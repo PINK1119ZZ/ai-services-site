@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 自動化服務 | 讓 AI 幫你的生意省時間、賺更多</title>
+    <title>AutoDev AI | AI 自動化服務 — LINE 機器人、智慧客服、流程自動化</title>
     <meta name="description" content="專業 AI 自動化開發服務 — LINE 預約機器人、AI 客服、工作流程自動化、網站開發。2 週快速交付。">
+    <link rel="canonical" href="https://autodev-ai.com">
+    <!-- Open Graph -->
+    <meta property="og:title" content="AutoDev AI | AI 自動化服務 — LINE 機器人、智慧客服、流程自動化">
+    <meta property="og:description" content="專業 AI 自動化開發服務 — LINE 預約機器人、AI 客服、工作流程自動化、網站開發。2 週快速交付。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autodev-ai.com">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AutoDev AI | AI 自動化服務 — LINE 機器人、智慧客服、流程自動化">
+    <meta name="twitter:description" content="專業 AI 自動化開發服務 — LINE 預約機器人、AI 客服、工作流程自動化、網站開發。2 週快速交付。">
+    <meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ProfessionalService","name":"AutoDev AI","url":"https://autodev-ai.com","description":"專業 AI 自動化開發服務","areaServed":"TW","priceRange":"NT$8,000-50,000"}
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
     <style>
         :root {
             --primary: #6C5CE7;
@@ -368,6 +387,18 @@
             color: var(--accent);
         }
 
+        /* ===== PORTFOLIO ===== */
+        #portfolio { background: var(--dark); }
+        .portfolio-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+        .portfolio-card { background: var(--dark-2); border: 1px solid rgba(108,92,231,0.2); border-radius: 16px; padding: 2rem; transition: all 0.3s; position: relative; overflow: hidden; }
+        .portfolio-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gradient-1); }
+        .portfolio-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-glow); }
+        .portfolio-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .portfolio-card p { color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem; }
+        .portfolio-tag { display: inline-block; font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 50px; background: rgba(0,210,211,0.1); color: var(--accent); border: 1px solid rgba(0,210,211,0.2); }
+        .portfolio-live { display: inline-block; margin-top: 1rem; color: var(--accent); font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+        .portfolio-live:hover { text-decoration: underline; }
+
         /* ===== PROCESS ===== */
         .process-grid {
             max-width: 900px;
@@ -514,7 +545,7 @@
         }
 
         .pricing-features li::before {
-            content: '✓';
+            content: '\2713';
             color: var(--accent);
             font-weight: 700;
         }
@@ -573,6 +604,70 @@
             font-size: 0.9rem;
         }
 
+        /* ===== ABOUT ===== */
+        #about { background: var(--dark-2); }
+        .about-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--dark);
+            border: 1px solid rgba(108,92,231,0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-1);
+        }
+        .about-name {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 0.25rem;
+        }
+        .about-title {
+            color: var(--accent);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .about-desc {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        .about-points {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .about-point {
+            background: rgba(108,92,231,0.1);
+            border: 1px solid rgba(108,92,231,0.2);
+            border-radius: 10px;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-light);
+        }
+
+        /* ===== FAQ ===== */
+        #faq { background: var(--dark); }
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; margin-bottom: 1rem; overflow: hidden; background: var(--dark-2); }
+        .faq-q { padding: 1.25rem 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1rem; transition: color 0.3s; }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q::after { content: '+'; font-size: 1.5rem; color: var(--accent); transition: transform 0.3s; }
+        .faq-item.open .faq-q::after { transform: rotate(45deg); }
+        .faq-a { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; color: var(--gray); font-size: 0.95rem; line-height: 1.7; }
+        .faq-item.open .faq-a { max-height: 200px; padding: 0 1.5rem 1.25rem; }
+
         /* ===== CTA ===== */
         .cta-section {
             background: var(--dark-2);
@@ -598,6 +693,13 @@
             color: var(--gray);
             font-size: 1.1rem;
             margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .cta-contacts {
@@ -644,6 +746,19 @@
             .nav-links { display: none; }
             .mobile-menu-btn { display: block; }
 
+            .nav-links.show {
+                display: flex !important;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 2rem;
+                background: rgba(15,15,26,0.98);
+                padding: 1rem 2rem;
+                border-radius: 12px;
+                border: 1px solid rgba(108,92,231,0.3);
+                gap: 1rem;
+            }
+
             .hero-stats {
                 gap: 1.5rem;
                 flex-wrap: wrap;
@@ -656,6 +771,10 @@
             .cta-box { padding: 2.5rem 1.5rem; }
 
             .pricing-grid { grid-template-columns: 1fr; }
+
+            .about-card { padding: 2rem 1.5rem; }
+
+            .about-points { flex-direction: column; }
         }
 
         /* ===== ANIMATIONS ===== */
@@ -677,13 +796,14 @@
 <nav class="nav" id="nav">
     <div class="nav-inner">
         <a href="#" class="nav-logo">AutoDev AI</a>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
             <a href="#services">服務</a>
-            <a href="#process">流程</a>
+            <a href="#portfolio">作品</a>
             <a href="#pricing">方案</a>
+            <a href="#faq">FAQ</a>
             <a href="#contact" class="nav-cta">免費諮詢</a>
         </div>
-        <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
     </div>
 </nav>
 
@@ -810,6 +930,37 @@
                 <span class="service-tag">彈性報價</span>
             </div>
             <div class="service-price">詳談</div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+    <div class="section-header fade-in">
+        <div class="section-tag">Portfolio</div>
+        <h2>實際作品展示</h2>
+        <p>你現在看到的，就是我們做的</p>
+    </div>
+    <div class="portfolio-grid">
+        <div class="portfolio-card fade-in">
+            <h3>AutoDev AI 官網</h3>
+            <p>你現在看的這個網站就是我們的作品。暗色科技風設計、響應式、GitHub Pages 部署。</p>
+            <span class="portfolio-tag">Landing Page</span>
+        </div>
+        <div class="portfolio-card fade-in">
+            <h3>LINE AI 智慧客服</h3>
+            <p>串接 GPT-4 的品牌顧問機器人，自動回覆、推薦服務、引導填單。24 小時不打烊。</p>
+            <span class="portfolio-tag">LINE Bot + AI</span>
+        </div>
+        <div class="portfolio-card fade-in">
+            <h3>LIFF 諮詢表單</h3>
+            <p>LINE 內建 3 步驟表單，自動通知 LINE + Telegram，資料即時記錄。</p>
+            <span class="portfolio-tag">LIFF + Form</span>
+        </div>
+        <div class="portfolio-card fade-in">
+            <h3>Telegram 通知機器人</h3>
+            <p>客戶訊息即時推播、AI 智慧回覆、跨平台整合 LINE 通知。</p>
+            <span class="portfolio-tag">TG Bot</span>
         </div>
     </div>
 </section>
@@ -942,12 +1093,63 @@
     </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+    <div class="section-header fade-in">
+        <div class="section-tag">About</div>
+        <h2>關於創辦人</h2>
+    </div>
+    <div class="about-card fade-in">
+        <div class="about-name">Ivan</div>
+        <div class="about-title">AI 自動化架構師 / AutoDev AI 創辦人</div>
+        <div class="about-desc">從零開始自建 20+ AI Agent 自動化系統，包含程式碼審查、市場研究、競品分析等全自動團隊。我相信 AI 不該只是大企業的專利，中小企業和個人品牌也能用 AI 省時間、降成本、提升效率。</div>
+        <div class="about-points">
+            <div class="about-point">1,371+ 自動化測試</div>
+            <div class="about-point">生產環境穩定運作</div>
+            <div class="about-point">一人團隊 + AI 等於一個開發部門</div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+    <div class="section-header fade-in">
+        <div class="section-tag">FAQ</div>
+        <h2>常見問題</h2>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item fade-in">
+            <div class="faq-q">付款方式是什麼？</div>
+            <div class="faq-a">確認方案後支付 50% 訂金，驗收完成後支付尾款。接受銀行轉帳。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">做完不滿意可以退款嗎？</div>
+            <div class="faq-a">開發過程中隨時可以提出修改。如果最終成品與約定的功能規格不符，全額退款。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">維護怎麼算？</div>
+            <div class="faq-a">交付後提供 14-30 天免費維護期（依方案而定）。之後可選擇月費維護方案，NT$2,000/月起。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">我不懂技術，可以用嗎？</div>
+            <div class="faq-a">完全沒問題！交付時會提供操作教學。機器人設計的原則就是讓不懂技術的人也能輕鬆使用。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">可以先做一個小功能試試嗎？</div>
+            <div class="faq-a">當然可以！建議從基礎方案 NT$8,000 起步，先體驗效果，滿意再擴充功能。</div>
+        </div>
+    </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section" id="contact">
     <div class="cta-box fade-in">
         <h2>準備好讓 AI 幫你工作了嗎？</h2>
         <p>免費諮詢，不滿意不收費。告訴我你的需求，我來給你最佳方案。</p>
-        <a href="https://mail.google.com/mail/?view=cm&to=ahrxiaofan@gmail.com&su=AI%E8%87%AA%E5%8B%95%E5%8C%96%E6%9C%8D%E5%8B%99%E8%AB%AE%E8%A9%A2" target="_blank" class="btn btn-primary">立即聯繫 →</a>
+        <div class="cta-buttons">
+            <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" class="btn btn-primary">立即諮詢 →</a>
+            <a href="https://line.me/ti/p/@882vhisc" target="_blank" class="btn btn-secondary">或加 LINE 聊聊</a>
+        </div>
         <div class="cta-contacts">
             <div class="cta-contact">📧 <a href="https://mail.google.com/mail/?view=cm&to=ahrxiaofan@gmail.com&su=AI%E8%87%AA%E5%8B%95%E5%8C%96%E6%9C%8D%E5%8B%99%E8%AB%AE%E8%A9%A2" target="_blank" style="color:var(--primary-light);text-decoration:none;">ahrxiaofan@gmail.com</a></div>
             <div class="cta-contact">💬 <a href="https://line.me/ti/p/@882vhisc" style="color:var(--primary-light);text-decoration:none;">LINE: @882vhisc</a></div>
@@ -958,7 +1160,7 @@
 
 <!-- FOOTER -->
 <footer>
-    <p>&copy; 2026 AutoDev AI. Built with AI. — <a href="https://github.com/PINK1119ZZ/claude-dev-team" target="_blank">Powered by Claude Dev Team</a></p>
+    <p>&copy; 2026 AutoDev AI. Built with AI.</p>
 </footer>
 
 <script>
@@ -979,18 +1181,30 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Mobile menu
-    document.querySelector('.mobile-menu-btn')?.addEventListener('click', () => {
-        const links = document.querySelector('.nav-links');
-        links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
-        links.style.flexDirection = 'column';
-        links.style.position = 'absolute';
-        links.style.top = '100%';
-        links.style.right = '2rem';
-        links.style.background = 'rgba(15,15,26,0.98)';
-        links.style.padding = '1rem 2rem';
-        links.style.borderRadius = '12px';
-        links.style.border = '1px solid rgba(108,92,231,0.3)';
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630';
+    });
+
+    // Close mobile menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            mobileMenuBtn.textContent = '\u2630';
+        });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(q => {
+        q.addEventListener('click', () => {
+            const item = q.parentElement;
+            document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
+            item.classList.toggle('open');
+        });
     });
 </script>
 </body>
