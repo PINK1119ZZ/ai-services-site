@@ -175,10 +175,13 @@
         }
 
         .hero h1 .gradient-text {
-            background: var(--gradient-2);
+            background: linear-gradient(90deg, #6C5CE7, #A29BFE, #00D2D3, #6C5CE7);
+            background-size: 300% 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: logoShimmer 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 12px rgba(108,92,231,0.5));
         }
 
         .hero p {
