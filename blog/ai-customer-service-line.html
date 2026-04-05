@@ -32,7 +32,7 @@
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"AI 客服會不會回答錯誤的資訊？","acceptedAnswer":{"@type":"Answer","text":"AI 客服會根據你提供的知識庫（產品資訊、FAQ、服務說明）來回答，不會胡亂編造。可以設定回答範圍，遇到無法回答的問題會自動轉接人工客服。"}},{"@type":"Question","name":"AI 客服可以處理哪些問題？","acceptedAnswer":{"@type":"Answer","text":"適合處理重複性高的問題：營業時間、價格查詢、服務說明、預約流程、退換貨政策等。大約 80% 的客服問題都是這類重複問題。"}},{"@type":"Question","name":"AI 客服的月費大概多少？","acceptedAnswer":{"@type":"Answer","text":"AI API 費用依使用量而定，一般中小店家大約 NT$500-2,000/月。加上伺服器費 NT$200-500/月，總月費約 NT$700-2,500。比請一個兼職客服便宜很多。"}},{"@type":"Question","name":"導入 AI 客服需要什麼技術能力？","acceptedAnswer":{"@type":"Answer","text":"你不需要任何技術能力。AutoDev AI 會幫你處理所有技術面：開發、部署、設定知識庫、教你使用後台。你只需要提供你的產品資訊和常見問題就好。"}},{"@type":"Question","name":"AI 客服跟傳統的關鍵字機器人有什麼不同？","acceptedAnswer":{"@type":"Answer","text":"傳統關鍵字機器人只能回應設定好的固定關鍵字，回答死板。AI 客服能理解自然語言，即使客人用不同方式問同一個問題，都能正確理解並回答。"}}]}
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
-    
+
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
     <style>
         .blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
@@ -76,226 +76,226 @@
 
 <!-- PAGE HEADER -->
 <section class="page-header">
-    <h1>AI 客服是什麼？</h1>
-    <p>LINE Bot 智慧客服完整指南（2026）</p>
+    <h1 data-en="What Is AI Customer Service?">AI 客服是什麼？</h1>
+    <p data-en="Complete LINE Bot Smart Customer Service Guide (2026)">LINE Bot 智慧客服完整指南（2026）</p>
 </section>
 
 <!-- ARTICLE -->
 <article class="blog-article fade-in">
     <div class="blog-meta">
-        <span>Ivan / AutoDev AI</span> | <span>2026-03-30</span> | <span>閱讀時間 8 分鐘</span>
+        <span>Ivan / AutoDev AI</span> | <span>2026-03-30</span> | <span data-en="8 min read">閱讀時間 8 分鐘</span>
     </div>
 
     <div class="blog-nav">
-        <a href="#what-is-ai-cs">什麼是 AI 客服</a>
-        <a href="#how-it-works">運作原理</a>
-        <a href="#benefits">優勢比較</a>
-        <a href="#use-cases">應用場景</a>
-        <a href="#implementation">導入步驟</a>
-        <a href="#cost">成本分析</a>
-        <a href="#faq">常見問題</a>
+        <a href="#what-is-ai-cs" data-en="What Is AI CS">什麼是 AI 客服</a>
+        <a href="#how-it-works" data-en="How It Works">運作原理</a>
+        <a href="#benefits" data-en="Comparison">優勢比較</a>
+        <a href="#use-cases" data-en="Use Cases">應用場景</a>
+        <a href="#implementation" data-en="Implementation">導入步驟</a>
+        <a href="#cost" data-en="Cost Analysis">成本分析</a>
+        <a href="#faq" data-en="FAQ">常見問題</a>
     </div>
 
-    <p>「營業時間是幾點？」「這個商品有貨嗎？」「怎麼退貨？」如果你的店每天都在回答這些重複的問題，那你需要的不是再請一個客服，而是一個 AI 客服。這篇文章幫你完整了解 LINE Bot 智慧客服是什麼、怎麼運作、適不適合你。</p>
+    <p data-en="&quot;What are your business hours?&quot; &quot;Is this product in stock?&quot; &quot;How do I return an item?&quot; If your store answers these repetitive questions every day, what you need isn&apos;t another customer service rep — it&apos;s an AI customer service bot. This article gives you a complete understanding of what LINE Bot smart CS is, how it works, and whether it&apos;s right for you.">「營業時間是幾點？」「這個商品有貨嗎？」「怎麼退貨？」如果你的店每天都在回答這些重複的問題，那你需要的不是再請一個客服，而是一個 AI 客服。這篇文章幫你完整了解 LINE Bot 智慧客服是什麼、怎麼運作、適不適合你。</p>
 
-    <h2 id="what-is-ai-cs">AI 客服是什麼？</h2>
+    <h2 id="what-is-ai-cs" data-en="What Is AI Customer Service?">AI 客服是什麼？</h2>
 
-    <p>AI 客服是利用人工智慧技術（如 GPT-4、Claude 等大型語言模型）來自動回覆客人問題的系統。和傳統的「關鍵字機器人」不同，AI 客服能理解自然語言，用接近真人的方式回答問題。</p>
+    <p data-en="AI customer service is a system that uses artificial intelligence (such as GPT-4, Claude, and other large language models) to automatically reply to customer questions. Unlike traditional &quot;keyword bots,&quot; AI CS understands natural language and responds in a near-human manner.">AI 客服是利用人工智慧技術（如 GPT-4、Claude 等大型語言模型）來自動回覆客人問題的系統。和傳統的「關鍵字機器人」不同，AI 客服能理解自然語言，用接近真人的方式回答問題。</p>
 
-    <p>舉例來說：</p>
+    <p data-en="For example:">舉例來說：</p>
     <ul>
-        <li><strong>傳統機器人：</strong>客人說「幾點關門」→ 不在關鍵字清單裡 → 回覆「我不懂你的意思」</li>
-        <li><strong>AI 客服：</strong>客人說「幾點關門」、「營業到幾點」、「你們晚上有開嗎」→ 都能理解，回覆正確的營業時間</li>
+        <li data-en="&lt;strong&gt;Traditional bot:&lt;/strong&gt; Customer says &quot;what time do you close&quot; &amp;rarr; not in keyword list &amp;rarr; replies &quot;I don&apos;t understand&quot;"><strong>傳統機器人：</strong>客人說「幾點關門」→ 不在關鍵字清單裡 → 回覆「我不懂你的意思」</li>
+        <li data-en="&lt;strong&gt;AI CS:&lt;/strong&gt; Customer says &quot;what time do you close,&quot; &quot;how late are you open,&quot; or &quot;are you open tonight&quot; &amp;rarr; all understood, replies with correct business hours"><strong>AI 客服：</strong>客人說「幾點關門」、「營業到幾點」、「你們晚上有開嗎」→ 都能理解，回覆正確的營業時間</li>
     </ul>
 
-    <p>把 AI 客服放在 LINE 上，就是 LINE Bot 智慧客服。客人在 LINE 聊天室發問，AI 即時回覆，24 小時不間斷。</p>
+    <p data-en="Putting AI CS on LINE creates a LINE Bot smart customer service. Customers ask questions in the LINE chat, and AI replies instantly, 24/7.">把 AI 客服放在 LINE 上，就是 LINE Bot 智慧客服。客人在 LINE 聊天室發問，AI 即時回覆，24 小時不間斷。</p>
 
-    <h2 id="how-it-works">AI 客服怎麼運作？</h2>
+    <h2 id="how-it-works" data-en="How Does AI Customer Service Work?">AI 客服怎麼運作？</h2>
 
-    <h3>核心技術：大型語言模型 + 知識庫</h3>
-    <p>AI 客服的核心是大型語言模型（LLM），如 OpenAI 的 GPT-4 或 Anthropic 的 Claude。但光有 LLM 還不夠，必須搭配你的「知識庫」——也就是你的產品資訊、服務說明、FAQ、營業資訊等。</p>
+    <h3 data-en="Core Technology: Large Language Model + Knowledge Base">核心技術：大型語言模型 + 知識庫</h3>
+    <p data-en="The core of AI CS is a large language model (LLM) like OpenAI&apos;s GPT-4 or Anthropic&apos;s Claude. But an LLM alone isn&apos;t enough — it must be paired with your &quot;knowledge base&quot;: your product information, service descriptions, FAQ, business info, etc.">AI 客服的核心是大型語言模型（LLM），如 OpenAI 的 GPT-4 或 Anthropic 的 Claude。但光有 LLM 還不夠，必須搭配你的「知識庫」——也就是你的產品資訊、服務說明、FAQ、營業資訊等。</p>
 
-    <p>運作流程：</p>
+    <p data-en="How it works:">運作流程：</p>
     <ol>
-        <li><strong>客人在 LINE 發送訊息</strong>：例如「請問你們有做指甲彩繪嗎？」</li>
-        <li><strong>系統接收訊息</strong>：LINE Messaging API 將訊息傳送到後端伺服器</li>
-        <li><strong>AI 理解問題</strong>：LLM 分析客人的意圖，搜尋知識庫中的相關資訊</li>
-        <li><strong>生成回覆</strong>：根據知識庫內容，用自然語言生成回答</li>
-        <li><strong>回傳 LINE</strong>：在幾秒鐘內將回覆送回給客人</li>
+        <li data-en="&lt;strong&gt;Customer sends a message on LINE&lt;/strong&gt;: e.g., &quot;Do you offer nail art?&quot;"><strong>客人在 LINE 發送訊息</strong>：例如「請問你們有做指甲彩繪嗎？」</li>
+        <li data-en="&lt;strong&gt;System receives the message&lt;/strong&gt;: LINE Messaging API forwards the message to the backend server"><strong>系統接收訊息</strong>：LINE Messaging API 將訊息傳送到後端伺服器</li>
+        <li data-en="&lt;strong&gt;AI understands the question&lt;/strong&gt;: LLM analyzes the customer&apos;s intent and searches relevant info in the knowledge base"><strong>AI 理解問題</strong>：LLM 分析客人的意圖，搜尋知識庫中的相關資訊</li>
+        <li data-en="&lt;strong&gt;Generates a reply&lt;/strong&gt;: Based on knowledge base content, generates a natural language answer"><strong>生成回覆</strong>：根據知識庫內容，用自然語言生成回答</li>
+        <li data-en="&lt;strong&gt;Sends back to LINE&lt;/strong&gt;: Delivers the reply to the customer within seconds"><strong>回傳 LINE</strong>：在幾秒鐘內將回覆送回給客人</li>
     </ol>
 
-    <h3>安全機制</h3>
-    <p>好的 AI 客服不會「亂回答」。我們會設定：</p>
+    <h3 data-en="Safety Mechanisms">安全機制</h3>
+    <p data-en="Good AI CS won&apos;t &quot;make things up.&quot; We configure:">好的 AI 客服不會「亂回答」。我們會設定：</p>
     <ul>
-        <li><strong>回答範圍限制</strong>：只根據知識庫內容回答，不會編造資訊</li>
-        <li><strong>敏感問題過濾</strong>：涉及價格談判、客訴、法律問題等自動轉接人工</li>
-        <li><strong>回答品質監控</strong>：記錄所有對話，定期檢視和優化</li>
-        <li><strong>人工轉接機制</strong>：AI 無法處理的問題，自動通知店主接手</li>
+        <li data-en="&lt;strong&gt;Answer scope limits&lt;/strong&gt;: Only answers based on knowledge base content, won&apos;t fabricate information"><strong>回答範圍限制</strong>：只根據知識庫內容回答，不會編造資訊</li>
+        <li data-en="&lt;strong&gt;Sensitive question filtering&lt;/strong&gt;: Price negotiations, complaints, legal issues auto-transfer to human agents"><strong>敏感問題過濾</strong>：涉及價格談判、客訴、法律問題等自動轉接人工</li>
+        <li data-en="&lt;strong&gt;Answer quality monitoring&lt;/strong&gt;: All conversations logged, regularly reviewed and optimized"><strong>回答品質監控</strong>：記錄所有對話，定期檢視和優化</li>
+        <li data-en="&lt;strong&gt;Human handoff mechanism&lt;/strong&gt;: Questions AI can&apos;t handle automatically notify the store owner to take over"><strong>人工轉接機制</strong>：AI 無法處理的問題，自動通知店主接手</li>
     </ul>
 
-    <h2 id="benefits">AI 客服 vs 人工客服</h2>
+    <h2 id="benefits" data-en="AI CS vs Human CS">AI 客服 vs 人工客服</h2>
 
     <table class="price-table">
         <thead>
             <tr>
-                <th>比較項目</th>
-                <th>AI 客服</th>
-                <th>人工客服</th>
+                <th data-en="Comparison">比較項目</th>
+                <th data-en="AI CS">AI 客服</th>
+                <th data-en="Human CS">人工客服</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>服務時間</td>
-                <td>24 小時 / 365 天</td>
-                <td>工作時間內</td>
+                <td data-en="Service hours">服務時間</td>
+                <td data-en="24/7 / 365 days">24 小時 / 365 天</td>
+                <td data-en="During work hours">工作時間內</td>
             </tr>
             <tr>
-                <td>回覆速度</td>
-                <td>即時（2-5 秒）</td>
-                <td>需等待（分鐘到小時）</td>
+                <td data-en="Response speed">回覆速度</td>
+                <td data-en="Instant (2-5 seconds)">即時（2-5 秒）</td>
+                <td data-en="Wait required (minutes to hours)">需等待（分鐘到小時）</td>
             </tr>
             <tr>
-                <td>同時處理量</td>
-                <td>無上限</td>
-                <td>1-3 位客人</td>
+                <td data-en="Simultaneous capacity">同時處理量</td>
+                <td data-en="Unlimited">無上限</td>
+                <td data-en="1-3 customers">1-3 位客人</td>
             </tr>
             <tr>
-                <td>月成本</td>
+                <td data-en="Monthly cost">月成本</td>
                 <td>NT$700-2,500</td>
                 <td>NT$25,000-35,000+</td>
             </tr>
             <tr>
-                <td>回答一致性</td>
-                <td>高（不會情緒波動）</td>
-                <td>依人員素質</td>
+                <td data-en="Answer consistency">回答一致性</td>
+                <td data-en="High (no mood swings)">高（不會情緒波動）</td>
+                <td data-en="Depends on staff quality">依人員素質</td>
             </tr>
             <tr>
-                <td>複雜問題處理</td>
-                <td>需轉接人工</td>
-                <td>可即時判斷</td>
+                <td data-en="Complex issue handling">複雜問題處理</td>
+                <td data-en="Needs human handoff">需轉接人工</td>
+                <td data-en="Can judge immediately">可即時判斷</td>
             </tr>
             <tr>
-                <td>情感溝通</td>
-                <td>基礎同理回覆</td>
-                <td>優秀</td>
+                <td data-en="Emotional communication">情感溝通</td>
+                <td data-en="Basic empathetic replies">基礎同理回覆</td>
+                <td data-en="Excellent">優秀</td>
             </tr>
         </tbody>
     </table>
 
     <div class="highlight-box">
-        <p><strong>最佳策略：</strong>AI 客服不是取代人工，而是讓 AI 處理 80% 的重複問題，人工專注在 20% 需要判斷力的複雜情境。這樣效率最高、成本最低。</p>
+        <p data-en="&lt;strong&gt;Best Strategy:&lt;/strong&gt; AI CS isn&apos;t meant to replace humans — it lets AI handle 80% of repetitive questions while humans focus on the 20% that require judgment. This maximizes efficiency and minimizes costs."><strong>最佳策略：</strong>AI 客服不是取代人工，而是讓 AI 處理 80% 的重複問題，人工專注在 20% 需要判斷力的複雜情境。這樣效率最高、成本最低。</p>
     </div>
 
-    <h2 id="use-cases">AI 客服的應用場景</h2>
+    <h2 id="use-cases" data-en="AI Customer Service Use Cases">AI 客服的應用場景</h2>
 
-    <h3>1. 電商 / 網路商店</h3>
-    <p>自動回覆商品規格、庫存查詢、運費計算、退換貨流程。減少客人因為等不到回覆而放棄購買的情況。特別是在促銷活動期間，大量訊息湧入時 AI 客服的價值最大。</p>
+    <h3 data-en="1. E-commerce / Online Stores">1. 電商 / 網路商店</h3>
+    <p data-en="Auto-reply to product specs, stock inquiries, shipping calculations, and return processes. Reduce customers abandoning purchases because they couldn&apos;t get a timely reply. AI CS is most valuable during promotional campaigns when messages flood in.">自動回覆商品規格、庫存查詢、運費計算、退換貨流程。減少客人因為等不到回覆而放棄購買的情況。特別是在促銷活動期間，大量訊息湧入時 AI 客服的價值最大。</p>
 
-    <h3>2. 美容 / 美體 / SPA</h3>
-    <p>回答服務項目、價格、預約流程、注意事項。搭配<a href="/blog/line-bot-booking-system.html" style="color:var(--accent);">預約系統</a>，客人從問問題到完成預約都能在 LINE 上搞定。</p>
+    <h3 data-en="2. Beauty / Body Care / SPA">2. 美容 / 美體 / SPA</h3>
+    <p data-en="Answer questions about services, pricing, booking process, and precautions. Combined with a &lt;a href=&quot;/blog/line-bot-booking-system.html&quot; style=&quot;color:var(--accent);&quot;&gt;booking system&lt;/a&gt;, customers can go from asking questions to completing a booking entirely on LINE.">回答服務項目、價格、預約流程、注意事項。搭配<a href="/blog/line-bot-booking-system.html" style="color:var(--accent);">預約系統</a>，客人從問問題到完成預約都能在 LINE 上搞定。</p>
 
-    <h3>3. 餐飲業</h3>
-    <p>菜單查詢、營業時間、訂位流程、外送範圍、過敏原資訊。AI 客服可以根據客人的需求推薦適合的餐點。</p>
+    <h3 data-en="3. Food &amp; Beverage">3. 餐飲業</h3>
+    <p data-en="Menu inquiries, business hours, reservation process, delivery range, allergen information. AI CS can recommend suitable dishes based on customer needs.">菜單查詢、營業時間、訂位流程、外送範圍、過敏原資訊。AI 客服可以根據客人的需求推薦適合的餐點。</p>
 
-    <h3>4. 教育 / 補習班</h3>
-    <p>課程資訊、收費說明、師資介紹、體驗課預約。家長的問題通常很重複，AI 客服可以大幅減少行政人員的負擔。</p>
+    <h3 data-en="4. Education / Tutoring Centers">4. 教育 / 補習班</h3>
+    <p data-en="Course information, pricing, teacher profiles, trial class bookings. Parents&apos; questions tend to be very repetitive, and AI CS can significantly reduce administrative staff workload.">課程資訊、收費說明、師資介紹、體驗課預約。家長的問題通常很重複，AI 客服可以大幅減少行政人員的負擔。</p>
 
-    <h3>5. 不動產 / 仲介</h3>
-    <p>物件資訊查詢、看房預約、貸款試算、社區介紹。AI 客服可以先篩選有意願的客人，再轉給業務做深度服務。</p>
+    <h3 data-en="5. Real Estate / Agents">5. 不動產 / 仲介</h3>
+    <p data-en="Property information queries, viewing appointments, mortgage calculations, community introductions. AI CS can pre-screen interested prospects before passing them to agents for deeper service.">物件資訊查詢、看房預約、貸款試算、社區介紹。AI 客服可以先篩選有意願的客人，再轉給業務做深度服務。</p>
 
-    <h2 id="implementation">導入 AI 客服的 5 個步驟</h2>
+    <h2 id="implementation" data-en="5 Steps to Implement AI Customer Service">導入 AI 客服的 5 個步驟</h2>
 
     <ol>
-        <li><strong>需求評估（免費）</strong>：分析你的客服現況，找出最適合 AI 處理的問題類型。你可以<a href="/contact.html" style="color:var(--accent);">免費諮詢</a>，30 分鐘幫你評估。</li>
-        <li><strong>知識庫建立</strong>：整理你的產品資訊、服務說明、FAQ、營業資訊等。這是 AI 客服回答問題的基礎。</li>
-        <li><strong>開發與串接</strong>：建立 LINE Bot、串接 AI 模型、設定回答範圍與轉接規則。使用 AI 輔助開發，約 1-2 週完成。</li>
-        <li><strong>測試與調整</strong>：上線前充分測試各種問題場景，確保回答品質。調整語氣、補充知識庫內容。</li>
-        <li><strong>上線與監控</strong>：正式上線後持續監控對話品質，定期優化知識庫和回答策略。</li>
+        <li data-en="&lt;strong&gt;Needs assessment (free)&lt;/strong&gt;: Analyze your current CS situation and identify the best question types for AI to handle. You can &lt;a href=&quot;/contact.html&quot; style=&quot;color:var(--accent);&quot;&gt;get a free consultation&lt;/a&gt; — 30 minutes to assess your needs."><strong>需求評估（免費）</strong>：分析你的客服現況，找出最適合 AI 處理的問題類型。你可以<a href="/contact.html" style="color:var(--accent);">免費諮詢</a>，30 分鐘幫你評估。</li>
+        <li data-en="&lt;strong&gt;Knowledge base creation&lt;/strong&gt;: Compile your product info, service descriptions, FAQ, business details, etc. This is the foundation for AI CS answers."><strong>知識庫建立</strong>：整理你的產品資訊、服務說明、FAQ、營業資訊等。這是 AI 客服回答問題的基礎。</li>
+        <li data-en="&lt;strong&gt;Development and integration&lt;/strong&gt;: Build the LINE Bot, integrate the AI model, configure answer scope and handoff rules. About 1-2 weeks with AI-assisted development."><strong>開發與串接</strong>：建立 LINE Bot、串接 AI 模型、設定回答範圍與轉接規則。使用 AI 輔助開發，約 1-2 週完成。</li>
+        <li data-en="&lt;strong&gt;Testing and adjustment&lt;/strong&gt;: Thoroughly test various question scenarios before launch to ensure answer quality. Adjust tone, supplement knowledge base content."><strong>測試與調整</strong>：上線前充分測試各種問題場景，確保回答品質。調整語氣、補充知識庫內容。</li>
+        <li data-en="&lt;strong&gt;Launch and monitoring&lt;/strong&gt;: After launch, continuously monitor conversation quality and regularly optimize the knowledge base and answer strategies."><strong>上線與監控</strong>：正式上線後持續監控對話品質，定期優化知識庫和回答策略。</li>
     </ol>
 
-    <h2 id="cost">AI 客服的完整成本分析</h2>
+    <h2 id="cost" data-en="Complete Cost Analysis for AI Customer Service">AI 客服的完整成本分析</h2>
 
     <table class="price-table">
         <thead>
             <tr>
-                <th>費用項目</th>
-                <th>金額</th>
-                <th>說明</th>
+                <th data-en="Cost Item">費用項目</th>
+                <th data-en="Amount">金額</th>
+                <th data-en="Description">說明</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>開發費（一次性）</td>
+                <td data-en="Development fee (one-time)">開發費（一次性）</td>
                 <td>NT$12,000-20,000</td>
-                <td>含 LINE Bot、AI 串接、知識庫建立</td>
+                <td data-en="Includes LINE Bot, AI integration, knowledge base setup">含 LINE Bot、AI 串接、知識庫建立</td>
             </tr>
             <tr>
-                <td>AI API 費用（月費）</td>
+                <td data-en="AI API fee (monthly)">AI API 費用（月費）</td>
                 <td>NT$500-2,000</td>
-                <td>依每月訊息量，GPT-4 或 Claude</td>
+                <td data-en="Based on monthly message volume, GPT-4 or Claude">依每月訊息量，GPT-4 或 Claude</td>
             </tr>
             <tr>
-                <td>LINE 官方帳號（月費）</td>
-                <td>免費 - NT$800</td>
-                <td>免費版 200 則/月，輕用量 NT$800</td>
+                <td data-en="LINE official account (monthly)">LINE 官方帳號（月費）</td>
+                <td data-en="Free - NT$800">免費 - NT$800</td>
+                <td data-en="Free plan: 200 msgs/month, light plan NT$800">免費版 200 則/月，輕用量 NT$800</td>
             </tr>
             <tr>
-                <td>伺服器費（月費）</td>
+                <td data-en="Server costs (monthly)">伺服器費（月費）</td>
                 <td>NT$200-500</td>
-                <td>雲端主機</td>
+                <td data-en="Cloud hosting">雲端主機</td>
             </tr>
             <tr>
-                <td>維護費（選配月費）</td>
-                <td>NT$2,000 起</td>
-                <td>知識庫更新、功能調整</td>
+                <td data-en="Maintenance fee (optional monthly)">維護費（選配月費）</td>
+                <td data-en="From NT$2,000">NT$2,000 起</td>
+                <td data-en="Knowledge base updates, feature adjustments">知識庫更新、功能調整</td>
             </tr>
         </tbody>
     </table>
 
-    <p><strong>投資回報試算：</strong>假設你原本每月花 NT$30,000 請兼職客服（或老闆自己花 60 小時回訊息，以時薪 NT$500 計算也是 NT$30,000）。導入 AI 客服後月費約 NT$1,500，一年省下 NT$342,000。</p>
+    <p data-en="&lt;strong&gt;ROI calculation:&lt;/strong&gt; Suppose you currently spend NT$30,000/month on part-time CS (or the boss spends 60 hours replying to messages — at NT$500/hour, that&apos;s also NT$30,000). After implementing AI CS at about NT$1,500/month, you save NT$342,000 per year."><strong>投資回報試算：</strong>假設你原本每月花 NT$30,000 請兼職客服（或老闆自己花 60 小時回訊息，以時薪 NT$500 計算也是 NT$30,000）。導入 AI 客服後月費約 NT$1,500，一年省下 NT$342,000。</p>
 
     <div class="highlight-box">
-        <p><strong>AutoDev AI 方案：</strong>AI 智慧客服 NT$12,000 起，含 LINE Bot 開發、AI 模型串接、知識庫建立、14 天免費維護。<a href="/pricing.html" style="color:var(--accent);">查看完整方案 →</a></p>
+        <p data-en="&lt;strong&gt;AutoDev AI Plan:&lt;/strong&gt; AI smart CS from NT$12,000, including LINE Bot development, AI model integration, knowledge base setup, and 14-day free maintenance. &lt;a href=&quot;/pricing.html&quot; style=&quot;color:var(--accent);&quot;&gt;View full plans &amp;rarr;&lt;/a&gt;"><strong>AutoDev AI 方案：</strong>AI 智慧客服 NT$12,000 起，含 LINE Bot 開發、AI 模型串接、知識庫建立、14 天免費維護。<a href="/pricing.html" style="color:var(--accent);">查看完整方案 →</a></p>
     </div>
 
-    <h2 id="faq">常見問題</h2>
+    <h2 id="faq" data-en="FAQ">常見問題</h2>
 
     <div class="faq-list">
         <div class="faq-item fade-in">
-            <div class="faq-q">AI 客服會不會回答錯誤的資訊？</div>
-            <div class="faq-a">AI 客服會根據你提供的知識庫（產品資訊、FAQ、服務說明）來回答，不會胡亂編造。可以設定回答範圍，遇到無法回答的問題會自動轉接人工客服。</div>
+            <div class="faq-q" data-en="Will AI CS give wrong information?">AI 客服會不會回答錯誤的資訊？</div>
+            <div class="faq-a" data-en="AI CS answers based on the knowledge base you provide (product info, FAQ, service descriptions) and won&apos;t make things up. You can set answer boundaries, and questions it can&apos;t handle are automatically transferred to human agents.">AI 客服會根據你提供的知識庫（產品資訊、FAQ、服務說明）來回答，不會胡亂編造。可以設定回答範圍，遇到無法回答的問題會自動轉接人工客服。</div>
         </div>
         <div class="faq-item fade-in">
-            <div class="faq-q">AI 客服可以處理哪些問題？</div>
-            <div class="faq-a">適合處理重複性高的問題：營業時間、價格查詢、服務說明、預約流程、退換貨政策等。大約 80% 的客服問題都是這類重複問題。</div>
+            <div class="faq-q" data-en="What types of questions can AI CS handle?">AI 客服可以處理哪些問題？</div>
+            <div class="faq-a" data-en="Best suited for highly repetitive questions: business hours, pricing, service descriptions, booking processes, return policies, etc. About 80% of CS questions fall into this repetitive category.">適合處理重複性高的問題：營業時間、價格查詢、服務說明、預約流程、退換貨政策等。大約 80% 的客服問題都是這類重複問題。</div>
         </div>
         <div class="faq-item fade-in">
-            <div class="faq-q">AI 客服的月費大概多少？</div>
-            <div class="faq-a">AI API 費用依使用量而定，一般中小店家大約 NT$500-2,000/月。加上伺服器費 NT$200-500/月，總月費約 NT$700-2,500。比請一個兼職客服便宜很多。</div>
+            <div class="faq-q" data-en="How much is the monthly fee for AI CS?">AI 客服的月費大概多少？</div>
+            <div class="faq-a" data-en="AI API costs depend on usage — typically NT$500-2,000/month for small to medium businesses. Plus server costs of NT$200-500/month, total monthly cost is about NT$700-2,500. Much cheaper than hiring a part-time CS rep.">AI API 費用依使用量而定，一般中小店家大約 NT$500-2,000/月。加上伺服器費 NT$200-500/月，總月費約 NT$700-2,500。比請一個兼職客服便宜很多。</div>
         </div>
         <div class="faq-item fade-in">
-            <div class="faq-q">導入 AI 客服需要什麼技術能力？</div>
-            <div class="faq-a">你不需要任何技術能力。AutoDev AI 會幫你處理所有技術面：開發、部署、設定知識庫、教你使用後台。你只需要提供你的產品資訊和常見問題就好。</div>
+            <div class="faq-q" data-en="Do I need technical skills to implement AI CS?">導入 AI 客服需要什麼技術能力？</div>
+            <div class="faq-a" data-en="You don&apos;t need any technical skills. AutoDev AI handles all technical aspects: development, deployment, knowledge base setup, and training you on the backend. You just need to provide your product info and common questions.">你不需要任何技術能力。AutoDev AI 會幫你處理所有技術面：開發、部署、設定知識庫、教你使用後台。你只需要提供你的產品資訊和常見問題就好。</div>
         </div>
         <div class="faq-item fade-in">
-            <div class="faq-q">AI 客服跟傳統的關鍵字機器人有什麼不同？</div>
-            <div class="faq-a">傳統關鍵字機器人只能回應設定好的固定關鍵字，回答死板。AI 客服能理解自然語言，即使客人用不同方式問同一個問題，都能正確理解並回答。</div>
+            <div class="faq-q" data-en="How is AI CS different from traditional keyword bots?">AI 客服跟傳統的關鍵字機器人有什麼不同？</div>
+            <div class="faq-a" data-en="Traditional keyword bots can only respond to preset fixed keywords with rigid replies. AI CS understands natural language — even when customers phrase the same question differently, it can correctly understand and answer.">傳統關鍵字機器人只能回應設定好的固定關鍵字，回答死板。AI 客服能理解自然語言，即使客人用不同方式問同一個問題，都能正確理解並回答。</div>
         </div>
     </div>
 
     <div class="highlight-box" style="margin-top:2rem;">
-        <p><strong>免費諮詢：</strong>不確定 AI 客服適不適合你的生意？<a href="/contact.html" style="color:var(--accent);">聯繫我們</a>，30 分鐘免費評估。</p>
+        <p data-en="&lt;strong&gt;Free Consultation:&lt;/strong&gt; Not sure if AI CS is right for your business? &lt;a href=&quot;/contact.html&quot; style=&quot;color:var(--accent);&quot;&gt;Contact us&lt;/a&gt; for a free 30-minute assessment."><strong>免費諮詢：</strong>不確定 AI 客服適不適合你的生意？<a href="/contact.html" style="color:var(--accent);">聯繫我們</a>，30 分鐘免費評估。</p>
     </div>
 </article>
 
 <!-- CTA -->
 <section class="cta-section">
     <div class="cta-box fade-in">
-        <h2>讓 AI 幫你回覆 80% 的客服問題</h2>
-        <p>LINE Bot 智慧客服 NT$12,000 起，24 小時不間斷服務。</p>
+        <h2 data-en="Let AI handle 80% of your customer service questions">讓 AI 幫你回覆 80% 的客服問題</h2>
+        <p data-en="LINE Bot smart CS from NT$12,000, 24/7 service.">LINE Bot 智慧客服 NT$12,000 起，24 小時不間斷服務。</p>
         <div class="cta-buttons">
-            <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" class="btn btn-primary">免費諮詢 →</a>
-            <a href="/pricing.html" class="btn btn-secondary">查看方案</a>
+            <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" class="btn btn-primary" data-en="Free Consultation &rarr;">免費諮詢 →</a>
+            <a href="/pricing.html" class="btn btn-secondary" data-en="View Plans">查看方案</a>
         </div>
     </div>
 </section>
@@ -306,6 +306,7 @@
 </footer>
 
 <script src="/chat-widget.js" defer></script>
+<script src="/lang.js" defer></script>
 <script>
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
