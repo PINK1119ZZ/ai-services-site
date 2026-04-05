@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LINE Bot Development Tutorial: Complete Guide from Zero to Launch (2026) | AutoDev AI</title>
+<meta content="Build your own LINE bot from scratch. Complete tutorial covering LINE Developer setup, Messaging API, common features. Evaluate DIY vs outsourcing." name="description"/>
+<link href="https://autodev-ai.com/en/blog/line-bot-tutorial-2026.html" rel="canonical"/><link href="https://autodev-ai.com/blog/line-bot-tutorial-2026.html" hreflang="zh-Hant" rel="alternate"/><link href="https://autodev-ai.com/en/blog/line-bot-tutorial-2026.html" hreflang="en" rel="alternate"/><link href="https://autodev-ai.com/blog/line-bot-tutorial-2026.html" hreflang="x-default" rel="alternate"/>
+<meta content="LINE Bot Tutorial — Zero to Launch (2026) | AutoDev AI" property="og:title"/>
+<meta content="Complete LINE bot development guide. From setup to launch, evaluate DIY vs outsourcing." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://autodev-ai.com/en/blog/line-bot-tutorial-2026.html" property="og:url"/>
+<meta content="https://autodev-ai.com/autodev-logo2.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="LINE Bot Tutorial — Zero to Launch (2026) | AutoDev AI" name="twitter:title"/>
+<meta content="Complete LINE bot development guide. From setup to launch, evaluate DIY vs outsourcing." name="twitter:description"/>
+<meta content="https://autodev-ai.com/autodev-logo2.png" name="twitter:image"/>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="#0F0F1A" name="theme-color"/>
+<meta content="LINE Bot 開發教學,LINE Bot 教學,LINE 機器人教學,LINE Bot 製作,LINE Messaging API,LINE Bot 開發,LINE LIFF 教學,Rich Menu 教學" name="keywords"/>
+<meta content="AutoDev AI" name="author"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css" rel="stylesheet"/>
+<script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"LINE Bot 開發教學：從零開始到上線的完整攻略（2026）","description":"LINE Bot 開發完整教學，含 LINE Developer 設定、Messaging API、常見功能開發、DIY vs 外包比較","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-02","dateModified":"2026-04-02","mainEntityOfPage":"https://autodev-ai.com/blog/line-bot-tutorial-2026.html","image":"https://autodev-ai.com/autodev-logo2.png"}
+    </script>
+<script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"LINE Bot 開發需要會寫程式嗎？","acceptedAnswer":{"@type":"Answer","text":"基礎的自動回覆可以用 LINE 官方帳號的「自動回應訊息」設定，不需要寫程式。但如果要做 AI 客服、預約系統、串接外部服務，就需要程式開發能力（通常用 Python 或 Node.js）。"}},{"@type":"Question","name":"LINE Bot 開發要多久？","acceptedAnswer":{"@type":"Answer","text":"視功能複雜度而定。基礎自動回覆約 1-3 天，含 AI 客服約 1 週，完整預約系統約 2 週。使用 AI 輔助開發可以加速 5-10 倍。"}},{"@type":"Question","name":"LINE Bot 可以免費做嗎？","acceptedAnswer":{"@type":"Answer","text":"LINE Messaging API 本身免費，LINE 官方帳號免費版每月可發 200 則推播訊息（回覆訊息不限）。但如果需要伺服器部署，會有主機費用（約 NT$200-500/月）。"}},{"@type":"Question","name":"自己做 LINE Bot 跟外包有什麼差別？","acceptedAnswer":{"@type":"Answer","text":"自己做省錢但耗時，適合有技術背景且需求簡單的情況。外包給專業開發者速度快、品質穩定、有售後支援，適合沒有技術背景或需要進階功能的商家。"}},{"@type":"Question","name":"LINE Bot 跟 LINE 官方帳號有什麼不同？","acceptedAnswer":{"@type":"Answer","text":"LINE 官方帳號是 LINE 提供的商業帳號，有基本的自動回應功能。LINE Bot 是透過 Messaging API 開發的程式，可以做到更複雜的功能如 AI 對話、預約系統、資料庫串接等。LINE Bot 建立在 LINE 官方帳號之上。"}}]}
+    </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+<style>
+        .blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
+        .blog-article h2 { color: var(--primary-light); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
+        .blog-article h3 { color: var(--text); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
+        .blog-article p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .blog-article ul, .blog-article ol { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .blog-article li { margin-bottom: 0.5rem; }
+        .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; text-align: center; }
+        .blog-meta span { margin: 0 0.5rem; }
+        .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+        .price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .price-table th { color: var(--primary-light); font-weight: 700; background: rgba(99,102,241,0.1); }
+        .price-table td { color: var(--text-secondary); }
+        .price-table tr:hover td { background: rgba(99,102,241,0.05); }
+        .highlight-box { background: rgba(99,102,241,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; margin: 1.5rem 0; }
+        .highlight-box p { margin-bottom: 0; color: var(--text); }
+        .blog-nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+        .blog-nav a { color: var(--primary-light); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(99,102,241,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
+        .blog-nav a:hover { background: rgba(99,102,241,0.2); border-color: var(--primary); }
+    </style>
+</head>
+<body>
+<!-- NAV -->
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="/en/">AutoDev AI</a>
+<div class="nav-links" id="navLinks">
+<a href="/en/services.html">Services</a>
+<a href="/en/portfolio.html">Portfolio</a>
+<a href="/en/pricing.html">Pricing</a>
+<a class="active" href="/en/blog/">Blog</a>
+<a href="/en/about.html">About</a>
+<a href="/en/demo.html">Try Demo</a>
+<a class="nav-cta" href="/en/contact.html">Consult</a>
+</div>
+<button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+</div>
+</nav>
+<!-- PAGE HEADER -->
+<section class="page-header">
+<h1 data-en="LINE Bot Development Tutorial">LINE Bot Development Tutorial</h1>
+<p data-en="Complete Guide from Zero to Launch (2026)">Complete Guide from Zero to Launch (2026)</p>
+</section>
+<!-- ARTICLE -->
+<article class="blog-article fade-in">
+<div class="blog-meta">
+<span>Ivan / AutoDev AI</span> | <span>2026-04-02</span> | <span data-en="10 min read">10 min read</span>
+</div>
+<div class="blog-nav">
+<a data-en="Prerequisites" href="#prerequisites">Prerequisites</a>
+<a href="#line-developer">LINE Developer</a>
+<a href="#messaging-api">Messaging API</a>
+<a data-en="Common Features" href="#features">Common Features</a>
+<a data-en="DIY vs Outsource" href="#diy-vs-outsource">DIY vs Outsource</a>
+<a data-en="FAQ" href="#faq">FAQ</a>
+</div>
+<p data-en="LINE Bot is one of the most popular digital tools for Taiwanese businesses. Whether it's auto-reply, booking systems, or AI customer service, they're all built on LINE Bot. This tutorial walks you through the complete LINE Bot development process to help you decide whether to DIY or outsource.">LINE Bot is one of the most popular digital tools for Taiwanese businesses. Whether it's auto-reply, booking systems, or AI customer service, they're all built on LINE Bot. This tutorial walks you through the complete LINE Bot development process to help you decide whether to DIY or outsource.</p>
+<h2 data-en="What Do You Need to Develop a LINE Bot?" id="prerequisites">What Do You Need to Develop a LINE Bot?</h2>
+<h3 data-en="Required">Required</h3>
+<ul>
+<li data-en="&lt;strong&gt;LINE account&lt;/strong&gt;: Used to log into LINE Developer Console"><strong>LINE account</strong>: Used to log into LINE Developer Console</li>
+<li data-en='&lt;strong&gt;LINE official account&lt;/strong&gt;: Create one for free at &lt;a href="https://manager.line.biz/" target="_blank" rel="noopener" style="color:var(--accent);"&gt;LINE Official Account Manager&lt;/a&gt;'><strong>LINE official account</strong>: Create one for free at <a href="https://manager.line.biz/" rel="noopener" style="color:var(--accent);" target="_blank">LINE Official Account Manager</a></li>
+<li data-en='&lt;strong&gt;LINE Developer account&lt;/strong&gt;: Register at &lt;a href="https://developers.line.biz/" target="_blank" rel="noopener" style="color:var(--accent);"&gt;LINE Developers&lt;/a&gt;'><strong>LINE Developer account</strong>: Register at <a href="https://developers.line.biz/" rel="noopener" style="color:var(--accent);" target="_blank">LINE Developers</a></li>
+</ul>
+<h3 data-en="For Advanced Features You Also Need">For Advanced Features You Also Need</h3>
+<ul>
+<li data-en="&lt;strong&gt;Programming skills&lt;/strong&gt;: Python or Node.js (the two most common languages)"><strong>Programming skills</strong>: Python or Node.js (the two most common languages)</li>
+<li data-en="&lt;strong&gt;Server&lt;/strong&gt;: To deploy your Bot backend (cloud hosting or VPS)"><strong>Server</strong>: To deploy your Bot backend (cloud hosting or VPS)</li>
+<li data-en="&lt;strong&gt;HTTPS domain&lt;/strong&gt;: LINE Webhook requires HTTPS; use ngrok for testing or your own domain"><strong>HTTPS domain</strong>: LINE Webhook requires HTTPS; use ngrok for testing or your own domain</li>
+<li data-en="&lt;strong&gt;Database&lt;/strong&gt; (optional): If you need to store user data or booking records"><strong>Database</strong> (optional): If you need to store user data or booking records</li>
+</ul>
+<div class="highlight-box">
+<p data-en="&lt;strong&gt;Can't code?&lt;/strong&gt; LINE official accounts have a built-in &quot;auto-response message&quot; feature for simple keyword replies without any programming. But the functionality is limited — advanced features require development."><strong>Can't code?</strong> LINE official accounts have a built-in "auto-response message" feature for simple keyword replies without any programming. But the functionality is limited — advanced features require development.</p>
+</div>
+<h2 data-en="LINE Developer Console Setup" id="line-developer">LINE Developer Console Setup</h2>
+<p data-en="LINE Developer Console is where you manage your LINE Bot. Here are the basic setup steps:">LINE Developer Console is where you manage your LINE Bot. Here are the basic setup steps:</p>
+<ol>
+<li data-en="&lt;strong&gt;Create a Provider&lt;/strong&gt;: After logging into LINE Developers, create a Provider and enter your brand name"><strong>Create a Provider</strong>: After logging into LINE Developers, create a Provider and enter your brand name</li>
+<li data-en="&lt;strong&gt;Create a Messaging API Channel&lt;/strong&gt;: Create a Messaging API Channel under the Provider"><strong>Create a Messaging API Channel</strong>: Create a Messaging API Channel under the Provider</li>
+<li data-en="&lt;strong&gt;Get important credentials&lt;/strong&gt;: &lt;ul&gt;&lt;li&gt;Channel Secret: Used to verify requests from LINE&lt;/li&gt;&lt;li&gt;Channel Access Token: Used to send messages to users&lt;/li&gt;&lt;/ul&gt;"><strong>Get important credentials</strong>: <ul><li>Channel Secret: Used to verify requests from LINE</li><li>Channel Access Token: Used to send messages to users</li></ul></li>
+<li data-en="&lt;strong&gt;Set Webhook URL&lt;/strong&gt;: Enter your server address where LINE will send user messages"><strong>Set Webhook URL</strong>: Enter your server address where LINE will send user messages</li>
+<li data-en='&lt;strong&gt;Disable auto-response&lt;/strong&gt;: If you want to control replies with code, remember to turn off "auto-response messages" in LINE Official Account Manager'><strong>Disable auto-response</strong>: If you want to control replies with code, remember to turn off "auto-response messages" in LINE Official Account Manager</li>
+</ol>
+<h2 data-en="Messaging API Fundamentals" id="messaging-api">Messaging API Fundamentals</h2>
+<p data-en="LINE Messaging API is the core of LINE Bot. Understanding these concepts gives you the operating logic of LINE Bot:">LINE Messaging API is the core of LINE Bot. Understanding these concepts gives you the operating logic of LINE Bot:</p>
+<h3 data-en="Webhook (Message Receiving)">Webhook (Message Receiving)</h3>
+<p data-en="When a user sends a message to your Bot, LINE POSTs the message to the URL you configured via Webhook. Your server processes it and replies through the API.">When a user sends a message to your Bot, LINE POSTs the message to the URL you configured via Webhook. Your server processes it and replies through the API.</p>
+<h3 data-en="Message Types">Message Types</h3>
+<ul>
+<li data-en="&lt;strong&gt;Text Message&lt;/strong&gt;: Plain text messages, the most basic interaction"><strong>Text Message</strong>: Plain text messages, the most basic interaction</li>
+<li data-en="&lt;strong&gt;Flex Message&lt;/strong&gt;: Customizable layouts for cards, buttons, carousels, and rich interactive interfaces"><strong>Flex Message</strong>: Customizable layouts for cards, buttons, carousels, and rich interactive interfaces</li>
+<li data-en="&lt;strong&gt;Template Message&lt;/strong&gt;: LINE's preset message templates with buttons, confirmations, carousels, etc."><strong>Template Message</strong>: LINE's preset message templates with buttons, confirmations, carousels, etc.</li>
+<li data-en="&lt;strong&gt;Image / Video / Audio&lt;/strong&gt;: Multimedia messages"><strong>Image / Video / Audio</strong>: Multimedia messages</li>
+<li data-en="&lt;strong&gt;Sticker&lt;/strong&gt;: Sticker messages"><strong>Sticker</strong>: Sticker messages</li>
+</ul>
+<h3>Reply vs Push Message</h3>
+<table class="price-table">
+<thead>
+<tr>
+<th data-en="Type">Type</th>
+<th>Reply Message</th>
+<th>Push Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Trigger method">Trigger method</td>
+<td data-en="User sends message first, Bot replies">User sends message first, Bot replies</td>
+<td data-en="Bot sends proactively">Bot sends proactively</td>
+</tr>
+<tr>
+<td data-en="Cost">Cost</td>
+<td data-en="Free (unlimited)">Free (unlimited)</td>
+<td data-en="Charged by message volume">Charged by message volume</td>
+</tr>
+<tr>
+<td data-en="Use cases">Use cases</td>
+<td data-en="CS replies, feature operations">CS replies, feature operations</td>
+<td data-en="Notifications, reminders, marketing pushes">Notifications, reminders, marketing pushes</td>
+</tr>
+<tr>
+<td data-en="Time limit">Time limit</td>
+<td data-en="Within 30 seconds of receiving message">Within 30 seconds of receiving message</td>
+<td data-en="No limit">No limit</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-box">
+<p data-en="&lt;strong&gt;Cost-saving tip:&lt;/strong&gt; Reply Messages are completely free! So when designing your LINE Bot, make features trigger through user actions (tapping buttons, sending keywords) to save a ton on messaging costs."><strong>Cost-saving tip:</strong> Reply Messages are completely free! So when designing your LINE Bot, make features trigger through user actions (tapping buttons, sending keywords) to save a ton on messaging costs.</p>
+</div>
+<h2 data-en="Common LINE Bot Features" id="features">Common LINE Bot Features</h2>
+<h3 data-en="1. Auto Reply">1. Auto Reply</h3>
+<p data-en="The most basic feature. Automatically replies based on user message content. Can be simple keyword matching or AI-powered smart replies.">The most basic feature. Automatically replies based on user message content. Can be simple keyword matching or AI-powered smart replies.</p>
+<ul>
+<li data-en='&lt;strong&gt;Keyword reply&lt;/strong&gt;: Detects specific keywords (like "business hours," "price") and replies with preset content'><strong>Keyword reply</strong>: Detects specific keywords (like "business hours," "price") and replies with preset content</li>
+<li data-en='&lt;strong&gt;AI smart reply&lt;/strong&gt;: Integrates GPT or Claude to understand natural language and generate answers. See &lt;a href="/blog/ai-customer-service-line.html" style="color:var(--accent);"&gt;AI CS Complete Guide&lt;/a&gt;'><strong>AI smart reply</strong>: Integrates GPT or Claude to understand natural language and generate answers. See <a href="/en/blog/ai-customer-service-line.html" style="color:var(--accent);">AI CS Complete Guide</a></li>
+</ul>
+<h3 data-en="2. Rich Menu">2. Rich Menu</h3>
+<p data-en="The visual menu at the bottom of the LINE chat is the most intuitive entry point for users. You can design multiple button areas that trigger different features when tapped (e.g., book, inquire, contact CS).">The visual menu at the bottom of the LINE chat is the most intuitive entry point for users. You can design multiple button areas that trigger different features when tapped (e.g., book, inquire, contact CS).</p>
+<p data-en="Design tips:">Design tips:</p>
+<ul>
+<li data-en="Keep buttons to 6 or fewer for simplicity">Keep buttons to 6 or fewer for simplicity</li>
+<li data-en="Place the most important feature in the top-left (user's focal point)">Place the most important feature in the top-left (user's focal point)</li>
+<li data-en="Use clear icons and text labels">Use clear icons and text labels</li>
+<li data-en="Design with brand colors">Design with brand colors</li>
+</ul>
+<h3 data-en="3. LIFF (LINE Front-end Framework)">3. LIFF (LINE Front-end Framework)</h3>
+<p data-en="LIFF opens web pages inside the LINE chat. Common uses:">LIFF opens web pages inside the LINE chat. Common uses:</p>
+<ul>
+<li data-en="&lt;strong&gt;Form filling&lt;/strong&gt;: Booking forms, consultation forms, surveys"><strong>Form filling</strong>: Booking forms, consultation forms, surveys</li>
+<li data-en="&lt;strong&gt;Product catalog&lt;/strong&gt;: Richer product info displayed as web pages"><strong>Product catalog</strong>: Richer product info displayed as web pages</li>
+<li data-en="&lt;strong&gt;Member center&lt;/strong&gt;: View booking history, accumulated points, personal info"><strong>Member center</strong>: View booking history, accumulated points, personal info</li>
+</ul>
+<p data-en="LIFF's advantage is direct access to the user's LINE User ID without separate login, creating a smooth experience.">LIFF's advantage is direct access to the user's LINE User ID without separate login, creating a smooth experience.</p>
+<h3 data-en="4. Booking System">4. Booking System</h3>
+<p data-en='Complete the booking flow within the LINE chat, including time slot management, auto-confirmation, and booking reminders. For details, see &lt;a href="/blog/line-bot-booking-system.html" style="color:var(--accent);"&gt;LINE Booking System Complete Guide&lt;/a&gt;.'>Complete the booking flow within the LINE chat, including time slot management, auto-confirmation, and booking reminders. For details, see <a href="/en/blog/line-bot-booking-system.html" style="color:var(--accent);">LINE Booking System Complete Guide</a>.</p>
+<h3 data-en="5. Push Notifications">5. Push Notifications</h3>
+<p data-en="Proactively send notifications to users: booking reminders, order status updates, event notices, birthday greetings, etc. Note that Push Messages count toward your message quota, so control frequency and targeting.">Proactively send notifications to users: booking reminders, order status updates, event notices, birthday greetings, etc. Note that Push Messages count toward your message quota, so control frequency and targeting.</p>
+<h3 data-en="6. Third-Party Integrations">6. Third-Party Integrations</h3>
+<ul>
+<li data-en="&lt;strong&gt;Google Sheets&lt;/strong&gt;: Auto-log bookings, orders, customer data"><strong>Google Sheets</strong>: Auto-log bookings, orders, customer data</li>
+<li data-en="&lt;strong&gt;Google Calendar&lt;/strong&gt;: Sync bookings to calendar"><strong>Google Calendar</strong>: Sync bookings to calendar</li>
+<li data-en="&lt;strong&gt;Telegram&lt;/strong&gt;: Cross-platform sync notifications"><strong>Telegram</strong>: Cross-platform sync notifications</li>
+<li data-en="&lt;strong&gt;Payment gateways (e.g., ECPay, NewebPay)&lt;/strong&gt;: Complete payment within LINE"><strong>Payment gateways (e.g., ECPay, NewebPay)</strong>: Complete payment within LINE</li>
+<li data-en="&lt;strong&gt;Email (e.g., Gmail API)&lt;/strong&gt;: Auto-send confirmation emails"><strong>Email (e.g., Gmail API)</strong>: Auto-send confirmation emails</li>
+</ul>
+<h2 data-en="DIY vs Outsourcing" id="diy-vs-outsource">DIY vs Outsourcing</h2>
+<table class="price-table">
+<thead>
+<tr>
+<th data-en="Comparison">Comparison</th>
+<th data-en="DIY">DIY</th>
+<th data-en="Outsource to AutoDev AI">Outsource to AutoDev AI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Cost">Cost</td>
+<td data-en="Server $6-15/month">Server $6-15/month</td>
+<td data-en="One-time from $250">One-time from $250</td>
+</tr>
+<tr>
+<td data-en="Time cost">Time cost</td>
+<td data-en="Learning + dev about 2-8 weeks">Learning + dev about 2-8 weeks</td>
+<td data-en="1-2 weeks to complete">1-2 weeks to complete</td>
+</tr>
+<tr>
+<td data-en="Skills needed">Skills needed</td>
+<td data-en="Python/Node.js, API integration">Python/Node.js, API integration</td>
+<td data-en="None needed">None needed</td>
+</tr>
+<tr>
+<td data-en="Feature quality">Feature quality</td>
+<td data-en="Depends on personal ability">Depends on personal ability</td>
+<td data-en="Professional development quality">Professional development quality</td>
+</tr>
+<tr>
+<td data-en="Maintenance">Maintenance</td>
+<td data-en="Self-managed">Self-managed</td>
+<td data-en="14-30 days free maintenance">14-30 days free maintenance</td>
+</tr>
+<tr>
+<td data-en="Best for">Best for</td>
+<td data-en="Technical background, simple needs">Technical background, simple needs</td>
+<td data-en="No time to learn, need advanced features">No time to learn, need advanced features</td>
+</tr>
+<tr>
+<td data-en="Scalability">Scalability</td>
+<td data-en="Depends on personal planning">Depends on personal planning</td>
+<td data-en="Add features anytime">Add features anytime</td>
+</tr>
+</tbody>
+</table>
+<h3 data-en="When Should You DIY?">When Should You DIY?</h3>
+<ul>
+<li data-en="You have programming experience">You have programming experience</li>
+<li data-en="Your needs are simple (just basic keyword replies)">Your needs are simple (just basic keyword replies)</li>
+<li data-en="You want to learn LINE Bot development">You want to learn LINE Bot development</li>
+<li data-en="Your budget is very limited">Your budget is very limited</li>
+</ul>
+<h3 data-en="When Should You Outsource?">When Should You Outsource?</h3>
+<ul>
+<li data-en="You don't have a programming background">You don't have a programming background</li>
+<li data-en="You need advanced features like AI CS or booking systems">You need advanced features like AI CS or booking systems</li>
+<li data-en="You want to launch quickly (within 1-2 weeks)">You want to launch quickly (within 1-2 weeks)</li>
+<li data-en="You need long-term maintenance and tech support">You need long-term maintenance and tech support</li>
+<li data-en="Your time is worth more than the development cost">Your time is worth more than the development cost</li>
+</ul>
+<div class="highlight-box">
+<p data-en="&lt;strong&gt;Practical advice:&lt;/strong&gt; If you're a store owner and the revenue you generate per hour far exceeds the dev cost amortized hourly, outsourcing is absolutely the smarter choice. Spend your time on what you do best and leave the tech to professionals. &lt;a href=&quot;/pricing.html&quot; style=&quot;color:var(--accent);&quot;&gt;View AutoDev AI Plans &amp;rarr;&lt;/a&gt;"><strong>Practical advice:</strong> If you're a store owner and the revenue you generate per hour far exceeds the dev cost amortized hourly, outsourcing is absolutely the smarter choice. Spend your time on what you do best and leave the tech to professionals. <a href="/en/pricing.html" style="color:var(--accent);">View AutoDev AI Plans →</a></p>
+</div>
+<h2 data-en="Common Pitfalls in LINE Bot Development">Common Pitfalls in LINE Bot Development</h2>
+<ol>
+<li data-en="&lt;strong&gt;Forgetting Webhook verification&lt;/strong&gt;: LINE periodically verifies your Webhook URL. If your server doesn't respond with 200 OK correctly, the Bot will stop receiving messages."><strong>Forgetting Webhook verification</strong>: LINE periodically verifies your Webhook URL. If your server doesn't respond with 200 OK correctly, the Bot will stop receiving messages.</li>
+<li data-en='&lt;strong&gt;Reply Token expiration&lt;/strong&gt;: Reply Tokens are only valid for 30 seconds. If your processing logic is too slow (e.g., waiting for AI reply), replies will fail. Solution: reply "Processing..." first, then send results via Push Message.'><strong>Reply Token expiration</strong>: Reply Tokens are only valid for 30 seconds. If your processing logic is too slow (e.g., waiting for AI reply), replies will fail. Solution: reply "Processing..." first, then send results via Push Message.</li>
+<li data-en="&lt;strong&gt;No error handling&lt;/strong&gt;: When the server errors without proper fallback, users send messages but get zero response — terrible experience. Always set up a default reply."><strong>No error handling</strong>: When the server errors without proper fallback, users send messages but get zero response — terrible experience. Always set up a default reply.</li>
+<li data-en="&lt;strong&gt;Ignoring LINE's message limits&lt;/strong&gt;: The free plan only has 200 Push Messages per month. If you have many users, you'll run out fast. Plan for messaging costs early."><strong>Ignoring LINE's message limits</strong>: The free plan only has 200 Push Messages per month. If you have many users, you'll run out fast. Plan for messaging costs early.</li>
+<li data-en="&lt;strong&gt;Skipping UX testing&lt;/strong&gt;: Launching right after development without testing means users have no idea how to operate it. Get at least 3-5 people to test before going live."><strong>Skipping UX testing</strong>: Launching right after development without testing means users have no idea how to operate it. Get at least 3-5 people to test before going live.</li>
+</ol>
+<h2 data-en="FAQ" id="faq">FAQ</h2>
+<div class="faq-list">
+<div class="faq-item fade-in">
+<div class="faq-q" data-en="Do I need programming skills to develop a LINE Bot?">Do I need programming skills to develop a LINE Bot?</div>
+<div class="faq-a" data-en="Basic auto-replies can be set up using LINE official account's &quot;auto-response messages&quot; without coding. But for AI CS, booking systems, or external service integrations, you'll need programming skills (typically Python or Node.js).">Basic auto-replies can be set up using LINE official account's "auto-response messages" without coding. But for AI CS, booking systems, or external service integrations, you'll need programming skills (typically Python or Node.js).</div>
+</div>
+<div class="faq-item fade-in">
+<div class="faq-q" data-en="How long does LINE Bot development take?">How long does LINE Bot development take?</div>
+<div class="faq-a" data-en="Depends on complexity. Basic auto-reply about 1-3 days, with AI CS about 1 week, full booking system about 2 weeks. AI-assisted development can speed things up 5-10x.">Depends on complexity. Basic auto-reply about 1-3 days, with AI CS about 1 week, full booking system about 2 weeks. AI-assisted development can speed things up 5-10x.</div>
+</div>
+<div class="faq-item fade-in">
+<div class="faq-q" data-en="Can I build a LINE Bot for free?">Can I build a LINE Bot for free?</div>
+<div class="faq-a" data-en="LINE Messaging API itself is free, and the free tier of LINE official accounts allows 200 push messages per month (reply messages are unlimited). But server deployment costs about $6-15/month.">LINE Messaging API itself is free, and the free tier of LINE official accounts allows 200 push messages per month (reply messages are unlimited). But server deployment costs about $6-15/month.</div>
+</div>
+<div class="faq-item fade-in">
+<div class="faq-q" data-en="What's the difference between DIY and outsourcing a LINE Bot?">What's the difference between DIY and outsourcing a LINE Bot?</div>
+<div class="faq-a" data-en="DIY saves money but takes time — suited for those with technical backgrounds and simple needs. Outsourcing to professionals is faster, more reliable, and comes with after-sales support — suited for those without technical backgrounds or needing advanced features.">DIY saves money but takes time — suited for those with technical backgrounds and simple needs. Outsourcing to professionals is faster, more reliable, and comes with after-sales support — suited for those without technical backgrounds or needing advanced features.</div>
+</div>
+<div class="faq-item fade-in">
+<div class="faq-q" data-en="What's the difference between LINE Bot and LINE official account?">What's the difference between LINE Bot and LINE official account?</div>
+<div class="faq-a" data-en="A LINE official account is a business account provided by LINE with basic auto-response features. A LINE Bot is a program developed through Messaging API that can handle more complex functions like AI conversations, booking systems, and database integrations. LINE Bot is built on top of a LINE official account.">A LINE official account is a business account provided by LINE with basic auto-response features. A LINE Bot is a program developed through Messaging API that can handle more complex functions like AI conversations, booking systems, and database integrations. LINE Bot is built on top of a LINE official account.</div>
+</div>
+</div>
+<div class="highlight-box" style="margin-top:2rem;">
+<p data-en='&lt;strong&gt;Free Consultation:&lt;/strong&gt; Found the tutorial too complex? No worries — &lt;a href="/contact.html" style="color:var(--accent);"&gt;contact us&lt;/a&gt; for a free 30-minute assessment of your needs and quote. No charge, no pressure.'><strong>Free Consultation:</strong> Found the tutorial too complex? No worries — <a href="/en/contact.html" style="color:var(--accent);">contact us</a> for a free 30-minute assessment of your needs and quote. No charge, no pressure.</p>
+</div>
+</article>
+<!-- CTA -->
+<section class="cta-section">
+<div class="cta-box fade-in">
+<h2 data-en="Don't want to code? Leave it to us">Don't want to code? Leave it to us</h2>
+<p data-en="LINE Bot development from $250, completed in as fast as 1 week.">LINE Bot development from $250, completed in as fast as 1 week.</p>
+<div class="cta-buttons">
+<a class="btn btn-primary" data-en="Free Consultation →" href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank">Free Consultation →</a>
+<a class="btn btn-secondary" data-en="View Plans" href="/en/pricing.html">View Plans</a>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<p>© 2026 AutoDev AI. Built with AI.</p>
+</footer>
+<script defer="" src="/chat-widget.js"></script>
+<script defer="" src="/lang.js"></script>
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
+fadeEls.forEach(el => observer.observe(el));
+setTimeout(() => { fadeEls.forEach(el => { const rect = el.getBoundingClientRect(); if (rect.top < window.innerHeight + 100) el.classList.add('visible'); }); }, 150);
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+mobileMenuBtn.addEventListener('click', () => { navLinks.classList.toggle('show'); mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630'; });
+navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('show'); mobileMenuBtn.textContent = '\u2630'; }); });
+document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+        const item = q.parentElement;
+        document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
+        item.classList.toggle('open');
+    });
+});
+</script>
+</body>
+</html>
