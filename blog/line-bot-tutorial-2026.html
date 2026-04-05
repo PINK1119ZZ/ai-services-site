@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINE Bot 開發教學：從零開始到上線的完整攻略（2026）| AutoDev AI</title>
+    <meta name="description" content="LINE Bot 開發教學完整攻略：LINE Developer 設定、Messaging API 基礎、常見功能開發（自動回覆、Rich Menu、LIFF）、DIY vs 外包比較。2026 最新版。">
+    <link rel="canonical" href="https://autodev-ai.com/blog/line-bot-tutorial-2026.html">
+    <meta property="og:title" content="LINE Bot 開發教學：從零開始到上線的完整攻略（2026）">
+    <meta property="og:description" content="LINE Bot 開發完整教學：從 LINE Developer 設定到常見功能開發，含 DIY vs 外包比較。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/line-bot-tutorial-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LINE Bot 開發教學：從零開始到上線的完整攻略（2026）">
+    <meta name="twitter:description" content="LINE Bot 開發完整教學：從 LINE Developer 設定到常見功能開發，含 DIY vs 外包比較。">
+    <meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <meta name="theme-color" content="#0F0F1A">
+    <meta name="keywords" content="LINE Bot 開發教學,LINE Bot 教學,LINE 機器人教學,LINE Bot 製作,LINE Messaging API,LINE Bot 開發,LINE LIFF 教學,Rich Menu 教學">
+    <meta name="author" content="AutoDev AI">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"LINE Bot 開發教學：從零開始到上線的完整攻略（2026）","description":"LINE Bot 開發完整教學，含 LINE Developer 設定、Messaging API、常見功能開發、DIY vs 外包比較","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-05","dateModified":"2026-04-05","mainEntityOfPage":"https://autodev-ai.com/blog/line-bot-tutorial-2026.html","image":"https://autodev-ai.com/autodev-logo2.png"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"LINE Bot 開發需要會寫程式嗎？","acceptedAnswer":{"@type":"Answer","text":"基礎的自動回覆可以用 LINE 官方帳號的「自動回應訊息」設定，不需要寫程式。但如果要做 AI 客服、預約系統、串接外部服務，就需要程式開發能力（通常用 Python 或 Node.js）。"}},{"@type":"Question","name":"LINE Bot 開發要多久？","acceptedAnswer":{"@type":"Answer","text":"視功能複雜度而定。基礎自動回覆約 1-3 天，含 AI 客服約 1 週，完整預約系統約 2 週。使用 AI 輔助開發可以加速 5-10 倍。"}},{"@type":"Question","name":"LINE Bot 可以免費做嗎？","acceptedAnswer":{"@type":"Answer","text":"LINE Messaging API 本身免費，LINE 官方帳號免費版每月可發 200 則推播訊息（回覆訊息不限）。但如果需要伺服器部署，會有主機費用（約 NT$200-500/月）。"}},{"@type":"Question","name":"自己做 LINE Bot 跟外包有什麼差別？","acceptedAnswer":{"@type":"Answer","text":"自己做省錢但耗時，適合有技術背景且需求簡單的情況。外包給專業開發者速度快、品質穩定、有售後支援，適合沒有技術背景或需要進階功能的商家。"}},{"@type":"Question","name":"LINE Bot 跟 LINE 官方帳號有什麼不同？","acceptedAnswer":{"@type":"Answer","text":"LINE 官方帳號是 LINE 提供的商業帳號，有基本的自動回應功能。LINE Bot 是透過 Messaging API 開發的程式，可以做到更複雜的功能如 AI 對話、預約系統、資料庫串接等。LINE Bot 建立在 LINE 官方帳號之上。"}}]}
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+    <style>
+        .blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
+        .blog-article h2 { color: var(--primary-light); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
+        .blog-article h3 { color: var(--text); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
+        .blog-article p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .blog-article ul, .blog-article ol { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .blog-article li { margin-bottom: 0.5rem; }
+        .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; text-align: center; }
+        .blog-meta span { margin: 0 0.5rem; }
+        .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+        .price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .price-table th { color: var(--primary-light); font-weight: 700; background: rgba(99,102,241,0.1); }
+        .price-table td { color: var(--text-secondary); }
+        .price-table tr:hover td { background: rgba(99,102,241,0.05); }
+        .highlight-box { background: rgba(99,102,241,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; margin: 1.5rem 0; }
+        .highlight-box p { margin-bottom: 0; color: var(--text); }
+        .blog-nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+        .blog-nav a { color: var(--primary-light); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(99,102,241,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
+        .blog-nav a:hover { background: rgba(99,102,241,0.2); border-color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">AutoDev AI</a>
+        <div class="nav-links" id="navLinks">
+            <a href="/services.html">服務</a>
+            <a href="/portfolio.html">作品</a>
+            <a href="/pricing.html">方案</a>
+            <a href="/blog/" class="active">部落格</a>
+            <a href="/about.html">關於</a>
+            <a href="/contact.html" class="nav-cta">免費諮詢</a>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <h1>LINE Bot 開發教學</h1>
+    <p>從零開始到上線的完整攻略（2026）</p>
+</section>
+
+<!-- ARTICLE -->
+<article class="blog-article fade-in">
+    <div class="blog-meta">
+        <span>Ivan / AutoDev AI</span> | <span>2026-04-05</span> | <span>閱讀時間 10 分鐘</span>
+    </div>
+
+    <div class="blog-nav">
+        <a href="#prerequisites">前置準備</a>
+        <a href="#line-developer">LINE Developer</a>
+        <a href="#messaging-api">Messaging API</a>
+        <a href="#features">常見功能</a>
+        <a href="#diy-vs-outsource">DIY vs 外包</a>
+        <a href="#faq">常見問題</a>
+    </div>
+
+    <p>LINE Bot（LINE 機器人）是台灣商家最愛用的數位工具之一。無論是自動回覆、預約系統還是 AI 客服，都建立在 LINE Bot 的基礎上。這篇教學會帶你了解 LINE Bot 開發的完整流程，幫你評估到底要自己動手還是找人外包。</p>
+
+    <h2 id="prerequisites">開發 LINE Bot 需要什麼？</h2>
+
+    <h3>必備條件</h3>
+    <ul>
+        <li><strong>LINE 帳號</strong>：用來登入 LINE Developer Console</li>
+        <li><strong>LINE 官方帳號</strong>：到 <a href="https://manager.line.biz/" target="_blank" rel="noopener" style="color:var(--accent);">LINE Official Account Manager</a> 免費建立</li>
+        <li><strong>LINE Developer 帳號</strong>：到 <a href="https://developers.line.biz/" target="_blank" rel="noopener" style="color:var(--accent);">LINE Developers</a> 註冊</li>
+    </ul>
+
+    <h3>進階功能還需要</h3>
+    <ul>
+        <li><strong>程式開發能力</strong>：Python 或 Node.js（最常用的兩種語言）</li>
+        <li><strong>伺服器</strong>：用來部署你的 Bot 後端程式（雲端主機或 VPS）</li>
+        <li><strong>HTTPS 網域</strong>：LINE Webhook 要求 HTTPS，可用 ngrok 測試或自有網域</li>
+        <li><strong>資料庫</strong>（選配）：如果需要儲存用戶資料或預約記錄</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p><strong>不會寫程式？</strong>LINE 官方帳號內建「自動回應訊息」功能，可以設定簡單的關鍵字回覆，不需要寫任何程式。但功能有限，想做進階功能就需要開發了。</p>
+    </div>
+
+    <h2 id="line-developer">LINE Developer Console 設定</h2>
+
+    <p>LINE Developer Console 是管理你的 LINE Bot 的地方。以下是基本設定步驟：</p>
+
+    <ol>
+        <li><strong>建立 Provider</strong>：登入 LINE Developers 後，建立一個 Provider（提供者），填入你的品牌名稱</li>
+        <li><strong>建立 Messaging API Channel</strong>：在 Provider 底下建立一個 Messaging API 的 Channel</li>
+        <li><strong>取得重要資訊</strong>：
+            <ul>
+                <li>Channel Secret：用來驗證 LINE 送來的請求</li>
+                <li>Channel Access Token：用來發送訊息給用戶</li>
+            </ul>
+        </li>
+        <li><strong>設定 Webhook URL</strong>：填入你的伺服器位址，LINE 會把用戶的訊息送到這個位址</li>
+        <li><strong>關閉自動回應</strong>：如果你要用程式控制回覆，記得到 LINE Official Account Manager 關閉「自動回應訊息」</li>
+    </ol>
+
+    <h2 id="messaging-api">Messaging API 基礎概念</h2>
+
+    <p>LINE Messaging API 是 LINE Bot 的核心。理解以下概念，你就掌握了 LINE Bot 的運作邏輯：</p>
+
+    <h3>Webhook（訊息接收）</h3>
+    <p>當用戶發送訊息給你的 Bot，LINE 會透過 Webhook 把訊息 POST 到你設定的 URL。你的伺服器接收後處理，再透過 API 回覆。</p>
+
+    <h3>訊息類型</h3>
+    <ul>
+        <li><strong>Text Message</strong>：純文字訊息，最基本的互動方式</li>
+        <li><strong>Flex Message</strong>：客製化版面的訊息，可以做出卡片、按鈕、輪播等豐富的互動介面</li>
+        <li><strong>Template Message</strong>：LINE 預設的訊息模板，含按鈕、確認、輪播等</li>
+        <li><strong>Image / Video / Audio</strong>：多媒體訊息</li>
+        <li><strong>Sticker</strong>：貼圖訊息</li>
+    </ul>
+
+    <h3>Reply vs Push Message</h3>
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>類型</th>
+                <th>Reply Message</th>
+                <th>Push Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>觸發方式</td>
+                <td>用戶先發訊息，Bot 回覆</td>
+                <td>Bot 主動發送</td>
+            </tr>
+            <tr>
+                <td>費用</td>
+                <td>免費（不限次數）</td>
+                <td>依訊息量計費</td>
+            </tr>
+            <tr>
+                <td>使用場景</td>
+                <td>客服回覆、功能操作</td>
+                <td>通知、提醒、行銷推播</td>
+            </tr>
+            <tr>
+                <td>時間限制</td>
+                <td>收到訊息後 30 秒內</td>
+                <td>無限制</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="highlight-box">
+        <p><strong>省錢重點：</strong>Reply Message 完全免費！所以設計 LINE Bot 時，盡量讓功能都透過用戶主動觸發（點按鈕、發關鍵字），就能省下大量的訊息費用。</p>
+    </div>
+
+    <h2 id="features">LINE Bot 常見功能開發</h2>
+
+    <h3>1. 自動回覆（Auto Reply）</h3>
+    <p>最基礎的功能。根據用戶發送的訊息內容，自動回覆對應的訊息。可以是簡單的關鍵字匹配，也可以串接 AI 做智慧回覆。</p>
+    <ul>
+        <li><strong>關鍵字回覆</strong>：偵測特定關鍵字（如「營業時間」、「價格」），回覆設定好的內容</li>
+        <li><strong>AI 智慧回覆</strong>：串接 GPT 或 Claude，理解自然語言並生成回答。詳見<a href="/blog/ai-customer-service-line.html" style="color:var(--accent);">AI 客服完整指南</a></li>
+    </ul>
+
+    <h3>2. Rich Menu（圖文選單）</h3>
+    <p>LINE 聊天室底部的圖文選單，是用戶最直覺的操作入口。可以設計多個按鈕區域，點擊後觸發不同功能（如：預約、查詢、聯絡客服）。</p>
+    <p>設計重點：</p>
+    <ul>
+        <li>按鈕不要超過 6 個，保持簡潔</li>
+        <li>最重要的功能放在左上角（用戶視線焦點）</li>
+        <li>使用清晰的圖示和文字說明</li>
+        <li>配合品牌色調設計</li>
+    </ul>
+
+    <h3>3. LIFF（LINE Front-end Framework）</h3>
+    <p>LIFF 可以在 LINE 聊天室內開啟網頁。常用於：</p>
+    <ul>
+        <li><strong>表單填寫</strong>：預約表單、諮詢表單、問卷調查</li>
+        <li><strong>產品目錄</strong>：用網頁呈現更豐富的產品資訊</li>
+        <li><strong>會員中心</strong>：查看預約記錄、累積點數、個人資料</li>
+    </ul>
+    <p>LIFF 的優勢是可以直接取得用戶的 LINE User ID，不需要另外登入，體驗流暢。</p>
+
+    <h3>4. 預約系統</h3>
+    <p>在 LINE 聊天室內完成預約流程。包含時段管理、自動確認、預約提醒等。詳細介紹請看<a href="/blog/line-bot-booking-system.html" style="color:var(--accent);">LINE 預約系統完整指南</a>。</p>
+
+    <h3>5. 通知推播</h3>
+    <p>主動發送通知給用戶，如：預約提醒、訂單狀態更新、活動通知、生日祝福等。注意 Push Message 會計入訊息量，要控制發送頻率和對象。</p>
+
+    <h3>6. 第三方服務串接</h3>
+    <ul>
+        <li><strong>Google Sheets</strong>：自動記錄預約、訂單、客戶資料</li>
+        <li><strong>Google Calendar</strong>：同步預約到行事曆</li>
+        <li><strong>Telegram</strong>：跨平台同步通知</li>
+        <li><strong>金流（如綠界、藍新）</strong>：LINE 內完成付款</li>
+        <li><strong>Email（如 Gmail API）</strong>：自動發送確認信</li>
+    </ul>
+
+    <h2 id="diy-vs-outsource">DIY 自己做 vs 外包開發</h2>
+
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>比較項目</th>
+                <th>DIY 自己做</th>
+                <th>外包給 AutoDev AI</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>費用</td>
+                <td>伺服器費 NT$200-500/月</td>
+                <td>一次性 NT$8,000 起</td>
+            </tr>
+            <tr>
+                <td>時間成本</td>
+                <td>學習 + 開發約 2-8 週</td>
+                <td>1-2 週交付</td>
+            </tr>
+            <tr>
+                <td>需要技能</td>
+                <td>Python/Node.js、API 串接</td>
+                <td>不需要</td>
+            </tr>
+            <tr>
+                <td>功能品質</td>
+                <td>依個人能力</td>
+                <td>專業開發品質</td>
+            </tr>
+            <tr>
+                <td>維護</td>
+                <td>自己負責</td>
+                <td>14-30 天免費維護</td>
+            </tr>
+            <tr>
+                <td>適合對象</td>
+                <td>有技術背景、需求簡單</td>
+                <td>沒時間學、需要進階功能</td>
+            </tr>
+            <tr>
+                <td>擴充性</td>
+                <td>依個人規劃</td>
+                <td>可隨時加購功能</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>什麼時候該自己做？</h3>
+    <ul>
+        <li>你本身有程式開發經驗</li>
+        <li>需求很簡單（只需要基礎的關鍵字回覆）</li>
+        <li>你想學習 LINE Bot 開發技術</li>
+        <li>預算非常有限</li>
+    </ul>
+
+    <h3>什麼時候該找外包？</h3>
+    <ul>
+        <li>你沒有程式開發背景</li>
+        <li>需要 AI 客服、預約系統等進階功能</li>
+        <li>希望快速上線（1-2 週內）</li>
+        <li>需要長期維護和技術支援</li>
+        <li>你的時間比開發費更有價值</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p><strong>務實建議：</strong>如果你是店老闆，每小時能創造的營收遠高於開發費分攤到每小時的成本，那外包絕對是更聰明的選擇。把時間花在你最擅長的事情上，技術的事交給專業的。<a href="/pricing.html" style="color:var(--accent);">查看 AutoDev AI 方案 →</a></p>
+    </div>
+
+    <h2>LINE Bot 開發常見的地雷</h2>
+
+    <ol>
+        <li><strong>忘記處理 Webhook 驗證</strong>：LINE 會定期驗證 Webhook URL，如果你的伺服器沒有正確回應 200 OK，Bot 會停止接收訊息。</li>
+        <li><strong>Reply Token 過期</strong>：Reply Token 只有 30 秒有效期，如果你的處理邏輯太慢（例如等 AI 回覆），會導致回覆失敗。解法是先回覆「處理中」，再用 Push Message 送結果。</li>
+        <li><strong>沒有錯誤處理</strong>：伺服器出錯時沒有適當的 fallback，用戶發訊息卻完全沒有回應，體驗很差。一定要設定預設回覆。</li>
+        <li><strong>忽略 LINE 的訊息量限制</strong>：免費版每月只有 200 則 Push Message。如果你的用戶多，很快就會用完。規劃時要考慮訊息費用。</li>
+        <li><strong>沒有做使用者體驗測試</strong>：開發完直接上線，結果用戶根本不知道怎麼操作。上線前至少找 3-5 個人測試。</li>
+    </ol>
+
+    <h2 id="faq">常見問題</h2>
+
+    <div class="faq-list">
+        <div class="faq-item fade-in">
+            <div class="faq-q">LINE Bot 開發需要會寫程式嗎？</div>
+            <div class="faq-a">基礎的自動回覆可以用 LINE 官方帳號的「自動回應訊息」設定，不需要寫程式。但如果要做 AI 客服、預約系統、串接外部服務，就需要程式開發能力（通常用 Python 或 Node.js）。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">LINE Bot 開發要多久？</div>
+            <div class="faq-a">視功能複雜度而定。基礎自動回覆約 1-3 天，含 AI 客服約 1 週，完整預約系統約 2 週。使用 AI 輔助開發可以加速 5-10 倍。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">LINE Bot 可以免費做嗎？</div>
+            <div class="faq-a">LINE Messaging API 本身免費，LINE 官方帳號免費版每月可發 200 則推播訊息（回覆訊息不限）。但如果需要伺服器部署，會有主機費用（約 NT$200-500/月）。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">自己做 LINE Bot 跟外包有什麼差別？</div>
+            <div class="faq-a">自己做省錢但耗時，適合有技術背景且需求簡單的情況。外包給專業開發者速度快、品質穩定、有售後支援，適合沒有技術背景或需要進階功能的商家。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">LINE Bot 跟 LINE 官方帳號有什麼不同？</div>
+            <div class="faq-a">LINE 官方帳號是 LINE 提供的商業帳號，有基本的自動回應功能。LINE Bot 是透過 Messaging API 開發的程式，可以做到更複雜的功能如 AI 對話、預約系統、資料庫串接等。LINE Bot 建立在 LINE 官方帳號之上。</div>
+        </div>
+    </div>
+
+    <div class="highlight-box" style="margin-top:2rem;">
+        <p><strong>免費諮詢：</strong>看完教學覺得太複雜？沒關係，<a href="/contact.html" style="color:var(--accent);">聯繫我們</a>，30 分鐘免費幫你評估需求和報價。不收費、沒壓力。</p>
+    </div>
+</article>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-box fade-in">
+        <h2>不想自己寫程式？交給我們</h2>
+        <p>LINE Bot 開發 NT$8,000 起，最快 1 週交付。</p>
+        <div class="cta-buttons">
+            <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" class="btn btn-primary">免費諮詢 →</a>
+            <a href="/pricing.html" class="btn btn-secondary">查看方案</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 AutoDev AI. Built with AI.</p>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
+fadeEls.forEach(el => observer.observe(el));
+setTimeout(() => { fadeEls.forEach(el => { const rect = el.getBoundingClientRect(); if (rect.top < window.innerHeight + 100) el.classList.add('visible'); }); }, 150);
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+mobileMenuBtn.addEventListener('click', () => { navLinks.classList.toggle('show'); mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630'; });
+navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('show'); mobileMenuBtn.textContent = '\u2630'; }); });
+document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+        const item = q.parentElement;
+        document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
+        item.classList.toggle('open');
+    });
+});
+</script>
+</body>
+</html>
