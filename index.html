@@ -585,6 +585,62 @@
 
         .pricing-btn:hover { transform: translateY(-2px); }
 
+        /* ===== ADD-ONS ===== */
+        .addons-section {
+            margin-top: 4rem;
+        }
+        .addons-title {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 0.5rem;
+        }
+        .addons-subtitle {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .addon-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 1.2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .addon-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .addon-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .addon-name { font-weight: 600; color: var(--light); margin-bottom: 0.3rem; font-size: 0.95rem; }
+        .addon-price { color: var(--accent); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .addon-desc { color: var(--muted); font-size: 0.8rem; line-height: 1.4; }
+
+        /* ===== MAINTENANCE ===== */
+        .maintenance-section {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .maintenance-card {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(108,92,231,0.1), rgba(0,210,211,0.1));
+            border: 1px solid rgba(108,92,231,0.2);
+            border-radius: 16px;
+            padding: 2rem 3rem;
+            max-width: 500px;
+        }
+        .maintenance-card .addon-price { font-size: 1.3rem; }
+
         /* ===== WHY ME ===== */
         .why-grid {
             max-width: 900px;
@@ -1070,6 +1126,74 @@
                 <li>月費維護可選</li>
             </ul>
             <a href="#contact" class="pricing-btn">聯繫我</a>
+        </div>
+    </div>
+
+    <!-- ADD-ON SERVICES -->
+    <div class="addons-section fade-in">
+        <div class="addons-title">附加服務 — 單點加購</div>
+        <div class="addons-subtitle">可搭配任何方案，也可獨立購買</div>
+        <div class="addons-grid">
+            <div class="addon-card">
+                <div class="addon-icon">🌐</div>
+                <div class="addon-name">企業官網 / Landing Page</div>
+                <div class="addon-price">NT$5,000 起</div>
+                <div class="addon-desc">響應式設計、SEO 優化、一頁式或多頁</div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-icon">📊</div>
+                <div class="addon-name">GA4 流量分析安裝</div>
+                <div class="addon-price">NT$1,500</div>
+                <div class="addon-desc">Google Analytics 建置 + Search Console 提交</div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-icon">🔍</div>
+                <div class="addon-name">SEO 基礎優化</div>
+                <div class="addon-price">NT$3,000</div>
+                <div class="addon-desc">Meta tags、結構化資料、Sitemap、關鍵字佈局</div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-icon">🖼️</div>
+                <div class="addon-name">Rich Menu 設計</div>
+                <div class="addon-price">NT$2,000</div>
+                <div class="addon-desc">LINE 圖文選單設計 + API 上傳設定</div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-icon">📝</div>
+                <div class="addon-name">LIFF 表單系統</div>
+                <div class="addon-price">NT$3,000</div>
+                <div class="addon-desc">LINE 內建表單、自動通知、資料記錄</div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-icon">🔔</div>
+                <div class="addon-name">跨平台通知整合</div>
+                <div class="addon-price">NT$2,500</div>
+                <div class="addon-desc">LINE ↔ Telegram 雙向通知推播</div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-icon">🤖</div>
+                <div class="addon-name">AI 智慧回覆模組</div>
+                <div class="addon-price">NT$3,500</div>
+                <div class="addon-desc">GPT 驅動、品牌人設、上下文記憶</div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-icon">🕷️</div>
+                <div class="addon-name">數據爬蟲 & 自動報表</div>
+                <div class="addon-price">NT$5,000 起</div>
+                <div class="addon-desc">定時爬取、資料清洗、自動發送報告</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAINTENANCE -->
+    <div class="maintenance-section fade-in">
+        <div class="addons-title" style="margin-top:2rem;">長期維護方案</div>
+        <div class="addons-subtitle">交付後持續優化，讓系統穩定運作</div>
+        <div class="maintenance-card">
+            <div class="addon-icon">🛡️</div>
+            <div class="addon-name">月費維護</div>
+            <div class="addon-price">NT$2,000/月 起</div>
+            <div class="addon-desc">Bug 修復、功能微調、伺服器監控、API 額度管理<br>依系統複雜度報價</div>
         </div>
     </div>
 </section>
