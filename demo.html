@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>免費體驗 LINE Bot Demo | AI 智慧客服即時試用 — AutoDev AI</title>
+    <meta name="description" content="免費體驗 LINE Bot Demo，掃碼加好友即可試用 AI 智慧客服、自動預約、LIFF 表單。30 秒感受自動化的威力。LINE Bot 體驗、LINE Bot demo。">
+    <link rel="canonical" href="https://autodev-ai.com/demo.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="免費體驗 LINE Bot Demo | AI 智慧客服即時試用 — AutoDev AI">
+    <meta property="og:description" content="掃碼體驗 AI 智慧客服，30 秒感受自動化的威力。免費試用 LINE Bot Demo。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autodev-ai.com/demo.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="免費體驗 LINE Bot Demo | AI 智慧客服即時試用 — AutoDev AI">
+    <meta name="twitter:description" content="掃碼體驗 AI 智慧客服，30 秒感受自動化的威力。免費試用 LINE Bot Demo。">
+    <meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <meta name="theme-color" content="#0F0F1A">
+    <meta name="keywords" content="LINE Bot 體驗,LINE Bot demo,AI 客服體驗,LINE Bot 試用,LINE 機器人 demo,AI 智慧客服,LINE 預約機器人,AutoDev AI">
+    <meta name="author" content="AutoDev AI">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "免費體驗 LINE Bot Demo",
+        "description": "掃碼體驗 AI 智慧客服，30 秒感受自動化的威力。免費試用 LINE Bot Demo。",
+        "url": "https://autodev-ai.com/demo.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "AutoDev AI",
+            "url": "https://autodev-ai.com",
+            "logo": "https://autodev-ai.com/autodev-logo2.png"
+        },
+        "mainEntity": {
+            "@type": "SoftwareApplication",
+            "name": "AutoDev AI LINE Bot Demo",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "LINE",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "TWD"
+            }
+        }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+    <style>
+        /* QR Code Glow Container */
+        .qr-container {
+            display: inline-block;
+            padding: 1.5rem;
+            border-radius: 20px;
+            background: var(--dark-2);
+            border: 2px solid rgba(108,92,231,0.4);
+            box-shadow: 0 0 30px rgba(108,92,231,0.3), 0 0 60px rgba(108,92,231,0.15), inset 0 0 30px rgba(108,92,231,0.05);
+            animation: qrGlow 3s ease-in-out infinite alternate;
+            transition: transform 0.3s ease;
+        }
+        .qr-container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 40px rgba(108,92,231,0.5), 0 0 80px rgba(0,210,211,0.2), inset 0 0 30px rgba(108,92,231,0.08);
+        }
+        @keyframes qrGlow {
+            0% { box-shadow: 0 0 30px rgba(108,92,231,0.3), 0 0 60px rgba(108,92,231,0.15); border-color: rgba(108,92,231,0.4); }
+            100% { box-shadow: 0 0 40px rgba(0,210,211,0.3), 0 0 80px rgba(0,210,211,0.15); border-color: rgba(0,210,211,0.4); }
+        }
+        .qr-container img {
+            display: block;
+            width: 220px;
+            height: 220px;
+            border-radius: 12px;
+        }
+        .qr-hint {
+            margin-top: 1.5rem;
+            color: var(--gray);
+            font-size: 1rem;
+        }
+        .qr-hint strong {
+            color: var(--accent);
+        }
+
+        /* Feature Cards */
+        .demo-features-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .demo-feature-card {
+            background: var(--dark);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .demo-feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-1);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .demo-feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(108,92,231,0.3);
+            box-shadow: var(--shadow-md);
+        }
+        .demo-feature-card:hover::before { opacity: 1; }
+        .demo-feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .demo-feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .demo-feature-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Process Steps (horizontal) */
+        .demo-process {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .demo-step {
+            text-align: center;
+            flex: 1;
+            max-width: 220px;
+        }
+        .demo-step-number {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.3rem;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 20px rgba(108,92,231,0.3);
+        }
+        .demo-step h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .demo-step-arrow {
+            font-size: 1.5rem;
+            color: var(--primary-light);
+            flex-shrink: 0;
+            margin-top: -1.5rem;
+        }
+
+        /* Testimonial Cards */
+        .testimonial-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .testimonial-card {
+            background: var(--dark);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(108,92,231,0.3);
+            box-shadow: var(--shadow-md);
+        }
+        .testimonial-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .testimonial-quote {
+            color: var(--light);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary);
+        }
+        .testimonial-author {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+        .testimonial-author strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Mobile responsive for process steps */
+        @media (max-width: 768px) {
+            .demo-process {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .demo-step-arrow {
+                transform: rotate(90deg);
+                margin-top: 0;
+            }
+            .demo-features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .demo-features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">AutoDev AI</a>
+        <div class="nav-links" id="navLinks">
+            <a href="/services.html">服務</a>
+            <a href="/portfolio.html">作品</a>
+            <a href="/pricing.html">方案</a>
+            <a href="/blog/">部落格</a>
+            <a href="/about.html">關於</a>
+            <a href="/contact.html" class="nav-cta">免費諮詢</a>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <h1>免費體驗 LINE Bot Demo</h1>
+    <p>掃碼體驗 AI 智慧客服，30 秒感受自動化的威力</p>
+</section>
+
+<!-- SECTION 1: 立即體驗 -->
+<section style="background: var(--dark-2); text-align: center;">
+    <div class="section-header fade-in">
+        <div class="section-tag">Try it now</div>
+        <h2>立即體驗</h2>
+        <p>掃描 QR Code 或點擊按鈕，馬上開始</p>
+    </div>
+    <div class="fade-in">
+        <div class="qr-container">
+            <img src="https://qr-official.line.me/gs/M_882vhisc_GW.png" alt="AutoDev AI LINE Bot QR Code - 掃碼加好友體驗 AI 智慧客服" width="220" height="220">
+        </div>
+        <p class="qr-hint">掃碼加好友，輸入「<strong>體驗</strong>」開始 Demo</p>
+        <div style="margin-top: 1.5rem;">
+            <a href="https://line.me/ti/p/@882vhisc" target="_blank" rel="noopener" class="btn btn-primary">用手機加好友 →</a>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 2: 你可以體驗什麼 -->
+<section>
+    <div class="section-header fade-in">
+        <div class="section-tag">Features</div>
+        <h2>你可以體驗什麼</h2>
+        <p>在 LINE 上直接感受 AI 自動化的四大功能</p>
+    </div>
+    <div class="demo-features-grid">
+        <div class="demo-feature-card fade-in">
+            <div class="demo-feature-icon">🤖</div>
+            <h3>AI 智慧對話</h3>
+            <p>問任何關於我們服務的問題，AI 即時回答</p>
+        </div>
+        <div class="demo-feature-card fade-in">
+            <div class="demo-feature-icon">📅</div>
+            <h3>預約流程示範</h3>
+            <p>體驗自動化預約系統的完整流程</p>
+        </div>
+        <div class="demo-feature-card fade-in">
+            <div class="demo-feature-icon">📋</div>
+            <h3>LIFF 表單</h3>
+            <p>LINE 內建諮詢表單，3 步驟完成</p>
+        </div>
+        <div class="demo-feature-card fade-in">
+            <div class="demo-feature-icon">🔔</div>
+            <h3>即時通知</h3>
+            <p>表單送出後自動通知，不漏接任何訊息</p>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 3: 從體驗到上線只要 3 步 -->
+<section style="background: var(--dark-2);">
+    <div class="section-header fade-in">
+        <div class="section-tag">Process</div>
+        <h2>從體驗到上線只要 3 步</h2>
+    </div>
+    <div class="demo-process fade-in">
+        <div class="demo-step">
+            <div class="demo-step-number">1</div>
+            <h3>掃碼體驗 Demo</h3>
+        </div>
+        <div class="demo-step-arrow">→</div>
+        <div class="demo-step">
+            <div class="demo-step-number">2</div>
+            <h3>告訴我你的需求</h3>
+        </div>
+        <div class="demo-step-arrow">→</div>
+        <div class="demo-step">
+            <div class="demo-step-number">3</div>
+            <h3>2 週內交付上線</h3>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 4: 客戶怎麼說 -->
+<section>
+    <div class="section-header fade-in">
+        <div class="section-tag">Testimonials</div>
+        <h2>客戶怎麼說</h2>
+        <p>不同產業的老闆都用 AI 解放時間</p>
+    </div>
+    <div class="testimonial-grid">
+        <div class="testimonial-card fade-in">
+            <div class="testimonial-icon">💇</div>
+            <div class="testimonial-quote">「預約不用再接電話了，客人自己在 LINE 上約好」</div>
+            <div class="testimonial-author"><strong>林老闆</strong> — 美容院負責人</div>
+        </div>
+        <div class="testimonial-card fade-in">
+            <div class="testimonial-icon">📦</div>
+            <div class="testimonial-quote">「AI 客服幫我回覆 80% 的重複問題，省超多時間」</div>
+            <div class="testimonial-author"><strong>陳先生</strong> — 電商賣家</div>
+        </div>
+        <div class="testimonial-card fade-in">
+            <div class="testimonial-icon">🍽️</div>
+            <div class="testimonial-quote">「訂位自動化之後，漏訂的情況幾乎沒有了」</div>
+            <div class="testimonial-author"><strong>王經理</strong> — 餐廳經理</div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-box fade-in">
+        <h2>體驗完覺得不錯？</h2>
+        <p>免費諮詢，告訴我你的需求，量身打造你的 AI 機器人。</p>
+        <div class="cta-buttons">
+            <a href="/contact.html" class="btn btn-primary">免費諮詢 →</a>
+            <a href="/pricing.html" class="btn btn-secondary">查看方案</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 AutoDev AI. Built with AI.</p>
+</footer>
+
+<script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Fade-in animation
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
+fadeEls.forEach(el => observer.observe(el));
+setTimeout(() => {
+    fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 100) el.classList.add('visible');
+    });
+}, 150);
+
+// Mobile menu toggle
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+
+mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630';
+});
+
+// Close mobile menu when a link is clicked
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        mobileMenuBtn.textContent = '\u2630';
+    });
+});
+</script>
+</body>
+</html>
