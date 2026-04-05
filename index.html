@@ -159,6 +159,36 @@
     </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+    <div class="section-header fade-in">
+        <div class="section-tag">FAQ</div>
+        <h2>常見問題</h2>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item fade-in">
+            <div class="faq-q">付款方式是什麼？</div>
+            <div class="faq-a">確認方案後支付 50% 訂金，驗收完成後支付尾款。接受銀行轉帳。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">做完不滿意可以退款嗎？</div>
+            <div class="faq-a">開發過程中隨時可以提出修改。如果最終成品與約定的功能規格不符，全額退款。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">維護怎麼算？</div>
+            <div class="faq-a">交付後提供 14-30 天免費維護期（依方案而定）。之後可選擇月費維護方案，NT$2,000/月起。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">我不懂技術，可以用嗎？</div>
+            <div class="faq-a">完全沒問題！交付時會提供操作教學。機器人設計的原則就是讓不懂技術的人也能輕鬆使用。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">可以先做一個小功能試試嗎？</div>
+            <div class="faq-a">當然可以！建議從基礎方案 NT$8,000 起步，先體驗效果，滿意再擴充功能。</div>
+        </div>
+    </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section">
     <div class="cta-box fade-in">
@@ -214,6 +244,15 @@ navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('show');
         mobileMenuBtn.textContent = '\u2630';
+    });
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+        const item = q.parentElement;
+        document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
+        item.classList.toggle('open');
     });
 });
 </script>
