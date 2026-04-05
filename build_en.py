@@ -17,6 +17,7 @@ EN_META = {
         'description': 'Professional AI bot development — LINE, Telegram, Discord, Slack, Web Chat. Smart customer service, booking systems, workflow automation. From $250, done in 2 weeks.',
         'og_title': 'AI Bot Development | Smart Customer Service & Automation — AutoDev AI',
         'og_description': 'Professional AI bot development from $250. Smart customer service, booking bots, workflow automation. Done in 2 weeks.',
+        'keywords': 'ai chatbot development, custom chatbot, ai customer service bot, telegram bot, discord bot, slack bot, workflow automation, booking bot, chatbot developer, ai automation',
     },
     'services.html': {
         'title': 'AI Bot Development Services | Chatbots, Smart CS, Automation — AutoDev AI',
@@ -47,6 +48,7 @@ EN_META = {
         'description': 'Try our AI smart customer service for free. Chat with the AI bot right on this page. Experience automated booking, smart replies, and instant notifications.',
         'og_title': 'Free AI Customer Service Demo — AutoDev AI',
         'og_description': 'Try AI smart customer service for free. 30 seconds to experience the power of automation.',
+        'keywords': 'ai chatbot demo, chatbot free trial, ai customer service demo, smart chatbot demo, business bot demo',
     },
     'portfolio.html': {
         'title': 'Portfolio | AI Bot & Automation Case Studies — AutoDev AI',
@@ -145,6 +147,11 @@ def process_file(rel_path):
     desc_tag = soup.find('meta', attrs={'name': 'description'})
     if desc_tag and meta.get('description'):
         desc_tag['content'] = meta['description']
+
+    # 3b. Update keywords
+    kw_tag = soup.find('meta', attrs={'name': 'keywords'})
+    if kw_tag and meta.get('keywords'):
+        kw_tag['content'] = meta['keywords']
 
     # 4. Update OG tags
     og_title = soup.find('meta', attrs={'property': 'og:title'})
