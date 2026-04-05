@@ -199,15 +199,22 @@ window.addEventListener('scroll', () => {
 });
 
 // Fade-in animation
+const fadeEls = document.querySelectorAll('.fade-in');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
         }
     });
-}, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
-
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+}, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
+fadeEls.forEach(el => observer.observe(el));
+// Fallback: reveal elements already in viewport on load
+setTimeout(() => {
+    fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 100) el.classList.add('visible');
+    });
+}, 150);
 
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
