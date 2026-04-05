@@ -68,11 +68,20 @@
         .nav-logo {
             font-size: 1.5rem;
             font-weight: 900;
-            background: var(--gradient-1);
+            background: linear-gradient(90deg, #6C5CE7, #A29BFE, #00D2D3, #6C5CE7);
+            background-size: 300% 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-decoration: none;
+            animation: logoShimmer 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 8px rgba(108,92,231,0.4));
+        }
+
+        @keyframes logoShimmer {
+            0% { background-position: 0% 50%; filter: drop-shadow(0 0 8px rgba(108,92,231,0.4)); }
+            50% { background-position: 100% 50%; filter: drop-shadow(0 0 16px rgba(0,210,211,0.6)); }
+            100% { background-position: 0% 50%; filter: drop-shadow(0 0 8px rgba(108,92,231,0.4)); }
         }
 
         .nav-links { display: flex; gap: 2rem; align-items: center; }
@@ -786,6 +795,18 @@
                 <span class="service-tag">自動報表</span>
             </div>
             <div class="service-price">NT$8,000 起</div>
+        </div>
+
+        <div class="service-card fade-in" style="border:1px dashed var(--primary-light);">
+            <div class="service-icon">🎯</div>
+            <h3>其他客製需求</h3>
+            <p>以上沒有你要的？沒關係，告訴我你的需求，我來評估能不能幫你做。</p>
+            <div class="service-tags">
+                <span class="service-tag">客製開發</span>
+                <span class="service-tag">免費評估</span>
+                <span class="service-tag">彈性報價</span>
+            </div>
+            <div class="service-price">詳談</div>
         </div>
     </div>
 </section>
