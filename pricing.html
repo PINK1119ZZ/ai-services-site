@@ -106,7 +106,7 @@
     </div>
 
     <!-- ADD-ON SERVICES -->
-    <div class="addons-section fade-in">
+    <div class="addons-section">
         <div class="addons-title">附加服務 — 單點加購</div>
         <div class="addons-subtitle">可搭配任何方案，也可獨立購買</div>
         <div class="addons-grid">
@@ -162,7 +162,7 @@
     </div>
 
     <!-- MAINTENANCE -->
-    <div class="maintenance-section fade-in">
+    <div class="maintenance-section">
         <div class="addons-title" style="margin-top:2rem;">長期維護方案</div>
         <div class="addons-subtitle">交付後持續優化，讓系統穩定運作</div>
         <div class="maintenance-card">
@@ -205,7 +205,7 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('visible');
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
