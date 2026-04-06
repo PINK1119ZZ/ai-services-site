@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINE 官方帳號自動回覆設定完整教學（2026）| AutoDev AI</title>
+    <meta name="description" content="LINE 官方帳號自動回覆怎麼設定？本文提供 2026 最新完整教學：關鍵字回覆、歡迎訊息、營業時間自動回覆，以及升級 LINE Bot 的時機與比較。">
+    <link rel="canonical" href="https://autodev-ai.com/blog/line-auto-reply-setup.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/line-auto-reply-setup.html">
+    <link rel="alternate" hreflang="en" href="https://autodev-ai.com/en/blog/line-auto-reply-setup.html">
+    <link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/line-auto-reply-setup.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="LINE 官方帳號自動回覆設定完整教學（2026）">
+    <meta property="og:description" content="LINE 官方帳號關鍵字回覆、歡迎訊息、非營業時間自動回覆全攻略，加碼分析 LINE Bot 升級時機。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/line-auto-reply-setup.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LINE 官方帳號自動回覆設定完整教學（2026）">
+    <meta name="twitter:description" content="LINE 官方帳號關鍵字回覆、歡迎訊息、非營業時間自動回覆全攻略，加碼分析 LINE Bot 升級時機。">
+    <meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <meta name="theme-color" content="#0F0F1A">
+    <meta name="keywords" content="LINE 官方帳號自動回覆,LINE 自動回覆設定,LINE OA 自動回覆,LINE 關鍵字回覆,LINE 歡迎訊息設定,LINE 非營業時間回覆,LINE Bot 自動回覆,LINE 官方帳號教學">
+    <meta name="author" content="AutoDev AI">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <!-- Structured Data: Article -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"LINE 官方帳號自動回覆設定完整教學（2026）","description":"LINE 官方帳號自動回覆完整設定指南，含關鍵字回覆、歡迎訊息、非營業時間自動回覆，以及 LINE Bot 升級時機分析","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-06","dateModified":"2026-04-06","mainEntityOfPage":"https://autodev-ai.com/blog/line-auto-reply-setup.html","image":"https://autodev-ai.com/autodev-logo2.png"}
+    </script>
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"LINE 官方帳號自動回覆要怎麼設定？","acceptedAnswer":{"@type":"Answer","text":"登入 LINE Official Account Manager（官方帳號管理頁面），進入「自動回應訊息」，選擇「關鍵字回應」或「智慧聊天」模式，即可設定自動回覆內容。免費帳號也可使用基本的自動回覆功能。"}},{"@type":"Question","name":"LINE 官方帳號自動回覆免費嗎？","acceptedAnswer":{"@type":"Answer","text":"LINE 官方帳號的基本自動回覆（關鍵字回應、歡迎訊息）是免費功能，但每月發送訊息有數量限制。免費版每月可發送 500 則推播訊息，超出需升級付費方案。"}},{"@type":"Question","name":"LINE 官方帳號自動回覆和 LINE Bot 有什麼差別？","acceptedAnswer":{"@type":"Answer","text":"LINE 官方帳號內建的自動回覆功能較為基礎，只能設定固定關鍵字對應的固定回覆。LINE Bot 是透過 Messaging API 開發的進階機器人，可以做 AI 對話、串接資料庫、預約系統等複雜功能。"}},{"@type":"Question","name":"LINE 官方帳號可以設定幾組關鍵字自動回覆？","acceptedAnswer":{"@type":"Answer","text":"目前 LINE 官方帳號管理後台最多可設定 200 組關鍵字回應，每組關鍵字可以對應一則回覆訊息（文字、圖片、或圖文訊息）。"}},{"@type":"Question","name":"什麼情況下需要從 LINE 官方帳號升級到 LINE Bot？","acceptedAnswer":{"@type":"Answer","text":"當你需要 AI 智慧對話、自動預約排班、串接 Google Sheets 或 CRM、或是需要更複雜的流程邏輯時，就需要升級到 LINE Bot。通常月訊息量超過 1,000 則，或客戶問題類型很多樣的店家，升級 LINE Bot 的 ROI 最高。"}}]}
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+    <style>
+        .blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
+        .blog-article h2 { color: var(--primary-light); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
+        .blog-article h3 { color: var(--text); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
+        .blog-article p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .blog-article ul, .blog-article ol { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .blog-article li { margin-bottom: 0.5rem; }
+        .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; text-align: center; }
+        .blog-meta span { margin: 0 0.5rem; }
+        .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+        .price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .price-table th { color: var(--primary-light); font-weight: 700; background: rgba(99,102,241,0.1); }
+        .price-table td { color: var(--text-secondary); }
+        .price-table tr:hover td { background: rgba(99,102,241,0.05); }
+        .highlight-box { background: rgba(99,102,241,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; margin: 1.5rem 0; }
+        .highlight-box p { margin-bottom: 0; color: var(--text); }
+        .blog-nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+        .blog-nav a { color: var(--primary-light); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(99,102,241,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
+        .blog-nav a:hover { background: rgba(99,102,241,0.2); border-color: var(--primary); }
+        .step-box { background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.2); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+        .step-box .step-num { display: inline-block; background: var(--gradient-1); color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: 50%; width: 28px; height: 28px; line-height: 28px; text-align: center; margin-right: 0.75rem; }
+        .step-box h4 { display: inline; color: var(--text); font-size: 1rem; font-weight: 700; }
+        .step-box p { margin-top: 0.75rem; margin-bottom: 0; color: var(--text-secondary); font-size: 0.95rem; }
+        .warning-box { background: rgba(245,158,11,0.08); border-left: 4px solid #f59e0b; padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; margin: 1.5rem 0; }
+        .warning-box p { margin-bottom: 0; color: var(--text); }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">AutoDev AI</a>
+        <div class="nav-links" id="navLinks">
+            <a href="/services.html">服務</a>
+            <a href="/portfolio.html">作品</a>
+            <a href="/pricing.html">方案</a>
+            <a href="/blog/" class="active">部落格</a>
+            <a href="/about.html">關於</a>
+            <a href="/demo.html">體驗 Demo</a>
+            <a href="/contact.html" class="nav-cta">免費諮詢</a>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <h1>LINE 官方帳號自動回覆設定</h1>
+    <p>2026 完整教學：關鍵字回覆、歡迎訊息、非營業時間自動回應全攻略</p>
+</section>
+
+<!-- ARTICLE -->
+<article class="blog-article fade-in">
+    <div class="blog-meta">
+        <span>Ivan / AutoDev AI</span> | <span>2026-04-06</span> | <span>閱讀時間 8 分鐘</span>
+    </div>
+
+    <div class="blog-nav">
+        <a href="#what-is">自動回覆功能</a>
+        <a href="#step-by-step">設定步驟</a>
+        <a href="#types">三種回覆類型</a>
+        <a href="#comparison">OA vs LINE Bot</a>
+        <a href="#upgrade">何時升級</a>
+        <a href="#faq">常見問題</a>
+    </div>
+
+    <p>你是否遇過這種情況：LINE 官方帳號一天收到幾十則詢問，問題幾乎都是一樣的——「你們幾點開門？」「有素食嗎？」「可以預約嗎？」每次都要手動回覆，累死人也讓客人等很久。其實 LINE 官方帳號內建的「自動回覆」功能，可以幫你解決大部分重複問題，完全不需要工程師，自己就能設定好。</p>
+
+    <p>這篇文章帶你從頭學會 LINE 官方帳號自動回覆的設定方式，包括關鍵字回應、歡迎訊息、非營業時間自動回覆，以及什麼時候該考慮升級到正式的 <a href="/services.html">LINE Bot 服務</a>。</p>
+
+    <h2 id="what-is">LINE 官方帳號自動回覆功能介紹</h2>
+
+    <p>LINE 官方帳號（LINE Official Account，簡稱 LINE OA）是 LINE 官方提供給商家使用的商業帳號，你可以在上面發送廣播訊息、管理好友名單，以及設定自動回覆。</p>
+
+    <p>自動回覆功能主要分為三種：</p>
+
+    <ul>
+        <li><strong>關鍵字回應</strong>：客人輸入特定關鍵字，帳號自動回覆對應訊息</li>
+        <li><strong>歡迎訊息</strong>：客人加入好友的第一則訊息</li>
+        <li><strong>非營業時間訊息</strong>：超出設定的營業時間，自動告知客人</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p><strong>重要提醒：</strong>LINE 官方帳號的自動回覆屬於「固定式」回覆，只能設定關鍵字對應固定訊息。如果你需要 AI 對話、預約系統或串接資料庫，那就需要升級到 <a href="/services.html">LINE Bot 開發服務</a>。</p>
+    </div>
+
+    <h2 id="step-by-step">LINE 官方帳號自動回覆設定步驟</h2>
+
+    <p>以下教學適用於 LINE Official Account Manager（電腦版後台）。手機版 LINE OA App 操作路徑略有不同，但功能相同。</p>
+
+    <div class="step-box">
+        <span class="step-num">1</span><h4>登入 LINE Official Account Manager</h4>
+        <p>前往 manager.line.biz，使用你的 LINE 帳號登入，選擇你的官方帳號。</p>
+    </div>
+
+    <div class="step-box">
+        <span class="step-num">2</span><h4>進入「自動回應訊息」設定</h4>
+        <p>左側選單點選「訊息」→「自動回應訊息」。如果看不到此選項，請確認你有管理員或編輯者權限。</p>
+    </div>
+
+    <div class="step-box">
+        <span class="step-num">3</span><h4>選擇回應模式</h4>
+        <p>系統提供兩種模式：<strong>智慧聊天</strong>（LINE AI 自動判斷，答案較通用）和<strong>手動設定關鍵字回應</strong>。建議選擇「手動設定」，回覆內容更精準符合你的業務。</p>
+    </div>
+
+    <div class="step-box">
+        <span class="step-num">4</span><h4>新增關鍵字回應</h4>
+        <p>點選「建立」，輸入關鍵字（如「營業時間」、「價格」）和對應的回覆訊息。一組關鍵字最多可包含 5 個相似詞，例如「幾點開」、「幾點營業」、「開門時間」都可以對應同一則回覆。</p>
+    </div>
+
+    <div class="step-box">
+        <span class="step-num">5</span><h4>啟用並測試</h4>
+        <p>設定完成後，記得將狀態切換為「啟用」。然後用自己的個人 LINE 帳號加入官方帳號測試，確認回覆是否正常觸發。</p>
+    </div>
+
+    <h2 id="types">三種自動回覆類型詳解</h2>
+
+    <h3>① 關鍵字回應：最常用的自動回覆</h3>
+    <p>關鍵字回應是最核心的自動回覆功能。設定邏輯很簡單：「當客人說 X，自動回覆 Y」。以美容院為例，可以設定以下常見問題：</p>
+
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>關鍵字組</th>
+                <th>包含詞彙範例</th>
+                <th>自動回覆內容</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>營業時間</strong></td>
+                <td>幾點開、幾點到幾點、營業</td>
+                <td>「我們週一至週六 10:00-20:00，週日公休 🗓」</td>
+            </tr>
+            <tr>
+                <td><strong>價格/收費</strong></td>
+                <td>多少錢、費用、價格、收費</td>
+                <td>「歡迎點選選單查看完整服務價目 👇」+ 圖文訊息</td>
+            </tr>
+            <tr>
+                <td><strong>預約</strong></td>
+                <td>預約、約時間、訂位、能預約嗎</td>
+                <td>「請點選下方預約連結，或直接傳訊息給我們 📅」</td>
+            </tr>
+            <tr>
+                <td><strong>地址/位置</strong></td>
+                <td>在哪、地址、怎麼去、捷運</td>
+                <td>「地址：台北市〇〇路〇〇號，靠近〇〇捷運站」+ 地圖連結</td>
+            </tr>
+            <tr>
+                <td><strong>停車</strong></td>
+                <td>停車、停車場、車位</td>
+                <td>「店家附近有〇〇停車場，步行約 3 分鐘 🚗」</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="highlight-box">
+        <p><strong>設定小技巧：</strong>每組關鍵字最多設 5 個相似詞，盡量涵蓋客人的各種說法。關鍵字不需要完全符合，只要訊息中包含關鍵字就會觸發回覆。</p>
+    </div>
+
+    <h3>② 歡迎訊息：第一印象決定留存率</h3>
+    <p>歡迎訊息是客人加入好友後，自動發送的第一則訊息。這是你留住新好友的黃金機會，一定要好好設計。</p>
+
+    <p>好的歡迎訊息應該包含：</p>
+    <ul>
+        <li>品牌問候語（簡短、有溫度）</li>
+        <li>你能提供什麼服務（30 字以內說清楚）</li>
+        <li>引導下一步行動（查看選單、預約、優惠）</li>
+        <li>可搭配一張精美的圖片或圖文選單（Rich Menu）</li>
+    </ul>
+
+    <p>歡迎訊息範例（美容沙龍）：</p>
+    <div class="step-box">
+        <p>「嗨！感謝你加入〇〇美容沙龍 ✨<br><br>
+        我們提供剪髮、染髮、護髮等全系列服務，讓你每次出門都美美的！<br><br>
+        👇 點選下方選單查看服務價格與預約方式<br>
+        有任何問題也歡迎直接傳訊給我們～」</p>
+    </div>
+
+    <h3>③ 非營業時間訊息：讓客人不白等</h3>
+    <p>設定營業時間後，當客人在下班後或假日傳訊息，系統會自動回覆告知目前無法即時回覆，同時可以引導客人自助取得資訊。</p>
+
+    <p>非營業時間訊息設定位置：「聊天」→「回應設定」→「非回應時間」。</p>
+
+    <p>非營業時間訊息建議內容：</p>
+    <ul>
+        <li>說明目前非營業時間</li>
+        <li>告知何時會回覆</li>
+        <li>提供自助資訊（如：常見問題、預約連結）</li>
+    </ul>
+
+    <div class="warning-box">
+        <p><strong>注意：</strong>非營業時間訊息只有在「回應模式」設定為「聊天」時才會生效。如果是「Bot」模式，LINE 不提供非營業時間訊息功能，這種情況建議透過 <a href="/services.html">LINE Bot 開發</a> 來處理。</p>
+    </div>
+
+    <h2 id="comparison">LINE 官方帳號自動回覆 vs LINE Bot：有什麼差別？</h2>
+
+    <p>很多店家剛開始都用 LINE 官方帳號的內建自動回覆，但隨著業務成長，會發現它有一些限制。以下是完整比較：</p>
+
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>功能</th>
+                <th>LINE OA 內建自動回覆</th>
+                <th>LINE Bot（Messaging API）</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>費用</strong></td>
+                <td>免費（含帳號費用）</td>
+                <td>需開發費 NT$8,000 起</td>
+            </tr>
+            <tr>
+                <td><strong>關鍵字回覆</strong></td>
+                <td>最多 200 組，固定回覆</td>
+                <td>無限組，可動態生成回覆</td>
+            </tr>
+            <tr>
+                <td><strong>AI 對話</strong></td>
+                <td>有限（LINE 智慧聊天功能）</td>
+                <td>可整合 GPT/Claude，高度智慧</td>
+            </tr>
+            <tr>
+                <td><strong>預約系統</strong></td>
+                <td>無法串接，只能導流到外部連結</td>
+                <td>可直接在 LINE 內完成預約</td>
+            </tr>
+            <tr>
+                <td><strong>串接 Google Sheets</strong></td>
+                <td>不支援</td>
+                <td>完整支援，自動記錄客戶資訊</td>
+            </tr>
+            <tr>
+                <td><strong>個人化回覆</strong></td>
+                <td>不支援（所有人同樣回覆）</td>
+                <td>可依客戶狀態、歷史記錄回覆</td>
+            </tr>
+            <tr>
+                <td><strong>推播訊息數量</strong></td>
+                <td>免費版每月 500 則</td>
+                <td>依方案，可大量推播</td>
+            </tr>
+            <tr>
+                <td><strong>LIFF 應用</strong></td>
+                <td>不支援</td>
+                <td>可建立嵌入式網頁應用</td>
+            </tr>
+            <tr>
+                <td><strong>設定難度</strong></td>
+                <td>★☆☆ 超簡單</td>
+                <td>★★★ 需要工程師</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="upgrade">什麼時候該升級到 LINE Bot？</h2>
+
+    <p>LINE 官方帳號的內建自動回覆功能對小店家來說已經非常夠用，但以下幾種情況，你可能需要考慮升級到正式的 LINE Bot：</p>
+
+    <h3>情況 1：客人問的問題五花八門，固定關鍵字不夠用</h3>
+    <p>如果你每天收到的客人問題非常多樣，無法用有限的關鍵字涵蓋，那 AI 智慧對話的 LINE Bot 就能派上用場。它可以理解自然語言，就算客人問法不一樣，都能給出合理的回覆。</p>
+
+    <h3>情況 2：需要在 LINE 內完成預約或訂單</h3>
+    <p>如果你的業務依賴預約（美容院、診所、補習班、餐廳），而且希望客人直接在 LINE 裡完成預約，而不是被導到外部網站，LINE Bot 搭配 LIFF 就是最佳解法。詳細可參考 <a href="/blog/line-bot-booking-system.html">LINE 預約系統完整介紹</a>。</p>
+
+    <h3>情況 3：需要自動記錄客戶資料</h3>
+    <p>如果你希望每次客人查詢或預約時，資料自動存到 Google Sheets 或你的 CRM，LINE Bot 可以幫你完全自動化這個流程，省去手動記錄的麻煩。</p>
+
+    <h3>情況 4：每月訊息量超過 1,000 則</h3>
+    <p>免費版 LINE 官方帳號每月只有 500 則推播，當你的好友數達到一定規模後，每月訊息費用會大幅上升。搭配 LINE Bot 的彈性訊息管理，可以更有效地使用訊息配額。</p>
+
+    <h3>情況 5：想要 24 小時不間斷的真正智慧回覆</h3>
+    <p>LINE OA 的自動回覆是固定的，碰到不在關鍵字清單裡的問題就沉默。LINE Bot 搭配 AI 客服可以讓你的帳號真正做到 24 小時都能給出有幫助的回應，大幅提升客戶滿意度。想了解更多可參考 <a href="/blog/ai-customer-service-line.html">AI 客服完整指南</a>。</p>
+
+    <div class="highlight-box">
+        <p><strong>評估建議：</strong>如果你的 LINE 官方帳號每週需要回覆超過 50 則重複問題，或者客人常常因為沒有即時回覆而流失，投資一套 LINE Bot 通常 3-6 個月就能回本。歡迎 <a href="/contact.html">免費諮詢</a>，我們幫你評估是否值得升級。</p>
+    </div>
+
+    <h2>LINE 官方帳號自動回覆常見錯誤與解法</h2>
+
+    <h3>錯誤 1：關鍵字設太長</h3>
+    <p>很多人設定關鍵字時會寫「你們幾點開門」這種完整句子，但實際上客人可能說「幾點開」或「幾點開始」。關鍵字應該設成短詞，讓系統更容易匹配，例如只設「幾點」、「開門」、「營業」。</p>
+
+    <h3>錯誤 2：沒有設定歡迎訊息</h3>
+    <p>很多小店家忽略了歡迎訊息的重要性。新好友加入後，如果沒有任何訊息，會讓人感覺這個帳號「沒有在管」，容易直接封鎖。一定要設定一則溫馨的歡迎訊息。</p>
+
+    <h3>錯誤 3：回覆訊息太長</h3>
+    <p>LINE 的自動回覆訊息如果太長，客人不會看完。重要資訊要在前 3 行內呈現，搭配 emoji 增加可讀性。長內容可以改用圖文訊息（Message Template）呈現。</p>
+
+    <h3>錯誤 4：沒有定期更新關鍵字</h3>
+    <p>店家的資訊會隨時更改——價格調整、地址搬遷、服務項目更新。記得定期（至少每季）檢查自動回覆內容是否還正確。</p>
+
+    <h2>進一步優化 LINE 官方帳號的 3 個技巧</h2>
+
+    <h3>技巧 1：搭配 Rich Menu 圖文選單</h3>
+    <p>Rich Menu（圖文選單）是 LINE 官方帳號的底部選單，可以設定快速連結按鈕。結合自動回覆，讓客人不需要輸入關鍵字，直接點選按鈕就能取得資訊。Rich Menu 可以在後台免費設定，或請設計師製作更精美的版本。</p>
+
+    <h3>技巧 2：善用圖文訊息</h3>
+    <p>自動回覆不只能發文字，也可以發圖文訊息（包含圖片和連結按鈕）。例如在「價格」關鍵字的回覆中，附上一張精美的服務菜單圖片，效果遠比純文字好。</p>
+
+    <h3>技巧 3：追蹤哪些關鍵字最常被觸發</h3>
+    <p>LINE 官方帳號後台有訊息統計功能，可以看到哪些自動回覆最常被觸發。高觸發率的關鍵字代表客人最常問的問題，你可以把這些資訊用來優化服務或做行銷素材。</p>
+
+    <h2 id="faq">常見問題</h2>
+
+    <div class="faq-list">
+        <div class="faq-item fade-in">
+            <div class="faq-q">LINE 官方帳號自動回覆要怎麼設定？</div>
+            <div class="faq-a">登入 LINE Official Account Manager（manager.line.biz），進入「訊息」→「自動回應訊息」，選擇關鍵字回應模式，即可新增關鍵字和對應的自動回覆訊息。免費帳號也可使用此功能。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">LINE 官方帳號自動回覆免費嗎？</div>
+            <div class="faq-a">LINE 官方帳號的基本自動回覆（關鍵字回應、歡迎訊息）是免費功能。但每月主動推播訊息有數量限制，免費版每月 500 則，超出需升級付費方案（輕用量方案 NT$800/月起）。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">LINE 官方帳號自動回覆和 LINE Bot 有什麼差別？</div>
+            <div class="faq-a">LINE 官方帳號內建的自動回覆屬於「固定式」，只能設定關鍵字對應固定回覆，最多 200 組。LINE Bot 是透過 Messaging API 開發的進階機器人，可以做 AI 對話、串接資料庫、預約系統等複雜功能，沒有關鍵字數量限制。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">LINE 官方帳號可以設定幾組關鍵字自動回覆？</div>
+            <div class="faq-a">目前 LINE 官方帳號管理後台最多可設定 200 組關鍵字回應，每組關鍵字可包含最多 5 個同義詞，對應一則回覆訊息（文字、圖片或圖文訊息）。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">什麼情況下需要從 LINE 官方帳號升級到 LINE Bot？</div>
+            <div class="faq-a">當你需要 AI 智慧對話、自動預約排班、串接 Google Sheets 或 CRM、或是需要更複雜的流程邏輯時，就需要升級到 LINE Bot。通常每週回覆超過 50 則重複問題，或客戶問題多樣性高的店家，升級效益最大。</div>
+        </div>
+    </div>
+
+    <div class="highlight-box" style="margin-top:2rem;">
+        <p><strong>需要更強大的自動化方案？</strong>如果 LINE 官方帳號的內建功能已經不夠用，歡迎了解我們的 <a href="/services.html">LINE Bot 開發服務</a>。從 AI 智慧客服到預約系統，我們幫你打造真正適合你業務的自動化解決方案。<a href="/contact.html">免費諮詢</a>，不需要技術背景，30 分鐘就能評估你的需求。</p>
+    </div>
+</article>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-box fade-in">
+        <h2>想讓 LINE 自動化更上一層樓？</h2>
+        <p>從 LINE 官方帳號到 AI 智慧客服，我們幫你找到最適合的方案。</p>
+        <div class="cta-buttons">
+            <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" class="btn btn-primary">免費諮詢 →</a>
+            <a href="/pricing.html" class="btn btn-secondary">查看方案</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 AutoDev AI. Built with AI.</p>
+</footer>
+
+<script src="/chat-widget.js" defer></script>
+<script src="/lang.js" defer></script>
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
+fadeEls.forEach(el => observer.observe(el));
+setTimeout(() => {
+    fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 100) el.classList.add('visible');
+    });
+}, 150);
+
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630';
+});
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        mobileMenuBtn.textContent = '\u2630';
+    });
+});
+
+document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+        const item = q.parentElement;
+        document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
+        item.classList.toggle('open');
+    });
+});
+</script>
+</body>
+</html>
