@@ -115,8 +115,33 @@
             color: var(--primary-light);
             border: 1px solid rgba(108,92,231,0.2);
         }
+        .blog-filters {
+            max-width: 1100px;
+            margin: 0 auto 1.5rem;
+            padding: 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .blog-filter-btn {
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            border: 1px solid rgba(108,92,231,0.3);
+            background: transparent;
+            color: var(--gray);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .blog-filter-btn:hover,
+        .blog-filter-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
         @media (max-width: 768px) {
             .blog-grid { grid-template-columns: 1fr; padding: 0 1rem 3rem; }
+            .blog-filters { padding: 0 1rem; }
         }
     </style>
 </head>
@@ -145,11 +170,19 @@
     <p data-en="Practical Knowledge on AI Automation &amp; LINE Bot Development">AI 自動化、LINE Bot 開發實用知識</p>
 </section>
 
-<!-- BLOG GRID -->
+<!-- BLOG FILTERS -->
 <section style="padding-top:2rem;">
+    <div class="blog-filters">
+        <button class="blog-filter-btn active" data-filter="all">全部</button>
+        <button class="blog-filter-btn" data-filter="ai">AI 知識</button>
+        <button class="blog-filter-btn" data-filter="line">LINE Bot</button>
+        <button class="blog-filter-btn" data-filter="automation">自動化</button>
+        <button class="blog-filter-btn" data-filter="business">商業應用</button>
+    </div>
+<!-- BLOG GRID -->
     <div class="blog-grid">
 
-        <div class="blog-card fade-in">
+        <div class="blog-card fade-in" data-category="ai">
             <div class="blog-card-meta">
                 <span>2026-04-07</span>
                 <span>閱讀 8 分鐘</span>
@@ -163,63 +196,7 @@
             <a href="/blog/ai-tools-comparison-2026.html" class="blog-card-link">閱讀全文 →</a>
         </div>
 
-        <div class="blog-card fade-in">
-            <div class="blog-card-meta">
-                <span>2026-03-28</span>
-                <span>閱讀 8 分鐘</span>
-            </div>
-            <div class="blog-card-tags">
-                <span class="blog-card-tag">AI 聊天機器人</span>
-                <span class="blog-card-tag">企業應用</span>
-            </div>
-            <h3><a href="/blog/ai-chatbot-for-business.html">2026 企業 AI 聊天機器人建置完整攻略：平台、費用、導入步驟</a></h3>
-            <p>如何為企業打造 AI 聊天機器人？完整比較 LINE Bot、Telegram Bot、網頁客服，含費用分析、建置步驟與實際案例。</p>
-            <a href="/blog/ai-chatbot-for-business.html" class="blog-card-link">閱讀全文 →</a>
-        </div>
-
-        <div class="blog-card fade-in">
-            <div class="blog-card-meta">
-                <span>2026-03-22</span>
-                <span>閱讀 7 分鐘</span>
-            </div>
-            <div class="blog-card-tags">
-                <span class="blog-card-tag">Telegram Bot</span>
-                <span class="blog-card-tag">商業應用</span>
-            </div>
-            <h3><a href="/blog/telegram-bot-business-guide.html">Telegram Bot 商業應用完整指南：自動客服、團隊通知、訂單管理（2026）</a></h3>
-            <p>Telegram 機器人如何幫助企業自動化？5 大商業應用場景、建置步驟、費用分析，以及 Telegram vs WhatsApp vs LINE 平台比較。</p>
-            <a href="/blog/telegram-bot-business-guide.html" class="blog-card-link">閱讀全文 →</a>
-        </div>
-
-        <div class="blog-card fade-in">
-            <div class="blog-card-meta">
-                <span>2026-03-15</span>
-                <span>閱讀 7 分鐘</span>
-            </div>
-            <div class="blog-card-tags">
-                <span class="blog-card-tag">工作流程自動化</span>
-                <span class="blog-card-tag">Python</span>
-            </div>
-            <h3><a href="/blog/workflow-automation-small-business.html">中小企業工作流程自動化：用 Python 每月省下 40+ 小時（2026）</a></h3>
-            <p>中小企業如何用 Python 和 AI 自動化重複工作？資料輸入、通知推播、自動報表、競品監控，7 大任務自動化完整指南。</p>
-            <a href="/blog/workflow-automation-small-business.html" class="blog-card-link">閱讀全文 →</a>
-        </div>
-
-        <div class="blog-card fade-in">
-            <div class="blog-card-meta">
-                <span>2026-04-03</span>
-                <span>閱讀 8 分鐘</span>
-            </div>
-            <div class="blog-card-tags">
-                <span class="blog-card-tag">LINE OA</span>
-                <span class="blog-card-tag">自動回覆</span>
-            </div>
-            <h3><a href="/blog/line-auto-reply-setup.html">LINE 官方帳號自動回覆設定完整教學（2026）</a></h3>
-            <p>LINE 官方帳號關鍵字回覆、歡迎訊息、非營業時間自動回應全攻略，加碼分析何時該升級到 LINE Bot，幫你省時省力。</p>
-            <a href="/blog/line-auto-reply-setup.html" class="blog-card-link">閱讀全文 →</a>
-        </div>
-
-        <div class="blog-card fade-in">
+        <div class="blog-card fade-in" data-category="automation">
             <div class="blog-card-meta">
                 <span>2026-04-05</span>
                 <span data-en="6 min read">閱讀 6 分鐘</span>
@@ -233,7 +210,21 @@
             <a href="/blog/small-business-automation.html" class="blog-card-link" data-en="Read More &rarr;">閱讀全文 →</a>
         </div>
 
-        <div class="blog-card fade-in">
+        <div class="blog-card fade-in" data-category="line">
+            <div class="blog-card-meta">
+                <span>2026-04-03</span>
+                <span>閱讀 8 分鐘</span>
+            </div>
+            <div class="blog-card-tags">
+                <span class="blog-card-tag">LINE OA</span>
+                <span class="blog-card-tag">自動回覆</span>
+            </div>
+            <h3><a href="/blog/line-auto-reply-setup.html">LINE 官方帳號自動回覆設定完整教學（2026）</a></h3>
+            <p>LINE 官方帳號關鍵字回覆、歡迎訊息、非營業時間自動回應全攻略，加碼分析何時該升級到 LINE Bot，幫你省時省力。</p>
+            <a href="/blog/line-auto-reply-setup.html" class="blog-card-link">閱讀全文 →</a>
+        </div>
+
+        <div class="blog-card fade-in" data-category="line">
             <div class="blog-card-meta">
                 <span>2026-04-02</span>
                 <span data-en="10 min read">閱讀 10 分鐘</span>
@@ -247,7 +238,7 @@
             <a href="/blog/line-bot-tutorial-2026.html" class="blog-card-link" data-en="Read More &rarr;">閱讀全文 →</a>
         </div>
 
-        <div class="blog-card fade-in">
+        <div class="blog-card fade-in" data-category="ai">
             <div class="blog-card-meta">
                 <span>2026-03-30</span>
                 <span data-en="8 min read">閱讀 8 分鐘</span>
@@ -261,7 +252,21 @@
             <a href="/blog/ai-customer-service-line.html" class="blog-card-link" data-en="Read More &rarr;">閱讀全文 →</a>
         </div>
 
-        <div class="blog-card fade-in">
+        <div class="blog-card fade-in" data-category="ai business">
+            <div class="blog-card-meta">
+                <span>2026-03-28</span>
+                <span>閱讀 8 分鐘</span>
+            </div>
+            <div class="blog-card-tags">
+                <span class="blog-card-tag">AI 聊天機器人</span>
+                <span class="blog-card-tag">企業應用</span>
+            </div>
+            <h3><a href="/blog/ai-chatbot-for-business.html">2026 企業 AI 聊天機器人建置完整攻略：平台、費用、導入步驟</a></h3>
+            <p>如何為企業打造 AI 聊天機器人？完整比較 LINE Bot、Telegram Bot、網頁客服，含費用分析、建置步驟與實際案例。</p>
+            <a href="/blog/ai-chatbot-for-business.html" class="blog-card-link">閱讀全文 →</a>
+        </div>
+
+        <div class="blog-card fade-in" data-category="line business">
             <div class="blog-card-meta">
                 <span>2026-03-25</span>
                 <span data-en="7 min read">閱讀 7 分鐘</span>
@@ -275,7 +280,21 @@
             <a href="/blog/line-bot-booking-system.html" class="blog-card-link" data-en="Read More &rarr;">閱讀全文 →</a>
         </div>
 
-        <div class="blog-card fade-in">
+        <div class="blog-card fade-in" data-category="business automation">
+            <div class="blog-card-meta">
+                <span>2026-03-22</span>
+                <span>閱讀 7 分鐘</span>
+            </div>
+            <div class="blog-card-tags">
+                <span class="blog-card-tag">Telegram Bot</span>
+                <span class="blog-card-tag">商業應用</span>
+            </div>
+            <h3><a href="/blog/telegram-bot-business-guide.html">Telegram Bot 商業應用完整指南：自動客服、團隊通知、訂單管理（2026）</a></h3>
+            <p>Telegram 機器人如何幫助企業自動化？5 大商業應用場景、建置步驟、費用分析，以及 Telegram vs WhatsApp vs LINE 平台比較。</p>
+            <a href="/blog/telegram-bot-business-guide.html" class="blog-card-link">閱讀全文 →</a>
+        </div>
+
+        <div class="blog-card fade-in" data-category="line">
             <div class="blog-card-meta">
                 <span>2026-03-20</span>
                 <span data-en="5 min read">閱讀 5 分鐘</span>
@@ -287,6 +306,20 @@
             <h3><a href="/blog/line-bot-cost.html" data-en="How Much Does LINE Bot Development Cost? 2026 Pricing &amp; Feature Comparison">LINE Bot 開發多少錢？2026 最新報價與功能比較</a></h3>
             <p data-en="Complete LINE bot pricing breakdown: basic auto-reply from $250, AI smart CS from $400. Includes feature comparison table, money-saving tips, and common pitfalls.">LINE 機器人開發費用完整解析：基礎自動回覆 NT$8,000 起、AI 智慧客服 NT$12,000 起。含功能比較表、省錢技巧、常見陷阱。</p>
             <a href="/blog/line-bot-cost.html" class="blog-card-link" data-en="Read More &rarr;">閱讀全文 →</a>
+        </div>
+
+        <div class="blog-card fade-in" data-category="automation">
+            <div class="blog-card-meta">
+                <span>2026-03-15</span>
+                <span>閱讀 7 分鐘</span>
+            </div>
+            <div class="blog-card-tags">
+                <span class="blog-card-tag">工作流程自動化</span>
+                <span class="blog-card-tag">Python</span>
+            </div>
+            <h3><a href="/blog/workflow-automation-small-business.html">中小企業工作流程自動化：用 Python 每月省下 40+ 小時（2026）</a></h3>
+            <p>中小企業如何用 Python 和 AI 自動化重複工作？資料輸入、通知推播、自動報表、競品監控，7 大任務自動化完整指南。</p>
+            <a href="/blog/workflow-automation-small-business.html" class="blog-card-link">閱讀全文 →</a>
         </div>
 
     </div>
@@ -324,6 +357,22 @@ const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navLinks = document.getElementById('navLinks');
 mobileMenuBtn.addEventListener('click', () => { navLinks.classList.toggle('show'); mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630'; });
 navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('show'); mobileMenuBtn.textContent = '\u2630'; }); });
+
+// Blog category filter
+document.querySelectorAll('.blog-filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelector('.blog-filter-btn.active').classList.remove('active');
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.blog-card').forEach(card => {
+            if (filter === 'all' || card.dataset.category.split(' ').includes(filter)) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
 </script>
 </body>
 </html>
