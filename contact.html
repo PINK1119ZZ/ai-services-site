@@ -80,6 +80,58 @@
     </div>
 </section>
 
+<!-- CONTACT FORM -->
+<section style="padding: 0 0 3rem;">
+    <div style="max-width:600px;margin:0 auto;padding:0 2rem;">
+        <div class="fade-in" style="background:rgba(255,255,255,0.03);border:1px solid rgba(108,92,231,0.2);border-radius:16px;padding:2.5rem;">
+            <h2 style="text-align:center;margin-bottom:0.5rem;color:var(--light);" data-en="Quick Inquiry Form">快速諮詢表單</h2>
+            <p style="text-align:center;color:var(--gray);margin-bottom:2rem;font-size:0.9rem;" data-en="Fill out below and I'll reply within hours">填寫以下資料，我會在幾小時內回覆你</p>
+            <form action="https://formsubmit.co/ahrxiaofan@gmail.com" method="POST">
+                <!-- FormSubmit settings -->
+                <input type="hidden" name="_subject" value="🔔 AutoDev AI 新客戶諮詢">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://autodev-ai.com/contact.html?sent=1">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+                <div style="margin-bottom:1.2rem;">
+                    <label style="display:block;color:var(--text-secondary);margin-bottom:0.4rem;font-size:0.9rem;" data-en="Name *">姓名 *</label>
+                    <input type="text" name="姓名" required style="width:100%;padding:0.8rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--light);font-size:1rem;outline:none;box-sizing:border-box;" placeholder="你的名字">
+                </div>
+                <div style="margin-bottom:1.2rem;">
+                    <label style="display:block;color:var(--text-secondary);margin-bottom:0.4rem;font-size:0.9rem;" data-en="Email *">Email *</label>
+                    <input type="email" name="Email" required style="width:100%;padding:0.8rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--light);font-size:1rem;outline:none;box-sizing:border-box;" placeholder="your@email.com">
+                </div>
+                <div style="margin-bottom:1.2rem;">
+                    <label style="display:block;color:var(--text-secondary);margin-bottom:0.4rem;font-size:0.9rem;" data-en="Which platform do you need?">需要哪個平台？</label>
+                    <select name="平台" style="width:100%;padding:0.8rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--light);font-size:1rem;outline:none;box-sizing:border-box;">
+                        <option value="LINE" style="background:#1a1a2e;">LINE</option>
+                        <option value="Telegram" style="background:#1a1a2e;">Telegram</option>
+                        <option value="Discord" style="background:#1a1a2e;">Discord</option>
+                        <option value="Slack" style="background:#1a1a2e;">Slack</option>
+                        <option value="Web Chat" style="background:#1a1a2e;">Web Chat</option>
+                        <option value="其他" style="background:#1a1a2e;" data-en="Other">其他</option>
+                    </select>
+                </div>
+                <div style="margin-bottom:1.2rem;">
+                    <label style="display:block;color:var(--text-secondary);margin-bottom:0.4rem;font-size:0.9rem;" data-en="Describe your needs *">描述你的需求 *</label>
+                    <textarea name="需求描述" required rows="4" style="width:100%;padding:0.8rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--light);font-size:1rem;outline:none;resize:vertical;box-sizing:border-box;" placeholder="例如：我開了一間美容院，想在 LINE 上做自動預約功能..." data-en-placeholder="e.g., I run a salon and want to automate bookings on LINE..."></textarea>
+                </div>
+                <div style="margin-bottom:1.5rem;">
+                    <label style="display:block;color:var(--text-secondary);margin-bottom:0.4rem;font-size:0.9rem;" data-en="Budget range">預算範圍</label>
+                    <select name="預算" style="width:100%;padding:0.8rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--light);font-size:1rem;outline:none;box-sizing:border-box;">
+                        <option value="NT$8,000 以下" style="background:#1a1a2e;" data-en="Under $250">NT$8,000 以下</option>
+                        <option value="NT$8,000-15,000" style="background:#1a1a2e;">NT$8,000-15,000 ($250-500)</option>
+                        <option value="NT$15,000-30,000" style="background:#1a1a2e;">NT$15,000-30,000 ($500-1,000)</option>
+                        <option value="NT$30,000+" style="background:#1a1a2e;">NT$30,000+ ($1,000+)</option>
+                        <option value="不確定" style="background:#1a1a2e;" data-en="Not sure yet">不確定，想先聊聊</option>
+                    </select>
+                </div>
+                <button type="submit" style="width:100%;padding:1rem;background:var(--gradient-1);border:none;border-radius:8px;color:white;font-size:1.1rem;font-weight:700;cursor:pointer;transition:all 0.3s;" data-en="Send Inquiry (Free) →">送出諮詢（免費）→</button>
+            </form>
+        </div>
+    </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
     <div class="section-header fade-in">
@@ -169,6 +221,19 @@ navLinks.querySelectorAll('a').forEach(link => {
         mobileMenuBtn.textContent = '\u2630';
     });
 });
+
+// Show success message if redirected back after form submit
+if (location.search.includes('sent=1')) {
+    var formBox = document.querySelector('#contactForm') || document.querySelector('form');
+    if (formBox) {
+        var msg = document.createElement('div');
+        msg.style.cssText = 'text-align:center;padding:2rem;color:#6ee7b7;font-size:1.2rem;font-weight:700;';
+        msg.textContent = '✅ 已送出！我會在幾小時內回覆你。';
+        formBox.parentElement.insertBefore(msg, formBox);
+        formBox.style.display = 'none';
+    }
+    history.replaceState(null, '', '/contact.html');
+}
 
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(q => {
