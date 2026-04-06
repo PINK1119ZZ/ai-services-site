@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 企業 AI 聊天機器人建置完整攻略：平台、費用、導入步驟 | AutoDev AI</title>
+    <meta name="description" content="如何為你的企業打造 AI 聊天機器人？完整比較 LINE Bot、Telegram Bot、網頁客服各平台優缺點，含費用分析、建置步驟與實際案例，最快 2 週上線。">
+    <link rel="canonical" href="https://autodev-ai.com/blog/ai-chatbot-for-business.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/ai-chatbot-for-business.html">
+    <link rel="alternate" hreflang="en" href="https://autodev-ai.com/en/blog/ai-chatbot-for-business.html">
+    <link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/ai-chatbot-for-business.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="2026 企業 AI 聊天機器人建置完整攻略 | AutoDev AI">
+    <meta property="og:description" content="為企業打造 AI 聊天機器人：平台比較、費用分析、建置步驟完整解析。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/ai-chatbot-for-business.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2026 企業 AI 聊天機器人建置完整攻略 | AutoDev AI">
+    <meta name="twitter:description" content="為企業打造 AI 聊天機器人：平台比較、費用分析、建置步驟完整解析。">
+    <meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <meta name="theme-color" content="#0F0F1A">
+    <meta name="keywords" content="AI 聊天機器人,企業聊天機器人,AI 客服機器人,聊天機器人開發,LINE Bot 開發,Telegram Bot 開發,AI 自動客服,商用聊天機器人">
+    <meta name="author" content="AutoDev AI">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <!-- Structured Data: Article -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"2026 企業 AI 聊天機器人建置完整攻略：平台、費用、導入步驟","description":"如何為企業打造 AI 聊天機器人？完整比較各平台優缺點，含費用分析、建置步驟與實際案例。","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-06","dateModified":"2026-04-06","mainEntityOfPage":"https://autodev-ai.com/blog/ai-chatbot-for-business.html","image":"https://autodev-ai.com/autodev-logo2.png"}
+    </script>
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"打造一個 AI 聊天機器人需要多久？","acceptedAnswer":{"@type":"Answer","text":"基礎的 FAQ 機器人（關鍵字回覆）約 3-5 天可完成。加上 AI 智慧回覆、預約功能和系統串接的進階機器人，通常需要 1-2 週。企業級多平台部署加 CRM 整合可能需要 2-4 週。"}},{"@type":"Question","name":"不會寫程式也能用 AI 聊天機器人嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。如果使用 ManyChat 等 SaaS 工具，可透過拖拉介面設定。如果請開發者客製化，技術面完全由開發者處理，你只需管理內容和查看對話紀錄。"}},{"@type":"Question","name":"哪個平台最適合做商用聊天機器人？","acceptedAnswer":{"@type":"Answer","text":"取決於你的客戶在哪裡。在台灣和日本，LINE 是主流。Telegram 適合科技社群和國際客戶。網頁聊天插件適用於所有網站訪客。很多企業會同時部署 2-3 個平台。"}},{"@type":"Question","name":"AI 聊天機器人每月營運費用多少？","acceptedAnswer":{"@type":"Answer","text":"營運費用其實很低。基本機器人在共享主機上約 NT$150-300/月。加上 AI 回覆（使用 GPT 或 Claude API）大約 NT$300-600/月，依訊息量而定。即使高流量的機器人，月營運成本也很少超過 NT$1,500。"}},{"@type":"Question","name":"AI 聊天機器人真的能取代真人客服嗎？","acceptedAnswer":{"@type":"Answer","text":"不完全能，也不應該。目標是自動化 70-80% 的重複問題（營業時間、價格、預約、FAQ），讓真人團隊專注在需要人性化溝通的複雜問題上。把它想成第一線過濾器，而非全面取代。"}}]}
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+    <style>
+        .blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
+        .blog-article h2 { color: var(--primary-light); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
+        .blog-article h3 { color: var(--text); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
+        .blog-article p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .blog-article ul, .blog-article ol { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .blog-article li { margin-bottom: 0.5rem; }
+        .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; text-align: center; }
+        .blog-meta span { margin: 0 0.5rem; }
+        .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+        .price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .price-table th { color: var(--primary-light); font-weight: 700; background: rgba(99,102,241,0.1); }
+        .price-table td { color: var(--text-secondary); }
+        .price-table tr:hover td { background: rgba(99,102,241,0.05); }
+        .highlight-box { background: rgba(99,102,241,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; margin: 1.5rem 0; }
+        .highlight-box p { margin-bottom: 0; color: var(--text); }
+        .blog-nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+        .blog-nav a { color: var(--primary-light); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(99,102,241,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
+        .blog-nav a:hover { background: rgba(99,102,241,0.2); border-color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">AutoDev AI</a>
+        <div class="nav-links" id="navLinks">
+            <a href="/services.html">服務</a>
+            <a href="/portfolio.html">作品</a>
+            <a href="/pricing.html">方案</a>
+            <a href="/blog/" class="active">部落格</a>
+            <a href="/about.html">關於</a>
+            <a href="/demo.html">體驗 Demo</a>
+            <a href="/contact.html" class="nav-cta">免費諮詢</a>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <h1>企業 AI 聊天機器人建置攻略</h1>
+    <p>2026 完整指南：平台選擇、費用分析、從零到上線</p>
+</section>
+
+<!-- ARTICLE -->
+<article class="blog-article fade-in">
+    <div class="blog-meta">
+        <span>Ivan / AutoDev AI</span> | <span>2026-04-06</span> | <span>閱讀時間 8 分鐘</span>
+    </div>
+
+    <div class="blog-nav">
+        <a href="#why-chatbot">為什麼需要</a>
+        <a href="#types">機器人類型</a>
+        <a href="#platforms">平台比較</a>
+        <a href="#build-vs-buy">自建 vs 外包</a>
+        <a href="#cost">費用分析</a>
+        <a href="#steps">建置步驟</a>
+        <a href="#results">導入成效</a>
+        <a href="#faq">常見問題</a>
+    </div>
+
+    <p>你的客戶已經在 LINE、Telegram、網頁上傳訊息給企業了。問題是：每一則訊息都靠真人回覆，還是讓一個聰明的 AI 聊天機器人處理例行工作，讓你的團隊專注在更重要的事情上？這篇文章幫你完整拆解：企業導入 AI 聊天機器人的所有面向——平台選擇、真實費用、以及從構想到上線的清晰路徑。</p>
+
+    <h2 id="why-chatbot">2026 年，為什麼每間企業都需要 AI 聊天機器人？</h2>
+
+    <p>訊息溝通優先已經不是趨勢，而是新常態。研究顯示約 65% 的消費者偏好傳訊息給商家，而非打電話。對年輕族群來說，這個比例更高。如果你的企業還在以電話和 Email 表單作為主要聯繫方式，就是在競爭對手不製造摩擦的地方，為客戶多設了一道門檻。</p>
+
+    <p>AI 聊天機器人同時解決三個根本問題：</p>
+
+    <ul>
+        <li><strong>24/7 全天候服務：</strong>客戶在晚上 11 點、週末、假日都會傳訊息。聊天機器人秒回，每一次都不漏接。不再有隔夜未讀的詢問、不再有錯過的潛在客戶。</li>
+        <li><strong>即時回應速度：</strong>一般企業平均需要 2-4 小時才能回覆一則訊息。聊天機器人在 3 秒內回應。光是這個速度差距，就足以決定潛在客戶是向你預約，還是轉向下一個選項。</li>
+        <li><strong>比人力更低的成本：</strong>一位兼職客服人員月薪約 NT$15,000-25,000。一個完善的 AI 聊天機器人，初期開發後月營運費僅 NT$150-600，而且能同時處理無限量對話，不需要休息或請假。</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p><strong>核心觀念：</strong>AI 聊天機器人不是要取代你的團隊，而是自動處理 70-80% 的重複問題，讓你的人力可以投入在真正需要人性化溝通的高價值工作上。</p>
+    </div>
+
+    <h2 id="types">商用聊天機器人的四大類型</h2>
+
+    <p>不是所有聊天機器人都做一樣的事。在開始建置之前，先搞清楚哪種類型適合你的需求：</p>
+
+    <h3>1. FAQ / 客服機器人</h3>
+    <p>最常見的入門選擇。自動回答常見問題——營業時間、價格、位置、退換貨政策、服務內容。基礎版用關鍵字比對；進階版用 AI（GPT 或 Claude）理解自然語言，從你的知識庫中提取答案。如果你每天都收到同樣的 10 個問題，這種機器人就能完全消除這些重複工作。想深入了解可參考我們的 <a href="/blog/ai-customer-service-line.html" style="color:var(--accent);">AI 客服完整指南</a>。</p>
+
+    <h3>2. 預約排班機器人</h3>
+    <p>服務業的必備工具——美容院、診所、工作室、餐廳、顧問公司。客戶選擇可用時段、填寫資料、收到確認通知。機器人管理可用性、發送提醒、自動記錄到試算表或行事曆。不再有電話來回、不再有重複預約。詳細內容請看我們的 <a href="/blog/line-bot-booking-system.html" style="color:var(--accent);">LINE 預約系統指南</a>。</p>
+
+    <h3>3. 電商/銷售機器人</h3>
+    <p>協助客戶查找商品、回答庫存或物流問題，甚至可以在對話中直接完成訂單。就像一個永遠不休息的銷售員。它可以根據偏好推薦商品、交叉銷售相關產品、發送棄單提醒。在台灣使用者習慣用 LINE 購物的環境下，效果特別好。</p>
+
+    <h3>4. 內部團隊機器人</h3>
+    <p>不是面對客戶，但同樣有價值。內部機器人處理團隊通知（班表、新訂單、低庫存警報）、自動生成日報、作為內部流程的快速參考。部署在 Telegram 或 Slack 上，讓團隊隨時掌握資訊，不用手動發一堆群組訊息。</p>
+
+    <h2 id="platforms">平台比較：你的機器人該放在哪裡？</h2>
+
+    <p>選擇正確的平台取決於你的客群在哪裡。部署在錯誤的平台上，等於建了一個沒人用的東西。以下是各平台的直接比較：</p>
+
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>平台</th>
+                <th>最適合</th>
+                <th>優點</th>
+                <th>缺點</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>LINE</strong></td>
+                <td>台灣、日本、泰國商家</td>
+                <td>亞洲超大用戶基數；圖文選單 & Flex Message；LINE Pay 整合</td>
+                <td>API 限制較多；大量推播需付費</td>
+            </tr>
+            <tr>
+                <td><strong>Telegram</strong></td>
+                <td>科技社群、跨國企業、內部團隊</td>
+                <td>API 完全免費；功能強大；無訊息數量限制；群組 & 頻道</td>
+                <td>台灣一般消費者使用率較低</td>
+            </tr>
+            <tr>
+                <td><strong>網頁聊天</strong></td>
+                <td>任何有網站的企業</td>
+                <td>不需安裝 App；任何網站都能用；完全自訂設計</td>
+                <td>只在訪客瀏覽網站時有效；無推播通知</td>
+            </tr>
+            <tr>
+                <td><strong>Slack</strong></td>
+                <td>內部團隊、B2B</td>
+                <td>深度整合工作空間；適合自動化工作流程</td>
+                <td>不適合客戶端使用</td>
+            </tr>
+            <tr>
+                <td><strong>Discord</strong></td>
+                <td>遊戲、社群、年輕族群</td>
+                <td>免費；豐富的機器人生態系；語音+文字頻道</td>
+                <td>多數 B2C 企業不適用</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="highlight-box">
+        <p><strong>我們的建議：</strong>台灣的企業通常先從 LINE 開始（客戶都在那裡），再加 Telegram 做內部團隊通知。網頁聊天是有網站的企業很好的第二管道。你不需要只選一個——多平台機器人可以共用同一套後端邏輯。</p>
+    </div>
+
+    <h2 id="build-vs-buy">自建 vs 外包：客製機器人 vs SaaS 工具</h2>
+
+    <p>這是你最需要認真思考的決定。兩種方式各有明確的取捨。</p>
+
+    <h3>SaaS 工具（Chatfuel、ManyChat、Tidio 等）</h3>
+    <ul>
+        <li><strong>優點：</strong>不需寫程式；拖拉式介面；快速上線（幾小時）；內建範本</li>
+        <li><strong>缺點：</strong>月訂閱費會累積（NT$500-3,000+/月）；客製化有限；你不擁有程式碼；平台綁定；功能可能不符合你的流程</li>
+        <li><strong>適合：</strong>Facebook Messenger 或 Instagram 上的簡單 FAQ 機器人；需要馬上上線、能接受限制的企業</li>
+    </ul>
+
+    <h3>客製化開發</h3>
+    <ul>
+        <li><strong>優點：</strong>完全按照你的業務邏輯打造；無月訂閱費（只有主機費）；程式碼完全歸你所有；無限客製化；可串接任何系統（CRM、行事曆、金流等）</li>
+        <li><strong>缺點：</strong>初期費用較高；需要開發者；需要 1-2 週而非幾小時</li>
+        <li><strong>適合：</strong>需要預約系統、AI 智慧回覆、多平台部署或串接現有工具的企業</li>
+    </ul>
+
+    <h3>什麼時候該選哪個？</h3>
+    <p>如果你只需要在 Instagram 私訊設定簡單的自動回覆，SaaS 工具可能就夠了。但如果你需要機器人能預約、用 AI 回答問題、發通知給團隊、自動記錄資料到試算表——客製化開發在第一個月內就能回本，因為你省掉了持續的 SaaS 月費，還能得到完全符合需求的功能。</p>
+
+    <h2 id="cost">客製 AI 聊天機器人要花多少錢？</h2>
+
+    <p>價格因複雜度而異。以下是各種專案規模的實際報價。更多 LINE 專屬報價請參考我們的 <a href="/blog/line-bot-cost.html" style="color:var(--accent);">LINE Bot 費用完整分析</a>。</p>
+
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>方案</th>
+                <th>功能內容</th>
+                <th>開發費用</th>
+                <th>月營運費用</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>入門方案</strong></td>
+                <td>關鍵字回覆、5 個模組、選單導覽、Google Sheets 記錄</td>
+                <td>NT$6,000 - 9,000</td>
+                <td>NT$150 - 300</td>
+            </tr>
+            <tr>
+                <td><strong>進階方案</strong></td>
+                <td>AI 智慧回覆（GPT/Claude）、對話記錄、第三方串接、數據儀表板</td>
+                <td>NT$12,000 - 18,000</td>
+                <td>NT$300 - 600</td>
+            </tr>
+            <tr>
+                <td><strong>企業方案</strong></td>
+                <td>預約系統、多平台部署、CRM 整合、客製管理後台、進階 AI 工作流程</td>
+                <td>NT$25,000 - 45,000+</td>
+                <td>NT$450 - 1,500</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>為什麼這些價格比你預期的低？</strong>AI 輔助開發將聊天機器人的建置時間縮短了 50-70%。在 AutoDev AI，我們把省下的成本直接回饋給客戶。兩年前需要 NT$60,000-150,000 的機器人，現在只需要一小部分費用。</p>
+
+    <div class="highlight-box">
+        <p><strong>算一筆帳：</strong>一位兼職客服月薪 NT$15,000-25,000。一個進階方案聊天機器人只要 NT$12,000-18,000 一次性費用，加上每月 NT$300-600 營運費。機器人在第一週就能回本。<a href="/pricing.html" style="color:var(--accent);">查看完整方案 &rarr;</a></p>
+    </div>
+
+    <h2 id="steps">從構想到上線：五步驟完整流程</h2>
+
+    <p>以下是我們在 AutoDev AI 實際執行的流程。不管你是自建還是委託開發，這些步驟都適用。</p>
+
+    <h3>步驟一：定義你的使用場景</h3>
+    <p>先列出你的團隊每天重複處理最多的 5-10 個問題或任務。要具體：不是只寫「客戶服務」，而是「每天回答價格、營業時間、停車資訊的問題超過 30 次」。使用場景越清楚，機器人就越有效。優先處理影響最大的那一個工作流程。</p>
+
+    <h3>步驟二：選擇平台</h3>
+    <p>去你的客戶所在的地方。如果 90% 的詢問來自 LINE，就先在 LINE 上建置。如果你經營網路社群，Telegram 或 Discord 更合適。第一天不要想同時佈局五個平台——從一個開始，驗證價值，再逐步擴展。</p>
+
+    <h3>步驟三：設計對話流程</h3>
+    <p>畫出每一個可能的使用者互動。有人打招呼會怎樣？如果問了機器人無法回答的問題呢？設計清楚的路徑：打招呼、主選單、各 FAQ 主題、預約流程（如果有的話）、以及在需要時優雅地轉接真人。好的對話流程要讓人覺得自然，而不是在跟機器對話。</p>
+
+    <h3>步驟四：開發與測試</h3>
+    <p>建置機器人、連接資料來源（商品資訊、行事曆、FAQ 文件），然後徹底測試。用你實際的訊息記錄來測——不要只測「理想路徑」。確認機器人能妥善處理打錯字、意料之外的輸入和邊界情況。這個階段通常需要 3-10 天，取決於複雜度。</p>
+
+    <h3>步驟五：上線與監控</h3>
+    <p>正式上線，但不要放著不管。前 1-2 週密切監控對話。找出機器人回覆不佳的問題並改善。檢查數據：每天多少對話、多少比例不需要真人介入就能解決、使用者在哪裡中斷？上線後第一個月的持續優化，決定了機器人是受歡迎還是被忽略。</p>
+
+    <div class="highlight-box">
+        <p><strong>想跳過這些複雜步驟？</strong><a href="/contact.html" style="color:var(--accent);">預約免費 30 分鐘諮詢</a>，我們幫你評估專案、推薦最適合的平台、提供固定報價——通常 24 小時內就能給你回覆。</p>
+    </div>
+
+    <h2 id="results">導入前後的實際成效</h2>
+
+    <p>數字比承諾更有說服力。以下是企業導入 AI 聊天機器人後的典型成效：</p>
+
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>指標</th>
+                <th>導入前</th>
+                <th>導入後</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>詢問回應時間</td>
+                <td>2-4 小時（僅限營業時間）</td>
+                <td>3 秒內，24/7 全天候</td>
+            </tr>
+            <tr>
+                <td>重複問題人工處理比例</td>
+                <td>100%</td>
+                <td>20%（機器人處理 80%）</td>
+            </tr>
+            <tr>
+                <td>每週花在例行回覆的時間</td>
+                <td>15+ 小時</td>
+                <td>1-2 小時（檢查機器人紀錄）</td>
+            </tr>
+            <tr>
+                <td>非營業時間漏接的詢問</td>
+                <td>全部漏接</td>
+                <td>零漏接</td>
+            </tr>
+            <tr>
+                <td>客戶對回應速度的滿意度</td>
+                <td>參差不齊</td>
+                <td>持續高滿意度</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>實際案例：服務業 LINE Bot 導入</h3>
+    <p><strong>導入前：</strong>一間服務型商家每天收到 40-50 則 LINE 訊息，都是同樣的價格、可用時段、預約問題。老闆每天花 2 小時以上打字回覆，常常是邊服務現場客戶邊回訊息。非營業時間的訊息要到隔天早上才能回覆，導致許多潛在預約流失給回覆更快的競爭對手。</p>
+    <p><strong>導入後：</strong>AI 驅動的 LINE Bot 自動處理 FAQ 回覆和預約請求。老闆每天只需花約 10 分鐘檢查對話摘要。回應時間從數小時降到數秒。月預約量增加 25%，因為非營業時間的詢問現在能即時轉換，而不是拖到隔天才回覆。</p>
+
+    <p>想了解更多 AI 自動化如何幫助企業省時間和成本，請看我們的 <a href="/blog/small-business-automation.html" style="color:var(--accent);">小店家自動化工具指南</a>。</p>
+
+    <h2 id="faq">常見問題</h2>
+
+    <div class="faq-list">
+        <div class="faq-item fade-in">
+            <div class="faq-q">打造一個 AI 聊天機器人需要多久？</div>
+            <div class="faq-a">基礎的 FAQ 機器人（關鍵字回覆）約 3-5 天可完成。加上 AI 智慧回覆、預約功能和系統串接的進階機器人，通常需要 1-2 週。企業級多平台部署加 CRM 整合可能需要 2-4 週。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">不會寫程式也能用 AI 聊天機器人嗎？</div>
+            <div class="faq-a">可以。如果使用 ManyChat 等 SaaS 工具，可透過拖拉介面設定。如果請開發者客製化，技術面完全由開發者處理，你只需管理內容和查看對話紀錄。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">哪個平台最適合做商用聊天機器人？</div>
+            <div class="faq-a">取決於你的客戶在哪裡。在台灣和日本，LINE 是主流。Telegram 適合科技社群和國際客戶。網頁聊天插件適用於所有網站訪客。很多企業會同時部署 2-3 個平台。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">AI 聊天機器人每月營運費用多少？</div>
+            <div class="faq-a">營運費用其實很低。基本機器人在共享主機上約 NT$150-300/月。加上 AI 回覆（使用 GPT 或 Claude API）大約 NT$300-600/月，依訊息量而定。即使高流量的機器人，月營運成本也很少超過 NT$1,500。</div>
+        </div>
+        <div class="faq-item fade-in">
+            <div class="faq-q">AI 聊天機器人真的能取代真人客服嗎？</div>
+            <div class="faq-a">不完全能，也不應該。目標是自動化 70-80% 的重複問題（營業時間、價格、預約、FAQ），讓真人團隊專注在需要人性化溝通的複雜問題上。把它想成第一線過濾器，而非全面取代。</div>
+        </div>
+    </div>
+
+    <div class="highlight-box" style="margin-top:2rem;">
+        <p><strong>準備好了嗎？</strong><a href="/contact.html" style="color:var(--accent);">預約免費諮詢</a>——我們幫你定義最適合你企業的聊天機器人方案，給你清楚的時程和報價。</p>
+    </div>
+</article>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-box fade-in">
+        <h2>想為你的企業打造 AI 聊天機器人？</h2>
+        <p>客製化 AI 聊天機器人 NT$6,000 起，最快 2 週上線。</p>
+        <div class="cta-buttons">
+            <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" class="btn btn-primary">免費諮詢 &rarr;</a>
+            <a href="/pricing.html" class="btn btn-secondary">查看方案</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 AutoDev AI. Built with AI.</p>
+</footer>
+
+<script src="/chat-widget.js" defer></script>
+<script src="/lang.js" defer></script>
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
+fadeEls.forEach(el => observer.observe(el));
+setTimeout(() => { fadeEls.forEach(el => { const rect = el.getBoundingClientRect(); if (rect.top < window.innerHeight + 100) el.classList.add('visible'); }); }, 150);
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+mobileMenuBtn.addEventListener('click', () => { navLinks.classList.toggle('show'); mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630'; });
+navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('show'); mobileMenuBtn.textContent = '\u2630'; }); });
+document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+        const item = q.parentElement;
+        document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
+        item.classList.toggle('open');
+    });
+});
+</script>
+</body>
+</html>
