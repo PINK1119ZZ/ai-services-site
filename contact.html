@@ -33,10 +33,25 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"ContactPage","name":"AutoDev AI 免費諮詢","url":"https://autodev-ai.com/contact.html","description":"LINE Bot 開發免費諮詢，透過 LINE、Telegram 或 Email 聯繫","mainEntity":{"@type":"ProfessionalService","name":"AutoDev AI","url":"https://autodev-ai.com","email":"ahrxiaofan@gmail.com","contactPoint":{"@type":"ContactPoint","contactType":"customer service","availableLanguage":["zh-TW","en"]}}}
     </script>
-    <!-- Google Analytics -->
+    <!-- Google Analytics + Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
-    
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+    <script>
+      window.dataLayer=window.dataLayer||[];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js',new Date());
+      if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';
+      var _cfg={};
+      if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';
+      gtag('config','G-4ZWDT650BM',_cfg);
+      // ★ Google Ads 轉換追蹤 — 與 index.html 填入同樣的值
+      var ADS_ID    = 'AW-18066037819';
+      var ADS_LABEL = 'PUcnCLS6sJccELu4x6ZD';
+      gtag('config', ADS_ID);
+      window.fireAdsConversion = function() {
+        gtag('event', 'conversion', { send_to: ADS_ID + '/' + ADS_LABEL });
+      };
+    </script>
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -69,7 +84,7 @@
         <h2 data-en="Ready to let AI work for you?">準備好讓 AI 幫你工作了嗎？</h2>
         <p data-en="Free consultation. No satisfaction, no charge. Tell me your needs and I'll find the best solution.">免費諮詢，不滿意不收費。告訴我你的需求，我來給你最佳方案。</p>
         <div class="cta-buttons">
-            <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" class="btn btn-primary" data-en="Get Started &rarr;">立即諮詢 →</a>
+            <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" class="btn btn-primary" data-en="Get Started &rarr;" onclick="fireAdsConversion();gtag('event','click',{event_category:'CTA',event_label:'contact_line_liff'})">立即諮詢 →</a>
             <a href="https://line.me/ti/p/@882vhisc" target="_blank" class="btn btn-secondary" data-en="Or chat on LINE">或加 LINE 聊聊</a>
         </div>
         <div class="cta-contacts">
@@ -168,7 +183,7 @@
         <h2 data-en="Have more questions?">還有其他問題？</h2>
         <p data-en="Reach out directly — free consultation, no charge.">直接聯繫我，免費諮詢不收費。</p>
         <div class="cta-buttons">
-            <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" class="btn btn-primary" data-en="Get Started &rarr;">立即諮詢 →</a>
+            <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" class="btn btn-primary" data-en="Get Started &rarr;" onclick="fireAdsConversion();gtag('event','click',{event_category:'CTA',event_label:'contact_line_liff'})">立即諮詢 →</a>
             <a href="https://t.me/AUTO_DEV_AI_BOT" target="_blank" class="btn btn-secondary" data-en="Contact via Telegram">Telegram 聯繫</a>
         </div>
     </div>
@@ -222,9 +237,14 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Show success message if redirected back after form submit
+// 表單送出成功 — 觸發 Google Ads 轉換 + 顯示成功訊息
 if (location.search.includes('sent=1')) {
-    var formBox = document.querySelector('#contactForm') || document.querySelector('form');
+    // ★ 觸發 Google Ads 轉換（最重要的追蹤點）
+    fireAdsConversion();
+    // 同步觸發 GA4 lead 事件
+    gtag('event', 'generate_lead', { event_category: 'Contact', event_label: 'Form Submission' });
+
+    var formBox = document.querySelector('form');
     if (formBox) {
         var msg = document.createElement('div');
         msg.style.cssText = 'text-align:center;padding:2rem;color:#6ee7b7;font-size:1.2rem;font-weight:700;';

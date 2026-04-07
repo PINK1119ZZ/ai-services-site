@@ -848,13 +848,15 @@ footer a {
 }
 
 /* ===== ANIMATIONS ===== */
+/* 只有 JS 載入後才隱藏（避免爬蟲/廣告用戶看到黑屏） */
 .fade-in {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.js .fade-in {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s ease;
 }
-
-.fade-in.visible {
+.js .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
 }
