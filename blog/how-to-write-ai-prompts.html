@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何用 AI 寫出好的 Prompt？新手完整教學 2026 | AutoDev AI</title>
+    <meta name="description" content="Prompt 是什麼？為什麼同樣用 ChatGPT，別人得到完美答案你卻得到廢話？本文教你 5 大 Prompt 技巧、角色扮演法、提問框架，新手一看就會。">
+    <link rel="canonical" href="https://autodev-ai.com/blog/how-to-write-ai-prompts.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/how-to-write-ai-prompts.html">
+    <link rel="alternate" hreflang="en" href="https://autodev-ai.com/en/blog/how-to-write-ai-prompts.html">
+    <link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/how-to-write-ai-prompts.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="如何用 AI 寫出好的 Prompt？新手完整教學 2026">
+    <meta property="og:description" content="5 大 Prompt 技巧讓 AI 回答更精準：角色扮演法、情境說明、格式要求、範例提供、分步提問。新手一看就會。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/how-to-write-ai-prompts.html">
+    <meta property="og:image" content="https://autodev-ai.com/blog/images/how-to-write-ai-prompts-hero.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="如何用 AI 寫出好的 Prompt？新手完整教學 2026">
+    <meta name="twitter:description" content="5 大 Prompt 技巧讓 AI 回答更精準：角色扮演法、情境說明、格式要求、範例提供、分步提問。">
+    <meta name="twitter:image" content="https://autodev-ai.com/blog/images/how-to-write-ai-prompts-hero.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <meta name="theme-color" content="#0F0F1A">
+    <meta name="keywords" content="Prompt 教學,AI Prompt 寫法,ChatGPT Prompt 技巧,如何問 AI,Prompt Engineering 新手,AI 提問技巧,寫好 Prompt,Claude Prompt,Gemini Prompt">
+    <meta name="author" content="AutoDev AI">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <!-- Structured Data: Article -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"如何用 AI 寫出好的 Prompt？新手完整教學 2026","description":"5 大 Prompt 技巧讓 AI 回答更精準：角色扮演法、情境說明、格式要求、範例提供、分步提問。新手一看就會。","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-10","dateModified":"2026-04-10","mainEntityOfPage":"https://autodev-ai.com/blog/how-to-write-ai-prompts.html","image":"https://autodev-ai.com/blog/images/how-to-write-ai-prompts-hero.png"}
+    </script>
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"什麼是 Prompt？","acceptedAnswer":{"@type":"Answer","text":"Prompt 就是你給 AI 的指令或問題。它可以是一句話、一段描述、甚至帶有角色設定和範例的完整說明。Prompt 的品質直接決定 AI 回答的品質。"}},{"@type":"Question","name":"為什麼我問 ChatGPT 都得不到好答案？","acceptedAnswer":{"@type":"Answer","text":"最常見原因是 Prompt 太模糊。例如只說「幫我寫文章」而不說主題、長度、受眾、語氣。加上角色設定和情境說明後，回答品質可提升 60% 以上。"}},{"@type":"Question","name":"Prompt Engineering 需要學程式嗎？","acceptedAnswer":{"@type":"Answer","text":"完全不需要。Prompt Engineering 的核心是「清楚表達需求」，任何人都能學。本文的 5 大技巧不需要任何技術背景，照著做就能立刻看到改善。"}},{"@type":"Question","name":"ChatGPT、Claude、Gemini 的 Prompt 寫法一樣嗎？","acceptedAnswer":{"@type":"Answer","text":"基礎原則相同（清楚、具體、有情境），但各有特性：Claude 更善於遵循複雜指示、ChatGPT 對創意任務反應快、Gemini 擅長搜尋整合。本文技巧對三者都適用。"}},{"@type":"Question","name":"有沒有好用的 Prompt 模板可以直接複製？","acceptedAnswer":{"@type":"Answer","text":"有！本文提供「角色 + 任務 + 格式 + 限制」四段式模板，以及行銷文案、客服回覆、會議摘要三個即用模板，直接複製修改即可使用。"}}]}
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+    <style>
+        .blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
+        .blog-article h2 { color: var(--primary-light); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
+        .blog-article h3 { color: var(--text); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
+        .blog-article p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .blog-article ul, .blog-article ol { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .blog-article li { margin-bottom: 0.5rem; }
+        .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; text-align: center; }
+        .blog-meta span { margin: 0 0.5rem; }
+        .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+        .price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .price-table th { color: var(--primary-light); font-weight: 700; background: rgba(99,102,241,0.1); }
+        .price-table td { color: var(--text-secondary); }
+        .price-table tr:hover td { background: rgba(99,102,241,0.05); }
+        .highlight-box { background: rgba(99,102,241,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; margin: 1.5rem 0; }
+        .highlight-box p { margin-bottom: 0; color: var(--text); }
+        .blog-nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+        .blog-nav a { color: var(--primary-light); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(99,102,241,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
+        .blog-nav a:hover { background: rgba(99,102,241,0.2); border-color: var(--primary); }
+        .prompt-box { background: rgba(15,15,26,0.8); border: 1px solid rgba(108,92,231,0.4); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; font-family: 'Inter', monospace; }
+        .prompt-box .label { color: var(--primary-light); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+        .prompt-box .bad { color: #ff7675; margin-bottom: 0.5rem; }
+        .prompt-box .good { color: #00b894; }
+        .prompt-box p { font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem; }
+        .tip-number { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: var(--primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; margin-right: 0.5rem; flex-shrink: 0; }
+        .tip-header { display: flex; align-items: center; margin: 2.5rem 0 1rem; }
+        .tip-header h2 { margin: 0; color: var(--primary-light); font-size: 1.4rem; }
+        .hero-svg-wrap { margin: 2rem 0; border-radius: 16px; overflow: hidden; }
+        .faq-section { margin-top: 3rem; }
+        .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 1.5rem 0; }
+        .faq-item h3 { color: var(--primary-light); margin: 0 0 0.8rem; font-size: 1.1rem; }
+        .faq-item p { margin-bottom: 0; }
+        .cta-section { background: linear-gradient(135deg, rgba(108,92,231,0.2), rgba(99,102,241,0.1)); border: 1px solid rgba(108,92,231,0.3); border-radius: 20px; padding: 2.5rem; text-align: center; margin-top: 3rem; }
+        .cta-section h2 { color: var(--text); margin-bottom: 1rem; }
+        .cta-section p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">AutoDev AI</a>
+        <div class="nav-links" id="navLinks">
+            <a href="/services.html">服務</a>
+            <a href="/portfolio.html">作品</a>
+            <a href="/pricing.html">方案</a>
+            <a href="/blog/" class="active">Blog</a>
+            <a href="/about.html">關於</a>
+            <a href="/demo.html">體驗 Demo</a>
+            <a href="/contact.html" class="nav-cta">免費諮詢</a>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
+    </div>
+</nav>
+
+<!-- HERO SVG -->
+<div class="hero-svg-wrap" style="max-width:900px;margin:6rem auto 0;padding:0 2rem;">
+    <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:16px;">
+        <defs>
+            <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#0F0F1A"/>
+                <stop offset="100%" style="stop-color:#1a1040"/>
+            </linearGradient>
+            <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#6c5ce7"/>
+                <stop offset="100%" style="stop-color:#a29bfe"/>
+            </linearGradient>
+        </defs>
+        <rect width="900" height="400" fill="url(#bgGrad)"/>
+        <!-- Decorative circles -->
+        <circle cx="750" cy="80" r="120" fill="rgba(108,92,231,0.08)"/>
+        <circle cx="150" cy="320" r="80" fill="rgba(108,92,231,0.06)"/>
+        <!-- Chat bubble left: bad prompt -->
+        <rect x="40" y="90" width="280" height="80" rx="16" fill="rgba(255,118,117,0.12)" stroke="rgba(255,118,117,0.4)" stroke-width="1.5"/>
+        <text x="60" y="118" font-family="Inter,sans-serif" font-size="11" fill="#ff7675" font-weight="700">❌ 模糊 Prompt</text>
+        <text x="60" y="142" font-family="Inter,sans-serif" font-size="13" fill="#dfe6e9">「幫我寫一篇文章」</text>
+        <text x="60" y="162" font-family="Inter,sans-serif" font-size="11" fill="#b2bec3">→ AI 不知道寫什麼，亂回一通</text>
+        <!-- Arrow pointing right -->
+        <text x="340" y="135" font-family="Inter,sans-serif" font-size="28" fill="rgba(108,92,231,0.6)">→</text>
+        <!-- Chat bubble center: AI icon -->
+        <rect x="390" y="70" width="120" height="120" rx="24" fill="url(#accentGrad)" opacity="0.9"/>
+        <text x="450" y="145" font-family="Inter,sans-serif" font-size="48" text-anchor="middle" fill="white">🤖</text>
+        <!-- Arrow pointing right -->
+        <text x="530" y="135" font-family="Inter,sans-serif" font-size="28" fill="rgba(108,92,231,0.6)">→</text>
+        <!-- Chat bubble right: good response -->
+        <rect x="580" y="90" width="280" height="80" rx="16" fill="rgba(0,184,148,0.12)" stroke="rgba(0,184,148,0.4)" stroke-width="1.5"/>
+        <text x="600" y="118" font-family="Inter,sans-serif" font-size="11" fill="#00b894" font-weight="700">✅ 精準 Prompt</text>
+        <text x="600" y="138" font-family="Inter,sans-serif" font-size="11" fill="#dfe6e9">「你是資深行銷顧問，針對台灣</text>
+        <text x="600" y="154" font-family="Inter,sans-serif" font-size="11" fill="#dfe6e9">30-40 歲女性，寫 300 字 IG 貼文」</text>
+        <text x="600" y="170" font-family="Inter,sans-serif" font-size="11" fill="#b2bec3">→ 精準、可用、省時</text>
+        <!-- Bottom title -->
+        <text x="450" y="260" font-family="Inter,sans-serif" font-size="32" font-weight="700" fill="white" text-anchor="middle">如何寫出好的 AI Prompt</text>
+        <rect x="200" y="280" width="500" height="4" rx="2" fill="url(#accentGrad)" opacity="0.8"/>
+        <text x="450" y="320" font-family="Inter,sans-serif" font-size="16" fill="#a29bfe" text-anchor="middle">5 大技巧 × 即用模板 × 新手完整教學</text>
+        <text x="450" y="360" font-family="Inter,sans-serif" font-size="12" fill="rgba(178,190,195,0.6)" text-anchor="middle">autodev-ai.com</text>
+    </svg>
+</div>
+
+<!-- ARTICLE -->
+<article class="blog-article">
+    <div class="blog-meta">
+        <span>📅 2026-04-10</span>
+        <span>✍️ Ivan @ AutoDev AI</span>
+        <span>⏱ 閱讀約 10 分鐘</span>
+    </div>
+
+    <h1 style="text-align:center;font-size:2rem;margin-bottom:0.5rem;">如何用 AI 寫出好的 Prompt？</h1>
+    <h1 style="text-align:center;font-size:1.4rem;color:var(--primary-light);font-weight:500;margin-bottom:2rem;">新手完整教學 2026</h1>
+
+    <div class="blog-nav">
+        <a href="/blog/">← 回到 Blog</a>
+        <a href="/blog/chatgpt-claude-gemini-comparison.html">AI 工具比較</a>
+        <a href="/blog/ai-tools-comparison-2026.html">AI 工具整理</a>
+        <a href="/services.html">AI 自動化服務</a>
+    </div>
+
+    <p>你有沒有這種感覺：同樣用 ChatGPT，別人得到一篇精彩的商品文案，你卻只得到一堆廢話？差別不在 AI，而在於你怎麼「問」它。</p>
+
+    <p>這個「問法」就是 <strong>Prompt</strong>。Prompt 的品質直接決定 AI 輸出的品質。好消息是：寫好 Prompt 不需要任何程式背景，只需要掌握幾個核心原則，任何人都能在 5 分鐘內明顯提升 AI 的回答品質。</p>
+
+    <div class="highlight-box">
+        <p>📌 <strong>本文重點：</strong>你將學到 5 大 Prompt 技巧、一個四段式萬用模板、以及 3 個可直接複製使用的即用範本。適合 ChatGPT、Claude、Gemini 三大 AI 平台。</p>
+    </div>
+
+    <h2>什麼是 Prompt？為什麼它這麼重要？</h2>
+
+    <p>Prompt（提示詞）就是你輸入給 AI 的文字指令。它可以是一句話，也可以是一段詳細的描述，甚至包含角色設定、背景資訊、輸出格式要求等。</p>
+
+    <p>AI 語言模型的運作原理是「預測最可能的回答」。當你給的資訊越模糊，AI 就必須「猜」你要什麼，結果當然不精準。當你給的資訊越具體，AI 就能精準對焦，給出你真正需要的答案。</p>
+
+    <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80" alt="AI Prompt 工程師在電腦前思考如何撰寫最佳提示詞" loading="lazy" style="width:100%;border-radius:12px;margin:1.5rem 0;">
+
+    <p>研究顯示，使用結構化 Prompt 的用戶，得到滿意答案的比例比隨意提問高出 <strong>3-5 倍</strong>。這不是魔法，只是溝通技巧。</p>
+
+    <!-- TECHNIQUE 1 -->
+    <div class="tip-header">
+        <span class="tip-number">1</span>
+        <h2>給 AI 一個「角色」：角色扮演法</h2>
+    </div>
+
+    <p>這是最簡單、效果也最明顯的技巧。在你的問題前面加上「你是一位 XXX」，AI 會立刻調整它的語氣、專業深度和表達風格。</p>
+
+    <div class="prompt-box">
+        <div class="label">範例對比</div>
+        <p class="bad">❌ 一般問法：「幫我寫一封給客戶的道歉信」</p>
+        <p class="good">✅ 角色法：「你是一位有 10 年經驗的品牌公關顧問。我的餐廳因為食材問題讓客戶食物中毒，請幫我寫一封誠懇的道歉信，語氣要謙遜但不失品牌形象，300 字以內。」</p>
+    </div>
+
+    <p>常用角色設定：</p>
+    <ul>
+        <li>「你是一位資深 SEO 行銷顧問，熟悉台灣市場...」</li>
+        <li>「你是一位友善的客服專員，服務對象是 40-60 歲的顧客...」</li>
+        <li>「你是一位精通繁體中文的編輯，幫我潤稿...」</li>
+        <li>「你是一位財務分析師，熟悉台灣中小企業的財務結構...」</li>
+    </ul>
+
+    <!-- TECHNIQUE 2 -->
+    <div class="tip-header">
+        <span class="tip-number">2</span>
+        <h2>說清楚「背景情境」：五個 W 框架</h2>
+    </div>
+
+    <p>新聞記者學的五個 W（Who, What, When, Where, Why）同樣適用於 Prompt。給 AI 足夠的情境，它才能給你貼近實際需求的答案。</p>
+
+    <div class="prompt-box">
+        <div class="label">五個 W 實戰範例</div>
+        <p class="bad">❌ 「幫我寫 IG 貼文」</p>
+        <p class="good">✅「幫我寫 IG 貼文：
+Who（目標受眾）：台灣 25-35 歲女性，喜歡手作與咖啡
+What（主題）：我的手沖咖啡豆上市，柑橘花香調
+When（時機）：週末早晨氛圍
+Where（平台）：Instagram，hashtag 需要
+Why（目的）：提升品牌知名度，帶動線上購買
+格式：3 段式，含 emoji，附 5 個 hashtag」</p>
+    </div>
+
+    <!-- SVG INFOGRAPHIC: Prompt 結構圖 -->
+    <div style="margin:2rem 0;">
+        <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+            <rect width="800" height="320" fill="#0F0F1A" rx="16"/>
+            <text x="400" y="38" font-family="Inter,sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle">一個好 Prompt 的結構</text>
+
+            <!-- Block 1 -->
+            <rect x="30" y="60" width="160" height="90" rx="12" fill="rgba(108,92,231,0.25)" stroke="rgba(108,92,231,0.6)" stroke-width="1.5"/>
+            <text x="110" y="100" font-family="Inter,sans-serif" font-size="28" text-anchor="middle">🎭</text>
+            <text x="110" y="125" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#a29bfe" text-anchor="middle">角色</text>
+            <text x="110" y="142" font-family="Inter,sans-serif" font-size="11" fill="#b2bec3" text-anchor="middle">你是誰？</text>
+
+            <!-- Arrow -->
+            <text x="200" y="110" font-family="Inter,sans-serif" font-size="20" fill="rgba(108,92,231,0.6)" text-anchor="middle">→</text>
+
+            <!-- Block 2 -->
+            <rect x="215" y="60" width="160" height="90" rx="12" fill="rgba(108,92,231,0.25)" stroke="rgba(108,92,231,0.6)" stroke-width="1.5"/>
+            <text x="295" y="100" font-family="Inter,sans-serif" font-size="28" text-anchor="middle">📋</text>
+            <text x="295" y="125" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#a29bfe" text-anchor="middle">任務</text>
+            <text x="295" y="142" font-family="Inter,sans-serif" font-size="11" fill="#b2bec3" text-anchor="middle">我要你做什麼？</text>
+
+            <!-- Arrow -->
+            <text x="385" y="110" font-family="Inter,sans-serif" font-size="20" fill="rgba(108,92,231,0.6)" text-anchor="middle">→</text>
+
+            <!-- Block 3 -->
+            <rect x="400" y="60" width="160" height="90" rx="12" fill="rgba(108,92,231,0.25)" stroke="rgba(108,92,231,0.6)" stroke-width="1.5"/>
+            <text x="480" y="100" font-family="Inter,sans-serif" font-size="28" text-anchor="middle">📐</text>
+            <text x="480" y="125" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#a29bfe" text-anchor="middle">格式</text>
+            <text x="480" y="142" font-family="Inter,sans-serif" font-size="11" fill="#b2bec3" text-anchor="middle">怎麼呈現？</text>
+
+            <!-- Arrow -->
+            <text x="570" y="110" font-family="Inter,sans-serif" font-size="20" fill="rgba(108,92,231,0.6)" text-anchor="middle">→</text>
+
+            <!-- Block 4 -->
+            <rect x="585" y="60" width="180" height="90" rx="12" fill="rgba(108,92,231,0.25)" stroke="rgba(108,92,231,0.6)" stroke-width="1.5"/>
+            <text x="675" y="100" font-family="Inter,sans-serif" font-size="28" text-anchor="middle">⚠️</text>
+            <text x="675" y="125" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#a29bfe" text-anchor="middle">限制</text>
+            <text x="675" y="142" font-family="Inter,sans-serif" font-size="11" fill="#b2bec3" text-anchor="middle">有什麼不能做？</text>
+
+            <!-- Example row -->
+            <rect x="30" y="175" width="740" height="110" rx="12" fill="rgba(0,184,148,0.08)" stroke="rgba(0,184,148,0.3)" stroke-width="1"/>
+            <text x="400" y="198" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#00b894" text-anchor="middle">實際範例</text>
+            <text x="400" y="220" font-family="Inter,sans-serif" font-size="12" fill="#dfe6e9" text-anchor="middle">「你是資深行銷顧問（角色）</text>
+            <text x="400" y="238" font-family="Inter,sans-serif" font-size="12" fill="#dfe6e9" text-anchor="middle">幫我寫一篇台灣手搖飲品牌的 FB 廣告文案（任務）</text>
+            <text x="400" y="256" font-family="Inter,sans-serif" font-size="12" fill="#dfe6e9" text-anchor="middle">分 3 個版本、每版 80 字以內、條列式（格式）</text>
+            <text x="400" y="274" font-family="Inter,sans-serif" font-size="12" fill="#dfe6e9" text-anchor="middle">不要使用英文、不誇大療效」（限制）</text>
+        </svg>
+    </div>
+
+    <!-- TECHNIQUE 3 -->
+    <div class="tip-header">
+        <span class="tip-number">3</span>
+        <h2>指定「輸出格式」：讓 AI 按你要的方式呈現</h2>
+    </div>
+
+    <p>AI 預設會給你一大段文字。但你可能需要的是條列式、表格、JSON、Markdown、或指定字數。明確告訴 AI 輸出格式，可以省去你大量後製時間。</p>
+
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>你的需求</th>
+                <th>格式指令範例</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>簡報大綱</td>
+                <td>「用 Markdown 格式，分 5 個主標題，每個主標題下 3 個子重點」</td>
+            </tr>
+            <tr>
+                <td>比較分析</td>
+                <td>「用表格呈現，欄位為：名稱、優點、缺點、適合對象」</td>
+            </tr>
+            <tr>
+                <td>行動步驟</td>
+                <td>「分 5 個步驟，每步驟含：標題、說明（2 句話）、注意事項」</td>
+            </tr>
+            <tr>
+                <td>社群文案</td>
+                <td>「3 個版本，每版 100 字以內，第一句要能引起注意」</td>
+            </tr>
+            <tr>
+                <td>客服回覆</td>
+                <td>「語氣親切但專業，200 字以內，結尾要有後續聯絡方式」</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="highlight-box">
+        <p>💡 <strong>小技巧：</strong>如果你不確定用什麼格式，可以問 AI：「這個任務最適合用什麼格式呈現？」讓 AI 幫你決定。</p>
+    </div>
+
+    <!-- TECHNIQUE 4 -->
+    <div class="tip-header">
+        <span class="tip-number">4</span>
+        <h2>提供「範例」：一個例子勝過千字說明</h2>
+    </div>
+
+    <p>這是專業 Prompt 工程師最常用的技巧，稱為「Few-shot Prompting」（小樣本提示）。你給 AI 1-3 個你喜歡的範例，它就能模仿那個風格或格式。</p>
+
+    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&q=80" alt="提供範例給 AI 參考，讓 Prompt 效果更精準" loading="lazy" style="width:100%;border-radius:12px;margin:1.5rem 0;">
+
+    <div class="prompt-box">
+        <div class="label">Few-shot 範例</div>
+        <p style="color:var(--text-secondary);font-size:0.9rem;">「請幫我用同樣的風格，寫一個關於咖啡豆的商品描述。
+<br><br>
+風格範例：
+「這不只是一瓶橄欖油，是義大利奶奶留下的秘密食譜。每一滴都帶著地中海的陽光，讓平凡的料理也有了靈魂。」
+<br><br>
+現在幫我寫：衣索比亞耶加雪菲單品咖啡豆（100g，柑橘花香調）」</p>
+    </div>
+
+    <p>同樣的技巧可以用在：</p>
+    <ul>
+        <li>你有喜歡的文章，想讓 AI 模仿那個語氣寫新內容</li>
+        <li>你有現有的客服回覆，想讓 AI 依相同標準回答新問題</li>
+        <li>你有自己的品牌文案風格，想讓 AI 保持一致性</li>
+    </ul>
+
+    <!-- TECHNIQUE 5 -->
+    <div class="tip-header">
+        <span class="tip-number">5</span>
+        <h2>「分步提問」：複雜任務拆開處理</h2>
+    </div>
+
+    <p>一次要求 AI 做太多事，它往往每件事都做得不夠好。把複雜任務拆成幾個步驟，每步驟單獨提問，最後整合結果，效果通常好得多。</p>
+
+    <div class="prompt-box">
+        <div class="label">錯誤做法 vs 正確做法</div>
+        <p class="bad">❌ 一次問太多：「幫我規劃一個 Instagram 行銷策略，包含目標設定、內容行事曆、文案範本、成效追蹤方法...」</p>
+        <br>
+        <p class="good">✅ 分步提問：
+<br>步驟 1：「我是一家台南的甜點店，目標是增加 IG 粉絲，幫我設定 3 個 SMART 行銷目標」
+<br>步驟 2：「根據剛才的目標，幫我規劃未來 4 週的內容主題行事曆」
+<br>步驟 3：「針對第一週的主題，幫我寫 3 篇貼文文案」</p>
+    </div>
+
+    <h2>四段式萬用模板（直接複製使用）</h2>
+
+    <p>把上面 5 個技巧整合起來，就是這個模板：</p>
+
+    <div class="prompt-box">
+        <div class="label">四段式 Prompt 模板</div>
+        <p style="color:#a29bfe;font-size:0.95rem;">【角色】你是一位 [專業領域] 的專家，有 [年資/特點]。
+<br><br>
+【任務】我需要你幫我 [具體任務]。背景情況是：[情境說明]。
+<br><br>
+【格式】請用 [格式要求]，大約 [字數/長度]，語氣要 [語氣風格]。
+<br><br>
+【限制】請注意：[不能做的事 / 特殊要求 / 限制條件]。</p>
+    </div>
+
+    <h2>三個即用 Prompt 模板</h2>
+
+    <h3>模板 A：行銷文案</h3>
+    <div class="prompt-box">
+        <p style="color:var(--text-secondary);font-size:0.9rem;">「你是一位熟悉台灣市場的資深數位行銷顧問。
+<br><br>幫我為【你的商品/服務名稱】寫一篇 FB 廣告貼文。目標受眾是【受眾描述，如：台北 30-45 歲職業婦女】，主要解決她們【痛點描述】的問題。
+<br><br>請給我 3 個版本：情感型、數據型、故事型，每版不超過 150 字，結尾要有明確 CTA（行動呼籲）。
+<br><br>請避免誇大功效的詞語，語氣要像朋友推薦，不要過度商業感。」</p>
+    </div>
+
+    <h3>模板 B：客服回覆</h3>
+    <div class="prompt-box">
+        <p style="color:var(--text-secondary);font-size:0.9rem;">「你是我們品牌的資深客服主任，語氣親切專業，代表公司說話。
+<br><br>客戶留言：【貼上客戶原文】
+<br><br>請幫我回覆：先感謝客戶反饋，針對問題說明解決方案，結尾提供後續協助。
+<br><br>語氣要誠懇，200 字以內，繁體中文，不要使用『您好，感謝您的支持...』這種罐頭開頭。」</p>
+    </div>
+
+    <h3>模板 C：會議摘要</h3>
+    <div class="prompt-box">
+        <p style="color:var(--text-secondary);font-size:0.9rem;">「你是一位專業的商業文書整理師。
+<br><br>以下是會議記錄逐字稿（或筆記）：
+【貼上原始內容】
+<br><br>請整理成：
+1. 會議結論（3 個重點以內）
+2. 決議事項（含負責人和截止日期）
+3. 待跟進事項（條列式）
+<br><br>用繁體中文，語氣正式，不加入你的主觀意見，只整理事實。」</p>
+    </div>
+
+    <h2>常見 Prompt 錯誤一次整理</h2>
+
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>常見錯誤</th>
+                <th>問題所在</th>
+                <th>修正方向</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>「幫我寫文章」</td>
+                <td>主題、受眾、長度、風格全部未說明</td>
+                <td>加上四段式模板所有要素</td>
+            </tr>
+            <tr>
+                <td>「翻譯這段」</td>
+                <td>未說明目標語言、語氣、用途</td>
+                <td>「翻成繁體中文，語氣口語，給一般大眾看」</td>
+            </tr>
+            <tr>
+                <td>「分析一下」</td>
+                <td>沒有說要分析什麼面向、要什麼格式</td>
+                <td>「從市場、競爭、風險三個角度分析，用表格呈現」</td>
+            </tr>
+            <tr>
+                <td>不滿意就重問</td>
+                <td>重複模糊問法，AI 繼續猜</td>
+                <td>告訴 AI「哪裡不好」，針對性修正</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="highlight-box">
+        <p>🔄 <strong>進階技巧：迭代對話。</strong>第一次回答不夠好時，不要重新開始。直接說：「這個太正式了，請用更輕鬆的語氣重寫」或「第二段不夠有力，可以加一個具體數字嗎？」AI 會記住前面的對話，持續優化。</p>
+    </div>
+
+    <h2>ChatGPT vs Claude vs Gemini：Prompt 有差嗎？</h2>
+
+    <p>本文的 5 大技巧對三個平台都適用，但各有小差異：</p>
+
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>AI 平台</th>
+                <th>特別擅長</th>
+                <th>Prompt 小建議</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ChatGPT</strong></td>
+                <td>創意發想、多樣化版本</td>
+                <td>可要求「給我 5 個不同方向的版本」</td>
+            </tr>
+            <tr>
+                <td><strong>Claude</strong></td>
+                <td>遵循複雜指示、長文分析</td>
+                <td>可以給非常詳細的格式要求，它都會照做</td>
+            </tr>
+            <tr>
+                <td><strong>Gemini</strong></td>
+                <td>整合搜尋、即時資訊</td>
+                <td>適合問「最新的 XXX 趨勢是什麼」類問題</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>想深入了解三者的差異？我們寫了一篇完整的比較文章：<a href="/blog/chatgpt-claude-gemini-comparison.html" style="color:var(--primary-light);">ChatGPT、Claude、Gemini 差在哪？2026 完整比較</a>。</p>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+        <h2>常見問題 FAQ</h2>
+
+        <div class="faq-item">
+            <h3>什麼是 Prompt？</h3>
+            <p>Prompt 就是你給 AI 的指令或問題。它可以是一句話、一段描述、甚至帶有角色設定和範例的完整說明。Prompt 的品質直接決定 AI 回答的品質。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>為什麼我問 ChatGPT 都得不到好答案？</h3>
+            <p>最常見原因是 Prompt 太模糊。例如只說「幫我寫文章」而不說主題、長度、受眾、語氣。加上角色設定和情境說明後，回答品質可提升 60% 以上。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Prompt Engineering 需要學程式嗎？</h3>
+            <p>完全不需要。Prompt Engineering 的核心是「清楚表達需求」，任何人都能學。本文的 5 大技巧不需要任何技術背景，照著做就能立刻看到改善。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>ChatGPT、Claude、Gemini 的 Prompt 寫法一樣嗎？</h3>
+            <p>基礎原則相同（清楚、具體、有情境），但各有特性：Claude 更善於遵循複雜指示、ChatGPT 對創意任務反應快、Gemini 擅長搜尋整合。本文技巧對三者都適用。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>有沒有好用的 Prompt 模板可以直接複製？</h3>
+            <p>有！本文提供「角色 + 任務 + 格式 + 限制」四段式模板，以及行銷文案、客服回覆、會議摘要三個即用模板，直接複製修改即可使用。</p>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>想讓 AI 真正為你的生意工作？</h2>
+        <p>學會寫 Prompt 只是第一步。如果你想把 AI 整合進你的 LINE 客服、預約系統、或自動化工作流程，我們可以幫你規劃和建置一套完整的 AI 自動化系統。</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <a href="/demo.html" class="btn-primary">體驗 AI Demo</a>
+            <a href="/contact.html" class="btn-outline">免費諮詢</a>
+        </div>
+        <p style="margin-top:1rem;font-size:0.85rem;color:var(--text-muted);">也可以查看 <a href="/services.html" style="color:var(--primary-light);">我們的 AI 服務</a> 和 <a href="/pricing.html" style="color:var(--primary-light);">方案費用</a></p>
+    </div>
+
+    <!-- Related Posts -->
+    <div style="margin-top:3rem;">
+        <h2>延伸閱讀</h2>
+        <ul>
+            <li><a href="/blog/chatgpt-claude-gemini-comparison.html" style="color:var(--primary-light);">ChatGPT、Claude、Gemini 差在哪？2026 完整比較給一般人看</a></li>
+            <li><a href="/blog/ai-tools-comparison-2026.html" style="color:var(--primary-light);">2026 年 AI 工具大整理：免費 vs 付費怎麼選</a></li>
+            <li><a href="/blog/workflow-automation-small-business.html" style="color:var(--primary-light);">不會寫程式也能用！5 個 AI 工作流程自動化工具</a></li>
+            <li><a href="/blog/ai-chatbot-for-business.html" style="color:var(--primary-light);">AI 聊天機器人適合我的生意嗎？5 種行業實測案例</a></li>
+        </ul>
+    </div>
+</article>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">AutoDev AI</div>
+            <p class="footer-tagline">AI 驅動的接案工作室<br>幫台灣中小企業打造智慧自動化系統</p>
+        </div>
+        <div class="footer-links">
+            <h4>服務</h4>
+            <a href="/services.html">LINE Bot 開發</a>
+            <a href="/services.html">AI 客服系統</a>
+            <a href="/services.html">自動化工作流程</a>
+            <a href="/portfolio.html">作品集</a>
+        </div>
+        <div class="footer-links">
+            <h4>資源</h4>
+            <a href="/blog/">部落格</a>
+            <a href="/demo.html">體驗 Demo</a>
+            <a href="/pricing.html">方案費用</a>
+            <a href="/contact.html">免費諮詢</a>
+        </div>
+        <div class="footer-links">
+            <h4>關於</h4>
+            <a href="/about.html">關於我們</a>
+            <a href="/contact.html">聯絡方式</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 AutoDev AI. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/chat-widget.js"></script>
+<script>
+    // Mobile nav
+    const btn = document.getElementById('mobileMenuBtn');
+    const links = document.getElementById('navLinks');
+    if(btn) btn.addEventListener('click', () => links.classList.toggle('open'));
+    // Sticky nav
+    window.addEventListener('scroll', () => {
+        document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+</script>
+</body>
+</html>
