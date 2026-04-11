@@ -179,3 +179,108 @@
 - [ ] 下次競品監控（2 週後）：追蹤 Dify/n8n 繁中關鍵字排名變化
 - [ ] 評估 iThome 鐵人賽 2026 下半年報名（最高品質反向連結來源）
 - [ ] 在 r/n8n 回答問題試跑 Reddit 流量
+
+---
+
+## 2026-04-12（市場研究 Round 5：新聯盟機會 + 數位產品缺口 + 流量管道）
+
+### 一、🆕 未碰的高價值 AI SaaS 聯盟機會（本輪新發現）
+
+| 產品 | 佣金% | 期間 | Cookie | 申請連結 | 台灣市場評估 |
+|-----|-------|------|--------|---------|-----------|
+| **Jasper AI** | 25-30% 循環 | 12個月 | ? | https://www.jasper.ai/affiliates（FirstPromoter 平台） | 英文 AI 寫作工具，台灣繁中評測幾乎零競爭，月費 $39-99 |
+| **Framer** | 最高 50% | 長期（creators 計畫） | ? | https://www.framer.com/creators | AI 建站工具爆紅，繁中評測很少，設計師受眾高轉換 |
+| **AgentForge** | 20% 循環 | 12個月 | ? | https://agentforge.solutions/partners | PH 月榜上榜（April 2026），AI Agent 建構工具，繁中空白 |
+| **OutlierKit** | 30% 循環 | 12個月 | 60天 | https://outlierkit.com/p/affiliate | YouTube 分析 AI 工具，PH 4.9/5，台灣 YouTuber 受眾高匹配 |
+| **Sonix** | 10-33%（分級） | 12個月首年 | ? | https://sonix.ai/affiliates | AI 轉錄/字幕工具，媒體/播客製作者受眾，繁中評測空白 |
+| **Sintra AI** | 高（70% OFF 促銷中） | ? | ? | via vCommission | AI 自動化工具，推廣難度低（有折扣促銷），待評估 |
+| **NovaVoice** | ? | ? | ? | PH 週榜上榜（April 6, 2026）| AI 語音指令 + App 控制，待確認是否有 affiliate |
+
+**更新後完整聯盟優先清單：**
+
+| 優先級 | 產品 | 佣金 | 狀態 | 建議行動 |
+|------|------|------|------|---------|
+| 🔥🔥🔥 | TubeBuddy | 50% 終身 | 待 Ivan 申請 | https://www.tubebuddy.com/affiliate |
+| 🔥🔥🔥 | Systeme.io | 60% 終身 | 待 Ivan 申請 | https://systeme.io/affiliates |
+| 🔥🔥 | n8n Cloud | 30% 循環/12m | 待 Ivan PartnerStack | https://n8n.partnerstack.com/ |
+| 🔥🔥 | Dify | 30-50% 循環/12m | 待 Ivan PartnerStack | PartnerStack |
+| 🔥🔥 | ElevenLabs | 22% 循環/12m | 待 Ivan PartnerStack | PartnerStack |
+| 🔥🔥 | **Jasper AI** | 25-30% 循環/12m | 🆕 未申請 | https://www.jasper.ai/affiliates |
+| 🔥🔥 | **Framer** | 最高 50% | 🆕 未申請 | https://www.framer.com/creators |
+| 🔥 | **OutlierKit** | 30% 循環/12m | 🆕 未申請 | https://outlierkit.com/p/affiliate |
+| 🔥 | Surfer SEO | 30% 循環 | 待確認流量門檻 | PartnerStack |
+| 🔥 | Wispr Flow | 25% 循環/12m | 待 Ivan 申請 | https://partners.dub.co/flow |
+| ✅ | DigitalOcean | $25 首充 | 已申請 | active |
+| ✅ | Hahow | 10-15% | 已申請 | active |
+| ✅ | Systeme.io | 60% 終身 | 已部署連結 | active |
+
+---
+
+### 二、🆕 Product Hunt April 2026 週榜新品分析
+
+**Week of April 6, 2026 上榜值得關注：**
+
+1. **Brila** — 從 Google Maps 評論自動生成一頁式網站。AI + 在地商業，台灣美食/服務業主受眾！評測連結至 DigitalOcean 自架主題自然。
+2. **AgentForge** — "From prompts to working AI systems"，繁中 AI Agent 建構教學空白，可搭配現有 AI Agents 系列文章。
+3. **NovaVoice** — AI 語音指令 + 應用程式控制（Mac/Win），類 Wispr Flow，待確認 Affiliate。
+4. **Offsite** — 人類 + Agent 混合工作流管理（已在 topic-ideas.md 記錄）。
+5. **Claude Advisor tool** — Anthropic 新功能，繁中評測空白，搭配現有 Claude 系列。
+6. **Lessie AI** — AI 銷售/行銷配對工具，B2B 受眾。
+
+**→ 最高優先新品：Brila（台灣在地商業痛點 + 容易轉換） + AgentForge（有聯盟計畫）**
+
+---
+
+### 三、🆕 台灣數位產品需求新洞察（2026 Q2）
+
+**Threads 台灣 AI 討論熱點（本輪發現）：**
+- DeepSeek / Cursor / Perplexity 依然是台灣討論最多的 AI 工具
+- 「2026 年不想被淘汰必學 AI 工具」主題內容瘋傳
+- 台灣 Substack AI Newsletter 生態系已形成（AI觀察日記、布萊登週報等）→ **潛在合作/投稿管道**
+
+**Substack 台灣 AI 生態洞察：**
+- 台灣有成熟的 AI 主題 Substack（AI觀察日記 on futureaitw.substack.com）
+- Substack 40% 新訂閱來自平台內部推薦 → 值得建立我們自己的 Substack 頁作為分發管道
+- **缺口：沒有台灣繁中 AI 工具測評 Newsletter 專注於「付費工具聯盟評測」**
+
+**數位產品新缺口（本輪）：**
+
+| 產品類型 | 搜尋熱度 | 競品現況 | 我們能做 | 定價建議 |
+|---------|---------|---------|---------|---------|
+| AI 工具使用懶人包 PDF（2026 版） | 🔥🔥🔥 | 英文有，繁中幾乎沒有 | ✅ | US$9-15 |
+| Framer 台灣版建站教學包 | 🔥🔥 | 繁中空白 | ✅ | US$19-29 |
+| Claude Prompt 工程師工作模板包 | 🔥🔥 | 少量，品質差 | ✅ | US$12-19 |
+| AI 客服 LINE Bot 完整架設手冊 PDF | 🔥🔥🔥 | 完全空白 | ✅ 高可行 | US$29-49 |
+
+---
+
+### 四、🆕 新流量管道（本輪新增）
+
+| 管道 | 可行性 | 建議方式 | 預估導流 |
+|-----|--------|---------|---------|
+| **Substack 繁中 AI 工具週報** | 高（台灣用戶已有習慣） | 建立 Substack，每週推送新文章摘要 + 聯盟連結，免費方案無限發送 500 訂閱內 | 初期 50-200 訂閱/月 |
+| **AI觀察日記等 Substack 互推** | 高 | 與現有繁中 AI Substack 換稿/互推，借流量 | 快速獲取首批讀者 |
+| **Threads 台灣 AI 社群** | 高（已有活躍社群） | 每週發 3-5 條 AI 工具短文，帶 blog 連結；關鍵字：#AI工具 #台灣AI | 中高（有機觸及） |
+| **LINE 官方帳號（免費版）** | 極高台灣適用性 | 建立 AI 工具推薦 LINE OA，每週推送評測，導流到部落格 | 台灣轉換率最高渠道 |
+| **iThome 投稿** | 中（需人工） | 投稿「AI 工具實測」系列到 iThome，獲得高 DA 反向連結 | 低頻但高品質反連結 |
+
+**🔑 本輪最大發現：LINE 官方帳號免費版**
+- LINE 台灣月活 2,100 萬，是 IG/Threads 的 2 倍觸及
+- LINE OA 免費版每月可發 200 則訊息
+- 建立 LINE OA 推送 AI 工具評測 → 一鍵導流 ai-tools-tw
+- **零成本，台灣轉換率最高**，建議立即執行
+
+---
+
+## 待追蹤（更新版）
+
+- [ ] **【緊急 Ivan 操作】** TubeBuddy (50%) + Systeme.io (60%) + PartnerStack x3 (n8n/ElevenLabs/Dify)
+- [ ] **【新增 Ivan 操作】** Jasper AI affiliate 申請（https://www.jasper.ai/affiliates）
+- [ ] **【新增 Ivan 操作】** Framer creators 申請（https://www.framer.com/creators）
+- [ ] **【新增建議】** 建立 LINE 官方帳號（免費版）→ 最高台灣轉換率渠道
+- [ ] **【新增建議】** 建立 Substack 繁中 AI 工具週報頁（免費，無限 500 訂閱前）
+- [ ] AgentForge 聯盟申請評估（https://agentforge.solutions/partners，20% 循環）
+- [ ] OutlierKit 聯盟申請（https://outlierkit.com/p/affiliate，30% 循環）
+- [ ] NovaVoice 確認是否有 Affiliate 計畫
+- [ ] Brila 評測文（台灣在地商業 SEO 場景 + DigitalOcean 聯盟）
+- [ ] 評估 iThome 投稿策略（不只鐵人賽，日常投稿也有 DA 效益）
