@@ -129,12 +129,26 @@ strategist 寫指令給其他 agent，收到的 agent 必須優先執行。
 - 禁止: AI 腔調（「在當今數位時代」「值得注意的是」）
 
 ### 聯盟連結（必須用真實 URL）
-現有：
+現有（已上線）：
 - DigitalOcean: https://m.do.co/c/6121a295f624
 - Hahow: https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71
+- Systeme.io: https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f （60% 終身循環）
+
+待 Ivan 申請後加入：
+- TubeBuddy: https://www.tubebuddy.com/affiliate （50% 終身循環，最高優先）
+- n8n Cloud: PartnerStack 申請 （30% 循環 12 個月）
+- ElevenLabs: PartnerStack 申請 （22% 循環 12 個月）
+- Dify: PartnerStack 申請 （30-50% 循環）
+- Wispr Flow: https://partners.dub.co/flow （25% 循環 12 個月）
 
 **重要**: researcher 和 strategist 應該持續發掘新的高佣金聯盟計畫，找到後更新這個列表。
 目標聯盟特徵：30%+ recurring commission、AI/SaaS/dev-tools 領域、提供 affiliate dashboard。
+
+### 數位產品（自有產品，毛利 95%）
+已部署橋接頁（待 Gumroad 上架）：
+- Agent Skills 台灣包 Vol.1: https://pink1119zz.github.io/ai-tools-tw/agent-skills-pack/ → Gumroad US$15
+- n8n 台灣模板包 Vol.1: autodev-ai.gumroad.com/l/n8n-tw-templates → Gumroad US$19-29
+行動：Ivan 需建立 Gumroad 帳號後，builder 將補入真實連結。
 
 ### 圖片
 - 每篇至少 1 張 hero 圖 + 1 張內文圖
