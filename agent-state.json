@@ -46,6 +46,16 @@
       "url": "https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71",
       "lastChecked": "2026-04-11",
       "status": "active (403 from curl, 200 with browser UA - bot protection normal)"
+    },
+    "n8n-cloud": {
+      "url": "https://n8n.io/cloud/",
+      "lastChecked": "2026-04-11",
+      "status": "active (200) - affiliate URL placeholder, awaiting Ivan to get official referral link from PartnerStack"
+    },
+    "systeme-io": {
+      "url": "https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f",
+      "lastChecked": "2026-04-11",
+      "status": "active (200)"
     }
   },
   "performance": {
@@ -60,6 +70,13 @@
     ]
   },
   "agentLog": [
+    {
+      "date": "2026-04-11",
+      "agent": "content-ops",
+      "action": "affiliate-monitor: link health check + add DO affiliate to 2 missing articles",
+      "detail": "【聯盟連結健檢 + 補漏】(1) 所有聯盟連結狀態確認：m.do.co/c/6121a295f624 [200 ✅], abzcoupon Hahow [200 ✅], n8n.io/cloud [200 ✅], systeme.io affiliate link [200 ✅] — 無任何壞連結。(2) 掃描 3 站所有 HTML：發現 ai-tools-tw 有 2 篇完全缺少聯盟連結：ai-coding-tools.html、rag-explained.html。(3) 已修復：兩篇都加入 DigitalOcean $200 試用 CTA 區塊（自然融入：ai-coding-tools 以「自架開發環境」為由，rag-explained 以「自架向量資料庫」為由）。同時補齊延伸閱讀含費用計算器連結。(4) JSON-LD dateModified 更新為 2026-04-11。(5) sitemap.xml 兩篇 lastmod 更新。(6) autodev-ai 主站 blog/index.html 無聯盟連結但屬 listing 頁屬正常。ai-tools-en/index.html 同理。",
+      "result": "ok - 0 broken links, 2 articles fixed with DO affiliate CTA, pushed to ai-tools-tw"
+    },
     {
       "date": "2026-04-12",
       "agent": "researcher",
