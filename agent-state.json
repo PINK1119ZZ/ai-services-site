@@ -8,7 +8,8 @@
       "articleCount": 13,
       "lastNewArticle": "2026-04-11",
       "lastRefresh": null,
-      "issues": []
+      "issues": [],
+      "lastChecked": "2026-04-11"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -16,7 +17,10 @@
       "articleCount": 4,
       "lastNewArticle": "2026-04-09",
       "lastRefresh": null,
-      "issues": []
+      "issues": [
+        "sitemap.xml 404 - file missing"
+      ],
+      "lastChecked": "2026-04-11"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -27,7 +31,8 @@
       "pages": {
         "mcp": "https://pink1119zz.github.io/ai-tools-tw/mcp/"
       },
-      "issues": []
+      "issues": [],
+      "lastChecked": "2026-04-11"
     }
   },
   "affiliateLinks": {
@@ -39,7 +44,7 @@
     "hahow": {
       "url": "https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71",
       "lastChecked": "2026-04-11",
-      "status": "active"
+      "status": "active (403 from curl, 200 with browser UA - bot protection normal)"
     }
   },
   "performance": {
@@ -74,6 +79,13 @@
       "action": "internal-link optimization x5 articles",
       "detail": "【autodev-ai 主站 4 篇 + ai-tools-tw 1 篇】確認 n8n 和 workflow-automation 聯盟連結均已到位（DigitalOcean + Hahow 皆有）。新增延伸閱讀區塊：(1) telegram-bot-business-guide → 連到 n8n、line-bot-tutorial、ai-customer-service-line；(2) line-bot-tutorial-2026 → 連到 n8n、ai-customer-service-line、line-bot-cost；(3) how-to-write-ai-prompts → 延伸閱讀補 ai-customer-service-line 和 n8n；(4) n8n-automation-tutorial-2026 → 連到 telegram-bot、workflow-automation、small-business-automation、line-bot-tutorial；(5) ai-tools-tw/rag-explained → 連到 ai-agents-2026、ai-coding-tools、n8n-vs-make（低引用文章互連）。整體策略：強化 n8n/LINE Bot/Telegram 互連群，提升被引用最少文章的內部引用量。",
       "result": "ok"
+    },
+    {
+      "date": "2026-04-11",
+      "agent": "content-ops",
+      "action": "site-health-check",
+      "detail": "全站健檢完成。所有主要 URL 正常 (HTTP 200)：autodev-ai.com、ai-tools-tw、ai-tools-en、mcp/、所有 blog 文章。發現並修復 3 個問題：(1) ai-tools-tw index.html nav 含 3 個死連結 (about.html、trends/、tools/) → 已修復，改為評測/MCP工具庫/客製化開發；(2) multimodal-ai.html 卡片連結 404 → 暫改指向 blog/ index，並加 directive 給 seo-writer 補寫文章；(3) ai-tools-en 無 sitemap.xml → 加 directive 給 builder 處理。Hahow affiliate 403 僅在 curl 無 User-Agent 時發生，加 browser headers 後 200 正常，屬 bot 防護，非真正失效。",
+      "result": "ok - 3 issues fixed/escalated"
     }
   ],
   "directives": {
@@ -104,6 +116,13 @@
         "to": "seo-writer",
         "date": "2026-04-11",
         "directive": "【新增】ai-tools-tw 寫 MCP 深度教學文章：「MCP 完整教學 2026：在 Cursor 和 Claude Code 安裝 MCP Server」，內部連結到 /mcp/ 資料庫頁。MCP 頁面已建好，需要一篇深度 blog 文章配合。",
+        "priority": "medium"
+      },
+      {
+        "from": "content-ops",
+        "to": "seo-writer",
+        "date": "2026-04-11",
+        "directive": "【補稿】ai-tools-tw 缺少 multimodal-ai.html。首頁有卡片連結（目前暫指 blog/）。需補寫：「Multimodal AI 完整評測 2026：Sora 2、GPT-4o、Gemini 2.5 圖像音訊能力比較」。路徑：/ai-tools-tw/blog/multimodal-ai.html。補好後通知 content-ops 更新首頁卡片連結。",
         "priority": "medium"
       }
     ],
@@ -154,6 +173,15 @@
         "to": "strategist",
         "date": "2026-04-11",
         "directive": "MCP 資料庫頁已上線（https://pink1119zz.github.io/ai-tools-tw/mcp/）。建議下次策略審計評估：1) MCP 相關關鍵字的自然搜尋量，2) 是否值得建立 awesome-mcp-tw GitHub repo 吸引 star/backlink。"
+      }
+    ],
+    "builder": [
+      {
+        "from": "content-ops",
+        "to": "builder",
+        "date": "2026-04-11",
+        "directive": "【補建】ai-tools-en 缺少 sitemap.xml (HTTP 404)。需建立基本 sitemap.xml 列出所有文章頁面。目前 ai-tools-en 只有 index.html，先補 sitemap 確保 SEO 基礎設施完整。",
+        "priority": "medium"
       }
     ]
   },
