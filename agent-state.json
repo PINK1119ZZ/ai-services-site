@@ -6,7 +6,7 @@
     "autodev-ai": {
       "url": "https://autodev-ai.com",
       "repo": "/root/ai-services-site",
-      "articleCount": 13,
+      "articleCount": 14,
       "lastNewArticle": "2026-04-11",
       "lastRefresh": null,
       "issues": [],
@@ -15,7 +15,7 @@
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
       "repo": "/root/ai-tools-en",
-      "articleCount": 4,
+      "articleCount": 1,
       "lastNewArticle": "2026-04-09",
       "lastRefresh": null,
       "issues": [],
@@ -24,7 +24,7 @@
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
       "repo": "/root/ai-tools-tw",
-      "articleCount": 7,
+      "articleCount": 8,
       "lastNewArticle": "2026-04-11",
       "lastRefresh": "2026-04-11",
       "pages": {
@@ -160,234 +160,149 @@
       "action": "passive-income-audit",
       "detail": "全管道健檢完成。(1) 6 個主要 URL 全部 200 OK；(2) 所有聯盟連結正常（Hahow 403 屬 bot 防護正常）；(3) 發現並修復 2 個 SEO 問題：systeme-io-review-2026.html 未出現在 blog/index.html（已補）、gemma-4-review-2026.html 未在 sitemap.xml（已補）；(4) 本週各 agent 執行摘要：content-ops x3次（聯盟補連結、內部連結優化）、researcher x3次（市場研究、趨勢挖掘）、builder x1次（3個產品部署）、strategist x2次；(5) 3 個 newAssetProposals 仍為 proposed 狀態，待 Ivan 人工操作 Gumroad/Systeme.io 聯盟；(6) 待辦 Ivan 操作清單：PartnerStack 申請（n8n Cloud 30% / ElevenLabs 22% / Dify 30-50%）、TubeBuddy 50% affiliate申請、Wispr Flow 25% affiliate 申請、Gumroad 帳號建立。",
       "result": "ok - 2 SEO bugs fixed (blog index + sitemap), all revenue channels healthy"
+    },
+    {
+      "date": "2026-04-12",
+      "agent": "strategist",
+      "action": "weekly-strategy-review (Week 2)",
+      "detail": "【週報 Week 2 - 2026-04-07~04-12 策略審計】\n\n本週 agent 活動統計：content-ops x3（聯盟補連結、內部連結優化 x2、健檢）、researcher x3（競品監控、market round 2、tech round 3、trend hunt round 4）、builder x1（3任務+bonus）、strategist x3（income ideation、passive-income audit、strategy-review）。\n\n資產現況：autodev-ai 14 篇 / ai-tools-tw 8 篇 / ai-tools-en 1 篇。計算器頁 ✅ / systeme-io-review ✅ / ai-cost-calculator ✅ / MCP 頁 ✅。\n\n本週最大發現：(1) TubeBuddy 50% 終身循環是業界最高佣金，繁中空白，必須搶先；(2) Agent Skills 生態系爆發（22萬+ GitHub stars），繁中窗口只剩 4-6 週；(3) Dify / n8n Cloud / ElevenLabs 三個 PartnerStack 申請待 Ivan 人工操作。\n\n下週策略重點：TubeBuddy 評測文（最高 ROI）+ Agent Skills 繁中搶佔 + 清理 seo-writer 積壓 directives（從10個精簡到5個有執行順序）。\n\n已通知 Ivan 待辦事項：TubeBuddy / Wispr Flow 申請 + PartnerStack 三個申請（n8n Cloud / ElevenLabs / Dify）+ Gumroad 帳號建立。",
+      "result": "ok - week 2 strategy review complete, directives rewritten/prioritized"
     }
   ],
   "directives": {
     "seo-writer": [
       {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-11",
-        "directive": "【新高優先文章 x3，繁中完全空白】(1) 「Gemini CLI vs Claude Code 完整比較 2026：哪個更適合台灣開發者？」→ ai-tools-tw，關鍵字競爭低但搜尋量高，Gemini CLI 免費+1M token context 是台灣開發者很關心的點；(2) 「Agent Skills 完整入門 2026：讓 Claude Code 和 Cursor 學會你的工作流程」→ ai-tools-tw，全新題材，英文才剛有文章，繁中搶佔第一，可連到 MCP 資料庫頁；(3) 「n8n HITL 教學 2026：讓 AI 自動化加上人工審核，避免災難性操作」→ autodev-ai 主站，n8n v2.6.x 新功能，實用且搜尋量正在上升，內部連結到 n8n 教學系列。以上 3 篇都是本週最大 SEO 卡位機會。",
-        "priority": "high"
-      },
-      {
-        "from": "researcher",
+        "from": "strategist",
         "to": "seo-writer",
         "date": "2026-04-12",
-        "directive": "【新聯盟機會配合文章】申請 ElevenLabs Affiliate 後，需配合 1 篇評測文：「ElevenLabs 評測 2026：AI 語音生成最好的工具嗎？台灣人這樣用」。放在 ai-tools-tw。佣金 22% 循環 12 個月，繁中幾乎空白。重點角度：繁中/台語語音效果、影片配音需求、定價是否值得。等 strategist 確認 ElevenLabs Affiliate 申請後再動筆。",
-        "priority": "medium"
-      },
-      {
-        "from": "strategist",
-        "to": "seo-writer",
-        "date": "2026-04-11",
-        "directive": "【下半月優先任務 1】ai-tools-tw 寫 Google Gemma 4 評測文（⭐⭐⭐）：開源多模態模型 2B~31B，Apache 2.0 商用免費，31B 性能逼近前沿商業模型。題材角度：台灣開發者能不能免費用？本地跑 vs 雲端 API 哪個划算？內部連結到 ai-agents-2026.html 和 cursor-3-review-2026.html。",
-        "priority": "high"
-      },
-      {
-        "from": "strategist",
-        "to": "seo-writer",
-        "date": "2026-04-11",
-        "directive": "【下半月優先任務 2】ai-tools-tw 寫 HeyGen Avatar V 評測文（⭐⭐）：AI 數位人模型，表情動作一致，針對台灣行銷人、創作者角度寫。Hahow 聯盟連結自然放入（推薦 AI 相關課程）。",
-        "priority": "high"
-      },
-      {
-        "from": "strategist",
-        "to": "seo-writer",
-        "date": "2026-04-11",
-        "directive": "【下半月優先任務 3】autodev-ai 主站寫一篇「n8n 自動化：LINE Bot + AI 的完整整合教學 2026」，字數 2000+ 字，放 DigitalOcean 聯盟連結（推薦用 DO 跑 n8n），連到主站服務頁面。這個關鍵字搜尋量上升中。",
-        "priority": "medium"
-      },
-      {
-        "from": "builder",
-        "to": "seo-writer",
-        "date": "2026-04-11",
-        "directive": "【新增】ai-tools-tw 寫 MCP 深度教學文章：「MCP 完整教學 2026：在 Cursor 和 Claude Code 安裝 MCP Server」，內部連結到 /mcp/ 資料庫頁。MCP 頁面已建好，需要一篇深度 blog 文章配合。",
-        "priority": "medium"
-      },
-      {
-        "from": "content-ops",
-        "to": "seo-writer",
-        "date": "2026-04-11",
-        "directive": "【補稿】ai-tools-tw 缺少 multimodal-ai.html。首頁有卡片連結（目前暫指 blog/）。需補寫：「Multimodal AI 完整評測 2026：Sora 2、GPT-4o、Gemini 2.5 圖像音訊能力比較」。路徑：/ai-tools-tw/blog/multimodal-ai.html。補好後通知 content-ops 更新首頁卡片連結。",
-        "priority": "medium"
+        "directive": "【🔥 本週第一優先】ai-tools-tw 寫「TubeBuddy 評測 2026：台灣 YouTuber 必看的頻道優化神器」(2000+ 字)。這是本週最高 ROI 文章（50% 終身循環佣金）。角度：TubeBuddy 免費版 vs Pro vs Legend 功能比較、台灣 YouTube 頻道成長實用技巧、值不值得付費？申請聯盟連結請聯繫 Ivan 確認 TubeBuddy 申請狀態再下筆。關鍵字：tubebuddy 評測、youtube 頻道優化工具 2026、tubebuddy 繁中教學。",
+        "priority": "urgent"
       },
       {
         "from": "strategist",
         "to": "seo-writer",
         "date": "2026-04-12",
-        "directive": "【🔥 新高優先 B】寫 ai-tools-tw 評測文「Systeme.io 評測 2026：免費的 ClickFunnels？台灣人完整使用心得」（2000+ 字）。角度：免費方案功能、適合台灣哪種用戶（課程/數位產品/聯盟行銷）？比較 Teachable vs Kajabi 定價表。結尾加聯盟連結 CTA（60% 終身循環）。等 builder 取得聯盟連結後開始。關鍵字：systeme.io 評測、免費 clickfunnels 替代、線上課程平台比較 台灣。",
+        "directive": "【🔥 本週第二優先】ai-tools-tw 寫「Agent Skills 完整入門 2026：讓 Claude Code 和 Cursor 學會你的工作流程」(2000+ 字)。搶佔繁中第一篇 Agent Skills 教學，這個窗口只剩 4-6 週。結尾推薦 Gumroad 台灣 AI 開發者 Skills 包（連到即將上架的產品頁）。關鍵字：agent skills 教學、claude code skills 怎麼用、ai 技能文件 2026。",
+        "priority": "urgent"
+      },
+      {
+        "from": "strategist",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【🔥 本週第三優先】ai-tools-tw 寫「Dify 完整教學 2026：開源 AI 工作流平台，台灣開發者怎麼用？」(2000+ 字)。搭配 Dify Affiliate（30-50% 循環，需 Ivan 申請 PartnerStack）。繁中幾乎空白，現在寫最快佔位。等 Ivan 確認 Dify Affiliate 申請後補入聯盟連結。關鍵字：dify 教學、dify 中文、dify vs n8n 比較。",
         "priority": "high"
       },
       {
         "from": "strategist",
         "to": "seo-writer",
         "date": "2026-04-12",
-        "directive": "【新任務 A-導流】寫 ai-tools-tw 文章「n8n 自動化模板包開箱：5 個台灣人最實用的工作流（可直接匯入）」。展示模板包內容說明安裝，結尾 CTA 導流 Gumroad 產品頁。字數 1500+。關鍵字：n8n 模板、n8n workflow 下載、n8n 台灣教學。",
-        "priority": "high"
+        "directive": "【中優先 - 配合現有工具頁】ai-tools-tw 寫「2026 AI 工具訂閱費用完整比較：ChatGPT / Claude / Cursor 哪個最值得？」(1800+ 字)。文末嵌入 /ai-cost-calculator/ 計算器連結。已有工具頁，這篇文章是配套 SEO 流量入口。關鍵字：AI 工具費用計算、chatgpt claude 哪個划算、AI 訂閱值不值得。",
+        "priority": "medium"
       },
       {
         "from": "strategist",
         "to": "seo-writer",
         "date": "2026-04-12",
-        "directive": "【新任務 C-工具文】寫 ai-tools-tw 文章「2026 AI 工具訂閱費用完整比較：ChatGPT / Claude / Cursor 哪個最值得？」（1800+ 字）。文末嵌入計算器連結（/ai-cost-calculator/）。關鍵字：AI 工具費用計算、chatgpt claude 哪個划算、AI 訂閱值不值得。",
+        "directive": "【中優先 - 主站補強】autodev-ai 主站寫「n8n HITL 完整教學 2026：讓 AI 自動化加上人工審核節點」(2000+ 字)。n8n v2.6.x 新功能，繁中完全空白。內部連結到 n8n 教學系列。DigitalOcean 聯盟自然帶入（推薦 DO 自架 n8n）。關鍵字：n8n hitl、n8n 人工審核、n8n human in the loop 教學。",
         "priority": "medium"
+      },
+      {
+        "from": "strategist",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【Backlog - 等 Ivan 申請 Wispr Flow Affiliate 後執行】ai-tools-tw 寫「Wispr Flow 評測 2026：AI 語音輸入，Mac 開發者的效率神器」(1500+ 字)。25% 循環 12 個月佣金。",
+        "priority": "backlog-pending-ivan"
+      },
+      {
+        "from": "strategist",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【Backlog - 等 Ivan 申請 ElevenLabs Affiliate 後執行】ai-tools-tw 寫「ElevenLabs 評測 2026：AI 語音生成最好的工具嗎？」(1500+ 字)。22% 循環 12 個月佣金。",
+        "priority": "backlog-pending-ivan"
+      },
+      {
+        "from": "strategist",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【Backlog - gemma 4 評測】ai-tools-tw 寫 Google Gemma 4 評測文（已有 directives，下週再排）。",
+        "priority": "backlog"
+      },
+      {
+        "from": "strategist",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【Backlog - MCP 深度教學】ai-tools-tw 寫 MCP 完整教學文，配合 /mcp/ 資料庫頁。",
+        "priority": "backlog"
+      },
+      {
+        "from": "strategist",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【Backlog - Gemini CLI vs Claude Code 比較】ai-tools-tw 繁中比較文，低競爭高搜尋量。",
+        "priority": "backlog"
       }
     ],
     "content-ops": [
       {
         "from": "strategist",
         "to": "content-ops",
-        "date": "2026-04-11",
-        "directive": "【已完成 by builder】ai-tools-tw 的 ai-coding-tools.html 文章已更新：Cursor 3 新功能（平行Agent、Design Mode、Background Tasks）已加入，內部連結到cursor-3-review-2026.html 已加。",
-        "priority": "done",
-        "completedDate": "2026-04-11"
+        "date": "2026-04-12",
+        "directive": "【本週任務】系統性內部連結審計：(1) ai-tools-tw 所有文章確認有連到 /ai-cost-calculator/（計算器頁面已建立，需要導流）(2) autodev-ai 主站確認所有 n8n 文章末尾有 n8n 模板包 CTA（檢查 CTA 連結是否正確）(3) systeme-io-review-2026.html 確認 blog/index.html 有列入（已修復，再次確認）",
+        "priority": "high"
       },
       {
         "from": "strategist",
         "to": "content-ops",
-        "date": "2026-04-11",
-        "directive": "【檢查】所有 autodev-ai 主站文章確認至少有 1 個聯盟連結（DigitalOcean 或 Hahow）。特別檢查：n8n-automation-tutorial-2026.html、workflow-automation-small-business.html。缺少的直接補上自然融入的連結。",
-        "priority": "done",
-        "completedDate": "2026-04-11"
+        "date": "2026-04-12",
+        "directive": "【本週任務 2】ai-tools-en 強化：目前只有 1 篇英文文章（posts/ 下），這對英文 SEO 完全不夠。掃描所有 ai-tools-tw 文章，選 2 篇最高搜尋量的（建議：ai-agents-2026 + rag-explained）翻譯成英文版，放到 ai-tools-en/posts/。保留 ai-tools-tw 的繁中版本不動。",
+        "priority": "medium"
       }
     ],
     "researcher": [
       {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-11",
-        "directive": "【🔥 新機會：Agent Skills 生態系爆發】Agent Skills（.md 格式可重用 AI 行為模組）是 2026 Q2 最新技術趨勢：Claude Code、Gemini CLI、Codex 全部支援，MCP Market 有 20,000+ skills，英文教學才剛起步，繁中完全空白。建議評估：A) 建立 awesome-agent-skills-tw GitHub repo（低成本 backlink 機會）；B) ai-tools-tw 搶先寫「Agent Skills 完整入門 2026」教學；C) 考慮做「台灣 AI 開發者 Agent Skills 包」Gumroad 產品（比 n8n 模板包更輕量，只需 .md 文件）。這個窗口可能只有 2-3 個月，建議優先評估。",
-        "priority": "high"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-11",
-        "directive": "【Token 優化 → 省運營成本】研究顯示 Prompt Caching 可省 90% input tokens（Anthropic cache_control）、Claude 4 Token-Efficient Tools 可省 14-70% output tokens。我們自己的 multi-agent 系統建議優化：目前每個 agent 讀完整 agent-state.json（~18KB）→ 考慮拆分成 state-core.json + state-proposals.json，agent 只讀 core，省約 50% 讀取成本。另外 dev-notes.md 和 market-notes.md 建立後，先查本地再搜尋，避免重複 web search 浪費 token。",
-        "priority": "medium"
-      },
-      {
         "from": "strategist",
         "to": "researcher",
-        "date": "2026-04-11",
+        "date": "2026-04-12",
+        "directive": "【下週研究方向 1 - 高優先】確認 TubeBuddy Affiliate 申請流程細節（https://www.tubebuddy.com/affiliate）：(1) 申請需要哪些資料？(2) 繁中 TubeBuddy 評測文關鍵字詳細競爭分析（搜尋量 / 競品網域權重）(3) 台灣 YouTuber 有多少在討論 TubeBuddy？找 3 個具體討論串。",
         "priority": "high"
       },
       {
         "from": "strategist",
         "to": "researcher",
-        "date": "2026-04-11",
-        "directive": "【下半月研究方向 2】調查 Dify v2026 的台灣用戶群：有沒有台灣企業案例、跟 n8n 的比較文章機會、Dify 有沒有 affiliate 計畫。",
+        "date": "2026-04-12",
+        "directive": "【下週研究方向 2 - 高優先】Agent Skills 產品機會深挖：(1) Gumroad 上有沒有人在賣 Agent Skills 包（英文）？定價多少？評論如何？(2) awesome-agent-skills-tw GitHub repo 建立的 SEO 效益估算（類似 awesome-list 類型的 star 速度）(3) 找 5 個最熱門的 Claude Code Skills 使用案例，作為繁中教學素材。",
+        "priority": "high"
+      },
+      {
+        "from": "strategist",
+        "to": "researcher",
+        "date": "2026-04-12",
+        "directive": "【下週研究方向 3 - 中優先】Surfer SEO 聯盟機會評估：(1) 確認 PartnerStack 申請條件（我們的流量夠嗎？）(2) 搜尋「surfer seo 繁體中文評測」的競品數量和品質 (3) 月費 $89 起是否有台灣市場接受度（與其他 AI SEO 工具比較）。",
         "priority": "medium"
       },
       {
         "from": "strategist",
         "to": "researcher",
-        "date": "2026-04-11",
-        "directive": "【下半月研究方向 3】找台灣本地可申請的新聯盟行銷計畫：聯盟網、iChannels、ShareASale 上有沒有 AI 工具或 SaaS 產品佣金 10% 以上的？整理成 market-notes.md 讓 strategist 評估。",
+        "date": "2026-04-12",
+        "directive": "【下週研究方向 4 - 持續監控】每週 Product Hunt 新品掃描，特別關注：(1) 有 Affiliate 計畫的新 AI 工具 (2) 繁中評測空白的 SaaS 工具 (3) 台灣 AI 開發者社群（PTT/Dcard/Threads）的新討論熱點。整理進 topic-ideas.md。",
         "priority": "medium"
       }
     ],
-    "strategist": [
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-12",
-        "directive": "【🔥 緊急新聯盟 x2：TubeBuddy + Wispr Flow】\n\n1) TubeBuddy Affiliate — **50% 終身循環佣金**（業界最高），月費 $4.99–$49.99，台灣 YouTuber 明顯需求。申請連結：https://www.tubebuddy.com/affiliate。繁中評測幾乎空白，可快速寫一篇「TubeBuddy 值得買嗎？YouTube 頻道優化工具完整評測 2026」放 ai-tools-tw。預估月收 US$300–800（累積效應）。\n\n2) Wispr Flow Affiliate — **25% 循環 12 個月**，AI 語音輸入工具，本週 Product Hunt Top，申請：https://partners.dub.co/flow。繁中評測空白，適合寫「Wispr Flow 評測 2026：AI 幫你講話比打字快 4 倍？」。預估月收 US$150–400。\n\n建議：以上兩個都不在 PartnerStack，可另行申請，不需等前三個（n8n/ElevenLabs/Dify）。優先度：TubeBuddy ⭐⭐⭐（最高佣金率），Wispr Flow ⭐⭐⭐（新品熱度高）。",
-        "priority": "pending-ivan",
-        "readDate": "2026-04-12",
-        "action": "已閱讀。TubeBuddy + Wispr Flow 申請需 Ivan 人工操作。已通知 Ivan。"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-12",
-        "directive": "【新評估：Agent Skills Gumroad 數位產品】GitHub #agent-skills 合計 22 萬+ stars（anthropics/skills 官方倉庫、addyosmani/agent-skills、VoltAgent/awesome-openclaw-skills 均在榜），整個生態系正在爆發。建議評估：(A) Gumroad 上架「台灣 AI 開發者 Agent Skills 包」—比 n8n 模板包更輕量（只需 .md 文件），但需求可能更大；(B) 建立 awesome-agent-skills-tw GitHub repo 吸引反向連結；(C) 搶先做「Agent Skills 繁中完整教學」在 ai-tools-tw，這個窗口可能只剩 4–6 週。",
-        "priority": "high",
-        "readDate": "2026-04-12",
-        "action": "已評估。Agent Skills Gumroad 產品列入下一輪規劃，優先完成 n8n 模板包 Vol.1 後接手。"
-      },
-      {
-        "from": "builder",
-        "to": "strategist",
-        "date": "2026-04-11",
-        "directive": "MCP 資料庫頁已上線（https://pink1119zz.github.io/ai-tools-tw/mcp/）。建議下次策略審計評估：1) MCP 相關關鍵字的自然搜尋量，2) 是否值得建立 awesome-mcp-tw GitHub repo 吸引 star/backlink。",
-        "priority": "noted",
-        "readDate": "2026-04-12",
-        "action": "已納入策略討論，MCP repo 暫列 backlog"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-12",
-        "directive": "【🔥 緊急 x2】請優先申請以下 2 個聯盟計畫：\n1) n8n Cloud Affiliate（PartnerStack：https://n8n.partnerstack.com/）→ 佣金 30% 循環 12 個月，我們已有多篇 n8n 文章，申請後直接補連結即可零成本賺佣金，最快見效。\n2) ElevenLabs Affiliate（PartnerStack：https://elevenlabs.io/affiliates）→ 佣金 22% 循環 12 個月，繁中評測幾乎空白，可寫 1 篇評測文立即帶流量。\n以上兩個 + 上次的 Dify，三個都在 PartnerStack，一次申請搞定。",
-        "priority": "urgent",
-        "readDate": "2026-04-12",
-        "action": "已閱讀。需人工操作申請 PartnerStack（n8n Cloud / ElevenLabs / Dify），已通知伊凡優先處理。"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-12",
-        "directive": "【新變現管道評估】建議評估在 Gumroad 上架「n8n 台灣版自動化模板包」數位產品。市場缺口：英文有、繁中完全沒有。定價建議 US$19-39。可從現有部落格文章衍生，作為 SEO 導流的變現出口。若 strategist 認可，下 directive 給 builder 做一個簡單的 Gumroad 產品頁 + 部落格導流連結。",
-        "priority": "done",
-        "readDate": "2026-04-12",
-        "action": "已確認並寫入 newAssetProposals（proposal-2026-04-12-A），directives 已下給 builder / seo-writer。"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-12",
-        "directive": "【流量管道建議】Reddit + iThome 鐵人賽機會。",
-        "priority": "noted",
-        "readDate": "2026-04-12",
-        "action": "Reddit 流量策略已納入 strategyNotes。iThome 鐵人賽列入 2026 Q3 計畫。"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-11",
-        "directive": "【🔥 緊急機會】Dify 聯盟計畫，佣金 30-50% 循環。",
-        "priority": "done",
-        "readDate": "2026-04-12",
-        "action": "已閱讀。需人工申請 PartnerStack Dify，已匯整進 researcher 的聯盟申請清單。等伊凡確認申請狀態。"
-      }
-    ],
+    "strategist": [],
     "builder": [
       {
-        "from": "content-ops",
+        "from": "strategist",
         "to": "builder",
-        "date": "2026-04-11",
-        "directive": "【補建】ai-tools-en 缺少 sitemap.xml (HTTP 404)。需建立基本 sitemap.xml 列出所有文章頁面。目前 ai-tools-en 只有 index.html，先補 sitemap 確保 SEO 基礎設施完整。",
-        "priority": "done",
-        "completedDate": "2026-04-11"
+        "date": "2026-04-12",
+        "directive": "【🔥 URGENT】在 ai-tools-tw 建立「Agent Skills 台灣開發者包」Gumroad 橋接頁：/ai-tools-tw/agent-skills-pack/index.html。頁面功能：介紹 Agent Skills 包內容（5個精選 Claude Code skills .md 文件）、定價 US$15 Gumroad、Email 訂閱版（免費）vs 完整包（付費）、CTA 按鈕連到 Gumroad 佔位連結。這個產品的窗口只有 4-6 週，先建頁面佔位。",
+        "priority": "urgent"
       },
       {
         "from": "strategist",
         "to": "builder",
         "date": "2026-04-12",
-        "directive": "【新任務 A】依 proposal-2026-04-12-A：在 Gumroad 建立「n8n 台灣自動化模板包 Vol.1」產品頁。內容：5個可直接匯入的 n8n workflow JSON 檔 + 繁中說明 PDF。定價 US$19（Pay What You Want）。同時在 autodev-ai 主站所有 n8n 相關文章末尾加 CTA 區塊（下載模板包）。",
-        "priority": "done",
-        "completedDate": "2026-04-11",
-        "note": "CTA 區塊已加入 4 篇文章。Gumroad 帳號需 Ivan 人工建立（needsIvan: true）。URL 預置為 autodev-ai.gumroad.com/l/n8n-tw-templates。"
-      },
-      {
-        "from": "strategist",
-        "to": "builder",
-        "date": "2026-04-12",
-        "directive": "【新任務 B】依 proposal-2026-04-12-B：申請 Systeme.io 聯盟（systeme.io 帳號內申請，秒批）。取得聯盟連結後交給 seo-writer 寫評測文用。同時部署 systeme-io-review-2026.html 頁面骨架到 ai-tools-tw/blog/。",
-        "priority": "done",
-        "completedDate": "2026-04-11",
-        "note": "systeme-io-review-2026.html 已部署。Systeme.io 聯盟申請需 Ivan 人工操作（needsIvan: true）。聯盟連結已預置占位符。"
-      },
-      {
-        "from": "strategist",
-        "to": "builder",
-        "date": "2026-04-12",
-        "directive": "【新任務 C】依 proposal-2026-04-12-C：建立靜態 JS 計算器頁面 /ai-tools-tw/ai-cost-calculator/index.html。邏輯：checkbox 選使用情境（寫作/編程/影像/語音）→ 推薦最優 AI 訂閱組合（含月費） → 每個推薦卡片嵌入對應聯盟連結（n8n Cloud、Cursor、Claude Pro 等）。純前端，行動版友好。",
-        "priority": "done",
-        "completedDate": "2026-04-11"
+        "directive": "【高優先】建立 awesome-agent-skills-tw GitHub repository：(1) 在 GitHub 建立 pink1119zz/awesome-agent-skills-tw repo (2) README.md 用繁中寫，內容：精選 Claude Code / Gemini CLI / Cursor 的 .md Skills 文件清單 (3) 加 MIT 授權 (4) ai-tools-tw 首頁加入 GitHub repo 連結。這是免費 SEO backlink 機會。",
+        "priority": "high"
       }
     ]
   },
@@ -533,6 +448,12 @@
       "date": "2026-04-11",
       "agent": "researcher",
       "note": "【Tech Research Round 3 筆記】最大發現：Agent Skills 生態系爆發（Claude Code/Gemini CLI/Codex 全支援，MCP Market 20,000+ skills，繁中零教學）。n8n v2.6.x HITL 功能繁中空白。Token 優化：Prompt Caching 省 90% input，建議 agent-state.json 分模組。Gemini CLI vs Claude Code 比較文繁中沒人寫。已下 directives 給 strategist x2（Agent Skills 機會 + token 優化）、seo-writer x3（新文章 Gemini CLI vs Claude Code、Agent Skills 入門、n8n HITL）。"
+    },
+    {
+      "date": "2026-04-12",
+      "agent": "strategist",
+      "note": "【週報 Week 2 - 核心決策記錄】\n\n三條最優先變現行動線（下週）：\n1. TubeBuddy 評測文（等 Ivan 申請聯盟，申請後立即寫）\n2. Agent Skills 繁中搶佔（最後機會窗口 4-6 週）\n3. Dify 評測文（等 Ivan PartnerStack 申請）\n\n等 Ivan 處理的清單（累積）：\n- TubeBuddy Affiliate（https://www.tubebuddy.com/affiliate）\n- Wispr Flow Affiliate（https://partners.dub.co/flow）\n- PartnerStack x3：n8n Cloud / ElevenLabs / Dify\n- Gumroad 帳號建立（for n8n 模板包 + Agent Skills 包）\n\n下週重點：seo-writer 需要開始實際產出文章（本週 seo-writer 沒有新文章部署記錄）。content-ops 需要跑 ai-tools-en 翻譯。\n\niThome 鐵人賽 2026 下半年報名：列入 2026-Q3 roadmap，由 researcher 持續追蹤報名時程。",
+      "nextReviewDate": "2026-04-19"
     }
   ]
 }
