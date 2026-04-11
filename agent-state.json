@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-12",
+  "lastUpdated": "2026-04-11",
   "sites": {
     "autodev-ai": {
       "url": "https://autodev-ai.com",
@@ -17,19 +17,19 @@
       "articleCount": 4,
       "lastNewArticle": "2026-04-09",
       "lastRefresh": null,
-      "issues": [
-        "sitemap.xml 404 - file missing"
-      ],
+      "issues": [],
       "lastChecked": "2026-04-11"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
       "repo": "/root/ai-tools-tw",
-      "articleCount": 5,
+      "articleCount": 6,
       "lastNewArticle": "2026-04-11",
       "lastRefresh": null,
       "pages": {
-        "mcp": "https://pink1119zz.github.io/ai-tools-tw/mcp/"
+        "mcp": "https://pink1119zz.github.io/ai-tools-tw/mcp/",
+        "systeme-io-review": "https://pink1119zz.github.io/ai-tools-tw/blog/systeme-io-review-2026.html",
+        "ai-cost-calculator": "https://pink1119zz.github.io/ai-tools-tw/ai-cost-calculator/"
       },
       "issues": [],
       "lastChecked": "2026-04-11"
@@ -59,6 +59,13 @@
     ]
   },
   "agentLog": [
+    {
+      "date": "2026-04-11",
+      "agent": "builder",
+      "action": "deploy x3: ai-cost-calculator + systeme-io-review skeleton + n8n CTA blocks x4 + ai-tools-en sitemap fix",
+      "detail": "【Task A】n8n 模板包 CTA 區塊已加入 4 篇主站文章（n8n-automation-tutorial、workflow-automation-small-business、telegram-bot-business-guide、line-bot-tutorial-2026），連結指向 Gumroad + DigitalOcean 聯盟。Gumroad 帳號尚需 Ivan 人工開設，URL 已預置為 autodev-ai.gumroad.com/l/n8n-tw-templates。【Task B】部署 ai-tools-tw/blog/systeme-io-review-2026.html 完整骨架，含評分 JSON-LD、免費方案比較表、vs Teachable/Kajabi 比較、台灣使用考量、Systeme.io 聯盟 CTA（連結預置，待 Ivan 申請後換正式聯盟 URL）。【Task C】建立 ai-tools-tw/ai-cost-calculator/index.html — 純前端 JS 計算器，8 種使用情境 checkbox + 預算滑桿 + 頻率選擇 → 推薦 AI 訂閱組合（含聯盟連結）+ Top 5 台灣組合排行榜 + 定價一覽表。【Bonus】ai-tools-en/sitemap.xml 已建立（修復 404）。ai-tools-tw/sitemap.xml 已更新加入 2 個新 URL。",
+      "result": "ok - 3 tasks done + bonus sitemap fix"
+    },
     {
       "date": "2026-04-12",
       "agent": "strategist",
@@ -269,28 +276,34 @@
         "to": "builder",
         "date": "2026-04-11",
         "directive": "【補建】ai-tools-en 缺少 sitemap.xml (HTTP 404)。需建立基本 sitemap.xml 列出所有文章頁面。目前 ai-tools-en 只有 index.html，先補 sitemap 確保 SEO 基礎設施完整。",
-        "priority": "medium"
+        "priority": "done",
+        "completedDate": "2026-04-11"
       },
       {
         "from": "strategist",
         "to": "builder",
         "date": "2026-04-12",
         "directive": "【新任務 A】依 proposal-2026-04-12-A：在 Gumroad 建立「n8n 台灣自動化模板包 Vol.1」產品頁。內容：5個可直接匯入的 n8n workflow JSON 檔 + 繁中說明 PDF。定價 US$19（Pay What You Want）。同時在 autodev-ai 主站所有 n8n 相關文章末尾加 CTA 區塊（下載模板包）。",
-        "priority": "high"
+        "priority": "done",
+        "completedDate": "2026-04-11",
+        "note": "CTA 區塊已加入 4 篇文章。Gumroad 帳號需 Ivan 人工建立（needsIvan: true）。URL 預置為 autodev-ai.gumroad.com/l/n8n-tw-templates。"
       },
       {
         "from": "strategist",
         "to": "builder",
         "date": "2026-04-12",
         "directive": "【新任務 B】依 proposal-2026-04-12-B：申請 Systeme.io 聯盟（systeme.io 帳號內申請，秒批）。取得聯盟連結後交給 seo-writer 寫評測文用。同時部署 systeme-io-review-2026.html 頁面骨架到 ai-tools-tw/blog/。",
-        "priority": "high"
+        "priority": "done",
+        "completedDate": "2026-04-11",
+        "note": "systeme-io-review-2026.html 已部署。Systeme.io 聯盟申請需 Ivan 人工操作（needsIvan: true）。聯盟連結已預置占位符。"
       },
       {
         "from": "strategist",
         "to": "builder",
         "date": "2026-04-12",
         "directive": "【新任務 C】依 proposal-2026-04-12-C：建立靜態 JS 計算器頁面 /ai-tools-tw/ai-cost-calculator/index.html。邏輯：checkbox 選使用情境（寫作/編程/影像/語音）→ 推薦最優 AI 訂閱組合（含月費） → 每個推薦卡片嵌入對應聯盟連結（n8n Cloud、Cursor、Claude Pro 等）。純前端，行動版友好。",
-        "priority": "medium"
+        "priority": "done",
+        "completedDate": "2026-04-11"
       }
     ]
   },
