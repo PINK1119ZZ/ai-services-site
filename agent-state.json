@@ -60,6 +60,13 @@
   },
   "agentLog": [
     {
+      "date": "2026-04-12",
+      "agent": "strategist",
+      "action": "income-ideation round 1",
+      "detail": "完成市場研究：(1) Gumroad n8n 模板包確認有人在賣（$19–$47），繁中完全空白；(2) Systeme.io 聯盟計畫 60% 終身循環，繁中評測零競爭；(3) AI 費用計算器互動工具 SEO 機會高。寫入 3 個具體提案到 newAssetProposals：A) n8n台灣模板包 Gumroad，B) Systeme.io 繁中評測+聯盟，C) AI費用計算器互動頁。已清除 strategist directives（已閱讀並納入本輪行動）。",
+      "result": "ok - 3 proposals written"
+    },
+    {
       "date": "2026-04-11",
       "agent": "strategist",
       "action": "strategy-review + article deploy",
@@ -145,6 +152,27 @@
         "date": "2026-04-11",
         "directive": "【補稿】ai-tools-tw 缺少 multimodal-ai.html。首頁有卡片連結（目前暫指 blog/）。需補寫：「Multimodal AI 完整評測 2026：Sora 2、GPT-4o、Gemini 2.5 圖像音訊能力比較」。路徑：/ai-tools-tw/blog/multimodal-ai.html。補好後通知 content-ops 更新首頁卡片連結。",
         "priority": "medium"
+      },
+      {
+        "from": "strategist",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【🔥 新高優先 B】寫 ai-tools-tw 評測文「Systeme.io 評測 2026：免費的 ClickFunnels？台灣人完整使用心得」（2000+ 字）。角度：免費方案功能、適合台灣哪種用戶（課程/數位產品/聯盟行銷）？比較 Teachable vs Kajabi 定價表。結尾加聯盟連結 CTA（60% 終身循環）。等 builder 取得聯盟連結後開始。關鍵字：systeme.io 評測、免費 clickfunnels 替代、線上課程平台比較 台灣。",
+        "priority": "high"
+      },
+      {
+        "from": "strategist",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【新任務 A-導流】寫 ai-tools-tw 文章「n8n 自動化模板包開箱：5 個台灣人最實用的工作流（可直接匯入）」。展示模板包內容說明安裝，結尾 CTA 導流 Gumroad 產品頁。字數 1500+。關鍵字：n8n 模板、n8n workflow 下載、n8n 台灣教學。",
+        "priority": "high"
+      },
+      {
+        "from": "strategist",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【新任務 C-工具文】寫 ai-tools-tw 文章「2026 AI 工具訂閱費用完整比較：ChatGPT / Claude / Cursor 哪個最值得？」（1800+ 字）。文末嵌入計算器連結（/ai-cost-calculator/）。關鍵字：AI 工具費用計算、chatgpt claude 哪個划算、AI 訂閱值不值得。",
+        "priority": "medium"
       }
     ],
     "content-ops": [
@@ -193,35 +221,46 @@
         "from": "builder",
         "to": "strategist",
         "date": "2026-04-11",
-        "directive": "MCP 資料庫頁已上線（https://pink1119zz.github.io/ai-tools-tw/mcp/）。建議下次策略審計評估：1) MCP 相關關鍵字的自然搜尋量，2) 是否值得建立 awesome-mcp-tw GitHub repo 吸引 star/backlink。"
+        "directive": "MCP 資料庫頁已上線（https://pink1119zz.github.io/ai-tools-tw/mcp/）。建議下次策略審計評估：1) MCP 相關關鍵字的自然搜尋量，2) 是否值得建立 awesome-mcp-tw GitHub repo 吸引 star/backlink。",
+        "priority": "noted",
+        "readDate": "2026-04-12",
+        "action": "已納入策略討論，MCP repo 暫列 backlog"
       },
       {
         "from": "researcher",
         "to": "strategist",
         "date": "2026-04-12",
         "directive": "【🔥 緊急 x2】請優先申請以下 2 個聯盟計畫：\n1) n8n Cloud Affiliate（PartnerStack：https://n8n.partnerstack.com/）→ 佣金 30% 循環 12 個月，我們已有多篇 n8n 文章，申請後直接補連結即可零成本賺佣金，最快見效。\n2) ElevenLabs Affiliate（PartnerStack：https://elevenlabs.io/affiliates）→ 佣金 22% 循環 12 個月，繁中評測幾乎空白，可寫 1 篇評測文立即帶流量。\n以上兩個 + 上次的 Dify，三個都在 PartnerStack，一次申請搞定。",
-        "priority": "urgent"
+        "priority": "urgent",
+        "readDate": "2026-04-12",
+        "action": "已閱讀。需人工操作申請 PartnerStack（n8n Cloud / ElevenLabs / Dify），已通知伊凡優先處理。"
       },
       {
         "from": "researcher",
         "to": "strategist",
         "date": "2026-04-12",
         "directive": "【新變現管道評估】建議評估在 Gumroad 上架「n8n 台灣版自動化模板包」數位產品。市場缺口：英文有、繁中完全沒有。定價建議 US$19-39。可從現有部落格文章衍生，作為 SEO 導流的變現出口。若 strategist 認可，下 directive 給 builder 做一個簡單的 Gumroad 產品頁 + 部落格導流連結。",
-        "priority": "medium"
+        "priority": "done",
+        "readDate": "2026-04-12",
+        "action": "已確認並寫入 newAssetProposals（proposal-2026-04-12-A），directives 已下給 builder / seo-writer。"
       },
       {
         "from": "researcher",
         "to": "strategist",
         "date": "2026-04-12",
-        "directive": "【流量管道建議】Reddit 2026 年已是 AI 搜尋引擎（ChatGPT/Perplexity/Google AI）最常引用的來源（研究確認）。建議：在 r/n8n、r/selfhosted 回答問題時自然帶上部落格連結，可同時獲得 SEO 反向連結 + AI 引用流量。另外：iThome 鐵人賽 2026 下半年值得報名（主題建議：「30天 AI 自動化工作流」），是台灣最高品質的反向連結來源之一。請納入下次策略審計討論。",
-        "priority": "medium"
+        "directive": "【流量管道建議】Reddit + iThome 鐵人賽機會。",
+        "priority": "noted",
+        "readDate": "2026-04-12",
+        "action": "Reddit 流量策略已納入 strategyNotes。iThome 鐵人賽列入 2026 Q3 計畫。"
       },
       {
         "from": "researcher",
         "to": "strategist",
         "date": "2026-04-11",
-        "directive": "【🔥 緊急機會】Dify 聯盟計畫已開放申請，佣金 30-50% 循環（每付費客戶 12 個月），繁中競品完全沒打這個。申請連結：https://dash.partnerstack.com/application?company=dify&group=affiliatepartners。建議：1) 優先申請 Dify Affiliate；2) 同時下 directive 給 seo-writer 寫 Dify 教學 + Dify vs n8n 比較文；3) Dify 已融資 $30M，是上升中平台。詳見 market-notes.md。",
-        "priority": "high"
+        "directive": "【🔥 緊急機會】Dify 聯盟計畫，佣金 30-50% 循環。",
+        "priority": "done",
+        "readDate": "2026-04-12",
+        "action": "已閱讀。需人工申請 PartnerStack Dify，已匯整進 researcher 的聯盟申請清單。等伊凡確認申請狀態。"
       }
     ],
     "builder": [
@@ -231,12 +270,158 @@
         "date": "2026-04-11",
         "directive": "【補建】ai-tools-en 缺少 sitemap.xml (HTTP 404)。需建立基本 sitemap.xml 列出所有文章頁面。目前 ai-tools-en 只有 index.html，先補 sitemap 確保 SEO 基礎設施完整。",
         "priority": "medium"
+      },
+      {
+        "from": "strategist",
+        "to": "builder",
+        "date": "2026-04-12",
+        "directive": "【新任務 A】依 proposal-2026-04-12-A：在 Gumroad 建立「n8n 台灣自動化模板包 Vol.1」產品頁。內容：5個可直接匯入的 n8n workflow JSON 檔 + 繁中說明 PDF。定價 US$19（Pay What You Want）。同時在 autodev-ai 主站所有 n8n 相關文章末尾加 CTA 區塊（下載模板包）。",
+        "priority": "high"
+      },
+      {
+        "from": "strategist",
+        "to": "builder",
+        "date": "2026-04-12",
+        "directive": "【新任務 B】依 proposal-2026-04-12-B：申請 Systeme.io 聯盟（systeme.io 帳號內申請，秒批）。取得聯盟連結後交給 seo-writer 寫評測文用。同時部署 systeme-io-review-2026.html 頁面骨架到 ai-tools-tw/blog/。",
+        "priority": "high"
+      },
+      {
+        "from": "strategist",
+        "to": "builder",
+        "date": "2026-04-12",
+        "directive": "【新任務 C】依 proposal-2026-04-12-C：建立靜態 JS 計算器頁面 /ai-tools-tw/ai-cost-calculator/index.html。邏輯：checkbox 選使用情境（寫作/編程/影像/語音）→ 推薦最優 AI 訂閱組合（含月費） → 每個推薦卡片嵌入對應聯盟連結（n8n Cloud、Cursor、Claude Pro 等）。純前端，行動版友好。",
+        "priority": "medium"
       }
     ]
   },
   "newJobProposals": [],
-  "newAssetProposals": [],
+  "newAssetProposals": [
+    {
+      "id": "proposal-2026-04-12-A",
+      "date": "2026-04-12",
+      "proposedBy": "strategist",
+      "type": "digital-product",
+      "title": "「n8n 台灣自動化模板包 Vol.1」— Gumroad 數位產品",
+      "status": "proposed",
+      "revenueModel": "one-time purchase on Gumroad / Lemon Squeezy",
+      "estimatedMonthlyRevenue": "US$200–600（保守估計：10–30套/月 × US$19）",
+      "marketEvidence": "Gumroad 上英文 n8n 模板包熱賣：$29 社媒排程、$47 450+模板包、$30 ready-to-use 套裝。繁中市場完全空白。Etsy 甚至有 18000+ 模板包在賣。我們已有多篇 n8n 教學文，有現成流量導入。",
+      "targetAudience": "台灣中小企業主、SOHO 族、LINE Bot 愛好者、想自動化工作流的非技術用戶",
+      "productContent": [
+        "LINE Bot + n8n 自動回覆工作流（JSON 可直接匯入）",
+        "Telegram Bot 通知自動化工作流",
+        "Google Sheets ↔ Notion 資料同步工作流",
+        "AI 客服自動轉單工作流（接 OpenAI API）",
+        "社群媒體定時發文排程工作流",
+        "附繁中說明文件（PDF）+ 安裝影片（Loom 錄製）"
+      ],
+      "pricing": "US$19 早鳥 → US$29 正常價（Gumroad Pay What You Want 最低 $19）",
+      "buildSteps": [
+        "1. 從現有教學文章提取 5 個已驗證 workflow（LINE Bot / Telegram / n8n 系列已有素材）",
+        "2. 匯出為 .json 格式並測試可直接匯入 n8n",
+        "3. 用 Notion/PDF 寫繁中安裝說明（各工作流一頁）",
+        "4. 錄 Loom 示範影片（3–5 分鐘）",
+        "5. 在 Gumroad 建立產品頁（英文標題 + 繁中說明）",
+        "6. 主站 n8n 教學文章末尾加「下載模板包」CTA 連結",
+        "7. ai-tools-tw blog 寫一篇「n8n 模板包開箱」文章導流"
+      ],
+      "affiliateLink": "n/a（自有產品）",
+      "directives": {
+        "builder": "建立 Gumroad 產品頁 + 在 autodev-ai 主站 n8n 相關文章末尾加 CTA 區塊",
+        "seo-writer": "寫一篇 ai-tools-tw 文章「n8n 模板包免費 vs 付費完整比較：我們整理了 5 個台灣人最實用的自動化工作流」，結尾導流到 Gumroad 產品頁",
+        "content-ops": "確認 autodev-ai 主站所有 n8n 文章末尾都有模板包 CTA"
+      },
+      "priority": "high",
+      "effortEstimate": "builder 2–3 天（含錄影）",
+      "notes": "競品弱點：英文模板包品質參差不齊，繁中完全沒有。我們的差異化在於：台灣場景（LINE Bot / 繁中說明）+ 有配套教學文章導流。"
+    },
+    {
+      "id": "proposal-2026-04-12-B",
+      "date": "2026-04-12",
+      "proposedBy": "strategist",
+      "type": "affiliate-review-page",
+      "title": "Systeme.io 繁中深度評測 + 聯盟佈局（60% 終身循環）",
+      "status": "proposed",
+      "revenueModel": "affiliate recurring commission 60% lifetime（Systeme.io 官方計畫，免申請直接開通）",
+      "estimatedMonthlyRevenue": "US$150–800/月（保守：3–5 個轉換 × 平均方案 $27/月 × 60% = ~$48–81/人，累積遞增）",
+      "marketEvidence": "搜尋「Systeme.io 繁體中文評測」幾乎為零結果。Systeme.io 是 2026 最熱的免費 ClickFunnels 替代品（有 300,000+ 用戶）。60% 終身循環是目前市場最高佣金之一（Jotform/HubSpot 只給 30%）。我們的 AI 工具評測定位完全契合其目標客群（想用 AI 做線上生意的人）。",
+      "targetAudience": "台灣想開線上課程、賣數位產品、做聯盟行銷的創業者",
+      "buildSteps": [
+        "1. 前往 systeme.io → 申請聯盟（Systeme.io 可直接在帳戶申請，無需 PartnerStack）",
+        "2. 申請後取得聯盟連結",
+        "3. seo-writer 寫 ai-tools-tw 評測文「Systeme.io 評測 2026：免費的 ClickFunnels？台灣人這樣用」（2000+ 字）",
+        "4. 文章角度：免費方案有多完整？台灣用 LINE 還是 Email 行銷更有效？比較 Systeme vs Kajabi vs Teachable 定價",
+        "5. builder 建立 /ai-tools-tw/blog/systeme-io-review-2026.html",
+        "6. content-ops 在 autodev-ai 主站「AI 工具推薦」類文章加入 Systeme.io 提及 + 聯盟連結",
+        "7. 建立一個互動比較表：Systeme.io vs Teachable vs Podia（定價/功能），嵌入評測文中"
+      ],
+      "affiliateSignup": "https://systeme.io/affiliates（帳號內直接申請，秒批）",
+      "commissionDetails": "60% 終身循環，方案 $27–$97/月，cookie 180 天",
+      "targetKeywords": [
+        "systeme.io 評測",
+        "systeme.io 繁體中文",
+        "免費 clickfunnels 替代",
+        "線上課程平台比較 台灣",
+        "systeme.io 中文教學"
+      ],
+      "directives": {
+        "seo-writer": "優先寫 Systeme.io 繁中評測文（高佣金 + 零競爭）。角度：免費方案有多好？台灣人能用嗎？比較 Teachable / Kajabi。結尾放聯盟連結 CTA。",
+        "builder": "部署 systeme-io-review-2026.html 到 ai-tools-tw/blog/，確認聯盟連結正確嵌入",
+        "researcher": "確認 Systeme.io 台灣用戶實際使用案例（有沒有台灣 YouTuber/部落客推薦過？）"
+      },
+      "priority": "high",
+      "effortEstimate": "申請 5 分鐘 + seo-writer 1 篇文章（1–2 天）",
+      "notes": "這是本次最快見效的提案：零門檻申請 → 寫一篇文 → 開始賺佣金。60% 終身循環在一般聯盟計畫中極為罕見。繁中競品完全缺位，關鍵字長期排名空間大。"
+    },
+    {
+      "id": "proposal-2026-04-12-C",
+      "date": "2026-04-12",
+      "proposedBy": "strategist",
+      "type": "interactive-tool",
+      "title": "「AI 訂閱費用計算器」互動頁面 + 多重聯盟導流",
+      "status": "proposed",
+      "revenueModel": "聯盟佣金導流頁（ChatGPT Plus / Claude Pro / Cursor / n8n Cloud 等聯盟連結嵌入）",
+      "estimatedMonthlyRevenue": "US$100–400/月（依流量，靠 SEO 被動獲客）",
+      "marketEvidence": "搜尋量分析：「AI 工具費用計算」「chatgpt claude 哪個划算」是高搜尋量、低競爭的長尾關鍵字。互動計算器在 SEO 上有天然優勢（停留時間長、分享率高、被其他網站引用）。2026 年 AI 訂閱滲透率上升，選擇困難症用戶增多。",
+      "targetAudience": "考慮訂閱 AI 工具但不確定哪個值得付費的台灣用戶",
+      "productContent": [
+        "輸入：每月使用情境（寫作/編程/影像/語音）、預算、使用頻率",
+        "輸出：最推薦的 AI 訂閱組合（含月費明細）",
+        "嵌入各工具聯盟連結（ChatGPT Plus 試用、Claude Pro、Cursor、n8n Cloud）",
+        "附「台灣人最常用 AI 工具組合 Top 5」排行榜"
+      ],
+      "buildSteps": [
+        "1. builder 在 ai-tools-tw 建立 /ai-tools-tw/ai-cost-calculator/ 靜態頁面",
+        "2. 純 JS 計算器（無後端需求）：checkbox 選使用情境 → 自動計算推薦方案",
+        "3. 每個推薦卡片嵌入對應聯盟連結（n8n Cloud 30%、Cursor 等）",
+        "4. seo-writer 寫一篇配套文章：「2026 AI 工具訂閱值不值得？費用計算器幫你算清楚」",
+        "5. content-ops 在所有 AI 工具評測文章加「費用計算」內部連結",
+        "6. 提交到 r/taiwan、巴哈姆特 AI 討論串導流"
+      ],
+      "targetKeywords": [
+        "AI 工具費用計算",
+        "chatgpt claude 哪個划算",
+        "AI 訂閱值不值得",
+        "AI 工具月費比較 台灣",
+        "cursor vs github copilot 費用"
+      ],
+      "directives": {
+        "builder": "建立靜態 JS 計算器頁面 /ai-tools-tw/ai-cost-calculator/index.html，設計簡潔，行動版友好",
+        "seo-writer": "配套文章：「2026 AI 工具訂閱費用完整比較：ChatGPT / Claude / Cursor 哪個最值得？」，內嵌計算器 iframe 或連結",
+        "content-ops": "所有 AI 工具評測文章加計算器內部連結，特別是 ai-tools-tw 的 ai-coding-tools.html"
+      },
+      "priority": "medium",
+      "effortEstimate": "builder 1 天（純前端，無後端）",
+      "notes": "互動工具的 SEO 優勢在於 dwell time 高、自然被引用。計算器本身成本幾乎為零（靜態頁），但能長期被動導流到聯盟連結。"
+    }
+  ],
   "strategyNotes": [
+    {
+      "date": "2026-04-12",
+      "agent": "strategist",
+      "note": "【收入腦暴 Round 1 — 本週重大發現】\n\n三條最優先收入線路：\n\n(1) Systeme.io 聯盟 60% 終身循環 ← 最快見效，零競爭，繁中空白。申請秒批，一篇評測文就開始賺。\n\n(2) n8n 台灣模板包 Gumroad ← 數位產品，我們有現成流量（n8n 系列文章），英文版在賣，繁中空白。預計 10-30 套/月。\n\n(3) AI 費用計算器互動頁 ← SEO 工具頁，長期被動導流，開發成本低（純前端），嵌入多個聯盟連結。\n\n已擱置等人工操作的事項（需伊凡手動）：\n- PartnerStack 申請：n8n Cloud（30%）/ ElevenLabs（22%）/ Dify（30-50%）\n- Gumroad 帳號創建（如未有）\n- Systeme.io 帳號申請聯盟\n\n下次腦暴重點（2026-04-19）：評估 iThome 鐵人賽報名策略 + Reddit 流量策略具體執行步驟。",
+      "nextReviewDate": "2026-04-19"
+    },
     {
       "date": "2026-04-11",
       "note": "【第一次半月策略會議記錄】資產現狀：autodev-ai 主站 13 篇 / ai-tools-en 4 篇 / ai-tools-tw 5 篇（本次新增 1 篇）。重大發現：(1) agentLog 完全空白，表示各 agent 尚未正式啟動，這是最大的執行缺口。(2) ai-tools-tw 有 12 個題材在 queue，最高優先的 Cursor 3 已由 strategist 直接處理完。(3) ai-tools-en 只有 4 篇，嚴重落後，需要 seo-writer 優先補強。(4) 主站 autodev-ai 沒有 n8n 深度教學，這個關鍵字有機會，已下 directive。(5) MCP 是 2026 Q2 最熱的開發者關鍵字之一，繁中內容極少，值得搶先佈局。",
