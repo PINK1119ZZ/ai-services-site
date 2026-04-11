@@ -74,9 +74,108 @@
 
 ---
 
+## 2026-04-12（新聯盟機會 Round 2 ＋ 流量管道研究）
+
+### 一、🔥 高優先新聯盟計畫——尚未申請
+
+| 產品 | 佣金 | Cookie | 申請連結 | 評估 |
+|-----|------|--------|---------|-----|
+| **ElevenLabs**（AI TTS） | **22% 循環，12個月** | 未公開 | https://elevenlabs.io/affiliates（via PartnerStack） | ⭐⭐⭐ 繁中評測幾乎空白，AI 配音需求高 |
+| **n8n Cloud** | **30% 循環，12個月** | 未公開 | https://n8n.partnerstack.com/ | ⭐⭐⭐ 我們已有多篇 n8n 文章，直接獲利 |
+| **Dify** | **30→50% 循環，12個月** | 未公開 | https://dash.partnerstack.com/application?company=dify | ⭐⭐⭐ 最高優先（已於上次列入） |
+| **Perplexity Pro** | 有 Affiliate（多管道） | 未公開 | https://www.perplexity.ai/referral | ⭐⭐ 搜尋替代品，繁中評測少 |
+| **Cursor Ambassadors** | 無直接佣金；品牌合作+折扣碼 | N/A | https://cursor.com/ambassadors | ⭐ 申請，但無現金佣金，適合品牌曝光 |
+
+**月收入試算（n8n Cloud）**：
+- n8n Starter €24/月 × 30% = €7.2 / 轉介
+- 若 100 人轉介 Starter = 每月約 **€720（約 US$800）**
+- 我們已有多篇 n8n 文章 → 零增量成本，直接補連結就能跑
+
+---
+
+### 二、數位產品機會（Gumroad / Lemon Squeezy）
+
+**研究重點：台灣創作者能否在 Gumroad/Lemon Squeezy 賣 AI 相關數位產品？**
+
+**市場現況：**
+- Gumroad：最簡單上架，10% 抽成，適合一次性商品（Prompt Pack、模板、教學 PDF）
+- Lemon Squeezy：5%+$0.5/筆，適合 SaaS/訂閱/MRR 產品
+- 市場規模：有人回報「AI 教學 PDF + Prompt 包」月收 US$2000-5000
+
+**台灣人能賣什麼（缺口識別）：**
+
+| 數位產品類型 | 競品現況 | 我們可做 | 預估定價 |
+|-----------|---------|---------|---------|
+| n8n 自動化模板包（含 LINE Bot） | 英文有，繁中完全沒有 | ✅ 高可行 | US$19-39 |
+| Claude/ChatGPT 台灣版 Prompt 包 | 少量，品質差 | ✅ 高可行 | US$9-19 |
+| Dify 部署教學 PDF（繁中） | 完全空白 | ✅ 高可行 | US$15-29 |
+| MCP Server 設定指南（附模板） | 繁中空白 | ✅ 高可行 | US$9-19 |
+| AI 客服 LINE Bot 完整解決方案 | 服務有，產品版沒有 | 中等 | US$49-99 |
+
+**→ 建議：優先做「n8n 台灣版自動化模板包」上 Gumroad，配合部落格文章導流**
+
+---
+
+### 三、台灣數位產品需求缺口（有人搜但沒人賣）
+
+**來源：Tasker.com.tw 服務需求 + 台灣 Threads/PTT 討論 + n8n 年會洞察**
+
+| 需求主題 | 搜尋/討論熱度 | 現有解決方案 | 缺口 |
+|---------|------------|-----------|-----|
+| n8n × LINE Bot × AI 自動化（台灣場景） | 🔥🔥🔥 極高 | 只有付費服務，無教學產品 | 教學 PDF / 模板包 |
+| Dify 繁中完整部署教學 | 🔥🔥 高 | iThome 有片段，無系統教學 | 完整教學文 / 影片 |
+| Claude Code 台灣開發者入門 | 🔥🔥 高（上升中） | 完全沒有繁中系統教學 | 第一個吃螃蟹 |
+| AI 客服整合（LINE + ChatGPT + CRM） | 🔥🔥🔥 | 只有外包服務，$NT 數萬起 | 低成本自架教學 |
+| MCP 繁中入門到進階 | 🔥🔥 | 幾乎空白 | 搶先佔位 |
+
+**重要洞察（n8n 台北年會 2026）：**
+- n8n 有台灣年會！ → 代表台灣用戶社群夠大
+- 繁中 n8n 教學供不應求，社群有明顯需求
+- tasker.com.tw 上大量 n8n 外包需求 → 有商業痛點 → 可轉化為教學讀者
+
+---
+
+### 四、🆕 新流量管道評估
+
+| 管道 | 台灣適用性 | 繁中競爭 | 建議策略 |
+|-----|----------|---------|---------|
+| **Reddit**（AI/自動化/n8n 社群） | 中（英文為主） | 幾乎沒繁中 | 在 r/n8n、r/selfhosted 回答問題 + 帶連結；**2026 最大 AI 搜尋引用來源** |
+| **Threads（台灣）** | 高（台灣用戶多） | 低競爭 | 每週發 3-5 條 AI 工具短文，附部落格連結 |
+| **iThome 鐵人賽** | 極高（台灣開發者聚集地） | 中等 | 2026 年下半報名鐵人賽，主題：「30 天打造 AI 自動化工作流」→ 30 篇文章 + 大量反向連結 |
+| **PTT/Dcard 軟體板** | 高 | 低（AI 工具討論少） | 低頻發文，分享工具評測，不硬廣 |
+| **GitHub** | 中（開發者導向） | 低（繁中 README 幾乎沒有） | 建立 awesome-ai-tools-tw repo，吸引 star/反向連結 |
+| **YouTube（繁中）** | 高，但成本高 | 中等競爭 | 長期方向；先 SEO 站起來再考慮 |
+
+**重要訊號（2026 搜尋生態）：**
+- Reddit 是 AI 搜尋引擎（ChatGPT、Perplexity、Google AI Overview）最常引用的來源
+- 15 million weekly users on Reddit AI Search
+- **結論：發 Reddit 回答 = 同時獲得 SEO 反向連結 + AI 引用流量**
+
+---
+
+### 五、競品 AI SaaS 聯盟佣金完整比較表
+
+| 產品 | 佣金% | 期間 | Cookie | 狀態 |
+|-----|-------|------|--------|------|
+| Dify | 30-50% 循環 | 12個月 | ? | 待申請 ⬅️ |
+| n8n Cloud | 30% 循環 | 12個月 | ? | 待申請 ⬅️ |
+| ElevenLabs | 22% 循環 | 12個月 | ? | 待申請 ⬅️ |
+| Perplexity | 有（金額未公開） | ? | ? | 待申請 |
+| ConvertKit | 30% 循環 | 永久 | 90天 | 可考慮 |
+| HubSpot | 30% 循環 | 12個月 | 180天 | 非 AI 但高票 |
+| DigitalOcean | $25 首充獎勵 | 一次性 | ? | 已申請 ✅ |
+| Hahow | 10-15%（課程） | 一次性 | ? | 已申請 ✅ |
+
+**→ 最優先：同時申請 Dify + n8n Cloud + ElevenLabs（三個都在 PartnerStack 上）**
+
+---
+
 ## 待追蹤
 
-- [ ] Dify Affiliate 申請後確認佣金結構（strategist 評估）
-- [ ] 調查 n8n Cloud 有無官方聯盟計畫（PartnerStack 上搜尋）
-- [ ] Perplexity Pro 是否有 affiliate 計畫
-- [ ] 下次競品監控（2 週後）：追蹤 Dify 繁中關鍵字排名變化
+- [ ] **【緊急】申請 n8n Cloud Affiliate**（https://n8n.partnerstack.com/）→ 已有文章，零成本立即獲利
+- [ ] **【緊急】申請 ElevenLabs Affiliate**（via PartnerStack）→ 高佣金，繁中空白
+- [ ] Dify Affiliate 申請後確認佣金結構（strategist 評估）→ 上次已下 directive
+- [ ] 評估 Gumroad 上架「n8n 台灣版自動化模板包」可行性
+- [ ] 下次競品監控（2 週後）：追蹤 Dify/n8n 繁中關鍵字排名變化
+- [ ] 評估 iThome 鐵人賽 2026 下半年報名（最高品質反向連結來源）
+- [ ] 在 r/n8n 回答問題試跑 Reddit 流量
