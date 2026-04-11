@@ -19,3 +19,20 @@
 | 2026-04-11 | Perplexity Pro 值不值得買 | 月費 $17 的 AI 搜尋工具，Instagram 有短片但無 SEO 文章，可做繁中評測，搭配未來 Perplexity affiliate | ai-tools-tw |
 
 ---
+
+## 2026-04-12（Researcher Round 4：Product Hunt 週榜 + GitHub agent-skills 爆發 + 新聯盟機會挖掘）
+
+> 本輪新格式：日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|----------|---------|
+| 2026-04-12 | **Wispr Flow**（AI 語音輸入，PH 本週 Top，支援 Mac/Win/iOS/Android） | `wispr flow 評測`、`AI 語音輸入 mac`、`voice to text ai 2026` | 中（上升中） | **Affiliate 25% 循環 12 個月**（via partners.dub.co/flow）；Pro $16.67/月 → 每轉介 ~$50/年 | **US$150–400/月** | ai-tools-tw（主）/ ai-tools-en |
+| 2026-04-12 | **Manus Skills**（PH 本週 Top，Manus AI agent 技能模組系統） | `manus skills 教學`、`manus ai 怎麼用`、`manus vs claude code 比較` | 中（快速上升） | Manus referral 導流 + 評測文；可搭配 Agent Skills 系列文章矩陣 | **US$100–250/月** | ai-tools-tw |
+| 2026-04-12 | **Agent Skills 繁中教學庫**（GitHub #agent-skills topic：合計 22 萬+ stars，anthropics/skills 官方倉庫、addyosmani 倉庫均進榜） | `agent skills 教學`、`claude code skills 怎麼用`、`ai 技能文件 2026`、`openclaw skills` | **高（急速增長中）** | Gumroad「台灣 AI 開發者 Skills 包」+ Cursor/Claude Code 聯盟導流；建 awesome-agent-skills-tw GitHub repo 吸引 backlink | **US$200–600/月** | ai-tools-tw + GitHub repo |
+| 2026-04-12 | **Offsite AI**（PH 週榜：Build teams of humans + agents，管理 human-agent 混合工作流） | `offsite ai 評測`、`AI agent 管理工具`、`human in the loop 2026` | 低（新品，值得搶先） | 評測文搶先佔位；等 Affiliate 計畫開放；帶入 n8n HITL 內部連結 | **US$50–200/月**（開 Affiliate 後） | autodev-ai |
+| 2026-04-12 | **MolmoWeb**（GitHub 週榜 Top，Allen Institute 開源 Web Agent，MIT 授權，from data to deployment） | `open source web agent 教學`、`molmo web agent 繁中`、`免費 browser automation ai 2026` | 中（開源社群熱） | 無直接 Affiliate，但帶 DigitalOcean 聯盟（自部署需求高）；適合做「免費自架 AI Agent」主題文 | **US$100–200/月** | autodev-ai / ai-tools-en |
+| 2026-04-12 | **TubeBuddy**（YouTube 優化工具，**Affiliate 50% 終身循環**，台灣 YouTuber 明顯需求） | `tubebuddy 評測`、`youtube 頻道優化工具 2026`、`tubebuddy 繁中教學` | 中（穩定） | **50% 終身循環佣金**（業界最高之一）；月費 $4.99–$49.99，轉介越積越多 | **US$300–800/月**（累積效應強） | ai-tools-tw（⭐⭐⭐ 高優先） |
+| 2026-04-12 | **Surfer SEO**（PartnerStack，30% 循環，SEO 工具完全符合我們受眾：AI 站長） | `surfer seo 評測`、`surfer seo 值得買嗎 2026`、`ai seo 優化工具 台灣` | 中 | Affiliate 30% 循環（月費 $89 起）→ 每客戶約 $26.7/月佣金 | **US$200–500/月** | ai-tools-tw / ai-tools-en |
+| 2026-04-12 | **Wispr Flow vs ElevenLabs 聲音工具比較頁**（雙聯盟導流頁，一頁兩個聯盟） | `AI 語音工具比較 2026`、`wispr flow vs elevenlabs`、`AI 聲音輸入輸出哪個好` | 中 | Wispr 25% + ElevenLabs 22% 雙聯盟；比較頁長期 SEO 排名潛力高 | **US$200–500/月** | ai-tools-tw |
+
+---
