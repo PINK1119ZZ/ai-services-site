@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n 自動化教學：5 個真實案例讓你每天省 2 小時（2026）| AutoDev AI</title>
+    <meta name="description" content="n8n 自動化完整教學：免費開源、視覺化拖拉流程，5 個中小企業真實案例——從 LINE 通知、Google Sheets 自動整理到 AI 客服串接。新手也能上手。">
+    <link rel="canonical" href="https://autodev-ai.com/blog/n8n-automation-tutorial-2026.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/n8n-automation-tutorial-2026.html">
+    <link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/n8n-automation-tutorial-2026.html">
+    <meta property="og:title" content="n8n 自動化教學：5 個真實案例讓你每天省 2 小時（2026）">
+    <meta property="og:description" content="n8n 自動化完整教學：免費開源、視覺化拖拉流程，5 個中小企業真實案例——LINE 通知、Google Sheets、AI 串接。新手也能上手。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/n8n-automation-tutorial-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="n8n 自動化教學：5 個真實案例讓你每天省 2 小時（2026）">
+    <meta name="twitter:description" content="n8n 自動化完整教學：免費開源、視覺化拖拉流程，5 個中小企業真實案例。新手也能上手。">
+    <meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <meta name="theme-color" content="#0F0F1A">
+    <meta name="keywords" content="n8n 教學,n8n 自動化,n8n 中文教學,n8n 台灣,n8n 串接,no-code 自動化,工作流程自動化,n8n LINE,n8n Google Sheets,n8n ChatGPT">
+    <meta name="author" content="AutoDev AI">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"n8n 自動化教學：5 個真實案例讓你每天省 2 小時（2026）","description":"n8n 自動化完整教學：免費開源、視覺化拖拉流程，5 個中小企業真實案例——LINE 通知、Google Sheets、AI 串接。新手也能上手。","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-11","dateModified":"2026-04-11","mainEntityOfPage":"https://autodev-ai.com/blog/n8n-automation-tutorial-2026.html","image":"https://autodev-ai.com/autodev-logo2.png"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"n8n 是免費的嗎？","acceptedAnswer":{"@type":"Answer","text":"n8n 是開源軟體，可以免費自行架設（Self-hosted）。官方也有雲端付費版（n8n Cloud），起價約每月 €20 歐元，包含 2,500 次工作流程執行。大多數小型團隊自己架在 VPS 上，幾乎零成本。"}},{"@type":"Question","name":"n8n 和 Zapier 有什麼差別？","acceptedAnswer":{"@type":"Answer","text":"最大差別是費用和彈性。Zapier 按執行次數收費，用量一大費用很高；n8n 自架版免費無限執行。n8n 還支援自訂 JavaScript/Python 程式碼節點，做不到的事情可以寫程式補，比 Zapier 彈性很多。但 n8n 初始設定門檻稍高一些。"}},{"@type":"Question","name":"n8n 需要會寫程式嗎？","acceptedAnswer":{"@type":"Answer","text":"基礎的拖拉流程不需要寫程式。n8n 的視覺化介面讓你用連線的方式串接不同服務。但如果要做比較複雜的邏輯判斷或資料處理，懂一點 JavaScript 會讓你更如魚得水。完全不懂程式的人也可以從簡單的通知型流程開始。"}},{"@type":"Question","name":"n8n 可以串接 LINE Bot 嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。n8n 有內建的 HTTP Request 節點，可以直接呼叫 LINE Messaging API。你可以做到：接收用戶訊息後觸發工作流程、自動發送 LINE 推播通知、把 LINE 訊息資料存到 Google Sheets 等。"}},{"@type":"Question","name":"n8n 怎麼架設？需要伺服器嗎？","acceptedAnswer":{"@type":"Answer","text":"需要一台有公開 IP 的伺服器（或使用 n8n Cloud）。最簡單的方式是用 Docker 在 VPS 上部署，一台月費 NT$200-500 的入門 VPS 就夠用。DigitalOcean、Vultr、Linode 都是常見選擇。也有人用家裡的 NAS 或樹莓派自架。"}},{"@type":"Question","name":"n8n 支援哪些服務串接？","acceptedAnswer":{"@type":"Answer","text":"超過 400 種服務，包含：Google Workspace（Gmail、Sheets、Drive、Calendar）、Slack、Discord、Telegram、LINE、Notion、Airtable、GitHub、Stripe、OpenAI/ChatGPT、HubSpot 等。沒有內建的服務可以用 HTTP Request 節點自訂串接。"}}]}
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+    <style>
+        .blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
+        .blog-article h2 { color: var(--primary-light); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
+        .blog-article h3 { color: var(--text); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
+        .blog-article p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+        .blog-article ul, .blog-article ol { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .blog-article li { margin-bottom: 0.5rem; }
+        .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; text-align: center; }
+        .blog-meta span { margin: 0 0.5rem; }
+        .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+        .price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .price-table th { color: var(--primary-light); font-weight: 700; background: rgba(99,102,241,0.1); }
+        .price-table td { color: var(--text-secondary); }
+        .price-table tr:hover td { background: rgba(99,102,241,0.05); }
+        .highlight-box { background: rgba(99,102,241,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; margin: 1.5rem 0; }
+        .highlight-box p { margin-bottom: 0; color: var(--text); }
+        .blog-nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+        .blog-nav a { color: var(--primary-light); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(99,102,241,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
+        .blog-nav a:hover { background: rgba(99,102,241,0.2); border-color: var(--primary); }
+        .case-box { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+        .case-box h4 { color: #10b981; font-size: 1rem; margin: 0 0 0.8rem; }
+        .case-box p { color: var(--text-secondary); margin-bottom: 0; }
+        .step-box { background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.15); border-radius: 12px; padding: 1.5rem; margin: 1rem 0; }
+        .step-box h4 { color: var(--primary-light); font-size: 1rem; margin: 0 0 0.5rem; }
+        .step-box p { color: var(--text-secondary); margin-bottom: 0; }
+        .compare-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+        .compare-table th, .compare-table td { padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.9rem; }
+        .compare-table th { color: var(--primary-light); font-weight: 700; background: rgba(99,102,241,0.1); }
+        .compare-table td { color: var(--text-secondary); }
+        .compare-table tr:hover td { background: rgba(99,102,241,0.04); }
+        .faq-section { margin-top: 3rem; }
+        .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 1.5rem 0; }
+        .faq-item h3 { color: var(--text); font-size: 1.05rem; margin: 0 0 0.8rem; }
+        .faq-item p { color: var(--text-secondary); margin-bottom: 0; }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482625906579389" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">AutoDev AI</a>
+        <div class="nav-links" id="navLinks">
+            <a href="/services.html">服務</a>
+            <a href="/portfolio.html">作品</a>
+            <a href="/pricing.html">方案</a>
+            <a href="/blog/" class="active">Blog</a>
+            <a href="/about.html">關於</a>
+            <a href="/demo.html">體驗 Demo</a>
+            <a href="/contact.html" class="nav-cta">免費諮詢</a>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <h1>n8n 自動化教學</h1>
+    <p>5 個真實案例讓你每天省 2 小時（2026）</p>
+</section>
+
+<!-- ARTICLE -->
+<article class="blog-article fade-in">
+    <div class="blog-meta">
+        <span>Ivan / AutoDev AI</span> | <span>2026-04-11</span> | <span>閱讀時間 11 分鐘</span>
+    </div>
+
+    <div class="blog-nav">
+        <a href="#what-is-n8n">什麼是 n8n</a>
+        <a href="#vs-zapier">n8n vs Zapier</a>
+        <a href="#install">安裝架設</a>
+        <a href="#cases">5 個實戰案例</a>
+        <a href="#tips">新手建議</a>
+        <a href="#faq">常見問題</a>
+    </div>
+
+    <p>你有沒有這種感覺：每天一堆重複的雜事，把訂單從 Email 複製到 Google Sheets、手動發 LINE 通知給客戶、每週整理報表貼到 Slack……這些事情沒有技術含量，但就是占走了你大量的時間。</p>
+
+    <p>有個工具叫 <strong>n8n</strong>，可以幫你把這些流程全部自動化。重點是：它免費、開源、有視覺化介面，不一定要會寫程式就能用。這篇文章會給你看 5 個台灣中小企業最常用到的真實自動化案例，讓你直接感受 n8n 能幫你做什麼。</p>
+
+    <div class="highlight-box">
+        <p>📌 <strong>本文重點</strong>：n8n 是什麼、跟 Zapier 有什麼差別、如何架設、5 個真實自動化案例（含設定方向）、新手入門建議。</p>
+    </div>
+
+    <!-- AdSense -->
+    <ins class="adsbygoogle" style="display:block;text-align:center;margin:2rem 0;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7482625906579389" data-ad-slot="auto"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <h2 id="what-is-n8n">n8n 是什麼？為什麼台灣企業開始用它</h2>
+
+    <p>n8n（念作「n-eight-n」，全名 <em>node eight node</em>）是一套開源的工作流程自動化平台。說白了就是：你可以把不同服務（像 Gmail、LINE、Google Sheets、Slack、ChatGPT 等）串在一起，設定好觸發條件，讓流程自動跑。</p>
+
+    <p>它的介面長得很像流程圖，你用「節點（Node）」代表每個步驟，用「連線」把步驟串起來。一個流程叫做一個「Workflow」。舉例：</p>
+
+    <ul>
+        <li>當有新訂單進來（觸發）→ 自動把資料存到 Google Sheets → 發 LINE 通知給業務</li>
+        <li>每天早上 9 點（觸發）→ 抓昨天的銷售數字 → 自動彙整 → 發報表到群組</li>
+        <li>有人填了 Google 表單（觸發）→ 發確認信給對方 → 在 Notion 建立一筆記錄</li>
+    </ul>
+
+    <p>這類事情放在以前，你要嘛每天手動做，要嘛花錢請工程師寫程式。有了 n8n，很多流程可以自己拼出來，甚至不用寫一行程式碼。</p>
+
+    <h3>為什麼台灣開始流行 n8n？</h3>
+
+    <p>2024 年之前，台灣比較多人用 Zapier 或 Make（前身 Integromat）。n8n 是近兩年才在台灣的新創圈、電商圈、行銷圈快速擴散。主要原因有幾個：</p>
+
+    <ul>
+        <li><strong>免費無限執行</strong>：自架版完全不限執行次數，Zapier 跑多了費用嚇死人</li>
+        <li><strong>可以寫程式擴充</strong>：有 JavaScript/Python Code 節點，做不到的事可以自己補邏輯</li>
+        <li><strong>資料不出境</strong>：自己架就自己管，對資安敏感的公司很重要</li>
+        <li><strong>400+ 內建整合</strong>：常用服務幾乎都有，沒有的可以用 HTTP Request 自訂</li>
+        <li><strong>AI 節點崛起</strong>：2025 年 n8n 強化了 LangChain / OpenAI 的整合，做 AI 自動化流程超方便</li>
+    </ul>
+
+    <h2 id="vs-zapier">n8n vs Zapier vs Make：怎麼選？</h2>
+
+    <p>市面上三個主流的自動化工具各有適合的族群：</p>
+
+    <table class="compare-table">
+        <thead>
+            <tr>
+                <th>功能</th>
+                <th>n8n（自架）</th>
+                <th>Zapier</th>
+                <th>Make</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>費用</td>
+                <td>幾乎免費（VPS 約 NT$200/月）</td>
+                <td>免費版限 100 次/月，付費 USD$20/月起</td>
+                <td>免費版限 1,000 操作/月，付費 USD$9/月起</td>
+            </tr>
+            <tr>
+                <td>執行次數</td>
+                <td>無限</td>
+                <td>按 Task 計費</td>
+                <td>按 Operation 計費</td>
+            </tr>
+            <tr>
+                <td>介面</td>
+                <td>流程圖式，稍有學習曲線</td>
+                <td>最簡單，新手友善</td>
+                <td>流程圖式，中等難度</td>
+            </tr>
+            <tr>
+                <td>程式碼擴充</td>
+                <td>✅ 支援 JS/Python</td>
+                <td>❌ 基本不支援</td>
+                <td>⚠️ 有限度支援</td>
+            </tr>
+            <tr>
+                <td>自架</td>
+                <td>✅ 完全開源可自架</td>
+                <td>❌ 僅雲端</td>
+                <td>❌ 僅雲端</td>
+            </tr>
+            <tr>
+                <td>AI 整合</td>
+                <td>✅ 原生支援 OpenAI/LangChain</td>
+                <td>⚠️ 有但功能有限</td>
+                <td>⚠️ 有但需自行設定</td>
+            </tr>
+            <tr>
+                <td>適合對象</td>
+                <td>願意花時間設定、用量大、重資安</td>
+                <td>完全不懂技術、用量小</td>
+                <td>介於兩者之間</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="highlight-box">
+        <p>💡 <strong>簡單判斷</strong>：如果你每月自動化執行次數超過 1,000 次，或是想做 AI 相關的流程，n8n 幾乎是最划算的選擇。如果只是偶爾跑幾個簡單通知，Zapier 免費版就夠了。</p>
+    </div>
+
+    <h2 id="install">n8n 怎麼架設？3 種方法</h2>
+
+    <p>不管哪種方法，核心都是：你需要一個地方「跑」n8n 的程式。</p>
+
+    <h3>方法一：n8n Cloud（最簡單，但要付費）</h3>
+
+    <p>直接到 <a href="https://n8n.io" target="_blank" rel="noopener" style="color:var(--accent);">n8n.io</a> 註冊，選方案，馬上可以用。不需要管伺服器，但每月 €20 起跳（約 NT$700），而且執行次數有上限。適合想快速試玩、不想碰伺服器的人。</p>
+
+    <h3>方法二：Docker + VPS（推薦，性價比最高）</h3>
+
+    <p>這是台灣工程師最常用的方法。你需要：</p>
+
+    <ol>
+        <li>一台 VPS（<a href="https://www.digitalocean.com/?refcode=your_ref" target="_blank" rel="noopener sponsored" style="color:var(--accent);">DigitalOcean</a> 最低方案 USD$6/月，或 Vultr USD$6/月）</li>
+        <li>在伺服器上安裝 Docker</li>
+        <li>跑一行指令：<code style="background:rgba(99,102,241,0.15);padding:0.2rem 0.5rem;border-radius:4px;color:var(--primary-light);">docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n</code></li>
+        <li>設定 Nginx + SSL（讓外部可以透過 HTTPS 存取，Webhook 才能接收）</li>
+    </ol>
+
+    <p>設定完大概要花 1-2 小時，但設好之後就是免費無限用。如果你完全沒有伺服器經驗，可以找 AutoDev AI 幫你建好交給你，<a href="/contact.html" style="color:var(--accent);">免費諮詢</a>了解看看。</p>
+
+    <h3>方法三：Zeabur / Railway（雲端快速部署）</h3>
+
+    <p>台灣很流行的 PaaS 平台 <a href="https://zeabur.com" target="_blank" rel="noopener" style="color:var(--accent);">Zeabur</a> 和 Railway 都支援一鍵部署 n8n，不需要自己管 Docker。費用依使用量計算，輕度使用可能比 VPS 便宜。適合對伺服器陌生但想嘗試的人。</p>
+
+    <!-- AdSense -->
+    <ins class="adsbygoogle" style="display:block;text-align:center;margin:2rem 0;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7482625906579389" data-ad-slot="auto"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <h2 id="cases">5 個台灣中小企業最實用的 n8n 自動化案例</h2>
+
+    <p>光看介紹可能感覺很抽象，直接看案例最清楚。以下 5 個都是真實場景，從最簡單到進階排列。</p>
+
+    <h3>案例一：電商訂單自動通知（難度 ⭐）</h3>
+
+    <div class="case-box">
+        <h4>🛒 場景：蝦皮、91APP 店家</h4>
+        <p>每次有新訂單進來，自動把訂單資訊存到 Google Sheets，並發 LINE 推播通知給老闆和出貨人員，不用再一直盯著後台。</p>
+    </div>
+
+    <p><strong>流程邏輯：</strong></p>
+    <ol>
+        <li><strong>Trigger（觸發）</strong>：Webhook 節點 — 蝦皮 / 91APP 有新訂單時送資料來</li>
+        <li><strong>Google Sheets 節點</strong>：把訂單號、品項、金額、收件人寫入 Sheets</li>
+        <li><strong>HTTP Request 節點</strong>：呼叫 LINE Messaging API，發推播給指定 LINE 帳號</li>
+    </ol>
+
+    <p>省下的時間：每天手動查訂單 + 抄 Sheets 約 30-60 分鐘。</p>
+
+    <p>延伸閱讀：想了解 LINE 推播的更多應用，可以看 <a href="/blog/line-auto-reply-setup.html" style="color:var(--accent);">LINE 官方帳號自動回覆設定完整教學</a>。</p>
+
+    <h3>案例二：Google 表單自動報名流程（難度 ⭐⭐）</h3>
+
+    <div class="case-box">
+        <h4>📋 場景：課程、活動、診所報名</h4>
+        <p>學員填完報名表單，系統自動發確認信、在 Notion 或 Sheets 建立資料、在行事曆新增活動提醒，老師 / 主辦人只要看 Notion 就能掌握所有名單。</p>
+    </div>
+
+    <p><strong>流程邏輯：</strong></p>
+    <ol>
+        <li><strong>Google Sheets Trigger</strong>：偵測到試算表新增一列（表單送出）</li>
+        <li><strong>Gmail 節點</strong>：寄確認信給報名者，信件內容帶入對方填的姓名、課程名稱</li>
+        <li><strong>Notion 節點</strong>：在 Notion 資料庫新增一筆紀錄</li>
+        <li><strong>Google Calendar 節點</strong>（選配）：在行事曆新增活動</li>
+    </ol>
+
+    <p>省下的時間：每次報名手動確認 + 整理名單約 10 分鐘；一個活動有 50 人報名就省了 8+ 小時。</p>
+
+    <h3>案例三：競品價格監控自動通知（難度 ⭐⭐⭐）</h3>
+
+    <div class="case-box">
+        <h4>🔍 場景：電商、零售業者</h4>
+        <p>每天早上自動爬取競品網站的特定商品價格，和昨天比較，如果降價超過 5%，就發 Slack 或 LINE 通知給行銷團隊，立即反應定價策略。</p>
+    </div>
+
+    <p><strong>流程邏輯：</strong></p>
+    <ol>
+        <li><strong>Schedule Trigger</strong>：每天早上 8 點觸發</li>
+        <li><strong>HTTP Request 節點</strong>：GET 競品網頁 HTML</li>
+        <li><strong>HTML Extract 節點</strong>：解析出目標商品價格</li>
+        <li><strong>Code 節點（JS）</strong>：比較今日 vs 昨日價格，計算降幅</li>
+        <li><strong>IF 節點</strong>：如果降幅 > 5%</li>
+        <li><strong>Slack / LINE 節點</strong>：發通知</li>
+        <li><strong>Google Sheets</strong>：記錄每日價格歷史</li>
+    </ol>
+
+    <p>這個流程需要一點 JavaScript 知識處理資料比較，但整體框架還是拖拉完成的。</p>
+
+    <h3>案例四：AI 客服自動分類回覆（難度 ⭐⭐⭐⭐）</h3>
+
+    <div class="case-box">
+        <h4>🤖 場景：有大量客詢的電商 / 服務業</h4>
+        <p>用戶透過 LINE 或 Email 傳來客服詢問，n8n 自動把問題送給 ChatGPT 判斷類型（退換貨 / 出貨查詢 / 產品問題），給出初步回覆，同時把問題分類記錄到 Sheets，人工客服只需要處理 AI 無法解答的複雜問題。</p>
+    </div>
+
+    <p><strong>流程邏輯：</strong></p>
+    <ol>
+        <li><strong>Webhook Trigger</strong>：收到 LINE Webhook 事件</li>
+        <li><strong>OpenAI Chat Model 節點</strong>：把用戶問題送給 GPT-4o，附上 System Prompt（品牌資訊、常見問題知識庫）</li>
+        <li><strong>AI Agent 節點</strong>：讓 AI 決定要用哪個工具（查訂單 / 查庫存 / 直接回覆）</li>
+        <li><strong>HTTP Request 節點</strong>：呼叫 LINE API 回覆用戶</li>
+        <li><strong>Google Sheets</strong>：記錄問題類型、AI 回覆、是否需要人工接手</li>
+    </ol>
+
+    <p>這個是進階案例，需要對 LINE Messaging API 有基本了解。可以搭配看 <a href="/blog/ai-customer-service-line.html" style="color:var(--accent);">AI 客服完整指南</a> 了解整體架構。</p>
+
+    <h3>案例五：每週自動產生營運報表（難度 ⭐⭐）</h3>
+
+    <div class="case-box">
+        <h4>📊 場景：小型電商、餐廳、工作室老闆</h4>
+        <p>每週一早上自動彙整上週的銷售、新客數、客單價，用 AI 幫你寫一段重點摘要，以 Email 形式寄給老闆，省去手動整理報表的時間。</p>
+    </div>
+
+    <p><strong>流程邏輯：</strong></p>
+    <ol>
+        <li><strong>Schedule Trigger</strong>：每週一 08:00</li>
+        <li><strong>Google Sheets 節點</strong>：抓取上週銷售資料（按日期篩選）</li>
+        <li><strong>Code 節點</strong>：計算總銷售額、新客數、平均客單價</li>
+        <li><strong>OpenAI 節點</strong>：把數字送給 GPT，請它用繁體中文寫一段簡短分析</li>
+        <li><strong>Gmail 節點</strong>：把報表和 AI 分析寄給指定 Email</li>
+    </ol>
+
+    <p>這個流程不需要複雜的程式知識，全程用拖拉 + 少量設定就能完成，每週省下 1-2 小時整理報表的時間。</p>
+
+    <!-- AdSense -->
+    <ins class="adsbygoogle" style="display:block;text-align:center;margin:2rem 0;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7482625906579389" data-ad-slot="auto"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <h2 id="tips">新手入門建議：從哪裡開始？</h2>
+
+    <p>很多人看了 n8n 之後覺得很有趣，但不知道從哪裡下手。這邊給幾個實際建議：</p>
+
+    <h3>Step 1：先想清楚你最痛的重複工作是什麼</h3>
+
+    <p>不要為了用自動化而自動化。先列出你每天做 3 次以上的重複動作，圈出最花時間、最無聊的那個，那就是你的第一個自動化目標。</p>
+
+    <h3>Step 2：從最簡單的「通知型」流程開始</h3>
+
+    <p>通知型流程是入門首選：「某件事發生 → 傳一則訊息」。邏輯簡單、節點少、出錯機率低。等你熟悉了 n8n 的操作邏輯，再挑戰多步驟、有條件判斷的複雜流程。</p>
+
+    <div class="step-box">
+        <h4>📝 推薦第一個流程</h4>
+        <p>每天早上 9 點，自動把今天的 Google Calendar 行程整理成一條訊息，發到自己的 LINE。這個流程只需要 3 個節點，30 分鐘就能設好。</p>
+    </div>
+
+    <h3>Step 3：善用 n8n 內建的 Workflow 模板</h3>
+
+    <p>n8n 官方有個 <a href="https://n8n.io/workflows/" target="_blank" rel="noopener" style="color:var(--accent);">Workflow Templates 資料庫</a>，幾百個現成模板直接匯入就能用。你不用從零開始畫流程，找一個最接近你需求的模板，修改一下參數就好。</p>
+
+    <h3>Step 4：懂一點點 JavaScript 讓你飛起來</h3>
+
+    <p>n8n 的 Code 節點支援 JavaScript，讓你可以做自訂的資料處理。不需要很深，只要會：</p>
+
+    <ul>
+        <li>取某個欄位的值：<code style="background:rgba(99,102,241,0.15);padding:0.1rem 0.4rem;border-radius:4px;color:var(--primary-light);">$input.item.json.fieldName</code></li>
+        <li>基本的字串處理和數字計算</li>
+        <li>簡單的 if/else 判斷</li>
+    </ul>
+
+    <p>用 ChatGPT 幫你寫這些小段程式碼完全沒問題，告訴它「我有一個 n8n Code 節點，輸入是 XXX，我要做 YYY，幫我寫 JS」，幾秒就有答案。</p>
+
+    <h3>Step 5：善用社群資源</h3>
+
+    <p>台灣已經有不少人在用 n8n，幾個資源值得收藏：</p>
+
+    <ul>
+        <li><strong>n8n 官方 Community Forum</strong>：遇到問題直接搜，八成都有人問過</li>
+        <li><strong>Facebook 群組「n8n 台灣用戶」</strong>：有繁中討論，分享流程、問問題都可以</li>
+        <li><strong>YouTube 搜 "n8n tutorial"</strong>：英文資源豐富，配合字幕學習效果很好</li>
+        <li><strong>n8n.io/workflows</strong>：官方模板庫，依使用情境分類</li>
+    </ul>
+
+    <h2>n8n 的限制和注意事項</h2>
+
+    <p>n8n 很強，但不是萬能的，有幾件事要提前知道：</p>
+
+    <ul>
+        <li><strong>自架需要維護</strong>：伺服器更新、n8n 版本更新、偶爾的 Bug 排查都需要時間。如果你完全不懂伺服器，建議找人幫你設定好，或直接用 n8n Cloud。</li>
+        <li><strong>複雜邏輯還是需要程式底子</strong>：前面說了基礎流程不用寫程式，但要做真正複雜的判斷和資料處理，沒有程式背景很難進階。</li>
+        <li><strong>某些服務的 API 需要付費</strong>：n8n 本身免費，但你串接的服務可能要付費。例如 OpenAI API 依用量計費、某些 SaaS 的 API 要付費方案才能用。</li>
+        <li><strong>Webhook 需要公開 HTTPS URL</strong>：如果要接收 LINE、蝦皮等外部的 Webhook，n8n 必須有可以從外部存取的 HTTPS 網址。本機測試可以用 ngrok 暫時解決，但正式環境一定需要有公開 IP 的伺服器。</li>
+    </ul>
+
+    <p>如果你不確定 n8n 適不適合你的需求，或是架設過程遇到問題，歡迎透過 <a href="/contact.html" style="color:var(--accent);">免費諮詢</a> 跟我們聊聊，我們幫台灣不少中小企業規劃過自動化流程。</p>
+
+    <p>也可以參考 <a href="/blog/workflow-automation-small-business.html" style="color:var(--accent);">中小企業工作流程自動化完整指南</a>，了解更多自動化工具的選擇與比較。</p>
+
+    <!-- FAQ -->
+    <div class="faq-section" id="faq">
+        <h2>常見問題（FAQ）</h2>
+
+        <div class="faq-item">
+            <h3>n8n 是免費的嗎？</h3>
+            <p>n8n 是開源軟體，可以免費自行架設（Self-hosted）。官方也有雲端付費版（n8n Cloud），起價約每月 €20 歐元，包含 2,500 次工作流程執行。大多數小型團隊自己架在 VPS 上，每月只需負擔 VPS 費用（約 NT$200-500），幾乎零成本。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>n8n 和 Zapier 有什麼差別？</h3>
+            <p>最大差別是費用和彈性。Zapier 按執行次數收費，用量一大費用很高；n8n 自架版免費無限執行。n8n 還支援自訂 JavaScript/Python 程式碼節點，做不到的事情可以寫程式補，比 Zapier 彈性很多。但 n8n 初始設定門檻稍高一些，需要花時間了解介面和概念。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>n8n 需要會寫程式嗎？</h3>
+            <p>基礎的拖拉流程不需要寫程式。n8n 的視覺化介面讓你用連線的方式串接不同服務。但如果要做比較複雜的邏輯判斷或資料處理，懂一點 JavaScript 會讓你更如魚得水。完全不懂程式的人可以從簡單的通知型流程開始，再搭配 ChatGPT 幫你生成 Code 節點裡的程式碼。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>n8n 可以串接 LINE Bot 嗎？</h3>
+            <p>可以。n8n 有內建的 HTTP Request 節點，可以直接呼叫 LINE Messaging API。你可以做到：接收用戶訊息後觸發工作流程、自動發送 LINE 推播通知、把 LINE 訊息資料存到 Google Sheets 等。進階的 AI 回覆功能也可以透過 OpenAI 節點實現。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>n8n 怎麼架設？需要伺服器嗎？</h3>
+            <p>需要一台有公開 IP 的伺服器（或使用 n8n Cloud）。最簡單的方式是用 Docker 在 VPS 上部署，一台月費 NT$200-500 的入門 VPS 就夠用。DigitalOcean、Vultr、Linode 都是常見選擇。也有人用 Zeabur 或 Railway 快速部署。如果完全沒有伺服器經驗，也可以請 AutoDev AI 協助架設。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>n8n 支援哪些服務串接？</h3>
+            <p>超過 400 種服務，包含：Google Workspace（Gmail、Sheets、Drive、Calendar）、Slack、Discord、Telegram、LINE、Notion、Airtable、GitHub、Stripe、OpenAI/ChatGPT、HubSpot、Shopify 等。沒有內建的服務可以用 HTTP Request 節點自訂串接，幾乎任何有 API 的服務都能接。</p>
+        </div>
+    </div>
+
+    <!-- CTA Box -->
+    <div class="highlight-box" style="margin-top:3rem;">
+        <p>🚀 <strong>想讓 n8n 幫你省時間，但不知道從哪裡開始？</strong><br>
+        AutoDev AI 提供 n8n 流程規劃與架設服務，從需求訪談到上線交付，讓你少走彎路。<br>
+        <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" style="color:var(--accent);font-weight:600;">LINE 免費諮詢 →</a> 或 <a href="/contact.html" style="color:var(--accent);font-weight:600;">填寫諮詢表單</a></p>
+    </div>
+
+</article>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-box fade-in">
+        <h2>有想法想討論？免費諮詢 30 分鐘</h2>
+        <p>不管是 n8n 架設、LINE Bot、AI 客服還是自動化規劃，都可以聊聊。</p>
+        <div class="cta-buttons">
+            <a href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank" class="btn btn-primary">免費諮詢 →</a>
+            <a href="/services.html" class="btn btn-secondary">查看服務</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 AutoDev AI. Built with AI.</p>
+</footer>
+
+<script src="/chat-widget.js" defer></script>
+<script src="/lang.js" defer></script>
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
+fadeEls.forEach(el => observer.observe(el));
+setTimeout(() => { fadeEls.forEach(el => { const rect = el.getBoundingClientRect(); if (rect.top < window.innerHeight + 100) el.classList.add('visible'); }); }, 150);
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+mobileMenuBtn.addEventListener('click', () => { navLinks.classList.toggle('show'); mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630'; });
+navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('show'); mobileMenuBtn.textContent = '\u2630'; }); });
+</script>
+</body>
+</html>
