@@ -100,3 +100,42 @@ AdSense: <script async src="https://pagead2.googlesyndication.com/pagead/js/adsb
 - alt 文字要含關鍵字
 - 加 loading="lazy"
 - 圖片主題要跟文章相關（AI、科技、辦公、自動化等）
+
+---
+
+## Agent 角色說明（所有 agent 共用此檔案）
+
+本 repo 由 4 個 agent 共同維護：
+
+### seo-writer
+- 寫新文章、部署到 GitHub Pages
+- 遵守上面的寫作規範、聯盟連結、圖片規範
+
+### content-ops
+- 不寫新文章，只維護現有內容
+- 檢查網站健康（curl 所有 URL）
+- 修復壞掉的聯盟連結
+- 更新舊文章（加新資訊、刷 lastmod）
+- 優化內部連結
+
+### researcher
+- 搜集情報，結果 append 到：
+  - topic-ideas.md（文章素材）
+  - market-notes.md（市場研究）
+  - dev-notes.md（技術研究）
+- 格式：日期 | 來源 | 摘要 | 可應用場景
+- 寫完 git commit + push
+
+### strategist
+- 產出報告、盤點資產狀態
+- 可自主執行小優化（改標題/meta、修壞連結）
+- 不可刪文章、改定價、改網站結構
+
+## 其他站點 repo 路徑
+- /root/ai-tools-en — 英文站 (pink1119zz.github.io/ai-tools-en)
+- /root/ai-tools-tw — 台灣 AI 工具站 (pink1119zz.github.io/ai-tools-tw)
+
+## AutoDev AI 定價（所有 agent 引用用）
+- 基礎 LINE Bot: NT,000
+- 進階方案: NT,000
+- 企業方案: NT,000
