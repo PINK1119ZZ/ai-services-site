@@ -64,3 +64,39 @@ AdSense: <script async src="https://pagead2.googlesyndication.com/pagead/js/adsb
 
 ## Git 配置
 使用現有 git config。commit message 格式: "blog: add {article-title}"
+
+## 聯盟連結（必須使用以下真實連結，不要用佔位符）
+
+### DigitalOcean（技術/VPS/架站相關文章必放）
+```html
+<p class="affiliate-note" style="margin:0;">💡 推薦：<a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener noreferrer nofollow">DigitalOcean</a> 是我們部署專案的首選雲端平台，最低 $4/月起，穩定又划算。</p>
+```
+
+### Hahow 好學校（AI/教學/學習相關文章必放）
+```html
+<p class="affiliate-note" style="margin:0;">💡 推薦：想深入學習？<a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" target="_blank" rel="noopener noreferrer nofollow">Hahow 好學校</a>有豐富的線上課程，從入門到進階一次搞定。</p>
+```
+
+### 放置規則
+- 每篇文章至少放 1 個聯盟連結（依主題選 DigitalOcean 或 Hahow）
+- 放在文章中段或結尾，自然融入上下文
+- 不要用 `your_ref` 或假連結，必須用上面的真實 URL
+
+## 圖片規範（每篇文章必須有圖）
+
+### Hero 圖片（文章頂部）
+使用 Unsplash 免費圖片，格式：
+```html
+<img
+    src="https://images.unsplash.com/photo-{ID}?w=1200&q=80"
+    alt="{文章主題描述}"
+    style="width:100%;max-height:400px;object-fit:cover;border-radius:12px;margin:2rem 0"
+    loading="lazy">
+```
+
+### 規則
+- 每篇至少 1 張 hero 圖 + 1 張內文圖
+- 使用 Unsplash 的 photo ID（搜尋相關主題找合適圖片）
+- alt 文字要含關鍵字
+- 加 loading="lazy"
+- 圖片主題要跟文章相關（AI、科技、辦公、自動化等）
