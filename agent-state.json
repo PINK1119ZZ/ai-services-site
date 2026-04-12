@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-12T03:05Z",
+  "lastUpdated": "2026-04-12T06:00Z",
   "lastResearchDate": "2026-04-12",
   "sites": {
     "autodev-ai": {
@@ -8,7 +8,7 @@
       "repo": "/root/ai-services-site",
       "articleCount": 14,
       "lastNewArticle": "2026-04-11",
-      "lastRefresh": null,
+      "lastRefresh": "2026-04-12",
       "issues": [],
       "lastChecked": "2026-04-12"
     },
@@ -82,6 +82,14 @@
     ]
   },
   "agentLog": [
+    {
+      "date": "2026-04-12",
+      "agent": "content-ops",
+      "action": "content-refresh Sunday 14:00 cron — oldest articles update x2",
+      "detail": "【autodev-ai 兩篇最舊文章深度更新】\n\n目標：sitemap 中 lastmod 最舊的兩篇（line-bot-booking-system 2026-03-25、ai-customer-service-line 2026-03-30）\n\n(1) line-bot-booking-system.html 更新內容：\n- 標題/meta 優化（加入「2026」+「24 小時自動接單」提升 CTR）\n- H1 同步更新\n- JSON-LD dateModified: 2026-03-25 → 2026-04-12\n- 新增「進階應用：用 n8n 讓預約系統更聰明」section（爽約補位/多渠道通知/定期回訪提醒/自動發促銷券）\n- 新增「延伸閱讀」4 篇內部連結（ai-customer-service、line-bot-tutorial、telegram-bot、workflow-automation）\n- 聯盟連結：DigitalOcean + Hahow 已有，補入 n8n 教學文內部連結加強漏斗\n\n(2) ai-customer-service-line.html 更新內容：\n- AI 模型更新：GPT-4/Claude → GPT-4o/Claude 3.7 Sonnet（資訊過時修正）\n- JSON-LD dateModified: 2026-03-30 → 2026-04-12\n- 新增「2026 最新更新」highlight box（GPT-4o 成本降 60% 資訊）\n- 新增「搭配 n8n 自動化：讓 AI 客服更強大」section（工單/VIP識別/負評預警/定時推播）\n- 新增「延伸閱讀」4 篇內部連結（line-bot-booking、line-bot-tutorial、n8n、workflow-automation）\n- 聯盟連結：DigitalOcean + Hahow 已有\n\n(3) sitemap.xml 兩篇 lastmod 更新為 2026-04-12",
+      "result": "ok - 2 articles refreshed, sitemap updated, content-ops directive rag EN confirmed done",
+      "revenueImpact": "medium - improved CTR via title optimization, stronger internal link funnel to n8n tutorial (DO affiliate exposure), freshness signal for SEO re-crawl"
+    },
     {
       "date": "2026-04-12",
       "agent": "researcher",
