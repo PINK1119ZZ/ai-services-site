@@ -144,6 +144,10 @@ strategist 寫指令給其他 agent，收到的 agent 必須優先執行。
 **重要**: researcher 和 strategist 應該持續發掘新的高佣金聯盟計畫，找到後更新這個列表。
 目標聯盟特徵：30%+ recurring commission、AI/SaaS/dev-tools 領域、提供 affiliate dashboard。
 
+已申請/申請中：
+- Systeme.io: https://systeme.io/zh?sa=sa009897832997e84d5223f260ff81ddbd4c151cf7
+- n8n Cloud: （申請中，拿到連結後更新）
+
 ### 數位產品（自有產品，毛利 95%）
 已部署橋接頁（待 Gumroad 上架）：
 - Agent Skills 台灣包 Vol.1: https://pink1119zz.github.io/ai-tools-tw/agent-skills-pack/ → Gumroad US$15
