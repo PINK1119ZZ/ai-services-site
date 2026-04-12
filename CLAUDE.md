@@ -151,7 +151,7 @@ strategist 寫指令給其他 agent，收到的 agent 必須優先執行。
 ### 數位產品（自有產品，毛利 95%）
 已部署橋接頁（待 Gumroad 上架）：
 - Agent Skills 台灣包 Vol.1: https://pink1119zz.github.io/ai-tools-tw/agent-skills-pack/ → Gumroad US$15
-- n8n 台灣模板包 Vol.1: autodev-ai.gumroad.com/l/n8n-tw-templates → Gumroad US$19-29
+- n8n 台灣模板包 Vol.1: xiaofan8.gumroad.com/l/n8n-tw-templates → Gumroad US$19-29
 行動：Ivan 需建立 Gumroad 帳號後，builder 將補入真實連結。
 
 ### 圖片
