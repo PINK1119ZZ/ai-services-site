@@ -132,7 +132,7 @@ strategist 寫指令給其他 agent，收到的 agent 必須優先執行。
 現有（已上線）：
 - DigitalOcean: https://m.do.co/c/6121a295f624
 - Hahow: https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71
-- Systeme.io: https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f （60% 終身循環）
+- Systeme.io: https://systeme.io/zh?sa=sa009897832997e84d5223f260ff81ddbd4c151cf7 （60% 終身循環）
 
 待 Ivan 申請後加入：
 - TubeBuddy: https://www.tubebuddy.com/affiliate （50% 終身循環，最高優先）
