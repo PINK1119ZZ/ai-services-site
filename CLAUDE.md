@@ -201,3 +201,104 @@ agent-state.json 裡的 gscData 欄位包含：
 - CTR < 3% + 曝光 > 20 → **標題/meta 有問題，必須改**
 - 某關鍵字排名上升 → 多寫相關主題
 - 某關鍵字排名下降 → 分析原因，補強內容
+
+
+---
+
+## Agent 進化系統（自我學習迴路）
+
+### 機制一：績效追蹤（performance-tracker）
+
+agent-state.json 裡的 performance 欄位必須由 content-ops 和 strategist 持續維護：
+
+contentScorecard 陣列，每篇文章一條記錄：
+- url, site, publishDate, author, targetKeyword, affiliateLinks
+- week1/week4: clicks, impressions, position（從 GSC 自動填入）
+- revenue: 聯盟+AdSense 收入（手動或 API 填入）
+- grade: A/B/C/F（content-ops 每週評分）
+- lessons: 成功或失敗原因分析
+
+#### 評分規則（content-ops 每週執行）：
+- A 級：4 週內 clicks > 50 或產生收入 → 分析為什麼成功，記入 winPatterns
+- B 級：clicks 10-50，有潛力 → 加強優化
+- C 級：4 週 clicks < 10 → 分析失敗原因，記入 failPatterns
+- F 級：4 週 0 clicks → 記入 failPatterns，考慮重寫或刪除
+
+#### winPatterns / failPatterns / rules：
+- winPatterns: 成功模式（例：「比較文+價格表+3個以上聯盟連結」，附 evidence 和日期）
+- failPatterns: 失敗模式（例：「純科普無CTA」，附 evidence 和日期）
+- rules: 從 patterns 推導出的規則（例：「所有新文章必須包含價格比較表」）
+
+**關鍵**: seo-writer 寫新文章前，必須先讀 winPatterns 和 rules，模仿成功模式，避開失敗模式。
+
+---
+
+### 機制二：策略迭代（strategy-evolution）
+
+strategist 每週執行時必須做「策略復盤」：
+
+1. **數據收集**: 讀 GSC 數據 + AdSense 數據 + performance scorecard
+2. **對比上週**: 總 clicks 增還是減？哪個方向有效？
+3. **更新策略**: 
+   - 有效的 → 加碼（多寫類似主題、提高頻率）
+   - 無效的 → 停止（刪除相關 directive、標記為 failPattern）
+   - 新發現 → 測試（下一個 directive 包含小規模實驗）
+4. **寫入 strategyEvolution 欄位**: 每週一條記錄，包含：
+   - week, totalClicks, totalImpressions, estimatedRevenue
+   - whatWorked, whatFailed, strategicShift
+   - experimentsToRun, rulesAdded, rulesRemoved
+
+**核心原則**: 不重複犯錯。每個失敗都變成規則，每個成功都變成模板。
+
+---
+
+### 機制三：能力升級（skill-upgrade）
+
+agent 應該隨時間擴展能力邊界：
+
+#### Level 1（現在）— 內容生產者
+- 寫文章、維護連結、做研究、制定策略
+- 依據 GSC 數據調整
+
+#### Level 2（數據累積 4 週後）— 數據驅動優化者
+- 根據 winPatterns/failPatterns 自動選題
+- 根據 CTR 數據自動改標題
+- 根據排名變化自動調整內部連結結構
+
+#### Level 3（累積 8 週後）— 收入最大化者
+- 根據 AdSense RPM 數據決定哪類內容最賺錢
+- 自動 A/B 測試標題（同主題寫兩個版本）
+- 根據聯盟後台數據（手動輸入）計算每篇文章 ROI
+- 自動砍掉 ROI 為 0 的內容，集中資源在高 ROI 方向
+
+#### Level 4（累積 12 週後）— 自主經營者
+- 自動發現並申請新聯盟計畫
+- 自動設計並建置新數位產品
+- 根據市場趨勢主動切換賽道
+- 產生月度收入報告，提出下月策略建議
+
+**升級條件**: strategist 每月評估一次，當前 level 的指標都達成後，在 agent-state.json 記錄升級，所有 agent 解鎖新 level 的行為。
+
+teamLevel 欄位: current level, since date, nextLevelRequirements 列表, history 陣列
+
+Level 1 → 2 升級條件：
+- 累積 4 週 GSC 數據
+- performance scorecard 至少 10 篇文章有成績
+- winPatterns 至少 3 條
+
+---
+
+## AdSense 數據（API 已連接）
+
+token: /root/.openclaw/adsense-token.json
+account: accounts/pub-7482625906579389
+
+strategist 和 content-ops 可用 AdSense API 拉取：
+- 每日/每週收入
+- 各頁面 RPM（每千次瀏覽收入）
+- 最賺錢的頁面排名
+
+決策規則：
+- RPM > $5 的頁面 → 高價值，多寫類似主題
+- RPM < $1 的頁面 → 低價值，除非有聯盟收入補償
+- AdSense 審查通過前，優先衝聯盟收入
