@@ -105,3 +105,41 @@
 - AI 影片工具類（HeyGen / Munch / VEED / Pictory）在台灣幾乎零繁中評測
 - 所有這些工具都有 affiliate 計畫，但台灣完全沒人打這一塊
 - **這是一個完整未開發的聯盟收入垂直**
+
+---
+
+## 2026-04-12（Researcher Round 8：GitHub 最新趨勢 + Claude Code Ultraplan + ElevenLabs 音樂市集 + 新高佣金機會）
+
+> 本輪重點：Claude Code 新功能（Ultraplan）爆發、ElevenLabs 音樂市集上線、NousResearch hermes-agent 爆紅、AI 工具變現新垂直發現。
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 | 優先 |
+|------|------|--------|-----------|---------|----------|---------|------|
+| 2026-04-12 | **Claude Code Ultraplan**（Anthropic v2.1.92 新功能：雲端起草計畫→瀏覽器審核→任意執行；洩漏原始碼還含 KAIROS/Coordinator/Buddy 等未發布功能） | `claude code ultraplan 教學`、`claude code 規劃模式`、`ultraplan 怎麼用 2026`、`claude code 新功能` | **高（爆發中，1週內話題）** | Anthropic 官方有聯盟計畫（Claude Max/Pro 訂閱）；評測文帶 Claude Pro CTA + Cursor 比較文 | **US$300–800/月** | ai-tools-tw（⭐⭐⭐ 緊急）/ ai-tools-en | ⭐⭐⭐ |
+| 2026-04-12 | **NousResearch Hermes Agent**（GitHub 爆紅：6,400 stars 單日，累計 58,000+，多平台 AI agent 框架，支援 Telegram/Discord/LINE 等，自進化技能系統） | `hermes agent 教學`、`nousresearch hermes 繁中`、`開源 ai agent 框架 2026`、`hermes vs claude code 比較` | **高（GitHub #1 trending）** | 無直接 Affiliate；帶 DigitalOcean 自架 CTA（自部署場景）+ 比較文帶 Cursor/Claude Pro 聯盟 | **US$150–400/月** | autodev-ai / ai-tools-en | ⭐⭐⭐ |
+| 2026-04-12 | **ElevenLabs 音樂市集**（ElevenLabs 新推 Music Marketplace：用戶可發布 AI 生成音樂授權給企業，14M+ 歌曲已生成，已付創作者 $11M+） | `elevenlabs 音樂市集`、`elevenlabs 賺錢 2026`、`ai 音樂授權平台`、`elevenlabs music marketplace 教學` | 中（上升中） | **ElevenLabs Affiliate 22% 循環 12個月**；此新功能可做「用 ElevenLabs 賺錢完整教學」評測文，雙角度（聯盟+創作者收益） | **US$200–500/月** | ai-tools-tw / ai-tools-en | ⭐⭐⭐ |
+| 2026-04-12 | **Claude Code vs Cursor vs GitHub Copilot 三方終極比較（含 Ultraplan 更新）**（比較頁常青選題） | `claude code vs cursor 2026`、`ai 編程工具 繁中比較`、`github copilot 值得買嗎台灣` | **高（常青）** | Claude Max/Pro + Cursor 雙聯盟導流；搭配 ai-cost-calculator 計算器；已有 Cursor 評測文可互連 | **US$400–1000/月** | ai-tools-tw（⭐⭐⭐ 常青高優先）/ ai-tools-en | ⭐⭐⭐ |
+| 2026-04-12 | **AI Agent Framework 比較 2026（Dify vs LangGraph vs n8n vs Hermes）**（技術選型文，開發者受眾高價值） | `ai agent framework 比較`、`dify vs n8n vs langchain 2026`、`最好的 ai agent 框架 台灣` | 中高（開發者） | Dify 30-50% + n8n Cloud 30% + DO 聯盟三重；技術型讀者點閱率高 | **US$200–500/月** | autodev-ai / ai-tools-en | ⭐⭐ |
+| 2026-04-12 | **ElevenLabs Scribe v2**（最新 ASR 語音辨識模型，號稱最準確，上線中） | `elevenlabs scribe 評測`、`elevenlabs 語音辨識 2026`、`最準確 ai 語音辨識台灣` | 中（新品） | ElevenLabs 22% Affiliate；帶 Whisper/Google STT 比較；評測文搶先 | **US$100–300/月** | ai-tools-tw | ⭐⭐ |
+
+### 💡 本輪策略觀察（Round 8）
+
+**Claude Code Ultraplan 是本週最大新聞：**
+- v2.1.92 剛發布，Reddit r/ClaudeAI 熱議（已有 post 截圖流傳）
+- 洩漏原始碼事件（v2.1.88 含 1884 個 TS 檔）引爆技術社群，KAIROS/Coordinator/Buddy 等概念大量被討論
+- **繁中幾乎沒有任何 Ultraplan 實際操作教學** → 搶先機會窗口 **7-14 天**
+
+**ElevenLabs 音樂市集是「雙重賺錢文」的最佳題材：**
+- 可以同時介紹：(1) 用 ElevenLabs 生成音樂掛到市集賺錢、(2) 讀者透過聯盟連結訂閱 ElevenLabs
+- 這種「教別人賺錢」的文章 CTR 極高（ElevenLabs 已付 $11M 給創作者作為社會證明）
+- **建議標題**：「ElevenLabs 音樂市集完整教學：台灣創作者如何靠 AI 音樂月入被動收入？」
+
+**NousResearch Hermes Agent 是技術社群的下一個 OpenClaw：**
+- 6,400 stars 單日、58,000 累計、GitHub #1 trending
+- 支援 LINE/Telegram/Discord 等台灣常用平台
+- 無官方 Affiliate 但技術評測文可帶大量 DO 自架聯盟流量
+
+**高優先待執行（本輪新增）：**
+1. 🔥🔥🔥 Claude Code Ultraplan 繁中教學（7-14天機會窗口，搶先）
+2. 🔥🔥🔥 ElevenLabs 音樂市集「雙賺錢」文（高 CTR 選題）
+3. 🔥🔥 Claude Code vs Cursor 三方比較（常青高流量頁）
+4. 🔥🔥 NousResearch Hermes Agent 繁中評測（技術社群引爆中）

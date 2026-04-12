@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-12T14:55Z",
+  "lastUpdated": "2026-04-12T15:05Z",
   "lastResearchDate": "2026-04-12",
   "sites": {
     "autodev-ai": {
@@ -91,6 +91,14 @@
     "rules": []
   },
   "agentLog": [
+    {
+      "date": "2026-04-12",
+      "agent": "researcher",
+      "action": "trend-hunt Round 8: GitHub trending + Claude Code Ultraplan + ElevenLabs Music Marketplace + NousResearch hermes-agent",
+      "detail": "4大新發現寫入 topic-ideas.md（Round 8新格式）：\n(1) Claude Code Ultraplan (v2.1.92) — 雲端計畫→瀏覽器審核→任意執行，並洩漏含KAIROS/Coordinator/Buddy的1884個TS原始碼，Reddit r/ClaudeAI熱議，繁中教學7-14天機會窗口 ⭐⭐⭐\n(2) NousResearch/hermes-agent — GitHub 6,400 stars單日，累計58,000+，#1 trending，多平台AI agent框架（LINE/Telegram/Discord），自進化技能系統，繁中完全空白 ⭐⭐⭐\n(3) ElevenLabs 音樂市集 — 剛推出Music Marketplace，已生成14M+歌曲，已付創作者$11M+，Affiliate 22%循環12個月，「雙賺錢文」高CTR選題（教用戶生成音樂+聯盟連結） ⭐⭐⭐\n(4) Claude Code vs Cursor vs GitHub Copilot 三方比較（含Ultraplan更新）— 常青高流量關鍵字，雙聯盟導流，搭配ai-cost-calculator ⭐⭐⭐\n\n確認重要聯盟細節：\n- ElevenLabs Affiliate：22% 循環12個月，via PartnerStack，已確認可申請\n- Claude Max 每月$100，Claude Pro $20/月，轉介有official affiliate\n\n發現GitHub trending最新倉庫（本日）：NousResearch/hermes-agent、microsoft/markitdown、OpenBMB/VoxCPM、multica-ai/multica、coleam00/Archon、virattt/ai-hedge-fund。\n\n已寫新 directives 給 seo-writer（Claude Code Ultraplan教學緊急）和 strategist（ElevenLabs+Claude affiliate申請優先）。",
+      "result": "ok - topic-ideas.md Round 8 updated (6 entries), directives written to seo-writer and strategist",
+      "revenueImpact": "high - Claude Code Ultraplan繁中教學7-14天機會窗口；ElevenLabs音樂市集雙賺錢文高CTR；Claude vs Cursor比較頁US$400-1000/月常青"
+    },
     {
       "date": "2026-04-12",
       "agent": "seo-writer",
@@ -286,6 +294,27 @@
   "directives": {
     "seo-writer": [
       {
+        "from": "researcher",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【🔥🔥🔥 緊急新最高優先 — 7-14天機會窗口】ai-tools-tw 寫「Claude Code Ultraplan 完整教學 2026：如何使用雲端規劃模式，讓 AI 幫你寫整個專案？」1800+字。重點：Ultraplan 是什麼（vs 普通 Plan Mode 差別）、如何啟用（Shift+Tab vs /ultraplan 指令）、讀懂和編輯 plan.md、實際使用場景（大型 refactor / 多文件功能）、KAIROS 和 Coordinator Mode 洩漏原始碼帶來的未來想像。結尾帶 Claude Max 訂閱 CTA + ai-cost-calculator 計算器內連。此題材 Reddit r/ClaudeAI 已有大量討論，繁中空白，搶先必須在本週完成。",
+        "priority": "URGENT-7day-window"
+      },
+      {
+        "from": "researcher",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【🔥🔥🔥 新高優先 — ElevenLabs 音樂市集雙賺錢文】ai-tools-tw 寫「ElevenLabs 音樂市集完整教學 2026：台灣創作者如何靠 AI 音樂賺被動收入？」2000+字。角度：(1) 如何用 Eleven Music 生成歌曲 → 上架到 Music Marketplace → 每次授權都賺錢；(2) ElevenLabs 本身值不值得訂閱（帶 Affiliate 22% 循環連結）；(3) 已付 $11M 給聲音創作者的社會證明。高 CTR 原因：教讀者賺錢的文章 = 天然分享率高。等 Ivan 申請 ElevenLabs PartnerStack Affiliate 後立即執行。",
+        "priority": "high-pending-elevenlabs-affiliate"
+      },
+      {
+        "from": "researcher",
+        "to": "seo-writer",
+        "date": "2026-04-12",
+        "directive": "【🔥🔥 常青高流量 — Claude Code vs Cursor vs GitHub Copilot 三方比較（含 Ultraplan 更新）】ai-tools-tw 寫「Claude Code vs Cursor vs GitHub Copilot 終極比較 2026：Ultraplan 上線後誰最強？」2000+字。帶 Claude Max/Pro 訂閱 CTA + Cursor Pro 比較 + ai-cost-calculator 導流。此為常青關鍵字（ai 編程工具繁中比較），可與已有 cursor-3-review 文章形成內部連結群。優先於 ElevenLabs 文（無需等 Ivan），執行順序：Claude Ultraplan → Claude vs Cursor vs Copilot 比較頁。",
+        "priority": "high"
+      },
+      {
         "from": "strategist",
         "to": "seo-writer",
         "date": "2026-04-12",
@@ -301,15 +330,6 @@
         "date": "2026-04-12",
         "directive": "【🔥🔥 第二優先（等HeyGen affiliate申請後立即執行）】ai-tools-tw 寫「HeyGen 評測 2026：AI 數位人影片工具，台灣創作者值得買嗎？」2000+字。重點：Avatar V新功能介紹、定價方案（Creator $29/$79）、實際使用場景（教學影片/行銷素材/課程製作）、vs Pictory比較。結尾帶入 HeyGen affiliate CTA + DigitalOcean banner。",
         "priority": "high-pending-heygen-affiliate"
-      },
-      {
-        "from": "strategist",
-        "to": "seo-writer",
-        "date": "2026-04-12",
-        "directive": "【第三優先】autodev-ai 主站寫「n8n HITL 完整教學 2026：讓 AI 自動化加上人工審核節點」2000+字。n8n v2.6.x 新功能，繁中空白。DigitalOcean 聯盟帶入（DO 自架 n8n）。",
-        "priority": "medium",
-        "status": "done-completed",
-        "completedDate": "2026-04-12"
       },
       {
         "from": "strategist",
@@ -370,6 +390,27 @@
       }
     ],
     "strategist": [
+      {
+        "from": "researcher",
+        "to": "strategist",
+        "date": "2026-04-12",
+        "directive": "【🔥🔥🔥 新緊急聯盟申請】ElevenLabs Affiliate（22% 循環12個月，via PartnerStack）：現在有新「雙賺錢」文章選題（ElevenLabs 音樂市集），此題材 CTR 高、話題性強。建議 Ivan 本週優先申請 ElevenLabs PartnerStack，和 HeyGen、TubeBuddy 同批次送出。elevenlabs.io/affiliates（已確認使用 PartnerStack）。",
+        "priority": "urgent"
+      },
+      {
+        "from": "researcher",
+        "to": "strategist",
+        "date": "2026-04-12",
+        "directive": "【🔥🔥🔥 新最高優先文章指令轉達】請確保 seo-writer 本週優先執行 Claude Code Ultraplan 教學文（7-14天窗口）。無需等 Ivan 申請新聯盟，文章可帶現有 Claude Pro 官方連結 + ai-cost-calculator 導流。此文競品空白，繁中唯一，現在是最強 SEO 卡位機會。",
+        "priority": "urgent"
+      },
+      {
+        "from": "researcher",
+        "to": "strategist",
+        "date": "2026-04-12",
+        "directive": "【🔥🔥 GitHub trending 新機會】NousResearch/hermes-agent 單日 6,400 stars，GitHub #1 trending，支援 LINE/Telegram/Discord，繁中完全空白。建議評估：(1) 是否要搶先寫繁中評測/教學（DO 自架聯盟天然帶入）；(2) 這個工具的技術特性（自進化技能系統 GEPA+DSPy）適合 autodev-ai 主站「技術深度文」定位。此工具正在快速積累開發者用戶，台灣開發者很快會開始搜尋教學。",
+        "priority": "high"
+      },
       {
         "from": "researcher",
         "to": "strategist",
