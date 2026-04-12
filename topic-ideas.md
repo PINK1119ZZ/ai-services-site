@@ -53,3 +53,19 @@
 | 2026-04-12 | **Jasper vs Claude vs ChatGPT 寫作工具比較**（AI 寫作工具三方比較頁） | `ai 寫作工具比較 2026`、`jasper claude chatgpt 哪個好`、`ai 寫作 台灣推薦` | 高（常青關鍵字） | **三重聯盟導流頁**：Jasper 30% + Systeme.io 60% + n8n Cloud 30%（三工具均有 affiliate） | **US$300–800/月** | ai-tools-tw（⭐⭐⭐ 高優先） |
 | 2026-04-12 | **LINE 官方帳號 AI 工具推薦頻道**（流量管道，非評測文） | N/A（LINE OA 本身不是 SEO） | - | 建立 LINE OA 免費版 → 每週推送評測摘要 → 導流 ai-tools-tw 所有聯盟文章；台灣轉換率最高 | **間接效益高** | 所有站台 |
 | 2026-04-12 | **Substack 繁中 AI 工具週報**（流量分發管道） | N/A（Substack 本身不是 SEO，但有 40% 內部推薦流量） | - | 建立 Substack 分發週報，帶聯盟連結；500 訂閱前完全免費；可與台灣現有 AI Substack 互推 | **間接效益中高** | 跨站配合 |
+
+---
+
+## 2026-04-12（Researcher Round 6：PH April 月榜深挖 + GitHub AI Skills 新倉庫 + SuperGrok 比較機會 + 新聯盟確認）
+
+> 本輪格式沿用：日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|----------|---------|
+| 2026-04-12 | **Velo**（AI 影片訊息工具，PH 4/8 日榜 #1，週榜 Top 3，把任何素材自動剪成精美影片） | `velo ai 評測`、`ai 影片製作工具 2026`、`velo vs loom 比較` | 中（急速上升） | 搶先評測佔位；等 Velo Affiliate 計畫開放（新品）；帶 DigitalOcean 自架 AI 主題文 | **US$100–300/月**（Affiliate 開放後） | ai-tools-tw / ai-tools-en |
+| 2026-04-12 | **SuperGrok vs ChatGPT Plus vs Claude Pro 三方比較**（xAI SuperGrok 新推出 $10/$30/$300 分級，是 2026 Q2 最熱 AI 訂閱對比題材） | `supergrok 值得買嗎`、`supergrok vs chatgpt plus`、`xai grok 訂閱比較 2026`、`ai 訂閱哪個最划算 台灣` | **高（爆發中）** | 搭配 ai-cost-calculator 計算器頁 + 三方評比文；帶 n8n Cloud 聯盟（AI 訂閱省錢方案）；常青關鍵字 | **US$200–600/月** | ai-tools-tw（⭐⭐⭐ 高優先） |
+| 2026-04-12 | **Grok 4.2 Beta 多 Agent 架構評測**（PH 月榜上榜：4 AI agents 協作辯論系統，Grok + Harper + Benjamin + Lucas；$300/月 Heavy 方案） | `grok 4.2 評測`、`grok 4.2 vs claude sonnet`、`xai multi agent 2026`、`grok heavy 值得買嗎` | 高（技術社群熱） | 評測文導流 ai-cost-calculator；搭配 AI 訂閱比較頁雙聯盟 | **US$150–400/月** | ai-tools-en（英文優先）/ ai-tools-tw |
+| 2026-04-12 | **Tiny Aya by Cohere**（PH 4/5 日榜：本地、開源、輕量多語言 LLM，適合非英語市場，繁中支援有潛力） | `cohere aya 繁中`、`本地 llm 繁體中文 2026`、`tiny aya 教學`、`輕量 ai 模型 台灣` | 中（開源社群） | 無直接 Affiliate；搭配 DigitalOcean 自架 CTA（開源 LLM 自架場景）+ Google Gemma 4 比較文 | **US$80–200/月** | ai-tools-tw / autodev-ai |
+| 2026-04-12 | **Panorama by Imbue**（PH 4/5 日榜：AI 找出團隊工作流程和隱藏結構，適合企業效率受眾） | `panorama ai 評測`、`ai 工作流分析工具`、`imbue panorama 2026` | 低（企業受眾） | 搶先評測；等 Affiliate 計畫；帶 autodev-ai 主站 AI 自動化服務導流 | **US$50–150/月** | autodev-ai |
+| 2026-04-12 | **awesome-ai-agents-2026（GitHub）**（caramaschiHG/awesome-ai-agents-2026，281 stars，340+ resources，AI Agent 生態全覽，4月亮點已更新） | `ai agent 工具清單 2026`、`best ai agent frameworks`、`ai agent 繁中整理` | 中（開發者） | 建立繁中版 awesome-ai-tools-tw repo（吸引 backlink）；導流 ai-tools-tw + autodev-ai | **間接 SEO 效益高** | GitHub repo + ai-tools-tw |
+| 2026-04-12 | **OutlierKit（確認）**：已在 PH 4.9/5，「Best AI Tools Affiliate Programs 2026 Top 50+ Ranked」由 OutlierKit 自己撰寫，30% 循環/12m，60天 cookie，確認可申請 | `outlierkit 評測`、`youtube 分析 ai 工具 比較` | 中 | **Affiliate 30% 循環/12m，60天 cookie**（outlierkit.com/p/affiliate 已確認）；與 TubeBuddy 50% 終身做比較頁雙聯盟 | **US$150–450/月** | ai-tools-tw |
