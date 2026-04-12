@@ -284,3 +284,104 @@
 - [ ] NovaVoice 確認是否有 Affiliate 計畫
 - [ ] Brila 評測文（台灣在地商業 SEO 場景 + DigitalOcean 聯盟）
 - [ ] 評估 iThome 投稿策略（不只鐵人賽，日常投稿也有 DA 效益）
+
+---
+
+## 2026-04-12（競品監控 Round 7：AI 影片工具聯盟空白 + NxCode 打法拆解 + HeyGen 佣金確認）
+
+### 一、🔥 本輪最重大發現：AI 影片工具聯盟空白是完整的未開發垂直
+
+台灣繁中 AI 影片工具評測幾乎為零，但這個品類全部都有高佣金 Affiliate 計畫：
+
+| 工具 | 佣金 | 期間 | 平台 | 台灣評測現況 |
+|-----|------|------|------|------------|
+| **HeyGen** | **35% 循環** | 3個月 | Rewardful（heygen.com/affiliate-program）| 繁中幾乎空白 ⭐⭐⭐ |
+| **Munch AI** | **25% 循環** | 未公開 | 自有平台 | 繁中空白 |
+| **VEED.io** | **25% 循環** | 7天 cookie | 自有 | 繁中評測少 |
+| **Murf AI** | **20% 循環** | **24個月**（業界最長！）| 自有 | 繁中空白 ⭐⭐⭐ |
+| **Pictory AI** | **20-50%（分級）** | 未公開 | 自有 | 繁中空白 |
+
+**策略結論：「AI 影片工具比較頁 2026」是最新高優先目標**
+- 一頁帶入 HeyGen(35%) + Munch(25%) + VEED(25%) 三重聯盟
+- 繁中零競爭，關鍵字「ai 影片工具比較 2026」搜尋量高且常青
+- 預估月收 US$400–1000（若有 10+ 轉換/月）
+
+---
+
+### 二、🔥 NxCode.io 競品打法完整拆解
+
+**NxCode 是什麼：** AI App Builder（類 Lovable / Bolt.new），台灣有繁中頁面。
+
+**他們的 SEO 流量策略：**
+1. 大量發布「X vs Y AI App Builder 比較」類文章（Lovable vs Bolt、v0 vs Bolt 等）
+2. 覆蓋「Best AI App Builder 2026」主題文章，高搜尋量關鍵字
+3. 有繁中版頁面（zh-TW），直接搶台灣 Developer 流量
+
+**他們的變現方式：**
+- 不靠外部聯盟 → 靠自身 SaaS 訂閱（月費）
+- Creator Economy：用戶建的 App 上架後 **70% 分潤**（NxCode 抽 30%）
+- 策略：讓用戶賺錢 → 用戶幫忙推廣（病毒式增長）
+
+**我們能複製的：**
+- 做「Lovable vs Bolt.new vs NxCode 繁中比較頁」 → 搶同一批關鍵字
+- 帶入 DigitalOcean 自架 CTA（開發者族群高親和力）
+- 結果頁推薦「最佳搭配：AI App Builder + DO 雲端 = 最省成本自架方案」
+
+---
+
+### 三、🔥 OutlierKit 的「自我引流」策略 — 可複製
+
+**他們的做法：**
+- 發布「Best AI Tools Affiliate Programs 2026 Top 50+」長文
+- 這篇文章本身就是搜尋量最高的聯盟行銷關鍵字
+- 文章推薦清單：OutlierKit 自然排 #1（因為是自家寫的）
+- TubeBuddy、Jasper、Surfer SEO 等高知名度工具排後面，給文章可信度
+
+**我們能複製的（⭐⭐⭐ 立即可執行）：**
+- 寫「台灣 AI 工具聯盟計畫大比較 2026：哪些佣金最高？哪些最適合繁中站長？」
+- 文章自然帶入我們已申請的聯盟（DO、Hahow、Systeme.io）
+- 置入我們想推的高佣金工具（TubeBuddy 50%、HeyGen 35%、n8n Cloud 30%）
+- 常青關鍵字，文章本身就是流量入口 + 聯盟導流出口
+- **這是最聰明的 double-dip 策略：文章帶流量 + 文章本身導聯盟**
+
+---
+
+### 四、🆕 聯盟計畫更新優先清單（本輪修訂版）
+
+| 優先級 | 產品 | 佣金 | 期間 | 狀態 | Ivan 操作 |
+|------|------|------|------|------|-----------|
+| 🔥🔥🔥 | **HeyGen** | **35% 循環** | 3個月 | 🆕 本輪新發現，未申請 | https://www.heygen.com/affiliate-program |
+| 🔥🔥🔥 | TubeBuddy | 50% 終身 | 永久 | 待 Ivan 申請 | https://www.tubebuddy.com/affiliate |
+| 🔥🔥🔥 | Systeme.io | 60% 終身 | 永久 | 已部署連結，待正式申請 | https://systeme.io/affiliates |
+| 🔥🔥🔥 | **Murf AI** | **20% 循環** | **24個月** | 🆕 本輪新發現，未申請 | murf.ai/affiliates |
+| 🔥🔥 | n8n Cloud | 30% 循環 | 12個月 | 待 Ivan PartnerStack | https://n8n.partnerstack.com/ |
+| 🔥🔥 | Dify | 30-50% 循環 | 12個月 | 待 Ivan PartnerStack | PartnerStack |
+| 🔥🔥 | ElevenLabs | 22% 循環 | 12個月 | 待 Ivan PartnerStack | PartnerStack |
+| 🔥🔥 | Jasper AI | 25-30% 循環 | 12個月 | 待 Ivan 申請 | https://www.jasper.ai/affiliates |
+| 🔥🔥 | Framer | 最高 50% | 長期 | 待 Ivan 申請 | https://www.framer.com/creators |
+| 🔥🔥 | **VEED.io** | **25% 循環** | 7天 cookie | 🆕 本輪新發現，未申請 | veed.io/affiliates |
+| 🔥 | OutlierKit | 30% 循環 | 12個月 | 待申請 | outlierkit.com/p/affiliate |
+| 🔥 | Surfer SEO | 30% 循環 | 未公開 | 待確認 | PartnerStack |
+| 🔥 | Wispr Flow | 25% 循環 | 12個月 | 待 Ivan 申請 | https://partners.dub.co/flow |
+| ✅ | DigitalOcean | $25 首充 | 一次性 | 已申請 | active |
+| ✅ | Hahow | 10-15% | 一次性 | 已申請 | active |
+| ✅ | Systeme.io | 60% 終身 | 永久 | 已部署連結 | active（待正式申請） |
+
+**本輪新增待申請：HeyGen（⭐最高新優先） + Murf AI + VEED.io**
+
+---
+
+### 五、關鍵字空白盤點（本輪新增）
+
+**AI 影片工具繁中關鍵字完全空白（對手未打）：**
+
+| 關鍵字 | 月搜尋量估計 | 現有繁中文章數 | 我們機會 |
+|-------|------------|--------------|---------|
+| `heygen 評測 繁中` | 中（500-2000） | <5篇，品質差 | ⭐⭐⭐ |
+| `heygen 替代品` | 中 | 幾乎零 | ⭐⭐⭐ |
+| `ai 影片工具比較 2026` | 高（2000-5000） | 幾乎零 | ⭐⭐⭐ |
+| `murf ai 評測` | 中 | 零 | ⭐⭐⭐ |
+| `veed 繁中教學` | 中 | 極少 | ⭐⭐ |
+| `lovable vs bolt 台灣 繁中` | 中 | 零 | ⭐⭐ |
+| `ai app builder 台灣 2026` | 中高 | 極少 | ⭐⭐ |
+| `台灣 ai 工具聯盟計畫比較` | 低（新關鍵字） | 零 | ⭐⭐⭐（自我引流型） |

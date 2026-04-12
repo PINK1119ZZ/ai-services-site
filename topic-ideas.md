@@ -69,3 +69,39 @@
 | 2026-04-12 | **Panorama by Imbue**（PH 4/5 日榜：AI 找出團隊工作流程和隱藏結構，適合企業效率受眾） | `panorama ai 評測`、`ai 工作流分析工具`、`imbue panorama 2026` | 低（企業受眾） | 搶先評測；等 Affiliate 計畫；帶 autodev-ai 主站 AI 自動化服務導流 | **US$50–150/月** | autodev-ai |
 | 2026-04-12 | **awesome-ai-agents-2026（GitHub）**（caramaschiHG/awesome-ai-agents-2026，281 stars，340+ resources，AI Agent 生態全覽，4月亮點已更新） | `ai agent 工具清單 2026`、`best ai agent frameworks`、`ai agent 繁中整理` | 中（開發者） | 建立繁中版 awesome-ai-tools-tw repo（吸引 backlink）；導流 ai-tools-tw + autodev-ai | **間接 SEO 效益高** | GitHub repo + ai-tools-tw |
 | 2026-04-12 | **OutlierKit（確認）**：已在 PH 4.9/5，「Best AI Tools Affiliate Programs 2026 Top 50+ Ranked」由 OutlierKit 自己撰寫，30% 循環/12m，60天 cookie，確認可申請 | `outlierkit 評測`、`youtube 分析 ai 工具 比較` | 中 | **Affiliate 30% 循環/12m，60天 cookie**（outlierkit.com/p/affiliate 已確認）；與 TubeBuddy 50% 終身做比較頁雙聯盟 | **US$150–450/月** | ai-tools-tw |
+
+---
+
+## 2026-04-12（Researcher Round 7：競品變現結構深挖 + 新聯盟發現 + 關鍵字空白 — 競品監控 Sunday cron）
+
+> 本輪重點：**對手靠什麼賺錢？** 聯盟計畫、產品定價、流量頁面、可複製模式。
+
+### 🔥 本輪最大發現：HeyGen Affiliate 35% 循環（3個月）+ NxCode Creator Economy 70% 分潤
+
+| 日期 | 工具/競品 | 關鍵字 | 搜尋量估計 | 變現方式（對手如何賺？） | 預估月收入 | 建議站點 | 優先 |
+|------|-----------|--------|-----------|------------------------|------------|---------|------|
+| 2026-04-12 | **HeyGen**（AI 數位人影片生成，Avatar V 剛發布）| `heygen 評測 2026`、`heygen 中文教學`、`ai 數位人 影片 台灣`、`heygen 替代品` | 高（持續上升） | **Affiliate 35% 循環 3個月**（heygen.com/affiliate-program，Rewardful 平台，30天 cookie）；月費 $29–$79/月 Creator 方案，每轉介最高 $83/3個月 | **US$200–600/月**（累積） | ai-tools-tw（⭐⭐⭐ 高優先） | ⭐⭐⭐ |
+| 2026-04-12 | **NxCode.io**（AI App Builder，競品分析：靠「Creator Economy 70% 分潤」+ 繁中 AI 工具評測文引流）| `nxcode 評測`、`ai 應用程式建構工具 2026`、`lovable vs bolt 繁中比較` | 中（技術族群） | NxCode 自身無 affiliate，但他們在打「Lovable vs Bolt vs v0 繁中比較」關鍵字 → 我們可搶同一批關鍵字，導流到 DigitalOcean（自架）+ n8n Cloud 聯盟 | **US$100–300/月** | ai-tools-tw / ai-tools-en | ⭐⭐ |
+| 2026-04-12 | **Lovable vs Bolt.new vs v0 三方比較**（AI App Builder，NxCode 在打此關鍵字，繁中評測少） | `lovable 評測`、`bolt.new 繁中教學`、`ai app builder 比較 台灣 2026` | 中高（上升中） | 無 Bolt/Lovable 官方 Affiliate（確認）；可帶 DigitalOcean 自架 + NxCode Creator Economy 導流 | **US$80–200/月**（DO 聯盟） | ai-tools-tw / ai-tools-en | ⭐⭐ |
+| 2026-04-12 | **Munch AI**（AI 影片短片自動剪輯，25% 循環佣金，類似 Velo 競品）| `munch ai 評測`、`ai 影片剪輯工具 2026`、`short video ai 台灣` | 中 | **Affiliate 25% 循環**；與 Velo 做「AI 影片工具比較」雙聯盟 | **US$100–300/月** | ai-tools-tw | ⭐⭐ |
+| 2026-04-12 | **VEED.io**（AI 影片編輯，25% 循環佣金，7天 cookie）| `veed 評測`、`veed.io 繁中教學`、`線上影片編輯 ai 2026` | 中 | **Affiliate 25% 循環**；繁中評測少 | **US$150–400/月** | ai-tools-tw | ⭐⭐ |
+| 2026-04-12 | **Murf AI**（AI TTS 配音，20% 循環 24個月，業界最長期）| `murf ai 評測`、`ai 配音工具 繁中`、`murf vs elevenlabs 比較` | 中 | **Affiliate 20% 循環 24個月**（24個月！業界最長）；ElevenLabs 22%/12m vs Murf 20%/24m 比較文雙聯盟 | **US$200–500/月** | ai-tools-tw | ⭐⭐⭐ |
+| 2026-04-12 | **Pictory AI**（AI 影片生成，20-50% 分級佣金）| `pictory ai 評測`、`blog to video ai 台灣`、`pictory 繁中教學` | 中 | **Affiliate 20-50%**（分級）；文章轉影片場景繁中空白 | **US$150–400/月** | ai-tools-tw | ⭐⭐ |
+| 2026-04-12 | **「AI 影片工具比較頁 2026」**（HeyGen + Munch + VEED + Pictory 四合一比較）| `ai 影片工具比較 2026`、`ai 影片製作 台灣 哪個好` | 高（常青）| **四重聯盟導流頁**：HeyGen 35% + Munch 25% + VEED 25% + DO 聯盟；比較頁高 SEO 停留時間 | **US$400–1000/月** | ai-tools-tw（⭐⭐⭐ 新高優先） | ⭐⭐⭐ |
+
+### 📌 對手變現結構觀察（本輪新發現）
+
+**NxCode 的打法（最值得複製）：**
+- 打「Lovable vs Bolt vs v0 繁中比較」關鍵字 → 引流到自家 AI App Builder
+- 發布大量「Best AI Tools 2026 完整排名」類文章 → SEO 吸量
+- 最聰明的是：他們不靠外部聯盟，直接建 Creator Economy（70% 分潤）讓用戶帶用戶
+- **我們可複製**：做「AI App Builder 繁中比較頁」，帶 DigitalOcean 自架 CTA
+
+**OutlierKit 的打法（自我引流）：**
+- 發布「Best AI Affiliate Programs 2026 Top 50+」自家文章 → 流量最高的關鍵字，卻推自己的聯盟計畫
+- **我們可複製**：做「台灣 AI 工具聯盟計畫比較 2026」文章，自然帶入我們已申請的聯盟連結
+
+**台灣競品盲點（本輪確認）：**
+- AI 影片工具類（HeyGen / Munch / VEED / Pictory）在台灣幾乎零繁中評測
+- 所有這些工具都有 affiliate 計畫，但台灣完全沒人打這一塊
+- **這是一個完整未開發的聯盟收入垂直**
