@@ -1348,6 +1348,44 @@
         "5. 高互動貼文同步加入FB相關社團擴散"
       ],
       "linkInBio": "粉專About/Bio欄位放主站連結（固定流量入口）"
+    },
+    "autoDevAIStrategy": {
+      "positioning": "AI 工具教學 + 時事快評，定位：台灣中小企業的 AI 軍師",
+      "postFrequency": "每天 1-2 則，配合 SEO 新文章自動生成",
+      "postTimes": [
+        "12:00",
+        "20:00"
+      ],
+      "contentMix": {
+        "weekday": "1 則教學/評測摘要（來自當天 SEO 文）+ 偶爾 1 則時事快評",
+        "weekend": "1 則懶人包/排行/比較型"
+      },
+      "postRules": [
+        "連結放留言區第一則，貼文本體不放外部連結（避免觸及被壓）",
+        "標題用問句或數字開頭（觸發點擊）",
+        "結尾帶互動問題（提升留言率）",
+        "每則貼文 3-5 個 hashtag：#AI工具 #自動化 + 主題相關",
+        "圖片優先：至少配 1 張圖或資訊圖卡",
+        "不要純轉貼，要加個人觀點或一句話摘要"
+      ],
+      "postTemplates": {
+        "articlePromo": "🔥 {吸睛標題，帶數字或問句}\n\n{2-3 句重點摘要，帶個人觀點}\n\n{互動問題} 👇\n\n#AI工具 #自動化 #{主題tag}",
+        "newsComment": "📢 {新聞事件一句話}\n\n我的看法：{2-3 句觀點}\n\n你覺得呢？👇\n\n#{相關tags}",
+        "listicle": "📋 {主題} Top {N} 整理\n\n{列點}\n\n完整比較 👉 留言區\n\n#AI工具推薦 #{主題}"
+      },
+      "evolutionRules": [
+        "每週日 researcher 檢查 FB Insights（觸及、互動、點擊），更新 fbStrategy.performance",
+        "觸及率 > 5% 的貼文格式 → 加入 winPatterns",
+        "觸及率 < 1% 的貼文格式 → 加入 failPatterns，下週避免",
+        "每月 1 號 strategist 根據 performance 數據調整 contentMix 和 postRules",
+        "持續追蹤競品粉專（電腦王阿達、科技新報）的新玩法，有值得學的寫入 fbStrategy.learnings"
+      ],
+      "performance": {
+        "weeklyReviews": [],
+        "winPatterns": [],
+        "failPatterns": [],
+        "learnings": []
+      }
     }
   },
   "competitorDatabase": {
