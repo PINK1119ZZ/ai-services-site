@@ -143,3 +143,42 @@
 2. 🔥🔥🔥 ElevenLabs 音樂市集「雙賺錢」文（高 CTR 選題）
 3. 🔥🔥 Claude Code vs Cursor 三方比較（常青高流量頁）
 4. 🔥🔥 NousResearch Hermes Agent 繁中評測（技術社群引爆中）
+
+---
+
+## 2026-04-12（Researcher Round 9：PH 今日榜 4/12 + Gemini 互動模擬 + Claude Code Voice Mode + Google Vids 2.0 + Ollama v0.20 爆速迭代）
+
+> 本輪重點：**今日（4/12）Product Hunt 榜單即時掃描 + 已確認新功能深挖**
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 | 優先 |
+|------|------|--------|-----------|---------|----------|---------|------|
+| 2026-04-12 | **Interactive Simulations in Gemini**（PH 今日榜 #1：Gemini Pro 可即時生成 3D 物理模擬、分子模型、行星軌道演示） | `gemini interactive simulation 教學`、`gemini 3D 模型 台灣`、`google gemini pro 互動模擬 怎麼用` | 中（急速上升，今日 PH #1） | 無直接 Affiliate；Google One AI Pro 訂閱導流（Google Workspace 方案）；帶 ai-cost-calculator 計算器比較 Gemini vs Claude Pro | **US$80–200/月** | ai-tools-tw（搶先教學）/ ai-tools-en | ⭐⭐ |
+| 2026-04-12 | **Claude Code Voice Mode 完整教學**（Anthropic 2026-03-03 推出，仍在擴展 rollout；/voice 啟動；token 不計入 rate limit） | `claude code voice mode 教學`、`claude code 語音輸入 怎麼用`、`vibe coding 中文教學 2026` | 中（持續熱) | Claude Pro/Max 訂閱 CTA；與 Wispr Flow 比較（雙聯盟頁）；整合進「Claude Code 完整功能教學 2026」一篇涵蓋 Ultraplan + Voice Mode | **US$200–500/月** | ai-tools-tw（⭐⭐⭐ 整合文）/ ai-tools-en | ⭐⭐⭐ |
+| 2026-04-12 | **Google Vids 2.0 完整教學**（免費版 10 段 Veo 3.1 影片/月 + AI 分身 + Lyria 3 音樂；直接推 YouTube；PH 月榜上榜） | `google vids 怎麼用 2026`、`veo 3.1 免費 台灣`、`google workspace ai 影片 免費教學` | 中（上升中） | 無直接 Affiliate；Google Workspace 官方方案帶入；作為「HeyGen vs Google Vids vs VEED 比較頁」重要對比素材，強化 HeyGen 35% 聯盟文說服力 | **US$100–300/月**（作為比較頁子題材） | ai-tools-tw / ai-tools-en | ⭐⭐ |
+| 2026-04-12 | **Claude Code 完整功能 2026 終極教學**（整合 Ultraplan + Voice Mode + Skills + Agent Subagents，一篇覆蓋所有新功能） | `claude code 完整教學 2026`、`claude code 怎麼用`、`claude code 功能介紹 繁中` | **高（常青+話題疊加）** | Claude Max/Pro 訂閱多個 CTA；ai-cost-calculator 計算器導流；與 Cursor 比較文互連；SEO 強力複合篇 | **US$400–1000/月** | ai-tools-tw（⭐⭐⭐ 旗艦文章）/ ai-tools-en | ⭐⭐⭐ |
+| 2026-04-12 | **Ollama v0.20 完整教學 2026：Mac/Windows/Linux 自架本地 AI，NVFP4+MLX 加速**（v0.19-v0.20 爆速迭代，PH 月榜上榜；context caching 升級） | `ollama 教學 2026`、`ollama mac 安裝`、`本地 ai 自架 免費 2026`、`ollama v0.20 新功能` | 中（開發者族群穩定） | DigitalOcean 自架 VPS 聯盟（Ollama server 場景）；Open WebUI 搭配教學；無直接 Affiliate 但 DO CTA 極自然 | **US$150–400/月** | autodev-ai / ai-tools-en | ⭐⭐ |
+| 2026-04-12 | **HeyGen vs Google Vids vs VEED 三方比較頁（2026 最新）**（Google Vids 2.0 免費版上線後，HeyGen 付費方案 vs 免費 Google Vids 的對比更有說服力） | `heygen vs google vids`、`ai 影片工具 免費 vs 付費 比較`、`google vids 可以取代 heygen 嗎` | 中高（比較型關鍵字 CTR 高） | HeyGen 35% + VEED 25% 雙聯盟；Google Vids（Google One AI Pro 導流）；比較型文章高轉換 | **US$300–800/月** | ai-tools-tw（⭐⭐⭐ 等 HeyGen affiliate）/ ai-tools-en | ⭐⭐⭐ |
+
+### 💡 本輪策略觀察（Round 9）
+
+**「Claude Code 完整功能 2026 旗艦文章」是本輪最強提案：**
+- 一篇覆蓋 Ultraplan（7-14天窗口）+ Voice Mode（rollout 中）+ Skills（爆發中）= 三個話題合一
+- 搜尋「claude code 教學 2026 繁中」幾乎完全空白
+- 旗艦文章策略：一篇 3000+字 → 導流多個 CTA → 長期排名潛力強
+
+**Google Vids 2.0 讓 HeyGen 比較文更有說服力：**
+- 有了免費的 Google Vids，讀者自然想問「那我還需要付費用 HeyGen 嗎？」
+- 答案是：HeyGen Avatar V 真人感、多語音、商業授權更完整 → 有機會讓使用者付費
+- 這個比較框架讓 HeyGen 35% 聯盟文的轉換率更高
+
+**Ollama v0.20 + DigitalOcean 自架組合：**
+- Ollama 10天發布 6個版本 → 技術社群持續討論
+- VPS 自架 Ollama server 是 DigitalOcean 最自然的帶入場景
+- 建議 autodev-ai 主站發布「Ollama + DigitalOcean VPS 自架指南」，DO $200 CTA 兩次出現
+
+**Directives 待執行優先順序（本輪更新）：**
+1. 🔥🔥🔥 Claude Code 完整功能 2026 旗艦文（Ultraplan + Voice Mode + Skills 合體）→ seo-writer 立即
+2. 🔥🔥🔥 Claude Code Ultraplan 緊急教學（如未完成）→ 7-14天窗口
+3. 🔥🔥 HeyGen vs Google Vids vs VEED 比較頁（等 HeyGen affiliate）
+4. 🔥 Ollama v0.20 自架教學 + DigitalOcean 聯盟 → autodev-ai
+
