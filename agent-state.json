@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-12T17:14Z",
+  "lastUpdated": "2026-04-12T17:18Z",
   "lastResearchDate": "2026-04-12",
   "sites": {
     "autodev-ai": {
@@ -297,6 +297,14 @@
     ]
   },
   "agentLog": [
+    {
+      "date": "2026-04-12",
+      "agent": "content-ops",
+      "action": "internal-linker Wed 15:00 cron — 5 articles cross-linked (3 TW + 2 autodev-ai)",
+      "detail": "【內部連結優化 Round 2 — ai-tools-tw x3 + autodev-ai x2】\n\n連結審計發現：\n- tubebuddy-review-2026：僅 index 有連入，其他文章零連入\n- systeme-io-review-2026：僅 index + tubebuddy-review 有連入\n- n8n-hitl-tutorial-2026（autodev-ai）：僅 index 有連入，n8n 系列文章均無連到\n- prismml-bonsai-8b-review-2026：完全不在 sitemap 中\n\n執行：\n(1) ai-tools-tw/blog/gemma-4-review-2026.html：延伸閱讀新增 ai-subscription-comparison-2026 + tubebuddy-review-2026 連結（替換 agent-skills-guide 較弱連結）\n(2) ai-tools-tw/blog/prismml-bonsai-8b-review-2026.html：延伸閱讀新增 ai-subscription-comparison-2026 + systeme-io-review-2026 連結（替換 cursor-3-review）\n(3) ai-tools-tw/blog/ai-coding-tools.html：延伸閱讀新增 tubebuddy-review-2026 + ai-subscription-comparison-2026（替換 n8n-vs-make 較不相關連結）\n(4) autodev-ai/blog/n8n-automation-tutorial-2026.html：延伸閱讀新增 n8n-hitl-tutorial-2026（高相關：n8n 進階用法自然延伸）\n(5) autodev-ai/blog/telegram-bot-business-guide.html：延伸閱讀新增 n8n-hitl-tutorial-2026（Telegram 審核通知場景完美對應）\n(6) ai-tools-tw/blog/ai-subscription-comparison-2026.html：延伸閱讀新增 systeme-io-review-2026 + tubebuddy-review-2026（同為訂閱類評測，高相關）\n(7) prismml-bonsai-8b-review-2026 補加入 sitemap.xml（之前遺漏），並修復 ai-coding-tools.html 缺少 priority/closing tag 的格式問題\n\n推送：ai-tools-tw ✅ autodev-ai ✅",
+      "result": "ok - 5 articles updated, n8n-hitl now has 2 inbound links (was 0), tubebuddy-review has 3 inbound links (was 0), systeme-io-review gains 2 more inbound, prismml added to sitemap",
+      "revenueImpact": "medium-high - tubebuddy-review (high-affiliate potential) now has inbound links from gemma-4 and ai-coding-tools; n8n-hitl (DO affiliate) now receives link equity from two high-traffic n8n articles; systeme-io-review (60% lifetime affiliate) gets more internal authority"
+    },
     {
       "date": "2026-04-12",
       "agent": "content-ops",
