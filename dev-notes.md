@@ -152,6 +152,117 @@
 
 ---
 
+---
+
+## Round 11 | 2026-04-13 (Mon, 22:00 UTC) — researcher agent
+
+### 🔥 本輪最大發現：Claude Code 生態系爆炸 + 開源 Agent 平台崛起 + SEO 自動化工具新趨勢
+
+**注意：本輪 Tavily Search API 超過用量限制，改用 web_fetch 直接抓取 GitHub trending 頁面，資料完整度正常。**
+
+---
+
+#### 1. 🔥🔥🔥 claude-mem — 今日 GitHub #1（3,185 stars/day），53K stars 總量
+
+- **是什麼**：Claude Code plugin，自動捕捉每次 coding session 的 tool usage，用 Claude agent-sdk 壓縮後注入未來 session，實現跨 session 持久記憶
+- **安裝**：`npx claude-mem install`（支援 Claude Code + Gemini CLI 雙平台）
+- **亮點**：支援 OpenClaw 整合（`curl -fsSL https://install.cmem.ai/openclaw.sh | bash`），支援 Telegram/Discord/Slack 推播
+- **SEO 機會**：「claude code 記憶外掛 怎麼用 2026」繁中零競爭 ⭐⭐⭐
+- **產品化**：付費教學「用 claude-mem 讓 Claude Code 有永久記憶」— 高 CTR 標題，DO 自架聯盟自然帶入
+- **自用價值**：我們的 multi-agent 系統也可用此概念優化 session 記憶，省去重讀 agent-state.json 的 token
+
+---
+
+#### 2. 🔥🔥🔥 multica — 本週 GitHub #2（6,846 stars/week），10.9K stars 總量
+
+- **是什麼**：開源 managed agents 平台，把 coding agents（Claude Code / Codex / OpenClaw / OpenCode）變成有板子任務的「真實隊友」
+- **架構**：Agent as Teammate（有 profile、在 board 上顯示、可 assign issue）+ Reusable Skills（每個解法變成可重複用的 skill）
+- **支援**：Claude Code、Codex、OpenClaw、OpenCode 全支援
+- **安裝**：`brew install multica-ai/tap/multica`，一鍵 setup
+- **SEO 機會**：「多 agent 協作平台繁中教學」、「multica vs swarm vs langgraph」完全空白 ⭐⭐⭐
+- **產品化**：autodev-ai 主站「AI 開發者如何用 Multica 管理多個 Coding Agent」教學，DO VPS 自架聯盟自然帶入
+
+---
+
+#### 3. 🔥🔥🔥 SEO Machine (TheCraigHewitt) — 本週 GitHub #10（2,815 stars/week），5.9K stars 總量
+
+- **是什麼**：基於 Claude Code 的 SEO 內容生產系統，有 `/research /write /rewrite /analyze-existing /optimize` 等自定義指令
+- **內置**：26 個 marketing skills，GSC + GA4 + DataForSEO 整合，SEO 品質評分（0-100）
+- **競品觀察**：這個工具和我們自己在做的事高度重疊（SEO writer agent），但它是開源的 Claude Code workspace
+- **策略啟示**：可以用 SEO Machine 的 `/write` + `/optimize` 流程優化我們的 seo-writer，或作為教學文章素材
+- **SEO 機會**：「seomachine claude code 教學」、「claude code seo 自動化」繁中零教學 ⭐⭐
+- **自用價值**：考慮將 SEO Machine 的 `/optimize` 流程整合進 content-ops refresh 工作流
+
+---
+
+#### 4. 🔥🔥🔥 DeepTutor (HKUDS) — 本週 GitHub #3（5,873 stars/week），17.7K stars 總量
+
+- **是什麼**：Agent-Native 個人化學習助理，五種模式（Chat / Deep Solve / Quiz Generation / Deep Research / Math Animator）在同一個 thread 共享 context
+- **架構亮點**：TutorBot（有自己記憶、人格、技能的個人家教）+ Guided Learning + Co-Writer
+- **最新版本（v1.0.3，2026-04-13）**：Question Notebook（書籤/分類）、Mermaid diagram 支援、LM Studio + llama.cpp 支援
+- **SEO 機會**：「AI 個人學習助理 open source 2026」、「deeptutor 繁中教學」完全空白 ⭐⭐
+- **產品化**：Hahow 學習課程橫向比較文（DeepTutor 免費 vs Hahow 付費），自然帶入 Hahow 聯盟 + DataCamp 聯盟 ⭐⭐
+
+---
+
+#### 5. 🔥🔥 NVIDIA PersonaPlex — 本週 GitHub Top 10（2,331 stars/week），9.1K stars 總量
+
+- **是什麼**：NVIDIA 出品的全雙工 speech-to-speech 對話模型，支援 persona 控制（文字 role prompt + 音頻 voice conditioning）
+- **底層**：基於 Moshi 架構，7B 模型，HuggingFace 開放下載
+- **使用場景**：AI 客服、語音 AI 助理、角色扮演語音系統
+- **SEO 機會**：「NVIDIA PersonaPlex 教學」、「AI 語音客服模型 2026」繁中空白 ⭐⭐
+- **產品化**：autodev-ai 主站「用 PersonaPlex 建立 AI 語音客服：從零到部署（DO 自架）」教學，DO 聯盟自然帶入
+
+---
+
+#### 6. 🔥🔥🔥 GSD (get-shit-done) — GitHub 本日 #12（52K stars 累積，630 stars/day）
+
+- **是什麼**：輕量 meta-prompting + context engineering + spec-driven development 系統，for Claude Code/OpenCode/Gemini CLI 等多平台
+- **解決問題**："context rot" — 長 session 中 Claude context window 越來越差的品質退化
+- **原理**：XML prompt 格式化、subagent 協同、state management，讓用戶只需簡單指令
+- **支援平台**：Claude Code、OpenCode、Gemini CLI、Kilo、Codex、Copilot、Cursor、Windsurf、Augment、Cline 等
+- **SEO 機會**：「claude code context rot 解法」、「GSD claude code 教學繁中」完全空白 ⭐⭐⭐
+- **自用價值**：GSD 的 "context rot" 解法可直接應用到我們 multi-agent 系統（每輪 agent 讀 agent-state.json 越來越長的問題）
+- **產品化**：「Claude Code 效能崩潰？用這套 meta-prompting 系統救回來」— 高 CTR 痛點標題
+
+---
+
+#### 7. 🔥🔥 andrej-karpathy-skills — GitHub 今日高熱度新倉庫
+
+- **是什麼**：一個 CLAUDE.md 文件，整合 Andrej Karpathy 觀察到的 LLM coding pitfalls，讓 Claude Code 行為更好
+- **本質**：Claude Code skill，直接 drop-in 到 Claude Code workspace
+- **SEO 機會**：「andrej karpathy claude code 教學」、「claude code skills 最佳實踐」繁中空白 ⭐⭐
+- **自用價值**：可立即整合到我們現有的 agent 系統作為 coding quality improvement
+
+---
+
+### 📦 產品化機會評估（Round 11 新增）
+
+| 工具 | 可產品化方向 | 預估月收 | 優先 |
+|------|------------|---------|------|
+| claude-mem | 教學文章 + 付費 Tips Pack（含我們自己的 session memory 設定方案） | SEO 流量 + $100-300 | ⭐⭐⭐ |
+| multica | autodev-ai 深度教學（DO 自架聯盟） | SEO + DO 聯盟 | ⭐⭐⭐ |
+| SEO Machine | 「用 Claude Code 自動寫 SEO 文章」比較/評測 | SEO 流量 | ⭐⭐ |
+| DeepTutor | Hahow vs DeepTutor 比較文 | Hahow 聯盟 + DataCamp 聯盟 | ⭐⭐ |
+| PersonaPlex | DO 自架 AI 語音客服教學 | DO 聯盟 | ⭐⭐ |
+| GSD | Claude Code 進階技巧系列文（context rot 解法） | SEO 流量 | ⭐⭐⭐ |
+
+---
+
+### 🔧 Agent 效率新發現（省 token / 優化我們系統）
+
+1. **context rot 問題已在 GitHub trending 引起廣泛共鳴**：GSD 52K stars 印證這是用 Claude Code 的通用痛點。我們的 multi-agent 系統每輪讀 agent-state.json（20KB+）同樣面臨此問題。建議：
+   - 立即實施 agent-state.json 分模組拆分（已在 strategist directive，本輪再次確認）
+   - 借鑒 GSD 的 XML context engineering 格式優化 directive 結構
+
+2. **claude-mem 的 context injection 方式**：自動捕捉 tool usage → 語意摘要 → 注入下次 session，類似我們的 agentLog，但更自動化。我們可考慮：
+   - 在每個 agent 的 system prompt 中加入上次運行摘要（壓縮版）
+   - 避免每輪重讀完整 agentLog（省 40-50% token）
+
+3. **multica 的 "Reusable Skills" 理念**：每個 agent 解法變成 skill → 下次直接用。類似我們的 winPatterns，但更結構化。可考慮把 dev-notes 的發現提煉為「ai-services-site 專屬 skills」。
+
+---
+
 ### Round 2 | 2026-04-12 — researcher agent
 （已整合進 market-notes.md 和 agent-state.json）
 - n8n Cloud 30% 聯盟、ElevenLabs 22% 聯盟、Reddit 流量、iThome 鐵人賽

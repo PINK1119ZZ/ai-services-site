@@ -231,3 +231,21 @@
 2. 🔥🔥🔥 Copy.ai vs Jasper vs Claude 三方比較頁（45% 第一年佣金確認，繁中空白）
 3. 🔥🔥 Wispr Flow 評測（25% 循環，PH 月榜進榜，待 Ivan 申請聯盟後執行）
 4. 🔥🔥 Kimi K2.5 技術評測（繁中空白，DO 自架場景自然帶入）
+
+---
+
+## 2026-04-13（Researcher Round 11：GitHub Trending 深挖 — Claude Code 生態系爆炸週）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|----------|---------|
+| 2026-04-13 | **claude-mem**（Claude Code plugin，自動跨 session 持久記憶，今日 GitHub #1，3,185 stars/day，53K 總 stars） | `claude code 記憶 外掛`、`claude-mem 教學`、`claude code session 記憶`、`claude code persistent memory` | 高（爆發中） | 教學文 + DO 自架聯盟（本地部署 claude-mem 用 VPS）+ 付費 Tips Pack（Gumroad） | **US$150–400/月** | autodev-ai（主）/ ai-tools-tw |
+| 2026-04-13 | **multica**（開源 managed agents 平台，把 Claude Code/Codex/OpenClaw/OpenCode 變成有 board 任務的隊友，本週 GitHub #2，6,846 stars/week） | `multica ai 教學`、`多 agent 協作 2026`、`multica vs swarm`、`coding agent 管理平台` | 中（快速上升） | autodev-ai 深度教學 + DO VPS 自架聯盟（Multica 本機 daemon 部署場景） | **US$100–300/月** | autodev-ai |
+| 2026-04-13 | **SEO Machine**（基於 Claude Code 的 SEO 內容生產系統，/research /write /optimize 指令，本週 GitHub Top 10，2,815 stars/week） | `seomachine claude code`、`claude code seo 自動化`、`ai seo writer tool 2026` | 中（上升中） | 評測文 + Claude Pro/Max 聯盟導流（使用 SEO Machine 需要 Claude Code） | **US$100–250/月** | autodev-ai / ai-tools-en |
+| 2026-04-13 | **DeepTutor**（Agent-Native 個人化學習助理，TutorBot + 5種模式，17K stars，v1.0.3 今日更新） | `deeptutor 評測`、`ai 個人學習助理 open source`、`deeptutor 繁中`、`ai 家教 2026` | 中 | Hahow 課程聯盟比較文（免費 DeepTutor vs 付費 Hahow）+ DataCamp 聯盟 | **US$150–400/月** | ai-tools-tw |
+| 2026-04-13 | **GSD (get-shit-done)**（輕量 meta-prompting + context engineering，解決 Claude Code context rot，52K stars，今日熱門） | `claude code context rot`、`gsd claude code 教學`、`claude code 效能優化`、`context window 滿了怎麼辦` | 高（痛點明確） | 教學文 + Claude Pro 導流（用 Claude Code 的人必須訂閱）+ DO 自架場景 | **US$200–500/月** | autodev-ai（主）/ ai-tools-tw |
+| 2026-04-13 | **NVIDIA PersonaPlex**（全雙工 speech-to-speech，persona 控制，7B 開源，本週 GitHub Top 10） | `personaplex 教學`、`nvidia ai 語音客服`、`全雙工 ai 語音 2026`、`open source voice ai` | 低-中（技術受眾） | DO VPS 自架聯盟（運行 7B 模型需要好的 GPU VPS）+ autodev-ai 技術文 | **US$50–200/月** | autodev-ai |
+
+**本輪 SEO 最高優先（3 篇需立即寫）：**
+1. 🔥🔥🔥 **claude-mem 完整教學**：「讓 Claude Code 有永久記憶！2026 最熱 GitHub Plugin 教學」— DO 聯盟自然帶入，繁中零競爭
+2. 🔥🔥🔥 **GSD 教學**：「Claude Code 越用越爛？用這套系統解決 Context Rot！」— 高 CTR 痛點標題，Claude Pro 導流
+3. 🔥🔥🔥 **multica 教學**：「一個人管 5 個 AI 工程師：multica 開源 Agent 管理平台繁中完整教學」— DO 自架聯盟

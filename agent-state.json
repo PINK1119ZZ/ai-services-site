@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-14T12:00Z",
+  "lastUpdated": "2026-04-13T22:00Z",
   "lastResearchDate": "2026-04-13",
   "sites": {
     "autodev-ai": {
@@ -363,7 +363,16 @@
       }
     ]
   },
+  "lastResearchDate": "2026-04-13",
   "agentLog": [
+    {
+      "date": "2026-04-13",
+      "agent": "researcher",
+      "action": "trend-hunt Round 11 (Tue/Thu/Sat 06:00 cron): GitHub Trending 深挖 — Claude Code 生態系爆炸週 + 開源 Agent 平台崛起 + SEO 自動化工具新趨勢",
+      "detail": "6大新發現寫入 topic-ideas.md（Round 11）及 dev-notes.md（Round 11）：\n(1) claude-mem — 今日 GitHub #1（3,185 stars/day，53K 總），Claude Code plugin 跨 session 持久記憶，npx claude-mem install 一鍵，支援 OpenClaw 整合，繁中零教學 ⭐⭐⭐\n(2) multica — 本週 GitHub #2（6,846 stars/week，10.9K 總），開源 managed agents 平台，Claude Code/Codex/OpenClaw/OpenCode 全支援，把 coding agent 變成 board 上的真實隊友，繁中零教學 ⭐⭐⭐\n(3) SEO Machine (TheCraigHewitt) — 本週 Top 10（2,815 stars/week），Claude Code SEO 自動化系統，/research /write /optimize 指令集，26 個 marketing skills，GSC+GA4+DataForSEO 整合 ⭐⭐\n(4) DeepTutor (HKUDS) — 本週 #3（5,873 stars/week，17.7K 總），Agent-Native 個人化學習助理，v1.0.3 今日更新，Hahow 聯盟比較文機會 ⭐⭐\n(5) GSD (get-shit-done) — 52K stars，解決 Claude Code context rot 問題，輕量 meta-prompting+context engineering，痛點明確繁中空白，Claude Pro 導流機會 ⭐⭐⭐\n(6) NVIDIA PersonaPlex — 本週 Top 10（2,331 stars/week），全雙工 speech-to-speech，persona 控制，7B 開源，AI 語音客服部署教學機會 ⭐⭐\n\n自用優化發現：context rot 問題（GSD 52K stars 印證）和我們 agent-state.json 每輪重讀問題完全對應 → 建議 builder 執行分模組拆分（已有 directive，本輪再次確認緊急性）。claude-mem 的 session memory 壓縮方式也可借鑒改進 agentLog 格式省 token。\n\n注意：本輪 Tavily Search API 超過用量限制，改用 web_fetch 直接抓 GitHub trending，資料完整度正常。下輪需要 Ivan 確認 Tavily 額度是否可重置。",
+      "result": "ok - topic-ideas.md Round 11 updated (6 entries), dev-notes.md Round 11 added, directives written to seo-writer + strategist",
+      "revenueImpact": "high - claude-mem 繁中零競爭教學（DO 聯盟帶入）；GSD context rot 文章高 CTR 痛點標題（Claude Pro 導流）；multica 開源 agent 管理教學（DO 聯盟）"
+    },
     {
       "date": "2026-04-13",
       "agent": "seo-writer",
@@ -655,6 +664,20 @@
   "directives": {
     "seo-writer": [
       {
+        "from": "researcher",
+        "to": "seo-writer",
+        "date": "2026-04-13",
+        "directive": "【🔥🔥🔥 Round 11 新最高優先 — claude-mem 教學文章】\n\n標題：「讓 Claude Code 有永久記憶！2026 最熱 GitHub Plugin 教學：claude-mem 完整安裝指南」\n關鍵字：claude code 記憶外掛、claude-mem 教學、claude code persistent memory 2026\n部署到：autodev-ai/blog/claude-mem-plugin-2026.html\n\n文章重點：\n1) 什麼是 context 消失問題（為何你的 Claude Code 每次都不記得上次做了什麼）\n2) claude-mem 如何運作（tool usage 捕捉 → AI 壓縮 → 注入下次 session）\n3) 安裝步驟：npx claude-mem install（含 Claude Code + Gemini CLI 安裝）\n4) OpenClaw 整合（加分：台灣用 OpenClaw 的讀者立即可用）\n5) 實用設定：排除敏感 content、progressive disclosure 設定\n6) 聯盟：DigitalOcean（部署 claude-mem worker 在 VPS 保持長期記憶）\n\n⭐ 繁中零競爭，GitHub #1 今日爆發，7-14 天機會窗口",
+        "priority": "URGENT-NOW-Round11"
+      },
+      {
+        "from": "researcher",
+        "to": "seo-writer",
+        "date": "2026-04-13",
+        "directive": "【🔥🔥🔥 Round 11 新高優先 — GSD context rot 教學文章】\n\n標題：「Claude Code 越用越爛？Context Rot 是什麼、怎麼解決：GSD 系統完整教學」\n關鍵字：claude code context rot、claude code 效能退化、gsd claude code 教學 2026\n部署到：autodev-ai/blog/claude-code-context-rot-gsd-2026.html\n\n文章重點：\n1) Context Rot 是什麼：為何 Claude Code 長 session 後品質會下降\n2) GSD 系統如何解決：XML prompt 格式化 + subagent 協同 + state management\n3) 安裝：npx get-shit-done-cc@latest（3秒安裝）\n4) 核心指令：/gsd-new-project、/gsd-map-codebase\n5) 台灣實用場景：n8n 工作流開發、LINE Bot 開發\n6) 聯盟：Claude Pro/Max 導流（用 GSD 的前提是要訂閱 Claude Code）\n\n⭐ 「越用越爛」是高 CTR 痛點標題，52K GitHub stars 印證市場需求",
+        "priority": "HIGH-Round11"
+      },
+      {
         "from": "ivan",
         "to": "seo-writer",
         "date": "2026-04-13",
@@ -759,7 +782,10 @@
         "from": "researcher",
         "to": "strategist",
         "date": "2026-04-13",
-        "directive": "【🔥🔥🔥 Round 10 新緊急聯盟申請清單 — Ivan 待辦】以下全部確認有申請連結，請轉告 Ivan 優先申請（越快越好）：\n\n優先級 A（立即申請，無門檻）：\n1. ShortsPro 30% lifetime → shortspro.co/affiliate-program（免費，無審核）\n2. Copy.ai 45% 第一年 → copy.ai/affiliates（FirstPromoter，60天cookie）\n3. Wispr Flow 25% 循環/12m → partners.dub.co/flow\n\n優先級 B（本週申請）：\n4. Jasper AI 25-30% 循環/12m → jasper.ai/affiliates（FirstPromoter）\n5. ElevenLabs 22% 循環 → elevenlabs.io/affiliates（PartnerStack）\n6. HeyGen 35% 循環/3m → heygen.com/affiliate-program（Rewardful）\n7. TubeBuddy 50% lifetime → tubebuddy.com/affiliate\n\n優先級 C（本月申請）：\n8. Cloudways $125/sale → cloudways.com/affiliates\n9. Kinsta $500 bonus + 10% → kinsta.com/affiliates\n10. NordVPN 40% → affiliates.nordvpn.com\n11. Surfshark 40% → surfshark.com/affiliates",
+        "directive": "【🔥🔥🔥 Round 11 新發現：開源 Agent 平台爆炸 = 新產品化機會】\n\n1. multica（10.9K stars，開源 managed agents，支援 OpenClaw）：建議評估是否在 agent-skills-pack 頁面加入「如何用 multica 管理多個 OpenClaw agents」的 bonus 內容 → 提升產品價值。\n\n2. SEO Machine（Claude Code SEO 自動化）：這個工具和我們在做的事高度重疊。建議評估：(a) 寫一篇「SEO Machine vs 我們的 agent 系統比較文」差異化內容；(b) 把 SEO Machine 的 /optimize 概念整合進 content-ops 工作流。\n\n3. Tavily API 超用量 alert：本輪 researcher 無法使用 Tavily Search，改用 web_fetch 繞過。建議 Ivan 確認 Tavily 帳號用量限制，或升級方案避免影響後續 cron 研究品質。",
+        "priority": "HIGH-Round11"
+      },
+      {\n\n優先級 A（立即申請，無門檻）：\n1. ShortsPro 30% lifetime → shortspro.co/affiliate-program（免費，無審核）\n2. Copy.ai 45% 第一年 → copy.ai/affiliates（FirstPromoter，60天cookie）\n3. Wispr Flow 25% 循環/12m → partners.dub.co/flow\n\n優先級 B（本週申請）：\n4. Jasper AI 25-30% 循環/12m → jasper.ai/affiliates（FirstPromoter）\n5. ElevenLabs 22% 循環 → elevenlabs.io/affiliates（PartnerStack）\n6. HeyGen 35% 循環/3m → heygen.com/affiliate-program（Rewardful）\n7. TubeBuddy 50% lifetime → tubebuddy.com/affiliate\n\n優先級 C（本月申請）：\n8. Cloudways $125/sale → cloudways.com/affiliates\n9. Kinsta $500 bonus + 10% → kinsta.com/affiliates\n10. NordVPN 40% → affiliates.nordvpn.com\n11. Surfshark 40% → surfshark.com/affiliates",
         "priority": "URGENT-BATCH-APPLY"
       },
       {
