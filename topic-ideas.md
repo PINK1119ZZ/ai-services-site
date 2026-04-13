@@ -182,3 +182,52 @@
 3. 🔥🔥 HeyGen vs Google Vids vs VEED 比較頁（等 HeyGen affiliate）
 4. 🔥 Ollama v0.20 自架教學 + DigitalOcean 聯盟 → autodev-ai
 
+
+---
+
+## 2026-04-13（Researcher Round 10：PH 四月月榜 + GitHub Kimi K2.5 + 新高佣金申請連結確認 + 聲音 AI 工具新機會）
+
+> 本輪重點：**Product Hunt 四月月榜新進工具深挖 + Kimi K2.5 visual agentic intelligence 爆發 + 聲音 AI 新聯盟機會 + 高佣金申請連結確認（Ivan 任務）**
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 | 優先 |
+|------|------|--------|-----------|---------|----------|---------|------|
+| 2026-04-13 | **Kimi K2.5 by Moonshot AI**（2026-01 發布、GitHub 持續爆紅：視覺型 Agentic 模型，影片→程式碼、辦公自動化、256K context MoE 架構，開源可自架） | `kimi k2.5 教學`、`kimi 繁中 評測`、`moonshot ai 開源模型 2026`、`video to code ai` | 中（急速上升，開發者社群持續討論） | 無官方 affiliate；自架場景帶 DigitalOcean VPS 聯盟（高 RAM 需求）；與 GLM-5 / Gemma 4 比較文搭配 autodev-ai 站點 | **US$100–300/月** | autodev-ai / ai-tools-en | ⭐⭐ |
+| 2026-04-13 | **ShortsPro AI**（PH 確認在榜，30% lifetime 聯盟，最快增長 AI 影片平台，支援 AI Shorts 自動生成，2,500+ 活躍推廣者）| `shortspro 評測`、`ai short video platform 台灣`、`ai 短影音 自動生成 2026`、`shortspro vs pictory` | 中（上升中，短影音市場爆發） | **Affiliate 30% lifetime** (shortspro.co/affiliate-program)；與 ProdShort 比較頁雙聯盟；繁中評測完全空白 | **US$150–400/月** | ai-tools-tw / ai-tools-en | ⭐⭐⭐ |
+| 2026-04-13 | **Noiz AI**（PH 四月月榜上榜：text-to-voice-to-story 全流程，emoji 情緒控制，800,000+ 用戶，免費+付費方案，SaaS 成熟；Noiz Easter Voice 4月第一週 PH #1）| `noiz ai 評測`、`noiz ai 怎麼用`、`ai tts 情緒控制`、`noiz vs elevenlabs 比較` | 中（PH 爆發中，用戶基數大） | 尚未確認 Noiz Affiliate；可做「Noiz AI vs ElevenLabs vs Murf AI 三方比較」帶已申請的 ElevenLabs 22% + Murf 20% 雙聯盟；評測文搶先 | **US$100–300/月**（via 比較文雙聯盟） | ai-tools-tw | ⭐⭐ |
+| 2026-04-13 | **Copy.ai 聯盟**（確認：45% 第一年佣金，60天 cookie，FirstPromoter 平台；AI 寫作工具市場成熟；繁中 Copy.ai 評測文稀少）| `copy.ai 評測`、`copy.ai 怎麼用 繁中`、`ai 寫作工具 2026 台灣`、`copy.ai vs jasper 比較` | 中（穩定搜尋量） | **Affiliate 45% 第一年**（業界極高）；Copy.ai vs Jasper vs Claude 三方比較頁可帶三重聯盟；繁中競品少 | **US$200–600/月** | ai-tools-tw / ai-tools-en | ⭐⭐⭐ |
+| 2026-04-13 | **Wispr Flow v1.0**（PH 四月月榜進榜，AI 語音輸入，Mac 全應用程式使用，100+ 語言，auto-edits + command mode；已確認 Affiliate 25% 循環 12 個月）| `wispr flow 評測`、`wispr flow 怎麼用`、`ai 語音輸入 mac 2026`、`wispr vs novavoice 比較` | 中（上升中，voice coding 趨勢） | **Affiliate 25% 循環 12 個月**（partners.dub.co/flow）；Mac + AI coding 受眾重疊度高；「Wispr Flow + Claude Code Voice Mode 比較文」雙場景 | **US$150–400/月** | ai-tools-tw（⭐⭐⭐ 待 Ivan 申請後） | ⭐⭐⭐ |
+| 2026-04-13 | **「AI 影片工具全面比較 2026：Short Video 新時代」（ShortsPro + ProdShort + Munch + VEED + Pictory 五工具比較頁）**| `ai 短影音工具比較 2026`、`best ai video tools taiwan`、`ai short video 哪個好 台灣` | 中高（常青比較型，短影音市場大） | **ShortsPro 30% lifetime + VEED 25% + Munch 25% + Pictory 20-50% 四重聯盟**；比較頁高停留時間高 SEO 價值；等 ShortsPro affiliate 申請後執行 | **US$400–1000/月** | ai-tools-tw（⭐⭐⭐ 新高優先比較頁） | ⭐⭐⭐ |
+| 2026-04-13 | **2026 年 AI 生態系全貌分析文章**（根據 PChome 科技報導：Cursor/Claude Code/GitHub Copilot $30/月開發工具組、Jasper「品牌語音」功能、n8n GDPR 自架優勢、Fathom 會議自動化）| `ai 工具生態系 2026`、`2026 最佳 ai 工具組合 台灣`、`ai 訂閱組合 推薦` | 高（常青，每年更新） | 多重聯盟：Cursor + Claude + n8n + Jasper；搭配 ai-cost-calculator 導流；此類「完整指南」文章長期排名強 | **US$300–800/月** | ai-tools-tw（⭐⭐⭐ 常青旗艦文） | ⭐⭐⭐ |
+
+### 💡 本輪策略觀察（Round 10 — 2026-04-13）
+
+**本輪最大新發現：ShortsPro 30% lifetime affiliate 是目前影片工具類最強佣金：**
+- 確認：shortspro.co/affiliate-program 公開，30% lifetime（同類最高），2,500+ 活躍推廣者，頂尖 affiliate US$5,000+/月
+- 繁中完全無評測；AI 短影音市場 2026 持續爆發（CapCut/Runway/Kling/Jellyfish AI 競爭激烈，用戶需選擇指南）
+- **建議 Ivan 立即申請 ShortsPro affiliate**（無審核門檻，免費加入）
+
+**Copy.ai 45% 第一年佣金是本輪確認的最高佣金工具之一：**
+- 確認：FirstPromoter 平台，45% 第一年，60天 cookie
+- Copy.ai vs Jasper vs Claude 三方比較頁 = 三重聯盟，預估月收 US$200-600
+- 繁中 Copy.ai 評測文稀少，競品弱，關鍵字 CPC 高
+
+**Ivan 本輪新增高優先申請清單（已確認連結）：**
+1. 🔥🔥🔥 ShortsPro：shortspro.co/affiliate-program（30% lifetime，免費，無門檻）
+2. 🔥🔥🔥 Copy.ai：copy.ai/affiliates（45% 第一年，60天 cookie，FirstPromoter）
+3. 🔥🔥 Wispr Flow：partners.dub.co/flow（25% 循環 12 個月，已有文章可立即用）
+4. 🔥🔥 Jasper AI：jasper.ai/affiliates（25-30% 循環 12 個月，FirstPromoter）
+5. 🔥🔥 ElevenLabs：elevenlabs.io/affiliates（22% 循環，PartnerStack）
+6. 🔥🔥 HeyGen：heygen.com/affiliate-program（35% 循環 3 個月，Rewardful）
+7. 🔥🔥 TubeBuddy：tubebuddy.com/affiliate（50% lifetime，業界最高）
+
+**Cloudways/Kinsta/NordVPN 申請連結確認（Round 10 更新）：**
+- Cloudways：cloudways.com/affiliates（$50-125/sale，90天 cookie）
+- Kinsta：kinsta.com/affiliates（$50-500 bonus + 10% lifetime）
+- NordVPN：affiliates.nordvpn.com（40% 新用戶 + 30% 續約）
+- Surfshark：surfshark.com/affiliates（40% revenue share）
+
+**高優先待執行（本輪新增）：**
+1. 🔥🔥🔥 ShortsPro 評測文 + AI 短影音工具比較頁（30% lifetime，等申請後立即執行）
+2. 🔥🔥🔥 Copy.ai vs Jasper vs Claude 三方比較頁（45% 第一年佣金確認，繁中空白）
+3. 🔥🔥 Wispr Flow 評測（25% 循環，PH 月榜進榜，待 Ivan 申請聯盟後執行）
+4. 🔥🔥 Kimi K2.5 技術評測（繁中空白，DO 自架場景自然帶入）
