@@ -159,93 +159,93 @@ def generate_post(filepath):
     return post, url
 
 if __name__ == "__main__":
-with open(CONFIG_FILE) as f:
-    config = json.load(f)
+    with open(CONFIG_FILE) as f:
+        config = json.load(f)
 
-with open(STATE_FILE) as f:
-    state = json.load(f)
+    with open(STATE_FILE) as f:
+        state = json.load(f)
 
-PAGE_ID = config["page_id"]
-TOKEN = config["page_access_token"]
+    PAGE_ID = config["page_id"]
+    TOKEN = config["page_access_token"]
 
-posted = set(state.get("fbPosted", []))
+    posted = set(state.get("fbPosted", []))
 
-# Find recent articles from agentLog
-new_articles = []
-for entry in state.get("agentLog", []):
-    action = entry.get("action", "").lower()
-    if "new article" in action or "new post" in action or "published" in action:
-        detail = entry.get("detail", "")
-        date = entry.get("date", "")
-        key = f"{date}:{detail[:50]}"
-        if key not in posted:
-            # Try to find the actual file
-            filename_match = re.search(r'[\w-]+\.html', detail)
-            if filename_match:
-                fname = filename_match.group()
-                # Search for this file
-                for base in ['/root/ai-tools-tw/blog/', '/root/ai-tools-en/posts/', '/root/ai-services-site/blog/']:
-                    fpath = base + fname
-                    if os.path.exists(fpath):
-                        new_articles.append((entry, fpath, key))
-                        break
+    # Find recent articles from agentLog
+    new_articles = []
+    for entry in state.get("agentLog", []):
+        action = entry.get("action", "").lower()
+        if "new article" in action or "new post" in action or "published" in action:
+            detail = entry.get("detail", "")
+            date = entry.get("date", "")
+            key = f"{date}:{detail[:50]}"
+            if key not in posted:
+                # Try to find the actual file
+                filename_match = re.search(r'[\w-]+\.html', detail)
+                if filename_match:
+                    fname = filename_match.group()
+                    # Search for this file
+                    for base in ['/root/ai-tools-tw/blog/', '/root/ai-tools-en/posts/', '/root/ai-services-site/blog/']:
+                        fpath = base + fname
+                        if os.path.exists(fpath):
+                            new_articles.append((entry, fpath, key))
+                            break
 
-if not new_articles:
-    # Fallback: pick a random article that hasn't been posted recently
-    all_articles = []
-    for base in ['/root/ai-tools-tw/blog/', '/root/ai-tools-en/posts/', '/root/ai-services-site/blog/']:
-        if os.path.isdir(base):
-            for f in os.listdir(base):
-                if f.endswith('.html') and not f.startswith('google'):
-                    fpath = base + f
-                    fkey = f"promo:{f}"
-                    if fkey not in posted:
-                        all_articles.append((None, fpath, fkey))
-    
-    if all_articles:
-        new_articles = [random.choice(all_articles)]
-    else:
-        print("No articles to post.")
-        sys.exit(0)
+    if not new_articles:
+        # Fallback: pick a random article that hasn't been posted recently
+        all_articles = []
+        for base in ['/root/ai-tools-tw/blog/', '/root/ai-tools-en/posts/', '/root/ai-services-site/blog/']:
+            if os.path.isdir(base):
+                for f in os.listdir(base):
+                    if f.endswith('.html') and not f.startswith('google'):
+                        fpath = base + f
+                        fkey = f"promo:{f}"
+                        if fkey not in posted:
+                            all_articles.append((None, fpath, fkey))
 
-success = 0
-for entry, filepath, key in new_articles[:1]:  # 1 post per run
-    try:
-        message, url = generate_post(filepath)
-        
-        # Post to FB (no link in body)
-        resp = requests.post(
-            f"https://graph.facebook.com/v25.0/{PAGE_ID}/feed",
-            data={"message": message, "access_token": TOKEN}
-        )
-        result = resp.json()
-        
-        if "id" in result:
-            post_id = result["id"]
-            print(f"✅ Posted: {os.path.basename(filepath)} -> {post_id}")
-            print(f"   Content preview: {message[:100]}...")
-            
-            # Link in first comment
-            if url:
-                comment = f"📖 完整文章看這裡 👉 {url}"
-                try:
-                    requests.post(
-                        f"https://graph.facebook.com/v25.0/{post_id}/comments",
-                        data={"message": comment, "access_token": TOKEN}
-                    )
-                    print(f"   💬 Link comment: {url}")
-                except Exception as e:
-                    print(f"   ⚠️ Comment failed: {e}")
-            
-            posted.add(key)
-            success += 1
+        if all_articles:
+            new_articles = [random.choice(all_articles)]
         else:
-            print(f"❌ Error: {result}")
-    except Exception as e:
-        print(f"❌ Failed: {e}")
+            print("No articles to post.")
+            sys.exit(0)
 
-state["fbPosted"] = list(posted)[-200:]
-with open(STATE_FILE, "w") as f:
-    json.dump(state, f, ensure_ascii=False, indent=2)
+    success = 0
+    for entry, filepath, key in new_articles[:1]:  # 1 post per run
+        try:
+            message, url = generate_post(filepath)
 
-print(f"\nDone. {success} posted.")
+            # Post to FB (no link in body)
+            resp = requests.post(
+                f"https://graph.facebook.com/v25.0/{PAGE_ID}/feed",
+                data={"message": message, "access_token": TOKEN}
+            )
+            result = resp.json()
+
+            if "id" in result:
+                post_id = result["id"]
+                print(f"✅ Posted: {os.path.basename(filepath)} -> {post_id}")
+                print(f"   Content preview: {message[:100]}...")
+
+                # Link in first comment
+                if url:
+                    comment = f"📖 完整文章看這裡 👉 {url}"
+                    try:
+                        requests.post(
+                            f"https://graph.facebook.com/v25.0/{post_id}/comments",
+                            data={"message": comment, "access_token": TOKEN}
+                        )
+                        print(f"   💬 Link comment: {url}")
+                    except Exception as e:
+                        print(f"   ⚠️ Comment failed: {e}")
+
+                posted.add(key)
+                success += 1
+            else:
+                print(f"❌ Error: {result}")
+        except Exception as e:
+            print(f"❌ Failed: {e}")
+
+    state["fbPosted"] = list(posted)[-200:]
+    with open(STATE_FILE, "w") as f:
+        json.dump(state, f, ensure_ascii=False, indent=2)
+
+    print(f"\nDone. {success} posted.")
