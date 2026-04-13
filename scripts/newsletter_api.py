@@ -189,6 +189,19 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header('Content-Type', 'text/html; charset=utf-8')
             self.end_headers()
             self.wfile.write(html.encode())
+        elif self.path == '/report':
+            report_path = '/root/ai-services-site/downloads/income_report.html'
+            try:
+                with open(report_path, 'r') as rf:
+                    report_html = rf.read()
+                self.send_response(200)
+                self.send_header('Content-Type', 'text/html; charset=utf-8')
+                self.end_headers()
+                self.wfile.write(report_html.encode())
+            except FileNotFoundError:
+                self.send_response(404)
+                self.end_headers()
+                self.wfile.write(b'Report not found')
         elif self.path == '/health':
             self.send_response(200)
             self.send_header('Content-Type', 'text/plain')
