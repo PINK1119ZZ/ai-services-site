@@ -592,5 +592,9 @@ N8N_EXECUTIONS_DATA_SAVE_ON_SUCCESS=none  # 成功的不留，省空間</code></
   <a href="#" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=500');return false;" class="share-btn share-tw" title="分享到 X">𝕏</a>
   <a href="#" onclick="navigator.clipboard.writeText(location.href);this.textContent='已複製 ✓';setTimeout(()=>this.textContent='複製連結',2000);return false;" class="share-btn share-copy" title="複製連結">複製連結</a>
 </div>
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="display:none;position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:50%;border:none;background:linear-gradient(135deg,#667eea,#764ba2);color:white;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 15px rgba(102,126,234,0.4);transition:all 0.3s;z-index:999;">↑</button>
+<script>
+(function(){var b=document.getElementById('backToTop');window.addEventListener('scroll',function(){b.style.display=window.scrollY>300?'block':'none'});})();
+</script>
 </body>
 </html>
