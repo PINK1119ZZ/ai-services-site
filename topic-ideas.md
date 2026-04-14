@@ -249,3 +249,58 @@
 1. 🔥🔥🔥 **claude-mem 完整教學**：「讓 Claude Code 有永久記憶！2026 最熱 GitHub Plugin 教學」— DO 聯盟自然帶入，繁中零競爭
 2. 🔥🔥🔥 **GSD 教學**：「Claude Code 越用越爛？用這套系統解決 Context Rot！」— 高 CTR 痛點標題，Claude Pro 導流
 3. 🔥🔥🔥 **multica 教學**：「一個人管 5 個 AI 工程師：multica 開源 Agent 管理平台繁中完整教學」— DO 自架聯盟
+
+---
+
+## 2026-04-14（Researcher Round 12：GitHub 新一波爆發 — Ralph / Archon / Voicebox / Andrej Karpathy Skills + HN 趨勢 + SnapState Agent Workflow 新品）
+
+> 本輪掃描：GitHub daily/weekly trending + HN 今日前30 + 新工具 affiliate 機會評估。Tavily API 用量超限，使用 web_fetch 直接抓取。
+
+### 🔥 Round 12 核心發現
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 | 優先 |
+|------|------|--------|-----------|---------|----------|---------|------|
+| 2026-04-14 | **andrej-karpathy-skills**（forrestchang/andrej-karpathy-skills，Claude Code Plugin，源自 Karpathy 對 LLM coding pitfall 的觀察，4原則：Think Before Coding / Simplicity First / Surgical Changes / Goal-Driven Execution） | `andrej karpathy claude code`、`claude code best practices 2026`、`karpathy ai coding 教學 繁中` | **高（爆發中，開發者大量轉貼）** | Claude Code / Claude Pro 導流；autodev-ai 技術文角度；可搭 GSD + claude-mem 三合一「Claude Code 效率優化大全」旗艦文 | **US$200–500/月** | autodev-ai（⭐⭐⭐ 緊急）/ ai-tools-en | ⭐⭐⭐ |
+| 2026-04-14 | **Ralph**（snarktank/ralph，16.5K stars，691/day，Amp/Claude Code PRD-driven 自主 agent 迴圈，每次迭代全新 context，記憶靠 git+progress.txt+prd.json，支援 Claude Code Plugin 安裝） | `ralph ai agent 教學`、`prd driven development ai`、`claude code autonomous loop 2026` | 高（上升中） | Claude Code / Claude Max 導流；DigitalOcean 自架 CI/CD 場景；autodev-ai 技術文最佳匹配 | **US$150–400/月** | autodev-ai / ai-tools-en | ⭐⭐⭐ |
+| 2026-04-14 | **Archon**（coleam00/Archon，17.6K stars，3,647/week，「n8n for AI coding workflows」— YAML workflow 定義開發流程，每次 AI coding 行為可重複、可隔離、可並行執行 5 個修復任務） | `archon ai coding workflow`、`ai 開發工作流 2026`、`archon vs n8n 比較`、`deterministic ai coding 教學` | 高（爆發中） | n8n Cloud 30% + DigitalOcean 自架；「Archon vs Ralph vs multica 開源 AI coding 工具比較頁」三重覆蓋 | **US$200–500/月** | autodev-ai（⭐⭐⭐）/ ai-tools-en | ⭐⭐⭐ |
+| 2026-04-14 | **Voicebox**（jamiepine/voicebox，16.3K stars，512/day，本地優先開源語音合成工作室，ElevenLabs 免費替代品：5個TTS引擎/23語言/聲音克隆/音效處理/Stories多軌時間軸/Tauri本機App，完全隱私） | `voicebox 教學`、`elevenlabs 免費替代品`、`開源語音合成 2026`、`voice cloning 本地端 繁中` | **高（爆發，直衝付費 ElevenLabs 競品）** | ElevenLabs Affiliate **反向轉換**：先介紹免費版 Voicebox，再比較付費版 ElevenLabs 優勢 → 轉化意願更強；22% 循環 12個月 | **US$200–600/月** | ai-tools-tw（⭐⭐⭐）/ ai-tools-en | ⭐⭐⭐ |
+| 2026-04-14 | **Google AI Edge Gallery + Gemma 4（on-device）**（google-ai-edge/gallery，20.9K stars，3,273/week，Google 官方 on-device ML App，正式支援 Gemma 4，含 Agent Skills / Thinking Mode / Ask Image / Audio Scribe，Android 12 + iOS 17，可離線運行） | `google ai edge gallery 教學`、`gemma 4 手機端運行`、`on device llm 繁中 2026`、`手機跑 ai 教學` | 中高（Google 官方加持） | DigitalOcean 自架對比（雲端 vs 本地端）；Gemma 4 評測延伸 → 我們已有 gemma-4-review-2026.html 文章可交叉內連 | **US$100–300/月** | ai-tools-tw / ai-tools-en | ⭐⭐ |
+| 2026-04-14 | **SnapState**（snapstate.dev，HN Show HN 今日，公測版：AI agent workflow 持久狀態 SDK，save/resume/replay，MCP Server 支援 Claude Desktop/Cline，JS/Python SDK，免費層 10K writes/1GB/5K resumes） | `snapstate ai agent 教學`、`ai agent 記憶 mcp`、`workflow state persistence 2026` | 中（新品，HN 曝光） | 等 SnapState Affiliate 計畫（新品）；先搶先評測佔位；MCP + Claude Desktop 場景帶入 autodev-ai 主站 | **US$50–200/月**（Affiliate 開放後）| autodev-ai / ai-tools-en | ⭐⭐ |
+| 2026-04-14 | **「開源 Claude Code 替代 & 增強工具完整指南 2026」**（整合文：GSD + claude-mem + andrej-karpathy-skills + Ralph + Archon 五工具教學串燒，全部免費/開源，繁中第一篇整合評測） | `claude code 效率提升 2026`、`claude code plugins 推薦`、`claude code 免費外掛 繁中` | **高（常青複合頁）** | Claude Pro/Max 多 CTA；DigitalOcean 自架場景；搭配 ai-cost-calculator 計算器導流；每工具一個 H2 章節，SEO 覆蓋面廣 | **US$400–1000/月** | autodev-ai（⭐⭐⭐ 旗艦文）/ ai-tools-en | ⭐⭐⭐ |
+
+### 💡 本輪策略觀察（Round 12）
+
+**🔥 最大機會：「Claude Code 生態系旗艦文 2026」是本週最高 ROI 選題**
+
+GitHub trending 同時出現 5 個 Claude Code 相關工具（GSD 52K/andrej-karpathy-skills/Ralph/claude-mem/Archon），代表 Claude Code 生態系正在爆炸式成熟。用「開源 Claude Code 效率工具完整指南 2026」做一篇 3000+ 字旗艦文，每個工具一個 H2：
+- 每個 H2 都是一個長尾關鍵字（andrej karpathy claude code / ralph prd tutorial / archon workflow）
+- 文章整體是「claude code 效率提升 2026」高搜尋量常青頁
+- 五個工具都免費開源 → 讀者門檻低 → 轉換率高到 Claude Pro 訂閱
+
+**🔥🔥 Voicebox = ElevenLabs 的「反向激活」機會**
+
+Voicebox（完全免費開源 TTS 工作室）是直接替代 ElevenLabs 的工具。但弔詭的是，這反而是 ElevenLabs Affiliate 的最佳轉換場景：
+- 先寫「Voicebox 完整教學：免費開源語音克隆工作室」
+- 文章中自然對比：免費版 Voicebox 的限制（需本地GPU/部署複雜）vs ElevenLabs 雲端服務的便利性
+- 「不想自架的讀者，ElevenLabs 是最佳替代」→ 22% 循環 12 個月轉換
+- 這比直接寫 ElevenLabs 評測 CTR 更高，因為搜尋「免費替代品」的讀者本來就更有購買意願
+
+**🔥 Archon = n8n 視角下的最強類比**
+
+Archon 的官方描述是「n8n for AI coding workflows」—這個 positioning 對我們非常有利：
+- 我們已有大量 n8n 文章和受眾（n8n HITL, n8n automation tutorial 等）
+- 這批 n8n 讀者也是最有可能使用 AI coding tools 的受眾
+- 「如果你用 n8n 管理自動化工作流，你一定要試試 Archon 管理你的 AI coding 工作流」 → 完美的交叉推廣
+
+**HN 今日觀察（2026-04-14）：**
+- #1：WordPress 後門植入攻擊（637 pts）→ 網站安全文章機會（帶 Cloudways/主機聯盟）
+- #5：AMD Run AI Agents Locally (89 pts) → 本地 AI agent 趨勢確認
+- #10：Building a CLI for All of Cloudflare (242 pts) → Cloudflare 產品受關注
+- #21：SnapState - Persistent state for AI agent workflows → 我們在上面已評估
+
+**本輪新增高優先指令（給 seo-writer）：**
+1. 🔥🔥🔥「開源 Claude Code 效率工具完整指南 2026」旗艦文（andrej-karpathy-skills + Ralph + GSD + claude-mem + Archon 五合一）
+2. 🔥🔥🔥 Voicebox vs ElevenLabs 反向激活比較文（帶 ElevenLabs 22% 聯盟）
+3. 🔥🔥 Archon 完整教學（「n8n for AI coding workflows」角度，帶 n8n Cloud 聯盟）
+
+---
