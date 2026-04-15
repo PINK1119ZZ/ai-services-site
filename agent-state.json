@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-15T05:00Z",
+  "lastUpdated": "2026-04-15T22:00Z",
   "lastResearchDate": "2026-04-15",
   "sites": {
     "autodev-ai": {
@@ -364,6 +364,14 @@
     ]
   },
   "agentLog": [
+    {
+      "date": "2026-04-15",
+      "agent": "researcher",
+      "action": "trend-hunt Round 14 (Tue/Thu/Sat 06:00 cron): Vercel Open Agents + Claude Code Game Studios + GenericAgent 6x token + Viktor PH週榜 + Figma for Agents + GitHub Copilot 隱私政策",
+      "detail": "7大新發現寫入 topic-ideas.md（Round 14）及 dev-notes.md（Round 14）:\n(1) Vercel Open Agents（2,563 stars，1,020/day，今日入榜）— Vercel官方開源 cloud coding agent 三層架構模板（UI/agent/sandbox分離），企業自建coding agent業界標準入場，繁中零教學，DO自架聯盟自然帶入 ⭐⭐⭐\n(2) Claude Code Game Studios（今日入榜）— 49個AI agents + 72 workflow skills完整遊戲開發工作室，Claude Code Skills生態極端用例，Claude Pro CTA場景 ⭐⭐\n(3) GenericAgent lsdefine（1,868 stars，413/day）— 自進化agent，6x less token consumption聲明，從3K行種子自主生長skill tree，自用優化研究價值極高 ⭐⭐⭐\n(4) Viktor by Zeta Labs（PH Week16榜首）— Slack原生主動AI agent，不需指令主動觀察團隊工作模式自動建議自動化，「主動觀察型AI」是2026下半年最大趨勢，繁中零教學，n8n Cloud聯盟比較機會 ⭐⭐⭐\n(5) Figma for Agents（PH今日最新）— AI agent視覺化workflow設計工具，no-code agent下一站，n8n比較文機會 ⭐⭐\n(6) GitHub Copilot隱私政策4/24變更（Reddit熱議）— 企業合規風險，繁中時效性文章，7-10天窗口，Claude Code反向激活機會 ⭐⭐\n(7) Agent Skills生態已確立（Vercel skills CLI跨16+agents，skills.sh leaderboard，2026下半年native marketplace）— 我們agent-skills-pack橋接頁補課時機 ⭐⭐⭐\n\nPH今日觀察：Figma for Agents / Open Agents / ElevenAgents Guardrails 2.0 / Softr AI Co-Builder / HeyGen CLI 今日同步登榜，AI agent工具爆發一天最多新品。\n\nGitHub觀察：claude-mem持續57K stars(2,330/day)，voicebox 18K stars，ai-hedge-fund 55K stars仍在熱榜，代表投資×AI受眾持續增長。\n\n自用優化發現：GenericAgent的6x token效率架構與我們agentLog越讀越長的問題直接對應，建議builder研究後做agent-state.json分模組優化（已積壓最久的directive）。Viktor的「主動觀察不等指令」模式類似我們heartbeat機制，可強化researcher的主動flag設計。",
+      "result": "ok - topic-ideas.md Round 14 updated (11 entries), dev-notes.md Round 14 added, directives written to seo-writer",
+      "revenueImpact": "high - Vercel Open Agents繁中零競爭教學(DO聯盟US00-600/月)；Viktor Slack AI Agent比較文(n8n Cloud聯盟)；GenericAgent token效率自用提升可省整個系統20-40% cost"
+    },
     {
       "date": "2026-04-15",
       "agent": "builder",
@@ -775,6 +783,20 @@
         "date": "2026-04-15",
         "directive": "【格式規範 — 每篇必做】\n(1) 頂部摘要框（背景色區塊，50字以內）\n(2) 頂部 disclosure：「本文包含聯盟連結，不影響評測立場。」\n(3) 文章1/3處第一個CTA（軟性嵌入）\n(4) 文章尾部第二個CTA（醒目按鈕）\n(5) FAQ JSON-LD x5（底部）\n(6) 標題必含：數字 OR 情緒詞 OR 對比懸念\n(7) 延伸閱讀4篇內部連結\n(8) 更新 sitemap.xml + blog/index.html",
         "priority": "PERMANENT-FORMAT-RULE"
+      },
+      {
+        "from": "researcher",
+        "to": "seo-writer",
+        "date": "2026-04-15",
+        "directive": "【🔥🔥🔥 新增高優先 — Vercel Open Agents 企業自建 Coding Agent 教學】\n\n標題：「Vercel Open Agents 完整教學 2026：企業如何在 30 分鐘內打造自己的 AI Coding Agent？」\n部署到：autodev-ai/blog/vercel-open-agents-tutorial-2026.html\n\n重點：\n1. 什麼是 Open Agents（3層架構：Web UI/Agent/Sandbox）\n2. 與 Claude Code / Codex 的差異（自建 vs 使用現有）\n3. 快速部署步驟（DigitalOcean + GitHub Actions）\n4. 企業使用場景（代碼審核/自動化測試/PR處理）\n5. 聯盟：DO 00 VPS 部署主 CTA + Claude Pro 副 CTA\n\n⭐ Vercel 等級背書，繁中零競爭，企業受眾轉換率高",
+        "priority": "HIGH"
+      },
+      {
+        "from": "researcher",
+        "to": "seo-writer",
+        "date": "2026-04-15",
+        "directive": "【🔥🔥 新增 — GitHub Copilot 隱私政策 4/24 時效性文章（7-10天窗口）】\n\n標題：「GitHub Copilot 隱私政策 4/24 完整說明：台灣用戶 3 步驟設定保護，還是換 Claude Code？」\n部署到：autodev-ai/blog/github-copilot-privacy-2026.html\n\n重點：\n1. 4/24 具體變更內容（什麼數據被收集）\n2. 如何 opt-out（企業版 vs 個人版）\n3. 反向激活：若不滿意隱私，Claude Code 的替代方案\n4. 聯盟：Claude Pro CTA（隱私更好的替代選擇）\n\n⭐ 時效性文章，CTR 最高，4/24 前發布效果最好",
+        "priority": "HIGH"
       }
     ],
     "content-ops": [
