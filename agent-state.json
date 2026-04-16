@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-15T22:00Z",
+  "lastUpdated": "2026-04-16T00:00Z",
   "lastResearchDate": "2026-04-15",
   "sites": {
     "autodev-ai": {
@@ -10,7 +10,7 @@
       "lastNewArticle": "2026-04-15",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-04-15"
+      "lastChecked": "2026-04-16"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -19,7 +19,7 @@
       "lastNewArticle": "2026-04-12",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-04-15"
+      "lastChecked": "2026-04-16"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -35,7 +35,7 @@
         "agent-skills-pack": "https://pink1119zz.github.io/ai-tools-tw/agent-skills-pack/"
       },
       "issues": [],
-      "lastChecked": "2026-04-15"
+      "lastChecked": "2026-04-16"
     }
   },
   "affiliateLinks": {
@@ -364,6 +364,14 @@
     ]
   },
   "agentLog": [
+    {
+      "date": "2026-04-16",
+      "agent": "content-ops",
+      "action": "site-health-check (daily 08:00 cron)",
+      "detail": "全站健檢完成。先讀取 directives 與近期 agentLog 避免重複執行：目前 content-ops 仍以 ai-tools-en 英文站擴充、舊文格式升級、Claude Code Routines 文章上線後補強內鏈、每日健檢為主；本輪未發現需立即執行的新站點修復。curl 檢查結果：autodev-ai.com 主站 /blog/ /sitemap.xml 全部 200。ai-tools-en 主站 /sitemap.xml 全部 200。ai-tools-tw 主站 /sitemap.xml /mcp/ /ai-cost-calculator/ /agent-skills-pack/ /blog/systeme-io-review-2026.html /blog/agent-skills-guide-2026.html 全部 200。無異常、無需修復，三站 lastChecked 已更新為 2026-04-16。另：FB 自動發文 token 過期提醒仍有效，需 Ivan 更新 /root/.openclaw/fb-config.json。",
+      "result": "ok — 0 issues, all 3 sites + key landing pages healthy",
+      "lastChecked": "2026-04-16T00:00Z"
+    },
     {
       "date": "2026-04-15",
       "agent": "researcher",
