@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude / GPT / Gemini Token 成本計算器 2026｜每月 AI 使用費一鍵估算 | AutoDev AI</title>
+<meta name="description" content="免費 AI Token 成本計算器 2026，即時對比 Claude Opus / Sonnet / GPT-5 / Gemini 的輸入輸出成本。輸入每月對話量秒算美金月費，比官方 Pricing 頁快 10 倍。">
+<link rel="canonical" href="https://autodev-ai.com/tools/token-cost-calculator.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/tools/token-cost-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/tools/token-cost-calculator.html">
+<meta property="og:title" content="Claude / GPT / Gemini Token 成本計算器 2026">
+<meta property="og:description" content="一鍵估算每月 AI API 費用。對比 Claude、GPT、Gemini 的 input/output token 實際月成本。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autodev-ai.com/tools/token-cost-calculator.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"AI Token 成本計算器","url":"https://autodev-ai.com/tools/token-cost-calculator.html","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482625906579389" crossorigin="anonymous"></script>
+<style>
+.calc-wrap{max-width:1020px;margin:0 auto;padding:7rem 1.5rem 4rem;}
+.calc-header{text-align:center;margin-bottom:2.5rem;}
+.calc-header h1{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.8rem;font-weight:900;}
+.calc-header p{color:var(--gray);font-size:1.05rem;}
+.input-box{background:var(--dark-2);border:1px solid rgba(108,92,231,.2);border-radius:14px;padding:1.5rem;margin-bottom:2rem;}
+.input-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;}
+.input-item label{display:block;font-size:.85rem;color:var(--gray);margin-bottom:.4rem;}
+.input-item input{width:100%;padding:.7rem .9rem;background:var(--dark);border:1px solid rgba(255,255,255,.1);color:var(--light);border-radius:8px;font-size:1.1rem;font-family:inherit;font-weight:600;box-sizing:border-box;}
+.input-item input:focus{border-color:var(--primary);outline:none;}
+.input-item .unit{font-size:.75rem;color:var(--gray);margin-top:.3rem;}
+.presets{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem;}
+.preset-btn{padding:.4rem .8rem;background:rgba(108,92,231,.1);border:1px solid rgba(108,92,231,.3);color:var(--primary-light);border-radius:50px;font-size:.8rem;cursor:pointer;}
+.preset-btn:hover{background:rgba(108,92,231,.2);}
+.model-grid{display:grid;gap:.8rem;}
+.model-card{background:var(--dark-2);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:1.2rem 1.4rem;display:grid;grid-template-columns:200px 1fr auto;gap:1.5rem;align-items:center;transition:all .25s;}
+@media(max-width:720px){.model-card{grid-template-columns:1fr;gap:.6rem;}}
+.model-card:hover{border-color:rgba(108,92,231,.4);}
+.model-card.cheapest{border-color:var(--accent);box-shadow:0 0 20px rgba(0,210,211,.15);}
+.model-card.cheapest::before{content:'🏆 最便宜';display:inline-block;padding:.15rem .55rem;border-radius:50px;background:linear-gradient(135deg,#00D2D3,#6C5CE7);color:#fff;font-size:.7rem;font-weight:700;position:absolute;transform:translate(-.5rem,-1.8rem);}
+.model-name{font-weight:900;font-size:1.1rem;color:var(--light);}
+.model-name .provider{display:block;font-size:.75rem;color:var(--gray);font-weight:500;margin-top:.15rem;}
+.model-pricing{font-size:.8rem;color:var(--gray);}
+.model-pricing .rate{color:var(--light);}
+.model-cost{text-align:right;}
+.model-cost .m{font-size:1.6rem;font-weight:900;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;}
+.model-cost .per{color:var(--gray);font-size:.75rem;}
+.model-cost .ntd{color:var(--gray);font-size:.8rem;margin-top:.15rem;}
+.disclaimer{color:var(--gray);font-size:.75rem;margin-top:2rem;text-align:center;line-height:1.5;}
+.info-strip{background:rgba(0,210,211,.05);border:1px solid rgba(0,210,211,.2);border-radius:10px;padding:.9rem 1.1rem;margin-top:1.5rem;font-size:.85rem;color:#C5C5D5;line-height:1.6;}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo">AutoDev AI</a>
+<div class="nav-links" id="navLinks">
+<a href="/services.html">服務</a>
+<a href="/pricing.html">方案</a>
+<a href="/bot-cloud.html">雲託管</a>
+<a href="/blog/">Blog</a>
+<a href="/contact.html" class="nav-cta">免費諮詢</a>
+</div>
+<button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
+</div>
+</nav>
+
+<div class="calc-wrap">
+<div class="calc-header">
+<h1>🧮 AI Token 成本計算器 2026</h1>
+<p>輸入每月對話量，秒算 Claude / GPT / Gemini / Grok 各家月費</p>
+</div>
+
+<div class="input-box">
+<div class="input-grid">
+<div class="input-item">
+<label>每月對話次數</label>
+<input type="number" id="convs" value="1000" min="0">
+<div class="unit">次 / 月</div>
+</div>
+<div class="input-item">
+<label>平均輸入 tokens</label>
+<input type="number" id="inTok" value="500" min="0">
+<div class="unit">token / 次</div>
+</div>
+<div class="input-item">
+<label>平均輸出 tokens</label>
+<input type="number" id="outTok" value="1000" min="0">
+<div class="unit">token / 次</div>
+</div>
+<div class="input-item">
+<label>匯率（USD → TWD）</label>
+<input type="number" id="fx" value="32" min="25" max="40" step="0.1">
+<div class="unit">NT$ / $1 USD</div>
+</div>
+</div>
+<div class="presets">
+<span style="font-size:.8rem;color:var(--gray);margin-right:.5rem;line-height:2;">💡 快速預設：</span>
+<button class="preset-btn" data-c="100" data-i="300" data-o="500">個人使用（輕）</button>
+<button class="preset-btn" data-c="1000" data-i="500" data-o="1000">Side project</button>
+<button class="preset-btn" data-c="5000" data-i="800" data-o="1500">小型 SaaS</button>
+<button class="preset-btn" data-c="20000" data-i="1200" data-o="2500">中型產品</button>
+<button class="preset-btn" data-c="100000" data-i="2000" data-o="3500">大流量服務</button>
+</div>
+</div>
+
+<div class="model-grid" id="modelGrid"></div>
+
+<div class="info-strip">
+💡 <strong>省錢秘訣：</strong>Claude Sonnet 4.6 / GPT-5.4 mini / Gemini 2.5 Flash 的性價比通常高於旗艦模型 5-10 倍。中小流量建議先用 Sonnet / Mini / Flash，遇到複雜任務再切 Opus / GPT-5 / Gemini Pro。自建 Bot 在 <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener">DigitalOcean</a> $18/月 VPS 跑綽綽有餘。
+</div>
+
+<div class="disclaimer">
+* 價格基於 2026-04 官方公告，未含 prompt caching / batch discount。實際以各家 API pricing 為準。
+* 不想自己管 Token 成本？<a href="/bot-cloud.html" style="color:var(--accent);">AutoDev AI 雲託管</a>月費已包含 AI 額度。
+</div>
+
+</div>
+
+<footer>
+<p>&copy; 2026 AutoDev AI · <a href="/">首頁</a> · <a href="/tools/line-bot-calculator.html">LINE Bot 計算器</a> · <a href="/tools/vps-compare.html">VPS 比價</a></p>
+</footer>
+
+<script>
+// 2026-04 pricing per 1M tokens (USD)
+const models = [
+  {name:'Claude Opus 4.6', provider:'Anthropic', input:15, output:75},
+  {name:'Claude Sonnet 4.6', provider:'Anthropic', input:3, output:15},
+  {name:'Claude Haiku 4', provider:'Anthropic', input:0.8, output:4},
+  {name:'GPT-5.4', provider:'OpenAI', input:10, output:40},
+  {name:'GPT-5.4 mini', provider:'OpenAI', input:0.4, output:1.6},
+  {name:'GPT-5 nano', provider:'OpenAI', input:0.1, output:0.4},
+  {name:'Gemini 2.5 Pro', provider:'Google', input:5, output:20},
+  {name:'Gemini 2.5 Flash', provider:'Google', input:0.3, output:1.2},
+  {name:'Grok 4', provider:'xAI', input:5, output:15},
+  {name:'Llama 4 405B', provider:'Meta (via together.ai)', input:3.5, output:3.5},
+  {name:'DeepSeek V4', provider:'DeepSeek', input:0.27, output:1.1},
+  {name:'Mistral Large 3', provider:'Mistral', input:3, output:12}
+];
+
+const convsEl = document.getElementById('convs');
+const inEl = document.getElementById('inTok');
+const outEl = document.getElementById('outTok');
+const fxEl = document.getElementById('fx');
+const grid = document.getElementById('modelGrid');
+
+function calc(){
+  const c = +convsEl.value || 0;
+  const i = +inEl.value || 0;
+  const o = +outEl.value || 0;
+  const fx = +fxEl.value || 32;
+  const totalIn = c * i / 1_000_000;   // in millions of tokens
+  const totalOut = c * o / 1_000_000;
+
+  const rows = models.map(m => ({
+    ...m,
+    monthlyUSD: totalIn * m.input + totalOut * m.output
+  })).sort((a,b)=> a.monthlyUSD - b.monthlyUSD);
+
+  grid.innerHTML = '';
+  rows.forEach((m, idx) => {
+    const el = document.createElement('div');
+    el.className = 'model-card' + (idx === 0 && m.monthlyUSD > 0 ? ' cheapest' : '');
+    el.innerHTML = `
+      <div>
+        <div class="model-name">${m.name}<span class="provider">${m.provider}</span></div>
+      </div>
+      <div class="model-pricing">
+        Input <span class="rate">$${m.input}</span> / 1M · Output <span class="rate">$${m.output}</span> / 1M
+      </div>
+      <div class="model-cost">
+        <div class="m">$${m.monthlyUSD.toFixed(2)}</div>
+        <div class="per">USD / 月</div>
+        <div class="ntd">約 NT$ ${Math.round(m.monthlyUSD * fx).toLocaleString()}</div>
+      </div>
+    `;
+    grid.appendChild(el);
+  });
+}
+
+[convsEl, inEl, outEl, fxEl].forEach(el => el.addEventListener('input', calc));
+document.querySelectorAll('.preset-btn').forEach(btn => btn.addEventListener('click', () => {
+  convsEl.value = btn.dataset.c;
+  inEl.value = btn.dataset.i;
+  outEl.value = btn.dataset.o;
+  calc();
+}));
+
+document.getElementById('mobileMenuBtn').addEventListener('click', () =>
+  document.getElementById('navLinks').classList.toggle('show'));
+
+calc();
+</script>
+</body>
+</html>
