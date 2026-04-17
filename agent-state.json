@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-17T03:00Z",
+  "lastUpdated": "2026-04-17T12:00Z",
   "lastResearchDate": "2026-04-17",
   "sites": {
     "autodev-ai": {
@@ -174,6 +174,14 @@
       "url": "https://afflink.one/s/rrR3t",
       "status": "active (200)",
       "lastChecked": "2026-04-14"
+    },
+    "kit-convertkit": {
+      "url": "https://kit.com/affiliate",
+      "status": "not yet applied - 50% for 12 months + 10-20% lifetime (Bronze+), 90-day cookie，台灣繁中評測空白，待Ivan申請",
+      "commissionDetails": "50% commission for first 12 months；Bronze/Silver/Gold status後獲10-20% lifetime recurring；90天cookie；申請後快速審核",
+      "applyUrl": "https://kit.com/affiliate",
+      "lastChecked": "2026-04-17",
+      "notes": "2026年升級方案：從舊30%升至50%/12m。email行銷工具，台灣創作者/部落客/AI工具站主完美受眾。"
     }
   },
   "competitorInsights": {
@@ -370,6 +378,14 @@
     ]
   },
   "agentLog": [
+    {
+      "date": "2026-04-17",
+      "agent": "strategist",
+      "action": "income-ideation round 3 (weekly Fri 20:00 cron)",
+      "detail": "【收入腦暴 Round 3 — 2026-04-17 週五】\n\n研究重點：\n(1) Gumroad 2026 暢銷榜：Notion template 是最熱品類（5.0評分，A$79-US$29區間，月收k-3.5k+）。AI prompt + Notion template 混搭是2026最快賺錢格式。繁中 Notion template 幾乎為零。\n(2) 新高佣金聯盟發現：Kit（ConvertKit 改名）50% commission for 12 months + 10-20% lifetime after Bronze status（最新2026政策升級！超越過去30%方案），申請地址 kit.com/affiliate，90天cookie，繁中評測空白！台灣 email 行銷工具評測完全未覆蓋。\n(3) AI Automation ROI Calculator：搜尋「AI ROI calculator 繁中」幾乎為零。英文有多個（Enrichlabs、Bespokeais），但繁中版完全沒有。這是比 ai-cost-calculator 更具商業受眾的工具頁（B2B導流，高佣金轉換）。\n(4) AI Overviews SEO 影響：Google AI Overviews 觸發率達 48-88%，台灣 SEO 工作者急需評估工具；「AI Overview 流量損失計算器」繁中零競爭。\n(5) Token 費用計算器英文站：token-calculator.net 已有英文版，但繁中版完全空白。台灣開發者用 Claude/GPT API 付費，需要繁中版估算工具。\n\n核心提案：\nA) Kit（ConvertKit）繁中評測 + 50%佣金 → 完全未開發市場\nB) 「AI 自動化 ROI 計算器」互動工具 → B2B 受眾 + Cloudways/DO 高佣金導流\nC) Notion + AI 工作流模板包（繁中本地化版）→ Gumroad 最熱品類，台灣空白\n\n已更新 newAssetProposals。給 seo-writer 和 builder 新 directives。",
+      "result": "ok - 3 new proposals written to newAssetProposals (proposals G/H/I)",
+      "revenueImpact": "high - Kit 50%佣金繁中評測US00-700/月；AI ROI計算器B2B受眾DO聯盟US00-800/月；Notion模板包Gumroad US00-1000/月"
+    },
     {
       "date": "2026-04-17",
       "agent": "seo-writer",
@@ -796,6 +812,13 @@
   "directives": {
     "seo-writer": [
       {
+        "from": "strategist",
+        "to": "seo-writer",
+        "date": "2026-04-17",
+        "directive": "【🔥🔥 新增 — Kit（ConvertKit 改名）繁中評測（50%佣金）】\n\n標題：「Kit（ConvertKit）評測 2026：台灣部落客的最強 Email 行銷工具？10,000 訂閱免費用！」\n部署到：ai-tools-tw/blog/kit-convertkit-review-2026.html\n\n重點（50%聯盟佣金，kit.com/affiliate）：\n1. Kit 是什麼（2024年改名，email行銷平台，Creator-first設計）\n2. 免費方案能做什麼（10,000 訂閱上限，無限 email 和 form）\n3. Kit vs Mailchimp vs Substack vs MailerLite 比較表\n4. 台灣適用性（繁中介面？支付方式？台灣號碼？）\n5. AI工具站主怎麼用（培養訂閱者 → 推廣聯盟產品）\n6. 付費方案值得嗎（Creator Plan 5/月 vs Creator Pro 0/月）\n7. CTA：「免費試用 Kit（10,000訂閱完全免費）→」（1/3處）+ 付費升級 CTA（尾部）\n\n⭐ 50%佣金，繁中零競爭，我們自己就是目標受眾（天然EEAT加持）",
+        "priority": "HIGH"
+      },
+      {
         "from": "researcher",
         "to": "seo-writer",
         "date": "2026-04-17",
@@ -1076,6 +1099,13 @@
         "date": "2026-04-15",
         "directive": "【Tavily API 超用量 — 影響 researcher 研究品質】連續 Round 11-13 無法使用 Tavily Search，每次需改用 web_fetch 繞過，效率降低 50%。Ivan 需升級 Tavily 方案或重置配額。",
         "priority": "MEDIUM"
+      },
+      {
+        "from": "strategist",
+        "to": "strategist",
+        "date": "2026-04-17",
+        "directive": "【新聯盟提醒 — Kit（ConvertKit）50% commission 待申請】\n申請地址：kit.com/affiliate\n佣金：50% for 12 months + 10-20% lifetime（達Bronze status後）\n已加入 affiliateLinks[kit-convertkit]。下次半月報告提醒 Ivan 申請。\n繁中評測文已寫入 seo-writer directives。",
+        "priority": "RECURRING-REMINDER"
       }
     ],
     "builder": [
@@ -1402,6 +1432,127 @@
       "estimatedMonthlyRevenue": "US$150-450",
       "url": "https://pink1119zz.github.io/ai-tools-tw/agent-skills-pack/",
       "notes": "橋接頁 + 教學文章已部署。待 Ivan 建立 Gumroad 帳號後補入真實購買連結。免費版指向 GitHub repo（待 Ivan 建立）。"
+    },
+    {
+      "id": "proposal-2026-04-17-G",
+      "date": "2026-04-17",
+      "proposedBy": "strategist",
+      "type": "affiliate-review-page",
+      "title": "「Kit（ConvertKit）繁中完整評測 2026」+ 50% 高佣金聯盟",
+      "status": "proposed",
+      "revenueModel": "affiliate recurring commission：50% for 12 months + 10-20% lifetime（Bronze以上status）",
+      "estimatedMonthlyRevenue": "US00–700/月（3-8個轉換/月 × 平均方案9/月 × 50% = 3-116/人，12個月累積）",
+      "marketEvidence": "(1) Kit（ConvertKit改名）2026最新政策：50% for 12 months（從舊版30%大升），Bronze/Silver/Gold status可獲終身10-20%循環！申請 kit.com/affiliate，90天cookie。(2) 搜尋「ConvertKit 繁體中文評測」2026版幾乎零結果。(3) 台灣 content creator / 部落客 / AI工具站主 = Kit的完美受眾（我們自己就是！）。(4) Kit競品評測文（Mailchimp/MailerLite）英文站超多，但繁中完全沒有入口。(5) Kit免費計畫支援10,000訂閱者 = 強大入口誘因，轉免費→付費漏斗。",
+      "targetAudience": "台灣部落客、YouTuber、AI工具站主、LINE OA 轉型電郵行銷的中小企業主",
+      "buildSteps": [
+        "1. Ivan 申請 Kit affiliate：kit.com/affiliate（直接申請，快速審核）",
+        "2. seo-writer 寫 ai-tools-tw/blog/kit-convertkit-review-2026.html（2000+字）",
+        "3. 文章角度：台灣部落客為什麼需要 email list？Kit 免費方案有多強？vs Mailchimp vs Substack",
+        "4. 核心比較表：Kit vs Mailchimp vs Substack vs MailerLite（定價/功能/台灣適用性）",
+        "5. 使用場景：AI工具站 + 部落格 + 線上課程業者",
+        "6. CTA：1/3處放「免費試用 Kit（最多10,000訂閱）」+ 尾部付費升級CTA",
+        "7. 延伸：autodev-ai 補一篇「n8n + Kit 整合教學」帶雙聯盟（n8n Cloud + Kit）"
+      ],
+      "targetKeywords": [
+        "convertkit 繁體中文",
+        "kit email 行銷 評測 2026",
+        "convertkit vs mailchimp 台灣",
+        "email 行銷工具比較 2026",
+        "kit affiliate 台灣"
+      ],
+      "newAffiliateInfo": {
+        "name": "Kit (ConvertKit)",
+        "applyUrl": "https://kit.com/affiliate",
+        "commission": "50% for 12 months；Bronze/Silver/Gold status可獲10-20% lifetime",
+        "cookieDays": 90,
+        "minPayout": null,
+        "notes": "2026年重大升級：從30%提升至50% for 12m，達成銷售配額後可獲終身循環。台灣繁中評測空白，email行銷台灣受眾廣大。"
+      },
+      "directives": {
+        "seo-writer": "寫 Kit（ConvertKit）2026繁中評測 + vs Mailchimp比較。角度：AI工具站主 + 台灣部落客如何用 email 行銷自動化賺錢。帶50%聯盟CTA。",
+        "researcher": "確認 Kit 2026 affiliate 條款（kit.com/affiliate），確認台灣是否有地區限制，寫入 affiliateLinks[kit]。"
+      },
+      "priority": "HIGH",
+      "effortEstimate": "Ivan 申請5分鐘 + seo-writer 1篇評測文（2-3天）",
+      "notes": "我們自己就是 Kit 的完美用戶（AI工具站主 + 教學部落格）——這讓我們的評測有天然的 EEAT 信號。且50%是目前搜到最高的email工具聯盟之一。"
+    },
+    {
+      "id": "proposal-2026-04-17-H",
+      "date": "2026-04-17",
+      "proposedBy": "strategist",
+      "type": "interactive-tool",
+      "title": "「AI 自動化 ROI 計算器」— B2B 高意圖導流工具",
+      "status": "proposed",
+      "revenueModel": "互動工具 SEO 導流頁（嵌入 Cloudways/DigitalOcean/n8n Cloud/Systeme.io 聯盟連結；B2B決策受眾高轉換）",
+      "estimatedMonthlyRevenue": "US00–800/月（B2B受眾轉換率高於一般受眾3-5x；主推 Cloudways 0-125/sale）",
+      "marketEvidence": "(1) 英文有多個 AI ROI Calculator（enrichlabs.ai、bespokeais.ai、theautomators.ai），但繁中一個都沒有。(2) 搜尋「AI 自動化 ROI 計算 台灣」= 零結果。(3) B2B 決策者（老闆/主管）在評估是否導入AI/n8n自動化前，最需要的就是「我到底能省多少錢/賺多少」的具體數字。這類工具的停留時間極長（5-10分鐘），SEO停留信號最佳。(4) 計算器頁面特性：被引用率高（其他站會嵌入/引用），產生天然反向連結。(5) 我們已有 ai-cost-calculator 成功案例，同樣邏輯複製到 B2B ROI 計算版本。",
+      "targetAudience": "台灣中小企業老闆、IT主管、想評估導入 n8n/AI 自動化是否值得的決策者",
+      "productContent": [
+        "輸入：行業類型、員工數、目前手動流程時間（小時/周）、平均薪資",
+        "輸出：(1)每月預估節省工時；(2)換算省下的人力成本（NTD）；(3)n8n/AI工具投資回收期；(4)推薦方案（按規模分：DO VPS自架 / Cloudways 管理 / n8n Cloud）",
+        "附帶：「台灣企業 AI 自動化導入成本與效益一覽表」",
+        "嵌入 CTA：DO 00 試用 + Cloudways 評測連結 + n8n Cloud 試用 + autodev-ai 服務頁"
+      ],
+      "buildSteps": [
+        "1. builder 在 ai-tools-tw 建立 /ai-tools-tw/ai-roi-calculator/ 靜態頁面（純 JS，無後端）",
+        "2. 設計：行業選擇（製造/電商/服務/媒體）→ 員工規模滑桿 → 手動流程時間輸入 → 自動化比例假設（30-80%）→ 結果頁",
+        "3. 結果頁嵌入推薦方案卡片（DO / Cloudways / n8n Cloud）各帶聯盟連結",
+        "4. seo-writer 配套文章：「2026 AI 自動化真的值得嗎？算給你看：台灣企業導入成本效益計算器」",
+        "5. content-ops 在 autodev-ai 所有 n8n / 自動化教學文章加入計算器內部連結",
+        "6. 分享到 PTT Soft_Job / 台灣新創社群 / LinkedIn"
+      ],
+      "targetKeywords": [
+        "AI 自動化 ROI 計算 台灣",
+        "n8n 導入成本效益",
+        "AI 自動化值得嗎 台灣企業",
+        "自動化節省成本計算器",
+        "AI 投資回報率 2026"
+      ],
+      "directives": {
+        "builder": "建立 /ai-tools-tw/ai-roi-calculator/index.html — 純 JS 計算器。輸入：行業/員工數/手動時間/薪資 → 輸出：省下成本/ROI/推薦方案卡片。每個方案卡片帶聯盟連結（DO/Cloudways/n8n Cloud）。設計參考已有的 ai-cost-calculator。",
+        "seo-writer": "配套文章「AI 自動化值得投資嗎？台灣企業 ROI 完整算法（含免費計算器）」，部署到 autodev-ai/blog/ai-automation-roi-guide-2026.html，文中嵌入計算器 iframe/連結，帶 Cloudways + DO 雙聯盟 CTA。"
+      },
+      "priority": "HIGH",
+      "effortEstimate": "builder 1-2天（複用 ai-cost-calculator 框架，B2B 版本改寫）",
+      "notes": "這個計算器是 autodev-ai 服務頁（接案頁）的完美前置漏斗：老闆算完ROI後，自然想找人幫他們「真的做出來」——直接導流到服務頁，可能帶來接案詢問！雙重收益：聯盟佣金 + 潛在接案。"
+    },
+    {
+      "id": "proposal-2026-04-17-I",
+      "date": "2026-04-17",
+      "proposedBy": "strategist",
+      "type": "digital-product",
+      "title": "「AI 工作流 Notion 模板包（繁中版）」— Gumroad 最熱品類進攻",
+      "status": "proposed",
+      "revenueModel": "one-time purchase on Gumroad（US9-37/件）",
+      "estimatedMonthlyRevenue": "US00–1200/月（保守：20-50 件/月 × US5 平均）",
+      "marketEvidence": "(1) Gumroad 2026暢銷：Notion template是最熱品類，「Headquarters Notion Productivity Template」5.0評分 A9，「Notion Productivity Bundle」熱賣中。知名賣家月收,500+ by selling Notion templates。(2) 繁中 Notion 模板幾乎為零（Gumroad上搜不到中文模板）。(3) AI + Notion 組合是2026爆款：AI 內容日曆 + AI 專案管理 + AI 客戶管理。這三個需求在台灣 SOHO/創作者/小企業中有明確需求。(4) 我們的AI工具評測站有精準流量（用AI工具的人 = 最可能買AI Notion模板的人）。(5) 差異化：繁中說明 + 台灣場景（LINE OA / 台灣節假日 / 繁中標籤）= 競品無法複製的護城河。",
+      "targetAudience": "台灣 SOHO 族、部落客、AI 工具用戶、自媒體創作者、小企業主",
+      "productContent": [
+        "模板1：AI 內容日曆（Notion + ChatGPT/Claude 整合場景，繁中欄位設計）",
+        "模板2：AI 專案管理看板（Kanban + AI任務拆解 + 時間追蹤，適合 SOHO 接案族）",
+        "模板3：AI 客戶/聯盟行銷追蹤板（適合聯盟行銷/業務人員，可追蹤聯盟連結績效）",
+        "模板4：AI 閱讀/筆記管理系統（配合 ChatGPT 摘要功能的知識管理模板）",
+        "附：繁中 PDF 說明書 + 30分鐘使用上手影片（Loom）",
+        "總計：4個模板，繁中本地化，AI工具場景優化"
+      ],
+      "pricing": "US7（早鳥 US9），或 Bundle（4模板）US7",
+      "buildSteps": [
+        "1. Ivan 建立 Gumroad 帳號（這是多個數位產品的共同先決條件）",
+        "2. builder/seo-writer 使用 Notion 設計4個模板（複用既有 ai-tools 知識設計場景）",
+        "3. 錄 3-5 分鐘 Loom 示範影片（展示如何搭配 Claude/ChatGPT 使用）",
+        "4. 建立 Gumroad 產品頁（英文標題利於搜尋：\"AI Notion Template Pack - Traditional Chinese\"）",
+        "5. ai-tools-tw 網站加入 Notion 模板包 CTA（嵌入現有 AI 生產力文章）",
+        "6. 寫一篇配套文章：「4 個讓 AI 幫你管事的 Notion 模板（繁中版，立即可用）」",
+        "7. 分享到 台灣 Notion 社群 / PTT / Dcard 科技版"
+      ],
+      "directives": {
+        "builder": "【等 Ivan Gumroad 帳號建立後】設計4個 Notion 模板（AI Content Calendar + Project Kanban + Affiliate Tracker + Reading System），建立 Gumroad 產品頁，在 ai-tools-tw 各相關文章末尾加「Notion模板包」CTA。",
+        "seo-writer": "寫 ai-tools-tw 文章「4個讓 AI 幫你管理工作的 Notion 模板（繁中完整版）— 下載即用」，文末導流 Gumroad。搭配關鍵字「notion 模板 台灣」「notion ai 模板 繁中」「notion 工作流 模板」。",
+        "researcher": "下輪 cron 確認：繁中 Gumroad / 方格子是否有人開始賣 Notion 模板（競品偵測），若有，確認定價和評分。"
+      },
+      "priority": "HIGH",
+      "effortEstimate": "建模板 2-3天（設計+錄影），依賴 Ivan Gumroad 帳號",
+      "notes": "這個提案可以和已有的 agent-skills-pack / n8n 模板包 / claude-crons 整合成「AI 數位工作者工具包」大 bundle，在 Gumroad 做交叉銷售。Notion模板目前是 Gumroad 成交率最高的品類之一（比純prompt pack更有「看得到的價值感」）。"
     }
   ],
   "strategyNotes": [
