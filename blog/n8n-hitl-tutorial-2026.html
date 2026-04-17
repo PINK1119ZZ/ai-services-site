@@ -173,15 +173,22 @@
 <meta name="twitter:description" content="n8n v2.6 新增 Human-in-the-Loop（HITL）功能，讓你在 AI 自動化流程中插入人工審核關卡。本文手把手教你設定等待審核節點、Telegram 通知確認、多階段審批工作流，繁中首發完整教學。">
 </head>
 <body>
-<header>
-<a href="https://autodev-ai.com">🤖 AutoDev AI</a>
-<nav>
-<a href="https://autodev-ai.com/blog/">Blog</a>
-<a href="https://autodev-ai.com/services.html">服務</a>
-<a href="https://autodev-ai.com/pricing.html">報價</a>
-<a href="https://autodev-ai.com/contact.html">聯絡</a>
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo">AutoDev AI</a>
+<div class="nav-links" id="navLinks">
+<a href="/services.html">服務</a>
+<a href="/bot-cloud.html">雲託管</a>
+<a href="/tools/">工具</a>
+<a href="/pricing.html">方案</a>
+<a class="active" href="/blog/">Blog</a>
+<a href="/about.html">關於</a>
+<a class="nav-cta" href="/contact.html">免費諮詢</a>
+</div>
+<button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
+</div>
 </nav>
-</header>
+<script>document.getElementById('mobileMenuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('show'));</script>
 <div class="container">
 <div class="breadcrumb">
 <a href="https://autodev-ai.com">首頁</a> › <a href="https://autodev-ai.com/blog/">Blog</a> › n8n HITL 教學
@@ -557,19 +564,8 @@ N8N_EXECUTIONS_DATA_SAVE_ON_SUCCESS=none  # 成功的不留，省空間</code></
 </a>
 </div>
 </section><footer>
-<p>© 2026 AutoDev AI — 台灣 AI 自動化開發服務</p>
-<p>
-<a href="https://autodev-ai.com">首頁</a>
-<a href="https://autodev-ai.com/blog/">Blog</a>
-<a href="https://autodev-ai.com/services.html">服務</a>
-<a href="https://autodev-ai.com/pricing.html">報價</a>
-<a href="https://autodev-ai.com/contact.html">聯絡我們</a>
-<a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a>
-<a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a>
-</p>
-<p style="font-size: 0.8rem; color: #475569; margin-top: 1rem;">
-    本文部分連結為聯盟行銷連結，點擊後購買我們可能獲得佣金，不影響您的費用或我們的評測立場。
-  </p>
+<p>© 2026 AutoDev AI. Built with AI.</p>
+<p style="margin-top:0.5rem; font-size:0.85rem;">姊妹站：<a href="https://pink1119zz.github.io/ai-tools-tw/" rel="noopener" target="_blank">AI Tools TW</a>（繁中工具評測） · <a href="https://pink1119zz.github.io/ai-tools-en/" rel="noopener" target="_blank">AI Tools EN</a>（English Reviews）</p>
 </footer>
 <script>
 (function(){
