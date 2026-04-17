@@ -7,7 +7,7 @@
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AI 客服是什麼？<a class="internal-link" href="/blog/line-bot-tutorial-2026.html" style="color:var(--primary-light,#a5b4fc);text-decoration:underline dotted;">LINE Bot</a> 智慧客服完整指南（2026）| AutoDev AI</title>
+<title>AI 客服是什麼？<a class="internal-link" href="/blog/line-bot-tutorial-2026.html" style="color:var(--primary-light,#A29BFE);text-decoration:underline dotted;">LINE Bot</a> 智慧客服完整指南（2026）| AutoDev AI</title>
 <meta content="AI 客服完整指南：GPT/Claude 驅動的 LINE 智慧客服如何運作、導入成本、效益分析。24 小時不間斷回覆，處理 80% 重複問題，月省 $950+ 人力成本。" name="description"/>
 <link href="https://autodev-ai.com/blog/ai-customer-service-line.html" rel="canonical"/>
 <link href="https://autodev-ai.com/blog/ai-customer-service-line.html" hreflang="zh-Hant" rel="alternate"/>
@@ -51,29 +51,29 @@
         .blog-meta span { margin: 0 0.5rem; }
         .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
         .price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .price-table th { color: var(--primary-light); font-weight: 700; background: rgba(99,102,241,0.1); }
+        .price-table th { color: var(--primary-light); font-weight: 700; background: rgba(108,92,231,0.1); }
         .price-table td { color: var(--text-secondary); }
-        .price-table tr:hover td { background: rgba(99,102,241,0.05); }
-        .highlight-box { background: rgba(99,102,241,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; margin: 1.5rem 0; }
+        .price-table tr:hover td { background: rgba(108,92,231,0.05); }
+        .highlight-box { background: rgba(108,92,231,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; margin: 1.5rem 0; }
         .highlight-box p { margin-bottom: 0; color: var(--text); }
         .blog-nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
-        .blog-nav a { color: var(--primary-light); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(99,102,241,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
-        .blog-nav a:hover { background: rgba(99,102,241,0.2); border-color: var(--primary); }
+        .blog-nav a { color: var(--primary-light); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(108,92,231,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
+        .blog-nav a:hover { background: rgba(108,92,231,0.2); border-color: var(--primary); }
     
 /* Blog optimizer additions */
 
 .reading-time { text-align: center; color: #888; font-size: 0.9rem; margin-bottom: 1.5rem; }
-.toc { background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2); border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 2rem; }
-.toc summary { cursor: pointer; font-weight: 700; color: #b0b8ff; font-size: 1.1rem; }
+.toc { background: rgba(108,92,231,0.08); border: 1px solid rgba(108,92,231,0.2); border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 2rem; }
+.toc summary { cursor: pointer; font-weight: 700; color: #A29BFE; font-size: 1.1rem; }
 .toc ul { list-style: none; padding-left: 0; margin-top: 0.8rem; }
 .toc li { margin-bottom: 0.5rem; }
-.toc a { color: #a5b4fc; text-decoration: none; }
+.toc a { color: #A29BFE; text-decoration: none; }
 .toc a:hover { text-decoration: underline; }
 .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
 .related-articles h2 { text-align: center; margin-bottom: 1.5rem; }
 .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
 .related-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.2rem; text-decoration: none; transition: all 0.3s; display: block; }
-.related-card:hover { border-color: rgba(99,102,241,0.5); transform: translateY(-2px); }
+.related-card:hover { border-color: rgba(108,92,231,0.5); transform: translateY(-2px); }
 .related-card h3 { color: #e2e8f0; font-size: 1rem; margin: 0 0 0.5rem; }
 .related-card p { color: #94a3b8; font-size: 0.85rem; margin: 0; }
 </style>
@@ -82,14 +82,14 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
   {"@type":"ListItem","position":1,"name":"Home","item":"https://autodev-ai.com/"},
   {"@type":"ListItem","position":2,"name":"Blog","item":"https://autodev-ai.com/blog/"},
-  {"@type":"ListItem","position":3,"name":"AI 客服是什麼？<a class="internal-link" href="/blog/line-bot-tutorial-2026.html" style="color:var(--primary-light,#a5b4fc);text-decoration:underline dotted;">LINE Bot</a> 智慧客服完整指南（2026）"}
+  {"@type":"ListItem","position":3,"name":"AI 客服是什麼？<a class="internal-link" href="/blog/line-bot-tutorial-2026.html" style="color:var(--primary-light,#A29BFE);text-decoration:underline dotted;">LINE Bot</a> 智慧客服完整指南（2026）"}
 ]}</script>
 <style>
-.share-buttons{display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin:2rem 0;padding:1.5rem;background:rgba(99,102,241,0.08);border-radius:12px}
+.share-buttons{display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin:2rem 0;padding:1.5rem;background:rgba(108,92,231,0.08);border-radius:12px}
 .share-label{color:#94a3b8;font-size:0.9rem;margin-right:0.5rem}
 .share-btn{padding:0.4rem 1rem;border-radius:20px;text-decoration:none;font-size:0.85rem;font-weight:600;transition:all 0.2s;cursor:pointer}
 .share-line{background:#06C755;color:white}.share-fb{background:#1877F2;color:white}
-.share-tw{background:#1DA1F2;color:white}.share-copy{background:rgba(255,255,255,0.1);color:#a5b4fc;border:1px solid rgba(99,102,241,0.3)}
+.share-tw{background:#1DA1F2;color:white}.share-copy{background:rgba(255,255,255,0.1);color:#A29BFE;border:1px solid rgba(108,92,231,0.3)}
 .share-btn:hover{transform:scale(1.05);opacity:0.9}
 </style>
 </head>
@@ -147,7 +147,7 @@
 <ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-<p data-en='AI customer service is a system that uses artificial intelligence (such as GPT-4, Claude, and other large language models) to automatically reply to customer questions. Unlike traditional "keyword bots," AI CS understands natural language and responds in a near-human manner.'>AI 客服是利用人工智慧技術（如 OpenAI 的 GPT-4o、Anthropic 的 Claude 3.7 Sonnet 等大型語言模型）來<a class="internal-link" href="/blog/line-auto-reply-setup.html" style="color:var(--primary-light,#a5b4fc);text-decoration:underline dotted;">自動回覆</a>客人問題的系統。和傳統的「關鍵字機器人」不同，AI 客服能理解自然語言，用接近真人的方式回答問題。</p>
+<p data-en='AI customer service is a system that uses artificial intelligence (such as GPT-4, Claude, and other large language models) to automatically reply to customer questions. Unlike traditional "keyword bots," AI CS understands natural language and responds in a near-human manner.'>AI 客服是利用人工智慧技術（如 OpenAI 的 GPT-4o、Anthropic 的 Claude 3.7 Sonnet 等大型語言模型）來<a class="internal-link" href="/blog/line-auto-reply-setup.html" style="color:var(--primary-light,#A29BFE);text-decoration:underline dotted;">自動回覆</a>客人問題的系統。和傳統的「關鍵字機器人」不同，AI 客服能理解自然語言，用接近真人的方式回答問題。</p>
 <p data-en="For example:">舉例來說：</p>
 <ul>
 <li data-en="&lt;strong&gt;Traditional bot:&lt;/strong&gt; Customer says &quot;what time do you close&quot; &amp;rarr; not in keyword list &amp;rarr; replies &quot;I don't understand&quot;"><strong>傳統機器人：</strong>客人說「幾點關門」→ 不在關鍵字清單裡 → 回覆「我不懂你的意思」</li>
@@ -252,7 +252,7 @@
 <table class="price-table">
 <thead>
 <tr>
-<th data-en="Cost Item"><a class="internal-link" href="/blog/line-bot-cost.html" style="color:var(--primary-light,#a5b4fc);text-decoration:underline dotted;">費用</a>項目</th>
+<th data-en="Cost Item"><a class="internal-link" href="/blog/line-bot-cost.html" style="color:var(--primary-light,#A29BFE);text-decoration:underline dotted;">費用</a>項目</th>
 <th data-en="Amount">金額</th>
 <th data-en="Description">說明</th>
 </tr>
