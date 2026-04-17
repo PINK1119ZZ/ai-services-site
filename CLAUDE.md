@@ -128,6 +128,17 @@ strategist 寫指令給其他 agent，收到的 agent 必須優先執行。
 - 每篇至少 2 個內部連結
 - 禁止: AI 腔調（「在當今數位時代」「值得注意的是」）
 
+### 視覺風格（強制統一 autodev-ai.com 紫青主題）
+**⚠️ 所有 HTML 頁面必須遵守，新寫舊改都一樣：**
+- 全站只用 `/style.css` 的 CSS 變數（`var(--primary)`、`var(--accent)`、`var(--primary-light)`、`var(--dark)`、`var(--gray)`）
+- 禁止在 inline `<style>` 硬編色碼（例：❌ `#6366f1`、`#a5b4fc`、`rgba(99,102,241,...)`）
+- 如果需要特殊色，用 `var(--primary)` 搭配 opacity 調整，或加到 `/style.css` 作新 token
+- 若看到文章還有舊色碼 `#6366f1 / #a5b4fc / rgba(99,102,241)`，立刻批次替換成：
+  - `#6366f1 → #6C5CE7`（primary 紫）
+  - `#a5b4fc → #A29BFE`（primary-light）
+  - `rgba(99,102,241,X) → rgba(108,92,231,X)`
+- 新寫文章優先繼承 `/style.css` 樣式，只在有特殊版面需求時才加 inline style（且只用 CSS 變數）
+
 ### 聯盟連結（必須用真實 URL）
 現有（已上線）：
 - DigitalOcean: https://m.do.co/c/6121a295f624
