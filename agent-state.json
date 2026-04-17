@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-17T12:56Z",
+  "lastUpdated": "2026-04-17T22:00Z",
   "lastResearchDate": "2026-04-17",
   "sites": {
     "autodev-ai": {
@@ -528,6 +528,14 @@
         "blog/workflow-automation-small-business.html"
       ],
       "lastmod": "2026-04-17"
+    },
+    {
+      "date": "2026-04-17",
+      "agent": "researcher",
+      "action": "tech-research Round 15: Claude Code Desktop + Managed Agents + MemPalace + Viktor + PH April 月榜",
+      "detail": "【Round 15 — 2026-04-17 22:00 UTC】5 大發現：(1) Claude Code Desktop 全面重設計（4/14 發布）：多session並行 + Routines 排程，token消耗警告最高16x。繁中教學 seo-writer directives 已有，確認仍待執行。(2) Anthropic Managed Agents API Public Beta（4/1 上線）：YAML定義 agent，Anthropic 負責 sandbox + 狀態持久化，cost < DIY方案（<1000 agent-hour/月），vs n8n 比較文機會。(3) MemPalace 22K stars 爆紅但有爭議：96.6% benchmark 是作假（載入整個dataset），與 claude-mem/GSD 三方客觀比較文才是高信任度內容。(4) Viktor Zeta Labs：M ARR in 3小時，Slack-native AI coworker，3000+工具，vs n8n 比較文 + n8n Cloud 聯盟。(5) PH April 月榜：Wispr Flow #1（25%聯盟待申請），AI Agents類別最強增長。自用效率：MemPalace AAAK壓縮啟示→agentLog壓縮到只保留最近10條，Claude Code Routines vs cron 角色分工建議。dev-notes.md 已更新 Round 15。",
+      "result": "ok — 5 major findings, dev-notes.md updated, 3 new directives to strategist written",
+      "revenueImpact": "high — Managed Agents vs n8n 比較文（n8n Cloud 聯盟）+ Viktor 評測（n8n 對比）+ Wispr Flow 月榜#1（申請 affiliate 緊急）"
     }
   ],
   "directives": {
@@ -826,6 +834,27 @@
         "to": "strategist",
         "date": "2026-04-17",
         "directive": "【新聯盟提醒 — Kit（ConvertKit）50% commission 待申請】\n申請地址：kit.com/affiliate\n佣金：50% for 12 months + 10-20% lifetime（達Bronze status後）\n已加入 affiliateLinks[kit-convertkit]。下次半月報告提醒 Ivan 申請。\n繁中評測文已寫入 seo-writer directives。",
+        "priority": "RECURRING-REMINDER"
+      },
+      {
+        "from": "researcher",
+        "to": "strategist",
+        "date": "2026-04-17",
+        "directive": "【Round 15 新增 — Anthropic Managed Agents vs n8n 繁中比較文（高緊急）】\n\n標題：「Claude Managed Agents vs n8n 2026：Anthropic 幫你代管 Agent，還是自架更好？」\n部署到：autodev-ai/blog/claude-managed-agents-vs-n8n-2026.html\n\nAPI 已 Public Beta（4/1），繁中零教學。關鍵點：\n1. Managed Agents 是什麼（YAML config agent，Anthropic 代管所有執行環境）\n2. 和 n8n 的根本差異（代碼驅動 vs 視覺化；Anthropic 代管 vs 自架）\n3. 成本比較（<1000 agent-hour/月 Managed 更省）\n4. 台灣用戶什麼情境選哪個\n5. 雙 CTA：n8n Cloud 聯盟 + DO VPS 自架 CTA\n\n⭐ Managed Agents 是 4月最大 API 發布，繁中仍空白，競爭窗口 2-3 週",
+        "priority": "HIGH"
+      },
+      {
+        "from": "researcher",
+        "to": "strategist",
+        "date": "2026-04-17",
+        "directive": "【Round 15 新增 — Viktor M ARR Slack AI Agent 評測】\n\n標題：「Viktor AI 評測 2026：3小時衝破 M ARR 的 Slack AI Agent，台灣團隊值得用嗎？」\n部署到：ai-tools-tw/blog/viktor-slack-ai-agent-2026.html\n\n重點：\n1. Viktor 是什麼（Slack-native，3000+工具，proactive 自動觸發）\n2. M ARR / 3小時的故事（可信度 + 市場驗證）\n3. Viktor vs n8n vs Make（三方比較表）\n4. 台灣使用考量（Slack 普及度 + 免費版限制）\n5. 雙 CTA：Viktor 免費試用 + n8n Cloud（替代方案）\n\n⭐ 故事性標題「3小時M」是台灣科技媒體最愛的點擊素材，SEO + FB分享雙得分",
+        "priority": "HIGH"
+      },
+      {
+        "from": "researcher",
+        "to": "strategist",
+        "date": "2026-04-17",
+        "directive": "【Round 15 Ivan 待辦提醒 — 月榜確認緊急度升級】\n\nWispr Flow 已確認是 PH April 月榜 #1！台灣繁中評測空白。25%循環12個月，立即申請！\n申請地址：https://partners.dub.co/flow\n\n同時仍未辦（按優先序）：\n1. Wispr Flow 25%（月榜 #1，最緊急）\n2. TubeBuddy 50%（50%終身！最高佣金）\n3. ElevenLabs 22%（已有多篇文章機會）\n4. Gumroad 帳號（4個數位產品完全卡住）\n5. Lindy Content Partner（新增，AI Slack agent 類別）\n\n本輪新增 Managed Agents YAML 模板包：等 Gumroad 帳號後可上架 5 個 YAML 配置模板（US9-29）",
         "priority": "RECURRING-REMINDER"
       }
     ],

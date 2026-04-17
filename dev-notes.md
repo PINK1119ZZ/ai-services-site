@@ -380,3 +380,123 @@
 - Dify Affiliate Program 30-50% 循環
 - 台灣競品監控：主要用 Hahow 帶貨
 - MCP 熱度確認
+
+---
+
+## Round 15 | 2026-04-17 (Fri, 22:00 UTC) — researcher agent
+
+### 🔥 本輪最大發現：Claude Code Desktop 全面重設計 + Anthropic Managed Agents API + MemPalace 爆紅記憶系統 + Viktor $1M ARR / 3小時
+
+**注意：本輪 Tavily 正常使用。覆蓋 Product Hunt 月榜、GitHub trending、AI changelog 三大管道。**
+
+---
+
+#### 1. 🔥🔥🔥 Claude Code Desktop 全面重設計（2026-04-14 正式發布）
+
+- **什麼改變**：Anthropic 在 4/14 同時發布 Claude Code 桌面 App 全新 UI + "Routines" 研究預覽
+- **新 Desktop 重點**：多 session 並行（4個 session 同時跑 → 4倍工作效率）、整合 Terminal、File editing、HTML/PDF preview
+- **Routines**：Claude Code 內建排程系統（`/schedule` 指令），無需電腦開著即可自動執行 coding 任務
+- **重要警告（省錢/省token相關）**：多 session 並行使 token 消耗可能達舊工作流 16x。Pro 用戶若重度使用，需預算 2-3x token 消耗
+- **繁中評測**：現仍空白（seo-writer directives 已有此題材，確認仍有效執行必要）
+- **自用機會**：Routines 等同於我們現在的 cron-based agent system，但 native 整合更深。評估是否將某些 cron jobs 遷移至 Claude Code Routines
+- **關鍵字**：`claude code desktop 新功能 2026`、`claude code routines 教學`、`claude code 多session 怎麼用`
+
+---
+
+#### 2. 🔥🔥🔥 Anthropic Managed Agents API — 正式 Public Beta（2026-04-01 上線）
+
+- **是什麼**：Anthropic 雲端代管 agent 執行環境，開發者只需 YAML 定義 agent，Anthropic 負責 agent loop + 工具執行 + sandbox + 狀態持久化
+- **API 端點**：`/v1/agents`、`/v1/environments`、`/v1/sessions`，帶 `anthropic-beta: managed-agents-2026-04-01` header
+- **成本比較**：<1,000 agent-hour/月 完全低於 AWS Lambda+container+DynamoDB+CloudWatch DIY 方案
+- **支援 trigger**：webhook + cron（直接定義 schedule）
+- **觀察日誌**：`capture_tool_calls: true`、SSE stream
+- **台灣適用性**：現有多篇 n8n + Claude 教學文章，Managed Agents 是「不想自架 n8n 的替代方案」，有對比文章機會
+- **SEO 機會**：「anthropic managed agents 教學繁中」、「claude api agent 自動化 2026」完全空白 ⭐⭐⭐
+- **產品化**：「Managed Agents vs n8n：哪個讓你的 AI 工作流更省力？2026 完整比較」帶 n8n Cloud 聯盟 + DO VPS CTA
+- **關鍵字**：`anthropic managed agents 教學`、`claude managed agents vs n8n`、`claude api 自動化 2026`
+
+---
+
+#### 3. 🔥🔥🔥 MemPalace — GitHub 爆紅 AI 記憶系統（22K stars / 48小時）
+
+- **是什麼**：開源 AI agent 記憶系統，採用「記憶宮殿」(Method of Loci) 架構，MCP server 提供 19 個工具
+- **技術架構**：Wings → Rooms → Closets（AAAK 30x 壓縮） → Drawers（原始記錄），+ 知識圖譜（SQLite），+ 矛盾偵測
+- **宣稱 benchmark**：96.6% Recall@5 on LongMemEval（最高 zero-API 分數）
+- **爭議（重要！）**：GitHub gist 深度技術稽核 指出其 benchmark 是「載入整個資料集」達成，並非真實 memory retrieval；42,000 顆星中存在疑似購買星星爭議。競品 Hindsight 的 91.4% 分數反而更誠實（測了真實 entity resolution）
+- **自用價值**：AAAK 30x 壓縮技術（AI 專用語義壓縮）概念值得借鑒 — 我們可用類似壓縮邏輯減少 agentLog 體積
+- **SEO 機會**：「MemPalace vs claude-mem vs GSD：AI agent 記憶哪個好？」三方比較 + 爭議解析（帶客觀分析有助信任度）⭐⭐⭐
+- **directive 狀態**：已在 seo-writer directives 中（Round 15 新增），確認繁中三方比較文仍待執行
+- **關鍵字**：`mempalace ai memory 教學`、`ai agent 記憶 2026`、`claude-mem vs mempalace`
+
+---
+
+#### 4. 🔥🔥🔥 Viktor by Zeta Labs — $1M ARR 在 3 小時內（PH 月榜 + 週榜雙進榜）
+
+- **是什麼**：Slack-native AI coworker，連接 3,000+ 工具，在自己的 cloud computer 上執行真實工作（PDF、dashboard、code commit、部署）
+- **資本驗證**：$1M ARR 在 Launch 後 3 小時，這是 SaaS 史上最快 ARR 之一
+- **限制**：Slack 限定（Teams 支援尚未上線）
+- **台灣市場**：中小企業若用 Slack，這是 $0 起的 AI coworker 解決方案
+- **文章角度**：Viktor vs n8n vs Make：Slack-first 自動化 vs 工作流建構器哪個更適合你的公司？
+- **SEO 機會**：「viktor ai slack 教學繁中」、「slack ai coworker 免費 2026」⭐⭐⭐
+- **關鍵字**：`viktor ai slack 怎麼用`、`slack ai agent 自動化`、`viktor zeta labs 評測`
+
+---
+
+#### 5. 🔥🔥 Wispr Flow — PH April 月榜 #1（持續霸榜，25% 聯盟申請中）
+
+- **是什麼**：Mac AI 語音輸入工具，支援全應用程式語音輸入，學習你的寫作風格，100+ 語言
+- **PH April 月榜**：Wispr Flow（月榜第一！）確認熱度最高的 AI 工具
+- **聯盟狀態**：partners.dub.co/flow — 25% 循環 12 個月，待 Ivan 申請
+- **差異化機會**：Wispr Flow + AI Developer 整合（搭配 Claude Code 語音輸入比較）
+- **關鍵字確認有效**：`wispr flow 評測 繁中`、`ai 語音輸入 mac 2026`、`voice dictation ai 台灣`
+
+---
+
+#### 6. 🔥🔥 Product Hunt 月榜分析（April 2026 完整）
+
+本月主導類別：
+- **Claude Code 生態系** — Desktop 重設計、Routines（產品月榜進榜）
+- **Slack AI agents** — Viktor、其他 Slack 自動化工具
+- **AI 語音工具** — Wispr Flow 月榜 #1
+- **AI 代碼工具** — Managed Agents、Open Agents（工具排行前列）
+
+重要信號：**「AI Agents」類別** 是 April 月榜最強增長分類，超過 LLMs 和 Productivity。
+
+---
+
+### 📦 產品化機會評估（Round 15 新增）
+
+| 工具/趨勢 | 可產品化方向 | 預估月收 | 優先 |
+|-----------|------------|---------|------|
+| Anthropic Managed Agents | vs n8n 比較文（n8n Cloud 聯盟 + DO 聯盟） | SEO + $300-800 | ⭐⭐⭐ |
+| Claude Code Desktop 重設計 | 完整功能評測 + Routines 教學（補足未執行 directives）| Claude Pro CTA | ⭐⭐⭐ |
+| MemPalace 爭議分析 | 客觀三方比較文（加爭議解析，提升信任度）| SEO 流量高 | ⭐⭐⭐ |
+| Viktor + Slack | Slack AI Agent 評測 + n8n 比較（n8n Cloud 聯盟）| SEO + n8n 聯盟 | ⭐⭐⭐ |
+| Wispr Flow 月榜 #1 | 評測文（待 Ivan 申請 affiliate）25% 循環 | US$150-400/月 | ⭐⭐⭐ |
+| Managed Agents YAML 模板 | Gumroad 數位產品（Claude Managed Agents 配置模板 5 個）| US$15-29/件 | ⭐⭐ |
+
+---
+
+### 🔧 Agent 效率新發現（Round 15）
+
+1. **Claude Code Routines 與我們的 cron 系統對比**：Routines 在 Claude Code 內原生執行，不需要 OpenClaw cron 外部觸發。對於純 coding 任務，Routines 可能比我們的 cron 更省 token（少了 context switch overhead）。**建議：** coding agent 任務（seo-writer / builder）未來考慮遷移至 Routines；orchestration 任務（researcher / content-ops / strategist）仍用 OpenClaw cron（需要多工具）。
+
+2. **MemPalace AAAK 30x 壓縮啟示**：其核心是 AI 特化的語義壓縮（保留語義，去除格式冗余）。我們的 agentLog 目前每條平均 300-500 tokens，用類似壓縮邏輯可壓縮到 50-80 tokens/條。**即時可行動**：下次 builder 執行時，評估壓縮 agentLog 到只保留最近 10 條 + 精簡 summary。
+
+3. **Managed Agents 的觀察日誌模式**（`capture_tool_calls: true`）：我們的 agentLog 已在做類似的事，但沒有 SSE stream 觀察性。Managed Agents 的事件模型值得參考，讓 strategist 能即時觀察 agent 執行狀態。
+
+---
+
+### 📋 給 strategist 的新 Directives
+
+1. **新文章緊急補充 — Anthropic Managed Agents vs n8n**（本週執行）：利用 Managed Agents 剛上線熱度，搶先做繁中評測。seo-writer 已有大量 directives 積壓，此為最新 Round 15 新增高優先。
+
+2. **Viktor + Slack 3方比較**（Viktor vs n8n vs Make）：Viktor $1M ARR/3小時的故事本身就是吸睛標題素材。搭配 n8n Cloud 聯盟。
+
+3. **Ivan 待辦提醒**（Round 15 累積）：
+   - Wispr Flow affiliate（月榜 #1，25% 申請！）
+   - TubeBuddy affiliate（50% lifetime，仍未辦）
+   - ElevenLabs affiliate（22% 循環，仍未辦）
+   - Gumroad 帳號（4個數位產品卡住！）
+   - Managed Agents YAML 模板包 Gumroad 新機會
+
