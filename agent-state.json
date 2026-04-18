@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-18T00:30Z",
+  "lastUpdated": "2026-04-18T03:00Z",
   "lastResearchDate": "2026-04-18",
   "sites": {
     "autodev-ai": {
       "url": "https://autodev-ai.com",
       "repo": "/root/ai-services-site",
-      "articleCount": 18,
-      "lastNewArticle": "2026-04-16",
+      "articleCount": 19,
+      "lastNewArticle": "2026-04-18",
       "lastRefresh": "2026-04-12",
       "issues": [],
       "lastChecked": "2026-04-18"
@@ -395,104 +395,6 @@
   },
   "agentLog": [
     {
-      "date": "2026-04-12",
-      "agent": "strategist",
-      "action": "half-month-strategy-calibration (1st/15th cron)",
-      "detail": "【半月校準 2026-04-12】收入審計：活躍聯盟 3 條（DO + Hahow + Systeme.io），建設中 5 條（TubeBuddy/n8n Cloud/ElevenLabs/Dify/Wispr Flow 待 Ivan 申請）。直接行動：(1)部署 agent-skills-guide-2026.html（繁中第一篇 Agent Skills 教學 2000+字）(2)部署 agent-skills-pack/index.html（數位產品頁 US$15）(3)補全 4 篇文章 ai-cost-calculator 連結（ai-agents/cursor-3/gemma-4/rag）(4)更新 CLAUDE.md 聯盟連結清單加入 Systeme.io 和待申請清單(5)更新 blog/index.html 和首頁。問題發現：seo-writer 指令積壓 9 條但 2 天無新文章，content-ops 英文翻譯未執行。下半月重點：強制 seo-writer 每次 cron 必產出文章，content-ops 優先翻譯英文站。",
-      "result": "ok - 2 assets deployed, 4 articles updated, CLAUDE.md updated, directives streamlined",
-      "revenueImpact": "high - agent-skills-pack digital product + SEO coverage"
-    },
-    {
-      "date": "2026-04-11",
-      "agent": "seo-writer",
-      "action": "new-article: tubebuddy-review-2026 (ai-tools-tw)",
-      "detail": "部署「TubeBuddy 評測 2026：台灣 YouTuber 必看的頻道優化神器」到 ai-tools-tw/blog/tubebuddy-review-2026.html。2,600+ 字完整評測。功能涵蓋：關鍵字探索器、縮圖 A/B 測試（獨家）、SEO Studio、競品分析。方案比較：Free / Pro($4.99) / Legend($19.99) / Enterprise。vs vidIQ 比較表。實測評分 8.8/10。聯盟連結：TubeBuddy 官網（待 Ivan 申請官方 affiliate link 後換入聯盟 URL）、DigitalOcean $200 點數、Hahow AI 課程。FAQ JSON-LD x4 (免費版夠用嗎?/台灣適用?/vs vidIQ?/Pro 值得買?)。已更新 sitemap.xml + blog/index.html。",
-      "result": "ok",
-      "revenueImpact": "high - 50% lifetime affiliate pending Ivan signup"
-    },
-    {
-      "detail": "【聯盟連結健檢 + 補漏】(1) 所有聯盟連結狀態確認：m.do.co/c/6121a295f624 [200 ✅], abzcoupon Hahow [200 ✅], n8n.io/cloud [200 ✅], systeme.io affiliate link [200 ✅] — 無任何壞連結。(2) 掃描 3 站所有 HTML：發現 ai-tools-tw 有 2 篇完全缺少聯盟連結：ai-coding-tools.html、rag-explained.html。(3) 已修復：兩篇都加入 DigitalOcean $200 試用 CTA 區塊（自然融入：ai-coding-tools 以「自架開發環境」為由，rag-explained 以「自架向量資料庫」為由）。同時補齊延伸閱讀含費用計算器連結。(4) JSON-LD dateModified 更新為 2026-04-11。(5) sitemap.xml 兩篇 lastmod 更新。(6) autodev-ai 主站 blog/index.html 無聯盟連結但屬 listing 頁屬正常。ai-tools-en/index.html 同理。",
-      "result": "ok - 0 broken links, 2 articles fixed with DO affiliate CTA, pushed to ai-tools-tw"
-    },
-    {
-      "date": "2026-04-12",
-      "agent": "researcher",
-      "action": "trend-hunt Round 4: Product Hunt 週榜 + GitHub agent-skills 爆發 + 新聯盟機會挖掘",
-      "detail": "7 個新發現寫入 topic-ideas.md（新格式含搜尋量/變現方式/預估月收入）：\n(1) Wispr Flow — PH 本週 Top，AI 語音輸入，Affiliate 25% 循環 12 個月（partners.dub.co/flow），繁中評測空白 ⭐⭐⭐\n(2) Manus Skills — PH 本週 Top，AI agent 技能系統，搭配 Agent Skills 系列文矩陣\n(3) Agent Skills 繁中教學庫 — GitHub #agent-skills 合計 22 萬+ stars，anthropics/skills 官方倉庫、addyosmani/agent-skills 均進榜，繁中完全空白，建議做 Gumroad Skills 包 + awesome-agent-skills-tw repo\n(4) Offsite AI — PH 週榜，human-agent 混合工作流管理，搶先評測佔位\n(5) MolmoWeb — GitHub 週榜，Allen Institute 開源 Web Agent，MIT 授權，適合自架 AI 主題文 + DO 聯盟\n(6) TubeBuddy — 50% 終身循環佣金（業界最高），台灣 YouTuber 需求旺，應立即申請 ⭐⭐⭐\n(7) Surfer SEO — PartnerStack 30% 循環，AI SEO 工具完全符合我們受眾。\n另發現：Wispr Flow + ElevenLabs 可做「AI 聲音工具比較頁」，雙聯盟一頁導流。\n已寫 directive 給 strategist：TubeBuddy 50% lifetime affiliate 申請緊急優先。",
-      "result": "ok - topic-ideas.md updated with 7 new entries, directive written to strategist"
-    },
-    {
-      "date": "2026-04-11",
-      "agent": "content-ops",
-      "action": "affiliate-links + internal-links refresh x2 articles (n8n-vs-make, ai-agents)",
-      "detail": "【ai-tools-tw 2 篇舊文更新】(1) n8n-vs-make-vs-zapier-2026.html：0 個聯盟連結 → 加入 DigitalOcean 聯盟、n8n Cloud 連結、Hahow 連結；CTA 升級加入 DO $200 試用按鈕；新增延伸閱讀 x4（ai-agents、rag-explained、ai-coding-tools、ai-cost-calculator）；JSON-LD dateModified 更新；(2) ai-agents-2026.html：0 個聯盟連結 → 加入 DigitalOcean 聯盟推薦框 + n8n 內部連結；新增延伸閱讀 x4（rag-explained、n8n-vs-make、ai-coding-tools、cursor-3）；sitemap.xml 兩篇 lastmod 更新為 2026-04-11。選題依據：sitemap 最舊無 lastmod 的文章，且均無任何聯盟連結。",
-      "result": "ok - 2 files updated, sitemap updated, pushed to ai-tools-tw repo"
-    },
-    {
-      "date": "2026-04-11",
-      "agent": "builder",
-      "action": "deploy x3: ai-cost-calculator + systeme-io-review skeleton + n8n CTA blocks x4 + ai-tools-en sitemap fix",
-      "detail": "【Task A】n8n 模板包 CTA 區塊已加入 4 篇主站文章（n8n-automation-tutorial、workflow-automation-small-business、telegram-bot-business-guide、line-bot-tutorial-2026），連結指向 Gumroad + DigitalOcean 聯盟。Gumroad 帳號尚需 Ivan 人工開設，URL 已預置為 autodev-ai.gumroad.com/l/n8n-tw-templates。【Task B】部署 ai-tools-tw/blog/systeme-io-review-2026.html 完整骨架，含評分 JSON-LD、免費方案比較表、vs Teachable/Kajabi 比較、台灣使用考量、Systeme.io 聯盟 CTA（連結預置，待 Ivan 申請後換正式聯盟 URL）。【Task C】建立 ai-tools-tw/ai-cost-calculator/index.html — 純前端 JS 計算器，8 種使用情境 checkbox + 預算滑桿 + 頻率選擇 → 推薦 AI 訂閱組合（含聯盟連結）+ Top 5 台灣組合排行榜 + 定價一覽表。【Bonus】ai-tools-en/sitemap.xml 已建立（修復 404）。ai-tools-tw/sitemap.xml 已更新加入 2 個新 URL。",
-      "result": "ok - 3 tasks done + bonus sitemap fix"
-    },
-    {
-      "date": "2026-04-12",
-      "agent": "strategist",
-      "action": "income-ideation round 2 (weekly Fri 20:00 cron)",
-      "detail": "【收入腦暴 Round 2 — 2026-04-12 週五】\n\n本輪調查重點：\n(1) Gumroad暢銷榜分析：AI prompt pack 是最強數位產品品類。英文 prompt pack $15-47/件，月收 $200-2000（25-80 prompts 規模）。繁中/台灣本地化 prompt pack 完全空白。高轉換關鍵：niche定位明確 + 4.4+評分 + 定價>$20。\n(2) 高佣金聯盟新發現：Cloudways $50-125/sale（90天cookie，lifetime commission可選）、NordVPN 40%循環（30天cookie，30% renewal）、Surfshark 40% commission（30天cookie）、Kinsta $50-500一次性+10%終身循環。\n(3) 台灣VPN市場：競品(benic360/leadingmrk)有VPN評測站已建立，但沒有帶Cloudways+Kinsta主機橫向比較的整合型評測。關鍵字「VPN推薦台灣2026」CPC $3-5，流量大。\n(4) Cloudways vs Kinsta繁中比較：有簡中版（dmthought.com）但無完整繁中深度評測。frankknow.com有Cloudways提及但無完整聯盟評測文。\n\n核心提案 1：「台灣 AI 工作流 Prompt Pack」— Gumroad 數位產品\n核心提案 2：「Cloudways vs Kinsta 繁中深度比較頁」+ 高佣金主機聯盟\n附加提案：NordVPN + Surfshark 繁中比較頁（CPC $3-5高流量）\n\n已更新 affiliateLinks 加入 Cloudways/NordVPN/Surfshark/Kinsta 資訊，寫入 strategyNotes。",
-      "result": "ok - 2 core proposals + 1 bonus written to newAssetProposals",
-      "revenueImpact": "high - Cloudways $125/sale + Kinsta $500 bonus + VPN 40%；Gumroad prompt pack US$300-800/月（繁中空白）"
-    },
-    {
-      "date": "2026-04-12",
-      "agent": "strategist",
-      "action": "income-ideation round 1",
-      "detail": "完成市場研究：(1) Gumroad n8n 模板包確認有人在賣（$19–$47），繁中完全空白；(2) Systeme.io 聯盟計畫 60% 終身循環，繁中評測零競爭；(3) AI 費用計算器互動工具 SEO 機會高。寫入 3 個具體提案到 newAssetProposals：A) n8n台灣模板包 Gumroad，B) Systeme.io 繁中評測+聯盟，C) AI費用計算器互動頁。已清除 strategist directives（已閱讀並納入本輪行動）。",
-      "result": "ok - 3 proposals written"
-    },
-    {
-      "date": "2026-04-11",
-      "agent": "strategist",
-      "action": "strategy-review + article deploy",
-      "detail": "半月策略審計：完成全面資產盤點（3站共22篇文章）。部署 ai-tools-tw 新文章：cursor-3-review-2026.html（⭐⭐⭐優先題材）。寫入 directives 給 seo-writer / content-ops / researcher。",
-      "result": "ok"
-    },
-    {
-      "date": "2026-04-11",
-      "agent": "content-ops",
-      "action": "internal-link optimization x5 articles",
-      "detail": "【autodev-ai 主站 4 篇 + ai-tools-tw 1 篇】確認 n8n 和 workflow-automation 聯盟連結均已到位（DigitalOcean + Hahow 皆有）。新增延伸閱讀區塊：(1) telegram-bot-business-guide → 連到 n8n、line-bot-tutorial、ai-customer-service-line；(2) line-bot-tutorial-2026 → 連到 n8n、ai-customer-service-line、line-bot-cost；(3) how-to-write-ai-prompts → 延伸閱讀補 ai-customer-service-line 和 n8n；(4) n8n-automation-tutorial-2026 → 連到 telegram-bot、workflow-automation、small-business-automation、line-bot-tutorial；(5) ai-tools-tw/rag-explained → 連到 ai-agents-2026、ai-coding-tools、n8n-vs-make（低引用文章互連）。整體策略：強化 n8n/LINE Bot/Telegram 互連群，提升被引用最少的文章（telegram、line-bot-tutorial、how-to-write）的內部引用量。",
-      "result": "ok"
-    },
-    {
-      "date": "2026-04-11",
-      "agent": "content-ops",
-      "action": "internal-link optimization x5 articles",
-      "detail": "【autodev-ai 主站 4 篇 + ai-tools-tw 1 篇】確認 n8n 和 workflow-automation 聯盟連結均已到位（DigitalOcean + Hahow 皆有）。新增延伸閱讀區塊：(1) telegram-bot-business-guide → 連到 n8n、line-bot-tutorial、ai-customer-service-line；(2) line-bot-tutorial-2026 → 連到 n8n、ai-customer-service-line、line-bot-cost；(3) how-to-write-ai-prompts → 延伸閱讀補 ai-customer-service-line 和 n8n；(4) n8n-automation-tutorial-2026 → 連到 telegram-bot、workflow-automation、small-business-automation、line-bot-tutorial；(5) ai-tools-tw/rag-explained → 連到 ai-agents-2026、ai-coding-tools、n8n-vs-make（低引用文章互連）。整體策略：強化 n8n/LINE Bot/Telegram 互連群，提升被引用最少文章的內部引用量。",
-      "result": "ok"
-    },
-    {
-      "date": "2026-04-11",
-      "agent": "content-ops",
-      "action": "site-health-check",
-      "detail": "全站健檢完成。所有主要 URL 正常 (HTTP 200)：autodev-ai.com、ai-tools-tw、ai-tools-en、mcp/、所有 blog 文章。發現並修復 3 個問題：(1) ai-tools-tw index.html nav 含 3 個死連結 (about.html、trends/、tools/) → 已修復，改為評測/MCP工具庫/客製化開發；(2) multimodal-ai.html 卡片連結 404 → 暫改指向 blog/ index，並加 directive 給 seo-writer 補寫文章；(3) ai-tools-en 無 sitemap.xml → 加 directive 給 builder 處理。Hahow affiliate 403 僅在 curl 無 User-Agent 時發生，加 browser headers 後 200 正常，屬 bot 防護，非真正失效。",
-      "result": "ok - 3 issues fixed/escalated"
-    },
-    {
-      "date": "2026-04-12",
-      "agent": "researcher",
-      "action": "market-research Round 2: new affiliate channels + digital product gaps + traffic channels",
-      "detail": "新發現 3 個未申請的高佣金聯盟：(1) n8n Cloud 30% 循環 12 個月（我們已有多篇 n8n 文章，直接補連結即可獲利，緊急優先）；(2) ElevenLabs 22% 循環 12 個月（繁中評測空白，AI 配音需求旺）；(3) Perplexity 有 Affiliate（細節待確認）。數位產品缺口：繁中完全沒有「n8n 台灣版自動化模板包」在 Gumroad，建議建立。台灣需求缺口：AI 客服 LINE Bot 自架教學、Claude Code 繁中入門、MCP 入門教學。流量新管道：Reddit 是 2026 AI 搜尋引用第一來源，建議在 r/n8n 回答問題；iThome 鐵人賽下半年是最高品質反向連結機會。已寫 directive 給 strategist 申請 n8n Cloud + ElevenLabs affiliate。market-notes.md 更新完整。",
-      "result": "ok - market-notes.md updated, directives written"
-    },
-    {
-      "date": "2026-04-11",
-      "agent": "researcher",
-      "action": "tech-research Round 3: GitHub trending + MCP ecosystem + n8n updates + token optimization + agent frameworks",
-      "detail": "6 大發現：(1) Agent Skills 生態系爆發 — Claude Code/Gemini CLI/Codex 全支援 Skills 系統（.md 格式），MCP Market 已有 20,000+ skills，繁中零教學，是卡位機會；(2) n8n v2.0 Publish/Save 分離 + v2.6.x HITL（Human-in-the-Loop）审批功能，繁中 HITL 教學完全空白；(3) MCP 四大廠（OpenAI/Microsoft/Google/Amazon）全面支援，n8n MCP Server 進榜 Top 10；(4) Token 優化：Prompt Caching 可省 90% input、Claude 4 Token-Efficient Tools 省 14-70% output，建議我們自己的 agent 系統分模組讀取 state 省 token；(5) AI Agent Framework：LangGraph 和 OpenAI Swarm 是 2026 token 效率最優方案；(6) Gemini CLI vs Claude Code 比較文繁中完全空白，搜尋量高。已寫 directives 給 strategist + seo-writer。dev-notes.md 更新。",
-      "result": "ok - dev-notes.md created, 3 directives written"
-    },
-    {
       "date": "2026-04-11",
       "agent": "researcher",
       "action": "competitor-watch + affiliate research",
@@ -567,6 +469,14 @@
       "detail": "【Round 16 — 2026-04-18 00:30 UTC】7 大發現：(1) Viktor（Zeta Labs）確認 PH Week 16 榜首，Slack-native AI coworker，3000+工具，$1M ARR/3小時，n8n Cloud 對比聯盟機會；(2) OutlierKit 30% 循環 12個月 affiliate 確認可申請（outlierkit.com/p/affiliate），TubeBuddy 比較文雙聯盟機會 ⭐⭐⭐；(3) apfel（HN #5 全月 743 points）—免費解鎖 macOS Tahoe 內建 AI，無需 API key，MCP 整合，繁中零教學，Setapp 聯盟自然搭配；(4) LangAlpha（HN #33）—Claude Code for Wall Street，LangGraph 多 Agent 股票研究，MIT 開源，台灣投資族受眾 + DataCamp 聯盟；(5) Eve（HN #60）—企業級 OpenClaw 代管服務，autodev-ai 接案頁自然導流；(6) Setapp $25/人固定佣金（Impact 平台），台灣繁中評測空白 ⭐⭐⭐；(7) 比較 affiliate 機會：OutlierKit + Setapp 兩個新高佣金聯盟均可立即申請，無需等 Ivan 人工介入。已寫入 topic-ideas.md（7 個新條目 + affiliate 摘要表）。已寫 2 條新 directive 給 strategist（OutlierKit + Setapp 申請），1 條給 seo-writer（TubeBuddy vs OutlierKit 比較文）。",
       "result": "ok — 7 new topic-ideas entries, 2 affiliate leads, directives written",
       "revenueImpact": "high — OutlierKit 30%循環 + Setapp $25/人，兩者合計預估 US$300–850/月；Viktor + apfel 搶先評測佔位"
+    },
+    {
+      "date": "2026-04-18",
+      "agent": "seo-writer",
+      "action": "new-article: DeerFlow 2.0 vs Dify vs n8n (autodev-ai)",
+      "detail": "部署三強比較文 deerflow-vs-dify-vs-n8n-2026.html。2600+字，5維度比較表，使用場景分流，VPS部署費用，FAQ JSON-LD x5，延伸閱讀4篇。DO 聯盟主CTA(1/3處+尾部) + Systeme.io副CTA。blog/index.html置頂 + sitemap.xml更新。",
+      "result": "ok",
+      "revenueImpact": "high - 三方比較頁3倍關鍵字覆蓋，繁中零競爭，DO+Systeme.io聯盟雙CTA"
     }
   ],
   "directives": {
