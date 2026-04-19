@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-19T03:07Z",
+  "lastUpdated": "2026-04-19T13:00Z",
   "lastResearchDate": "2026-04-19",
   "sites": {
     "autodev-ai": {
@@ -1905,7 +1905,7 @@
     "history": []
   },
   "fbStrategy": {
-    "lastResearched": "2026-04-12",
+    "lastResearched": "2026-04-19",
     "sourcesAnalyzed": [
       "電腦王阿達 (kocpctw)",
       "科技新報 TechNews (technewsinside)",
@@ -2189,7 +2189,10 @@
         "結尾帶互動問題（提升留言率）",
         "每則貼文 3-5 個 hashtag：#AI工具 #自動化 + 主題相關",
         "圖片優先：至少配 1 張圖或資訊圖卡",
-        "不要純轉貼，要加個人觀點或一句話摘要"
+        "不要純轉貼，要加個人觀點或一句話摘要",
+        "同一發文時段只推 1 篇主打文；避免 3-4 篇不同站文章在同分鐘連發。",
+        "英文文章不要直接原文外連發粉專；先轉成中文觀點版或延後到其他渠道。",
+        "優先使用「鉤子句 + 重點摘要 + 第一則留言放連結」格式；外連不要直接放主文。"
       ],
       "postTemplates": {
         "articlePromo": "🔥 {吸睛標題，帶數字或問句}\n\n{2-3 句重點摘要，帶個人觀點}\n\n{互動問題} 👇\n\n#AI工具 #自動化 #{主題tag}",
@@ -2204,9 +2207,92 @@
         "持續追蹤競品粉專（電腦王阿達、科技新報）的新玩法，有值得學的寫入 fbStrategy.learnings"
       ],
       "performance": {
-        "weeklyReviews": [],
-        "winPatterns": [],
-        "failPatterns": [],
+        "weeklyReviews": [
+          {
+            "weekEnding": "2026-04-19",
+            "summary": "本週抓到 34 則週內貼文，其中可視為主動經營貼文以中文摘要/comment-link 格式表現最好；04:00 UTC 批量 body-link 分發幾乎全零互動。Facebook Graph API 目前無法用現有 token 取回 post_impressions / post_engaged_users / post_clicks 實值，因此本週先以可讀取的貼文層互動訊號做代理分析。",
+            "totals": {
+              "postsAnalyzed": 30,
+              "engagedPosts": 7,
+              "zeroEngagementPosts": 23,
+              "commentLinkPosts": 7,
+              "bodyLinkPosts": 22
+            },
+            "topSignals": [
+              {
+                "headline": "💡 GEO 是什麼？2026 台灣品牌如何讓 ChatGPT、Perplexity、Claude 主動推薦你",
+                "reason": "連結放留言區，主文保持乾淨，較符合 FB 觸及規則；標題/內文有數字或清單感，利於點擊；結尾有互動導向，不只是丟連結；有摘要式 bullet，降低理解成本"
+              },
+              {
+                "headline": "💡 GLM",
+                "reason": "連結放留言區，主文保持乾淨，較符合 FB 觸及規則；有摘要式 bullet，降低理解成本"
+              },
+              {
+                "headline": "💡 ",
+                "reason": "連結放留言區，主文保持乾淨，較符合 FB 觸及規則；有摘要式 bullet，降低理解成本"
+              },
+              {
+                "headline": "🔍 Cloudways 評測 2026：AI 開發者最值得用的雲端主機？台灣人怎麼選",
+                "reason": "連結放留言區，主文保持乾淨，較符合 FB 觸及規則；標題/內文有數字或清單感，利於點擊；結尾有互動導向，不只是丟連結；有摘要式 bullet，降低理解成本"
+              },
+              {
+                "headline": "💡 ",
+                "reason": "連結放留言區，主文保持乾淨，較符合 FB 觸及規則；有摘要式 bullet，降低理解成本"
+              }
+            ],
+            "weakSignals": [
+              {
+                "headline": "📝 DigitalOcean vs Vercel 2026: Which Is Better for Indie Hackers?",
+                "reason": "主文直接放外連，可能壓低觸及；內容偏像自動分發摘要，個人觀點不足；CTA過早導向離站，互動誘因弱"
+              },
+              {
+                "headline": "📝 Claude Code 成本追蹤 2026：ccusage + Claudoscope 讓 AI 帳單完全透明",
+                "reason": "主文直接放外連，可能壓低觸及；內容偏像自動分發摘要，個人觀點不足；CTA過早導向離站，互動誘因弱"
+              },
+              {
+                "headline": "📝 GEO 是什麼？2026 台灣品牌如何讓 ChatGPT、Perplexity、Claude 主動推薦你",
+                "reason": "主文直接放外連，可能壓低觸及；內容偏像自動分發摘要，個人觀點不足；CTA過早導向離站，互動誘因弱"
+              },
+              {
+                "headline": "📝 Hahow AI 課程推薦 2026：7 門最值得學的 AI 課完整評測",
+                "reason": "主文直接放外連，可能壓低觸及；內容偏像自動分發摘要，個人觀點不足；CTA過早導向離站，互動誘因弱"
+              },
+              {
+                "headline": "📝 Systeme.io vs ClickFunnels 2026: Which Funnel Builder Is Worth It?",
+                "reason": "主文直接放外連，可能壓低觸及；內容偏像自動分發摘要，個人觀點不足；CTA過早導向離站，互動誘因弱"
+              }
+            ],
+            "apiLimitation": "Graph API 對 post_impressions / post_engaged_users 回傳 metric invalid；post_impressions_unique / post_clicks 等可查詢但目前回傳空 data。需檢查 token 權限、Page insights 可用性或改用正確版本/metric mapping。"
+          }
+        ],
+        "winPatterns": [
+          {
+            "date": "2026-04-19",
+            "pattern": "高意圖導流文改用「主文講重點 + 連結放第一則留言」比直接貼外連更健康",
+            "evidence": "本週有互動的貼文都集中在 comment-link 格式（如 Cloudways、LINE Bot 費用、Telegram Bot、AI 訂閱比較、GEO 摘要版），而 body-link/批量分發貼文幾乎全零互動。",
+            "howToApply": "未來中文主力貼文優先採 comment-link；英文站/純分發貼文若要發，需改寫本地化鉤子，不直接貼裸連結。"
+          },
+          {
+            "date": "2026-04-19",
+            "pattern": "「💡/🔥 + 問題句/數字 + 📋文章重點」的摘要式貼文，比單純「完整文章看這裡」更能拿到初始互動",
+            "evidence": "有留言紀錄的幾篇都使用 hook emoji + 摘要重點 + 問句收尾；純標題+連結格式幾乎沒有回應。",
+            "howToApply": "延續摘要卡格式：首行鉤子、第二段價值承諾、第三段3-5個 bullet、結尾互動問題。"
+          }
+        ],
+        "failPatterns": [
+          {
+            "date": "2026-04-19",
+            "pattern": "同一時段連發多篇不同站點文章，且多數是 body-link，容易互相稀釋與零互動",
+            "evidence": "4/17-4/19 多個 04:00 UTC 連發批次幾乎全部 0 互動；同時包含 autodev-ai / ai-tools-tw / ai-tools-en 三站混發。",
+            "howToAvoid": "單次時段最多發 1 篇主打文；其餘延後排程，避免同時段洗版。"
+          },
+          {
+            "date": "2026-04-19",
+            "pattern": "英文貼文直接丟連結，在目前粉專受眾結構下互動非常弱",
+            "evidence": "本週英文章節（DigitalOcean vs Vercel、Systeme.io vs ClickFunnels、CapCut vs Descript 等）皆為 body-link 且 0 互動。",
+            "howToAvoid": "英文文若要發 FB，需先改成中文觀點包裝；否則優先放 X/LinkedIn/英文站渠道，不占用粉專黃金時段。"
+          }
+        ],
         "learnings": []
       }
     }
