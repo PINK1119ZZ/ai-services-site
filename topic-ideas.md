@@ -4,6 +4,60 @@
 
 ---
 
+## 2026-04-20（Researcher Round 20：Monday趨勢掃描 + GEO工具爆發 + Claude Code桌面改版）
+
+> 本輪執行時間：2026-04-20 00:30 UTC | 搜尋範圍：HN April Top、Reddit r/AI_Agents、GitHub trending、新 affiliate 機會掃描
+
+### 🏆 最高優先（30%+ recurring affiliate 確認）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量（估）| 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|------------|---------|----------|---------|
+| 2026-04-20 | **LLMClicks.ai 評測 2026（GEO/AI能見度追蹤）** | `llmclicks ai 評測`、`geo 工具台灣`、`ai search visibility 工具`、`chatgpt 品牌曝光監控` | 中（快速成長，繁中=0） | **30% 循環 recurring（high-ticket：Agency方案 $199/月）** | **US$200–600/月（30%/月；Agency轉換=US$60/次/月）** | ai-tools-tw ⭐⭐⭐ |
+| 2026-04-20 | **Answrr AI 接待員 vs 傳統客服比較（補強版）** | `ai 電話接待員 台灣`、`answrr 評測`、`ai receptionist smb 台灣` | 中-低（完全藍海） | **30% LIFETIME recurring**（tryanswrr.com/affiliate）| **US$300–900/月（lifetime結構，94%留存率）** | ai-tools-tw ⭐⭐⭐ |
+| 2026-04-20 | **GEO工具完整比較頁 2026（10+工具）** | `generative engine optimization 工具`、`ai seo 工具比較 2026`、`geo vs seo 工具台灣`、`best geo tools 2026` | 高（市場爆發期）| LLMClicks.ai 30% + Writesonic GEO模塊 30% + 接案導流 | **US$400–1200/月（比較頁3倍關鍵字覆蓋）** | autodev-ai ⭐⭐⭐ |
+
+### 💎 高價值但不含 30%+ affiliate 的題材
+
+| 日期 | 工具 | 關鍵字 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|---------|----------|---------|
+| 2026-04-20 | **Parallel AI（parallellabs.app）評測 2026** | `parallel ai 評測`、`ai 自動化平台 台灣`、`ai employee 台灣`、`video generation ai 2026` | Parallel AI Affiliate（佣金率待確認，月費$99-297，潛力高）| **US$150–500/月（企業受眾，高ACV）** | autodev-ai ⭐⭐ |
+| 2026-04-20 | **Claude Code Desktop 桌面版完整教學（含 Routines）** | `claude code 桌面版教學`、`claude code routines 台灣`、`claude code parallel session`、`claude 多工 agent` | Claude Pro/Max 升級（Anthropic 無公開聯盟，帶 DO 副CTA）| **US$80–200/月（流量高，轉換率中）** | ai-tools-tw ⭐⭐ |
+| 2026-04-20 | **jmux：AI Agent 開發環境（HN Show）** | `tmux ai agent 開發`、`jmux 教學`、`claude code 終端機整合` | DO VPS 部署聯盟 + DataCamp 學習路徑 | **US$50–150/月（開發者受眾精準）** | autodev-ai ⭐ |
+| 2026-04-20 | **Robofy AI Chatbot 評測（建立 AI Chatbot Agency）** | `ai chatbot 台灣 官網`、`robofy 評測`、`ai 客服機器人 white label` | **Robofy 30% 循環 12個月**（robofy.ai/affiliate）| **US$100–350/月（12個月期）** | ai-tools-tw ⭐⭐ |
+| 2026-04-20 | **AIClicks.io vs LLMClicks.ai vs Profound：GEO追蹤工具三強比較** | `ai visibility tool 比較`、`geo tracking tool 2026`、`llm citation monitor 台灣` | LLMClicks.ai 30% + 接案導流（GEO服務） | **US$200–600/月（三方比較=3倍關鍵字）** | autodev-ai ⭐⭐⭐ |
+
+### 💰 本輪新聯盟發現摘要
+
+| 工具 | 佣金 | Cookie | 申請連結 | 特色 | 優先序 |
+|------|------|--------|---------|------|--------|
+| **LLMClicks.ai** | 30% 循環 recurring | 待確認 | llmclicks.ai/blog/ai-visibility-tool-affiliate-program/ | GEO/AI能見度追蹤，Agency $199/月，高ticket | ⭐⭐⭐ 立即申請 |
+| **Robofy** | 30% 循環 12個月 | Stripe自動月付 | robofy.ai/affiliate | AI Chatbot白牌，30分鐘建站，零代碼 | ⭐⭐ 申請 |
+| **Parallel AI（parallellabs.app）** | 待確認（月費$99-297） | 待確認 | parallellabs.app（affiliate待查） | AI Employee平台，Veo3/Sora2影片生成，$99-297/月 | ⭐⭐ 確認佣金後申請 |
+
+### 📊 本輪市場訊號
+
+**GEO/AI能見度工具爆發（2026 April核心趨勢）：**
+- AIClicks.io / LLMClicks.ai / Profound / Rankscale / Writesonic GEO 等10+工具湧現
+- 台灣企業GEO需求：AppLabx確認台灣已有GEO agency（autodev-ai.com接案導流已部署對）
+- 台灣繁中GEO工具評測/比較文：幾乎空白 → 最大藍海
+
+**Claude Code Desktop 桌面版（4/14-4/15 雙發布）：**
+- 多session並行 + 拖曳佈局 + Routines（雲端排程）
+- Reddit/X稱「品質生活革命」，台灣繁中教學queue仍積壓（directive已在seo-writer queue）
+- 注意：Routines 使用量有每日上限（按方案分），token最高16x消耗需警示
+
+**HN April 2026 亮點（非主流/長尾機會）：**
+- jmux（AI agent開發環境，tmux-based）→ 開發者受眾，DO VPS聯盟
+- Kimi把自己介紹為「Claude」→ 病毒話題，可做「AI模型誠信度」比較文
+
+**Reddit r/AI_Agents 2026 April熱議：**
+- 最熱問題：「實際工作的underrated AI工具」→ 我們的工具評測文可以在此引流
+- Continual Learning研究熱（Google Nested Learning）→ 技術類，非直接變現
+
+---
+
+
+
 ## 2026-04-19（Researcher Round 19：競品監控 + Murf AI新聯盟 + TTS四方比較升級）
 
 > 本輪執行時間：2026-04-19 03:07 UTC | 搜尋範圍：雷蒙三十競品追蹤、PH April月榜確認、Murf AI新聯盟、TTS市場掃描

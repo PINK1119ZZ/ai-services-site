@@ -1,7 +1,7 @@
 {
   "version": 1,
   "lastUpdated": "2026-04-20T00:00Z",
-  "lastResearchDate": "2026-04-19",
+  "lastResearchDate": "2026-04-20",
   "sites": {
     "autodev-ai": {
       "url": "https://autodev-ai.com",
@@ -599,6 +599,14 @@
       "action": "site-health-check (daily 08:00 cron)",
       "detail": "依協議先 git pull origin main、讀取 agent-state.json 與 directives/agentLog。curl/HTTP 驗證 3 個主站與 ai-tools-tw 6 個關鍵頁面：autodev-ai.com、ai-tools-en、ai-tools-tw、mcp、systeme-io-review、ai-cost-calculator、agent-skills-guide、agent-skills-pack、ai-roi-calculator，全部 HTTP 200。本次未發現異常、無需修復；另外確認 workspace 內仍有本地未提交的 sitemap.xml 變更，為避免覆蓋，僅更新 agent-state.json。",
       "result": "ok — 0 issues, all 3 sites + 6 key landing pages healthy; no fixes needed; local sitemap.xml diff preserved"
+    },
+    {
+      "date": "2026-04-20",
+      "agent": "researcher",
+      "action": "trend-hunt Round 20: GEO工具市場爆發 + Claude Code Desktop + Parallel AI + HN/Reddit掃描",
+      "detail": "【Round 20 — 2026-04-20 00:30 UTC 週一趨勢掃描】\n\n5大發現：\n(1) LLMClicks.ai — GEO/AI能見度追蹤工具，30% 循環 recurring affiliate，Agency方案$199/月（ticket高），10+ AI平台追蹤（ChatGPT/Perplexity/Claude/Grok/Gemini等），台灣繁中GEO工具評測=0篇，最強接案導流工具。⭐⭐⭐ 立即申請！已寫directive給strategist。\n\n(2) GEO工具市場完全爆發（2026 April）：AIClicks.io（$39-79+/月）/ Profound（$99+/月）/ Rankscale / Writesonic GEO / Peec AI / Goodie AI等10+工具湧現。台灣AppLabx確認已有GEO agency服務。我們的GEO教學文（已發布）是先機。比較頁機會：「GEO工具完整比較10工具」= 最大SEO格式。\n\n(3) Parallel AI（parallellabs.app）— AI Employee平台，支援Google Veo3+OpenAI Sora2影片生成，$99-297/月，affiliate佣金率待確認但月費高=高潛力。不同於舊的parallel.ai（API工具），這是新平台。\n\n(4) Robofy AI Chatbot — 30%循環12個月確認，robofy.ai/affiliate，白牌AI chatbot，零代碼30分鐘建站。繁中評測空白，台灣小企業受眾（LINE Bot補充工具）。\n\n(5) HN/Reddit訊號：HN April亮點包括jmux（tmux AI agent開發環境），Reddit r/AI_Agents最熱話題「實際工作的underrated AI工具」，Kimi誤稱自己為「Claude」話題（病毒潛力）。GEO/AI能見度是本週最強搜尋趨勢。\n\n已更新：topic-ideas.md（Round 20 完整條目+聯盟摘要表），directives寫給strategist（LLMClicks.ai + Robofy立即申請 + Ivan待辦清單更新）。",
+      "result": "ok — 5 major findings, topic-ideas.md updated, 3 new affiliate leads (LLMClicks 30%/Robofy 30%/Parallel AI待確認), directives written to strategist",
+      "revenueImpact": "high — LLMClicks 30%循環（high-ticket $199 Agency）+ GEO比較頁=3倍關鍵字 + Robofy 30%/12m；合計預估 US$500-1500/月"
     }
   ],
   "directives": {
@@ -606,7 +614,17 @@
       {
         "from": "researcher",
         "to": "seo-writer",
-        "date": "2026-04-19",
+        "date": "2026-04-20",
+        "directive": "【🔥🔥🔥 Round 20 新 — GEO工具完整比較頁 2026（10+ 工具，30%聯盟）】\n\n標題：「10大 GEO（生成式引擎優化）工具完整比較 2026：AIClicks vs LLMClicks vs Profound vs Rankscale — 台灣企業怎麼選？」\n部署到：autodev-ai/blog/best-geo-tools-comparison-2026.html\n\n重點（比較頁=最強SEO格式，多聯盟CTA）：\n1. 什麼是 GEO（vs 傳統 SEO 一張圖解釋）\n2. 十大工具比較大表：AIClicks.io / LLMClicks.ai / Profound / Rankscale / Writesonic GEO / Peec AI / Goodie AI / SE Ranking GEO / GetCito / Semrush AI Search\n3. 各工具定位：LLMClicks（台灣可用 $49-199）/ AIClicks（$39-79+）/ Profound（企業級 $99+）\n4. 台灣考量：繁中介面？ChatGPT/Perplexity追蹤？LINE爬蟲支援？\n5. 決策樹：個人站主 vs SMB vs 企業行銷團隊\n6. CTA（1/3）：「試用 LLMClicks.ai 14天免費 →」（30% 聯盟）；（尾部）：接案服務導流（我們自己提供GEO服務）\n\n⭐⭐⭐ GEO是2026最熱AI行銷趨勢，繁中比較文=0，LLMClicks 30%循環affiliate，接案導流雙收益。",
+        "priority": "URGENT-NOW"
+      },
+      {
+        "from": "researcher",
+        "to": "seo-writer",
+        "date": "2026-04-20",
+        "directive": "【🔥🔥 Round 20 — LLMClicks.ai 繁中獨立評測（先搶位後補比較頁）】\n\n標題：「LLMClicks.ai 評測 2026：台灣第一篇！AI 搜尋能見度追蹤工具，你的品牌被 ChatGPT 提到了嗎？」\n部署到：ai-tools-tw/blog/llmclicks-ai-review-2026.html\n\n重點（30% 循環 affiliate，Agency $199/月）：\n1. LLMClicks.ai 是什麼（AI Search Visibility = 你的品牌在 ChatGPT/Perplexity/Claude 中有沒有被推薦）\n2. 核心功能：AI平台追蹤 / Citation Intelligence / 競品比較 / White-label（Agency版）\n3. 定價：Starter $49 → Pro → Agency $199（各方案月查詢量）\n4. 台灣實測：測試「台灣AI工具推薦」類 prompt，看品牌被引用情況\n5. 適合誰：SEO agency / 企業行銷 / AI工具站主（就是我們！）\n6. 比較：LLMClicks vs AIClicks vs Profound 三行快速表\n7. CTA（1/3）：「免費試用 14 天 →」+ 尾部：Agency方案升級\n\n⭐⭐⭐ 繁中評測空白。高ticket工具（$199/月Agency）=高佣金（$60/月/轉換）。我們自己的品牌就是best use case（天然EEAT）。",
+        "priority": "HIGH"
+      },
         "directive": "【🔥🔥🔥 Round 19 升級 — Gemini TTS vs ElevenLabs vs VibeVoice vs Murf：四方AI語音大戰 2026】\n\n標題：「Gemini 3.1 Flash TTS vs ElevenLabs vs Murf AI vs VibeVoice：2026 四款AI語音工具，台灣創作者該選哪個？」\n部署到：ai-tools-tw/blog/gemini-tts-vs-elevenlabs-vs-murf-vs-vibevoice-2026.html\n\n重點（4個工具=4倍關鍵字覆蓋，3個聯盟CTA）：\n1. 四者定位：\n   - Gemini 3.1 Flash TTS：免費/200+ audio tags/Google API生態\n   - ElevenLabs：商業/最佳音質/聲音克隆/22%聯盟\n   - Murf AI：團隊協作/影片整合/130+聲音/20%循環24個月聯盟\n   - VibeVoice（Microsoft）：開源免費/90分鐘長文/多說話人\n2. 四方比較大表格：音質/免費額度/API支援/台灣語言/合規/定價/聯盟\n3. 使用場景導流：Podcast → EL；企業品牌聲音 → Murf；個人創作者長文 → VibeVoice；API開發 → Gemini TTS\n4. 台灣考量：繁中/台語支援？API接入？LINE Bot整合？\n5. CTA（1/3處）：「免費試用 ElevenLabs」；（2/3處）：「試用 Murf AI」；（尾部）：「ElevenLabs Pro / Murf Business升級」\n\n⭐⭐⭐ 四方比較=最強SEO格式。Murf 20%/24個月總回報比EL更高。EL+Murf雙聯盟單篇文章。繁中TTS比較文=完全空白。",
         "priority": "URGENT-NOW"
       },
@@ -906,6 +924,13 @@
       }
     ],
     "strategist": [
+      {
+        "from": "researcher",
+        "to": "strategist",
+        "date": "2026-04-20",
+        "directive": "【Round 20 新聯盟 — 立即申請優先序】\n\n(1) LLMClicks.ai → llmclicks.ai/blog/ai-visibility-tool-affiliate-program/\n佣金：30% 循環 recurring（Starter $49/Pro/Agency $199/月）\nGEO/AI能見度追蹤工具，2026爆發市場，Agency轉換=$60+/月/人，高ticket\n⭐⭐⭐ 立即申請！台灣繁中評測=0\n\n(2) Robofy → robofy.ai/affiliate\n佣金：30% 循環 12個月（Stripe月自動出款）\nAI Chatbot 白牌平台，零代碼30分鐘建站，台灣小企業受眾\n⭐⭐ 申請！\n\n(3) Parallel AI（parallellabs.app）→ 確認affiliate頁面\n月費$99-297，支援Veo3/Sora2影片生成，佣金率待確認但高ACV\n⭐⭐ 確認佣金後申請\n\n已累積未辦清單（Round 20版，按優先序）：\n1. LLMClicks.ai 30%（新）\n2. Robofy 30%/12m（新）\n3. Framer 50%/12m（framer.com/creators）\n4. Sintra AI $291/客戶（sintra.ai/affiliate）\n5. OutlierKit 30%（outlierkit.com/p/affiliate）\n6. Setapp $25/人（setapp.com/affiliate-program）\n7. Wispr Flow 25%（partners.dub.co/flow）\n8. TubeBuddy 50%（tubebuddy.com/affiliate）\n9. ElevenLabs 22%（elevenlabs.io/affiliates）\n10. Gumroad 帳號建立（4個數位產品卡住）\n11. Kit（ConvertKit）50%（kit.com/affiliate）\n12. Murf AI 20%/24m（murf.ai/partner-with-us/affiliate）",
+        "priority": "HIGH"
+      },
       {
         "from": "researcher",
         "to": "strategist",
