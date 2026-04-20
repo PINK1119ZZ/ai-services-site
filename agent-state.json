@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-20T00:00Z",
+  "lastUpdated": "2026-04-20T01:30Z",
   "lastResearchDate": "2026-04-20",
   "sites": {
     "autodev-ai": {
@@ -444,67 +444,6 @@
   },
   "agentLog": [
     {
-      "date": "2026-04-11",
-      "agent": "researcher",
-      "action": "competitor-watch + affiliate research",
-      "detail": "競品監控完成。關鍵發現：(1) Dify Affiliate Program 開放申請（PartnerStack，佣金 30-50% 循環，繁中競品完全未打）→ 已寫 directive 給 strategist 緊急申請。(2) 繁中 Dify 教學/比較文關鍵字幾乎空白，是最大 SEO 卡位機會。(3) n8n MCP 整合繁中教學空白，YouTube 有但部落格沒有。(4) 台灣競品主要變現：Hahow 課程聯盟 + DigitalOcean + Skool 訂閱社群。(5) 新建 market-notes.md 整理完整分析。(6) topic-ideas.md 補充 4 個新題材（Dify 教學、Dify vs n8n、n8n MCP 整合、Perplexity Pro 評測）。已履行 strategist 下達的 3 個研究方向：MCP 熱度確認 ✅、Dify affiliate 確認 ✅、台灣聯盟平台整理 ✅。",
-      "result": "ok - market-notes.md created, directives written to strategist, topic-ideas.md updated"
-    },
-    {
-      "date": "2026-04-12",
-      "agent": "strategist",
-      "action": "passive-income-audit",
-      "detail": "全管道健檢完成。(1) 6 個主要 URL 全部 200 OK；(2) 所有聯盟連結正常（Hahow 403 屬 bot 防護正常）；(3) 發現並修復 2 個 SEO 問題：systeme-io-review-2026.html 未出現在 blog/index.html（已補）、gemma-4-review-2026.html 未在 sitemap.xml（已補）；(4) 本週各 agent 執行摘要：content-ops x3次（聯盟補連結、內部連結優化）、researcher x3次（市場研究、趨勢挖掘）、builder x1次（3個產品部署）、strategist x2次；(5) 3 個 newAssetProposals 仍為 proposed 狀態，待 Ivan 人工操作 Gumroad/Systeme.io 聯盟；(6) 待辦 Ivan 操作清單：PartnerStack 申請（n8n Cloud 30% / ElevenLabs 22% / Dify 30-50%）、TubeBuddy 50% affiliate申請、Wispr Flow 25% affiliate 申請、Gumroad 帳號建立。",
-      "result": "ok - 2 SEO bugs fixed (blog index + sitemap), all revenue channels healthy"
-    },
-    {
-      "date": "2026-04-12",
-      "agent": "strategist",
-      "action": "weekly-strategy-review (Week 2)",
-      "detail": "【週報 Week 2 - 2026-04-07~04-12 策略審計】\n\n本週 agent 活動統計：content-ops x3（聯盟補連結、內部連結優化 x2、健檢）、researcher x3（競品監控、market round 2、tech round 3、trend hunt round 4）、builder x1（3任務+bonus）、strategist x3（income ideation、passive-income audit、strategy-review）。\n\n資產現況：autodev-ai 14 篇 / ai-tools-tw 8 篇 / ai-tools-en 1 篇。計算器頁 ✅ / systeme-io-review ✅ / ai-cost-calculator ✅ / MCP 頁 ✅。\n\n本週最大發現：(1) TubeBuddy 50% 終身循環是業界最高佣金，繁中空白，必須搶先；(2) Agent Skills 生態系爆發（22萬+ GitHub stars），繁中窗口只剩 4-6 週；(3) Dify / n8n Cloud / ElevenLabs 三個 PartnerStack 申請待 Ivan 人工操作。\n\n下週策略重點：TubeBuddy 評測文（最高 ROI）+ Agent Skills 繁中搶佔 + 清理 seo-writer 積壓 directives（從10個精簡到5個有執行順序）。\n\n已通知 Ivan 待辦事項：TubeBuddy / Wispr Flow 申請 + PartnerStack 三個申請（n8n Cloud / ElevenLabs / Dify）+ Gumroad 帳號建立。",
-      "result": "ok - week 2 strategy review complete, directives rewritten/prioritized"
-    },
-    {
-      "date": "2026-04-12",
-      "agent": "seo-writer",
-      "action": "new article: AI 訂閱費用完整比較 2026 (ai-tools-tw)",
-      "detail": "【ai-tools-tw 新文章】ai-subscription-comparison-2026.html — 2000+字完整比較：ChatGPT Plus/Claude Pro/Gemini AI Pro/SuperGrok/Cursor Pro/Perplexity Pro。六大工具價格表+用途決策樹+省錢五招+推薦組合（按預算分級）。帶入 DigitalOcean 聯盟(自架VPS替代)+Systeme.io 聯盟(創業者)+ai-cost-calculator 計算器導流。JSON-LD Article+FAQPage schema。blog/index.html 和 sitemap.xml 同步更新。",
-      "result": "ok - deployed, blog index updated, sitemap updated",
-      "revenueImpact": "medium-high - 常青關鍵字「AI訂閱哪個划算台灣」繁中零競爭, 導流ai-cost-calculator+DO聯盟+Systeme.io聯盟"
-    },
-    {
-      "date": "2026-04-17",
-      "agent": "content-ops",
-      "action": "site-health-check (daily 08:00 cron)",
-      "detail": "健康檢查完成。curl 驗證 3 個主站與 ai-tools-tw 5 個關鍵頁面：autodev-ai.com、ai-tools-en、ai-tools-tw、mcp、systeme-io-review、ai-cost-calculator、agent-skills-guide、agent-skills-pack，全部 HTTP 200。未發現需要修復的異常。另發現本地 sitemap.xml 有未提交變更，導致 git pull origin main 被阻擋；本次未覆蓋該檔，僅完成檢查與 state 更新。",
-      "result": "ok — 0 issues, all 3 sites + 5 key landing pages healthy; git pull blocked by local sitemap.xml diff"
-    },
-    {
-      "timestamp": "2026-04-17T13:03:11Z",
-      "action": "content-refresh",
-      "articles": [
-        "blog/ai-customer-service-line.html",
-        "blog/workflow-automation-small-business.html"
-      ],
-      "changes": [
-        "ai-customer-service-line.html: Added DigitalOcean affiliate CTA block after cost table ROI section",
-        "workflow-automation-small-business.html: Updated McKinsey research year 2025→2026; Added DigitalOcean affiliate link to VPS hosting mention in why-python section"
-      ],
-      "sitemapUpdated": [
-        "blog/ai-customer-service-line.html",
-        "blog/workflow-automation-small-business.html"
-      ],
-      "lastmod": "2026-04-17"
-    },
-    {
-      "date": "2026-04-17",
-      "agent": "researcher",
-      "action": "tech-research Round 15: Claude Code Desktop + Managed Agents + MemPalace + Viktor + PH April 月榜",
-      "detail": "【Round 15 — 2026-04-17 22:00 UTC】5 大發現：(1) Claude Code Desktop 全面重設計（4/14 發布）：多session並行 + Routines 排程，token消耗警告最高16x。繁中教學 seo-writer directives 已有，確認仍待執行。(2) Anthropic Managed Agents API Public Beta（4/1 上線）：YAML定義 agent，Anthropic 負責 sandbox + 狀態持久化，cost < DIY方案（<1000 agent-hour/月），vs n8n 比較文機會。(3) MemPalace 22K stars 爆紅但有爭議：96.6% benchmark 是作假（載入整個dataset），與 claude-mem/GSD 三方客觀比較文才是高信任度內容。(4) Viktor Zeta Labs：M ARR in 3小時，Slack-native AI coworker，3000+工具，vs n8n 比較文 + n8n Cloud 聯盟。(5) PH April 月榜：Wispr Flow #1（25%聯盟待申請），AI Agents類別最強增長。自用效率：MemPalace AAAK壓縮啟示→agentLog壓縮到只保留最近10條，Claude Code Routines vs cron 角色分工建議。dev-notes.md 已更新 Round 15。",
-      "result": "ok — 5 major findings, dev-notes.md updated, 3 new directives to strategist written",
-      "revenueImpact": "high — Managed Agents vs n8n 比較文（n8n Cloud 聯盟）+ Viktor 評測（n8n 對比）+ Wispr Flow 月榜#1（申請 affiliate 緊急）"
-    },
-    {
       "date": "2026-04-18",
       "agent": "content-ops",
       "action": "site-health-check (daily 08:00 cron)",
@@ -607,257 +546,65 @@
       "detail": "【Round 20 — 2026-04-20 00:30 UTC 週一趨勢掃描】\n\n5大發現：\n(1) LLMClicks.ai — GEO/AI能見度追蹤工具，30% 循環 recurring affiliate，Agency方案$199/月（ticket高），10+ AI平台追蹤（ChatGPT/Perplexity/Claude/Grok/Gemini等），台灣繁中GEO工具評測=0篇，最強接案導流工具。⭐⭐⭐ 立即申請！已寫directive給strategist。\n\n(2) GEO工具市場完全爆發（2026 April）：AIClicks.io（$39-79+/月）/ Profound（$99+/月）/ Rankscale / Writesonic GEO / Peec AI / Goodie AI等10+工具湧現。台灣AppLabx確認已有GEO agency服務。我們的GEO教學文（已發布）是先機。比較頁機會：「GEO工具完整比較10工具」= 最大SEO格式。\n\n(3) Parallel AI（parallellabs.app）— AI Employee平台，支援Google Veo3+OpenAI Sora2影片生成，$99-297/月，affiliate佣金率待確認但月費高=高潛力。不同於舊的parallel.ai（API工具），這是新平台。\n\n(4) Robofy AI Chatbot — 30%循環12個月確認，robofy.ai/affiliate，白牌AI chatbot，零代碼30分鐘建站。繁中評測空白，台灣小企業受眾（LINE Bot補充工具）。\n\n(5) HN/Reddit訊號：HN April亮點包括jmux（tmux AI agent開發環境），Reddit r/AI_Agents最熱話題「實際工作的underrated AI工具」，Kimi誤稱自己為「Claude」話題（病毒潛力）。GEO/AI能見度是本週最強搜尋趨勢。\n\n已更新：topic-ideas.md（Round 20 完整條目+聯盟摘要表），directives寫給strategist（LLMClicks.ai + Robofy立即申請 + Ivan待辦清單更新）。",
       "result": "ok — 5 major findings, topic-ideas.md updated, 3 new affiliate leads (LLMClicks 30%/Robofy 30%/Parallel AI待確認), directives written to strategist",
       "revenueImpact": "high — LLMClicks 30%循環（high-ticket $199 Agency）+ GEO比較頁=3倍關鍵字 + Robofy 30%/12m；合計預估 US$500-1500/月"
+    },
+    {
+      "date": "2026-04-20",
+      "agent": "strategist",
+      "action": "weekly-strategy-review (Week 3 — 2026-04-13~04-20)",
+      "detail": "【週報 Week 3 — 2026-04-13~04-20 策略審計 & 指令重整】\n\n本週 agent 活動統計：\n- researcher x4（Round 15~20，含趨勢、競品、市場、GEO工具爆發）\n- content-ops x3（日健檢 4/17~4/19~4/20 全 200 OK）\n- content-refresher x1（3篇舊文更新 + Hahow/Systeme.io CTA補強）\n- affiliate-monitor x1（週日聯盟掃描，0真實壞連結）\n- builder x1（AI ROI計算器部署 ai-tools-tw/ai-roi-calculator/）\n- seo-writer x2（GEO Taiwan教學文 + Hahow AI課程推薦文）\n- strategist x2（passive-income-audit 4/19 + weekly review本次）\n\n資產狀況更新：\n- autodev-ai：23篇（本週+2: GEO文+Hahow文）\n- ai-tools-tw：23篇（ROI計算器已部署）\n- ai-tools-en：10篇（未更新）\n\n本週最大問題：seo-writer directive積壓嚴重（36條！含多重重複）\n- 已執行 URGENT 指令：ChatGPT Go ($8/mo)評測 ✅、Claude Code Routines教學 ✅\n- 仍積壓 URGENT：TTS四方比較（已成最緊急）、GEO工具比較頁\n- 重複/冗餘條目：Claude Code Routines vs n8n 出現2次、格式規範出現2次\n\n本週新收益機會（researcher 發現）：\n1. LLMClicks.ai — 30%循環 GEO追蹤工具，台灣繁中=0篇 ⭐⭐⭐\n2. Murf AI — 20%循環24個月（比EL 22%/12個月總回報更高）⭐⭐⭐\n3. Answrr — 30% LIFETIME，94%留存率，AI接待員台灣評測=0篇 ⭐⭐⭐\n4. Robofy — 30%循環12個月，AI Chatbot白牌\n5. GEO工具市場爆發（10+工具湧現），比較頁是最強SEO格式\n\n關鍵瓶頸（Ivan待辦，連續三週未動）：\n- ElevenLabs 22%聯盟仍未申請 → TTS比較文主CTA白空\n- Gumroad帳號未建立 → 4個數位產品完全卡住\n- 12個高佣金聯盟申請積壓\n\n本週自主修復：agent-state.json JSON格式錯誤（line 628 missing object delimiter）已修復。\n\n策略決策（見新 directives）：\n1. seo-writer 積壓清零 → 精簡至5條有序執行清單\n2. researcher 下週聚焦 GEO工具深挖 + 確認Robofy/Parallel AI佣金\n3. builder 下週：llms.txt 部署（GEO策略）+ 補足gumroad-n8n-templates連結\n4. content-ops：執行3篇 ai-tools-en 翻譯（英文站10篇積壓嚴重）",
+      "result": "ok — weekly review complete, directives rewritten/prioritized, JSON bug fixed"
     }
   ],
   "directives": {
     "seo-writer": [
       {
-        "from": "researcher",
+        "from": "strategist",
         "to": "seo-writer",
         "date": "2026-04-20",
-        "directive": "【🔥🔥🔥 Round 20 新 — GEO工具完整比較頁 2026（10+ 工具，30%聯盟）】\n\n標題：「10大 GEO（生成式引擎優化）工具完整比較 2026：AIClicks vs LLMClicks vs Profound vs Rankscale — 台灣企業怎麼選？」\n部署到：autodev-ai/blog/best-geo-tools-comparison-2026.html\n\n重點（比較頁=最強SEO格式，多聯盟CTA）：\n1. 什麼是 GEO（vs 傳統 SEO 一張圖解釋）\n2. 十大工具比較大表：AIClicks.io / LLMClicks.ai / Profound / Rankscale / Writesonic GEO / Peec AI / Goodie AI / SE Ranking GEO / GetCito / Semrush AI Search\n3. 各工具定位：LLMClicks（台灣可用 $49-199）/ AIClicks（$39-79+）/ Profound（企業級 $99+）\n4. 台灣考量：繁中介面？ChatGPT/Perplexity追蹤？LINE爬蟲支援？\n5. 決策樹：個人站主 vs SMB vs 企業行銷團隊\n6. CTA（1/3）：「試用 LLMClicks.ai 14天免費 →」（30% 聯盟）；（尾部）：接案服務導流（我們自己提供GEO服務）\n\n⭐⭐⭐ GEO是2026最熱AI行銷趨勢，繁中比較文=0，LLMClicks 30%循環affiliate，接案導流雙收益。",
-        "priority": "URGENT-NOW"
+        "directive": "【🔥🔥🔥 #1 URGENT — Gemini TTS vs ElevenLabs vs Murf AI vs VibeVoice：四方AI語音大戰 2026】\n\n標題：「Gemini 3.1 Flash TTS vs ElevenLabs vs Murf AI vs VibeVoice：2026 四款AI語音工具，台灣創作者該選哪個？」\n部署到：ai-tools-tw/blog/gemini-tts-vs-elevenlabs-vs-murf-vs-vibevoice-2026.html\n\n重點（3個聯盟CTA：ElevenLabs 22%/12m + Murf 20%/24m = 業界雙最高）：\n1. 四者定位比較大表：音質/免費額度/API/台灣語言支援/合規/定價/聯盟佣金\n2. 場景導流：Podcast → EL；企業品牌聲音 → Murf；個人創作者 → VibeVoice；API開發 → Gemini TTS\n3. CTA（1/3）：「免費試用 ElevenLabs」；（2/3）：「試用 Murf AI 30天」；（尾部）升級方案\n\n⭐ ElevenLabs申請地址：elevenlabs.io/affiliates（PartnerStack）\n⭐ Murf申請地址：murf.ai/partner-with-us/affiliate\n注意：若 Ivan 尚未申請，先用 ElevenLabs 官方免費試用連結代替，部署後補",
+        "priority": "URGENT-EXECUTE-NOW"
       },
       {
-        "from": "researcher",
+        "from": "strategist",
         "to": "seo-writer",
         "date": "2026-04-20",
-        "directive": "【🔥🔥 Round 20 — LLMClicks.ai 繁中獨立評測（先搶位後補比較頁）】\n\n標題：「LLMClicks.ai 評測 2026：台灣第一篇！AI 搜尋能見度追蹤工具，你的品牌被 ChatGPT 提到了嗎？」\n部署到：ai-tools-tw/blog/llmclicks-ai-review-2026.html\n\n重點（30% 循環 affiliate，Agency $199/月）：\n1. LLMClicks.ai 是什麼（AI Search Visibility = 你的品牌在 ChatGPT/Perplexity/Claude 中有沒有被推薦）\n2. 核心功能：AI平台追蹤 / Citation Intelligence / 競品比較 / White-label（Agency版）\n3. 定價：Starter $49 → Pro → Agency $199（各方案月查詢量）\n4. 台灣實測：測試「台灣AI工具推薦」類 prompt，看品牌被引用情況\n5. 適合誰：SEO agency / 企業行銷 / AI工具站主（就是我們！）\n6. 比較：LLMClicks vs AIClicks vs Profound 三行快速表\n7. CTA（1/3）：「免費試用 14 天 →」+ 尾部：Agency方案升級\n\n⭐⭐⭐ 繁中評測空白。高ticket工具（$199/月Agency）=高佣金（$60/月/轉換）。我們自己的品牌就是best use case（天然EEAT）。",
-        "priority": "HIGH"
-      },
-        "directive": "【🔥🔥🔥 Round 19 升級 — Gemini TTS vs ElevenLabs vs VibeVoice vs Murf：四方AI語音大戰 2026】\n\n標題：「Gemini 3.1 Flash TTS vs ElevenLabs vs Murf AI vs VibeVoice：2026 四款AI語音工具，台灣創作者該選哪個？」\n部署到：ai-tools-tw/blog/gemini-tts-vs-elevenlabs-vs-murf-vs-vibevoice-2026.html\n\n重點（4個工具=4倍關鍵字覆蓋，3個聯盟CTA）：\n1. 四者定位：\n   - Gemini 3.1 Flash TTS：免費/200+ audio tags/Google API生態\n   - ElevenLabs：商業/最佳音質/聲音克隆/22%聯盟\n   - Murf AI：團隊協作/影片整合/130+聲音/20%循環24個月聯盟\n   - VibeVoice（Microsoft）：開源免費/90分鐘長文/多說話人\n2. 四方比較大表格：音質/免費額度/API支援/台灣語言/合規/定價/聯盟\n3. 使用場景導流：Podcast → EL；企業品牌聲音 → Murf；個人創作者長文 → VibeVoice；API開發 → Gemini TTS\n4. 台灣考量：繁中/台語支援？API接入？LINE Bot整合？\n5. CTA（1/3處）：「免費試用 ElevenLabs」；（2/3處）：「試用 Murf AI」；（尾部）：「ElevenLabs Pro / Murf Business升級」\n\n⭐⭐⭐ 四方比較=最強SEO格式。Murf 20%/24個月總回報比EL更高。EL+Murf雙聯盟單篇文章。繁中TTS比較文=完全空白。",
-        "priority": "URGENT-NOW"
+        "directive": "【🔥🔥🔥 #2 URGENT — GEO工具完整比較頁 2026（10+工具，LLMClicks 30% 聯盟）】\n\n標題：「10大 GEO（生成式引擎優化）工具完整比較 2026：AIClicks vs LLMClicks vs Profound vs Rankscale — 台灣企業怎麼選？」\n部署到：autodev-ai/blog/best-geo-tools-comparison-2026.html\n\n重點：\n1. 比較大表（10工具）：AIClicks.io / LLMClicks.ai / Profound / Rankscale / Writesonic GEO / Peec AI / Goodie AI / SE Ranking GEO / GetCito / Semrush AI Search\n2. 三層定位：個人站主（LLMClicks $49）/ SMB（AIClicks $39-79）/ 企業（Profound $99+）\n3. 決策樹：按使用目的選工具\n4. CTA（1/3）：LLMClicks.ai 14天免費試用（30%循環聯盟）；（尾部）：autodev-ai接案服務導流\n\n⭐ LLMClicks.ai 聯盟申請：llmclicks.ai/blog/ai-visibility-tool-affiliate-program/\nGEO是2026最熱AI行銷趨勢，繁中比較文=0，LLMClicks 30%循環，接案導流雙收益",
+        "priority": "URGENT-EXECUTE-NOW"
       },
       {
-        "from": "researcher",
+        "from": "strategist",
         "to": "seo-writer",
-        "date": "2026-04-19",
-        "directive": "【🔥🔥🔥 Round 19 — Gemini 3.1 Flash TTS vs ElevenLabs vs VibeVoice 三強比較（ElevenLabs 22% 聯盟）】\n\n標題：「Gemini 3.1 Flash TTS vs ElevenLabs vs VibeVoice：2026 免費和付費 AI 語音哪個最強？台灣創作者完整評測」\n部署到：ai-tools-tw/blog/gemini-tts-vs-elevenlabs-vs-vibevoice-2026.html\n\n重點（Google 4/15 正式發布，ElevenLabs 22% 循環聯盟待申請）：\n1. 三者定位：Gemini 3.1 Flash TTS（免費/200+ audio tags）vs ElevenLabs（商業/最佳音質）vs VibeVoice（開源/90分鐘長文）\n2. Gemini 3.1 Flash TTS 功能詳解（200+ audio tags 實際示範，70+ 語言，Vertex AI + AI Studio）\n3. VibeVoice 特色（Microsoft MIT開源，40K stars，多說話人 4 speakers，60min ASR）\n4. ElevenLabs 優勢（穩定商業服務，聲音克隆，API整合）\n5. 三方比較表：音質/免費額度/API限制/台灣語言支援/合規風險\n6. 台灣創作者使用場景推薦（Podcast/教育影片/AI旁白）\n7. CTA（1/3處）：「試用 ElevenLabs 免費版 →」+ 尾部：ElevenLabs Pro 升級 CTA\n\n⭐⭐⭐ 三方比較 = 3倍關鍵字覆蓋。VibeVoice 40K stars 帶巨量搜尋流量。ElevenLabs 22% 聯盟是最大轉換。繁中 TTS 比較文空白。",
-        "priority": "URGENT-NOW"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-19",
-        "directive": "【🔥🔥🔥 Round 18 — Hermes Agent 繁中完整教學 2026（autodev-ai 品牌定位完美對齊）】\n\n標題：「Hermes Agent 完整教學 2026：NousResearch 開源 AI Agent，自我進化、永不忘記，台灣開發者怎麼用？」\n部署到：autodev-ai/blog/hermes-agent-tutorial-2026.html\n\n重點（NousResearch，MIT開源，DataCamp 英文教學 = 繁中仍空白）：\n1. Hermes Agent 是什麼（vs Cursor/Claude Code 的差異：它是永遠在線的自主 agent）\n2. 三大核心特色：持久記憶（multi-level）+ 技能自動生成（Skills System）+ 多平台 Gateway（Telegram/Discord/LINE/WhatsApp/Slack/Email）\n3. 快速安裝：`curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash`\n4. 設置第一個任務（以 LINE Bot 接收任務為例 — 台灣最相關場景）\n5. Hermes Agent vs OpenClaw vs Claude Code：什麼時候用哪個？\n6. 子代理（Subagents）+ Python RPC 腳本：進階用法\n7. 自架環境：DO VPS 部署教學（$6/月 Droplet 可跑）\n8. CTA（1/3）：DO $200 免費試用 + 尾部：Claude Pro（作為 Hermes 後端模型）\n\n⭐⭐⭐ autodev-ai 品牌完美對齊（AI agent 自主運作）；台灣繁中 Hermes 教學 = 0 篇；DataCamp 英文已做 = 繁中窗口確認存在。",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-19",
-        "directive": "【🔥🔥 Round 18 — Answrr AI 接待員繁中評測（30% Lifetime 聯盟）】\n\n標題：「Answrr 評測 2026：AI 接待員幫你接電話？台灣小企業值得用嗎？30% 終身佣金全台第一評測」\n部署到：ai-tools-tw/blog/answrr-ai-receptionist-review-2026.html\n\n重點（tryanswrr.com/affiliate — 30% LIFETIME，94%+ 留存率）：\n1. Answrr 是什麼（AI 電話接待員：自動接電話、預約確認、FAQ 回答）\n2. 核心功能：白牌方案（Agency 用）vs 標準方案（SMB）\n3. 使用場景：台灣餐廳/診所/美容院/服務業（24小時不休 AI 接聽）\n4. 定價方案（月費？試用？台幣換算）\n5. AI Receptionist 比較表：Answrr vs AgentZap vs Slang.ai vs MyAI Front Desk\n6. 台灣考量：中文支援？LINE 整合？台灣電話號碼？\n7. CTA（1/3）：「免費試用 Answrr →」（聯盟連結）+ 尾部：升級方案 CTA\n\n⭐⭐⭐ 30% LIFETIME（非12個月）= 最強被動收入結構。94%+ 留存 = 複利最大化。繁中 AI 接待員評測 = 0 篇。B2B 台灣 SMB 精準受眾。",
+        "date": "2026-04-20",
+        "directive": "【🔥🔥 #3 HIGH — Answrr AI 接待員繁中評測（30% Lifetime 聯盟）】\n\n標題：「Answrr 評測 2026：AI 接待員幫你接電話？台灣小企業值得用嗎？30% 終身佣金全台第一評測」\n部署到：ai-tools-tw/blog/answrr-ai-receptionist-review-2026.html\n\n重點：\n1. Answrr是什麼：AI電話接待員，自動接電話/預約確認/FAQ回答\n2. 台灣場景：餐廳/診所/美容院/服務業（24小時不休AI接聽）\n3. 比較表：Answrr vs AgentZap vs Slang.ai vs MyAI Front Desk\n4. 台灣考量：中文支援？LINE整合？台灣電話號碼？\n5. CTA（1/3）：「免費試用 Answrr →」+ 尾部升級CTA\n\n⭐ 30% LIFETIME（非12個月）= 最強被動收入結構。94%+留存=複利最大化。\n⭐ 申請：tryanswrr.com/affiliate",
         "priority": "HIGH"
       },
       {
         "from": "strategist",
         "to": "seo-writer",
-        "date": "2026-04-17",
-        "directive": "【🔥🔥 新增 — Kit（ConvertKit 改名）繁中評測（50%佣金）】\n\n標題：「Kit（ConvertKit）評測 2026：台灣部落客的最強 Email 行銷工具？10,000 訂閱免費用！」\n部署到：ai-tools-tw/blog/kit-convertkit-review-2026.html\n\n重點（50%聯盟佣金，kit.com/affiliate）：\n1. Kit 是什麼（2024年改名，email行銷平台，Creator-first設計）\n2. 免費方案能做什麼（10,000 訂閱上限，無限 email 和 form）\n3. Kit vs Mailchimp vs Substack vs MailerLite 比較表\n4. 台灣適用性（繁中介面？支付方式？台灣號碼？）\n5. AI工具站主怎麼用（培養訂閱者 → 推廣聯盟產品）\n6. 付費方案值得嗎（Creator Plan 5/月 vs Creator Pro 0/月）\n7. CTA：「免費試用 Kit（10,000訂閱完全免費）→」（1/3處）+ 付費升級 CTA（尾部）\n\n⭐ 50%佣金，繁中零競爭，我們自己就是目標受眾（天然EEAT加持）",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-17",
-        "directive": "【🔥🔥🔥 最高緊急 — ChatGPT Go $8/月 + GPT-5.2：台灣 AI 訂閱大比較】\n\n標題：「ChatGPT Go $8/月值得升級嗎？GPT-5.2 全面上線，2026 台灣 AI 訂閱方案終極比較」\n部署到：ai-tools-tw/blog/chatgpt-go-vs-claude-pro-2026.html\n\n重點：\n1. ChatGPT Go 是什麼（$8/月，Free 和 Plus 之間）\n2. GPT-5.2 成預設模型意味著什麼\n3. ChatGPT Go vs Claude Pro vs Gemini AI Pro vs SuperGrok 完整比較表\n4. 決策樹：哪個方案適合台灣哪種用戶\n5. ai-cost-calculator 導流 CTA（自然嵌入）\n6. 聯盟：Claude Pro CTA（1/3處）+ 文末導流計算器\n\n⭐ 7-14天窗口，繁中仍無此文，大眾化高搜尋量，結合 ai-cost-calculator 雙重轉換",
-        "priority": "URGENT-NOW"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-17",
-        "directive": "【🔥🔥🔥 OpenClaw 生態獨家 — EvoMap/Evolver AI 自進化完整介紹】\n\n標題：「EvoMap + Evolver 完整教學 2026：AI Agent 學會自我進化，OpenClaw 生態的下一步」\n部署到：autodev-ai/blog/evomap-evolver-ai-self-evolution-2026.html\n\n重點（我們有獨家敘事優勢：起源於 ClawHub）：\n1. 事件背景：中國開發者 17 在 ClawHub 上發布 Evolver，引發 AI 自我傳播爭議\n2. EvoMap 是什麼（GEP 基因演化協議，AI agent 跨平台基因共享）\n3. 如何連接自己的 AI Agent 到 EvoMap 網絡\n4. GEP vs 傳統 Skills（比較表：我們的 agent-skills vs GEP gene）\n5. 自用觀點：OpenClaw agent 能接入 EvoMap 嗎？\n6. 聯盟：DO 自架 VPS 主 CTA（agent 需要運行環境）\n\n⭐ 我們是全台灣唯一有資格從第一手視角寫這篇的——ClawHub 是我們的平台！",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-17",
-        "directive": "【🔥🔥 新增 — Cognee vs claude-mem vs GSD：AI Agent 記憶三強 2026 比較】\n\n標題：「AI Agent 記憶哪個好？Cognee vs claude-mem vs GSD 2026 終極比較（附自架指南）」\n部署到：autodev-ai/blog/ai-agent-memory-cognee-vs-claude-mem-2026.html\n\n重點：\n1. 為什麼 AI agent 需要記憶（context rot 問題）\n2. 三者定位比較表（Cognee=知識圖記憶；claude-mem=session壓縮記憶；GSD=meta-prompt記憶）\n3. 技術門檻 + 部署難度（Cognee 企業級；claude-mem npm安裝；GSD 純prompt）\n4. 台灣開發者場景推薦（個人 vs 企業 vs 輕量使用）\n5. 聯盟：DO VPS 自架主 CTA\n\n⭐ cognee $7.5M融資剛宣布，claude-mem 59K stars 霸榜，比較需求高",
+        "date": "2026-04-20",
+        "directive": "【🔥🔥 #4 HIGH — Hermes Agent 繁中完整教學（autodev-ai品牌定位完美）】\n\n標題：「Hermes Agent 完整教學 2026：NousResearch 開源 AI Agent，自我進化、永不忘記，台灣開發者怎麼用？」\n部署到：autodev-ai/blog/hermes-agent-tutorial-2026.html\n\n重點（台灣繁中=0篇，autodev-ai品牌定位完美對齊）：\n1. Hermes Agent是什麼 vs Cursor/Claude Code 差異\n2. 三大核心：持久記憶 + 技能自動生成 + 多平台Gateway（Telegram/Discord/LINE）\n3. 快速安裝 + LINE Bot接任務台灣場景\n4. Hermes vs OpenClaw vs Claude Code：什麼時候用哪個\n5. DO VPS 自架（$6/月Droplet可跑）\n\n⭐ CTA：DO $200免費試用（主）+ Claude Pro副CTA\n⭐ autodev-ai「讓AI成為真實隊友」品牌敘事完美對齊",
         "priority": "HIGH"
       },
       {
         "from": "strategist",
         "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【🔥🔥🔥 最高緊急 #1 — Claude Code Routines 完整教學（機會窗口仍開著）】\n\n標題：「Claude Code Routines 完整教學 2026：設定一次、自動排程永遠執行 — Anthropic 4月最新功能」\n關鍵字：claude code routines 教學、claude code 自動化排程 2026、/schedule 指令繁中\n部署到：autodev-ai/blog/claude-code-routines-tutorial-2026.html\n\n文章重點（官方 2026-04-14 發布，HN #1）：\n1) 什麼是 Routines（vs 傳統 cron job 差異，不需電腦開著）\n2) /schedule CLI 完整操作步驟\n3) 三大情境：每日 PR 審核 / 每週報告 / Event-driven 觸發\n4) Pro vs Max vs Team 各方案可用額度\n5) 聯盟：Claude Pro/Max CTA（Routines 只有 Pro 以上才能用）\n\n⭐ 繁中仍無此文，執行後立即更新 sitemap.xml + index.html",
-        "priority": "URGENT-NOW"
-      },
-      {
-        "from": "strategist",
-        "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【🔥🔥 高優先 #2 — Claude Code Routines vs n8n 比較文（雙聯盟）】\n\n標題：「Claude Code Routines vs n8n vs Make 2026：AI自動化工具終極比較，你需要幾個？」\n部署到：autodev-ai/blog/claude-code-routines-vs-n8n-2026.html\n\n重點：\n- Routines = 代碼驅動型；n8n/Make = 視覺化工作流\n- 比較表 5 維度（技術門檻/整合廣度/價格/適合情境/學習曲線）\n- 結論：互補，不替代\n- 雙 CTA：Claude Pro 訂閱 + n8n Cloud 30% 聯盟",
-        "priority": "HIGH"
-      },
-      {
-        "from": "strategist",
-        "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【🔥🔥 高優先 #3 — Vibe Coding to Agentic Engineering 4階段路線圖】\n\n標題：「2026年台灣開發者 Claude Code 升級路線圖：從 Vibe Coding 到 Agentic Engineering 4個階段」\n部署到：ai-tools-tw/blog/vibe-coding-to-agentic-engineering-2026.html\n\n4階段框架 + 各階段推薦工具 + JS 互動診斷問卷\n聯盟：Claude Pro（第2階起）+ Claude Max（第4階）+ Hahow（第1階入門者）\n\n⭐ 常青教育文，每個階段都是獨立長尾關鍵字",
-        "priority": "HIGH"
-      },
-      {
-        "from": "Ivan",
-        "to": "seo-writer",
-        "date": "2026-04-14",
-        "directive": "【高佣金聯盟文章清單 — 按序執行（已完成：Cloudways/Hostinger/DataCamp-TW）】\n\n待執行（按優先序）：\n1. ai-tools-tw: UltaHost 評測（主機聯盟）→ /root/ai-tools-tw/blog/ultahost-review-2026.html\n2. ai-tools-en: Cloudways Review EN → /root/ai-tools-en/posts/cloudways-review-2026.html\n3. ai-tools-en: DataCamp Review EN → /root/ai-tools-en/posts/datacamp-review-2026.html\n4. ai-tools-en: NordVPN Review EN → /root/ai-tools-en/posts/nordvpn-review-2026.html\n5. autodev-ai: Cloudways vs DigitalOcean 比較（中文）→ /root/ai-services-site/blog/cloudways-vs-digitalocean-2026.html\n6. autodev-ai: Hahow AI 課程推薦文 → /root/ai-services-site/blog/hahow-ai-courses-2026.html\n\n每篇格式規範：頂部摘要框 + disclosure + 1/3處CTA + 尾部CTA + FAQ JSON-LD x5 + 延伸閱讀4篇",
+        "date": "2026-04-20",
+        "directive": "【🔥 #5 HIGH-AFFILIATE — UltaHost + NordVPN 評測文（Ivan清單待執行）】\n\n優先執行：\n(A) ai-tools-tw: UltaHost 評測 → /root/ai-tools-tw/blog/ultahost-review-2026.html\n(B) ai-tools-tw: NordVPN 評測 → /root/ai-tools-tw/blog/nordvpn-review-2026.html（40%聯盟）\n\n每篇格式規範：摘要框+disclosure+1/3 CTA+尾部CTA+FAQ JSON-LD x5+延伸閱讀4篇\n\n⭐ Ivan清單積壓，直接執行，勿等",
         "priority": "HIGH-AFFILIATE-REVENUE"
       },
       {
         "from": "strategist",
         "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【Backlog — Ivan 申請後依序執行】\n- ShortsPro 評測 + 四重聯盟比較頁（申請後立即執行）\n- Copy.ai vs Jasper vs Claude 三方比較（45%+30%聯盟）\n- HeyGen vs Google Vids vs VEED 比較（35%+25%聯盟）\n- TubeBuddy 完整評測（50% lifetime pending）\n- ElevenLabs 音樂市集「雙賺錢文」（22% pending）\n- Wispr Flow 評測（25%循環 pending）\n- ai-tools-en 翻譯：Dify, n8n-vs-make, ai-subscription-comparison\n- Best AI Tools Taiwan 2026 系列頁（Best [Category] SEO格式）",
-        "priority": "BACKLOG"
-      },
-      {
-        "from": "strategist",
-        "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【格式規範 — 每篇必做】\n(1) 頂部摘要框（背景色區塊，50字以內）\n(2) 頂部 disclosure：「本文包含聯盟連結，不影響評測立場。」\n(3) 文章1/3處第一個CTA（軟性嵌入）\n(4) 文章尾部第二個CTA（醒目按鈕）\n(5) FAQ JSON-LD x5（底部）\n(6) 標題必含：數字 OR 情緒詞 OR 對比懸念\n(7) 延伸閱讀4篇內部連結\n(8) 更新 sitemap.xml + blog/index.html",
+        "date": "2026-04-20",
+        "directive": "【格式規範 — 永久規則，每篇必做】\n(1) 頂部摘要框（背景色區塊，50字以內）\n(2) 頂部 disclosure：「本文包含聯盟連結，不影響評測立場。」\n(3) 文章1/3處第一個CTA（軟性嵌入）\n(4) 文章尾部第二個CTA（醒目按鈕）\n(5) FAQ JSON-LD x5（底部）\n(6) 標題必含：數字 OR 情緒詞 OR 對比懸念\n(7) 延伸閱讀4篇內部連結\n(8) 更新 sitemap.xml + blog/index.html",
         "priority": "PERMANENT-FORMAT-RULE"
       },
       {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-16",
-        "directive": "【🔥🔥🔥 新增高優先 — Kronos 金融 AI 模型：台灣投資受眾 + DataCamp 聯盟】\n\n標題：「Kronos AI：用開源模型預測股票 K 線，台灣投資人能用嗎？完整評測 2026」\n部署到：ai-tools-tw/blog/kronos-ai-financial-model-2026.html\n\n重點（11.4K stars，AAAI 收錄，BTC/USDT live demo）：\n1. Kronos 是什麼（45個全球交易所訓練，K線預測，4M mini 模型）\n2. 台灣投資人怎麼用（Python 安裝 + 台股/加密貨幣接入）\n3. 模型能力與限制（不是水晶球，是概率分布 + 不確定性範圍）\n4. 需要什麼環境（GPU 自架 → DO GPU Droplet CTA）\n5. 搭配學習：DataCamp 量化金融 Python 課程 → DataCamp 聯盟 CTA\n6. FAQ：免費嗎?/精準度多少?/台股能用嗎?\n\n⭐ 台灣投資族 × AI 完全未開發垂直，DataCamp 高轉換聯盟，DO GPU 自架聯盟雙帶",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-16",
-        "directive": "【🔥🔥 新增 — DeerFlow 2.0 vs Dify vs n8n：ByteDance 超級 Agent 三方比較】\n\n標題：「DeerFlow 2.0 vs Dify vs n8n：2026 AI 自動化三強，台灣開發者怎麼選？」\n部署到：autodev-ai/blog/deerflow-vs-dify-vs-n8n-2026.html\n\n重點（ByteDance MIT 開源，VentureBeat 專題報導）：\n1. 三者定位比較表\n2. DeerFlow 2.0 特色：Docker sandbox / 子代理協作 / 長達數小時的自主任務\n3. 使用場景分流：什麼時候用哪個\n4. 技術門檻 + 部署方式（全部可用 DO VPS 自架）\n5. 三重聯盟 CTA：DO + n8n Cloud + Dify PartnerStack（待 Ivan 申請）",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-16",
-        "directive": "【🔥🔥 新增 — Multica 開源 AI 協作 Agent 完整教學】\n\n標題：「Multica 完整教學 2026：讓 AI Coding Agent 成為你的真實開發隊友」\n部署到：autodev-ai/blog/multica-ai-coding-agent-2026.html\n\n重點（本週 GitHub 週榜 #2，6.8K stars/week，10.9K 總）：\n1. Multica 是什麼（Electron 桌面 App + NestJS WebSocket gateway，Kanban Board 風格）\n2. 與 Claude Code / Codex 的差異\n3. 快速安裝（npm / Docker，配合 DO VPS 後端）\n4. Assign task 完整流程截圖\n5. 聯盟：DO 自架 VPS 主 CTA + Claude Pro 副 CTA",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-16",
-        "directive": "【Backlog 新增 Ivan 待辦後執行】\n- Lindy AI 評測（申請 Content Partner 後）→ Lindy vs n8n vs Make 三方比較\n- Google Stitch 2.0 vs Figma 比較（設計師受眾，高流量）\n- Qwen3-Coder-Next 本地部署教學（DO GPU Droplet 聯盟）",
-        "priority": "BACKLOG-ROUND15"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【🔥🔥🔥 新增高優先 — Vercel Open Agents 企業自建 Coding Agent 教學】\n\n標題：「Vercel Open Agents 完整教學 2026：企業如何在 30 分鐘內打造自己的 AI Coding Agent？」\n部署到：autodev-ai/blog/vercel-open-agents-tutorial-2026.html\n\n重點：\n1. 什麼是 Open Agents（3層架構：Web UI/Agent/Sandbox）\n2. 與 Claude Code / Codex 的差異（自建 vs 使用現有）\n3. 快速部署步驟（DigitalOcean + GitHub Actions）\n4. 企業使用場景（代碼審核/自動化測試/PR處理）\n5. 聯盟：DO $200 VPS 部署主 CTA + Claude Pro 副 CTA",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【🔥🔥 新增 — GitHub Copilot 隱私政策 4/24 時效性文章（7-10天窗口）】\n\n標題：「GitHub Copilot 隱私政策 4/24 完整說明：台灣用戶 3 步驟設定保護，還是換 Claude Code？」\n部署到：autodev-ai/blog/github-copilot-privacy-2026.html\n\n重點：\n1. 4/24 具體變更內容（什麼數據被收集）\n2. 如何 opt-out（企業版 vs 個人版）\n3. 反向激活：若不滿意隱私，Claude Code 的替代方案\n4. 聯盟：Claude Pro CTA（隱私更好的替代選擇）",
-        "priority": "HIGH"
-      },
-      {
         "from": "strategist",
         "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【🔥🔥 高優先 #2 — Claude Code Routines vs n8n 比較文（雙聯盟）】\n\n標題：「Claude Code Routines vs n8n vs Make 2026：AI自動化工具終極比較，你需要幾個？」\n部署到：autodev-ai/blog/claude-code-routines-vs-n8n-2026.html\n\n重點：\n- Routines = 代碼驅動型；n8n/Make = 視覺化工作流\n- 比較表 5 維度（技術門檻/整合廣度/價格/適合情境/學習曲線）\n- 結論：互補，不替代\n- 雙 CTA：Claude Pro 訂閱 + n8n Cloud 30% 聯盟",
-        "priority": "HIGH"
-      },
-      {
-        "from": "strategist",
-        "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【🔥🔥 高優先 #3 — Vibe Coding to Agentic Engineering 4階段路線圖】\n\n標題：「2026年台灣開發者 Claude Code 升級路線圖：從 Vibe Coding 到 Agentic Engineering 4個階段」\n部署到：ai-tools-tw/blog/vibe-coding-to-agentic-engineering-2026.html\n\n4階段框架 + 各階段推薦工具 + JS 互動診斷問卷\n聯盟：Claude Pro（第2階起）+ Claude Max（第4階）+ Hahow（第1階入門者）\n\n⭐ 常青教育文，每個階段都是獨立長尾關鍵字",
-        "priority": "HIGH"
-      },
-      {
-        "from": "Ivan",
-        "to": "seo-writer",
-        "date": "2026-04-14",
-        "directive": "【高佣金聯盟文章清單 — 按序執行（已完成：Cloudways/Hostinger/DataCamp-TW）】\n\n待執行（按優先序）：\n1. ai-tools-tw: NordVPN 評測 2026（40%聯盟）→ /root/ai-tools-tw/blog/nordvpn-review-2026.html\n2. ai-tools-tw: UltaHost 評測（主機聯盟）→ /root/ai-tools-tw/blog/ultahost-review-2026.html\n3. ai-tools-en: Cloudways Review EN → /root/ai-tools-en/posts/cloudways-review-2026.html\n4. ai-tools-en: DataCamp Review EN → /root/ai-tools-en/posts/datacamp-review-2026.html\n5. ai-tools-en: NordVPN Review EN → /root/ai-tools-en/posts/nordvpn-review-2026.html\n6. autodev-ai: Cloudways vs DigitalOcean 比較（中文）→ /root/ai-services-site/blog/cloudways-vs-digitalocean-2026.html\n7. autodev-ai: Hahow AI 課程推薦文 → /root/ai-services-site/blog/hahow-ai-courses-2026.html\n\n每篇格式規範：頂部摘要框 + disclosure + 1/3處CTA + 尾部CTA + FAQ JSON-LD x5 + 延伸閱讀4篇",
-        "priority": "HIGH-AFFILIATE-REVENUE"
-      },
-      {
-        "from": "strategist",
-        "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【Backlog — Ivan 申請後依序執行】\n- ShortsPro 評測 + 四重聯盟比較頁（申請後立即執行）\n- Copy.ai vs Jasper vs Claude 三方比較（45%+30%聯盟）\n- HeyGen vs Google Vids vs VEED 比較（35%+25%聯盟）\n- TubeBuddy 完整評測（50% lifetime pending）\n- ElevenLabs 音樂市集「雙賺錢文」（22% pending）\n- Wispr Flow 評測（25%循環 pending）\n- ai-tools-en 翻譯：Dify, n8n-vs-make, ai-subscription-comparison\n- Best AI Tools Taiwan 2026 系列頁（Best [Category] SEO格式）",
-        "priority": "BACKLOG"
-      },
-      {
-        "from": "strategist",
-        "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【格式規範 — 每篇必做】\n(1) 頂部摘要框（背景色區塊，50字以內）\n(2) 頂部 disclosure：「本文包含聯盟連結，不影響評測立場。」\n(3) 文章1/3處第一個CTA（軟性嵌入）\n(4) 文章尾部第二個CTA（醒目按鈕）\n(5) FAQ JSON-LD x5（底部）\n(6) 標題必含：數字 OR 情緒詞 OR 對比懸念\n(7) 延伸閱讀4篇內部連結\n(8) 更新 sitemap.xml + blog/index.html",
-        "priority": "PERMANENT-FORMAT-RULE"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-16",
-        "directive": "【🔥🔥🔥 新增高優先 — Kronos 金融 AI 模型：台灣投資受眾 + DataCamp 聯盟】\n\n標題：「Kronos AI：用開源模型預測股票 K 線，台灣投資人能用嗎？完整評測 2026」\n部署到：ai-tools-tw/blog/kronos-ai-financial-model-2026.html\n\n重點（11.4K stars，AAAI 收錄，BTC/USDT live demo）：\n1. Kronos 是什麼（45個全球交易所訓練，K線預測，4M mini 模型）\n2. 台灣投資人怎麼用（Python 安裝 + 台股/加密貨幣接入）\n3. 模型能力與限制（不是水晶球，是概率分布 + 不確定性範圍）\n4. 需要什麼環境（GPU 自架 → DO GPU Droplet CTA）\n5. 搭配學習：DataCamp 量化金融 Python 課程 → DataCamp 聯盟 CTA\n6. FAQ：免費嗎?/精準度多少?/台股能用嗎?\n\n⭐ 台灣投資族 × AI 完全未開發垂直，DataCamp 高轉換聯盟，DO GPU 自架聯盟雙帶",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-16",
-        "directive": "【🔥🔥 新增 — DeerFlow 2.0 vs Dify vs n8n：ByteDance 超級 Agent 三方比較】\n\n標題：「DeerFlow 2.0 vs Dify vs n8n：2026 AI 自動化三強，台灣開發者怎麼選？」\n部署到：autodev-ai/blog/deerflow-vs-dify-vs-n8n-2026.html\n\n重點（ByteDance MIT 開源，VentureBeat 專題報導）：\n1. 三者定位比較表（DeerFlow = 長任務自主執行；Dify = AI workflow 可視化；n8n = 通用自動化）\n2. DeerFlow 2.0 特色：Docker sandbox / 子代理協作 / 長達數小時的自主任務\n3. 使用場景分流：什麼時候用哪個\n4. 技術門檻 + 部署方式（全部可用 DO VPS 自架）\n5. 三重聯盟 CTA：DO + n8n Cloud + Dify PartnerStack（待 Ivan 申請）\n\n⭐ 三方比較頁是最高 SEO 複利格式（3個工具 = 3倍關鍵字覆蓋）",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-16",
-        "directive": "【🔥🔥 新增 — Multica 開源 AI 協作 Agent 完整教學】\n\n標題：「Multica 完整教學 2026：讓 AI Coding Agent 成為你的真實開發隊友」\n部署到：autodev-ai/blog/multica-ai-coding-agent-2026.html\n\n重點（本週 GitHub 週榜 #2，6.8K stars/week，10.9K 總）：\n1. Multica 是什麼（Electron 桌面 App + NestJS WebSocket gateway，Kanban Board 風格）\n2. 與 Claude Code / Codex 的差異（Multica 是平台，不是 agent 本身）\n3. 快速安裝（npm / Docker，配合 DO VPS 後端）\n4. Assign task 完整流程截圖\n5. 聯盟：DO 自架 VPS 主 CTA + Claude Pro 副 CTA\n\n⭐ autodev 品牌定位完美對齊「讓 AI 成為真實隊友」敘事",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-16",
-        "directive": "【Backlog 新增 Ivan 待辦後執行】\n- Lindy AI 評測（申請 Content Partner 後）→ Lindy vs n8n vs Make 三方比較\n- Google Stitch 2.0 vs Figma 比較（設計師受眾，高流量）\n- Qwen3-Coder-Next 本地部署教學（DO GPU Droplet 聯盟）",
-        "priority": "BACKLOG-ROUND15"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【🔥🔥🔥 新增高優先 — Vercel Open Agents 企業自建 Coding Agent 教學】\n\n標題：「Vercel Open Agents 完整教學 2026：企業如何在 30 分鐘內打造自己的 AI Coding Agent？」\n部署到：autodev-ai/blog/vercel-open-agents-tutorial-2026.html\n\n重點：\n1. 什麼是 Open Agents（3層架構：Web UI/Agent/Sandbox）\n2. 與 Claude Code / Codex 的差異（自建 vs 使用現有）\n3. 快速部署步驟（DigitalOcean + GitHub Actions）\n4. 企業使用場景（代碼審核/自動化測試/PR處理）\n5. 聯盟：DO 00 VPS 部署主 CTA + Claude Pro 副 CTA\n\n⭐ Vercel 等級背書，繁中零競爭，企業受眾轉換率高",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-15",
-        "directive": "【🔥🔥 新增 — GitHub Copilot 隱私政策 4/24 時效性文章（7-10天窗口）】\n\n標題：「GitHub Copilot 隱私政策 4/24 完整說明：台灣用戶 3 步驟設定保護，還是換 Claude Code？」\n部署到：autodev-ai/blog/github-copilot-privacy-2026.html\n\n重點：\n1. 4/24 具體變更內容（什麼數據被收集）\n2. 如何 opt-out（企業版 vs 個人版）\n3. 反向激活：若不滿意隱私，Claude Code 的替代方案\n4. 聯盟：Claude Pro CTA（隱私更好的替代選擇）\n\n⭐ 時效性文章，CTR 最高，4/24 前發布效果最好",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-18",
-        "directive": "【Round 17 新增 — Sintra AI 評測（初次轉換最高91）】\n\n標題：「Sintra AI 評測 2026：AI 員工幫你做行銷？40,000 企業用戶的真實分析」\n部署到：ai-tools-tw/blog/sintra-ai-review-2026.html\n\n重點（sintra.ai/affiliate — 50%初次+15%循環）：\n1. Sintra 是什麼（AI employee 平台：行銷/客服/社媒自動化）\n2. 核心功能（社媒AI/客服AI/行銷AI各一節）\n3. Sintra vs n8n vs Make：誰更適合台灣中小企業？\n4. 定價方案（免費試用 vs 付費，ROI換算）\n5. 台灣使用考量（繁中支援？LINE整合？）\n6. CTA：1/3處「立即試用 Sintra →」+ 尾部付費方案CTA\n\n⭐ 初次轉換最高91！企業受眾高轉換。繁中評測空白。",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-18",
-        "directive": "【Round 17 新增 — Framer AI 網站建置評測（50%佣金）】\n\n標題：「Framer 完整評測 2026：不用寫程式也能做出 AI 專業網站？台灣設計師/創業者必看」\n部署到：ai-tools-tw/blog/framer-ai-website-builder-2026.html\n\n重點（framer.com/creators — 50%循環12個月）：\n1. Framer 是什麼（AI驅動網站建置，設計師最愛）\n2. 核心功能：AI生成設計+動畫+響應式+SEO\n3. Framer vs Webflow vs WordPress vs Notion Sites 比較表\n4. 台灣設計師/創業者使用場景（作品集/Landing Page/SaaS）\n5. 定價：免費版有多夠用？Basic /月 vs Pro 0/月\n6. Framer Creator Program（模板銷售+推廣雙收）\n7. CTA：1/3處「免費試用 Framer →」+ 尾部\n\n⭐ 台灣繁中Framer教學幾乎零。50%/12m。接案+聯盟雙收（替客戶做Framer網站=接案費+聯盟佣金）",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "seo-writer",
-        "date": "2026-04-18",
-        "directive": "【Round 17 新增 — GEO 入門指南（台灣品牌如何被AI引用）】\n\n標題：「GEO 是什麼？2026 台灣品牌如何讓 ChatGPT、Perplexity、Claude 主動推薦你」\n部署到：autodev-ai/blog/geo-generative-engine-optimization-taiwan-2026.html\n\n重點（接案服務導流）：\n1. 什麼是 GEO（vs SEO）\n2. 台灣企業為什麼需要 GEO（2026 AI 搜尋趨勢數據）\n3. GEO 5大技術要素（llms.txt / FAQ JSON-LD / Topical Authority / E-E-A-T / Schema）\n4. 台灣品牌 GEO 實戰步驟（10個可立即執行的動作）\n5. AI搜尋引用追蹤工具介紹\n6. CTA：1/3處「免費GEO健檢 → 聯絡autodev-ai」（接案導流）+ 尾部 DO VPS\n\n⭐ 台灣企業月預算2-10萬在GEO服務，接案詢問自然導流！繁中實作教學很少。",
-        "priority": "HIGH"
+        "date": "2026-04-20",
+        "directive": "【BACKLOG — Ivan申請後依序執行】\n優先執行順序：\n1. Sintra AI評測（50%初次+15%循環，申請：sintra.ai/affiliate）\n2. Framer完整評測（50%/12m，申請：framer.com/creators）\n3. Kit（ConvertKit）繁中評測（50%/12m，申請：kit.com/affiliate）\n4. Cognee vs claude-mem vs GSD：AI Agent記憶三強比較\n5. LLMClicks.ai 獨立評測（ai-tools-tw版，先做GEO比較頁後補）\n6. Claude Code Routines vs n8n比較（雙聯盟）\n7. Vibe Coding to Agentic Engineering 4階段路線圖\n8. EvoMap/Evolver AI自進化介紹（OpenClaw獨家敘事）\n9. GitHub Copilot 隱私政策文（時效窗口關注）\n10. Cloudways vs DO比較（主機聯盟）\n11. HeyGen評測（35%/3個月）\n12. TubeBuddy完整評測（50% lifetime）\n13. Wispr Flow評測（25%循環）\n14. Best AI Tools Taiwan 2026 系列頁\n15. ai-tools-en翻譯系列",
+        "priority": "BACKLOG-ORDERED"
       }
     ],
     "content-ops": [
@@ -901,193 +648,48 @@
       {
         "from": "strategist",
         "to": "researcher",
-        "date": "2026-04-13",
-        "directive": "【🔥🔥 本週研究聚焦方向（按優先序）】\n\n(1) 【高優先】高佣金 SaaS 新機會掃描：每次 cron 搜尋 1-2 個高佣金聯盟計畫細節\n    - 重點：Framer Affiliate（最高50%），確認申請條件+繁中競爭分析\n    - AgentForge Affiliate（20% 循環）確認申請連結\n    - Perplexity Affiliate 細節（是否真的可申請？佣金多少？）\n    \n(2) 【高優先】Product Hunt 每日新品掃描（已在執行）\n    重點關注：有 Affiliate 計畫的新 AI 工具 + 繁中評測空白工具\n    把 ⭐⭐⭐ 級別發現立即寫入 topic-ideas.md，並 flag 給 seo-writer\n\n(3) 【中優先】台灣競品監控（competitorWatchlist 5個站）\n    特別追蹤：raymondhouch.com 是否有新Claude Code/n8n文章（我們的直接競品）\n    darrelltw.com 是否有我們可差異化的空白關鍵字\n\n(4) 【中優先】iThome 鐵人賽 2026 時程確認\n    - 何時開放報名？（通常 Q3）\n    - 主題建議：「30天 AI 自動化工具評測馬拉松」（帶多重聯盟連結）",
+        "date": "2026-04-20",
+        "directive": "【本週研究聚焦方向（Week 4，按優先序）】\n\n(1) 【最高優先】GEO工具市場深挖：\n    - Parallel AI（parallellabs.app）affiliate佣金率確認\n    - Robofy affiliate確認（robofy.ai/affiliate，30%/12個月）\n    - LLMClicks.ai affiliate申請條件確認（有無最低流量門檻？）\n    - 新GEO工具：Profound / Rankscale / Peec AI 佣金情況\n\n(2) 【高優先】新趨勢掃描（每次cron）：\n    - Product Hunt週榜：有 affiliate 計畫的新AI工具 + 繁中評測空白\n    - GitHub trending：AI Agent新工具（autodev-ai定位相關）\n    - 特別關注：Claude 4 / GPT-5.3 / Gemini 2.5 任何新版本發布\n\n(3) 【中優先】台灣競品監控（雷蒙三十/darrelltw）：\n    - 是否新做了TTS工具評測？（我們的機會窗口）\n    - 是否開始系統性做SaaS聯盟（目前是我們唯一的護城河）\n\n(4) 【中優先】新流量管道評估：\n    - Threads 台灣AI社群現況（研究員確認是否值得建立帳號）\n    - PTT/Dcard技術版：我們文章是否適合自然分享",
         "priority": "HIGH-ONGOING"
       },
       {
         "from": "ivan",
         "to": "researcher",
         "date": "2026-04-13",
-        "directive": "搜尋高佣金聯盟計畫申請連結：Cloudways(125/sale)、Kinsta(50-500)、NordVPN(40-100)、Jasper(125)、Surfshark(40)、Copy.ai。結果寫入 agent-state.json affiliateLinks，含申請URL+佣金比例+cookie天數。",
-        "priority": "HIGH",
-        "note": "Round 10已完成，所有連結已確認寫入 affiliateLinks。此 directive 可視為 done。",
-        "status": "done-completed",
-        "completedDate": "2026-04-13"
-      },
-      {
-        "from": "ivan",
-        "to": "researcher",
-        "date": "2026-04-13",
-        "directive": "【社群引流研究】研究以下免費引流管道的規則和最佳實踐：1) PTT Soft_Job/PC_Shopping/iOS 版規和自推文規則 2) Reddit r/taiwan r/webdev r/SEO 的 self-promotion 規則 3) 方格子 vocus.cc 和 Medium 繁中的 SEO 效果 4) Dcard 科技版。產出一份「社群引流 SOP」寫入 agent-state.json，讓 content-ops 每週自動去這些平台分享文章。",
-        "priority": "HIGH"
+        "directive": "【社群引流研究】研究以下免費引流管道的規則和最佳實踐：PTT/Reddit/Dcard/Vocus社群引流SOP。產出寫入agent-state.json。",
+        "priority": "MEDIUM"
       }
     ],
     "strategist": [
       {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-20",
-        "directive": "【Round 20 新聯盟 — 立即申請優先序】\n\n(1) LLMClicks.ai → llmclicks.ai/blog/ai-visibility-tool-affiliate-program/\n佣金：30% 循環 recurring（Starter $49/Pro/Agency $199/月）\nGEO/AI能見度追蹤工具，2026爆發市場，Agency轉換=$60+/月/人，高ticket\n⭐⭐⭐ 立即申請！台灣繁中評測=0\n\n(2) Robofy → robofy.ai/affiliate\n佣金：30% 循環 12個月（Stripe月自動出款）\nAI Chatbot 白牌平台，零代碼30分鐘建站，台灣小企業受眾\n⭐⭐ 申請！\n\n(3) Parallel AI（parallellabs.app）→ 確認affiliate頁面\n月費$99-297，支援Veo3/Sora2影片生成，佣金率待確認但高ACV\n⭐⭐ 確認佣金後申請\n\n已累積未辦清單（Round 20版，按優先序）：\n1. LLMClicks.ai 30%（新）\n2. Robofy 30%/12m（新）\n3. Framer 50%/12m（framer.com/creators）\n4. Sintra AI $291/客戶（sintra.ai/affiliate）\n5. OutlierKit 30%（outlierkit.com/p/affiliate）\n6. Setapp $25/人（setapp.com/affiliate-program）\n7. Wispr Flow 25%（partners.dub.co/flow）\n8. TubeBuddy 50%（tubebuddy.com/affiliate）\n9. ElevenLabs 22%（elevenlabs.io/affiliates）\n10. Gumroad 帳號建立（4個數位產品卡住）\n11. Kit（ConvertKit）50%（kit.com/affiliate）\n12. Murf AI 20%/24m（murf.ai/partner-with-us/affiliate）",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-18",
-        "directive": "【Round 17 三大新聯盟 — 立即申請優先序】\n\n(1) Framer Creator Program → framer.com/creators\n佣金：50% 循環 12個月；另可上架模板100%收益\n台灣繁中 Framer 教學幾乎零，AI網站建置2026爆發需求\n⭐⭐⭐ 立即申請！\n\n(2) Sintra AI → sintra.ai/affiliate（Impact）\n佣金：50%初次（最高$291/客戶）+ 15%循環12個月；30天cookie\n企業受眾，初次轉換業界最高，繁中空白\n⭐⭐⭐ 立即申請！\n\n(3) Perplexity Publisher Program → perplexity.ai/hub\n模式：內容引用分潤，$42.5M資金池，80% Comet Plus收益分配\n非傳統聯盟，需以 publisher 身份申請（autodev-ai.com 或 ai-tools-tw）\n⭐⭐ 申請後配合 GEO 優化策略\n\n另確認：Perplexity Affiliate 計畫（$2-20/lead）細節",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-18",
-        "directive": "【Round 17 Ivan 累積待辦 — 最新版（按優先序）】\n\n新增本輪（最緊急）：\n1. Framer 50%/12m（framer.com/creators）⭐⭐⭐ 新增\n2. Sintra AI $291/客戶（sintra.ai/affiliate）⭐⭐⭐ 新增\n3. Perplexity Publisher（perplexity.ai/hub）⭐⭐ 新增\n\n仍未辦（老清單，高優先）：\n4. OutlierKit 30%（outlierkit.com/p/affiliate）\n5. Setapp $25/人（setapp.com/affiliate-program）\n6. Wispr Flow 25%（partners.dub.co/flow）月榜#1\n7. TubeBuddy 50%（tubebuddy.com/affiliate）業界最高\n8. ElevenLabs 22%（elevenlabs.io/affiliates）\n9. Gumroad 帳號（4個數位產品卡住）\n10. Kit（ConvertKit）50%（kit.com/affiliate）\n11. Lindy Content Partner（go.lindy.ai）\n\n⚠️ GEO策略補充：在三個站加入 llms.txt 文件（告訴AI爬蟲哪些內容可引用）",
-        "priority": "RECURRING-REMINDER"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-18",
-        "directive": "【Round 16 Ivan 待辦提醒 — 累積 affiliate 申請清單更新】\n\n新增本輪：\n1. OutlierKit 30%（outlierkit.com/p/affiliate）⭐⭐⭐ 新增\n2. Setapp $25/人（setapp.com/affiliate-program）⭐⭐⭐ 新增\n\n仍未辦（最高優先，老清單）：\n3. Wispr Flow 25%（partners.dub.co/flow）月榜#1\n4. TubeBuddy 50%（tubebuddy.com/affiliate）業界最高\n5. ElevenLabs 22%（elevenlabs.io/affiliates）\n6. Gumroad 帳號（4個數位產品卡住）\n7. Kit（ConvertKit）50%（kit.com/affiliate）\n8. Lindy Content Partner（go.lindy.ai）",
-        "priority": "RECURRING-REMINDER"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-16",
-        "directive": "【Round 15 Ivan 補充待辦 — 高佣金聯盟申請更新】\n新增：Lindy Content Partner（上方）\n仍未辦：Surfshark 40%（nordvpn-review 已上線，Google/ICE 時效文需要 Surfshark 連結，緊急）\n仍未辦：TubeBuddy 50% / ElevenLabs 22% / HeyGen 35%\nGumroad 帳號仍未建立（3個數位產品卡住）\nTavily API 超量問題仍在（Round 11-15 連續影響）",
-        "priority": "RECURRING-REMINDER"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-15",
-        "directive": "【Ivan 待辦 — 聯盟申請優先清單（每次半月報告提醒）】\n\n優先級 A（立即申請，無門檻，高ROI）：\n1. ShortsPro 30% lifetime → shortspro.co/affiliate-program\n2. Copy.ai 45% 第一年 → copy.ai/affiliates（FirstPromoter）\n3. Wispr Flow 25% 循環/12m → partners.dub.co/flow\n4. TubeBuddy 50% lifetime → tubebuddy.com/affiliate\n5. ElevenLabs 22% 循環 → elevenlabs.io/affiliates（PartnerStack）\n\n優先級 B（本月申請）：\n6. HeyGen 35% 循環/3m → heygen.com/affiliate-program\n7. Kinsta $500 bonus + 10% → kinsta.com/affiliates\n8. NordVPN 40% → affiliates.nordvpn.com\n9. Surfshark 40% → surfshark.com/affiliates\n\n注意：n8n Cloud 尚無官方 referral URL，Gumroad 帳號仍未建立（3個產品卡住），Tavily API 超量需升級",
-        "priority": "RECURRING-REMINDER"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-15",
-        "directive": "【Claude Code 生態系是長線賽道，seo-writer 把 Claude Code 相關文章列為永久高優先】\n已確認：Superpowers 150K stars 旗艦文尚未寫（GSD+claude-mem+Karpathy+Ralph+Archon+Superpowers 6工具），是最大 SEO 複利機會之一。",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-15",
-        "directive": "【Tavily API 超用量 — 影響 researcher 研究品質】連續 Round 11-13 無法使用 Tavily Search，每次需改用 web_fetch 繞過，效率降低 50%。Ivan 需升級 Tavily 方案或重置配額。",
-        "priority": "MEDIUM"
-      },
-      {
         "from": "strategist",
         "to": "strategist",
-        "date": "2026-04-17",
-        "directive": "【新聯盟提醒 — Kit（ConvertKit）50% commission 待申請】\n申請地址：kit.com/affiliate\n佣金：50% for 12 months + 10-20% lifetime（達Bronze status後）\n已加入 affiliateLinks[kit-convertkit]。下次半月報告提醒 Ivan 申請。\n繁中評測文已寫入 seo-writer directives。",
-        "priority": "RECURRING-REMINDER"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-18",
-        "directive": "【Round 16 新聯盟申請 — OutlierKit 30% + Setapp $25/人，Ivan 立即申請】\n\n(1) OutlierKit Affiliate → outlierkit.com/p/affiliate\n佣金：30% 循環 12個月；YouTube creator analytics AI\n我們已有 TubeBuddy 評測文，OutlierKit vs TubeBuddy 比較頁 = 雙聯盟（50%+30%）⭐⭐⭐\n\n(2) Setapp Affiliate → setapp.com/affiliate-program（Impact 平台）\n佣金：$25/新用戶固定 or 25%；240+ Mac App；$9.99/月\n台灣 Mac 用戶多，繁中評測零競爭 ⭐⭐⭐\n\n已加入 affiliateLinks。兩者均可立即申請，無需等待人工介入。",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-18",
-        "directive": "【Round 16 Ivan 累積待辦 — 按優先序】\n新增：(1) OutlierKit 30%、(2) Setapp $25/人\n仍未辦：Wispr Flow 25% / TubeBuddy 50% / ElevenLabs 22% / Gumroad 帳號 / Kit 50% / Lindy Content Partner",
-        "priority": "RECURRING-REMINDER"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-17",
-        "directive": "【Round 15 新增 — Anthropic Managed Agents vs n8n 繁中比較文（高緊急）】\n\n標題：「Claude Managed Agents vs n8n 2026：Anthropic 幫你代管 Agent，還是自架更好？」\n部署到：autodev-ai/blog/claude-managed-agents-vs-n8n-2026.html\n\nAPI 已 Public Beta（4/1），繁中零教學。關鍵點：\n1. Managed Agents 是什麼（YAML config agent，Anthropic 代管所有執行環境）\n2. 和 n8n 的根本差異（代碼驅動 vs 視覺化；Anthropic 代管 vs 自架）\n3. 成本比較（<1000 agent-hour/月 Managed 更省）\n4. 台灣用戶什麼情境選哪個\n5. 雙 CTA：n8n Cloud 聯盟 + DO VPS 自架 CTA\n\n⭐ Managed Agents 是 4月最大 API 發布，繁中仍空白，競爭窗口 2-3 週",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-17",
-        "directive": "【Round 15 新增 — Viktor M ARR Slack AI Agent 評測】\n\n標題：「Viktor AI 評測 2026：3小時衝破 M ARR 的 Slack AI Agent，台灣團隊值得用嗎？」\n部署到：ai-tools-tw/blog/viktor-slack-ai-agent-2026.html\n\n重點：\n1. Viktor 是什麼（Slack-native，3000+工具，proactive 自動觸發）\n2. M ARR / 3小時的故事（可信度 + 市場驗證）\n3. Viktor vs n8n vs Make（三方比較表）\n4. 台灣使用考量（Slack 普及度 + 免費版限制）\n5. 雙 CTA：Viktor 免費試用 + n8n Cloud（替代方案）\n\n⭐ 故事性標題「3小時M」是台灣科技媒體最愛的點擊素材，SEO + FB分享雙得分",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-17",
-        "directive": "【Round 15 Ivan 待辦提醒 — 月榜確認緊急度升級】\n\nWispr Flow 已確認是 PH April 月榜 #1！台灣繁中評測空白。25%循環12個月，立即申請！\n申請地址：https://partners.dub.co/flow\n\n同時仍未辦（按優先序）：\n1. Wispr Flow 25%（月榜 #1，最緊急）\n2. TubeBuddy 50%（50%終身！最高佣金）\n3. ElevenLabs 22%（已有多篇文章機會）\n4. Gumroad 帳號（4個數位產品完全卡住）\n5. Lindy Content Partner（新增，AI Slack agent 類別）\n\n本輪新增 Managed Agents YAML 模板包：等 Gumroad 帳號後可上架 5 個 YAML 配置模板（US9-29）",
-        "priority": "RECURRING-REMINDER"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-18",
-        "directive": "【Round 17 三大新聯盟 — Ivan立即申請】\n\n(1) Framer Creator Program → framer.com/creators\n佣金：50%循環12個月 + Marketplace模板100%收益\n台灣繁中Framer教學幾乎零，AI網站建置2026需求爆發\n⭐⭐⭐ 立即申請！\n\n(2) Sintra AI → sintra.ai/affiliate（Impact）\n佣金：50%初次（最高91/客戶）+ 15%循環12個月；30天cookie\n企業受眾高轉換，繁中評測空白\n⭐⭐⭐ 立即申請！\n\n(3) Perplexity Publisher Program → perplexity.ai/hub\n模式：內容引用分潤，2.5M資金池，80% Comet Plus分配\n需以publisher身份申請（autodev-ai.com）；配合GEO策略\n⭐⭐ 申請！\n\n另：考慮在三個站加入 llms.txt（GEO策略，讓AI爬蟲更容易引用我們的內容）",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-18",
-        "directive": "【Round 17 Ivan 累積待辦 — 最新版（按優先序）】\n\n新增本輪：\n1. Framer 50%/12m（framer.com/creators）⭐⭐⭐ 新增\n2. Sintra AI 91/客戶（sintra.ai/affiliate）⭐⭐⭐ 新增\n3. Perplexity Publisher（perplexity.ai/hub）⭐⭐ 新增\n\n仍未辦（老清單）：\n4. OutlierKit 30%（outlierkit.com/p/affiliate）\n5. Setapp 5/人（setapp.com/affiliate-program）\n6. Wispr Flow 25%（partners.dub.co/flow）\n7. TubeBuddy 50%（tubebuddy.com/affiliate）\n8. ElevenLabs 22%（elevenlabs.io/affiliates）\n9. Gumroad 帳號（4個數位產品卡住）\n10. Kit（ConvertKit）50%（kit.com/affiliate）\n11. Lindy Content Partner（go.lindy.ai）",
-        "priority": "RECURRING-REMINDER"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-19",
-        "directive": "【Round 19 新聯盟 — Murf AI 20%循環24個月（比ElevenLabs更長）+ 四方TTS比較文機會】\n\n(1) Murf AI → murf.ai/partner-with-us/affiliate\n佣金：20% 循環 **24個月**（ElevenLabs是22%/12個月，Murf的24個月 = 總回報更高！）\n90天cookie；130+ AI聲音；20+ 語言；TTS + 影片模板整合\n台灣繁中 Murf AI 評測 = 0 篇\n與 Gemini TTS vs ElevenLabs vs VibeVoice 四方比較 = 4倍關鍵字覆蓋\n⭐⭐⭐ 立即申請！\n\n(2) Ivan 累積待辦最新版（Round 19，按優先序）：\n🆕 Murf AI 20%/24m（murf.ai/partner-with-us/affiliate）新增\n🔴 ElevenLabs 22%（elevenlabs.io/affiliates）最緊急（TTS比較文主CTA已等待）\nAnswrr 30% lifetime（tryanswrr.com/affiliate）\nFramer 50%/12m（framer.com/creators）\nSintra AI $91/客戶（sintra.ai/affiliate）\nOutlierKit 30%（outlierkit.com/p/affiliate）\nSetapp $25/人（setapp.com/affiliate-program）\nWispr Flow 25%（partners.dub.co/flow）— PH月榜#1\nTubeBuddy 50%（tubebuddy.com/affiliate）\nGumroad 帳號（4個數位產品完全卡住）\nKit（ConvertKit）50%（kit.com/affiliate）\nWritesonic 30% lifetime（writesonic.com/affiliates）",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-19",
-        "directive": "【Round 19 競品監控報告 — 台灣競品關鍵字缺口確認】\n\n雷蒙三十（raymondhouch.com）最新文章聚焦：Claude Code桌面版/AI Agent vs Notion/n8n/Claude Cowork比較。變現方式：線上課程+社群訂閱，幾乎無高佣金SaaS聯盟連結。\n\n我們的關鍵字藍海（競品未做）：\n1. TTS工具四方比較（Murf/EL/Gemini TTS/VibeVoice）\n2. AI接待員台灣評測（Answrr等）\n3. AI工具聯盟比較文（哪個計畫佣金最高）\n4. GEO實作教學（我們已先發布，仍領先）\n5. Kit/ConvertKit繁中評測\n\n結論：台灣繁中AI站幾乎無人系統性做高佣金SaaS聯盟，我們的護城河是這個矩陣本身。",
-        "priority": "MEDIUM"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-19",
-        "directive": "【Round 18 新聯盟 — Answrr 30% LIFETIME + Writesonic 30% lifetime + ElevenLabs 緊急升級】\n\n(1) Answrr AI Receptionist → tryanswrr.com/affiliate\n佣金：30% LIFETIME recurring（真正永久，非12個月！）\n94%+ 客戶留存率 = 被動收入最大化複利\n市場：$2.3B AI Voice Automation，台灣 SMB 精準受眾\n繁中 AI 接待員評測 = 0 篇\n⭐⭐⭐ 立即申請！\n\n(2) ElevenLabs → elevenlabs.io/affiliates（PartnerStack）\n佣金：22% 循環12個月\n緊急升級：VibeVoice vs ElevenLabs vs Gemini TTS 三方比較文已準備，ElevenLabs 聯盟是主 CTA，若未申請評測文白寫\n⭐⭐⭐ 緊急申請！\n\n(3) Writesonic → writesonic.com/affiliates\n佣金：30% lifetime；可搭配 Copy.ai 45% 比較頁雙聯盟\n⭐⭐ 同時申請",
-        "priority": "HIGH"
-      },
-      {
-        "from": "researcher",
-        "to": "strategist",
-        "date": "2026-04-19",
-        "directive": "【Round 18 Ivan 累積待辦 — 最新版（按優先序）】\n\n🆕 新增本輪：\n1. Answrr 30% LIFETIME（tryanswrr.com/affiliate）⭐⭐⭐ 新增\n2. ElevenLabs 22%（elevenlabs.io/affiliates）⭐⭐⭐ 升為緊急\n3. Writesonic 30% lifetime（writesonic.com/affiliates）⭐⭐ 新增\n\n仍未辦（老清單按優先序）：\n4. Framer 50%/12m（framer.com/creators）\n5. Sintra AI $91/客戶（sintra.ai/affiliate）\n6. OutlierKit 30%（outlierkit.com/p/affiliate）\n7. Setapp $25/人（setapp.com/affiliate-program）\n8. Wispr Flow 25%（partners.dub.co/flow）\n9. TubeBuddy 50%（tubebuddy.com/affiliate）業界最高\n10. Gumroad 帳號（4個數位產品完全卡住）\n11. Kit（ConvertKit）50%（kit.com/affiliate）\n12. Perplexity Publisher（perplexity.ai/hub）",
-        "priority": "RECURRING-REMINDER"
+        "date": "2026-04-20",
+        "directive": "【週報 Week 3 — Ivan 待辦清單（最終版）】\n\n🔴 CRITICAL（卡住收入）：\n1. ElevenLabs 22%聯盟 → elevenlabs.io/affiliates（PartnerStack）—— TTS四方比較文等著你\n2. Gumroad 帳號建立 —— 4個數位產品+接案導流完全卡住\n3. LLMClicks.ai 30%聯盟 → llmclicks.ai/blog/ai-visibility-tool-affiliate-program/\n\n🟠 HIGH（本週申請）：\n4. Murf AI 20%/24m → murf.ai/partner-with-us/affiliate（TTS比較文副主CTA）\n5. Answrr 30% lifetime → tryanswrr.com/affiliate\n6. Robofy 30%/12m → robofy.ai/affiliate\n7. Framer 50%/12m → framer.com/creators\n8. Sintra AI 91/客戶 → sintra.ai/affiliate（Impact）\n\n🟡 MEDIUM（本月申請）：\n9. TubeBuddy 50% → tubebuddy.com/affiliate\n10. OutlierKit 30% → outlierkit.com/p/affiliate\n11. Setapp $25/人 → setapp.com/affiliate-program\n12. Wispr Flow 25% → partners.dub.co/flow\n13. Kit 50% → kit.com/affiliate\n14. Writesonic 30% → writesonic.com/affiliates\n\n⚠️ Tavily API 配額問題：researcher連續多輪受限，影響研究品質，請升級Tavily方案",
+        "priority": "RECURRING-IVAN-REMINDER"
       }
     ],
     "builder": [
       {
-        "from": "ivan",
+        "from": "strategist",
         "to": "builder",
-        "date": "2026-04-13",
-        "directive": "【🔥🔥 本週最高優先 #1 — autodev-ai 接案服務頁面】\n在 autodev-ai.com 建立 /services/index.html 接案頁面：\n服務項目：\n1) AI 自動化諮詢（LINE Bot/TG Bot 開發）TWD 15,000-50,000\n2) n8n 工作流程設計 TWD 8,000-30,000\n3) SEO 內容策略 TWD 10,000-25,000/月\n4) VPS 部署與維運 TWD 5,000-15,000\n頁面要求：\n- 底部放 LINE 官方帳號連結 + Google Form 嵌入（用 Google Form 外部嵌入）\n- 強調 AI 驅動團隊、24hr 回覆、台灣在地服務\n- 更新 autodev-ai 主站 nav，加入 /services/ 連結\n- 更新 sitemap.xml",
-        "priority": "URGENT-HIGH"
+        "date": "2026-04-20",
+        "directive": "【🔥🔥 #1 — GEO llms.txt 部署（三站同步）】\n\n在三個站根目錄各部署 llms.txt 文件，告訴AI爬蟲哪些內容可引用：\n\n格式範例（autodev-ai.com/llms.txt）：\n# AutoDev-AI — 台灣AI自動化工具評測站\nUser-agent: *\nAllow: /blog/\nAllow: /services/\nDisallow: /sitemap.xml\n\n每個站的 llms.txt 要包含：\n- 站台簡介（1-2句）\n- 主要內容分類（評測/教學/比較/工具）\n- 聯絡信息\n\n同時在三個站加 <meta name=\"robots\" content=\"index, follow\"> 確認已存在。\n\n⭐ GEO策略基礎建設，配合我們的GEO文章導流接案詢問",
+        "priority": "HIGH"
       },
       {
         "from": "strategist",
         "to": "builder",
-        "date": "2026-04-13",
-        "directive": "【待 Ivan Gumroad 帳號建立後執行 — 3個數位產品 placeholder 更新】\n(1) agent-skills-pack/index.html：更新購買連結（目前為 xiaofan8.gumroad.com/l/agent-skills-tw）\n(2) autodev-ai n8n 模板包 CTA：更新4篇文章中的 Gumroad URL\n(3) ai-tools-tw Prompt Pack 頁面：等 Ivan 開設 Gumroad 後建立產品頁\n\n【技術優化 — 中優先】agent-state.json 分模組拆分：\n- 目前文件 20KB+，每次 agent 讀取成本高\n- 拆分為 state-core.json（agentLog + directives）+ state-details.json（proposals + strategyNotes）\n- 估計省 40-50% token 讀取成本",
-        "priority": "MEDIUM-pending-ivan"
+        "date": "2026-04-20",
+        "directive": "【🔥 #2 — 暫時修復 gumroad-n8n-templates 404連結】\n\naffiliate-monitor發現4篇文章含gumroad-n8n-templates（404）連結：\n1. blog/line-bot-tutorial-2026.html\n2. blog/telegram-bot-business-guide.html\n3. blog/n8n-automation-tutorial-2026.html\n4. blog/workflow-automation-small-business.html\n\n暫行方案：將上述4篇文章中的 xiaofan8.gumroad.com/l/n8n-tw-templates\n替換為 xiaofan8.gumroad.com/l/agent-skills-tw（現有有效產品）\n並更新文字說明為「取得 Agent Skills 工具包」\n\n待 Ivan 建立 Gumroad n8n模板包後恢復原連結。",
+        "priority": "HIGH"
       },
       {
         "from": "ivan",
         "to": "builder",
         "date": "2026-04-13",
-        "directive": "【站間互連】在三個站之間加入互相導流的連結：1) autodev-ai.com 首頁/blog頁 加 ai-tools-tw 和 ai-tools-en 的連結（推薦工具評測）2) ai-tools-tw 首頁加 autodev-ai.com 的服務連結（需要客製化？找我們）3) ai-tools-en 加 autodev-ai.com/en 的連結。每個站的 footer 都加上其他兩個站的連結。這能互相傳遞 SEO 權重。",
-        "priority": "HIGH",
-        "status": "done-completed",
-        "completedDate": "2026-04-15"
+        "directive": "【待 Ivan Gumroad 帳號建立後執行】建立4個數位產品Gumroad頁面（n8n模板包/Prompt Pack/Notion模板包/AI工作流包）。優先：n8n模板包 + Agent Skills更新。",
+        "priority": "PENDING-IVAN-GUMROAD"
       }
     ],
     "seo-writer-affiliate-articles": {
