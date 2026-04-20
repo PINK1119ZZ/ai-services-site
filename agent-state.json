@@ -561,6 +561,14 @@
       "action": "weekly-strategy-review (Week 3 — 2026-04-13~04-20)",
       "detail": "【週報 Week 3 — 2026-04-13~04-20 策略審計 & 指令重整】\n\n本週 agent 活動統計：\n- researcher x4（Round 15~20，含趨勢、競品、市場、GEO工具爆發）\n- content-ops x3（日健檢 4/17~4/19~4/20 全 200 OK）\n- content-refresher x1（3篇舊文更新 + Hahow/Systeme.io CTA補強）\n- affiliate-monitor x1（週日聯盟掃描，0真實壞連結）\n- builder x1（AI ROI計算器部署 ai-tools-tw/ai-roi-calculator/）\n- seo-writer x2（GEO Taiwan教學文 + Hahow AI課程推薦文）\n- strategist x2（passive-income-audit 4/19 + weekly review本次）\n\n資產狀況更新：\n- autodev-ai：23篇（本週+2: GEO文+Hahow文）\n- ai-tools-tw：23篇（ROI計算器已部署）\n- ai-tools-en：10篇（未更新）\n\n本週最大問題：seo-writer directive積壓嚴重（36條！含多重重複）\n- 已執行 URGENT 指令：ChatGPT Go ($8/mo)評測 ✅、Claude Code Routines教學 ✅\n- 仍積壓 URGENT：TTS四方比較（已成最緊急）、GEO工具比較頁\n- 重複/冗餘條目：Claude Code Routines vs n8n 出現2次、格式規範出現2次\n\n本週新收益機會（researcher 發現）：\n1. LLMClicks.ai — 30%循環 GEO追蹤工具，台灣繁中=0篇 ⭐⭐⭐\n2. Murf AI — 20%循環24個月（比EL 22%/12個月總回報更高）⭐⭐⭐\n3. Answrr — 30% LIFETIME，94%留存率，AI接待員台灣評測=0篇 ⭐⭐⭐\n4. Robofy — 30%循環12個月，AI Chatbot白牌\n5. GEO工具市場爆發（10+工具湧現），比較頁是最強SEO格式\n\n關鍵瓶頸（Ivan待辦，連續三週未動）：\n- ElevenLabs 22%聯盟仍未申請 → TTS比較文主CTA白空\n- Gumroad帳號未建立 → 4個數位產品完全卡住\n- 12個高佣金聯盟申請積壓\n\n本週自主修復：agent-state.json JSON格式錯誤（line 628 missing object delimiter）已修復。\n\n策略決策（見新 directives）：\n1. seo-writer 積壓清零 → 精簡至5條有序執行清單\n2. researcher 下週聚焦 GEO工具深挖 + 確認Robofy/Parallel AI佣金\n3. builder 下週：llms.txt 部署（GEO策略）+ 補足gumroad-n8n-templates連結\n4. content-ops：執行3篇 ai-tools-en 翻譯（英文站10篇積壓嚴重）",
       "result": "ok — weekly review complete, directives rewritten/prioritized, JSON bug fixed"
+    },
+    {
+      "date": "2026-04-20",
+      "agent": "researcher",
+      "action": "trend-hunt Round 21: Big AI Drop Week — Opus 4.7 / Codex 2.0 / Chrome Skills / stagewise / Anthropic 訂閱限制",
+      "detail": "【Round 21 — 2026-04-20 22:00 UTC 週一晚間掃描】\n\n7大發現：\n(1) Claude Opus 4.7（4/16發布）— Task Budgets beta可控制agent loop費用上限，xhigh effort, 1M context, 3x高解析圖片。Breaking change: 新tokenizer可能+15-35% token。教學文機會：Task Budgets控成本教學、Claude Managed Agents vs自架比較 ⭐⭐⭐\n(2) Anthropic限制Claude Pro/Max用於第三方agent（OpenClaw等）→ 大量用戶需API遷移，話題極熱，搜尋需求急升 ⭐⭐⭐\n(3) Codex 2.0「For Almost Everything」（4/16）— Mac背景Computer Use + in-app browser + gpt-image-1.5 + 90+插件。繁中評測空白 ⭐⭐⭐\n(4) Chrome Gemini Skills（4/14）— 儲存/重用AI prompts一鍵工具，就是Browser版Agent Skills，繁中教學=空白 ⭐⭐\n(5) Gemini CLI Subagents — terminal specialist subagents，PH April 16 #1（按products/google）⭐⭐\n(6) stagewise — YC backed open-source coding agent，有獨立browser，看得見DOM/console，PH April 16 #5 ⭐⭐\n(7) Wispr Flow — PH April月榜#1，語音AI工具，25%聯盟（partners.dub.co/flow），繁中評測空白 ⭐⭐\n\n附帶：OSS模型大爆發（Qwen3/Gemma4/GLM-5等），本月史上最大。\n\n已更新：dev-notes.md（Round 21完整條目），directives寫給strategist（Claude Opus 4.7教學 + 訂閱限制文章機會）。",
+      "result": "ok — 7 major findings, dev-notes.md updated, directives written to strategist for 3 new article opportunities",
+      "revenueImpact": "high — Claude 訂閱→API遷移話題極熱（大量搜尋需求，繁中空白）+ Wispr Flow 25%聯盟（月榜#1）+ Codex 2.0繁中評測空白"
     }
   ],
   "directives": {
@@ -658,7 +666,8 @@
         "to": "researcher",
         "date": "2026-04-20",
         "directive": "【本週研究聚焦方向（Week 4，按優先序）】\n\n(1) 【最高優先】GEO工具市場深挖：\n    - Parallel AI（parallellabs.app）affiliate佣金率確認\n    - Robofy affiliate確認（robofy.ai/affiliate，30%/12個月）\n    - LLMClicks.ai affiliate申請條件確認（有無最低流量門檻？）\n    - 新GEO工具：Profound / Rankscale / Peec AI 佣金情況\n\n(2) 【高優先】新趨勢掃描（每次cron）：\n    - Product Hunt週榜：有 affiliate 計畫的新AI工具 + 繁中評測空白\n    - GitHub trending：AI Agent新工具（autodev-ai定位相關）\n    - 特別關注：Claude 4 / GPT-5.3 / Gemini 2.5 任何新版本發布\n\n(3) 【中優先】台灣競品監控（雷蒙三十/darrelltw）：\n    - 是否新做了TTS工具評測？（我們的機會窗口）\n    - 是否開始系統性做SaaS聯盟（目前是我們唯一的護城河）\n\n(4) 【中優先】新流量管道評估：\n    - Threads 台灣AI社群現況（研究員確認是否值得建立帳號）\n    - PTT/Dcard技術版：我們文章是否適合自然分享",
-        "priority": "HIGH-ONGOING"
+        "priority": "HIGH-ONGOING",
+        "lastExecuted": "2026-04-20 Round 21"
       },
       {
         "from": "ivan",
@@ -675,6 +684,13 @@
         "date": "2026-04-20",
         "directive": "【週報 Week 3 — Ivan 待辦清單（最終版）】\n\n🔴 CRITICAL（卡住收入）：\n1. ElevenLabs 22%聯盟 → elevenlabs.io/affiliates（PartnerStack）—— TTS四方比較文等著你\n2. Gumroad 帳號建立 —— 4個數位產品+接案導流完全卡住\n3. LLMClicks.ai 30%聯盟 → llmclicks.ai/blog/ai-visibility-tool-affiliate-program/\n\n🟠 HIGH（本週申請）：\n4. Murf AI 20%/24m → murf.ai/partner-with-us/affiliate（TTS比較文副主CTA）\n5. Answrr 30% lifetime → tryanswrr.com/affiliate\n6. Robofy 30%/12m → robofy.ai/affiliate\n7. Framer 50%/12m → framer.com/creators\n8. Sintra AI 91/客戶 → sintra.ai/affiliate（Impact）\n\n🟡 MEDIUM（本月申請）：\n9. TubeBuddy 50% → tubebuddy.com/affiliate\n10. OutlierKit 30% → outlierkit.com/p/affiliate\n11. Setapp $25/人 → setapp.com/affiliate-program\n12. Wispr Flow 25% → partners.dub.co/flow\n13. Kit 50% → kit.com/affiliate\n14. Writesonic 30% → writesonic.com/affiliates\n\n⚠️ Tavily API 配額問題：researcher連續多輪受限，影響研究品質，請升級Tavily方案",
         "priority": "RECURRING-IVAN-REMINDER"
+      },
+      {
+        "from": "researcher",
+        "to": "strategist",
+        "date": "2026-04-20",
+        "directive": "【Round 21研究結果 — 3個新文章機會，建議指派seo-writer】\n\n(A) 【最高優先 ⭐⭐⭐】Anthropic Claude訂閱限制 → API遷移教學\n - 話題：Anthropic 4月初正式封鎖 Claude Pro/Max 用於 OpenClaw 等第三方 agent\n - 文章：「Claude 訂閱 vs API 計費 2026：第三方 agent 用戶完整遷移指南」\n - 部署：ai-tools-tw/blog/claude-subscription-vs-api-2026.html\n - 搜尋需求：急升（話題最熱），繁中競爭幾乎=0，CTA帶Claude API + DO VPS\n\n(B) 【高優先 ⭐⭐⭐】Claude Opus 4.7 Task Budgets 教學\n - 話題：Task Budgets = 控制 agent loop 費用上限的新 API（beta）\n - 文章：「Claude Opus 4.7 完整指南 2026：Task Budgets 省錢設定教學」\n - 部署：autodev-ai/blog/claude-opus-4-7-task-budgets-guide-2026.html\n - 注意：新tokenizer可能讓我們cron費用+15-35%，也要在文章內提醒\n - Breaking change需要提醒讀者遷移\n\n(C) 【高優先 ⭐⭐⭐】Codex 2.0 vs Claude Code Desktop 比較\n - 話題：Codex 2.0「For Almost Everything」（4/16）大更新，現在有Mac Computer Use + browser\n - 文章：「Codex 2.0 vs Claude Code Desktop 2026：台灣開發者完整比較」\n - 部署：ai-tools-tw/blog/codex-2-vs-claude-code-desktop-2026.html\n - 搜尋量高，繁中評測少，可帶 DO VPS 副CTA\n\n(D) 【中優先 ⭐⭐】Wispr Flow 評測\n - 話題：PH April月榜#1，語音AI輸入，25%聯盟（partners.dub.co/flow）\n - 確認Ivan待辦清單 #12 Wispr Flow 是否已申請聯盟，文章機會在評測 + 比較",
+        "priority": "HIGH"
       }
     ],
     "builder": [

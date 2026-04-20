@@ -1,5 +1,162 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 21 | 2026-04-20 (Mon PM) — researcher agent
+
+> 執行時間：2026-04-20 22:00 UTC | 搜尋範圍：Product Hunt April 16-17、GitHub trending、Claude/Anthropic/OpenAI changelog、Wispr Flow、Gemini Chrome Skills
+
+---
+
+### 🔥 本輪最大發現：「Big AI Drop Week」— 4個重量級平台同週發布
+
+#### 1. Claude Opus 4.7（2026-04-16 發布）⭐⭐⭐ 最高優先
+
+**核心升級：**
+- **最大亮點：Task Budgets（beta）** — 可給 Claude 整個 agent loop 設定 token 預算上限，避免費用失控 → **直接影響我們的 multi-agent 系統成本！**
+- **xhigh effort level（新增）** — 比 `high` 更深度思考，適合複雜推理任務
+- **1M context + 128k 輸出** — 適合大型 codebase、長文件分析、記憶密集工作流
+- **3x 高解析度影像支援** — vision任務大升級
+- **Breaking changes**：新 tokenizer 可能增加 1-35% token 計費（需注意！）；移除 extended thinking budgets；移除部分 sampling parameters
+- **Claude Managed Agents** 同期發布：tokens + $0.08/session-hour，web search $10/1000次
+- **Claude Code source code 疑似洩露**（Reddit r/LocalLLaMA）→ 社群已基於它重建多 agent 框架，病毒話題
+
+**產品化機會：**
+- 教學文：「Claude Opus 4.7 完整指南 2026：Task Budgets 控成本教學」→ ai-tools-tw ⭐⭐⭐
+- 「Claude Managed Agents vs 自架 agent：費用+設定完整比較」→ autodev-ai ⭐⭐⭐
+- 幾乎沒有繁中 Task Budgets 教學，這是最強技術空白
+
+**成本優化（內部）：**
+- 升級到 Opus 4.7 前要測試：新 tokenizer 可能讓我們每輪 cron 費用增加 15-35%
+- Task Budgets API 可用來控制 multi-agent cron 系統費用 → 下次優化機會
+
+---
+
+#### 2. Codex 2.0「For (Almost) Everything」（2026-04-16）⭐⭐⭐
+
+**核心升級：**
+- **Mac背景 Computer Use** — Codex 可在後台操作 macOS 桌面應用，不打斷使用者
+- **In-app browser（Atlas引擎）** — 原生瀏覽器整合，可直接在頁面留言給 agent 下指令
+- **gpt-image-1.5 圖片生成** — 不離開 Codex 界面
+- **Persistent memory + scheduled automations**
+- **90+ 外掛（Jira/Notion/Slack/Microsoft 365）**
+- 從「純開發工具」轉型為「通用 AI 工作台」
+
+**產品化機會：**
+- 「Codex 2.0 for (Almost) Everything 評測：台灣上班族可以怎麼用？」→ ai-tools-tw ⭐⭐
+- 「Codex vs Claude Code Desktop 2026：Mac 使用者完整比較」→ ai-tools-tw ⭐⭐⭐（搜尋量高）
+- 繁中 Codex 2.0 實用教學目前極少
+
+---
+
+#### 3. Gemini CLI Subagents + Chrome Skills（2026-04-14/16）⭐⭐
+
+**Chrome Skills：**
+- Google 在 Chrome 加入「Skills」= 儲存/重用 Gemini AI prompts 的一鍵工具
+- 支援 Skills Library（預建 prompts）+ 用 `/` 呼叫自訂 Skills
+- 現在上線（MacOS/Windows/ChromeOS，英文UI）
+- 門外漢角度：這就是「Browser 版 Agent Skills」
+
+**Gemini CLI Subagents（PH #1 April 16）：**
+- Gemini CLI 現在支援 specialist subagents 在終端機執行 — 類似 Claude Code 的 agent team
+- 加上 1M context，免費個人版仍是最強 cost-per-token 選擇
+
+**產品化機會：**
+- 「Google Chrome Skills 完整教學：5個最實用的 Gemini 技能 2026」→ ai-tools-tw ⭐⭐（量大但競爭激烈）
+- 「Gemini CLI vs Claude Code 2026：terminal agent 最終評比」→ autodev-ai ⭐⭐⭐（高搜量）
+
+---
+
+#### 4. stagewise — YC 支持的「看得見你 App」的 coding agent ⭐⭐
+
+**是什麼：**
+- 專為 Web 開發者打造的獨立瀏覽器，AI coding agent 直接內建
+- Agent 可看到 DOM、console、debugger — 不是 IDE 插件，不是 Chrome 擴充
+- 開源（GitHub），支援 IDE 整合
+- YC backed，PH April 16 #5，5星評分
+
+**為什麼重要：**
+- 解決「AI agent 對頁面視覺無感」的核心問題
+- 前端/vibe coding 受眾精準 → 有機會做英文站教學文
+
+---
+
+#### 5. 重要業界訊號：Anthropic 限制 Claude Pro/Max 用於第三方 agent（4月初）
+
+**重大衝擊：**
+- Anthropic 正式封鎖 Claude Pro/Max 訂閱用於 OpenClaw 等第三方 agent 框架
+- 訂閱 ≠ API 存取，必須使用 API 計費
+- 影響所有靠 Claude 訂閱跑 agent 的用戶 → 大量用戶需要學習 API 遷移
+
+**產品化機會（超高）：**
+- 「Claude 訂閱 vs API 計費 2026：第三方 agent 用戶怎麼辦？」→ ai-tools-tw ⭐⭐⭐
+- 「Claude Managed Agents vs 自架：成本計算 + 遷移指南」→ autodev-ai ⭐⭐⭐
+- 這個話題現在最熱，搜尋需求急升
+
+---
+
+#### 6. Wispr Flow：語音輸入 AI 工具，有聯盟計畫 ⭐⭐（新發現）
+
+**是什麼：**
+- PH April 2026 月榜榜首
+- Mac/Windows/iOS/Android AI 語音 → 文字，自動移除填充詞/優化語句
+- 支援 100+ 語言，4x 快於打字
+- 每月 $12（Pro），有 snippets（快捷短語）功能
+
+**聯盟計畫：**
+- 地址：partners.dub.co/flow
+- 佣金：25%（策略師已列在 Ivan 待辦 #12）
+- PH 月榜第一 = 巨大流量池
+
+**機會：**
+- 「Wispr Flow 評測 2026：語音 AI 輸入真的值得嗎？」→ ai-tools-tw ⭐⭐
+- 比較文：「Wispr Flow vs Apple 聽寫 vs otter.ai 2026」→ 已有人在寫英文版
+
+---
+
+#### 7. Open-Source 模型月：April 2026 = 史上最大 OSS AI 爆發
+
+- Llama 4 / **Qwen 3** / Gemma 3n / **Gemma 4** / OLMo 2 / GLM-5 / MiniMax M2.5 — 七大模型首12天全發布
+- 社群共識本週最強 local 模型：**Qwen 3.5 > Gemma 4 > GLM-5 > MiniMax M2.5 > DeepSeek V3.2**
+- **Qwen3-6.5B-A3B（Qwen3.6 PH）** = 最小 sparse MoE 開源 coding 模型（3B activated params，高效）
+
+**機會：**
+- 「2026 最強本地 AI 模型評測：Qwen3 vs Gemma4 vs GLM-5」→ autodev-ai ⭐⭐（長尾但技術受眾）
+
+---
+
+### 📊 本輪市場訊號總結
+
+| 趨勢 | 訊號強度 | 台灣繁中競爭 | 優先 |
+|------|---------|------------|------|
+| Claude Opus 4.7 Task Budgets | ⭐⭐⭐ 極強 | 空白 | 立即 |
+| Claude 訂閱限制 → API 遷移需求 | ⭐⭐⭐ 極強（話題最熱）| 幾乎空白 | 立即 |
+| Codex 2.0 Mac Computer Use | ⭐⭐⭐ 強 | 少 | 高 |
+| Chrome Gemini Skills | ⭐⭐ 強（Google品牌大）| 空白 | 中高 |
+| Wispr Flow 語音 AI | ⭐⭐ 中 | 空白 | 中 |
+| OSS 模型爆發（Qwen3/Gemma4）| ⭐⭐ 中（技術受眾）| 少 | 中 |
+| stagewise（前端 coding agent）| ⭐⭐ 中（YC）| 空白 | 低-中 |
+
+---
+
+### 💰 本輪新聯盟/佣金確認
+
+| 工具 | 佣金 | 連結 | 備注 |
+|------|------|------|------|
+| Wispr Flow | 25% | partners.dub.co/flow | 月榜#1，申請已在Ivan待辦 |
+| Anthropic（Claude）| 無公開聯盟 | — | 借助 Claude 教學帶 API 消費 |
+| Google（Gemini/Chrome）| 無直接聯盟 | — | 帶 DO VPS / Hahow 副CTA |
+
+---
+
+### 🔧 技術研究：Task Budgets 對我們 multi-agent 的優化機會
+
+根據 Claude Opus 4.7 文檔：
+- `task_budget_tokens` 可設定整個 agentic loop 的 token 預算
+- 系統在接近預算時會提示 Claude 總結/停止，而非繼續耗費
+- **應用場景**：我們的 researcher / seo-writer cron jobs 可以設 task_budget，控制單次執行費用
+- 當前問題：每次 cron 沒有預算上限 → Task Budgets beta 值得評估
+
+---
+
 ## Round 3 | 2026-04-11 (Sat) — researcher agent
 
 ### 🔥 本輪最大發現：Agent Skills 生態系爆發
