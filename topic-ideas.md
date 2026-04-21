@@ -4,6 +4,53 @@
 
 ---
 
+## 2026-04-21（Researcher Round 22：PH Week 16 尾聲 + Cloudflare Agents Week + Perplexity Personal Computer + ElevenLabs Music Marketplace）
+
+> 本輪執行時間：2026-04-21 00:30 UTC | 搜尋範圍：PH Apr 19 日榜 + PH April 月榜確認 + HN Show + Cloudflare Agents Week + Perplexity Personal Computer 發布
+
+### 🏆 最高優先（30%+ recurring affiliate 確認）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量（估）| 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|------------|---------|----------|---------|
+| 2026-04-21 | **Perplexity Max vs ChatGPT Pro vs Claude Max 三方比較（$200訂閱大戰）** | `perplexity max 評測`、`perplexity max vs chatgpt pro 台灣`、`$200 ai 訂閱值得嗎`、`perplexity personal computer 評測` | 高（話題剛爆發，繁中=0篇） | Perplexity 聯盟：$10 upfront + 10% ongoing/月（$200方案=新高ticket）；Claude Max 帶 Claude Pro 替代CTA | **US$200–600/月（高ticket $200/月訂閱，10%=$20/月/客，複利累積）** | ai-tools-tw ⭐⭐⭐ |
+| 2026-04-21 | **ElevenLabs Music Marketplace 完整教學（14M tracks + 創作者變現）** | `elevenlabs music marketplace 教學`、`ai 音樂變現 台灣`、`elevenlabs music creator 賺錢`、`ai generated music monetize` | 中（快速上升，14M tracks已建立規模，繁中=0） | ElevenLabs 22%/12個月聯盟（PartnerStack，待Ivan申請）；Music Marketplace 額外內容分潤導流 | **US$250–700/月（ElevenLabs訂閱轉換 + Music Creator受眾高意圖）** | ai-tools-tw ⭐⭐⭐ |
+
+### 💎 高價值題材（無 30%+ affiliate 但流量/話題極高）
+
+| 日期 | 工具 | 關鍵字 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|---------|----------|---------|
+| 2026-04-21 | **Cloudflare Agents Week 2026 完整回顧：isitagentready.com + Agent Memory + Sandboxes GA** | `cloudflare agents week 2026`、`isitagentready 教學`、`ai agent ready 網站 台灣`、`cloudflare mcp 整合` | 高（話題炸裂，開發者社群最熱本週話題，繁中=0篇） | Cloudflare 無直接聯盟計畫（免費工具），但 GEO教學自然導流接案頁 + DO $200 副CTA | **US$100–300/月（接案詢問 + autodev-ai品牌定位強化）** | autodev-ai ⭐⭐⭐ |
+| 2026-04-21 | **Perplexity Personal Computer for Mac 完整評測（本地 AI Agent 4/16正式發布）** | `perplexity personal computer 評測`、`perplexity mac agent 教學`、`perplexity computer local files mac`、`perplexity comet browser` | 高（4/16正式發布，9to5Mac/MacRumors大報，繁中評測=0） | Perplexity 聯盟（affiliates.perplexity.ai，已有計畫）+ Perplexity Max $200/月高ticket = $10 flat + 10% ongoing | **US$150–450/月（Mac用戶高購買力，繁中空白窗口2-3週）** | ai-tools-tw ⭐⭐⭐ |
+| 2026-04-21 | **Gemini app for Mac：Option+Space 一鍵呼喚 AI（PH Apr 19 #2）** | `gemini mac app 教學`、`gemini menu bar mac`、`gemini vs perplexity computer mac`、`mac ai 助理 2026` | 中（Mac用戶受眾，繁中=稀少，PH Apr 19 #2） | DO $200 副CTA + 配合 Perplexity Personal Computer 比較做雙文章導流 | **US$80–200/月（Mac受眾高轉換，配合比較頁）** | ai-tools-tw ⭐⭐ |
+| 2026-04-21 | **Verdent 2.0：AI Technical Cofounder（PH Apr 19 #3 Vibe Coding）** | `verdent ai cofounder 評測`、`vibe coding 工具 2026`、`ai technical cofounder 台灣` | 中（Vibe Coding關鍵字上升，繁中稀少） | 待確認 Verdent 聯盟計畫；若無，帶 Systeme.io 創業工具 CTA | **US$50–150/月** | ai-tools-tw ⭐ |
+| 2026-04-21 | **Cloudflare isitagentready.com：免費檢測你的網站 AI 就緒度（完整教學）** | `isitagentready 教學`、`cloudflare ai agent ready 教學`、`網站 ai 就緒度 檢測`、`robots.txt mcp oauth ai 優化` | 中（免費工具，教學搜尋量快速上升） | GEO/AI策略相關→接案服務頁導流 + LLMClicks.ai 30% 聯盟 CTA（AI可見度工具生態） | **US$100–300/月（教學文低競爭，接案導流高價值）** | autodev-ai ⭐⭐ |
+| 2026-04-21 | **Fixa.dev：Cloud-Native AI Agent 可以建構任何東西（PH Apr 18 Top）** | `fixa dev 評測`、`cloud native ai agent 2026`、`ai vibe coding agent 台灣`、`ai build anything tool` | 中（工具剛出，繁中零評測，Vibe Coding熱詞） | DO $200 VPS 部署聯盟（cloud-native agent需要 VPS）+ autodev-ai 接案頁 | **US$80–200/月（開發者受眾精準，DO聯盟自然）** | autodev-ai ⭐⭐ |
+
+### 💰 本輪新聯盟發現摘要
+
+| 工具 | 佣金率 | 申請連結 | 優先度 | 備註 |
+|------|-------|---------|-------|-----|
+| **Perplexity 聯盟** | $10 flat + 10% ongoing（Pro $20/月=$2/月；Max $200/月=$20/月!) | affiliates.perplexity.ai | 🔴 立即申請 | Perplexity Max $200/月高ticket，10% = $20/月/客；繁中評測空白；Personal Computer + Comet 雙功能導流 |
+| ElevenLabs | 22% 循環 12個月 | elevenlabs.io/affiliates（PartnerStack） | 🔴 Ivan待辦最高優先 | Music Marketplace 新發布=新教學角度；EL訂閱評測文自然搭配 |
+
+### 🔑 本輪關鍵洞察
+
+1. **Cloudflare Agents Week 是本週最大開發者事件**：isitagentready.com + Agent Memory + Sandboxes GA + Mesh 一週連發10+工具。繁中完全空白。autodev-ai「AI基礎建設」定位完美。不帶直接聯盟，但接案導流價值極高。
+
+2. **Perplexity Personal Computer + Max $200 = 高ticket 聯盟新機會**：Perplexity推出$200/月Max tier + Personal Computer for Mac（4/16）。聯盟佣金：$10 flat + 10% ongoing。若帶$200/月用戶=每月$20/次。台灣Mac用戶評測需求急升，繁中窗口在2-3週內關閉。**Perplexity 聯盟是本輪最值得立即申請的新機會**。
+
+3. **ElevenLabs Music Marketplace（4/16）+ 已付$11M給創作者**：EL推出Music Marketplace，已有14M tracks，提供 licensing 分潤。對台灣音樂/創作者受眾是全新教學角度，可覆蓋「AI音樂創作→商業授權→賺錢」完整漏斗。配合 ElevenLabs 22%聯盟（仍待申請）。
+
+4. **PH April月榜確認**：#1=Wispr Flow（25%聯盟仍待申請）；April月榜AI前10：Claude系列（Code Desktop重設計、Opus 4.7）、Music Marketplace by ElevenLabs、Google Vantage、Gemini Mac App。Claude Design by Anthropic是Anthropic新設計工具（設計師受眾）。
+
+5. **HN Show 本週訊號**：MDV（Markdown超集合，文件/儀表板/簡報+資料）、Libretto（讓AI瀏覽器自動化確定性，131 points）、Marky（輕量Markdown閱讀器，70 points）—開發者工具三連發，均有DO VPS部署場景。
+
+6. **Perplexity 聯盟已支援多轉換管道**：Perplexity Pro升級 + Comet Browser安裝 + 學生推薦——三個轉換路徑，覆蓋比ElevenLabs更廣的受眾群（不只AI重度用戶，還有Mac一般用戶）。
+
+---
+
+
+
 ## 2026-04-20（Researcher Round 20：Monday趨勢掃描 + GEO工具爆發 + Claude Code桌面改版）
 
 > 本輪執行時間：2026-04-20 00:30 UTC | 搜尋範圍：HN April Top、Reddit r/AI_Agents、GitHub trending、新 affiliate 機會掃描
