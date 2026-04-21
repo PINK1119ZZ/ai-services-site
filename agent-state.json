@@ -9,8 +9,10 @@
       "articleCount": 24,
       "lastNewArticle": "2026-04-20",
       "lastRefresh": "2026-04-19",
-      "issues": [],
-      "lastChecked": "2026-04-20"
+      "issues": [
+        "2026-04-21 health check: autodev-ai.com timed out on 3 curl attempts from cron host (connect timeout to :443); requires infra/DNS/origin verification."
+      ],
+      "lastChecked": "2026-04-21"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -19,7 +21,7 @@
       "lastNewArticle": "2026-04-12",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-04-20"
+      "lastChecked": "2026-04-21"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -36,7 +38,7 @@
         "ai-roi-calculator": "https://pink1119zz.github.io/ai-tools-tw/ai-roi-calculator/"
       },
       "issues": [],
-      "lastChecked": "2026-04-20"
+      "lastChecked": "2026-04-21"
     }
   },
   "affiliateLinks": {
@@ -569,6 +571,13 @@
       "detail": "【Round 21 — 2026-04-20 22:00 UTC 週一晚間掃描】\n\n7大發現：\n(1) Claude Opus 4.7（4/16發布）— Task Budgets beta可控制agent loop費用上限，xhigh effort, 1M context, 3x高解析圖片。Breaking change: 新tokenizer可能+15-35% token。教學文機會：Task Budgets控成本教學、Claude Managed Agents vs自架比較 ⭐⭐⭐\n(2) Anthropic限制Claude Pro/Max用於第三方agent（OpenClaw等）→ 大量用戶需API遷移，話題極熱，搜尋需求急升 ⭐⭐⭐\n(3) Codex 2.0「For Almost Everything」（4/16）— Mac背景Computer Use + in-app browser + gpt-image-1.5 + 90+插件。繁中評測空白 ⭐⭐⭐\n(4) Chrome Gemini Skills（4/14）— 儲存/重用AI prompts一鍵工具，就是Browser版Agent Skills，繁中教學=空白 ⭐⭐\n(5) Gemini CLI Subagents — terminal specialist subagents，PH April 16 #1（按products/google）⭐⭐\n(6) stagewise — YC backed open-source coding agent，有獨立browser，看得見DOM/console，PH April 16 #5 ⭐⭐\n(7) Wispr Flow — PH April月榜#1，語音AI工具，25%聯盟（partners.dub.co/flow），繁中評測空白 ⭐⭐\n\n附帶：OSS模型大爆發（Qwen3/Gemma4/GLM-5等），本月史上最大。\n\n已更新：dev-notes.md（Round 21完整條目），directives寫給strategist（Claude Opus 4.7教學 + 訂閱限制文章機會）。",
       "result": "ok — 7 major findings, dev-notes.md updated, directives written to strategist for 3 new article opportunities",
       "revenueImpact": "high — Claude 訂閱→API遷移話題極熱（大量搜尋需求，繁中空白）+ Wispr Flow 25%聯盟（月榜#1）+ Codex 2.0繁中評測空白"
+    },
+    {
+      "date": "2026-04-21",
+      "agent": "content-ops",
+      "action": "site-health-check (daily 08:00 cron)",
+      "detail": "依協議先 git pull origin main、讀取 agent-state.json 與 directives/agentLog。curl/HTTP 驗證 3 個主站與 ai-tools-tw 6 個關鍵頁面：ai-tools-en、ai-tools-tw、mcp、systeme-io-review、ai-cost-calculator、agent-skills-guide、agent-skills-pack、ai-roi-calculator 全部 HTTP 200。autodev-ai.com 從 cron 主機對 443 連線連續 3 次 timeout，暫列為主站連線異常待確認。另依既有 builder / affiliate-monitor directive，已將 4 篇文章中的 gumroad n8n-templates placeholder 404 連結暫時替換為可用的 gumroad-agent-skills 連結，避免持續導向已知 404。",
+      "result": "warn — ai-tools-en/ai-tools-tw and 6 key pages healthy; autodev-ai.com timed out from cron host; 4 placeholder Gumroad links replaced with active fallback"
     }
   ],
   "directives": {
