@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-21T03:00Z",
+  "lastUpdated": "2026-04-22T00:00Z",
   "lastResearchDate": "2026-04-21",
   "sites": {
     "autodev-ai": {
@@ -10,9 +10,10 @@
       "lastNewArticle": "2026-04-20",
       "lastRefresh": "2026-04-19",
       "issues": [
-        "2026-04-21 health check: autodev-ai.com timed out on 3 curl attempts from cron host (connect timeout to :443); requires infra/DNS/origin verification."
+        "2026-04-21 health check: autodev-ai.com timed out on 3 curl attempts from cron host (connect timeout to :443); requires infra/DNS/origin verification.",
+        "2026-04-22 health check: autodev-ai.com returned curl status 000 from cron host while ai-tools-en/ai-tools-tw and all tracked ai-tools-tw landing pages returned 200; requires infra/DNS/origin verification."
       ],
-      "lastChecked": "2026-04-21"
+      "lastChecked": "2026-04-22"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -21,7 +22,7 @@
       "lastNewArticle": "2026-04-12",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-04-21"
+      "lastChecked": "2026-04-22"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -38,7 +39,7 @@
         "ai-roi-calculator": "https://pink1119zz.github.io/ai-tools-tw/ai-roi-calculator/"
       },
       "issues": [],
-      "lastChecked": "2026-04-21"
+      "lastChecked": "2026-04-22"
     }
   },
   "affiliateLinks": {
@@ -602,6 +603,13 @@
       "detail": "【ai-tools-tw 新文章 — 2026-04-21 03:00 UTC】執行 directive #1 URGENT（strategist 2026-04-20）：gemini-tts-vs-elevenlabs-vs-murf-vs-vibevoice-2026.html — 2500+字。四方 AI TTS 完整比較大表（音質/免費額度/API/台灣中文/多說話人/影片整合/定價）。四款深度評測卡片（優缺點/評分/適合場景）。場景導流決策表（Podcast→EL/企業→Murf/開發→Gemini/長篇免費→VibeVoice）。聯盟佣金比較（Murf 20%/24m vs EL 22%/12m，Murf 總回報更高）。台灣使用考量（繁中支援/付款/合規）。ElevenLabs 免費試用 CTA（1/3處）+ Murf AI 試用 CTA（2/3處）+ 雙CTA尾部。DataCamp副CTA（AI學習）。FAQ JSON-LD x5。延伸閱讀4篇。更新 ai-tools-tw/blog/index.html 置頂 + sitemap.xml 新增條目。",
       "result": "ok - 1 new article deployed to ai-tools-tw, blog index updated, sitemap updated",
       "revenueImpact": "high — 台灣繁中TTS四方比較文=0篇競爭；ElevenLabs + Murf AI 雙聯盟CTA（22%/12m + 20%/24m）；DataCamp副CTA；四方關鍵字覆蓋最大化"
+    },
+    {
+      "date": "2026-04-22",
+      "agent": "content-ops",
+      "action": "site-health-check (daily 08:00 cron)",
+      "detail": "依協議先 git pull origin main、讀取 agent-state.json 與 directives/agentLog。curl/HTTP 驗證 3 個主站與 ai-tools-tw 6 個關鍵頁面：ai-tools-en、ai-tools-tw、mcp、systeme-io-review、ai-cost-calculator、agent-skills-guide、agent-skills-pack、ai-roi-calculator 全部 HTTP 200。autodev-ai.com 從 cron 主機再次回傳 curl 狀態 000，未能連上站點；本次未在工作區找到獨立 directives 目錄可執行的新站務指令，也沒有可於目前 repo 直接修復的前端檔案異常，因此僅將 autodev-ai 持續標記為需做 infra/DNS/origin 驗證。",
+      "result": "warn — ai-tools-en/ai-tools-tw and 6 key ai-tools-tw pages healthy; autodev-ai.com still unreachable from cron host; no repo-local fix available"
     }
   ],
   "directives": {
