@@ -4,6 +4,51 @@
 
 ---
 
+## 2026-04-22（Researcher Round 23：PH Week 17 + April 月榜完整確認 + Fathom 3.0 + Figma for Agents + Offsite + Wafer Pass）
+
+> 本輪執行時間：2026-04-22 00:30 UTC | 搜尋範圍：PH Week 17 + PH April 月榜 + Fathom 3.0 深挖 + Figma for Agents + Offsite + NovaVoice + Wafer Pass
+
+### 🏆 最高優先（30%+ recurring affiliate 確認）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量（估）| 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|------------|---------|----------|---------|
+| 2026-04-22 | **Fathom 3.0 評測 2026：AI會議筆記，無機器人入侵、接入ChatGPT & Claude** | `fathom ai 評測`、`fathom 3.0 繁中`、`ai 會議筆記 免費`、`fathom vs otter ai 台灣`、`無機器人 ai 會議記錄` | 高（PH Apr 15 日榜#1，581票，177則留言，月榜前列；繁中評測=0篇） | **Fathom 聯盟：25% recurring，60天cookie**（openaffiliate.dev/programs/fathom-video）+ 自然導流 Zoom/Meet/Teams AI工作流 | **US$150–500/月（25%循環；免費版驅動高轉換漏斗）** | ai-tools-tw ⭐⭐⭐ |
+| 2026-04-22 | **Figma for Agents 完整教學 2026：AI Agent 寫入設計稿的革命** | `figma for agents 教學`、`figma ai agent 設計系統`、`figma mcp claude code`、`use_figma tool 教學`、`ai agent 設計稿生成` | 高（PH Week 16 + 月榜前列；Claude Code/Codex/Cursor全都整合；Figma 15%/first year聯盟；設計師+開發者雙受眾） | Figma 聯盟：15% first year（commissiondex.com/programs/figma-affiliate）+ DataCamp AI設計課程副CTA | **US$100–350/月（設計工具高ACV；繁中教學空白）** | autodev-ai ⭐⭐⭐ |
+
+### 💎 高價值題材（有 affiliate 潛力但需確認或較低佣金）
+
+| 日期 | 工具 | 關鍵字 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|---------|----------|---------|
+| 2026-04-22 | **Offsite：人類+AI Agent混合团隊可視化 org chart 平台** | `offsite ai 評測`、`hybrid human agent team 台灣`、`ai 員工管理平台`、`offsite agent org chart`、`ai 組織圖工具` | 中（PH April月榜；「30個agent支持3人團隊」病毒敘事；Enterprise受眾） | Offsite 聯盟待確認（新平台）；可帶 Answrr AI接待員 30% LIFETIME副CTA（同屬「AI替代人力」主題） | **US$80–250/月（企業受眾高ACV，配合Answrr比較頁）** | autodev-ai ⭐⭐ |
+| 2026-04-22 | **NovaVoice vs Wispr Flow vs Claude Code語音輸入：2026語音AI三強比較** | `novavoice 評測`、`ai 語音輸入 mac 2026`、`wispr flow vs novavoice`、`ai 語音 app control`、`語音 ai 助理 mac` | 中（PH April月榜；Wispr Flow 25%聯盟待申請；NovaVoice還有app control功能；語音AI是2026最熱趨勢） | Wispr Flow 25% recurring 12個月（partners.dub.co/flow，Ivan待申請） | **US$120–400/月（語音AI受眾廣，Wispr Flow 25%聯盟主CTA）** | ai-tools-tw ⭐⭐⭐ |
+| 2026-04-22 | **Wafer Pass 評測：AI Agent 開發者的LLM平費訂閱是否值得？** | `wafer pass 評測`、`llm flat rate 訂閱`、`openclaw llm 費用`、`hermes agent llm cost`、`ai agent api 月費省錢` | 中（PH April月榜；OpenClaw/Hermes Agent生態直接相關；开發者受眾；繁中=0） | DO $200 VPS副CTA（自架LLM場景）+ DataCamp AI學習路徑 | **US$60–180/月（開發者精準受眾；搭配OpenClaw教學文導流）** | autodev-ai ⭐⭐ |
+| 2026-04-22 | **Google Gemma 4 評測：Google最強開源模型完整測試** | `gemma 4 評測`、`google gemma 4 繁中`、`gemma 4 vs llama 4 比較`、`開源 llm 2026 最強`、`gemma 4 本機部署` | 高（PH April月榜；GitHub trending；開源LLM最新；話題剛爆發；繁中評測極少） | DO $200 VPS部署聯盟（本機部署Gemma 4場景）+ DataCamp 副CTA | **US$100–300/月（開源LLM是高搜尋量主題；DO聯盟自然搭配）** | autodev-ai ⭐⭐ |
+| 2026-04-22 | **Vibe Coding完整指南 2026：CatDoes v4 + Softr AI + Verdent 三工具比較** | `vibe coding 工具 2026`、`catdoes ai 評測`、`softr ai co-builder`、`vibe coding 台灣入門`、`ai build app 無代碼` | 高（Vibe Coding是PH April最熱標籤；CatDoes v4+Softr AI都在Week 16/17；繁中幾乎空白） | Systeme.io 60% lifetime（vibe coding→online business自然導流）+ DO $200副CTA | **US$120–400/月（Vibe Coding受眾廣；Systeme.io 60%lifetime是最高佣金）** | ai-tools-tw ⭐⭐⭐ |
+
+### 💰 本輪新聯盟發現摘要
+
+| 工具 | 佣金率 | 申請連結 | 優先度 | 備註 |
+|------|-------|---------|-------|-----|
+| **Fathom AI（會議筆記）** | 25% recurring，60天cookie | openaffiliate.dev/programs/fathom-video 或 usefathom.com/affiliates（注：這是Fathom Analytics，不同產品，需確認Fathom Video的申請連結） | 🟠 HIGH 立即申請 | PH Apr 15 日榜#1，581票；bot-free功能是獨特賣點；台灣遠端工作者+企業受眾；繁中=0評測 |
+| **Figma 聯盟** | 15% first year，30天cookie | commissiondex.com/programs/figma-affiliate | 🟡 MEDIUM | Figma for Agents是新功能；設計師受眾；繁中空白；佣金率低但Figma品牌大 |
+| **Figma Weave 聯盟** | 25% recurring | weave.figma.com/affiliate | 🟡 MEDIUM | Figma Weave = 原Weavy被Figma收購；創作者/教程製作者受眾；25%循環比主Figma 15%更高 |
+
+### 🔑 本輪關鍵洞察
+
+1. **PH Week 17（Apr 20, 2026）週冠軍信號**：Wispr Flow依然強勢出現（本週日榜#1，確認月榜#1地位）。Week 17榜單顯示AI開發工具（Figma for Agents + AI coding agents）持續主導，Makko AI（2D遊戲+AI）是新出現的垂直應用。
+
+2. **Fathom 3.0 是本月最大AI工作效率工具**：4月15日 PH 日榜#1，581票（壓倒式勝出），bot-free是爆點（「機器人入會議」是企業最常見投訴），已接入ChatGPT+Claude。Fathom 25% recurring聯盟 = 低門檻立即申請機會。台灣遠端工作者/企業IT採購受眾大量未被滿足。
+
+3. **Figma for Agents = 設計師×AI Agent 交叉點爆發**：Claude Code/Codex/Cursor/Copilot CLI 現在都可以直接寫入Figma設計稿。9個社群Skills（技能）同時發布。Figma MCP是2026設計師必學工具。繁中教學空白。Figma聯盟 15%/year 或 Figma Weave 25% recurring可帶。
+
+4. **Vibe Coding 持續爆發**：PH April最熱標籤之一。CatDoes v4（AI agent有自己的電腦建App）+ Softr AI Co-Builder（Vibe Coding+No Code結合）+ Verdent 2.0 三工具構成完美比較頁機會。Systeme.io 60% lifetime是這類「Vibe Coding → 上線賣產品」漏斗的最強聯盟搭配。
+
+5. **Google Gemma 4 是本月開源LLM最大事件**：PH月榜上榜，GitHub trending，「Google最強開源模型」定位。繁中評測稀少，DO VPS本地部署場景自然。
+
+6. **NovaVoice + Wispr Flow = 語音AI評測文最佳時機**：兩者都在PH月榜，Wispr Flow 25%聯盟（Ivan待申請），NovaVoice有app control差異化功能。三方比較（NovaVoice vs Wispr Flow vs Claude Code語音模式）是高轉換格式。
+
+---
+
 ## 2026-04-21（Researcher Round 22：PH Week 16 尾聲 + Cloudflare Agents Week + Perplexity Personal Computer + ElevenLabs Music Marketplace）
 
 > 本輪執行時間：2026-04-21 00:30 UTC | 搜尋範圍：PH Apr 19 日榜 + PH April 月榜確認 + HN Show + Cloudflare Agents Week + Perplexity Personal Computer 發布
