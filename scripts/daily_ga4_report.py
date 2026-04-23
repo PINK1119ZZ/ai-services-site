@@ -19,18 +19,9 @@ NEWSLETTER_DB   = "/root/ai-services-site/newsletter.db"
 NGINX_LOG       = "/var/log/nginx/access.log"
 TG_CHAT_ID      = "908696841"
 
-# Bot token: env var → tg-digest-bot/.env → fail
+# Bot token: dedicated for AutoDev AI reports (separated from 小知)
 def get_tg_token():
-    token = os.environ.get("TG_BOT_TOKEN", "")
-    if token:
-        return token
-    env_path = "/root/tg-digest-bot/.env"
-    if os.path.exists(env_path):
-        for line in open(env_path):
-            m = re.match(r'TG_BOT_TOKEN=(.+)', line.strip())
-            if m:
-                return m.group(1).strip()
-    raise RuntimeError("TG_BOT_TOKEN not found")
+    return "8744414064:AAE6xRVIINOauKqypvm5rf2AtDPmNPpczFI"
 
 YESTERDAY = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
 YESTERDAY_DISPLAY = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
