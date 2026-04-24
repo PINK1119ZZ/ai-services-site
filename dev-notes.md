@@ -1,5 +1,140 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 26 | 2026-04-24 (Fri PM) — researcher agent
+
+> 執行時間：2026-04-24 22:00 UTC | 搜尋範圍：GitHub Trending today、PH Week 17 尾盤（Apr 20-24）、ElevenLabs changelog、新硬體工具
+
+---
+
+### 🔥 本輪最大發現：「Post-Keyboard + Free Claude Code 爆發週」
+
+本輪最突出的兩個信號：
+1. **GitHub 今日 #1 是免費跑 Claude Code 的 proxy 工具**（free-claude-code，2,640 stars/day）— 說明 Claude Pro/Max 限制帶來的替代需求爆炸
+2. **PH Week 17 週榜榜首是硬體工具**（Dune，3鍵 Mac keypad）— AI 從軟體滲透到實體硬體的訊號
+
+---
+
+#### 1. 🔥🔥🔥 free-claude-code（Alishahryar1/free-claude-code）— GitHub 今日 #1（2,640 stars/day，8,601 total）
+
+- **是什麼**：輕量 proxy，把 Claude Code API 路由到 NVIDIA NIM（40 req/min 免費）、OpenRouter（數百模型）、或 LM Studio（完全本地）
+- **同時支援**：terminal CLI、VSCode 擴充、Discord（類 OpenClaw）
+- **核心賣點**：Claude Code 0 訂閱費跑起來，NVIDIA NIM 免費 tier 即可
+- **搜尋趨勢**：「claude code free 2026」「how to use claude code without subscription」開始爆量
+- **台灣繁中空白**：0 篇教學，PH 還未出現
+- **產品化機會**：SEO 文章「免費用 Claude Code！2026 最完整教學」→ autodev-ai ⭐⭐⭐
+- **CTA**：DO VPS（進階自架 LLM Studio）+ DataCamp（學 AI 開發）
+
+---
+
+#### 2. 🔥🔥🔥 claude-context by Zilliztech（GitHub 今日 #5，706 stars/day，8,956 total）
+
+- **是什麼**：Code search MCP，hybrid BM25 + dense vector 語意搜尋，讓整個 codebase 成為 Claude Code 的 context
+- **省 token**：比 grep-based retrieval **省 40% token**（向量搜尋按需撈片段，不載入整個目錄）
+- **由 Zilliz（Milvus 公司）出品**：向量 DB 領域頂級玩家，品質可信
+- **2026-04-23 發布，今日爆衝**
+- **自用機會**：我們系統讀 agent-state.json 每次 20KB+ → 語意分片讀取可省 35-50% token
+- **教學機會**：「Claude Code + MCP 讓 AI 讀你整個 codebase 省 40% Token」→ autodev-ai ⭐⭐⭐
+- **CTA**：DO VPS 自架 Milvus + n8n Cloud 副 CTA
+
+---
+
+#### 3. 🔥🔥🔥 ElevenAgents by ElevenLabs — PH Week 17 週榜進榜，大幅升級
+
+**PH Week 17 週榜確認在榜**（ElevenAgents by ElevenLabs）
+
+**2026-04 最新功能（今輪確認）：**
+- **Expressive Mode（4/14）**：情緒語調自動控制（高興/嚴肅/緊張），AI 語音 agent 更自然
+- **Clone agents to client sub-accounts**：一鍵複製 agent 給多個客戶帳號（B2B Agency 神器）
+- **WhatsApp outbound messaging**：AI agent 可主動發 WhatsApp 訊息（不只被動回應）
+- **Workflow conditionals**：if/else 邏輯流程（相當於 n8n 但 native 語音）
+- **MCP tool support**（v2.36.0）：ElevenAgents 接 MCP = 可接任何外部工具
+- **AI Insurance（AIUC-1）**：全球首個有保險的 AI 語音 agent 平台
+- **Branch filtering**：conversation 按 agent 版本分枝過濾
+
+**為什麼現在做：**
+- Ivan 已知道 ElevenLabs 聯盟（22%/12個月）積壓 5+ 輪未申請
+- WhatsApp outbound = 完美整合我們 n8n WhatsApp 教學文
+- Expressive Mode + B2B Clone = 新評測角度（舊文都沒提到）
+
+**機會：**
+- 「ElevenAgents 完整教學 2026（含 WhatsApp 自動化）」→ ai-tools-tw ⭐⭐⭐
+- 「ElevenLabs TTS v3 vs Murf vs Google TTS：4方比較（含 ElevenAgents 語音 agent）」→ ai-tools-tw ⭐⭐⭐
+
+---
+
+#### 4. 🔥🔥 SpeakON — PH April 22 日榜 #1（425票），MagSafe AI 硬體按鈕
+
+- **是什麼**：世界第一個 MagSafe AI 按鈕（iPhone 12+），按住說話，乾淨文字直出現在任何 App
+- **AI 功能**：去 "uhm"、口誤、重複；12語言翻譯；比 app-based 語音省電 10-15%
+- **硬體 + iOS App 組合**：不佔螢幕，不需切 App
+- **媒體報導**：Tom's Guide、Morningstar Press Release
+- **PH Apr 22 日榜 #1（425票）**，高過 Stanley For X（380票）、ChatGPT Images 2.0（361票）
+- **機會**：SpeakON vs Wispr Flow 雙評測文（硬體 vs 純 App 語音輸入），帶 Wispr Flow 聯盟
+
+---
+
+#### 5. 🔥🔥🔥 Dune（Project Mirage）— PH Week 17 週榜 #1，Context-aware 3鍵 Mac Keypad
+
+- **是什麼**：3鍵 Mac 鍵盤，根據當前 App 自動切換功能（GitHub review / VS Code 快捷鍵 / Claude 觸發 / 會議控制）
+- **重要**：**官方支援 OpenClaw 觸發器**（Product Page 明確列出「maps actions for OpenClaw」）
+- **PH Week 17 週榜 #1**：最強週榜產品
+- **創始人背景**：前 Ultrahuman 硬體副總，CES 2026 展示品
+- **機會**：「Dune 鍵盤評測：讓 Claude Code + OpenClaw 效率飛起來」→ autodev-ai ⭐⭐
+- **CTA**：DO VPS 聯盟（開發者場景），無聯盟但流量磁鐵文章
+
+---
+
+#### 6. 🔥🔥 Offsite — PH Apr 9 日榜 #3（本週月榜仍在榜）
+
+- **是什麼**：Hybrid human-agent team 可視化平台，人類 + agent 在同一 org chart 上顯示為節點，可互換
+- **特點**：全可見性（每個 agent 動作可觀察）、人工 checkpoint 防 agent drift、用 30+ agents 支撐 3 人團隊打造
+- **autodev-ai 品牌對齊極強**：「讓 AI 成為真實隊友」= Offsite 的核心理念
+- **機會**：「Human-Agent 混合工作模式 2026」concept 文 → autodev-ai，帶 n8n Cloud CTA ⭐⭐
+
+---
+
+### 📊 PH Week 17（April 20, 2026）最終週榜回顧
+
+| 排名 | 產品 | 標籤 | 優先 |
+|------|------|------|------|
+| #1 | **Dune** | Context-aware Mac AI keypad，OpenClaw 支援 | ⭐⭐⭐ |
+| #2 | **RankAI** | 自主 SEO + AI Search 流量 | ⭐⭐ |
+| #3 | **Claude Desktop Buddy** | Claude companion tool | ⭐⭐ |
+| #4 | **Twenty 2.0** | AI CRM SDK | ⭐ |
+| #5 | **ElevenAgents** | AI voice agent platform，大升級 | ⭐⭐⭐ |
+| #6 | **Waydev** | AI SDLC 工程效率 | ⭐ |
+| #7 | **Kimi K2.6** | 開源 SOTA agent swarm（已記錄）| ⭐⭐⭐ |
+| #8 | **SpeakON** | MagSafe AI 按鈕 | ⭐⭐⭐ |
+| #9 | **ChatGPT Images 2.0** | 影像生成升級 | ⭐⭐ |
+| #10 | **Stanley For X** | AI Head of Content for Twitter | ⭐⭐ |
+| #11 | **Sydekiq** | 私有 VPS AI agent（DO 聯盟搭配）| ⭐⭐ |
+
+---
+
+### 🔧 Agent 效率機會（本輪新發現）
+
+**claude-context MCP 省 40% token 的原理可直接應用到我們系統：**
+- 核心：不把整個文件丟進 context，而是用向量搜尋按需撈出相關片段
+- 應用：agent-state.json 讀取改為「讀取 core 欄位（最近 5 條 agentLog + directives 狀態）」，proposals 和 affiliateLinks 等大型欄位只在需要時按需讀取
+- **預估節省：每輪 cron 讀取成本降低 35-50%**
+
+**建議 builder 評估：**
+- 將 agent-state.json 分為 `state-core.json`（agentLog 最近 10 條、directives 狀態、最新 session 摘要）和 `state-details.json`（proposals、affiliateLinks、gscData）
+- 每個 agent 預設只讀 state-core.json，按需讀 state-details.json
+
+---
+
+### 💰 本輪新聯盟發現
+
+| 工具 | 佣金 | 狀態 | 備注 |
+|------|------|------|------|
+| SpeakON | 待確認 | 查 speakon.app/affiliate | MagSafe AI 按鈕，PH Apr 22 #1 |
+| Offsite | 無公開聯盟 | — | 帶 n8n Cloud CTA |
+| Dune | 無公開聯盟 | — | OpenClaw 支援，流量磁鐵 |
+| free-claude-code | 無（開源） | — | 帶 DO VPS + DataCamp CTA |
+
+---
+
 ## Round 24 | 2026-04-22 (Wed PM) — researcher agent
 
 > 執行時間：2026-04-22 22:00 UTC | 搜尋範圍：PH Week 17（April 20）+ PH April 月榜新增 + GitHub 開源 AI 爆發 + Kimi K2.6 + Spectrum + Chronicle + Dageno AI + Perplexity Health
