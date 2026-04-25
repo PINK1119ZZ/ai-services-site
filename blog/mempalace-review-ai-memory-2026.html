@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MemPalace 評測 2026：48小時 22K Stars 的 AI 記憶神器，Claude Code 長期記憶終於解決了？</title>
+  <meta name="description" content="MemPalace 48小時暴增 22K GitHub Stars！MIT 開源 AI 記憶系統，讓 Claude/ChatGPT 記住你的所有對話。實測安裝、vs Mem0、值得用嗎？完整繁中評測。">
+  <meta name="keywords" content="mempalace 評測, mempalace 繁中, ai agent 記憶系統 2026, mempalace vs mem0, claude code 長期記憶, ai 記憶 github, chromadb ai 記憶, mempalace 安裝教學">
+  <link rel="canonical" href="https://autodev-ai.com/blog/mempalace-review-ai-memory-2026.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MemPalace 評測 2026：48小時 22K Stars，AI 記憶系統爆紅真相大揭露">
+  <meta property="og:description" content="MemPalace 讓 Claude/ChatGPT 記住你的所有對話歷史。48小時 22K GitHub Stars 爆紅，MIT 開源。完整繁中評測＋安裝教學。">
+  <meta property="og:url" content="https://autodev-ai.com/blog/mempalace-review-ai-memory-2026.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://autodev-ai.com/blog/og/mempalace-review-2026.jpg">
+
+  <style>
+:root {
+  --dark: #0a0a0f;
+  --dark-2: #111118;
+  --primary: #6c5ce7;
+  --primary-light: #a29bfe;
+  --accent: #00cec9;
+  --white: #ffffff;
+  --light: #e0e0f0;
+  --gray: #888899;
+  --gradient-1: linear-gradient(135deg, #6c5ce7, #00cec9);
+  --shadow-glow: 0 0 30px rgba(108,92,231,0.4);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans TC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--light); line-height: 1.8; background: var(--dark); }
+.container, .hero, .cta-section, main { max-width: 860px; margin: 0 auto; padding: 6rem 1.5rem 4rem; }
+.hero { text-align: center; padding-top: 8rem; padding-bottom: 2rem; }
+.breadcrumb { font-size: 0.85rem; color: var(--gray); margin-bottom: 1.5rem; }
+.breadcrumb a { color: var(--primary-light); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent); }
+h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; line-height: 1.25; color: var(--white); margin-bottom: 1rem; background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+h2 { font-size: 1.5rem; font-weight: 800; color: var(--white); margin: 2.4rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(108,92,231,0.3); }
+h3 { font-size: 1.15rem; font-weight: 700; color: var(--primary-light); margin: 1.6rem 0 0.75rem; }
+h4 { font-size: 1.05rem; font-weight: 700; color: var(--primary-light); margin: 1rem 0 0.5rem; }
+p { margin-bottom: 1rem; color: var(--light); }
+strong, b { color: var(--white); }
+ul, ol { margin: 0 0 1rem 1.4rem; }
+li { margin-bottom: 0.35rem; color: var(--light); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.meta, .article-meta { font-size: 0.85rem; color: var(--gray); margin-bottom: 1.5rem; }
+.disclosure, .notice-box { background: rgba(108,92,231,0.08); border: 1px solid rgba(108,92,231,0.3); color: var(--light); border-radius: 10px; padding: 0.8rem 1.1rem; font-size: 0.9rem; margin: 1.2rem 0; }
+.summary-box { background: rgba(108,92,231,0.08); border: 1px solid rgba(108,92,231,0.3); border-left: 4px solid var(--primary); border-radius: 12px; padding: 1.2rem 1.5rem; margin: 1.5rem 0 2rem; }
+.summary-box strong { color: var(--white); }
+table { width: 100%; border-collapse: collapse; margin: 1.3rem 0 1.8rem; font-size: 0.92rem; background: var(--dark-2); border-radius: 10px; overflow: hidden; }
+th { background: var(--gradient-1); color: var(--white); padding: 0.75rem 1rem; text-align: left; font-weight: 700; }
+td { padding: 0.7rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); color: var(--light); }
+tr:nth-child(even) td { background: rgba(108,92,231,0.05); }
+.highlight { background: rgba(0,210,211,0.15); border: 1px solid rgba(0,210,211,0.3); border-radius: 4px; padding: 2px 6px; font-weight: 600; color: var(--accent); }
+.cta-box { background: linear-gradient(135deg, rgba(108,92,231,0.15), rgba(0,210,211,0.1)); border: 1px solid rgba(108,92,231,0.3); color: var(--white); border-radius: 16px; padding: 1.5rem 1.75rem; margin: 2rem 0; text-align: center; }
+.cta-box h3 { color: var(--white); background: none; -webkit-text-fill-color: var(--white); margin: 0 0 0.5rem; font-size: 1.2rem; }
+.cta-box p { color: var(--gray); margin-bottom: 1rem; }
+.cta-btn { display: inline-block; background: var(--gradient-1); color: var(--white) !important; padding: 0.85rem 1.75rem; border-radius: 10px; font-weight: 700; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; margin: 0.3rem; }
+.cta-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-glow); text-decoration: none; }
+.cta-btn-secondary { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); }
+.pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.3rem 0 1.8rem; }
+.pros { background: rgba(0,210,211,0.08); border: 1px solid rgba(0,210,211,0.3); border-radius: 10px; padding: 1.1rem 1.2rem; }
+.cons { background: rgba(255,107,107,0.08); border: 1px solid rgba(255,107,107,0.3); border-radius: 10px; padding: 1.1rem 1.2rem; }
+.pros h4 { color: var(--accent); margin-bottom: 0.6rem; }
+.cons h4 { color: #ff6b6b; margin-bottom: 0.6rem; }
+.rating-box { display: flex; align-items: center; gap: 0.8rem; background: var(--dark-2); border: 1px solid rgba(108,92,231,0.2); border-radius: 10px; padding: 0.9rem 1.2rem; margin: 1.2rem 0; }
+.rating-num { font-size: 2.2rem; font-weight: 900; background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.rating-label { font-size: 0.85rem; color: var(--gray); }
+.badge { display: inline-block; background: var(--accent); color: var(--dark); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+.badge-purple { background: var(--primary); color: var(--white); }
+.badge-orange { background: #fd7e14; color: var(--white); }
+.badge-red { background: #e17055; color: var(--white); }
+.code-block { background: #1a1a2e; border: 1px solid rgba(108,92,231,0.3); border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0 1.5rem; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #a8b2d8; overflow-x: auto; }
+.code-block code { white-space: pre; display: block; }
+.toc { background: var(--dark-2); border: 1px solid rgba(108,92,231,0.2); border-radius: 10px; padding: 1rem 1.25rem; margin: 1.2rem 0 1.5rem; }
+.toc summary { cursor: pointer; font-weight: 700; color: var(--white); }
+.toc ul { margin: 0.6rem 0 0 1.2rem; list-style: disc; }
+.toc a { color: var(--primary-light); font-size: 0.92rem; }
+.related { background: var(--dark-2); border: 1px solid rgba(108,92,231,0.2); border-radius: 12px; padding: 1.2rem 1.5rem; margin-top: 2.5rem; }
+.related h4 { color: var(--primary-light); margin-bottom: 0.75rem; }
+.reading-time { font-size: 0.85rem; color: var(--gray); margin-bottom: 1rem; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0 1.2rem; }
+.tag { font-size: 0.75rem; padding: 0.2rem 0.7rem; border-radius: 50px; background: rgba(108,92,231,0.12); color: var(--primary-light); border: 1px solid rgba(108,92,231,0.25); }
+.step-box { background: var(--dark-2); border-left: 4px solid var(--primary); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1rem 0; }
+.step-box strong { color: var(--accent); }
+.warning-box { background: rgba(253,126,20,0.08); border: 1px solid rgba(253,126,20,0.3); border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; }
+.warning-box strong { color: #fd7e14; }
+footer { padding: 2rem 1.5rem; text-align: center; color: var(--gray); font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.06); background: var(--dark-2); margin-top: 3rem; }
+footer a { color: var(--primary-light); }
+@media (max-width: 640px) { .pros-cons { grid-template-columns: 1fr; } table { font-size: 0.82rem; } }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "MemPalace 評測 2026：48小時 22K Stars 的 AI 記憶神器，Claude Code 長期記憶終於解決了？",
+    "datePublished": "2026-04-25",
+    "dateModified": "2026-04-25",
+    "author": { "@type": "Organization", "name": "AutoDev AI" },
+    "publisher": { "@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com" },
+    "description": "MemPalace 48小時暴增 22K GitHub Stars！MIT 開源 AI 記憶系統，讓 Claude/ChatGPT 記住你的所有對話。實測安裝、vs Mem0、值得用嗎？完整繁中評測。"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "MemPalace 是什麼？",
+        "acceptedAnswer": { "@type": "Answer", "text": "MemPalace 是一個開源 AI 記憶系統，讓 Claude Code、ChatGPT 等 AI 助手能跨對話記住你的歷史訊息、程式碼偏好和工作習慣。底層使用 ChromaDB 向量資料庫，48小時內在 GitHub 獲得超過 22,000 顆星。" }
+      },
+      {
+        "@type": "Question",
+        "name": "MemPalace 和 Mem0 有什麼差別？",
+        "acceptedAnswer": { "@type": "Answer", "text": "Mem0 是商業 SaaS 服務，有免費層但付費功能要收費；MemPalace 是完全開源（MIT 授權）可自架，資料留在自己機器上。Mem0 整合生態更豐富，MemPalace 隱私性更強、零費用。" }
+      },
+      {
+        "@type": "Question",
+        "name": "MemPalace 安裝難度高嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "中等難度，需要基本 Python 環境和命令列操作。整體安裝約 10-15 分鐘，需要 pip install chromadb 和 clone GitHub repo。有 Python 基礎的開發者可輕鬆完成；完全不懂程式的使用者較吃力。" }
+      },
+      {
+        "@type": "Question",
+        "name": "MemPalace 能在 Claude Code 中使用嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "可以。MemPalace 設計上即支援 Claude Code 工作流，可作為 MCP（Model Context Protocol）工具整合，讓 Claude Code 在不同 session 之間共享記憶。這是最受開發者歡迎的使用情境。" }
+      },
+      {
+        "@type": "Question",
+        "name": "MemPalace 爆紅背後有炒作嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "社群確實存在一些爭議，主要集中在 benchmark 方法論。但核心功能（ChromaDB 向量搜索 + Claude/ChatGPT 歷史記憶）是真實可用的。對話記憶搜索的實際效果因使用場景而異，建議自行測試後判斷是否適合自己的工作流。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.06);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;">
+  <a href="/" style="font-weight:800;font-size:1.1rem;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;">AutoDev AI</a>
+  <div style="display:flex;gap:1.5rem;font-size:0.9rem;">
+    <a href="/blog/" style="color:var(--light);text-decoration:none;">部落格</a>
+    <a href="/pricing.html" style="color:var(--light);text-decoration:none;">方案</a>
+    <a href="/contact.html" style="color:var(--accent);font-weight:700;text-decoration:none;">免費諮詢</a>
+  </div>
+</nav>
+
+<main>
+  <div class="breadcrumb">
+    <a href="/">首頁</a> › <a href="/blog/">部落格</a> › MemPalace 評測 2026
+  </div>
+
+  <div class="tag-list">
+    <span class="tag">AI 記憶</span>
+    <span class="tag">開源工具</span>
+    <span class="tag">Claude Code</span>
+    <span class="tag">GitHub 爆紅</span>
+    <span class="tag">ChromaDB</span>
+    <span class="tag">2026</span>
+  </div>
+
+  <h1>MemPalace 評測 2026：48小時 22K Stars 的 AI 記憶神器，Claude Code 長期記憶終於解決了？</h1>
+
+  <p class="article-meta">
+    📅 2026年4月25日 &nbsp;|&nbsp; ✍️ AutoDev AI 編輯團隊 &nbsp;|&nbsp; ⏱️ 閱讀約 12 分鐘
+  </p>
+
+  <div class="reading-time">🔥 本文追蹤 GitHub 上最熱話題：MemPalace 在 48 小時內獲得 <strong>22,000+ Stars</strong>，登上 Hacker News 首頁。</div>
+
+  <div class="disclosure">
+    📢 <strong>聯盟行銷揭露：</strong>本文包含聯盟推廣連結。透過連結購買，AutoDev AI 可能獲得佣金，不影響您的費用，也不影響本文評測立場。
+  </div>
+
+  <details class="toc">
+    <summary>📋 文章目錄（點擊展開）</summary>
+    <ul>
+      <li><a href="#what-is">MemPalace 是什麼？為何 48 小時爆紅？</a></li>
+      <li><a href="#how-it-works">底層原理：ChromaDB + 向量搜索怎麼運作？</a></li>
+      <li><a href="#install">5 步驟安裝教學（附指令）</a></li>
+      <li><a href="#claude-code">整合 Claude Code：跨 Session 記憶工作流</a></li>
+      <li><a href="#vs-mem0">MemPalace vs Mem0 完整比較</a></li>
+      <li><a href="#pros-cons">優缺點老實說</a></li>
+      <li><a href="#controversy">爭議解析：炒作還是真材實料？</a></li>
+      <li><a href="#deploy">進階：架在 VPS 上，全團隊共用記憶</a></li>
+      <li><a href="#verdict">評分與結論</a></li>
+      <li><a href="#faq">常見問題 FAQ</a></li>
+    </ul>
+  </details>
+
+  <div class="summary-box">
+    <strong>⚡ 30 秒速覽</strong><br>
+    MemPalace 是 GitHub 開源（MIT）的 AI 對話記憶系統，核心用 ChromaDB 向量搜索，讓 Claude Code / ChatGPT 能「記住」你跨對話的歷史脈絡。2026 年 4 月，48 小時內暴增 22K+ Stars，登上 HN 首頁。<br><br>
+    <strong>適合：</strong>每天重度使用 Claude Code 的開發者、想要 AI 助手有「長期記憶」的用戶、注重資料隱私的本地部署愛好者。<br>
+    <strong>不適合：</strong>完全不接觸程式的一般用戶（安裝需要 Python 基礎）。
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2 id="what-is">MemPalace 是什麼？為何 48 小時爆紅？</h2>
+
+  <p>如果你有在用 Claude Code 或 ChatGPT 寫程式，一定遇過這個痛苦：</p>
+
+  <ul>
+    <li>每次開新對話，AI 就「忘記」你上次的偏好設定</li>
+    <li>「我上禮拜跟你說過用 TypeScript strict mode」—— AI：「哪次？」</li>
+    <li>大型專案跨 session 的程式脈絡每次都要重新解釋</li>
+    <li>同樣的問題講了三次，AI 還是給出一樣的答案</li>
+  </ul>
+
+  <p>這就是 <strong>MemPalace</strong> 要解決的問題。</p>
+
+  <p>MemPalace（GitHub: milla-jovovich/mempalace）是一個開源工具，讓你的 AI 助手能夠搜尋和調用你所有歷史對話內容。它在 2026 年 4 月中旬發布後，<strong>48 小時內衝破 22,000 GitHub Stars</strong>，登上 Hacker News 首頁，成為近期最受矚目的 AI 開源項目之一。</p>
+
+  <div class="step-box">
+    <strong>🔥 為什麼這麼多人關注？</strong><br>
+    Claude Code 和 ChatGPT 都有「Context Window」限制——對話超過一定長度就會忘記前面的內容。MemPalace 解決的是 AI 的「失憶症」，這個痛點幾乎每個重度 AI 用戶都有。
+  </div>
+
+  <h3>MemPalace 核心功能一覽</h3>
+
+  <table>
+    <tr>
+      <th>功能</th>
+      <th>說明</th>
+    </tr>
+    <tr>
+      <td>🧠 跨對話記憶搜索</td>
+      <td>搜尋你所有歷史 Claude/ChatGPT 對話</td>
+    </tr>
+    <tr>
+      <td>🔍 語意相似度搜索</td>
+      <td>不需要完全關鍵字匹配，懂你的意思</td>
+    </tr>
+    <tr>
+      <td>📦 本地 ChromaDB 儲存</td>
+      <td>資料完全在你自己的機器上，零雲端</td>
+    </tr>
+    <tr>
+      <td>🔌 MCP 整合支援</td>
+      <td>可接入 Claude Code 工作流</td>
+    </tr>
+    <tr>
+      <td>🆓 MIT 開源免費</td>
+      <td>完全免費，可商業使用</td>
+    </tr>
+    <tr>
+      <td>🌐 多 AI 支援</td>
+      <td>Claude、ChatGPT、Gemini 歷史皆可</td>
+    </tr>
+  </table>
+
+  <!-- SECTION 2 -->
+  <h2 id="how-it-works">底層原理：ChromaDB + 向量搜索怎麼運作？</h2>
+
+  <p>MemPalace 的技術架構其實並不複雜，理解原理有助於你判斷它是否適合你：</p>
+
+  <h3>Step 1：對話向量化</h3>
+  <p>當你匯入歷史對話（從 Claude.ai 或 ChatGPT 匯出的 JSON/Markdown），MemPalace 會把每段對話轉換成<strong>向量（Embedding）</strong>——一組代表語意的數字陣列。</p>
+
+  <h3>Step 2：ChromaDB 儲存</h3>
+  <p>向量儲存在本機的 <strong>ChromaDB</strong>（一個輕量級向量資料庫）。ChromaDB 完全在你的電腦或伺服器上運行，不需要外部服務。</p>
+
+  <h3>Step 3：語意搜索</h3>
+  <p>當你提問時，MemPalace 把你的問題也向量化，然後在 ChromaDB 中找出「語意最相近」的歷史對話片段，把這些片段作為 Context 傳給 AI。</p>
+
+  <div class="step-box">
+    <strong>📌 實際效果：</strong>你問「上次我說要用什麼資料庫框架？」，MemPalace 會從你幾週前的對話中找出「我們決定用 Prisma + PostgreSQL」這個資訊，然後告訴現在的 Claude/ChatGPT。
+  </div>
+
+  <div class="warning-box">
+    <strong>⚠️ 技術限制需知：</strong>MemPalace 的搜索品質取決於 Embedding 模型的語意理解能力。對於非常技術性的代碼片段，語意搜索有時不如精確關鍵字搜索準確。這也是社群爭議點之一。
+  </div>
+
+  <!-- SECTION 3 -->
+  <h2 id="install">5 步驟安裝教學（附指令）</h2>
+
+  <p>以下以 macOS / Linux 環境示範，需要 Python 3.10+：</p>
+
+  <div class="step-box">
+    <strong>Step 1：Clone 專案</strong>
+  </div>
+  <div class="code-block"><code>git clone https://github.com/milla-jovovich/mempalace.git
+cd mempalace</code></div>
+
+  <div class="step-box">
+    <strong>Step 2：建立虛擬環境並安裝依賴</strong>
+  </div>
+  <div class="code-block"><code>python3 -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt</code></div>
+
+  <div class="step-box">
+    <strong>Step 3：初始化 ChromaDB</strong>
+  </div>
+  <div class="code-block"><code>python setup.py --init-db</code></div>
+
+  <div class="step-box">
+    <strong>Step 4：匯入對話歷史</strong>
+  </div>
+  <div class="code-block"><code># 匯入 Claude 對話歷史（從 claude.ai 設定 > 匯出資料）
+python import.py --source claude --file ~/Downloads/claude-history.json
+
+# 或匯入 ChatGPT 對話歷史
+python import.py --source chatgpt --file ~/Downloads/conversations.json</code></div>
+
+  <div class="step-box">
+    <strong>Step 5：啟動 API 伺服器</strong>
+  </div>
+  <div class="code-block"><code>python server.py --port 8765</code></div>
+
+  <p>啟動後訪問 <code>http://localhost:8765/docs</code> 可看到 Swagger API 文件。</p>
+
+  <div class="warning-box">
+    <strong>⚠️ 注意：</strong>大量歷史對話匯入時，初次向量化可能需要 5-30 分鐘（視對話量和電腦性能）。這是一次性過程，之後的搜索非常快。
+  </div>
+
+  <!-- SECTION 4 -->
+  <h2 id="claude-code">整合 Claude Code：跨 Session 記憶工作流</h2>
+
+  <p>對開發者來說，MemPalace 最有價值的整合是 <strong>Claude Code + MCP 工作流</strong>。</p>
+
+  <h3>方法一：MCP Server 整合（推薦）</h3>
+
+  <p>MemPalace 提供 MCP（Model Context Protocol）Server，讓 Claude Code 可以直接呼叫記憶搜索：</p>
+
+  <div class="code-block"><code># 在 Claude Code 的 .claude/mcp.json 加入：
+{
+  "mcpServers": {
+    "mempalace": {
+      "command": "python",
+      "args": ["/path/to/mempalace/mcp_server.py"],
+      "env": {
+        "MEMPALACE_DB_PATH": "/path/to/your/chroma_db"
+      }
+    }
+  }
+}</code></div>
+
+  <p>設定完成後，在 Claude Code 中你可以說：「搜索我之前的對話，找出我的 PostgreSQL 連線設定。」Claude Code 會自動調用 MemPalace 找到答案。</p>
+
+  <h3>方法二：手動 API 查詢</h3>
+
+  <div class="code-block"><code># 搜索語意相關對話
+curl -X POST http://localhost:8765/search \
+  -H "Content-Type: application/json" \
+  -d '{"query": "我的資料庫連線字串", "limit": 5}'</code></div>
+
+  <div class="cta-box">
+    <h3>🚀 想在雲端架設 MemPalace？</h3>
+    <p>用 DigitalOcean Droplet（$6/月）架設永久運行的 MemPalace，全團隊共用 AI 記憶庫</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">
+      💧 DigitalOcean 新戶 $200 免費點數 →
+    </a>
+    <p style="font-size:0.8rem;margin-top:0.5rem;color:var(--gray);">透過此連結註冊可獲得 60 天 $200 免費額度，足夠跑 MemPalace 超過 1 年</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2 id="vs-mem0">MemPalace vs Mem0 完整比較</h2>
+
+  <p>市場上類似的 AI 記憶工具主要是 Mem0，我們來做完整比較：</p>
+
+  <table>
+    <tr>
+      <th>項目</th>
+      <th>MemPalace</th>
+      <th>Mem0</th>
+    </tr>
+    <tr>
+      <td><strong>授權</strong></td>
+      <td>✅ MIT 開源免費</td>
+      <td>免費層 + 付費方案</td>
+    </tr>
+    <tr>
+      <td><strong>資料儲存</strong></td>
+      <td>✅ 完全本地（自架）</td>
+      <td>雲端（Mem0 伺服器）</td>
+    </tr>
+    <tr>
+      <td><strong>隱私</strong></td>
+      <td>✅ 資料不離機</td>
+      <td>資料在 Mem0 雲端</td>
+    </tr>
+    <tr>
+      <td><strong>安裝難度</strong></td>
+      <td>中（需 Python 基礎）</td>
+      <td>✅ 低（API Key 即用）</td>
+    </tr>
+    <tr>
+      <td><strong>Claude Code 整合</strong></td>
+      <td>✅ MCP Server</td>
+      <td>✅ SDK 整合</td>
+    </tr>
+    <tr>
+      <td><strong>搜索方式</strong></td>
+      <td>ChromaDB 向量搜索</td>
+      <td>混合搜索（向量+圖譜）</td>
+    </tr>
+    <tr>
+      <td><strong>月費</strong></td>
+      <td>✅ $0（自架）</td>
+      <td>Free: 1000次/月；Pro: $29/月起</td>
+    </tr>
+    <tr>
+      <td><strong>社群活躍度</strong></td>
+      <td>⭐ 剛爆紅，更新頻繁</td>
+      <td>穩定成熟</td>
+    </tr>
+    <tr>
+      <td><strong>文件完整度</strong></td>
+      <td>尚在完善中</td>
+      <td>✅ 完整文件</td>
+    </tr>
+  </table>
+
+  <p><strong>結論：</strong>重視隱私、不想付費、有技術能力的開發者選 MemPalace。需要穩定 SaaS、不想自架的用戶選 Mem0。</p>
+
+  <!-- SECTION 6 -->
+  <h2 id="pros-cons">優缺點老實說</h2>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>✅ 優點</h4>
+      <ul>
+        <li>MIT 開源，永久免費</li>
+        <li>資料完全本地化，隱私無憂</li>
+        <li>Claude Code MCP 整合流暢</li>
+        <li>ChromaDB 輕量，資源佔用低</li>
+        <li>支援多種 AI 對話歷史格式</li>
+        <li>社群爆發成長，迭代速度快</li>
+        <li>可自架在 VPS 供團隊使用</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>❌ 缺點</h4>
+      <ul>
+        <li>需要 Python 基礎才能安裝</li>
+        <li>文件還不夠完整（新項目）</li>
+        <li>Benchmark 方法論有爭議</li>
+        <li>純向量搜索對代碼精確匹配較弱</li>
+        <li>大量歷史初次匯入較慢</li>
+        <li>Windows 支援不如 macOS/Linux</li>
+        <li>UI 介面尚未開發（純 CLI + API）</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <h2 id="controversy">爭議解析：炒作還是真材實料？</h2>
+
+  <p>MemPalace 在 Hacker News 引發了不少爭議，讓我們直接看看主要批評：</p>
+
+  <h3>爭議一：「只是 ChromaDB 的包裝」</h3>
+  <p>部分評論者認為 MemPalace 的核心功能很簡單，不過是把 ChromaDB + Embedding 的常見流程打包而已，本質沒有什麼創新。</p>
+  <p><strong>我們的評估：</strong>這個說法技術上有一定道理，但好的打包本身就有價值。MemPalace 解決的是「設置門檻」問題，讓不熟悉向量資料庫的開發者也能快速用上這個能力。就像 n8n 也「只是」包裝各種 API，但仍然有大量用戶。</p>
+
+  <h3>爭議二：Benchmark 數字可信度</h3>
+  <p>README 中展示的記憶準確率數據，有 HN 用戶質疑測試方法論過於自設情境，難以反映真實使用場景。</p>
+  <p><strong>我們的評估：</strong>這個批評是合理的。對於 ChromaDB 向量搜索，實際效果高度依賴：對話品質、Embedding 模型、搜索問法。建議自行測試，不要只看 README 數字。</p>
+
+  <h3>爭議三：「Milla Jovovich」作者名稱</h3>
+  <p>GitHub 帳號名稱用了好萊塢女星的名字（milla-jovovich），引發是否是玩笑帳號的討論。</p>
+  <p><strong>我們的評估：</strong>這確實有點奇怪，但代碼本身是真實的，MIT 授權可自行審查。用化名在開源社群不是少見的事。</p>
+
+  <div class="summary-box">
+    <strong>📊 我們的最終裁定：</strong>MemPalace 是真材實料的工具，爭議主要在行銷方式和 Benchmark 誇大。核心功能（向量搜索歷史對話）確實有用，只是可能沒有 README 描述的那麼神奇。理性期待，值得一試。
+  </div>
+
+  <!-- SECTION 8 -->
+  <h2 id="deploy">進階：架在 VPS 上，全團隊共用記憶</h2>
+
+  <p>MemPalace 最強的使用場景之一是<strong>架在雲端 VPS，讓整個開發團隊共用同一個 AI 記憶庫</strong>。例如：</p>
+
+  <ul>
+    <li>所有工程師的 Claude Code 對話，統一存入團隊 MemPalace</li>
+    <li>新人加入時，可以搜索過去三個月的技術決策對話</li>
+    <li>PM 可以搜索特定功能的歷史討論脈絡</li>
+    <li>避免「這個為什麼這樣設計」的重複問答</li>
+  </ul>
+
+  <h3>推薦部署方案：DigitalOcean Droplet</h3>
+
+  <table>
+    <tr>
+      <th>方案</th>
+      <th>規格</th>
+      <th>月費</th>
+      <th>適合</th>
+    </tr>
+    <tr>
+      <td>Basic Droplet</td>
+      <td>1 vCPU / 1GB RAM</td>
+      <td>$6/月</td>
+      <td>個人使用，少量歷史</td>
+    </tr>
+    <tr>
+      <td>Basic Droplet</td>
+      <td>2 vCPU / 2GB RAM</td>
+      <td>$12/月</td>
+      <td>小團隊（3-5人）</td>
+    </tr>
+    <tr>
+      <td>General Purpose</td>
+      <td>2 vCPU / 8GB RAM</td>
+      <td>$48/月</td>
+      <td>大量歷史 + 多人團隊</td>
+    </tr>
+  </table>
+
+  <p>初次向量化大量歷史時，RAM 是瓶頸。建議至少 2GB RAM。平時搜索 API 運行非常省資源。</p>
+
+  <div class="cta-box">
+    <h3>🚀 新戶 $200 免費點數，跑 MemPalace 超過一年</h3>
+    <p>DigitalOcean 新用戶透過以下連結可獲得 $200 / 60 天免費額度。$12/月方案等於免費跑超過 16 個月。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">
+      💧 立即領取 $200 免費點數 →
+    </a>
+    <br>
+    <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener">
+      ☁️ Cloudways 託管雲端主機 →
+    </a>
+  </div>
+
+  <h3>快速部署指令（Ubuntu 22.04）</h3>
+  <div class="code-block"><code># 在 DigitalOcean Droplet 上
+sudo apt update && sudo apt install -y python3 python3-pip git
+git clone https://github.com/milla-jovovich/mempalace.git
+cd mempalace
+pip3 install -r requirements.txt
+python3 setup.py --init-db
+
+# 用 systemd 讓服務開機自動啟動
+sudo nano /etc/systemd/system/mempalace.service
+# (填入 ExecStart=python3 /home/user/mempalace/server.py --port 8765)
+sudo systemctl enable mempalace
+sudo systemctl start mempalace</code></div>
+
+  <!-- SECTION 9 -->
+  <h2 id="verdict">評分與結論</h2>
+
+  <div class="rating-box">
+    <div class="rating-num">8.2</div>
+    <div>
+      <div style="color:var(--white);font-weight:700;">MemPalace 綜合評分</div>
+      <div class="rating-label">AutoDev AI 編輯評分（滿分 10）</div>
+    </div>
+  </div>
+
+  <table>
+    <tr>
+      <th>評分項目</th>
+      <th>分數</th>
+      <th>說明</th>
+    </tr>
+    <tr>
+      <td>功能實用性</td>
+      <td>⭐⭐⭐⭐☆ 8/10</td>
+      <td>解決真實痛點，跨對話記憶有效</td>
+    </tr>
+    <tr>
+      <td>安裝難度</td>
+      <td>⭐⭐⭐☆☆ 6/10</td>
+      <td>需要 Python 基礎，非 plug-and-play</td>
+    </tr>
+    <tr>
+      <td>隱私保護</td>
+      <td>⭐⭐⭐⭐⭐ 10/10</td>
+      <td>完全本地化，資料零外洩</td>
+    </tr>
+    <tr>
+      <td>Claude Code 整合</td>
+      <td>⭐⭐⭐⭐☆ 8/10</td>
+      <td>MCP 整合流暢，是目前最強場景</td>
+    </tr>
+    <tr>
+      <td>性價比</td>
+      <td>⭐⭐⭐⭐⭐ 10/10</td>
+      <td>MIT 免費，無可挑剔</td>
+    </tr>
+    <tr>
+      <td>文件完整度</td>
+      <td>⭐⭐⭐☆☆ 6/10</td>
+      <td>新項目，文件持續完善中</td>
+    </tr>
+  </table>
+
+  <h3>🎯 我們的推薦結論</h3>
+
+  <p><strong>如果你每天都在用 Claude Code</strong>，MemPalace 值得試試。安裝一次，長期受益。特別是如果你有跨多個 Session 的大型專案，它能省下大量「重新解釋背景」的時間。</p>
+
+  <p><strong>如果你不熟悉 Python</strong>，目前可能還不是最佳時機。等待社群開發更友善的 GUI 版本，或者考慮 Mem0 的 SaaS 版本。</p>
+
+  <p><strong>如果你是開發團隊 Lead</strong>，在 VPS 上架設一個團隊共用的 MemPalace，讓所有工程師的 AI 對話歷史都能跨人搜索，這個用法的投資報酬率極高。</p>
+
+  <!-- ADDITIONAL CTAs -->
+  <div class="cta-box" style="margin-top:2.5rem;">
+    <h3>📚 同場加映：想學 AI 開發技能？</h3>
+    <p>DataCamp 提供完整的 AI / LLM / Vector DB 課程路徑，從向量資料庫到 RAG 應用一次學齊</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">
+      🎓 DataCamp AI 課程 →
+    </a>
+  </div>
+
+  <div class="cta-box" style="margin-top:1.5rem;">
+    <h3>🤖 想快速部署 AI 自動化工作流？</h3>
+    <p>Systeme.io 免費方案讓你建立完整的 AI 行銷漏斗，結合 MemPalace 記憶系統和自動化流程</p>
+    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="cta-btn" target="_blank" rel="noopener">
+      ⚡ Systeme.io 免費開始 →
+    </a>
+  </div>
+
+  <div class="cta-box" style="margin-top:1.5rem;">
+    <h3>🛡️ 自架 MemPalace 需要 VPN 保護？</h3>
+    <p>在 VPS 上跑 MemPalace，用 NordVPN 加密連線保護你的 AI 記憶庫</p>
+    <a href="https://onelink.one/s/7WSzC" class="cta-btn" target="_blank" rel="noopener">
+      🔒 NordVPN 優惠方案 →
+    </a>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener">
+      📦 Claude Crons 自動化模板包 →
+    </a>
+  </div>
+
+  <!-- FAQ -->
+  <h2 id="faq">常見問題 FAQ</h2>
+
+  <h3>MemPalace 要付費嗎？</h3>
+  <p>完全免費，MIT 開源授權，可商業使用。唯一的「費用」是你自架伺服器的主機費（如果你選擇雲端部署）。</p>
+
+  <h3>MemPalace 支援中文對話嗎？</h3>
+  <p>支援，ChromaDB 的向量搜索是語言無關的（language-agnostic）。中文繁體、簡體、英文都可以搜索。不過 Embedding 模型的中文語意理解品質，建議選擇支援多語言的版本。</p>
+
+  <h3>我的 Claude.ai 對話怎麼匯出？</h3>
+  <p>前往 claude.ai → 設定 → 隱私 → 匯出資料，下載 JSON 格式的對話歷史，再用 MemPalace 的 import 指令匯入。</p>
+
+  <h3>MemPalace 會不斷更新嗎？</h3>
+  <p>爆紅後社群非常活躍，2026 年 4 月的更新頻率很高。但作為新項目，長期維護穩定性仍需觀察。</p>
+
+  <h3>需要 GPU 嗎？</h3>
+  <p>不需要。ChromaDB 向量搜索在 CPU 上就可以流暢運行。初次匯入大量對話時 CPU 使用率較高，但之後搜索幾乎無感。</p>
+
+  <!-- Related -->
+  <div class="related">
+    <h4>🔗 延伸閱讀</h4>
+    <ul>
+      <li><a href="/blog/claude-code-routines-tutorial-2026.html">Claude Code 自動化日常工作流教學 2026</a></li>
+      <li><a href="/blog/n8n-automation-tutorial-2026.html">n8n 自動化教學：從零開始建立 AI 工作流</a></li>
+      <li><a href="/blog/n8n-hitl-tutorial-2026.html">n8n HITL 人機協作流程完整教學</a></li>
+      <li><a href="/blog/ai-tools-comparison-2026.html">2026 AI 工具完整比較：Claude vs ChatGPT vs Gemini</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 AutoDev AI｜<a href="/about.html">關於我們</a>｜<a href="/contact.html">聯絡我們</a>｜<a href="/privacy.html">隱私政策</a></p>
+  <p style="margin-top:0.5rem;">本站文章包含聯盟行銷連結，購買時 AutoDev AI 可能獲得佣金。</p>
+</footer>
+
+</body>
+</html>
