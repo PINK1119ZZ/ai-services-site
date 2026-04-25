@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-24T22:00Z",
+  "lastUpdated": "2026-04-25T00:00Z",
   "lastResearchDate": "2026-04-24",
   "sites": {
     "autodev-ai": {
@@ -10,11 +10,9 @@
       "lastNewArticle": "2026-04-23",
       "lastRefresh": "2026-04-19",
       "issues": [
-        "2026-04-21 health check: autodev-ai.com timed out on 3 curl attempts from cron host (connect timeout to :443); requires infra/DNS/origin verification.",
-        "2026-04-22 health check: autodev-ai.com returned curl status 000 from cron host while ai-tools-en/ai-tools-tw and all tracked ai-tools-tw landing pages returned 200; requires infra/DNS/origin verification.",
-        "2026-04-23 health check: autodev-ai.com returned curl status 000 from cron host again while ai-tools-en, ai-tools-tw, and 9 tracked ai-tools-tw pages returned 200; requires infra/DNS/origin verification."
+        "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-04-24"
+      "lastChecked": "2026-04-25"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -23,7 +21,7 @@
       "lastNewArticle": "2026-04-12",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-04-24"
+      "lastChecked": "2026-04-25"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -42,7 +40,7 @@
         "vibe-coding-comparison": "https://pink1119zz.github.io/ai-tools-tw/blog/vibe-coding-tools-comparison-2026.html"
       },
       "issues": [],
-      "lastChecked": "2026-04-24"
+      "lastChecked": "2026-04-25"
     }
   },
   "affiliateLinks": {
@@ -1284,7 +1282,9 @@
         "Updated dev-notes.md with Round 26 findings",
         "Identified internal efficiency: claude-context principles can reduce agent-state.json read cost by 35-50%"
       ],
-      "directivesWritten": ["researcher-to-strategist-2026-04-24.md"],
+      "directivesWritten": [
+        "researcher-to-strategist-2026-04-24.md"
+      ],
       "topFindings": [
         "free-claude-code: GitHub #1 today, post-Anthropic-restriction demand, 繁中 tutorial = 0",
         "claude-context MCP: 40% token savings, internal use opportunity",
@@ -1311,6 +1311,25 @@
         "proposal-2026-04-24-B",
         "proposal-2026-04-24-C"
       ]
+    },
+    {
+      "timestamp": "2026-04-25T00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json and latest directive before running health checks",
+        "Curl checked 11 tracked URLs: 3 site roots + 8 ai-tools-tw key pages",
+        "Confirmed all tracked URLs returned HTTP 200 from cron host",
+        "Updated lastChecked to 2026-04-25 for all tracked sites",
+        "Cleared recurring autodev-ai timeout/000 incidents from Apr 21-23 after successful recovery verification",
+        "Logged autodev-ai recovery note in issues history"
+      ],
+      "results": {
+        "checkedUrls": 11,
+        "http200": 11,
+        "failures": 0
+      }
     }
   ],
   "fbPosted": [
