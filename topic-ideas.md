@@ -4,6 +4,49 @@
 
 ---
 
+## 2026-04-25（Researcher Round 27：PH Apr月榜最終 + GitHub Trending + HN 熱門 + MemPalace 病毒爆發 + Tolaria + DeepEP V2 + Pixelle-Video + Fathom 3.0 + RAG-Anything）
+
+> 本輪執行時間：2026-04-25 00:30 UTC | 搜尋範圍：PH April月榜最終版 + GitHub trending (trendshift.io) + HN top + Claude Opus 4.7 爭議
+
+### 🏆 最高優先（有 30%+ recurring affiliate 或緊急視窗）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量（估）| 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|------------|---------|----------|---------|
+| 2026-04-25 | **Fathom 3.0 評測 2026：無機器人 AI 會議筆記，直接整合 ChatGPT 和 Claude** | `fathom 評測`、`fathom 3.0 繁中`、`ai 會議記錄工具 2026`、`fathom vs otter vs fireflies 比較`、`ai 會議 bot-free` | 高（PH April月榜#1；3.6K followers；bot-free 是強差異點；繁中評測存在但可超越）| **Fathom affiliate：25% recurring（待確認）** + autodev-ai 服務 CTA | **US$200–600/月（月榜#1; bot-free 差異化賣點; 台灣遠距工作受眾）** | ai-tools-tw ⭐⭐⭐ |
+| 2026-04-25 | **MemPalace 評測：22K Stars 48小時爆紅的 AI 記憶系統，Milla Jovovich 建的是神器還是炒作？** | `mempalace 評測`、`mempalace 繁中`、`ai agent 記憶系統 2026`、`mempalace vs mem0`、`claude code 長期記憶` | 極高（GitHub 22K stars in 48h；HN熱門；MIT licence；Claude Code 用戶痛點完全命中；話題性極高） | **ChromaDB/向量資料庫工具教學** + DigitalOcean $200（本地部署）+ DataCamp 副 CTA | **US$150–500/月（極高流量話題；教學/工具頁；DO 部署場景自然）** | autodev-ai ⭐⭐⭐ |
+| 2026-04-25 | **Langfuse 完整評測 2026：LLM Observability 開源神器，從 Prototype 到 Production 最佳選擇** | `langfuse 評測`、`langfuse 繁中`、`llm observability 工具 2026`、`langfuse vs helicone`、`ai agent 監控 open source` | 高（GitHub trendshift AI workflow Topic #7；Canva使用案例；開源+雲端雙部署；開發者受眾高意圖） | **Langfuse Cloud affiliate（待確認）** + DigitalOcean $200（self-host 部署）主 CTA | **US$180–500/月（LLM observability 是2026 AI dev必需品；開發者受眾=高DO轉換）** | autodev-ai ⭐⭐⭐ |
+
+### 💎 高價值題材
+
+| 日期 | 工具 | 關鍵字 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|---------|----------|---------|
+| 2026-04-25 | **Tolaria 評測：Luca Rossi（Refactoring.fm）的 AI 時代個人知識庫 macOS App，為何拋棄 Notion？** | `tolaria 評測`、`tolaria app 繁中`、`ai markdown knowledge base mac 2026`、`notion 替代品 mac`、`tolaria vs obsidian ai` | 中高（HN Show HN 剛上 Apr 25；開源 macOS；Refactoring.fm 創辦人建立；AI優先 Markdown KM；繁中評測=0） | **Setapp affiliate $25/新用戶**（若Tolaria進Setapp）+ DataCamp AI 知識管理副 CTA | **US$80–250/月（個人效能 + macOS App 受眾；Notion替代品搜索量高；繁中空白）** | ai-tools-tw ⭐⭐ |
+| 2026-04-25 | **Pixelle-Video 教學 2026：3分鐘自動生成 AI 短影音，支援 DeepSeek + ComfyUI，比 MoneyPrinterTurbo 更強？** | `pixelle video 教學`、`pixelle video 繁中`、`ai 短影音生成 comfyui 2026`、`ai 自動生成影片 工具`、`moneyprinterturbo 替代品 2026` | 中高（GitHub trending trendshift；AI video generation Topic #14 全球4.3K stars；中文工具+英文受眾） | **CapCut 副 CTA**（影片編輯後製）+ DigitalOcean $200（ComfyUI GPU部署）主 CTA | **US$120–350/月（AI短影音創作市場爆發；DO GPU部署 = 最強聯盟場景）** | autodev-ai ⭐⭐ |
+| 2026-04-25 | **RAG-Anything 完整教學：多模態 RAG 框架，PDF + 圖片 + 表格 + 公式全部搞定** | `rag-anything 教學`、`multimodal rag 繁中 2026`、`rag anything github`、`llm 多模態 retrieval 2026`、`lightrag 進階版` | 中（GitHub trending trendshift #13 RAG Topic；HKUDS 學術背書；LightRAG 延伸；企業文件AI受眾） | **DigitalOcean $200**（RAG部署場景）+ DataCamp AI 課程副 CTA | **US$100–300/月（企業AI開發者受眾；技術含量高=高意圖；DO自然搭配）** | autodev-ai ⭐⭐ |
+| 2026-04-25 | **DeepEP V2 + TileKernels：DeepSeek 再出手，MoE Expert Parallelism 通訊庫讓訓練效率倍增** | `deepep v2 教學`、`deepseek deepep 繁中`、`moe expert parallelism 2026`、`deepseek 開源工具 2026`、`llm 訓練加速工具` | 中（GitHub trending；Reddit r/LocalLLaMA爆討論；DeepSeek品牌在台灣工程師圈=高認知；技術性話題） | **DataCamp** AI / LLM 課程副 CTA + DigitalOcean GPU 部署主 CTA | **US$80–250/月（技術性受眾意圖高；DO GPU CTA 自然）** | autodev-ai ⭐⭐ |
+| 2026-04-25 | **Claude Opus 4.7 爭議全解析：為何 HN 和 Reddit 說「這是 Anthropic 最差發布」？** | `claude opus 4.7 評測`、`claude opus 4.7 vs claude opus 4`、`anthropic claude 2026 最新`、`claude 訂閱 值得嗎 2026`、`claude opus 4.7 問題` | 高（HN 1.2K upvotes「最差發布」爭議；Medium Vibe Coding 批評文；計費方式改變引起用戶反彈；搜尋量急升） | **DataCamp（AI 工具比較課）**+ Perplexity Max affiliate（$10+10%；推替代方案）副 CTA | **US$100–300/月（爭議話題=高流量；替代方案比較頁可嵌多個聯盟）** | autodev-ai ⭐⭐⭐ |
+
+### 🆕 本輪新聯盟發現
+
+| 工具 | 佣金率 | 申請連結 | 優先度 | 備注 |
+|------|--------|---------|--------|------|
+| **Fathom** | 估 25% recurring（待確認官方聯盟頁）| https://fathom.video/affiliates | 🔴 HIGH — PH April月榜#1，現在申請搶先機 | Bot-free + ChatGPT/Claude整合；3.6K PH followers；繁中評測已有但不強 |
+| **Langfuse Cloud** | 待確認（猜測 20-30% recurring）| https://langfuse.com | 🟠 MEDIUM — 先寫評測再確認聯盟 | 開源旗艦；Canva使用案例；LLM dev必備工具 |
+
+### 🔑 本輪關鍵洞察
+
+1. **MemPalace 是本輪最大話題**：22K stars in 48小時、HN frontpage、Milla Jovovich 搞的（celebrity novelty）。MIT licence、本地ChromaDB、Claude Code歷史記憶搜索。技術社群反應兩極：實際架構是ChromaDB + 向量搜索，benchmark methodology有爭議。這種「病毒爆紅+爭議」組合是內容流量最強配方。繁中教學幾乎空白。
+
+2. **Fathom 3.0 = PH April月榜#1 + Bot-free 差異化**：Fathom的最大突破是「無機器人參加會議」的全新錄音架構，同時整合進ChatGPT和Claude的副駕駛界面。台灣遠距工作、創業者、PM受眾完全命中。已有ai-tools-tw的fathom-3-review頁，可升級+加強聯盟CTA。
+
+3. **Claude Opus 4.7 爭議 = 熱門搜尋機會**：Medium Vibe Coding 1.2K讚批評文「最差發布」；HN 大量討論；計費方式改變引起反彈。「為什麼大家討厭Claude Opus 4.7」類標題的搜尋量急升。可做「Claude Opus 4.7 到底值不值得升級？完整評測」引流，底部推薦替代方案（Perplexity Max = 10%+$10聯盟）。
+
+4. **GitHub Trending 今日主題**：AI agent (46.7K stars) > AI coding assistant (21K) > AI skills (17.2K) > Self-hosted (14K) > MCP (6.3K) > AI workflow (8.1K)。MCP 仍在Top 10說明MCP相關內容持續有搜尋需求。AI agent skills 主題下有多個爆紅repos（addyosmani/agent-skills、VoltAgent系列）。
+
+5. **Langfuse = LLM dev 必備工具，無繁中評測**：Canva使用案例讓可信度極高；開源+雲端雙部署；Trace + Prompt管理 + Eval一體化。台灣AI工程師快速增長，Langfuse教學文 = 高意圖開發者流量。DO自架部署場景是最自然的$200 CTA。
+
+---
+
 ## 2026-04-24（Researcher Round 26：PH Apr 23 日榜 + OpenAI Workspace Agents + Gemini Enterprise + Qwen3.6-27B + ASI:One + Blink AI CFO + Magic Patterns 2.0）
 
 > 本輪執行時間：2026-04-24 00:30 UTC | 搜尋範圍：Product Hunt Apr 23 日榜 + GitHub trending + Qwen3.6-27B 深挖 + PH月榜新進者
