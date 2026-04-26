@@ -4,6 +4,21 @@
 
 ---
 
+## 2026-04-26（Researcher Round 30：Sunday Competitor Watch — 競品變現分析 + 關鍵字空白掃描）
+
+> 本輪執行時間：2026-04-26 03:10 UTC | 搜尋範圍：台灣繁中競品監控 + Vocus/Threads競品 + PH April月榜最終 + 新聯盟掃描
+
+### 🔴 緊急（競品已佔位，我們完全缺席）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量（估）| 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|------------|---------|----------|---------|
+| 2026-04-26 | **NovaVoice vs Wispr Flow 比較頁**（PH April月榜 #3，語音AI OS，整合MCP/WhatsApp/Telegram） | `novavoice vs wispr flow`、`ai 語音輸入工具比較 2026`、`mac 語音聽打 最佳選擇 台灣`、`novavoice 評測 繁中` | 高（兩工具都是April月榜前5；Wispr Flow已有評測文需互連；NovaVoice繁中評測=0） | **Wispr Flow 25% 12m affiliate（已確認）** 嵌比較頁；Murf AI副CTA；DataCamp | **US$150–400/月**（帶Wispr Flow轉換+Murf AI副CTA；台灣職場語音輸入受眾高轉換） | ai-tools-tw ⭐⭐⭐ |
+| 2026-04-26 | **AEO/GEO是什麼？台灣繁中AI搜尋優化完整指南**（競品Vocus文章已排行前3，我們完全缺席） | `AEO 是什麼 繁中`、`AI 搜尋優化 台灣 2026`、`如何出現在 ChatGPT 搜尋結果`、`GEO 教學`、`generative engine optimization 繁中` | 非常高（AEO是2026最熱SEO子話題；企業需求旺；台灣繁中教學幾乎空白） | **Semrush affiliate**（待申請，$200+方案B2B高ticket）；LLMClicks.ai 30% recurring | **US$200–600/月**（B2B高ticket受眾；企業SEO顧問受眾高付費意願；Semrush $10/sale+$0.01/trial） | autodev-ai ⭐⭐⭐ |
+| 2026-04-26 | **Fomofly vs OpusClip vs CapCut AI短影音工具比較**（台灣Threads @ai_content_radar已帶火，我們缺位） | `fomofly 評測 繁中`、`ai 短影音剪輯工具 2026`、`fomofly vs opusclip 台灣`、`ai 自動剪片工具比較`、`15分鐘出10支短影音` | 高（台灣影音創作者受眾大；Threads擴散快；CapCut我們已有affiliate；Fomofly繁中評測=0） | **CapCut affiliate（已有）** + **ShortsPro affiliate 30% lifetime（待申請）** + Fomofly affiliate（待調查） | **US$100–300/月**（CapCut帶既有流量；ShortsPro 30% lifetime是長期被動收入結構） | ai-tools-tw ⭐⭐⭐ |
+| 2026-04-26 | **Taption 完整評測 2026**（台灣本土AI字幕工具，繁中評測已有競品KOL佈局，我們缺席） | `taption 評測 繁中`、`taption 教學`、`ai 字幕工具 台灣`、`taption vs otter.ai`、`taption vs 雅婷逐字稿` | 高（台灣本土工具，受眾精準；YouTuber/講師/企業影片製作=高轉換；字幕工具市場成熟） | **Taption affiliate（待申請）**；Fathom 3.0副CTA（已有review page）；DataCamp副CTA | **US$100–250/月**（台灣本土affiliate轉換率通常較高；字幕工具使用頻率=高黏性） | ai-tools-tw ⭐⭐ |
+
+---
+
 ## 2026-04-26（Researcher Round 29：PH週榜Week17 + GitHub Trending 本週 + HN 熱門 + Wispr Flow 1.0 + Zed Parallel Agents + Hermes Agent 100K Stars + Google TPU 8代）
 
 > 本輪執行時間：2026-04-26 00:30 UTC | 搜尋範圍：PH Week 17 leaderboard + GitHub trending + HN frontpage + 聯盟佣金核查
