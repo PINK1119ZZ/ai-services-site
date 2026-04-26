@@ -4,6 +4,48 @@
 
 ---
 
+## 2026-04-26（Researcher Round 29：PH週榜Week17 + GitHub Trending 本週 + HN 熱門 + Wispr Flow 1.0 + Zed Parallel Agents + Hermes Agent 100K Stars + Google TPU 8代）
+
+> 本輪執行時間：2026-04-26 00:30 UTC | 搜尋範圍：PH Week 17 leaderboard + GitHub trending + HN frontpage + 聯盟佣金核查
+
+### 🏆 最高優先（有 30%+ recurring affiliate 或緊急視窗）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量（估）| 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|------------|---------|----------|---------|
+| 2026-04-26 | **Wispr Flow 1.0 評測 2026：停止打字！Mac/Windows/iOS AI語音聽打工具完整評測** | `wispr flow 評測`、`wispr flow 繁中`、`ai 語音輸入工具 mac 2026`、`wispr flow vs superwhisper`、`ai 聽打工具 台灣` | 極高（PH Week17 週榜 #1、Apr 17日榜 #1；台灣語音輸入需求爆發；100+ 語言支援；繁中評測競爭不高） | **Wispr Flow affiliate：25% 12個月 recurring（官方確認）**；Pro方案$15/月 → $3.75/客/月 | **US$150–400/月**（Week17 週冠；生產力受眾台灣職場轉換高；Dev+PM受眾雙覆蓋；繁中幾乎空白） | ai-tools-tw ⭐⭐⭐ |
+| 2026-04-26 | **Zed Parallel Agents 完整教學 2026：同時跑多個AI Agent的開源代碼編輯器** | `zed 評測`、`zed parallel agents 教學`、`zed vs cursor 2026`、`zed ai editor 繁中`、`parallel agents coding editor` | 高（HN 268分熱門+155則留言；PH Week17 上榜；AI coding editor話題持續發酵；開源 + MCP + ACP支援） | **DigitalOcean $200**（遠端dev環境部署）；DataCamp AI課程副CTA；Cursor比較頁嵌affiliate | **US$120–350/月**（dev受眾高意圖；Cursor比較帶流量；DO部署=最自然CTA；繁中Zed教學空白） | autodev-ai ⭐⭐⭐ |
+
+### 💎 高價值題材
+
+| 日期 | 工具 | 關鍵字 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|---------|----------|---------|
+| 2026-04-26 | **Hermes Agent 100K Stars 完整解析 2026：會自我進化的開源AI Agent，比OpenClaw更容易？** | `hermes agent 評測`、`hermes agent 繁中`、`nous research hermes 2026`、`hermes agent vs openclaw`、`自我進化 ai agent 開源` | 極高（GitHub 100K stars；X trending話題；YouTube爆發；100+ ready skills；自學loop設計；繁中解析=0） | **Hostinger affiliate**（YouTube帶$的品牌Hostinger）；**DigitalOcean $200**（自架Hermes場景）；DataCamp副CTA | **US$100–300/月**（話題性極高；自架AI agent = DO最強場景；開發者受眾；繁中完全空白） | autodev-ai ⭐⭐ |
+| 2026-04-26 | **Google TPU 8代解析：TPU 8t + 8i 是什麼？台灣供應鏈如何受惠？開發者能用嗎？** | `google tpu 8 評測`、`tpu 8t 8i 解析`、`google cloud next 2026 台灣`、`ai 訓練晶片 2026`、`google cloud 台灣` | 中高（HN 440分熱門+218則留言；Google Cloud Next 2026剛發佈；台灣供應鏈角度獨特；Digitimes獨家報導） | **Google Cloud affiliate**（新用戶credit）；DigitalOcean 比較CTA；DataCamp AI培訓副CTA | **US$80–250/月**（科技新聞分析受眾；台灣供應鏈角度差異化；Google Cloud credit轉換） | autodev-ai ⭐⭐ |
+| 2026-04-26 | **Dune 評測 2026：PH週冠3鍵Mac小鍵盤，原生支援OpenClaw觸發，值得買嗎？** | `dune app 評測`、`dune mac keypad 繁中`、`ai workflow mac 2026`、`dune vs raycast`、`mac ai 快捷鍵工具` | 中（PH Week17 #1、AI Dev/Productivity受眾；OpenClaw整合是差異賣點；macOS效率工具台灣用戶穩定需求） | **Dune 官方affiliate待查**；Raycast Pro比較 + Setapp affiliate $25/新用戶副CTA | **US$60–200/月**（PH週冠；macOS效率受眾；OpenClaw連動文章可做內部連結强化SEO） | ai-tools-tw ⭐⭐ |
+| 2026-04-26 | **ElevenAgents 完整評測 2026：ElevenLabs 的 AI Voice Agent 平台，WhatsApp + MCP + 可複製到子帳號** | `elevenagents 評測`、`elevenlabs voice agent 2026`、`ai 語音客服 台灣`、`eleven agents mcp 整合`、`ai voice agent 台灣` | 中高（PH Week17 #5 + 音頻類；ElevenLabs品牌效應；WhatsApp outbound支援對台灣中小企業有吸引力；MCP整合開發者受眾） | **ElevenLabs affiliate（待確認，預估20-30% recurring）**；Vapi比較頁副CTA | **US$100–300/月**（語音AI市場台灣快速成長；WhatsApp台灣使用率高；繁中語音agent評測=0） | autodev-ai ⭐⭐⭐ |
+
+### 🆕 本輪新聯盟發現
+
+| 工具 | 佣金率 | 申請連結 | 優先度 | 備注 |
+|------|--------|---------|--------|------|
+| **Wispr Flow** | **25% recurring 12個月**（官方確認）| https://wisprflow.ai/affiliates | 🔴 HIGH — PH Week17週冠、Apr17日冠 | Pro $15/月 → $3.75/客/月；繁中評測幾乎0；立即申請 |
+| **ElevenAgents / ElevenLabs** | 估 20-30% recurring（待確認官方） | https://elevenlabs.io/affiliates | 🔴 HIGH — PH Week17 #5、WhatsApp outbound台灣場景強 | 之前已建議申請ElevenLabs，本輪再次確認優先 |
+| **Dune (context-aware keypad)** | 待確認（macOS生產力小型工具） | 查官網 dune.ai | 🟡 MEDIUM — PH週冠，但小品工具轉換率較低 | OpenClaw整合是差異化賣點 |
+
+### 🔑 本輪關鍵洞察
+
+1. **Wispr Flow 1.0 是本輪最強變現機會**：PH Week17週冠 + Apr17日冠。官方確認25% recurring 12個月。Pro $15/月，Teams $12/用戶/月。台灣繁中「AI語音輸入工具」評測幾乎空白。Wispr Flow的關鍵差異是「write in your style across EVERY app」——不是只有一個app，而是全系統。對台灣PM/工程師/Cursor/Claude用戶是完美場景。搜尋意圖：「如何用聲音操作AI」→ 直接解答。
+
+2. **Zed Parallel Agents = AI coding editor 2026 新基準**：HN 268分+155則留言（Apr 25），同一天PH Week17上榜。核心功能：同時啟動多個AI agent跑在不同資料夾/repo，Threads Sidebar監控，120fps + 開源。台灣開發者Cursor評測已不少，但「Zed vs Cursor 2026」對比文在繁中幾乎0篇。DO遠端dev環境是最自然的CTA（Zed + DigitalOcean droplet）。
+
+3. **Hermes Agent 100K GitHub Stars = 話題性頂峰**：nousresearch/hermes-agent在X上trending。YouTube影片已有標題「insane 100K stars」。自我進化loop（完成複雜任務後自動寫reusable skill）是與OpenClaw最大差異點。無商業化產品，純開源，適合做「Hermes Agent vs OpenClaw 比較」（已有英文版多篇，繁中=0）。Hostinger是主要YouTube品牌贊助商（有affiliate）。
+
+4. **Google TPU 8t/8i = 台灣供應鏈敘事 + 開發者How-To**：Google Cloud Next 2026剛發佈（Apr 22），台灣Inventec/TSMC供應鏈角度是獨特切入點（Digitimes有獨家）。開發者角度：「如何在Google Cloud用TPU 8訓練AI」；台灣科技人角度：「TPU 8如何影響台灣供應鏈」。兩個角度可分拆兩篇。Google Cloud affiliate可嵌。
+
+5. **PH Week17 整體趨勢**：Productivity × AI coding × Voice AI 三大主題。Dune（脈絡感知Mac keypad）+ Wispr Flow（語音輸入）+ Zed（多agent編輯器）形成一條完整的「AI-native開發工作流」主題，可合併成一篇工具串燒文。
+
+---
+
 ## 2026-04-25（Researcher Round 27：PH Apr月榜最終 + GitHub Trending + HN 熱門 + MemPalace 病毒爆發 + Tolaria + DeepEP V2 + Pixelle-Video + Fathom 3.0 + RAG-Anything）
 
 > 本輪執行時間：2026-04-25 00:30 UTC | 搜尋範圍：PH April月榜最終版 + GitHub trending (trendshift.io) + HN top + Claude Opus 4.7 爭議
