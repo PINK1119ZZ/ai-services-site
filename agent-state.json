@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-26T10:30Z",
+  "lastUpdated": "2026-04-26T13:00Z",
   "lastResearchDate": "2026-04-26",
   "sites": {
     "autodev-ai": {
@@ -1209,6 +1209,25 @@
           "en/blog/index.html"
         ]
       }
+    },
+    {
+      "timestamp": "2026-04-26T13:00Z",
+      "agent": "content-ops",
+      "session": "fb-weekly-review",
+      "actions": [
+        "Pulled git main and read agent-state.json",
+        "Read /root/.openclaw/fb-config.json",
+        "Fetched this week Facebook page posts via Graph API",
+        "Tested available page/post insights metrics and documented blocker for per-post reach",
+        "Updated agent-state.json with new fbStrategy structure, fail patterns, post rules, and weekly review"
+      ],
+      "results": {
+        "postsReviewed": 30,
+        "publicInteractions": 7,
+        "postsWithAnyInteraction": 7,
+        "reachMetricsAvailable": false,
+        "blocker": "Per-post reach/impressions insights unavailable with current Graph API token/permissions"
+      }
     }
   ],
   "fbPosted": [
@@ -1222,5 +1241,52 @@
     "122106285734778539_1224590573079900",
     "122105694398778539_2347942879016966",
     "122105946014778539_1275622094136744"
-  ]
+  ],
+  "fbStrategy": {
+    "performance": {
+      "winPatterns": [],
+      "failPatterns": [
+        "同一時段（04:00 UTC）連發 3-4 則以上貼文，貼文彼此競食，幾乎全部 0 互動。",
+        "英文清單型貼文在目前粉專受眾上反應偏弱，缺少在地角度、問題鉤子與討論點。",
+        "「完整文章看這裡」型文案太平，CTA 偏像 feed dump，不像社群對話。",
+        "多數貼文沒有明確觀點、爭議、問句或案例切入，留言動機低。"
+      ],
+      "weeklyReviews": [
+        {
+          "week": "2026-W17",
+          "period": "2026-04-20 to 2026-04-26",
+          "generatedAt": "2026-04-26T13:00:00Z",
+          "summary": "本週共發 30 則貼文，公開互動總量偏低（7 則留言、0 reaction、0 share）。中午主貼文比凌晨批次連發更有機會拿到互動，但整體最大問題不是題材，而是發布節奏過密與文案過像 RSS 轉貼。",
+          "totals": {
+            "posts": 30,
+            "publicInteractions": 7,
+            "postsWithAnyInteraction": 7
+          },
+          "blockers": [
+            "本週 Graph API token 可列出貼文與公開互動，但無法取得可用的 per-post reach/impressions metric（post_impressions / post_engaged_users 欄位對目前權限/版本不可用或返回空值），因此本週無法誠實計算觸及率；改以公開互動訊號做暫代觀察。"
+          ],
+          "observations": [
+            "有互動的 7 則全部來自中午主貼文；凌晨 04:00 UTC 批次貼文幾乎全滅。",
+            "有明確比較、爭議、商業決策感的題目較容易觸發留言，例如 Fathom、Answrr、Gemini TTS、GEO、OpenAI Chronicle、NordVPN。",
+            "英文 listicle 幾乎沒有公開互動，代表目前粉專受眾更吃繁中、在地、問題導向內容。"
+          ],
+          "nextWeekActions": [
+            "把每日貼文量從 4-5 則降到 1-2 則，保留一則中午主貼文。",
+            "主打比較文、爭議文、是否值得買/用的決策型題材。",
+            "申請或補齊能讀取 per-post reach/engagement insights 的權限，否則週報只能做互動觀察，學習閉環不完整。"
+          ]
+        }
+      ]
+    },
+    "autoDevAIStrategy": {
+      "postRules": [
+        "避免同一批次密集連發；每個時段最多 1 則核心貼文，其他內容延後至少 3-6 小時。",
+        "優先發有明確利益點/爭議點/對比的貼文：例如「值不值得買」「台灣人需不需要」「A vs B」。",
+        "繁中貼文優先於英文貼文；英文文若要發，需改寫成在地情境與明確受眾。",
+        "貼文前 2 行先給結論，再給 3-5 個 bullet 重點，最後只放 1 個 CTA。",
+        "每篇文案至少包含 1 個留言誘因問題，不要只貼連結。",
+        "把高商業意圖題目（VPN、會議筆記、AI 接待員、GEO、語音工具）排在中午主時段。"
+      ]
+    }
+  }
 }
