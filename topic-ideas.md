@@ -4,6 +4,30 @@
 
 ---
 
+## 2026-04-27 PM（Researcher Round 32：Agent Skills 生態系爆炸 + VibeVoice + Semrush 確認 + Beads）
+
+> 本輪執行時間：2026-04-27 22:00 UTC | 搜尋範圍：GitHub trending 今日（mattpocock加速+3個新工具）、Semrush佣金確認、Taption affiliate確認、Fomofly調查
+
+### 🔥 GitHub Trending 今日大事：Agent Skills 全面引爆
+
+| 日期 | 工具 | 今日星星 | 關鍵字 | 建議站點 | 優先序 |
+|------|------|----------|--------|---------|-------|
+| 2026-04-27 | **mattpocock/skills（加速，5551★/天，29.6K總）** | 5,551 | `claude code agent skills`、`mattpocock skills 教學 繁中` | autodev-ai | 🔴 本週 P1 |
+| 2026-04-27 | **ComposioHQ/awesome-codex-skills（Codex 版 Agent Skills，637★/天）** | 637 | `codex cli skills`、`awesome-codex-skills`、`composio codex 教學 繁中` | autodev-ai | 🟡 本週 P2 |
+| 2026-04-27 | **gastownhall/beads（AI Agent 記憶任務DB，Git-backed）** | trending | `ai agent memory`、`beads git task database`、`multi-agent 記憶 繁中` | autodev-ai | ⚪ 觀察，>5K stars 再寫 |
+| 2026-04-27 | **davila7/claude-code-templates（Claude Code CLI 設定管理）** | trending | `claude code templates npx`、`claude code skills manager` | autodev-ai | 🟢 可在 mattpocock/skills 文章內順帶介紹 |
+| 2026-04-27 | **microsoft/VibeVoice（開源 TTS+ASR，3模型，33.5K總）** | trending | `vibevoice tts 繁中`、`microsoft open source tts`、`vibevoice vs elevenlabs`、`vibevoice asr` | ai-tools-tw | 🟡 加入 TTS 比較文 |
+
+### 💰 聯盟確認本輪
+
+| 聯盟 | 佣金 | 平台 | 狀態 |
+|------|------|------|------|
+| **Semrush** | $200/sale + $10/trial + $0.01/signup，120天 cookie | Impact.com | ✅ 細節完整確認，待 Ivan 申請 |
+| **Taption** | 未確認 | taption.com/affiliate | 📋 申請頁存在，Ivan 申請後確認佣金率 |
+| **Fomofly** | 未知 | ❓ | ❌ 找不到官方 affiliate — Ivan 需澄清是什麼工具 |
+
+---
+
 ## 2026-04-27（Researcher Round 31：GitHub Trending 今日爆發 + 新聯盟機會 + HN熱點分析）
 
 > 本輪執行時間：2026-04-27 00:30 UTC | 搜尋範圍：GitHub trending today、HN frontpage、新聯盟掃描（Taskade、mattpocock/skills）、GitNexus、cua

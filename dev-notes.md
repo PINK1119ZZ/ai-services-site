@@ -1,6 +1,109 @@
 # Dev Notes — AI Tech Research Log
 
-## Round 26 | 2026-04-24 (Fri PM) — researcher agent
+## Round 32 | 2026-04-27 PM — researcher agent
+
+> 執行時間：2026-04-27 22:00 UTC | 搜尋範圍：GitHub Trending 今日、Semrush affiliate 確認、Taption + Fomofly 調查、新工具評估
+
+---
+
+### 🔥 本輪最大發現：Agent Skills 生態系全面引爆
+
+mattpocock/skills 從昨日 2519★ 加速到今日 **5551★/天**（+120%），同時 ComposioHQ/awesome-codex-skills（Codex 版）上榜，加上 beads + claude-code-templates — 整個「為 AI coding agent 加裝技能」主題在 GitHub 形成群聚效應。
+
+---
+
+#### 1. 🔥🔥🔥 mattpocock/skills 加速（今日 GitHub #1，5,551★/天，29,647 總）
+
+- 昨日：2,519★/天 → 今日：5,551★/天（**+120% 加速**）
+- 總星正在衝破 30K 大關（目前 29,647）
+- TypeScript 之父出品，工程師受眾高付費意願
+- **繁中空白：0 篇**（同上，7天視窗仍開著）
+- **行動：** seo-writer 本週 Priority 1，確認是否已執行
+
+---
+
+#### 2. 🔥🔥 ComposioHQ/awesome-codex-skills（GitHub #3，637★/天，2,708 總）
+
+- **是什麼：** Codex CLI 版 Agent Skills 套件（Composio 出品）
+- 每個 skill 是獨立資料夾，metadata 輕量、body 按需載入
+- 已有技能：`content-research-writer`、`gh-fix-ci`、`notion-meeting-intelligence`、`notion-spec-to-implementation`、`create-plan`
+- Composio 的 MCP 生態接 1000+ 應用（Gmail/Slack/GitHub/Notion）
+- **與 mattpocock/skills 差異：** Codex CLI（OpenAI）vs Claude Code（Anthropic）
+- **繁中空白：0 篇**；r/AskVibecoders 有討論「Codex > Claude Code for me」
+- **文章機會：**「awesome-codex-skills vs mattpocock/skills：工程師應該選哪個？」→ autodev-ai ⭐⭐⭐
+
+---
+
+#### 3. 🔥🔥 gastownhall/beads（AI Agent Git-backed 任務資料庫）
+
+- **是什麼：** 替 AI coding agent 設計的分散式任務追蹤 DB（非給人類看的 issue tracker）
+- 解決的問題：多 agent 平行工作時共用 TODO.md 會互相衝突（Git 合併地獄）
+- 使用 **Dolt**（MySQL 相容的 Git-backed 資料庫）或純 Git 後端
+- 特點：stealth mode（本地不 commit）、daemon 模式、AGENTS.md 整合
+- **內部相關性：** 我們的 agent-state.json 方案解決的問題高度重疊 → 有機會寫「我們如何做 Agent 記憶協調」教學文
+- **建議：** 等 >5K stars 再寫單獨文章；目前可在 MemPalace 評測文加「延伸閱讀」
+
+---
+
+#### 4. 🔥🔥 microsoft/VibeVoice（Open-Source Frontier Voice AI，~33.5K 總星）
+
+- **3 個模型：**
+  1. `VibeVoice-TTS`：90 分鐘長形式 TTS，最多 4 個說話者（Podcast 自動生成！）
+  2. `VibeVoice-Realtime-0.5B`：300ms 低延遲即時 TTS，串流輸入
+  3. `VibeVoice-ASR`：60 分鐘一次性轉錄，說話者識別 + 時間戳 + 自訂熱詞
+- **授權：** MIT（免費商用）
+- **競品：** ElevenLabs（付費），Murf AI（付費），Whisper（只有 ASR）
+- **繁中機會：** 0 篇完整中文教學；YouTube 有英文 demo
+- **部署：** 需 GPU（VibeVoice-7B），適合 DigitalOcean GPU Droplet CTA
+- **文章建議：** 加入現有「TTS 比較文」欄位（Murf vs ElevenLabs vs VibeVoice vs Gemini TTS）→ ai-tools-tw ⭐⭐⭐
+
+---
+
+#### 5. davila7/claude-code-templates（CLI 版 Claude Code 設定管理器）
+
+- `npx claude-code-templates@latest --skills-manager` — 安裝、管理、監控所有 skills
+- v1.26.4：Skills Manager Dashboard，支援從 mattpocock/skills 和 Composio 安裝
+- v1.24.16：Cloudflare Workers Sandbox 整合
+- 500+ 組件安全驗證系統
+- **行動：** 在 mattpocock/skills 評測文中作為「延伸工具」介紹，不需單獨文章
+
+---
+
+### 💰 本輪聯盟調查結果
+
+#### ✅ Semrush — 細節完整確認
+- $200 / 訂閱銷售（flat CPA）
+- $10 / 免費試用啟用
+- $0.01 / 帳號註冊（追蹤確認用）
+- 120 天 cookie（業界最長之一）
+- 平台：Impact.com
+- 申請：semrush.com/lp/affiliate-program/en/
+- **行動：** Ivan 立即申請；配套文章 AEO/GEO 指南
+
+#### 📋 Taption — 有 affiliate 頁面，佣金率待確認
+- 申請頁：https://www.taption.com/affiliate（200 OK）
+- 「Share your unique affiliate link and earn commission for every successful referral」
+- 具體佣金率未在搜尋結果中顯示 — 需 Ivan 點進去確認
+- 台灣本土 AI 字幕工具（40+ 語言輸入，50+ 語言翻譯），KOL 已佈局
+
+#### ❌ Fomofly — 找不到官方 affiliate
+- 搜尋「fomofly affiliate」完全無結果
+- 「Fomofly」可能是台灣 Threads 上對某種工具的口語稱呼，非工具品牌名
+- **行動：** 請 Ivan 在 Threads 搜尋確認「Fomofly」具體指哪個工具，再追查
+
+---
+
+### ⚡ Agent 效率建議
+
+**agent-state.json 瘦身方案（預估省 30-40% token）：**
+- 現在：每次讀 ~20KB（含完整 agentLog 歷史）
+- 建議：agentLog 只保留最近 5 條，其餘 archive 到 `agent-log-archive.json`
+- 每次讀只需 ~6KB
+- 參考：davila7/claude-code-templates 的「metadata 輕量、body 按需載入」原則
+
+---
+
+
 
 > 執行時間：2026-04-24 22:00 UTC | 搜尋範圍：GitHub Trending today、PH Week 17 尾盤（Apr 20-24）、ElevenLabs changelog、新硬體工具
 

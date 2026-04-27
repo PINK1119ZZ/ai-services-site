@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-27T03:00:00Z",
+  "lastUpdated": "2026-04-27T22:00:00Z",
   "lastResearchDate": "2026-04-27",
   "sites": {
     "autodev-ai": {
@@ -799,6 +799,42 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-04-27T22:00Z",
+      "agent": "researcher",
+      "session": "ai-dev-research-round32-mon-2200",
+      "actions": [
+        "Pulled git main (already up to date)",
+        "Read agent-state.json — no pending researcher directives beyond Round 31 (already handled)",
+        "Read strategist-weekly-2026-04-27.md — researcher priorities: Fomofly affiliate, Taption affiliate, PH/GitHub scan, Semrush details",
+        "Fetched GitHub trending today: mattpocock/skills #1 (5551★/天, accelerating from 2519), GitNexus #2 (1074★/天), awesome-codex-skills #3 (637★/天), free-claude-code #4 (2973★/天), beads trending, davila7/claude-code-templates trending, microsoft/VibeVoice trending",
+        "Researched awesome-codex-skills (ComposioHQ): Codex CLI version of Agent Skills, 5 skills (content-research-writer, gh-fix-ci, notion-meeting-intelligence, etc.), 1000+ app integrations via Composio MCP, 繁中=0",
+        "Researched microsoft/VibeVoice: 3-model open-source voice AI family (TTS 90min 4-speaker, Realtime 300ms, ASR 60min speaker diarization), MIT license, ~33.5K stars, 繁中教學=0, GPU-hungry",
+        "Researched gastownhall/beads: Git-backed distributed task DB for multi-agent coordination, Dolt backend, stealth mode, AGENTS.md integration — similar to our agent-state.json approach",
+        "Researched davila7/claude-code-templates: npx CLI tool with Skills Manager Dashboard, v1.26.4 detects mattpocock/skills and Composio skills, Cloudflare sandbox support",
+        "Investigated Fomofly affiliate: UNABLE TO FIND — no fomofly.com affiliate page, no search results for affiliate program. Fomofly appears to be a Taiwanese Threads slang term, not a specific tool brand",
+        "Investigated Taption affiliate: taption.com/affiliate exists (200 OK), program confirmed active, specific commission rate not publicly listed — Ivan must visit page to confirm",
+        "Confirmed Semrush affiliate full details: $200/sale + $10/trial + $0.01/signup, 120-day cookie, Impact.com platform, no traffic minimum, fast approval",
+        "Wrote Round 32 directive: directives/researcher-to-strategist-2026-04-27-round32.md",
+        "Added Round 32 section to topic-ideas.md (5 new tool entries + 3 affiliate statuses)",
+        "Added Round 32 section to dev-notes.md",
+        "Updated lastResearchDate, lastUpdated, agentLog in agent-state.json"
+      ],
+      "directivesWritten": [
+        "researcher-to-strategist-2026-04-27-round32.md"
+      ],
+      "topFindings": [
+        "mattpocock/skills: 加速至5551★/天（+120%），29.6K総，衝破30K大關中，繁中P1教學仍空白",
+        "awesome-codex-skills (ComposioHQ): GitHub #3 (637★/天)，Codex CLI 版 Agent Skills，1000+應用，繁中=0 — 比較文機會",
+        "microsoft/VibeVoice: 開源3模型TTS/ASR家族，33.5K総，MIT授權，繁中=0 — 加入TTS比較文",
+        "gastownhall/beads: AI agent Git-backed任務DB，內部相關性高（類agent-state.json），建議待>5K stars",
+        "davila7/claude-code-templates: Skills Manager Dashboard，可在mattpocock/skills文章中順帶介紹",
+        "Semrush affiliate: $200/sale + $10/trial，120天cookie，Impact.com，細節完整確認",
+        "Taption affiliate: 申請頁存在，佣金率未公開，Ivan申請後確認",
+        "Fomofly: 找不到官方affiliate，可能是Threads口語用詞而非工具品牌，Ivan需澄清"
+      ],
+      "agentEfficiencyInsight": "agent-state.json 瘦身方案：agentLog只保留最近5條+archive，預估省30-40% token per session"
+    },
     {
       "timestamp": "2026-04-27T03:00Z",
       "agent": "seo-writer",
