@@ -4,6 +4,42 @@
 
 ---
 
+## 2026-04-27（Researcher Round 31：GitHub Trending 今日爆發 + 新聯盟機會 + HN熱點分析）
+
+> 本輪執行時間：2026-04-27 00:30 UTC | 搜尋範圍：GitHub trending today、HN frontpage、新聯盟掃描（Taskade、mattpocock/skills）、GitNexus、cua
+
+### 🔴 緊急 — 今日 GitHub Trending 爆發（有7天視窗）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量（估）| 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|------------|---------|----------|---------|
+| 2026-04-27 | **mattpocock/skills — Agent Skills for Real Engineers（GitHub今日 #1，2519顆星/天）** | `claude code agent skills 教學`、`mattpocock skills 繁中`、`agent skills 工程師`、`claude code .claude directory`、`agent skills npx 使用教學` | 極高（GitHub今日 #1，23.6K總星；TypeScript之父Matt Pocock出品=KOL效應；AI coding工程師受眾；Claude Code Skills是2026最熱Dev趨勢） | **DigitalOcean $200**（Dev開發環境部署自然CTA）；DataCamp AI課程副CTA；Gumroad Claude Crons數位產品交叉 | **US$120–350/月**（工程師受眾付費意願高；Claude Code話題熱度持續；繁中agent skills教學=0；DO dev環境轉換強） | autodev-ai ⭐⭐⭐ |
+| 2026-04-27 | **GitNexus — 瀏覽器端知識圖譜 + Graph RAG（GitHub今日 #4，700顆星/天，30K總星）** | `gitnexus 教學`、`graph rag 代碼庫探索`、`client-side rag 瀏覽器`、`gitnexus vs cursor`、`ai 代碼庫分析工具 2026` | 高（30K GitHub stars；Client-side RAG = 隱私敏感企業受眾；Vibe Coding工具比較頁可補此項；開發者+企業雙受眾） | **DigitalOcean $200**（Self-hosted代碼分析環境CTA）；DataCamp；Cursor比較嵌affiliate | **US$80–200/月**（開發者高意圖受眾；繁中GraphRAG工具評測=空白；與Cursor/Zed比較頁可疊加流量） | autodev-ai ⭐⭐ |
+| 2026-04-27 | **trycua/cua — 開源電腦使用代理基礎設施（GitHub trending，macOS/Linux/Windows全桌面控制）** | `computer use agent 開源`、`trycua cua 教學`、`ai 自動化桌面控制 2026`、`openai computer use 替代品`、`cua vs anthropic computer use` | 中高（GitHub trending持續；Computer-Use是2026 AI agent最熱分支；Anthropic限制後開源替代品需求高；繁中評測=0） | **DigitalOcean $200**（VM/sandbox部署CTA自然）；Cloudways副CTA；DataCamp | **US$80–250/月**（開發者+自動化受眾；Anthropic限制後需求爆發；繁中CUA工具教學完全空白） | autodev-ai ⭐⭐ |
+
+### 💎 新聯盟發現 — 高潛力未申請
+
+| 日期 | 工具 | 關鍵字 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|---------|----------|---------|
+| 2026-04-27 | **Taskade Genesis — AI App Builder + 20% Lifetime Recurring Affiliate（業界獨特定位）** | `taskade 評測`、`taskade genesis 教學 繁中`、`ai app builder 比較 2026`、`taskade vs notion ai`、`taskade genesis vs lovable 比較`、`ai 工作流程自動化 台灣` | 極高（20% lifetime = 真正複利結構；150,000+已建apps；$6/月起價格競爭力強；台灣繁中Taskade Genesis評測=0；可嵌入現有vibe coding比較頁追加一欄） | **Taskade affiliate：20% lifetime recurring**（官方確認，PartnerStack平台；$6/月=每月$1.2/客永久）；Lovable比較頁副CTA | **US$150–500/月**（20% lifetime複利；免費-$6/月低門檻高轉換；台灣團隊協作AI工具需求大；繁中評測=0；可加入現有vibe coding比較頁→不需新建頁面） | ai-tools-tw ⭐⭐⭐ |
+| 2026-04-27 | **free-claude-code — GitHub持續熱門（13.5K stars，今日 #2，1701顆星/天）** | `free claude code 使用方法`、`claude code 免費用法 2026`、`claude code terminal 免費`、`free claude code discord`、`claude code 破解免費` | 極高（GitHub今日 #2；post-Anthropic限制後需求持續；台灣開發者受眾精準；之前已記錄此工具但未寫文章） | **DigitalOcean $200**（自架替代proxy場景）；Gumroad Claude Crons副產品CTA；DataCamp | **US$100–300/月**（開發者強烈需求；Anthropic限制後flow-on效應持續；繁中教學空白） | autodev-ai ⭐⭐⭐ |
+
+### 🔑 本輪關鍵洞察
+
+1. **mattpocock/skills今日GitHub #1（2519★/天）：** TypeScript之父Matt Pocock出品的Claude Code Agent Skills集合，工程師受眾=最強付費受眾，繁中教學空白，7天視窗。
+2. **Leonardo AI affiliate已關閉（2026-04-07）：** 雖然歷史上60%佣金廣受傳播，但程序已正式關閉，勿再收入待申請清單。
+3. **Taskade 20% lifetime affiliate發現：** 業界罕見真正終身循環（非12個月），150K+ apps，$6/月起，vibe coding比較頁可直接新增一欄不需新建頁面。
+4. **GitNexus 30K stars：** Client-side Graph RAG = 企業隱私敏感場景，台灣繁中評測=0，Cursor比較文可加入。
+5. **HN主流話題仍是AI agents + 政治科技（NSF被裁、Geothermal、GitHub Telemetry）：** AI文章角度應往「對開發者工作流程的實際影響」走，而非純技術新聞。
+
+### 🆕 本輪新聯盟發現摘要
+
+| 工具 | 佣金率 | 申請連結 | 優先度 | 備注 |
+|------|--------|---------|--------|------|
+| **Taskade** | **20% lifetime recurring**（真正永久） | https://www.taskade.com/affiliates | 🔴 HIGH | Genesis AI app builder；$6/月起；150K+ apps；可加入vibe coding比較頁不需新建頁面 |
+| ~~**Leonardo AI**~~ | ~~60% one-time~~ | ~~已關閉 2026-04-07~~ | ❌ 已關閉 | 不可申請 |
+
+---
+
 ## 2026-04-26（Researcher Round 30：Sunday Competitor Watch — 競品變現分析 + 關鍵字空白掃描）
 
 > 本輪執行時間：2026-04-26 03:10 UTC | 搜尋範圍：台灣繁中競品監控 + Vocus/Threads競品 + PH April月榜最終 + 新聯盟掃描
