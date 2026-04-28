@@ -4,6 +4,42 @@
 
 ---
 
+## 2026-04-28（Researcher Round 33：Jet Admin 30% Affiliate 確認 + OpenAI Workspace Agents + Zed 平行代理 + TradingAgents 44K Stars）
+
+> 本輪執行時間：2026-04-28 00:30 UTC | 搜尋範圍：Product Hunt 今日（Apr 28）、HN frontpage、GitHub trending、聯盟佣金確認
+
+### 🔥 Product Hunt 今日（Apr 28）熱門
+
+| 日期 | 工具 | 一句話描述 | 關鍵字 | 建議站點 | 優先序 |
+|------|------|-----------|--------|---------|-------|
+| 2026-04-28 | **Jet AI Agents（jetadmin.io）** | 無程式碼企業AI Agent Builder | `jet admin ai agents 評測 繁中`、`no code ai agent builder 2026`、`jetadmin vs n8n 比較`、`企業ai工作流程 no-code` | ai-tools-tw | 🔴 P1 — 有30%/12m affiliate，企業B2B受眾 |
+| 2026-04-28 | **Orange Slice** | AI銷售任務自動化（CRM整合） | `orange slice 評測`、`ai sales automation 2026`、`ai crm 台灣`、`销售自动化 ai 工具` | ai-tools-tw | 🟡 P2 — affiliate待查，銷售受眾 |
+| 2026-04-28 | **Replyless AI** | AI Email每日摘要→Telegram推送 | `replyless ai 評測`、`ai email 摘要 telegram`、`inbox zero ai 2026`、`replyless app 繁中` | ai-tools-tw | ⚪ 觀察 — affiliate待確認，Telegram整合有台灣受眾 |
+
+### 💎 HN frontpage 本週高分話題（變現分析）
+
+| 日期 | 工具/話題 | 變現角度 | 關鍵字 | 建議站點 | 優先序 |
+|------|----------|---------|--------|---------|-------|
+| 2026-04-27 | **Zed Parallel Agents（268pts）** | Cursor vs Zed 比較文；Zed已開源+免費，Cursor要$20/月 → Cursor affiliate (20%/12m)；Zed開源 → DigitalOcean dev environment CTA | `zed parallel agents 繁中`、`zed vs cursor 比較 2026`、`ai coding editor 比較`、`zed editor 台灣` | autodev-ai | 🟡 P2 — HN 268pts已證明需求，繁中評測=0 |
+| 2026-04-27 | **OpenAI Workspace Agents（153pts VentureBeat確認）** | ChatGPT Business $20/user/month → ChatGPT affiliate；企業AI agent採購決策文→高付費意圖；vs Anthropic Claude Cowork比較頁 | `chatgpt workspace agents 評測 繁中`、`openai workspace agents 企業`、`chatgpt business agent 台灣`、`workspace agents vs claude cowork` | ai-tools-tw | 🟡 P2 — OpenAI重大企業功能，台灣IT決策者受眾 |
+| 2026-04-27 | **TauricResearch/TradingAgents（44.2K Stars，本週+734）** | AI量化交易 → Tradingview affiliate / Alpaca(有affiliate) / DigitalOcean backtest環境；台灣股市+台灣量化社群角度 | `tradingagents 教學 繁中`、`tradingagents 台灣股市`、`ai 量化交易框架 2026`、`tauric research trading agents 繁中`、`llm trading framework 教學` | ai-tools-tw | 🔴 P1 — 44K stars爆發中，中文社群已有ecosystem(tradingagents-ai.com)，台灣繁中=0，fintech affiliate機會 |
+
+### 💰 聯盟確認本輪
+
+| 聯盟 | 佣金 | 平台 | 狀態 |
+|------|------|------|------|
+| **Jet Admin（jetadmin.io）** | 30%循環12個月（官方確認）| 官網 /affiliate-refer-earn | ✅ 確認！Ivan立即申請 |
+| **Orange Slice** | 未知 | 待查 | 📋 今日PH新品，需查affiliate |
+| **Replyless AI** | 未知 | 待查 | 📋 今日PH新品，需查affiliate |
+
+### 🔑 本輪關鍵洞察
+
+1. **Jet Admin affiliate 30%/12m已確認**：無程式碼企業AI Agent Builder，B2B高付費意圖，評測文 + 比較頁（vs n8n/Zapier）= 高轉換潛力。今日Product Hunt上線=最佳評測時機。
+2. **TradingAgents（44K stars）是本週最大SEO機會**：台灣繁中評測完全空白，tradingagents-ai.com中文ecosystem已有，代表中文受眾需求確認。可搭配DigitalOcean backtesting環境部署CTA（$200），以及台股角度（AkShare、BaoStock均支援台灣數據）。
+3. **Zed Parallel Agents + OpenAI Workspace Agents**：兩者都在HN上超高分，代表企業AI工具採購需求爆發。比較文（Zed vs Cursor；Workspace Agents vs Claude Cowork）是當前變現效率最高的文體。
+
+---
+
 ## 2026-04-27 PM（Researcher Round 32：Agent Skills 生態系爆炸 + VibeVoice + Semrush 確認 + Beads）
 
 > 本輪執行時間：2026-04-27 22:00 UTC | 搜尋範圍：GitHub trending 今日（mattpocock加速+3個新工具）、Semrush佣金確認、Taption affiliate確認、Fomofly調查
