@@ -1,5 +1,11 @@
 (function() {
-  const API_URL = 'https://line-bot.76.13.219.163.nip.io/api/chat';
+  // Dual-domain failover: prefer the brand domain (more stable on mobile carriers
+  // that occasionally block .nip.io), fall back to the IP-based nip.io domain
+  // until the chat.autodev-ai.com DNS record is verified live.
+  const API_URLS = [
+    'https://chat.autodev-ai.com/api/chat',
+    'https://line-bot.76.13.219.163.nip.io/api/chat',
+  ];
   const SESSION_ID = 'web_' + Math.random().toString(36).substr(2, 9);
 
   // Inject styles
@@ -184,14 +190,17 @@
   }
 
   async function callApi(text, attempt) {
+    // attempt 0: try preferred URL with 12s timeout
+    // attempt 1: cycle to next URL with 25s timeout (covers cold start)
+    const url = API_URLS[Math.min(attempt, API_URLS.length - 1)];
     const resp = await fetchWithTimeout(
-      API_URL,
+      url,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text, session_id: SESSION_ID }),
       },
-      attempt === 0 ? 12000 : 25000   // 12s first try, 25s retry (warm)
+      attempt === 0 ? 12000 : 25000
     );
     if (!resp.ok) throw new Error('http_' + resp.status);
     const data = await resp.json();

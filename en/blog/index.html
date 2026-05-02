@@ -143,6 +143,24 @@
             .blog-grid { grid-template-columns: 1fr; padding: 0 1rem 3rem; }
             .blog-filters { padding: 0 1rem; }
         }
+    
+    /* Sticky filter bar (2026-05-02) */
+    .blog-filters {
+        position: sticky; top: 60px; z-index: 50;
+        background: rgba(15,15,26,0.92); backdrop-filter: blur(12px);
+        padding: 1rem 0; margin: 0 0 1.5rem; border-bottom: 1px solid rgba(108,92,231,0.15);
+        display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;
+    }
+    .blog-filter-btn .cnt {
+        display: inline-block; margin-left: 0.4rem; padding: 1px 6px; border-radius: 10px;
+        background: rgba(108,92,231,0.25); color: #A29BFE; font-size: 0.75rem; font-weight: 600;
+    }
+    .blog-filter-btn.active .cnt { background: rgba(255,255,255,0.25); color: #fff; }
+    @media (max-width: 720px) {
+        .blog-filters { top: 56px; padding: 0.6rem 0.5rem; gap: 0.3rem; }
+        .blog-filter-btn { padding: 0.3rem 0.7rem; font-size: 0.85rem; }
+    }
+    
     </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482625906579389" crossorigin="anonymous"></script>
 </head>
@@ -170,16 +188,16 @@
 </section>
 <!-- BLOG FILTERS & GRID -->
 <section style="padding-top:2rem;">
-<div class="blog-filters">
-    <button class="blog-filter-btn active" data-filter="all">All</button>
-    <button class="blog-filter-btn" data-filter="ai">AI Knowledge</button>
-    <button class="blog-filter-btn" data-filter="line">Chatbots</button>
-    <button class="blog-filter-btn" data-filter="automation">Automation</button>
-    <button class="blog-filter-btn" data-filter="business">Business</button>
+<div class="blog-filters" id="blogFilters">
+  <button class="blog-filter-btn active" data-filter="all">All <span class="cnt">12</span></button>
+  <button class="blog-filter-btn" data-filter="linebot">LINE Bot <span class="cnt">5</span></button>
+  <button class="blog-filter-btn" data-filter="automation">n8n & Automation <span class="cnt">3</span></button>
+  <button class="blog-filter-btn" data-filter="aitools">AI Tool Reviews <span class="cnt">3</span></button>
+  <button class="blog-filter-btn" data-filter="biz">Business <span class="cnt">5</span></button>
 </div>
 <div class="blog-grid">
 
-<div class="blog-card fade-in" data-category="ai">
+<div class="blog-card fade-in" data-category="tutorial">
 <div class="blog-card-meta"><span>2026-04-10</span><span>10 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">Prompt Engineering</span><span class="blog-card-tag">AI Tips</span></div>
 <h3><a href="/en/blog/how-to-write-ai-prompts.html">How to Write Better AI Prompts: A Complete Beginner's Guide 2026</a></h3>
@@ -187,7 +205,7 @@
 <a class="blog-card-link" href="/en/blog/how-to-write-ai-prompts.html">Read More &rarr;</a>
 </div>
 
-<div class="blog-card fade-in" data-category="ai">
+<div class="blog-card fade-in" data-category="aitools">
 <div class="blog-card-meta"><span>2026-04-08</span><span>8 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">AI Comparison</span><span class="blog-card-tag">ChatGPT vs Claude</span></div>
 <h3><a href="/en/blog/chatgpt-claude-gemini-comparison.html">ChatGPT vs Claude vs Gemini: Complete 2026 Comparison for Regular Users</a></h3>
@@ -195,7 +213,7 @@
 <a class="blog-card-link" href="/en/blog/chatgpt-claude-gemini-comparison.html">Read More &rarr;</a>
 </div>
 
-<div class="blog-card fade-in" data-category="ai">
+<div class="blog-card fade-in" data-category="aitools">
 <div class="blog-card-meta"><span>2026-04-07</span><span>8 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">AI Tools</span><span class="blog-card-tag">Free vs Paid</span></div>
 <h3><a href="/en/blog/ai-tools-comparison-2026.html">AI Tools Comparison 2026: Free vs Paid Guide</a></h3>
@@ -203,7 +221,7 @@
 <a class="blog-card-link" href="/en/blog/ai-tools-comparison-2026.html">Read More &rarr;</a>
 </div>
 
-<div class="blog-card fade-in" data-category="automation">
+<div class="blog-card fade-in" data-category="automation biz">
 <div class="blog-card-meta"><span>2026-04-05</span><span>6 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">Automation</span><span class="blog-card-tag">SMB</span></div>
 <h3><a href="/en/blog/small-business-automation.html">Small Businesses Can Automate Too! 5 AI Tools to Save Time &amp; Cut Costs</a></h3>
@@ -211,7 +229,7 @@
 <a class="blog-card-link" href="/en/blog/small-business-automation.html">Read More →</a>
 </div>
 
-<div class="blog-card fade-in" data-category="line">
+<div class="blog-card fade-in" data-category="linebot tutorial">
 <div class="blog-card-meta"><span>2026-04-03</span><span>8 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">LINE OA</span><span class="blog-card-tag">Auto-Reply</span></div>
 <h3><a href="/en/blog/line-auto-reply-setup.html">LINE Official Account Auto-Reply Setup: Complete Guide (2026)</a></h3>
@@ -219,7 +237,7 @@
 <a class="blog-card-link" href="/en/blog/line-auto-reply-setup.html">Read More →</a>
 </div>
 
-<div class="blog-card fade-in" data-category="line">
+<div class="blog-card fade-in" data-category="linebot tutorial">
 <div class="blog-card-meta"><span>2026-04-02</span><span>10 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">LINE Bot Tutorial</span><span class="blog-card-tag">Development</span></div>
 <h3><a href="/en/blog/line-bot-tutorial-2026.html">LINE Bot Development Tutorial: Complete Guide from Zero to Launch (2026)</a></h3>
@@ -227,7 +245,7 @@
 <a class="blog-card-link" href="/en/blog/line-bot-tutorial-2026.html">Read More →</a>
 </div>
 
-<div class="blog-card fade-in" data-category="ai">
+<div class="blog-card fade-in" data-category="linebot ai">
 <div class="blog-card-meta"><span>2026-03-30</span><span>8 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">AI Customer Service</span><span class="blog-card-tag">Smart CS</span></div>
 <h3><a href="/en/blog/ai-customer-service-line.html">What Is AI Customer Service? Complete LINE Bot Smart CS Guide (2026)</a></h3>
@@ -235,7 +253,7 @@
 <a class="blog-card-link" href="/en/blog/ai-customer-service-line.html">Read More →</a>
 </div>
 
-<div class="blog-card fade-in" data-category="ai business">
+<div class="blog-card fade-in" data-category="aitools biz">
 <div class="blog-card-meta"><span>2026-03-28</span><span>8 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">AI Chatbot</span><span class="blog-card-tag">Business</span></div>
 <h3><a href="/en/blog/ai-chatbot-for-business.html">AI Chatbots for Business: Complete Guide to Boost Sales &amp; Cut Costs (2026)</a></h3>
@@ -243,7 +261,7 @@
 <a class="blog-card-link" href="/en/blog/ai-chatbot-for-business.html">Read More →</a>
 </div>
 
-<div class="blog-card fade-in" data-category="line business">
+<div class="blog-card fade-in" data-category="linebot biz">
 <div class="blog-card-meta"><span>2026-03-25</span><span>7 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">LINE Booking</span><span class="blog-card-tag">Beauty Salon</span></div>
 <h3><a href="/en/blog/line-bot-booking-system.html">LINE Booking System: Auto-Scheduling for Salons, Clinics &amp; Restaurants</a></h3>
@@ -251,7 +269,7 @@
 <a class="blog-card-link" href="/en/blog/line-bot-booking-system.html">Read More →</a>
 </div>
 
-<div class="blog-card fade-in" data-category="business automation">
+<div class="blog-card fade-in" data-category="automation biz">
 <div class="blog-card-meta"><span>2026-03-22</span><span>7 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">Telegram Bot</span><span class="blog-card-tag">Business</span></div>
 <h3><a href="/en/blog/telegram-bot-business-guide.html">Telegram Bot for Business: Automation &amp; Customer Engagement Guide</a></h3>
@@ -259,7 +277,7 @@
 <a class="blog-card-link" href="/en/blog/telegram-bot-business-guide.html">Read More →</a>
 </div>
 
-<div class="blog-card fade-in" data-category="line">
+<div class="blog-card fade-in" data-category="linebot">
 <div class="blog-card-meta"><span>2026-03-20</span><span>5 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">LINE Bot</span><span class="blog-card-tag">Pricing</span></div>
 <h3><a href="/en/blog/line-bot-cost.html">How Much Does LINE Bot Development Cost? 2026 Pricing &amp; Comparison</a></h3>
@@ -267,7 +285,7 @@
 <a class="blog-card-link" href="/en/blog/line-bot-cost.html">Read More →</a>
 </div>
 
-<div class="blog-card fade-in" data-category="automation">
+<div class="blog-card fade-in" data-category="automation biz">
 <div class="blog-card-meta"><span>2026-03-15</span><span>8 min read</span></div>
 <div class="blog-card-tags"><span class="blog-card-tag">Automation</span><span class="blog-card-tag">Workflow</span></div>
 <h3><a href="/en/blog/workflow-automation-small-business.html">Workflow Automation for Small Business: Save 20+ Hours/Week (2026)</a></h3>
@@ -294,7 +312,7 @@
 <p style="margin-top:0.5rem; font-size:0.85rem;">姊妹站：<a href="https://pink1119zz.github.io/ai-tools-tw/" rel="noopener" target="_blank" style="color:#9B8AFF;">AI Tools TW</a>（繁中工具評測） · <a href="https://pink1119zz.github.io/ai-tools-en/" rel="noopener" target="_blank" style="color:#9B8AFF;">AI Tools EN</a>（English Reviews）</p>
 <p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/en/privacy.html">Privacy</a> · <a href="/en/terms.html">Terms</a> · <a href="/en/disclaimer.html">Disclaimer</a></p>
 </footer>
-<script defer="" src="/chat-widget.js?v=20260502b"></script>
+<script defer="" src="/chat-widget.js?v=20260502c"></script>
 <script defer="" src="/lang.js"></script>
 <script>
 const nav = document.getElementById('nav');

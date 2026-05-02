@@ -32,7 +32,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="/style.css" rel="stylesheet"/>
 <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"n8n 自動化教學：5 個真實案例讓你每天省 2 小時（2026）","description":"n8n 自動化完整教學：免費開源、視覺化拖拉流程，5 個中小企業真實案例——LINE 通知、Google Sheets、AI 串接。新手也能上手。","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-11","dateModified":"2026-04-11","mainEntityOfPage":"https://autodev-ai.com/blog/n8n-automation-tutorial-2026.html","image":"https://autodev-ai.com/autodev-logo2.png"}
+    {"@context":"https://schema.org","@type":"Article","headline":"n8n 自動化教學：5 個真實案例讓你每天省 2 小時（2026）","description":"n8n 自動化完整教學：免費開源、視覺化拖拉流程，5 個中小企業真實案例——LINE 通知、Google Sheets、AI 串接。新手也能上手。","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-11","dateModified":"2026-05-02","mainEntityOfPage":"https://autodev-ai.com/blog/n8n-automation-tutorial-2026.html","image":"https://autodev-ai.com/autodev-logo2.png"}
     </script>
 <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"n8n 是免費的嗎？","acceptedAnswer":{"@type":"Answer","text":"n8n 是開源軟體，可以免費自行架設（Self-hosted）。官方也有雲端付費版（n8n Cloud），起價約每月 €20 歐元，包含 2,500 次工作流程執行。大多數小型團隊自己架在 VPS 上，幾乎零成本。"}},{"@type":"Question","name":"n8n 和 Zapier 有什麼差別？","acceptedAnswer":{"@type":"Answer","text":"最大差別是費用和彈性。Zapier 按執行次數收費，用量一大費用很高；n8n 自架版免費無限執行。n8n 還支援自訂 JavaScript/Python 程式碼節點，做不到的事情可以寫程式補，比 Zapier 彈性很多。但 n8n 初始設定門檻稍高一些。"}},{"@type":"Question","name":"n8n 需要會寫程式嗎？","acceptedAnswer":{"@type":"Answer","text":"基礎的拖拉流程不需要寫程式。n8n 的視覺化介面讓你用連線的方式串接不同服務。但如果要做比較複雜的邏輯判斷或資料處理，懂一點 JavaScript 會讓你更如魚得水。完全不懂程式的人也可以從簡單的通知型流程開始。"}},{"@type":"Question","name":"n8n 可以串接 LINE Bot 嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。n8n 有內建的 HTTP Request 節點，可以直接呼叫 LINE Messaging API。你可以做到：接收用戶訊息後觸發工作流程、自動發送 LINE 推播通知、把 LINE 訊息資料存到 Google Sheets 等。"}},{"@type":"Question","name":"n8n 怎麼架設？需要伺服器嗎？","acceptedAnswer":{"@type":"Answer","text":"需要一台有公開 IP 的伺服器（或使用 n8n Cloud）。最簡單的方式是用 Docker 在 VPS 上部署，一台月費 NT$200-500 的入門 VPS 就夠用。DigitalOcean、Vultr、Linode 都是常見選擇。也有人用家裡的 NAS 或樹莓派自架。"}},{"@type":"Question","name":"n8n 支援哪些服務串接？","acceptedAnswer":{"@type":"Answer","text":"超過 400 種服務，包含：Google Workspace（Gmail、Sheets、Drive、Calendar）、Slack、Discord、Telegram、LINE、Notion、Airtable、GitHub、Stripe、OpenAI/ChatGPT、HubSpot 等。沒有內建的服務可以用 HTTP Request 節點自訂串接。"}}]}
@@ -135,6 +135,24 @@
 <div style="color:var(--gray);font-size:0.85rem;">發布：2026-04-11　·　<a href="/disclaimer.html" style="color:var(--gray);text-decoration:underline;">編輯政策與聯盟揭露</a></div>
 </div>
 </div>
+<!-- TESTED_CALLOUT -->
+<div class="tested-callout" style="background:rgba(0,210,211,0.08);border:1px solid rgba(0,210,211,0.3);border-radius:8px;padding:1.2rem 1.4rem;margin:1.5rem 0 2rem;">
+<div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.8rem;">
+<span style="font-size:1.2rem;">🧪</span>
+<strong style="color:var(--accent);font-size:0.95rem;letter-spacing:0.5px;">作者實測筆記 · 最後測試 2026-04-29</strong>
+</div>
+<p style="margin:0 0 0.6rem;font-size:0.9rem;color:var(--gray);"><strong>實測環境：</strong>n8n self-hosted v1.62 (DigitalOcean Droplet 1GB)・OpenAI / Anthropic API / Google Sheets webhook 全跑通</p>
+<p style="margin:0 0 0.8rem;line-height:1.7;">本站的 6 個 cron 自動化（GSC 抓取、FB 發文、IndexNow 推送、聯盟連結健檢等）有部份是 n8n + 部份是純 Python。文中的工作流案例都是我自己 production 在跑的版本拆解，不是看官方教學翻譯的。</p>
+<p style="margin:0 0 0.4rem;font-weight:600;color:var(--light);">📌 實際使用觀察（4 點）：</p>
+<ul style="margin:0 0 0.6rem 0;padding-left:1.2rem;line-height:1.7;">
+<li><strong>n8n 在小規模自動化（&lt; 50 workflow）穩到不行</strong> — self-host 半年沒掛過。</li>
+<li><strong>HTTP Request node 的 retry 邏輯預設不開</strong> — 串外部 API 必須手動勾，否則網路抖一下整個 workflow 失敗。</li>
+<li><strong>credentials 共享比 Make / Zapier 麻煩</strong> — 但跑量大時月費差非常多，值得學。</li>
+<li><strong>HITL（Human-in-the-Loop）是 n8n 真正的殺手鐧</strong> — 詳見<a href="/blog/n8n-hitl-tutorial-2026.html" style="color:var(--accent);">這篇 HITL 完整教學</a>。</li>
+</ul>
+<p style="margin:0;font-size:0.8rem;color:var(--gray);">下次重測：2026-06 · 若你發現本文資訊過時，<a href="/contact.html" style="color:var(--accent);">告訴我們</a>會盡快更新。</p>
+</div>
+
 <img alt="n8n 自動化工作流程視覺化介面教學 2026" height="450" loading="lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&amp;q=80" style="width:100%;max-height:400px;object-fit:cover;border-radius:12px;margin:2rem 0" width="800"/>
 <p>5 個真實案例讓你每天省 2 小時（2026）</p>
 </section>
@@ -477,7 +495,7 @@
 <p style="margin-top:0.5rem; font-size:0.85rem;">姊妹站：<a href="https://pink1119zz.github.io/ai-tools-tw/" rel="noopener" target="_blank" style="color:#9B8AFF;">AI Tools TW</a>（繁中工具評測） · <a href="https://pink1119zz.github.io/ai-tools-en/" rel="noopener" target="_blank" style="color:#9B8AFF;">AI Tools EN</a>（English Reviews）</p>
 <p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/privacy.html">隱私權政策</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></p>
 </footer>
-<script defer="" src="/chat-widget.js?v=20260502b"></script>
+<script defer="" src="/chat-widget.js?v=20260502c"></script>
 <script defer="" src="/lang.js"></script>
 <script>
 const nav = document.getElementById('nav');
