@@ -576,14 +576,8 @@
  </div>
 </footer>
 
-<script>
-const mobileBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.getElementById('navLinks');
-if(mobileBtn) mobileBtn.addEventListener('click', () =>navLinks.classList.toggle('active'));
-window.addEventListener('scroll', () =>{
- document.getElementById('navbar').classList.toggle('scrolled', window.scrollY >50);
-});
-</script>
+
 <script defer src="/lang.js"></script>
+<script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;b.addEventListener('click',function(e){e.stopPropagation();l.classList.toggle('show');});document.addEventListener('click',function(e){if(!l.contains(e.target)&&!b.contains(e.target))l.classList.remove('show');});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('show');});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 </body>
 </html>

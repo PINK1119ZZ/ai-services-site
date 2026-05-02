@@ -282,7 +282,7 @@
 <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
 </div>
 </nav>
-<script>document.getElementById('mobileMenuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('show'));</script>
+
 <main class="article-container">
 <div class="breadcrumb">
 <a href="/">首頁</a>› <a href="/blog/">部落格</a>› Cloudways 評測 2026
@@ -671,5 +671,6 @@
 (function(){var b=document.getElementById('backToTop');window.addEventListener('scroll',function(){b.style.display=window.scrollY>300?'block':'none'});})();
 </script>
 <script defer src="/lang.js"></script>
+<script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;b.addEventListener('click',function(e){e.stopPropagation();l.classList.toggle('show');});document.addEventListener('click',function(e){if(!l.contains(e.target)&&!b.contains(e.target))l.classList.remove('show');});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('show');});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 </body>
 </html>

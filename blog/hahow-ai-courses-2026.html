@@ -554,13 +554,8 @@ article li { margin-bottom: 0.5rem; }
  <p style="margin-top:1rem;">© 2026 AutoDev AI. All rights reserved.</p>
 </footer>
 
-<script>
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () =>{ nav.classList.toggle('scrolled', window.scrollY >50); });
-document.getElementById('mobileMenuBtn').addEventListener('click', () =>{
- document.getElementById('navLinks').classList.toggle('open');
-});
-</script>
+
 <script defer src="/lang.js"></script>
+<script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;b.addEventListener('click',function(e){e.stopPropagation();l.classList.toggle('show');});document.addEventListener('click',function(e){if(!l.contains(e.target)&&!b.contains(e.target))l.classList.remove('show');});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('show');});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 </body>
 </html>

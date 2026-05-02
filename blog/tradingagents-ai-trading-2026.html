@@ -412,6 +412,7 @@
 <a href="/about.html">關於</a>
 <a class="nav-cta" href="/contact.html">免費諮詢</a>
 </div>
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="開啟選單">&#9776;</button>
  </div>
  </nav>
 
@@ -998,5 +999,6 @@ crontab -e
  </div>
  </footer>
 <script defer src="/lang.js"></script>
+<script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;b.addEventListener('click',function(e){e.stopPropagation();l.classList.toggle('show');});document.addEventListener('click',function(e){if(!l.contains(e.target)&&!b.contains(e.target))l.classList.remove('show');});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('show');});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 </body>
 </html>

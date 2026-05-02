@@ -192,10 +192,10 @@ strong { color: var(--light); }
 <meta name="theme-color" content="#FFF8F3">
 </head>
 <body>
-<header>
- <nav class="navbar">
- <a href="/" class="logo">AutoDev AI</a>
- <div class="nav-links">
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="/">AutoDev AI</a>
+<div class="nav-links" id="navLinks">
 <a href="/services.html">服務</a>
 <a href="/bot-cloud.html">雲託管</a>
 <a href="/ai-model.html">AI 模特</a>
@@ -205,8 +205,9 @@ strong { color: var(--light); }
 <a href="/about.html">關於</a>
 <a class="nav-cta" href="/contact.html">免費諮詢</a>
 </div>
- </nav>
-</header>
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="開啟選單">&#9776;</button>
+</div>
+</nav>
 
 <main class="article-container">
  <article>
@@ -758,5 +759,6 @@ Allow: /services/
 </footer>
 <script src="/script.js" defer></script>
 <script defer src="/lang.js"></script>
+<script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;b.addEventListener('click',function(e){e.stopPropagation();l.classList.toggle('show');});document.addEventListener('click',function(e){if(!l.contains(e.target)&&!b.contains(e.target))l.classList.remove('show');});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('show');});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 </body>
 </html>

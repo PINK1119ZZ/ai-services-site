@@ -151,7 +151,7 @@
 <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
 </div>
 </nav>
-<script>document.getElementById('mobileMenuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('show'));window.addEventListener('scroll',()=>{const nav=document.getElementById('nav');nav.classList.toggle('scrolled',window.scrollY>50);});</script>
+
 <main style="max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;">
  <article>
  <!-- Breadcrumb -->
@@ -532,5 +532,6 @@
  <p style="margin-top:0.5rem;font-size:0.78rem;">本文含聯盟連結，點擊購買我們可能獲得佣金，不影響評測立場。</p>
 </footer>
 <script defer src="/lang.js"></script>
+<script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;b.addEventListener('click',function(e){e.stopPropagation();l.classList.toggle('show');});document.addEventListener('click',function(e){if(!l.contains(e.target)&&!b.contains(e.target))l.classList.remove('show');});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('show');});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 </body>
 </html>

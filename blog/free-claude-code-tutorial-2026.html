@@ -109,9 +109,10 @@ footer{background:var(--dark-2);border-top:1px solid var(--border);padding:2rem;
 <meta name="theme-color" content="#FFF8F3">
 </head>
 <body>
-<nav class="nav">
- <a href="/" class="nav-logo">AutoDev AI</a>
- <div class="nav-links">
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="/">AutoDev AI</a>
+<div class="nav-links" id="navLinks">
 <a href="/services.html">服務</a>
 <a href="/bot-cloud.html">雲託管</a>
 <a href="/ai-model.html">AI 模特</a>
@@ -120,6 +121,8 @@ footer{background:var(--dark-2);border-top:1px solid var(--border);padding:2rem;
 <a href="/blog/">Blog</a>
 <a href="/about.html">關於</a>
 <a class="nav-cta" href="/contact.html">免費諮詢</a>
+</div>
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="開啟選單">&#9776;</button>
 </div>
 </nav>
 <section class="hero">
@@ -456,5 +459,6 @@ claude "讀取 components/ 目錄下所有 .tsx 檔案，
  <p style="margin-top:.5rem;font-size:.8rem">本文包含聯盟行銷連結，點擊後購買我們可能獲得佣金，不影響您的費用。</p>
 </footer>
 <script defer src="/lang.js"></script>
+<script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;b.addEventListener('click',function(e){e.stopPropagation();l.classList.toggle('show');});document.addEventListener('click',function(e){if(!l.contains(e.target)&&!b.contains(e.target))l.classList.remove('show');});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('show');});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 </body>
 </html>
