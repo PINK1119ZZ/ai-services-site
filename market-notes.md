@@ -285,3 +285,39 @@
 > - 確認 Framer 台灣用戶量（是否適合繁中評測）
 > - 搜尋「台灣 AI SaaS 新創 2026」找本地 affiliate 機會
 > - 監控 Claude Code Desktop 繁中搜尋量是否上升
+
+---
+
+### Round 36 — 2026-05-02
+
+#### 一、Perplexity Comet Browser 推廣機會
+
+- **佣金：** $20/Comet 安裝 + $10 upfront + 10% ongoing（Pro）；Max $200/月 = $20/月/客
+- **申請：** https://affiliates.perplexity.ai
+- **狀態：** 已在 affiliateLinks 記錄，Ivan 尚未申請
+- Perplexity ARR $450M（+50%/月），100M+ MAU，成長確認
+- 台灣繁中完整評測 = 稀少，窗口開啟
+
+#### 二、Windsurf vs Cursor 比較頁
+
+- Windsurf（Cognition AI 收購）$20/月 Pro，referral $10 credit
+- Cursor 無官方 affiliate，但有 Ambassador Program（cursor.com/ambassadors）
+- 搜尋「windsurf vs cursor 繁中」= 0 篇完整比較
+- 可帶入 DO VPS + DataCamp 聯盟
+
+#### 三、新流量管道：Threads 台灣 AI 社群
+
+- 台灣 AI 創作者在 Threads 活躍（搜尋結果確認）
+- AI 工具懶人包貼文格式適合 Threads 傳播
+- 現有文章可直接轉成 Threads 貼文導流，零額外成本
+
+#### 四、Perplexity Publisher Program
+
+- 2026/1 上線，被引用即分潤（$2.5M 資金池）
+- 申請：https://www.perplexity.ai/hub
+- 現有技術文章符合被引用條件，零額外工作
+
+> 下次市場研究重點（Round 37，下週日）：
+> - 監控 free-claude-code 繁中文章是否已有競品出現
+> - 搜尋台灣 Threads AI 社群規模（確認流量潛力）
+> - 調查 Cursor Ambassador 申請條件與回報
