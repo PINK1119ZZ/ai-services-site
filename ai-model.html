@@ -288,10 +288,68 @@
  </table>
 </section>
 
+<!-- KIRA REEL -->
+<section class="kira-reel-section">
+    <div class="kira-reel-wrap">
+        <div class="kira-reel-video">
+            <video autoplay muted loop playsinline poster="/assets/showcase/kira-portrait.jpg">
+                <source src="/assets/showcase/kira-reel.mp4" type="video/mp4">
+                您的瀏覽器不支援 video 標籤。
+            </video>
+        </div>
+        <div class="kira-reel-text">
+            <span class="reel-tag">動態 Reel · 10 秒</span>
+            <h2>不只靜態 — 也能出影片</h2>
+            <p>同一套 Higgsfield 工作流，鎖定人物一致性後，可以無縫切換成短影片素材。從靜態廣告 → IG Reels → TikTok 短片，一次解決。</p>
+            <p class="reel-meta">這支由 Higgsfield Veo 工作流生成 · 1080×1920 · 商用永久授權</p>
+        </div>
+    </div>
+</section>
+
+<style>
+.kira-reel-section {
+    max-width: 1100px; margin: 5rem auto 4rem; padding: 0 2rem;
+}
+.kira-reel-wrap {
+    display: grid; grid-template-columns: 360px 1fr; gap: 3rem;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .kira-reel-wrap { grid-template-columns: 1fr; gap: 2rem; }
+    .kira-reel-video { max-width: 320px; margin: 0 auto; }
+}
+.kira-reel-video {
+    border-radius: 4px; overflow: hidden;
+    aspect-ratio: 9/16; background: var(--bg-alt);
+    box-shadow: var(--shadow-md);
+}
+.kira-reel-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.kira-reel-text .reel-tag {
+    display: inline-block; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.2em;
+    color: var(--primary); margin-bottom: 1rem; font-weight: 500;
+}
+.kira-reel-text h2 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    color: var(--text); margin-bottom: 1.2rem;
+    font-family: 'DM Serif Display', 'Noto Serif TC', serif;
+    letter-spacing: -0.01em;
+}
+.kira-reel-text p {
+    color: var(--text-muted); font-size: 1rem;
+    line-height: 1.75; margin-bottom: 1rem;
+}
+.kira-reel-text p.reel-meta {
+    font-size: 0.82rem; color: var(--text-soft);
+    letter-spacing: 0.04em; margin-top: 1.5rem;
+    padding-top: 1rem; border-top: 1px solid var(--border);
+}
+</style>
+
 <!-- SHOWCASE -->
 <section class="showcase-section">
  <h2>實際作品｜Kira IG 帳號</h2>
- <p class="ig-credit">完全由 AI 生成的編輯感台北女生帳號 — <a href="https://www.instagram.com/kira.editorial/" target="_blank" rel="noopener">@kira.editorial</a>（6 張示範圖，IG 持續更新中）</p>
+ <p class="ig-credit">完全由 AI 生成的編輯感台北女生帳號 — <a href="https://www.instagram.com/kira.editorial/" target="_blank" rel="noopener">@kira.editorial</a>（9 張靜態 + 1 段 Reel 示範，IG 持續更新中）</p>
  <div class="showcase-grid">
  <a href="https://www.instagram.com/kira.editorial/" target="_blank" rel="noopener" class="showcase-card">
  <img src="/assets/showcase/kira-beauty.jpg" alt="Kira AI 模特：YSL 美妝產品摆拍範例 — Higgsfield 工作流" loading="lazy">
