@@ -200,74 +200,7 @@
 
 <script src="/chat-widget.js?v=20260502e" defer></script>
 <script src="/lang.js" defer></script>
-<script>
-// Nav scroll effect
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () =>{
- nav.classList.toggle('scrolled', window.scrollY >50);
-});
 
-// Fade-in animation
-const fadeEls = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver((entries) =>{
- entries.forEach(entry =>{
- if (entry.isIntersecting) {
- entry.target.classList.add('visible');
- }
- });
-}, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
-fadeEls.forEach(el =>observer.observe(el));
-setTimeout(() =>{
- fadeEls.forEach(el =>{
- const rect = el.getBoundingClientRect();
- if (rect.top < window.innerHeight + 100) el.classList.add('visible');
- });
-}, 150);
-
-// Mobile menu toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.getElementById('navLinks');
-
-mobileMenuBtn.addEventListener('click', () =>{
- navLinks.classList.toggle('show');
- mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630';
-});
-
-// Close mobile menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link =>{
- link.addEventListener('click', () =>{
- navLinks.classList.remove('show');
- mobileMenuBtn.textContent = '\u2630';
- });
-});
-
-// 表單送出成功 — 觸發 Google Ads 轉換 + 顯示成功訊息
-if (location.search.includes('sent=1')) {
- // 觸發 Google Ads 轉換（最重要的追蹤點）
- fireAdsConversion();
- // 同步觸發 GA4 lead 事件
- gtag('event', 'generate_lead', { event_category: 'Contact', event_label: 'Form Submission' });
-
- var formBox = document.querySelector('form');
- if (formBox) {
- var msg = document.createElement('div');
- msg.style.cssText = 'text-align:center;padding:2rem;color:#6ee7b7;font-size:1.2rem;font-weight:700;';
- msg.textContent = ' 已送出！我會在幾小時內回覆你。';
- formBox.parentElement.insertBefore(msg, formBox);
- formBox.style.display = 'none';
- }
- history.replaceState(null, '', '/contact.html');
-}
-
-// FAQ accordion
-document.querySelectorAll('.faq-q').forEach(q =>{
- q.addEventListener('click', () =>{
- const item = q.parentElement;
- document.querySelectorAll('.faq-item').forEach(i =>{ if (i !== item) i.classList.remove('open'); });
- item.classList.toggle('open');
- });
-});
-</script>
 <script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;b.addEventListener('click',function(e){e.stopPropagation();l.classList.toggle('show');});document.addEventListener('click',function(e){if(!l.contains(e.target)&&!b.contains(e.target))l.classList.remove('show');});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('show');});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 </body>
 </html>

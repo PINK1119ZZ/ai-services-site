@@ -134,76 +134,7 @@
 <p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/privacy.html">隱私權政策</a>· <a href="/terms.html">使用條款</a>· <a href="/disclaimer.html">免責聲明</a></p>
 </footer>
 
-<script>
-// 2026-04 pricing per 1M tokens (USD)
-const models = [
- {name:'Claude Opus 4.6', provider:'Anthropic', input:15, output:75},
- {name:'Claude Sonnet 4.6', provider:'Anthropic', input:3, output:15},
- {name:'Claude Haiku 4', provider:'Anthropic', input:0.8, output:4},
- {name:'GPT-5.4', provider:'OpenAI', input:10, output:40},
- {name:'GPT-5.4 mini', provider:'OpenAI', input:0.4, output:1.6},
- {name:'GPT-5 nano', provider:'OpenAI', input:0.1, output:0.4},
- {name:'Gemini 2.5 Pro', provider:'Google', input:5, output:20},
- {name:'Gemini 2.5 Flash', provider:'Google', input:0.3, output:1.2},
- {name:'Grok 4', provider:'xAI', input:5, output:15},
- {name:'Llama 4 405B', provider:'Meta (via together.ai)', input:3.5, output:3.5},
- {name:'DeepSeek V4', provider:'DeepSeek', input:0.27, output:1.1},
- {name:'Mistral Large 3', provider:'Mistral', input:3, output:12}
-];
 
-const convsEl = document.getElementById('convs');
-const inEl = document.getElementById('inTok');
-const outEl = document.getElementById('outTok');
-const fxEl = document.getElementById('fx');
-const grid = document.getElementById('modelGrid');
-
-function calc(){
- const c = +convsEl.value || 0;
- const i = +inEl.value || 0;
- const o = +outEl.value || 0;
- const fx = +fxEl.value || 32;
- const totalIn = c * i / 1_000_000; // in millions of tokens
- const totalOut = c * o / 1_000_000;
-
- const rows = models.map(m =>({
- ...m,
- monthlyUSD: totalIn * m.input + totalOut * m.output
- })).sort((a,b)=>a.monthlyUSD - b.monthlyUSD);
-
- grid.innerHTML = '';
- rows.forEach((m, idx) =>{
- const el = document.createElement('div');
- el.className = 'model-card' + (idx === 0 && m.monthlyUSD >0 ? ' cheapest' : '');
- el.innerHTML = `
- <div>
- <div class="model-name">${m.name}<span class="provider">${m.provider}</span></div>
- </div>
- <div class="model-pricing">
- Input <span class="rate">$${m.input}</span>/ 1M · Output <span class="rate">$${m.output}</span>/ 1M
- </div>
- <div class="model-cost">
- <div class="m">$${m.monthlyUSD.toFixed(2)}</div>
- <div class="per">USD / 月</div>
- <div class="ntd">約 NT$ ${Math.round(m.monthlyUSD * fx).toLocaleString()}</div>
- </div>
- `;
- grid.appendChild(el);
- });
-}
-
-[convsEl, inEl, outEl, fxEl].forEach(el =>el.addEventListener('input', calc));
-document.querySelectorAll('.preset-btn').forEach(btn =>btn.addEventListener('click', () =>{
- convsEl.value = btn.dataset.c;
- inEl.value = btn.dataset.i;
- outEl.value = btn.dataset.o;
- calc();
-}));
-
-document.getElementById('mobileMenuBtn').addEventListener('click', () =>
- document.getElementById('navLinks').classList.toggle('show'));
-
-calc();
-</script>
 <script defer src="/lang.js"></script>
 <script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;b.addEventListener('click',function(e){e.stopPropagation();l.classList.toggle('show');});document.addEventListener('click',function(e){if(!l.contains(e.target)&&!b.contains(e.target))l.classList.remove('show');});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('show');});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 </body>
