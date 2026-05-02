@@ -229,18 +229,93 @@ footer a { color: var(--primary); text-decoration: none; border-bottom: 1px soli
 footer a:hover { border-bottom-color: var(--primary); }
 
 /* ───── MOBILE ───── */
-.mobile-menu-btn { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+.mobile-menu-btn { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; min-width: 44px; min-height: 44px; padding: 0.5rem; }
+
+/* ───── MOBILE: 768px (tablet/large phone) ───── */
 @media (max-width: 768px) {
+  .nav { padding: 0.85rem 1.25rem; }
+  .nav-logo { font-size: 1.4rem; }
   .nav-links { display: none; }
-  .mobile-menu-btn { display: block; }
-  .nav-links.show { display: flex !important; flex-direction: column; position: absolute; top: 100%; right: 2rem; background: var(--bg); padding: 1.5rem 2rem; border-radius: 4px; border: 1px solid var(--border); gap: 1rem; box-shadow: var(--shadow-md); }
-  .hero-stats { gap: 2rem; flex-wrap: wrap; padding-top: 2rem; }
+  .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+  .nav-links.show { display: flex !important; flex-direction: column; position: absolute; top: 100%; right: 1rem; left: 1rem; background: var(--bg); padding: 1.25rem 1.5rem; border-radius: 4px; border: 1px solid var(--border); gap: 1rem; box-shadow: var(--shadow-md); }
+  .nav-links.show a { padding: 0.6rem 0; font-size: 1rem; min-height: 44px; display: flex; align-items: center; }
+  .nav-cta { text-align: center; justify-content: center; }
+  .hero { padding: 6rem 1.25rem 3rem; min-height: auto; }
+  .hero p { font-size: 1.02rem; padding: 0 0.5rem; }
+  .hero-stats { gap: 2rem; flex-wrap: wrap; padding-top: 2rem; margin-top: 3rem; }
   .hero-stat .number { font-size: 1.75rem; }
+  .hero-buttons { flex-direction: column; gap: 0.75rem; padding: 0 1rem; }
+  .hero-buttons .btn { width: 100%; justify-content: center; padding: 1rem 1.5rem; }
+  .btn { min-height: 44px; padding: 0.85rem 1.6rem; }
   .process-step { gap: 1rem; }
   .cta-box { padding: 2.5rem 1.5rem; }
-  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .pricing-card { padding: 1.75rem 1.5rem; }
   .about-card { padding: 2rem 1.5rem; }
   .about-points { flex-direction: column; }
+  .page-header { padding: 7rem 1.25rem 3rem; }
+  .section-header { padding: 0 1.25rem; }
+  /* 表格在手機上強制橫向滾動,不擠壓 */
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+  .compare-table, .pricing-table { font-size: 0.88rem; }
+  .compare-table th, .compare-table td { padding: 0.7rem 0.8rem; }
+  /* 圖片預設防溢位 */
+  img, video { max-width: 100%; height: auto; }
+  /* footer 收緊 */
+  footer { padding: 2rem 1.25rem 1.5rem; font-size: 0.8rem; }
+}
+
+/* ───── MOBILE: 480px (mid phone) ───── */
+@media (max-width: 480px) {
+  .nav { padding: 0.7rem 1rem; }
+  .nav-logo { font-size: 1.25rem; }
+  .hero { padding: 5.5rem 1rem 2.5rem; }
+  .hero h1 { font-size: clamp(1.85rem, 7.5vw, 2.4rem); margin-bottom: 1.25rem; }
+  .hero p { font-size: 0.96rem; margin-bottom: 1.75rem; }
+  .hero-badge { font-size: 0.7rem; padding: 0.35rem 0.9rem; margin-bottom: 1.25rem; }
+  .hero-stats { gap: 1.25rem; padding-top: 1.5rem; margin-top: 2.5rem; }
+  .hero-stat .number { font-size: 1.5rem; }
+  .hero-stat .label { font-size: 0.78rem; }
+  .section-header h2 { font-size: clamp(1.55rem, 6.5vw, 2rem); }
+  .page-header h1 { font-size: clamp(1.85rem, 7.5vw, 2.5rem); }
+  .pricing-price { font-size: 2.25rem; }
+  .cta-box { padding: 2rem 1.25rem; }
+  .cta-box h2 { font-size: clamp(1.45rem, 6vw, 1.85rem); }
+  .btn { font-size: 0.88rem; padding: 0.8rem 1.4rem; }
+  .nav-cta { font-size: 0.82rem !important; padding: 0.5rem 1.1rem; }
+}
+
+/* ───── MOBILE: 360px (small phone) ───── */
+@media (max-width: 360px) {
+  .hero h1 { font-size: 1.65rem; }
+  .hero-stats { gap: 1rem; }
+  .pricing-price { font-size: 1.95rem; }
+  .nav-logo { font-size: 1.1rem; }
+}
+
+/* ───── 手機表單防 iOS 自動 zoom (input font 必須 ≥ 16px) ───── */
+input[type="text"], input[type="email"], input[type="tel"],
+input[type="number"], input[type="url"], input[type="password"],
+textarea, select {
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+}
+@media (min-width: 769px) {
+  input[type="text"], input[type="email"], input[type="tel"],
+  input[type="number"], input[type="url"], input[type="password"],
+  textarea, select { font-size: 0.95rem; }
+}
+
+/* ───── 手機觸控優化 ───── */
+@media (hover: none) and (pointer: coarse) {
+  /* 觸控裝置移除 hover transform 動畫,反應更直接 */
+  .btn:hover, .pricing-card:hover, .service-card:hover, .showcase-card:hover {
+    transform: none !important;
+  }
+  /* 點擊連結 / 按鈕的 tap highlight 改成品牌色淡色 */
+  a, button { -webkit-tap-highlight-color: rgba(184, 148, 106, 0.15); }
 }
 
 /* ───── ANIMATIONS ───── */
