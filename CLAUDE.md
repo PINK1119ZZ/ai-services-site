@@ -68,6 +68,23 @@ strategist 寫指令給其他 agent，收到的 agent 必須優先執行。
 - 更新舊文時，重點加強變現元素（加聯盟連結、加 CTA、加產品推薦）
 - 內部連結優先導向：產品頁 > 工具頁 > 高轉換文章
 
+**🚨 內部連結注入硬性禁區（2026-05-02 教訓）**：
+插入 `<a class="internal-link">` 時，**絕對不能在以下區域注入任何 HTML 標籤**，否則會破壞 SEO 結構：
+- ❌ `<title>...</title>` 區段（會讓 Google SERP 顯示原始 HTML，超嚴重）
+- ❌ `<head>...</head>` 內所有 meta、og:title、twitter:title、canonical
+- ❌ `<script>...</script>`、`<style>...</style>` 區段
+- ❌ HTML 屬性值內（`alt=""`、`title=""`、`data-*`）
+- ❌ JSON-LD（`<script type="application/ld+json">`）
+- ❌ 已經在 `<a>...</a>` 內的文字（避免巢狀 anchor）
+
+**正確做法**：只在 `<body>` 主內容的純文字段落（`<p>`、`<li>`、`<td>`、`<h2>-<h6>` 但不含 `<h1>`）注入連結，且每個關鍵字第一次出現才注入，避免重複。
+
+**事故記錄**：2026-05-02 發現 5 篇文章 title 被注入了 `<a class="internal-link">` 標籤，例如「AI 工具推薦｜2026 免費 vs 付費完整比較（&lt;a class="internal-link" href="..."&gt;ChatGPT&lt;/a&gt;/Claude/Gemini）」 — Google SERP 直接顯示原始 HTML，極度傷排名。已批次修復，但 content-ops 必須學會避免再犯。
+
+**SEO 標題長度規則**：
+- 中文 title ≤ 60 字（含品牌名），英文 ≤ 60 字。超過會被 Google SERP 截斷顯示「...」。
+- 若文章主標題 + 品牌名 > 60 字，可省略「| AutoDev AI」品牌尾綴（Google 會自動拼接 site name）。
+
 ### researcher（收入機會獵手）
 **目標**: 找到新的賺錢機會，不是寫讀書報告
 **核心規則**:
