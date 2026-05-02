@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapfamily=Noto+Serif+TC:wght@400;500;600https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapfamily=Noto+Sans+TC:wght@400;500;700;900https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapfamily=Inter:wght@400;500;600;700https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"AI Token 成本計算器","url":"https://autodev-ai.com/tools/token-cost-calculator.html","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
@@ -29,21 +29,21 @@
 .calc-header{text-align:center;margin-bottom:2.5rem;}
 .calc-header h1{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.8rem;font-weight:900;}
 .calc-header p{color:var(--gray);font-size:1.05rem;}
-.input-box{background:var(--dark-2);border:1px solid rgba(108,92,231,.2);border-radius:14px;padding:1.5rem;margin-bottom:2rem;}
+.input-box{background:var(--dark-2);border:1px solid rgba(184,148,106,.2);border-radius:14px;padding:1.5rem;margin-bottom:2rem;}
 .input-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;}
 .input-item label{display:block;font-size:.85rem;color:var(--gray);margin-bottom:.4rem;}
 .input-item input{width:100%;padding:.7rem .9rem;background:var(--dark);border:1px solid rgba(255,255,255,.1);color:var(--light);border-radius:8px;font-size:1.1rem;font-family:inherit;font-weight:600;box-sizing:border-box;}
 .input-item input:focus{border-color:var(--primary);outline:none;}
 .input-item .unit{font-size:.75rem;color:var(--gray);margin-top:.3rem;}
 .presets{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem;}
-.preset-btn{padding:.4rem .8rem;background:rgba(108,92,231,.1);border:1px solid rgba(108,92,231,.3);color:var(--primary-light);border-radius:50px;font-size:.8rem;cursor:pointer;}
-.preset-btn:hover{background:rgba(108,92,231,.2);}
+.preset-btn{padding:.4rem .8rem;background:rgba(184,148,106,.1);border:1px solid rgba(184,148,106,.3);color:var(--primary-light);border-radius:50px;font-size:.8rem;cursor:pointer;}
+.preset-btn:hover{background:rgba(184,148,106,.2);}
 .model-grid{display:grid;gap:.8rem;}
 .model-card{background:var(--dark-2);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:1.2rem 1.4rem;display:grid;grid-template-columns:200px 1fr auto;gap:1.5rem;align-items:center;transition:all .25s;}
 @media(max-width:720px){.model-card{grid-template-columns:1fr;gap:.6rem;}}
-.model-card:hover{border-color:rgba(108,92,231,.4);}
-.model-card.cheapest{border-color:var(--accent);box-shadow:0 0 20px rgba(0,210,211,.15);}
-.model-card.cheapest::before{content:'🏆 最便宜';display:inline-block;padding:.15rem .55rem;border-radius:50px;background:linear-gradient(135deg,#00D2D3,#6C5CE7);color:#fff;font-size:.7rem;font-weight:700;position:absolute;transform:translate(-.5rem,-1.8rem);}
+.model-card:hover{border-color:rgba(184,148,106,.4);}
+.model-card.cheapest{border-color:var(--accent);box-shadow:0 0 20px rgba(196,165,123,.15);}
+.model-card.cheapest::before{content:'🏆 最便宜';display:inline-block;padding:.15rem .55rem;border-radius:50px;background:linear-gradient(135deg,#C4A57B,#B8946A);color:#fff;font-size:.7rem;font-weight:700;position:absolute;transform:translate(-.5rem,-1.8rem);}
 .model-name{font-weight:900;font-size:1.1rem;color:var(--light);}
 .model-name .provider{display:block;font-size:.75rem;color:var(--gray);font-weight:500;margin-top:.15rem;}
 .model-pricing{font-size:.8rem;color:var(--gray);}
@@ -53,7 +53,7 @@
 .model-cost .per{color:var(--gray);font-size:.75rem;}
 .model-cost .ntd{color:var(--gray);font-size:.8rem;margin-top:.15rem;}
 .disclaimer{color:var(--gray);font-size:.75rem;margin-top:2rem;text-align:center;line-height:1.5;}
-.info-strip{background:rgba(0,210,211,.05);border:1px solid rgba(0,210,211,.2);border-radius:10px;padding:.9rem 1.1rem;margin-top:1.5rem;font-size:.85rem;color:#C5C5D5;line-height:1.6;}
+.info-strip{background:rgba(196,165,123,.05);border:1px solid rgba(196,165,123,.2);border-radius:10px;padding:.9rem 1.1rem;margin-top:1.5rem;font-size:.85rem;color:#C5C5D5;line-height:1.6;}
 </style>
 </head>
 <body>
