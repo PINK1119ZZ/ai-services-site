@@ -172,6 +172,32 @@
     if (el) el.remove();
   }
 
+  async function fetchWithTimeout(url, options, timeoutMs) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const resp = await fetch(url, { ...options, signal: controller.signal });
+      return resp;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
+  async function callApi(text, attempt) {
+    const resp = await fetchWithTimeout(
+      API_URL,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text, session_id: SESSION_ID }),
+      },
+      attempt === 0 ? 12000 : 25000   // 12s first try, 25s retry (warm)
+    );
+    if (!resp.ok) throw new Error('http_' + resp.status);
+    const data = await resp.json();
+    return data.reply || '';
+  }
+
   async function sendMessage(text) {
     if (!text.trim()) return;
     addMsg(text, 'user');
@@ -180,18 +206,30 @@
     quickBtns.style.display = 'none';
     showTyping();
 
-    try {
-      const resp = await fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text, session_id: SESSION_ID }),
-      });
-      const data = await resp.json();
-      hideTyping();
-      addMsg(data.reply || '抱歉，暫時無法回覆，請稍後再試。', 'bot');
-    } catch (e) {
-      hideTyping();
-      addMsg('連線出了點問題，請稍後再試，或直接加我們的 LINE：@882vhisc', 'bot');
+    let reply = '';
+    let lastErr = null;
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        reply = await callApi(text, attempt);
+        break;
+      } catch (e) {
+        lastErr = e;
+        // brief pause then retry once
+        if (attempt === 0) {
+          await new Promise(r => setTimeout(r, 800));
+        }
+      }
+    }
+
+    hideTyping();
+    if (reply) {
+      addMsg(reply, 'bot');
+    } else {
+      const isAbort = lastErr && (lastErr.name === 'AbortError' || String(lastErr).includes('abort'));
+      const msg = isAbort
+        ? '伺服器回應有點慢，可能是首次喚醒。請再試一次，或加 LINE 諮詢：<a href="https://line.me/R/ti/p/@882vhisc" target="_blank" rel="noopener">@882vhisc</a>'
+        : '連線暫時不穩，請稍後再試，或加 LINE：<a href="https://line.me/R/ti/p/@882vhisc" target="_blank" rel="noopener">@882vhisc</a>';
+      addMsg(msg, 'bot');
     }
     sendBtn.disabled = false;
     input.focus();
