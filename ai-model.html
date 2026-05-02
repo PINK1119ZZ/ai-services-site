@@ -340,6 +340,101 @@
 }
 </style>
 
+<!-- EDITORIAL SERIES · 8 個場景 -->
+<section class="editorial-series">
+ <div class="editorial-header">
+  <span class="editorial-tag">Editorial Series · 8 個場景包</span>
+  <h2>同一個 Kira，跨 8 個專業場景</h2>
+  <p>奢牌廣告、台灣本土、產品代言、編輯雜誌、Y2K 復古、Vogue Paris … 同一個人物模型，無限切換場景。Higgsfield 角色一致性鎖定 + 8 個 prompt 包，你的品牌素材永遠不缺。</p>
+ </div>
+ <div class="editorial-grid">
+  <figure class="editorial-card">
+   <img src="/assets/scenes/kira-d1-lv-neonoe.jpg" alt="Kira × LV NeoNoé 廣告 — 奢牌包款場景" loading="lazy" decoding="async">
+   <figcaption><strong>D1</strong>·LV NeoNoé Ad<br><em>奢侈品包款廣告</em></figcaption>
+  </figure>
+  <figure class="editorial-card">
+   <img src="/assets/scenes/kira-d2-taxi-rain.jpg" alt="Kira 雨夜計程車場景 — 故事性編輯感" loading="lazy" decoding="async">
+   <figcaption><strong>D2</strong>·成為 Kira 的第一天<br><em>故事性編輯感</em></figcaption>
+  </figure>
+  <figure class="editorial-card">
+   <img src="/assets/scenes/kira-d3-dintaifung.jpg" alt="Kira × 鼎泰豐 — 台灣本土餐飲場景" loading="lazy" decoding="async">
+   <figcaption><strong>D3</strong>·鼎泰豐<br><em>台灣餐飲品牌</em></figcaption>
+  </figure>
+  <figure class="editorial-card">
+   <img src="/assets/scenes/kira-d4-jiufen.jpg" alt="Kira 九份場景 — 台灣山城旅遊風情" loading="lazy" decoding="async">
+   <figcaption><strong>D4</strong>·九份<br><em>台灣旅遊本土</em></figcaption>
+  </figure>
+  <figure class="editorial-card">
+   <img src="/assets/scenes/kira-d5-y2k.jpg" alt="Kira Y2K 祕書造型 — 復古職場美學" loading="lazy" decoding="async">
+   <figcaption><strong>D5</strong>·Y2K Secretary<br><em>復古職場美學</em></figcaption>
+  </figure>
+  <figure class="editorial-card">
+   <img src="/assets/scenes/kira-d6-ysl-glow.jpg" alt="Kira × YSL 粉底 glow 妝後 — 美妝產品代言" loading="lazy" decoding="async">
+   <figcaption><strong>D6</strong>·YSL Glow<br><em>美妝產品代言</em></figcaption>
+  </figure>
+  <figure class="editorial-card">
+   <img src="/assets/scenes/kira-d7-slip-dress.jpg" alt="Kira slip dress 編輯工作室 — 時尚雜誌風" loading="lazy" decoding="async">
+   <figcaption><strong>D7</strong>·Slip Dress Editorial<br><em>時尚雜誌風</em></figcaption>
+  </figure>
+  <figure class="editorial-card">
+   <img src="/assets/scenes/kira-vogue-paris.jpg" alt="Kira × Vogue Paris × LV — 高端時尚廣告" loading="lazy" decoding="async">
+   <figcaption><strong>D8</strong>·Vogue Paris × LV<br><em>高端時尚廣告</em></figcaption>
+  </figure>
+ </div>
+ <div class="editorial-cta">
+  <a href="/contact.html" class="btn btn-primary">免費試做 1 張你的場景 →</a>
+  <a href="https://www.instagram.com/kira.editorial/" target="_blank" rel="noopener" class="btn btn-secondary">看 IG 完整 portfolio</a>
+ </div>
+</section>
+
+<style>
+.editorial-series { max-width: 1200px; margin: 4rem auto 3rem; padding: 0 2rem; }
+.editorial-header { text-align: center; margin-bottom: 2.5rem; max-width: 720px; margin-left: auto; margin-right: auto; }
+.editorial-header .editorial-tag {
+ display: inline-block; font-size: 0.72rem;
+ text-transform: uppercase; letter-spacing: 0.2em;
+ color: var(--primary); margin-bottom: 1rem; font-weight: 500;
+}
+.editorial-header h2 {
+ font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+ font-family: 'DM Serif Display', 'Noto Serif TC', serif;
+ letter-spacing: -0.01em; margin-bottom: 1rem; color: var(--text);
+}
+.editorial-header p {
+ color: var(--text-muted); font-size: 1rem; line-height: 1.75;
+}
+.editorial-grid {
+ display: grid; grid-template-columns: repeat(4, 1fr);
+ gap: 1rem;
+}
+@media (max-width: 900px) { .editorial-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .editorial-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; } }
+@media (max-width: 380px) { .editorial-grid { grid-template-columns: 1fr; } }
+.editorial-card {
+ margin: 0; aspect-ratio: 3/4; overflow: hidden;
+ border-radius: 4px; position: relative;
+ background: var(--bg-alt); border: 1px solid var(--border);
+ transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.editorial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.editorial-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.editorial-card figcaption {
+ position: absolute; bottom: 0; left: 0; right: 0;
+ background: linear-gradient(to top, rgba(45,38,32,0.88), transparent);
+ padding: 1.5rem 1rem 0.85rem; color: var(--white);
+ font-size: 0.78rem; line-height: 1.4;
+}
+.editorial-card figcaption strong {
+ display: inline-block; background: var(--primary); color: var(--white);
+ font-family: 'DM Serif Display', serif;
+ padding: 0.1rem 0.5rem; border-radius: 2px; font-size: 0.72rem;
+ margin-right: 0.4rem; letter-spacing: 0.05em;
+}
+.editorial-card figcaption em { font-style: normal; opacity: 0.78; font-size: 0.72rem; }
+.editorial-cta { text-align: center; margin-top: 2.5rem; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+@media (max-width: 480px) { .editorial-cta .btn { width: 100%; max-width: 320px; } }
+</style>
+
 <!-- SHOWCASE -->
 <section class="showcase-section">
  <h2>實際作品｜Kira IG 帳號</h2>
