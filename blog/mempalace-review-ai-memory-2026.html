@@ -141,15 +141,24 @@ footer a { color: var(--primary); }
 <body>
 
 <!-- NAV -->
-<nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.06);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;">
- <a href="/" style="font-weight:800;font-size:1.1rem;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;">AutoDev AI</a>
- <div style="display:flex;gap:1.5rem;font-size:0.9rem;">
- <a href="/blog/" style="color:var(--light);text-decoration:none;">部落格</a>
- <a href="/pricing.html" style="color:var(--light);text-decoration:none;">方案</a>
- <a href="/contact.html" style="color:var(--accent);font-weight:700;text-decoration:none;">免費諮詢</a>
- </div>
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="/">AutoDev AI</a>
+<div class="nav-links" id="navLinks">
+<a href="/services.html">服務</a>
+<a href="/bot-cloud.html">雲託管</a>
+<a href="/ai-model.html">AI 模特</a>
+<a href="/tools/">工具</a>
+<a href="/pricing.html">方案</a>
+<a href="/blog/">Blog</a>
+<a href="/about.html">關於</a>
+<a href="/en/">EN</a>
+<a class="nav-cta" href="/contact.html">免費諮詢</a>
+</div>
+<button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
+</div>
 </nav>
-
+<script>document.getElementById('mobileMenuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('show'));window.addEventListener('scroll',()=>{const nav=document.getElementById('nav');nav.classList.toggle('scrolled',window.scrollY>50);});</script>
 <main>
  <div class="breadcrumb">
  <a href="/">首頁</a>› <a href="/blog/">部落格</a>› MemPalace 評測 2026
