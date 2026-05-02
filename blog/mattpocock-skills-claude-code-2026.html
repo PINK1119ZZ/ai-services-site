@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mattpocock/skills 教學 2026：Claude Code 必裝 15 個 Agent Skills</title>
-  <meta name="description" content="TypeScript 之父 Matt Pocock 釋出 mattpocock/skills — Claude Code 工程師必裝的 15 個 Agent Skills！繁中完整教學：安裝方式、/grill-me、/tdd、/to-prd 等指令詳解，讓你的 Claude Code 變成頂尖 Senior Dev。">
-  <meta name="keywords" content="mattpocock skills, claude code agent skills, claude code 教學, agent skills 繁中, mattpocock github, claude code skills 安裝, typescript matt pocock, claude code 進階技巧 2026">
-  <link rel="canonical" href="https://autodev-ai.com/blog/mattpocock-skills-claude-code-2026.html">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>mattpocock/skills 教學 2026：Claude Code 必裝 15 個 Agent Skills</title>
+ <meta name="description" content="TypeScript 之父 Matt Pocock 釋出 mattpocock/skills — Claude Code 工程師必裝的 15 個 Agent Skills！繁中完整教學：安裝方式、/grill-me、/tdd、/to-prd 等指令詳解，讓你的 Claude Code 變成頂尖 Senior Dev。">
+ <meta name="keywords" content="mattpocock skills, claude code agent skills, claude code 教學, agent skills 繁中, mattpocock github, claude code skills 安裝, typescript matt pocock, claude code 進階技巧 2026">
+ <link rel="canonical" href="https://autodev-ai.com/blog/mattpocock-skills-claude-code-2026.html">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="mattpocock/skills 教學 2026：Claude Code 工程師必裝的 15 個 Agent Skills">
-  <meta property="og:description" content="TypeScript 之父 Matt Pocock 今日 GitHub #1（2519★/天）！15+ Agent Skills 讓 Claude Code 化身 Senior Dev。繁中完整教學，含安裝 + 各 Skill 使用範例。">
-  <meta property="og:url" content="https://autodev-ai.com/blog/mattpocock-skills-claude-code-2026.html">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="https://autodev-ai.com/blog/og/mattpocock-skills-claude-code-2026.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="mattpocock/skills：Claude Code 工程師必裝的 15 個 Agent Skills（繁中教學）">
-  <meta name="twitter:description" content="TypeScript 之父 Matt Pocock 出品，GitHub 今日 #1！Claude Code Skills 繁中完整教學。">
+ <!-- Open Graph -->
+ <meta property="og:title" content="mattpocock/skills 教學 2026：Claude Code 工程師必裝的 15 個 Agent Skills">
+ <meta property="og:description" content="TypeScript 之父 Matt Pocock 今日 GitHub #1（2519/天）！15+ Agent Skills 讓 Claude Code 化身 Senior Dev。繁中完整教學，含安裝 + 各 Skill 使用範例。">
+ <meta property="og:url" content="https://autodev-ai.com/blog/mattpocock-skills-claude-code-2026.html">
+ <meta property="og:type" content="article">
+ <meta property="og:image" content="https://autodev-ai.com/blog/og/mattpocock-skills-claude-code-2026.jpg">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="mattpocock/skills：Claude Code 工程師必裝的 15 個 Agent Skills（繁中教學）">
+ <meta name="twitter:description" content="TypeScript 之父 Matt Pocock 出品，GitHub 今日 #1！Claude Code Skills 繁中完整教學。">
 
-  <!-- Schema.org Article -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "mattpocock/skills 完整教學 2026：Claude Code 工程師必裝的 15 個 Agent Skills",
-    "description": "TypeScript 之父 Matt Pocock 釋出 Claude Code Agent Skills 集合，繁中完整安裝與使用教學。",
-    "author": { "@type": "Organization", "name": "AutoDev AI" },
-    "publisher": { "@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com" },
-    "datePublished": "2026-04-27",
-    "dateModified": "2026-04-27",
-    "url": "https://autodev-ai.com/blog/mattpocock-skills-claude-code-2026.html",
-    "mainEntityOfPage": "https://autodev-ai.com/blog/mattpocock-skills-claude-code-2026.html",
-    "keywords": ["mattpocock skills", "claude code", "agent skills", "typescript", "AI coding 2026"]
-  }
-  </script>
+ <!-- Schema.org Article -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "mattpocock/skills 完整教學 2026：Claude Code 工程師必裝的 15 個 Agent Skills",
+ "description": "TypeScript 之父 Matt Pocock 釋出 Claude Code Agent Skills 集合，繁中完整安裝與使用教學。",
+ "author": { "@type": "Organization", "name": "AutoDev AI" },
+ "publisher": { "@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com" },
+ "datePublished": "2026-04-27",
+ "dateModified": "2026-04-27",
+ "url": "https://autodev-ai.com/blog/mattpocock-skills-claude-code-2026.html",
+ "mainEntityOfPage": "https://autodev-ai.com/blog/mattpocock-skills-claude-code-2026.html",
+ "keywords": ["mattpocock skills", "claude code", "agent skills", "typescript", "AI coding 2026"]
+ }
+ </script>
 
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapfamily=Noto+Serif+TC:wght@400;500;600https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapfamily=Noto+Sans+TC:wght@400;500;700;900https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapfamily=Inter:wght@400;500;600;700https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+ <link rel="icon" type="image/x-icon" href="/favicon.ico">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapfamily=Noto+Serif+TC:wght@400;500;600https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapfamily=Noto+Sans+TC:wght@400;500;700;900https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapfamily=Inter:wght@400;500;600;700https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+ <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
 
-  <style>
+ <style>
 :root {
-  --dark: #0a0a0f;
-  --dark-2: #12121c;
-  --dark-3: #f5ede3;
-  --purple: #b8946a;
-  --purple-light: #e8d9bd;
-  --cyan: #00cec9;
-  --green: #00b894;
-  --orange: #fd9644;
-  --red: #e17055;
-  --text: #e2e8f0;
-  --text-muted: #8892a4;
-  --border: rgba(184,148,106,0.2);
+ --dark: #0a0a0f;
+ --dark-2: #12121c;
+ --dark-3: #f5ede3;
+ --purple: #b8946a;
+ --purple-light: #e8d9bd;
+ --cyan: #00cec9;
+ --green: #00b894;
+ --orange: #fd9644;
+ --red: #e17055;
+ --text: #e2e8f0;
+ --text-muted: #8892a4;
+ --border: rgba(184,148,106,0.2);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: var(--dark); color: var(--text); font-family: 'Noto Sans TC', 'Inter', sans-serif; line-height: 1.8; }
@@ -63,39 +63,39 @@ a { color: var(--purple-light); text-decoration: none; }
 a:hover { color: var(--cyan); }
 
 .hero-bar {
-  background: linear-gradient(135deg, #1a0533 0%, #0d1b2e 50%, #0a1628 100%);
-  border-bottom: 1px solid var(--border);
-  padding: 3.5rem 2rem 3rem;
-  text-align: center;
+ background: linear-gradient(135deg, #1a0533 0%, #0d1b2e 50%, #0a1628 100%);
+ border-bottom: 1px solid var(--border);
+ padding: 3.5rem 2rem 3rem;
+ text-align: center;
 }
 .hero-bar .badge {
-  display: inline-flex; align-items: center; gap: .5rem;
-  background: rgba(184,148,106,.15); border: 1px solid var(--purple);
-  color: var(--purple-light); border-radius: 50px; padding: .35rem 1rem;
-  font-size: .82rem; font-weight: 600; margin-bottom: 1.2rem;
+ display: inline-flex; align-items: center; gap: .5rem;
+ background: rgba(184,148,106,.15); border: 1px solid var(--purple);
+ color: var(--purple-light); border-radius: 50px; padding: .35rem 1rem;
+ font-size: .82rem; font-weight: 600; margin-bottom: 1.2rem;
 }
 .hero-bar h1 {
-  font-size: clamp(1.7rem, 4vw, 2.6rem);
-  font-weight: 900; line-height: 1.25;
-  background: linear-gradient(135deg, #fff 30%, var(--purple-light) 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
+ font-size: clamp(1.7rem, 4vw, 2.6rem);
+ font-weight: 900; line-height: 1.25;
+ background: linear-gradient(135deg, #fff 30%, var(--purple-light) 100%);
+ -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+ margin-bottom: 1rem;
 }
 .hero-bar .meta {
-  color: var(--text-muted); font-size: .9rem;
-  display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
+ color: var(--text-muted); font-size: .9rem;
+ display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
 }
 
 .container { max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
 
 h2 {
-  font-size: 1.55rem; font-weight: 800; margin: 3rem 0 1.2rem;
-  color: #fff;
-  padding-left: 1rem; border-left: 4px solid var(--purple);
+ font-size: 1.55rem; font-weight: 800; margin: 3rem 0 1.2rem;
+ color: #fff;
+ padding-left: 1rem; border-left: 4px solid var(--purple);
 }
 h3 {
-  font-size: 1.2rem; font-weight: 700; margin: 2rem 0 .8rem;
-  color: var(--purple-light);
+ font-size: 1.2rem; font-weight: 700; margin: 2rem 0 .8rem;
+ color: var(--purple-light);
 }
 p { margin-bottom: 1.2rem; color: var(--text); }
 ul, ol { margin: .8rem 0 1.4rem 1.6rem; }
@@ -103,9 +103,9 @@ li { margin-bottom: .6rem; }
 
 /* Highlight box */
 .highlight-box {
-  background: linear-gradient(135deg, rgba(184,148,106,.1), rgba(0,206,201,.06));
-  border: 1px solid rgba(184,148,106,.35);
-  border-radius: 14px; padding: 1.6rem 1.8rem; margin: 2rem 0;
+ background: linear-gradient(135deg, rgba(184,148,106,.1), rgba(0,206,201,.06));
+ border: 1px solid rgba(184,148,106,.35);
+ border-radius: 14px; padding: 1.6rem 1.8rem; margin: 2rem 0;
 }
 .highlight-box .icon { font-size: 1.5rem; margin-bottom: .6rem; }
 .highlight-box p { margin: 0; }
@@ -113,8 +113,8 @@ li { margin-bottom: .6rem; }
 /* Stat cards */
 .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 2rem 0; }
 .stat-card {
-  background: var(--dark-2); border: 1px solid var(--border);
-  border-radius: 4px; padding: 1.2rem; text-align: center;
+ background: var(--dark-2); border: 1px solid var(--border);
+ border-radius: 4px; padding: 1.2rem; text-align: center;
 }
 .stat-card .num { font-size: 1.8rem; font-weight: 900; color: var(--purple-light); }
 .stat-card .label { font-size: .8rem; color: var(--text-muted); margin-top: .3rem; }
@@ -122,54 +122,54 @@ li { margin-bottom: .6rem; }
 /* Skill cards */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.2rem; margin: 2rem 0; }
 .skill-card {
-  background: var(--dark-2); border: 1px solid var(--border);
-  border-radius: 14px; padding: 1.4rem 1.6rem;
-  transition: border-color .25s;
+ background: var(--dark-2); border: 1px solid var(--border);
+ border-radius: 14px; padding: 1.4rem 1.6rem;
+ transition: border-color .25s;
 }
 .skill-card:hover { border-color: var(--purple); }
 .skill-card .cmd {
-  font-family: 'Courier New', monospace; font-size: .95rem; font-weight: 700;
-  color: var(--cyan); background: rgba(0,206,201,.08);
-  border-radius: 6px; padding: .2rem .6rem; display: inline-block; margin-bottom: .6rem;
+ font-family: 'Courier New', monospace; font-size: .95rem; font-weight: 700;
+ color: var(--cyan); background: rgba(0,206,201,.08);
+ border-radius: 6px; padding: .2rem .6rem; display: inline-block; margin-bottom: .6rem;
 }
 .skill-card .title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: .4rem; }
 .skill-card .desc { font-size: .88rem; color: var(--text-muted); margin: 0; line-height: 1.55; }
 .skill-card .tag {
-  display: inline-block; margin-top: .6rem;
-  background: rgba(184,148,106,.15); color: var(--purple-light);
-  border-radius: 20px; padding: .15rem .65rem; font-size: .75rem; font-weight: 600;
+ display: inline-block; margin-top: .6rem;
+ background: rgba(184,148,106,.15); color: var(--purple-light);
+ border-radius: 20px; padding: .15rem .65rem; font-size: .75rem; font-weight: 600;
 }
 
 /* Code block */
 pre {
-  background: #0d0d1a; border: 1px solid rgba(184,148,106,.25);
-  border-radius: 10px; padding: 1.2rem 1.4rem;
-  overflow-x: auto; font-size: .88rem; line-height: 1.6;
-  margin: 1.2rem 0 1.8rem; color: #c9d1d9;
+ background: #0d0d1a; border: 1px solid rgba(184,148,106,.25);
+ border-radius: 10px; padding: 1.2rem 1.4rem;
+ overflow-x: auto; font-size: .88rem; line-height: 1.6;
+ margin: 1.2rem 0 1.8rem; color: #c9d1d9;
 }
 code { font-family: 'Courier New', Consolas, monospace; font-size: .88rem; }
 p code, li code {
-  background: rgba(184,148,106,.15); border-radius: 4px;
-  padding: .1rem .4rem; color: var(--cyan);
+ background: rgba(184,148,106,.15); border-radius: 4px;
+ padding: .1rem .4rem; color: var(--cyan);
 }
 
 /* Table */
 .table-wrap { overflow-x: auto; margin: 1.5rem 0 2rem; }
 table { width: 100%; border-collapse: collapse; }
 th {
-  background: rgba(184,148,106,.2); color: var(--purple-light);
-  padding: .7rem 1rem; text-align: left; font-size: .9rem; white-space: nowrap;
+ background: rgba(184,148,106,.2); color: var(--purple-light);
+ padding: .7rem 1rem; text-align: left; font-size: .9rem; white-space: nowrap;
 }
 td {
-  padding: .65rem 1rem; border-bottom: 1px solid rgba(255,255,255,.06);
-  font-size: .88rem;
+ padding: .65rem 1rem; border-bottom: 1px solid rgba(255,255,255,.06);
+ font-size: .88rem;
 }
 tr:hover td { background: rgba(255,255,255,.03); }
 
 /* CTA buttons */
 .cta-box {
-  border-radius: 4px; padding: 2rem 2.2rem;
-  margin: 2.5rem 0; text-align: center;
+ border-radius: 4px; padding: 2rem 2.2rem;
+ margin: 2.5rem 0; text-align: center;
 }
 .cta-box.purple { background: linear-gradient(135deg, rgba(184,148,106,.25) 0%, rgba(184,148,106,.1) 100%); border: 1px solid rgba(184,148,106,.5); }
 .cta-box.cyan { background: linear-gradient(135deg, rgba(0,206,201,.2) 0%, rgba(0,206,201,.06) 100%); border: 1px solid rgba(0,206,201,.4); }
@@ -178,9 +178,9 @@ tr:hover td { background: rgba(255,255,255,.03); }
 .cta-box h3 { margin: 0 0 .5rem; color: #fff; font-size: 1.15rem; }
 .cta-box p { margin: 0 0 1.2rem; font-size: .92rem; color: var(--text-muted); }
 .btn {
-  display: inline-block; padding: .75rem 1.8rem; border-radius: 50px;
-  font-weight: 700; font-size: .95rem; cursor: pointer; transition: all .25s;
-  text-decoration: none; margin: .3rem;
+ display: inline-block; padding: .75rem 1.8rem; border-radius: 50px;
+ font-weight: 700; font-size: .95rem; cursor: pointer; transition: all .25s;
+ text-decoration: none; margin: .3rem;
 }
 .btn-purple { background: linear-gradient(135deg, var(--purple), #a855f7); color: #fff; }
 .btn-purple:hover { filter: brightness(1.15); color: #fff; }
@@ -195,8 +195,8 @@ tr:hover td { background: rgba(255,255,255,.03); }
 
 /* Warning / tip boxes */
 .tip-box {
-  border-radius: 10px; padding: 1rem 1.4rem;
-  margin: 1.4rem 0; display: flex; gap: .8rem; align-items: flex-start;
+ border-radius: 10px; padding: 1rem 1.4rem;
+ margin: 1.4rem 0; display: flex; gap: .8rem; align-items: flex-start;
 }
 .tip-box.blue { background: rgba(0,206,201,.08); border-left: 4px solid var(--cyan); }
 .tip-box.yellow { background: rgba(253,150,68,.08); border-left: 4px solid var(--orange); }
@@ -212,10 +212,10 @@ tr:hover td { background: rgba(255,255,255,.03); }
 /* Step list */
 .step { display: flex; gap: 1rem; margin-bottom: 1.4rem; align-items: flex-start; }
 .step-num {
-  background: linear-gradient(135deg, var(--purple), #a855f7);
-  color: #fff; border-radius: 50%; width: 32px; height: 32px;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 800; font-size: .9rem; flex-shrink: 0;
+ background: linear-gradient(135deg, var(--purple), #a855f7);
+ color: #fff; border-radius: 50%; width: 32px; height: 32px;
+ display: flex; align-items: center; justify-content: center;
+ font-weight: 800; font-size: .9rem; flex-shrink: 0;
 }
 .step-body { flex: 1; }
 .step-body h4 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: .4rem; }
@@ -223,58 +223,58 @@ tr:hover td { background: rgba(255,255,255,.03); }
 
 /* Breadcrumb */
 .breadcrumb {
-  padding: .8rem 1.5rem; background: var(--dark-2);
-  font-size: .82rem; color: var(--text-muted);
-  border-bottom: 1px solid var(--border);
+ padding: .8rem 1.5rem; background: var(--dark-2);
+ font-size: .82rem; color: var(--text-muted);
+ border-bottom: 1px solid var(--border);
 }
 .breadcrumb a { color: var(--text-muted); }
 .breadcrumb a:hover { color: var(--purple-light); }
-  </style>
+ </style>
 </head>
 <body>
 
 <!-- Breadcrumb -->
 <div class="breadcrumb">
-  <a href="/">AutoDev AI</a> › <a href="/blog/">部落格</a> › mattpocock/skills 完整教學 2026
+ <a href="/">AutoDev AI</a>› <a href="/blog/">部落格</a>› mattpocock/skills 完整教學 2026
 </div>
 
 <!-- Hero -->
 <div class="hero-bar">
-  <div class="badge">⚡ GitHub 今日 #1（2519★/天）</div>
-  <h1>mattpocock/skills 完整教學 2026<br>Claude Code 工程師必裝的 15 個 Agent Skills</h1>
-  <div class="meta">
-    <span>📅 2026-04-27</span>
-    <span>✍️ AutoDev AI</span>
-    <span>🕐 閱讀時間 12 分鐘</span>
-    <span>🏷️ Claude Code｜Agent Skills｜TypeScript</span>
-  </div>
+ <div class="badge">GitHub 今日 #1（2519/天）</div>
+ <h1>mattpocock/skills 完整教學 2026<br>Claude Code 工程師必裝的 15 個 Agent Skills</h1>
+ <div class="meta">
+ <span>2026-04-27</span>
+ <span>AutoDev AI</span>
+ <span>閱讀時間 12 分鐘</span>
+ <span>Claude Code｜Agent Skills｜TypeScript</span>
+ </div>
 </div>
 
 <div class="container">
 
 <!-- ====== 前言 ====== -->
 <div class="highlight-box">
-  <div class="icon">🔥</div>
-  <p><strong>2026 年 4 月 27 日，mattpocock/skills 登上 GitHub 今日熱榜 #1，單日新增 2,519 顆 ★，總計超過 23,600 顆。</strong>這個 repo 的作者是 TypeScript 之父 <strong>Matt Pocock</strong>——Total TypeScript 課程創辦人、Zod 開源貢獻者——他把多年工程師直覺濃縮成 15+ 個 Claude Code Agent Skills，讓你的 AI 副駕駛瞬間升格為 Senior Dev。而這份繁中教學，是目前全中文世界第一篇。</p>
+ <div class="icon"></div>
+ <p><strong>2026 年 4 月 27 日，mattpocock/skills 登上 GitHub 今日熱榜 #1，單日新增 2,519 顆 ，總計超過 23,600 顆。</strong>這個 repo 的作者是 TypeScript 之父 <strong>Matt Pocock</strong>——Total TypeScript 課程創辦人、Zod 開源貢獻者——他把多年工程師直覺濃縮成 15+ 個 Claude Code Agent Skills，讓你的 AI 副駕駛瞬間升格為 Senior Dev。而這份繁中教學，是目前全中文世界第一篇。</p>
 </div>
 
 <div class="stat-grid">
-  <div class="stat-card">
-    <div class="num">23.6K</div>
-    <div class="label">GitHub ★ 總計</div>
-  </div>
-  <div class="stat-card">
-    <div class="num">2,519</div>
-    <div class="label">今日新增 ★</div>
-  </div>
-  <div class="stat-card">
-    <div class="num">15+</div>
-    <div class="label">Agent Skills 數量</div>
-  </div>
-  <div class="stat-card">
-    <div class="num">#1</div>
-    <div class="label">GitHub 今日熱榜</div>
-  </div>
+ <div class="stat-card">
+ <div class="num">23.6K</div>
+ <div class="label">GitHub 總計</div>
+ </div>
+ <div class="stat-card">
+ <div class="num">2,519</div>
+ <div class="label">今日新增 </div>
+ </div>
+ <div class="stat-card">
+ <div class="num">15+</div>
+ <div class="label">Agent Skills 數量</div>
+ </div>
+ <div class="stat-card">
+ <div class="num">#1</div>
+ <div class="label">GitHub 今日熱榜</div>
+ </div>
 </div>
 
 <!-- ====== 1. 什麼是 Agent Skills ====== -->
@@ -287,8 +287,8 @@ tr:hover td { background: rgba(255,255,255,.03); }
 <p>例如，輸入 <code>/grill-me</code>，Claude Code 就會扮演嚴苛的 code reviewer，從安全性、效能、可維護性三個維度審問你的程式；輸入 <code>/tdd</code>，它會先寫測試再實作，完全符合 TDD 流程。</p>
 
 <div class="tip-box blue">
-  <div class="icon">💡</div>
-  <p><strong>類比：</strong>把 Agent Skills 想成 TypeScript 的 tsconfig.json——一份設定讓你的整個工具鏈行為改變。mattpocock/skills 就是 Matt Pocock 精心調校的「AI 行為 tsconfig」。</p>
+ <div class="icon"></div>
+ <p><strong>類比：</strong>把 Agent Skills 想成 TypeScript 的 tsconfig.json——一份設定讓你的整個工具鏈行為改變。mattpocock/skills 就是 Matt Pocock 精心調校的「AI 行為 tsconfig」。</p>
 </div>
 
 <!-- ====== 2. Matt Pocock 是誰 ====== -->
@@ -296,11 +296,11 @@ tr:hover td { background: rgba(255,255,255,.03); }
 
 <p>Matt Pocock 在 TypeScript 社群的地位相當於「國師」等級：</p>
 <ul>
-  <li>🎓 <strong>Total TypeScript</strong> 課程創辦人，學員數萬人，業界口碑極高</li>
-  <li>🔧 <strong>Zod</strong>（TypeScript-first schema validation）主要貢獻者</li>
-  <li>📦 <strong>ts-reset</strong>、<strong>ts-expect</strong> 等常用工具庫作者</li>
-  <li>🐦 Twitter/X 粉絲超過 18 萬，TypeScript 生態意見領袖</li>
-  <li>⭐ 多個 GitHub repos 超過萬顆星</li>
+ <li><strong>Total TypeScript</strong>課程創辦人，學員數萬人，業界口碑極高</li>
+ <li><strong>Zod</strong>（TypeScript-first schema validation）主要貢獻者</li>
+ <li><strong>ts-reset</strong>、<strong>ts-expect</strong>等常用工具庫作者</li>
+ <li>Twitter/X 粉絲超過 18 萬，TypeScript 生態意見領袖</li>
+ <li>⭐ 多個 GitHub repos 超過萬顆星</li>
 </ul>
 
 <p>他在 AI coding 浪潮中不是追風者——他在實際解決工程師痛點。mattpocock/skills 是他真實在用的工作流程，不是行銷材料。這也是為什麼這個 repo 一釋出就爆炸性成長。</p>
@@ -312,58 +312,58 @@ tr:hover td { background: rgba(255,255,255,.03); }
 
 <h3>方法 A：全域安裝（推薦）</h3>
 
-<p>Claude Code 的全域 Skills 放在 <code>~/.claude/skills/</code> 目錄。</p>
+<p>Claude Code 的全域 Skills 放在 <code>~/.claude/skills/</code>目錄。</p>
 
 <div class="step">
-  <div class="step-num">1</div>
-  <div class="step-body">
-    <h4>確認 Claude Code 已安裝</h4>
-    <pre><code># 確認版本（需要 Claude Code >= 1.2.0）
+ <div class="step-num">1</div>
+ <div class="step-body">
+ <h4>確認 Claude Code 已安裝</h4>
+ <pre><code># 確認版本（需要 Claude Code >= 1.2.0）
 claude --version
 
 # 如果還沒安裝
 npm install -g @anthropic-ai/claude-code</code></pre>
-  </div>
+ </div>
 </div>
 
 <div class="step">
-  <div class="step-num">2</div>
-  <div class="step-body">
-    <h4>建立全域 Skills 目錄</h4>
-    <pre><code>mkdir -p ~/.claude/skills</code></pre>
-  </div>
+ <div class="step-num">2</div>
+ <div class="step-body">
+ <h4>建立全域 Skills 目錄</h4>
+ <pre><code>mkdir -p ~/.claude/skills</code></pre>
+ </div>
 </div>
 
 <div class="step">
-  <div class="step-num">3</div>
-  <div class="step-body">
-    <h4>Clone mattpocock/skills repo</h4>
-    <pre><code>git clone https://github.com/mattpocock/skills.git /tmp/mattpocock-skills</code></pre>
-  </div>
+ <div class="step-num">3</div>
+ <div class="step-body">
+ <h4>Clone mattpocock/skills repo</h4>
+ <pre><code>git clone https://github.com/mattpocock/skills.git /tmp/mattpocock-skills</code></pre>
+ </div>
 </div>
 
 <div class="step">
-  <div class="step-num">4</div>
-  <div class="step-body">
-    <h4>複製所有 Skills 到全域目錄</h4>
-    <pre><code>cp -r /tmp/mattpocock-skills/skills/* ~/.claude/skills/
+ <div class="step-num">4</div>
+ <div class="step-body">
+ <h4>複製所有 Skills 到全域目錄</h4>
+ <pre><code>cp -r /tmp/mattpocock-skills/skills/* ~/.claude/skills/
 
 # 確認複製成功
 ls ~/.claude/skills/</code></pre>
-    <p>你應該看到類似 <code>grill-me.md</code>、<code>tdd.md</code>、<code>to-prd.md</code> 等文件。</p>
-  </div>
+ <p>你應該看到類似 <code>grill-me.md</code>、<code>tdd.md</code>、<code>to-prd.md</code>等文件。</p>
+ </div>
 </div>
 
 <div class="step">
-  <div class="step-num">5</div>
-  <div class="step-body">
-    <h4>重啟 Claude Code 並測試</h4>
-    <pre><code># 重啟 claude code session
+ <div class="step-num">5</div>
+ <div class="step-body">
+ <h4>重啟 Claude Code 並測試</h4>
+ <pre><code># 重啟 claude code session
 # 然後輸入
 /grill-me
 
 # Claude Code 應該開始進入嚴格 code review 模式</code></pre>
-  </div>
+ </div>
 </div>
 
 <h3>方法 B：專案安裝（Team 共用）</h3>
@@ -376,16 +376,16 @@ git add .claude/skills
 git commit -m "chore: add mattpocock agent skills"</code></pre>
 
 <div class="tip-box yellow">
-  <div class="icon">⚠️</div>
-  <p><strong>注意：</strong>如果你在 VPS 或遠端環境開發，建議用方法 B 搭配 git，這樣 CI/CD 也能拿到 Skills。需要一台穩定的雲端開發機？DigitalOcean Droplet 是很多工程師的選擇。</p>
+ <div class="icon"></div>
+ <p><strong>注意：</strong>如果你在 VPS 或遠端環境開發，建議用方法 B 搭配 git，這樣 CI/CD 也能拿到 Skills。需要一台穩定的雲端開發機？DigitalOcean Droplet 是很多工程師的選擇。</p>
 </div>
 
 <!-- DO CTA #1 -->
 <div class="cta-box purple">
-  <h3>🖥️ Claude Code 遠端開發環境推薦</h3>
-  <p>本機跑 Claude Code 常遇到記憶體不足？在 DigitalOcean 開一台 4GB Droplet，穩穩跑 Claude Code + 多個 Agent Skills 並行，新用戶享 <strong>$200 免費額度（60 天）</strong>。</p>
-  <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="btn btn-purple">🚀 領取 $200 免費額度</a>
-  <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="btn btn-outline">查看 Droplet 方案</a>
+ <h3>Claude Code 遠端開發環境推薦</h3>
+ <p>本機跑 Claude Code 常遇到記憶體不足？在 DigitalOcean 開一台 4GB Droplet，穩穩跑 Claude Code + 多個 Agent Skills 並行，新用戶享 <strong>$200 免費額度（60 天）</strong>。</p>
+ <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="btn btn-purple">領取 $200 免費額度</a>
+ <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="btn btn-outline">查看 Droplet 方案</a>
 </div>
 
 <!-- ====== 4. 15 個 Agent Skills 完整介紹 ====== -->
@@ -393,232 +393,232 @@ git commit -m "chore: add mattpocock agent skills"</code></pre>
 
 <p>以下是 mattpocock/skills 目前收錄的所有 Skills，包含每個 Skill 的核心用途、適合時機與實際指令範例。依照工作流程分類：</p>
 
-<h3>🔍 Code Review 類</h3>
+<h3>Code Review 類</h3>
 
 <div class="skills-grid">
-  <div class="skill-card">
-    <div class="cmd">/grill-me</div>
-    <div class="title">嚴格 Code Review 模式</div>
-    <p class="desc">Claude Code 化身最挑剔的 Senior Dev，從安全性漏洞、效能瓶頸、可維護性、TypeScript 型別安全四個維度逐一審問你的程式碼。不留情面，但每個批評都附上改法。</p>
-    <span class="tag">⭐ 最多人用</span>
-  </div>
-  <div class="skill-card">
-    <div class="cmd">/review-pr</div>
-    <div class="title">PR Review 助手</div>
-    <p class="desc">把 Claude Code 帶入 PR review 工作流程，自動對 diff 產生結構化評語，包含 breaking change 標記、建議修改點、以及是否可直接 merge 的建議。</p>
-    <span class="tag">Team 協作</span>
-  </div>
+ <div class="skill-card">
+ <div class="cmd">/grill-me</div>
+ <div class="title">嚴格 Code Review 模式</div>
+ <p class="desc">Claude Code 化身最挑剔的 Senior Dev，從安全性漏洞、效能瓶頸、可維護性、TypeScript 型別安全四個維度逐一審問你的程式碼。不留情面，但每個批評都附上改法。</p>
+ <span class="tag">⭐ 最多人用</span>
+ </div>
+ <div class="skill-card">
+ <div class="cmd">/review-pr</div>
+ <div class="title">PR Review 助手</div>
+ <p class="desc">把 Claude Code 帶入 PR review 工作流程，自動對 diff 產生結構化評語，包含 breaking change 標記、建議修改點、以及是否可直接 merge 的建議。</p>
+ <span class="tag">Team 協作</span>
+ </div>
 </div>
 
-<h3>🧪 TDD / 測試類</h3>
+<h3>TDD / 測試類</h3>
 
 <div class="skills-grid">
-  <div class="skill-card">
-    <div class="cmd">/tdd</div>
-    <div class="title">Test-Driven Development 模式</div>
-    <p class="desc">強制 Claude Code 先寫失敗的測試，再實作通過測試的程式。確保你的 codebase 有測試覆蓋，而不是事後補測試的「假 TDD」。</p>
-    <span class="tag">⭐ 品質必備</span>
-  </div>
-  <div class="skill-card">
-    <div class="cmd">/write-tests</div>
-    <div class="title">補寫測試套件</div>
-    <p class="desc">給它現有的函式或 class，自動補上完整的 unit test，包含邊界條件（edge cases）、錯誤處理（error paths），輸出可直接用於 Vitest / Jest 的格式。</p>
-    <span class="tag">測試補強</span>
-  </div>
+ <div class="skill-card">
+ <div class="cmd">/tdd</div>
+ <div class="title">Test-Driven Development 模式</div>
+ <p class="desc">強制 Claude Code 先寫失敗的測試，再實作通過測試的程式。確保你的 codebase 有測試覆蓋，而不是事後補測試的「假 TDD」。</p>
+ <span class="tag">⭐ 品質必備</span>
+ </div>
+ <div class="skill-card">
+ <div class="cmd">/write-tests</div>
+ <div class="title">補寫測試套件</div>
+ <p class="desc">給它現有的函式或 class，自動補上完整的 unit test，包含邊界條件（edge cases）、錯誤處理（error paths），輸出可直接用於 Vitest / Jest 的格式。</p>
+ <span class="tag">測試補強</span>
+ </div>
 </div>
 
-<h3>📋 需求 / 規劃類</h3>
+<h3>需求 / 規劃類</h3>
 
 <div class="skills-grid">
-  <div class="skill-card">
-    <div class="cmd">/to-prd</div>
-    <div class="title">對話轉 PRD</div>
-    <p class="desc">你說想法，它輸出完整的 Product Requirements Document（PRD）。包含：用戶故事、acceptance criteria、技術考量、edge cases。適合快速把腦中 idea 變成可執行的 spec。</p>
-    <span class="tag">⭐ PM 最愛</span>
-  </div>
-  <div class="skill-card">
-    <div class="cmd">/plan-feature</div>
-    <div class="title">功能規劃 Breakdown</div>
-    <p class="desc">把大功能拆解成可執行的小任務，輸出帶有優先序的任務清單和依賴關係圖。告別「我不知道從哪裡開始」的迷茫感。</p>
-    <span class="tag">Sprint 規劃</span>
-  </div>
-  <div class="skill-card">
-    <div class="cmd">/estimate</div>
-    <div class="title">工程估時助手</div>
-    <p class="desc">把任務描述或 PRD 丟給它，產生考慮到不確定因素的時間估算（樂觀 / 正常 / 保守三個版本）。幫你跟 PM 談判有憑有據。</p>
-    <span class="tag">時間管理</span>
-  </div>
+ <div class="skill-card">
+ <div class="cmd">/to-prd</div>
+ <div class="title">對話轉 PRD</div>
+ <p class="desc">你說想法，它輸出完整的 Product Requirements Document（PRD）。包含：用戶故事、acceptance criteria、技術考量、edge cases。適合快速把腦中 idea 變成可執行的 spec。</p>
+ <span class="tag">⭐ PM 最愛</span>
+ </div>
+ <div class="skill-card">
+ <div class="cmd">/plan-feature</div>
+ <div class="title">功能規劃 Breakdown</div>
+ <p class="desc">把大功能拆解成可執行的小任務，輸出帶有優先序的任務清單和依賴關係圖。告別「我不知道從哪裡開始」的迷茫感。</p>
+ <span class="tag">Sprint 規劃</span>
+ </div>
+ <div class="skill-card">
+ <div class="cmd">/estimate</div>
+ <div class="title">工程估時助手</div>
+ <p class="desc">把任務描述或 PRD 丟給它，產生考慮到不確定因素的時間估算（樂觀 / 正常 / 保守三個版本）。幫你跟 PM 談判有憑有據。</p>
+ <span class="tag">時間管理</span>
+ </div>
 </div>
 
-<h3>🏗️ 重構 / 架構類</h3>
+<h3>重構 / 架構類</h3>
 
 <div class="skills-grid">
-  <div class="skill-card">
-    <div class="cmd">/refactor</div>
-    <div class="title">智能重構建議</div>
-    <p class="desc">分析指定程式碼的可讀性、耦合度、SOLID 原則，輸出優先序排列的重構建議，每條建議說明「重構前 vs 重構後」的差異和預期收益。</p>
-    <span class="tag">技術債清理</span>
-  </div>
-  <div class="skill-card">
-    <div class="cmd">/extract-types</div>
-    <div class="title">TypeScript 型別萃取</div>
-    <p class="desc">Matt Pocock 的招牌 Skill。從 any/unknown 混亂的 codebase 中萃取嚴謹的 TypeScript 型別，消滅隱性 any，讓型別系統發揮真正的保護作用。</p>
-    <span class="tag">⭐ TypeScript 精華</span>
-  </div>
+ <div class="skill-card">
+ <div class="cmd">/refactor</div>
+ <div class="title">智能重構建議</div>
+ <p class="desc">分析指定程式碼的可讀性、耦合度、SOLID 原則，輸出優先序排列的重構建議，每條建議說明「重構前 vs 重構後」的差異和預期收益。</p>
+ <span class="tag">技術債清理</span>
+ </div>
+ <div class="skill-card">
+ <div class="cmd">/extract-types</div>
+ <div class="title">TypeScript 型別萃取</div>
+ <p class="desc">Matt Pocock 的招牌 Skill。從 any/unknown 混亂的 codebase 中萃取嚴謹的 TypeScript 型別，消滅隱性 any，讓型別系統發揮真正的保護作用。</p>
+ <span class="tag">⭐ TypeScript 精華</span>
+ </div>
 </div>
 
-<h3>📚 文件 / 說明類</h3>
+<h3>文件 / 說明類</h3>
 
 <div class="skills-grid">
-  <div class="skill-card">
-    <div class="cmd">/document</div>
-    <div class="title">自動補寫文件</div>
-    <p class="desc">為函式、class、模組補上 JSDoc / TSDoc 格式的文件說明，包含參數說明、回傳值、使用範例和潛在 edge cases。告別「這段誰寫的都不記得了」。</p>
-    <span class="tag">程式碼文件</span>
-  </div>
-  <div class="skill-card">
-    <div class="cmd">/write-readme</div>
-    <div class="title">README 生成器</div>
-    <p class="desc">分析整個 repo 結構，自動生成一份完整的 README.md，包含：Project 概述、安裝步驟、使用範例、API 說明、貢獻指南。適合 open source 準備開源前的一鍵生成。</p>
-    <span class="tag">開源必備</span>
-  </div>
+ <div class="skill-card">
+ <div class="cmd">/document</div>
+ <div class="title">自動補寫文件</div>
+ <p class="desc">為函式、class、模組補上 JSDoc / TSDoc 格式的文件說明，包含參數說明、回傳值、使用範例和潛在 edge cases。告別「這段誰寫的都不記得了」。</p>
+ <span class="tag">程式碼文件</span>
+ </div>
+ <div class="skill-card">
+ <div class="cmd">/write-readme</div>
+ <div class="title">README 生成器</div>
+ <p class="desc">分析整個 repo 結構，自動生成一份完整的 README.md，包含：Project 概述、安裝步驟、使用範例、API 說明、貢獻指南。適合 open source 準備開源前的一鍵生成。</p>
+ <span class="tag">開源必備</span>
+ </div>
 </div>
 
-<h3>🐛 Debug / 問題排查類</h3>
+<h3>Debug / 問題排查類</h3>
 
 <div class="skills-grid">
-  <div class="skill-card">
-    <div class="cmd">/debug</div>
-    <div class="title">系統化 Debug 協作</div>
-    <p class="desc">不只是「找 bug」——它會引導你描述問題的 reproduction steps、最近的程式碼改動、環境差異，然後提出有優先序的假設清單，每個假設附上驗證方法。</p>
-    <span class="tag">Debug 方法論</span>
-  </div>
-  <div class="skill-card">
-    <div class="cmd">/explain-error</div>
-    <div class="title">錯誤訊息解碼器</div>
-    <p class="desc">貼上 TypeScript 編譯錯誤、runtime stack trace 或任何看不懂的錯誤訊息，它用人話解釋「為什麼會發生」和「怎麼修」，附上最小可重現範例。</p>
-    <span class="tag">初學者友善</span>
-  </div>
+ <div class="skill-card">
+ <div class="cmd">/debug</div>
+ <div class="title">系統化 Debug 協作</div>
+ <p class="desc">不只是「找 bug」——它會引導你描述問題的 reproduction steps、最近的程式碼改動、環境差異，然後提出有優先序的假設清單，每個假設附上驗證方法。</p>
+ <span class="tag">Debug 方法論</span>
+ </div>
+ <div class="skill-card">
+ <div class="cmd">/explain-error</div>
+ <div class="title">錯誤訊息解碼器</div>
+ <p class="desc">貼上 TypeScript 編譯錯誤、runtime stack trace 或任何看不懂的錯誤訊息，它用人話解釋「為什麼會發生」和「怎麼修」，附上最小可重現範例。</p>
+ <span class="tag">初學者友善</span>
+ </div>
 </div>
 
-<h3>🔄 版本 / 發布類</h3>
+<h3>版本 / 發布類</h3>
 
 <div class="skills-grid">
-  <div class="skill-card">
-    <div class="cmd">/changelog</div>
-    <div class="title">Changelog 自動生成</div>
-    <p class="desc">分析 git commit history，按照 Conventional Commits 格式輸出美觀的 CHANGELOG.md，自動分類為 Features / Bug Fixes / Breaking Changes / Internal。</p>
-    <span class="tag">Release 管理</span>
-  </div>
-  <div class="skill-card">
-    <div class="cmd">/semver</div>
-    <div class="title">語義版本建議</div>
-    <p class="desc">根據這次 PR 或 commit 的變更內容，建議應該用 major / minor / patch 版本號，並解釋原因（是否有 breaking changes、新功能或只是修 bug）。</p>
-    <span class="tag">版本控制</span>
-  </div>
+ <div class="skill-card">
+ <div class="cmd">/changelog</div>
+ <div class="title">Changelog 自動生成</div>
+ <p class="desc">分析 git commit history，按照 Conventional Commits 格式輸出美觀的 CHANGELOG.md，自動分類為 Features / Bug Fixes / Breaking Changes / Internal。</p>
+ <span class="tag">Release 管理</span>
+ </div>
+ <div class="skill-card">
+ <div class="cmd">/semver</div>
+ <div class="title">語義版本建議</div>
+ <p class="desc">根據這次 PR 或 commit 的變更內容，建議應該用 major / minor / patch 版本號，並解釋原因（是否有 breaking changes、新功能或只是修 bug）。</p>
+ <span class="tag">版本控制</span>
+ </div>
 </div>
 
-<h3>🎯 特殊 / 進階類</h3>
+<h3>特殊 / 進階類</h3>
 
 <div class="skills-grid">
-  <div class="skill-card">
-    <div class="cmd">/rubber-duck</div>
-    <div class="title">小黃鴨 Debug 夥伴</div>
-    <p class="desc">當你思緒卡住時，它扮演「小黃鴨」：安靜地聽你逐步說明程式邏輯，在對的時機問關鍵問題，讓你自己找到答案。來自 Rubber Duck Debugging 方法論的 AI 版本。</p>
-    <span class="tag">思維工具</span>
-  </div>
-  <div class="skill-card">
-    <div class="cmd">/pair-program</div>
-    <div class="title">結對程式設計模式</div>
-    <p class="desc">激活 Claude Code 的「配對駕駛員」模式——不直接給答案，而是問引導性問題，讓你主導，它補充。適合用來學習新技術或訓練自己的問題解決能力。</p>
-    <span class="tag">學習成長</span>
-  </div>
+ <div class="skill-card">
+ <div class="cmd">/rubber-duck</div>
+ <div class="title">小黃鴨 Debug 夥伴</div>
+ <p class="desc">當你思緒卡住時，它扮演「小黃鴨」：安靜地聽你逐步說明程式邏輯，在對的時機問關鍵問題，讓你自己找到答案。來自 Rubber Duck Debugging 方法論的 AI 版本。</p>
+ <span class="tag">思維工具</span>
+ </div>
+ <div class="skill-card">
+ <div class="cmd">/pair-program</div>
+ <div class="title">結對程式設計模式</div>
+ <p class="desc">激活 Claude Code 的「配對駕駛員」模式——不直接給答案，而是問引導性問題，讓你主導，它補充。適合用來學習新技術或訓練自己的問題解決能力。</p>
+ <span class="tag">學習成長</span>
+ </div>
 </div>
 
 <!-- ====== 5. 實際使用案例 ====== -->
 <h2>5. 實際使用案例：台灣工程師怎麼用？</h2>
 
 <h3>案例一：接手舊系統，先 /grill-me 找雷點</h3>
-<p>接手一個沒有文件的 Node.js 後端，有 API 安全漏洞但不知道在哪。用 <code>/grill-me</code> 讓 Claude Code 扮演安全 reviewer，幾分鐘就找出 3 個潛在的 SQL injection 風險點（雖然是 ORM 寫的，但有幾個地方有直接字串拼接）。</p>
+<p>接手一個沒有文件的 Node.js 後端，有 API 安全漏洞但不知道在哪。用 <code>/grill-me</code>讓 Claude Code 扮演安全 reviewer，幾分鐘就找出 3 個潛在的 SQL injection 風險點（雖然是 ORM 寫的，但有幾個地方有直接字串拼接）。</p>
 
 <h3>案例二：新功能開發，用 /to-prd 先想清楚</h3>
-<p>要做 LINE Bot 的預約功能，但腦中只有模糊 idea。先用 <code>/to-prd</code> 輸出 PRD，確認邊界條件（取消、改期、衝突時段怎麼處理）後，再開始寫程式，大幅減少後期改需求的回頭成本。</p>
+<p>要做 LINE Bot 的預約功能，但腦中只有模糊 idea。先用 <code>/to-prd</code>輸出 PRD，確認邊界條件（取消、改期、衝突時段怎麼處理）後，再開始寫程式，大幅減少後期改需求的回頭成本。</p>
 
 <h3>案例三：Open source 準備上架，/write-readme 一鍵補文件</h3>
-<p>自己的 n8n workflow 工具想開源分享，但懶得寫 README。用 <code>/write-readme</code> 分析 repo 後生成初稿，再手動微調 10 分鐘就完成，比從頭寫省了 80% 時間。</p>
+<p>自己的 n8n workflow 工具想開源分享，但懶得寫 README。用 <code>/write-readme</code>分析 repo 後生成初稿，再手動微調 10 分鐘就完成，比從頭寫省了 80% 時間。</p>
 
 <h3>案例四：TypeScript 專案升級，/extract-types 清除 any 地獄</h3>
-<p>接手舊 React 專案，TypeScript 設定 <code>strict: false</code>，到處都是 <code>any</code>。用 <code>/extract-types</code> 逐模組清理，搭配 <code>/grill-me</code> 驗證，3 天把整個 codebase 升到 strict 模式。</p>
+<p>接手舊 React 專案，TypeScript 設定 <code>strict: false</code>，到處都是 <code>any</code>。用 <code>/extract-types</code>逐模組清理，搭配 <code>/grill-me</code>驗證，3 天把整個 codebase 升到 strict 模式。</p>
 
 <!-- ====== 6. vs 其他 Skills 方案比較 ====== -->
 <h2>6. mattpocock/skills vs 其他 Claude Code Skills 方案比較</h2>
 
 <div class="table-wrap">
-  <table>
-    <thead>
-      <tr>
-        <th>方案</th>
-        <th>來源</th>
-        <th>Skills 數量</th>
-        <th>TypeScript 深度</th>
-        <th>維護頻率</th>
-        <th>適合對象</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>mattpocock/skills</strong></td>
-        <td>Matt Pocock (TypeScript 之父)</td>
-        <td class="yes">15+</td>
-        <td class="yes">最高</td>
-        <td class="yes">活躍更新</td>
-        <td>TypeScript / JS 工程師</td>
-      </tr>
-      <tr>
-        <td>anthropic/claude-code-skills</td>
-        <td>Anthropic 官方</td>
-        <td class="partial">8</td>
-        <td class="partial">中等</td>
-        <td class="yes">穩定</td>
-        <td>一般用途</td>
-      </tr>
-      <tr>
-        <td>自己寫 CLAUDE.md</td>
-        <td>個人/Team</td>
-        <td class="partial">不定</td>
-        <td class="partial">看個人</td>
-        <td class="no">手動維護</td>
-        <td>進階用戶</td>
-      </tr>
-      <tr>
-        <td>OpenClaw Skills 系統</td>
-        <td>OpenClaw</td>
-        <td class="partial">12</td>
-        <td class="partial">中等</td>
-        <td class="yes">活躍</td>
-        <td>Agent 平台用戶</td>
-      </tr>
-    </tbody>
-  </table>
+ <table>
+ <thead>
+ <tr>
+ <th>方案</th>
+ <th>來源</th>
+ <th>Skills 數量</th>
+ <th>TypeScript 深度</th>
+ <th>維護頻率</th>
+ <th>適合對象</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>mattpocock/skills</strong></td>
+ <td>Matt Pocock (TypeScript 之父)</td>
+ <td class="yes">15+</td>
+ <td class="yes">最高</td>
+ <td class="yes">活躍更新</td>
+ <td>TypeScript / JS 工程師</td>
+ </tr>
+ <tr>
+ <td>anthropic/claude-code-skills</td>
+ <td>Anthropic 官方</td>
+ <td class="partial">8</td>
+ <td class="partial">中等</td>
+ <td class="yes">穩定</td>
+ <td>一般用途</td>
+ </tr>
+ <tr>
+ <td>自己寫 CLAUDE.md</td>
+ <td>個人/Team</td>
+ <td class="partial">不定</td>
+ <td class="partial">看個人</td>
+ <td class="no">手動維護</td>
+ <td>進階用戶</td>
+ </tr>
+ <tr>
+ <td>OpenClaw Skills 系統</td>
+ <td>OpenClaw</td>
+ <td class="partial">12</td>
+ <td class="partial">中等</td>
+ <td class="yes">活躍</td>
+ <td>Agent 平台用戶</td>
+ </tr>
+ </tbody>
+ </table>
 </div>
 
 <div class="tip-box blue">
-  <div class="icon">💡</div>
-  <p><strong>結論：</strong>mattpocock/skills 和 Anthropic 官方 Skills 不互斥，可以一起裝。把 mattpocock/skills 裝在全域，官方 Skills 裝在特定 project 層，相互補充。</p>
+ <div class="icon"></div>
+ <p><strong>結論：</strong>mattpocock/skills 和 Anthropic 官方 Skills 不互斥，可以一起裝。把 mattpocock/skills 裝在全域，官方 Skills 裝在特定 project 層，相互補充。</p>
 </div>
 
 <!-- DataCamp CTA -->
 <div class="cta-box cyan">
-  <h3>📊 想系統學 AI 工程師技能？</h3>
-  <p>DataCamp 有完整的 AI/ML 工程師學習路徑，從 Python 基礎到 LLM 應用開發、Agent 架構全覆蓋。超過 400 門課程，台灣工程師升薪必備。</p>
-  <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener" class="btn btn-cyan">🎓 開始免費試用 DataCamp</a>
+ <h3>想系統學 AI 工程師技能？</h3>
+ <p>DataCamp 有完整的 AI/ML 工程師學習路徑，從 Python 基礎到 LLM 應用開發、Agent 架構全覆蓋。超過 400 門課程，台灣工程師升薪必備。</p>
+ <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener" class="btn btn-cyan">開始免費試用 DataCamp</a>
 </div>
 
 <!-- ====== 7. 進階技巧 ====== -->
 <h2>7. 進階技巧：客製化你的 Agent Skills</h2>
 
 <h3>技巧一：在 Skills 中加入 Project Context</h3>
-<p>mattpocock/skills 的所有 Skill 文件都是標準 Markdown，你可以直接編輯，加入你的 project 特定規範。例如在 <code>grill-me.md</code> 中加一行：</p>
+<p>mattpocock/skills 的所有 Skill 文件都是標準 Markdown，你可以直接編輯，加入你的 project 特定規範。例如在 <code>grill-me.md</code>中加一行：</p>
 
 <pre><code>## Project-specific rules (add these)
 - 所有 API handler 必須使用 Zod schema validation
@@ -659,13 +659,13 @@ description: 描述這個 Skill 做什麼
 <h2>8. 常見問題 FAQ</h2>
 
 <h3>Q：免費版 Claude Code 可以用 Skills 嗎？</h3>
-<p>可以。Agent Skills 是本地 Markdown 文件，不是付費功能。但 <code>/grill-me</code> 等需要大量 context window 的 Skills 在 Sonnet 3.5 以上效果最好。Haiku 可以用，但 review 深度略遜。</p>
+<p>可以。Agent Skills 是本地 Markdown 文件，不是付費功能。但 <code>/grill-me</code>等需要大量 context window 的 Skills 在 Sonnet 3.5 以上效果最好。Haiku 可以用，但 review 深度略遜。</p>
 
 <h3>Q：Skills 和 MCP（Model Context Protocol）的差別？</h3>
 <p>MCP 是讓 AI 連接外部工具（databases、APIs）；Skills 是定義 AI 的行為模式和工作流程。兩者可以同時用——Skills 定義「怎麼做」，MCP 定義「能連接什麼」。</p>
 
 <h3>Q：在 Windows 上可以用嗎？</h3>
-<p>Claude Code 本身支援 Windows（WSL2），Skills 也可以用。但 <code>~/.claude/skills/</code> 路徑在 Windows 要改成 <code>%USERPROFILE%\.claude\skills\</code>。</p>
+<p>Claude Code 本身支援 Windows（WSL2），Skills 也可以用。但 <code>~/.claude/skills/</code>路徑在 Windows 要改成 <code>%USERPROFILE%\.claude\skills\</code>。</p>
 
 <h3>Q：Skills 會消耗更多 token 嗎？</h3>
 <p>每次啟動 Claude Code 時，Skills 文件會作為系統 context 載入，確實會消耗一些 token。但 mattpocock/skills 的每個文件都相當精簡（通常 500 字以下），對整體 token 消耗影響不大。</p>
@@ -675,9 +675,9 @@ description: 描述這個 Skill 做什麼
 
 <!-- Gumroad CTA -->
 <div class="cta-box orange">
-  <h3>🤖 讓你的 Claude Code 更強大</h3>
-  <p>如果你喜歡 mattpocock/skills 這種「結構化 AI 工作流程」的概念，你也會喜歡我們整理的 <strong>Claude Code Cron 自動化指南</strong>——讓 AI 幫你自動執行定期任務，從 SEO 寫作到程式碼維護全自動化。</p>
-  <a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener" class="btn btn-orange">📚 查看自動化指南（Gumroad）</a>
+ <h3>讓你的 Claude Code 更強大</h3>
+ <p>如果你喜歡 mattpocock/skills 這種「結構化 AI 工作流程」的概念，你也會喜歡我們整理的 <strong>Claude Code Cron 自動化指南</strong>——讓 AI 幫你自動執行定期任務，從 SEO 寫作到程式碼維護全自動化。</p>
+ <a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener" class="btn btn-orange">查看自動化指南（Gumroad）</a>
 </div>
 
 <!-- ====== 9. 安全性考量 ====== -->
@@ -686,17 +686,17 @@ description: 描述這個 Skill 做什麼
 <p>Agent Skills 本質上是給 AI 的「超級指令」，使用時需要注意幾點：</p>
 
 <ul>
-  <li>🔐 <strong>不要在 Skills 中寫入 API Keys 或密碼</strong>——Skills 文件可能被推上 git</li>
-  <li>👀 <strong>公司 repo 使用前確認 Skills 內容合規</strong>——避免洩漏商業邏輯到 Skills 文件</li>
-  <li>🌐 <strong>VPN 保護遠端開發</strong>——在咖啡廳等公共場所用 Claude Code，建議搭配 VPN</li>
-  <li>📊 <strong>定期 review Skills</strong>——隨著 project 演進，Skills 的規則也需要更新</li>
+ <li><strong>不要在 Skills 中寫入 API Keys 或密碼</strong>——Skills 文件可能被推上 git</li>
+ <li><strong>公司 repo 使用前確認 Skills 內容合規</strong>——避免洩漏商業邏輯到 Skills 文件</li>
+ <li><strong>VPN 保護遠端開發</strong>——在咖啡廳等公共場所用 Claude Code，建議搭配 VPN</li>
+ <li><strong>定期 review Skills</strong>——隨著 project 演進，Skills 的規則也需要更新</li>
 </ul>
 
 <!-- NordVPN CTA -->
 <div class="cta-box green">
-  <h3>🔒 遠端工作、咖啡廳 coding？VPN 不能少</h3>
-  <p>在公共 WiFi 使用 Claude Code，API 請求走的是明文——小心！NordVPN 台灣有節點，速度快、零日誌政策，年方案平均每月不到 NT$130，工程師必備。</p>
-  <a href="https://onelink.one/s/7WSzC" target="_blank" rel="noopener" class="btn btn-green">🛡️ 試用 NordVPN（30天退款保障）</a>
+ <h3>遠端工作、咖啡廳 coding？VPN 不能少</h3>
+ <p>在公共 WiFi 使用 Claude Code，API 請求走的是明文——小心！NordVPN 台灣有節點，速度快、零日誌政策，年方案平均每月不到 NT$130，工程師必備。</p>
+ <a href="https://onelink.one/s/7WSzC" target="_blank" rel="noopener" class="btn btn-green">試用 NordVPN（30天退款保障）</a>
 </div>
 
 <!-- ====== 10. 總結 ====== -->
@@ -705,11 +705,11 @@ description: 描述這個 Skill 做什麼
 <p>答案幾乎是無腦「值得」：</p>
 
 <ul>
-  <li>✅ <strong>免費、開源</strong>——沒有額外費用，MIT 授權</li>
-  <li>✅ <strong>安裝 5 分鐘</strong>——<code>git clone + cp</code> 就完成</li>
-  <li>✅ <strong>來自頂尖工程師的實戰 SOP</strong>——Matt Pocock 每天在用的工作流程</li>
-  <li>✅ <strong>立即看到效果</strong>——第一次用 <code>/grill-me</code> 你就會驚訝 Claude Code 有多「敢說真話」</li>
-  <li>⚠️ <strong>需要 Claude Code 環境</strong>——有 Anthropic API key 才能用</li>
+ <li><strong>免費、開源</strong>——沒有額外費用，MIT 授權</li>
+ <li><strong>安裝 5 分鐘</strong>——<code>git clone + cp</code>就完成</li>
+ <li><strong>來自頂尖工程師的實戰 SOP</strong>——Matt Pocock 每天在用的工作流程</li>
+ <li><strong>立即看到效果</strong>——第一次用 <code>/grill-me</code>你就會驚訝 Claude Code 有多「敢說真話」</li>
+ <li><strong>需要 Claude Code 環境</strong>——有 Anthropic API key 才能用</li>
 </ul>
 
 <p>如果你每天花 4 小時用 Claude Code 寫程式，加上 mattpocock/skills 後，估計可以節省 30–40 分鐘在「讓 AI 理解你想要什麼」上——因為 Skills 已經把工作流程的最佳實踐內建進去了。</p>
@@ -717,29 +717,29 @@ description: 描述這個 Skill 做什麼
 <p>這份 repo 在 7 天視窗內有爆發性流量，現在裝是最好時機——而且一旦習慣了這些 Skills，你會很難回到「裸用 Claude Code」的方式。</p>
 
 <div class="highlight-box">
-  <div class="icon">🔗</div>
-  <p><strong>👉 GitHub 連結：</strong><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">github.com/mattpocock/skills</a>（目前 23,600+ ★，給它一顆星支持開源！）</p>
+ <div class="icon"></div>
+ <p><strong>GitHub 連結：</strong><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">github.com/mattpocock/skills</a>（目前 23,600+ ，給它一顆星支持開源！）</p>
 </div>
 
 <!-- Final CTA DO -->
 <div class="cta-box purple">
-  <h3>🚀 從本機升級到雲端開發環境</h3>
-  <p>Claude Code + mattpocock/skills 在本機跑容量不夠？DigitalOcean 4GB Droplet 每月只要 $24，新用戶 <strong>$200 免費額度</strong>（60天），夠你玩一整個季度。</p>
-  <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="btn btn-purple">☁️ 領取 $200 免費額度（DigitalOcean）</a>
+ <h3>從本機升級到雲端開發環境</h3>
+ <p>Claude Code + mattpocock/skills 在本機跑容量不夠？DigitalOcean 4GB Droplet 每月只要 $24，新用戶 <strong>$200 免費額度</strong>（60天），夠你玩一整個季度。</p>
+ <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="btn btn-purple">領取 $200 免費額度（DigitalOcean）</a>
 </div>
 
 <!-- Related Articles -->
 <h2>相關文章</h2>
 <ul>
-  <li>📖 <a href="/blog/claude-code-routines-tutorial-2026.html">Claude Code Routines 完整教學 2026</a></li>
-  <li>📖 <a href="/blog/mempalace-review-ai-memory-2026.html">MemPalace 評測：Claude Code 的 AI 長期記憶解決方案</a></li>
-  <li>📖 <a href="/blog/n8n-automation-tutorial-2026.html">n8n 自動化完整教學 2026</a></li>
-  <li>📖 <a href="/blog/wispr-flow-review-2026.html">Wispr Flow 1.0 評測：AI 語音輸入工具</a></li>
-  <li>📖 <a href="/blog/ai-tools-comparison-2026.html">2026 AI 工具完整比較：Claude vs GPT vs Gemini</a></li>
+ <li><a href="/blog/claude-code-routines-tutorial-2026.html">Claude Code Routines 完整教學 2026</a></li>
+ <li><a href="/blog/mempalace-review-ai-memory-2026.html">MemPalace 評測：Claude Code 的 AI 長期記憶解決方案</a></li>
+ <li><a href="/blog/n8n-automation-tutorial-2026.html">n8n 自動化完整教學 2026</a></li>
+ <li><a href="/blog/wispr-flow-review-2026.html">Wispr Flow 1.0 評測：AI 語音輸入工具</a></li>
+ <li><a href="/blog/ai-tools-comparison-2026.html">2026 AI 工具完整比較：Claude vs GPT vs Gemini</a></li>
 </ul>
 
 <p style="margin-top:2.5rem; padding-top:1.5rem; border-top:1px solid var(--border); color: var(--text-muted); font-size:.85rem;">
-  本文部分連結為聯盟行銷連結，點擊並購買後，本站可能獲得佣金，不影響您的購買價格。所有推薦均為作者真實評估結果。
+ 本文部分連結為聯盟行銷連結，點擊並購買後，本站可能獲得佣金，不影響您的購買價格。所有推薦均為作者真實評估結果。
 </p>
 
 </div><!-- /container -->

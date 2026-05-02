@@ -32,8 +32,8 @@
 <link href="/style.css" rel="stylesheet"/>
 <!-- Structured Data -->
 <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"ContactPage","name":"AutoDev AI 免費諮詢","url":"https://autodev-ai.com/contact.html","description":"LINE Bot 開發免費諮詢，透過 LINE、Telegram 或 Email 聯繫","mainEntity":{"@type":"ProfessionalService","name":"AutoDev AI","url":"https://autodev-ai.com","email":"ahrxiaofan@gmail.com","contactPoint":{"@type":"ContactPoint","contactType":"customer service","availableLanguage":["zh-TW","en"]}}}
-    </script>
+ {"@context":"https://schema.org","@type":"ContactPage","name":"AutoDev AI 免費諮詢","url":"https://autodev-ai.com/contact.html","description":"LINE Bot 開發免費諮詢，透過 LINE、Telegram 或 Email 聯繫","mainEntity":{"@type":"ProfessionalService","name":"AutoDev AI","url":"https://autodev-ai.com","email":"ahrxiaofan@gmail.com","contactPoint":{"@type":"ContactPoint","contactType":"customer service","availableLanguage":["zh-TW","en"]}}}
+ </script>
 <!-- Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
@@ -53,7 +53,7 @@
 <a href="/en/about.html">About</a>
 <a class="nav-cta active" href="/en/contact.html">Free Quote</a>
 </div>
-<button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+<button class="mobile-menu-btn" id="mobileMenuBtn"></button>
 </div>
 </nav>
 <!-- PAGE HEADER -->
@@ -71,9 +71,9 @@
 <a class="btn btn-secondary" data-en="Or chat on LINE" href="https://line.me/ti/p/@882vhisc" target="_blank">Or chat on LINE</a>
 </div>
 <div class="cta-contacts">
-<div class="cta-contact">📧 <a href="https://mail.google.com/mail/?view=cm&amp;to=ahrxiaofan@gmail.com&amp;su=AI%E8%87%AA%E5%8B%95%E5%8C%96%E6%9C%8D%E5%8B%99%E8%AB%AE%E8%A9%A2" style="color:var(--primary-light);text-decoration:none;" target="_blank">ahrxiaofan@gmail.com</a></div>
-<div class="cta-contact">💬 <a href="https://line.me/ti/p/@882vhisc" style="color:var(--primary-light);text-decoration:none;">LINE: @882vhisc</a></div>
-<div class="cta-contact">✈️ <a href="https://t.me/AUTO_DEV_AI_BOT" style="color:var(--primary-light);text-decoration:none;">Telegram: @AUTO_DEV_AI_BOT</a></div>
+<div class="cta-contact"><a href="https://mail.google.com/mail/?view=cm&amp;to=ahrxiaofan@gmail.com&amp;su=AI%E8%87%AA%E5%8B%95%E5%8C%96%E6%9C%8D%E5%8B%99%E8%AB%AE%E8%A9%A2" style="color:var(--primary-light);text-decoration:none;" target="_blank">ahrxiaofan@gmail.com</a></div>
+<div class="cta-contact"><a href="https://line.me/ti/p/@882vhisc" style="color:var(--primary-light);text-decoration:none;">LINE: @882vhisc</a></div>
+<div class="cta-contact"><a href="https://t.me/AUTO_DEV_AI_BOT" style="color:var(--primary-light);text-decoration:none;">Telegram: @AUTO_DEV_AI_BOT</a></div>
 </div>
 </div>
 </section>
@@ -85,7 +85,7 @@
 <p data-en="Fill out below and I'll reply within hours" style="text-align:center;color:var(--gray);margin-bottom:2rem;font-size:0.9rem;">Fill out below and I'll reply within hours</p>
 <form action="https://formsubmit.co/ahrxiaofan@gmail.com" method="POST">
 <!-- FormSubmit settings -->
-<input name="_subject" type="hidden" value="🔔 AutoDev AI 新客戶諮詢"/>
+<input name="_subject" type="hidden" value=" AutoDev AI 新客戶諮詢"/>
 <input name="_captcha" type="hidden" value="false"/>
 <input name="_next" type="hidden" value="https://autodev-ai.com/contact.html?sent=1"/>
 <input name="_template" type="hidden" value="table"/>
@@ -172,71 +172,71 @@
 <footer>
 <p>© 2026 AutoDev AI. Built with AI.</p>
 <p style="margin-top:0.5rem; font-size:0.85rem;">姊妹站：<a href="https://pink1119zz.github.io/ai-tools-tw/" rel="noopener" target="_blank" style="color:#E8D9BD;">AI Tools TW</a>（繁中工具評測） · <a href="https://pink1119zz.github.io/ai-tools-en/" rel="noopener" target="_blank" style="color:#E8D9BD;">AI Tools EN</a>（English Reviews）</p>
-<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/en/privacy.html">Privacy</a> · <a href="/en/terms.html">Terms</a> · <a href="/en/disclaimer.html">Disclaimer</a></p>
+<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/en/privacy.html">Privacy</a>· <a href="/en/terms.html">Terms</a>· <a href="/en/disclaimer.html">Disclaimer</a></p>
 </footer>
 <script defer="" src="/chat-widget.js?v=20260502e"></script>
 <script defer="" src="/lang.js"></script>
 <script>
 // Nav scroll effect
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
+window.addEventListener('scroll', () =>{
+ nav.classList.toggle('scrolled', window.scrollY >50);
 });
 
 // Fade-in animation
 const fadeEls = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
+const observer = new IntersectionObserver((entries) =>{
+ entries.forEach(entry =>{
+ if (entry.isIntersecting) {
+ entry.target.classList.add('visible');
+ }
+ });
 }, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
-fadeEls.forEach(el => observer.observe(el));
-setTimeout(() => {
-    fadeEls.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight + 100) el.classList.add('visible');
-    });
+fadeEls.forEach(el =>observer.observe(el));
+setTimeout(() =>{
+ fadeEls.forEach(el =>{
+ const rect = el.getBoundingClientRect();
+ if (rect.top < window.innerHeight + 100) el.classList.add('visible');
+ });
 }, 150);
 
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navLinks = document.getElementById('navLinks');
 
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-    mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630';
+mobileMenuBtn.addEventListener('click', () =>{
+ navLinks.classList.toggle('show');
+ mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630';
 });
 
 // Close mobile menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('show');
-        mobileMenuBtn.textContent = '\u2630';
-    });
+navLinks.querySelectorAll('a').forEach(link =>{
+ link.addEventListener('click', () =>{
+ navLinks.classList.remove('show');
+ mobileMenuBtn.textContent = '\u2630';
+ });
 });
 
 // Show success message if redirected back after form submit
 if (location.search.includes('sent=1')) {
-    var formBox = document.querySelector('#contactForm') || document.querySelector('form');
-    if (formBox) {
-        var msg = document.createElement('div');
-        msg.style.cssText = 'text-align:center;padding:2rem;color:#6ee7b7;font-size:1.2rem;font-weight:700;';
-        msg.textContent = '✅ 已送出！我會在幾小時內回覆你。';
-        formBox.parentElement.insertBefore(msg, formBox);
-        formBox.style.display = 'none';
-    }
-    history.replaceState(null, '', '/contact.html');
+ var formBox = document.querySelector('#contactForm') || document.querySelector('form');
+ if (formBox) {
+ var msg = document.createElement('div');
+ msg.style.cssText = 'text-align:center;padding:2rem;color:#6ee7b7;font-size:1.2rem;font-weight:700;';
+ msg.textContent = ' 已送出！我會在幾小時內回覆你。';
+ formBox.parentElement.insertBefore(msg, formBox);
+ formBox.style.display = 'none';
+ }
+ history.replaceState(null, '', '/contact.html');
 }
 
 // FAQ accordion
-document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => {
-        const item = q.parentElement;
-        document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
-        item.classList.toggle('open');
-    });
+document.querySelectorAll('.faq-q').forEach(q =>{
+ q.addEventListener('click', () =>{
+ const item = q.parentElement;
+ document.querySelectorAll('.faq-item').forEach(i =>{ if (i !== item) i.classList.remove('open'); });
+ item.classList.toggle('open');
+ });
 });
 </script>
 </body>

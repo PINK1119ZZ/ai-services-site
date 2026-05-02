@@ -32,8 +32,8 @@
 <link href="/style.css" rel="stylesheet"/>
 <!-- Structured Data -->
 <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"CollectionPage","name":"AutoDev AI 作品展示","url":"https://autodev-ai.com/portfolio.html","description":"LINE Bot 開發實際案例：品牌官網、LINE AI 智慧客服、LIFF 諮詢表單、Telegram 通知機器人","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"CreativeWork","name":"AutoDev AI 官網","description":"暗色科技風設計、響應式、GitHub Pages 部署"}},{"@type":"ListItem","position":2,"item":{"@type":"CreativeWork","name":"LINE AI 智慧客服","description":"串接 GPT-4 的品牌顧問機器人，24 小時自動回覆"}},{"@type":"ListItem","position":3,"item":{"@type":"CreativeWork","name":"LIFF 諮詢表單","description":"LINE 內建 3 步驟表單，自動通知 LINE + Telegram"}},{"@type":"ListItem","position":4,"item":{"@type":"CreativeWork","name":"Telegram 通知機器人","description":"客戶訊息即時推播、AI 智慧回覆、跨平台整合"}}]}}
-    </script>
+ {"@context":"https://schema.org","@type":"CollectionPage","name":"AutoDev AI 作品展示","url":"https://autodev-ai.com/portfolio.html","description":"LINE Bot 開發實際案例：品牌官網、LINE AI 智慧客服、LIFF 諮詢表單、Telegram 通知機器人","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"CreativeWork","name":"AutoDev AI 官網","description":"暗色科技風設計、響應式、GitHub Pages 部署"}},{"@type":"ListItem","position":2,"item":{"@type":"CreativeWork","name":"LINE AI 智慧客服","description":"串接 GPT-4 的品牌顧問機器人，24 小時自動回覆"}},{"@type":"ListItem","position":3,"item":{"@type":"CreativeWork","name":"LIFF 諮詢表單","description":"LINE 內建 3 步驟表單，自動通知 LINE + Telegram"}},{"@type":"ListItem","position":4,"item":{"@type":"CreativeWork","name":"Telegram 通知機器人","description":"客戶訊息即時推播、AI 智慧回覆、跨平台整合"}}]}}
+ </script>
 <!-- Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
@@ -53,7 +53,7 @@
 <a href="/en/about.html">About</a>
 <a class="nav-cta" href="/en/contact.html">Free Quote</a>
 </div>
-<button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+<button class="mobile-menu-btn" id="mobileMenuBtn"></button>
 </div>
 </nav>
 <!-- PAGE HEADER -->
@@ -143,49 +143,49 @@
 <footer>
 <p>© 2026 AutoDev AI. Built with AI.</p>
 <p style="margin-top:0.5rem; font-size:0.85rem;">姊妹站：<a href="https://pink1119zz.github.io/ai-tools-tw/" rel="noopener" target="_blank" style="color:#E8D9BD;">AI Tools TW</a>（繁中工具評測） · <a href="https://pink1119zz.github.io/ai-tools-en/" rel="noopener" target="_blank" style="color:#E8D9BD;">AI Tools EN</a>（English Reviews）</p>
-<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/en/privacy.html">Privacy</a> · <a href="/en/terms.html">Terms</a> · <a href="/en/disclaimer.html">Disclaimer</a></p>
+<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/en/privacy.html">Privacy</a>· <a href="/en/terms.html">Terms</a>· <a href="/en/disclaimer.html">Disclaimer</a></p>
 </footer>
 <script defer="" src="/chat-widget.js?v=20260502e"></script>
 <script defer="" src="/lang.js"></script>
 <script>
 // Nav scroll effect
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
+window.addEventListener('scroll', () =>{
+ nav.classList.toggle('scrolled', window.scrollY >50);
 });
 
 // Fade-in animation
 const fadeEls = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
+const observer = new IntersectionObserver((entries) =>{
+ entries.forEach(entry =>{
+ if (entry.isIntersecting) {
+ entry.target.classList.add('visible');
+ }
+ });
 }, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
-fadeEls.forEach(el => observer.observe(el));
-setTimeout(() => {
-    fadeEls.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight + 100) el.classList.add('visible');
-    });
+fadeEls.forEach(el =>observer.observe(el));
+setTimeout(() =>{
+ fadeEls.forEach(el =>{
+ const rect = el.getBoundingClientRect();
+ if (rect.top < window.innerHeight + 100) el.classList.add('visible');
+ });
 }, 150);
 
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navLinks = document.getElementById('navLinks');
 
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-    mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630';
+mobileMenuBtn.addEventListener('click', () =>{
+ navLinks.classList.toggle('show');
+ mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630';
 });
 
 // Close mobile menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('show');
-        mobileMenuBtn.textContent = '\u2630';
-    });
+navLinks.querySelectorAll('a').forEach(link =>{
+ link.addEventListener('click', () =>{
+ navLinks.classList.remove('show');
+ mobileMenuBtn.textContent = '\u2630';
+ });
 });
 </script>
 </body>

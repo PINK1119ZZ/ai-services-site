@@ -12,47 +12,47 @@
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Claude Code Routines 完整教學 2026：設定一次、自動排程永遠執行",
-  "description": "Anthropic 2026年4月最新功能 Claude Code Routines 完整繁中教學",
-  "author": {"@type": "Person", "name": "Ivan", "url": "https://autodev-ai.com/about.html"},
-  "publisher": {"@type": "Organization", "name": "AutoDev AI"},
-  "datePublished": "2026-04-15",
-  "dateModified": "2026-04-15"
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Claude Code Routines 完整教學 2026：設定一次、自動排程永遠執行",
+ "description": "Anthropic 2026年4月最新功能 Claude Code Routines 完整繁中教學",
+ "author": {"@type": "Person", "name": "Ivan", "url": "https://autodev-ai.com/about.html"},
+ "publisher": {"@type": "Organization", "name": "AutoDev AI"},
+ "datePublished": "2026-04-15",
+ "dateModified": "2026-04-15"
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Claude Code Routines 需要電腦一直開著嗎？",
-      "acceptedAnswer": {"@type": "Answer", "text": "不需要。Routines 在 Anthropic 的雲端伺服器執行，設定好排程後，即使你的電腦關閉或離線，到指定時間仍會自動觸發執行。這是 Routines 和傳統本地 cron job 最大的差異。"}
-    },
-    {
-      "@type": "Question",
-      "name": "Claude Code Routines 哪些方案可以用？",
-      "acceptedAnswer": {"@type": "Answer", "text": "Routines 為 Claude Pro（$20/月）以上方案的功能，包含 Claude Pro、Claude Max（$100/月）、Team、Enterprise 方案。免費版 Claude 無法使用。"}
-    },
-    {
-      "@type": "Question",
-      "name": "Routines 和 n8n 的差別是什麼？",
-      "acceptedAnswer": {"@type": "Answer", "text": "Routines 是「代碼驅動型自動化」，適合有程式碼的開發任務（PR 審核、測試、報告生成）；n8n 是「視覺化工作流」，適合跨系統整合（CRM / 電商 / 通知）。兩者互補，不互相取代。"}
-    },
-    {
-      "@type": "Question",
-      "name": "Claude Code Routines 計費方式是什麼？",
-      "acceptedAnswer": {"@type": "Answer", "text": "Routines 的 token 用量計入你的 Claude Pro/Max 月訂閱額度。Claude Max ($100/月) 提供大幅更高的使用量，適合設定多個每日排程任務的重度使用者。"}
-    },
-    {
-      "@type": "Question",
-      "name": "如何在 Claude Code 設定第一個 Routine？",
-      "acceptedAnswer": {"@type": "Answer", "text": "在 Claude Code 終端機輸入 /schedule，選擇排程類型（每日/每週/事件觸發），輸入要執行的 prompt 和對應的 repo 及 connector，確認後儲存即可。詳細步驟見本文教學。"}
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Claude Code Routines 需要電腦一直開著嗎？",
+ "acceptedAnswer": {"@type": "Answer", "text": "不需要。Routines 在 Anthropic 的雲端伺服器執行，設定好排程後，即使你的電腦關閉或離線，到指定時間仍會自動觸發執行。這是 Routines 和傳統本地 cron job 最大的差異。"}
+ },
+ {
+ "@type": "Question",
+ "name": "Claude Code Routines 哪些方案可以用？",
+ "acceptedAnswer": {"@type": "Answer", "text": "Routines 為 Claude Pro（$20/月）以上方案的功能，包含 Claude Pro、Claude Max（$100/月）、Team、Enterprise 方案。免費版 Claude 無法使用。"}
+ },
+ {
+ "@type": "Question",
+ "name": "Routines 和 n8n 的差別是什麼？",
+ "acceptedAnswer": {"@type": "Answer", "text": "Routines 是「代碼驅動型自動化」，適合有程式碼的開發任務（PR 審核、測試、報告生成）；n8n 是「視覺化工作流」，適合跨系統整合（CRM / 電商 / 通知）。兩者互補，不互相取代。"}
+ },
+ {
+ "@type": "Question",
+ "name": "Claude Code Routines 計費方式是什麼？",
+ "acceptedAnswer": {"@type": "Answer", "text": "Routines 的 token 用量計入你的 Claude Pro/Max 月訂閱額度。Claude Max ($100/月) 提供大幅更高的使用量，適合設定多個每日排程任務的重度使用者。"}
+ },
+ {
+ "@type": "Question",
+ "name": "如何在 Claude Code 設定第一個 Routine？",
+ "acceptedAnswer": {"@type": "Answer", "text": "在 Claude Code 終端機輸入 /schedule，選擇排程類型（每日/每週/事件觸發），輸入要執行的 prompt 和對應的 repo 及 connector，確認後儲存即可。詳細步驟見本文教學。"}
+ }
+ ]
 }
 </script>
 <style>
@@ -135,8 +135,8 @@ footer a { color: var(--primary); }
 <script>document.getElementById('mobileMenuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('show'));</script>
 
 <div class="hero">
-  <div class="badge">🔥 2026年4月最新功能</div>
-  <h1>Claude Code Routines 完整教學 2026：設定一次、自動排程永遠執行</h1>
+ <div class="badge">2026年4月最新功能</div>
+ <h1>Claude Code Routines 完整教學 2026：設定一次、自動排程永遠執行</h1>
 <!-- AUTHOR_BYLINE -->
 <div class="author-byline" style="display:flex;align-items:center;gap:1rem;margin:1.5rem 0 2rem;padding:1.2rem;background:rgba(184,148,106,0.08);border-left:3px solid var(--primary);border-radius:6px;">
 <div style="width:48px;height:48px;border-radius:50%;background:var(--gradient-1);display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;color:#fff;flex-shrink:0;">I</div>
@@ -145,24 +145,24 @@ footer a { color: var(--primary); }
 <div style="color:var(--gray);font-size:0.85rem;">發布：2026-04-15　·　<a href="/disclaimer.html" style="color:var(--gray);text-decoration:underline;">編輯政策與聯盟揭露</a></div>
 </div>
 </div>
-  <p>Anthropic 官方正式發布 | HN 今日 #1（379 pts）| 繁中第一篇完整教學</p>
+ <p>Anthropic 官方正式發布 | HN 今日 #1（379 pts）| 繁中第一篇完整教學</p>
 </div>
 
 <div class="container">
 
 <div class="disclosure">
-  📌 本文包含聯盟連結，點擊購買我們可能獲得佣金，不影響你的價格或我們的評測立場。
+ 本文包含聯盟連結，點擊購買我們可能獲得佣金，不影響你的價格或我們的評測立場。
 </div>
 
 <div class="summary-box">
-  <h3>📋 本文重點速覽</h3>
-  <ul>
-    <li>Claude Code Routines 是 Anthropic 2026-04-14 正式發布的自動排程功能</li>
-    <li>設定一次 → 不需電腦開著 → 每日/每週/事件觸發自動執行</li>
-    <li>三大應用場景：PR 審核、每週報告生成、Event-driven 觸發</li>
-    <li>Claude Pro（$20/月）以上方案限定功能</li>
-    <li>與 n8n/Make 互補而非競爭，適合不同使用情境</li>
-  </ul>
+ <h3>本文重點速覽</h3>
+ <ul>
+ <li>Claude Code Routines 是 Anthropic 2026-04-14 正式發布的自動排程功能</li>
+ <li>設定一次 → 不需電腦開著 → 每日/每週/事件觸發自動執行</li>
+ <li>三大應用場景：PR 審核、每週報告生成、Event-driven 觸發</li>
+ <li>Claude Pro（$20/月）以上方案限定功能</li>
+ <li>與 n8n/Make 互補而非競爭，適合不同使用情境</li>
+ </ul>
 </div>
 
 <p>2026 年 4 月 14 日，Anthropic 正式推出了一個讓開發者社群振奮的功能 — <strong>Claude Code Routines</strong>。這個消息在 Hacker News 登上今日第一名（379 points，238 條討論），背後原因很簡單：它做到了許多開發者夢寐以求的事情。</p>
@@ -171,7 +171,7 @@ footer a { color: var(--primary); }
 
 <p>本文是台灣第一篇完整的 Routines 繁中教學，帶你從概念到實作全搞懂。</p>
 
-<h2>🤔 什麼是 Claude Code Routines？</h2>
+<h2>什麼是 Claude Code Routines？</h2>
 <div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
 <ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -182,122 +182,122 @@ footer a { color: var(--primary); }
 <p>你可以把它想像成「有 AI 的 GitHub Actions」或「不需要伺服器的 cron job」：</p>
 
 <ul>
-  <li>設定一個排程（每日早上 9 點、每週一、或某個事件觸發）</li>
-  <li>指定要做的事（審核 PR、生成報告、跑分析）</li>
-  <li>Anthropic 的雲端在指定時間幫你觸發 Claude Code</li>
-  <li><strong>你不需要讓電腦保持開著</strong></li>
+ <li>設定一個排程（每日早上 9 點、每週一、或某個事件觸發）</li>
+ <li>指定要做的事（審核 PR、生成報告、跑分析）</li>
+ <li>Anthropic 的雲端在指定時間幫你觸發 Claude Code</li>
+ <li><strong>你不需要讓電腦保持開著</strong></li>
 </ul>
 
 <h3>Routines vs. 傳統 cron job vs. n8n — 三秒看懂差異</h3>
 
 <table>
-  <tr>
-    <th>功能</th>
-    <th>傳統 cron job</th>
-    <th>Claude Code Routines</th>
-    <th>n8n/Make</th>
-  </tr>
-  <tr>
-    <td>需要伺服器</td>
-    <td>✅ 需要 VPS</td>
-    <td>❌ 不需要</td>
-    <td>✅（自架）/ ❌（雲端）</td>
-  </tr>
-  <tr>
-    <td>AI 理解能力</td>
-    <td>❌ 只能跑 shell</td>
-    <td>✅ 完整 Claude Code 能力</td>
-    <td>⚡ 基本 AI 節點</td>
-  </tr>
-  <tr>
-    <td>程式碼操作</td>
-    <td>✅（手寫腳本）</td>
-    <td>✅（AI 自動處理）</td>
-    <td>⚡ 有限</td>
-  </tr>
-  <tr>
-    <td>跨系統整合</td>
-    <td>需自行開發</td>
-    <td>⚡ 透過 Connectors</td>
-    <td>✅ 原生強項</td>
-  </tr>
-  <tr>
-    <td>適合誰</td>
-    <td>DevOps 老手</td>
-    <td>開發者</td>
-    <td>非技術用戶/企業</td>
-  </tr>
-  <tr>
-    <td>費用</td>
-    <td>VPS $5-20/月</td>
-    <td>含在 Claude Pro 訂閱</td>
-    <td>免費~$20/月</td>
-  </tr>
+ <tr>
+ <th>功能</th>
+ <th>傳統 cron job</th>
+ <th>Claude Code Routines</th>
+ <th>n8n/Make</th>
+ </tr>
+ <tr>
+ <td>需要伺服器</td>
+ <td>需要 VPS</td>
+ <td>不需要</td>
+ <td>（自架）/ （雲端）</td>
+ </tr>
+ <tr>
+ <td>AI 理解能力</td>
+ <td>只能跑 shell</td>
+ <td>完整 Claude Code 能力</td>
+ <td>基本 AI 節點</td>
+ </tr>
+ <tr>
+ <td>程式碼操作</td>
+ <td>（手寫腳本）</td>
+ <td>（AI 自動處理）</td>
+ <td>有限</td>
+ </tr>
+ <tr>
+ <td>跨系統整合</td>
+ <td>需自行開發</td>
+ <td>透過 Connectors</td>
+ <td>原生強項</td>
+ </tr>
+ <tr>
+ <td>適合誰</td>
+ <td>DevOps 老手</td>
+ <td>開發者</td>
+ <td>非技術用戶/企業</td>
+ </tr>
+ <tr>
+ <td>費用</td>
+ <td>VPS $5-20/月</td>
+ <td>含在 Claude Pro 訂閱</td>
+ <td>免費~$20/月</td>
+ </tr>
 </table>
 
 <!-- 1/3 處 CTA -->
 <div class="cta-box">
-  <h3>🚀 想用 Claude Code Routines？需要 Claude Pro 以上</h3>
-  <p>Routines 是 Claude Pro（$20/月）、Max（$100/月）、Team 和 Enterprise 方案專屬功能。免費版無法使用。</p>
-  <a href="https://claude.ai/upgrade" class="cta-btn">升級 Claude Pro → 開始用 Routines</a>
+ <h3>想用 Claude Code Routines？需要 Claude Pro 以上</h3>
+ <p>Routines 是 Claude Pro（$20/月）、Max（$100/月）、Team 和 Enterprise 方案專屬功能。免費版無法使用。</p>
+ <a href="https://claude.ai/upgrade" class="cta-btn">升級 Claude Pro → 開始用 Routines</a>
 </div>
 
-<h2>⚙️ 如何設定你的第一個 Routine？</h2>
+<h2>如何設定你的第一個 Routine？</h2>
 
 <p>設定流程非常直觀，只需要在 Claude Code 終端機操作：</p>
 
 <div class="step-box">
-  <h4>Step 1：開啟 Claude Code 終端機</h4>
-  <p>確保你已安裝 Claude Code（<code>npm install -g @anthropic-ai/claude-code</code>），並在專案目錄中執行。</p>
+ <h4>Step 1：開啟 Claude Code 終端機</h4>
+ <p>確保你已安裝 Claude Code（<code>npm install -g @anthropic-ai/claude-code</code>），並在專案目錄中執行。</p>
 </div>
 
 <div class="step-box">
-  <h4>Step 2：輸入 /schedule 指令</h4>
-  <pre><code># 在 Claude Code 中輸入：
+ <h4>Step 2：輸入 /schedule 指令</h4>
+ <pre><code># 在 Claude Code 中輸入：
 /schedule</code></pre>
-  <p>這會開啟 Routine 設定介面。</p>
+ <p>這會開啟 Routine 設定介面。</p>
 </div>
 
 <div class="step-box">
-  <h4>Step 3：選擇排程類型</h4>
-  <p>Claude Code 會詢問你要設定哪種排程：</p>
-  <ul>
-    <li><strong>Time-based</strong>（時間觸發）：每日、每週、自訂 cron 表達式</li>
-    <li><strong>Event-based</strong>（事件觸發）：PR 開啟、Issue 新增、Push 事件等</li>
-  </ul>
+ <h4>Step 3：選擇排程類型</h4>
+ <p>Claude Code 會詢問你要設定哪種排程：</p>
+ <ul>
+ <li><strong>Time-based</strong>（時間觸發）：每日、每週、自訂 cron 表達式</li>
+ <li><strong>Event-based</strong>（事件觸發）：PR 開啟、Issue 新增、Push 事件等</li>
+ </ul>
 </div>
 
 <div class="step-box">
-  <h4>Step 4：輸入 Routine 設定</h4>
-  <pre><code># Routine 設定範例（每日早上 9 點審核 PR）
+ <h4>Step 4：輸入 Routine 設定</h4>
+ <pre><code># Routine 設定範例（每日早上 9 點審核 PR）
 name: daily-pr-review
-schedule: "0 9 * * 1-5"   # 週一到週五早上 9:00
+schedule: "0 9 * * 1-5" # 週一到週五早上 9:00
 prompt: |
-  Review all open pull requests in this repository.
-  Check for:
-  - Code quality issues
-  - Missing tests
-  - Security vulnerabilities
-  - Documentation gaps
-  Post a summary comment on each PR with your findings.
+ Review all open pull requests in this repository.
+ Check for:
+ - Code quality issues
+ - Missing tests
+ - Security vulnerabilities
+ - Documentation gaps
+ Post a summary comment on each PR with your findings.
 connector: github
 repo: your-org/your-repo</code></pre>
 </div>
 
 <div class="step-box">
-  <h4>Step 5：確認並儲存</h4>
-  <p>Claude Code 會顯示設定摘要，確認後輸入 <code>confirm</code> 儲存。Routine 即刻在 Anthropic 雲端生效，不需要你的電腦保持開著。</p>
+ <h4>Step 5：確認並儲存</h4>
+ <p>Claude Code 會顯示設定摘要，確認後輸入 <code>confirm</code>儲存。Routine 即刻在 Anthropic 雲端生效，不需要你的電腦保持開著。</p>
 </div>
 
 <div class="step-box">
-  <h4>Step 6：管理現有 Routines</h4>
-  <pre><code>/routines list    # 查看所有 Routines
-/routines pause [name]   # 暫停特定 Routine
-/routines delete [name]  # 刪除 Routine
-/routines run [name]     # 立即手動觸發執行</code></pre>
+ <h4>Step 6：管理現有 Routines</h4>
+ <pre><code>/routines list # 查看所有 Routines
+/routines pause [name] # 暫停特定 Routine
+/routines delete [name] # 刪除 Routine
+/routines run [name] # 立即手動觸發執行</code></pre>
 </div>
 
-<h2>🎯 三大實戰應用場景</h2>
+<h2>三大實戰應用場景</h2>
 
 <h3>場景一：每日 PR 審核（最常見）</h3>
 
@@ -306,10 +306,10 @@ repo: your-org/your-repo</code></pre>
 <pre><code>name: morning-pr-review
 schedule: "0 8 * * 1-5"
 prompt: |
-  Review all pull requests opened in the last 24 hours.
-  Focus on: code style, logic errors, test coverage.
-  Add inline comments and a summary review.
-  Use the team's coding standards from CLAUDE.md.
+ Review all pull requests opened in the last 24 hours.
+ Focus on: code style, logic errors, test coverage.
+ Add inline comments and a summary review.
+ Use the team's coding standards from CLAUDE.md.
 connector: github
 repo: your-org/main-product</code></pre>
 
@@ -322,13 +322,13 @@ repo: your-org/main-product</code></pre>
 <pre><code>name: weekly-tech-report
 schedule: "0 16 * * 5"
 prompt: |
-  Generate a weekly technical summary for the team:
-  1. Summary of merged PRs this week
-  2. Top 5 files with most changes
-  3. Open bugs and blockers
-  4. Velocity trend (compared to last week)
-  5. Highlights and concerns
-  Format as a Slack message with proper formatting.
+ Generate a weekly technical summary for the team:
+ 1. Summary of merged PRs this week
+ 2. Top 5 files with most changes
+ 3. Open bugs and blockers
+ 4. Velocity trend (compared to last week)
+ 5. Highlights and concerns
+ Format as a Slack message with proper formatting.
 connector: github, slack
 repo: your-org/main-product</code></pre>
 
@@ -338,73 +338,73 @@ repo: your-org/main-product</code></pre>
 
 <pre><code>name: security-alert-response
 trigger: 
-  type: github_issue
-  conditions:
-    labels: ["security", "critical"]
+ type: github_issue
+ conditions:
+ labels: ["security", "critical"]
 prompt: |
-  A critical security issue has been filed.
-  1. Analyze the vulnerability described in the issue
-  2. Identify affected code areas in this repo
-  3. Draft a preliminary fix approach
-  4. Assign to the security team lead
-  5. Add to the urgent milestone
+ A critical security issue has been filed.
+ 1. Analyze the vulnerability described in the issue
+ 2. Identify affected code areas in this repo
+ 3. Draft a preliminary fix approach
+ 4. Assign to the security team lead
+ 5. Add to the urgent milestone
 connector: github
 repo: your-org/main-product</code></pre>
 
-<h2>📊 各方案 Routines 使用額度比較</h2>
+<h2>各方案 Routines 使用額度比較</h2>
 <div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
 <ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <table>
-  <tr>
-    <th>方案</th>
-    <th>月費</th>
-    <th>Routines</th>
-    <th>每月 token 額度</th>
-    <th>最適合</th>
-  </tr>
-  <tr>
-    <td>Claude Free</td>
-    <td>$0</td>
-    <td>❌ 不支援</td>
-    <td>有限（每日）</td>
-    <td>試用</td>
-  </tr>
-  <tr>
-    <td><strong>Claude Pro</strong></td>
-    <td>$20</td>
-    <td>✅ 支援</td>
-    <td>5x Free</td>
-    <td>個人開發者</td>
-  </tr>
-  <tr>
-    <td><strong>Claude Max</strong></td>
-    <td>$100</td>
-    <td>✅ 支援（最高額度）</td>
-    <td>20x Free</td>
-    <td>重度用戶 / 多個 Routines</td>
-  </tr>
-  <tr>
-    <td>Claude Team</td>
-    <td>$30/人</td>
-    <td>✅ 支援</td>
-    <td>5x Free/人</td>
-    <td>開發團隊</td>
-  </tr>
-  <tr>
-    <td>Claude Enterprise</td>
-    <td>洽談</td>
-    <td>✅ 支援（客製）</td>
-    <td>客製</td>
-    <td>企業</td>
-  </tr>
+ <tr>
+ <th>方案</th>
+ <th>月費</th>
+ <th>Routines</th>
+ <th>每月 token 額度</th>
+ <th>最適合</th>
+ </tr>
+ <tr>
+ <td>Claude Free</td>
+ <td>$0</td>
+ <td>不支援</td>
+ <td>有限（每日）</td>
+ <td>試用</td>
+ </tr>
+ <tr>
+ <td><strong>Claude Pro</strong></td>
+ <td>$20</td>
+ <td>支援</td>
+ <td>5x Free</td>
+ <td>個人開發者</td>
+ </tr>
+ <tr>
+ <td><strong>Claude Max</strong></td>
+ <td>$100</td>
+ <td>支援（最高額度）</td>
+ <td>20x Free</td>
+ <td>重度用戶 / 多個 Routines</td>
+ </tr>
+ <tr>
+ <td>Claude Team</td>
+ <td>$30/人</td>
+ <td>支援</td>
+ <td>5x Free/人</td>
+ <td>開發團隊</td>
+ </tr>
+ <tr>
+ <td>Claude Enterprise</td>
+ <td>洽談</td>
+ <td>支援（客製）</td>
+ <td>客製</td>
+ <td>企業</td>
+ </tr>
 </table>
 
 <p><strong>建議</strong>：如果你計畫設定超過 3 個以上的每日 Routines，Claude Max ($100/月) 的 20x token 額度更划算，避免月底 token 用完的問題。</p>
 
-<h2>⚡ Routines vs n8n：你需要放棄哪個？</h2>
+<h2>Routines vs n8n：你需要放棄哪個？</h2>
 <div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
 <ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -415,62 +415,62 @@ repo: your-org/main-product</code></pre>
 <p><strong>答案：兩個都留著，用在不同地方。</strong></p>
 
 <table>
-  <tr>
-    <th>情境</th>
-    <th>用 Routines</th>
-    <th>用 n8n</th>
-  </tr>
-  <tr>
-    <td>程式碼 PR 審核</td>
-    <td>✅ 完美</td>
-    <td>❌ 做不到</td>
-  </tr>
-  <tr>
-    <td>技術文件自動更新</td>
-    <td>✅ 最強</td>
-    <td>⚡ 需要 AI 節點</td>
-  </tr>
-  <tr>
-    <td>電商訂單通知</td>
-    <td>⚡ 可以</td>
-    <td>✅ 更合適</td>
-  </tr>
-  <tr>
-    <td>CRM 資料同步</td>
-    <td>❌ 不適合</td>
-    <td>✅ 最強</td>
-  </tr>
-  <tr>
-    <td>LINE Bot 回覆</td>
-    <td>❌ 不適合</td>
-    <td>✅ 最強</td>
-  </tr>
-  <tr>
-    <td>GitHub → Slack 通知</td>
-    <td>✅ 原生支援</td>
-    <td>✅ 都可以</td>
-  </tr>
+ <tr>
+ <th>情境</th>
+ <th>用 Routines</th>
+ <th>用 n8n</th>
+ </tr>
+ <tr>
+ <td>程式碼 PR 審核</td>
+ <td>完美</td>
+ <td>做不到</td>
+ </tr>
+ <tr>
+ <td>技術文件自動更新</td>
+ <td>最強</td>
+ <td>需要 AI 節點</td>
+ </tr>
+ <tr>
+ <td>電商訂單通知</td>
+ <td>可以</td>
+ <td>更合適</td>
+ </tr>
+ <tr>
+ <td>CRM 資料同步</td>
+ <td>不適合</td>
+ <td>最強</td>
+ </tr>
+ <tr>
+ <td>LINE Bot 回覆</td>
+ <td>不適合</td>
+ <td>最強</td>
+ </tr>
+ <tr>
+ <td>GitHub → Slack 通知</td>
+ <td>原生支援</td>
+ <td>都可以</td>
+ </tr>
 </table>
 
 <p>Routines 的核心強項是「<strong>理解程式碼、操作 Git、生成技術文件</strong>」。n8n 的核心強項是「<strong>跨平台整合、視覺化流程、非技術用戶友善</strong>」。</p>
 
 <!-- 文章尾部 CTA -->
 <div class="cta-box">
-  <h3>🔥 立即開始使用 Claude Code Routines</h3>
-  <p>Claude Pro $20/月，包含 Routines 功能，解放你的重複開發工作。</p>
-  <a href="https://claude.ai/upgrade" class="cta-btn">升級 Claude Pro → 開始自動化開發任務</a>
+ <h3>立即開始使用 Claude Code Routines</h3>
+ <p>Claude Pro $20/月，包含 Routines 功能，解放你的重複開發工作。</p>
+ <a href="https://claude.ai/upgrade" class="cta-btn">升級 Claude Pro → 開始自動化開發任務</a>
 </div>
 
 <div class="cta-box-do">
-  <h3>⚡ 需要更多 AI 算力？部署在 DigitalOcean</h3>
-  <p>自架 n8n、部署 AI Agent、VPS 穩定運行 — 新用戶免費獲得 $200 點數試用。</p>
-  <a href="https://m.do.co/c/6121a295f624" class="cta-btn">免費獲得 $200 DigitalOcean 點數 →</a>
+ <h3>需要更多 AI 算力？部署在 DigitalOcean</h3>
+ <p>自架 n8n、部署 AI Agent、VPS 穩定運行 — 新用戶免費獲得 $200 點數試用。</p>
+ <a href="https://m.do.co/c/6121a295f624" class="cta-btn">免費獲得 $200 DigitalOcean 點數 →</a>
 </div>
 
-<h2>🔍 常見問題 FAQ</h2>
+<h2>常見問題 FAQ</h2>
 
 <p><strong>Q: Routines 的執行結果去哪裡看？</strong><br>
-A: 執行結果會出現在你設定的 connector 目標（GitHub comment、Slack 頻道等），也可以在 Claude Code 的 <code>/routines log [name]</code> 查看執行歷史。</p>
+A: 執行結果會出現在你設定的 connector 目標（GitHub comment、Slack 頻道等），也可以在 Claude Code 的 <code>/routines log [name]</code>查看執行歷史。</p>
 
 <p><strong>Q: Routine 執行失敗怎麼辦？</strong><br>
 A: Claude Code 會發送通知給你（Email 或設定的 connector）。常見失敗原因：token 配額不足、repo 權限問題、connector 認證過期。</p>
@@ -485,13 +485,13 @@ A: 目前已確認支援 GitHub（最完整）、GitLab、Slack。更多 connect
 A: Claude Code CLI 本身免費，但 Routines 功能需要 Claude Pro 以上方案。基本的手動 Claude Code 任務在免費版也可以用。</p>
 
 <div class="related">
-  <h3>延伸閱讀</h3>
-  <ul>
-    <li><a href="n8n-automation-tutorial-2026.html">n8n 自動化完整教學 2026：從入門到實際部署</a></li>
-    <li><a href="n8n-hitl-tutorial-2026.html">n8n HITL 教學：讓 AI 自動化加入人工審核節點</a></li>
-    <li><a href="cloudways-review-2026.html">Cloudways 評測 2026：AI 開發者最值得用的雲端主機？</a></li>
-    <li><a href="workflow-automation-small-business.html">中小企業 AI 工作流自動化完整指南</a></li>
-  </ul>
+ <h3>延伸閱讀</h3>
+ <ul>
+ <li><a href="n8n-automation-tutorial-2026.html">n8n 自動化完整教學 2026：從入門到實際部署</a></li>
+ <li><a href="n8n-hitl-tutorial-2026.html">n8n HITL 教學：讓 AI 自動化加入人工審核節點</a></li>
+ <li><a href="cloudways-review-2026.html">Cloudways 評測 2026：AI 開發者最值得用的雲端主機？</a></li>
+ <li><a href="workflow-automation-small-business.html">中小企業 AI 工作流自動化完整指南</a></li>
+ </ul>
 </div>
 
 </div>
@@ -499,7 +499,7 @@ A: Claude Code CLI 本身免費，但 Routines 功能需要 Claude Pro 以上方
 <footer>
 <p>© 2026 AutoDev AI. Built with AI.</p>
 <p style="margin-top:0.5rem; font-size:0.85rem;">姊妹站：<a href="https://pink1119zz.github.io/ai-tools-tw/" rel="noopener" target="_blank">AI Tools TW</a>（繁中工具評測） · <a href="https://pink1119zz.github.io/ai-tools-en/" rel="noopener" target="_blank">AI Tools EN</a>（English Reviews）</p>
-<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/privacy.html">隱私權政策</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></p>
+<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/privacy.html">隱私權政策</a>· <a href="/terms.html">使用條款</a>· <a href="/disclaimer.html">免責聲明</a></p>
 </footer>
 </body>
 </html>

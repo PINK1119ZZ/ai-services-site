@@ -32,8 +32,8 @@
 <link href="/style.css" rel="stylesheet"/>
 <!-- Structured Data -->
 <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"AboutPage","name":"關於 AutoDev AI","url":"https://autodev-ai.com/about.html","description":"AutoDev AI 創辦人 Ivan，自建 20+ AI Agent 自動化系統","mainEntity":{"@type":"Person","name":"Ivan","jobTitle":"AI 自動化架構師","worksFor":{"@type":"Organization","name":"AutoDev AI","url":"https://autodev-ai.com"},"knowsAbout":["LINE Bot 開發","AI 客服","Telegram Bot","工作流程自動化","Python","LIFF"]}}
-    </script>
+ {"@context":"https://schema.org","@type":"AboutPage","name":"關於 AutoDev AI","url":"https://autodev-ai.com/about.html","description":"AutoDev AI 創辦人 Ivan，自建 20+ AI Agent 自動化系統","mainEntity":{"@type":"Person","name":"Ivan","jobTitle":"AI 自動化架構師","worksFor":{"@type":"Organization","name":"AutoDev AI","url":"https://autodev-ai.com"},"knowsAbout":["LINE Bot 開發","AI 客服","Telegram Bot","工作流程自動化","Python","LIFF"]}}
+ </script>
 <!-- Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
@@ -53,7 +53,7 @@
 <a class="active" href="/en/about.html">About</a>
 <a class="nav-cta" href="/en/contact.html">Free Quote</a>
 </div>
-<button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+<button class="mobile-menu-btn" id="mobileMenuBtn"></button>
 </div>
 </nav>
 <!-- PAGE HEADER -->
@@ -69,22 +69,22 @@
 </div>
 <div class="why-grid">
 <div class="why-item fade-in">
-<div class="why-icon">🧠</div>
+<div class="why-icon"></div>
 <h3 data-en="AI-Native Development">AI-Native Development</h3>
 <p data-en='Not just "knows ChatGPT" — an architect who built 20+ AI Agent automation systems from scratch'>Not just "knows ChatGPT" — an architect who built 20+ AI Agent automation systems from scratch</p>
 </div>
 <div class="why-item fade-in">
-<div class="why-icon">🚀</div>
+<div class="why-icon"></div>
 <h3 data-en="Done in 2 Weeks">Done in 2 Weeks</h3>
 <p data-en="AI-assisted development at 5-10x traditional speed. What takes others 2 months, I finish in 2 weeks">AI-assisted development at 5-10x traditional speed. What takes others 2 months, I finish in 2 weeks</p>
 </div>
 <div class="why-item fade-in">
-<div class="why-icon">💰</div>
+<div class="why-icon"></div>
 <h3 data-en="Great Value">Great Value</h3>
 <p data-en="No office rent, no team management overhead. The savings go directly into your pricing">No office rent, no team management overhead. The savings go directly into your pricing</p>
 </div>
 <div class="why-item fade-in">
-<div class="why-icon">🔧</div>
+<div class="why-icon"></div>
 <h3 data-en="Ongoing Maintenance">Ongoing Maintenance</h3>
 <p data-en="We don't just build and leave. Long-term maintenance plans keep your system running smoothly">We don't just build and leave. Long-term maintenance plans keep your system running smoothly</p>
 </div>
@@ -122,49 +122,49 @@
 <footer>
 <p>© 2026 AutoDev AI. Built with AI.</p>
 <p style="margin-top:0.5rem; font-size:0.85rem;">姊妹站：<a href="https://pink1119zz.github.io/ai-tools-tw/" rel="noopener" target="_blank" style="color:#E8D9BD;">AI Tools TW</a>（繁中工具評測） · <a href="https://pink1119zz.github.io/ai-tools-en/" rel="noopener" target="_blank" style="color:#E8D9BD;">AI Tools EN</a>（English Reviews）</p>
-<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/en/privacy.html">Privacy</a> · <a href="/en/terms.html">Terms</a> · <a href="/en/disclaimer.html">Disclaimer</a></p>
+<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/en/privacy.html">Privacy</a>· <a href="/en/terms.html">Terms</a>· <a href="/en/disclaimer.html">Disclaimer</a></p>
 </footer>
 <script defer="" src="/chat-widget.js?v=20260502e"></script>
 <script defer="" src="/lang.js"></script>
 <script>
 // Nav scroll effect
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
+window.addEventListener('scroll', () =>{
+ nav.classList.toggle('scrolled', window.scrollY >50);
 });
 
 // Fade-in animation
 const fadeEls = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
+const observer = new IntersectionObserver((entries) =>{
+ entries.forEach(entry =>{
+ if (entry.isIntersecting) {
+ entry.target.classList.add('visible');
+ }
+ });
 }, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
-fadeEls.forEach(el => observer.observe(el));
-setTimeout(() => {
-    fadeEls.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight + 100) el.classList.add('visible');
-    });
+fadeEls.forEach(el =>observer.observe(el));
+setTimeout(() =>{
+ fadeEls.forEach(el =>{
+ const rect = el.getBoundingClientRect();
+ if (rect.top < window.innerHeight + 100) el.classList.add('visible');
+ });
 }, 150);
 
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navLinks = document.getElementById('navLinks');
 
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-    mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630';
+mobileMenuBtn.addEventListener('click', () =>{
+ navLinks.classList.toggle('show');
+ mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630';
 });
 
 // Close mobile menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('show');
-        mobileMenuBtn.textContent = '\u2630';
-    });
+navLinks.querySelectorAll('a').forEach(link =>{
+ link.addEventListener('click', () =>{
+ navLinks.classList.remove('show');
+ mobileMenuBtn.textContent = '\u2630';
+ });
 });
 </script>
 </body>

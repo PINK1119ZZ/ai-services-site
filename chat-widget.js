@@ -123,7 +123,7 @@
   box.id = 'chat-widget-box';
   box.innerHTML = `
     <div class="chat-header">
-      <div class="chat-header-avatar">🤖</div>
+      <div class="chat-header-avatar"></div>
       <div class="chat-header-info">
         <h4>AutoDev AI 客服</h4>
         <p>通常在幾秒內回覆</p>
@@ -254,7 +254,7 @@
     btn.classList.toggle('open', isOpen);
     if (isOpen && messages.children.length === 0) {
       setTimeout(() => {
-        addMsg('你好！👋 我是 AutoDev AI 的智慧助手。\n\n有什麼我可以幫你的嗎？可以問我關於 LINE Bot 開發、AI 客服、報價等任何問題！', 'bot');
+        addMsg('你好！ 我是 AutoDev AI 的智慧助手。\n\n有什麼我可以幫你的嗎？可以問我關於 LINE Bot 開發、AI 客服、報價等任何問題！', 'bot');
       }, 500);
     }
     if (isOpen) input.focus();

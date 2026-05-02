@@ -39,7 +39,7 @@
 @media(max-width:720px){.vps-card{grid-template-columns:1fr;gap:1rem;}}
 .vps-card:hover{border-color:rgba(184,148,106,.4);transform:translateY(-2px);}
 .vps-card.best{border-color:var(--accent);box-shadow:0 0 30px rgba(196,165,123,.15);}
-.vps-card.best::before{content:'🏆 最划算';display:inline-block;padding:.2rem .6rem;border-radius:50px;background:linear-gradient(135deg,#C4A57B,#B8946A);color:#fff;font-size:.7rem;font-weight:700;position:absolute;transform:translate(-.5rem,-1.8rem);}
+.vps-card.best::before{content:' 最划算';display:inline-block;padding:.2rem .6rem;border-radius:50px;background:linear-gradient(135deg,#C4A57B,#B8946A);color:#fff;font-size:.7rem;font-weight:700;position:absolute;transform:translate(-.5rem,-1.8rem);}
 .vps-brand{font-size:1.3rem;font-weight:900;color:var(--light);}
 .vps-brand .plan{display:block;font-size:.8rem;color:var(--gray);font-weight:500;margin-top:.2rem;}
 .vps-specs{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;font-size:.8rem;}
@@ -77,7 +77,7 @@
 
 <div class="calc-wrap">
 <div class="calc-header">
-<h1>☁️ VPS 比價器 2026</h1>
+<h1>VPS 比價器 2026</h1>
 <p>一鍵對比 DigitalOcean、Cloudways、Hostinger、Linode、Vultr 即時報價</p>
 </div>
 
@@ -132,107 +132,107 @@
 <footer>
 <p>© 2026 AutoDev AI. Built with AI.</p>
 <p style="margin-top:0.5rem; font-size:0.85rem;">姊妹站：<a href="https://pink1119zz.github.io/ai-tools-tw/" rel="noopener" target="_blank">AI Tools TW</a>（繁中工具評測） · <a href="https://pink1119zz.github.io/ai-tools-en/" rel="noopener" target="_blank">AI Tools EN</a>（English Reviews）</p>
-<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/privacy.html">隱私權政策</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></p>
+<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/privacy.html">隱私權政策</a>· <a href="/terms.html">使用條款</a>· <a href="/disclaimer.html">免責聲明</a></p>
 </footer>
 
 <script>
 const vpsData = [
-  {
-    brand: 'DigitalOcean',
-    plan: 'Basic Droplet',
-    cpu: 2, ram: 2, storage: 60, bw: 3000, price: 18,
-    url: 'https://m.do.co/c/6121a295f624',
-    tags: ['開發者最愛','全球 14 區','聯盟 $200/單'],
-    aff: true
-  },
-  {
-    brand: 'DigitalOcean',
-    plan: 'Premium Intel',
-    cpu: 2, ram: 4, storage: 80, bw: 4000, price: 28,
-    url: 'https://m.do.co/c/6121a295f624',
-    tags: ['Intel Xeon','SSD'],
-    aff: true
-  },
-  {
-    brand: 'DigitalOcean',
-    plan: 'General Purpose',
-    cpu: 4, ram: 8, storage: 50, bw: 4000, price: 63,
-    url: 'https://m.do.co/c/6121a295f624',
-    tags: ['商用穩定','NVMe'],
-    aff: true
-  },
-  {
-    brand: 'Cloudways',
-    plan: 'DO 2GB Managed',
-    cpu: 1, ram: 2, storage: 50, bw: 2000, price: 26,
-    url: 'https://www.cloudways.com',
-    tags: ['Managed hosting','免運維','WP 友善'],
-    aff: false
-  },
-  {
-    brand: 'Cloudways',
-    plan: 'DO 4GB Managed',
-    cpu: 2, ram: 4, storage: 80, bw: 4000, price: 50,
-    url: 'https://www.cloudways.com',
-    tags: ['Managed','自動備份'],
-    aff: false
-  },
-  {
-    brand: 'Hostinger',
-    plan: 'KVM 2',
-    cpu: 2, ram: 8, storage: 100, bw: 8000, price: 7.99,
-    url: 'https://www.hostinger.com',
-    tags: ['🔥 CP 值王','入門最便宜'],
-    aff: false
-  },
-  {
-    brand: 'Hostinger',
-    plan: 'KVM 4',
-    cpu: 4, ram: 16, storage: 200, bw: 16000, price: 14.99,
-    url: 'https://www.hostinger.com',
-    tags: ['高配低價','亞洲機房'],
-    aff: false
-  },
-  {
-    brand: 'Vultr',
-    plan: 'Cloud Compute',
-    cpu: 1, ram: 2, storage: 55, bw: 2000, price: 12,
-    url: 'https://www.vultr.com',
-    tags: ['超多機房','小時計費'],
-    aff: false
-  },
-  {
-    brand: 'Vultr',
-    plan: 'High Performance',
-    cpu: 2, ram: 4, storage: 128, bw: 4000, price: 24,
-    url: 'https://www.vultr.com',
-    tags: ['AMD EPYC','NVMe'],
-    aff: false
-  },
-  {
-    brand: 'Linode (Akamai)',
-    plan: 'Shared CPU 4GB',
-    cpu: 2, ram: 4, storage: 80, bw: 4000, price: 24,
-    url: 'https://www.linode.com',
-    tags: ['Akamai 加持','全球 CDN'],
-    aff: false
-  },
-  {
-    brand: 'Linode (Akamai)',
-    plan: 'Dedicated CPU 8GB',
-    cpu: 4, ram: 8, storage: 160, bw: 5000, price: 72,
-    url: 'https://www.linode.com',
-    tags: ['獨立 CPU','高負載'],
-    aff: false
-  },
-  {
-    brand: 'AWS Lightsail',
-    plan: '$10 Plan',
-    cpu: 2, ram: 2, storage: 60, bw: 3000, price: 10,
-    url: 'https://aws.amazon.com/lightsail',
-    tags: ['AWS 信任','台灣機房'],
-    aff: false
-  }
+ {
+ brand: 'DigitalOcean',
+ plan: 'Basic Droplet',
+ cpu: 2, ram: 2, storage: 60, bw: 3000, price: 18,
+ url: 'https://m.do.co/c/6121a295f624',
+ tags: ['開發者最愛','全球 14 區','聯盟 $200/單'],
+ aff: true
+ },
+ {
+ brand: 'DigitalOcean',
+ plan: 'Premium Intel',
+ cpu: 2, ram: 4, storage: 80, bw: 4000, price: 28,
+ url: 'https://m.do.co/c/6121a295f624',
+ tags: ['Intel Xeon','SSD'],
+ aff: true
+ },
+ {
+ brand: 'DigitalOcean',
+ plan: 'General Purpose',
+ cpu: 4, ram: 8, storage: 50, bw: 4000, price: 63,
+ url: 'https://m.do.co/c/6121a295f624',
+ tags: ['商用穩定','NVMe'],
+ aff: true
+ },
+ {
+ brand: 'Cloudways',
+ plan: 'DO 2GB Managed',
+ cpu: 1, ram: 2, storage: 50, bw: 2000, price: 26,
+ url: 'https://www.cloudways.com',
+ tags: ['Managed hosting','免運維','WP 友善'],
+ aff: false
+ },
+ {
+ brand: 'Cloudways',
+ plan: 'DO 4GB Managed',
+ cpu: 2, ram: 4, storage: 80, bw: 4000, price: 50,
+ url: 'https://www.cloudways.com',
+ tags: ['Managed','自動備份'],
+ aff: false
+ },
+ {
+ brand: 'Hostinger',
+ plan: 'KVM 2',
+ cpu: 2, ram: 8, storage: 100, bw: 8000, price: 7.99,
+ url: 'https://www.hostinger.com',
+ tags: [' CP 值王','入門最便宜'],
+ aff: false
+ },
+ {
+ brand: 'Hostinger',
+ plan: 'KVM 4',
+ cpu: 4, ram: 16, storage: 200, bw: 16000, price: 14.99,
+ url: 'https://www.hostinger.com',
+ tags: ['高配低價','亞洲機房'],
+ aff: false
+ },
+ {
+ brand: 'Vultr',
+ plan: 'Cloud Compute',
+ cpu: 1, ram: 2, storage: 55, bw: 2000, price: 12,
+ url: 'https://www.vultr.com',
+ tags: ['超多機房','小時計費'],
+ aff: false
+ },
+ {
+ brand: 'Vultr',
+ plan: 'High Performance',
+ cpu: 2, ram: 4, storage: 128, bw: 4000, price: 24,
+ url: 'https://www.vultr.com',
+ tags: ['AMD EPYC','NVMe'],
+ aff: false
+ },
+ {
+ brand: 'Linode (Akamai)',
+ plan: 'Shared CPU 4GB',
+ cpu: 2, ram: 4, storage: 80, bw: 4000, price: 24,
+ url: 'https://www.linode.com',
+ tags: ['Akamai 加持','全球 CDN'],
+ aff: false
+ },
+ {
+ brand: 'Linode (Akamai)',
+ plan: 'Dedicated CPU 8GB',
+ cpu: 4, ram: 8, storage: 160, bw: 5000, price: 72,
+ url: 'https://www.linode.com',
+ tags: ['獨立 CPU','高負載'],
+ aff: false
+ },
+ {
+ brand: 'AWS Lightsail',
+ plan: '$10 Plan',
+ cpu: 2, ram: 2, storage: 60, bw: 3000, price: 10,
+ url: 'https://aws.amazon.com/lightsail',
+ tags: ['AWS 信任','台灣機房'],
+ aff: false
+ }
 ];
 
 const grid = document.getElementById('vpsGrid');
@@ -242,52 +242,52 @@ const stoSel = document.getElementById('storage');
 const sortSel = document.getElementById('sort');
 
 function render(){
-  const cpuMin = +cpuSel.value;
-  const ramMin = +ramSel.value;
-  const stoMin = +stoSel.value;
-  const sortBy = sortSel.value;
+ const cpuMin = +cpuSel.value;
+ const ramMin = +ramSel.value;
+ const stoMin = +stoSel.value;
+ const sortBy = sortSel.value;
 
-  let list = vpsData.filter(v => v.cpu >= cpuMin && v.ram >= ramMin && v.storage >= stoMin);
+ let list = vpsData.filter(v =>v.cpu >= cpuMin && v.ram >= ramMin && v.storage >= stoMin);
 
-  if(sortBy === 'price') list.sort((a,b)=> a.price - b.price);
-  if(sortBy === 'cpu') list.sort((a,b)=> b.cpu - a.cpu || a.price - b.price);
-  if(sortBy === 'ram') list.sort((a,b)=> b.ram - a.ram || a.price - b.price);
+ if(sortBy === 'price') list.sort((a,b)=>a.price - b.price);
+ if(sortBy === 'cpu') list.sort((a,b)=>b.cpu - a.cpu || a.price - b.price);
+ if(sortBy === 'ram') list.sort((a,b)=>b.ram - a.ram || a.price - b.price);
 
-  grid.innerHTML = '';
-  if(list.length === 0){
-    grid.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--gray);">😅 目前沒有符合條件的方案，請放寬條件</div>';
-    return;
-  }
+ grid.innerHTML = '';
+ if(list.length === 0){
+ grid.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--gray);">目前沒有符合條件的方案，請放寬條件</div>';
+ return;
+ }
 
-  list.forEach((v, i) => {
-    const el = document.createElement('div');
-    el.className = 'vps-card' + (i === 0 && sortBy === 'price' ? ' best' : '');
-    const tags = v.tags.map(t => `<span class="tag${t.includes('聯盟') ? ' aff' : ''}">${t}</span>`).join('');
-    el.innerHTML = `
-      <div>
-        <div class="vps-brand">${v.brand}<span class="plan">${v.plan}</span></div>
-        <div class="tags">${tags}</div>
-      </div>
-      <div class="vps-specs">
-        <div class="spec"><div class="v">${v.cpu}</div><div class="l">vCPU</div></div>
-        <div class="spec"><div class="v">${v.ram} GB</div><div class="l">RAM</div></div>
-        <div class="spec"><div class="v">${v.storage} GB</div><div class="l">SSD</div></div>
-        <div class="spec"><div class="v">${(v.bw/1000).toFixed(0)} TB</div><div class="l">流量</div></div>
-      </div>
-      <div class="vps-price">
-        <div class="p">$${v.price}</div>
-        <div class="pm">USD / 月</div>
-        <a href="${v.url}" target="_blank" rel="${v.aff ? '' : 'nofollow '}noopener" class="btn">立即前往 →</a>
-      </div>
-    `;
-    grid.appendChild(el);
-  });
+ list.forEach((v, i) =>{
+ const el = document.createElement('div');
+ el.className = 'vps-card' + (i === 0 && sortBy === 'price' ? ' best' : '');
+ const tags = v.tags.map(t =>`<span class="tag${t.includes('聯盟') ? ' aff' : ''}">${t}</span>`).join('');
+ el.innerHTML = `
+ <div>
+ <div class="vps-brand">${v.brand}<span class="plan">${v.plan}</span></div>
+ <div class="tags">${tags}</div>
+ </div>
+ <div class="vps-specs">
+ <div class="spec"><div class="v">${v.cpu}</div><div class="l">vCPU</div></div>
+ <div class="spec"><div class="v">${v.ram} GB</div><div class="l">RAM</div></div>
+ <div class="spec"><div class="v">${v.storage} GB</div><div class="l">SSD</div></div>
+ <div class="spec"><div class="v">${(v.bw/1000).toFixed(0)} TB</div><div class="l">流量</div></div>
+ </div>
+ <div class="vps-price">
+ <div class="p">$${v.price}</div>
+ <div class="pm">USD / 月</div>
+ <a href="${v.url}" target="_blank" rel="${v.aff ? '' : 'nofollow '}noopener" class="btn">立即前往 →</a>
+ </div>
+ `;
+ grid.appendChild(el);
+ });
 }
 
-[cpuSel, ramSel, stoSel, sortSel].forEach(el => el.addEventListener('change', render));
+[cpuSel, ramSel, stoSel, sortSel].forEach(el =>el.addEventListener('change', render));
 
 document.getElementById('mobileMenuBtn').addEventListener('click', () =>
-  document.getElementById('navLinks').classList.toggle('show'));
+ document.getElementById('navLinks').classList.toggle('show'));
 
 render();
 </script>
