@@ -33,7 +33,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="/style.css" rel="stylesheet"/>
 <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"LINE Bot 開發教學：從零開始到上線的完整攻略（2026）","description":"LINE Bot 開發完整教學，含 LINE Developer 設定、Messaging API、常見功能開發、DIY vs 外包比較","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-02","dateModified":"2026-04-02","mainEntityOfPage":"https://autodev-ai.com/blog/line-bot-tutorial-2026.html","image":"https://autodev-ai.com/autodev-logo2.png"}
+    {"@context":"https://schema.org","@type":"Article","headline":"LINE Bot 開發教學：從零開始到上線的完整攻略（2026）","description":"LINE Bot 開發完整教學，含 LINE Developer 設定、Messaging API、常見功能開發、DIY vs 外包比較","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-02","dateModified":"2026-05-02","mainEntityOfPage":"https://autodev-ai.com/blog/line-bot-tutorial-2026.html","image":"https://autodev-ai.com/autodev-logo2.png"}
     </script>
 <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"LINE Bot 開發需要會寫程式嗎？","acceptedAnswer":{"@type":"Answer","text":"基礎的自動回覆可以用 LINE 官方帳號的「自動回應訊息」設定，不需要寫程式。但如果要做 AI 客服、預約系統、串接外部服務，就需要程式開發能力（通常用 Python 或 Node.js）。"}},{"@type":"Question","name":"LINE Bot 開發要多久？","acceptedAnswer":{"@type":"Answer","text":"視功能複雜度而定。基礎自動回覆約 1-3 天，含 AI 客服約 1 週，完整預約系統約 2 週。使用 AI 輔助開發可以加速 5-10 倍。"}},{"@type":"Question","name":"LINE Bot 可以免費做嗎？","acceptedAnswer":{"@type":"Answer","text":"LINE Messaging API 本身免費，LINE 官方帳號免費版每月可發 200 則推播訊息（回覆訊息不限）。但如果需要伺服器部署，會有主機費用（約 NT$200-500/月）。"}},{"@type":"Question","name":"自己做 LINE Bot 跟外包有什麼差別？","acceptedAnswer":{"@type":"Answer","text":"自己做省錢但耗時，適合有技術背景且需求簡單的情況。外包給專業開發者速度快、品質穩定、有售後支援，適合沒有技術背景或需要進階功能的商家。"}},{"@type":"Question","name":"LINE Bot 跟 LINE 官方帳號有什麼不同？","acceptedAnswer":{"@type":"Answer","text":"LINE 官方帳號是 LINE 提供的商業帳號，有基本的自動回應功能。LINE Bot 是透過 Messaging API 開發的程式，可以做到更複雜的功能如 AI 對話、預約系統、資料庫串接等。LINE Bot 建立在 LINE 官方帳號之上。"}}]}
@@ -184,6 +184,91 @@
 <li data-en="&lt;strong&gt;Set Webhook URL&lt;/strong&gt;: Enter your server address where LINE will send user messages"><strong>設定 Webhook URL</strong>：填入你的伺服器位址，LINE 會把用戶的訊息送到這個位址</li>
 <li data-en='&lt;strong&gt;Disable auto-response&lt;/strong&gt;: If you want to control replies with code, remember to turn off "auto-response messages" in LINE Official Account Manager'><strong>關閉自動回應</strong>：如果你要用程式控制回覆，記得到 LINE Official Account Manager 關閉「自動回應訊息」</li>
 </ol>
+
+<h2 id="echo-bot-30-minutes">30 分鐘實作：你的第一個 LINE Echo Bot</h2>
+<p>看完前面的概念，最快驗證自己懂的方式就是動手做一個。下面這段程式碼是我這幾年帶上 100+ 位讀者複現過的最小 LINE Bot — 用戶發什麼，Bot 就回什麼（echo）。30 分鐘從零跑起來，含部署。</p>
+
+<h3>需要的東西</h3>
+<ul>
+<li>LINE Developers 帳號（已建好上面那 5 步驟）</li>
+<li>Python 3.9+ 環境（或 Node.js 18+，本範例用 Python）</li>
+<li>一個能對外的 HTTPS URL — 如果還沒 VPS，<a href="/blog/cloudways-review-2026.html" style="color:var(--accent);">用 Cloudways</a> 或 <a href="/blog/hostinger-vps-review-2026.html" style="color:var(--accent);">Hostinger VPS</a> 都可以；本機開發階段用 ngrok 也行</li>
+</ul>
+
+<h3>步驟 1：安裝套件</h3>
+<pre style="background:rgba(0,0,0,0.4);padding:1rem;border-radius:6px;overflow-x:auto;"><code>pip install flask line-bot-sdk python-dotenv</code></pre>
+
+<h3>步驟 2：寫 echo_bot.py</h3>
+<pre style="background:rgba(0,0,0,0.4);padding:1rem;border-radius:6px;overflow-x:auto;"><code>import os
+from flask import Flask, request, abort
+from linebot import LineBotApi, WebhookHandler
+from linebot.exceptions import InvalidSignatureError
+from linebot.models import MessageEvent, TextMessage, TextSendMessage
+
+app = Flask(__name__)
+line_bot_api = LineBotApi(os.environ['CHANNEL_ACCESS_TOKEN'])
+handler = WebhookHandler(os.environ['CHANNEL_SECRET'])
+
+@app.route('/callback', methods=['POST'])
+def callback():
+    signature = request.headers['X-Line-Signature']
+    body = request.get_data(as_text=True)
+    try:
+        handler.handle(body, signature)
+    except InvalidSignatureError:
+        abort(400)
+    return 'OK'
+
+@handler.add(MessageEvent, message=TextMessage)
+def handle_text(event):
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=f'你說了：{event.message.text}')
+    )
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+</code></pre>
+
+<h3>步驟 3：設定環境變數 + 啟動</h3>
+<pre style="background:rgba(0,0,0,0.4);padding:1rem;border-radius:6px;overflow-x:auto;"><code>export CHANNEL_ACCESS_TOKEN="你從 LINE Developers 拿到的"
+export CHANNEL_SECRET="你從 LINE Developers 拿到的"
+python echo_bot.py</code></pre>
+
+<h3>步驟 4：對外 HTTPS（本機開發）</h3>
+<p>LINE Webhook 強制 HTTPS。本機開發用 ngrok：</p>
+<pre style="background:rgba(0,0,0,0.4);padding:1rem;border-radius:6px;overflow-x:auto;"><code>ngrok http 5000</code></pre>
+<p>把 ngrok 給的 <code>https://xxxx.ngrok-free.app/callback</code> 貼到 LINE Developers 的 Webhook URL，按「Verify」確認 200 OK。</p>
+
+<h3>步驟 5：測試</h3>
+<p>掃 LINE Developers 提供的 QR code 加好友，發任何訊息，Bot 就會回「你說了：xxx」。</p>
+
+<div class="highlight-box" style="background:rgba(0,210,211,0.08);border:1px solid rgba(0,210,211,0.3);border-radius:8px;padding:1rem 1.2rem;margin:1.5rem 0;">
+<p style="margin:0;"><strong>📌 跑完這個 echo bot，就具備做 90% LINE Bot 功能的基礎</strong>。剩下的差別只在於「換掉 reply_message 的內容」— 換成資料庫查詢就是查單機器人，換成串 GPT 就是 AI 客服，換成寫入 Google Calendar 就是預約系統。</p>
+</div>
+
+<h3>實際部署常見坑（我自己踩過的）</h3>
+<table class="compare-table" style="width:100%;border-collapse:collapse;margin:1rem 0;">
+<thead>
+<tr>
+<th style="background:var(--gradient-1);color:#fff;padding:0.6rem;text-align:left;">問題</th>
+<th style="background:var(--gradient-1);color:#fff;padding:0.6rem;text-align:left;">原因</th>
+<th style="background:var(--gradient-1);color:#fff;padding:0.6rem;text-align:left;">修法</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Webhook Verify 一直 500</td><td>環境變數沒讀到</td><td>用 dotenv 載 .env、重啟程式</td></tr>
+<tr><td>本機 OK，部署後沒回應</td><td>SSL 憑證沒設、port 被擋</td><td>用 Caddy / Cloudflare Tunnel 自動 HTTPS</td></tr>
+<tr><td>偶爾訊息不回</td><td>單一 Flask process 處理慢、reply_token 30 秒過期</td><td>加 worker 池、或用 push_message 補發</td></tr>
+<tr><td>Bot 重啟訊息全失</td><td>沒做訊息持久化</td><td>事件先寫 DB／queue 再處理</td></tr>
+<tr><td>VPS 重開機 Bot 沒上線</td><td>沒設 systemd / supervisor</td><td>用 <a href="/bot-cloud.html" style="color:var(--accent);">Bot 雲託管</a> 或自己寫 systemd unit</td></tr>
+</tbody>
+</table>
+
+<div class="highlight-box" style="background:rgba(108,92,231,0.08);border-left:3px solid var(--primary);border-radius:6px;padding:1rem 1.2rem;margin:1.5rem 0;">
+<p style="margin:0;"><strong>不想自己 debug 這些坑？</strong>我們的 <a href="/bot-cloud.html" style="color:var(--accent);">Bot 雲託管月費 NT$1,500/月起</a> 直接幫你跑：自動重啟、HTTPS、流量監控、月用量報告。把上面這一整章的維運責任外包出去。或者看 <a href="/blog/line-bot-cost.html" style="color:var(--accent);">完整 LINE Bot 開發費用解析</a> 估一下總成本。</p>
+</div>
+
 <h2 data-en="Messaging API Fundamentals" id="messaging-api">Messaging API 基礎概念</h2><div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
 <ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
