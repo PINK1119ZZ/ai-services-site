@@ -78,53 +78,6 @@
  .compare-table .win { color: var(--primary-dark); font-weight: 500; }
  .compare-table .lose { color: #B85C5C; text-decoration: line-through; opacity: 0.7; }
 
- .showcase-section {
- max-width: 1100px; margin: 4rem auto; padding: 0 2rem; text-align: center;
- }
- .showcase-section h2 { font-size: 2rem; margin-bottom: 0.5rem; color: var(--text); }
- .showcase-section .ig-credit {
- color: var(--gray); margin-bottom: 2rem; font-size: 0.95rem;
- }
- .showcase-section .ig-credit a { color: var(--accent); text-decoration: none; font-weight: 600; }
- .showcase-grid {
- display: grid; grid-template-columns: repeat(3, 1fr);
- gap: 1rem; margin-top: 2rem;
- }
- @media (max-width: 768px) { .showcase-grid { grid-template-columns: repeat(2, 1fr); } }
- @media (max-width: 480px) { .showcase-grid { grid-template-columns: 1fr; } }
- .showcase-card {
- aspect-ratio: 4/5; background: rgba(184,148,106,0.1); border-radius: 12px;
- border: 1px solid rgba(184,148,106,0.2); position: relative; overflow: hidden;
- display: block; text-decoration: none;
- transition: transform 0.3s, box-shadow 0.3s;
- }
- .showcase-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(184,148,106,0.35); }
- .showcase-card img {
- width: 100%; height: 100%; object-fit: cover; display: block;
- }
- .showcase-card .overlay {
- position: absolute; bottom: 0; left: 0; right: 0;
- background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
- padding: 2rem 1rem 1rem; color: #fff;
- }
- .showcase-card .overlay strong { display: block; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
- .showcase-card .overlay span { font-size: 0.78rem; color: rgba(255,255,255,0.8); }
- .showcase-card.placeholder-card {
- grid-column: 1 / -1; aspect-ratio: auto;
- display: flex; align-items: center; justify-content: center; flex-direction: column;
- gap: 0.5rem; color: var(--gray); padding: 2.5rem 1.5rem; text-align: center;
- border: 2px dashed rgba(184,148,106,0.4); background: rgba(184,148,106,0.05);
- margin-top: 0.5rem;
- }
- .showcase-card.placeholder-card strong { color: var(--primary); font-size: 1.25rem; font-weight: 500; font-family: 'DM Serif Display', serif; }
- .showcase-card.placeholder-card small { font-size: 0.9rem; line-height: 1.6; color: var(--gray); }
- .showcase-cta { margin-top: 2rem; }
- .showcase-cta a {
- display: inline-block; padding: 0.8rem 2rem; border-radius: 50px;
- background: linear-gradient(135deg, var(--primary), var(--accent));
- color: #fff; text-decoration: none; font-weight: 700;
- }
-
  .pricing-section {
  max-width: 1100px; margin: 4rem auto; padding: 0 2rem;
  }
@@ -259,24 +212,53 @@
             <span class="reel-caption">Reel 03 · 鼎泰豐</span>
         </div>
     </div>
+    <!-- 點 reel 縮圖 → 開 lightbox 全屏播 + native controls (有聲) -->
     <script>
-    document.querySelectorAll('.lazy-video').forEach(function(el){
-      function play(){
-        var src = el.dataset.src, poster = el.dataset.poster;
-        if (el.querySelector('video')) return;
+    (function(){
+      function openVideoLightbox(src, poster, caption){
+        var lb = document.getElementById('editorialLightbox');
+        if (!lb) return;
+        var img = document.getElementById('lightboxImg');
+        var cap = document.getElementById('lightboxCaption');
+        // 移除舊 video 節點(避免重複)
+        var prev = lb.querySelector('video.lightbox-video');
+        if (prev) prev.remove();
+        if (img) img.style.display = 'none';
         var v = document.createElement('video');
-        v.src = src; v.poster = poster;
-        v.autoplay = true; v.muted = true; v.loop = true;
-        v.playsInline = true; v.controls = false;
+        v.className = 'lightbox-video';
+        v.src = src;
+        v.poster = poster;
+        v.controls = true;
+        v.autoplay = true;
+        v.playsInline = true;
         v.setAttribute('playsinline','');
-        var img = el.querySelector('img'); if (img) img.remove();
-        var play = el.querySelector('.play-icon'); if (play) play.remove();
-        el.insertBefore(v, el.firstChild);
-        v.play().catch(function(){});
+        v.style.cssText = 'max-width:95vw;max-height:90vh;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.5);background:#000;';
+        lb.insertBefore(v, lb.querySelector('.lightbox-close').nextSibling);
+        if (cap) cap.textContent = caption || '';
+        lb.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        // 嘗試非靜音播放,若被 autoplay policy 擋,降級成 muted (用戶仍可點 unmute)
+        v.muted = false;
+        v.play().catch(function(){
+          v.muted = true;
+          v.play().catch(function(){});
+        });
       }
-      el.addEventListener('click', play);
-      el.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault(); play();} });
-    });
+      document.querySelectorAll('.lazy-video').forEach(function(el){
+        function open(){
+          var src = el.dataset.src;
+          var poster = el.dataset.poster;
+          var capEl = el.querySelector('.reel-caption');
+          var caption = capEl ? capEl.textContent.trim() : '';
+          openVideoLightbox(src, poster, caption);
+        }
+        el.addEventListener('click', open);
+        el.addEventListener('keydown', function(e){
+          if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(); }
+        });
+        el.style.cursor = 'pointer';
+      });
+    })();
     </script>
     <p class="reel-meta">由 Higgsfield Veo 工作流生成 · 1080×1920 · 商用永久授權</p>
 </section>
@@ -395,6 +377,54 @@
  </div>
 </section>
 
+<!-- Lightbox overlay -->
+<div class="lightbox" id="editorialLightbox" role="dialog" aria-modal="true" aria-label="圖片放大檢視">
+ <button class="lightbox-close" id="lightboxClose" aria-label="關閉">✕</button>
+ <img id="lightboxImg" src="" alt="">
+ <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+<script>
+(function(){
+  var box = document.getElementById('editorialLightbox');
+  var img = document.getElementById('lightboxImg');
+  var cap = document.getElementById('lightboxCaption');
+  var closeBtn = document.getElementById('lightboxClose');
+  if (!box) return;
+  function open(src, alt, caption){
+    img.src = src; img.alt = alt;
+    cap.textContent = caption || alt || '';
+    box.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    box.classList.remove('show');
+    document.body.style.overflow = '';
+    setTimeout(function(){
+      img.src = '';
+      // 停止 + 移除 video (避免關掉後背景還在播 + 留聲音)
+      var v = box.querySelector('video.lightbox-video');
+      if (v) { v.pause(); v.removeAttribute('src'); v.load(); v.remove(); }
+      img.style.display = '';
+    }, 200);
+  }
+  document.querySelectorAll('.editorial-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      var i = card.querySelector('img');
+      var fc = card.querySelector('figcaption');
+      if (!i) return;
+      var caption = fc ? fc.textContent.replace(/\s+/g,' ').trim() : '';
+      open(i.src, i.alt, caption);
+    });
+    card.style.cursor = 'zoom-in';
+  });
+  closeBtn.addEventListener('click', close);
+  box.addEventListener('click', function(e){ if (e.target === box) close(); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && box.classList.contains('show')) close();
+  });
+})();
+</script>
+
 <style>
 .editorial-series { max-width: 1200px; margin: 4rem auto 3rem; padding: 0 2rem; }
 .editorial-header { text-align: center; margin-bottom: 2.5rem; max-width: 720px; margin-left: auto; margin-right: auto; }
@@ -412,20 +442,57 @@
  color: var(--text-muted); font-size: 1rem; line-height: 1.75;
 }
 .editorial-grid {
- display: grid; grid-template-columns: repeat(4, 1fr);
- gap: 1rem;
+ display: grid; grid-template-columns: repeat(3, 1fr);
+ gap: 1.25rem;
 }
-@media (max-width: 900px) { .editorial-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 640px) { .editorial-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; } }
-@media (max-width: 380px) { .editorial-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .editorial-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } }
+@media (max-width: 480px) { .editorial-grid { grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto; } }
 .editorial-card {
  margin: 0; aspect-ratio: 3/4; overflow: hidden;
  border-radius: 4px; position: relative;
  background: var(--bg-alt); border: 1px solid var(--border);
  transition: transform 0.4s ease, box-shadow 0.4s ease;
+ cursor: zoom-in;
 }
 .editorial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .editorial-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.editorial-card::after {
+ content: '⛶'; position: absolute; top: 0.6rem; right: 0.6rem;
+ background: rgba(255,248,243,0.85); color: var(--text);
+ width: 28px; height: 28px; border-radius: 50%;
+ display: flex; align-items: center; justify-content: center;
+ font-size: 0.8rem; opacity: 0; transition: opacity 0.3s;
+ backdrop-filter: blur(4px);
+}
+.editorial-card:hover::after { opacity: 1; }
+
+/* Lightbox */
+.lightbox {
+ position: fixed; inset: 0; background: rgba(20,15,12,0.94);
+ display: none; align-items: center; justify-content: center;
+ z-index: 9999; padding: 2rem; backdrop-filter: blur(8px);
+ cursor: zoom-out;
+}
+.lightbox.show { display: flex; animation: fadeIn 0.25s ease; }
+.lightbox img { max-width: 95vw; max-height: 90vh; object-fit: contain; border-radius: 4px; box-shadow: 0 8px 40px rgba(0,0,0,0.5); }
+.lightbox-close {
+ position: absolute; top: 1.25rem; right: 1.5rem;
+ background: rgba(255,255,255,0.1); color: #fff;
+ border: 1px solid rgba(255,255,255,0.2);
+ width: 44px; height: 44px; border-radius: 50%;
+ font-size: 1.2rem; cursor: pointer;
+ display: flex; align-items: center; justify-content: center;
+ transition: background 0.2s, transform 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.2); transform: scale(1.05); }
+.lightbox-caption {
+ position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+ background: rgba(0,0,0,0.6); color: #fff; padding: 0.6rem 1.25rem;
+ border-radius: 4px; font-size: 0.88rem; letter-spacing: 0.04em;
+ backdrop-filter: blur(8px); white-space: nowrap; max-width: 90vw;
+ overflow: hidden; text-overflow: ellipsis;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 .editorial-card figcaption {
  position: absolute; bottom: 0; left: 0; right: 0;
  background: linear-gradient(to top, rgba(45,38,32,0.88), transparent);
