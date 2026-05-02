@@ -47,44 +47,44 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
 <style>
         .blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
-        .blog-article h2 { color: var(--primary-light); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
+        .blog-article h2 { color: var(--primary); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
         .blog-article h3 { color: var(--text); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
-        .blog-article p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
-        .blog-article ul, .blog-article ol { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .blog-article p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.2rem; }
+        .blog-article ul, .blog-article ol { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
         .blog-article li { margin-bottom: 0.5rem; }
         .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; text-align: center; }
         .blog-meta span { margin: 0 0.5rem; }
         .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
         .price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .price-table th { color: var(--primary-light); font-weight: 700; background: rgba(184,148,106,0.1); }
-        .price-table td { color: var(--text-secondary); }
+        .price-table th { color: var(--primary); font-weight: 700; background: rgba(184,148,106,0.1); }
+        .price-table td { color: var(--text-muted); }
         .price-table tr:hover td { background: rgba(184,148,106,0.05); }
-        .highlight-box { background: rgba(184,148,106,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; margin: 1.5rem 0; }
+        .highlight-box { background: rgba(184,148,106,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0; margin: 1.5rem 0; }
         .highlight-box p { margin-bottom: 0; color: var(--text); }
         .blog-nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
-        .blog-nav a { color: var(--primary-light); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(184,148,106,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
+        .blog-nav a { color: var(--primary); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(184,148,106,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
         .blog-nav a:hover { background: rgba(184,148,106,0.2); border-color: var(--primary); }
-        .prompt-box { background: rgba(255,248,243,0.8); border: 1px solid rgba(184,148,106,0.4); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; font-family: 'Inter', monospace; }
-        .prompt-box .label { color: var(--primary-light); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+        .prompt-box { background: rgba(255,248,243,0.8); border: 1px solid rgba(184,148,106,0.4); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; font-family: 'Inter', monospace; }
+        .prompt-box .label { color: var(--primary); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
         .prompt-box .bad { color: #ff7675; margin-bottom: 0.5rem; }
         .prompt-box .good { color: #00b894; }
         .prompt-box p { font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem; }
         .tip-number { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: var(--primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; margin-right: 0.5rem; flex-shrink: 0; }
         .tip-header { display: flex; align-items: center; margin: 2.5rem 0 1rem; }
-        .tip-header h2 { margin: 0; color: var(--primary-light); font-size: 1.4rem; }
-        .hero-svg-wrap { margin: 2rem 0; border-radius: 16px; overflow: hidden; }
+        .tip-header h2 { margin: 0; color: var(--primary); font-size: 1.4rem; }
+        .hero-svg-wrap { margin: 2rem 0; border-radius: 4px; overflow: hidden; }
         .faq-section { margin-top: 3rem; }
         .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 1.5rem 0; }
-        .faq-item h3 { color: var(--primary-light); margin: 0 0 0.8rem; font-size: 1.1rem; }
+        .faq-item h3 { color: var(--primary); margin: 0 0 0.8rem; font-size: 1.1rem; }
         .faq-item p { margin-bottom: 0; }
         .cta-section { background: linear-gradient(135deg, rgba(184,148,106,0.2), rgba(184,148,106,0.1)); border: 1px solid rgba(184,148,106,0.3); border-radius: 20px; padding: 2.5rem; text-align: center; margin-top: 3rem; }
         .cta-section h2 { color: var(--text); margin-bottom: 1rem; }
-        .cta-section p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .cta-section p { color: var(--text-muted); margin-bottom: 1.5rem; }
     
 /* Blog optimizer additions */
 
 .reading-time { text-align: center; color: #888; font-size: 0.9rem; margin-bottom: 1.5rem; }
-.toc { background: rgba(184,148,106,0.08); border: 1px solid rgba(184,148,106,0.2); border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 2rem; }
+.toc { background: rgba(184,148,106,0.08); border: 1px solid rgba(184,148,106,0.2); border-radius: 4px; padding: 1rem 1.5rem; margin-bottom: 2rem; }
 .toc summary { cursor: pointer; font-weight: 700; color: #E8D9BD; font-size: 1.1rem; }
 .toc ul { list-style: none; padding-left: 0; margin-top: 0.8rem; }
 .toc li { margin-bottom: 0.5rem; }
@@ -93,7 +93,7 @@
 .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
 .related-articles h2 { text-align: center; margin-bottom: 1.5rem; }
 .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-.related-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.2rem; text-decoration: none; transition: all 0.3s; display: block; }
+.related-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 1.2rem; text-decoration: none; transition: all 0.3s; display: block; }
 .related-card:hover { border-color: rgba(184,148,106,0.5); transform: translateY(-2px); }
 .related-card h3 { color: #e2e8f0; font-size: 1rem; margin: 0 0 0.5rem; }
 .related-card p { color: #94a3b8; font-size: 0.85rem; margin: 0; }
@@ -354,7 +354,7 @@ Why（目的）：提升品牌知名度，帶動線上購買
 <img alt="提供範例給 AI 參考，讓 Prompt 效果更精準" height="450" loading="lazy" src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&amp;q=80" style="width:100%;border-radius:12px;margin:1.5rem 0;" width="800"/>
 <div class="prompt-box">
 <div class="label">Few-shot 範例</div>
-<p style="color:var(--text-secondary);font-size:0.9rem;">「請幫我用同樣的風格，寫一個關於咖啡豆的商品描述。
+<p style="color:var(--text-muted);font-size:0.9rem;">「請幫我用同樣的風格，寫一個關於咖啡豆的商品描述。
 <br/><br/>
 風格範例：
 「這不只是一瓶橄欖油，是義大利奶奶留下的秘密食譜。每一滴都帶著地中海的陽光，讓平凡的料理也有了靈魂。」
@@ -397,21 +397,21 @@ Why（目的）：提升品牌知名度，帶動線上購買
 <h2 id="三個即用-prompt-模板">三個即用 Prompt 模板</h2>
 <h3>模板 A：行銷文案</h3>
 <div class="prompt-box">
-<p style="color:var(--text-secondary);font-size:0.9rem;">「你是一位熟悉台灣市場的資深數位行銷顧問。
+<p style="color:var(--text-muted);font-size:0.9rem;">「你是一位熟悉台灣市場的資深數位行銷顧問。
 <br/><br/>幫我為【你的商品/服務名稱】寫一篇 FB 廣告貼文。目標受眾是【受眾描述，如：台北 30-45 歲職業婦女】，主要解決她們【痛點描述】的問題。
 <br/><br/>請給我 3 個版本：情感型、數據型、故事型，每版不超過 150 字，結尾要有明確 CTA（行動呼籲）。
 <br/><br/>請避免誇大功效的詞語，語氣要像朋友推薦，不要過度商業感。」</p>
 </div>
 <h3>模板 B：客服回覆</h3>
 <div class="prompt-box">
-<p style="color:var(--text-secondary);font-size:0.9rem;">「你是我們品牌的資深客服主任，語氣親切專業，代表公司說話。
+<p style="color:var(--text-muted);font-size:0.9rem;">「你是我們品牌的資深客服主任，語氣親切專業，代表公司說話。
 <br/><br/>客戶留言：【貼上客戶原文】
 <br/><br/>請幫我回覆：先感謝客戶反饋，針對問題說明解決方案，結尾提供後續協助。
 <br/><br/>語氣要誠懇，200 字以內，繁體中文，不要使用『您好，感謝您的支持...』這種罐頭開頭。」</p>
 </div>
 <h3>模板 C：會議摘要</h3>
 <div class="prompt-box">
-<p style="color:var(--text-secondary);font-size:0.9rem;">「你是一位專業的商業文書整理師。
+<p style="color:var(--text-muted);font-size:0.9rem;">「你是一位專業的商業文書整理師。
 <br/><br/>以下是會議記錄逐字稿（或筆記）：
 【貼上原始內容】
 <br/><br/>請整理成：

@@ -43,39 +43,39 @@
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
     <style>
         .blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
-        .blog-article h2 { color: var(--primary-light); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
+        .blog-article h2 { color: var(--primary); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
         .blog-article h3 { color: var(--text); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
-        .blog-article p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
-        .blog-article ul, .blog-article ol { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .blog-article p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.2rem; }
+        .blog-article ul, .blog-article ol { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
         .blog-article li { margin-bottom: 0.5rem; }
         .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; text-align: center; }
         .blog-meta span { margin: 0 0.5rem; }
         .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
         .price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .price-table th { color: var(--primary-light); font-weight: 700; background: rgba(184,148,106,0.1); }
-        .price-table td { color: var(--text-secondary); }
+        .price-table th { color: var(--primary); font-weight: 700; background: rgba(184,148,106,0.1); }
+        .price-table td { color: var(--text-muted); }
         .price-table tr:hover td { background: rgba(184,148,106,0.05); }
-        .highlight-box { background: rgba(184,148,106,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; margin: 1.5rem 0; }
+        .highlight-box { background: rgba(184,148,106,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0; margin: 1.5rem 0; }
         .highlight-box p { margin-bottom: 0; color: var(--text); }
         .blog-nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
-        .blog-nav a { color: var(--primary-light); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(184,148,106,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
+        .blog-nav a { color: var(--primary); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(184,148,106,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
         .blog-nav a:hover { background: rgba(184,148,106,0.2); border-color: var(--primary); }
-        .prompt-box { background: rgba(255,248,243,0.8); border: 1px solid rgba(184,148,106,0.4); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; font-family: 'Inter', monospace; }
-        .prompt-box .label { color: var(--primary-light); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+        .prompt-box { background: rgba(255,248,243,0.8); border: 1px solid rgba(184,148,106,0.4); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; font-family: 'Inter', monospace; }
+        .prompt-box .label { color: var(--primary); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
         .prompt-box .bad { color: #ff7675; margin-bottom: 0.5rem; }
         .prompt-box .good { color: #00b894; }
         .prompt-box p { font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem; }
         .tip-number { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: var(--primary); color: white; border-radius: 50%; font-weight: 700; font-size: 0.9rem; margin-right: 0.5rem; flex-shrink: 0; }
         .tip-header { display: flex; align-items: center; margin: 2.5rem 0 1rem; }
-        .tip-header h2 { margin: 0; color: var(--primary-light); font-size: 1.4rem; }
-        .hero-svg-wrap { margin: 2rem 0; border-radius: 16px; overflow: hidden; }
+        .tip-header h2 { margin: 0; color: var(--primary); font-size: 1.4rem; }
+        .hero-svg-wrap { margin: 2rem 0; border-radius: 4px; overflow: hidden; }
         .faq-section { margin-top: 3rem; }
         .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 1.5rem 0; }
-        .faq-item h3 { color: var(--primary-light); margin: 0 0 0.8rem; font-size: 1.1rem; }
+        .faq-item h3 { color: var(--primary); margin: 0 0 0.8rem; font-size: 1.1rem; }
         .faq-item p { margin-bottom: 0; }
         .cta-section { background: linear-gradient(135deg, rgba(184,148,106,0.2), rgba(184,148,106,0.1)); border: 1px solid rgba(184,148,106,0.3); border-radius: 20px; padding: 2.5rem; text-align: center; margin-top: 3rem; }
         .cta-section h2 { color: var(--text); margin-bottom: 1rem; }
-        .cta-section p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .cta-section p { color: var(--text-muted); margin-bottom: 1.5rem; }
     </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482625906579389" crossorigin="anonymous"></script>
 </head>
@@ -308,7 +308,7 @@ Format: 3 short paragraphs, emoji-friendly, 5 hashtags"</p>
 
     <div class="prompt-box">
         <div class="label">Few-shot example</div>
-        <p style="color:var(--text-secondary);font-size:0.9rem;">"Write a product description for our new specialty coffee in the same style as this example:
+        <p style="color:var(--text-muted);font-size:0.9rem;">"Write a product description for our new specialty coffee in the same style as this example:
 <br><br>
 Example: 'This isn't just olive oil. It's your Italian grandmother's secret, bottled. Every drop carries the warmth of Mediterranean sun — turning ordinary cooking into something with soul.'
 <br><br>
@@ -359,7 +359,7 @@ Now write: Ethiopian Yirgacheffe single-origin coffee beans (100g, citrus-floral
 
     <h3>Template A: Marketing Copy</h3>
     <div class="prompt-box">
-        <p style="color:var(--text-secondary);font-size:0.9rem;">"You are a senior digital marketing copywriter who specializes in direct response copy for small businesses.
+        <p style="color:var(--text-muted);font-size:0.9rem;">"You are a senior digital marketing copywriter who specializes in direct response copy for small businesses.
 <br><br>Write a Facebook ad for [your product/service name]. The target audience is [describe audience — age, interests, location]. Their main pain point is [describe the problem your product solves].
 <br><br>Give me 3 versions: Emotional, Data-driven, and Story-based. Each version should be under 150 words with a clear call-to-action at the end.
 <br><br>Avoid medical or income claims. Write in a conversational tone, as if a trusted friend is recommending this."</p>
@@ -367,7 +367,7 @@ Now write: Ethiopian Yirgacheffe single-origin coffee beans (100g, citrus-floral
 
     <h3>Template B: Customer Service Reply</h3>
     <div class="prompt-box">
-        <p style="color:var(--text-secondary);font-size:0.9rem;">"You are our brand's senior customer success manager — warm, professional, and solution-oriented.
+        <p style="color:var(--text-muted);font-size:0.9rem;">"You are our brand's senior customer success manager — warm, professional, and solution-oriented.
 <br><br>Customer message: [paste customer's original message]
 <br><br>Write a reply that: (1) acknowledges their frustration, (2) clearly explains the solution, (3) ends with next steps and an offer to help further.
 <br><br>Keep it under 200 words, no corporate jargon, no generic opening like 'Dear valued customer.' Sound human."</p>
@@ -375,7 +375,7 @@ Now write: Ethiopian Yirgacheffe single-origin coffee beans (100g, citrus-floral
 
     <h3>Template C: Meeting Summary</h3>
     <div class="prompt-box">
-        <p style="color:var(--text-secondary);font-size:0.9rem;">"You are a professional business writer specializing in clear executive communication.
+        <p style="color:var(--text-muted);font-size:0.9rem;">"You are a professional business writer specializing in clear executive communication.
 <br><br>Here are the raw meeting notes/transcript:
 [paste notes]
 <br><br>Organize this into:
