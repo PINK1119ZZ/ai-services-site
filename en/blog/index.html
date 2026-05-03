@@ -1,349 +1,95 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Blog — AI Automation &amp; Bot Development Knowledge | AutoDev AI</title>
-<meta content="AutoDev AI blog: chatbot development tutorials, AI customer service guides, booking system reviews, small business automation tools." name="description"/>
-<link href="https://autodev-ai.com/en/blog/index.html" rel="canonical"/><link href="https://autodev-ai.com/blog/" hreflang="zh-Hant" rel="alternate"/><link href="https://autodev-ai.com/en/blog/index.html" hreflang="en" rel="alternate"/><link href="https://autodev-ai.com/blog/" hreflang="x-default" rel="alternate"/>
-<link href="https://autodev-ai.com/blog/" hreflang="zh-Hant" rel="alternate"/>
-<link href="https://autodev-ai.com/en/blog/index.html" hreflang="en" rel="alternate"/>
-<link href="https://autodev-ai.com/blog/" hreflang="x-default" rel="alternate"/>
-<meta content="Blog — AI Automation &amp; Bot Development | AutoDev AI" property="og:title"/>
-<meta content="Bot development tutorials, AI customer service guides, booking system reviews, automation tools." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://autodev-ai.com/en/blog/index.html" property="og:url"/>
-<meta content="https://autodev-ai.com/autodev-logo2.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Blog — AI Automation &amp; Bot Development | AutoDev AI" name="twitter:title"/>
-<meta content="Bot development tutorials, AI customer service guides, booking system reviews, automation tools." name="twitter:description"/>
-<meta content="https://autodev-ai.com/autodev-logo2.png" name="twitter:image"/>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
-<meta content="#FFF8F3" name="theme-color"/>
-<meta content="AutoDev AI" name="author"/>
-<meta content="index, follow" name="robots"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Noto+Serif+TC:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="/style.css" rel="stylesheet"/>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — AI Automation, LINE Bot Development | AutoDev AI</title>
+<meta name="description" content="AutoDev AI blog: LINE Bot tutorials, AI customer service guides, automation tools, SMB digital transformation.">
+<link rel="canonical" href="https://autodev-ai.com/en/blog/">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/">
+<link rel="alternate" hreflang="en" href="https://autodev-ai.com/en/blog/">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/">
+<meta property="og:title" content="Blog — AI Automation, LINE Bot Development">
+<meta property="og:description" content="LINE Bot, AI tools, n8n automation — actionable guides for SMBs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autodev-ai.com/en/blog/">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"AutoDev AI Blog","url":"https://autodev-ai.com/en/blog/","description":"AI tools reviews, LINE Bot tutorials, automation case studies","publisher":{"@type":"Organization","name":"AutoDev AI","url":"https://autodev-ai.com"}}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
 <style>
- .blog-grid {
- max-width: 1100px;
- margin: 0 auto;
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
- gap: 1.5rem;
- padding: 0 2rem 4rem;
- }
- .blog-card {
- background: var(--dark-2);
- border: 1px solid rgba(184,148,106,0.2);
- border-radius: 4px;
- padding: 2rem;
- transition: all 0.3s;
- position: relative;
- overflow: hidden;
- display: flex;
- flex-direction: column;
- }
- .blog-card::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- height: 3px;
- background: var(--gradient-1);
- opacity: 0;
- transition: opacity 0.3s;
- }
- .blog-card:hover {
- transform: translateY(-5px);
- box-shadow: var(--shadow-glow);
- border-color: rgba(184,148,106,0.4);
- }
- .blog-card:hover::before { opacity: 1; }
- .blog-card-meta {
- display: flex;
- gap: 1rem;
- font-size: 0.8rem;
- color: var(--gray);
- margin-bottom: 1rem;
- }
- .blog-card h3 {
- font-size: 1.2rem;
- font-weight: 700;
- margin-bottom: 0.75rem;
- line-height: 1.5;
- }
- .blog-card h3 a {
- color: var(--light);
- text-decoration: none;
- transition: color 0.3s;
- }
- .blog-card h3 a:hover { color: var(--primary); }
- .blog-card p {
- color: var(--gray);
- font-size: 0.9rem;
- line-height: 1.7;
- margin-bottom: 1.25rem;
- flex-grow: 1;
- }
- .blog-card-link {
- color: var(--accent);
- font-size: 0.9rem;
- font-weight: 600;
- text-decoration: none;
- transition: color 0.3s;
- }
- .blog-card-link:hover { text-decoration: underline; }
- .blog-card-tags {
- display: flex;
- flex-wrap: wrap;
- gap: 0.5rem;
- margin-bottom: 1rem;
- }
- .blog-card-tag {
- font-size: 0.7rem;
- padding: 0.2rem 0.6rem;
- border-radius: 50px;
- background: rgba(184,148,106,0.1);
- color: var(--primary);
- border: 1px solid rgba(184,148,106,0.2);
- }
- .blog-filter-btn {
- padding: 0.4rem 1rem;
- border-radius: 50px;
- border: 1px solid rgba(184,148,106,0.3);
- background: transparent;
- color: var(--gray);
- font-size: 0.85rem;
- cursor: pointer;
- transition: all 0.3s;
- }
- .blog-filter-btn:hover,
- .blog-filter-btn.active {
- background: var(--primary);
- color: #fff;
- border-color: var(--primary);
- }
- @media (max-width: 768px) {
- .blog-grid { grid-template-columns: 1fr; padding: 0 1rem 3rem; }
- }
-
- /* Unified sticky filter bar (2026-05-02d) — single rule, centered */
- .blog-filters-wrap {
- position: sticky; top: 60px; z-index: 50;
- background: rgba(255,248,243,0.92); backdrop-filter: blur(12px);
- border-bottom: 1px solid rgba(184,148,106,0.15);
- margin-bottom: 1.5rem;
- }
- .blog-filters {
- max-width: 1100px;
- margin: 0 auto;
- padding: 1rem 2rem;
- display: flex;
- flex-wrap: wrap;
- gap: 0.5rem;
- justify-content: center;
- }
- .blog-filter-btn .cnt {
- display: inline-block; margin-left: 0.4rem; padding: 1px 6px; border-radius: 10px;
- background: rgba(184,148,106,0.25); color: #B8946A; font-size: 0.75rem; font-weight: 600;
- }
- .blog-filter-btn.active .cnt { background: rgba(255,255,255,0.25); color: #fff; }
- @media (max-width: 720px) {
- .blog-filters-wrap { top: 56px; }
- .blog-filters { padding: 0.6rem 0.8rem; gap: 0.3rem; }
- .blog-filter-btn { padding: 0.3rem 0.7rem; font-size: 0.85rem; }
- }
- 
- </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482625906579389" crossorigin="anonymous"></script>
+.blog-hero { padding: 7rem 2rem 2rem; text-align: center; background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%); }
+.blog-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 1rem; }
+.blog-hero p { color: var(--text-muted); max-width: 720px; margin: 0 auto; line-height: 1.75; }
+.blog-grid { max-width: 1100px; margin: 3rem auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+.blog-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px; padding: 1.75rem 1.5rem; text-decoration: none; color: var(--text); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+.blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--primary); }
+.blog-card .meta { font-size: 0.8rem; color: var(--text-soft); margin-bottom: 0.6rem; }
+.blog-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.2rem; margin-bottom: 0.6rem; line-height: 1.4; }
+.blog-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; flex: 1; margin-bottom: 1rem; }
+.blog-card .arrow { color: var(--primary); font-weight: 500; font-size: 0.85rem; }
+.blog-card.featured { border-color: var(--primary); background: var(--bg-card); position: relative; }
+.blog-card.featured::before { content: '★ Pillar'; display: inline-block; background: var(--primary); color: var(--white); padding: 0.15rem 0.6rem; border-radius: 50px; font-size: 0.7rem; margin-bottom: 0.5rem; align-self: flex-start; }
+</style>
 </head>
 <body>
-<!-- NAV -->
 <nav class="nav" id="nav">
 <div class="nav-inner">
 <a class="nav-logo" href="/en/">AutoDev AI</a>
 <div class="nav-links" id="navLinks">
 <a href="/en/services.html">Services</a>
-<a href="/bot-cloud.html">Cloud Hosting</a>
-<a href="/tools/">Tools</a>
+<a href="/en/bot-cloud.html">Cloud Hosting</a>
+<a href="/en/ai-model.html">AI Model</a>
+<a href="/en/tools/">Tools</a>
 <a href="/en/pricing.html">Pricing</a>
 <a class="active" href="/en/blog/">Blog</a>
 <a href="/en/about.html">About</a>
-<a class="nav-cta" href="/en/contact.html">Free Quote</a>
+<a class="nav-cta" href="/en/contact.html">Free Consult</a>
 </div>
-<button class="mobile-menu-btn" id="mobileMenuBtn"></button>
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">&#9776;</button>
 </div>
 </nav>
-<!-- PAGE HEADER -->
-<section class="page-header">
-<h1>BLOG</h1>
-<p data-en="Practical Knowledge on AI Automation &amp; LINE Bot Development">Practical Knowledge on AI Automation &amp; LINE Bot Development</p>
+<section class="blog-hero">
+<h1>Blog</h1>
+<p>Actionable guides on LINE Bot, AI automation, and SMB growth — written from real client work.</p>
 </section>
-<!-- BLOG FILTERS & GRID -->
-<div class="blog-filters-wrap">
-<div class="blog-filters" id="blogFilters">
- <button class="blog-filter-btn active" data-filter="all">All <span class="cnt">12</span></button>
- <button class="blog-filter-btn" data-filter="linebot">LINE Bot <span class="cnt">5</span></button>
- <button class="blog-filter-btn" data-filter="automation">n8n & Automation <span class="cnt">3</span></button>
- <button class="blog-filter-btn" data-filter="aitools">AI Tool Reviews <span class="cnt">3</span></button>
- <button class="blog-filter-btn" data-filter="biz">Business <span class="cnt">5</span></button>
-</div>
-</div>
 <div class="blog-grid">
-
-<div class="blog-card fade-in" data-category="tutorial">
-<div class="blog-card-meta"><span>2026-04-10</span><span>10 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">Prompt Engineering</span><span class="blog-card-tag">AI Tips</span></div>
-<h3><a href="/en/blog/how-to-write-ai-prompts.html">How to Write Better AI Prompts: A Complete Beginner's Guide 2026</a></h3>
-<p>Why do some people get perfect answers from ChatGPT while others don't? 5 proven prompt techniques, a 4-part template, and 3 copy-paste prompts you can use today.</p>
-<a class="blog-card-link" href="/en/blog/how-to-write-ai-prompts.html">Read More &rarr;</a>
+<a href="/en/blog/line-bot-complete-guide-2026.html" class="blog-card featured"><div class="meta">📅 2026-05-03 · 18 min read</div><h3>LINE Bot Complete Guide 2026 — From Zero to Launch</h3><p>4 types, costs, booking systems, AI customer service, common mistakes. Pillar guide linking 5 deep tutorials.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/n8n-automation-tutorial-2026.html" class="blog-card"><div class="meta">📅 2026-05-03 · 8 min read</div><h3>n8n Workflow Automation Tutorial 2026</h3><p>8 real workflows, Make/Zapier comparison, monthly cost breakdown for SMBs.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/n8n-hitl-tutorial-2026.html" class="blog-card"><div class="meta">📅 2026-05-03 · 6 min read</div><h3>n8n Human-in-the-Loop Tutorial</h3><p>Add human approval to AI workflows. Reduce errors by 80%, build trust over time.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/ai-chatbot-for-business.html" class="blog-card"><div class="meta">📅 2026-04 · 10 min read</div><h3>AI Chatbot for Business — Platform Selection</h3><p>LINE / Telegram / Discord / Web Chat — which platform fits your business model?</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/ai-customer-service-line.html" class="blog-card"><div class="meta">📅 2026-04 · 12 min read</div><h3>LINE AI Customer Service Implementation</h3><p>GPT/Claude integration with LINE Bot, prompt design, knowledge base, cost control.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/ai-tools-comparison-2026.html" class="blog-card"><div class="meta">📅 2026-05-02 · 15 min read</div><h3>2026 AI Tools Complete Comparison</h3><p>50+ tools reviewed: ChatGPT, Claude, Gemini, Midjourney, n8n, and more. Pricing, use cases.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/chatgpt-claude-gemini-comparison.html" class="blog-card"><div class="meta">📅 2026-04 · 10 min read</div><h3>ChatGPT vs Claude vs Gemini 2026</h3><p>Three top LLMs compared by use case, pricing, capability. Which to subscribe?</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/cloudways-review-2026.html" class="blog-card"><div class="meta">📅 2026-05-03 · 7 min read</div><h3>Cloudways Review 2026 — Managed VPS</h3><p>Managed cloud hosting for non-DevOps. Pricing, who should use it.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/hostinger-vps-review-2026.html" class="blog-card"><div class="meta">📅 2026-05-03 · 6 min read</div><h3>Hostinger VPS Review 2026</h3><p>Cheap KVM VPS for beginners. Pros, cons, vs DigitalOcean/Hetzner.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/hahow-ai-courses-2026.html" class="blog-card"><div class="meta">📅 2026-05-03 · 5 min read</div><h3>Best AI Courses on Hahow 2026</h3><p>Top AI courses on Taiwan's largest learning platform. Which are worth paying for?</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/systeme-io-review-2026.html" class="blog-card"><div class="meta">📅 2026-05-03 · 6 min read</div><h3>Systeme.io Review 2026</h3><p>Free all-in-one marketing platform. Free plan limits, vs ClickFunnels/Kajabi.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/best-geo-tools-comparison-2026.html" class="blog-card"><div class="meta">📅 2026-05-03 · 6 min read</div><h3>Best GEO Tools 2026</h3><p>Profound, Otterly, AthenaHQ. Get your brand into AI engine answers.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/geo-generative-engine-optimization-taiwan-2026.html" class="blog-card"><div class="meta">📅 2026-05-03 · 8 min read</div><h3>GEO Strategy 2026 — AI Engine Recommendation</h3><p>How to make ChatGPT, Perplexity, Claude recommend your brand. Tactical checklist.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/deerflow-vs-dify-vs-n8n-2026.html" class="blog-card"><div class="meta">📅 2026-05-03 · 7 min read</div><h3>DeerFlow vs Dify vs n8n 2026</h3><p>Three AI workflow platforms compared. Which fits your use case?</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/how-to-write-ai-prompts.html" class="blog-card"><div class="meta">📅 2026-04 · 8 min read</div><h3>How to Write Effective AI Prompts</h3><p>Practical prompt engineering for SMB owners. 5 templates you can copy.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/line-auto-reply-setup.html" class="blog-card"><div class="meta">📅 2026-04 · 5 min read</div><h3>LINE Auto-Reply Setup — 5-min No-Code</h3><p>Setup keyword auto-reply in LINE OA without writing any code. Step-by-step.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/line-bot-booking-system.html" class="blog-card"><div class="meta">📅 2026-04 · 12 min read</div><h3>LINE Booking System Implementation</h3><p>LIFF form, scheduler, reminders, Google Calendar sync. Real client case.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/line-bot-cost.html" class="blog-card"><div class="meta">📅 2026-04 · 10 min read</div><h3>LINE Bot Real Cost Breakdown</h3><p>$1k, $3k, $5k bots — what you actually get at each tier. API/host/maintenance.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/line-bot-tutorial-2026.html" class="blog-card"><div class="meta">📅 2026-04 · 15 min read</div><h3>LINE Bot Tutorial 2026 — Zero to Launch</h3><p>Register, build, deploy your first bot. Screenshots and code examples.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/small-business-automation.html" class="blog-card"><div class="meta">📅 2026-04 · 8 min read</div><h3>Small Business Automation Practical</h3><p>Real workflows that save 10+ hours/week. Email, scheduling, reporting.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/telegram-bot-business-guide.html" class="blog-card"><div class="meta">📅 2026-04 · 10 min read</div><h3>Telegram Bot Business Guide</h3><p>When to use Telegram over LINE. Notification bots, group monitoring, bots-as-products.</p><span class="arrow">Read →</span></a>
+<a href="/en/blog/workflow-automation-small-business.html" class="blog-card"><div class="meta">📅 2026-04 · 8 min read</div><h3>SMB Workflow Automation</h3><p>From spreadsheets to automated pipelines. Concrete examples for restaurants, salons, agencies.</p><span class="arrow">Read →</span></a>
 </div>
-
-<div class="blog-card fade-in" data-category="aitools">
-<div class="blog-card-meta"><span>2026-04-08</span><span>8 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">AI Comparison</span><span class="blog-card-tag">ChatGPT vs Claude</span></div>
-<h3><a href="/en/blog/chatgpt-claude-gemini-comparison.html">ChatGPT vs Claude vs Gemini: Complete 2026 Comparison for Regular Users</a></h3>
-<p>Which AI should you use in 2026? Deep comparison of ChatGPT, Claude, and Gemini — writing, coding, real-time search, free vs paid, and who each AI is best for.</p>
-<a class="blog-card-link" href="/en/blog/chatgpt-claude-gemini-comparison.html">Read More &rarr;</a>
-</div>
-
-<div class="blog-card fade-in" data-category="aitools">
-<div class="blog-card-meta"><span>2026-04-07</span><span>8 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">AI Tools</span><span class="blog-card-tag">Free vs Paid</span></div>
-<h3><a href="/en/blog/ai-tools-comparison-2026.html">AI Tools Comparison 2026: Free vs Paid Guide</a></h3>
-<p>ChatGPT, Claude, Gemini, Midjourney — is the free version enough? Full comparison table, decision tree, and role-based recommendations.</p>
-<a class="blog-card-link" href="/en/blog/ai-tools-comparison-2026.html">Read More &rarr;</a>
-</div>
-
-<div class="blog-card fade-in" data-category="automation biz">
-<div class="blog-card-meta"><span>2026-04-05</span><span>6 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">Automation</span><span class="blog-card-tag">SMB</span></div>
-<h3><a href="/en/blog/small-business-automation.html">Small Businesses Can Automate Too! 5 AI Tools to Save Time &amp; Cut Costs</a></h3>
-<p>You don't need a big budget for digital transformation! From LINE auto-reply to AI reports, 5 practical automation tools that save small businesses 40+ hours per month.</p>
-<a class="blog-card-link" href="/en/blog/small-business-automation.html">Read More →</a>
-</div>
-
-<div class="blog-card fade-in" data-category="linebot tutorial">
-<div class="blog-card-meta"><span>2026-04-03</span><span>8 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">LINE OA</span><span class="blog-card-tag">Auto-Reply</span></div>
-<h3><a href="/en/blog/line-auto-reply-setup.html">LINE Official Account Auto-Reply Setup: Complete Guide (2026)</a></h3>
-<p>How to set up LINE OA auto-replies: keyword responses, welcome messages, after-hours auto-replies, plus when to upgrade to a LINE Bot.</p>
-<a class="blog-card-link" href="/en/blog/line-auto-reply-setup.html">Read More →</a>
-</div>
-
-<div class="blog-card fade-in" data-category="linebot tutorial">
-<div class="blog-card-meta"><span>2026-04-02</span><span>10 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">LINE Bot Tutorial</span><span class="blog-card-tag">Development</span></div>
-<h3><a href="/en/blog/line-bot-tutorial-2026.html">LINE Bot Development Tutorial: Complete Guide from Zero to Launch (2026)</a></h3>
-<p>Want to build your own LINE bot? From LINE Developer setup and Messaging API to common features — a complete tutorial to help you decide between DIY and outsourcing.</p>
-<a class="blog-card-link" href="/en/blog/line-bot-tutorial-2026.html">Read More →</a>
-</div>
-
-<div class="blog-card fade-in" data-category="linebot ai">
-<div class="blog-card-meta"><span>2026-03-30</span><span>8 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">AI Customer Service</span><span class="blog-card-tag">Smart CS</span></div>
-<h3><a href="/en/blog/ai-customer-service-line.html">What Is AI Customer Service? Complete LINE Bot Smart CS Guide (2026)</a></h3>
-<p>Replace repetitive CS work with AI: GPT/Claude-powered LINE smart customer service, available 24/7. Complete guide with implementation steps and cost analysis.</p>
-<a class="blog-card-link" href="/en/blog/ai-customer-service-line.html">Read More →</a>
-</div>
-
-<div class="blog-card fade-in" data-category="aitools biz">
-<div class="blog-card-meta"><span>2026-03-28</span><span>8 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">AI Chatbot</span><span class="blog-card-tag">Business</span></div>
-<h3><a href="/en/blog/ai-chatbot-for-business.html">AI Chatbots for Business: Complete Guide to Boost Sales &amp; Cut Costs (2026)</a></h3>
-<p>How AI chatbots help businesses automate customer service, boost conversions, and reduce costs. Platform comparison, pricing, and implementation guide.</p>
-<a class="blog-card-link" href="/en/blog/ai-chatbot-for-business.html">Read More →</a>
-</div>
-
-<div class="blog-card fade-in" data-category="linebot biz">
-<div class="blog-card-meta"><span>2026-03-25</span><span>7 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">LINE Booking</span><span class="blog-card-tag">Beauty Salon</span></div>
-<h3><a href="/en/blog/line-bot-booking-system.html">LINE Booking System: Auto-Scheduling for Salons, Clinics &amp; Restaurants</a></h3>
-<p>Still taking bookings by phone? A LINE booking bot handles reservations 24/7, reduces no-shows, and boosts return visits. Full feature comparison and industry analysis.</p>
-<a class="blog-card-link" href="/en/blog/line-bot-booking-system.html">Read More →</a>
-</div>
-
-<div class="blog-card fade-in" data-category="automation biz">
-<div class="blog-card-meta"><span>2026-03-22</span><span>7 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">Telegram Bot</span><span class="blog-card-tag">Business</span></div>
-<h3><a href="/en/blog/telegram-bot-business-guide.html">Telegram Bot for Business: Automation &amp; Customer Engagement Guide</a></h3>
-<p>How to use Telegram bots for business automation: customer service, notifications, order management. Free API, no message limits, full setup guide.</p>
-<a class="blog-card-link" href="/en/blog/telegram-bot-business-guide.html">Read More →</a>
-</div>
-
-<div class="blog-card fade-in" data-category="linebot">
-<div class="blog-card-meta"><span>2026-03-20</span><span>5 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">LINE Bot</span><span class="blog-card-tag">Pricing</span></div>
-<h3><a href="/en/blog/line-bot-cost.html">How Much Does LINE Bot Development Cost? 2026 Pricing &amp; Comparison</a></h3>
-<p>Complete LINE bot pricing breakdown: basic auto-reply from $250, AI smart CS from $400. Includes feature comparison table, money-saving tips, and common pitfalls.</p>
-<a class="blog-card-link" href="/en/blog/line-bot-cost.html">Read More →</a>
-</div>
-
-<div class="blog-card fade-in" data-category="automation biz">
-<div class="blog-card-meta"><span>2026-03-15</span><span>8 min read</span></div>
-<div class="blog-card-tags"><span class="blog-card-tag">Automation</span><span class="blog-card-tag">Workflow</span></div>
-<h3><a href="/en/blog/workflow-automation-small-business.html">Workflow Automation for Small Business: Save 20+ Hours/Week (2026)</a></h3>
-<p>Practical workflow automation tools and strategies for small businesses. No-code solutions, ROI calculator, and step-by-step implementation guide.</p>
-<a class="blog-card-link" href="/en/blog/workflow-automation-small-business.html">Read More →</a>
-</div>
-
-</div>
-<!-- CTA -->
-<section class="cta-section">
-<div class="cta-box fade-in">
-<h2 data-en="Have an idea to discuss? Free 30-min consultation">Have an idea to discuss? Free 30-min consultation</h2>
-<p data-en="Whether it's LINE Bot, AI customer service, or automation — let's chat.">Whether it's LINE Bot, AI customer service, or automation — let's chat.</p>
-<div class="cta-buttons">
-<a class="btn btn-primary" data-en="Free Consultation →" href="https://liff.line.me/2009694545-LJmZCiEX" target="_blank">Free Consultation →</a>
-<a class="btn btn-secondary" data-en="View Services" href="/en/services.html">View Services</a>
-</div>
-</div>
-</section>
-<!-- FOOTER -->
-<footer>
-<p>© 2026 AutoDev AI. Built with AI.</p>
-<p style="margin-top:0.5rem; font-size:0.85rem;">姊妹站：<a href="https://pink1119zz.github.io/ai-tools-tw/" rel="noopener" target="_blank" style="color:#B8946A;">AI Tools TW</a>（繁中工具評測） · <a href="https://pink1119zz.github.io/ai-tools-en/" rel="noopener" target="_blank" style="color:#B8946A;">AI Tools EN</a>（English Reviews）</p>
-<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/en/privacy.html">Privacy</a>· <a href="/en/terms.html">Terms</a>· <a href="/en/disclaimer.html">Disclaimer</a></p>
+<footer style="padding:3rem 2rem 2rem;text-align:center;color:var(--text-muted);font-size:0.85rem;border-top:1px solid var(--border);background:var(--bg);">
+<p>© 2026 AutoDev AI · <a href="/en/about.html" style="color:var(--primary);">About</a> · <a href="/en/contact.html" style="color:var(--primary);">Contact</a> · <a href="/blog/" style="color:var(--primary);">繁中版</a></p>
 </footer>
-<script defer="" src="/chat-widget.js?v=20260502e"></script>
-<script defer="" src="/lang.js"></script>
-<script>
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () =>{ nav.classList.toggle('scrolled', window.scrollY >50); });
-const fadeEls = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver((entries) =>{
- entries.forEach(entry =>{ if (entry.isIntersecting) entry.target.classList.add('visible'); });
-}, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
-fadeEls.forEach(el =>observer.observe(el));
-setTimeout(() =>{ fadeEls.forEach(el =>{ const rect = el.getBoundingClientRect(); if (rect.top < window.innerHeight + 100) el.classList.add('visible'); }); }, 150);
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.getElementById('navLinks');
-mobileMenuBtn.addEventListener('click', () =>{ navLinks.classList.toggle('show'); mobileMenuBtn.textContent = navLinks.classList.contains('show') ? '\u2715' : '\u2630'; });
-navLinks.querySelectorAll('a').forEach(link =>{ link.addEventListener('click', () =>{ navLinks.classList.remove('show'); mobileMenuBtn.textContent = '\u2630'; }); });
-
-// Blog category filter
-document.querySelectorAll('.blog-filter-btn').forEach(btn =>{
- btn.addEventListener('click', () =>{
- document.querySelector('.blog-filter-btn.active').classList.remove('active');
- btn.classList.add('active');
- const filter = btn.dataset.filter;
- document.querySelectorAll('.blog-card').forEach(card =>{
- if (filter === 'all' || card.dataset.category.split(' ').includes(filter)) {
- card.style.display = '';
- } else {
- card.style.display = 'none';
- }
- });
- });
-});
-</script>
+<script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;var H='☰',X='✕';function set(o){l.classList.toggle('show',o);b.innerHTML=o?X:H;}b.addEventListener('click',function(e){e.stopPropagation();set(!l.classList.contains('show'));});document.addEventListener('click',function(e){if(l.classList.contains('show')&&!l.contains(e.target)&&!b.contains(e.target))set(false);});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
+<script defer src="/lang.js"></script>
 </body>
 </html>

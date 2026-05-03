@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude / GPT / Gemini Token Cost Calculator 2026</title>
+<meta name="description" content="Compare Claude, GPT-4, Gemini API costs by your monthly usage. Per-1k-token pricing with monthly bill estimates. Free, no signup.">
+<link rel="canonical" href="https://autodev-ai.com/en/tools/token-cost-calculator.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/tools/token-cost-calculator.html">
+<link rel="alternate" hreflang="en" href="https://autodev-ai.com/en/tools/token-cost-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/tools/token-cost-calculator.html">
+<meta property="og:title" content="AI Token Cost Calculator — Claude / GPT / Gemini">
+<meta property="og:description" content="Estimate your monthly AI API bill in seconds.">
+<meta property="og:url" content="https://autodev-ai.com/en/tools/token-cost-calculator.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AI Token Cost Calculator","applicationCategory":"DeveloperApplication","operatingSystem":"Web","url":"https://autodev-ai.com/en/tools/token-cost-calculator.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+
+<style>
+.calc-hero { padding: 7rem 2rem 2rem; text-align: center; background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%); }
+.calc-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.85rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+.calc-hero p { color: var(--text-muted); max-width: 720px; margin: 0 auto; line-height: 1.75; }
+.calc-wrap { max-width: 1000px; margin: 2rem auto 4rem; padding: 0 2rem; }
+.calc-input { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px; padding: 2rem 1.75rem; margin-bottom: 1.5rem; }
+.calc-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.6rem 0; }
+.calc-row label { color: var(--text); font-size: 0.95rem; flex: 1; }
+.calc-row input, .calc-row select { font-size: 16px; padding: 0.55rem 0.8rem; border: 1px solid var(--border); border-radius: 4px; background: var(--white); min-width: 180px; }
+.results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.result-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1.25rem; }
+.result-card h4 { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 0.6rem; }
+.result-card .price { font-family: 'DM Serif Display', serif; font-size: 1.7rem; color: var(--primary); margin: 0.4rem 0; }
+.result-card .breakdown { font-size: 0.78rem; color: var(--text-soft); }
+.result-card.cheapest { border-color: var(--primary); background: linear-gradient(135deg, var(--bg-card), rgba(184,148,106,0.08)); }
+.result-card.cheapest::before { content: '🏆 Cheapest'; display: inline-block; background: var(--primary); color: var(--white); padding: 0.15rem 0.6rem; border-radius: 50px; font-size: 0.7rem; margin-bottom: 0.5rem; }
+.calc-cta { margin-top: 2rem; text-align: center; }
+.calc-cta a { display: inline-block; background: var(--primary); color: var(--white); padding: 0.95rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 500; }
+@media (max-width: 600px) { .calc-row { flex-direction: column; align-items: stretch; } .calc-row input, .calc-row select { width: 100%; min-width: 0; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="/en/">AutoDev AI</a>
+<div class="nav-links" id="navLinks">
+<a href="/en/services.html">Services</a>
+<a href="/en/bot-cloud.html">Cloud Hosting</a>
+<a href="/en/ai-model.html">AI Model</a>
+<a class="active" href="/en/tools/">Tools</a>
+<a href="/en/pricing.html">Pricing</a>
+<a href="/en/blog/">Blog</a>
+<a href="/en/about.html">About</a>
+<a class="nav-cta" href="/en/contact.html">Free Consult</a>
+</div>
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">&#9776;</button>
+</div>
+</nav>
+
+<section class="calc-hero">
+ <h1>AI Token Cost Calculator</h1>
+ <p>Compare Claude, GPT-4, Gemini API costs based on your monthly usage. Updated 2026 pricing.</p>
+</section>
+
+<div class="calc-wrap">
+<div class="calc-input">
+ <h3 style="font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:1rem;">Your Monthly Usage</h3>
+ <div class="calc-row">
+  <label>Input tokens (questions/prompts)</label>
+  <input type="number" id="inputTokens" value="500000" step="100000">
+ </div>
+ <div class="calc-row">
+  <label>Output tokens (AI replies)</label>
+  <input type="number" id="outputTokens" value="200000" step="50000">
+ </div>
+ <div class="calc-row">
+  <label>Use case</label>
+  <select id="useCase">
+   <option value="chat">Chat / FAQ Bot</option>
+   <option value="content">Content generation</option>
+   <option value="code">Code assistant</option>
+   <option value="rag">RAG / knowledge base</option>
+  </select>
+ </div>
+</div>
+
+<div class="results-grid" id="resultsGrid">
+ <!-- Filled by JS -->
+</div>
+
+<div class="calc-cta">
+ <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:1rem;">Need help choosing the right model + integration?</p>
+ <a href="/en/contact.html?ref=token-calculator" onclick="gtag('event','click',{event_category:'tool_cta',event_label:'token_calc_consult_en'})">Free 30-Min Consult →</a>
+</div>
+
+</div>
+
+<footer style="padding:3rem 2rem 2rem;text-align:center;color:var(--text-muted);font-size:0.85rem;border-top:1px solid var(--border);background:var(--bg);">
+ <p>© 2026 AutoDev AI · <a href="/en/tools/" style="color:var(--primary);">More Tools</a> · <a href="/tools/token-cost-calculator.html" style="color:var(--primary);">繁中版</a></p>
+</footer>
+
+<script>
+// 2026 model pricing (USD per 1M tokens)
+var models = [
+ { name: 'Claude 3.5 Sonnet', inputRate: 3.0, outputRate: 15.0 },
+ { name: 'Claude 3.5 Haiku', inputRate: 0.8, outputRate: 4.0 },
+ { name: 'GPT-4o', inputRate: 2.5, outputRate: 10.0 },
+ { name: 'GPT-4o mini', inputRate: 0.15, outputRate: 0.6 },
+ { name: 'Gemini 1.5 Pro', inputRate: 1.25, outputRate: 5.0 },
+ { name: 'Gemini 1.5 Flash', inputRate: 0.075, outputRate: 0.3 }
+];
+
+function calc(){
+ var inT = parseFloat(document.getElementById('inputTokens').value) || 0;
+ var outT = parseFloat(document.getElementById('outputTokens').value) || 0;
+ var grid = document.getElementById('resultsGrid');
+ var costs = models.map(function(m){
+  var c = (inT / 1000000) * m.inputRate + (outT / 1000000) * m.outputRate;
+  return { ...m, cost: c };
+ });
+ costs.sort(function(a,b){ return a.cost - b.cost; });
+ grid.innerHTML = costs.map(function(m, i){
+  var cls = i === 0 ? 'cheapest' : '';
+  return '<div class="result-card ' + cls + '">' +
+   '<h4>' + m.name + '</h4>' +
+   '<div class="price">$' + m.cost.toFixed(2) + '<small style="font-size:0.7em;color:var(--text-soft);">/mo</small></div>' +
+   '<div class="breakdown">In: $' + m.inputRate.toFixed(2) + '/M · Out: $' + m.outputRate.toFixed(2) + '/M</div>' +
+   '</div>';
+ }).join('');
+}
+document.querySelectorAll('input, select').forEach(function(el){ el.addEventListener('input', calc); el.addEventListener('change', calc); });
+calc();
+</script>
+
+<script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;var H='☰',X='✕';function set(o){l.classList.toggle('show',o);b.innerHTML=o?X:H;}b.addEventListener('click',function(e){e.stopPropagation();set(!l.classList.contains('show'));});document.addEventListener('click',function(e){if(l.classList.contains('show')&&!l.contains(e.target)&&!b.contains(e.target))set(false);});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
+<script defer src="/lang.js"></script>
+</body>
+</html>

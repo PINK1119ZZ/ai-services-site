@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LINE Bot Cost Calculator 2026 | Free Estimator</title>
+<meta name="description" content="Estimate your LINE Bot development cost: dev fee + monthly hosting + AI API + maintenance. Free, instant, no signup.">
+<link rel="canonical" href="https://autodev-ai.com/en/tools/line-bot-calculator.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/tools/line-bot-calculator.html">
+<link rel="alternate" hreflang="en" href="https://autodev-ai.com/en/tools/line-bot-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/tools/line-bot-calculator.html">
+<meta property="og:title" content="LINE Bot Cost Calculator 2026">
+<meta property="og:description" content="Free instant estimator for LINE Bot dev + hosting + AI API costs.">
+<meta property="og:url" content="https://autodev-ai.com/en/tools/line-bot-calculator.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LINE Bot Cost Calculator","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://autodev-ai.com/en/tools/line-bot-calculator.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+
+<style>
+.calc-hero { padding: 7rem 2rem 2rem; text-align: center; background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%); }
+.calc-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.85rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+.calc-hero p { color: var(--text-muted); max-width: 720px; margin: 0 auto; line-height: 1.75; }
+.calc-wrap { max-width: 820px; margin: 2rem auto 4rem; padding: 0 2rem; }
+.calc-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px; padding: 2rem 1.75rem; }
+.calc-section { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+.calc-section:last-child { border-bottom: none; margin-bottom: 0; }
+.calc-section h3 { font-family: 'DM Serif Display', serif; font-size: 1.2rem; margin-bottom: 1rem; }
+.calc-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.6rem 0; }
+.calc-row label { color: var(--text); font-size: 0.95rem; flex: 1; }
+.calc-row select, .calc-row input { font-size: 16px; padding: 0.55rem 0.8rem; border: 1px solid var(--border); border-radius: 4px; background: var(--white); min-width: 180px; }
+.calc-result { background: var(--bg-card); border-radius: 4px; padding: 1.5rem; margin-top: 1.5rem; }
+.calc-result h4 { font-family: 'DM Serif Display', serif; font-size: 1.1rem; margin-bottom: 1rem; color: var(--primary-dark); }
+.calc-result-row { display: flex; justify-content: space-between; padding: 0.45rem 0; font-size: 0.95rem; }
+.calc-result-row.total { padding-top: 0.85rem; margin-top: 0.5rem; border-top: 2px solid var(--primary); font-weight: 600; font-size: 1.1rem; color: var(--primary); font-family: 'DM Serif Display', serif; }
+.calc-cta { margin-top: 2rem; text-align: center; }
+.calc-cta a { display: inline-block; background: var(--primary); color: var(--white); padding: 0.95rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 500; }
+@media (max-width: 600px) { .calc-row { flex-direction: column; align-items: stretch; } .calc-row select, .calc-row input { width: 100%; min-width: 0; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="/en/">AutoDev AI</a>
+<div class="nav-links" id="navLinks">
+<a href="/en/services.html">Services</a>
+<a href="/en/bot-cloud.html">Cloud Hosting</a>
+<a href="/en/ai-model.html">AI Model</a>
+<a class="active" href="/en/tools/">Tools</a>
+<a href="/en/pricing.html">Pricing</a>
+<a href="/en/blog/">Blog</a>
+<a href="/en/about.html">About</a>
+<a class="nav-cta" href="/en/contact.html">Free Consult</a>
+</div>
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">&#9776;</button>
+</div>
+</nav>
+
+<section class="calc-hero">
+ <h1>LINE Bot Cost Calculator</h1>
+ <p>Pick your scope, get a realistic budget. Numbers based on Taiwan market rates and our project history.</p>
+</section>
+
+<div class="calc-wrap">
+<div class="calc-card">
+
+<div class="calc-section">
+<h3>Bot Scope</h3>
+<div class="calc-row">
+ <label>Bot type</label>
+ <select id="botType">
+  <option value="basic" data-cost="400">Basic auto-reply (keyword/menu)</option>
+  <option value="booking" data-cost="800">Booking system (LIFF form)</option>
+  <option value="ai" data-cost="800">AI customer service (GPT/Claude)</option>
+  <option value="full" data-cost="1600">Multi-module integration</option>
+ </select>
+</div>
+<div class="calc-row">
+ <label>Integrations</label>
+ <select id="integrations">
+  <option value="0">None</option>
+  <option value="200">Google Sheets / Calendar</option>
+  <option value="400">CRM (HubSpot / Salesforce)</option>
+  <option value="600">Payment gateway</option>
+  <option value="800">All of the above</option>
+ </select>
+</div>
+</div>
+
+<div class="calc-section">
+<h3>Monthly Volume</h3>
+<div class="calc-row">
+ <label>Active users / month</label>
+ <select id="users">
+  <option value="50">Under 100</option>
+  <option value="95" selected>100 - 1,000</option>
+  <option value="150">1,000 - 5,000</option>
+  <option value="280">5,000+</option>
+ </select>
+</div>
+<div class="calc-row">
+ <label>AI API usage</label>
+ <select id="aiUsage">
+  <option value="0">None (no AI)</option>
+  <option value="30">Light (basic FAQ Bot)</option>
+  <option value="80">Medium (active chat)</option>
+  <option value="200">Heavy (knowledge base)</option>
+ </select>
+</div>
+</div>
+
+<div class="calc-section">
+<h3>Maintenance</h3>
+<div class="calc-row">
+ <label>Maintenance level</label>
+ <select id="maint">
+  <option value="0">Self-managed</option>
+  <option value="80">Light (monitoring + bugfix)</option>
+  <option value="200">Active (feature additions)</option>
+ </select>
+</div>
+</div>
+
+<div class="calc-result">
+ <h4>Estimated Cost</h4>
+ <div class="calc-result-row"><span>Development (one-time)</span><span id="devCost">$400</span></div>
+ <div class="calc-result-row"><span>Monthly hosting</span><span id="hostCost">$95</span></div>
+ <div class="calc-result-row"><span>Monthly AI API</span><span id="aiCost">$0</span></div>
+ <div class="calc-result-row"><span>Monthly maintenance</span><span id="maintCost">$0</span></div>
+ <div class="calc-result-row total"><span>Total monthly</span><span id="totalMonthly">$95</span></div>
+ <div class="calc-result-row total" style="margin-top:0.85rem;border-top-color:var(--accent);"><span>One-time + first 12 months</span><span id="total12">$1,540</span></div>
+</div>
+
+<div class="calc-cta">
+ <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:1rem;">Want a precise quote with your custom requirements?</p>
+ <a href="/en/contact.html?ref=line-calculator" onclick="gtag('event','click',{event_category:'tool_cta',event_label:'line_calc_consult_en'})">Free 30-Min Consult →</a>
+</div>
+
+</div>
+</div>
+
+<footer style="padding:3rem 2rem 2rem;text-align:center;color:var(--text-muted);font-size:0.85rem;border-top:1px solid var(--border);background:var(--bg);">
+ <p>© 2026 AutoDev AI · <a href="/en/tools/" style="color:var(--primary);">More Tools</a> · <a href="/tools/line-bot-calculator.html" style="color:var(--primary);">繁中版</a></p>
+</footer>
+
+<script>
+function calc(){
+ var bot = document.getElementById('botType');
+ var dev = parseFloat(bot.options[bot.selectedIndex].dataset.cost);
+ var integ = parseFloat(document.getElementById('integrations').value);
+ var users = parseFloat(document.getElementById('users').value);
+ var ai = parseFloat(document.getElementById('aiUsage').value);
+ var maint = parseFloat(document.getElementById('maint').value);
+ var devTotal = dev + integ;
+ document.getElementById('devCost').textContent = '$' + devTotal.toLocaleString();
+ document.getElementById('hostCost').textContent = '$' + users.toLocaleString();
+ document.getElementById('aiCost').textContent = '$' + ai.toLocaleString();
+ document.getElementById('maintCost').textContent = '$' + maint.toLocaleString();
+ var monthly = users + ai + maint;
+ document.getElementById('totalMonthly').textContent = '$' + monthly.toLocaleString();
+ var total12 = devTotal + monthly * 12;
+ document.getElementById('total12').textContent = '$' + total12.toLocaleString();
+}
+document.querySelectorAll('select').forEach(function(s){ s.addEventListener('change', calc); });
+calc();
+</script>
+
+<script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;var H='☰',X='✕';function set(o){l.classList.toggle('show',o);b.innerHTML=o?X:H;}b.addEventListener('click',function(e){e.stopPropagation();set(!l.classList.contains('show'));});document.addEventListener('click',function(e){if(l.classList.contains('show')&&!l.contains(e.target)&&!b.contains(e.target))set(false);});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
+<script defer src="/lang.js"></script>
+</body>
+</html>

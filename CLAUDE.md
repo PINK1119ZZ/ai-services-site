@@ -204,6 +204,56 @@ strategist 寫指令給其他 agent，收到的 agent 必須優先執行。
 - 不註冊帳號
 - 不刪現有資產
 - 價格對齊 pricing.html（NT$8,000 / NT$15,000 / NT$30,000）
+- **絕不做半套** — 看下面「不做半套」鐵律
+
+---
+
+## 🚨 不做半套 (硬性規定 · 2026-05-03 教訓)
+
+**用戶反饋**: 「不要做事情都做半套 記進去 MD 裡」
+
+### 已踩過的半套坑
+1. **新建 /en/ai-model.html 但沒同步補其他 EN 頁面**
+   - 結果: sitemap 跟 zh 頁的 hreflang="en" 指向 14 個不存在的 EN 頁 → 全部 404
+   - 影響: Google 爬到死連結懲罰權重 + 用戶點 EN 切換到 404
+
+2. **加了動態注入 EN 切換按鈕的 lang.js, 但又寫死 <a href="/en/">EN</a>**
+   - 結果: 雙 EN 並排出現
+   - 修法: 全站 51 頁移除靜態 EN, 30 頁補載 lang.js
+
+3. **用 regex 移除舊 inline script 沒測 multiline / 變體開頭**
+   - 結果: 23 頁同時跑兩支 click handler, 互相 toggle 抵消, 看起來「點不開」
+   - 修法: 改用穩健的 script-block matcher, 全清一次
+
+### 鐵律
+1. **雙語站任何頁面要嘛同時有 zh + en, 要嘛同時都沒有**
+   - 新建 /en/X.html → 同時補 sitemap entry, 確認 zh 頁的 hreflang="en" 指過來
+   - 沒打算翻譯的頁面 → 從 sitemap 跟 zh 頁 hreflang 移除 en 引用
+   - 絕不出現「sitemap 標 EN 但檔案不存在」的死連結
+
+2. **動態元件 (lang.js / nav button) 跟靜態 HTML 不能重複**
+   - 加新 JS 注入前先 grep 確認站上沒有同功能的元件
+   - 替換 inline script 用穩健 regex `<script(?:\s[^>]*)?>([^<]|<(?!/script>))*?</script>` (不要用 [^<]*)
+
+3. **批次 sweep 完一定要 audit + verify**
+   - 不能 sweep 完就 commit, 要寫一個 audit 腳本確認 0 失誤再 push
+   - 例: 動 nav 之後跑 mobile_btn_audit.py 確認 51/51 都對
+
+4. **跨頁影響的改動必須全站 sweep**
+   - 改 nav HTML 結構 → 51 頁全掃
+   - 改色碼 token → 全 CSS 掃
+   - 加 hreflang → sitemap 跟所有頁面同步
+   - 半個頁面用新版半個用舊版 = 必坑
+
+5. **承諾「全做完」之前先做 audit, 不要憑感覺**
+   - 用戶問「還有啥沒做」之前自己跑 grep 確認, 不靠記憶答
+
+### 半套檢查清單 (commit 前自問)
+- [ ] 新功能涉及多頁? 全部覆蓋了沒?
+- [ ] 雙語? zh + en 同時? sitemap 同步?
+- [ ] 加新元件? 有沒跟既有元件衝突 (grep 過)?
+- [ ] sweep 完跑 audit 腳本? 確認 0 失誤?
+- [ ] 跨檔案改動? 影響的全部都同步了?
 
 ---
 
