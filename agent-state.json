@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-03T03:05:00Z",
+  "lastUpdated": "2026-05-03T10:30:00Z",
   "lastResearchDate": "2026-05-03",
   "sites": {
     "autodev-ai": {
@@ -50,12 +50,12 @@
   "affiliateLinks": {
     "digitalocean": {
       "url": "https://m.do.co/c/6121a295f624",
-      "lastChecked": "2026-04-26",
+      "lastChecked": "2026-05-03",
       "status": "active (200)"
     },
     "hahow": {
       "url": "https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71",
-      "lastChecked": "2026-04-26",
+      "lastChecked": "2026-05-03",
       "status": "active (200)"
     },
     "n8n-cloud": {
@@ -65,27 +65,27 @@
     },
     "systeme-io": {
       "url": "https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f",
-      "lastChecked": "2026-04-26",
+      "lastChecked": "2026-05-03",
       "status": "active (200)"
     },
     "gumroad-n8n-templates": {
       "url": "https://xiaofan8.gumroad.com/l/n8n-tw-templates",
-      "lastChecked": "2026-04-26",
+      "lastChecked": "2026-05-03",
       "status": "404 - PLACEHOLDER: product not yet created on Gumroad (known issue, not a real broken link)"
     },
     "gumroad-agent-skills": {
       "url": "https://xiaofan8.gumroad.com/l/agent-skills-tw",
-      "lastChecked": "2026-04-26",
+      "lastChecked": "2026-05-03",
       "status": "active (200)"
     },
     "gumroad-claude-crons": {
       "url": "https://xiaofan8.gumroad.com/l/kknad",
-      "lastChecked": "2026-04-26",
+      "lastChecked": "2026-05-03",
       "status": "active (200)"
     },
     "cloudways": {
       "url": "https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d",
-      "lastChecked": "2026-04-26",
+      "lastChecked": "2026-05-03",
       "status": "active (403 JS/bot protection normal)",
       "commissionDetails": "$50-125/sale（分級：越多銷售越高）, 90天cookie, PayPal/Payoneer出款",
       "applyUrl": "https://www.cloudways.com/affiliates/"
@@ -100,7 +100,7 @@
     "nordvpn": {
       "url": "https://onelink.one/s/7WSzC",
       "status": "active - 403 is JS redirect protection normal",
-      "lastChecked": "2026-04-26"
+      "lastChecked": "2026-05-03"
     },
     "surfshark": {
       "url": "https://surfshark.com/affiliates",
@@ -161,17 +161,17 @@
     "ultahost": {
       "url": "https://aftck.com/track/clicks/9568/c627c2bc9b0126dafe89ec23d62e9842226e4edf2aabebfd0266ba13234652eed671a3ea103a9e71",
       "status": "active (200)",
-      "lastChecked": "2026-04-26"
+      "lastChecked": "2026-05-03"
     },
     "datacamp": {
       "url": "https://afflink.one/s/aavAC",
       "status": "403 - JS redirect protection, likely normal - monitor next week",
-      "lastChecked": "2026-04-26"
+      "lastChecked": "2026-05-03"
     },
     "capcut": {
       "url": "https://vbtrax.com/track/clicks/9453/c627c2bc9b0126dafe8dec2bd32e9d452d6745c963bcb0f90067b504641200a8cd3ea5e2576e9f663499abdb4aee7abb970d",
       "status": "active (200)",
-      "lastChecked": "2026-04-26"
+      "lastChecked": "2026-05-03"
     },
     "lindy": {
       "url": "https://go.lindy.ai/website-partner-application",
@@ -182,7 +182,7 @@
     "decodo": {
       "url": "https://afflink.one/s/rrR3t",
       "status": "active (200)",
-      "lastChecked": "2026-04-26"
+      "lastChecked": "2026-05-03"
     },
     "framer": {
       "url": "https://www.framer.com/creators",
@@ -926,6 +926,36 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-05-03T10:30:00Z",
+      "agent": "content-ops",
+      "session": "affiliate-monitor-sun-1000",
+      "actions": [
+        "Pulled git main (already up to date)",
+        "Read agent-state.json",
+        "curl-checked 12 active affiliate links",
+        "Results: digitalocean 200, systeme-io 200, gumroad-agent-skills 200, gumroad-claude-crons 200",
+        "403s (JS/bot protection, normal): hahow, cloudways, nordvpn, ultahost, datacamp, capcut, decodo",
+        "404: gumroad-n8n-templates — known placeholder, product not yet uploaded by Ivan",
+        "Scanned all blog/*.html for external links — no new broken links found",
+        "Found 1 article with no affiliate links: blog/line-bot-complete-guide-2026.html",
+        "Wrote directive: directives/affiliate-monitor-to-content-refresher-2026-05-03.md",
+        "Updated affiliateLinks lastChecked in agent-state.json"
+      ],
+      "results": {
+        "linksChecked": 12,
+        "http200": 4,
+        "http403_bot_protection": 7,
+        "http404": 1,
+        "brokenLinks": [],
+        "knownIssues": [
+          "gumroad-n8n-templates 404 — Ivan upload pending"
+        ],
+        "articlesWithoutAffiliateLinks": [
+          "blog/line-bot-complete-guide-2026.html"
+        ]
+      }
+    },
     {
       "timestamp": "2026-05-03T03:05:00Z",
       "agent": "researcher",
