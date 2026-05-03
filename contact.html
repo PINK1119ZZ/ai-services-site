@@ -99,50 +99,51 @@
 <!-- CONTACT FORM -->
 <section style="padding: 0 0 3rem;">
  <div style="max-width:600px;margin:0 auto;padding:0 2rem;">
- <div class="fade-in" style="background:rgba(255,255,255,0.03);border:1px solid rgba(184,148,106,0.2);border-radius:16px;padding:2.5rem;">
- <h2 style="text-align:center;margin-bottom:0.5rem;color:var(--light);" data-en="Quick Inquiry Form">快速諮詢表單</h2>
- <p style="text-align:center;color:var(--gray);margin-bottom:2rem;font-size:0.9rem;" data-en="Fill out below and I'll reply within hours">填寫以下資料，我會在幾小時內回覆你</p>
+ <div class="fade-in" style="background:var(--bg-alt);border:1px solid var(--border);border-radius:6px;padding:2.5rem;">
+ <h2 style="text-align:center;margin-bottom:0.5rem;color:var(--text);font-family:'DM Serif Display','Noto Serif TC',serif;font-size:1.55rem;" data-en="Quick Inquiry Form">快速諮詢表單</h2>
+ <p style="text-align:center;color:var(--text-muted);margin-bottom:2rem;font-size:0.92rem;" data-en="Fill out below and I'll reply within hours">填寫以下資料，我會在幾小時內回覆你</p>
  <form action="https://formsubmit.co/ahrxiaofan@gmail.com" method="POST">
  <!-- FormSubmit settings -->
- <input type="hidden" name="_subject" value=" AutoDev AI 新客戶諮詢">
+ <input type="hidden" name="_subject" value="AutoDev AI 新客戶諮詢">
  <input type="hidden" name="_captcha" value="false">
  <input type="hidden" name="_next" value="https://autodev-ai.com/contact.html?sent=1">
  <input type="hidden" name="_template" value="table">
  <input type="text" name="_honey" style="display:none">
  <div style="margin-bottom:1.2rem;">
- <label style="display:block;color:var(--text-secondary);margin-bottom:0.4rem;font-size:0.9rem;" data-en="Name *">姓名 *</label>
- <input type="text" name="姓名" required style="width:100%;padding:0.8rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--light);font-size:1rem;outline:none;box-sizing:border-box;" placeholder="你的名字">
+ <label style="display:block;color:var(--text);margin-bottom:0.4rem;font-size:0.9rem;font-weight:500;" data-en="Name *">姓名 *</label>
+ <input type="text" name="姓名" required style="width:100%;padding:0.8rem 1rem;background:var(--white);border:1px solid var(--border);border-radius:4px;color:var(--text);font-size:16px;outline:none;box-sizing:border-box;" placeholder="你的名字">
  </div>
  <div style="margin-bottom:1.2rem;">
- <label style="display:block;color:var(--text-secondary);margin-bottom:0.4rem;font-size:0.9rem;" data-en="Email *">Email *</label>
- <input type="email" name="Email" required style="width:100%;padding:0.8rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--light);font-size:1rem;outline:none;box-sizing:border-box;" placeholder="your@email.com">
+ <label style="display:block;color:var(--text);margin-bottom:0.4rem;font-size:0.9rem;font-weight:500;" data-en="Email *">Email *</label>
+ <input type="email" name="Email" required style="width:100%;padding:0.8rem 1rem;background:var(--white);border:1px solid var(--border);border-radius:4px;color:var(--text);font-size:16px;outline:none;box-sizing:border-box;" placeholder="your@email.com">
  </div>
  <div style="margin-bottom:1.2rem;">
- <label style="display:block;color:var(--text-secondary);margin-bottom:0.4rem;font-size:0.9rem;" data-en="Which platform do you need?">需要哪個平台？</label>
- <select name="平台" style="width:100%;padding:0.8rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--light);font-size:1rem;outline:none;box-sizing:border-box;">
- <option value="LINE" style="background:#f5ede3;">LINE</option>
- <option value="Telegram" style="background:#f5ede3;">Telegram</option>
- <option value="Discord" style="background:#f5ede3;">Discord</option>
- <option value="Slack" style="background:#f5ede3;">Slack</option>
- <option value="Web Chat" style="background:#f5ede3;">Web Chat</option>
- <option value="其他" style="background:#f5ede3;" data-en="Other">其他</option>
+ <label style="display:block;color:var(--text);margin-bottom:0.4rem;font-size:0.9rem;font-weight:500;" data-en="Which platform / service?">需要哪個平台 / 服務？</label>
+ <select name="平台" style="width:100%;padding:0.8rem 1rem;background:var(--white);border:1px solid var(--border);border-radius:4px;color:var(--text);font-size:16px;outline:none;box-sizing:border-box;">
+ <option value="LINE Bot">LINE Bot</option>
+ <option value="AI 模特">AI 模特生成</option>
+ <option value="Telegram">Telegram Bot</option>
+ <option value="AI 客服">AI 客服</option>
+ <option value="預約系統">預約系統</option>
+ <option value="工作流自動化">工作流自動化</option>
+ <option value="其他" data-en="Other">其他</option>
  </select>
  </div>
  <div style="margin-bottom:1.2rem;">
- <label style="display:block;color:var(--text-secondary);margin-bottom:0.4rem;font-size:0.9rem;" data-en="Describe your needs *">描述你的需求 *</label>
- <textarea name="需求描述" required rows="4" style="width:100%;padding:0.8rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--light);font-size:1rem;outline:none;resize:vertical;box-sizing:border-box;" placeholder="例如：我開了一間美容院，想在 LINE 上做自動預約功能..." data-en-placeholder="e.g., I run a salon and want to automate bookings on LINE..."></textarea>
+ <label style="display:block;color:var(--text);margin-bottom:0.4rem;font-size:0.9rem;font-weight:500;" data-en="Describe your needs *">描述你的需求 *</label>
+ <textarea name="需求描述" required rows="4" style="width:100%;padding:0.8rem 1rem;background:var(--white);border:1px solid var(--border);border-radius:4px;color:var(--text);font-size:16px;outline:none;resize:vertical;box-sizing:border-box;font-family:inherit;" placeholder="例如：我開了一間美容院，想在 LINE 上做自動預約功能..." data-en-placeholder="e.g., I run a salon and want to automate bookings on LINE..."></textarea>
  </div>
  <div style="margin-bottom:1.5rem;">
- <label style="display:block;color:var(--text-secondary);margin-bottom:0.4rem;font-size:0.9rem;" data-en="Budget range">預算範圍</label>
- <select name="預算" style="width:100%;padding:0.8rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--light);font-size:1rem;outline:none;box-sizing:border-box;">
- <option value="NT$8,000 以下" style="background:#f5ede3;" data-en="Under $250">NT$8,000 以下</option>
- <option value="NT$8,000-15,000" style="background:#f5ede3;">NT$8,000-15,000 ($250-500)</option>
- <option value="NT$15,000-30,000" style="background:#f5ede3;">NT$15,000-30,000 ($500-1,000)</option>
- <option value="NT$30,000+" style="background:#f5ede3;">NT$30,000+ ($1,000+)</option>
- <option value="不確定" style="background:#f5ede3;" data-en="Not sure yet">不確定，想先聊聊</option>
+ <label style="display:block;color:var(--text);margin-bottom:0.4rem;font-size:0.9rem;font-weight:500;" data-en="Budget range">預算範圍</label>
+ <select name="預算" style="width:100%;padding:0.8rem 1rem;background:var(--white);border:1px solid var(--border);border-radius:4px;color:var(--text);font-size:16px;outline:none;box-sizing:border-box;">
+ <option value="NT$8,000 以下" data-en="Under $250">NT$8,000 以下</option>
+ <option value="NT$8,000-15,000">NT$8,000-15,000 ($250-500)</option>
+ <option value="NT$15,000-30,000">NT$15,000-30,000 ($500-1,000)</option>
+ <option value="NT$30,000+">NT$30,000+ ($1,000+)</option>
+ <option value="不確定" data-en="Not sure yet">不確定，想先聊聊</option>
  </select>
  </div>
- <button type="submit" style="width:100%;padding:1rem;background:var(--gradient-1);border:none;border-radius:8px;color:white;font-size:1.1rem;font-weight:700;cursor:pointer;transition:all 0.3s;" data-en="Send Inquiry (Free) →">送出諮詢（免費）→</button>
+ <button type="submit" style="width:100%;padding:1rem;background:var(--primary);border:none;border-radius:4px;color:var(--white);font-size:1.05rem;font-weight:600;cursor:pointer;transition:background 0.3s;letter-spacing:0.04em;" onmouseover="this.style.background='var(--primary-dark)'" onmouseout="this.style.background='var(--primary)'" data-en="Send Inquiry (Free) →">送出諮詢（免費）→</button>
  </form>
  </div>
  </div>
