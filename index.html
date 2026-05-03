@@ -60,7 +60,7 @@
  gtag('event', 'conversion', { send_to: ADS_ID + '/' + ADS_LABEL });
  };
  </script>
-<script>document.documentElement.classList.add('js');</script>
+<script>(function(){var d=document.documentElement;d.classList.add('js');if('IntersectionObserver' in window){d.classList.add('io-supported');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{rootMargin:'0px 0px -50px 0px'});function bindFade(){document.querySelectorAll('.fade-in').forEach(function(el){io.observe(el);});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bindFade);else bindFade();}})();</script>
 <style>
 .email-signup { text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, rgba(184,148,106,0.1) 0%, rgba(139,92,246,0.1) 100%); }
 .email-form { display: flex; gap: 0.5rem; max-width: 450px; margin: 1.5rem auto 0; justify-content: center; }

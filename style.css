@@ -319,6 +319,10 @@ textarea, select {
 }
 
 /* ───── ANIMATIONS ───── */
+/* fade-in 動畫: 預設可見 (避免 IO 沒觸發時內容永遠隱形) */
 .fade-in { transition: opacity 0.8s ease, transform 0.8s ease; }
-.js .fade-in { opacity: 0; transform: translateY(20px); }
-.js .fade-in.visible { opacity: 1; transform: translateY(0); }
+/* 只在使用者偏好動畫且有 IO 支援時才隱藏初始狀態 */
+@media (prefers-reduced-motion: no-preference) {
+  .js.io-supported .fade-in { opacity: 0; transform: translateY(20px); }
+  .js.io-supported .fade-in.visible { opacity: 1; transform: translateY(0); }
+}
