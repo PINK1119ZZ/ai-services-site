@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-03T14:32:00Z",
+  "lastUpdated": "2026-05-04T00:00:00Z",
   "lastResearchDate": "2026-05-03",
   "sites": {
     "autodev-ai": {
@@ -12,7 +12,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-05-03"
+      "lastChecked": "2026-05-04"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -21,7 +21,7 @@
       "lastNewArticle": "2026-04-12",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-05-03"
+      "lastChecked": "2026-05-04"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -44,7 +44,7 @@
       "issues": [
         "2026-04-30 health check: all tracked ai-tools-tw URLs healthy (200); mitigated Gumroad n8n product 404 by replacing direct purchase CTAs on landing page with coming-soon notice and tutorial links until Ivan uploads the product."
       ],
-      "lastChecked": "2026-05-03"
+      "lastChecked": "2026-05-04"
     }
   },
   "affiliateLinks": {
@@ -942,13 +942,20 @@
         "git add + commit 'content: refresh old articles' + push origin main — success"
       ],
       "results": {
-        "articlesReviewed": ["deerflow-vs-dify-vs-n8n-2026.html", "geo-generative-engine-optimization-taiwan-2026.html", "hahow-ai-courses-2026.html", "line-bot-complete-guide-2026.html"],
+        "articlesReviewed": [
+          "deerflow-vs-dify-vs-n8n-2026.html",
+          "geo-generative-engine-optimization-taiwan-2026.html",
+          "hahow-ai-courses-2026.html",
+          "line-bot-complete-guide-2026.html"
+        ],
         "outdatedDataFixed": 0,
         "affiliateLinksAdded": [
           "geo-generative-engine-optimization-taiwan-2026.html: Cloudways CTA button added",
           "line-bot-complete-guide-2026.html: DO + Cloudways affiliate CTA block + disclosure added"
         ],
-        "sitemapUpdated": ["geo-generative-engine-optimization-taiwan-2026.html → 2026-05-03"]
+        "sitemapUpdated": [
+          "geo-generative-engine-optimization-taiwan-2026.html → 2026-05-03"
+        ]
       }
     },
     {
@@ -1389,6 +1396,27 @@
         "newDirective": "Round 37 — VEED/CapCut/ShortsPro + Supademo + Karpathy Skills",
         "actionRequired": "Ivan: apply VEED affiliate (veed.io/affiliates) + Supademo affiliate (supademo.com/affiliates)"
       }
+    },
+    {
+      "timestamp": "2026-05-04T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json, reviewed directives, and checked recent agentLog before running health checks",
+        "Reviewed latest content directive affiliate-monitor-to-content-refresher-2026-05-03.md and strategist-weekly-2026-04-27.md; no new site-health fix required for this run",
+        "Curl checked 11 tracked URLs: 3 site roots + 8 ai-tools-tw key pages",
+        "Confirmed all tracked URLs returned HTTP 200 from cron host",
+        "No site issues required repair; existing Gumroad LINE Bot n8n landing-page mitigation remains healthy",
+        "Updated lastChecked to 2026-05-04 for all tracked sites"
+      ],
+      "results": {
+        "checkedUrls": 11,
+        "http200": 11,
+        "failures": 0,
+        "fixes": 0,
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
+      }
     }
   ],
   "fbPosted": [
@@ -1587,5 +1615,5 @@
       ]
     }
   },
-  "lastAuditDate": "2026-05-03"
+  "lastAuditDate": "2026-05-04"
 }
