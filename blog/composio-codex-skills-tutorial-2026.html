@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComposioHQ awesome-codex-skills 繁中完整教學 2026：OpenAI Codex CLI 技能目錄整合指南</title>
+  <meta name="description" content="ComposioHQ/awesome-codex-skills 繁中完整教學：GitHub trending 爆紅，Codex CLI 官方生態 1000+ 工具整合。含安裝步驟、實戰範例、台灣開發者使用情境，2026 最新版。">
+  <meta name="keywords" content="composio codex skills 教學, codex skills 繁中, openai codex cli skills 2026, composio 整合教學, awesome-codex-skills 中文">
+  <link rel="canonical" href="https://autodev-ai.com/blog/composio-codex-skills-tutorial-2026.html">
+  <meta property="og:title" content="ComposioHQ awesome-codex-skills 繁中完整教學 2026：Codex CLI 技能目錄整合指南">
+  <meta property="og:description" content="GitHub trending 爆紅！Codex CLI 官方生態 1000+ 工具整合，繁中完整教學，台灣開發者必讀。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/composio-codex-skills-tutorial-2026.html">
+  <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="author" content="AutoDev AI">
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ComposioHQ awesome-codex-skills 繁中完整教學 2026",
+    "description": "Codex CLI 官方生態 1000+ 工具整合，繁中完整教學，台灣開發者必讀。",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "logo": {"@type": "ImageObject", "url": "https://autodev-ai.com/autodev-logo2.png"}},
+    "datePublished": "2026-05-04",
+    "dateModified": "2026-05-04",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/composio-codex-skills-tutorial-2026.html"}
+  }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Noto Sans TC',sans-serif;color:#1a1a2e;line-height:1.8;background:#f0f4ff}
+    .container{max-width:860px;margin:0 auto;padding:0 20px}
+    header{background:linear-gradient(135deg,#0f0c29 0%,#302b63 50%,#24243e 100%);color:#fff;padding:60px 0 40px}
+    header h1{font-size:2rem;line-height:1.3;margin-bottom:16px}
+    .meta{opacity:.75;font-size:.9rem}
+    .badge{display:inline-block;background:#6366f1;color:#fff;padding:3px 10px;border-radius:20px;font-size:.75rem;margin-right:8px;margin-bottom:8px}
+    .badge.hot{background:#ef4444}
+    article{background:#fff;border-radius:12px;padding:40px;margin:30px 0;box-shadow:0 2px 20px rgba(0,0,0,.06)}
+    h2{font-size:1.5rem;color:#302b63;margin:36px 0 16px;padding-bottom:8px;border-bottom:2px solid #e8eaf6}
+    h3{font-size:1.15rem;color:#1a1a2e;margin:24px 0 10px}
+    p{margin-bottom:16px}
+    ul,ol{margin:0 0 16px 24px}
+    li{margin-bottom:6px}
+    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+    .stat-card{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border-radius:10px;padding:20px;text-align:center}
+    .stat-card .num{font-size:1.8rem;font-weight:700}
+    .stat-card .label{font-size:.8rem;opacity:.85;margin-top:4px}
+    .table-wrap{overflow-x:auto;margin:24px 0}
+    table{width:100%;border-collapse:collapse;font-size:.9rem}
+    th{background:#302b63;color:#fff;padding:12px 14px;text-align:left}
+    td{padding:11px 14px;border-bottom:1px solid #e8eaf6}
+    tr:nth-child(even) td{background:#f5f7ff}
+    .check{color:#22c55e;font-weight:700}
+    .cross{color:#ef4444}
+    pre{background:#1e1e2e;color:#cdd6f4;border-radius:10px;padding:20px;overflow-x:auto;font-size:.88rem;margin:16px 0;line-height:1.6}
+    code{font-family:'Fira Code','Courier New',monospace}
+    .inline-code{background:#f1f5f9;color:#6366f1;padding:2px 6px;border-radius:4px;font-family:monospace;font-size:.9em}
+    .highlight{background:#eff6ff;border-left:4px solid #6366f1;padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+    .highlight.warn{background:#fff7ed;border-color:#f59e0b}
+    .highlight.success{background:#f0fdf4;border-color:#22c55e}
+    .cta-box{border-radius:12px;padding:28px;margin:28px 0;text-align:center}
+    .cta-box.do{background:linear-gradient(135deg,#0069ff,#0052cc)}
+    .cta-box.gumroad{background:linear-gradient(135deg,#ff90e8,#ff5c8a)}
+    .cta-box h3{color:#fff;margin:0 0 8px}
+    .cta-box p{color:rgba(255,255,255,.85);margin:0 0 16px;font-size:.95rem}
+    .btn{display:inline-block;background:#fff;color:#1a1a2e;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;font-size:1rem;transition:transform .15s}
+    .btn:hover{transform:translateY(-2px)}
+    .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:20px 0}
+    .skill-card{background:#f8f9ff;border:1px solid #e8eaf6;border-radius:10px;padding:16px}
+    .skill-card .name{font-weight:700;color:#302b63;font-size:.95rem}
+    .skill-card .desc{font-size:.85rem;color:#555;margin-top:4px}
+    .faq-item{border-bottom:1px solid #e8eaf6;padding:16px 0}
+    .faq-item:last-child{border:none}
+    .faq-q{font-weight:700;color:#302b63;margin-bottom:6px}
+    footer{text-align:center;padding:40px 0;color:#666;font-size:.85rem}
+    @media(max-width:600px){
+      header h1{font-size:1.4rem}
+      .stat-grid{grid-template-columns:1fr}
+      .skill-grid{grid-template-columns:1fr}
+      article{padding:24px 16px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <span class="badge hot">🔥 GitHub Trending</span>
+    <span class="badge">Codex CLI</span>
+    <span class="badge">繁中首發</span>
+    <h1>ComposioHQ awesome-codex-skills<br>繁中完整教學 2026：Codex CLI 技能目錄整合指南</h1>
+    <p class="meta">更新：2026-05-04 ｜ 閱讀時間：約 12 分鐘 ｜ AutoDev AI 編輯部</p>
+  </div>
+</header>
+
+<div class="container">
+<article>
+
+  <p><strong>ComposioHQ/awesome-codex-skills</strong> 是 OpenAI Codex CLI 官方生態中最受矚目的技能目錄，本週在 GitHub Trending 衝上第三名，單週新增 4,279 顆星。這個專案整合了 Composio 平台的 1,000+ 工具，讓你的 Codex CLI Agent 能直接操作 GitHub、Slack、Notion、Gmail 等服務，不需要自己寫 API 串接。</p>
+  <p>目前繁中教學幾乎是零。這篇文章是台灣開發者的第一份完整中文指南。</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="num">6,157</div>
+      <div class="label">GitHub Stars（本週 +4,279）</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">1,000+</div>
+      <div class="label">Composio 整合工具數</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">#3</div>
+      <div class="label">GitHub Trending 本週排名</div>
+    </div>
+  </div>
+
+  <h2>🤔 什麼是 awesome-codex-skills？</h2>
+  <p>簡單說：它是一個 <strong>Codex CLI 的技能擴充包目錄</strong>。</p>
+  <p>OpenAI 的 Codex CLI 本身是一個在終端機運行的 AI coding agent，可以讀寫檔案、執行指令、自動完成開發任務。但原生的 Codex CLI 只能操作本機環境，無法直接呼叫外部服務。</p>
+  <p><strong>awesome-codex-skills + Composio</strong> 解決了這個問題：透過預建的 skill 模組，你的 Codex Agent 可以：</p>
+  <ul>
+    <li>自動在 GitHub 開 Issue、建 PR、查 commit</li>
+    <li>讀寫 Notion 資料庫、建立頁面</li>
+    <li>發送 Slack 訊息、查詢頻道記錄</li>
+    <li>操作 Gmail 收發信件</li>
+    <li>串接 Jira、Linear、Trello 等專案管理工具</li>
+    <li>呼叫任意 REST API（透過 Composio 的 HTTP 工具）</li>
+  </ul>
+
+  <div class="highlight">
+    💡 <strong>一句話定位：</strong>awesome-codex-skills 是讓 Codex CLI 從「只會寫程式」升級成「能操作整個開發工作流」的橋樑。
+  </div>
+
+  <h2>🏗️ 架構概覽：Codex CLI + Composio 如何協作</h2>
+  <p>整個系統由三層組成：</p>
+  <ol>
+    <li><strong>Codex CLI（Agent 核心）</strong>：接收你的自然語言指令，規劃並執行任務</li>
+    <li><strong>awesome-codex-skills（技能目錄）</strong>：定義 Agent 可以呼叫哪些工具，以及如何呼叫</li>
+    <li><strong>Composio 平台（工具執行層）</strong>：實際處理 OAuth 認證、API 呼叫、錯誤重試</li>
+  </ol>
+  <p>你只需要在 Composio 上完成一次 OAuth 授權（例如連接你的 GitHub 帳號），之後 Codex Agent 就能直接說「幫我在 repo X 開一個 bug issue」，系統自動完成所有 API 呼叫。</p>
+
+  <h2>⚙️ 安裝步驟：5 分鐘完成環境設定</h2>
+  <h3>步驟 1：安裝 Codex CLI</h3>
+  <pre><code>npm install -g @openai/codex</code></pre>
+
+  <h3>步驟 2：安裝 Composio SDK</h3>
+  <pre><code>pip install composio-core composio-openai</code></pre>
+
+  <h3>步驟 3：Clone awesome-codex-skills</h3>
+  <pre><code>git clone https://github.com/ComposioHQ/awesome-codex-skills.git
+cd awesome-codex-skills</code></pre>
+
+  <h3>步驟 4：設定 API 金鑰</h3>
+  <pre><code>export OPENAI_API_KEY="sk-..."
+export COMPOSIO_API_KEY="your-composio-key"</code></pre>
+  <p>Composio API Key 可在 <a href="https://app.composio.dev" target="_blank" rel="noopener">app.composio.dev</a> 免費申請。</p>
+
+  <h3>步驟 5：連接你的工具（以 GitHub 為例）</h3>
+  <pre><code>composio add github</code></pre>
+  <p>執行後會開啟瀏覽器進行 OAuth 授權，完成後 Composio 會儲存你的 token，之後 Agent 可直接使用。</p>
+
+  <div class="highlight success">
+    ✅ <strong>完成！</strong>現在你的 Codex Agent 已經可以操作 GitHub。用同樣方式執行 <span class="inline-code">composio add slack</span>、<span class="inline-code">composio add notion</span> 來連接更多工具。
+  </div>
+
+  <h2>🛠️ 核心技能目錄：最實用的 10 個 Skills</h2>
+  <div class="skill-grid">
+    <div class="skill-card">
+      <div class="name">github-issues</div>
+      <div class="desc">自動建立、查詢、關閉 GitHub Issues；支援 label、assignee 設定</div>
+    </div>
+    <div class="skill-card">
+      <div class="name">github-pr</div>
+      <div class="desc">建立 Pull Request、查看 review 狀態、自動 merge（需權限）</div>
+    </div>
+    <div class="skill-card">
+      <div class="name">notion-database</div>
+      <div class="desc">讀寫 Notion 資料庫、建立頁面、查詢過濾條件</div>
+    </div>
+    <div class="skill-card">
+      <div class="name">slack-messaging</div>
+      <div class="desc">發送訊息到指定頻道、查詢歷史記錄、建立提醒</div>
+    </div>
+    <div class="skill-card">
+      <div class="name">gmail-compose</div>
+      <div class="desc">撰寫並發送 Email、讀取收件匣、搜尋郵件</div>
+    </div>
+    <div class="skill-card">
+      <div class="name">linear-tasks</div>
+      <div class="desc">建立 Linear issue、更新狀態、查詢 sprint 進度</div>
+    </div>
+    <div class="skill-card">
+      <div class="name">jira-tickets</div>
+      <div class="desc">建立 Jira ticket、更新 story points、查詢 backlog</div>
+    </div>
+    <div class="skill-card">
+      <div class="name">http-request</div>
+      <div class="desc">呼叫任意 REST API，支援 GET/POST/PUT/DELETE + 自訂 headers</div>
+    </div>
+    <div class="skill-card">
+      <div class="name">code-review</div>
+      <div class="desc">自動分析 diff、產生 review 意見、標記潛在 bug</div>
+    </div>
+    <div class="skill-card">
+      <div class="name">deploy-trigger</div>
+      <div class="desc">觸發 CI/CD pipeline（GitHub Actions、Vercel、Railway）</div>
+    </div>
+  </div>
+
+  <h2>🚀 實戰範例：台灣開發者常見場景</h2>
+
+  <h3>場景 1：自動化 Bug 回報流程</h3>
+  <p>當你的監控系統偵測到錯誤，讓 Codex Agent 自動建立 GitHub Issue 並通知 Slack：</p>
+  <pre><code>codex "幫我在 repo my-app 建立一個 bug issue，標題是『API timeout on /users endpoint』，
+label 設為 bug 和 high-priority，然後發訊息到 Slack #dev-alerts 頻道通知團隊"</code></pre>
+  <p>Agent 會自動：呼叫 github-issues skill → 建立 issue → 取得 issue URL → 呼叫 slack-messaging skill → 發送含連結的通知。</p>
+
+  <h3>場景 2：每日 Standup 自動整理</h3>
+  <pre><code>codex "查詢我昨天在 GitHub 的所有 commit 和 PR，整理成 standup 格式，
+然後發到 Slack #standup 頻道"</code></pre>
+
+  <h3>場景 3：需求文件自動同步</h3>
+  <pre><code>codex "讀取 Notion 資料庫『Product Roadmap』中本週的需求，
+幫我在 Linear 建立對應的 tickets，priority 根據 Notion 的欄位設定"</code></pre>
+
+  <h3>場景 4：Code Review 自動化</h3>
+  <pre><code>codex "查看 PR #142 的 diff，分析潛在的安全問題和效能瓶頸，
+用繁中寫 review 意見並 post 到 PR"</code></pre>
+
+  <div class="highlight warn">
+    ⚠️ <strong>注意：</strong>執行會修改外部服務的指令前，建議先用 <span class="inline-code">--dry-run</span> 旗標預覽 Agent 的計畫，確認無誤再執行。
+  </div>
+
+  <h2>☁️ 雲端部署：在 VPS 上跑 24/7 自動化 Agent</h2>
+  <p>本機跑 Codex Agent 適合開發測試，但如果你想讓 Agent 持續運行（例如監控 GitHub、定時整理 Notion），需要一台穩定的 VPS。</p>
+  <p>推薦使用 DigitalOcean Droplet：</p>
+  <ul>
+    <li>最低 $6/月的 Droplet 就夠跑輕量 Agent</li>
+    <li>支援 Node.js 22 + Python 3.12 環境</li>
+    <li>台灣用戶可選新加坡節點，延遲低</li>
+    <li>搭配 PM2 或 systemd 讓 Agent 背景常駐</li>
+  </ul>
+
+  <div class="cta-box do">
+    <h3>🌊 DigitalOcean — 最適合跑 Codex Agent 的 VPS</h3>
+    <p>$6/月起，新用戶享 $200 免費額度（60天），新加坡節點低延遲，一鍵部署 Node.js 環境</p>
+    <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="btn">🚀 領取 $200 免費額度</a>
+  </div>
+
+  <h3>VPS 部署快速指令</h3>
+  <pre><code># 在 DigitalOcean Droplet 上設定環境
+apt update && apt install -y nodejs npm python3-pip
+npm install -g @openai/codex
+pip install composio-core composio-openai
+
+# 設定環境變數
+echo 'export OPENAI_API_KEY="sk-..."' >> ~/.bashrc
+echo 'export COMPOSIO_API_KEY="your-key"' >> ~/.bashrc
+source ~/.bashrc
+
+# 用 PM2 讓 Agent 常駐
+npm install -g pm2
+pm2 start "codex --agent my-agent.js" --name codex-agent
+pm2 save && pm2 startup</code></pre>
+
+  <h2>📊 awesome-codex-skills vs 其他 Agent 工具整合方案比較</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>方案</th><th>整合工具數</th><th>設定難度</th><th>適合對象</th><th>費用</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>awesome-codex-skills + Composio</strong></td><td>1,000+</td><td>低（OAuth 一鍵）</td><td>Codex CLI 用戶</td><td>免費起</td></tr>
+        <tr><td>n8n 自建整合</td><td>無限（自訂）</td><td>中（需建 workflow）</td><td>自動化愛好者</td><td>免費/自架</td></tr>
+        <tr><td>Zapier + AI</td><td>7,000+</td><td>低</td><td>非技術用戶</td><td>$19.99/月起</td></tr>
+        <tr><td>LangChain Tools</td><td>50+（官方）</td><td>高（需寫 Python）</td><td>ML 工程師</td><td>免費</td></tr>
+        <tr><td>MCP Servers</td><td>數百（社群）</td><td>中</td><td>Claude Code 用戶</td><td>免費</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>awesome-codex-skills 的核心優勢是<strong>零 API 串接工作</strong>：Composio 幫你處理所有 OAuth、token 刷新、錯誤重試，你只需要描述想做什麼。</p>
+
+  <h2>💡 進階技巧：自訂 Skill 擴充</h2>
+  <p>如果 Composio 的 1,000+ 工具還不夠，你可以自己寫 skill：</p>
+  <pre><code># 自訂 skill 範例：串接台灣股市 API
+from composio import ComposioToolSet, Action
+
+toolset = ComposioToolSet()
+
+# 定義自訂工具
+@toolset.tool(name="tw_stock_price")
+def get_tw_stock(ticker: str) -> dict:
+    """查詢台灣股票即時價格"""
+    import requests
+    resp = requests.get(f"https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_{ticker}.tw")
+    return resp.json()
+
+# 在 Codex Agent 中使用
+tools = toolset.get_tools(actions=[Action.GITHUB_CREATE_ISSUE, "tw_stock_price"])</code></pre>
+
+  <div class="highlight">
+    💡 <strong>台灣開發者提示：</strong>可以把台灣常用服務（永豐 API、綠界金流、LINE Notify）包裝成自訂 skill，讓 Codex Agent 直接操作本地金融和通訊服務。
+  </div>
+
+  <h2>🎁 Agent Skills 繁中工程師包</h2>
+  <p>如果你想快速上手，我們整理了一份包含 10 個即用 Agent Skills 的繁中工程師包，含安裝腳本和台灣使用情境範例：</p>
+
+  <div class="cta-box gumroad">
+    <h3>🎯 Claude Code Agent Skills 繁中工程師包</h3>
+    <p>10 個即用 Skills + bash 一鍵安裝腳本 + 台灣工程師實戰範例，直接拿去用</p>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener sponsored" class="btn">📦 立即取得（$29）</a>
+  </div>
+
+  <h2>❓ 常見問題 FAQ</h2>
+  <div class="faq-item">
+    <div class="faq-q">Q：awesome-codex-skills 和 mattpocock/skills 有什麼不同？</div>
+    <p>mattpocock/skills 是針對 Claude Code CLI 的技能包，專注在 coding workflow（TDD、PR 審查等）。awesome-codex-skills 則是針對 OpenAI Codex CLI，強調外部服務整合（GitHub、Slack、Notion 等）。兩者定位不同，可以同時使用。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q：Composio 免費方案夠用嗎？</div>
+    <p>免費方案支援最多 3 個工具連接、每月 1,000 次 API 呼叫，個人開發者和小型專案完全夠用。如果是團隊使用或高頻自動化，再考慮升級付費方案。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q：需要 OpenAI API Key 嗎？費用怎麼算？</div>
+    <p>是的，Codex CLI 需要 OpenAI API Key。費用依使用量計算，一般開發任務每次約 $0.01–$0.05，日常使用每月大約 $5–$20。建議設定 usage limit 避免超支。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q：可以在 Windows 上使用嗎？</div>
+    <p>可以，但建議使用 WSL2（Windows Subsystem for Linux）以獲得最佳相容性。原生 Windows PowerShell 環境可能遇到路徑和權限問題。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q：安全性如何？OAuth token 存在哪裡？</div>
+    <p>Composio 使用業界標準的 OAuth 2.0，token 加密儲存在 Composio 的雲端服務。如果你有資安顧慮，可以使用 Composio 的 self-hosted 版本，把所有 token 存在自己的伺服器上。</p>
+  </div>
+
+  <h2>📝 總結：值得現在就試嗎？</h2>
+  <p>如果你已經在用 Codex CLI，答案是<strong>肯定的</strong>。awesome-codex-skills + Composio 的設定成本極低（5 分鐘），但能讓你的 Agent 能力大幅擴展。</p>
+  <p>特別推薦的使用場景：</p>
+  <ul>
+    <li>✅ 需要 Agent 自動操作 GitHub（開 issue、建 PR）</li>
+    <li>✅ 想讓 Codex 整合 Slack/Notion 等團隊工具</li>
+    <li>✅ 希望減少重複的 API 串接工作</li>
+    <li>✅ 想在 VPS 上跑 24/7 自動化 Agent</li>
+  </ul>
+  <p>目前這個生態系還在快速發展，現在進場是最好的時機——繁中資源幾乎是空白，你的學習成果可以直接轉化為競爭優勢。</p>
+
+  <p style="font-size:.8rem;color:#999;margin-top:32px">本文含聯盟行銷連結，點擊後購買我們可能獲得佣金，不影響您的購買價格。</p>
+
+</article>
+</div>
+
+<footer>
+  <p>© 2026 AutoDev AI · <a href="/blog/">更多文章</a> · <a href="/about.html">關於我們</a></p>
+</footer>
+</body>
+</html>
