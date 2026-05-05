@@ -44,4 +44,12 @@ function init(){
 
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
 else init();
+
+// FAQ accordion (delegated — works on any page that loads lang.js)
+document.addEventListener('click', function(e){
+  var q = e.target && e.target.closest && e.target.closest('.faq-q');
+  if(!q) return;
+  var item = q.parentElement;
+  if(item && item.classList.contains('faq-item')) item.classList.toggle('open');
+});
 })();
