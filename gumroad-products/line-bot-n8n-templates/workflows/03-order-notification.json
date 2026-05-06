@@ -1,0 +1,25 @@
+{
+  "name": "LINE Bot 訂單通知",
+  "nodes": [
+    {
+      "parameters": { "httpMethod": "POST", "path": "order-notify", "responseMode": "lastNode" },
+      "id": "webhook-node", "name": "訂單 Webhook", "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1, "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.line.me/v2/bot/message/push",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [{ "name": "Authorization", "value": "Bearer {{$env.LINE_CHANNEL_ACCESS_TOKEN}}" }] },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\"to\":\"{{$json.lineUserId}}\",\"messages\":[{\"type\":\"text\",\"text\":\"📦 訂單通知\\n訂單編號：{{$json.orderId}}\\n商品：{{$json.productName}}\\n金額：NT${{$json.amount}}\\n狀態：{{$json.status}}\\n\\n感謝您的購買！\"}]}"
+      },
+      "id": "push-node", "name": "LINE 推送通知", "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4, "position": [460, 300]
+    }
+  ],
+  "connections": {
+    "訂單 Webhook": { "main": [[{ "node": "LINE 推送通知", "type": "main", "index": 0 }]] }
+  }
+}

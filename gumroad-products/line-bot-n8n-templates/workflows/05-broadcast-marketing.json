@@ -1,0 +1,40 @@
+{
+  "name": "LINE Bot 群發行銷推播",
+  "nodes": [
+    {
+      "parameters": { "rule": { "interval": [{ "field": "cronExpression", "expression": "0 10 * * 1" }] } },
+      "id": "cron-node", "name": "每週一 10:00 觸發", "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1, "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{$env.GOOGLE_SHEET_WEBHOOK_URL}}",
+        "sendHeaders": false
+      },
+      "id": "sheet-node", "name": "取得訂閱用戶清單", "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4, "position": [460, 300]
+    },
+    {
+      "parameters": { "batchSize": 1, "options": {} },
+      "id": "split-node", "name": "逐一處理用戶", "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3, "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.line.me/v2/bot/message/push",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [{ "name": "Authorization", "value": "Bearer {{$env.LINE_CHANNEL_ACCESS_TOKEN}}" }] },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\"to\":\"{{$json.lineUserId}}\",\"messages\":[{\"type\":\"text\",\"text\":\"{{$env.BROADCAST_MESSAGE}}\"}]}"
+      },
+      "id": "push-node", "name": "LINE 推播", "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4, "position": [900, 300]
+    }
+  ],
+  "connections": {
+    "每週一 10:00 觸發": { "main": [[{ "node": "取得訂閱用戶清單", "type": "main", "index": 0 }]] },
+    "取得訂閱用戶清單": { "main": [[{ "node": "逐一處理用戶", "type": "main", "index": 0 }]] },
+    "逐一處理用戶": { "main": [[{ "node": "LINE 推播", "type": "main", "index": 0 }]] }
+  }
+}

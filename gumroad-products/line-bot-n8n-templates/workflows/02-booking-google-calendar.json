@@ -1,0 +1,47 @@
+{
+  "name": "LINE Bot 預約系統 + Google Calendar",
+  "nodes": [
+    {
+      "parameters": { "httpMethod": "POST", "path": "line-booking", "responseMode": "responseNode" },
+      "id": "webhook-node", "name": "LINE Webhook", "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1, "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const event = ($input.first().json.events || [])[0];\nif (!event || event.type !== 'message') return [{ json: { skip: true } }];\nconst text = event.message.text || '';\nconst match = text.match(/(\\d{4}-\\d{2}-\\d{2})\\s+(\\d{2}:\\d{2})/);\nif (!match) return [{ json: { replyToken: event.replyToken, needFormat: true } }];\nreturn [{ json: { replyToken: event.replyToken, date: match[1], time: match[2], userId: event.source.userId } }];"
+      },
+      "id": "parse-node", "name": "解析預約訊息", "type": "n8n-nodes-base.code",
+      "typeVersion": 2, "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "calendar": { "__rl": true, "value": "={{$env.GOOGLE_CALENDAR_ID}}", "mode": "id" },
+        "start": "={{$json.date}}T{{$json.time}}:00",
+        "end": "={{$json.date}}T{{$json.time.split(':')[0]}}:{{(parseInt($json.time.split(':')[1])+60)%60}}:00",
+        "additionalFields": { "summary": "LINE Bot 預約 - {{$json.userId}}" }
+      },
+      "id": "calendar-node", "name": "建立 Google Calendar 事件",
+      "type": "n8n-nodes-base.googleCalendar", "typeVersion": 1, "position": [680, 240]
+    },
+    {
+      "parameters": {
+        "url": "https://api.line.me/v2/bot/message/reply",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [{ "name": "Authorization", "value": "Bearer {{$env.LINE_CHANNEL_ACCESS_TOKEN}}" }] },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\"replyToken\":\"{{$json.replyToken}}\",\"messages\":[{\"type\":\"text\",\"text\":\"✅ 預約成功！\\n日期：{{$json.date}}\\n時間：{{$json.time}}\\n我們會在預約前 1 小時提醒您。\"}]}"
+      },
+      "id": "reply-node", "name": "LINE 確認回覆", "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4, "position": [900, 300]
+    },
+    { "parameters": { "respondWith": "text", "responseBody": "OK" }, "id": "response-node",
+      "name": "回應 Webhook", "type": "n8n-nodes-base.respondToWebhook", "typeVersion": 1, "position": [1120, 300] }
+  ],
+  "connections": {
+    "LINE Webhook": { "main": [[{ "node": "解析預約訊息", "type": "main", "index": 0 }]] },
+    "解析預約訊息": { "main": [[{ "node": "建立 Google Calendar 事件", "type": "main", "index": 0 }]] },
+    "建立 Google Calendar 事件": { "main": [[{ "node": "LINE 確認回覆", "type": "main", "index": 0 }]] },
+    "LINE 確認回覆": { "main": [[{ "node": "回應 Webhook", "type": "main", "index": 0 }]] }
+  }
+}

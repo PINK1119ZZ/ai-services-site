@@ -1,0 +1,57 @@
+{
+  "name": "LINE Bot AI 客服（Claude/GPT-4o）",
+  "nodes": [
+    {
+      "parameters": { "httpMethod": "POST", "path": "line-ai", "responseMode": "responseNode" },
+      "id": "webhook-node", "name": "LINE Webhook", "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1, "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const event = ($input.first().json.events || [])[0];\nif (!event || event.type !== 'message' || event.message.type !== 'text') return [{ json: { skip: true } }];\nreturn [{ json: { replyToken: event.replyToken, userMessage: event.message.text } }];"
+      },
+      "id": "parse-node", "name": "解析訊息", "type": "n8n-nodes-base.code",
+      "typeVersion": 2, "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.openai.com/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [{ "name": "Authorization", "value": "Bearer {{$env.OPENAI_API_KEY}}" }] },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\"model\":\"gpt-4o-mini\",\"messages\":[{\"role\":\"system\",\"content\":\"你是一個專業的繁體中文客服助理。請簡潔、友善地回答用戶問題，回覆控制在 150 字以內。\"},{\"role\":\"user\",\"content\":\"{{$json.userMessage}}\"}],\"max_tokens\":300}"
+      },
+      "id": "ai-node", "name": "GPT-4o-mini 回覆", "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4, "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const aiReply = $input.first().json.choices[0].message.content;\nconst replyToken = $('解析訊息').first().json.replyToken;\nreturn [{ json: { replyToken, aiReply } }];"
+      },
+      "id": "extract-node", "name": "取出 AI 回覆", "type": "n8n-nodes-base.code",
+      "typeVersion": 2, "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.line.me/v2/bot/message/reply",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [{ "name": "Authorization", "value": "Bearer {{$env.LINE_CHANNEL_ACCESS_TOKEN}}" }] },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\"replyToken\":\"{{$json.replyToken}}\",\"messages\":[{\"type\":\"text\",\"text\":\"{{$json.aiReply}}\"}]}"
+      },
+      "id": "reply-node", "name": "LINE 回覆", "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4, "position": [1120, 300]
+    },
+    { "parameters": { "respondWith": "text", "responseBody": "OK" }, "id": "response-node",
+      "name": "回應 Webhook", "type": "n8n-nodes-base.respondToWebhook", "typeVersion": 1, "position": [1340, 300] }
+  ],
+  "connections": {
+    "LINE Webhook": { "main": [[{ "node": "解析訊息", "type": "main", "index": 0 }]] },
+    "解析訊息": { "main": [[{ "node": "GPT-4o-mini 回覆", "type": "main", "index": 0 }]] },
+    "GPT-4o-mini 回覆": { "main": [[{ "node": "取出 AI 回覆", "type": "main", "index": 0 }]] },
+    "取出 AI 回覆": { "main": [[{ "node": "LINE 回覆", "type": "main", "index": 0 }]] },
+    "LINE 回覆": { "main": [[{ "node": "回應 Webhook", "type": "main", "index": 0 }]] }
+  }
+}
