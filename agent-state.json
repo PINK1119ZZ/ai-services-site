@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-08 00:30",
+  "lastUpdated": "2026-05-08 12:00",
   "lastResearchDate": "2026-05-08",
   "sites": {
     "autodev-ai": {
@@ -328,6 +328,14 @@
       "applyUrl": "https://supademo.com/affiliates",
       "lastChecked": "2026-05-03",
       "notes": "Round 37新發現。30% lifetime是最強被動收入結構。台灣繁中Supademo評測=0篇。B2B SaaS行銷/銷售受眾高LTV。⭐⭐⭐"
+    },
+    "scrapingant": {
+      "url": "https://scrapingant.com/legal/affiliate/",
+      "status": "not yet applied - 50% no-cap on every paid plan；Starter 0/月=5/月/客；Scale 45/月=22.50/月/客；upsell也算50%；Scrapling教學文天然受眾，待Ivan申請",
+      "commissionDetails": "50% no-cap；Starter 0/月；Scale 45/月；upsell也算50%；無最低出款限制",
+      "applyUrl": "https://scrapingant.com/legal/affiliate/",
+      "lastChecked": "2026-05-08",
+      "notes": "Round 43新發現。50% no-cap業界最高之一。Scrapling教學文天然受眾=需要proxy API的開發者。台灣繁中ScrapingAnt評測=0篇。⭐⭐⭐"
     }
   },
   "gscData": {
@@ -524,7 +532,7 @@
             "clicks": 7,
             "impressions": 126,
             "ctr": 5.6,
-            "position": 6.0
+            "position": 6
           },
           {
             "page": "//blog/ai-tools-comparison-2026.html",
@@ -537,7 +545,7 @@
             "page": "//blog/line-bot-cost.html",
             "clicks": 4,
             "impressions": 395,
-            "ctr": 1.0,
+            "ctr": 1,
             "position": 5.5
           },
           {
@@ -941,9 +949,117 @@
         "applyUrl": "https://www.shortspro.co/affiliate-program",
         "notes": "30% LIFETIME是最強被動收入結構之一。AI短影音市場2026爆發。台灣繁中評測=稀少。⭐⭐⭐"
       }
+    },
+    {
+      "id": "proposal-2026-05-08-A",
+      "addedAt": "2026-05-08T12:00Z",
+      "type": "seo_article_affiliate",
+      "title": "Scrapling 繁中完整教學 + ScrapingAnt 50% 聯盟（爬蟲工具新星）",
+      "revenueModel": "affiliate：ScrapingAnt 50% no-cap（新發現）+ Decodo proxy（已有）+ DigitalOcean VPS",
+      "estimatedMonthlyRevenue": "US00-500（保守：5-10轉換/月 × ScrapingAnt 9/月 × 50% = 22-245 + Decodo）",
+      "targetKeywords": [
+        "scrapling 教學 繁中",
+        "python 爬蟲 2026",
+        "scrapling vs beautifulsoup",
+        "web scraping python 台灣",
+        "scrapling proxy 設定"
+      ],
+      "rationale": [
+        "GitHub Round 43 P1：D4Vinci/Scrapling 47K stars +7,770/週新進榜爆發，繁中=0篇",
+        "新發現：ScrapingAnt affiliate 50% no-cap（業界最高之一）— 比Decodo更高佣金，Scrapling教學文天然需要proxy API",
+        "Decodo proxy（已有active連結）可作為第二個proxy選項，雙聯盟疊加",
+        "DigitalOcean VPS部署（已有連結）作為第三個CTA：爬蟲需要雲端IP",
+        "開發者受眾付費意願高，proxy API月費0-245，轉換率高"
+      ],
+      "buildSteps": [
+        "1. 申請ScrapingAnt affiliate（scrapingant.com/legal/affiliate）— 50% no-cap，免費申請，立即可用",
+        "2. 在autodev-ai新建 /blog/scrapling-python-tutorial-2026.html（~2500字）",
+        "3. 文章結構：Scrapling是什麼 → 安裝設定 → 基礎爬蟲範例 → 進階：selector自動修復 → proxy整合（ScrapingAnt + Decodo雙選項）→ vs BeautifulSoup/Playwright比較表 → VPS部署（DO CTA）",
+        "4. 嵌入3個affiliate CTA：ScrapingAnt（主推，50%）、Decodo（次推，已有連結）、DigitalOcean（VPS部署）",
+        "5. 更新sitemap.xml + blog/index.html",
+        "6. 在ai-tools-tw加入交叉推廣連結"
+      ],
+      "directives": {
+        "builder": "申請ScrapingAnt affiliate（scrapingant.com/legal/affiliate），獲連結後補入文章",
+        "seoWriter": "寫Scrapling繁中完整教學文，嵌入ScrapingAnt（50%）+ Decodo + DigitalOcean三個affiliate CTA",
+        "contentOps": "文章發布後更新sitemap.xml lastmod"
+      },
+      "newAffiliateOpportunity": {
+        "name": "ScrapingAnt",
+        "commissionDetails": "50% no-cap on every paid plan（Starter 0/月=5/月/客；Scale 45/月=22.50/月/客）；upsell也算50%；無最低出款限制",
+        "applyUrl": "https://scrapingant.com/legal/affiliate/",
+        "notes": "50% no-cap是業界最高之一。Scrapling教學文天然受眾=需要proxy API的開發者。台灣繁中ScrapingAnt評測=0篇。⭐⭐⭐"
+      },
+      "priority": "HIGH",
+      "timeToLaunch": "2-3天"
+    },
+    {
+      "id": "proposal-2026-05-08-B",
+      "addedAt": "2026-05-08T12:00Z",
+      "type": "seo_article_affiliate",
+      "title": "ruflo 繁中完整評測 + 企業AI Agent架構指南（四週爆發最後窗口）",
+      "revenueModel": "affiliate：DigitalOcean VPS部署（已有）+ DataCamp企業AI課程（已有）",
+      "estimatedMonthlyRevenue": "US50-400（保守：企業受眾高LTV，DO轉換率高於一般文章）",
+      "targetKeywords": [
+        "ruflo 教學 繁中",
+        "ruflo claude code 多代理",
+        "ruflo 評測 2026",
+        "claude code multi-agent 台灣",
+        "ruflo vs claude flow 比較"
+      ],
+      "rationale": [
+        "GitHub Round 43 P1：ruvnet/ruflo 46K stars +11,930/週，四週連續加速，繁中=0篇，窗口快關",
+        "ruflo = Claude Code多代理平台，企業級架構，swarm intelligence + RAG整合 — 企業受眾高LTV",
+        "搜尋確認：AIToolly、jimmysong.io、tosea.ai已有英文評測，繁中完全空白",
+        "DigitalOcean VPS是ruflo部署的天然需求（多代理需要雲端算力）",
+        "可做「ruflo vs Claude Flow vs OpenAI Swarm」三方比較，覆蓋更多長尾關鍵字"
+      ],
+      "buildSteps": [
+        "1. 在autodev-ai新建 /blog/ruflo-claude-code-multi-agent-2026.html（~2500字）",
+        "2. 文章結構：ruflo是什麼 → 核心功能（swarm intelligence/RAG/SPARC）→ 安裝設定 → 實戰範例（多代理協作workflow）→ vs Claude Flow vs OpenAI Swarm比較表 → 企業部署（DO VPS CTA）→ 適合對象分析 → FAQ",
+        "3. 嵌入2個affiliate CTA：DigitalOcean（企業VPS部署）、DataCamp（AI Agent開發課程）",
+        "4. 在TradingAgents文章底部加入ruflo交叉連結（同為AI Agent系列，已有流量）",
+        "5. 更新sitemap.xml + blog/index.html"
+      ],
+      "directives": {
+        "seoWriter": "寫ruflo繁中完整評測，包含vs Claude Flow比較表，嵌入DigitalOcean + DataCamp affiliate CTA，在TradingAgents文章加入交叉連結",
+        "contentOps": "文章發布後在tradingagents-ai-trading-2026.html底部加入ruflo相關文章連結"
+      },
+      "priority": "HIGH",
+      "timeToLaunch": "2-3天"
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-05-08T12:00:00Z",
+      "agent": "strategist",
+      "session": "income-ideation-weekly-fri-2000",
+      "actions": [
+        "Pulled git main (already up to date)",
+        "Read agent-state.json — reviewed current state, proposals, affiliates, GSC data",
+        "Read directive researcher-to-strategist-2026-05-08-round43.md — P1: Scrapling + ruflo",
+        "Checked agentLog — no duplicate proposals for these topics",
+        "Searched Gumroad trending: templates/courses/software top categories confirmed",
+        "Discovered ScrapingAnt affiliate: 50% no-cap（業界最高之一）— perfect match for Scrapling教學文",
+        "Confirmed ScrapeOps affiliate: 25-35% recurring（alternative option）",
+        "Confirmed ruflo market: AIToolly/jimmysong.io/tosea.ai英文評測已有，繁中完全空白",
+        "Wrote 2 new proposals: proposal-2026-05-08-A (Scrapling+ScrapingAnt), proposal-2026-05-08-B (ruflo評測)",
+        "Added ScrapingAnt to affiliateLinks",
+        "Updated agent-state.json agentLog + lastUpdated"
+      ],
+      "proposalsAdded": [
+        "proposal-2026-05-08-A",
+        "proposal-2026-05-08-B"
+      ],
+      "topFindings": [
+        "ScrapingAnt affiliate: 50% no-cap（新發現）— Scrapling教學文天然受眾，⭐⭐⭐",
+        "Scrapling: 47K stars +7,770/週，繁中=0，ScrapingAnt+Decodo雙聯盟疊加，⭐⭐⭐ P1",
+        "ruflo: 46K stars +11,930/週四週連續加速，繁中=0，企業受眾高LTV，⭐⭐⭐ P1"
+      ],
+      "affiliatesNewlyDiscovered": [
+        "ScrapingAnt: 50% no-cap (scrapingant.com/legal/affiliate) — NEW CONFIRMED"
+      ]
+    },
     {
       "timestamp": "2026-05-08T00:30:00Z",
       "agent": "researcher",
