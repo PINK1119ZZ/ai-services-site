@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agentmemory 完整教學 2026：讓 Claude Code 記住你的程式架構，跨 Session 持久記憶</title>
+    <meta name="description" content="agentmemory 繁中完整教學：讓 Claude Code、Codex、Cursor 跨 session 記住你的程式架構、決策與偏好。MCP 整合，記憶壓縮，台灣開發者必裝工具 2026。">
+    <meta name="keywords" content="agentmemory 教學 繁中, claude code 持久記憶, agentmemory mcp, ai coding agent 記憶 2026, claude code session 記憶, agentmemory 安裝教學, 台灣開發者 ai 工具">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="canonical" href="https://autodev-ai.com/blog/agentmemory-claude-code-tutorial-2026.html">
+    <meta property="og:title" content="agentmemory 完整教學 2026：讓 Claude Code 記住你的程式架構">
+    <meta property="og:description" content="agentmemory 繁中完整教學：讓 Claude Code、Codex、Cursor 跨 session 記住你的程式架構。MCP 整合，記憶壓縮，台灣開發者必裝。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/agentmemory-claude-code-tutorial-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "agentmemory 完整教學 2026：讓 Claude Code 記住你的程式架構，跨 Session 持久記憶",
+      "datePublished": "2026-05-18",
+      "dateModified": "2026-05-18",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "agentmemory 繁中完整教學：讓 Claude Code、Codex、Cursor 跨 session 記住你的程式架構、決策與偏好。MCP 整合，記憶壓縮，台灣開發者必裝工具。"
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">AutoDev AI</a>
+            <ul class="nav-links">
+                <li><a href="../services.html">服務</a></li>
+                <li><a href="../portfolio.html">作品集</a></li>
+                <li><a href="index.html">部落格</a></li>
+                <li><a href="../contact.html">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="blog-post">
+        <div class="container">
+            <header class="post-header">
+                <div class="post-badge">🔥 GitHub 本週 +7,103 stars</div>
+                <h1>agentmemory 完整教學 2026：讓 Claude Code 記住你的程式架構，跨 Session 持久記憶</h1>
+                <div class="post-meta">
+                    <time datetime="2026-05-18">2026 年 5 月 18 日</time>
+                    <span class="reading-time">⏱️ 閱讀時間：10 分鐘</span>
+                    <span class="tag">AI Coding Agent</span>
+                    <span class="tag">Claude Code</span>
+                    <span class="tag">MCP</span>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <p class="lead">每次重開 Claude Code 或 Codex，它就忘記你上次說的「我們用 PostgreSQL，不用 SQLite」？<strong>agentmemory</strong> 就是解方。本週 GitHub 爆發 +7,103 stars，登上 GitHub Trending #2，是目前最熱門的 AI coding agent 持久記憶工具，支援 Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Cline 等全主流平台。本文是 <strong>全網首篇繁中完整教學</strong>。</p>
+
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-number">11,487</div>
+                        <div class="stat-label">GitHub Stars</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">+7,103</div>
+                        <div class="stat-label">本週新增（Trending #2）</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">支援 AI Coding 平台</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">MCP</div>
+                        <div class="stat-label">Model Context Protocol 整合</div>
+                    </div>
+                </div>
+
+                <div class="toc">
+                    <h2>📋 目錄</h2>
+                    <ul>
+                        <li><a href="#problem">開發者的痛點：AI coding agent 的健忘症</a></li>
+                        <li><a href="#what-is">agentmemory 是什麼？</a></li>
+                        <li><a href="#how-it-works">運作原理：記憶壓縮與 MCP 整合</a></li>
+                        <li><a href="#install">安裝設定：5 步驟快速上手</a></li>
+                        <li><a href="#claude-code">Claude Code 整合教學</a></li>
+                        <li><a href="#mcp-setup">MCP 伺服器設定</a></li>
+                        <li><a href="#use-cases">實戰使用情境</a></li>
+                        <li><a href="#vs-alternatives">vs 其他解法比較</a></li>
+                        <li><a href="#vps-deploy">雲端部署與多專案管理</a></li>
+                        <li><a href="#faq">常見問題</a></li>
+                    </ul>
+                </div>
+
+                <section id="problem">
+                    <h2>開發者的痛點：AI Coding Agent 的健忘症</h2>
+                    <p>你一定有過這種經驗：</p>
+                    <ul>
+                        <li>昨天告訴 Claude Code「這個專案用 TypeScript strict mode，不要用 any」</li>
+                        <li>今天重開 session，它又開始用 <code>any</code></li>
+                        <li>你必須再次貼上 CLAUDE.md，重新說明架構決策</li>
+                        <li>做了三個月的專案，每次都要「喚醒」AI 的記憶</li>
+                    </ul>
+                    <p>這就是 AI coding agent 的「工作記憶限制」問題。每個 session 都是白板，context window 有限，你的架構知識、偏好設定、過往決策全部消失。</p>
+                    <p>agentmemory 的出現，正是為了解決這個問題。</p>
+                </section>
+
+                <section id="what-is">
+                    <h2>agentmemory 是什麼？</h2>
+                    <p><strong>agentmemory</strong>（GitHub: <a href="https://github.com/rohitg00/agentmemory" target="_blank" rel="noopener">rohitg00/agentmemory</a>）是目前 GitHub 上 <strong>最熱門的 AI coding agent 持久記憶框架</strong>，自稱「#1 Persistent Memory for AI Coding Agents」。</p>
+
+                    <div class="highlight-box">
+                        <h3>🧠 agentmemory 核心能力</h3>
+                        <ul>
+                            <li><strong>跨 session 持久記憶</strong>：重開 Claude Code 後，記憶仍在</li>
+                            <li><strong>記憶壓縮</strong>：自動把重複或過時記憶合併，節省 token</li>
+                            <li><strong>MCP 整合</strong>：透過 Model Context Protocol 無縫嵌入 AI 工作流</li>
+                            <li><strong>多平台支援</strong>：Claude Code, Codex, Cursor, Gemini CLI, OpenCode, Cline</li>
+                            <li><strong>記憶分類</strong>：程式架構、偏好設定、決策記錄、錯誤教訓分開管理</li>
+                            <li><strong>向量搜尋</strong>：根據當前 context 智能召回相關記憶</li>
+                        </ul>
+                    </div>
+
+                    <p>2026 年 5 月，agentmemory 在 ProductHunt 也出現在 Trending 欄，顯示受到廣泛關注。目前 GitHub stars 超過 11,487，本週單週新增 7,103 stars，爆發力驚人。</p>
+                </section>
+
+                <section id="how-it-works">
+                    <h2>運作原理：記憶壓縮與 MCP 整合</h2>
+                    <h3>記憶分層架構</h3>
+                    <p>agentmemory 把記憶分為三層：</p>
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>記憶層</th>
+                                    <th>內容</th>
+                                    <th>保存時長</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Working Memory</strong></td>
+                                    <td>當前 session 的即時上下文</td>
+                                    <td>session 內</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Episodic Memory</strong></td>
+                                    <td>過去的決策、對話片段</td>
+                                    <td>永久（可手動清除）</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Semantic Memory</strong></td>
+                                    <td>架構知識、偏好、規則</td>
+                                    <td>永久（自動壓縮）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>記憶壓縮機制</h3>
+                    <p>當記憶量累積到設定閾值，agentmemory 會自動觸發「記憶壓縮」：</p>
+                    <ol>
+                        <li>分析重複或類似的記憶片段</li>
+                        <li>用 LLM 合併成更精簡的摘要</li>
+                        <li>保留關鍵資訊，刪除冗餘</li>
+                        <li>向量化儲存，支援語義搜尋</li>
+                    </ol>
+                    <p>這讓長期使用不會因為記憶量爆炸而佔用過多 token。</p>
+
+                    <h3>MCP 整合</h3>
+                    <p>agentmemory 提供 MCP（Model Context Protocol）伺服器，AI coding agent 可以透過 MCP 工具呼叫：</p>
+                    <ul>
+                        <li><code>store_memory</code>：存入新記憶</li>
+                        <li><code>recall_memory</code>：根據查詢召回相關記憶</li>
+                        <li><code>list_memories</code>：列出所有記憶</li>
+                        <li><code>delete_memory</code>：刪除特定記憶</li>
+                    </ul>
+                </section>
+
+                <section id="install">
+                    <h2>安裝設定：5 步驟快速上手</h2>
+
+                    <h3>系統需求</h3>
+                    <ul>
+                        <li>Python 3.10+</li>
+                        <li>pip（或 uv）</li>
+                        <li>支援的 AI coding agent（Claude Code, Codex, Cursor 等）</li>
+                    </ul>
+
+                    <h3>步驟一：安裝 agentmemory</h3>
+                    <pre><code># 用 pip 安裝
+pip install agentmemory
+
+# 或用 uv（更快）
+uv pip install agentmemory</code></pre>
+
+                    <h3>步驟二：初始化記憶庫</h3>
+                    <pre><code># 初始化（預設儲存在 ~/.agentmemory/）
+agentmemory init
+
+# 指定儲存路徑
+agentmemory init --path ~/my-project/.memory</code></pre>
+
+                    <h3>步驟三：設定環境變數</h3>
+                    <pre><code># 在 .env 或 shell config 中加入
+export AGENTMEMORY_PATH=~/.agentmemory
+export OPENAI_API_KEY=sk-...  # 或 ANTHROPIC_API_KEY
+
+# 若使用 Ollama（本地模型）
+export AGENTMEMORY_LLM_PROVIDER=ollama
+export AGENTMEMORY_EMBEDDING_MODEL=nomic-embed-text</code></pre>
+
+                    <h3>步驟四：啟動 MCP 伺服器</h3>
+                    <pre><code># 啟動 MCP 伺服器（後台）
+agentmemory server start
+
+# 確認運行狀態
+agentmemory server status
+# → MCP server running on localhost:7878</code></pre>
+
+                    <h3>步驟五：驗證安裝</h3>
+                    <pre><code># 存入第一個記憶
+agentmemory store "我偏好用 PostgreSQL，不用 SQLite。原因：需要 JSON 操作與複雜 query。"
+
+# 召回記憶
+agentmemory recall "資料庫選擇"
+# → 找到記憶：PostgreSQL 偏好，日期：2026-05-18</code></pre>
+                </section>
+
+                <section id="claude-code">
+                    <h2>Claude Code 整合教學</h2>
+                    <p>這是最多台灣開發者的使用場景。</p>
+
+                    <h3>方法一：透過 CLAUDE.md 自動注入</h3>
+                    <p>在專案根目錄的 <code>CLAUDE.md</code> 中加入：</p>
+                    <pre><code># 記憶工具
+
+使用 agentmemory MCP 工具：
+- 每次 session 開始時，呼叫 recall_memory 查詢「架構決策」、「程式偏好」
+- 當用戶說「記住這個」時，呼叫 store_memory 存入
+- 當 session 結束前，自動摘要本次決策並 store_memory</code></pre>
+
+                    <h3>方法二：透過 Claude Code 指令</h3>
+                    <p>直接告訴 Claude Code：</p>
+                    <pre><code># 在 Claude Code session 中輸入：
+請查詢 agentmemory，召回這個專案的架構決策和程式偏好。</code></pre>
+
+                    <h3>方法三：開機自動載入記憶</h3>
+                    <pre><code"># 在 ~/.claude/settings.json 中加入 MCP 設定
+{
+  "mcpServers": {
+    "agentmemory": {
+      "command": "agentmemory",
+      "args": ["server", "mcp"],
+      "env": {
+        "AGENTMEMORY_PATH": "/root/.agentmemory"
+      }
+    }
+  }
+}</code></pre>
+                    <p>設定後，Claude Code 啟動時會自動連接 agentmemory MCP，可直接呼叫記憶工具。</p>
+
+                    <div class="highlight-box success">
+                        <h3>✅ 實際效果展示</h3>
+                        <p><strong>第一天（存入記憶）：</strong></p>
+                        <pre><code>你：這個專案用 Next.js 15 + TypeScript strict + Tailwind v4
+agentmemory: store_memory("技術棧：Next.js 15, TypeScript strict, Tailwind v4. 日期：2026-05-18")</code></pre>
+                        <p><strong>第二天（重開 session）：</strong></p>
+                        <pre><code>Claude Code: [自動召回] 技術棧：Next.js 15, TypeScript strict, Tailwind v4
+→ Claude Code 不再建議使用 any 或舊版 API</code></pre>
+                    </div>
+                </section>
+
+                <section id="mcp-setup">
+                    <h2>MCP 伺服器進階設定</h2>
+
+                    <h3>支援的 AI Coding 平台</h3>
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>平台</th>
+                                    <th>整合方式</th>
+                                    <th>難度</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Claude Code</td>
+                                    <td>MCP settings.json</td>
+                                    <td>⭐ 簡單</td>
+                                </tr>
+                                <tr>
+                                    <td>Codex CLI</td>
+                                    <td>MCP config</td>
+                                    <td>⭐ 簡單</td>
+                                </tr>
+                                <tr>
+                                    <td>Cursor</td>
+                                    <td>Cursor MCP extension</td>
+                                    <td>⭐⭐ 中等</td>
+                                </tr>
+                                <tr>
+                                    <td>Gemini CLI</td>
+                                    <td>gemini.json MCP 設定</td>
+                                    <td>⭐⭐ 中等</td>
+                                </tr>
+                                <tr>
+                                    <td>OpenCode</td>
+                                    <td>config.yaml</td>
+                                    <td>⭐⭐ 中等</td>
+                                </tr>
+                                <tr>
+                                    <td>Cline</td>
+                                    <td>VS Code MCP 設定</td>
+                                    <td>⭐⭐ 中等</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Cursor 整合設定</h3>
+                    <pre><code># ~/.cursor/mcp.json
+{
+  "servers": {
+    "agentmemory": {
+      "url": "http://localhost:7878",
+      "enabled": true
+    }
+  }
+}</code></pre>
+
+                    <h3>記憶 namespace 管理（多專案）</h3>
+                    <pre><code># 為不同專案設定獨立記憶空間
+agentmemory store --namespace "project-alpha" "使用 Django REST framework"
+agentmemory store --namespace "project-beta" "使用 FastAPI + SQLModel"
+
+# 查詢特定專案記憶
+agentmemory recall --namespace "project-alpha" "框架選擇"</code></pre>
+                </section>
+
+                <section id="use-cases">
+                    <h2>實戰使用情境</h2>
+
+                    <h3>情境一：前端工程師 — 元件規範記憶</h3>
+                    <pre><code># 存入元件規範
+agentmemory store "元件規範：
+- 所有元件用 React functional component + TypeScript
+- Props interface 命名：${ComponentName}Props
+- 用 styled-components，不用 CSS modules
+- 所有 async 操作用 React Query v5 的 useQuery/useMutation"</code></pre>
+                    <p>此後 Claude Code 生成元件時，自動遵循這些規範，不需每次重述。</p>
+
+                    <h3>情境二：後端工程師 — 資料庫決策記憶</h3>
+                    <pre><code>agentmemory store "資料庫架構決策：
+- 主資料庫：PostgreSQL 16（Supabase 託管）
+- 快取層：Redis（session, rate limit）
+- 搜尋：pg_vector（不引入 Elasticsearch，降低維運複雜度）
+- ORM：Prisma（不用 TypeORM，因 migration 支援更好）"</code></pre>
+
+                    <h3>情境三：全端工程師 — 錯誤教訓記憶</h3>
+                    <pre><code>agentmemory store "踩坑記錄 2026-05-10：
+Next.js 15 App Router 中使用 server action 時，
+form data 的 file 上傳需要特別處理 FormData，
+不能直接用 JSON.stringify。
+參考解法：/app/actions/upload.ts 第 23 行。"</code></pre>
+                    <p>兩個月後遇到同樣問題，agentmemory 自動召回這段記憶，Claude Code 直接給出正確解法。</p>
+
+                    <h3>情境四：AI Agent 開發者 — Workflow 記憶</h3>
+                    <pre><code>agentmemory store "Agent 系統架構（AutoDev AI 專案）：
+- 使用 OpenClaw 管理 agent session
+- 工作目錄：/root/ai-services-site
+- 每輪先讀 agent-state.json 確認狀態
+- 文章提交格式：git add . && git commit -m 'content: ...' && git push origin main"</code></pre>
+                </section>
+
+                <section id="vs-alternatives">
+                    <h2>agentmemory vs 其他解法比較</h2>
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>方案</th>
+                                    <th>持久性</th>
+                                    <th>智能召回</th>
+                                    <th>記憶壓縮</th>
+                                    <th>多平台</th>
+                                    <th>維護成本</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>agentmemory</strong></td>
+                                    <td>✅ 永久</td>
+                                    <td>✅ 向量搜尋</td>
+                                    <td>✅ 自動</td>
+                                    <td>✅ 6+ 平台</td>
+                                    <td>低（自動化）</td>
+                                </tr>
+                                <tr>
+                                    <td>CLAUDE.md 手寫</td>
+                                    <td>✅ 永久</td>
+                                    <td>❌ 全量注入</td>
+                                    <td>❌ 手動</td>
+                                    <td>⚠️ Claude 限定</td>
+                                    <td>高（手動更新）</td>
+                                </tr>
+                                <tr>
+                                    <td>mem0 (Memory Layer)</td>
+                                    <td>✅ 永久</td>
+                                    <td>✅ 智能</td>
+                                    <td>✅ 自動</td>
+                                    <td>⚠️ 有限</td>
+                                    <td>中（雲端 API）</td>
+                                </tr>
+                                <tr>
+                                    <td>OpenAI Vector Store</td>
+                                    <td>✅ 永久</td>
+                                    <td>✅ 向量搜尋</td>
+                                    <td>❌</td>
+                                    <td>❌ GPT 限定</td>
+                                    <td>中（費用）</td>
+                                </tr>
+                                <tr>
+                                    <td>每次貼 context</td>
+                                    <td>❌ session 限定</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                    <td>極高（每次手動）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>agentmemory 的優勢在於：開源免費、MCP 標準整合、支援多平台、記憶壓縮節省 token。</p>
+                </section>
+
+                <section id="vps-deploy">
+                    <h2>雲端部署：多台機器共享記憶庫</h2>
+                    <p>如果你有多台機器（本機 + 工作筆電 + 雲端 VPS），可以把 agentmemory 部署到 VPS 上，讓所有機器共用同一個記憶庫。</p>
+
+                    <h3>在 VPS 上部署 agentmemory 伺服器</h3>
+                    <pre><code># 在 DigitalOcean Droplet 上（Ubuntu 22.04）
+pip install agentmemory
+agentmemory init --path /opt/agentmemory-data
+
+# 啟動為系統服務
+agentmemory server start --host 0.0.0.0 --port 7878 --daemon
+
+# 設定 systemd 開機自啟
+agentmemory server install-service</code></pre>
+
+                    <h3>本機連接遠端記憶庫</h3>
+                    <pre><code"># 設定環境變數指向遠端
+export AGENTMEMORY_REMOTE_URL=http://your-vps-ip:7878
+export AGENTMEMORY_API_KEY=your-secret-key
+
+# 測試連接
+agentmemory recall "測試" --remote
+# → 連接成功，遠端記憶庫正常</code></pre>
+
+                    <div class="cta-box">
+                        <h3>💡 需要 VPS 部署 agentmemory？</h3>
+                        <p>DigitalOcean Droplet 最小方案 $6/月，足夠跑 agentmemory 伺服器 + 記憶庫。新用戶可獲得 $200 免費額度。</p>
+                        <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-button cta-gradient">
+                            🚀 領取 DigitalOcean $200 免費額度
+                        </a>
+                        <p class="cta-disclaimer">*聯盟連結，點擊不影響費用，有助支持本站內容</p>
+                    </div>
+                </section>
+
+                <section id="advanced">
+                    <h2>進階技巧</h2>
+
+                    <h3>自動記憶觸發器（Hooks）</h3>
+                    <pre><code># 在 agentmemory.config.yaml 設定自動觸發
+hooks:
+  on_session_start:
+    - recall: ["架構偏好", "程式規範", "重要決策"]
+  on_session_end:
+    - store_summary: true  # 自動摘要本次決策
+  on_keyword:
+    triggers:
+      - "記住這個"
+      - "別忘了"
+    action: store_current_message</code></pre>
+
+                    <h3>記憶健康報告</h3>
+                    <pre><code># 檢查記憶庫狀態
+agentmemory stats
+# → Total memories: 247
+# → Compressed: 89 (36%)
+# → Last accessed: 2026-05-18 04:15
+# → Storage size: 2.3 MB</code></pre>
+
+                    <h3>記憶備份與匯出</h3>
+                    <pre><code># 匯出所有記憶（JSON 格式）
+agentmemory export --output my-memories-backup.json
+
+# 匯入記憶（換機或共享）
+agentmemory import --input my-memories-backup.json</code></pre>
+                </section>
+
+                <!-- CTA 1: DataCamp AI 課程 -->
+                <div class="cta-box">
+                    <h3>📚 想深入學習 AI Agent 開發？</h3>
+                    <p>DataCamp 提供完整的 AI Agent 開發課程，包含 LangChain、LangGraph、MCP 整合實作，台灣工程師最推薦的 AI 技能平台。</p>
+                    <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" class="cta-button cta-gradient-blue">
+                        🎓 DataCamp AI Agent 開發課程 →
+                    </a>
+                    <p class="cta-disclaimer">*聯盟連結，點擊不影響費用，有助支持本站</p>
+                </div>
+
+                <section id="faq">
+                    <h2>常見問題</h2>
+
+                    <div class="faq-item">
+                        <h3>agentmemory 是免費的嗎？</h3>
+                        <p>是的，agentmemory 是完全開源免費的（MIT License）。你只需要支付嵌入模型的 API 費用（如 OpenAI text-embedding），或使用本地模型（Ollama）完全免費。</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>記憶數據儲存在哪裡？是否安全？</h3>
+                        <p>預設儲存在本機 <code>~/.agentmemory/</code> 目錄，完全在你的機器上，不上傳到任何雲端。記憶內容是純文字 + 向量索引，可以加密保護。</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>支援繁體中文記憶嗎？</h3>
+                        <p>完整支援。無論是繁中、簡中或英文的記憶，都能正常存入和召回。向量搜尋使用多語言嵌入模型，中文語義搜尋效果良好。</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>agentmemory 和 CLAUDE.md 可以一起用嗎？</h3>
+                        <p>可以，而且建議配合使用。CLAUDE.md 適合放不常變動的專案說明（技術棧、架構概述），agentmemory 適合記錄動態決策和錯誤教訓。兩者互補。</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>記憶量很多時會不會很慢？</h3>
+                        <p>agentmemory 的向量搜尋是毫秒級，即使有幾千條記憶也不影響速度。記憶壓縮機制確保實際使用的記憶量維持在合理範圍。</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>可以和 superpowers（obra/superpowers）一起用嗎？</h3>
+                        <p>完全可以！agentmemory 提供記憶持久化，superpowers 提供工程流程規範，兩者是互補的工具。搭配使用可以打造真正「懂你」又「遵守規範」的 AI coding partner。詳見我們的 <a href="superpowers-claude-code-tutorial-2026.html">superpowers 完整教學</a>。</p>
+                    </div>
+                </section>
+
+                <section id="summary">
+                    <h2>總結：agentmemory 值得裝嗎？</h2>
+                    <p>答案是肯定的，尤其如果你：</p>
+                    <ul>
+                        <li>✅ 每天使用 Claude Code、Codex 或 Cursor 開發</li>
+                        <li>✅ 有長期維護的專案（超過一個月）</li>
+                        <li>✅ 厭倦每次重開 session 都要重述架構</li>
+                        <li>✅ 想讓 AI coding agent 真正了解你的偏好</li>
+                    </ul>
+                    <p>agentmemory 解決了 AI coding agent 最根本的痛點：工作記憶限制。安裝簡單，開源免費，MCP 標準整合讓它與各主流平台無縫配合。</p>
+                    <p>本週 GitHub Trending #2（+7,103 stars/週），代表它正在快速成為業界標準。現在正是最佳進場時機——你可以在它變成每個工程師標配之前，搶先掌握這個工具。</p>
+
+                    <div class="related-articles">
+                        <h3>📖 延伸閱讀</h3>
+                        <ul>
+                            <li><a href="superpowers-claude-code-tutorial-2026.html">superpowers (obra/superpowers) 完整教學：Claude Code 最熱門 Skills Framework</a></li>
+                            <li><a href="mattpocock-skills-claude-code-2026.html">mattpocock/skills 繁中教學：Claude Code Agent Skills 完整指南</a></li>
+                            <li><a href="composio-codex-skills-tutorial-2026.html">ComposioHQ awesome-codex-skills 繁中教學</a></li>
+                            <li><a href="warp-terminal-review-2026.html">Warp Terminal 繁中評測 2026：AI 終端機值得換嗎？</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- CTA 2: Gumroad agent-skills-pack -->
+                <div class="cta-box">
+                    <h3>🛠️ 直接拿去用：Claude Code Agent Skills 繁中工程師包</h3>
+                    <p>已經幫你整理好 10 個最實用的 Claude Code Skills + 快速安裝腳本，含繁中說明和台灣工程師實戰範例，直接下載即用。</p>
+                    <a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener sponsored" class="cta-button cta-gradient-gold">
+                        📦 取得 Claude Code Agent Skills 包 →
+                    </a>
+                    <p class="cta-disclaimer">*聯盟連結，購買有助支持本站持續產出免費教學</p>
+                </div>
+
+                <!-- CTA 3: Systeme.io 自動化 -->
+                <div class="cta-box">
+                    <h3>🤖 想用 AI 自動化你的業務流程？</h3>
+                    <p>Systeme.io 整合 email 行銷、課程銷售、funnel 自動化，免費方案就能開始。台灣最多 solopreneur 和 AI 工具站主使用的一站式平台。</p>
+                    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" target="_blank" rel="noopener sponsored" class="cta-button cta-gradient-green">
+                        🚀 免費試用 Systeme.io →
+                    </a>
+                    <p class="cta-disclaimer">*聯盟連結，免費方案永久免費，有助支持本站</p>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 AutoDev AI · <a href="https://autodev-ai.com">autodev-ai.com</a></p>
+            <p style="font-size: 0.8rem; color: var(--gray); margin-top: 0.5rem;">本文含有聯盟行銷連結。點擊連結不會增加您的費用，有助支持本站持續產出免費教學內容。</p>
+        </div>
+    </footer>
+</body>
+</html>
