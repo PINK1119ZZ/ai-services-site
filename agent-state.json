@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-18 04:40",
+  "lastUpdated": "2026-05-18T04:43:00Z",
   "lastResearchDate": "2026-05-18",
   "sites": {
     "autodev-ai": {
@@ -2206,6 +2206,53 @@
         "fixes": 0,
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
       }
+    },
+    {
+      "timestamp": "2026-05-18T04:43:00Z",
+      "agent": "content-ops",
+      "session": "internal-linker-wed-1500",
+      "actions": [
+        "Pulled git main (already up to date)",
+        "Listed all HTML files across 3 sites: ai-services-site (50+ files), ai-tools-tw (50+ files), ai-tools-en (25+ files)",
+        "Checked agent-state.json agentLog for previously linked articles; last internal linking run was 2026-04-29",
+        "Selected 3 new articles with 0 internal links: warp-terminal-review-2026.html, composio-codex-skills-tutorial-2026.html, ai-video-tools-comparison-2026.html",
+        "Added 2 internal links to warp-terminal-review-2026.html: free-claude-code-tutorial-2026.html in summary 進階用戶 bullet, n8n-automation-tutorial-2026.html in 延伸閱讀",
+        "Added 2 internal links to composio-codex-skills-tutorial-2026.html: mattpocock-skills-claude-code-2026.html in FAQ answer, n8n-automation-tutorial-2026.html in 總結 use-case list",
+        "Added 2 internal links to ai-video-tools-comparison-2026.html: small-business-automation.html in 情境四 enterprise section, ai-tools-comparison-2026.html in 2026 趨勢 list",
+        "All edits verified with grep; git add + commit 'seo: add internal links' + push origin main — success"
+      ],
+      "linksAdded": [
+        {
+          "file": "blog/warp-terminal-review-2026.html",
+          "link": "/blog/free-claude-code-tutorial-2026.html",
+          "context": "總結 進階用戶 bullet"
+        },
+        {
+          "file": "blog/warp-terminal-review-2026.html",
+          "link": "/blog/n8n-automation-tutorial-2026.html",
+          "context": "延伸閱讀 list"
+        },
+        {
+          "file": "blog/composio-codex-skills-tutorial-2026.html",
+          "link": "/blog/mattpocock-skills-claude-code-2026.html",
+          "context": "FAQ mattpocock/skills 比較答案"
+        },
+        {
+          "file": "blog/composio-codex-skills-tutorial-2026.html",
+          "link": "/blog/n8n-automation-tutorial-2026.html",
+          "context": "總結 推薦使用場景 list"
+        },
+        {
+          "file": "blog/ai-video-tools-comparison-2026.html",
+          "link": "/blog/small-business-automation.html",
+          "context": "情境四 企業行銷協作"
+        },
+        {
+          "file": "blog/ai-video-tools-comparison-2026.html",
+          "link": "/blog/ai-tools-comparison-2026.html",
+          "context": "2026 AI 影片工具趨勢 list"
+        }
+      ]
     }
   ],
   "fbPosted": [
