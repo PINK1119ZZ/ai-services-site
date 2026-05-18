@@ -1,5 +1,88 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 44 | 2026-05-18 AM — researcher agent
+
+> 執行時間：2026-05-18 03:55 UTC | 搜尋範圍：GitHub Trending 本週、affiliate program 確認、agentmemory/CloakBrowser/superpowers/9router/AiToEarn 深度評估
+
+---
+
+### 🔥 本輪最大發現：Agent Memory + Stealth Browser 雙爆發，superpowers持續稱霸
+
+本輪 GitHub Trending 有三個主軸：
+1. **Agent Skills/Memory生態系持續爆發** — obra/superpowers 93K stars，agentmemory +7,103/週，academic-research-skills +3,624/週
+2. **爬蟲/自動化工具新星** — CloakBrowser +9,007/週（本週#1），直接取代 $49-299/月商業工具
+3. **內容變現/AI自動化** — AiToEarn +4,687/週，**30%/12個月affiliate已確認**（新發現！）
+
+---
+
+#### 1. 🔥🔥🔥 CloakBrowser（本週GitHub #1，+9,007/週，13,987 總）
+
+- MIT開源，Stealth Chromium，通過全部30/30 bot detection測試
+- `pip install cloakbrowser` 一行安裝，Playwright drop-in替換
+- 自稱取代商業 anti-detect browser 的 $49-299/月費用
+- **affiliate角度：** ScrapingAnt 50% no-cap（最佳搭配）+ Decodo proxy（已有）
+- **繁中=0篇**，P2優先
+
+#### 2. 🔥🔥🔥 rohitg00/agentmemory（#2，+7,103/週，11,487 總）
+
+- #1 Persistent Memory for AI coding agents（12個月bench測試驗證）
+- 支援 Claude Code, Codex, Cursor, Gemini CLI, OpenCode, Cline, OpenClaw 等
+- MCP整合，session間記憶壓縮與hybrid search
+- ProductHunt trending，agent-memory.dev上線
+- **繁中=0篇**，P1優先
+
+#### 3. 🔥🔥🔥 obra/superpowers（93,000+ stars，emelia.io確認）
+
+- Claude Code生態系最熱門Skills Framework
+- 強迫agent遵循 Plan→TDD→Subagent→Review 工程流程
+- termdock.com、emelia.io已有深度分析（英文），繁中仍稀少
+- **affiliate角度：** DataCamp + DigitalOcean + Gumroad（已有）
+- P1優先，與已有的mattpocock/skills文章形成SEO集群
+
+#### 4. 🔥🔥 decolua/9router（+4,458/週，11,705 總）
+
+- 本地proxy連接Claude Code/Codex/Cursor到40+免費AI provider
+- RTK技術聲稱省 -40% token（**對我們自己的agent成本有研究價值**）
+- 無直接affiliate但「免費AI coding完整指南」是高流量切入點
+- P2，繁中=0
+
+#### 5. 🆕 AiToEarn affiliate確認 — 30%/12個月（新affiliate發現！）
+
+- yikart/AiToEarn — 14,811 stars，+4,687/週
+- **affiliate已確認：** dev.aitoearn.ai/affiliates，30%/12個月
+- 4個AI Agent自動化 Create→Publish→Engage→Monetize
+- 台灣內容創作者受眾，繁中=0篇
+- **待Ivan申請**，先寫教學文建流量
+
+---
+
+### 📊 本輪 Trending 完整榜（2026-05-18 週榜）
+
+| Repo | Stars | +週 | 分類 |
+|------|-------|-----|------|
+| mattpocock/skills | 89,474 | +19,679 | Agent Skills |
+| obra/superpowers | ~93,000 | 持續熱 | Agent Skills |
+| CloakBrowser | 13,987 | +9,007 | 爬蟲/自動化 |
+| agentmemory | 11,487 | +7,103 | Agent Memory |
+| RuView | 59,302 | +6,733 | WiFi AI感知 |
+| anthropics/financial-services | 24,540 | +5,977 | 金融AI |
+| AiToEarn | 14,811 | +4,687 | 內容變現 |
+| 9router | 11,705 | +4,458 | 省token工具 |
+| academic-research-skills | 9,596 | +3,624 | 學術Agent |
+| DeepSeek-TUI | 31,413 | +7,444 | DeepSeek terminal |
+| UI-TARS-desktop | 34,467 | +2,563 | 多模態Agent |
+
+---
+
+### 💡 內部效率建議（給builder）
+
+9router 的 RTK（Reasoning Token Compression）技術值得 builder agent 研究：
+- 聲稱 -20~40% token 消耗
+- 若可整合於我們的 agent 通訊流程，直接省錢
+- 建議：下輪給 builder directive 讓其評估可行性
+
+---
+
 ## Round 32 | 2026-04-27 PM — researcher agent
 
 > 執行時間：2026-04-27 22:00 UTC | 搜尋範圍：GitHub Trending 今日、Semrush affiliate 確認、Taption + Fomofly 調查、新工具評估
