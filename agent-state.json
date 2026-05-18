@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-18T05:26:00Z",
+  "lastUpdated": "2026-05-18T05:41:00Z",
   "lastResearchDate": "2026-05-18",
   "lastResearchRound": 46,
   "sites": {
@@ -1224,6 +1224,25 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-05-18T05:41:00Z",
+      "agent": "content-ops",
+      "session": "fb-weekly-review",
+      "actions": [
+        "Pulled git main and read agent-state.json",
+        "Fetched this week Facebook posts via Graph API with public interaction fields",
+        "Tested requested insights metrics: post_impressions and post_engaged_users returned invalid metric; post_clicks and fallback insight metrics returned empty data",
+        "Could not truthfully compute reach rate / engagement rate due to unavailable per-post insights",
+        "Updated fbStrategy.performance winPatterns/failPatterns and appended weekly review using observable interaction proxy analysis",
+        "Extended autoDevAIStrategy.postRules with stronger FB-native posting rules"
+      ],
+      "results": {
+        "postsReviewed": 1,
+        "publicInteractions": 1,
+        "postsWithAnyInteraction": 1,
+        "blocker": "Graph API per-post reach/engagement metrics unavailable for current token/permissions"
+      }
+    },
     {
       "timestamp": "2026-05-18T05:26:00Z",
       "agent": "strategist",
@@ -2706,7 +2725,8 @@
   "fbStrategy": {
     "performance": {
       "winPatterns": [
-        "題材屬於比較/評測/決策型，較容易吸引停留與回應"
+        "題材屬於比較/評測/決策型，較容易吸引停留與回應",
+        "比較/評測/決策型題材仍是目前最容易拿到留言的格式，尤其前兩行直接講結論時更有效。"
       ],
       "failPatterns": [
         "同一時段（04:00 UTC）連發 3-4 則以上貼文，貼文彼此競食，幾乎全部 0 互動。",
@@ -2716,7 +2736,10 @@
         "目前 token/權限下無法穩定取得 per-post reach/impressions；週報改用公開互動與可取 clicks 作代理分析，直到補齊 insights 權限。",
         "開頭太像導流貼，社群原生感偏弱",
         "04:00 UTC 批次貼文時段表現持續偏弱",
-        "公開互動為 0，表示題材或開頭鉤子沒有讓人停下來"
+        "公開互動為 0，表示題材或開頭鉤子沒有讓人停下來",
+        "04:00 UTC 批次貼文持續表現偏弱，貼文彼此競食。",
+        "開頭太像導流貼文，社群原生感偏弱。",
+        "缺少明確立場、問題鉤子或留言誘因時，公開互動容易歸零。"
       ],
       "weeklyReviews": [
         {
@@ -2856,6 +2879,49 @@
             "減少 04:00 UTC 的批次導流貼；若要發，改成單篇強鉤子版本。",
             "文案前兩行先講結論，CTA 留到最後一段。"
           ]
+        },
+        {
+          "week": "2026-W20",
+          "period": "2026-05-11 to 2026-05-18",
+          "generatedAt": "2026-05-18T05:41:00Z",
+          "summary": "本週依然受限於 Graph API 權限／metric 可用性，無法可靠取得 per-post reach、impressions、engaged users，因此不能誠實計算任務要求的觸及率與互動率。改以公開互動（留言/反應/分享）做代理分析後，結果和前兩週一致：比較/評測/決策型貼文最有機會拿到互動；04:00 UTC 批次導流貼文持續低迷。",
+          "totals": {
+            "posts": 1,
+            "publicInteractions": 1,
+            "postsWithAnyInteraction": 1,
+            "reachAvailablePosts": 0,
+            "clickMetricAvailablePosts": 0
+          },
+          "topPostsByObservableInteraction": [
+            {
+              "created_time": "2026-05-18T03:55:34+0000",
+              "message_preview": "🔥 Warp Terminal 繁中評測 2026：AI 終端機值得換嗎？vs iTerm2 完整比較 Warp Terminal 完整繁中評測：Rust 打造的 AI 終端機，AI Command Search、Workflows、團隊協作。對比 iTerm2，台灣開發者值得換嗎？ 📋 文章重點： ✅ 什麼是 Warp Terminal？ ✅ 🎯 核心特色",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "whyItWorked": [
+                "比較/評測/決策型題材較容易引發留言或停留。",
+                "前兩行直接給結論，比單純貼連結更像社群原生內容。"
+              ]
+            }
+          ],
+          "weakPostsByObservableInteraction": [],
+          "blockers": [
+            "Facebook Graph API 在目前 token/權限下，post_impressions 與 post_engaged_users 會回 valid insights metric 錯誤。",
+            "post_clicks、post_impressions_unique、post_reactions_by_type_total 雖可請求，但本週實測回傳空 data，無法作為可靠逐篇指標。",
+            "因此本週無法完成任務要求中的「觸及率 > 5% / < 1%」硬性分類，只能做代理分析並把學習寫回策略。"
+          ],
+          "newRulesAdded": [
+            "每週 Facebook 主貼文優先用「比較 / 值不值得 / 怎麼選」框架，而不是單純貼文章摘要。",
+            "凌晨 04:00 UTC 若一定要發文，只發 1 則且前兩行必須先給結論與問題鉤子。",
+            "把留言問題寫進文案主體，不要只在最後補一句互動 CTA。"
+          ],
+          "nextWeekActions": [
+            "優先補齊可讀取 post reach/engagement insights 的權限或改用可用 metric 組合。",
+            "中午主時段只發比較/評測/值不值得類主貼文。",
+            "減少 04:00 UTC 批次導流貼文，必要時壓到單篇。"
+          ]
         }
       ]
     },
@@ -2870,7 +2936,10 @@
         "Facebook 貼文前 2 行要先給明確結論或立場，不要先放「完整文章看這裡」。",
         "比較文/評測文/值不值得買類題材，明顯比單純文章轉貼更有互動機會。",
         "同一天的 04:00 UTC 貼文若無強鉤子，極容易變成 0 互動；優先把核心貼文放在中午主時段。",
-        "條列重點控制在 3-4 個，避免整篇像 RSS 摘要。"
+        "條列重點控制在 3-4 個，避免整篇像 RSS 摘要。",
+        "每週 Facebook 主貼文優先用「比較 / 值不值得 / 怎麼選」框架，而不是單純貼文章摘要。",
+        "凌晨 04:00 UTC 若一定要發文，只發 1 則且前兩行必須先給結論與問題鉤子。",
+        "把留言問題寫進文案主體，不要只在最後補一句互動 CTA。"
       ]
     }
   },
