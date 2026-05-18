@@ -321,3 +321,114 @@
 > - 監控 free-claude-code 繁中文章是否已有競品出現
 > - 搜尋台灣 Threads AI 社群規模（確認流量潛力）
 > - 調查 Cursor Ambassador 申請條件與回報
+
+---
+
+### Round 46 — 2026-05-18（Market Research cron 週日 07:00 UTC）
+
+#### 一、🔥 本輪 P1 發現：GoHighLevel 40% LIFETIME 聯盟 — 業界最強行銷自動化聯盟
+
+| 欄位 | 詳情 |
+|------|------|
+| 佣金 | **40% recurring，LIFETIME（無時間限制）**+ 2-tier 5% |
+| Cookie | 90 天 |
+| 方案定價 | Starter $97/月、Pro $297/月 |
+| 每客收益 | $97×40% = **$38.80/月/客（永久！）** |
+| 2-tier | 每介紹一個 affiliate，他的每筆銷售你拿 5% |
+| 平台 | FirstPromoter |
+| 申請 | https://affiliate.gohighlevel.com/ |
+| 台灣缺口 | **繁中完整評測 = 0 篇**（只有英文內容）|
+| 受眾 | 行銷代理商、數位行銷公司、企業行銷主管 |
+| 預估 | 10 客 = $388/月；100 客 = $3,880/月（永久複利）|
+| 評估 | ⭐⭐⭐⭐ 業界最強行銷 SaaS 聯盟，lifetime + 2-tier 複利結構，台灣繁中=0 |
+
+**行動：** 立即申請（affiliate.gohighlevel.com），GHL 台灣繁中評測文是本月最高優先新文章候補
+
+---
+
+#### 二、🔥 本輪 P1 發現：Voibe — 25% LIFETIME（無12個月限制）+ 5月MacBook競賽進行中
+
+| 欄位 | 詳情 |
+|------|------|
+| 佣金 | **25% recurring，無 cap（真正 lifetime）** |
+| 特殊獎勵 | 5月1日-31日 MacBook Neo 競賽（最多付費客戶贏 MacBook；3個referral即可參賽）|
+| Lifetime方案 | $149 一次性 → 每筆賺 $37.25 |
+| 平台 | Lemon Squeezy |
+| 申請 | https://www.getvoibe.com/partners |
+| 產品 | Mac 原生 AI 聲音輸入（on-device，無雲端，Cursor/VS Code IDE 整合）|
+| 台灣缺口 | 繁中評測 = 0 篇，Mac 開發者受眾 |
+| 受眾 | Mac 用戶、工程師、創作者、AI 生產力工具用戶 |
+| 預估 | 25%×$29/月/客，$149 lifetime = $37.25 一次 |
+| 評估 | ⭐⭐⭐ 25% lifetime（比 Wispr Flow 25%/12個月更長），5月競賽是額外爆發機會 |
+
+**注意：** 目前是 5 月份，MacBook 競賽截止 5/31，窗口快關！
+
+---
+
+#### 三、本輪 P2 發現：QuillBot 20% + PartnerStack（高搜尋量，台灣繁中缺口）
+
+| 欄位 | 詳情 |
+|------|------|
+| 佣金 | 10%-20%（PartnerStack，lifetime of account）|
+| 平台 | PartnerStack，免費申請 |
+| 申請 | https://quillbot.com/affiliates |
+| 搜尋量 | 業界評測稱「search volume king」英文高量，繁中評測稀少 |
+| 產品 | AI 寫作助理：改寫/文法/摘要/翻譯（$9.95/月或年費）|
+| 台灣缺口 | 繁中 QuillBot 評測 vs Grammarly 比較頁 = 稀少 |
+| 受眾 | 學生、寫作者、非英語母語用戶（台灣完美受眾）|
+| 預估 | 20%×$9.95/月/客，累積型 |
+| 評估 | ⭐⭐ 搜尋量高但佣金偏低，配合比較頁多聯盟疊加效果好 |
+
+---
+
+#### 四、本輪 P2 發現：Descript 15% /12個月（Podcast/影片編輯 AI，台灣繁中空白）
+
+| 欄位 | 詳情 |
+|------|------|
+| 佣金 | 15% recurring 12個月（或 $25 flat/新訂閱者）|
+| 平台 | 直接申請（descript.com/affiliate）|
+| 申請 | https://www.descript.com/affiliate |
+| 產品 | AI 影片/Podcast 編輯：文字剪輯、轉錄、螢幕錄影 |
+| 台灣缺口 | 繁中評測 = 幾乎 0，Podcast 創作者受眾 |
+| 受眾 | YouTuber、Podcast 創作者、SaaS Demo 製作者 |
+| 可搭配 | VEED（已有 30%/12m）+ CapCut + Descript = 三聯盟影片工具比較頁 |
+| 評估 | ⭐⭐ 搭配 VEED 比較頁時可疊加，單獨做文章性價比偏低 |
+
+---
+
+#### 五、本輪 GitHub Trending 掃描（2026-05-18 weekly）
+
+| 排名 | 項目 | 本週星數 | 累計 | 評估 |
+|------|------|---------|------|------|
+| #1 | CloakHQ/CloakBrowser | +9,007 | 14,035 | P2（ScrapingAnt 50% 天然搭配）|
+| #2 | Hmbown/DeepSeek-TUI | +7,444 | 31,458 | P1 NEW — Rust terminal coding agent，繁中=0 |
+| #3 | mattpocock/skills | +19,679 | 89,595 | 仍在榜，已有文章 |
+| #4 | rohitg00/agentmemory | +7,103 | 11,534 | P1 已入列 |
+| #5 | ruvnet/RuView | +6,733 | 59,323 | P3（需 CSI 硬體） |
+| #6 | anthropics/financial-services | +5,977 | 24,575 | P2（金融 Agent 系列延伸）|
+| #7 | yikart/AiToEarn | +4,687 | 14,833 | P1 已入列，affiliate 30%/12m 待申請 |
+| #8 | Imbad0202/academic-research-skills | +3,624 | 9,648 | P2（學術研究 Agent）|
+| #9 | decolua/9router | +4,458 | 11,730 | P2（RTK token 優化）|
+| #10 | bytedance/UI-TARS-desktop | +2,563 | 34,475 | P3（開源無 affiliate）|
+| NEW | millionco/react-doctor | +2,430 | 10,008 | P2 — React 代碼品質 Agent，TypeScript |
+| NEW | HKUDS/AI-Trader | +2,499 | 17,944 | P2（已寫 TradingAgents 相關）|
+
+**本輪最新爆發：DeepSeek-TUI（Hmbown）**
+- +7,444/週，31.4K stars，MIT 開源
+- Rust 終端機 coding agent，DeepSeek V4 原生支援，1M context
+- 雙二進位架構（deepseek + deepseek-tui），MCP 支援，16 子 Agent 並行
+- 台灣繁中評測 = **0 篇**（英文已有 verdent.ai + xugj520.cn 評測）
+- 無直接 affiliate，但可搭配 DigitalOcean VPS + DataCamp（DeepSeek API 費用）
+- **潛力：** DeepSeek V4 + 台灣開發者受眾，成本議題（比 Claude Code 便宜）= 高轉換
+
+---
+
+#### 六、本輪新流量管道：「AI 聯盟行銷入門頁」繁中需求缺口
+
+- 搜尋「AI 聯盟行銷 2026 繁中」= 幾乎無完整的繁中 AI affiliate 彙整頁
+- outlierkit.com 有完整的英文版（50+ programs 排名），繁中版 = 空白
+- **機會：** 建立「台灣 AI 工具聯盟計畫完整整理 2026」頁面
+  - 把我們手上 30+ affiliate links 全部整理成比較表
+  - 目標關鍵字：「AI 工具 聯盟行銷 台灣」「AI affiliate 佣金比較 繁中」
+  - 天然適合嵌入所有聯盟連結，是高意圖受眾（想賺錢的人）
+  - 預估搜尋量：中量，但轉換率極高（用戶主動搜尋賺錢方法）
