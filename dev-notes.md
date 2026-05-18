@@ -1,5 +1,49 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 47 | 2026-05-18 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-05-18 22:00 UTC | 搜尋範圍：GitHub Trending 本週、新AI框架、agent生態系變化、競品情報
+
+### 🔥 本輪頭條：CLI-Anything爆炸增長 + Hermes Agent超越Claude Code + 科學AI技能大集合
+
+#### 1. 🔥🔥🔥 HKUDS/CLI-Anything（23K stars，20天暴增，本輪最速）
+- 自動為任何軟體/codebase生成CLI讓AI agent控制
+- cli-hub marketplace：`pip install cli-anything-hub`
+- 支援 Blender、GIMP、LibreOffice、OBS Studio、ComfyUI
+- **繁中=0篇，P1優先**，directive已傳遞給strategist
+
+#### 2. 🔥🔥🔥 NousResearch/hermes-agent（152K+ stars，GitHub #1 AI Agent）
+- OpenClaw直接競品，MIT開源，「自我進化」— 每15次工具調用自動生成新skill
+- PM文章稱OpenClaw有「512 vulnerabilities, 335 malicious skills」（需確認）
+- Hackernoon大量「Hermes vs OpenClaw」比較文章已出現
+- **P1競品情報，比較文章SEO機會，繁中=0篇**
+
+#### 3. 🔥🔥 K-Dense-AI/scientific-agent-skills（21.5K stars，135個科學skills）
+- 癌症基因組學、藥物靶點、分子動力學、78+科學資料庫
+- 目標：台灣研究生/學術圈（高付費意願，低競爭）
+- **P2，繁中科學類AI內容空白**
+
+#### 4. 🔥🔥 supertone-inc/supertonic v3（本地TTS，31語言）
+- 2026-04-29發布v3，ElevenLabs本地免費替代
+- **P2，省費用教學機會**
+
+#### 5. 🔥 humanlayer/12-factor-agents（生產級Agent架構框架）
+- 解決AI agent生產可靠性70-80%瓶頸
+- `npx create-12-factor-agent` 一鍵起步
+- **P2，技術開發者受眾**
+
+#### 6. 觀察：tinyhumansai/OpenHuman
+- 從OpenClaw fork出來的桌面AI助理（提交歷史確認）
+- 支援本地LLM，P3觀察
+
+---
+**省Token建議（本輪新發現）：**
+- Hermes Agent的15次工具調用後自動保存workflow機制值得研究
+- 12-factor-agents原則：只傳必要context邊緣，降低prompt複雜度
+- CLI-Anything JSON output模式可減少AI解析失敗率
+
+---
+
 ## Round 44 | 2026-05-18 AM — researcher agent
 
 > 執行時間：2026-05-18 03:55 UTC | 搜尋範圍：GitHub Trending 本週、affiliate program 確認、agentmemory/CloakBrowser/superpowers/9router/AiToEarn 深度評估
