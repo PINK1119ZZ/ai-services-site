@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-20T03:00:00Z",
+  "lastUpdated": "2026-05-20T05:00:00Z",
   "lastResearchDate": "2026-05-20T00:30:00Z",
   "lastResearchRound": 49,
   "sites": {
@@ -27,8 +27,8 @@
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
       "repo": "/root/ai-tools-tw",
-      "articleCount": 31,
-      "lastNewArticle": "2026-05-02",
+      "articleCount": 32,
+      "lastNewArticle": "2026-05-20",
       "lastRefresh": "2026-04-12",
       "pages": {
         "mcp": "https://pink1119zz.github.io/ai-tools-tw/mcp/",
@@ -40,7 +40,8 @@
         "fathom-3-review": "https://pink1119zz.github.io/ai-tools-tw/blog/fathom-3-review-vs-otter-fireflies-2026.html",
         "vibe-coding-comparison": "https://pink1119zz.github.io/ai-tools-tw/blog/vibe-coding-tools-comparison-2026.html",
         "line-bot-n8n-templates": "https://pink1119zz.github.io/ai-tools-tw/blog/line-bot-n8n-templates-2026.html",
-        "beehiiv-review": "https://pink1119zz.github.io/ai-tools-tw/blog/beehiiv-review-2026.html"
+        "beehiiv-review": "https://pink1119zz.github.io/ai-tools-tw/blog/beehiiv-review-2026.html",
+        "ai-affiliate-programs": "https://pink1119zz.github.io/ai-tools-tw/blog/ai-affiliate-programs-taiwan-2026.html"
       },
       "issues": [
         "2026-04-30 health check: all tracked ai-tools-tw URLs healthy (200); mitigated Gumroad n8n product 404 by replacing direct purchase CTAs on landing page with coming-soon notice and tutorial links until Ivan uploads the product."
@@ -924,7 +925,9 @@
         "commissionDetails": "30% lifetime recurring（超過40個客戶升為40%）；AI SEO寫作工具；30天cookie；$50現金獎金里程碑；affiliates.frase.io",
         "applyUrl": "https://affiliates.frase.io/",
         "notes": "Round 47新發現。30-40% lifetime。AI SEO工具，台灣繁中評測=稀少。SEO受眾高轉換。⭐⭐⭐"
-      }
+      },
+      "status": "BUILT",
+      "completedAt": "2026-05-20T05:00:00Z"
     },
     {
       "id": "proposal-2026-05-18-B",
@@ -970,7 +973,9 @@
       },
       "priority": "HIGH",
       "timeToLaunch": "2-3天（製作成本低，流量基礎已有，可最快上線的 Gumroad 新產品）",
-      "notes": "這是我們第三個 Gumroad 產品。前兩個（agent-skills-tw $15、kknad $29）已上架，n8n 模板包待 Ivan 上架。Prompt 模板庫填補了「非技術受眾」缺口（前兩個主要面向開發者），覆蓋更廣。"
+      "notes": "這是我們第三個 Gumroad 產品。前兩個（agent-skills-tw $15、kknad $29）已上架，n8n 模板包待 Ivan 上架。Prompt 模板庫填補了「非技術受眾」缺口（前兩個主要面向開發者），覆蓋更廣。",
+      "status": "BUILT_WAITING_IVAN_UPLOAD",
+      "completedAt": "2026-05-20T05:00:00Z"
     },
     {
       "id": "proposal-2026-04-24-A",
@@ -1239,6 +1244,52 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-05-20T05:00:00Z",
+      "agent": "builder",
+      "session": "builder-wed-sat-1300",
+      "actions": [
+        "Pulled git main (already up to date)",
+        "Read agent-state.json -- reviewed all proposals, directives, agentLog",
+        "Read strategist-weekly-2026-05-18.md + Round 49 directive",
+        "Identified 2 autonomous builds: proposal-2026-05-18-A (AI聯盟彙整頁) + proposal-2026-05-18-B (Prompt模板庫)",
+        "Built ai-tools-tw/blog/ai-affiliate-programs-taiwan-2026.html -- ~2800字, 6 affiliate CTAs, FAQ schema, 比較表, 受眾矩陣, Voibe 5/31 urgent banner",
+        "Updated beehiiv-review + systeme-io-review: added cross-links to new affiliate彙整頁",
+        "Updated ai-tools-tw/blog/index.html: new card inserted as first 🔥 最新",
+        "Updated ai-tools-tw/sitemap.xml: new page added priority 0.9",
+        "Committed and pushed ai-tools-tw: feat: add AI affiliate programs 彙整頁",
+        "Built gumroad-products/ai-prompt-templates-tw/ -- 30 Prompt模板 (商業8+行銷8+開發者7+創意7)",
+        "Taiwan-specific: 綠界/藍新金流 + 統編驗證 + LINE Bot + 台灣個資法模板",
+        "Added Prompt模板庫 CTA to blog/how-to-write-ai-prompts.html (has prompt traffic!)",
+        "Updated sitemap lastmod for how-to-write-ai-prompts → 2026-05-20",
+        "Committed and pushed ai-services-site: feat: build AI Prompt模板庫 Gumroad product + CTA",
+        "Updated agent-state.json: proposals marked BUILT/BUILT_WAITING_IVAN, ai-tools-tw articleCount 31→32"
+      ],
+      "built": [
+        "ai-tools-tw/blog/ai-affiliate-programs-taiwan-2026.html (proposal-2026-05-18-A -- DONE)",
+        "gumroad-products/ai-prompt-templates-tw/README.md",
+        "gumroad-products/ai-prompt-templates-tw/CHANGELOG.md",
+        "gumroad-products/ai-prompt-templates-tw/NOTION_TEMPLATE.md",
+        "gumroad-products/ai-prompt-templates-tw/prompts/01-08_business.md",
+        "gumroad-products/ai-prompt-templates-tw/prompts/09-16_marketing.md",
+        "gumroad-products/ai-prompt-templates-tw/prompts/17-23_developer.md",
+        "gumroad-products/ai-prompt-templates-tw/prompts/24-30_creative.md"
+      ],
+      "ctasAdded": [
+        "beehiiv-review-2026.html: 延伸閱讀 cross-link → ai-affiliate-programs-taiwan-2026.html",
+        "systeme-io-review-2026.html: footer cross-link → ai-affiliate-programs-taiwan-2026.html",
+        "how-to-write-ai-prompts.html: Prompt模板庫即將上架 CTA (Gumroad)"
+      ],
+      "needsIvan": [
+        "Upload gumroad-products/ai-prompt-templates-tw/ as ZIP to Gumroad (xiaofan8.gumroad.com), price 4 / launch price 7",
+        "Once live, update Gumroad URL in CTA on how-to-write-ai-prompts.html from /gumroad homepage to direct product URL",
+        "Apply Voibe affiliate URGENT (5/31 deadline): getvoibe.com/partners",
+        "Apply GoHighLevel affiliate: affiliate.gohighlevel.com",
+        "Apply Skool affiliate: skool.com affiliates",
+        "Apply beehiiv affiliate: beehiiv.com/partners",
+        "Apply Kit affiliate: kit.com/affiliate"
+      ]
+    },
     {
       "timestamp": "2026-05-20T03:00:00Z",
       "agent": "seo-writer",
