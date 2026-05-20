@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-19T03:00:00Z",
+  "lastUpdated": "2026-05-20T00:00:00Z",
   "lastResearchDate": "2026-05-19",
   "lastResearchRound": 48,
   "sites": {
@@ -13,7 +13,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-05-19"
+      "lastChecked": "2026-05-20"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -22,7 +22,7 @@
       "lastNewArticle": "2026-04-12",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-05-19"
+      "lastChecked": "2026-05-20"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -45,7 +45,7 @@
       "issues": [
         "2026-04-30 health check: all tracked ai-tools-tw URLs healthy (200); mitigated Gumroad n8n product 404 by replacing direct purchase CTAs on landing page with coming-soon notice and tutorial links until Ivan uploads the product."
       ],
-      "lastChecked": "2026-05-19"
+      "lastChecked": "2026-05-20"
     },
     "autodev_ai": {
       "url": "https://autodev-ai.com",
@@ -56,7 +56,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-05-19"
+      "lastChecked": "2026-05-20"
     }
   },
   "affiliateLinks": {
@@ -2855,6 +2855,29 @@
       "affiliatesConfirmed": [
         "Writesonic: 30% lifetime (writesonic.com/affiliates) — already in state, URGENT apply"
       ]
+    },
+    {
+      "timestamp": "2026-05-20T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json, reviewed directives, and checked recent agentLog before running health checks",
+        "No directives file present and no direct site-health repair task was pending for this run",
+        "Initial shell loop curl output returned 000 for all URLs due to parsing bug in the checker, so performed manual cross-checks before judging site health",
+        "Curl checked 13 deduped tracked URLs via Python subprocess runner: 3 site roots + 10 ai-tools-tw key pages",
+        "Confirmed all tracked URLs returned HTTP 200 from cron host",
+        "No site issues required repair; existing Gumroad LINE Bot n8n landing-page mitigation remains healthy",
+        "Updated lastChecked to 2026-05-20 for all tracked sites"
+      ],
+      "results": {
+        "checkedUrls": 13,
+        "http200": 13,
+        "failures": 0,
+        "fixes": 0,
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)",
+        "note": "A bash TSV parsing bug produced false 000s during the first pass; Python-based recheck confirmed all URLs healthy."
+      }
     }
   ],
   "fbPosted": [
@@ -3132,9 +3155,15 @@
           "task": "daily site health check",
           "result": "Pulled latest main, reviewed latest directives and agentLog, curl-checked 13 deduped tracked URLs (3 site roots + 10 ai-tools-tw key pages); all returned HTTP 200. No site repairs needed. Updated site lastChecked dates and recorded daily health result.",
           "status": "done"
+        },
+        {
+          "date": "2026-05-20",
+          "task": "daily site health check",
+          "result": "Pulled latest main, reviewed directives and recent agentLog, re-ran URL checks after a faulty shell parser produced false 000s, then confirmed 13 deduped tracked URLs all returned HTTP 200. No repairs needed. Updated site lastChecked dates and recorded daily health result.",
+          "status": "done"
         }
       ],
-      "lastRun": "2026-05-19"
+      "lastRun": "2026-05-20"
     }
   }
 }
