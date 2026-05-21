@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-20T22:00:00Z",
-  "lastResearchDate": "2026-05-20T22:00:00Z",
-  "lastResearchRound": 50,
+  "lastUpdated": "2026-05-21T00:30:00Z",
+  "lastResearchDate": "2026-05-21T00:30:00Z",
+  "lastResearchRound": 51,
   "sites": {
     "autodev-ai": {
       "url": "https://autodev-ai.com",
@@ -2968,6 +2968,62 @@
         "fixes": 0,
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)",
         "note": "A bash TSV parsing bug produced false 000s during the first pass; Python-based recheck confirmed all URLs healthy."
+      }
+    },
+    {
+      "timestamp": "2026-05-21T00:30:00Z",
+      "agent": "researcher",
+      "session": "ai-trend-hunter-round51-thu-0030",
+      "round": 51,
+      "actions": [
+        "git pull origin main",
+        "Read agent-state.json — lastResearchRound 50, last run 2026-05-20T22:00Z",
+        "Reviewed directives/ — researcher-to-strategist-2026-05-20-round50.md was last; all Round 50 P1 items still unexecuted (carry-over confirmed: Superpowers, GBrain, RTK, Claude Code, OpenCode)",
+        "Scraped github.com/trending live: spotted deepclaude (HN 669pts), rohitg00/agentmemory, tinyhumansai/openhuman, HKUDS/ViMax, can1357/oh-my-pi, zakirullin/files.md, obra/superpowers (carry-over), claude-plugins-official (carry-over)",
+        "Deep-dived aattaran/deepclaude: 'Claude Code with DeepSeek brain, 17x cheaper', Yahoo Tech full article, HN 669pts, 繁中評測=0篇",
+        "Deep-dived rohitg00/agentmemory: 13.7K stars, +497/週, Trendshift AI Memory #1, MCP server, agent-memory.dev, 繁中=0",
+        "Deep-dived tinyhumansai/openhuman: TechTimes報導, 118+ tool integrations, Threads傳播, 繁中教學=0",
+        "Checked HKUDS/ViMax: Agentic video generation (Director+Screenwriter+Producer+VideoGen all-in-one), 1.1K+ stars, Threads傳播",
+        "Checked can1357/oh-my-pi: 4.3K stars, AI coding agent for terminal, YouTube 37K views tutorial, awesomeskills.dev listed",
+        "DeepSeek affiliate: no direct affiliate confirmed; DigitalOcean/DataCamp remain best CTA pairing",
+        "Obsidian/files.md: files.md only 22 stars (不值得寫), Obsidian alternative search highly competitive",
+        "Wrote researcher-to-strategist-2026-05-21-round51.md directive (P1-NEW: DeepClaude + agentmemory; P1 carry-over x5; P2: OpenHuman comparison + ViMax)",
+        "Appended Round 51 entry to topic-ideas.md",
+        "Updated agent-state.json: lastResearchRound 51, agentLog, lastUpdated 2026-05-21T00:30Z"
+      ],
+      "findings": {
+        "githubTrending": [
+          {
+            "repo": "aattaran/deepclaude",
+            "stars": "N/A",
+            "signal": "HN 669pts, Yahoo Tech coverage, 17x cheaper Claude Code, 繁中=0"
+          },
+          {
+            "repo": "rohitg00/agentmemory",
+            "stars": 13700,
+            "starsWeekly": 497,
+            "signal": "Trendshift AI Memory #1, MCP server, 繁中=0"
+          },
+          {
+            "repo": "tinyhumansai/openhuman",
+            "stars": "growing",
+            "signal": "TechTimes coverage, 118+ integrations, Threads viral, OpenClaw/Hermes competitor"
+          },
+          {
+            "repo": "HKUDS/ViMax",
+            "stars": "1100+",
+            "signal": "Agentic video generation all-in-one, Threads传播, HKUDS品质"
+          },
+          {
+            "repo": "can1357/oh-my-pi",
+            "stars": 4338,
+            "signal": "Terminal coding agent, YouTube 37K views, awesomeskills.dev listed"
+          }
+        ],
+        "newP1s": 2,
+        "carryOverP1s": 5,
+        "affiliateNewFinds": 0,
+        "directiveFile": "researcher-to-strategist-2026-05-21-round51.md"
       }
     },
     {
