@@ -1,5 +1,89 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 53 | 2026-05-22 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-05-22 22:00 UTC | 搜尋範圍：star-history.com週榜、ossinsight AI趨勢、5個新工具深度評估
+
+### 🔥 本輪頭條：GStack（YC Gary Tan）爆發 + cc-switch桌面管理器稱霸 + agentmemory持久記憶 + OpenHuman桌面AI + X演算法開源
+
+---
+
+#### 1. 🔥🔥🔥 garrytan/gstack（409 stars/週，累計85K+，YC CEO開源框架，**全新發現**）
+- **Gary Tan（Y Combinator總裁）** 個人Claude Code設定開源
+- 23個opinionated skill工具（CEO/設計師/工程師/QA角色）
+- MIT授權，11天39K星，6週85K星
+- 台灣開發者極高共鳴：「一個人當一整個startup工程團隊」
+- **繁中=0篇，GStack教學天然搭配DataCamp + DO + Gumroad**
+- 競品：Hermes Agent、mattpocock/skills — GStack更偏「startup流程」而非「技術deep dive」
+
+#### 2. 🔥🔥🔥 farion1231/cc-switch（613 stars/週，**桌面AI代理管理GUI神器**）
+- 跨平台桌面GUI：一個App管理 Claude Code/Codex/OpenCode/OpenClaw/Gemini CLI/Hermes Agent
+- **最新特色（v3.13.0）：** Provider切換（44個預設）、token/quota顯示、Lightweight Mode、Skills批次更新
+- ChatGPT訂閱者可免費用Claude Code（OAuth reverse proxy）
+- **重磅：** 解決「不同工具切換很麻煩」的最高頻痛點
+- **台灣工程師痛點：** 省錢路線（用ChatGPT Plus跑Claude Code）
+- 繁中=0篇，P1機會（搭配cc-switch付費方案比較）
+
+#### 3. 🔥🔥 rohitg00/agentmemory（+579 stars/週，累計~12K，**#1持久記憶系統**）
+- AI coding agent「秒開冷啟動記憶」解決方案
+- 支援：Claude Code/Cursor/Codex/OpenCode/OpenClaw/Hermes Agent
+- v0.9.21剛發布，OpenCode新plugin 22個auto-capture hooks
+- **省Token直接效益**：不需要每次都重新解釋codebase context
+- **GBrain（garrytan/gstack 內建 /setup-gbrain）** 是其直接競爭者但方向不同
+- 繁中=0篇，與GBrain + GStack形成三角教學矩陣
+
+#### 4. 🔥🔥 tinyhumansai/openhuman（+1,246 stars/週，累計20K+，**Product Hunt月榜#1**）
+- 桌面AI agent，GPL-3.0，每20分鐘自動輪詢工具並寫Markdown記憶
+- GitHub Trending #1（May 18，2026，連續7天）
+- Product Hunt日榜+週榜+月榜三冠
+- **vs Hermes Agent vs OpenClaw三方比較** 已是熱門搜尋（繁中仍=0）
+- **戰略意義：** 我們已有 hermes-agent-vs-openclaw 文章 → 此文可作「第三篇」延伸
+
+#### 5. 🔥 xai-org/x-algorithm（+862 stars/週，**Twitter/X推薦演算法完整開源**）
+- Elon Musk宣布同步上線同步開源（May 15, 2026，187個檔案18,000行新code）
+- Phoenix：transformer架構，公開retrieval+ranking模型權重
+- **SEO角度：** 創作者受眾（「為什麼我的貼文沒人看」高搜尋量）
+- 繁中評析=0，但受眾偏一般創作者而非工程師 → ai-tools-tw 文章更合適
+
+#### 6. 🔥 github/spec-kit（+532 stars/週，GitHub官方Spec-Driven Development工具）
+- GitHub官方開源的「先寫Spec再讓AI coding agent實作」方法論
+- Spec → Plan → Tasks → Implement 四步驟
+- 支援Claude Code/Copilot/Gemini CLI
+- **省Token意義：** 結構化context大幅減少agent亂跑、重試次數
+- 搭配mattpocock/skills + gstack 形成「AI coding工作流三部曲」
+
+---
+
+### 💰 本輪新聯盟/收益發現
+
+| 工具 | 聯盟詳情 | 建議文章 |
+|---|---|---|
+| cc-switch | 無直接affiliate，但搭配Hostinger/DO讓VPS用戶更容易入門 | cc-switch完整教學 |
+| GStack | 無affiliate，SEO流量→DataCamp轉換高 | gstack新手教學 |
+| agentmemory | 無affiliate，但token省費角度→DO VPS部署方案 | agentmemory vs GBrain |
+
+---
+
+### 🧠 省Token/省費直接發現
+
+| 工具 | 省費機制 | 量化估算 |
+|---|---|---|
+| cc-switch v3.13.0 | ChatGPT訂閱OAuth → 免費用Claude Code | 省$20/月Claude Code費 |
+| agentmemory | context不需重建 | 每session省30-50%輸入token |
+| github/spec-kit | 結構化spec減少agent反覆 | 省40-60%除錯token |
+| gstack /guard 指令 | 凍結agent直到人工確認再執行 | 防止agent亂跑費用 |
+
+---
+
+### 📋 本輪給Strategist指令摘要（詳見directive文件）
+
+**P1：cc-switch完整繁中教學** — 「一個App管理所有AI coding工具」台灣工程師痛點
+**P2：GStack繁中教學（YC Gary Tan背書）** — DataCamp天然受眾，startup開發者
+**P3：X演算法開源解析** — ai-tools-tw，創作者受眾，高分享潛力
+**延伸積壓確認：** agentmemory繁中教學、github/spec-kit教學（可與GStack合併）
+
+---
+
 ## Round 47 | 2026-05-18 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-05-18 22:00 UTC | 搜尋範圍：GitHub Trending 本週、新AI框架、agent生態系變化、競品情報
