@@ -432,3 +432,72 @@
   - 目標關鍵字：「AI 工具 聯盟行銷 台灣」「AI affiliate 佣金比較 繁中」
   - 天然適合嵌入所有聯盟連結，是高意圖受眾（想賺錢的人）
   - 預估搜尋量：中量，但轉換率極高（用戶主動搜尋賺錢方法）
+
+---
+
+## 2026-05-24（市場研究 Round 55 — 週日 07:00 UTC cron）
+
+### 一、🔥 本輪最高價值新發現
+
+#### 1. OpenAI Codex Super-App 2026 — 台灣繁中深度指南空白確認
+
+| 欄位 | 詳情 |
+|------|------|
+| 功能集 | parallel agents、90+插件（Figma/Vercel/Canva）、Computer Use（電腦使用）、影像生成、in-app瀏覽器 |
+| 發布時間 | macOS桌面應用 2026-02-02 正式上線 |
+| 流量信號 | Riley Brown YouTube "Codex Full Course 2026" 140,748 views；仍在上升 |
+| 台灣現況 | 多奇教育有**舊版Codex CLI**課程（6小時），但**新版Super-App繁中深度指南=0篇** |
+| 搜尋缺口 | "openai codex super-app 繁中" "codex 2026 台灣 教學" = 無競品 |
+| 定價 | $20/月（ChatGPT Plus附帶）+ token費；rate limit快速觸達（Reddit確認） |
+| Affiliate | DataCamp（AI課程）+ DigitalOcean（VPS）+ Gumroad kknad（Claude Code對比） |
+| 預估 | ⭐⭐⭐⭐⭐ P1-ULTRA — US$300-700/月，立即執行 |
+
+#### 2. Threads 台灣流量管道確認（免費！）
+
+| 欄位 | 詳情 |
+|------|------|
+| 數據 | 台灣用戶佔全球Threads流量**21%**（Ketagalan Media 2026-03-11） |
+| 台灣人口占比 | 僅0.3%全球人口，流量佔比21% = 超比例活躍 |
+| 現況 | 我們在Facebook（互動低），完全未佈局Threads |
+| 競品 | 雷蒙三十、追日Gucci均在Facebook為主，Threads=相對藍海 |
+| 格式建議 | 比較表格圖片 + 一行結論 + 爭議問題（工程師和創作者受眾） |
+| 成本 | $0（Ivan開帳號，content-ops復用現有文章材料） |
+| 評估 | ⭐⭐⭐⭐ P1 — 免費流量+30-50%觸及提升，Ivan本週開帳號 |
+
+#### 3. AI 大頭照生成器 台灣繁中空白
+
+| 欄位 | 詳情 |
+|------|------|
+| 市場 | LinkedIn台灣用戶30萬+，企業/求職場景高需求 |
+| 英文競品 | BetterPic、Aragon AI、PhotoPacks.AI評測已飽和（2026年大量） |
+| 繁中現況 | **0篇繁中評測** |
+| 產品定價 | $20-80一次性費用 vs $200攝影棚 — 台灣用戶ROI訴求強 |
+| Affiliate | 需Ivan確認：BetterPic / Aragon AI / PhotoPacks.AI（各自查affiliate頁） |
+| 預估 | ⭐⭐⭐ P2 — US$200-500/月（affiliate確認後執行）|
+
+---
+
+### 二、本輪 AI SaaS Affiliate 彙整
+
+| 工具 | 佣金 | 狀態 | 優先 |
+|------|------|------|------|
+| BetterPic | 待確認（同類~20-30%） | 需Ivan申請 | P2 |
+| Aragon AI | 待確認 | 需Ivan申請 | P2 |
+| PhotoPacks.AI | 待確認 | 需Ivan申請 | P2 |
+| Blym | 50%/12m（已知） | 已在state，待Ivan申請 | P1 |
+| Frase | 30-40% lifetime（已知） | 已在state，待Ivan申請 | P1 |
+| Writesonic | 30% lifetime（已知） | 已在state，待Ivan申請 | P1 |
+| Hostinger | 40-60%（已知） | 待Ivan申請，Hermes流量熱 | P1 |
+
+---
+
+### 三、本輪流量管道分析
+
+| 管道 | 台灣潛力 | 競品現況 | 行動成本 |
+|------|---------|---------|---------|
+| Threads | ⭐⭐⭐⭐⭐（21%全球流量！） | 低競爭 | 低（Ivan開帳號） |
+| Xiaohongshu | ⭐⭐⭐（年輕族群90%使用） | 幾乎無AI繁中創作者 | 高（全新平台運營） |
+| Facebook | ⭐⭐（互動率低） | 雷蒙/追日Gucci主力 | 已在用，優化即可 |
+| SEO（現在做的） | ⭐⭐⭐⭐（長期收益） | 競品薄弱，繁中空白多 | 中（持續產出） |
+
+**本輪結論：Threads是我們最被低估的免費流量機會，21%全球流量佔比是驚人數字。**
