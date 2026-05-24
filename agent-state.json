@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-24T10:32:00Z",
+  "lastUpdated": "2026-05-24T13:00:00Z",
   "lastAuditDate": "2026-05-18",
   "lastResearchDate": "2026-05-24T03:15:00Z",
   "lastResearchRound": 57,
@@ -3810,6 +3810,25 @@
         "fixes": 0,
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
       }
+    },
+    {
+      "timestamp": "2026-05-24T13:00:00Z",
+      "agent": "content-ops",
+      "session": "fb-weekly-review",
+      "actions": [
+        "Pulled git main and read agent-state.json",
+        "Fetched this week Facebook posts via Graph API with public interaction fields",
+        "Retested fallback insights metrics: post_impressions_unique, post_clicks, post_reactions_by_type_total returned empty insights; post_engaged_users remained invalid",
+        "Could not truthfully compute reach rate / engagement rate due to unavailable per-post insights",
+        "Updated fbStrategy.performance winPatterns/failPatterns and appended weekly review using observable interaction proxy analysis",
+        "Extended autoDevAIStrategy.postRules with tighter FB posting rules for timing and framing"
+      ],
+      "results": {
+        "postsReviewed": 29,
+        "publicInteractions": 8,
+        "postsWithAnyInteraction": 8,
+        "blocker": "Graph API per-post reach/click/engagement metrics unavailable or empty for current token/permissions"
+      }
     }
   ],
   "fbPosted": [
@@ -3865,7 +3884,9 @@
     "performance": {
       "winPatterns": [
         "題材屬於比較/評測/決策型，較容易吸引停留與回應",
-        "比較/評測/決策型題材仍是目前最容易拿到留言的格式，尤其前兩行直接講結論時更有效。"
+        "比較/評測/決策型題材仍是目前最容易拿到留言的格式，尤其前兩行直接講結論時更有效。",
+        "中午主貼文可用英文，但前兩行必須先下結論或給排名框架，不能只是貼英文標題。",
+        "最有機會拿到留言的格式是：排名 / 比較 / 值不值得 / 真實 ROI，而不是單純「完整文章看這裡」。"
       ],
       "failPatterns": [
         "同一時段（04:00 UTC）連發 3-4 則以上貼文，貼文彼此競食，幾乎全部 0 互動。",
@@ -3878,7 +3899,9 @@
         "公開互動為 0，表示題材或開頭鉤子沒有讓人停下來",
         "04:00 UTC 批次貼文持續表現偏弱，貼文彼此競食。",
         "開頭太像導流貼文，社群原生感偏弱。",
-        "缺少明確立場、問題鉤子或留言誘因時，公開互動容易歸零。"
+        "缺少明確立場、問題鉤子或留言誘因時，公開互動容易歸零。",
+        "04:00 UTC 批次貼文若沒有強對比、強數字或爭議鉤子，幾乎穩定歸零。",
+        "同主題多篇在同一時段連發會彼此競食，尤其是多篇 AI coding 工具文一起發時最明顯。"
       ],
       "weeklyReviews": [
         {
@@ -4061,6 +4084,161 @@
             "中午主時段只發比較/評測/值不值得類主貼文。",
             "減少 04:00 UTC 批次導流貼文，必要時壓到單篇。"
           ]
+        },
+        {
+          "week": "2026-W21",
+          "period": "2026-05-18 to 2026-05-24",
+          "generatedAt": "2026-05-24T13:00:00Z",
+          "summary": "本週共發 28 則貼文，但目前 Graph API token/權限仍無法穩定讀到每篇貼文的有效 reach / impressions / engaged users / clicks，因此無法誠實計算任務要求的觸及率與互動率。改以公開互動（留言/reaction/share）做代理分析後，結果更明確：中午主貼文仍明顯優於 04:00 UTC 批次導流貼；前兩行先給結論、帶比較/排名/值不值得角度的貼文，最容易拿到留言。",
+          "totals": {
+            "posts": 29,
+            "publicInteractions": 8,
+            "postsWithAnyInteraction": 8,
+            "reachAvailablePosts": 0,
+            "clickMetricAvailablePosts": 0
+          },
+          "topPostsByObservableInteraction": [
+            {
+              "created_time": "2026-05-24T12:00:07+0000",
+              "message_preview": "💡 7 Best AI Tools for Digital Marketers in 2026 (Ranked by Real ROI)  The 7 best AI tools for digital marketers in 2026 — from content creation and SEO to funnel automation and analytics. Honest rankings, real pricing, n",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "whyItWorked": [
+                "有排名／比較／評測／值不值得這類決策框架，容易讓人停下來。",
+                "前段先講價值與結論，不是第一時間就把人往外送。",
+                "中午主時段表現持續比 04:00 UTC 批次貼文好。"
+              ]
+            },
+            {
+              "created_time": "2026-05-23T12:00:15+0000",
+              "message_preview": "💡 9 Best AI Tools for Content Creators in 2026 (Ranked by Real ROI)  I tested 20+ AI tools for content creators in 2026. These 9 actually save time and make money — ranked by output quality, speed, and ROI for YouTubers,",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "whyItWorked": [
+                "有排名／比較／評測／值不值得這類決策框架，容易讓人停下來。",
+                "前段先講價值與結論，不是第一時間就把人往外送。",
+                "中午主時段表現持續比 04:00 UTC 批次貼文好。"
+              ]
+            },
+            {
+              "created_time": "2026-05-22T12:04:56+0000",
+              "message_preview": "🔍 ElevenLabs ElevenCreative 評測 2026：AI 語音、音樂、影片一站搞定，台灣創作者必看  ElevenLabs ElevenCreative 2026 完整評測：AI 語音生成、音樂創作、影片配音、聲音複製，70+ 語言本地化。台灣 YouTuber、Podcast 主持人、行銷人員必看！含方案比較、中文支援說明、實際使用心得。  📋 文章重點：   ✅ ElevenCreative 是什麼？從語音 AI",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "whyItWorked": [
+                "有排名／比較／評測／值不值得這類決策框架，容易讓人停下來。",
+                "前段先講價值與結論，不是第一時間就把人往外送。",
+                "中午主時段表現持續比 04:00 UTC 批次貼文好。"
+              ]
+            },
+            {
+              "created_time": "2026-05-21T12:00:05+0000",
+              "message_preview": "📚 n8n HITL 完整教學 2026：讓 AI 自動化加上人工審核節點，告別失控的 Bot  n8n v2.6 新增 Human-in-the-Loop（HITL）功能，讓你在 AI 自動化流程中插入人工審核關卡。本文手把手教你設定等待審核節點、Telegram 通知確認、多階段審批工作流，繁中首發完整教學。  📋 文章重點：   ✅ 什麼是 HITL（Human-in-the-Loop）？   ✅ 你需要 HITL 的 5 個典型",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "whyItWorked": [
+                "前段先講價值與結論，不是第一時間就把人往外送。",
+                "中午主時段表現持續比 04:00 UTC 批次貼文好。"
+              ]
+            },
+            {
+              "created_time": "2026-05-20T12:00:29+0000",
+              "message_preview": "📚 OpenCode 評測 2026：153K ⭐ 開源 Claude Code 替代方案，75+ 模型免費用，台灣開發者完整教學  OpenCode 深度評測：153K GitHub stars 開源 AI coding agent，支援 75+ 模型（Claude/GPT/Gemini），終端機 + 桌面 + IDE 三合一，比 Claude Code 便宜且隱私更好。台灣開發者安裝教學與實戰場景。  📋 文章重點：   ✅ Ope",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "whyItWorked": [
+                "有排名／比較／評測／值不值得這類決策框架，容易讓人停下來。",
+                "前段先講價值與結論，不是第一時間就把人往外送。",
+                "中午主時段表現持續比 04:00 UTC 批次貼文好。"
+              ]
+            }
+          ],
+          "weakPostsByObservableInteraction": [
+            {
+              "created_time": "2026-05-24T04:01:27+0000",
+              "message_preview": "📝 OpenCode vs Cursor vs Claude Code 繁中比較 2026：費用、功能、適合對象全解析  三大 AI 編碼工具深度對比。OpenCode 免費開源 157K stars，Cursor $20/月低門檻，Claude Code $20/月最強推理。台灣工程師決策指南。  完整文章看這裡 👇 https://autodev-ai.com/blog/opencode-vs-cursor-vs-claude-co",
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 批次貼文持續表現偏弱。",
+                "開頭太像導流貼，社群原生感偏弱。",
+                "同時段連發多篇相近的 AI coding 題材，彼此競食。"
+              ]
+            },
+            {
+              "created_time": "2026-05-24T04:01:05+0000",
+              "message_preview": "📝 Gamma AI 完整評測 2026：AI 一鍵生成簡報，台灣用戶值得付費升級嗎？  Gamma 50M+ 用戶，台灣繁中評測首發。免費版 vs Plus 詳細比較，Gamma vs Canva vs Beautiful.AI，學生/上班族/YouTuber 誰最適合？  完整文章看這裡 👇 https://pink1119zz.github.io/ai-tools-tw/blog/gamma-ai-review-2026.html",
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 批次貼文持續表現偏弱。",
+                "開頭太像導流貼，社群原生感偏弱。"
+              ]
+            },
+            {
+              "created_time": "2026-05-24T04:00:47+0000",
+              "message_preview": "📝 AI Coding 工具比較 2026 終極指南：五大工具最終決戰  Windsurf vs Cursor vs GitHub Copilot vs Claude Code vs Gemini CLI — 2026 最完整比較，台灣開發者選購攻略。  完整文章看這裡 👇 https://pink1119zz.github.io/ai-tools-tw/blog/ai-coding-tools-comparison-2026-fina",
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 批次貼文持續表現偏弱。",
+                "開頭太像導流貼，社群原生感偏弱。",
+                "同時段連發多篇相近的 AI coding 題材，彼此競食。"
+              ]
+            },
+            {
+              "created_time": "2026-05-24T04:00:26+0000",
+              "message_preview": "📝 AI 大頭照生成器評測 2026：BetterPic vs Aragon，台灣 LinkedIn 職場照哪個最值得？  2026 最詳盡 AI 大頭照評測（繁中首發）。三方比較表、定價、品質分析，台灣求職者、社會新鮮人、上班族完整選購指南。  完整文章看這裡 👇 https://pink1119zz.github.io/ai-tools-tw/blog/ai-headshot-generator-review-2026.html  ",
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 批次貼文持續表現偏弱。",
+                "開頭太像導流貼，社群原生感偏弱。"
+              ]
+            },
+            {
+              "created_time": "2026-05-24T04:00:03+0000",
+              "message_preview": "📝 OpenCode Zen vs Go vs 自帶API：哪個方案最省錢？2026 台灣工程師完整試算  OpenCode 160K stars，三種計費方式完整比較。Zen 按需付費、Go $10/月、自帶 API Key 各自的費用試算與適合情境。  完整文章看這裡 👇 https://autodev-ai.com/blog/opencode-zen-vs-go-pricing-2026.html  #AI自動化 #科技 #Aut",
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 批次貼文持續表現偏弱。",
+                "開頭太像導流貼，社群原生感偏弱。",
+                "同時段連發多篇相近的 AI coding 題材，彼此競食。"
+              ]
+            },
+            {
+              "created_time": "2026-05-23T04:00:20+0000",
+              "message_preview": "📝 7 Best Cloudways Alternatives in 2026 (Cheaper & More Powerful)  Tested 7 Cloudways alternatives in 2026 — honest rankings by value, speed, support, and who each one is actually built for.  Read the full article 👇 http",
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 批次貼文持續表現偏弱。",
+                "開頭太像導流貼，社群原生感偏弱。"
+              ]
+            }
+          ],
+          "blockers": [
+            "Facebook Graph API 在目前 token/權限下，post_engaged_users 仍回 valid insights metric 錯誤。",
+            "post_impressions_unique、post_clicks、post_reactions_by_type_total 雖可請求，但本週實測仍回空 insights data，無法作為可靠逐篇指標。",
+            "因此本週無法完成任務要求中的「觸及率 > 5% / < 1%」硬性分類，只能用公開互動做代理分析並把學習寫回策略。"
+          ],
+          "newRulesAdded": [
+            "中午主貼文可用英文，但前兩行必須先下結論或給排名框架，不能只是貼英文標題。",
+            "04:00 UTC 批次貼文若沒有強對比、強數字或爭議鉤子，幾乎穩定歸零。",
+            "同主題多篇在同一時段連發會彼此競食，尤其是多篇 AI coding 工具文一起發時最明顯。",
+            "最有機會拿到留言的格式是：排名 / 比較 / 值不值得 / 真實 ROI，而不是單純「完整文章看這裡」。"
+          ],
+          "nextWeekActions": [
+            "先處理 Facebook insights 權限或 metric 組合問題，否則進化循環仍是半閉環。",
+            "把中午主貼文聚焦在排名、比較、值不值得、真實 ROI 這四種框架。",
+            "減少 04:00 UTC 批次導流貼數量，尤其不要同時丟 3-5 篇相近題材。",
+            "若要在凌晨發文，文案前兩行要直接講差異、價格或明確結論。"
+          ]
         }
       ]
     },
@@ -4078,7 +4256,11 @@
         "條列重點控制在 3-4 個，避免整篇像 RSS 摘要。",
         "每週 Facebook 主貼文優先用「比較 / 值不值得 / 怎麼選」框架，而不是單純貼文章摘要。",
         "凌晨 04:00 UTC 若一定要發文，只發 1 則且前兩行必須先給結論與問題鉤子。",
-        "把留言問題寫進文案主體，不要只在最後補一句互動 CTA。"
+        "把留言問題寫進文案主體，不要只在最後補一句互動 CTA。",
+        "中午主貼文可用英文，但前兩行必須先下結論或給排名框架，不能只是貼英文標題。",
+        "04:00 UTC 批次貼文若沒有強對比、強數字或爭議鉤子，幾乎穩定歸零。",
+        "同主題多篇在同一時段連發會彼此競食，尤其是多篇 AI coding 工具文一起發時最明顯。",
+        "最有機會拿到留言的格式是：排名 / 比較 / 值不值得 / 真實 ROI，而不是單純「完整文章看這裡」。"
       ]
     }
   },
