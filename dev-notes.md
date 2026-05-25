@@ -1,5 +1,108 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 58 | 2026-05-25 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-05-25 22:00 UTC | 搜尋範圍：ossinsight AI趨勢、askglitch.com週報、GitHub trending、affiliate確認、競品分析
+
+### 🔥 本輪頭條：claude-context MCP省Token神器 + pi-mono統一Agent工具包 + OpenCode 163K持續加速 + Zeabur Referral確認 + n8n affiliate暫停 + Anthropic無個人affiliate
+
+---
+
+#### 1. 🔥🔥🔥 zilliztech/claude-context（10.6K stars，**MCP語義代碼搜尋，省Token 40%**）
+- **Zilliz（Milvus向量資料庫公司）** 官方出品的MCP server
+- 讓Claude Code/Cursor/Codex CLI/Gemini CLI等所有MCP客戶端做語義代碼搜尋
+- 解決問題：大型codebase（50K+行）每次查詢都要讀整個目錄 → 費用爆炸
+- 技術：BM25 + dense vector hybrid search，只返回相關代碼片段
+- **省Token直接效益：比grep-based retrieval省40% token**（augmentcode.com確認）
+- 安裝：`claude mcp add claude-context -e OPENAI_API_KEY=...`
+- 需要Milvus/Zilliz實例（可用Docker一鍵啟動）
+- **繁中教學=0篇，P1-HIGH（省費系列天然延伸）**
+- 搭配：DigitalOcean VPS（Milvus部署）+ DataCamp（向量資料庫課程）
+
+#### 2. 🔥🔥 badlogic/pi-mono → earendil-works/pi（43.9K stars，**統一Agent工具包**）
+- Mario Zechner（libGDX作者）的AI agent toolkit monorepo
+- 包含：coding agent CLI + 統一LLM API（Anthropic/OpenAI/Google/Groq抽象層）+ TUI + Web UI + Slack bot + vLLM pods
+- **最大亮點：統一LLM API** — 一個介面切換所有模型，不被廠商鎖定
+- 已遷移至 earendil-works/pi（官方新repo）
+- 繁中=0篇，P2（與cc-switch/OpenCode系列互補）
+- 搭配：DigitalOcean + DataCamp
+
+#### 3. 🔥 OpenCode 163.4K stars（持續加速，我們的系列文章已佔位）
+- ossinsight確認：55,115 stars（ossinsight計數），star-history確認163.4K總星數
+- 本週+295 stars（ossinsight daily），仍在加速
+- 我們已有4篇OpenCode系列文章，SEO矩陣完整
+- **無需新文章，但可在現有文章加入最新星數更新**
+
+#### 4. 🔥 Context Compression工具新浪潮（省Token 70-90%）
+- GitHub topics/context-optimization 出現多個新工具：
+  - **ContextFusion**：compress + rank + route，支援OpenAI/Claude/Ollama/MCP
+  - **CodeGrok MCP**：semantic embeddings + Tree-sitter，智能codebase搜尋
+  - **Skim MCP**：Claude Code大輸出精簡，只返回schema
+  - **leanctx**：Rust-powered，聲稱省90%+ context（leanctx.com）
+- 整體趨勢：「省Token工具」正在形成獨立生態系
+- **P2：可做「Claude Code省Token工具全攻略2026」整合文章**（RTK + claude-context + Skim + leanctx四合一）
+
+---
+
+### 🔍 本輪 Affiliate 確認（重要更新）
+
+#### ✅ Zeabur Referral Program — 確認細節（修正Round 57描述）
+- **Referral Program（適合Ivan）**：5級制，LV1=20%佣金，LV5=100%佣金
+  - 申請：zeabur.com 登入 → Referral 頁面（無需審核，立即可用）
+  - 適用：伺服器租用 + AI Hub儲值
+- **Partner Program（不適合Ivan）**：分Education Partner（講師/活動）和Sales Partner（企業顧問）
+  - Education Partner：Event Code讓學員免費試用，按留存付費用戶計算獎勵
+  - Sales Partner：企業採購，每筆交易個別議定佣金率
+  - **重要：Referral Program 和 Partner Program 不能疊加（同一筆交易只能選一個）**
+- **結論：Ivan 應申請 Referral Program（非 Partner Program），立即可用，無審核**
+
+#### ❌ n8n Cloud Affiliate — 暫停申請中
+- n8n.io/affiliates 頁面顯示：30%/12個月，PartnerStack
+- **但：n8n Community 確認「currently pausing applications」**
+- 我們的 n8n Cloud 連結（n8n.io/cloud/）仍可用作一般導流，但無法申請正式affiliate
+- **建議：保留現有連結，等n8n重開申請再補**
+
+#### ❌ Anthropic Claude 個人 Affiliate — 不存在
+- Anthropic 無個人 affiliate program（確認）
+- Claude Partner Network（$100M）= 企業顧問/服務公司，非個人創作者
+- Claude for Enterprise Referral Partner = B2B企業推薦，非消費者affiliate
+- **結論：無法透過推廣Claude訂閱賺取佣金，只能間接透過DataCamp/Gumroad等工具賺取**
+
+---
+
+### 🧠 省Token/省費直接發現（Round 58）
+
+| 工具 | 省費機制 | 量化估算 | 安裝難度 |
+|---|---|---|---|
+| zilliztech/claude-context | 語義搜尋只返回相關代碼 | 省40% token（vs grep） | 中（需Milvus） |
+| leanctx | Rust context壓縮 | 聲稱省90%+ | 低（一行安裝） |
+| Skim MCP | 大輸出精簡 | 省50-70%輸出token | 低 |
+| ContextFusion | compress+rank+route | 省70-90% | 中 |
+
+**對我們agent的直接建議：**
+- claude-context：適合builder session（大型codebase查詢）
+- Skim MCP：適合所有agent（減少工具輸出token）
+- 建議builder下次session測試 claude-context + Skim MCP 組合
+
+---
+
+### 📋 本輪給Strategist指令摘要（詳見directive文件）
+
+**P1-HIGH：Claude Code Desktop vs Terminal 繁中比較文**（Round 57已識別，本輪確認需求）
+- MindStudio英文版已排名，vibecoding.app已有文章，r/ClaudeCode熱帖確認需求
+- 繁中=0篇深度指南，雷蒙三十剛搶佔，我們需要差異化角度
+- 差異化：Desktop不支援API billing（省錢必用CLI）+ 工程師決策矩陣
+
+**P2：claude-context MCP省Token教學**（新發現）
+- 省Token 40%，繁中=0篇，Milvus/Zilliz + DigitalOcean天然搭配
+- 可作「省費系列第4篇」（RTK→DeepClaude→code-review-graph→claude-context）
+
+**P3：Context Compression工具整合文**（新趨勢）
+- RTK + claude-context + Skim + leanctx 四合一省費攻略
+- 可合併進「Everything Claude Code」樞紐文章
+
+---
+
 ## Round 53 | 2026-05-22 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-05-22 22:00 UTC | 搜尋範圍：star-history.com週榜、ossinsight AI趨勢、5個新工具深度評估
