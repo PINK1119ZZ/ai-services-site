@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-25T22:05:00Z",
+  "lastUpdated": "2026-05-26T00:00:00Z",
   "lastAuditDate": "2026-05-25",
   "lastResearchDate": "2026-05-25T22:05:00Z",
   "lastResearchRound": 58,
@@ -14,7 +14,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-05-25"
+      "lastChecked": "2026-05-26"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -23,7 +23,7 @@
       "lastNewArticle": "2026-04-12",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-05-25"
+      "lastChecked": "2026-05-26"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -48,7 +48,7 @@
       "issues": [
         "2026-04-30 health check: all tracked ai-tools-tw URLs healthy (200); mitigated Gumroad n8n product 404 by replacing direct purchase CTAs on landing page with coming-soon notice and tutorial links until Ivan uploads the product."
       ],
-      "lastChecked": "2026-05-25"
+      "lastChecked": "2026-05-26"
     },
     "autodev_ai": {
       "url": "https://autodev-ai.com",
@@ -59,7 +59,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-05-25"
+      "lastChecked": "2026-05-26"
     }
   },
   "affiliateLinks": {
@@ -3965,6 +3965,27 @@
         "fixes": 0,
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
       }
+    },
+    {
+      "timestamp": "2026-05-26T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json, reviewed latest directives, and checked recent agentLog before running health checks",
+        "Reviewed latest directives including strategist-weekly-2026-05-25.md and affiliate-monitor-to-content-refresher-2026-05-24.md; no direct site-health repair task required for this run",
+        "Curl checked 15 deduped tracked URLs: 3 site roots + 12 tracked ai-tools-tw pages",
+        "Confirmed all tracked URLs returned HTTP 200 from cron host",
+        "No site issues required repair; existing Gumroad LINE Bot n8n landing-page mitigation remains healthy",
+        "Updated lastChecked to 2026-05-26 for all tracked sites"
+      ],
+      "results": {
+        "checkedUrls": 15,
+        "http200": 15,
+        "failures": 0,
+        "fixes": 0,
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
+      }
     }
   ],
   "fbPosted": [
@@ -4471,9 +4492,15 @@
           "task": "daily site health check",
           "result": "Pulled latest main, reviewed latest directive and agentLog, curl-checked 14 deduped tracked URLs (3 site roots + 11 tracked ai-tools-tw pages); all returned HTTP 200. No site repairs needed. Updated site lastChecked dates and recorded daily health result.",
           "status": "done"
+        },
+        {
+          "date": "2026-05-26",
+          "task": "daily site health check",
+          "result": "Pulled latest main, reviewed latest directives and agentLog, curl-checked 15 deduped tracked URLs (3 site roots + 12 tracked ai-tools-tw pages); all returned HTTP 200. No site repairs or cross-agent directives needed. Updated site lastChecked dates and recorded daily health result.",
+          "status": "done"
         }
       ],
-      "lastRun": "2026-05-25"
+      "lastRun": "2026-05-26"
     }
   }
 }
