@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code 桌面版 vs 終端機 2026：工程師該選哪個？完整比較</title>
+<meta name="description" content="Claude Code 桌面版 vs 終端機（CLI）完整比較 2026。功能差異、定價、省費方案、Unix piping、CI/CD 整合一次搞懂。台灣工程師決策指南，含費用試算與適合對象分析。">
+<link rel="canonical" href="https://autodev-ai.com/blog/claude-code-desktop-vs-terminal-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/claude-code-desktop-vs-terminal-2026.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/claude-code-desktop-vs-terminal-2026.html">
+<meta property="og:title" content="Claude Code 桌面版 vs 終端機 2026：工程師該選哪個？">
+<meta property="og:description" content="Claude Code Desktop vs CLI 完整比較。桌面版適合初學者，終端機才能省費、接 CI/CD、用 Unix piping。台灣工程師決策矩陣。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/claude-code-desktop-vs-terminal-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Code 桌面版 vs 終端機 2026：完整比較">
+<meta name="twitter:description" content="桌面版 vs CLI 六大差異。省費、CI/CD、Unix piping 只有終端機能做。台灣工程師決策指南。">
+<meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="author" content="AutoDev AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Claude Code 桌面版 vs 終端機 2026：工程師該選哪個？完整比較",
+  "description": "Claude Code Desktop vs CLI 完整比較 2026。功能差異、定價、省費方案、Unix piping、CI/CD 整合一次搞懂。台灣工程師決策指南。",
+  "author": {"@type": "Organization", "name": "AutoDev AI"},
+  "publisher": {"@type": "Organization", "name": "AutoDev AI", "logo": {"@type": "ImageObject", "url": "https://autodev-ai.com/autodev-logo2.png"}},
+  "datePublished": "2026-05-27",
+  "dateModified": "2026-05-27",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/claude-code-desktop-vs-terminal-2026.html"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Claude Code 桌面版和終端機版有什麼差別？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "桌面版（Desktop）提供圖形介面，適合初學者和設計師，但不支援自訂 API billing、Unix piping 和 CI/CD 整合。終端機版（CLI）功能完整，支援 --api-key 自訂後端、管道操作、自動化腳本，是工程師省費和自動化的唯一選擇。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Code 桌面版可以省費嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不行。桌面版綁定 Anthropic 官方計費，無法切換到 OpenRouter、DeepSeek 或自訂 API endpoint。要省費（如 DeepClaude、RTK 等工具），必須使用終端機版 CLI，透過 --api-key 和 ANTHROPIC_BASE_URL 環境變數切換後端。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Code 終端機版怎麼安裝？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "執行 npm install -g @anthropic-ai/claude-code 即可全域安裝。需要 Node.js 18+ 環境。安裝後執行 claude 進入互動模式，或 claude --help 查看所有指令。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Code 桌面版適合誰用？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "桌面版適合：(1) 剛開始學 AI coding 的初學者，(2) 設計師或非工程師背景的 vibe coder，(3) 不需要自動化腳本或 CI/CD 整合的個人專案用戶。如果你需要省費、自動化或企業部署，請用終端機版。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Code CLI 可以在 CI/CD 裡用嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。Claude Code CLI 支援 --print 模式（非互動式輸出），可以直接整合進 GitHub Actions、GitLab CI 或任何 CI/CD pipeline。桌面版完全不支援這個用法。"
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+.comparison-hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;border-radius:16px;padding:2rem;margin:2rem 0;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.comparison-hero .side{background:rgba(255,255,255,0.08);border-radius:12px;padding:1.5rem;text-align:center}
+.comparison-hero .side h3{font-size:1.1rem;margin:0 0 0.5rem;color:#a8d8ea}
+.comparison-hero .side .badge{display:inline-block;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.8rem;font-weight:700;margin-bottom:0.75rem}
+.badge-desktop{background:#4a90d9;color:#fff}
+.badge-cli{background:#27ae60;color:#fff}
+.comparison-hero .side p{font-size:0.9rem;color:#ccc;margin:0}
+.comparison-hero .side .price{font-size:1.4rem;font-weight:900;color:#f9ca24;margin:0.5rem 0}
+.diff-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.95rem}
+.diff-table th{background:#1a1a2e;color:#fff;padding:0.75rem 1rem;text-align:left}
+.diff-table td{padding:0.75rem 1rem;border-bottom:1px solid #eee;vertical-align:top}
+.diff-table tr:nth-child(even) td{background:#f8f9fa}
+.diff-table .check{color:#27ae60;font-weight:700}
+.diff-table .cross{color:#e74c3c;font-weight:700}
+.diff-table .partial{color:#f39c12;font-weight:700}
+.decision-matrix{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+.decision-card{border-radius:12px;padding:1.25rem;border:2px solid}
+.decision-card.desktop{border-color:#4a90d9;background:#f0f7ff}
+.decision-card.cli{border-color:#27ae60;background:#f0fff4}
+.decision-card h4{margin:0 0 0.75rem;font-size:1rem}
+.decision-card ul{margin:0;padding-left:1.25rem;font-size:0.9rem}
+.decision-card li{margin-bottom:0.4rem}
+.cost-box{background:#fff8e1;border:2px solid #f9ca24;border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.cost-box h4{margin:0 0 1rem;color:#e67e22}
+.cost-row{display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0;border-bottom:1px solid #ffe082}
+.cost-row:last-child{border-bottom:none;font-weight:700;font-size:1.05rem}
+.cost-label{color:#555}
+.cost-val{font-weight:700;color:#e67e22}
+.cost-val.green{color:#27ae60}
+.cta-box{border-radius:14px;padding:1.75rem;margin:2rem 0;text-align:center}
+.cta-box.do{background:linear-gradient(135deg,#0069ff,#0052cc)}
+.cta-box.dc{background:linear-gradient(135deg,#03ef62,#00b341)}
+.cta-box.gum{background:linear-gradient(135deg,#ff90e8,#ff5ca2)}
+.cta-box h3{color:#fff;margin:0 0 0.5rem;font-size:1.1rem}
+.cta-box p{color:rgba(255,255,255,0.85);margin:0 0 1rem;font-size:0.9rem}
+.cta-btn{display:inline-block;background:#fff;border-radius:8px;padding:0.65rem 1.5rem;font-weight:700;font-size:0.95rem;text-decoration:none;transition:transform 0.15s}
+.cta-btn:hover{transform:translateY(-2px)}
+.cta-btn.do{color:#0052cc}
+.cta-btn.dc{color:#00b341}
+.cta-btn.gum{color:#ff5ca2}
+.tip-box{background:#e8f5e9;border-left:4px solid #27ae60;border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:0.95rem}
+.warn-box{background:#fff3e0;border-left:4px solid #ff9800;border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin:1.25rem 0;font-size:0.95rem}
+.code-block{background:#1e1e2e;color:#cdd6f4;border-radius:10px;padding:1.25rem 1.5rem;font-family:'Courier New',monospace;font-size:0.88rem;overflow-x:auto;margin:1rem 0;line-height:1.6}
+.code-block .comment{color:#6c7086}
+.code-block .cmd{color:#89b4fa}
+.code-block .flag{color:#a6e3a1}
+.code-block .val{color:#f9e2af}
+@media(max-width:640px){.comparison-hero{grid-template-columns:1fr}.decision-matrix{grid-template-columns:1fr}.diff-table{font-size:0.82rem}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo-link"><img src="/autodev-logo2.png" alt="AutoDev AI" class="logo-img"></a>
+    <nav class="main-nav">
+      <a href="/blog/">文章</a>
+      <a href="/pricing.html">服務報價</a>
+      <a href="/contact.html">聯絡我們</a>
+    </nav>
+  </div>
+</header>
+
+<main class="article-main">
+<article class="article-body">
+
+<div class="article-header">
+  <div class="article-meta-top">
+    <span class="tag">Claude Code</span>
+    <span class="tag">AI 工具比較</span>
+    <span class="tag">工程師必看</span>
+  </div>
+  <h1>Claude Code 桌面版 vs 終端機 2026：工程師該選哪個？完整比較</h1>
+  <p class="article-lead">Anthropic 同時提供圖形桌面版和終端機 CLI 兩種 Claude Code 入口。表面上功能相似，但省費、自動化、CI/CD 整合這三件事，只有終端機版做得到。這篇把六大差異全部攤開，讓你一次決定。</p>
+  <div class="article-byline">
+    <span>AutoDev AI 編輯部</span>
+    <time datetime="2026-05-27">2026 年 5 月 27 日</time>
+    <span>閱讀時間約 8 分鐘</span>
+  </div>
+</div>
+
+<!-- Hero comparison card -->
+<div class="comparison-hero">
+  <div class="side">
+    <span class="badge badge-desktop">🖥️ 桌面版 Desktop</span>
+    <h3>Claude Code Desktop</h3>
+    <div class="price">$20/月</div>
+    <p>圖形介面，點擊即用<br>適合初學者 / vibe coder<br>不支援自訂 API billing</p>
+  </div>
+  <div class="side">
+    <span class="badge badge-cli">⌨️ 終端機 CLI</span>
+    <h3>Claude Code Terminal</h3>
+    <div class="price">$0 起（自帶 API Key）</div>
+    <p>完整功能，可省費 10-17x<br>支援 Unix piping / CI/CD<br>工程師的唯一正確選擇</p>
+  </div>
+</div>
+
+<h2>為什麼這個選擇比你想的重要</h2>
+
+<p>2026 年 Anthropic 推出 Claude Code Desktop 之後，很多人以為「桌面版更方便，就用桌面版吧」。這個決定在短期內沒問題，但一旦你開始認真用 Claude Code 做開發，就會撞到幾道牆：</p>
+
+<ul>
+  <li><strong>費用牆：</strong>桌面版綁定 Anthropic 官方計費，無法切換 DeepSeek、OpenRouter 等便宜後端。每月 $20 的 Pro 方案很快就不夠用，token 超量後費用直線上升。</li>
+  <li><strong>自動化牆：</strong>桌面版沒有 <code>--print</code> 非互動模式，無法整合進 GitHub Actions 或任何 CI/CD pipeline。</li>
+  <li><strong>工具牆：</strong>RTK、DeepClaude、claude-context MCP 等省費工具全部只支援 CLI 環境，桌面版完全無法使用。</li>
+</ul>
+
+<p>簡單說：桌面版是 Anthropic 給非工程師設計的入門產品。如果你是工程師，終端機版才是你的主場。</p>
+
+<h2>六大差異完整對比</h2>
+
+<table class="diff-table">
+  <thead>
+    <tr>
+      <th>功能 / 特性</th>
+      <th>🖥️ 桌面版 Desktop</th>
+      <th>⌨️ 終端機 CLI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>安裝方式</strong></td>
+      <td>下載 .dmg / .exe，點擊安裝</td>
+      <td><code>npm install -g @anthropic-ai/claude-code</code></td>
+    </tr>
+    <tr>
+      <td><strong>自訂 API billing</strong></td>
+      <td class="cross">✗ 不支援（綁定官方計費）</td>
+      <td class="check">✓ 支援 --api-key 和 ANTHROPIC_BASE_URL</td>
+    </tr>
+    <tr>
+      <td><strong>省費工具相容</strong></td>
+      <td class="cross">✗ DeepClaude / RTK / claude-context 均不支援</td>
+      <td class="check">✓ 全部相容</td>
+    </tr>
+    <tr>
+      <td><strong>Unix piping</strong></td>
+      <td class="cross">✗ 不支援</td>
+      <td class="check">✓ <code>cat error.log | claude "分析這個錯誤"</code></td>
+    </tr>
+    <tr>
+      <td><strong>CI/CD 整合</strong></td>
+      <td class="cross">✗ 不支援（無 --print 模式）</td>
+      <td class="check">✓ GitHub Actions / GitLab CI 完整支援</td>
+    </tr>
+    <tr>
+      <td><strong>Agent Skills 支援</strong></td>
+      <td class="partial">△ 部分支援（無法自訂 ~/.claude/）</td>
+      <td class="check">✓ 完整支援 ~/.claude/commands/ 和 skills/</td>
+    </tr>
+    <tr>
+      <td><strong>多視窗 / 分割畫面</strong></td>
+      <td class="check">✓ 原生 GUI 支援</td>
+      <td class="partial">△ 需搭配 tmux / iTerm2</td>
+    </tr>
+    <tr>
+      <td><strong>適合對象</strong></td>
+      <td>初學者、設計師、vibe coder</td>
+      <td>工程師、DevOps、自動化需求者</td>
+    </tr>
+    <tr>
+      <td><strong>月費下限</strong></td>
+      <td>$20/月（Pro 方案）</td>
+      <td>$0（自帶 API Key，按用量付費）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>最關鍵差異：省費只有 CLI 能做</h2>
+
+<p>這是工程師選擇終端機版最重要的理由。桌面版的計費架構完全封閉，你只能用 Anthropic 官方的 token 費率。但 CLI 版本透過兩個環境變數，可以把後端切換到任何相容的 API：</p>
+
+<div class="code-block">
+<span class="comment"># 切換到 OpenRouter（DeepSeek V3，費用約 1/17）</span>
+<span class="cmd">export</span> <span class="flag">ANTHROPIC_BASE_URL</span>=<span class="val">"https://openrouter.ai/api/v1"</span>
+<span class="cmd">export</span> <span class="flag">ANTHROPIC_API_KEY</span>=<span class="val">"sk-or-v1-你的OpenRouter金鑰"</span>
+<span class="cmd">claude</span>
+
+<span class="comment"># 或直接用 --api-key flag</span>
+<span class="cmd">claude</span> <span class="flag">--api-key</span> <span class="val">sk-or-v1-你的金鑰</span>
+</div>
+
+<p>這個切換讓你可以搭配 <a href="/blog/deepclaude-run-claude-code-deepseek-17x-cheaper-2026.html">DeepClaude</a>（省 17x）、<a href="/blog/rtk-rust-token-killer-review-2026.html">RTK Rust Token Killer</a>（省 60-90% token）等工具，把每月 AI coding 費用從 $200+ 壓到 $20 以下。</p>
+
+<div class="warn-box">
+  ⚠️ <strong>桌面版用戶注意：</strong>如果你目前用桌面版，你正在為每一個 token 付 Anthropic 的官方費率。切換到 CLI + OpenRouter 的組合，同樣的工作量費用可以降低 10-17 倍。
+</div>
+
+<h2>Unix Piping：CLI 的隱藏超能力</h2>
+
+<p>終端機版支援標準 Unix 管道操作，這讓 Claude Code 可以直接接收任何命令的輸出作為輸入：</p>
+
+<div class="code-block">
+<span class="comment"># 分析 git diff，自動生成 commit message</span>
+<span class="cmd">git diff</span> | <span class="cmd">claude</span> <span class="val">"根據這個 diff 寫一個 conventional commit message"</span>
+
+<span class="comment"># 分析錯誤日誌</span>
+<span class="cmd">cat</span> <span class="flag">error.log</span> | <span class="cmd">claude</span> <span class="val">"找出根本原因並給出修復建議"</span>
+
+<span class="comment"># 批次處理多個檔案</span>
+<span class="cmd">find</span> . -name "*.py" | <span class="cmd">xargs</span> <span class="cmd">claude</span> <span class="val">"審查這些 Python 檔案的安全性"</span>
+
+<span class="comment"># 整合進 Makefile</span>
+<span class="cmd">make</span> <span class="flag">test</span> 2>&1 | <span class="cmd">claude</span> <span class="val">"測試失敗了，幫我找出問題"</span>
+</div>
+
+<p>這些操作在桌面版完全無法實現。對於習慣 Unix 工作流程的工程師來說，piping 支援是 CLI 版本最自然的使用方式。</p>
+
+<h2>CI/CD 整合：自動化的關鍵</h2>
+
+<p>CLI 版本的 <code>--print</code> 模式讓 Claude Code 可以在非互動環境下執行，直接輸出結果到 stdout，這是 CI/CD 整合的基礎：</p>
+
+<div class="code-block">
+<span class="comment"># GitHub Actions 範例</span>
+- name: AI Code Review
+  run: |
+    <span class="cmd">claude</span> <span class="flag">--print</span> <span class="val">"審查這個 PR 的安全性問題"</span> \
+      --context <span class="val">"$(git diff origin/main)"</span>
+</div>
+
+<p>這讓你可以在每次 PR 自動觸發 AI code review、自動生成測試、自動更新文件。桌面版沒有 <code>--print</code> 模式，完全無法做到這件事。</p>
+
+<h2>費用試算：三個月實際差距</h2>
+
+<div class="cost-box">
+  <h4>💰 三個月費用試算（中度使用工程師）</h4>
+  <div class="cost-row">
+    <span class="cost-label">桌面版 Pro（$20/月 × 3）</span>
+    <span class="cost-val">$60</span>
+  </div>
+  <div class="cost-row">
+    <span class="cost-label">桌面版超量 token 費（估計）</span>
+    <span class="cost-val">$40-120</span>
+  </div>
+  <div class="cost-row">
+    <span class="cost-label">桌面版三個月總費用</span>
+    <span class="cost-val">$100-180</span>
+  </div>
+  <div class="cost-row">
+    <span class="cost-label">CLI + OpenRouter（DeepSeek V3）</span>
+    <span class="cost-val green">$8-15</span>
+  </div>
+  <div class="cost-row">
+    <span class="cost-label">CLI + RTK 省費工具（額外節省 60%）</span>
+    <span class="cost-val green">$3-6</span>
+  </div>
+  <div class="cost-row">
+    <span class="cost-label">CLI 三個月總費用</span>
+    <span class="cost-val green">$11-21</span>
+  </div>
+  <div class="cost-row">
+    <span class="cost-label">三個月節省金額</span>
+    <span class="cost-val green">$89-159（省 85-90%）</span>
+  </div>
+</div>
+
+<div class="tip-box">
+  💡 <strong>省費組合推薦：</strong>CLI + DeepClaude（切換 DeepSeek 後端）+ RTK（壓縮 token）+ claude-context MCP（語義搜尋省 40% context）。三層疊加，同樣工作量費用可以壓到桌面版的 5-10%。
+</div>
+
+<!-- CTA 1: DigitalOcean -->
+<div class="cta-box do">
+  <h3>🚀 用 CLI 跑 Claude Code？VPS 讓你隨時隨地開發</h3>
+  <p>DigitalOcean Droplet 從 $6/月起，搭配 CLI 版 Claude Code 在雲端跑自動化腳本、CI/CD pipeline，不受本機限制。新用戶 $200 免費額度。</p>
+  <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-btn do">領取 $200 免費額度 →</a>
+</div>
+
+<h2>Agent Skills：CLI 才能完整發揮</h2>
+
+<p>Claude Code 的 Agent Skills 系統（<code>~/.claude/commands/</code> 和 <code>~/.claude/skills/</code>）讓你可以自訂 slash commands 和可重用的 AI 工作流程。這個功能在桌面版只有部分支援，CLI 版本才能完整使用：</p>
+
+<div class="code-block">
+<span class="comment"># 安裝自訂 skill（只有 CLI 支援）</span>
+<span class="cmd">mkdir</span> -p ~/.claude/commands
+<span class="cmd">echo</span> <span class="val">'你的 skill 內容'</span> > ~/.claude/commands/my-skill.md
+
+<span class="comment"># 在 Claude Code 中使用</span>
+<span class="cmd">claude</span>
+> /my-skill  <span class="comment"># 觸發自訂 skill</span>
+</div>
+
+<p>如果你想用 mattpocock/skills 的 <code>/grill-me</code>、<code>/tdd</code>、<code>/security-review</code> 等熱門 skill，或是我們整理的<a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener sponsored">繁中 Claude Code 工具包</a>，都需要 CLI 環境。</p>
+
+<h2>誰該用桌面版？誰該用終端機？</h2>
+
+<div class="decision-matrix">
+  <div class="decision-card desktop">
+    <h4>🖥️ 選桌面版，如果你是…</h4>
+    <ul>
+      <li>剛開始接觸 AI coding 的初學者</li>
+      <li>設計師或產品經理，偶爾需要 AI 協助</li>
+      <li>Vibe coder，不需要深度工程整合</li>
+      <li>不想設定環境變數和 API Key</li>
+      <li>主要用途是對話式問答，不是自動化</li>
+    </ul>
+  </div>
+  <div class="decision-card cli">
+    <h4>⌨️ 選終端機版，如果你是…</h4>
+    <ul>
+      <li>後端 / 全端 / DevOps 工程師</li>
+      <li>需要控制 AI 費用（省 10-17x）</li>
+      <li>想整合 CI/CD pipeline 或 GitHub Actions</li>
+      <li>需要 Unix piping 和腳本自動化</li>
+      <li>想用 Agent Skills、DeepClaude、RTK 等工具</li>
+    </ul>
+  </div>
+</div>
+
+<h2>從桌面版遷移到 CLI：3 步驟</h2>
+
+<p>如果你目前用桌面版，遷移到 CLI 只需要三個步驟：</p>
+
+<p><strong>步驟一：安裝 CLI</strong></p>
+<div class="code-block">
+<span class="comment"># 需要 Node.js 18+</span>
+<span class="cmd">node</span> --version  <span class="comment"># 確認版本</span>
+<span class="cmd">npm install</span> -g @anthropic-ai/claude-code
+<span class="cmd">claude</span> --version  <span class="comment"># 確認安裝成功</span>
+</div>
+
+<p><strong>步驟二：設定 API Key</strong></p>
+<div class="code-block">
+<span class="comment"># 方法一：環境變數（推薦加入 ~/.zshrc 或 ~/.bashrc）</span>
+<span class="cmd">export</span> <span class="flag">ANTHROPIC_API_KEY</span>=<span class="val">"sk-ant-你的金鑰"</span>
+
+<span class="comment"># 方法二：省費模式，切換到 OpenRouter</span>
+<span class="cmd">export</span> <span class="flag">ANTHROPIC_BASE_URL</span>=<span class="val">"https://openrouter.ai/api/v1"</span>
+<span class="cmd">export</span> <span class="flag">ANTHROPIC_API_KEY</span>=<span class="val">"sk-or-v1-你的OpenRouter金鑰"</span>
+</div>
+
+<p><strong>步驟三：開始使用</strong></p>
+<div class="code-block">
+<span class="comment"># 互動模式</span>
+<span class="cmd">claude</span>
+
+<span class="comment"># 非互動模式（CI/CD 用）</span>
+<span class="cmd">claude</span> <span class="flag">--print</span> <span class="val">"幫我審查這個函數的安全性"</span>
+
+<span class="comment"># 指定工作目錄</span>
+<span class="cmd">claude</span> <span class="flag">--cwd</span> /path/to/project
+</div>
+
+<div class="tip-box">
+  💡 <strong>遷移小技巧：</strong>桌面版和 CLI 版可以同時安裝，不會互相衝突。你可以先用 CLI 試跑幾天，確認工作流程沒問題後再停用桌面版。
+</div>
+
+<!-- CTA 2: DataCamp -->
+<div class="cta-box dc">
+  <h3>📚 想系統學習 AI Engineering？</h3>
+  <p>DataCamp 的 AI Engineering 課程涵蓋 Claude Code CLI 整合、LLM API 使用、自動化 pipeline 建置。從工具使用到架構設計，一站學完。</p>
+  <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" class="cta-btn dc">查看 DataCamp AI 課程 →</a>
+</div>
+
+<h2>常見問題 FAQ</h2>
+
+<details open>
+  <summary><strong>Q：Claude Code 桌面版和終端機版有什麼差別？</strong></summary>
+  <p>桌面版提供圖形介面，適合初學者和設計師，但不支援自訂 API billing、Unix piping 和 CI/CD 整合。終端機版功能完整，支援 <code>--api-key</code> 自訂後端、管道操作、自動化腳本，是工程師省費和自動化的唯一選擇。</p>
+</details>
+
+<details>
+  <summary><strong>Q：Claude Code 桌面版可以省費嗎？</strong></summary>
+  <p>不行。桌面版綁定 Anthropic 官方計費，無法切換到 OpenRouter、DeepSeek 或自訂 API endpoint。要省費（如 DeepClaude、RTK 等工具），必須使用終端機版 CLI，透過 <code>--api-key</code> 和 <code>ANTHROPIC_BASE_URL</code> 環境變數切換後端。</p>
+</details>
+
+<details>
+  <summary><strong>Q：Claude Code 終端機版怎麼安裝？</strong></summary>
+  <p>執行 <code>npm install -g @anthropic-ai/claude-code</code> 即可全域安裝。需要 Node.js 18+ 環境。安裝後執行 <code>claude</code> 進入互動模式，或 <code>claude --help</code> 查看所有指令。</p>
+</details>
+
+<details>
+  <summary><strong>Q：Claude Code 桌面版適合誰用？</strong></summary>
+  <p>桌面版適合：(1) 剛開始學 AI coding 的初學者，(2) 設計師或非工程師背景的 vibe coder，(3) 不需要自動化腳本或 CI/CD 整合的個人專案用戶。如果你需要省費、自動化或企業部署，請用終端機版。</p>
+</details>
+
+<details>
+  <summary><strong>Q：Claude Code CLI 可以在 CI/CD 裡用嗎？</strong></summary>
+  <p>可以。Claude Code CLI 支援 <code>--print</code> 模式（非互動式輸出），可以直接整合進 GitHub Actions、GitLab CI 或任何 CI/CD pipeline。桌面版完全不支援這個用法。</p>
+</details>
+
+<h2>總結：工程師的選擇很清楚</h2>
+
+<p>如果你只是偶爾用 Claude Code 問問題、做做 vibe coding，桌面版的圖形介面確實更直覺。但只要你有以下任何一個需求，終端機版是唯一選擇：</p>
+
+<ul>
+  <li>想控制 AI 費用（省 10-17x）</li>
+  <li>需要 CI/CD 整合或自動化腳本</li>
+  <li>想用 Unix piping 接其他工具</li>
+  <li>想用 Agent Skills、DeepClaude、RTK 等進階工具</li>
+</ul>
+
+<p>遷移成本很低，三個步驟、十分鐘內完成。費用差距在三個月內就能回收。</p>
+
+<!-- CTA 3: Gumroad kknad -->
+<div class="cta-box gum">
+  <h3>🛠️ 切換到 CLI 後，這個工具包讓你省更多</h3>
+  <p>繁中 Claude Code 工具包：省費設定腳本 + Agent Skills 10 個 + 台灣工程師實戰 Prompt 範例。CLI 用戶專屬，一次設定好所有省費工具。</p>
+  <a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener sponsored" class="cta-btn gum">查看工具包內容 →</a>
+</div>
+
+<div class="related-articles">
+  <h3>延伸閱讀</h3>
+  <ul>
+    <li><a href="/blog/deepclaude-run-claude-code-deepseek-17x-cheaper-2026.html">DeepClaude 完整教學：Claude Code 換 DeepSeek 後端，費用砍 17 倍</a></li>
+    <li><a href="/blog/rtk-rust-token-killer-review-2026.html">RTK Rust Token Killer 評測：省 60-90% Token 費用</a></li>
+    <li><a href="/blog/opencode-vs-cursor-vs-claude-code-2026.html">OpenCode vs Cursor vs Claude Code：2026 三方終極比較</a></li>
+    <li><a href="/blog/opencode-zen-vs-go-pricing-2026.html">OpenCode Zen vs Go vs 自帶 API：最省錢方案比較</a></li>
+    <li><a href="/blog/hermes-agent-vs-openclaw-2026.html">Hermes Agent vs OpenClaw：哪個更適合你？</a></li>
+  </ul>
+</div>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 AutoDev AI · <a href="/privacy.html">隱私政策</a> · <a href="/contact.html">聯絡我們</a></p>
+    <p class="footer-disclaimer">本文含聯盟行銷連結，點擊後購買我們可能獲得佣金，不影響您的費用或我們的評測立場。</p>
+  </div>
+</footer>
+</body>
+</html>
