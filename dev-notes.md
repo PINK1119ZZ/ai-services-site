@@ -1,5 +1,52 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 61 | 2026-05-27 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-05-27 22:00 UTC | 搜尋範圍：ossinsight AI趨勢、GitHub trending、affiliate新發現、AI影片工具市場、Claude Code生態系里程碑
+
+### 🔥 本輪頭條：Synthesia 25%/12m affiliate 新發現 + Claude Code 生態系三工具同達 50K stars + awesome-claude-skills 生態系爆發
+
+---
+
+#### 1. 🔥🔥🔥 Synthesia affiliate（25%/12m，最高$267/客，AI數位人影片，繁中=0篇）
+- **affiliate.watch 確認**：25% commission for 1 year，60天cookie
+- 官方 synthesia.io/partners/affiliates 自述：每位客戶最高 $267 佣金
+- 10次銷售後獲免費Starter帳號，15次後獲自訂avatar — 激勵結構完整
+- 台灣繁中 Synthesia 深度評測 = 0 篇（搜尋確認）
+- 受眾：台灣企業培訓/HR/YouTuber/教育工作者 — 高LTV企業受眾
+- 可與 HeyGen（35%/3m）+ VEED（30%/12m）組成三聯盟AI影片工具比較頁
+- **P1-HIGH，Ivan 立即申請**
+
+#### 2. 🔥🔥 Claude Code 生態系三工具同達 50K stars（SEO 時效窗口）
+- `claude-code-best-practice`：突破 50,000 stars，Reddit r/ClaudeCode 確認，GitHub trending
+- `Claude-Mem`：45,000 stars（持久記憶系統，Round 58 已記錄）
+- `Claw Code`：50K stars 在兩小時內達成（Medium 文章確認，工程師社群高度關注）
+- 三工具同時爆發 = 「Claude Code 生態系 2026 里程碑」敘事，繁中=0篇
+- 整合文機會：「Claude Code 生態系 2026：三個 50K stars 工具完整指南」
+- **P1-HIGH，seo-writer 本週執行**
+
+#### 3. 🔥🔥 awesome-claude-skills 生態系爆發（658+ skills，聚合站出現）
+- travisvn/awesome-claude-skills：GitHub 上 Claude Skills 的 awesome list
+- agent-skills.cc 和 claudeskills.info 兩個聚合站已出現（658+ community skills）
+- Reddit r/ClaudeCode：「A new Claude Skill every 7 minutes on Github? ~200 additions/day」
+- 這個生態系爆發 = 我們的 Gumroad agent-skills-tw 產品的天然流量來源
+- 繁中「Claude Skills 完整指南 + awesome list」= 0 篇
+- **P2，直接為 Gumroad 產品導流，ROI 高**
+
+#### 4. 🟡 Colossyan + Munch AI 影片工具（Rewardful 整理確認，佣金待確認）
+- Rewardful 官方整理：Colossyan（AI 培訓影片）+ Munch（AI 影片剪輯）均有 affiliate
+- 可與 Synthesia + HeyGen + VEED 組成「AI 影片工具 2026 完整比較頁」五聯盟疊加
+- 佣金率待 Ivan 申請後確認，P2 記錄
+
+#### 5. 📊 ossinsight 即時數據（2026-05-27）
+- opencode：55,153 stars（+1,485/day，持續加速）
+- openai/codex：44,480 stars（+742/day）
+- All-Hands-AI/OpenHands：60,526 stars（+228/day）
+- cline/cline：48,982 stars（+143/day）
+- 我們的 OpenCode 系列文章 SEO 矩陣完整，無需新文章
+
+---
+
 ## Round 58 | 2026-05-25 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-05-25 22:00 UTC | 搜尋範圍：ossinsight AI趨勢、askglitch.com週報、GitHub trending、affiliate確認、競品分析
