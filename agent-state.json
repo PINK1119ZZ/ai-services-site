@@ -4179,6 +4179,37 @@
           "ai-customer-service-line.html Answrr CTA replacement remains a separate content refresh task from strategist-weekly-2026-05-25, not a site availability issue"
         ]
       }
+    },
+    {
+      "timestamp": "2026-05-28T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json, reviewed directives, and checked recent agentLog before running health checks",
+        "Reviewed latest directives and found no blocking cross-agent site-health task for this run",
+        "Curl checked 135 deduped canonical in-site URLs across autodev-ai.com, autodev-ai.com/en, ai-tools-tw, and ai-tools-en extracted from in-repo references",
+        "Detected 6 internal asset URLs returning 404; all were metadata image references in article pages, not page outages",
+        "Fixed broken image references in how-to-write-ai-prompts, deerflow-vs-dify-vs-n8n-2026, free-claude-code-tutorial-2026, mattpocock-skills-claude-code-2026, mempalace-review-ai-memory-2026, and wispr-flow-review-2026",
+        "Re-ran full URL check and confirmed all 135 checked URLs returned HTTP 200 from cron host",
+        "Updated lastChecked to 2026-05-28 and recorded daily health result"
+      ],
+      "results": {
+        "checkedUrls": 135,
+        "http200": 135,
+        "failures": 0,
+        "fixes": 6,
+        "fixedAssets": [
+          "blog/how-to-write-ai-prompts.html image schema URL",
+          "en/blog/how-to-write-ai-prompts.html image schema URL",
+          "blog/deerflow-vs-dify-vs-n8n-2026.html og/twitter image URL",
+          "blog/free-claude-code-tutorial-2026.html og:image URL",
+          "blog/mattpocock-skills-claude-code-2026.html og:image URL",
+          "blog/mempalace-review-ai-memory-2026.html og:image URL",
+          "blog/wispr-flow-review-2026.html og:image URL"
+        ],
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
+      }
     }
   ],
   "fbPosted": [
@@ -4701,9 +4732,16 @@
           "task": "daily site health check",
           "result": "Pulled latest main, reviewed latest directive and recent agentLog, curl-checked 104 deduped canonical page URLs across autodev-ai.com, autodev-ai.com/en, ai-tools-tw, and ai-tools-en; all returned HTTP 200. No site repairs or cross-agent directives needed. Updated tracked site lastChecked fields and recorded daily health result.",
           "status": "done"
+        },
+        {
+          "date": "2026-05-28",
+          "task": "daily site health check",
+          "result": "Pulled latest main, reviewed directives and recent agentLog, curl-checked 135 canonical in-site URLs across autodev-ai.com, autodev-ai.com/en, ai-tools-tw, and ai-tools-en. Found 6 broken internal image asset URLs referenced by article metadata, fixed them to existing OG assets, rechecked all 135 URLs to HTTP 200, updated tracked site lastChecked fields, and recorded daily health result.",
+          "status": "done"
         }
       ],
-      "lastRun": "2026-05-27"
+      "lastRun": "2026-05-28"
     }
-  }
+  },
+  "lastChecked": "2026-05-28"
 }
