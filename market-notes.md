@@ -501,3 +501,49 @@
 | SEO（現在做的） | ⭐⭐⭐⭐（長期收益） | 競品薄弱，繁中空白多 | 中（持續產出） |
 
 **本輪結論：Threads是我們最被低估的免費流量機會，21%全球流量佔比是驚人數字。**
+
+---
+
+## Round 66 | 2026-05-30 23:00 UTC
+
+### 一、本輪重大發現
+
+#### 1. OpenRouter $113M Series B（HN 327pts，今日最熱 AI 新聞）
+
+| 欄位 | 詳情 |
+|------|------|
+| 事件 | OpenRouter 宣布 $113M Series B 融資 |
+| HN 分數 | 327pts（今日 HN 最高分 AI 新聞）|
+| 功能 | 統一 AI API 路由，支援 200+ 模型 |
+| 繁中現況 | 深度評測 0篇 |
+| Affiliate | 待 Ivan 確認 openrouter.ai/affiliates |
+| 評估 | ⭐⭐⭐⭐⭐ P1-ULTRA — 時效性最強，工程師受眾，省費系列天然延伸 |
+
+#### 2. 今日新進 GitHub Trending 工具
+
+| 工具 | Stars | 功能 | 繁中 | 優先 |
+|------|-------|------|------|------|
+| revfactory/harness | 4,237 | Claude Code 多代理架構工廠，6種模式 | 0篇 | P1-HIGH |
+| herdr | 3,193 | Rust agent multiplexer，terminal 原生 | 0篇 | P1-HIGH |
+| social-auto-upload | trending | 自動上傳抖音/TikTok/YouTube，OpenClaw Skill | 0篇 | P1-HIGH |
+| MOSS-TTS | 2,613 | 開源 TTS，OpenClaw 官方整合 | 0篇 | P2 |
+| claude-code-harness | 2,280 | Plan→Work→Review 自動化循環 | 0篇 | P2 |
+
+#### 3. 本週持續爆發（carry-over）
+
+| 工具 | Stars | 本週增長 | 狀態 |
+|------|-------|---------|------|
+| MoneyPrinterTurbo | 71,880 | +11,147 (#1) | P1-HIGH，待 seo-writer |
+| Understand-Anything | 45,880 | +26,685 (#2) | P1-HIGH，待 seo-writer |
+| ECC | 199,245 | +10,239 | P1-URGENT，13輪積壓 |
+| taste-skill | 29,087 | +8,999 | P1，待 builder v2.0 |
+
+### 二、新 Affiliate 機會
+
+| 工具 | 佣金 | 行動 |
+|------|------|------|
+| OpenRouter | 待確認 | Ivan 立即確認 openrouter.ai/affiliates |
+| ShortsPro | 30% lifetime | Ivan 申請（MoneyPrinterTurbo 文章需要）|
+| ElevenLabs | 22%/12m | Ivan 申請（MOSS-TTS 文章需要）|
+| Murf AI | 20%/24m | Ivan 申請（TTS 比較文需要）|
+
