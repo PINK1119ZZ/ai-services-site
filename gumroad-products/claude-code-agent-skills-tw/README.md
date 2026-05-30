@@ -1,6 +1,7 @@
-# Claude Code Agent Skills 繁中工程師包 2026
+# Claude Code Agent Skills 繁中工程師包 2026 — v2.0
 
-> 10 個即用 Agent Skills + 一鍵安裝腳本 + 台灣工程師實戰範例
+> 13 個即用 Agent Skills + 一鍵安裝腳本 + 台灣工程師實戰範例
+> **v2.0 新增：前端設計品質守門員、AI 寫作去 Slop、資安漏洞審查（MITRE ATT&CK）**
 
 ---
 
@@ -8,7 +9,7 @@
 
 | 目錄/檔案 | 說明 |
 |-----------|------|
-| `skills/` | 10 個 `.md` Agent Skill 指令檔 |
+| `skills/` | 13 個 `.md` Agent Skill 指令檔 |
 | `install.sh` | 一鍵安裝腳本（複製到 `~/.claude/` 目錄）|
 | `README.md` | 本說明文件 |
 | `EXAMPLES.md` | 台灣工程師實戰 Prompt 範例（前端/後端/全端）|
@@ -24,82 +25,95 @@ bash install.sh
 
 # 或手動複製
 cp skills/*.md ~/.claude/
+
+# 強制覆蓋舊版本
+bash install.sh --force
 ```
 
 安裝後，在 Claude Code 對話中輸入 `/skill名稱` 即可使用。
 
 ---
 
-## 📋 Skills 清單
+## 🎯 13 個 Skills 完整清單
 
-| Skill 名稱 | 用途 | 適合對象 |
-|-----------|------|---------|
-| `/grill-me` | 程式碼嚴格審查（不放水版）| 所有人 |
-| `/tdd` | 測試驅動開發流程引導 | 後端/全端 |
-| `/to-prd` | 把想法轉成產品需求文件 | PM/創業者 |
-| `/explain-code` | 深度解釋程式碼（繁中版）| 學習者/新手 |
-| `/security-review` | 安全性漏洞掃描 | 全端/DevOps |
-| `/refactor` | 重構建議（含可維護性評分）| 中高級工程師 |
-| `/api-docs` | 自動生成 API 文件 | 後端工程師 |
-| `/debug-expert` | 系統化 Debug 流程 | 所有人 |
-| `/deploy-check` | 上線前安全檢查清單 | DevOps/全端 |
-| `/taiwan-code-review` | 台灣電商/企業常見問題審查 | 台灣開發者 |
+### 🔧 工程品質（原版 v1.0）
+| Skill | 指令 | 用途 |
+|-------|------|------|
+| grill-me | `/grill-me` | 嚴格程式碼審查，找出所有問題 |
+| tdd | `/tdd` | 測試驅動開發引導，先寫測試再寫程式 |
+| to-prd | `/to-prd` | 想法轉產品需求文件（PRD） |
+| explain-code | `/explain-code` | 深度程式碼解說（繁中輸出） |
+| security-review | `/security-review` | 安全性漏洞掃描（含 OWASP Top 10） |
+| refactor | `/refactor` | 重構建議與可維護性評分 |
+| api-docs | `/api-docs` | API 文件自動生成 |
+| debug-expert | `/debug-expert` | 系統化 Debug 引導（TRACE 框架） |
+| deploy-check | `/deploy-check` | 上線前安全檢查清單 |
+| taiwan-code-review | `/taiwan-code-review` | 台灣電商/金流專屬審查 |
+
+### ✨ v2.0 新增（2026-05-30）
+| Skill | 指令 | 用途 |
+|-------|------|------|
+| taste-skill | `/taste-skill` | AI 前端設計品質守門員，防止 Slop UI |
+| stop-slop | `/stop-slop` | AI 寫作品質過濾器，移除空洞套話 |
+| cybersecurity-review | `/cybersecurity-review` | 資安漏洞審查（MITRE ATT&CK 映射） |
 
 ---
 
-## 💡 使用方法
+## 👥 適合誰用？
 
-在 Claude Code 對話中輸入斜線指令：
+| 角色 | 推薦 Skills |
+|------|------------|
+| 前端工程師 | taste-skill, grill-me, refactor |
+| 後端工程師 | security-review, cybersecurity-review, api-docs, deploy-check |
+| 全端工程師 | 全部 |
+| 技術寫作者 | stop-slop, explain-code, to-prd |
+| 資安工程師 | cybersecurity-review, security-review, grill-me |
+| 台灣電商開發者 | taiwan-code-review, deploy-check, security-review |
 
+---
+
+## 💡 使用技巧
+
+### 組合使用（最強效果）
+```bash
+# 完整程式碼品質審查流程
+/grill-me → /security-review → /cybersecurity-review → /deploy-check
+
+# 前端 UI 品質流程
+/taste-skill → /refactor → /grill-me
+
+# 文件品質流程
+/stop-slop → /explain-code → /api-docs
 ```
-/grill-me 幫我審查這段 React 元件的效能問題
-/tdd 我要為這個 Node.js API 建立測試
-/to-prd 我想做一個 LINE Bot 預約系統給診所使用
-/taiwan-code-review 請審查我的電子商務結帳流程
+
+### 搭配 Claude Code 最佳實踐
+1. 在 `CLAUDE.md` 中設定專案規範
+2. 使用 `/to-prd` 先定義需求
+3. 用 `/tdd` 寫測試
+4. 用 `/grill-me` 審查實作
+5. 用 `/cybersecurity-review` 確保安全
+6. 用 `/deploy-check` 上線前把關
+
+---
+
+## 🔄 版本升級
+
+如果你已有 v1.0，升級到 v2.0 只需：
+```bash
+bash install.sh --force
 ```
+這會安裝 3 個新 Skills，不影響現有 Skills。
 
 ---
 
-## ⚙️ 系統需求
-
-- Claude Code（Claude.ai 訂閱 或 Claude API + Anthropic CLI）
-- macOS / Linux / Windows WSL2
-- Bash shell（安裝腳本用）
+## 📖 更多使用範例
+請參閱 `EXAMPLES.md`
 
 ---
 
-## 📁 安裝路徑
-
-技能檔案安裝至：
-```
-~/.claude/          ← 全域技能（所有專案可用）
-.claude/            ← 專案技能（只在此專案生效）
-```
-
-建議把常用技能（grill-me、tdd、debug-expert）安裝至全域，把專案特定技能（taiwan-code-review）安裝至專案目錄。
+## 🆘 問題回報
+如有問題或建議，歡迎透過 Gumroad 聯繫。
 
 ---
 
-## 🇹🇼 台灣工程師特別設計
-
-- 所有 Skill 提示詞均包含**繁中回覆指示**（輸出繁體中文）
-- `/taiwan-code-review` 專針對台灣常見情境：金流整合（綠界/藍新/台灣Pay）、統編驗證、中文字元處理、LINE Bot、台灣個資法合規
-- 範例情境涵蓋：電商後台、預約系統、LINE Bot、數據分析腳本
-
----
-
-## 🔄 更新
-
-本產品將持續更新。購買後可透過原始下載連結取得新版本。
-
-如有問題或需要客製化技能，請 Email：[support@autodev-ai.com](mailto:support@autodev-ai.com)
-
----
-
-## 📜 授權
-
-個人及商業使用皆可。請勿二次販售。
-
----
-
-*版本 1.0.0 — 2026年5月*
+*Claude Code Agent Skills 繁中工程師包 v2.0 — 2026-05-30*

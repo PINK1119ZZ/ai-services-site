@@ -1,10 +1,29 @@
 # CHANGELOG
 
+## v2.0.0 — 2026-05-30
+
+### 新增 3 個 Skills 🎉
+
+- `taste-skill.md` — AI 前端設計品質守門員（防止 Slop UI，設計品味評分，Tailwind/CSS 修正建議）
+- `stop-slop.md` — AI 寫作品質過濾器（移除空洞套話，密度/原創性/節奏評分，自動重寫）
+- `cybersecurity-review.md` — 資安漏洞審查（OWASP Top 10 + MITRE ATT&CK 映射，CVSS v3.1 評分，台灣法規對應）
+
+### 更新
+- `README.md` — 升級為 v2.0，新增 13 Skills 完整清單、角色推薦矩陣、組合使用指南
+- `install.sh` — 升級為 v2.0.0，新增 `--force` 覆蓋模式，支援 13 Skills
+
+### 受眾擴展
+- 前端設計師（taste-skill）
+- 技術寫作者/行銷人員（stop-slop）
+- 資安工程師（cybersecurity-review）
+
+---
+
 ## v1.0.0 — 2026-05-18
 
-### 初版發布 🎉
+### 初版發布
 
-**包含 10 個 Agent Skills：**
+**10 個 Agent Skills：**
 - `grill-me.md` — 嚴格程式碼審查
 - `tdd.md` — 測試驅動開發引導
 - `to-prd.md` — 想法轉產品需求文件
@@ -15,18 +34,3 @@
 - `debug-expert.md` — 系統化 Debug 引導（TRACE 框架）
 - `deploy-check.md` — 上線前安全檢查清單
 - `taiwan-code-review.md` — 台灣電商/金流專屬審查
-
-**工具：**
-- `install.sh` — 一鍵安裝腳本（支援全域/本地安裝）
-
-**文件：**
-- `README.md` — 完整說明和使用指南
-- `EXAMPLES.md` — 10 個台灣工程師實戰 Prompt 範例
-
----
-
-*未來版本計畫（v1.1）：*
-- 加入 LINE Bot 開發專用 Skill
-- 加入 Next.js 效能優化 Skill
-- 加入 Python 資料分析 Skill
-- 更多台灣電商情境範例
