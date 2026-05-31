@@ -14,7 +14,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-05-30T00:00:00Z"
+      "lastChecked": "2026-05-31T00:00:00Z"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -23,7 +23,7 @@
       "lastNewArticle": "2026-04-12",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-05-30T00:00:00Z"
+      "lastChecked": "2026-05-31T00:00:00Z"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -48,7 +48,7 @@
       "issues": [
         "2026-04-30 health check: all tracked ai-tools-tw URLs healthy (200); mitigated Gumroad n8n product 404 by replacing direct purchase CTAs on landing page with coming-soon notice and tutorial links until Ivan uploads the product."
       ],
-      "lastChecked": "2026-05-30T00:00:00Z"
+      "lastChecked": "2026-05-31T00:00:00Z"
     },
     "autodev_ai": {
       "url": "https://autodev-ai.com",
@@ -59,7 +59,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-05-30T00:00:00Z"
+      "lastChecked": "2026-05-31T00:00:00Z"
     }
   },
   "affiliateLinks": {
@@ -1467,7 +1467,9 @@
         "claude-code-harness: 今日 trending, Plan→Work→Review 循環, 繁中=0篇, ⭐⭐⭐ P2",
         "ECC 13輪積壓警告: 199K stars, 窗口快關, ⭐⭐⭐⭐ P1-URGENT carry-over"
       ],
-      "directivesWritten": ["researcher-to-strategist-2026-05-30-round66.md"],
+      "directivesWritten": [
+        "researcher-to-strategist-2026-05-30-round66.md"
+      ],
       "affiliatesNewlyConfirmed": []
     },
     {
@@ -5071,10 +5073,43 @@
           "task": "daily site health check",
           "result": "Pulled latest main, reviewed directives and recent agentLog, curl-checked 219 in-repo canonical URLs. Found malformed canonical/reference URLs in three blog pages plus sitemap/indexnow state, fixed them, rechecked successfully, and updated site lastChecked fields. One known ai-tools-tw landing page reference remains external to this repo.",
           "status": "done"
+        },
+        {
+          "date": "2026-05-31",
+          "task": "daily site health check",
+          "result": "Pulled latest main, reviewed current directives and recent agentLog, curl-checked 15 tracked URLs from site records; all returned HTTP 200. No site repairs or cross-agent directives were needed. Updated tracked site lastChecked fields and recorded daily health result.",
+          "status": "done"
         }
       ],
-      "lastRun": "2026-05-30"
+      "lastRun": "2026-05-31"
     }
   },
-  "lastChecked": "2026-05-30"
+  "lastChecked": "2026-05-31",
+  "dailyLog": [
+    {
+      "timestamp": "2026-05-31T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json, reviewed latest directives, and checked recent agentLog before running health checks",
+        "Reviewed strategist-weekly-2026-05-25.md and affiliate-monitor-to-content-refresher-2026-05-24.md; noted pending content tasks (replace lingering Answrr CTA in ai-customer-service-line.html, future Zeabur CTA insertion after referral link exists) but no blocking site-health outage for this run",
+        "Curl checked 15 tracked site URLs from state records: 4 site roots/page groups plus 11 ai-tools-tw tracked pages",
+        "Confirmed all 15 checked URLs returned HTTP 200 from cron host",
+        "No site issues required repair and no new cross-agent directives were needed",
+        "Updated lastChecked to 2026-05-31 for tracked site records and recorded daily health result"
+      ],
+      "results": {
+        "checkedUrls": 15,
+        "http200": 15,
+        "failures": 0,
+        "fixes": 0,
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)",
+        "notes": [
+          "ai-customer-service-line.html still needs Answrr CTA replacement as a content refresh task, not a site availability issue.",
+          "Zeabur CTA rollout remains pending Ivan referral link and is not a health incident."
+        ]
+      }
+    }
+  ]
 }
