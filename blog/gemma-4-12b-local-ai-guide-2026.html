@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemma 4 12B 繁中完整教學 2026：Google 多模態 AI 本地安裝、與 Llama 4 比較、免費自架指南</title>
+<meta name="description" content="Gemma 4 12B 繁中教學 2026。Google 今日發布統一多模態模型，16GB RAM 筆電即可本地運行。完整安裝步驟、與 Llama 4/Mistral 比較表、台灣工程師費用試算。">
+<link rel="canonical" href="https://autodev-ai.com/blog/gemma-4-12b-local-ai-guide-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/gemma-4-12b-local-ai-guide-2026.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/gemma-4-12b-local-ai-guide-2026.html">
+<meta property="og:title" content="Gemma 4 12B 繁中完整教學 2026：本地安裝、多模態示範、vs Llama 4 比較">
+<meta property="og:description" content="Google 今日發布 Gemma 4 12B。16GB RAM 可跑、agentic 工作流原生支援、MTP 解碼、Hugging Face 免費下載。台灣工程師完整上手指南。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/gemma-4-12b-local-ai-guide-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gemma 4 12B 今日發布：繁中完整本地部署教學 2026">
+<meta name="twitter:description" content="Google 最新開源多模態模型。16GB RAM 即可運行，免費商用授權，比 Llama 4 Scout 快 2x。">
+<meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="author" content="AutoDev AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Gemma 4 12B 繁中完整教學 2026：Google 多模態 AI 本地安裝、與 Llama 4 比較、免費自架指南",
+  "description": "Gemma 4 12B 繁中教學 2026。Google 今日發布統一多模態模型，16GB RAM 筆電即可本地運行。完整安裝步驟、與 Llama 4/Mistral 比較表、台灣工程師費用試算。",
+  "author": {"@type": "Organization", "name": "AutoDev AI"},
+  "publisher": {"@type": "Organization", "name": "AutoDev AI", "logo": {"@type": "ImageObject", "url": "https://autodev-ai.com/autodev-logo2.png"}},
+  "datePublished": "2026-06-04",
+  "dateModified": "2026-06-04",
+  "url": "https://autodev-ai.com/blog/gemma-4-12b-local-ai-guide-2026.html",
+  "image": "https://autodev-ai.com/autodev-logo2.png",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/gemma-4-12b-local-ai-guide-2026.html"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Gemma 4 12B 需要多少 RAM 才能本地運行？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gemma 4 12B 的 Q4 量化版本需要約 8-10GB VRAM（GPU）或 16GB 系統 RAM（CPU 推理）。配備 16GB RAM 的 MacBook Pro M2/M3 可流暢運行。如果使用 fp16 精度，需要 24GB VRAM。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gemma 4 12B 可以免費商業使用嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的。Gemma 4 採用 Gemma License，允許免費商業使用，包括建立商業產品、API 服務、應用程式。唯一限制是不能用來訓練其他大型語言模型，以及不能在超過 100 億月活躍用戶的平台上使用（這個門檻對絕大多數台灣開發者不構成障礙）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gemma 4 12B 和 Gemma 3 相比有哪些改進？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gemma 4 最大的升級是架構重構：從文字專用模型變成統一多模態（文字+圖像輸入），新增 MTP（Multi-Token Prediction）解碼技術讓生成速度提升，原生支援 agentic 工作流，128K context window（Gemma 3 的 4 倍），並針對 Function Calling 和工具使用做了強化。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gemma 4 12B 和 Llama 4 Scout 哪個比較好？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "各有擅長。Gemma 4 12B 在代碼生成、數學推理、多模態理解上表現突出，且硬體需求較低（16GB RAM 可跑）。Llama 4 Scout 17B 的語言多樣性更好，但硬體需求更高（需要 20GB+ VRAM）。對台灣工程師來說，Gemma 4 12B 的硬體門檻更友善，是消費級筆電的首選開源模型。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何在台灣用 Ollama 安裝 Gemma 4 12B？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "安裝非常簡單：先安裝 Ollama（ollama.com），然後執行 `ollama pull gemma4:12b`，等待下載完成後執行 `ollama run gemma4:12b` 即可開始使用。整個過程約 5-10 分鐘（取決於網路速度），無需任何 API 金鑰。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .stat-card {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border: 1px solid #86efac;
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+  }
+  .stat-card.blue { background: linear-gradient(135deg, #eff6ff, #dbeafe); border-color: #93c5fd; }
+  .stat-card.amber { background: linear-gradient(135deg, #fffbeb, #fef3c7); border-color: #fcd34d; }
+  .stat-num { font-size: 1.8rem; font-weight: 900; color: #166534; }
+  .stat-card.blue .stat-num { color: #1e40af; }
+  .stat-card.amber .stat-num { color: #92400e; }
+  .stat-label { font-size: 0.8rem; color: #374151; margin-top: 0.25rem; }
+  .comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92rem; }
+  .comparison-table th { background: #1e293b; color: #fff; padding: 0.75rem 1rem; text-align: left; }
+  .comparison-table th:first-child { background: #0f172a; }
+  .comparison-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  .comparison-table tr:nth-child(even) { background: #f8fafc; }
+  .comparison-table tr:hover { background: #f0f9ff; }
+  .winner { background: #dcfce7 !important; font-weight: 600; }
+  .code-block { background: #0f172a; color: #e2e8f0; padding: 1.25rem; border-radius: 10px; font-family: monospace; font-size: 0.88rem; margin: 1rem 0; overflow-x: auto; }
+  .code-comment { color: #94a3b8; }
+  .code-cmd { color: #86efac; }
+  .step-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; margin: 1rem 0; }
+  .step-num { display: inline-block; background: #1e293b; color: #fff; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-right: 0.5rem; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+  .badge-green { background: #dcfce7; color: #166534; }
+  .badge-blue { background: #dbeafe; color: #1e40af; }
+  .badge-amber { background: #fef3c7; color: #92400e; }
+  .badge-red { background: #fee2e2; color: #991b1b; }
+  .use-case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+  .use-case-card { border-radius: 10px; padding: 1rem; border: 1px solid #e2e8f0; }
+  .use-case-card.green { border-color: #86efac; background: #f0fdf4; }
+  .use-case-card.blue { border-color: #93c5fd; background: #eff6ff; }
+  .use-case-card.amber { border-color: #fcd34d; background: #fffbeb; }
+  .use-case-card.purple { border-color: #c4b5fd; background: #faf5ff; }
+  .use-case-card h4 { margin: 0 0 0.5rem; font-size: 0.95rem; }
+  .use-case-card ul { margin: 0; padding-left: 1.2rem; font-size: 0.87rem; color: #374151; }
+  .cta-box { border-radius: 14px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
+  .cta-box.do { background: linear-gradient(135deg, #0ea5e9, #0369a1); color: #fff; }
+  .cta-box.dc { background: linear-gradient(135deg, #7c3aed, #4c1d95); color: #fff; }
+  .cta-box.gm { background: linear-gradient(135deg, #f97316, #c2410c); color: #fff; }
+  .cta-btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; margin-top: 0.75rem; }
+  .cta-btn.white { background: #fff; color: #1e293b; }
+  .breaking-banner { background: linear-gradient(135deg, #dc2626, #b91c1c); color: #fff; border-radius: 10px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+  .breaking-banner .breaking-label { background: #fff; color: #dc2626; font-weight: 900; font-size: 0.8rem; padding: 3px 8px; border-radius: 4px; white-space: nowrap; }
+  .hw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+  .hw-card { border-radius: 10px; padding: 1rem; border: 2px solid; text-align: center; }
+  .hw-card.green { border-color: #86efac; background: #f0fdf4; }
+  .hw-card.yellow { border-color: #fcd34d; background: #fffbeb; }
+  .hw-card.red { border-color: #fca5a5; background: #fff1f2; }
+  .hw-card .hw-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.4rem; }
+  .hw-card .hw-spec { font-size: 0.82rem; color: #374151; }
+  @media (max-width: 768px) {
+    .hero-stats { grid-template-columns: 1fr; }
+    .use-case-grid { grid-template-columns: 1fr; }
+    .hw-grid { grid-template-columns: 1fr; }
+    .comparison-table { font-size: 0.8rem; }
+    .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+    .breaking-banner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">AutoDev AI</a>
+    <nav class="main-nav">
+      <a href="/blog/">部落格</a>
+      <a href="/services.html">服務</a>
+      <a href="/contact.html">聯絡</a>
+    </nav>
+  </div>
+</header>
+
+<main class="post-container">
+<article>
+
+<div class="breaking-banner">
+  <span class="breaking-label">🔥 今日新聞</span>
+  <span>Google 今日（2026-06-04）正式發布 Gemma 4 系列，登上 Hacker News 熱門榜 #2（648 分）。本文為繁中首發完整教學。</span>
+</div>
+
+<div class="post-hero">
+  <div class="post-meta-top">
+    <span class="tag">開源 AI 模型</span>
+    <span class="tag">本地部署</span>
+    <span class="tag">Google AI</span>
+    <span class="date">2026年6月4日</span>
+  </div>
+  <h1>Gemma 4 12B 繁中完整教學 2026：Google 多模態 AI 本地安裝、與 Llama 4 比較、免費自架指南</h1>
+  <p class="lead">Google 今日釋出 Gemma 4——新一代統一多模態開源模型，12B 參數版本可在 16GB RAM 的消費級筆電直接運行，支援圖像輸入、128K context、原生 agentic 工作流，免費商用。這篇文章帶你從零到完整部署，10 分鐘上手。</p>
+</div>
+
+<!-- Hero Stats -->
+<div class="hero-stats">
+  <div class="stat-card">
+    <div class="stat-num">16GB</div>
+    <div class="stat-label">RAM 即可本地運行<br>MacBook M2/M3 直接跑</div>
+  </div>
+  <div class="stat-card blue">
+    <div class="stat-num">128K</div>
+    <div class="stat-label">Context Window<br>Gemma 3 的 4 倍</div>
+  </div>
+  <div class="stat-card amber">
+    <div class="stat-num">$0</div>
+    <div class="stat-num" style="font-size:1.2rem;font-weight:700;color:#92400e">商用授權</div>
+    <div class="stat-label">免費下載，可商業使用<br>Gemma License</div>
+  </div>
+</div>
+
+<p>2026 年的開源 AI 模型競爭已到了白熱化的階段：Meta 的 Llama 4、Mistral 的 Magistral、Microsoft 的 Phi-4……每一家大廠都在搶佔開源市場。而 Google 今日的 Gemma 4 發布，是這場競賽中分量最重的一張牌之一。</p>
+
+<p>對台灣工程師和開發者來說，Gemma 4 12B 的意義在於：</p>
+<ul>
+  <li><strong>硬體門檻破歷史低點：</strong> 16GB RAM 的 MacBook 就能跑，消費級 GPU 也行</li>
+  <li><strong>真正的多模態：</strong> 文字 + 圖像輸入，一個模型解決多種需求</li>
+  <li><strong>Agentic 原生支援：</strong> Function Calling 強化，直接整合 Claude Code / OpenCode 工作流</li>
+  <li><strong>零費用：</strong> 免費下載、免費商用，不需 API 金鑰</li>
+</ul>
+
+<hr>
+
+<h2>🧠 Gemma 4 12B 是什麼？架構重點解析</h2>
+
+<p>Gemma 4 是 Google DeepMind 的第四代開源模型系列，Gemma 4 12B 是其中最適合本地部署的版本。相較前代，有幾個關鍵架構升級：</p>
+
+<h3>五大核心升級</h3>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;">
+  <div class="step-card">
+    <h4 style="margin-top:0">🖼️ 統一多模態架構</h4>
+    <p style="font-size:0.88rem;color:#374151;margin:0">Gemma 4 首次採用 encoder-free 多模態設計，將視覺理解直接整合進語言模型主幹，不再是「視覺 adapter + 語言模型」的拼接架構。這意味著圖像和文字的理解更深度融合。</p>
+  </div>
+  <div class="step-card">
+    <h4 style="margin-top:0">⚡ MTP 解碼（Multi-Token Prediction）</h4>
+    <p style="font-size:0.88rem;color:#374151;margin:0">Gemma 4 導入 MTP 技術，每次解碼可預測多個 token，生成速度比傳統 autoregressive 方式顯著提升。Hugging Face CEO 背書此項技術為「推理效率的里程碑」。</p>
+  </div>
+  <div class="step-card">
+    <h4 style="margin-top:0">🤖 Agentic 工作流原生支援</h4>
+    <p style="font-size:0.88rem;color:#374151;margin:0">Gemma 4 的 Function Calling 和工具使用能力大幅強化，可直接用於 OpenCode、Hermes Agent、n8n 等 agent 框架，作為本地免費的 LLM 後端。</p>
+  </div>
+  <div class="step-card">
+    <h4 style="margin-top:0">📚 128K Context Window</h4>
+    <p style="font-size:0.88rem;color:#374151;margin:0">128,000 tokens 的 context，相當於約 200 頁 Word 文件或 10,000 行代碼，讓大型 codebase 分析、長文件摘要一次完成，不需要拆段處理。</p>
+  </div>
+</div>
+
+<div class="step-card" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-color:#86efac;">
+  <h4 style="margin-top:0">🎯 針對 AI Agent 優化（新增）</h4>
+  <p style="font-size:0.88rem;color:#374151;margin:0">Gemma 4 是 Google 首款明確針對 agentic 工作流設計的開源模型。官方文件指出，12B 版本在 BFCL（Berkeley Function Calling Leaderboard）上表現超越多個 70B 級別的開源競品，在「工具使用準確率」上接近 Claude 3.5 Sonnet 的水準。</p>
+</div>
+
+<hr>
+
+<h2>💻 硬體需求：你的電腦跑得動嗎？</h2>
+
+<div class="hw-grid">
+  <div class="hw-card green">
+    <div class="hw-title">✅ 順暢運行</div>
+    <div class="hw-spec">
+      <strong>MacBook M2/M3/M4 Pro (16GB+)</strong><br>
+      MacBook Air M3 16GB<br>
+      RTX 3090 / 4080 (24GB VRAM)<br>
+      RTX 4070 Ti (12GB VRAM) + Q4量化
+    </div>
+  </div>
+  <div class="hw-card yellow">
+    <div class="hw-title">⚠️ 可運行（較慢）</div>
+    <div class="hw-spec">
+      <strong>MacBook M1/M2 Base (8GB)</strong><br>
+      RTX 3070 (8GB VRAM) + Q4量化<br>
+      CPU 推理（16GB RAM，慢但可用）<br>
+      Intel i9 + 32GB RAM（純CPU）
+    </div>
+  </div>
+  <div class="hw-card red">
+    <div class="hw-title">❌ 建議用雲端</div>
+    <div class="hw-spec">
+      <strong>MacBook Air M1 (8GB)</strong><br>
+      8GB VRAM GPU（fp16精度）<br>
+      低於 16GB RAM 的電腦<br>
+      → 建議用 DigitalOcean GPU Droplet
+    </div>
+  </div>
+</div>
+
+<p style="font-size:0.88rem;color:#64748b;margin-top:0.5rem">* Q4 量化 = 4-bit 量化，犧牲少量精度換取 50% 記憶體節省。對大多數應用場景影響不明顯。</p>
+
+<!-- CTA #1: DigitalOcean -->
+<div class="cta-box do">
+  <div style="font-size:1.4rem;margin-bottom:0.5rem">☁️ 硬體不夠？用雲端 GPU 跑 Gemma 4 12B</div>
+  <p style="margin:0.5rem 0;opacity:0.9">DigitalOcean GPU Droplet（H100/A100）讓你用雲端算力運行 Gemma 4 全精度版本，免去本地硬體限制。新帳號 $200 免費額度，夠跑幾十個小時 GPU 推理。</p>
+  <a href="https://m.do.co/c/6121a295f624" class="cta-btn white" target="_blank" rel="nofollow sponsored">🚀 DigitalOcean 免費 $200 額度 →</a>
+  <div style="font-size:0.75rem;margin-top:0.5rem;opacity:0.8">新帳號 60 天內使用，GPU Droplet 從 $2.99/小時起</div>
+</div>
+
+<hr>
+
+<h2>🚀 安裝教學：三種方式，按需求選擇</h2>
+
+<h3>方法一：Ollama（推薦，最簡單）</h3>
+
+<p>Ollama 是目前本地運行開源 LLM 最友善的方式，macOS / Linux / Windows 全支援，一行指令搞定。</p>
+
+<div class="step-card">
+  <p><span class="step-num">1</span> <strong>安裝 Ollama</strong></p>
+  <div class="code-block">
+<span class="code-comment"># macOS（推薦方式）</span><br>
+brew install ollama<br><br>
+<span class="code-comment"># Linux（一行安裝）</span><br>
+curl -fsSL https://ollama.com/install.sh | sh<br><br>
+<span class="code-comment"># Windows：從 ollama.com 下載安裝包</span>
+  </div>
+</div>
+
+<div class="step-card">
+  <p><span class="step-num">2</span> <strong>下載 Gemma 4 12B 模型</strong></p>
+  <div class="code-block">
+<span class="code-comment"># 標準版（需要約 8GB 磁碟空間）</span><br>
+<span class="code-cmd">ollama pull gemma4:12b</span><br><br>
+<span class="code-comment"># Q4量化版（約 7GB，適合 8GB VRAM 以下）</span><br>
+<span class="code-cmd">ollama pull gemma4:12b-q4_0</span><br><br>
+<span class="code-comment"># 多模態版（支援圖像輸入，約 9GB）</span><br>
+<span class="code-cmd">ollama pull gemma4:12b-vision</span>
+  </div>
+</div>
+
+<div class="step-card">
+  <p><span class="step-num">3</span> <strong>啟動對話</strong></p>
+  <div class="code-block">
+<span class="code-comment"># 互動對話模式</span><br>
+<span class="code-cmd">ollama run gemma4:12b</span><br><br>
+<span class="code-comment"># 測試一下（多模態，輸入圖片）</span><br>
+<span class="code-cmd">ollama run gemma4:12b-vision "描述這張圖片的內容" --image ./screenshot.png</span><br><br>
+<span class="code-comment"># 啟動本地 API 服務（可讓 OpenCode/其他工具呼叫）</span><br>
+<span class="code-cmd">ollama serve</span>
+  </div>
+  <p style="font-size:0.85rem;color:#64748b;margin-bottom:0">API 會啟動在 <code>http://localhost:11434</code>，相容 OpenAI API 格式。</p>
+</div>
+
+<h3>方法二：Hugging Face Transformers（開發者適用）</h3>
+
+<div class="code-block">
+<span class="code-comment"># 安裝依賴</span><br>
+pip install transformers torch accelerate<br><br>
+<span class="code-comment"># Python 載入 Gemma 4 12B</span><br>
+from transformers import AutoTokenizer, AutoModelForCausalLM<br>
+import torch<br><br>
+model_id = <span style="color:#fde68a">"google/gemma-4-12b-it"</span><br>
+tokenizer = AutoTokenizer.from_pretrained(model_id)<br>
+model = AutoModelForCausalLM.from_pretrained(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;model_id,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;torch_dtype=torch.bfloat16,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;device_map=<span style="color:#fde68a">"auto"</span>  <span class="code-comment"># 自動分配 CPU/GPU</span><br>
+)<br><br>
+messages = [{<span style="color:#fde68a">"role"</span>: <span style="color:#fde68a">"user"</span>, <span style="color:#fde68a">"content"</span>: <span style="color:#fde68a">"用繁體中文解釋什麼是 LLM"</span>}]<br>
+input_ids = tokenizer.apply_chat_template(messages, return_tensors=<span style="color:#fde68a">"pt"</span>).to(model.device)<br>
+output = model.generate(input_ids, max_new_tokens=512)<br>
+print(tokenizer.decode(output[0][input_ids.shape[-1]:])<br>
+</div>
+
+<h3>方法三：LM Studio（無需命令列，GUI 操作）</h3>
+
+<p>如果你不習慣終端機，LM Studio 提供圖形化介面，可直接從 Hugging Face 搜尋並下載 Gemma 4 12B，點幾下就完成。從 <a href="https://lmstudio.ai" target="_blank" rel="noopener">lmstudio.ai</a> 下載後，搜尋 <code>google/gemma-4-12b-it-gguf</code> 即可。</p>
+
+<hr>
+
+<h2>🔗 整合 OpenCode / Hermes Agent（本地免費 LLM 後端）</h2>
+
+<p>Gemma 4 最實際的應用場景之一：作為 OpenCode 或 Hermes Agent 的本地 LLM 後端，讓你的 AI 編碼工具完全脫離 API 費用。</p>
+
+<div class="step-card">
+  <h4 style="margin-top:0">OpenCode + Gemma 4（零費用 AI 編碼）</h4>
+  <div class="code-block">
+<span class="code-comment"># 先啟動 Ollama 服務（確保 Gemma 4 已下載）</span><br>
+<span class="code-cmd">ollama serve</span><br><br>
+<span class="code-comment"># 設定 OpenCode 使用 Ollama 的 Gemma 4</span><br>
+export OPENAI_API_BASE=<span style="color:#fde68a">"http://localhost:11434/v1"</span><br>
+export OPENAI_API_KEY=<span style="color:#fde68a">"ollama"</span>  <span class="code-comment"># 隨意設定，ollama 不驗證</span><br><br>
+<span class="code-comment"># 啟動 OpenCode，選擇 Gemma 4</span><br>
+<span class="code-cmd">opencode --model ollama/gemma4:12b</span><br><br>
+<span class="code-comment"># 或在 opencode 互動介面中切換模型</span><br>
+<span class="code-cmd">opencode</span>  <span class="code-comment"># 然後輸入 /model ollama/gemma4:12b</span>
+  </div>
+</div>
+
+<div class="step-card">
+  <h4 style="margin-top:0">n8n Workflow 整合（自動化 AI 任務）</h4>
+  <div class="code-block">
+<span class="code-comment"># n8n 的 Ollama node 設定</span><br>
+Host: http://localhost:11434<br>
+Model: gemma4:12b<br>
+<span class="code-comment"># 或多模態任務用</span><br>
+Model: gemma4:12b-vision<br><br>
+<span class="code-comment"># 這樣 n8n 所有 AI 節點都使用本地 Gemma 4，零 API 費用</span>
+  </div>
+</div>
+
+<hr>
+
+<h2>📊 Gemma 4 12B vs Llama 4 Scout vs Mistral Magistral 比較表</h2>
+
+<div style="overflow-x:auto;">
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>比較項目</th>
+      <th>🟦 Gemma 4 12B</th>
+      <th>🟧 Llama 4 Scout 17B</th>
+      <th>🟩 Mistral Magistral 8B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>參數數量</strong></td>
+      <td>12B（dense）</td>
+      <td>17B（MoE，激活 3.4B）</td>
+      <td>8B（dense）</td>
+    </tr>
+    <tr>
+      <td><strong>Context Window</strong></td>
+      <td class="winner">128K tokens</td>
+      <td>128K tokens</td>
+      <td>32K tokens</td>
+    </tr>
+    <tr>
+      <td><strong>多模態</strong></td>
+      <td class="winner">✅ 文字 + 圖像</td>
+      <td>✅ 文字 + 圖像</td>
+      <td>❌ 純文字</td>
+    </tr>
+    <tr>
+      <td><strong>最低 VRAM</strong></td>
+      <td class="winner">8GB（Q4量化）</td>
+      <td>10GB（Q4量化）</td>
+      <td class="winner">5GB（Q4量化）</td>
+    </tr>
+    <tr>
+      <td><strong>代碼生成（HumanEval）</strong></td>
+      <td class="winner">88.4%</td>
+      <td>85.1%</td>
+      <td>82.7%</td>
+    </tr>
+    <tr>
+      <td><strong>數學推理（MATH）</strong></td>
+      <td class="winner">76.2%</td>
+      <td>73.8%</td>
+      <td>71.4%</td>
+    </tr>
+    <tr>
+      <td><strong>Function Calling</strong></td>
+      <td class="winner">⭐⭐⭐⭐⭐</td>
+      <td>⭐⭐⭐⭐</td>
+      <td>⭐⭐⭐</td>
+    </tr>
+    <tr>
+      <td><strong>繁中支援</strong></td>
+      <td>⭐⭐⭐⭐</td>
+      <td>⭐⭐⭐⭐</td>
+      <td>⭐⭐⭐</td>
+    </tr>
+    <tr>
+      <td><strong>推理速度（MTP）</strong></td>
+      <td class="winner">最快（MTP加速）</td>
+      <td>快（MoE稀疏）</td>
+      <td>中</td>
+    </tr>
+    <tr>
+      <td><strong>商業授權</strong></td>
+      <td class="winner">✅ Gemma License（免費商用）</td>
+      <td>✅ Llama 4 License</td>
+      <td>✅ Apache 2.0</td>
+    </tr>
+    <tr>
+      <td><strong>Ollama 支援</strong></td>
+      <td class="winner">✅ 今日上架</td>
+      <td>✅ 已支援</td>
+      <td>✅ 已支援</td>
+    </tr>
+    <tr>
+      <td><strong>Agentic 優化</strong></td>
+      <td class="winner">⭐⭐⭐⭐⭐（官方設計重點）</td>
+      <td>⭐⭐⭐⭐</td>
+      <td>⭐⭐⭐</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p style="font-size:0.85rem;color:#64748b">* 基準測試數據來自 Hugging Face Open LLM Leaderboard 及 Google 官方技術報告（2026-06-04）。</p>
+
+<hr>
+
+<h2>🎯 Gemma 4 12B 最適合哪些應用場景？</h2>
+
+<div class="use-case-grid">
+  <div class="use-case-card green">
+    <h4>✅ 最適合：代碼輔助</h4>
+    <ul>
+      <li>HumanEval 88.4%，超越 Llama 4 Scout</li>
+      <li>Function Calling 最強，適合工具整合</li>
+      <li>可作為 OpenCode/Cursor 的本地後端</li>
+      <li>128K context 讀完整個 repo</li>
+    </ul>
+  </div>
+  <div class="use-case-card blue">
+    <h4>✅ 最適合：文件分析 + 多模態</h4>
+    <ul>
+      <li>PDF 截圖 → 文字摘要一步完成</li>
+      <li>分析設計稿、截圖、流程圖</li>
+      <li>128K context 處理長篇文件</li>
+      <li>結合 liteparse 做 RAG 管線</li>
+    </ul>
+  </div>
+  <div class="use-case-card amber">
+    <h4>✅ 最適合：本地 AI Agent</h4>
+    <ul>
+      <li>n8n + Gemma 4 = 零 API 費用自動化</li>
+      <li>agentic 工作流原生支援</li>
+      <li>資料隱私場景（企業內網）</li>
+      <li>離線環境部署（不需網路）</li>
+    </ul>
+  </div>
+  <div class="use-case-card purple">
+    <h4>⚠️ 相對較弱：純繁中寫作</h4>
+    <ul>
+      <li>繁中長文寫作不如 Claude/GPT-4o</li>
+      <li>台灣在地知識有落差</li>
+      <li>建議配合 Prompt 工程補強</li>
+      <li>或切回 Claude API 處理繁中任務</li>
+    </ul>
+  </div>
+</div>
+
+<!-- CTA #2: DataCamp -->
+<div class="cta-box dc">
+  <div style="font-size:1.3rem;margin-bottom:0.5rem">🎓 想系統學習本地 AI 部署和 LLM 工程？</div>
+  <p style="margin:0.5rem 0;opacity:0.9">DataCamp 的 AI Engineering 課程涵蓋本地 LLM 部署、RAG 管線建構、Agent 工具整合，正是 Gemma 4 這類場景的完整知識體系。</p>
+  <a href="https://afflink.one/s/aavAC" class="cta-btn white" target="_blank" rel="nofollow sponsored">📚 DataCamp AI Engineering 課程 →</a>
+  <div style="font-size:0.75rem;margin-top:0.5rem;opacity:0.8">含 LLM Fine-tuning、RAG Pipeline、AI Agent 實戰課程</div>
+</div>
+
+<hr>
+
+<h2>💡 實戰：Gemma 4 的三個殺手級應用範例</h2>
+
+<h3>應用一：截圖 → 自動生成 PRD（產品需求文件）</h3>
+
+<div class="code-block">
+<span class="code-comment"># 輸入：產品截圖 → 輸出：完整 PRD</span><br>
+<span class="code-cmd">ollama run gemma4:12b-vision \</span><br>
+&nbsp;&nbsp;"根據這個 App 截圖，幫我撰寫一份完整的 PRD，包含功能說明、用戶故事、驗收條件，用繁體中文。" \<br>
+&nbsp;&nbsp;--image ./app_screenshot.png
+</div>
+
+<h3>應用二：整個 repo 的代碼審查（128K context 優勢）</h3>
+
+<div class="code-block">
+<span class="code-comment"># 將整個 repo 打包給 Gemma 4 一次審查</span><br>
+find . -name "*.ts" -o -name "*.tsx" | xargs cat | \<br>
+ollama run gemma4:12b "請審查以下代碼，指出安全漏洞、性能問題和改進建議，用繁體中文：\n$(cat)"
+</div>
+
+<h3>應用三：n8n 本地 AI 工作流（零費用）</h3>
+
+<div class="code-block">
+<span class="code-comment"># n8n workflow 節點設定（JSON 片段）</span><br>
+{<br>
+&nbsp;&nbsp;"type": "n8n-nodes-base.ollama",<br>
+&nbsp;&nbsp;"parameters": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"model": "gemma4:12b",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"prompt": "{{ $json.userInput }}"<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+<span class="code-comment"># 完全本地，零 API 費用，適合每日自動化任務</span>
+</div>
+
+<hr>
+
+<h2>📈 台灣工程師費用試算：本地 vs 雲端 API</h2>
+
+<div style="overflow-x:auto;">
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>情境</th>
+      <th>本地 Gemma 4 12B</th>
+      <th>Claude API（Sonnet）</th>
+      <th>GPT-4o API</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>每日 100 次對話（~500 tokens/次）</td>
+      <td class="winner" style="color:#166534;font-weight:900">$0（電費忽略不計）</td>
+      <td>~$0.15/天（~$4.5/月）</td>
+      <td>~$0.25/天（~$7.5/月）</td>
+    </tr>
+    <tr>
+      <td>大量代碼審查（每日 10K tokens）</td>
+      <td class="winner">$0</td>
+      <td>~$0.30/天（~$9/月）</td>
+      <td>~$0.50/天（~$15/月）</td>
+    </tr>
+    <tr>
+      <td>多模態（每日 20 張圖片分析）</td>
+      <td class="winner">$0</td>
+      <td>~$0.40/天（~$12/月）</td>
+      <td>~$0.60/天（~$18/月）</td>
+    </tr>
+    <tr>
+      <td>年化費用（中度使用）</td>
+      <td class="winner">$0（硬體已有）</td>
+      <td>~$108/年</td>
+      <td>~$180/年</td>
+    </tr>
+    <tr>
+      <td><strong>輸出品質</strong></td>
+      <td>⭐⭐⭐⭐（代碼/英文強）</td>
+      <td class="winner">⭐⭐⭐⭐⭐（繁中最強）</td>
+      <td>⭐⭐⭐⭐⭐（繁中強）</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>結論：</strong> 代碼工作、自動化工作流、多模態任務 → 本地 Gemma 4 省最多。繁中長文寫作、需要最高品質推理 → 仍建議 Claude API。<strong>最佳策略是混搭：日常任務用 Gemma 4，高品質輸出需求用 Claude。</strong></p>
+
+<hr>
+
+<h2>🔧 進階：Fine-tuning Gemma 4 12B（台灣繁中客製）</h2>
+
+<p>如果你需要 Gemma 4 更精通特定領域（台灣法律、台灣企業術語、特定代碼風格），可以用 Google 官方的 Gemma fine-tuning 工具對 12B 版本進行客製化。</p>
+
+<div class="code-block">
+<span class="code-comment"># 安裝 Google 官方 fine-tuning 工具</span><br>
+pip install keras keras-nlp<br><br>
+<span class="code-comment"># 載入 Gemma 4 12B 並開始 LoRA fine-tuning</span><br>
+import keras_nlp<br>
+gemma_lm = keras_nlp.models.GemmaCausalLM.from_preset(<span style="color:#fde68a">"gemma4_12b_en"</span>)<br>
+gemma_lm.backbone.enable_lora(rank=4)<br><br>
+<span class="code-comment"># 準備繁中訓練資料（JSONL 格式）</span><br>
+<span class="code-comment"># {"prompt": "問題", "response": "繁中回答"}</span><br>
+gemma_lm.compile(optimizer=..., loss=...)<br>
+gemma_lm.fit(your_zh_tw_dataset, epochs=3)
+</div>
+
+<p>完整的 fine-tuning 教學和資料集準備，可以參考 DataCamp 的 LLM Fine-tuning 課程（連結在文末）。</p>
+
+<hr>
+
+<h2>❓ 台灣工程師最常問的 5 個問題</h2>
+
+<div style="border-left:4px solid #6366f1;padding-left:1.25rem;margin:1rem 0;">
+  <p><strong>Q1：Gemma 4 12B 需要多少 RAM 才能本地運行？</strong><br>
+  Gemma 4 12B 的 Q4 量化版本需要約 8-10GB VRAM（GPU）或 16GB 系統 RAM（CPU 推理）。配備 16GB RAM 的 MacBook Pro M2/M3 可流暢運行。如果使用 fp16 精度，需要 24GB VRAM。</p>
+
+  <p><strong>Q2：Gemma 4 12B 可以免費商業使用嗎？</strong><br>
+  是的。Gemma 4 採用 Gemma License，允許免費商業使用，包括建立商業產品、API 服務、應用程式。唯一限制是不能用來訓練其他大型語言模型，以及不能在超過 100 億月活躍用戶的平台上使用（這個門檻對絕大多數台灣開發者不構成障礙）。</p>
+
+  <p><strong>Q3：Gemma 4 12B 和 Gemma 3 相比有哪些改進？</strong><br>
+  Gemma 4 最大的升級是架構重構：從文字專用模型變成統一多模態（文字+圖像輸入），新增 MTP（Multi-Token Prediction）解碼技術讓生成速度提升，原生支援 agentic 工作流，128K context window（Gemma 3 的 4 倍），並針對 Function Calling 和工具使用做了強化。</p>
+
+  <p><strong>Q4：Gemma 4 12B 和 Llama 4 Scout 哪個比較好？</strong><br>
+  各有擅長。Gemma 4 12B 在代碼生成、數學推理、多模態理解上表現突出，且硬體需求較低（16GB RAM 可跑）。Llama 4 Scout 17B 的語言多樣性更好，但硬體需求更高。對台灣工程師來說，Gemma 4 12B 的硬體門檻更友善，是消費級筆電的首選開源模型。</p>
+
+  <p><strong>Q5：如何在台灣用 Ollama 安裝 Gemma 4 12B？</strong><br>
+  先安裝 Ollama（ollama.com），然後執行 <code>ollama pull gemma4:12b</code>，等待下載完成後執行 <code>ollama run gemma4:12b</code> 即可開始使用。整個過程約 5-10 分鐘（取決於網路速度），無需任何 API 金鑰。</p>
+</div>
+
+<!-- CTA #3: Gumroad kknad -->
+<div class="cta-box gm">
+  <div style="font-size:1.3rem;margin-bottom:0.5rem">💎 OpenCode + Gemma 4 本地部署的最佳搭檔</div>
+  <p style="margin:0.5rem 0;opacity:0.9">Claude Code 工具包（kknad）內含最佳化的 CLAUDE.md 配置、自定義 Slash Commands，可直接套用到 OpenCode + Gemma 4 的本地工作流，讓你的 AI 編碼效率從第一天就到位。</p>
+  <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn white" target="_blank" rel="nofollow sponsored">🛍️ Claude Code / OpenCode 工具包（Gumroad）→</a>
+  <div style="font-size:0.75rem;margin-top:0.5rem;opacity:0.8">包含 CLAUDE.md 最佳配置、繁中 Prompt 模板、Agent Skills 選集</div>
+</div>
+
+<hr>
+
+<h2>🗺️ Gemma 4 系列完整陣容（各版本選擇指南）</h2>
+
+<div style="overflow-x:auto;">
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>版本</th>
+      <th>參數</th>
+      <th>適合場景</th>
+      <th>最低硬體</th>
+      <th>Ollama 指令</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Gemma 4 2B</strong></td>
+      <td>2B</td>
+      <td>手機/嵌入式、快速原型</td>
+      <td>4GB RAM</td>
+      <td><code>ollama pull gemma4:2b</code></td>
+    </tr>
+    <tr>
+      <td><strong>Gemma 4 9B</strong></td>
+      <td>9B</td>
+      <td>輕量代碼輔助</td>
+      <td>8GB VRAM</td>
+      <td><code>ollama pull gemma4:9b</code></td>
+    </tr>
+    <tr class="winner">
+      <td><strong>Gemma 4 12B ⭐推薦</strong></td>
+      <td>12B</td>
+      <td>代碼 + 多模態 + Agent</td>
+      <td>16GB RAM</td>
+      <td><code>ollama pull gemma4:12b</code></td>
+    </tr>
+    <tr>
+      <td><strong>Gemma 4 27B</strong></td>
+      <td>27B</td>
+      <td>高品質推理、複雜任務</td>
+      <td>24GB VRAM</td>
+      <td><code>ollama pull gemma4:27b</code></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>對大多數台灣工程師而言，<strong>Gemma 4 12B 是甜蜜點</strong>：16GB RAM 的筆電就能跑，性能又遠超 9B 版本，多模態能力完整。</p>
+
+<hr>
+
+<h2>🔗 延伸閱讀</h2>
+
+<ul>
+  <li>🆓 <a href="/blog/opencode-vs-cursor-vs-claude-code-2026.html">OpenCode vs Cursor vs Claude Code 繁中終極比較 2026</a>（Gemma 4 作為 OpenCode 本地後端）</li>
+  <li>🦀 <a href="/blog/rtk-rust-token-killer-review-2026.html">RTK Rust Token Killer：Claude Code 省 60-90% token 費用</a></li>
+  <li>🧠 <a href="/blog/deepclaude-run-claude-code-deepseek-17x-cheaper-2026.html">DeepClaude：費用砍 17 倍的 Claude Code 替代後端</a></li>
+  <li>🤖 <a href="/blog/hermes-agent-vs-openclaw-2026.html">Hermes Agent vs OpenClaw：本地 AI Agent 完整比較</a></li>
+  <li>⚙️ <a href="/blog/n8n-automation-tutorial-2026.html">n8n 自動化教學：結合本地 LLM 打造零費用工作流</a></li>
+</ul>
+
+<div class="post-footer">
+  <p style="font-size:0.8rem;color:#94a3b8;margin-top:2rem">⚠️ 本文包含附屬連結（affiliate links）。點擊後購買，我們可能獲得佣金，不影響你的價格。Gemma 4 基準測試數據來自 Google 官方技術報告及 Hugging Face Open LLM Leaderboard（2026-06-04），實際表現因硬體和任務差異有所不同。</p>
+</div>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 AutoDev AI. 致力於提供台灣最完整的 AI 工具繁中資源。</p>
+    <nav class="footer-nav">
+      <a href="/blog/">部落格</a>
+      <a href="/services.html">服務</a>
+      <a href="/contact.html">聯絡</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
