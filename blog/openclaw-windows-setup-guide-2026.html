@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenClaw Windows 完整安裝教學 2026：Microsoft Build 官方 Demo 工具，繁中入門指南</title>
+<meta name="description" content="OpenClaw Windows 繁中完整教學 2026。Microsoft Build 2026 主舞台 Demo 工具。System Tray + Node + PowerToys 三合一，AI 個人助理從安裝到實戰全解析。">
+<link rel="canonical" href="https://autodev-ai.com/blog/openclaw-windows-setup-guide-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/openclaw-windows-setup-guide-2026.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/openclaw-windows-setup-guide-2026.html">
+<meta property="og:title" content="OpenClaw Windows 完整安裝教學 2026：Microsoft Build 官方 Demo，繁中入門指南">
+<meta property="og:description" content="OpenClaw 被 Microsoft Build 2026 主舞台欽點 Demo。Windows 11 System Tray + Node 配對 + PowerToys 整合，繁中最完整安裝教學。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/openclaw-windows-setup-guide-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OpenClaw Windows 安裝教學 2026｜Microsoft Build Demo 工具繁中全解析">
+<meta name="twitter:description" content="Microsoft Build 2026 主舞台欽點。OpenClaw Windows 三合一套件完整教學，從安裝到配對 AI 助理。">
+<meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="author" content="AutoDev AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "OpenClaw Windows 完整安裝教學 2026：Microsoft Build 官方 Demo 工具，繁中入門指南",
+  "description": "OpenClaw Windows 繁中完整教學 2026。Microsoft Build 2026 主舞台 Demo 工具。System Tray + Node + PowerToys 三合一安裝實戰。",
+  "author": {"@type": "Organization", "name": "AutoDev AI"},
+  "publisher": {"@type": "Organization", "name": "AutoDev AI", "logo": {"@type": "ImageObject", "url": "https://autodev-ai.com/autodev-logo2.png"}},
+  "datePublished": "2026-06-05",
+  "dateModified": "2026-06-05",
+  "url": "https://autodev-ai.com/blog/openclaw-windows-setup-guide-2026.html",
+  "image": "https://autodev-ai.com/autodev-logo2.png",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/openclaw-windows-setup-guide-2026.html"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "OpenClaw Windows 版本免費嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenClaw 本身是開源免費軟體（MIT 授權）。Windows companion suite（openclaw-windows-node）也是開源免費。費用只來自你選用的 AI 模型 API，例如 Claude Sonnet 或 GPT-5，或完全使用本地 Ollama 模型則零成本。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "OpenClaw Windows 和 Mac 版本有什麼差異？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "核心 OpenClaw Gateway（AI 助理引擎）兩平台功能相同。Windows 版本額外提供 System Tray 常駐圖示、PowerToys Command Palette 整合，讓 Windows 用戶可以用熟悉的 Win+空白鍵呼叫 AI 助理，是專為 Windows 工作流最佳化的設計。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "OpenClaw 需要雲端伺服器嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "本機使用不需要。OpenClaw Gateway 可以跑在你的 Windows PC 上（Node.js 環境），配合 Ollama 本地模型就能完全離線運作。若需要 24 小時長期運行（例如 cron 任務、多裝置同步），建議搭配 DigitalOcean 等 VPS 部署。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PowerToys 整合怎麼設定？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "安裝 PowerToys（Microsoft Store 免費）後，在 PowerToys Settings → Command Palette → Extensions，加入 openclaw-windows-node 提供的 Extension DLL。重啟後按 Win+空白鍵即可呼叫 OpenClaw。詳細步驟見本文「PowerToys 整合設定」段落。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "在 Microsoft Build 2026 上展示了哪些 OpenClaw Windows 功能？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Microsoft Build 2026 主舞台由 Scott Hanselman 和 Samantha Song Demo，展示了 OpenClaw Windows System Tray 常駐、Node 手機配對（掃 QR 碼即連）、以及 PowerToys Command Palette 呼叫 AI 助理的完整工作流。Peter Steinberger（OpenClaw 創辦人）亦親自上台說明架構。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .stat-card {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border: 1px solid #86efac;
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+  }
+  .stat-card.blue { background: linear-gradient(135deg, #eff6ff, #dbeafe); border-color: #93c5fd; }
+  .stat-card.orange { background: linear-gradient(135deg, #fff7ed, #ffedd5); border-color: #fdba74; }
+  .stat-num { font-size: 1.8rem; font-weight: 900; color: #166534; }
+  .stat-card.blue .stat-num { color: #1e40af; }
+  .stat-card.orange .stat-num { color: #c2410c; }
+  .stat-label { font-size: 0.8rem; color: #374151; margin-top: 0.25rem; }
+  .badge-ms { display: inline-block; background: #0078d4; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+  .step-box { background: #f8fafc; border-left: 4px solid #0ea5e9; border-radius: 0 10px 10px 0; padding: 1.1rem 1.3rem; margin: 1.2rem 0; }
+  .step-box h4 { margin: 0 0 0.5rem; font-size: 1rem; color: #0369a1; }
+  .step-box code { background: #1e293b; color: #e2e8f0; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.88rem; }
+  .code-block { background: #1e293b; color: #e2e8f0; border-radius: 10px; padding: 1.1rem 1.3rem; margin: 1rem 0; font-family: 'Courier New', monospace; font-size: 0.88rem; line-height: 1.7; overflow-x: auto; }
+  .code-block .comment { color: #94a3b8; }
+  .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .feature-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.2rem; }
+  .feature-card .icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .feature-card h4 { margin: 0 0 0.4rem; font-size: 0.95rem; }
+  .feature-card p { margin: 0; font-size: 0.85rem; color: #64748b; }
+  .comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+  .comparison-table th { background: #1e293b; color: #fff; padding: 0.75rem 1rem; text-align: left; }
+  .comparison-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  .comparison-table tr:nth-child(even) { background: #f8fafc; }
+  .comparison-table tr:hover { background: #f0f9ff; }
+  .winner { background: #dcfce7 !important; font-weight: 600; }
+  .cta-box { border-radius: 14px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
+  .cta-box.do { background: linear-gradient(135deg, #0ea5e9, #0369a1); color: #fff; }
+  .cta-box.dc { background: linear-gradient(135deg, #7c3aed, #4c1d95); color: #fff; }
+  .cta-box.gm { background: linear-gradient(135deg, #f97316, #c2410c); color: #fff; }
+  .cta-btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; margin-top: 0.75rem; }
+  .cta-btn.white { background: #fff; color: #1e293b; }
+  .tip-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; padding: 1rem 1.2rem; margin: 1.2rem 0; font-size: 0.92rem; }
+  .warn-box { background: #fefce8; border: 1px solid #fde047; border-radius: 10px; padding: 1rem 1.2rem; margin: 1.2rem 0; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="/" class="nav-logo">AutoDev AI</a>
+    <ul class="nav-links">
+      <li><a href="/services.html">服務</a></li>
+      <li><a href="/blog/">部落格</a></li>
+      <li><a href="/pricing.html">定價</a></li>
+      <li><a href="/contact.html">聯絡</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="article-container">
+<article>
+
+<div class="article-meta">
+  <span class="badge-ms">🪟 Microsoft Build 2026 官方 Demo</span>
+  <h1>OpenClaw Windows 完整安裝教學 2026：三合一 AI 助理套件，繁中入門指南</h1>
+  <p class="article-subtitle">System Tray 常駐 ＋ Node 手機配對 ＋ PowerToys 整合，把 AI 個人助理裝進 Windows 工作流</p>
+  <div class="article-byline">AutoDev AI 編輯部 ・ 2026 年 6 月 5 日 ・ 閱讀時間約 10 分鐘</div>
+</div>
+
+<div class="hero-stats">
+  <div class="stat-card blue">
+    <div class="stat-num">1,321</div>
+    <div class="stat-label">GitHub Stars（今日 +411，爆發中）</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">Build '26</div>
+    <div class="stat-label">Microsoft Build 主舞台 Demo</div>
+  </div>
+  <div class="stat-card orange">
+    <div class="stat-num">免費</div>
+    <div class="stat-label">MIT 開源，完全零成本</div>
+  </div>
+</div>
+
+<p>2026 年 5 月，Microsoft Build 全球開發者大會主舞台上，Scott Hanselman 和 Samantha Song 親自 Demo 了一個工具——<strong>OpenClaw Windows</strong>。台上，OpenClaw 的創辦人 Peter Steinberger（人稱「Claw Father」）也走上來說明架構。</p>
+
+<p>這個 Demo 只有幾分鐘，但對 Windows 工程師社群來說意義重大：一個 MIT 開源的 AI 個人助理套件，被全球最大的開發者大會主舞台欽點展示，代表它已經成熟到可以進入主流工作流了。</p>
+
+<p>問題是，<strong>繁中的完整教學幾乎是零</strong>。這篇文章就是要填上這個空白。</p>
+
+<h2>🪟 OpenClaw Windows 是什麼？</h2>
+
+<p>OpenClaw 是一個開源的 AI 個人助理框架（Gateway），讓你可以把 Claude、GPT-5、Gemini 等大語言模型接進你的日常工作流——回訊息、寫程式、查資料、設定提醒，全部自動化。</p>
+
+<p><strong>openclaw-windows-node</strong> 是 OpenClaw 的 Windows 專屬 companion suite，包含三個元件：</p>
+
+<div class="feature-grid">
+  <div class="feature-card">
+    <div class="icon">🖥️</div>
+    <h4>System Tray 常駐</h4>
+    <p>OpenClaw Gateway 在背景運行，工具列右下角一個小圖示，隨時可呼叫，不佔主視窗空間。</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">📱</div>
+    <h4>Node 手機配對</h4>
+    <p>掃 QR Code 把手機（iOS/Android）配對成 OpenClaw Node，讓 AI 能讀取手機通知、相機、位置。</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">⌨️</div>
+    <h4>PowerToys 整合</h4>
+    <p>整合 Windows PowerToys Command Palette，按 Win+空白鍵立刻呼叫 AI，不用切換任何視窗。</p>
+  </div>
+</div>
+
+<p>簡單說：它讓 OpenClaw 在 Windows 上的使用體驗，變得跟 Mac 一樣流暢，甚至因為 PowerToys 整合，某些情境下比 Mac 更好用。</p>
+
+<h2>📋 安裝前準備</h2>
+
+<p>在開始之前，確認你的環境符合以下條件：</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>需求</th>
+      <th>最低版本</th>
+      <th>建議</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>作業系統</td>
+      <td>Windows 10 64-bit</td>
+      <td class="winner">Windows 11 23H2+</td>
+    </tr>
+    <tr>
+      <td>Node.js</td>
+      <td>v18</td>
+      <td class="winner">v22 LTS</td>
+    </tr>
+    <tr>
+      <td>PowerToys（選用）</td>
+      <td>v0.88</td>
+      <td class="winner">最新版（Microsoft Store）</td>
+    </tr>
+    <tr>
+      <td>AI 模型</td>
+      <td>任一 API Key</td>
+      <td class="winner">Claude Sonnet 4.5 或 Ollama 本地模型</td>
+    </tr>
+    <tr>
+      <td>手機配對（選用）</td>
+      <td>iOS 16 / Android 12</td>
+      <td class="winner">最新 iOS 或 Android</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="tip-box">
+💡 <strong>沒有 API Key？</strong> 可以先用 <a href="https://ollama.ai" target="_blank" rel="noopener">Ollama</a> 在本機跑免費模型（例如 Llama 3.2 或 Qwen 2.5），完全不需要任何 API 費用，安裝完再換成 Claude。
+</div>
+
+<h2>🚀 安裝步驟：從零到跑起來</h2>
+
+<h3>步驟一：安裝 Node.js</h3>
+
+<p>前往 <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>，下載 v22 LTS（Windows Installer .msi），一路 Next 安裝完成。</p>
+
+<p>安裝後開啟 PowerShell，驗證：</p>
+
+<div class="code-block">
+node --version<br>
+<span class="comment"># 應顯示 v22.x.x</span><br>
+npm --version<br>
+<span class="comment"># 應顯示 10.x.x</span>
+</div>
+
+<h3>步驟二：安裝 OpenClaw CLI</h3>
+
+<div class="code-block">
+npm install -g openclaw
+</div>
+
+<p>這會安裝 OpenClaw Gateway 主程式。安裝完成後初始化：</p>
+
+<div class="code-block">
+openclaw init
+</div>
+
+<p>按照提示輸入你的 AI 模型設定（可先跳過，之後再設定）。</p>
+
+<h3>步驟三：安裝 Windows Companion Suite</h3>
+
+<div class="code-block">
+<span class="comment"># 安裝 openclaw-windows-node</span><br>
+npm install -g openclaw-windows-node<br><br>
+<span class="comment"># 啟動 System Tray 模式</span><br>
+openclaw-windows start --tray
+</div>
+
+<p>執行後，工作列右下角（系統匣）應出現 OpenClaw 圖示。右鍵點擊可以：</p>
+<ul>
+  <li>開啟 OpenClaw 聊天視窗</li>
+  <li>查看目前連線的 Nodes（手機）</li>
+  <li>重啟 Gateway</li>
+  <li>查看 Logs</li>
+</ul>
+
+<div class="step-box">
+  <h4>⚙️ 設定開機自動啟動</h4>
+  <p>在 PowerShell（以系統管理員身分執行）：</p>
+  <code>openclaw-windows install-service</code>
+  <p>這會把 OpenClaw 註冊為 Windows 服務，開機自動啟動，不需要每次手動執行。</p>
+</div>
+
+<h3>步驟四：設定 AI 模型</h3>
+
+<p>開啟 OpenClaw 設定（右鍵系統匣圖示 → Settings，或直接編輯 <code>~/.openclaw/config.json</code>）：</p>
+
+<div class="code-block">
+{<br>
+&nbsp;&nbsp;<span class="comment">// 使用 Claude（建議）</span><br>
+&nbsp;&nbsp;"model": "claude-sonnet-4-5",<br>
+&nbsp;&nbsp;"apiKey": "sk-ant-xxxxxxxx",<br><br>
+&nbsp;&nbsp;<span class="comment">// 或使用本地 Ollama（免費）</span><br>
+&nbsp;&nbsp;<span class="comment">// "model": "ollama/llama3.2",</span><br>
+&nbsp;&nbsp;<span class="comment">// "baseUrl": "http://localhost:11434"</span><br>
+}
+</div>
+
+<div class="warn-box">
+⚠️ <strong>API Key 安全提醒：</strong> config.json 存在本機，請確保不要把這個檔案 commit 進 Git repo 或分享給他人。OpenClaw 不會把你的 Key 傳送到任何外部伺服器。
+</div>
+
+<div class="cta-box do">
+  <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.4rem">需要 24 小時跑 OpenClaw？</div>
+  <div style="font-size:0.9rem;opacity:0.9">把 Gateway 部署到 VPS，讓 AI 助理不依賴電腦是否開機。新用戶 $200 免費額度，夠跑半年。</div>
+  <a href="https://m.do.co/c/6121a295f624" class="cta-btn white" target="_blank" rel="nofollow sponsored">🚀 DigitalOcean $200 免費額度 →</a>
+</div>
+
+<h2>📱 Node 配對：把手機接入 AI</h2>
+
+<p>OpenClaw 的 Node 系統讓你可以把手機（iOS/Android）配對成一個感測器節點——AI 就能看到你的通知、呼叫相機、甚至知道你在哪裡。</p>
+
+<h3>配對步驟</h3>
+
+<div class="step-box">
+  <h4>1. 在 Windows 上顯示配對 QR Code</h4>
+  <p>右鍵系統匣圖示 → <strong>Pair New Node</strong>，螢幕出現 QR Code 和 6 位數配對碼。</p>
+</div>
+
+<div class="step-box">
+  <h4>2. 在手機上安裝 OpenClaw App</h4>
+  <p>iOS：App Store 搜尋 "OpenClaw"。Android：Google Play 搜尋 "OpenClaw Node"。</p>
+</div>
+
+<div class="step-box">
+  <h4>3. 掃碼配對</h4>
+  <p>打開 App → Scan QR Code，掃描 Windows 上的 QR Code。配對完成後，手機會出現在 OpenClaw 的 Nodes 列表中。</p>
+</div>
+
+<p>配對成功後，你可以在 OpenClaw 聊天視窗中問：</p>
+<ul>
+  <li>「我的手機有什麼未讀通知？」</li>
+  <li>「幫我拍一張照片分析一下這份文件」</li>
+  <li>「我現在在哪裡？附近有什麼餐廳？」</li>
+</ul>
+
+<h2>⌨️ PowerToys 整合：Win+空白鍵呼叫 AI</h2>
+
+<p>這是 Microsoft Build 2026 Demo 中最讓現場觀眾驚豔的功能：不需要切換任何應用程式，直接在 Windows 的 Command Palette 裡呼叫 AI。</p>
+
+<h3>設定 PowerToys 整合</h3>
+
+<p><strong>1. 安裝 PowerToys</strong>（如果還沒有）：</p>
+<div class="code-block">
+<span class="comment"># 用 winget 安裝（最簡單）</span><br>
+winget install Microsoft.PowerToys
+</div>
+
+<p>或從 Microsoft Store 搜尋 "PowerToys" 安裝。</p>
+
+<p><strong>2. 啟用 Command Palette Extension：</strong></p>
+<div class="code-block">
+<span class="comment"># 在 PowerShell 執行（以系統管理員身分）</span><br>
+openclaw-windows install-powertoys-extension
+</div>
+
+<p>這個指令會自動把 OpenClaw Extension 安裝到 PowerToys 的 Command Palette Extensions 資料夾，並重啟 PowerToys。</p>
+
+<p><strong>3. 驗證安裝：</strong></p>
+<p>按 <kbd>Win</kbd> + <kbd>空白鍵</kbd> 呼叫 Command Palette，輸入 <code>claw</code> 應能看到 OpenClaw 的指令列表。</p>
+
+<div class="tip-box">
+💡 <strong>常用快捷指令：</strong>
+<ul style="margin:0.5rem 0 0">
+  <li><code>claw ask [問題]</code> — 直接向 AI 提問</li>
+  <li><code>claw summarize</code> — 摘要剪貼簿內容</li>
+  <li><code>claw remind [時間] [事項]</code> — 設定提醒</li>
+  <li><code>claw translate</code> — 翻譯剪貼簿文字</li>
+</ul>
+</div>
+
+<h2>🔧 實戰工作流：三個 Windows 工程師最常用的場景</h2>
+
+<h3>場景一：快速問 AI 不切換視窗</h3>
+
+<p>在寫程式途中遇到問題，直接 <kbd>Win</kbd>+<kbd>空白鍵</kbd>，輸入 <code>claw ask 這個 error 是什麼意思</code>，AI 回答完直接關掉，繼續寫程式。整個過程不超過 10 秒，不會打斷心流。</p>
+
+<h3>場景二：自動整理會議通知</h3>
+
+<p>手機配對後，OpenClaw 能讀取你的 Teams/Outlook 通知。每天早上，問 AI：「今天有哪些重要通知和會議？」，它會整理成摘要，不用一個個 App 翻。</p>
+
+<h3>場景三：搭配 Claude Code 做 code review</h3>
+
+<p>在 VS Code 選取一段程式碼，複製後，按 <kbd>Win</kbd>+<kbd>空白鍵</kbd> 輸入 <code>claw ask 幫我 review 這段 code</code>，AI 直接讀取剪貼簿內容分析，回覆貼回 VS Code。不需要開新的聊天視窗。</p>
+
+<div class="cta-box dc">
+  <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.4rem">想更深入理解 AI 工具背後的原理？</div>
+  <div style="font-size:0.9rem;opacity:0.9">DataCamp AI Engineering 課程：從 Prompt Engineering 到 AI Agent 架構，系統化學習，職場即用。</div>
+  <a href="https://afflink.one/s/aavAC" class="cta-btn white" target="_blank" rel="nofollow sponsored">📚 DataCamp AI Engineering 課程 →</a>
+</div>
+
+<h2>☁️ 進階：把 Gateway 部署到 VPS</h2>
+
+<p>如果你希望 AI 助理 24 小時在線（不依賴 PC 是否開著）、或多台裝置共用同一個 Gateway，可以把 OpenClaw 部署到 VPS。</p>
+
+<p>推薦方式是用 DigitalOcean 的 Droplet（最低 $6/月），或直接跑在你家的舊電腦上：</p>
+
+<div class="code-block">
+<span class="comment"># 在 Ubuntu VPS 上安裝</span><br>
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -<br>
+sudo apt-get install -y nodejs<br>
+npm install -g openclaw<br>
+openclaw init<br><br>
+<span class="comment"># 用 PM2 保持背景執行</span><br>
+npm install -g pm2<br>
+pm2 start "openclaw start" --name openclaw<br>
+pm2 startup<br>
+pm2 save
+</div>
+
+<p>部署完成後，在 Windows 的 OpenClaw 設定中，把 Gateway URL 指向你的 VPS IP，Windows 本機只跑 System Tray + PowerToys 延伸，計算全丟給 VPS。</p>
+
+<h2>🔍 OpenClaw Windows vs 直接用 ChatGPT App：哪個更好用？</h2>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>比較項目</th>
+      <th>OpenClaw Windows</th>
+      <th>ChatGPT App / Claude Web</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>呼叫方式</td>
+      <td class="winner">Win+空白鍵，不離開當前視窗</td>
+      <td>切換 App 或瀏覽器分頁</td>
+    </tr>
+    <tr>
+      <td>手機整合</td>
+      <td class="winner">原生 Node 配對，讀通知/相機/位置</td>
+      <td>需要分別在手機開 App</td>
+    </tr>
+    <tr>
+      <td>模型選擇</td>
+      <td class="winner">自由切換 Claude/GPT/Gemini/Ollama</td>
+      <td>綁定單一廠商</td>
+    </tr>
+    <tr>
+      <td>自動化/Cron</td>
+      <td class="winner">內建 Cron、Heartbeat、Skills</td>
+      <td>無</td>
+    </tr>
+    <tr>
+      <td>費用</td>
+      <td class="winner">免費（模型 API 另計）</td>
+      <td>$20/月 訂閱費</td>
+    </tr>
+    <tr>
+      <td>設定複雜度</td>
+      <td>需要 Node.js 環境</td>
+      <td class="winner">開箱即用</td>
+    </tr>
+    <tr>
+      <td>隱私</td>
+      <td class="winner">本機或自架 VPS，資料不外傳</td>
+      <td>資料傳送至第三方伺服器</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>結論很明確：如果你願意花 15 分鐘設定，OpenClaw Windows 在工作流整合深度上遠勝過一般 AI App。特別是工程師、知識工作者這類需要常常問 AI 但又不想打斷工作流的人。</p>
+
+<h2>❓ 常見問題 FAQ</h2>
+
+<h3>OpenClaw Windows 版本免費嗎？</h3>
+<p>OpenClaw 本身是開源免費軟體（MIT 授權），openclaw-windows-node 也是開源免費。費用只來自你選用的 AI 模型 API。若用 Ollama 本地模型，完全零成本。</p>
+
+<h3>跟 Mac 版 OpenClaw 有什麼差異？</h3>
+<p>核心 Gateway 功能完全相同。Windows 版額外有 System Tray 常駐、PowerToys Command Palette 整合，讓 Windows 用戶可以用熟悉的快捷鍵呼叫 AI，是專為 Windows 工作流最佳化的設計。</p>
+
+<h3>一定要有 VPS 嗎？</h3>
+<p>不需要。OpenClaw Gateway 可以直接跑在你的 Windows PC 上。VPS 只在需要「電腦關機 AI 還在線」或「多裝置共用」的情況才需要。</p>
+
+<h3>PowerToys 整合失敗怎麼辦？</h3>
+<p>最常見原因是 PowerToys 版本太舊（需要 v0.88+）或 PowerShell 沒有以系統管理員身分執行。更新 PowerToys 後重新跑 <code>openclaw-windows install-powertoys-extension</code>，通常都能解決。</p>
+
+<h3>在 Microsoft Build 2026 上展示了哪些功能？</h3>
+<p>主舞台 Demo 展示了：System Tray 常駐、Node 手機配對（掃 QR 碼即連）、PowerToys Command Palette 呼叫 AI 的完整工作流。Peter Steinberger 親自上台說明 Gateway 架構設計理念。</p>
+
+<div class="cta-box gm">
+  <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.4rem">想要現成的 OpenClaw 工作流設定？</div>
+  <div style="font-size:0.9rem;opacity:0.9">Claude Code 工具包：包含 Cron 範本、Skills 設定、Agent 工作流腳本，裝完直接用。</div>
+  <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn white" target="_blank" rel="nofollow sponsored">🛍️ 查看 Claude Code 工具包（Gumroad）</a>
+</div>
+
+<h2>🎯 總結：Windows 工程師值得花 15 分鐘設定</h2>
+
+<p>OpenClaw Windows 被 Microsoft Build 2026 主舞台 Demo，不是因為它炫，是因為它實用。</p>
+
+<p>System Tray 常駐讓 AI 助理真正融入 Windows 工作流；Node 配對讓手機成為 AI 的眼睛和耳朵；PowerToys 整合讓呼叫 AI 變得像呼叫 Spotlight 一樣自然。</p>
+
+<p>對 Windows 工程師來說，這是目前最接近「AI 真正整合進作業系統」的方案，而且完全免費、開源、可以自架。</p>
+
+<p>設定時間：約 15-20 分鐘。值不值得？你安裝完第一次 <kbd>Win</kbd>+<kbd>空白鍵</kbd> 問 AI 問題，就知道了。</p>
+
+<h3>延伸閱讀</h3>
+<ul>
+  <li><a href="/blog/opencode-vs-cursor-vs-claude-code-2026.html">OpenCode vs Cursor vs Claude Code 2026 終極比較</a></li>
+  <li><a href="/blog/deepclaude-run-claude-code-deepseek-17x-cheaper-2026.html">DeepClaude：用 DeepSeek 跑 Claude Code，省 17 倍費用</a></li>
+  <li><a href="/blog/rtk-rust-token-killer-review-2026.html">RTK Rust Token Killer：Token 壓縮省費工具評測</a></li>
+</ul>
+
+<p style="font-size:0.8rem;color:#94a3b8;margin-top:2rem">⚠️ 本文包含附屬連結（affiliate links）。點擊後購買，我們可能獲得佣金，不影響你的價格。所有評測基於公開資料與實際測試。</p>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 AutoDev AI. 打造屬於你的 AI 自動化工作流。</p>
+    <nav class="footer-nav">
+      <a href="/blog/">部落格</a>
+      <a href="/services.html">服務</a>
+      <a href="/contact.html">聯絡我們</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
