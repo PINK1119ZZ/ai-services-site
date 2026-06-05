@@ -1,5 +1,45 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 75 | 2026-06-05 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-06-05 22:00 UTC | 搜尋範圍：GitHub trending daily + weekly、HN 今日頭條、affiliate 確認
+
+### 🔥 本輪頭條：MiroFish（群體智能預測）+ MemPalace（AI記憶，Milla Jovovich開發）+ Agent-Reach（16平台社媒）+ OpenAI Codex 企業 Plugin
+
+---
+
+#### 1. 🔥🔥🔥 MiroFish（666ghj）— 今日 trending，多代理預測引擎，繁中=0篇
+- GitHub 今日新進榜，多代理 AI 預測引擎，用 OASIS（CAMEL-AI）仿真引擎
+- 功能：模擬輿論走向、金融預測、文學敘事（Dream of the Red Chamber 結局預測）
+- 技術：Python + Zep Cloud memory + OpenAI SDK format（支援 OpenRouter）+ Docker
+- Facebook/LinkedIn/daily.dev 英文社區傳播，繁中=0篇
+- **P1-HIGH，autodev-ai/blog/mirofish-swarm-intelligence-prediction-2026.html**
+
+#### 2. 🔥🔥🔥 MemPalace — 今日 trending，96.6% LongMemEval，Milla Jovovich 開發，繁中=0篇
+- 本地 AI 記憶系統，4 層架構，AAAK 30x 壓縮，170-token 啟動，MCP 原生
+- LongMemEval R@5: 96.6%（raw）/ 98.4%（hybrid）= 業界最高
+- ChromaDB + SQLite + 19個 MCP 工具，可完全離線
+- **特殊角度**：Milla Jovovich（Resident Evil/Fifth Element 女演員）親自開源 → 病毒傳播
+- **P1-HIGH，ai-tools-tw/blog/mempalace-ai-memory-system-2026.html（省費系列延伸）**
+
+#### 3. 🔥🔥 Agent-Reach（Panniantong）— 今日 trending，16 平台社媒，OpenClaw 支援
+- 16+ 平台（Twitter/X、Reddit、YouTube、GitHub、Bilibili、XiaoHongShu 等）
+- OpenClaw SKILL.md 官方整合確認（我們的品牌優勢）
+- **P1-HIGH，ai-tools-tw/blog/agent-reach-ai-social-media-tool-2026.html**
+
+#### 4. 🔥🔥 OpenAI Codex 企業 Plugin（2026-06-02）— 6 職能，本週時效
+- 6 職能 Plugins（銷售/財務/資料分析/設計/行銷/產品）+ Codex Sites
+- 企業非開發者採用 3x 加速，繁中企業指南=0篇
+- **P1-HIGH，autodev-ai/blog/openai-codex-plugins-enterprise-guide-2026.html**
+
+#### 5. headroom carry-over P1-URGENT（3 輪，今日必執行）
+- 14,427 stars，本週 +9,421（#2），提案 proposal-2026-06-05-A 已存在，seo-writer 待執行
+
+#### 6. 週榜其他：CopilotKit 32,624（AG-UI Protocol，Google/LangChain/AWS 採用）
+- 非本輪主推，但 AG-UI Protocol 生態系可做未來教學文角度
+
+---
+
 ## Round 61 | 2026-05-27 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-05-27 22:00 UTC | 搜尋範圍：ossinsight AI趨勢、GitHub trending、affiliate新發現、AI影片工具市場、Claude Code生態系里程碑
