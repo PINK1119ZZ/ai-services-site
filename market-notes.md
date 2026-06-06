@@ -547,3 +547,77 @@
 | ElevenLabs | 22%/12m | Ivan 申請（MOSS-TTS 文章需要）|
 | Murf AI | 20%/24m | Ivan 申請（TTS 比較文需要）|
 
+
+---
+
+## 2026-06-07（市場研究 Round 77 — 週日 07:00 UTC cron）
+
+### 一、🔥 本輪最高價值新發現
+
+#### 1. FlyHermes — 20% LIFETIME 循環 affiliate（全新發現！未在清單中）
+- **產品**：Hermes Agent 的官方 managed cloud 版（hosted version，無需自架 VPS）
+- **佣金**：20% lifetime recurring commission（永久循環）
+- **Cookie**：60天
+- **平台**：Rewardful
+- **申請**：hermes-agent.ai/affiliates → 導向 FlyHermes
+- **市場大小**：Hermes Agent 本週 GitHub trending 第一，110K+ stars，78K YouTube views（Metics Media），YouTube 教學影片全部用 Hostinger affiliate 做部署導流——FlyHermes 是「不想自架的人」的天然出口
+- **進入門檻**：極低（我們已有 Hermes Agent 相關文章 + OpenClaw vs Hermes 比較文）
+- **預估月收入**：FlyHermes Pro 約 $20-49/月/客 × 20% = $4-10/月/客（永久）；若轉換 50 客 = $200-500/月被動收入
+- **行動步驟**：① Ivan 立即申請 hermes-agent.ai/affiliates ② builder 在現有 Hermes Agent 相關文章補入 FlyHermes CTA（「不想自架？用 FlyHermes 一鍵托管」）③ seo-writer 新建「FlyHermes vs Hostinger VPS 部署 Hermes Agent 比較」
+
+#### 2. Munch AI — 25% 循環（補充確認）
+- **佣金**：25% on ALL recurring payments（確認，非 12 個月限制）
+- **Cookie**：60天
+- **最低出款**：$150（PayPal）
+- **申請**：getmunch.ai 頁底
+- **特色**：AI 影片剪輯+重新包裝，YouTube/TikTok/LinkedIn 跨平台，自動找亮點片段
+- **台灣繁中**：評測=0篇，競品（Zebracat、CapCut、ShortsPro）我們都有或在申請中
+- **行動**：P1-HIGH 補入影片工具四方比較頁（Munch + Zebracat + ShortsPro + CapCut）
+
+#### 3. Munch Studio（與 Munch AI 不同工具）— 25% 循環 + 60天 cookie
+- **佣金**：25% base，60天 cookie，$50 最低出款，Net-30 PayPal
+- 小型企業 AI 社群內容排程平台（與 Munch AI 的影片剪輯功能有差異）
+- **行動**：評估是否值得另開文章 vs 合併入 Munch AI 評測中
+
+#### 4. Bluesky — 高轉換免費流量管道（新發現！）
+- EMarketer May 2026 報告：Bluesky 引流轉換率比 X/Threads 高 3-4 倍
+- EUobserver：3,800 UV from Bluesky（3,300 followers）vs 1,320 from X（203,000 followers）
+- 台灣 AI 工具受眾（工程師/開發者）在 Bluesky 活躍度高
+- **行動**：建立 autodev-ai + ai-tools-tw 的 Bluesky 帳號，每篇新文章同步發布短貼文導流
+- **預估**：免費，每週新帖 × 1,000 followers = 預計 150-400 UV/週補充流量
+
+### 二、📊 機會評估表
+
+| 工具 | 佣金 | 類型 | 市場大小 | 進入門檻 | 預估月收入 | 行動 |
+|------|------|------|---------|---------|----------|------|
+| FlyHermes | 20% LIFETIME | AI Agent 托管 | 大（110K stars Hermes）| 低（已有文章）| $200-500 | ⭐⭐⭐⭐ P1-URGENT |
+| Munch AI | 25% 循環 | AI 影片剪輯 | 中大 | 低 | $150-400 | ⭐⭐⭐ P1-HIGH |
+| FlyHermes CTA 補充 | 20% LIFETIME | 被動 CTA 插入 | 現有流量 | 極低 | $50-200 | ⭐⭐⭐⭐ 立即執行 |
+| Bluesky 流量 | 免費流量 | 導流 | 3-4x 轉換率 | 低 | 間接 +$100-300 | ⭐⭐⭐ P1-HIGH |
+
+### 三、📦 Gumroad/Lemon Squeezy 暢銷分析
+
+**2026 最暢銷 AI 數位產品類別（Medium/YouTube 驗證）：**
+1. AI Prompt Bundle 模板庫（我們已有 proposal，待 Ivan 上架）
+2. AI Agent Skills Pack（我們已有 gumroad-agent-skills + v2.0 待發布）
+3. n8n Workflow Templates（我們已有 proposal，待 Ivan 上架 404 未解決）
+4. Claude Code 工具包（我們已有 kknad，active 200）
+
+**差距（Gap）**：
+- **繁中 AI 聯盟行銷指南**：我們的 ai-affiliate-programs-taiwan-2026.html 已發布，但缺少 FlyHermes + Munch AI 兩個新發現
+- **繁中 Hermes Agent 「非技術版」教學**：目前我們的文章偏工程師，FlyHermes 可以打「我不想自架 VPS」受眾（更廣泛）
+
+### 四、🌐 新流量管道評估
+
+| 平台 | 現況 | 2026 機會 | 行動 |
+|------|------|---------|------|
+| Bluesky | 未建帳號 | 轉換率 3-4x，AI/Tech 受眾活躍 | Ivan 建帳號 |
+| Threads | 未建帳號 | 200-250M MAU，一般大眾受眾 | 可跟進 |
+| YouTube Shorts | 未有 | ShortsPro/Zebracat 可展示 | 低優先 |
+| Reddit r/MachineLearning | 未使用 | 英文版 ai-tools-en 適合 | 中優先 |
+
+### 五、💡 高價值機會 → 已寫入 directives
+
+→ 見 directives/researcher-to-strategist-2026-06-07-round77.md
+
+---
