@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-07T10:30:00Z",
+  "lastUpdated": "2026-06-07T13:00:00Z",
   "lastAuditDate": "2026-06-07",
   "lastResearchDate": "2026-06-07T03:20:00Z",
   "lastResearchRound": 79,
@@ -5763,6 +5763,26 @@
         "fixes": 0,
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
       }
+    },
+    {
+      "timestamp": "2026-06-07T13:00:00Z",
+      "agent": "content-ops",
+      "session": "fb-weekly-review",
+      "actions": [
+        "Pulled git main and read agent-state.json",
+        "Fetched 2026-06-01..2026-06-07 Facebook posts via Graph API with public interaction fields",
+        "Retested requested insights metrics and fallback metrics",
+        "Confirmed post_impressions/post_engaged_users invalid and post_impressions_unique/post_clicks/post_reactions_by_type_total returned empty per-post insight values",
+        "Could not truthfully compute reach rate / engagement rate due to unavailable per-post insights",
+        "Updated fbStrategy.performance winPatterns/failPatterns and appended weekly review using observable interaction proxy analysis",
+        "Extended autoDevAIStrategy.postRules with stricter timing rules based on this week's data"
+      ],
+      "results": {
+        "postsReviewed": 18,
+        "publicInteractions": 7,
+        "postsWithAnyInteraction": 7,
+        "blocker": "Graph API per-post reach/click insights unavailable or empty for current token/permissions even when fallback metrics are accepted"
+      }
     }
   ],
   "fbPosted": [
@@ -5851,7 +5871,10 @@
         "最有機會拿到留言的格式是：排名 / 比較 / 值不值得 / 真實 ROI，而不是單純「完整文章看這裡」。",
         "中午主貼文若用「比較 / 報價 / 值不值得 / 完整教學」框架，持續比凌晨導流貼更容易拿到留言。",
         "台灣在地痛點（報價、省錢、工具怎麼選）比單純英文 review 更容易出現公開互動。",
-        "技術工具貼文只要前兩行先講清楚「差在哪、值不值得、能省多少」，互動明顯比純摘要高。"
+        "技術工具貼文只要前兩行先講清楚「差在哪、值不值得、能省多少」，互動明顯比純摘要高。",
+        "中午主貼文在本週 7/7 有公開互動，凌晨 04:00 UTC 的 11 則貼文全數 0 互動，時段差異非常明顯。",
+        "有明確比較、排名、價格差或 ROI 承諾的主貼文，本週持續比一般教學導流貼更容易拿到留言。",
+        "繁中比較文在中午主時段仍穩，英文 ranked list 只在中午發時才有機會拿到互動。"
       ],
       "failPatterns": [
         "同一時段（04:00 UTC）連發 3-4 則以上貼文，貼文彼此競食，幾乎全部 0 互動。",
@@ -5869,7 +5892,10 @@
         "同主題多篇在同一時段連發會彼此競食，尤其是多篇 AI coding 工具文一起發時最明顯。",
         "凌晨 04:00 UTC 的單純導流貼依然偏弱，尤其是沒有數字、比較或明確立場時。",
         "英文 review 型貼文若沒有先翻成在地決策角度，公開互動仍接近歸零。",
-        "目前 Graph API token/權限仍拿不到本週每篇可用的 reach / engaged users / clicks insights，無法誠實計算觸及率與互動率。"
+        "目前 Graph API token/權限仍拿不到本週每篇可用的 reach / engaged users / clicks insights，無法誠實計算觸及率與互動率。",
+        "本週 04:00 UTC 的 11 則貼文全部 0 公開互動，表示這個批次時段目前幾乎可視為無效曝光。",
+        "就算題材本身是比較文，只要放進 04:00 UTC 批次導流格式，互動仍會接近歸零。",
+        "本週 Graph API 雖接受 post_impressions_unique/post_clicks/post_reactions_by_type_total 欄位，但逐篇回傳仍為空值，依然無法誠實計算觸及率與互動率。"
       ],
       "weeklyReviews": [
         {
@@ -6293,6 +6319,104 @@
             "保留中午主時段給比較、報價、省錢、完整教學這四類內容。",
             "凌晨貼文若無法改成強鉤子版本，直接減量或停發。"
           ]
+        },
+        {
+          "week": "2026-W23",
+          "period": "2026-06-01 to 2026-06-07",
+          "generatedAt": "2026-06-07T13:00:00Z",
+          "summary": "本週共發 18 則貼文。Graph API 仍無法提供可用的 per-post reach / click insights，因此無法誠實計算任務要求的觸及率與互動率；改用公開互動代理分析後，訊號反而更乾脆：中午主貼文 7/7 有留言，凌晨 04:00 UTC 的 11 則貼文全部 0 互動。這代表目前真正有效的不是「多發」，而是把比較/排名/ROI 類核心內容集中到中午主時段。",
+          "totals": {
+            "posts": 18,
+            "publicInteractions": 7,
+            "postsWithAnyInteraction": 7,
+            "reachAvailablePosts": 0,
+            "clickMetricAvailablePosts": 0
+          },
+          "topPostsByObservableInteraction": [
+            {
+              "created_time": "2026-06-07T12:00:07+0000",
+              "message_preview": "💡 9 Best AI Tools for Remote Work in 2026 (Ranked by Real ROI)",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "whyItWorked": [
+                "中午主時段。",
+                "標題直接給排名與 ROI 框架。",
+                "英文也能成立，但前兩行先講 verdict。"
+              ]
+            },
+            {
+              "created_time": "2026-06-06T12:00:07+0000",
+              "message_preview": "💡 AI Agents 完整指南 2026 — GPT、Claude、Open Interpreter 哪個最強?",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "whyItWorked": [
+                "中午主時段。",
+                "強比較題材。",
+                "直接切進「哪個最強」這種決策鉤子。"
+              ]
+            },
+            {
+              "created_time": "2026-06-04T12:00:48+0000",
+              "message_preview": "🔥 DeerFlow 2.0 vs Dify vs n8n：2026 AI 自動化三強終極比較，台灣開發者怎麼選？",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "whyItWorked": [
+                "中午主時段。",
+                "繁中 + 三方比較 + 台灣選購指南，決策感最強。"
+              ]
+            }
+          ],
+          "weakPostsByObservableInteraction": [
+            {
+              "created_time": "2026-06-07T04:00:37+0000",
+              "message_preview": "📝 7 Best AI Video Editing Tools in 2026 (Ranked for Creators)",
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 批次貼文時段持續失效。",
+                "就算有 ranked 框架，放在凌晨仍無互動。"
+              ]
+            },
+            {
+              "created_time": "2026-06-06T04:00:02+0000",
+              "message_preview": "📝 AI 寫作工具比較 2026：ChatGPT vs Claude vs Gemini vs Perplexity 終極指南",
+              "interactions": 0,
+              "whyItMissed": [
+                "題材本身不差，但凌晨導流格式直接把比較優勢吃掉。",
+                "貼文像摘要，不像社群對話。"
+              ]
+            },
+            {
+              "created_time": "2026-06-05T04:00:14+0000",
+              "message_preview": "📝 Claude 4 Sonnet vs Opus 全面評測 2026：定價、能力、與 GPT-5 完整比較",
+              "interactions": 0,
+              "whyItMissed": [
+                "比較題材放在 04:00 UTC 依然歸零。",
+                "證明問題先是時段，其次才是題材。"
+              ]
+            }
+          ],
+          "blockers": [
+            "Facebook Graph API 目前會拒絕 post_impressions 與 post_engaged_users，回報「The value must be a valid insights metric」。",
+            "post_impressions_unique / post_clicks / post_reactions_by_type_total 這組欄位本週可請求成功，但逐篇回傳仍是空 insights，因此無法計算每篇觸及率與互動率。",
+            "因此本週無法完成任務要求中的「觸及率 > 5% / < 1%」硬性分類，只能用公開互動代理分析並把學習寫回策略。"
+          ],
+          "newRulesAdded": [
+            "04:00 UTC 批次貼文先視為失效時段；除非要做純索引曝光測試，否則核心內容不要再排在這個時段。",
+            "若發英文 ranked list，優先放中午主時段，且首句一定要保留明確 ROI / ranking / verdict。",
+            "比較題材不要再在凌晨連發；同一天只保留一則核心比較貼，其他延後到白天。"
+          ],
+          "nextWeekActions": [
+            "把中午主時段當成唯一核心時段，優先放比較 / 排名 / ROI / 台灣選購指南這四類內容。",
+            "04:00 UTC 先降到 0-1 則測試貼，不再放多篇核心內容。",
+            "若要保留凌晨貼文，只拿來做次級索引曝光，不拿來承擔互動目標。",
+            "後續若要真的做觸及率與互動率分層，必須先解決 Facebook insights 權限或 metric 可用性。"
+          ]
         }
       ]
     },
@@ -6317,7 +6441,10 @@
         "最有機會拿到留言的格式是：排名 / 比較 / 值不值得 / 真實 ROI，而不是單純「完整文章看這裡」。",
         "Facebook 主貼文優先寫成「問題 + 結論」開頭，例如：哪個值得用、能省多少、台灣報價多少。",
         "凌晨時段如果要發文，避免英文 review 直貼；改成繁中決策句或直接停發。",
-        "同週主題優先排：比較、報價、省錢、完整教學；少發純品牌曝光型貼文。"
+        "同週主題優先排：比較、報價、省錢、完整教學；少發純品牌曝光型貼文。",
+        "04:00 UTC 批次貼文先視為失效時段；除非要做純索引曝光測試，否則核心內容不要再排在這個時段。",
+        "若發英文 ranked list，優先放中午主時段，且首句一定要保留明確 ROI / ranking / verdict。",
+        "比較題材不要再在凌晨連發；同一天只保留一則核心比較貼，其他延後到白天。"
       ]
     }
   },
