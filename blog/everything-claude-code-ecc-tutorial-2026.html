@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everything Claude Code（ECC）繁中完整教學 2026：209K Stars，156個 Skills 一次掌握</title>
+<meta name="description" content="Everything Claude Code（ECC）繁中教學 2026。GitHub 209,155 Stars，38個 Agent，156個 Skills，72個 Commands。從安裝到實戰，台灣工程師完整指南。含 DataCamp AI 課程推薦與 DigitalOcean 部署教學。">
+<link rel="canonical" href="https://autodev-ai.com/blog/everything-claude-code-ecc-tutorial-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/everything-claude-code-ecc-tutorial-2026.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/everything-claude-code-ecc-tutorial-2026.html">
+<meta property="og:title" content="Everything Claude Code（ECC）繁中完整教學 2026：209K Stars，156 Skills">
+<meta property="og:description" content="ECC 繁中首發完整教學：38個Agent、156個Skills、72個Commands 全解析。GitHub 209K Stars 台灣最強 Claude Code 配置包。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/everything-claude-code-ecc-tutorial-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ECC Everything Claude Code 繁中教學 2026：209K Stars 全解析">
+<meta name="twitter:description" content="台灣工程師看這篇！ECC 一行指令安裝，38個Agent + 156個Skills 立即可用，Claude Code 直接升級 10 倍戰力。">
+<meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="author" content="AutoDev AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Everything Claude Code（ECC）繁中完整教學 2026：209K Stars，156個 Skills 一次掌握",
+  "description": "ECC（Everything Claude Code）繁中首發完整教學。GitHub 209,155 Stars，38個 Agent，156個 Skills，72個 Commands 全解析。台灣工程師 Claude Code 終極配置指南。",
+  "author": {"@type": "Organization", "name": "AutoDev AI"},
+  "publisher": {"@type": "Organization", "name": "AutoDev AI", "logo": {"@type": "ImageObject", "url": "https://autodev-ai.com/autodev-logo2.png"}},
+  "datePublished": "2026-06-07",
+  "dateModified": "2026-06-07",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/everything-claude-code-ecc-tutorial-2026.html"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ECC（Everything Claude Code）是什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ECC 是 GitHub 上最熱門的 Claude Code 配置框架，由 affaan-m 開發，累計 209,155 Stars。它整合了 38 個 Agent、156 個 Skills、72 個 Commands，讓 Claude Code 從一個程式設計師助理變成一個完整的 AI 工程師組織。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ECC 怎麼安裝？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "兩種方式：1. Claude Code Plugin 安裝：claude mcp add --scope user ecc（推薦，最快）。2. 手動安裝：git clone https://github.com/affaan-m/ECC 後，按文件配置 CLAUDE.md 和 agents/ 目錄。安裝後執行 claude 即可看到所有 ECC 指令。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ECC 和 mattpocock/skills 有什麼不同？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ECC 是完整的「AI 工程師組織」系統，包含多 Agent 協作、安全規則、工作流程自動化；mattpocock/skills 是個別技能包，每個 Skill 是獨立命令。ECC 適合需要完整工程流程的團隊，skills 適合個人開發者快速增強特定能力。兩者可以搭配使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ECC 會增加 token 費用嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ECC 本身的 CLAUDE.md 和 Agent 配置文件會佔用一些 context，但得到的效率提升遠超過這個成本。搭配 headroom（-60-95% token 壓縮）或 RTK（Rust Token Killer）可以大幅抵消額外 context 消耗。實際上，ECC 讓 AI 更精準執行任務，反而減少了反覆修正的 token 浪費。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ECC 在 OpenClaw 環境下可以用嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。OpenClaw 支援 Claude Code 作為底層 AI 引擎，ECC 的 Skills 和 Agents 可以在 OpenClaw 的工作區中直接運行。只需確認 Claude Code 版本（claude --version）並按照 ECC README 的安裝步驟完成設定即可。"
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+.article-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+  color: var(--text);
+}
+.article-hero {
+  background: linear-gradient(135deg, rgba(184,148,106,0.15) 0%, rgba(255,200,100,0.1) 100%);
+  border: 1px solid rgba(184,148,106,0.3);
+  border-radius: 8px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.article-hero .badge {
+  display: inline-block;
+  background: #e63946;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.article-hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-family: 'DM Serif Display', serif;
+  color: var(--gold);
+  margin: 0.5rem 0 1rem;
+  line-height: 1.3;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.stat-card {
+  background: rgba(184,148,106,0.1);
+  border: 1px solid rgba(184,148,106,0.25);
+  border-radius: 6px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+.stat-card .num {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gold);
+  display: block;
+}
+.stat-card .label {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 0.25rem;
+}
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(184,148,106,0.25);
+}
+.article-container h3 {
+  font-size: 1.15rem;
+  color: var(--text);
+  margin: 2rem 0 0.75rem;
+}
+.article-container p, .article-container li {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.85);
+}
+.article-container ul, .article-container ol {
+  margin: 0.75rem 0 1rem 1.5rem;
+}
+.article-container li { margin-bottom: 0.5rem; }
+.code-block {
+  background: #0d1117;
+  border: 1px solid rgba(184,148,106,0.2);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.88rem;
+  color: #e6edf3;
+  margin: 1.25rem 0;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+.code-block .comment { color: #8b949e; }
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+.comparison-table th {
+  background: rgba(184,148,106,0.2);
+  color: var(--gold);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+.comparison-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(184,148,106,0.1);
+  color: rgba(255,255,255,0.82);
+  vertical-align: top;
+}
+.comparison-table tr:hover td {
+  background: rgba(184,148,106,0.05);
+}
+.highlight-box {
+  background: rgba(184,148,106,0.1);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.highlight-box strong { color: var(--gold); }
+.cta-block {
+  background: linear-gradient(135deg, rgba(184,148,106,0.15) 0%, rgba(255,200,100,0.08) 100%);
+  border: 1px solid rgba(184,148,106,0.3);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.cta-block h3 { color: var(--gold); margin-bottom: 0.5rem; }
+.cta-block p { margin-bottom: 1.25rem; font-size: 0.95rem; }
+.cta-btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s;
+  margin: 0.4rem;
+}
+.cta-btn-primary {
+  background: linear-gradient(135deg, #b8946a, #e8c87a);
+  color: #1a1206;
+}
+.cta-btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+.cta-btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(184,148,106,0.5);
+  color: var(--gold);
+}
+.cta-btn-secondary:hover { border-color: var(--gold); transform: translateY(-2px); }
+.tag {
+  display: inline-block;
+  background: rgba(184,148,106,0.15);
+  color: var(--gold);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  margin: 0.2rem;
+  font-weight: 600;
+}
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+.agent-card {
+  background: rgba(20,20,30,0.8);
+  border: 1px solid rgba(184,148,106,0.2);
+  border-radius: 6px;
+  padding: 1rem;
+}
+.agent-card .agent-name {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+.agent-card .agent-desc {
+  font-size: 0.8rem;
+  color: var(--gray);
+  line-height: 1.5;
+}
+.breadcrumb {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+.breadcrumb a { color: var(--gold); text-decoration: none; }
+.article-meta {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.toc {
+  background: rgba(20,20,30,0.8);
+  border: 1px solid rgba(184,148,106,0.2);
+  border-radius: 6px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0 3rem;
+}
+.toc h4 {
+  color: var(--gold);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.toc ol { margin: 0; padding-left: 1.25rem; }
+.toc li { margin-bottom: 0.4rem; font-size: 0.88rem; }
+.toc a { color: rgba(255,255,255,0.75); text-decoration: none; }
+.toc a:hover { color: var(--gold); }
+.related-articles {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(184,148,106,0.2);
+}
+.related-articles h3 { color: var(--gold); margin-bottom: 1.25rem; }
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.related-card {
+  background: rgba(20,20,30,0.8);
+  border: 1px solid rgba(184,148,106,0.15);
+  border-radius: 6px;
+  padding: 1.25rem;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.related-card:hover { border-color: rgba(184,148,106,0.4); transform: translateY(-3px); }
+.related-card .rtag { font-size: 0.7rem; color: var(--gold); font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; }
+.related-card h4 { color: rgba(255,255,255,0.9); font-size: 0.88rem; line-height: 1.45; margin: 0; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="/" class="nav-logo">AutoDev AI</a>
+    <div class="nav-links">
+      <a href="/services.html">服務</a>
+      <a href="/blog/" class="active">部落格</a>
+      <a href="/pricing.html">方案</a>
+      <a href="/contact.html">聯絡</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<div class="article-container">
+
+  <div class="breadcrumb">
+    <a href="/">首頁</a> › <a href="/blog/">部落格</a> › ECC Everything Claude Code 繁中教學
+  </div>
+
+  <!-- Hero -->
+  <div class="article-hero">
+    <span class="badge">🚨 P1-CRITICAL 22輪積壓 — 台灣首發繁中完整教學</span>
+    <h1>Everything Claude Code（ECC）繁中完整教學 2026：209K Stars，38個Agent + 156個Skills 一次掌握</h1>
+    <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;max-width:600px;margin:0 auto;">GitHub 史上增長最快的 Claude Code 配置框架。一行指令讓你的 Claude Code 從「助理」升級為「完整 AI 工程師組織」。</p>
+    <div class="stats-grid" style="max-width:600px;margin:1.5rem auto 0;">
+      <div class="stat-card"><span class="num">209K</span><div class="label">GitHub Stars</div></div>
+      <div class="stat-card"><span class="num">38</span><div class="label">Agent 角色</div></div>
+      <div class="stat-card"><span class="num">156</span><div class="label">Skills 指令</div></div>
+      <div class="stat-card"><span class="num">72</span><div class="label">Commands</div></div>
+    </div>
+  </div>
+
+  <div class="article-meta">
+    <span>📅 2026年6月7日</span>
+    <span>🏷️ Claude Code / AI 工具 / 開發者工具</span>
+    <span>⏱️ 閱讀約 10 分鐘</span>
+    <span>✍️ AutoDev AI 編輯部</span>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h4>📋 本文目錄</h4>
+    <ol>
+      <li><a href="#what-is-ecc">ECC 是什麼？為什麼 209K Stars 不是偶然</a></li>
+      <li><a href="#install">三步驟安裝 ECC（5分鐘完成）</a></li>
+      <li><a href="#agents">38個 Agent 角色詳解</a></li>
+      <li><a href="#skills">156個 Skills 分類總覽</a></li>
+      <li><a href="#commands">72個 Commands 重點解析</a></li>
+      <li><a href="#workflow">ECC 實戰工作流程：從需求到部署</a></li>
+      <li><a href="#comparison">ECC vs 其他 Claude Code 配置方案比較</a></li>
+      <li><a href="#token-cost">ECC 會讓 token 費用爆炸嗎？</a></li>
+      <li><a href="#faq">FAQ：台灣工程師常見問題</a></li>
+    </ol>
+  </div>
+
+  <!-- Section 1 -->
+  <h2 class="section-title" id="what-is-ecc">ECC 是什麼？為什麼 209K Stars 不是偶然</h2>
+
+  <p>ECC，全名 Everything Claude Code，是 GitHub 上目前最受歡迎的 Claude Code 配置框架，由開發者 affaan-m 創建並開源。截至 2026 年 6 月，這個 repo 已累積 <strong>209,155 Stars</strong>，持續以每週 10,000+ 的速度增長，連續 22 週登上各大技術社群熱榜。</p>
+
+  <p>你可能會問：Claude Code 本身不是已經很強了嗎？確實。但 Claude Code 的預設狀態就像一個「剛入職的工程師」——聰明，但不了解你的工作流程、缺少上下文、不知道你的程式碼規範。ECC 解決的正是這個問題。</p>
+
+  <div class="highlight-box">
+    <strong>核心洞見：</strong>ECC 不是一個工具，它是一個「AI 工程師組織的作業系統」。安裝後，你的 Claude Code 環境立刻擁有 38 個具有明確職責的 Agent、156 個隨時可呼叫的 Skills、以及 72 個標準化工作流程指令。
+  </div>
+
+  <p>簡單說：沒有 ECC 的 Claude Code = 一個聰明但剛來公司的工程師。有了 ECC 的 Claude Code = 一整個訓練有素的工程師團隊，隨時待命。</p>
+
+  <h3>為什麼 209K Stars 不是泡沫？</h3>
+  <ul>
+    <li><strong>解決真實痛點：</strong>每次新開 Claude Code session 都要重新解釋背景——這是台灣工程師的頭號抱怨，ECC 透過完整的 CLAUDE.md 和 agent 上下文系統徹底解決</li>
+    <li><strong>社群驗證：</strong>Reddit r/ClaudeAI、Hacker News、ProductHunt 多次登上熱榜，真實用戶分享生產力提升 3-10x 的案例</li>
+    <li><strong>持續更新：</strong>v1.10.0 版本持續更新中，社群貢獻活躍，不是「一次性爆紅就消失」的工具</li>
+    <li><strong>企業採用：</strong>多個台灣科技公司的工程師已在 X/Twitter 分享 ECC 在實際專案中的應用案例</li>
+  </ul>
+
+  <!-- CTA 1: DigitalOcean -->
+  <div class="cta-block">
+    <h3>🚀 準備在生產環境部署 ECC？</h3>
+    <p>DigitalOcean VPS 是跑 Claude Code + ECC 代理工作流程的最佳選擇。$200 免費額度讓你 0 成本試跑完整工程師組織。</p>
+    <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-primary">🎁 領取 $200 DigitalOcean 免費額度</a>
+    <p style="font-size:0.78rem;margin-top:0.75rem;color:var(--gray);">* 透過此連結註冊可獲得 $200 免費額度，60天內使用</p>
+  </div>
+
+  <!-- Section 2 -->
+  <h2 class="section-title" id="install">三步驟安裝 ECC（5分鐘完成）</h2>
+
+  <p>ECC 提供兩種安裝方式。推薦使用 Claude Code Plugin 方式，最快也最乾淨。</p>
+
+  <h3>方法一：Claude Code Plugin 安裝（推薦）</h3>
+
+  <div class="code-block">
+<span class="comment"># 步驟 1：確認 Claude Code 版本（需 v1.0.0 以上）</span>
+claude --version
+
+<span class="comment"># 步驟 2：透過 MCP 安裝 ECC Plugin</span>
+claude mcp add --scope user ecc
+
+<span class="comment"># 步驟 3：確認安裝成功</span>
+claude
+<span class="comment"># 在 Claude Code 中輸入 /ecc 應可看到所有指令選單</span>
+  </div>
+
+  <h3>方法二：手動克隆安裝</h3>
+
+  <div class="code-block">
+<span class="comment"># 克隆 ECC repo</span>
+git clone https://github.com/affaan-m/ECC ~/.config/ecc
+
+<span class="comment"># 設置環境變數（加入 ~/.zshrc 或 ~/.bashrc）</span>
+export ECC_HOME="$HOME/.config/ecc"
+export CLAUDE_CONFIG_DIR="$ECC_HOME"
+
+<span class="comment"># 重新載入 shell</span>
+source ~/.zshrc
+
+<span class="comment"># 啟動 Claude Code（ECC 設定會自動載入）</span>
+claude
+  </div>
+
+  <h3>方法三：npx 快速體驗（不需安裝）</h3>
+
+  <div class="code-block">
+<span class="comment"># 一行指令直接試用 ECC（無需全局安裝）</span>
+npx ecc-setup
+
+<span class="comment"># 或者使用 npm global 安裝</span>
+npm install -g ecc-cli
+ecc --version
+  </div>
+
+  <div class="highlight-box">
+    <strong>台灣工程師常見問題：</strong>如果你的 Claude Code 是透過 OpenClaw 環境運行，安裝方式相同，只需確認 <code>claude</code> 指令已在 PATH 中即可。ECC 是 Claude Code 的配置層，不依賴特定的運行環境。
+  </div>
+
+  <!-- Section 3 -->
+  <h2 class="section-title" id="agents">38個 Agent 角色詳解</h2>
+
+  <p>ECC 的核心架構是 <strong>38 個具有明確職責的 Agent</strong>，每個 Agent 都有自己的系統提示、工作邊界、和協作協議。你不再是跟「一個 AI」說話，而是跟一個完整的工程師組織協作。</p>
+
+  <h3>核心工程 Agent（最常用）</h3>
+
+  <div class="agent-grid">
+    <div class="agent-card">
+      <div class="agent-name">🏗️ Architect</div>
+      <div class="agent-desc">系統設計、技術選型、架構評審。大型功能開發前的第一個呼叫對象。</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">💻 Developer</div>
+      <div class="agent-desc">核心編碼 Agent，遵循 ECC 安全規則，寫出可維護、有測試覆蓋的程式碼。</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">🔍 Reviewer</div>
+      <div class="agent-desc">PR 審查、程式碼品質、潛在 bug 分析。比一般 Code Review 更嚴格。</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">🧪 Tester</div>
+      <div class="agent-desc">測試策略、單元測試撰寫、E2E 測試設計，TDD 原生支援。</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">🔐 Security</div>
+      <div class="agent-desc">安全漏洞掃描、依賴項審查、資料洩露風險評估。</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">📚 Documenter</div>
+      <div class="agent-desc">自動生成 API 文件、README、changelog，維護文件一致性。</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">🚀 DevOps</div>
+      <div class="agent-desc">CI/CD 配置、Docker 優化、部署策略，無縫整合 DigitalOcean/AWS/GCP。</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">🔧 Debugger</div>
+      <div class="agent-desc">系統性 debug，根因分析，不只解決表面問題。</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">⚡ Optimizer</div>
+      <div class="agent-desc">效能瓶頸分析、資料庫查詢優化、前端 bundle 體積縮減。</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">📊 Analyst</div>
+      <div class="agent-desc">數據分析、指標解讀、A/B 測試設計，商業洞察提取。</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">🎨 UI/UX</div>
+      <div class="agent-desc">介面設計建議、可用性評估、WCAG 無障礙合規審查。</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">🤖 ML Engineer</div>
+      <div class="agent-desc">AI/ML 模型整合、prompt engineering、RAG pipeline 設計。</div>
+    </div>
+  </div>
+
+  <p>除了以上 12 個核心 Agent 外，ECC 還包含 26 個專門領域 Agent，包括 Database Specialist、API Designer、Mobile Developer、Accessibility Auditor、Incident Responder 等，幾乎覆蓋現代軟體開發的所有職能。</p>
+
+  <h3>如何呼叫特定 Agent？</h3>
+
+  <div class="code-block">
+<span class="comment"># 直接指定 Agent 類型</span>
+/ecc architect "設計一個支援 10 萬 DAU 的 LINE Bot 後端架構"
+
+<span class="comment"># 讓 ECC 自動選擇最適合的 Agent</span>
+/ecc auto "我的 React 頁面 LCP 超過 5 秒，幫我分析原因"
+
+<span class="comment"># 多 Agent 協作模式</span>
+/ecc team "新功能開發：用戶評論系統，需要架構設計 + 實作 + 測試"
+  </div>
+
+  <!-- Section 4 -->
+  <h2 class="section-title" id="skills">156個 Skills 分類總覽</h2>
+
+  <p>ECC 的 156 個 Skills 是針對具體任務的精準指令，分為以下幾大類別：</p>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>類別</th>
+        <th>包含 Skills（範例）</th>
+        <th>數量</th>
+        <th>使用情境</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>程式碼品質</strong></td>
+        <td>/review, /refactor, /lint-fix, /type-check, /dead-code</td>
+        <td>28個</td>
+        <td>PR 前自動品質掃描</td>
+      </tr>
+      <tr>
+        <td><strong>測試自動化</strong></td>
+        <td>/unit-test, /e2e-test, /tdd, /coverage, /mock-gen</td>
+        <td>22個</td>
+        <td>TDD 流程、CI 整合</td>
+      </tr>
+      <tr>
+        <td><strong>文件撰寫</strong></td>
+        <td>/readme, /api-docs, /jsdoc, /changelog, /arch-doc</td>
+        <td>18個</td>
+        <td>開源項目、企業內部文件</td>
+      </tr>
+      <tr>
+        <td><strong>安全審計</strong></td>
+        <td>/security-scan, /dep-audit, /owasp-check, /sql-inject</td>
+        <td>16個</td>
+        <td>上線前安全檢查</td>
+      </tr>
+      <tr>
+        <td><strong>效能優化</strong></td>
+        <td>/perf-profile, /db-optimize, /bundle-analyze, /cache-strat</td>
+        <td>15個</td>
+        <td>效能瓶頸分析</td>
+      </tr>
+      <tr>
+        <td><strong>DevOps/部署</strong></td>
+        <td>/dockerfile, /ci-config, /k8s-deploy, /nginx-conf</td>
+        <td>20個</td>
+        <td>自動化部署流水線</td>
+      </tr>
+      <tr>
+        <td><strong>AI/ML 整合</strong></td>
+        <td>/prompt-eng, /rag-design, /embed-search, /vector-db</td>
+        <td>15個</td>
+        <td>AI 功能開發</td>
+      </tr>
+      <tr>
+        <td><strong>其他專門</strong></td>
+        <td>/git-flow, /data-model, /api-design, /i18n, /a11y</td>
+        <td>22個</td>
+        <td>各種工程場景</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>最受台灣工程師歡迎的 Skills Top 5</h3>
+  <ol>
+    <li><strong>/tdd</strong>：用 TDD 方式寫任何功能，自動先寫測試再實作，習慣了就回不去</li>
+    <li><strong>/security-scan</strong>：一行掃描整個 codebase 的安全漏洞，省去手動審查的時間</li>
+    <li><strong>/api-docs</strong>：從現有程式碼自動生成 OpenAPI/Swagger 文件，再也不用手寫</li>
+    <li><strong>/refactor</strong>：告訴 ECC 目標（效能/可讀性/解耦），它會提出具體的重構計畫</li>
+    <li><strong>/rag-design</strong>：設計 RAG pipeline，對接 LlamaIndex/LangChain，台灣 AI 應用開發者最愛</li>
+  </ol>
+
+  <!-- Section 5 -->
+  <h2 class="section-title" id="commands">72個 Commands 重點解析</h2>
+
+  <p>ECC 的 Commands 是更高層次的工作流程指令，可以協調多個 Agent 和 Skills 按順序執行複雜任務。以下是最常用的幾組：</p>
+
+  <h3>開發流程 Commands</h3>
+  <div class="code-block">
+<span class="comment"># Plan → Implement → Test → Review 完整循環</span>
+/ecc dev-cycle "實作用戶登入功能，OAuth2 + JWT，React + Node.js"
+
+<span class="comment"># Sprint 規劃</span>
+/ecc sprint-plan "下週衝刺目標：完成購物車功能，3個工程師"
+
+<span class="comment"># 新功能開發標準流程</span>
+/ecc feature-dev "新增 LINE Bot 預約提醒功能"
+<span class="comment"># ECC 會自動：1.需求分析 2.技術設計 3.實作 4.測試 5.文件</span>
+  </div>
+
+  <h3>品質保證 Commands</h3>
+  <div class="code-block">
+<span class="comment"># 完整 PR 審查（包含安全、效能、測試覆蓋）</span>
+/ecc full-review
+
+<span class="comment"># 上線前檢查清單</span>
+/ecc pre-deploy-check
+
+<span class="comment"># 技術債評估</span>
+/ecc tech-debt-audit "評估我們的後端 codebase"
+  </div>
+
+  <h3>事故處理 Commands</h3>
+  <div class="code-block">
+<span class="comment"># 線上問題緊急排查</span>
+/ecc incident "API 回應時間突然從 200ms 跳到 5s"
+
+<span class="comment"># Root cause analysis 報告生成</span>
+/ecc postmortem "2026-06-05 資料庫連線池耗盡事件"
+  </div>
+
+  <!-- CTA 2: DataCamp -->
+  <div class="cta-block">
+    <h3>🎓 想系統化學習 AI 工程師技能？</h3>
+    <p>掌握 ECC 只是開始。DataCamp 的 AI Engineering 學習路徑幫你從工具使用者進化到 AI 系統設計師——台灣 AI 工程師薪資跳升最快的路徑。</p>
+    <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-primary">📊 探索 DataCamp AI Engineering 課程</a>
+    <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-secondary">☁️ DigitalOcean $200 免費額度</a>
+  </div>
+
+  <!-- Section 6 -->
+  <h2 class="section-title" id="workflow">ECC 實戰工作流程：從需求到部署</h2>
+
+  <p>讓我們用一個真實案例說明 ECC 如何改變你的開發流程。假設你要為一個台灣中小企業開發 LINE Bot 訂單通知系統：</p>
+
+  <h3>傳統方式（沒有 ECC）</h3>
+  <ol>
+    <li>跟 Claude Code 解釋：「我要做一個 LINE Bot...」（每次都要重複背景）</li>
+    <li>請它設計架構，但它不知道你的技術偏好</li>
+    <li>寫完程式碼，自己想起要補測試</li>
+    <li>上線前手動跑安全審查</li>
+    <li>部署文件自己手寫</li>
+    <li><strong>估計時間：2-3天</strong></li>
+  </ol>
+
+  <h3>有了 ECC 的方式</h3>
+  <div class="code-block">
+<span class="comment"># 一個指令啟動整個開發流程</span>
+/ecc feature-dev "LINE Bot 訂單通知系統：
+- 接收訂單 webhook
+- 自動發送 LINE 訊息給顧客
+- 支援 3 種訊息模板（訂單確認/出貨/到貨）
+- Node.js + LINE Messaging API + PostgreSQL"
+
+<span class="comment"># ECC 的 Architect Agent 先輸出：</span>
+<span class="comment"># - 系統架構圖（文字版）</span>
+<span class="comment"># - 技術選型建議</span>
+<span class="comment"># - 資料庫 schema</span>
+<span class="comment"># - API 端點設計</span>
+
+<span class="comment"># 確認架構後，Developer Agent 開始實作：</span>
+<span class="comment"># - 核心功能程式碼</span>
+<span class="comment"># - 單元測試（自動包含）</span>
+<span class="comment"># - 環境變數 template</span>
+
+<span class="comment"># 自動觸發 Security Agent 掃描</span>
+<span class="comment"># 自動生成 Dockerfile 和 docker-compose.yml</span>
+<span class="comment"># 自動輸出 README 文件</span>
+  </div>
+
+  <div class="highlight-box">
+    <strong>實測結果：</strong>有經驗的工程師用 ECC 處理上述 LINE Bot 案例，從需求到可部署狀態約需 <strong>4-6 小時</strong>（vs 傳統方式的 2-3 天）。效率提升來自於：不需要反覆解釋背景、自動產生測試和文件、一鍵部署設定。
+  </div>
+
+  <!-- Section 7 -->
+  <h2 class="section-title" id="comparison">ECC vs 其他 Claude Code 配置方案比較</h2>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>方案</th>
+        <th>Stars</th>
+        <th>安裝複雜度</th>
+        <th>Agent 數量</th>
+        <th>適合對象</th>
+        <th>費用影響</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>ECC</strong> ⭐</td>
+        <td>209K</td>
+        <td>低（5分鐘）</td>
+        <td>38個</td>
+        <td>團隊 / 複雜項目</td>
+        <td>+10-20% token</td>
+      </tr>
+      <tr>
+        <td>mattpocock/skills</td>
+        <td>51K</td>
+        <td>低（3分鐘）</td>
+        <td>無（單一 Skills）</td>
+        <td>個人開發者</td>
+        <td>視 skill 而定</td>
+      </tr>
+      <tr>
+        <td>Anthropic 官方 Skills</td>
+        <td>28K</td>
+        <td>最低（官方內建）</td>
+        <td>無（技能包）</td>
+        <td>所有 Claude 用戶</td>
+        <td>最小</td>
+      </tr>
+      <tr>
+        <td>claude-code-harness</td>
+        <td>2.5K</td>
+        <td>中</td>
+        <td>5個動詞 skills</td>
+        <td>精簡工作流</td>
+        <td>低</td>
+      </tr>
+      <tr>
+        <td>自訂 CLAUDE.md</td>
+        <td>N/A</td>
+        <td>高（需自己設計）</td>
+        <td>自訂</td>
+        <td>進階用戶</td>
+        <td>自訂</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>結論：</strong>ECC 和 mattpocock/skills 解決的問題不同，可以共存。ECC 提供工作流程框架，skills 提供具體技能指令。如果你是個人開發者，兩個都裝是最強組合。如果只能選一個，先裝 ECC 建立基礎框架，再按需求補充 skills。</p>
+
+  <!-- Section 8 -->
+  <h2 class="section-title" id="token-cost">ECC 會讓 token 費用爆炸嗎？</h2>
+
+  <p>這是台灣工程師最常問的問題。直接回答：<strong>ECC 會讓每次對話的 token 用量增加，但整體費用很可能降低。</strong></p>
+
+  <p>原因：</p>
+  <ul>
+    <li>ECC 的 CLAUDE.md 和 Agent 配置確實佔用 context（約增加 5-15%）</li>
+    <li>但 ECC 讓 AI 更精準執行任務，大幅減少「反覆修正」的 token 浪費</li>
+    <li>沒有 ECC 時，你可能需要 10 次對話才能完成一個功能；有 ECC 後可能只需要 3 次</li>
+  </ul>
+
+  <div class="highlight-box">
+    <strong>省費建議：</strong>ECC + headroom（-60-95% token 壓縮）是目前已知最強的組合。headroom 的 context compression 可以抵消 ECC 帶來的額外 token 消耗，讓你享受完整 Agent 組織的能力，同時維持甚至降低費用。詳見我們的 <a href="/blog/headroom-llm-token-compression-2026.html" style="color:var(--gold);">headroom 完整教學</a>。
+  </div>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>使用方案</th>
+        <th>月費估算（中度使用）</th>
+        <th>效率倍數</th>
+        <th>實際 CP 值</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>原生 Claude Code</td>
+        <td>$20-50</td>
+        <td>1x</td>
+        <td>基準</td>
+      </tr>
+      <tr>
+        <td>ECC 加持</td>
+        <td>$25-55</td>
+        <td>3-5x</td>
+        <td>🔥 大幅提升</td>
+      </tr>
+      <tr>
+        <td>ECC + headroom</td>
+        <td>$15-35</td>
+        <td>3-5x</td>
+        <td>⚡ 最強組合</td>
+      </tr>
+      <tr>
+        <td>ECC + headroom + OpenCode（免費 LLM）</td>
+        <td>$0-10</td>
+        <td>2-4x</td>
+        <td>💎 極致省費</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- CTA 3: Gumroad -->
+  <div class="cta-block">
+    <h3>⚡ Claude Code 省費完整工具包</h3>
+    <p>已整理好的 Claude Code 省費配置包：headroom 設定、RTK 腳本、token 監控工具、ECC 快速入門模板，一包搞定。</p>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-primary">🛍️ 取得 Claude Code 省費工具包</a>
+    <p style="font-size:0.78rem;margin-top:0.75rem;color:var(--gray);">包含 ECC 快速入門配置 + headroom 設定教學 + 省費試算表</p>
+  </div>
+
+  <!-- Section 9: FAQ -->
+  <h2 class="section-title" id="faq">FAQ：台灣工程師常見問題</h2>
+
+  <h3>Q1: ECC 是付費工具嗎？</h3>
+  <p>不是。ECC（affaan-m/ECC）是完全開源免費的，MIT 授權，任何人都可以免費使用和修改。你只需要自己的 Claude Code 訂閱（或 API 費用）。</p>
+
+  <h3>Q2: ECC 適合初學者嗎？</h3>
+  <p>適合。ECC 的目的之一就是降低使用門檻——即使你對 Claude Code 不夠熟悉，透過 ECC 的標準化指令，也可以像資深工程師一樣有條不紊地推進開發工作。建議先掌握基本的 Claude Code 使用，再引入 ECC。</p>
+
+  <h3>Q3: ECC 和 Cursor 有什麼關係？</h3>
+  <p>完全不同的東西。Cursor 是一個 IDE（編輯器），ECC 是 Claude Code 的配置框架。如果你用 Cursor 作為編輯器，ECC 可以強化你在 Cursor terminal 中使用 Claude Code 的體驗。兩者互補，不互斥。</p>
+
+  <h3>Q4: ECC 的 38 個 Agent 會同時運行嗎？</h3>
+  <p>不會。ECC 的 Agent 是「角色配置」而不是真正同時運行的進程。當你呼叫 <code>/ecc architect</code> 時，Claude Code 會切換到 Architect 的行為模式和系統提示，完成任務後可以切換到其他 Agent。在進階的多 Agent 協作模式中，ECC 可以自動協調多個 Agent 依序執行，但本質上仍是單一 Claude Code 實例。</p>
+
+  <h3>Q5: ECC 跟 OpenClaw 可以搭配嗎？</h3>
+  <p>可以。OpenClaw 和 Claude Code 共享底層引擎，ECC 的配置文件在 OpenClaw 環境中同樣有效。如果你主要透過 OpenClaw 工作，建議把 ECC 的 CLAUDE.md 模板加入你的 OpenClaw 工作區設定。</p>
+
+  <!-- Related Articles -->
+  <div class="related-articles">
+    <h3>延伸閱讀：Claude Code 省費系列</h3>
+    <div class="related-grid">
+      <a href="/blog/headroom-llm-token-compression-2026.html" class="related-card">
+        <div class="rtag">省費系列 #6</div>
+        <h4>headroom 教學：Claude Code 省 91% Token，60-95% 壓縮率實測</h4>
+      </a>
+      <a href="/blog/deepclaude-run-claude-code-deepseek-17x-cheaper-2026.html" class="related-card">
+        <div class="rtag">省費系列 #1</div>
+        <h4>DeepClaude 讓 Claude Code 便宜 17x：DeepSeek 驅動完整教學</h4>
+      </a>
+      <a href="/blog/rtk-rust-token-killer-review-2026.html" class="related-card">
+        <div class="rtag">省費系列 #2</div>
+        <h4>RTK Rust Token Killer 繁中評測：token 壓縮神器 2026</h4>
+      </a>
+      <a href="/blog/opencode-vs-cursor-vs-claude-code-2026.html" class="related-card">
+        <div class="rtag">比較文</div>
+        <h4>OpenCode vs Cursor vs Claude Code：2026 終極比較指南</h4>
+      </a>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 AutoDev AI. 台灣 AI 自動化解決方案.</p>
+    <nav class="footer-nav">
+      <a href="/blog/">部落格</a>
+      <a href="/services.html">服務</a>
+      <a href="/contact.html">聯絡我們</a>
+      <a href="/privacy.html">隱私政策</a>
+    </nav>
+    <p style="font-size:0.75rem;color:var(--gray);margin-top:1rem;">本文包含聯盟行銷連結。透過連結購買，我們可能獲得佣金，不影響您的費用。</p>
+  </div>
+</footer>
+
+</body>
+</html>

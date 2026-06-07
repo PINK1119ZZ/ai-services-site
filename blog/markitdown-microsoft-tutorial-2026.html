@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft MarkItDown 繁中完整教學 2026：146K Stars，Office/PDF/HTML 一鍵轉 Markdown</title>
+<meta name="description" content="Microsoft MarkItDown 繁中教學 2026。GitHub 146,378 Stars，本週 #2。將 PDF、Word、Excel、PPT、HTML、圖片全部轉換為 Markdown，RAG pipeline 必備前處理工具。Python pip install 一行安裝。">
+<link rel="canonical" href="https://autodev-ai.com/blog/markitdown-microsoft-tutorial-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/markitdown-microsoft-tutorial-2026.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/markitdown-microsoft-tutorial-2026.html">
+<meta property="og:title" content="Microsoft MarkItDown 繁中完整教學 2026：146K Stars，Office 全面轉 Markdown">
+<meta property="og:description" content="Microsoft 官方出品，RAG pipeline 前處理神器。PDF/Word/Excel/PPT/HTML/圖片 → Markdown，一行 Python 完成，本週 GitHub 週榜 #2。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/markitdown-microsoft-tutorial-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MarkItDown 繁中教學 2026：Microsoft 官方，PDF/Office 轉 Markdown 最強工具">
+<meta name="twitter:description" content="GitHub 146K Stars，本週週榜 #2。一行 pip 安裝，支援 20+ 格式，RAG 前處理必裝，台灣工程師繁中首發評測。">
+<meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="author" content="AutoDev AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Microsoft MarkItDown 繁中完整教學 2026：146K Stars，Office/PDF/HTML 一鍵轉 Markdown",
+  "description": "Microsoft MarkItDown 繁中首發完整教學。GitHub 146,378 Stars，本週週榜 #2。支援 PDF、Word、Excel、PPT、HTML、圖片等 20+ 格式轉 Markdown，RAG pipeline 前處理必備工具。",
+  "author": {"@type": "Organization", "name": "AutoDev AI"},
+  "publisher": {"@type": "Organization", "name": "AutoDev AI", "logo": {"@type": "ImageObject", "url": "https://autodev-ai.com/autodev-logo2.png"}},
+  "datePublished": "2026-06-07",
+  "dateModified": "2026-06-07",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/markitdown-microsoft-tutorial-2026.html"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "MarkItDown 是什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MarkItDown 是 Microsoft 開源的文件轉換工具，可以將 PDF、Word、Excel、PowerPoint、HTML、圖片（支援 OCR）等 20+ 格式轉換為 Markdown 格式。特別適合作為 AI RAG（檢索增強生成）pipeline 的前處理步驟，讓 AI 能夠讀取和處理各種企業文件。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MarkItDown 怎麼安裝？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一行 pip 指令即可安裝：pip install markitdown。如果需要完整功能（包含 OCR、音訊轉錄等），使用：pip install markitdown[all]。安裝後直接在 Python 中 from markitdown import MarkItDown 即可使用，也支援命令行工具 markitdown input.pdf > output.md。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MarkItDown 支援哪些檔案格式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MarkItDown 支援：文件類（PDF、DOCX、DOC、ODT）、試算表（XLSX、XLS、CSV）、簡報（PPTX、PPT）、網頁（HTML、HTM）、圖片（PNG、JPG、GIF，支援 OCR）、音訊（MP3、WAV，支援轉錄）、程式碼檔案（多種語言）、以及 ZIP 壓縮包（批次轉換內部文件）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MarkItDown 和 pypdf、python-docx 有什麼不同？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "pypdf 和 python-docx 是針對特定格式的解析工具，需要分別處理不同格式。MarkItDown 的優勢在於：統一介面處理所有格式、輸出 AI 友好的 Markdown（而非原始文字）、保留文件結構（標題階層、表格、列表）、以及 Microsoft 官方維護的企業信任度。如果你只需要處理一種格式，專門工具可能更快；如果需要統一處理多種企業文件格式，MarkItDown 是最佳選擇。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MarkItDown 可以用在 RAG 系統嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的，這正是 MarkItDown 的主要應用場景。MarkItDown 輸出的 Markdown 格式非常適合 text chunking（文字切片）和 embedding，可以無縫整合 LlamaIndex、LangChain 等 RAG 框架。典型工作流程：文件上傳 → MarkItDown 轉 Markdown → 文字切片 → 向量化 → 向量資料庫存儲 → RAG 查詢。"
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+.article-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+  color: var(--text);
+}
+.article-hero {
+  background: linear-gradient(135deg, rgba(0,120,212,0.12) 0%, rgba(184,148,106,0.1) 100%);
+  border: 1px solid rgba(0,120,212,0.25);
+  border-radius: 8px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.article-hero .badge-ms {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(0,120,212,0.2);
+  border: 1px solid rgba(0,120,212,0.3);
+  color: #5ba4f5;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.9rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.article-hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-family: 'DM Serif Display', serif;
+  color: var(--gold);
+  margin: 0.5rem 0 1rem;
+  line-height: 1.3;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.stat-card {
+  background: rgba(184,148,106,0.1);
+  border: 1px solid rgba(184,148,106,0.25);
+  border-radius: 6px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+.stat-card .num { font-size: 1.7rem; font-weight: 900; color: var(--gold); display: block; }
+.stat-card .label { font-size: 0.78rem; color: var(--gray); margin-top: 0.25rem; }
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(184,148,106,0.25);
+}
+.article-container h3 { font-size: 1.15rem; color: var(--text); margin: 2rem 0 0.75rem; }
+.article-container p, .article-container li { font-size: 1rem; line-height: 1.85; color: rgba(255,255,255,0.85); }
+.article-container ul, .article-container ol { margin: 0.75rem 0 1rem 1.5rem; }
+.article-container li { margin-bottom: 0.5rem; }
+.code-block {
+  background: #0d1117;
+  border: 1px solid rgba(184,148,106,0.2);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.88rem;
+  color: #e6edf3;
+  margin: 1.25rem 0;
+  overflow-x: auto;
+  line-height: 1.7;
+}
+.code-block .comment { color: #8b949e; }
+.code-block .string { color: #a5d6ff; }
+.code-block .keyword { color: #ff7b72; }
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+.comparison-table th {
+  background: rgba(184,148,106,0.2);
+  color: var(--gold);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+.comparison-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(184,148,106,0.1);
+  color: rgba(255,255,255,0.82);
+  vertical-align: top;
+}
+.comparison-table tr:hover td { background: rgba(184,148,106,0.05); }
+.highlight-box {
+  background: rgba(184,148,106,0.1);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.highlight-box strong { color: var(--gold); }
+.cta-block {
+  background: linear-gradient(135deg, rgba(184,148,106,0.15) 0%, rgba(255,200,100,0.08) 100%);
+  border: 1px solid rgba(184,148,106,0.3);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.cta-block h3 { color: var(--gold); margin-bottom: 0.5rem; }
+.cta-block p { margin-bottom: 1.25rem; font-size: 0.95rem; }
+.cta-btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s;
+  margin: 0.4rem;
+}
+.cta-btn-primary { background: linear-gradient(135deg, #b8946a, #e8c87a); color: #1a1206; }
+.cta-btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+.cta-btn-secondary { background: transparent; border: 1px solid rgba(184,148,106,0.5); color: var(--gold); }
+.cta-btn-secondary:hover { border-color: var(--gold); transform: translateY(-2px); }
+.format-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+.format-card {
+  background: rgba(20,20,30,0.8);
+  border: 1px solid rgba(184,148,106,0.2);
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.format-card .icon { font-size: 1.5rem; flex-shrink: 0; }
+.format-card .info .name { color: var(--gold); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.25rem; }
+.format-card .info .ext { font-size: 0.75rem; color: var(--gray); }
+.breadcrumb { font-size: 0.82rem; color: var(--gray); margin-bottom: 2rem; }
+.breadcrumb a { color: var(--gold); text-decoration: none; }
+.article-meta { font-size: 0.82rem; color: var(--gray); margin-bottom: 2rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.toc { background: rgba(20,20,30,0.8); border: 1px solid rgba(184,148,106,0.2); border-radius: 6px; padding: 1.5rem 2rem; margin: 2rem 0 3rem; }
+.toc h4 { color: var(--gold); margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.toc ol { margin: 0; padding-left: 1.25rem; }
+.toc li { margin-bottom: 0.4rem; font-size: 0.88rem; }
+.toc a { color: rgba(255,255,255,0.75); text-decoration: none; }
+.toc a:hover { color: var(--gold); }
+.workflow-step {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+.step-num {
+  background: var(--gold);
+  color: #1a1206;
+  font-weight: 900;
+  font-size: 0.9rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+.step-content h4 { color: var(--text); margin: 0 0 0.4rem; font-size: 1rem; }
+.step-content p { margin: 0; font-size: 0.9rem; }
+.related-articles { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(184,148,106,0.2); }
+.related-articles h3 { color: var(--gold); margin-bottom: 1.25rem; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.related-card { background: rgba(20,20,30,0.8); border: 1px solid rgba(184,148,106,0.15); border-radius: 6px; padding: 1.25rem; text-decoration: none; transition: all 0.25s; }
+.related-card:hover { border-color: rgba(184,148,106,0.4); transform: translateY(-3px); }
+.related-card .rtag { font-size: 0.7rem; color: var(--gold); font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; }
+.related-card h4 { color: rgba(255,255,255,0.9); font-size: 0.88rem; line-height: 1.45; margin: 0; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="/" class="nav-logo">AutoDev AI</a>
+    <div class="nav-links">
+      <a href="/services.html">服務</a>
+      <a href="/blog/" class="active">部落格</a>
+      <a href="/pricing.html">方案</a>
+      <a href="/contact.html">聯絡</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<div class="article-container">
+
+  <div class="breadcrumb">
+    <a href="/">首頁</a> › <a href="/blog/">部落格</a> › Microsoft MarkItDown 繁中教學
+  </div>
+
+  <!-- Hero -->
+  <div class="article-hero">
+    <span class="badge-ms">🏢 Microsoft 官方開源 — 本週 GitHub 週榜 #2</span>
+    <h1>Microsoft MarkItDown 繁中完整教學 2026：146K Stars，PDF/Office/HTML 一鍵轉 Markdown，RAG 前處理神器</h1>
+    <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;max-width:620px;margin:0 auto;">一行 pip 安裝，20+ 格式統一轉 Markdown。讓你的 AI 應用能讀取任何企業文件——再也不用為格式轉換煩惱。</p>
+    <div class="stats-grid" style="max-width:560px;margin:1.5rem auto 0;">
+      <div class="stat-card"><span class="num">146K</span><div class="label">GitHub Stars</div></div>
+      <div class="stat-card"><span class="num">20+</span><div class="label">支援格式</div></div>
+      <div class="stat-card"><span class="num">#2</span><div class="label">本週週榜排名</div></div>
+      <div class="stat-card"><span class="num">MIT</span><div class="label">開源授權</div></div>
+    </div>
+  </div>
+
+  <div class="article-meta">
+    <span>📅 2026年6月7日</span>
+    <span>🏷️ Microsoft / RAG / Python / AI 工具</span>
+    <span>⏱️ 閱讀約 9 分鐘</span>
+    <span>✍️ AutoDev AI 編輯部</span>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h4>📋 本文目錄</h4>
+    <ol>
+      <li><a href="#what-is">MarkItDown 是什麼？為什麼 146K Stars 是實力認證</a></li>
+      <li><a href="#supported-formats">支援格式完整列表（20+）</a></li>
+      <li><a href="#install">安裝與快速上手（3分鐘）</a></li>
+      <li><a href="#python-api">Python API 完整使用指南</a></li>
+      <li><a href="#cli">命令行工具使用教學</a></li>
+      <li><a href="#rag-pipeline">RAG Pipeline 實戰整合</a></li>
+      <li><a href="#advanced">進階功能：OCR、音訊轉錄、批次處理</a></li>
+      <li><a href="#comparison">MarkItDown vs 同類工具比較</a></li>
+      <li><a href="#faq">FAQ：台灣工程師常見問題</a></li>
+    </ol>
+  </div>
+
+  <!-- Section 1 -->
+  <h2 class="section-title" id="what-is">MarkItDown 是什麼？為什麼 146K Stars 是實力認證</h2>
+
+  <p>MarkItDown 是 Microsoft 開源的多格式文件轉 Markdown 工具，由 Microsoft AutoGen 團隊開發維護，目前在 GitHub 累積 <strong>146,378 Stars</strong>，本週週榜穩居第二，已連續多週保持高熱度。</p>
+
+  <p>聽起來很簡單——把文件轉成 Markdown。但這件事在 AI 應用開發中非常關鍵：</p>
+
+  <div class="highlight-box">
+    <strong>核心問題：</strong>AI 模型讀不了 PDF。你的公司有大量 Word 文件、Excel 報表、PowerPoint 簡報，這些都是 LLM 無法直接理解的格式。MarkItDown 是橋樑：把這些格式轉換為 AI 友好的 Markdown，讓你的 RAG 系統能夠真正「讀懂」企業知識庫。
+  </div>
+
+  <h3>為什麼不直接用 pypdf 或 python-docx？</h3>
+  <ul>
+    <li><strong>統一介面：</strong>一套 API 處理所有格式，不需要對每種格式寫不同的解析邏輯</li>
+    <li><strong>結構保留：</strong>MarkItDown 保留文件的標題層級、表格、列表結構，而不是輸出混亂的原始文字</li>
+    <li><strong>AI 優化輸出：</strong>輸出的 Markdown 格式對 text chunking 和 embedding 更友好</li>
+    <li><strong>Microsoft 官方維護：</strong>企業環境的信任度和長期維護保障</li>
+    <li><strong>持續擴展：</strong>社群不斷新增格式支援，目前已超過 20 種</li>
+  </ul>
+
+  <!-- Section 2 -->
+  <h2 class="section-title" id="supported-formats">支援格式完整列表（20+）</h2>
+
+  <div class="format-grid">
+    <div class="format-card">
+      <div class="icon">📄</div>
+      <div class="info">
+        <div class="name">PDF 文件</div>
+        <div class="ext">.pdf — 支援文字提取，保留段落結構</div>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="icon">📝</div>
+      <div class="info">
+        <div class="name">Word 文件</div>
+        <div class="ext">.docx / .doc — 標題、列表、表格全保留</div>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="icon">📊</div>
+      <div class="info">
+        <div class="name">Excel 試算表</div>
+        <div class="ext">.xlsx / .xls / .csv — 轉為 Markdown 表格</div>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="icon">📋</div>
+      <div class="info">
+        <div class="name">PowerPoint</div>
+        <div class="ext">.pptx / .ppt — 每張投影片各自轉換</div>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="icon">🌐</div>
+      <div class="info">
+        <div class="name">HTML 網頁</div>
+        <div class="ext">.html / .htm — 清理廣告和導航，保留主內容</div>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="icon">🖼️</div>
+      <div class="info">
+        <div class="name">圖片（OCR）</div>
+        <div class="ext">.png / .jpg / .gif — 需搭配 GPT-4o 視覺</div>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="icon">🎵</div>
+      <div class="info">
+        <div class="name">音訊（轉錄）</div>
+        <div class="ext">.mp3 / .wav — 語音轉文字後轉 Markdown</div>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="icon">📦</div>
+      <div class="info">
+        <div class="name">ZIP 壓縮包</div>
+        <div class="ext">.zip — 批次轉換內部所有支援格式</div>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="icon">💻</div>
+      <div class="info">
+        <div class="name">程式碼檔案</div>
+        <div class="ext">多種語言 — 加入 syntax highlighting 標記</div>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="icon">📧</div>
+      <div class="info">
+        <div class="name">電子郵件</div>
+        <div class="ext">.msg / .eml — 包含標頭和附件</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Install -->
+  <h2 class="section-title" id="install">安裝與快速上手（3分鐘）</h2>
+
+  <h3>基礎安裝</h3>
+  <div class="code-block">
+<span class="comment"># 基礎安裝（最快）</span>
+pip install markitdown
+
+<span class="comment"># 完整安裝（含 OCR、音訊轉錄、所有功能）</span>
+pip install "markitdown[all]"
+
+<span class="comment"># 確認安裝版本</span>
+markitdown --version
+  </div>
+
+  <h3>30 秒快速體驗</h3>
+  <div class="code-block">
+<span class="keyword">from</span> markitdown <span class="keyword">import</span> MarkItDown
+
+md = MarkItDown()
+
+<span class="comment"># 轉換 PDF</span>
+result = md.convert(<span class="string">"company-report.pdf"</span>)
+<span class="keyword">print</span>(result.text_content)
+
+<span class="comment"># 轉換 Word 文件</span>
+result = md.convert(<span class="string">"meeting-notes.docx"</span>)
+<span class="keyword">print</span>(result.text_content)
+
+<span class="comment"># 輸出到檔案</span>
+<span class="keyword">with</span> open(<span class="string">"output.md"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:
+    f.write(result.text_content)
+  </div>
+
+  <!-- Section 4: Python API -->
+  <h2 class="section-title" id="python-api">Python API 完整使用指南</h2>
+
+  <h3>URL 直接轉換（爬取網頁）</h3>
+  <div class="code-block">
+<span class="keyword">from</span> markitdown <span class="keyword">import</span> MarkItDown
+
+md = MarkItDown()
+
+<span class="comment"># 直接轉換網頁 URL（自動爬取和清理）</span>
+result = md.convert(<span class="string">"https://autodev-ai.com/blog/"</span>)
+<span class="keyword">print</span>(result.text_content)
+
+<span class="comment"># 轉換 Wikipedia 頁面</span>
+result = md.convert(<span class="string">"https://zh.wikipedia.org/wiki/人工智慧"</span>)
+  </div>
+
+  <h3>批次轉換多個檔案</h3>
+  <div class="code-block">
+<span class="keyword">from</span> markitdown <span class="keyword">import</span> MarkItDown
+<span class="keyword">from</span> pathlib <span class="keyword">import</span> Path
+
+md = MarkItDown()
+input_dir = Path(<span class="string">"./documents/"</span>)
+output_dir = Path(<span class="string">"./markdown/"</span>)
+output_dir.mkdir(exist_ok=<span class="keyword">True</span>)
+
+<span class="comment"># 批次轉換目錄下所有支援格式</span>
+supported_extensions = [<span class="string">".pdf"</span>, <span class="string">".docx"</span>, <span class="string">".xlsx"</span>, <span class="string">".pptx"</span>, <span class="string">".html"</span>]
+
+<span class="keyword">for</span> file_path <span class="keyword">in</span> input_dir.rglob(<span class="string">"*"</span>):
+    <span class="keyword">if</span> file_path.suffix.lower() <span class="keyword">in</span> supported_extensions:
+        <span class="keyword">try</span>:
+            result = md.convert(str(file_path))
+            output_file = output_dir / (file_path.stem + <span class="string">".md"</span>)
+            output_file.write_text(result.text_content, encoding=<span class="string">"utf-8"</span>)
+            <span class="keyword">print</span>(f<span class="string">"✅ 轉換成功: {file_path.name}"</span>)
+        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:
+            <span class="keyword">print</span>(f<span class="string">"❌ 轉換失敗: {file_path.name} — {e}"</span>)
+  </div>
+
+  <h3>圖片 OCR（搭配 GPT-4o）</h3>
+  <div class="code-block">
+<span class="keyword">from</span> markitdown <span class="keyword">import</span> MarkItDown
+<span class="keyword">from</span> openai <span class="keyword">import</span> OpenAI
+
+client = OpenAI()
+
+<span class="comment"># 啟用圖片 OCR（使用 GPT-4o 視覺功能）</span>
+md = MarkItDown(
+    llm_client=client,
+    llm_model=<span class="string">"gpt-4o"</span>
+)
+
+<span class="comment"># 轉換圖片（自動 OCR 提取文字）</span>
+result = md.convert(<span class="string">"invoice-scan.png"</span>)
+<span class="keyword">print</span>(result.text_content)
+<span class="comment"># 輸出：「發票號碼：ABC123 日期：2026-06-07 金額：NT$5,000...」</span>
+  </div>
+
+  <!-- CTA 1: DataCamp -->
+  <div class="cta-block">
+    <h3>🎓 系統化學習 AI Engineering？</h3>
+    <p>MarkItDown 只是 RAG 系統的第一步。DataCamp 的 AI Engineering 課程教你從文件解析、向量化到 RAG 完整架構——台灣工程師升薪最快捷徑。</p>
+    <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-primary">📊 探索 DataCamp AI Engineering 課程</a>
+    <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-secondary">☁️ DigitalOcean $200 免費額度</a>
+  </div>
+
+  <!-- Section 5: CLI -->
+  <h2 class="section-title" id="cli">命令行工具使用教學</h2>
+
+  <div class="code-block">
+<span class="comment"># 基本轉換：輸出到標準輸出</span>
+markitdown report.pdf
+
+<span class="comment"># 輸出到檔案</span>
+markitdown report.pdf -o report.md
+
+<span class="comment"># 轉換 URL</span>
+markitdown https://github.com/microsoft/markitdown
+
+<span class="comment"># 批次轉換（使用 shell glob）</span>
+<span class="keyword">for</span> f <span class="keyword">in</span> *.pdf; <span class="keyword">do</span> markitdown <span class="string">"$f"</span> -o <span class="string">"${f%.pdf}.md"</span>; <span class="keyword">done</span>
+
+<span class="comment"># 轉換並直接傳給 LLM 分析</span>
+markitdown company-report.pdf | claude <span class="string">"幫我摘要這份報告的重點"</span>
+  </div>
+
+  <!-- Section 6: RAG Pipeline -->
+  <h2 class="section-title" id="rag-pipeline">RAG Pipeline 實戰整合</h2>
+
+  <p>這是 MarkItDown 最有商業價值的應用場景。以下是一個完整的企業文件 RAG 系統建置範例：</p>
+
+  <div class="workflow-step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h4>文件收集與轉換</h4>
+      <p>使用 MarkItDown 將企業知識庫（Word/PDF/Excel）轉換為統一的 Markdown 格式</p>
+    </div>
+  </div>
+  <div class="workflow-step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h4>文字切片（Chunking）</h4>
+      <p>按照 Markdown 標題結構切分，每個切片 512-1024 tokens，保留語義完整性</p>
+    </div>
+  </div>
+  <div class="workflow-step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h4>向量化（Embedding）</h4>
+      <p>使用 OpenAI text-embedding-3-small 或本地模型轉換為向量</p>
+    </div>
+  </div>
+  <div class="workflow-step">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <h4>向量資料庫存儲</h4>
+      <p>使用 Chroma、Qdrant 或 pgvector 存儲向量索引</p>
+    </div>
+  </div>
+  <div class="workflow-step">
+    <div class="step-num">5</div>
+    <div class="step-content">
+      <h4>RAG 查詢</h4>
+      <p>用戶問題向量化 → 語義搜尋 → 取出相關片段 → 注入 LLM context → 生成回答</p>
+    </div>
+  </div>
+
+  <h3>LlamaIndex 整合範例</h3>
+  <div class="code-block">
+<span class="keyword">from</span> markitdown <span class="keyword">import</span> MarkItDown
+<span class="keyword">from</span> llama_index.core <span class="keyword">import</span> VectorStoreIndex, Document
+<span class="keyword">from</span> pathlib <span class="keyword">import</span> Path
+<span class="keyword">import</span> os
+
+<span class="comment"># Step 1: 轉換所有文件</span>
+md = MarkItDown()
+documents = []
+
+<span class="keyword">for</span> file_path <span class="keyword">in</span> Path(<span class="string">"./knowledge-base/"</span>).rglob(<span class="string">"*"</span>):
+    <span class="keyword">if</span> file_path.is_file():
+        result = md.convert(str(file_path))
+        <span class="keyword">if</span> result.text_content.strip():
+            documents.append(
+                Document(
+                    text=result.text_content,
+                    metadata={
+                        <span class="string">"filename"</span>: file_path.name,
+                        <span class="string">"source"</span>: str(file_path)
+                    }
+                )
+            )
+
+<span class="comment"># Step 2: 建立向量索引</span>
+index = VectorStoreIndex.from_documents(documents)
+
+<span class="comment"># Step 3: 查詢</span>
+query_engine = index.as_query_engine()
+response = query_engine.query(<span class="string">"我們的退換貨政策是什麼？"</span>)
+<span class="keyword">print</span>(response)
+  </div>
+
+  <!-- Section 7: Advanced -->
+  <h2 class="section-title" id="advanced">進階功能：OCR、音訊轉錄、批次處理</h2>
+
+  <h3>ZIP 批次轉換</h3>
+  <div class="code-block">
+<span class="keyword">from</span> markitdown <span class="keyword">import</span> MarkItDown
+
+md = MarkItDown()
+
+<span class="comment"># 自動解壓並轉換 ZIP 內所有支援格式的文件</span>
+result = md.convert(<span class="string">"company-documents-2026.zip"</span>)
+<span class="keyword">print</span>(result.text_content)
+<span class="comment"># 輸出：所有文件的 Markdown 內容，以分隔符分開</span>
+  </div>
+
+  <h3>SharePoint 整合（Microsoft 365 環境）</h3>
+  <div class="code-block">
+<span class="keyword">from</span> markitdown <span class="keyword">import</span> MarkItDown
+<span class="keyword">from</span> markitdown.converters.sharepoint <span class="keyword">import</span> SharePointConverter
+
+<span class="comment"># 直接從 SharePoint 連結轉換文件</span>
+<span class="comment"># （需要 Azure AD 認證）</span>
+md = MarkItDown()
+result = md.convert(
+    <span class="string">"https://yourcompany.sharepoint.com/sites/docs/report.docx"</span>
+)
+  </div>
+
+  <h3>自訂 Converter 擴展</h3>
+  <div class="code-block">
+<span class="keyword">from</span> markitdown <span class="keyword">import</span> MarkItDown, DocumentConverter, DocumentConverterResult
+
+<span class="comment"># 為特殊格式自訂轉換邏輯</span>
+<span class="keyword">class</span> MyCustomConverter(DocumentConverter):
+    <span class="keyword">def</span> convert(self, local_path, **kwargs) -> DocumentConverterResult:
+        <span class="comment"># 自訂解析邏輯</span>
+        <span class="keyword">with</span> open(local_path, <span class="string">"r"</span>) <span class="keyword">as</span> f:
+            content = f.read()
+        <span class="keyword">return</span> DocumentConverterResult(
+            title=<span class="string">"Custom File"</span>,
+            text_content=f<span class="string">"# Custom Format\n\n{content}"</span>
+        )
+
+<span class="comment"># 註冊自訂 Converter</span>
+md = MarkItDown()
+md.register_converter(MyCustomConverter(), priority=0)
+  </div>
+
+  <!-- CTA 2: DigitalOcean + Gumroad -->
+  <div class="cta-block">
+    <h3>🚀 在 VPS 上部署你的 RAG 文件系統</h3>
+    <p>MarkItDown + LlamaIndex + 向量資料庫，部署在 DigitalOcean 上，$6/月起即可運行完整的企業知識庫 AI 系統。$200 免費額度讓你充分測試再決定。</p>
+    <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-primary">🎁 領取 $200 DigitalOcean 免費額度</a>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-secondary">⚡ Claude Code 省費工具包</a>
+  </div>
+
+  <!-- Section 8: Comparison -->
+  <h2 class="section-title" id="comparison">MarkItDown vs 同類工具比較</h2>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>工具</th>
+        <th>格式支援</th>
+        <th>輸出格式</th>
+        <th>AI 優化</th>
+        <th>維護者</th>
+        <th>最適場景</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>MarkItDown</strong> ⭐</td>
+        <td>20+ 種</td>
+        <td>Markdown</td>
+        <td>✅ 原生優化</td>
+        <td>Microsoft 官方</td>
+        <td>RAG 前處理、統一文件轉換</td>
+      </tr>
+      <tr>
+        <td>pypdf</td>
+        <td>PDF only</td>
+        <td>純文字</td>
+        <td>❌</td>
+        <td>社群</td>
+        <td>只需要處理 PDF</td>
+      </tr>
+      <tr>
+        <td>python-docx</td>
+        <td>DOCX only</td>
+        <td>Python 物件</td>
+        <td>❌</td>
+        <td>社群</td>
+        <td>需要操作 Word 文件內容</td>
+      </tr>
+      <tr>
+        <td>Unstructured</td>
+        <td>多種</td>
+        <td>多種</td>
+        <td>⚠️ 部分</td>
+        <td>Unstructured.io</td>
+        <td>需要更精細的文件元素提取</td>
+      </tr>
+      <tr>
+        <td>Pandoc</td>
+        <td>40+ 種</td>
+        <td>多種</td>
+        <td>❌</td>
+        <td>學術社群</td>
+        <td>文件格式互轉（非 AI 專用）</td>
+      </tr>
+      <tr>
+        <td>liteparse</td>
+        <td>PDF 優先</td>
+        <td>Markdown</td>
+        <td>✅</td>
+        <td>LlamaIndex 官方</td>
+        <td>高效能 PDF 解析（Rust）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <strong>建議搭配：</strong>對於大量 PDF 的場景，<strong>MarkItDown + liteparse</strong> 是最強組合——MarkItDown 處理 Word/Excel/PPT/HTML 等多格式，liteparse（LlamaIndex 官方 Rust 解析器）負責高速 PDF 處理，兩個工具互補，覆蓋所有企業文件格式。
+  </div>
+
+  <!-- Section 9: FAQ -->
+  <h2 class="section-title" id="faq">FAQ：台灣工程師常見問題</h2>
+
+  <h3>Q1: MarkItDown 轉換繁中 PDF 的效果如何？</h3>
+  <p>表現良好。MarkItDown 使用 pdfminer.six 作為 PDF 後端，對繁中（正體中文）的支援度與英文相近。但需注意：掃描版 PDF（非文字 PDF）需要啟用 OCR 功能（需要 GPT-4o 視覺）。內嵌字型的 PDF 可能在極少數情況下出現亂碼，此時建議改用 liteparse。</p>
+
+  <h3>Q2: MarkItDown 轉換 Excel 表格的格式是什麼？</h3>
+  <p>MarkItDown 會將 Excel 的每個工作表（Sheet）轉換為 Markdown 表格格式（使用 <code>|</code> 分隔符）。大型表格（超過 100 行）建議先用 pandas 預先篩選資料再轉換，避免 context 過長。</p>
+
+  <h3>Q3: 轉換後的 Markdown 可以直接給 Claude 或 GPT 用嗎？</h3>
+  <p>可以。MarkItDown 輸出的 Markdown 格式對 LLM 非常友好，標題層級、表格結構都有正確的 Markdown 語法標記。實際使用時，建議搭配 chunking 工具（如 LlamaIndex 的 SentenceSplitter）按 1024 tokens 切片，避免一次塞入過長的文件。</p>
+
+  <h3>Q4: MarkItDown 支援 Google Docs / Google Sheets 嗎？</h3>
+  <p>目前 MarkItDown 不直接支援 Google Workspace 格式。但有兩種解決方案：1. 從 Google Drive 下載為 .docx / .xlsx 後再轉換。2. 使用 Google Drive API 配合 MarkItDown，自動化下載和轉換流程。</p>
+
+  <h3>Q5: MarkItDown 和 Claude Code 怎麼搭配？</h3>
+  <p>最佳搭配方式：在 Claude Code 的工作區中安裝 MarkItDown，當你需要分析 PDF 文件或讀取 Excel 數據時，先用 MarkItDown 轉換，再把 Markdown 結果注入 Claude Code 的 context。這樣不需要 Claude Code 直接讀取二進位格式，效率更高且 token 使用更可預測。</p>
+
+  <!-- Related Articles -->
+  <div class="related-articles">
+    <h3>延伸閱讀：AI 工程師工具系列</h3>
+    <div class="related-grid">
+      <a href="/blog/everything-claude-code-ecc-tutorial-2026.html" class="related-card">
+        <div class="rtag">Claude Code</div>
+        <h4>ECC 繁中教學：209K Stars，38個Agent + 156個Skills 完整指南</h4>
+      </a>
+      <a href="/blog/headroom-llm-token-compression-2026.html" class="related-card">
+        <div class="rtag">省費工具</div>
+        <h4>headroom 教學：Claude Code 省 91% Token，60-95% 壓縮實測</h4>
+      </a>
+      <a href="/blog/opencode-vs-cursor-vs-claude-code-2026.html" class="related-card">
+        <div class="rtag">比較文</div>
+        <h4>OpenCode vs Cursor vs Claude Code：2026 終極比較</h4>
+      </a>
+      <a href="/blog/n8n-automation-tutorial-2026.html" class="related-card">
+        <div class="rtag">自動化</div>
+        <h4>n8n 自動化教學 2026：繁中完整入門指南</h4>
+      </a>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 AutoDev AI. 台灣 AI 自動化解決方案.</p>
+    <nav class="footer-nav">
+      <a href="/blog/">部落格</a>
+      <a href="/services.html">服務</a>
+      <a href="/contact.html">聯絡我們</a>
+      <a href="/privacy.html">隱私政策</a>
+    </nav>
+    <p style="font-size:0.75rem;color:var(--gray);margin-top:1rem;">本文包含聯盟行銷連結。透過連結購買，我們可能獲得佣金，不影響您的費用。</p>
+  </div>
+</footer>
+
+</body>
+</html>
