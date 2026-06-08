@@ -6620,12 +6620,18 @@
           "task": "daily site health check",
           "result": "Pulled latest main, reviewed latest directives and recent agentLog, curl-checked 15 deduped tracked URLs from site records; all returned HTTP 200. No site repairs or cross-agent directives were needed. Updated tracked site lastChecked fields and recorded daily health result.",
           "status": "done"
+        },
+        {
+          "date": "2026-06-08",
+          "task": "daily site health check",
+          "result": "Pulled latest main, reviewed latest directives and recent agentLog, curl-checked 15 deduped tracked URLs from site records; all returned HTTP 200. No site repairs or cross-agent directives were needed. Updated tracked site lastChecked fields and recorded daily health result.",
+          "status": "done"
         }
       ],
-      "lastRun": "2026-06-06"
+      "lastRun": "2026-06-08"
     }
   },
-  "lastChecked": "2026-06-06",
+  "lastChecked": "2026-06-08",
   "dailyLog": [
     {
       "timestamp": "2026-05-31T00:00:00Z",
@@ -6776,6 +6782,27 @@
         "Confirmed all 15 checked URLs returned HTTP 200 from cron host",
         "No site issues required repair and no new cross-agent directives were needed",
         "Updated lastChecked to 2026-06-06 for tracked site records and recorded daily health result"
+      ],
+      "results": {
+        "checkedUrls": 15,
+        "http200": 15,
+        "failures": 0,
+        "fixes": 0,
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
+      }
+    },
+    {
+      "timestamp": "2026-06-08T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json, reviewed latest directives, and checked recent agentLog before running health checks",
+        "Reviewed latest directives including strategist-weekly-2026-06-01.md and researcher-to-strategist-2026-06-07-round79.md; no direct site-health repair task was required for this run",
+        "Curl checked 15 deduped tracked URLs from site records: 4 site roots/page groups plus 11 tracked pages across autodev-ai and ai-tools-tw",
+        "Confirmed all 15 checked URLs returned HTTP 200 from cron host",
+        "No site issues required repair and no new cross-agent directives were needed",
+        "Updated lastChecked to 2026-06-08 for tracked site records and recorded daily health result"
       ],
       "results": {
         "checkedUrls": 15,
