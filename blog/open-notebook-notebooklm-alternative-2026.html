@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>open-notebook 繁中完整教學 2026：自架 NotebookLM 替代品，隱私優先 AI 筆記系統 | AutoDev AI</title>
+<meta name="description" content="厭倦 NotebookLM 把你的資料傳給 Google？open-notebook 開源自架方案完整繁中教學：Docker 一鍵部署、18+ AI providers、AI Podcast 生成，完全掌控你的資料。">
+<link rel="canonical" href="https://autodev-ai.com/blog/open-notebook-notebooklm-alternative-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/open-notebook-notebooklm-alternative-2026.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/open-notebook-notebooklm-alternative-2026.html">
+<meta property="og:title" content="open-notebook 繁中完整教學 2026：自架 NotebookLM 替代品，隱私優先 AI 筆記系統">
+<meta property="og:description" content="厭倦 NotebookLM 把你的資料傳給 Google？open-notebook 開源自架方案：Docker 一鍵部署、18+ AI providers、完全掌控資料。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/open-notebook-notebooklm-alternative-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta property="article:published_time" content="2026-06-08T03:00:00Z">
+<meta property="article:modified_time" content="2026-06-08T03:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="open-notebook 繁中完整教學 2026：自架 NotebookLM 替代品">
+<meta name="twitter:description" content="厭倦 NotebookLM 把你的資料傳給 Google？開源自架完整教學，隱私優先 AI 筆記系統。">
+<meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="author" content="AutoDev AI">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "open-notebook 繁中完整教學 2026：自架 NotebookLM 替代品，隱私優先 AI 筆記系統",
+  "description": "厭倦 NotebookLM 把你的資料傳給 Google？open-notebook 開源自架方案完整繁中教學：Docker 一鍵部署、18+ AI providers、AI Podcast 生成，完全掌控你的資料。",
+  "author": {"@type": "Organization", "name": "AutoDev AI"},
+  "publisher": {"@type": "Organization", "name": "AutoDev AI", "logo": {"@type": "ImageObject", "url": "https://autodev-ai.com/autodev-logo2.png"}},
+  "datePublished": "2026-06-08T03:00:00Z",
+  "dateModified": "2026-06-08T03:00:00Z",
+  "url": "https://autodev-ai.com/blog/open-notebook-notebooklm-alternative-2026.html",
+  "image": "https://autodev-ai.com/autodev-logo2.png",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/open-notebook-notebooklm-alternative-2026.html"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "open-notebook 和 NotebookLM 有什麼不同？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最大差異是資料主權：NotebookLM 由 Google 託管，上傳的文件會存在 Google 的伺服器。open-notebook 完全自架，資料留在你自己的機器或 VPS 上，不傳給任何第三方。功能上，open-notebook 支援 18+ AI providers（OpenAI、Claude、Gemini、Ollama 本地模型），而 NotebookLM 只能用 Google 的模型。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "open-notebook 需要什麼硬體才能跑？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "本地部署建議至少 8GB RAM，Docker Desktop 環境。若搭配 Ollama 跑本地模型，16GB RAM 以上更順。如果不想設定本地環境，用 DigitalOcean $6/月的 Droplet 就能跑 open-notebook + 雲端 API（OpenAI/Claude），不需要高規格機器。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "open-notebook 支援哪些文件格式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "open-notebook 支援 PDF、網頁 URL、純文字、Markdown、YouTube 影片（字幕解析）、音訊檔案等格式。上傳後可以對文件提問、摘要、比較多份文件，或生成 AI Podcast 對話。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AI Podcast 生成功能是什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "open-notebook 可以把你上傳的文件轉成兩個 AI 聲音的對話式 Podcast，類似 NotebookLM 最受歡迎的功能。支援自訂語言（包含繁中），搭配 ElevenLabs 或 OpenAI TTS 可以生成高品質中文音訊。適合做研讀摘要、把論文或報告變成可以邊走邊聽的內容。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "open-notebook 是免費的嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "open-notebook 軟體本身完全免費開源（MIT 授權）。你只需要負擔：(1) 伺服器費用（本地部署=0元；DigitalOcean Droplet ~$6/月）和 (2) AI API 費用（使用 Ollama 本地模型=0元；OpenAI/Claude API 按量計費）。整體來說比 NotebookLM Plus $19.99/月便宜很多，且資料完全掌控。"
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+.article-hero {
+  background: linear-gradient(135deg, rgba(30,30,40,0.98) 0%, rgba(20,20,30,0.98) 100%);
+  border-bottom: 1px solid rgba(184,148,106,0.2);
+  padding: 3rem 2rem 2.5rem;
+  text-align: center;
+}
+.article-hero .badge {
+  display: inline-block;
+  background: rgba(184,148,106,0.15);
+  border: 1px solid rgba(184,148,106,0.4);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.article-hero h1 {
+  font-family: 'DM Serif Display', 'Noto Serif TC', serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: var(--text);
+  max-width: 820px;
+  margin: 0 auto 1rem;
+  line-height: 1.3;
+}
+.article-hero .meta {
+  color: var(--gray);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.article-body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+  color: var(--text);
+  line-height: 1.85;
+}
+.article-body h2 {
+  font-family: 'DM Serif Display', 'Noto Serif TC', serif;
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(184,148,106,0.2);
+}
+.article-body h3 {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin: 1.8rem 0 0.7rem;
+  font-weight: 700;
+}
+.article-body p { margin-bottom: 1.2rem; }
+.article-body ul, .article-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+.article-body li { margin-bottom: 0.5rem; }
+.article-body code {
+  background: rgba(184,148,106,0.12);
+  color: var(--primary);
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.88em;
+}
+.article-body pre {
+  background: rgba(10,10,15,0.95);
+  border: 1px solid rgba(184,148,106,0.2);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+  overflow-x: auto;
+  margin: 1.2rem 0 1.5rem;
+}
+.article-body pre code {
+  background: none;
+  color: #e8d5b0;
+  padding: 0;
+  font-size: 0.87em;
+  line-height: 1.6;
+}
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+.comparison-table th {
+  background: rgba(184,148,106,0.15);
+  color: var(--primary);
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border: 1px solid rgba(184,148,106,0.2);
+  font-weight: 700;
+}
+.comparison-table td {
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(184,148,106,0.12);
+  color: var(--text);
+  vertical-align: top;
+}
+.comparison-table tr:nth-child(even) td { background: rgba(184,148,106,0.04); }
+.comparison-table .win { color: #7ec87e; font-weight: 600; }
+.comparison-table .neutral { color: var(--gray); }
+.cta-box {
+  background: linear-gradient(135deg, rgba(30,20,10,0.95), rgba(20,15,5,0.95));
+  border: 1px solid rgba(184,148,106,0.4);
+  border-radius: 8px;
+  padding: 1.8rem 2rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.cta-box .cta-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  margin-bottom: 0.6rem;
+}
+.cta-box h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+.cta-box p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin: 0 0 1.2rem;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  border-radius: 4px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s;
+  margin: 0.3rem;
+}
+.cta-btn-primary {
+  background: linear-gradient(135deg, #b8946a 0%, #d4a96a 100%);
+  color: #111;
+}
+.cta-btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+.cta-btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(184,148,106,0.5);
+  color: var(--primary);
+}
+.cta-btn-secondary:hover { background: rgba(184,148,106,0.1); }
+.step-block {
+  background: rgba(184,148,106,0.06);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+}
+.step-block .step-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+.highlight-box {
+  background: rgba(126,200,126,0.08);
+  border: 1px solid rgba(126,200,126,0.25);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  font-size: 0.93rem;
+}
+.warning-box {
+  background: rgba(200,160,80,0.08);
+  border: 1px solid rgba(200,160,80,0.3);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  font-size: 0.93rem;
+}
+.toc {
+  background: rgba(184,148,106,0.06);
+  border: 1px solid rgba(184,148,106,0.2);
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+  margin: 0 0 2rem;
+  font-size: 0.9rem;
+}
+.toc-title {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.7rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.toc ol { padding-left: 1.3rem; margin: 0; }
+.toc li { margin-bottom: 0.35rem; }
+.toc a { color: var(--gray); text-decoration: none; }
+.toc a:hover { color: var(--primary); }
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+.tag {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  background: rgba(184,148,106,0.1);
+  color: var(--primary);
+  border: 1px solid rgba(184,148,106,0.2);
+}
+.related-links {
+  border-top: 1px solid rgba(184,148,106,0.15);
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+}
+.related-links h3 {
+  color: var(--gray);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+.related-links ul { padding-left: 0; list-style: none; }
+.related-links li { margin-bottom: 0.6rem; }
+.related-links a { color: var(--text); text-decoration: none; font-size: 0.92rem; }
+.related-links a:hover { color: var(--primary); }
+.providers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+.provider-chip {
+  background: rgba(184,148,106,0.08);
+  border: 1px solid rgba(184,148,106,0.2);
+  border-radius: 4px;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.8rem;
+  color: var(--text);
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="主選單">
+  <div class="nav-container">
+    <a href="/" class="nav-logo" aria-label="AutoDev AI 首頁">
+      <img src="/autodev-logo2.png" alt="AutoDev AI" width="110" height="36" loading="eager">
+    </a>
+    <div class="nav-links">
+      <a href="/">首頁</a>
+      <a href="/pricing.html">方案</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="/contact.html">聯絡</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="badge">🔒 隱私優先・開源自架</div>
+  <h1>open-notebook 繁中完整教學 2026：自架 NotebookLM 替代品，隱私優先 AI 筆記系統</h1>
+  <div class="meta">
+    <span>📅 2026年6月8日</span>
+    <span>⏱ 閱讀約 11 分鐘</span>
+    <span>✍️ AutoDev AI</span>
+    <span>🔄 v1.9.0 最新版</span>
+  </div>
+</header>
+
+<main class="article-body">
+
+  <div class="tag-list">
+    <span class="tag">open-notebook</span>
+    <span class="tag">NotebookLM 替代</span>
+    <span class="tag">開源自架</span>
+    <span class="tag">隱私優先</span>
+    <span class="tag">Docker 部署</span>
+    <span class="tag">AI 筆記</span>
+    <span class="tag">繁中教學</span>
+  </div>
+
+  <div class="warning-box">
+    ⚠️ <strong>你知道嗎？</strong> 使用 Google NotebookLM 時，你上傳的 PDF、論文、筆記會儲存在 Google 的伺服器，並可能用於模型訓練（視隱私設定而定）。如果你處理的是客戶資料、未發表研究、或商業機密，<strong>open-notebook 是更安全的選擇</strong>。
+  </div>
+
+  <div class="toc" aria-label="文章目錄">
+    <div class="toc-title">📋 文章目錄</div>
+    <ol>
+      <li><a href="#what-is">open-notebook 是什麼？</a></li>
+      <li><a href="#comparison">vs NotebookLM 完整比較表</a></li>
+      <li><a href="#install-docker">Docker 一鍵部署教學（本地）</a></li>
+      <li><a href="#install-vps">VPS 雲端部署（DigitalOcean $6/月）</a></li>
+      <li><a href="#ai-providers">18+ AI Providers 設定指南</a></li>
+      <li><a href="#podcast">AI Podcast 生成功能</a></li>
+      <li><a href="#use-cases">誰適合用？五種使用情境</a></li>
+      <li><a href="#faq">常見問題 FAQ</a></li>
+      <li><a href="#conclusion">結論與推薦</a></li>
+    </ol>
+  </div>
+
+  <h2 id="what-is">open-notebook 是什麼？</h2>
+
+  <p>
+    <strong>open-notebook</strong> 是一個完全開源的 AI 研究筆記系統，功能對標 Google NotebookLM，但有一個根本性的差異：<strong>你的資料留在你自己手中</strong>。
+  </p>
+  <p>
+    它由獨立開發者維護，目前在 GitHub 有超過 25,000 stars，持續保持活躍更新（2026年6月最新版 v1.9.0）。核心功能包括：
+  </p>
+  <ul>
+    <li>📄 上傳 PDF、網頁、YouTube 影片、音訊，對內容提問</li>
+    <li>🎙️ 把文件轉成 AI 對話式 Podcast（兩個聲音的討論）</li>
+    <li>🤖 支援 18+ AI providers，包含 Ollama 本地模型</li>
+    <li>🔒 完全自架，資料不離開你的伺服器</li>
+    <li>🌐 支援多語言，包含繁體中文介面</li>
+    <li>🔗 筆記間可以建立關聯，做知識圖譜</li>
+  </ul>
+
+  <p>簡單說：open-notebook 就是「你自己掌控的 NotebookLM」，功能不遜色，但資料主權回到你手上。</p>
+
+  <h2 id="comparison">vs NotebookLM 完整比較表</h2>
+
+  <p>先看最重要的差異對比，幫你快速判斷是否值得換：</p>
+
+  <table class="comparison-table" role="table" aria-label="open-notebook vs NotebookLM 比較">
+    <thead>
+      <tr>
+        <th>項目</th>
+        <th>open-notebook（自架）</th>
+        <th>Google NotebookLM</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>資料主權</strong></td>
+        <td class="win">✅ 完全掌控，不傳第三方</td>
+        <td>❌ 儲存在 Google 伺服器</td>
+      </tr>
+      <tr>
+        <td><strong>費用</strong></td>
+        <td class="win">✅ 軟體免費，自付伺服器/API</td>
+        <td>免費版 / Plus $19.99/月</td>
+      </tr>
+      <tr>
+        <td><strong>AI 模型選擇</strong></td>
+        <td class="win">✅ 18+ providers，含本地 Ollama</td>
+        <td>❌ 僅 Google Gemini</td>
+      </tr>
+      <tr>
+        <td><strong>AI Podcast 生成</strong></td>
+        <td class="win">✅ 支援，可自訂語言</td>
+        <td>✅ 支援（英文為主）</td>
+      </tr>
+      <tr>
+        <td><strong>繁中介面</strong></td>
+        <td class="win">✅ 支援</td>
+        <td class="neutral">部分支援</td>
+      </tr>
+      <tr>
+        <td><strong>支援格式</strong></td>
+        <td>PDF、URL、TXT、MD、YouTube、音訊</td>
+        <td>PDF、Google Docs、URL、YouTube</td>
+      </tr>
+      <tr>
+        <td><strong>API 費用風險</strong></td>
+        <td class="neutral">依你的 provider 而定（Ollama=免費）</td>
+        <td class="win">免費版無 API 費用</td>
+      </tr>
+      <tr>
+        <td><strong>部署難度</strong></td>
+        <td class="neutral">需要 Docker 基礎（30分鐘上手）</td>
+        <td class="win">零設定，開瀏覽器就用</td>
+      </tr>
+      <tr>
+        <td><strong>離線使用</strong></td>
+        <td class="win">✅ 搭配 Ollama 可完全離線</td>
+        <td>❌ 需要網路連線</td>
+      </tr>
+      <tr>
+        <td><strong>資料訓練風險</strong></td>
+        <td class="win">✅ 無，資料不離開自己伺服器</td>
+        <td>⚠️ 視隱私設定，可能用於訓練</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    💡 <strong>結論：</strong> 如果你處理的是個人筆記、公開資訊，NotebookLM 更方便。如果是客戶資料、未發表論文、商業資訊，或你就是不想把資料交給 Google，open-notebook 是更好的選擇。
+  </div>
+
+  <h2 id="install-docker">Docker 一鍵部署教學（本地）</h2>
+
+  <p>open-notebook 官方推薦用 Docker Compose 部署，是最快速的方式。以下步驟在 macOS、Linux、Windows (WSL2) 都適用。</p>
+
+  <h3>前置需求</h3>
+  <ul>
+    <li><strong>Docker Desktop</strong>（<a href="https://www.docker.com/products/docker-desktop/" rel="nofollow noopener" target="_blank">docker.com</a> 免費下載）</li>
+    <li>至少 8GB RAM（搭配雲端 API 使用）</li>
+    <li>一組 AI API Key（OpenAI 或 Anthropic，或用 Ollama 本地模型）</li>
+  </ul>
+
+  <div class="step-block">
+    <div class="step-num">第 1 步 ─ Clone 專案</div>
+    <pre><code>git clone https://github.com/lfnovo/open-notebook.git
+cd open-notebook</code></pre>
+  </div>
+
+  <div class="step-block">
+    <div class="step-num">第 2 步 ─ 複製設定檔</div>
+    <pre><code>cp .env.example .env</code></pre>
+  </div>
+
+  <div class="step-block">
+    <div class="step-num">第 3 步 ─ 設定 API Key（編輯 .env）</div>
+    <pre><code># 開啟 .env 並填入你的 API Key
+# 至少填一個，其他可留空
+
+OPENAI_API_KEY=sk-proj-xxxxxxxxxxxxxxxx
+ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxx
+
+# 若用 Ollama（本地模型），填入：
+OLLAMA_BASE_URL=http://localhost:11434</code></pre>
+  </div>
+
+  <div class="step-block">
+    <div class="step-num">第 4 步 ─ 啟動服務</div>
+    <pre><code>docker compose up -d</code></pre>
+    <p style="margin:0.5rem 0 0; font-size:0.87rem; color:var(--gray);">第一次啟動需要下載映像檔，約 3-5 分鐘。之後重啟只需幾秒。</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-num">第 5 步 ─ 開啟瀏覽器</div>
+    <pre><code>http://localhost:8080</code></pre>
+    <p style="margin:0.5rem 0 0; font-size:0.87rem; color:var(--gray);">看到 open-notebook 介面就成功了 🎉</p>
+  </div>
+
+  <div class="highlight-box">
+    ✅ <strong>快速測試：</strong> 進入介面後，建立一個 Notebook，貼上任何網頁 URL 或上傳 PDF，然後在聊天框問問題。如果能得到回答，恭喜你設定成功！
+  </div>
+
+  <h2 id="install-vps">VPS 雲端部署（DigitalOcean $6/月）</h2>
+
+  <p>如果你不想在本地跑伺服器，或需要讓團隊成員都能存取，把 open-notebook 部署到 VPS 是最佳方案。每月 <strong>$6 USD</strong> 的 Droplet 就夠用了。</p>
+
+  <div class="cta-box">
+    <div class="cta-label">💰 限時優惠</div>
+    <h3>DigitalOcean 新帳號送 $200 免費額度</h3>
+    <p>透過以下連結註冊，前 60 天享有 $200 美元免費額度。部署 open-notebook + 跑 API 完全夠用，幾乎不用自己花錢。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn cta-btn-primary" rel="nofollow noopener" target="_blank">🚀 領取 $200 免費額度</a>
+    <a href="#install-vps" class="cta-btn cta-btn-secondary">繼續閱讀部署步驟 ↓</a>
+  </div>
+
+  <h3>在 DigitalOcean 部署 open-notebook 的步驟</h3>
+
+  <div class="step-block">
+    <div class="step-num">第 1 步 ─ 建立 Droplet</div>
+    <p>登入 DigitalOcean → Create → Droplet</p>
+    <ul>
+      <li>系統：<strong>Ubuntu 22.04 LTS</strong></li>
+      <li>方案：<strong>Basic / Regular / $6/月</strong>（1GB RAM，1 vCPU，25GB SSD）</li>
+      <li>地區：選 Singapore（距台灣最近，延遲低）</li>
+    </ul>
+  </div>
+
+  <div class="step-block">
+    <div class="step-num">第 2 步 ─ 安裝 Docker</div>
+    <pre><code>ssh root@你的伺服器IP
+
+# 一鍵安裝 Docker
+curl -fsSL https://get.docker.com | sh
+
+# 確認安裝成功
+docker --version</code></pre>
+  </div>
+
+  <div class="step-block">
+    <div class="step-num">第 3 步 ─ 部署 open-notebook</div>
+    <pre><code>git clone https://github.com/lfnovo/open-notebook.git
+cd open-notebook
+cp .env.example .env
+
+# 用 nano 或 vim 填入 API Key
+nano .env
+
+# 啟動
+docker compose up -d</code></pre>
+  </div>
+
+  <div class="step-block">
+    <div class="step-num">第 4 步 ─ 設定防火牆（開放 8080 port）</div>
+    <pre><code># DigitalOcean 控制台 → Networking → Firewall
+# 或用 ufw：
+ufw allow 8080
+ufw enable</code></pre>
+  </div>
+
+  <p>完成後，輸入 <code>http://你的IP:8080</code> 就能從任何裝置存取 open-notebook。建議搭配 Nginx + Let's Encrypt 加上 HTTPS，保護傳輸安全。</p>
+
+  <h2 id="ai-providers">18+ AI Providers 設定指南</h2>
+
+  <p>open-notebook 最強的地方之一是支援超過 18 個 AI providers，讓你可以根據需求和預算自由選擇：</p>
+
+  <div class="providers-grid" role="list" aria-label="支援的 AI Providers">
+    <div class="provider-chip">☁️ OpenAI GPT-5</div>
+    <div class="provider-chip">🤖 Anthropic Claude</div>
+    <div class="provider-chip">🌟 Google Gemini</div>
+    <div class="provider-chip">🦙 Ollama（本地）</div>
+    <div class="provider-chip">🔀 OpenRouter</div>
+    <div class="provider-chip">🌐 Azure OpenAI</div>
+    <div class="provider-chip">⚡ Groq</div>
+    <div class="provider-chip">🦊 Mistral AI</div>
+    <div class="provider-chip">🔷 Cohere</div>
+    <div class="provider-chip">🌊 Deepseek</div>
+    <div class="provider-chip">🔒 Together AI</div>
+    <div class="provider-chip">💫 Perplexity</div>
+  </div>
+
+  <h3>推薦組合（依需求）</h3>
+
+  <table class="comparison-table">
+    <thead>
+      <tr><th>使用情境</th><th>推薦 Provider</th><th>估算費用</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>一般筆記問答</td>
+        <td>Ollama + Llama 3.2（本地）</td>
+        <td class="win">完全免費</td>
+      </tr>
+      <tr>
+        <td>高品質摘要</td>
+        <td>Claude Haiku / GPT-4o mini</td>
+        <td>~$0.5-2/月</td>
+      </tr>
+      <tr>
+        <td>AI Podcast 生成</td>
+        <td>OpenAI TTS + GPT-4o</td>
+        <td>~$3-8/月</td>
+      </tr>
+      <tr>
+        <td>企業敏感資料</td>
+        <td>本地 Ollama（零外傳）</td>
+        <td class="win">完全免費</td>
+      </tr>
+      <tr>
+        <td>繁中理解最佳</td>
+        <td>Claude 4 Sonnet</td>
+        <td>~$2-5/月</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>在 .env 切換 provider</h3>
+
+  <pre><code># 使用 Claude（最佳繁中理解）
+ANTHROPIC_API_KEY=sk-ant-xxxxxxx
+DEFAULT_LLM_PROVIDER=anthropic
+DEFAULT_LLM_MODEL=claude-sonnet-4-5
+
+# 使用 Ollama 本地模型（完全免費）
+OLLAMA_BASE_URL=http://localhost:11434
+DEFAULT_LLM_PROVIDER=ollama
+DEFAULT_LLM_MODEL=llama3.2:3b</code></pre>
+
+  <h2 id="podcast">AI Podcast 生成功能</h2>
+
+  <p>這是 open-notebook 最受歡迎的功能，也是很多人從 NotebookLM 遷移過來的主要原因。</p>
+
+  <p><strong>怎麼用？</strong></p>
+  <ol>
+    <li>上傳你的文件（PDF 論文、長篇文章、會議記錄）</li>
+    <li>點選「Generate Podcast」</li>
+    <li>選擇語言（繁中、英文、日文等）</li>
+    <li>選擇音訊 provider（OpenAI TTS / ElevenLabs）</li>
+    <li>等待 2-5 分鐘，下載 MP3 🎙️</li>
+  </ol>
+
+  <p><strong>生成的 Podcast 是什麼格式？</strong> 兩個 AI 聲音（一男一女）進行自然對話，解析你文件的核心內容，加入具體例子和問答互動。對於台灣的研究生、上班族、知識工作者來說，這是把「要讀但沒時間讀」的長篇內容快速消化的最佳工具。</p>
+
+  <div class="highlight-box">
+    🎧 <strong>實際用例：</strong> 把一份 40 頁的英文技術報告上傳，生成繁中 Podcast，邊通勤邊聽，完全不用坐下來讀。15分鐘的音訊相當於精讀 3 小時的效果。
+  </div>
+
+  <h2 id="use-cases">誰適合用？五種使用情境</h2>
+
+  <h3>1. 學術研究者 / 研究生</h3>
+  <p>每週要讀幾十篇 Paper？上傳到 open-notebook，對每篇 Paper 提問、比較，生成 Podcast 用來通勤複習。最重要的是：<strong>你的研究草稿和未發表成果不會上傳到 Google</strong>。</p>
+
+  <h3>2. 法律 / 醫療 / 財務專業人士</h3>
+  <p>客戶合約、病歷摘要、財務報告——這些資料不能上傳到任何第三方。open-notebook 完全自架，資料絕不外傳，符合台灣個人資料保護法和業界規範。</p>
+
+  <h3>3. 企業知識管理</h3>
+  <p>把公司的 SOP、會議記錄、產品文件上傳，讓員工用自然語言查詢。比 Confluence 搜尋更直觀，比 ChatGPT 更安全（因為資料不到 OpenAI 的伺服器）。</p>
+
+  <h3>4. 記者 / 內容創作者</h3>
+  <p>採訪逐字稿、新聞稿、背景資料全部匯入，快速找出關聯和切入點。AI Podcast 功能可以把長篇採訪記錄轉成精華摘要。</p>
+
+  <h3>5. 個人知識管理（PKM）愛好者</h3>
+  <p>跟 Obsidian 或 Logseq 互補使用：Obsidian 管理日常筆記，open-notebook 處理大型文件的 AI 問答和 Podcast。兩套工具各司其職，完整覆蓋知識管理需求。</p>
+
+  <!-- CTA Block 2: DataCamp -->
+  <div class="cta-box">
+    <div class="cta-label">📚 延伸學習</div>
+    <h3>學會自架 open-notebook 之後，下一步？</h3>
+    <p>DataCamp 提供完整的 AI Engineering 課程路徑，包含 RAG 系統設計、向量資料庫、LLM 應用開發。open-notebook 是起點，系統化學習幫你走更遠。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn cta-btn-primary" rel="nofollow noopener" target="_blank">🎓 探索 DataCamp AI 課程</a>
+  </div>
+
+  <h2 id="faq">常見問題 FAQ</h2>
+
+  <h3>Q1：open-notebook 和 NotebookLM 有什麼不同？</h3>
+  <p>最大差異是資料主權：NotebookLM 由 Google 託管，上傳的文件存在 Google 的伺服器。open-notebook 完全自架，資料留在你自己的機器或 VPS 上。功能上，open-notebook 支援 18+ AI providers（含 Ollama 本地模型），而 NotebookLM 只能用 Google 的模型。</p>
+
+  <h3>Q2：open-notebook 需要什麼硬體才能跑？</h3>
+  <p>本地部署建議至少 8GB RAM，Docker Desktop 環境。若搭配 Ollama 跑本地模型，16GB RAM 以上更順。如果不想設定本地環境，用 DigitalOcean $6/月的 Droplet 就能跑 open-notebook + 雲端 API（OpenAI/Claude）。</p>
+
+  <h3>Q3：open-notebook 支援哪些文件格式？</h3>
+  <p>支援 PDF、網頁 URL、純文字、Markdown、YouTube 影片（字幕解析）、音訊檔案等格式。上傳後可以對文件提問、摘要、比較多份文件，或生成 AI Podcast 對話。</p>
+
+  <h3>Q4：AI Podcast 生成功能是什麼？</h3>
+  <p>open-notebook 可以把你上傳的文件轉成兩個 AI 聲音的對話式 Podcast，類似 NotebookLM 最受歡迎的功能。支援自訂語言（含繁中），搭配 ElevenLabs 或 OpenAI TTS 可以生成高品質中文音訊。</p>
+
+  <h3>Q5：open-notebook 是免費的嗎？</h3>
+  <p>open-notebook 軟體本身完全免費開源（MIT 授權）。你只需要負擔：伺服器費用（本地部署=0元；DigitalOcean Droplet ~$6/月）和 AI API 費用（Ollama 本地模型=0元；OpenAI/Claude API 按量計費）。整體比 NotebookLM Plus $19.99/月便宜很多，且資料完全掌控。</p>
+
+  <h2 id="conclusion">結論與推薦</h2>
+
+  <p>如果你正在考慮是否要從 NotebookLM 遷移到 open-notebook，這裡是我的直接建議：</p>
+
+  <ul>
+    <li>✅ <strong>建議遷移</strong>：你有客戶資料、未發表研究、商業敏感內容需要 AI 分析</li>
+    <li>✅ <strong>建議遷移</strong>：你想要選擇自己的 AI 模型（尤其是用 Claude 或本地 Ollama）</li>
+    <li>✅ <strong>建議遷移</strong>：你需要繁體中文 Podcast 生成</li>
+    <li>⚠️ <strong>可留 NotebookLM</strong>：只用於處理公開資訊，且不想設定自架環境</li>
+  </ul>
+
+  <p>部署難度比想像中低。按照本文步驟，30分鐘內可以在本地完成安裝。如果用 DigitalOcean VPS，$6/月就能讓整個團隊共用，算下來比 NotebookLM Plus 便宜 3 倍以上，還多了資料主權的保障。</p>
+
+  <!-- Final CTA Block -->
+  <div class="cta-box">
+    <div class="cta-label">🚀 開始自架 open-notebook</div>
+    <h3>三個選擇，任你選</h3>
+    <p>從最適合你的方式開始部署 open-notebook：</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn cta-btn-primary" rel="nofollow noopener" target="_blank">☁️ DigitalOcean $200 免費額度（推薦）</a>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn cta-btn-secondary" rel="nofollow noopener" target="_blank">🎓 DataCamp AI Engineering 課程</a>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn cta-btn-secondary" rel="nofollow noopener" target="_blank">📦 Claude Code 省費工具包</a>
+  </div>
+
+  <div class="related-links" aria-label="延伸閱讀">
+    <h3>延伸閱讀</h3>
+    <ul>
+      <li>→ <a href="/blog/hermes-agent-vs-openclaw-2026.html">Hermes Agent vs OpenClaw：哪個 AI 助理適合台灣開發者？</a></li>
+      <li>→ <a href="/blog/markitdown-microsoft-tutorial-2026.html">Microsoft MarkItDown：PDF 轉 Markdown，RAG Pipeline 必裝工具</a></li>
+      <li>→ <a href="/blog/headroom-llm-token-compression-2026.html">headroom：Claude Code 省 91% Token，60-95% 壓縮率實測</a></li>
+      <li>→ <a href="/blog/everything-claude-code-ecc-tutorial-2026.html">Everything Claude Code（ECC）：209K Stars，AI 工程師完整配置框架</a></li>
+      <li>→ <a href="/blog/n8n-automation-tutorial-2026.html">n8n 完整教學 2026：台灣工程師最常問的 10 個問題</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="/autodev-logo2.png" alt="AutoDev AI" width="90" height="30" loading="lazy">
+      <p>台灣 AI 自動化開發專家</p>
+    </div>
+    <div class="footer-links">
+      <a href="/blog/">Blog</a>
+      <a href="/pricing.html">方案</a>
+      <a href="/contact.html">聯絡我們</a>
+    </div>
+    <p class="footer-copy">© 2026 AutoDev AI. 本文包含聯盟行銷連結，不影響內容公正性。</p>
+  </div>
+</footer>
+</body>
+</html>
