@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>career-ops 繁中教學 2026：Claude Code 幫你投 740 份履歷，AI 求職系統完整指南</title>
+  <meta name="description" content="career-ops 完整繁中教學：48.9K stars，14種求職技能，Claude Code 多代理自動化篩選職缺、撰寫履歷、評估 offer。真實案例：投了740份後獲 Head of Applied AI 職位。台灣 AI 工程師求職神器。">
+  <meta name="keywords" content="career-ops 教學 繁中, claude code 求職 自動化, ai 求職系統 台灣 2026, career-ops 安裝, ai 履歷 自動化, claude code agent 求職">
+  <link rel="canonical" href="https://autodev-ai.com/blog/career-ops-ai-job-hunting-2026.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="career-ops 繁中教學 2026：AI 自動投 740 份履歷，獲 Head of Applied AI">
+  <meta property="og:description" content="career-ops 完整繁中教學：Claude Code 多代理 AI 求職系統，14種技能自動篩選職缺、撰寫履歷、評估 offer。台灣 AI 工程師求職神器。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/career-ops-ai-job-hunting-2026.html">
+  <meta property="og:site_name" content="AutoDev AI">
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "career-ops 繁中教學 2026：Claude Code 幫你投 740 份履歷，AI 求職系統完整指南",
+    "description": "career-ops 完整繁中教學：48.9K stars，14種求職技能，Claude Code 多代理自動化求職系統。真實案例：投了740份後獲 Head of Applied AI 職位。",
+    "datePublished": "2026-06-10",
+    "dateModified": "2026-06-10",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+    "url": "https://autodev-ai.com/blog/career-ops-ai-job-hunting-2026.html",
+    "mainEntityOfPage": "https://autodev-ai.com/blog/career-ops-ai-job-hunting-2026.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "career-ops 是什麼？",
+        "acceptedAnswer": {"@type": "Answer", "text": "career-ops 是一個開源（MIT授權）的 Claude Code Agent Skills 套件，包含 14 種 AI 求職技能，能自動化履歷撰寫、職缺篩選、offer 評估等求職流程。由 santifer 開發，已在 GitHub 累積 48,900+ stars。"}
+      },
+      {
+        "@type": "Question",
+        "name": "career-ops 需要什麼前置條件？",
+        "acceptedAnswer": {"@type": "Answer", "text": "需要已安裝 Claude Code（claude.ai/code）並設定 API key。建議 Claude Pro ($20/月) 或 API 直連。MacOS 或 Linux 系統均可，Windows 建議用 WSL2。Git 基礎操作能力。"}
+      },
+      {
+        "@type": "Question",
+        "name": "career-ops 一個月的使用費用大概多少？",
+        "acceptedAnswer": {"@type": "Answer", "text": "Claude Pro 訂閱 $20/月已足夠一般使用。積極求職（每天大量分析職缺）可能需要 API 直連，預估 $10-30/月 token 費用。搭配 headroom 或 RTK 可省 60-90% token，每月 $5-10 即可。"}
+      },
+      {
+        "@type": "Question",
+        "name": "career-ops 能幫台灣人找台灣職缺嗎？",
+        "acceptedAnswer": {"@type": "Answer", "text": "可以。career-ops 支援自定義職缺資料來源，可以餵入 104、Cakeresume、LinkedIn Taiwan 等平台的 JD（職位描述），讓 AI 用你的背景做適配分析和評分。繁中履歷生成需要在 resume.md 中提供繁中範本。"}
+      },
+      {
+        "@type": "Question",
+        "name": "career-ops 適合什麼樣的求職者？",
+        "acceptedAnswer": {"@type": "Answer", "text": "最適合：(1) 想主動出擊投遞大量職缺的工程師 (2) 需要客製化不同職位的履歷/自薦信 (3) 收到多個 offer 需要系統性評估的人 (4) 想用 AI 模擬面試準備的候選人。不適合：只想被動等獵頭的求職者。"}
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif; margin: 0; background: #0d1117; color: #e6edf3; line-height: 1.7; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 1rem 1.5rem; }
+    header a { color: #58a6ff; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+    header a:hover { color: #79c0ff; }
+    article { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); color: #f0f6fc; margin: 0 0 1rem; line-height: 1.3; }
+    h2 { font-size: 1.4rem; color: #58a6ff; margin: 2.5rem 0 0.8rem; border-left: 3px solid #1f6feb; padding-left: 0.8rem; }
+    h3 { font-size: 1.1rem; color: #e6edf3; margin: 1.8rem 0 0.5rem; }
+    h4 { font-size: 1rem; color: #8b949e; margin: 1.4rem 0 0.4rem; }
+    p { margin: 0 0 1rem; }
+    a { color: #58a6ff; }
+    a:hover { color: #79c0ff; }
+    code { background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 0.1em 0.35em; font-size: 0.88em; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; color: #d2a8ff; }
+    pre { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1rem 1.2rem; overflow-x: auto; margin: 1rem 0 1.5rem; }
+    pre code { background: none; border: none; padding: 0; font-size: 0.85em; color: #e6edf3; }
+    .article-meta { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .badge { display: inline-block; background: #1f6feb33; color: #58a6ff; border: 1px solid #1f6feb55; border-radius: 20px; padding: 0.15rem 0.75rem; font-size: 0.78rem; font-weight: 600; }
+    .badge.green { background: #238636; color: #56d364; border-color: #2ea04344; }
+    .badge.yellow { background: #9e6a03; color: #e3b341; border-color: #e3b34144; }
+    .badge.purple { background: #6e40c922; color: #d2a8ff; border-color: #6e40c955; }
+    .hero-box { background: linear-gradient(135deg, #0d2137 0%, #162032 100%); border: 1px solid #1f6feb55; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0 2rem; }
+    .hero-box h2 { font-size: 1.2rem; color: #58a6ff; margin: 0 0 0.8rem; border: none; padding: 0; }
+    .hero-box ul { margin: 0; padding-left: 1.4rem; }
+    .hero-box li { margin-bottom: 0.5rem; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 1rem; text-align: center; }
+    .stat-card .num { font-size: 1.8rem; font-weight: 700; color: #58a6ff; }
+    .stat-card .label { font-size: 0.78rem; color: #8b949e; margin-top: 0.2rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.88rem; }
+    th { background: #161b22; color: #8b949e; font-weight: 600; padding: 0.6rem 0.8rem; text-align: left; border-bottom: 1px solid #30363d; }
+    td { padding: 0.55rem 0.8rem; border-bottom: 1px solid #21262d; }
+    tr:hover td { background: #161b22; }
+    td.winner { color: #56d364; font-weight: 600; }
+    .step { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 1.2rem 1.4rem; margin: 1rem 0; }
+    .step-num { display: inline-block; background: #1f6feb; color: #fff; border-radius: 50%; width: 26px; height: 26px; text-align: center; line-height: 26px; font-size: 0.85rem; font-weight: 700; margin-right: 0.5rem; }
+    .highlight-box { background: #132d1f; border: 1px solid #238636; border-radius: 10px; padding: 1rem 1.2rem; margin: 1.5rem 0; }
+    .highlight-box.blue { background: #0d2137; border-color: #1f6feb; }
+    .highlight-box.yellow { background: #2b1d04; border-color: #9e6a03; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.8rem; margin: 1rem 0 1.5rem; }
+    .skill-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 0.7rem 0.9rem; }
+    .skill-card .skill-name { font-weight: 600; color: #d2a8ff; font-size: 0.9rem; font-family: monospace; }
+    .skill-card .skill-desc { font-size: 0.78rem; color: #8b949e; margin-top: 0.2rem; }
+    .cta-box { border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+    .cta-box.primary { background: linear-gradient(135deg, #0d2039, #162d50); border: 1px solid #1f6feb; }
+    .cta-box.secondary { background: linear-gradient(135deg, #1a1040, #2d1b69); border: 1px solid #6e40c9; }
+    .cta-box.tertiary { background: linear-gradient(135deg, #0d2a1a, #0f3b20); border: 1px solid #238636; }
+    .cta-box h3 { margin: 0 0 0.6rem; font-size: 1.05rem; }
+    .cta-box.primary h3 { color: #58a6ff; }
+    .cta-box.secondary h3 { color: #d2a8ff; }
+    .cta-box.tertiary h3 { color: #56d364; }
+    .cta-box p { margin: 0 0 1rem; color: #c9d1d9; font-size: 0.92rem; }
+    .cta-btn { display: inline-block; padding: 0.65rem 1.4rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.92rem; transition: opacity 0.2s, transform 0.2s; }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+    .cta-btn.blue { background: #1f6feb; color: #fff; }
+    .cta-btn.purple { background: #6e40c9; color: #fff; }
+    .cta-btn.green { background: #238636; color: #fff; }
+    .related-links { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 1.2rem 1.4rem; margin: 2rem 0 1rem; }
+    .related-links h3 { color: #e6edf3; margin: 0 0 0.8rem; font-size: 1rem; }
+    .related-links ul { margin: 0; padding-left: 1.2rem; }
+    .related-links li { margin-bottom: 0.4rem; }
+    .related-links a { color: #58a6ff; text-decoration: none; font-size: 0.9rem; }
+    .related-links a:hover { color: #79c0ff; text-decoration: underline; }
+    .case-box { background: linear-gradient(135deg, #2b1d04, #3d2a05); border: 1px solid #e3b34155; border-radius: 12px; padding: 1.4rem; margin: 1.5rem 0; }
+    .case-box h3 { color: #e3b341; margin: 0 0 0.7rem; font-size: 1rem; }
+    footer { text-align: center; padding: 2rem 1rem; font-size: 0.82rem; color: #8b949e; border-top: 1px solid #21262d; }
+    footer a { color: #58a6ff; }
+    @media (max-width: 640px) {
+      article { padding: 1.5rem 1rem 3rem; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <a href="/">AutoDev AI</a> &nbsp;›&nbsp; <a href="/blog/">部落格</a>
+</header>
+
+<article>
+  <div class="article-meta">
+    <span>2026-06-10</span>
+    <span class="badge green">AI Agent</span>
+    <span class="badge purple">求職工具</span>
+    <span class="badge yellow">Claude Code</span>
+  </div>
+
+  <h1>career-ops 繁中教學 2026：Claude Code 幫你投 740 份履歷，AI 求職系統完整指南</h1>
+
+  <p>「他投了 740 份工作申請，最終拿到 Head of Applied AI 職位。」</p>
+
+  <p>這不是吹牛，這是 <strong>career-ops</strong>（48,900+ GitHub stars）的真實用戶案例。這個由 <em>santifer</em> 開發的開源 AI 求職系統，利用 <strong>Claude Code 多代理</strong>自動化了求職流程中最耗時的部分：篩選職缺、客製化履歷、撰寫自薦信、評估多個 offer 的性價比。</p>
+
+  <p>2026 年台灣 AI 職位需求激增，但競爭也空前激烈。這篇文章告訴你怎麼讓 AI 為你工作，而不是讓你為 AI 工作。</p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="num">48.9K</div><div class="label">GitHub Stars</div></div>
+    <div class="stat-card"><div class="num">14</div><div class="label">AI 求職技能模式</div></div>
+    <div class="stat-card"><div class="num">740+</div><div class="label">真實用戶投遞數</div></div>
+    <div class="stat-card"><div class="num">0</div><div class="label">每月工具費（MIT 開源）</div></div>
+  </div>
+
+  <div class="hero-box">
+    <h2>📋 本文涵蓋</h2>
+    <ul>
+      <li>① career-ops 是什麼，為什麼 49K stars 的人都在用</li>
+      <li>② 14 個 AI 求職技能完整說明</li>
+      <li>③ 5 分鐘快速安裝教學（MacOS / Linux / Windows WSL2）</li>
+      <li>④ 台灣工程師實戰：如何用 career-ops 找 AI 職位</li>
+      <li>⑤ 搭配 DataCamp 建構求職後的技能升級路徑</li>
+      <li>⑥ FAQ：5 個台灣讀者最常問的問題</li>
+    </ul>
+  </div>
+
+  <h2>career-ops 是什麼？為什麼 49K Stars？</h2>
+
+  <p>career-ops 是一個 <strong>Claude Code Agent Skills 套件</strong>，開源 MIT 授權，專門針對求職這個「超高頻、超耗時」的場景設計。它不是幫你「投履歷的機器人」，而是一個幫你<strong>思考和分析</strong>的 AI 副駕駛：</p>
+
+  <ul>
+    <li>🔍 <strong>分析職位描述</strong>（JD）：自動提取關鍵要求，評分你的適配度</li>
+    <li>✍️ <strong>客製化履歷</strong>：根據每份 JD，調整你履歷中的措辭和重點</li>
+    <li>📝 <strong>撰寫自薦信</strong>：生成個人化 cover letter，不再是複製貼上</li>
+    <li>📊 <strong>評估 Offer</strong>：薪資、文化、成長空間的系統化評分</li>
+    <li>🎤 <strong>模擬面試</strong>：根據 JD 生成最可能的面試問題</li>
+  </ul>
+
+  <div class="case-box">
+    <h3>🏆 真實案例：740 份申請 → Head of Applied AI</h3>
+    <p>santifer（creator）本人的求職歷程：使用 career-ops 自動化分析職缺適配度後，系統性地投遞了 <strong>740+ 份申請</strong>。每份申請的履歷和自薦信都由 AI 根據對應 JD 客製化生成，最終獲得 <strong>Head of Applied AI</strong> 職位。</p>
+    <p>關鍵洞察：<em>大量投遞 + 每份客製化</em>，這是過去人工做到就會崩潰的組合，但 AI 把它變成可執行的策略。</p>
+  </div>
+
+  <h2>14 個 AI 求職技能完整說明</h2>
+
+  <p>career-ops 的 14 種技能模式覆蓋了求職全流程：</p>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-name">/resume-tailor</div>
+      <div class="skill-desc">根據 JD 調整履歷，突出最相關的經歷</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/cover-letter</div>
+      <div class="skill-desc">生成個人化自薦信，避免 AI 味</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/jd-analyze</div>
+      <div class="skill-desc">解析職位描述，提取核心要求與紅旗警告</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/fit-score</div>
+      <div class="skill-desc">計算你與職位的適配度評分（0-100）</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/offer-compare</div>
+      <div class="skill-desc">多個 Offer 系統性比較：薪資/文化/成長</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/mock-interview</div>
+      <div class="skill-desc">根據 JD 生成最可能的面試問題 + 建議答案框架</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/salary-research</div>
+      <div class="skill-desc">根據職位/地點/年資分析薪資談判策略</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/linkedin-optimize</div>
+      <div class="skill-desc">優化 LinkedIn 個人頁面，提升被獵頭搜尋的機率</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/screening-prep</div>
+      <div class="skill-desc">電話/視訊初篩的標準問題準備</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/rejection-analyze</div>
+      <div class="skill-desc">分析被拒原因，調整求職策略</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/company-research</div>
+      <div class="skill-desc">快速研究公司文化、產品方向、最近動態</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/skills-gap</div>
+      <div class="skill-desc">分析你的技能缺口，建議學習路徑</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/portfolio-review</div>
+      <div class="skill-desc">審查作品集，提供客觀改進建議</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">/negotiation-script</div>
+      <div class="skill-desc">薪資談判話術，包含繁中版本</div>
+    </div>
+  </div>
+
+  <h2>快速安裝（5 分鐘上手）</h2>
+
+  <div class="highlight-box blue">
+    <strong>⚙️ 前置條件：</strong><br>
+    • 已安裝 <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a> 並設定 API key<br>
+    • MacOS / Linux（或 Windows WSL2）<br>
+    • Git
+  </div>
+
+  <div class="step">
+    <h3><span class="step-num">1</span> 克隆 career-ops 倉庫</h3>
+    <pre><code>git clone https://github.com/santifer/career-ops.git
+cd career-ops</code></pre>
+  </div>
+
+  <div class="step">
+    <h3><span class="step-num">2</span> 安裝 Skills 到 Claude Code</h3>
+    <pre><code># 一鍵安裝所有 14 個求職技能
+bash install.sh
+
+# 或手動複製
+cp skills/*.md ~/.claude/</code></pre>
+  </div>
+
+  <div class="step">
+    <h3><span class="step-num">3</span> 設定你的個人資料</h3>
+    <p>複製範本並填入你的真實資訊：</p>
+    <pre><code>cp templates/resume-template.md my-resume.md
+cp templates/profile-template.md my-profile.md
+
+# 用你習慣的編輯器填入個人資料
+code my-resume.md  # VS Code
+# 或
+nano my-resume.md</code></pre>
+    <p>填寫內容包含：工作經歷、教育背景、技能清單、個人專案。<strong>建議繁中和英文各準備一份</strong>。</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="step-num">4</span> 貼上 JD，開始分析</h3>
+    <pre><code># 在 Claude Code 中
+/jd-analyze [貼上職位描述]
+
+/fit-score my-resume.md [貼上職位描述]
+
+/resume-tailor my-resume.md [貼上職位描述]</code></pre>
+  </div>
+
+  <div class="highlight-box">
+    <strong>💡 省費技巧：</strong>搭配 <a href="/blog/headroom-llm-token-compression-2026.html">headroom</a> 使用，可壓縮 60-95% token 消耗。career-ops 的 JD 分析會傳入大量文字，headroom 的 CCR（Context Compression Routing）可以大幅降低每次分析的費用。
+  </div>
+
+  <h2>台灣工程師實戰：找 AI 職位的策略</h2>
+
+  <h3>Step 1：建立職缺清單</h3>
+
+  <p>從以下台灣 AI 職缺來源收集 JD：</p>
+  <ul>
+    <li><strong>104人力銀行</strong>：搜尋「AI Engineer」「Machine Learning」「LLM」</li>
+    <li><strong>CakeResume</strong>：台灣新創密度高，AI 職缺品質較好</li>
+    <li><strong>LinkedIn Taiwan</strong>：國際公司台灣分部多</li>
+    <li><strong>Glints Taiwan</strong>：東南亞科技公司台灣職缺</li>
+  </ul>
+
+  <h3>Step 2：批量適配度評分</h3>
+
+  <pre><code># 對每份 JD 跑 fit-score
+/fit-score my-resume.md [JD內容]
+
+# 建立篩選標準（建議只投 70分以上的職缺）
+# 這樣確保你的時間花在最有機會的職缺上</code></pre>
+
+  <h3>Step 3：客製化每份申請</h3>
+
+  <pre><code># 生成針對性履歷
+/resume-tailor my-resume.md [目標公司JD]
+
+# 生成繁中自薦信
+/cover-letter my-profile.md [目標公司JD] --lang zh-TW
+
+# 模擬面試準備
+/mock-interview [目標公司JD] --round technical</code></pre>
+
+  <h3>Step 4：Offer 到手後的評估</h3>
+
+  <pre><code># 如果同時有多個 Offer
+/offer-compare offer-a.md offer-b.md offer-c.md
+
+# 薪資談判準備
+/negotiation-script [Offer內容] --market Taiwan --yoe 5</code></pre>
+
+  <div class="highlight-box yellow">
+    <strong>⚠️ 重要提醒：</strong>career-ops 生成的履歷和自薦信<strong>必須人工審查</strong>。AI 生成的內容可能有不符合台灣職場文化的表達方式，或者填入了你實際不具備的技能（AI 幻覺）。每份申請發出前請確認內容的真實性。
+  </div>
+
+  <h2>career-ops vs 傳統求職：效率比較</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>任務</th>
+        <th>傳統方式</th>
+        <th>career-ops + AI</th>
+        <th>節省比例</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>分析 1 份 JD</td>
+        <td>20-30 分鐘</td>
+        <td class="winner">2-3 分鐘</td>
+        <td class="winner">90%↓</td>
+      </tr>
+      <tr>
+        <td>客製化履歷</td>
+        <td>45-90 分鐘</td>
+        <td class="winner">5-10 分鐘（審查）</td>
+        <td class="winner">85%↓</td>
+      </tr>
+      <tr>
+        <td>撰寫自薦信</td>
+        <td>30-60 分鐘</td>
+        <td class="winner">5 分鐘（審查）</td>
+        <td class="winner">88%↓</td>
+      </tr>
+      <tr>
+        <td>面試準備</td>
+        <td>2-4 小時</td>
+        <td class="winner">30-60 分鐘</td>
+        <td class="winner">75%↓</td>
+      </tr>
+      <tr>
+        <td>Offer 比較</td>
+        <td>主觀感覺</td>
+        <td class="winner">系統化評分</td>
+        <td>更客觀</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- CTA 1: DataCamp -->
+  <div class="cta-box primary">
+    <h3>📚 DataCamp — 找到 AI 職位後，這樣升級你的技能</h3>
+    <p>career-ops 幫你拿到面試機會，但你還需要真正的 AI 技能撐起這個職位。DataCamp 的「AI Engineering」和「Data Scientist with Python」學習路徑，系統性培養你在新職位需要的核心能力。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn blue" target="_blank" rel="noopener">
+      查看 DataCamp AI 課程 →
+    </a>
+  </div>
+
+  <h2>進階用法：多代理求職流程</h2>
+
+  <p>有 Claude Code Pro 的用戶可以設計更複雜的多代理求職流程：</p>
+
+  <pre><code># 建立自動化求職 pipeline
+# Agent 1: JD 篩選器
+claude "使用 career-ops /fit-score，批量分析 jobs/ 資料夾中的所有 JD，
+把評分 ≥ 70 的輸出到 shortlist.md"
+
+# Agent 2: 文件生成器
+claude "根據 shortlist.md 中的每個職缺，
+使用 /resume-tailor 和 /cover-letter 生成對應文件，
+儲存到 applications/ 資料夾，每個公司一個子目錄"
+
+# Agent 3: 審查提醒
+claude "掃描 applications/ 資料夾，
+列出所有待審查文件，並標記可能有問題的段落"</code></pre>
+
+  <div class="highlight-box">
+    <strong>🔗 與 ECC（Everything Claude Code）整合：</strong> 如果你已安裝 <a href="/blog/everything-claude-code-ecc-tutorial-2026.html">ECC</a>，career-ops 的技能可以與 ECC 的 38 個 Agent 結合，建構更完整的求職自動化工作流，例如讓 ECC 的 /web-research Agent 自動搜尋目標公司的最新動態，再餵給 career-ops 的 /cover-letter 生成更個人化的自薦信。
+  </div>
+
+  <h2>台灣用戶最常問的 5 個 FAQ</h2>
+
+  <h3>Q1：career-ops 是什麼？</h3>
+  <p>career-ops 是一個開源（MIT 授權）的 Claude Code Agent Skills 套件，包含 14 種 AI 求職技能，能自動化履歷撰寫、職缺篩選、offer 評估等求職流程。由 santifer 開發，已在 GitHub 累積 48,900+ stars。</p>
+
+  <h3>Q2：career-ops 需要什麼前置條件？</h3>
+  <p>需要已安裝 Claude Code（claude.ai/code）並設定 API key。建議 Claude Pro ($20/月) 或 API 直連。MacOS 或 Linux 系統均可，Windows 建議用 WSL2。Git 基礎操作能力。</p>
+
+  <h3>Q3：career-ops 一個月的使用費用大概多少？</h3>
+  <p>Claude Pro 訂閱 $20/月已足夠一般使用。積極求職（每天大量分析職缺）可能需要 API 直連，預估 $10-30/月 token 費用。搭配 <a href="/blog/headroom-llm-token-compression-2026.html">headroom</a> 或 <a href="/blog/rtk-rust-token-killer-review-2026.html">RTK</a> 可省 60-90% token，每月 $5-10 即可。</p>
+
+  <h3>Q4：career-ops 能幫台灣人找台灣職缺嗎？</h3>
+  <p>可以。career-ops 支援自定義職缺資料來源，可以餵入 104、CakeResume、LinkedIn Taiwan 等平台的 JD（職位描述），讓 AI 用你的背景做適配分析和評分。繁中履歷生成需要在 resume.md 中提供繁中範本。</p>
+
+  <h3>Q5：career-ops 適合什麼樣的求職者？</h3>
+  <p>最適合：(1) 想主動出擊投遞大量職缺的工程師 (2) 需要客製化不同職位的履歷/自薦信 (3) 收到多個 offer 需要系統性評估的人 (4) 想用 AI 模擬面試準備的候選人。不適合：只想被動等獵頭的求職者。</p>
+
+  <!-- CTA 2: Gumroad kknad -->
+  <div class="cta-box secondary">
+    <h3>🛠️ Claude Code 省費工具包 — 讓求職成本降到最低</h3>
+    <p>career-ops 頻繁呼叫 Claude API 會產生費用。這個工具包包含 Claude Code token 優化配置、headroom 代理設定、省費 Prompt 模板，幫你把 AI 求職成本壓到 $5/月以下。</p>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn purple" target="_blank" rel="noopener">
+      取得省費工具包 ($29) →
+    </a>
+  </div>
+
+  <!-- CTA 3: DigitalOcean -->
+  <div class="cta-box tertiary">
+    <h3>☁️ DigitalOcean — 雲端跑 career-ops 自動化流程</h3>
+    <p>想讓 career-ops 在背景持續監控新職缺、自動分析？架一台 $6/月 DigitalOcean Droplet，讓 AI 求職流程 24 小時不間斷，新 offer 優先搶先機。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn green" target="_blank" rel="noopener">
+      取得 DigitalOcean $200 免費額度 →
+    </a>
+  </div>
+
+  <h2>結論：2026 年 AI 求職就是要玩數量 × 品質</h2>
+
+  <p>過去，「量」和「質」是求職的兩難：想多投就要犧牲客製化品質，想高品質就只能少投幾家。career-ops 打破了這個限制。</p>
+
+  <p>不是每個人都像 santifer 一樣投 740 份，但道理是一樣的：<strong>讓 AI 幫你做分析和初稿，你負責審查和決策</strong>。你的時間應該花在面試準備、人脈拓展、技能升級，而不是在 Word 裡複製貼上調整措辭。</p>
+
+  <p>2026 年台灣 AI 職場的競爭只會更激烈。先用好工具的人，先拿到好 offer。</p>
+
+  <div class="highlight-box">
+    <strong>本文重點回顧：</strong><br>
+    1. career-ops = 14 種 AI 求職技能，MIT 開源，48.9K stars<br>
+    2. 核心功能：JD 分析 + 履歷客製化 + 自薦信生成 + Offer 比較 + 面試模擬<br>
+    3. 安裝：clone → bash install.sh → 填 my-resume.md → 開始用<br>
+    4. 台灣策略：104/CakeResume 收集 JD → fit-score 篩選 → 批量申請<br>
+    5. 省費：搭配 headroom 可省 60-90% token，每月 $5-10 以內
+  </div>
+
+  <div class="related-links">
+    <h3>📖 延伸閱讀：Claude Code Agent 系列</h3>
+    <ul>
+      <li><a href="/blog/everything-claude-code-ecc-tutorial-2026.html">Everything Claude Code（ECC）繁中完整教學 2026：209K Stars，38個Agent</a></li>
+      <li><a href="/blog/opencode-vs-cursor-vs-claude-code-2026.html">OpenCode vs Cursor vs Claude Code 終極比較 2026</a></li>
+      <li><a href="/blog/headroom-llm-token-compression-2026.html">headroom 完整教學：Claude Code 省 91% Token</a></li>
+      <li><a href="/blog/mattpocock-skills-claude-code-2026.html">mattpocock/skills 完整教學：Claude Code 最強技能框架</a></li>
+      <li><a href="/blog/rtk-rust-token-killer-review-2026.html">RTK Rust Token Killer 評測：Claude Code 省 60-90% Token</a></li>
+    </ul>
+  </div>
+
+  <p style="font-size:0.82rem;color:#666;margin-top:2rem;">
+    ⚠️ 本文部分連結為聯盟行銷連結，你通過這些連結購買服務，AutoDev AI 可能收到少量佣金，不影響你的購買價格，感謝你的支持。career-ops 相關資訊以 GitHub 官方 README 最新版本為準，本文撰寫於 2026-06-10。
+  </p>
+</article>
+
+<footer>
+  <p>© 2026 AutoDev AI · <a href="/blog/">部落格</a> · <a href="/contact.html">聯絡我們</a></p>
+</footer>
+</body>
+</html>
