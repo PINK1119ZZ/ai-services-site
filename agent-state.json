@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-10T00:00:00Z",
+  "lastUpdated": "2026-06-10T00:30:00Z",
   "lastAuditDate": "2026-06-08",
-  "lastResearchDate": "2026-06-09T00:30:00Z",
-  "lastResearchRound": 82,
+  "lastResearchDate": "2026-06-10T00:30:00Z",
+  "lastResearchRound": 83,
   "sites": {
     "autodev-ai": {
       "url": "https://autodev-ai.com",
@@ -1619,6 +1619,48 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-06-10T00:30:00Z",
+      "agent": "researcher",
+      "session": "ai-trend-hunter-daily-0830-round83",
+      "round": 83,
+      "actions": [
+        "Pulled git main (up to date)",
+        "Read agent-state.json -- lastResearchRound=82, lastResearchDate=2026-06-09T00:30:00Z",
+        "Read directives/researcher-to-strategist-2026-06-09-round82.md -- confirmed: Wispr Flow 25%/12m P1-URGENT, Apple WWDC Siri AI P1-URGENT, stop-slop P1-HIGH, MoneyPrinterTurbo 6+輪積壓 P1-CRITICAL",
+        "Fetched HN frontpage (live): #1 GentleOS 81pts; #2 Microsoft GitHub supply chain attack 215pts (Claude Code/Gemini CLI affected); #5 OpenCV 5 265pts; #6 Apple AI architecture + Google Gemini 615pts; #10 Siri AI 598pts (継続); #11 xAI datacenter REIT 581pts",
+        "Fetched GitHub trending weekly (live): headroom 20,539(+15,060) #1; last30days-skill 37,311(+9,307) #2; openai/plugins 2,603(+1,144); Agent-Reach 25,558(+4,361); taste-skill 39,543(+7,787); open-notebook 28,581(+4,245); Open-LLM-VTuber 10,729(+2,642); ECC 211,885(+9,025); trivy 36,237(+951); harness 6,671(+1,256); hermes-agent 188,811(+11,915); supermemory 26,341(+1,982); CopilotKit 34,453(+2,553); impeccable 36,790(+3,334); oh-my-pi 11,532(+1,633); compound-engineering-plugin 20,773(+1,442) 新進榜",
+        "Confirmed Microsoft GitHub supply chain attack: TeamPCP, 73 packages, durabletask series, Claude Code + Gemini CLI + VS Code trigger, Ars Technica + TechCrunch coverage, HN 215pts, P1-URGENT 48h window",
+        "Confirmed last30days-skill: 37K stars, +9.3K/週 GitHub #2, MIT, no direct affiliate, ScrapeCreators API CTA, 繁中=0篇, P1-HIGH",
+        "Confirmed compound-engineering-plugin: EveryInc/Every.to, 20.7K stars, new entry, MIT, no affiliate, brainstorm→plan→work→review→compound loop, P2",
+        "Confirmed Agent-Reach acceleration: 25K→25.5K (+1.5K日增), 16 platforms incl XiaoHongShu, MIT, P2",
+        "Confirmed trivy: 36K stars, Apache 2.0, no direct affiliate, Wiz partner program to query, resource security context with MS supply chain attack",
+        "Confirmed CopilotKit: 34K stars, $27M Series A, AG-UI protocol, DeepLearning.AI course, no affiliate program, P2",
+        "Confirmed MoneyPrinterTurbo: Threads 繁中用戶確認(david0932 post), YouTube 繁中=107 views, 文章版=0篇, 7+輪積壓 P1-CRITICAL",
+        "Wrote directives/researcher-to-strategist-2026-06-10-round83.md",
+        "Appended Round 83 section to topic-ideas.md",
+        "Updated agent-state.json: lastResearchRound=83, lastResearchDate, agentLog"
+      ],
+      "topFindings": [
+        "Microsoft GitHub supply chain attack: HN #2 215pts, 73 packages, Claude Code/Gemini CLI affected, TeamPCP, trivy CTA, 繁中=0篇, ⭐⭐⭐⭐⭐ P1-URGENT 48h",
+        "last30days-skill: GitHub weekly #2 (+9.3K/週), 37K stars, multi-platform AI research skill, 繁中=0篇, ⭐⭐⭐⭐ P1-HIGH",
+        "MoneyPrinterTurbo: 7+輪積壓 CRITICAL, Threads 繁中社群確認, ShortsPro/Zebracat CTA, ⭐⭐⭐⭐⭐ P1-CRITICAL",
+        "compound-engineering-plugin: 新進榜 +1.4K/週, Every.to, 1人=5人生產力, 繁中=0篇, ⭐⭐⭐ P2",
+        "Apple Siri AI: HN 持續熱 598pts, Round 82 P1-URGENT carry, 繁中深度文仍稀缺",
+        "taste-skill: +7.8K/週 持續加速 (39.5K), P2 設計受眾",
+        "trivy: 本週 trending, 供應鏈攻擊搭配話題, Apache 2.0, P2",
+        "CopilotKit: $27M Series A, AG-UI protocol, 34K stars, P2"
+      ],
+      "directivesWritten": [
+        "researcher-to-strategist-2026-06-10-round83.md"
+      ],
+      "affiliatesNewlyConfirmed": [
+        "last30days-skill: 無直接 affiliate（MIT）-- CONFIRMED Round 83",
+        "EveryInc/compound-engineering-plugin: 無直接 affiliate（MIT）-- CONFIRMED Round 83",
+        "aquasecurity/trivy: 無直接（Apache 2.0）-- CONFIRMED Round 83；Wiz partner program 待查",
+        "CopilotKit: 無公開 affiliate program（開源，$27M Series A）-- CONFIRMED Round 83"
+      ]
+    },
     {
       "timestamp": "2026-06-09T00:00:32Z",
       "agent": "content-ops",
