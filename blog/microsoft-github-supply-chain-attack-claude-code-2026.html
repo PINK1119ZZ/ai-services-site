@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft GitHub 供應鏈攻擊 2026：Claude Code / Gemini CLI 密碼遭竊風險完整解析</title>
+<meta name="description" content="TeamPCP 駭客組織入侵 Microsoft GitHub，植入密碼竊取惡意程式於 73 個套件，Claude Code、Gemini CLI、VS Code 使用者直接受影響。繁中完整解析 + trivy 掃描教學，台灣 AI 開發者必讀。">
+<link rel="canonical" href="https://autodev-ai.com/blog/microsoft-github-supply-chain-attack-claude-code-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/microsoft-github-supply-chain-attack-claude-code-2026.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/microsoft-github-supply-chain-attack-claude-code-2026.html">
+<meta property="og:title" content="Microsoft GitHub 供應鏈攻擊 2026：Claude Code 密碼遭竊風險解析">
+<meta property="og:description" content="TeamPCP 植入惡意程式於 73 個 Microsoft 套件，Claude Code/Gemini CLI 使用者受影響。繁中完整解析 + 掃描防護教學。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/microsoft-github-supply-chain-attack-claude-code-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta property="article:published_time" content="2026-06-10">
+<meta property="article:modified_time" content="2026-06-10">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【緊急資安警報】Claude Code 用戶密碼可能遭竊！Microsoft GitHub 供應鏈攻擊完整解析">
+<meta name="twitter:description" content="TeamPCP 駭入 73 個 Azure 套件，AI coding agent 開啟時自動觸發密碼竊取。台灣開發者速查防護清單。">
+<meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="author" content="AutoDev AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Microsoft GitHub 供應鏈攻擊 2026：Claude Code / Gemini CLI 密碼遭竊風險完整解析",
+  "description": "TeamPCP 駭客組織入侵 Microsoft GitHub，植入 credential stealer 於 73 個 Azure 開源套件，Claude Code、Gemini CLI、VS Code 使用者直接受影響。繁中完整解析與防護指南。",
+  "datePublished": "2026-06-10",
+  "dateModified": "2026-06-10",
+  "author": {"@type": "Organization", "name": "AutoDev AI"},
+  "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+  "url": "https://autodev-ai.com/blog/microsoft-github-supply-chain-attack-claude-code-2026.html",
+  "image": "https://autodev-ai.com/autodev-logo2.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "我只是用 Claude Code 讀程式碼，會受影響嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "如果你在開啟 Claude Code 或 Gemini CLI 之前 npm install / pip install 過受感染的套件，AI agent 啟動時可能觸發惡意程式。若你的專案有使用 durabletask 系列或任何 TeamPCP 植入的套件，應立即掃描。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "哪 73 個套件受影響？我如何快速確認？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "主要集中在 Microsoft azure-sdk-for-python、durabletask-python、azure-durable-functions 等 durabletask 系列，以及部分 Azure DevOps 相關套件。最快確認方式是用 trivy 掃描你的 requirements.txt / package.json，或到 TechCrunch / Ars Technica 查最新的完整清單。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "密碼已被竊取怎麼辦？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "立即更換所有 git hosting 平台密碼（GitHub / GitLab / Bitbucket），撤銷所有 personal access token 並重新生成，檢查 SSH key 是否被新增陌生 key，通知你的資安長或 IT 團隊，並查看 Git 操作記錄是否有異常 push/clone。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "trivy 掃描完後顯示沒有問題，我就安全了嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "trivy 的漏洞資料庫每日更新，但 TeamPCP 攻擊在揭露後 Microsoft 已停用相關 repo，因此 trivy 可以比對已知 CVE 和可疑套件。掃描無問題代表目前已知風險為低，但建議同步更換所有 Git 相關 token 以防萬一。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "未來如何防範類似供應鏈攻擊？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "三個實用做法：(1) 使用 pip-audit 或 npm audit 在 CI/CD pipeline 自動掃描；(2) 鎖定套件版本（pin exact versions），不用 latest 或 *；(3) 在 GitHub Action 加入 trivy-action，每次 push 自動掃描，問題在合併前就被攔截。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+.alert-banner {
+  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+  border: 1px solid #ef4444;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.alert-banner .alert-icon { font-size: 1.5rem; flex-shrink: 0; }
+.alert-banner .alert-text { color: #fca5a5; font-size: 0.95rem; line-height: 1.7; }
+.alert-banner .alert-text strong { color: #fff; }
+.affected-list { background: rgba(239,68,68,0.08); border-left: 3px solid #ef4444; border-radius: 0 4px 4px 0; padding: 1rem 1.5rem; margin: 1rem 0; }
+.safe-list { background: rgba(34,197,94,0.08); border-left: 3px solid #22c55e; border-radius: 0 4px 4px 0; padding: 1rem 1.5rem; margin: 1rem 0; }
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.step-card { background: var(--dark-2,#1a1a1a); border: 1px solid rgba(184,148,106,0.2); border-radius: 6px; padding: 1.25rem; }
+.step-num { display: inline-block; background: var(--primary, #B8946A); color: #fff; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.75rem; }
+.code-block { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 1rem 1.25rem; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #a3e635; overflow-x: auto; margin: 0.75rem 0; }
+.checklist { list-style: none; padding: 0; }
+.checklist li { padding: 0.5rem 0; display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.95rem; }
+.checklist li::before { content: '☐'; color: var(--primary,#B8946A); flex-shrink: 0; }
+.impact-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+.impact-table th { background: rgba(184,148,106,0.15); padding: 0.7rem 1rem; text-align: left; font-weight: 600; }
+.impact-table td { padding: 0.65rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.impact-table tr:hover td { background: rgba(184,148,106,0.05); }
+.badge-high { background: rgba(239,68,68,0.15); color: #f87171; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+.badge-med { background: rgba(251,146,60,0.15); color: #fb923c; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+.badge-low { background: rgba(34,197,94,0.12); color: #4ade80; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482625906579389" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">AutoDev AI</a>
+    <div class="nav-links" id="navLinks">
+      <a href="/services.html">服務</a>
+      <a href="/bot-cloud.html">雲託管</a>
+      <a href="/ai-model.html">AI 模特</a>
+      <a href="/tools/">工具</a>
+      <a href="/pricing.html">方案</a>
+      <a class="active" href="/blog/">Blog</a>
+      <a href="/about.html">關於</a>
+      <a class="nav-cta" href="/contact.html">免費諮詢</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="開啟選單">&#9776;</button>
+  </div>
+</nav>
+
+<article>
+<header class="post-header" style="max-width:820px;margin:0 auto;padding:3rem 2rem 2rem;">
+  <div class="post-meta" style="font-size:0.8rem;color:var(--gray);margin-bottom:1rem;display:flex;gap:1rem;flex-wrap:wrap;">
+    <span>2026-06-10</span>
+    <span>資安警報</span>
+    <span>Claude Code 安全</span>
+    <span>供應鏈攻擊</span>
+  </div>
+  <h1 style="font-family:'DM Serif Display','Noto Serif TC',serif;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.3;margin-bottom:1rem;">【緊急資安警報】Microsoft GitHub 供應鏈攻擊 2026：Claude Code / Gemini CLI 密碼遭竊風險完整解析</h1>
+  <p style="font-size:1.05rem;color:var(--gray);line-height:1.8;max-width:720px;">TeamPCP 駭客組織悄悄入侵 Microsoft 官方 GitHub 帳號，將 credential stealer（密碼竊取程式）植入 73 個開源套件。只要你使用 Claude Code、Gemini CLI 或 VS Code 開啟含受感染套件的專案，就可能在毫不知情的情況下洩漏 Git 憑證。</p>
+</header>
+
+<div class="post-body" style="max-width:820px;margin:0 auto;padding:0 2rem 4rem;">
+
+  <!-- ALERT BANNER -->
+  <div class="alert-banner">
+    <div class="alert-icon">🚨</div>
+    <div class="alert-text">
+      <strong>你可能受影響，如果你：</strong><br>
+      過去幾週安裝過任何 Microsoft Azure SDK、durabletask 或 Azure DevOps 相關 Python/npm 套件，且有使用 Claude Code、Gemini CLI 或 VS Code Copilot Agent 的習慣。請立即滾動到「三步驟快速自我檢查」。
+    </div>
+  </div>
+
+  <h2>事件全貌：到底發生了什麼？</h2>
+
+  <p>2026 年 6 月 8–9 日，TechCrunch 與 Ars Technica 同步披露了一起嚴重的 Microsoft GitHub 供應鏈攻擊事件，隨即在 Hacker News 以 215 分衝上榜單第二名，整個 AI 開發社群震驚。</p>
+
+  <p><strong>攻擊者（代號：TeamPCP）</strong> 的手法相當精密：他們成功取得 Microsoft 在 GitHub 上一個或多個官方帳號的存取權限，接著修改了多個熱門開源 Azure 套件的原始碼，植入一段 <strong>credential stealer</strong>（憑證竊取程式）。</p>
+
+  <p>最陰毒的地方在於：這段惡意程式不是在安裝時就發作，而是 <strong>被 AI coding agent 開啟時自動觸發</strong>。換句話說，只要你用 Claude Code、Gemini CLI、GitHub Copilot 等工具打開一個包含受感染套件的專案，惡意程式就會靜默執行，竊取你的 Git 憑證後回傳給攻擊者。</p>
+
+  <h3>受感染套件的範圍</h3>
+
+  <div class="affected-list">
+    <strong>主要受影響的套件系列（73 個）：</strong>
+    <ul style="margin:0.5rem 0 0;padding-left:1.2rem;">
+      <li>azure-durable-functions（npm）</li>
+      <li>durabletask-python（PyPI）</li>
+      <li>durabletask-go</li>
+      <li>部分 azure-sdk-for-python 子套件</li>
+      <li>azure-sdk-for-js 特定版本</li>
+      <li>Azure DevOps 整合工具集中多個套件</li>
+    </ul>
+    <p style="margin:0.75rem 0 0;font-size:0.88rem;color:var(--text-muted,#999);">完整清單持續更新中，建議以 trivy 掃描為準（下方有教學）。</p>
+  </div>
+
+  <h2>為什麼 AI Coding Agent 是特別危險的觸發點？</h2>
+
+  <p>傳統的惡意程式通常在 <code>install</code> 或 <code>import</code> 時發作，容易被沙箱或 CI 掃描攔截。但 TeamPCP 這次的設計更聰明：</p>
+
+  <table class="impact-table">
+    <thead>
+      <tr>
+        <th>觸發方式</th>
+        <th>觸發條件</th>
+        <th>風險等級</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Claude Code 啟動時</td>
+        <td>讀取專案依賴並初始化 agent 環境</td>
+        <td><span class="badge-high">高</span></td>
+      </tr>
+      <tr>
+        <td>Gemini CLI 指令執行</td>
+        <td>執行含受感染套件的 Python/JS 腳本</td>
+        <td><span class="badge-high">高</span></td>
+      </tr>
+      <tr>
+        <td>VS Code + Copilot Agent</td>
+        <td>開啟工作區時自動載入套件</td>
+        <td><span class="badge-high">高</span></td>
+      </tr>
+      <tr>
+        <td>一般 python main.py</td>
+        <td>手動執行，有機會被沙箱限制</td>
+        <td><span class="badge-med">中</span></td>
+      </tr>
+      <tr>
+        <td>pip install / npm install</td>
+        <td>安裝本身不觸發，但為後續埋下地雷</td>
+        <td><span class="badge-med">中</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>AI coding agent 天生擁有讀取整個專案的能力，而且通常以開發者的身份在本機執行、不受沙箱限制。這讓它成為最理想的觸發器。更糟的是，agent 執行的副作用很容易被忽略——你以為 Claude Code 只是在讀你的 README，實際上後台有惡意程式正在掃描你的 ~/.gitconfig 和環境變數。</p>
+
+  <h2>三步驟快速自我檢查</h2>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h3 style="font-size:1rem;margin:0 0 0.5rem;">檢查依賴清單</h3>
+      <p style="font-size:0.88rem;color:var(--text-muted,#999);margin:0;">先看看你的 requirements.txt / package.json / pyproject.toml 是否有 azure-durable-functions、durabletask 相關套件。</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h3 style="font-size:1rem;margin:0 0 0.5rem;">用 trivy 掃描</h3>
+      <p style="font-size:0.88rem;color:var(--text-muted,#999);margin:0;">aquasecurity/trivy 是目前最快更新此次攻擊特徵的開源掃描工具（36K stars，本週 GitHub trending）。</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <h3 style="font-size:1rem;margin:0 0 0.5rem;">輪換所有 Git Token</h3>
+      <p style="font-size:0.88rem;color:var(--text-muted,#999);margin:0;">不管掃描結果如何，只要你有機會接觸到受感染套件，預防性更換 PAT 和 SSH key 是最保險的做法。</p>
+    </div>
+  </div>
+
+  <h2>trivy 安裝與掃描教學（5 分鐘完成）</h2>
+
+  <p>trivy 是 aquasecurity 開源的容器與依賴漏洞掃描器，Apache 2.0 授權，36K GitHub stars，本週仍在 GitHub trending。針對此次供應鏈攻擊，trivy 的漏洞資料庫已更新對應的 CVE 特徵。</p>
+
+  <h3>安裝 trivy</h3>
+
+  <p><strong>macOS（Homebrew）：</strong></p>
+  <div class="code-block">brew install trivy</div>
+
+  <p><strong>Linux（apt）：</strong></p>
+  <div class="code-block">sudo apt-get install wget apt-transport-https gnupg lsb-release
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee /etc/apt/sources.list.d/trivy.list
+sudo apt-get update && sudo apt-get install trivy</div>
+
+  <p><strong>Windows（Scoop）：</strong></p>
+  <div class="code-block">scoop install trivy</div>
+
+  <p><strong>直接用 Docker（不想安裝的話）：</strong></p>
+  <div class="code-block">docker run --rm -v $(pwd):/workdir aquasec/trivy:latest fs /workdir</div>
+
+  <h3>掃描你的專案目錄</h3>
+
+  <div class="code-block"># 掃描當前目錄的所有依賴（Python + npm 均支援）
+trivy fs --scanners vuln .
+
+# 指定只看 HIGH 和 CRITICAL 等級
+trivy fs --scanners vuln --severity HIGH,CRITICAL .
+
+# 輸出成 JSON 格式方便記錄
+trivy fs --scanners vuln --format json --output trivy-report.json .</div>
+
+  <h3>掃描特定 requirements.txt</h3>
+  <div class="code-block">trivy fs --scanners vuln requirements.txt</div>
+
+  <h3>在 GitHub Actions 加入自動掃描</h3>
+  <div class="code-block">- name: Run Trivy vulnerability scanner
+  uses: aquasecurity/trivy-action@master
+  with:
+    scan-type: 'fs'
+    scan-ref: '.'
+    severity: 'CRITICAL,HIGH'
+    exit-code: '1'  # PR 發現問題時自動 block merge</div>
+
+  <p>這樣一來，每次有人 PR 加入新套件時，trivy 會自動在 CI 階段攔截可疑依賴。</p>
+
+  <!-- DataCamp CTA -->
+  <div style="background:linear-gradient(135deg,rgba(184,148,106,0.08) 0%,rgba(184,148,106,0.03) 100%);border:1px solid rgba(184,148,106,0.25);border-radius:6px;padding:1.5rem 1.75rem;margin:2rem 0;">
+    <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--primary,#B8946A);margin:0 0 0.5rem;font-weight:600;">相關學習</p>
+    <h3 style="font-size:1.1rem;margin:0 0 0.5rem;font-weight:700;">想系統學習 AI 開發資安？</h3>
+    <p style="color:var(--text-muted,#999);font-size:0.9rem;margin:0 0 1rem;">DataCamp 提供「Securing AI Systems」與「DevSecOps」完整課程，涵蓋依賴掃描、容器安全、AI agent 沙箱化等主題。台灣工程師最快補強資安能力的途徑。</p>
+    <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener" style="display:inline-block;background:var(--primary,#B8946A);color:#fff;padding:0.65rem 1.5rem;border-radius:4px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">→ 查看 DataCamp AI 資安課程</a>
+  </div>
+
+  <h2>如果密碼已被竊取，立刻做這些事</h2>
+
+  <ul class="checklist">
+    <li>立即進入 GitHub Settings → Developer settings → Personal access tokens，<strong>撤銷所有現有 PAT</strong> 並重新生成</li>
+    <li>進入 GitHub Settings → SSH and GPG keys，<strong>檢查是否有陌生的 SSH key</strong>，有的話立即刪除</li>
+    <li>更換你的 <strong>GitHub / GitLab / Bitbucket 登入密碼</strong>，啟用 2FA（如果還沒啟用的話）</li>
+    <li>搜尋你的 Git 活動記錄：<code>git log --all --oneline</code>，確認是否有陌生的 commit 或 push</li>
+    <li>如果是公司帳號，<strong>立刻通知資安團隊</strong>，對方可能已透過你的帳號存取公司 repo</li>
+    <li>檢查環境變數中是否有 <code>GITHUB_TOKEN</code>、<code>GH_TOKEN</code>、<code>AZURE_CREDENTIALS</code> 等憑證，若有則輪換</li>
+    <li>通知你的合作開發者，他們的帳號可能也需要確認</li>
+  </ul>
+
+  <h2>Microsoft 的回應：停用了 repo，但沒有通知開發者</h2>
+
+  <p>事件曝光後，Microsoft 確認已停用相關受感染的 GitHub repo 和套件版本，防止繼續下載。但<strong>令人憂心的是，Microsoft 並未主動通知可能受影響的開發者</strong>，這意味著許多人此刻仍不知道自己的憑證已遭竊。</p>
+
+  <p>Ars Technica 的報導指出，TeamPCP 選擇官方 Microsoft 帳號下的套件有明確的戰略意圖：開發者對 Microsoft 官方 repo 的信任度極高，幾乎不會懷疑。這讓惡意程式可以潛伏更久、感染更廣。</p>
+
+  <h2>台灣開發者的特殊風險</h2>
+
+  <p>台灣有大量工程師正在積極採用 AI coding agent，根據多個社群調查，Claude Code、Gemini CLI 在台灣工程師圈的使用率正快速攀升。特別是以下族群風險較高：</p>
+
+  <ul>
+    <li><strong>Azure 雲端開發者：</strong> 直接使用 durabletask 或 azure-sdk 套件的機率高</li>
+    <li><strong>API 整合開發者：</strong> 大量使用第三方 Python/npm 套件，且往往不鎖定版本</li>
+    <li><strong>Startup / 個人開發者：</strong> 通常沒有企業資安 CI/CD 過濾，依賴完全手動</li>
+    <li><strong>AI Agent 實驗者：</strong> 喜歡嘗試新工具，套件更新頻繁，暴露面更廣</li>
+  </ul>
+
+  <h2>長期防護建議：三個好習慣</h2>
+
+  <p>這次攻擊是個警鐘，但更重要的是建立長期習慣：</p>
+
+  <h3>1. 鎖定套件版本，不用 latest</h3>
+  <div class="code-block"># Python：鎖定精確版本
+azure-durable-functions==1.2.4  # 而非 >=1.0.0
+
+# npm：使用 exact version
+"azure-durable-functions": "1.5.0"  # 而非 "^1.5.0"</div>
+
+  <h3>2. 使用 pip-audit 或 npm audit 在 CI 自動掃描</h3>
+  <div class="code-block"># Python
+pip install pip-audit
+pip-audit -r requirements.txt
+
+# npm
+npm audit --audit-level=high</div>
+
+  <h3>3. AI Coding Agent 的沙箱化原則</h3>
+  <p>在安全性敏感的專案中使用 AI coding agent 時，幾個好習慣：</p>
+  <ul>
+    <li>使用容器或虛擬環境隔離，不要直接在生產環境用 agent</li>
+    <li>不要把 <code>.env</code> 檔案放在 agent 的工作目錄下</li>
+    <li>定期輪換 Git token，不要讓同一組憑證使用超過 90 天</li>
+    <li>啟用 GitHub 的 <strong>secret scanning alerts</strong>，一旦 token 外洩立刻收到通知</li>
+  </ul>
+
+  <!-- DigitalOcean CTA -->
+  <div style="background:linear-gradient(135deg,rgba(0,105,255,0.06) 0%,rgba(0,105,255,0.02) 100%);border:1px solid rgba(0,105,255,0.2);border-radius:6px;padding:1.5rem 1.75rem;margin:2rem 0;">
+    <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:#3b82f6;margin:0 0 0.5rem;font-weight:600;">安全部署建議</p>
+    <h3 style="font-size:1.1rem;margin:0 0 0.5rem;font-weight:700;">用隔離的 VPS 環境執行 AI Agent</h3>
+    <p style="color:var(--text-muted,#999);font-size:0.9rem;margin:0 0 1rem;">將 AI coding agent 部署在獨立的 DigitalOcean Droplet（$6/月起），與本地開發環境完全隔離。即使 agent 環境被攻擊，本地的 Git 憑證也不受影響。新帳號享 $200 免費額度，足夠用 2 個月。</p>
+    <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" style="display:inline-block;background:#0069ff;color:#fff;padding:0.65rem 1.5rem;border-radius:4px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">→ DigitalOcean 領取 $200 免費額度</a>
+  </div>
+
+  <h2>FAQ：台灣工程師最常問的問題</h2>
+
+  <section aria-label="常見問題">
+    <details style="border:1px solid rgba(184,148,106,0.2);border-radius:4px;padding:1rem 1.25rem;margin:0.75rem 0;">
+      <summary style="cursor:pointer;font-weight:600;font-size:0.97rem;">Q1：我只是用 Claude Code 讀程式碼，會受影響嗎？</summary>
+      <p style="margin:0.75rem 0 0;color:var(--text-muted,#999);font-size:0.92rem;">如果你在開啟 Claude Code 或 Gemini CLI 之前 npm install / pip install 過受感染的套件，AI agent 啟動時可能觸發惡意程式。若你的專案有使用 durabletask 系列或任何 TeamPCP 植入的套件，應立即掃描。</p>
+    </details>
+    <details style="border:1px solid rgba(184,148,106,0.2);border-radius:4px;padding:1rem 1.25rem;margin:0.75rem 0;">
+      <summary style="cursor:pointer;font-weight:600;font-size:0.97rem;">Q2：哪 73 個套件受影響？我如何快速確認？</summary>
+      <p style="margin:0.75rem 0 0;color:var(--text-muted,#999);font-size:0.92rem;">主要集中在 durabletask 系列和 Azure SDK 特定子套件。最快確認方式是用 trivy fs . 掃描，或到 TechCrunch / Ars Technica 查最新的完整清單。</p>
+    </details>
+    <details style="border:1px solid rgba(184,148,106,0.2);border-radius:4px;padding:1rem 1.25rem;margin:0.75rem 0;">
+      <summary style="cursor:pointer;font-weight:600;font-size:0.97rem;">Q3：密碼已被竊取怎麼辦？</summary>
+      <p style="margin:0.75rem 0 0;color:var(--text-muted,#999);font-size:0.92rem;">立即更換所有 git hosting 平台密碼，撤銷所有 PAT 並重新生成，檢查 SSH key 是否有陌生 key，通知資安長或 IT 團隊，並查看 Git 操作記錄是否有異常 push/clone。</p>
+    </details>
+    <details style="border:1px solid rgba(184,148,106,0.2);border-radius:4px;padding:1rem 1.25rem;margin:0.75rem 0;">
+      <summary style="cursor:pointer;font-weight:600;font-size:0.97rem;">Q4：trivy 掃描完後沒問題，我就安全了嗎？</summary>
+      <p style="margin:0.75rem 0 0;color:var(--text-muted,#999);font-size:0.92rem;">trivy 掃描無問題代表目前已知風險為低，但建議同步更換所有 Git 相關 token 以防萬一。Microsoft 已停用受感染 repo，trivy 會比對已知 CVE 特徵。</p>
+    </details>
+    <details style="border:1px solid rgba(184,148,106,0.2);border-radius:4px;padding:1rem 1.25rem;margin:0.75rem 0;">
+      <summary style="cursor:pointer;font-weight:600;font-size:0.97rem;">Q5：未來如何防範類似供應鏈攻擊？</summary>
+      <p style="margin:0.75rem 0 0;color:var(--text-muted,#999);font-size:0.92rem;">三個實用做法：(1) 使用 pip-audit 或 npm audit 在 CI/CD 自動掃描；(2) 鎖定套件版本，不用 latest；(3) 在 GitHub Action 加入 trivy-action，每次 push 自動攔截。</p>
+    </details>
+  </section>
+
+  <!-- Gumroad CTA -->
+  <div style="background:linear-gradient(135deg,rgba(184,148,106,0.08) 0%,rgba(184,148,106,0.03) 100%);border:1px solid rgba(184,148,106,0.25);border-radius:6px;padding:1.5rem 1.75rem;margin:2rem 0;">
+    <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--primary,#B8946A);margin:0 0 0.5rem;font-weight:600;">Claude Code 工具包</p>
+    <h3 style="font-size:1.1rem;margin:0 0 0.5rem;font-weight:700;">Claude Code 完整設定包（含安全配置模板）</h3>
+    <p style="color:var(--text-muted,#999);font-size:0.9rem;margin:0 0 1rem;">包含 token 省費設定、環境隔離最佳實踐、.gitignore 安全模板，以及進階 Agent Skills 完整合集。一次搞定 Claude Code 的安全與效率配置。</p>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener" style="display:inline-block;background:var(--primary,#B8946A);color:#fff;padding:0.65rem 1.5rem;border-radius:4px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">→ 取得 Claude Code 完整工具包</a>
+  </div>
+
+  <h2>總結</h2>
+
+  <p>Microsoft GitHub 供應鏈攻擊是 2026 年 AI 開發社群最重要的資安事件之一。它的危險之處不在於技術複雜性，而在於它利用了開發者對「官方來源」的信任，以及 AI coding agent 的廣泛執行權限。</p>
+
+  <p>好消息是，防護步驟並不複雜：</p>
+  <ol>
+    <li>用 <strong>trivy</strong> 掃描你的專案目錄（5 分鐘搞定）</li>
+    <li>輪換所有 GitHub PAT 和 SSH key（10 分鐘）</li>
+    <li>在 CI/CD 加入 trivy-action，自動化長期防護（15 分鐘）</li>
+  </ol>
+
+  <p>台灣 AI 開發社群正在快速成長，但資安意識還在補課中。這次事件是個提醒：AI 工具越強大，需要的安全習慣也越扎實。</p>
+
+  <hr style="border:none;border-top:1px solid rgba(184,148,106,0.15);margin:2rem 0;">
+
+  <h3>延伸閱讀</h3>
+  <ul>
+    <li><a href="/blog/everything-claude-code-ecc-tutorial-2026.html">Everything Claude Code（ECC）繁中完整教學 2026</a></li>
+    <li><a href="/blog/opencode-vs-cursor-vs-claude-code-2026.html">OpenCode vs Cursor vs Claude Code：三方終極比較</a></li>
+    <li><a href="/blog/headroom-llm-token-compression-2026.html">headroom：Claude Code 省 91% Token 教學</a></li>
+    <li><a href="/blog/openclaw-windows-setup-guide-2026.html">OpenClaw Windows 完整安裝教學</a></li>
+  </ul>
+
+</div>
+</article>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>&copy; 2026 AutoDev AI. 台灣 AI 自動化開發服務。</p>
+    <p style="font-size:0.8rem;color:var(--gray);margin-top:0.5rem;">本文包含聯盟行銷連結，購買時我們可能獲得佣金，不影響您的價格。</p>
+  </div>
+</footer>
+
+<script>
+const btn=document.getElementById('mobileMenuBtn');
+const links=document.getElementById('navLinks');
+if(btn&&links){btn.addEventListener('click',()=>{links.classList.toggle('open');});}
+window.addEventListener('scroll',()=>{const n=document.getElementById('nav');if(n){n.classList.toggle('scrolled',window.scrollY>50);}});
+</script>
+</body>
+</html>
