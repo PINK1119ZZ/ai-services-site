@@ -1,5 +1,50 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 84 | 2026-06-10 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-06-10 22:00 UTC | 搜尋範圍：GitHub trending weekly、HN 趨勢、AI changelog
+
+### 🔥 本輪頭條：turbovec（31GB→4GB，Google TurboQuant）+ openmed（1000+ 醫療模型，100% 離線）+ last30days-skill（週榜 #2，+9.3K/週）+ addyosmani/agent-skills 隱藏用法
+
+---
+
+#### 1. 🔥🔥🔥🔥🔥 RyanCodrai/turbovec — 本週新進，Rust 向量索引，Google TurboQuant
+- Rust 向量索引 + Python binding，基於 Google Research TurboQuant 算法
+- **31GB 向量 DB → 4GB（16x 壓縮）**，搜尋速度快於 FAISS，完全離線
+- TurboQuant 4-bit R@1 優於 FAISS 0.4-3.4 分；x86 4-bit 全配置勝出 1-6%
+- 安裝：`pip install turbovec`
+- Google Research 官方背書 + 病毒傳播數字（31GB→4GB）
+- 繁中評測：0篇；Affiliate：無直接（Rust 開源）；DO VPS 天然 CTA
+- **P1-HIGH，autodev-ai/blog/turbovec-vector-search-rust-2026.html**
+
+#### 2. 🔥🔥🔥🔥🔥 maziyarpanahi/openmed — 今日 Pinokio 確認，1000+ 醫療 AI 模型
+- 開源醫療 AI 引擎，1,000+ 專業模型，12 語言，247 PII 檢查點，**100% 離線**
+- Python API + REST service + Batch + iOS Swift + Apple MLX
+- 建構者：Maziyar Panahi（原 Spark NLP 7年 → 150M 下載）
+- 今日 Pinokio 更新確認（2026-06-10）
+- 繁中評測：0篇；台灣醫療法規 + 隱私需求強烈
+- **P1-HIGH，autodev-ai/blog/openmed-medical-ai-system-2026.html**
+
+#### 3. 🔥🔥🔥🔥 mvanhorn/last30days-skill — 本週 GitHub 週榜 #2（+9,307/週）
+- AI agent skill：跨 Reddit/X/YouTube/HN/Polymarket/Web 多平台研究，輸出 grounded summary
+- Python，MIT，38,994 stars；ScrapeCreators API 是天然 CTA
+- 繁中評測：0篇；研究自動化受眾
+- **P1-HIGH，autodev-ai/blog/last30days-skill-ai-research-agent-2026.html**
+
+#### 4. 🔥🔥🔥🔥 addyosmani/agent-skills — 49K stars，5 個隱藏用法
+- Addy Osmani（Anthropic）開源，22 production-grade SDLC skills
+- 多分發格式：Claude Code / Gemini CLI / Cursor / Windsurf / OpenCode / Copilot
+- `using-agent-skills` routing tree 是多數人沒注意到的核心 skill
+- 我們 Gumroad agent-skills-tw 是天然交叉銷售
+- 繁中深度教學：0篇；Affiliate：無直接（但 Gumroad 產品是我們的）
+- **P1-HIGH，ai-tools-tw/blog/addyosmani-agent-skills-hidden-uses-2026.html**
+
+#### 5. Agent 效率發現
+- **turbovec 可替換 FAISS**：RAG pipeline 記憶體需求 31GB→4GB = 降低 DO Droplet tier = 省錢
+- **last30days-skill 可整合 researcher agent 工作流**：自動多平台研究 = 減少手動搜尋 tool calls
+
+---
+
 ## Round 75 | 2026-06-05 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-06-05 22:00 UTC | 搜尋範圍：GitHub trending daily + weekly、HN 今日頭條、affiliate 確認
