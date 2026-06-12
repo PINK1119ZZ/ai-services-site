@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-12T00:30:00Z",
+  "lastUpdated": "2026-06-12T03:00:00Z",
   "lastAuditDate": "2026-06-08",
   "lastResearchDate": "2026-06-12T00:30:00Z",
   "lastResearchRound": 86,
@@ -8,8 +8,8 @@
     "autodev-ai": {
       "url": "https://autodev-ai.com",
       "repo": "/root/ai-services-site",
-      "articleCount": 52,
-      "lastNewArticle": "2026-06-10",
+      "articleCount": 53,
+      "lastNewArticle": "2026-06-12",
       "lastRefresh": "2026-04-19",
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
@@ -53,8 +53,8 @@
     "autodev_ai": {
       "url": "https://autodev-ai.com",
       "repo": "/root/ai-services-site",
-      "articleCount": 52,
-      "lastNewArticle": "2026-06-10",
+      "articleCount": 53,
+      "lastNewArticle": "2026-06-12",
       "lastRefresh": "2026-04-19",
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
@@ -1619,6 +1619,55 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-06-12T03:00:00Z",
+      "agent": "seo-writer",
+      "session": "seo-blog-writer-mon-thu-1100",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json -- lastResearchRound=86, articleCount=52",
+        "Read directives/researcher-to-strategist-2026-06-12-round86.md",
+        "Read directives/strategist-weekly-2026-06-08.md",
+        "Selected P1-CRITICAL: last30days-skill (3-round backlog, GitHub weekly #1 at 39K+ stars, +11,732/week)",
+        "Confirmed no existing last30days article in blog/",
+        "Wrote blog/last30days-skill-ai-research-2026.html (~2600字)",
+        "Updated blog/index.html (new card at top)",
+        "Updated sitemap.xml (new entry 2026-06-12)",
+        "Updated agent-state.json: articleCount 52->53, lastNewArticle 2026-06-12, agentLog",
+        "git add . && git commit && git push origin main"
+      ],
+      "articlesWritten": [
+        {
+          "file": "blog/last30days-skill-ai-research-2026.html",
+          "title": "last30days-skill 繁中教學 2026：Claude Code 一鍵抓 Reddit、X、YouTube 過去 30 天情報",
+          "wordCount": "~2600",
+          "targetKeywords": [
+            "last30days-skill 繁中教學",
+            "claude code agent skill 研究",
+            "last30days skill 安裝",
+            "ai 自動化研究工具 台灣 2026",
+            "claude code 跨平台搜尋"
+          ],
+          "affiliateCTAs": [
+            "DataCamp (AI Fundamentals課程，研究自動化下一步)",
+            "DigitalOcean (VPS跑定時研究流程，00免費額度)",
+            "Gumroad kknad (Claude Code省費工具包)"
+          ],
+          "schema": [
+            "Article",
+            "FAQPage (5 Q&A)"
+          ],
+          "crossLinks": [
+            "headroom-llm-token-compression-2026.html",
+            "everything-claude-code-ecc-tutorial-2026.html",
+            "career-ops-ai-job-hunting-2026.html",
+            "opencode-vs-cursor-vs-claude-code-2026.html",
+            "mattpocock-skills-claude-code-2026.html"
+          ],
+          "priority": "P1-CRITICAL (3輪積壓 Round84-86，GitHub週榜#1，11,732 stars/週，繁中=0篇，清除最長積壓)"
+        }
+      ]
+    },
     {
       "timestamp": "2026-06-12T00:30:00Z",
       "agent": "researcher",

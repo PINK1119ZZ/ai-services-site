@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>last30days-skill 繁中教學 2026：Claude Code 一鍵抓取 Reddit、X、YouTube 過去 30 天情報</title>
+  <meta name="description" content="last30days-skill 完整繁中教學：39K Stars，GitHub 週榜 #1。用 Claude Code Agent Skill 一鍵跨平台研究 Reddit/X/YouTube/HN/Polymarket，30 分鐘替代 3 小時手動搜尋。台灣 AI 工程師研究自動化神器。">
+  <meta name="keywords" content="last30days-skill 繁中教學, claude code agent skill 研究, last30days skill 安裝, ai 自動化研究工具 台灣 2026, claude code 跨平台搜尋, reddit x youtube 研究自動化">
+  <link rel="canonical" href="https://autodev-ai.com/blog/last30days-skill-ai-research-2026.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="last30days-skill 繁中教學 2026：Claude Code 一鍵抓 Reddit/X/YouTube 30 天情報">
+  <meta property="og:description" content="last30days-skill 完整繁中教學：39K Stars，GitHub 週榜 #1。一個指令替代 3 小時手動研究，台灣工程師/研究者/行銷人必裝 Claude Code Skill。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/last30days-skill-ai-research-2026.html">
+  <meta property="og:site_name" content="AutoDev AI">
+  <!-- JSON-LD Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "last30days-skill 繁中教學 2026：Claude Code 一鍵抓取 Reddit、X、YouTube 過去 30 天情報",
+    "description": "last30days-skill 完整繁中教學：39K Stars，GitHub 週榜 #1。Claude Code Agent Skill 一鍵跨平台研究，30分鐘替代3小時手動搜尋。",
+    "datePublished": "2026-06-12",
+    "dateModified": "2026-06-12",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+    "url": "https://autodev-ai.com/blog/last30days-skill-ai-research-2026.html",
+    "mainEntityOfPage": "https://autodev-ai.com/blog/last30days-skill-ai-research-2026.html"
+  }
+  </script>
+  <!-- JSON-LD FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "last30days-skill 是什麼？",
+        "acceptedAnswer": {"@type": "Answer", "text": "last30days-skill 是一個開源（MIT授權）的 Claude Code Agent Skill，能用單一 slash command 跨平台搜尋並摘要某個主題過去 30 天的討論內容，涵蓋 Reddit、X（Twitter）、YouTube、Hacker News、Polymarket、網頁 等平台。由 mvanhorn 開發，已在 GitHub 累積 39,000+ stars，為 2026 年 6 月週榜 #1。"}
+      },
+      {
+        "@type": "Question",
+        "name": "last30days-skill 需要付費嗎？",
+        "acceptedAnswer": {"@type": "Answer", "text": "last30days-skill 本身完全免費（MIT開源）。唯一的費用是 Claude Code（$20/月 Pro 方案），或直接用 Anthropic API（依 token 計費，一般研究每次 $0.10-0.50）。搭配 headroom 可省 60-90% token 費用。ScrapeCreators API 若需要深度爬取 X/YouTube 平台則另計，有免費方案可用。"}
+      },
+      {
+        "@type": "Question",
+        "name": "last30days-skill 支援哪些平台？",
+        "acceptedAnswer": {"@type": "Answer", "text": "預設支援：Reddit（subreddit 討論）、X/Twitter（帖子與討論串）、YouTube（影片評論與轉錄）、Hacker News（文章討論）、Polymarket（預測市場情緒）、一般網頁搜尋。部分平台需要 ScrapeCreators API 授權以繞過速率限制。"}
+      },
+      {
+        "@type": "Question",
+        "name": "last30days-skill 和直接用 ChatGPT 搜尋有什麼差別？",
+        "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT 網頁搜尋每次只能查一個平台，且無法摘要大量結果。last30days-skill 是 agentic 研究流程：Claude 會自動在多個平台進行多輪搜尋，過濾雜訊，輸出帶來源引用的結構化摘要，整個過程不需要手動介入。深度和廣度遠超一般 AI 搜尋。"}
+      },
+      {
+        "@type": "Question",
+        "name": "台灣用戶可以用 last30days-skill 研究中文內容嗎？",
+        "acceptedAnswer": {"@type": "Answer", "text": "可以，但效果因平台而異。Reddit 的繁中/簡中內容較少；X/YouTube 在台灣有活躍的中文社群，搜尋繁中關鍵字效果好。Hacker News 主要為英文。建議台灣用戶同時用中英文關鍵字搜尋，最大化覆蓋率。"}
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif; margin: 0; background: #0d1117; color: #e6edf3; line-height: 1.7; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 1rem 1.5rem; }
+    header a { color: #58a6ff; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+    header a:hover { color: #79c0ff; }
+    article { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); color: #f0f6fc; margin: 0 0 1rem; line-height: 1.3; }
+    h2 { font-size: 1.4rem; color: #58a6ff; margin: 2.5rem 0 0.8rem; border-left: 3px solid #1f6feb; padding-left: 0.8rem; }
+    h3 { font-size: 1.1rem; color: #e6edf3; margin: 1.8rem 0 0.5rem; }
+    h4 { font-size: 1rem; color: #8b949e; margin: 1.4rem 0 0.4rem; }
+    p { margin: 0 0 1rem; }
+    a { color: #58a6ff; }
+    a:hover { color: #79c0ff; }
+    code { background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 0.1em 0.35em; font-size: 0.88em; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; color: #d2a8ff; }
+    pre { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1rem 1.2rem; overflow-x: auto; margin: 1rem 0 1.5rem; }
+    pre code { background: none; border: none; padding: 0; font-size: 0.85em; color: #e6edf3; }
+    .article-meta { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .badge { display: inline-block; background: #1f6feb33; color: #58a6ff; border: 1px solid #1f6feb55; border-radius: 20px; padding: 0.15rem 0.75rem; font-size: 0.78rem; font-weight: 600; }
+    .badge.green { background: #23863633; color: #56d364; border-color: #2ea04344; }
+    .badge.yellow { background: #9e6a0333; color: #e3b341; border-color: #e3b34144; }
+    .badge.purple { background: #6e40c922; color: #d2a8ff; border-color: #6e40c955; }
+    .badge.orange { background: #d9730d22; color: #f8a943; border-color: #d9730d55; }
+    .hero-box { background: linear-gradient(135deg, #0d2137 0%, #162032 100%); border: 1px solid #1f6feb55; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0 2rem; }
+    .hero-box h2 { font-size: 1.2rem; color: #58a6ff; margin: 0 0 0.8rem; border: none; padding: 0; }
+    .hero-box ul { margin: 0; padding-left: 1.4rem; }
+    .hero-box li { margin-bottom: 0.5rem; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 1rem; text-align: center; }
+    .stat-card .num { font-size: 1.8rem; font-weight: 700; color: #58a6ff; }
+    .stat-card .label { font-size: 0.78rem; color: #8b949e; margin-top: 0.2rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.88rem; }
+    th { background: #161b22; color: #8b949e; font-weight: 600; padding: 0.6rem 0.8rem; text-align: left; border-bottom: 1px solid #30363d; }
+    td { padding: 0.55rem 0.8rem; border-bottom: 1px solid #21262d; }
+    tr:hover td { background: #161b22; }
+    td.winner { color: #56d364; font-weight: 600; }
+    .step { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 1.2rem 1.4rem; margin: 1rem 0; }
+    .step-num { display: inline-block; background: #1f6feb; color: #fff; border-radius: 50%; width: 26px; height: 26px; text-align: center; line-height: 26px; font-size: 0.85rem; font-weight: 700; margin-right: 0.5rem; }
+    .highlight-box { background: #132d1f; border: 1px solid #238636; border-radius: 10px; padding: 1rem 1.2rem; margin: 1.5rem 0; }
+    .highlight-box.blue { background: #0d2137; border-color: #1f6feb; }
+    .highlight-box.yellow { background: #2b1d04; border-color: #9e6a03; }
+    .highlight-box.orange { background: #2b1804; border-color: #d9730d; }
+    .platform-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.8rem; margin: 1rem 0 1.5rem; }
+    .platform-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 0.8rem 1rem; }
+    .platform-card .pname { font-weight: 700; color: #e6edf3; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .platform-card .pdesc { font-size: 0.78rem; color: #8b949e; }
+    .use-case { background: #161b22; border-left: 3px solid #1f6feb; border-radius: 0 8px 8px 0; padding: 1rem 1.2rem; margin: 0.8rem 0; }
+    .use-case .uc-role { font-weight: 700; color: #58a6ff; font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .use-case .uc-desc { font-size: 0.88rem; color: #c9d1d9; }
+    .cta-box { border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+    .cta-box.primary { background: linear-gradient(135deg, #0d2039, #162d50); border: 1px solid #1f6feb; }
+    .cta-box.secondary { background: linear-gradient(135deg, #1a1040, #2d1b69); border: 1px solid #6e40c9; }
+    .cta-box.tertiary { background: linear-gradient(135deg, #0d2a1a, #0f3b20); border: 1px solid #238636; }
+    .cta-box.orange-cta { background: linear-gradient(135deg, #2b1804, #3d2206); border: 1px solid #d9730d; }
+    .cta-box h3 { margin: 0 0 0.6rem; font-size: 1.05rem; }
+    .cta-box.primary h3 { color: #58a6ff; }
+    .cta-box.secondary h3 { color: #d2a8ff; }
+    .cta-box.tertiary h3 { color: #56d364; }
+    .cta-box.orange-cta h3 { color: #f8a943; }
+    .cta-box p { margin: 0 0 1rem; color: #c9d1d9; font-size: 0.92rem; }
+    .cta-btn { display: inline-block; padding: 0.65rem 1.4rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.92rem; transition: opacity 0.2s, transform 0.2s; }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+    .cta-btn.blue { background: #1f6feb; color: #fff; }
+    .cta-btn.purple { background: #6e40c9; color: #fff; }
+    .cta-btn.green { background: #238636; color: #fff; }
+    .cta-btn.orange { background: #d9730d; color: #fff; }
+    .related-links { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 1.2rem 1.4rem; margin: 2rem 0 1rem; }
+    .related-links h3 { color: #e6edf3; margin: 0 0 0.8rem; font-size: 1rem; }
+    .related-links ul { margin: 0; padding-left: 1.2rem; }
+    .related-links li { margin-bottom: 0.4rem; }
+    .related-links a { color: #58a6ff; text-decoration: none; font-size: 0.9rem; }
+    .related-links a:hover { color: #79c0ff; text-decoration: underline; }
+    .output-box { background: #0d2137; border: 1px solid #1f6feb44; border-radius: 8px; padding: 1rem 1.2rem; margin: 1rem 0; font-size: 0.88rem; }
+    .output-box .output-label { color: #8b949e; font-size: 0.78rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .output-box p { margin: 0 0 0.5rem; color: #c9d1d9; }
+    footer { text-align: center; padding: 2rem 1rem; font-size: 0.82rem; color: #8b949e; border-top: 1px solid #21262d; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://autodev-ai.com">← AutoDev AI</a>
+</header>
+
+<article>
+  <div class="article-meta">
+    <span>2026-06-12</span>
+    <span class="badge orange">GitHub 週榜 #1</span>
+    <span class="badge green">MIT 免費開源</span>
+    <span class="badge purple">Claude Code Skill</span>
+    <span class="badge">研究自動化</span>
+  </div>
+
+  <h1>last30days-skill 繁中教學 2026：Claude Code 一鍵抓 Reddit、X、YouTube 過去 30 天情報</h1>
+
+  <p>每次做競品研究或市場調查，你是不是要花 3 小時手動開一堆分頁——Reddit 找討論、X 找推文、YouTube 找評論、HN 找技術意見——最後整理成一份筆記？</p>
+
+  <p><strong>last30days-skill</strong> 直接把這個流程砍掉。安裝好之後，在 Claude Code 下一個指令，AI 會自動跑完所有平台，吐出一份帶來源引用的結構化摘要。整個過程你就看著就好。</p>
+
+  <p>這個工具目前在 GitHub 累積 39,000+ stars，連續數週保持 GitHub 週榜前三，最新一週更拿下 <strong>週榜 #1（+11,732 stars/週）</strong>。繁中教學目前幾乎空白，這是第一篇完整的中文教學。</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="num">39K+</div>
+      <div class="label">GitHub Stars</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">#1</div>
+      <div class="label">GitHub 週榜（2026/06）</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">6+</div>
+      <div class="label">支援平台</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">MIT</div>
+      <div class="label">完全免費開源</div>
+    </div>
+  </div>
+
+  <div class="hero-box">
+    <h2>📋 你將學到什麼</h2>
+    <ul>
+      <li>last30days-skill 的核心原理和它為什麼爆紅</li>
+      <li>完整安裝步驟（5分鐘內完成）</li>
+      <li>實戰範例：研究「AI coding tools」過去 30 天的市場動態</li>
+      <li>台灣用戶使用技巧（中英文關鍵字策略）</li>
+      <li>搭配 headroom 省 60-90% Claude token 費用</li>
+      <li>與其他研究工具的比較</li>
+    </ul>
+  </div>
+
+  <!-- ==================== SECTION 1 ==================== -->
+  <h2>last30days-skill 是什麼？</h2>
+
+  <p>last30days-skill 是一個 <strong>Claude Code Agent Skill</strong>（<code>.claude/commands/</code> 下的 slash command），由 mvanhorn 開發，MIT 授權免費使用。</p>
+
+  <p>它的核心邏輯很簡單：<strong>把你的研究問題交給 Claude，讓 Claude 自動用 agentic 方式跑完多個平台的搜尋，彙整成一份帶引用來源的摘要報告。</strong></p>
+
+  <p>你只需要輸入：</p>
+
+  <pre><code>/last30days [your topic]</code></pre>
+
+  <p>剩下的 Claude 全包：</p>
+  <ul>
+    <li>自動決定在哪些平台搜尋</li>
+    <li>拆解查詢成多個子問題</li>
+    <li>過濾低質量或重複內容</li>
+    <li>按主題叢集整理結果</li>
+    <li>輸出 Markdown 格式的結構化摘要，含來源連結</li>
+  </ul>
+
+  <div class="highlight-box blue">
+    <strong>為什麼叫 last30days？</strong> 預設搜尋範圍是過去 30 天的內容，避免抓到過時討論。你可以在 prompt 中指定其他時間範圍（如 7 天、90 天）。
+  </div>
+
+  <h3>支援哪些平台？</h3>
+
+  <div class="platform-grid">
+    <div class="platform-card">
+      <div class="pname">Reddit</div>
+      <div class="pdesc">Subreddit 討論、評論串、upvote 熱度</div>
+    </div>
+    <div class="platform-card">
+      <div class="pname">X（Twitter）</div>
+      <div class="pdesc">推文、討論串，需 ScrapeCreators API</div>
+    </div>
+    <div class="platform-card">
+      <div class="pname">YouTube</div>
+      <div class="pdesc">影片評論、轉錄字幕摘要</div>
+    </div>
+    <div class="platform-card">
+      <div class="pname">Hacker News</div>
+      <div class="pdesc">技術社群討論、Ask HN</div>
+    </div>
+    <div class="platform-card">
+      <div class="pname">Polymarket</div>
+      <div class="pdesc">預測市場情緒與賠率</div>
+    </div>
+    <div class="platform-card">
+      <div class="pname">一般網頁</div>
+      <div class="pdesc">部落格文章、新聞報導</div>
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 2 ==================== -->
+  <h2>安裝步驟（5 分鐘完成）</h2>
+
+  <p>前置條件：已安裝 <strong>Claude Code</strong>（<code>claude.ai/code</code> 或 npm 安裝）並設定好 Anthropic API key。</p>
+
+  <div class="step">
+    <span class="step-num">1</span>
+    <strong>Clone 或下載 last30days-skill</strong>
+    <pre><code>git clone https://github.com/mvanhorn/last30days-skill.git
+cd last30days-skill</code></pre>
+  </div>
+
+  <div class="step">
+    <span class="step-num">2</span>
+    <strong>複製 skill 檔案到 Claude 設定目錄</strong>
+    <pre><code># macOS / Linux
+cp commands/last30days.md ~/.claude/commands/
+
+# 或用 install script（如果有的話）
+bash install.sh</code></pre>
+    <p style="margin:0.5rem 0 0; font-size:0.88rem; color:#8b949e;">如果 <code>~/.claude/commands/</code> 目錄不存在，先建立：<code>mkdir -p ~/.claude/commands/</code></p>
+  </div>
+
+  <div class="step">
+    <span class="step-num">3</span>
+    <strong>（可選）設定 ScrapeCreators API</strong>
+    <p style="margin:0.5rem 0;">X（Twitter）和 YouTube 深度爬取需要 ScrapeCreators API key。有免費方案可用。</p>
+    <pre><code># 在 ~/.claude/settings.json 加入
+{
+  "env": {
+    "SCRAPECREATORS_API_KEY": "your_key_here"
+  }
+}</code></pre>
+    <p style="margin:0.5rem 0 0; font-size:0.88rem; color:#8b949e;">💡 沒有 API key 也能用，部分平台功能會受限，但 Reddit 和 HN 不受影響。</p>
+  </div>
+
+  <div class="step">
+    <span class="step-num">4</span>
+    <strong>驗證安裝</strong>
+    <pre><code># 在專案目錄下開啟 Claude Code
+claude
+
+# 確認 skill 出現在指令列表
+/help</code></pre>
+    <p style="margin:0.5rem 0 0; font-size:0.88rem; color:#8b949e;">看到 <code>/last30days</code> 出現在列表中就代表安裝成功。</p>
+  </div>
+
+  <!-- ==================== SECTION 3 ==================== -->
+  <h2>實戰範例：研究「Claude Code」市場動態</h2>
+
+  <p>安裝好之後，我們來跑一個完整的研究任務。假設你想了解過去一個月 AI coding tools 在社群上的討論趨勢：</p>
+
+  <pre><code>/last30days What are people saying about Claude Code and AI coding tools in the last 30 days? 
+Focus on: user complaints, feature requests, comparisons with competitors, pricing discussions.</code></pre>
+
+  <p>Claude 接到這個指令後，會自動執行以下流程：</p>
+
+  <div class="step">
+    <span class="step-num">1</span>
+    <strong>分解研究問題</strong>
+    <p style="margin:0.5rem 0 0; color:#8b949e; font-size:0.88rem;">拆成：「Claude Code 用戶抱怨」「Claude Code vs Cursor」「AI coding tool pricing reddit」等子查詢</p>
+  </div>
+
+  <div class="step">
+    <span class="step-num">2</span>
+    <strong>多平台並行搜尋</strong>
+    <p style="margin:0.5rem 0 0; color:#8b949e; font-size:0.88rem;">同時在 r/ClaudeAI, r/programming, HN, X 等多個來源搜尋</p>
+  </div>
+
+  <div class="step">
+    <span class="step-num">3</span>
+    <strong>過濾與彙整</strong>
+    <p style="margin:0.5rem 0 0; color:#8b949e; font-size:0.88rem;">去除重複、低質量回應，按主題群集整理</p>
+  </div>
+
+  <div class="step">
+    <span class="step-num">4</span>
+    <strong>輸出結構化摘要</strong>
+    <p style="margin:0.5rem 0 0; color:#8b949e; font-size:0.88rem;">帶來源連結的 Markdown 報告，可直接複製到筆記工具</p>
+  </div>
+
+  <h3>實際輸出範例（節錄）</h3>
+
+  <div class="output-box">
+    <div class="output-label">Claude 輸出摘要（示意）</div>
+    <p><strong>## Claude Code — 過去 30 天社群摘要</strong></p>
+    <p><strong>主要討論主題：</strong></p>
+    <p>1. <strong>Token 費用抱怨</strong>（高頻，Reddit r/ClaudeAI，28 則討論）：用戶反映 Claude Code $20/月 Pro 方案在大型專案容易達到 context limit，要求官方提供更透明的用量顯示...</p>
+    <p>2. <strong>vs Cursor 比較</strong>（高頻，HN + X）：技術社群普遍認為 Claude Code 在複雜重構任務更準確，但 Cursor 在 VS Code 整合體驗更順暢...</p>
+    <p>3. <strong>opencode 免費替代</strong>（上升中，HN）：多篇討論指出 opencode（MIT開源）可在不付費的情況下達到接近效果...</p>
+    <p style="color:#8b949e; font-size:0.8rem;">來源：r/ClaudeAI (2026-06-03), HN (2026-06-08), X @swyx (2026-06-07)...</p>
+  </div>
+
+  <p>整個過程大約 3-8 分鐘，完全不需要你手動開瀏覽器。</p>
+
+  <!-- ==================== SECTION 4 ==================== -->
+  <h2>台灣用戶使用技巧</h2>
+
+  <p>last30days-skill 預設以英文搜尋效果最好，但台灣用戶可以用以下技巧擴大中文覆蓋：</p>
+
+  <h3>技巧 1：雙語關鍵字搜尋</h3>
+
+  <pre><code>/last30days 
+Topic: Claude Code AI coding tools
+Also search: "Claude Code 繁中", "AI 程式工具 台灣", "Claude Code 好用嗎"
+Platforms: Reddit, YouTube, X
+Language: Include Traditional Chinese results from Taiwan community</code></pre>
+
+  <h3>技巧 2：按受眾定制研究角度</h3>
+
+  <div class="use-case">
+    <div class="uc-role">🎯 工程師 / 開發者</div>
+    <div class="uc-desc">研究技術工具評測、效能比較、定價討論。用 HN + Reddit r/programming 為主要來源。</div>
+  </div>
+
+  <div class="use-case">
+    <div class="uc-role">📈 行銷人 / 內容創作者</div>
+    <div class="uc-desc">研究話題熱度、社群情緒、用戶痛點。用 X + YouTube + Reddit 為主要來源。</div>
+  </div>
+
+  <div class="use-case">
+    <div class="uc-role">🔬 研究者 / 策略師</div>
+    <div class="uc-desc">研究市場趨勢、競品動態、技術發展方向。用 Polymarket + HN + 學術來源為主。</div>
+  </div>
+
+  <div class="use-case">
+    <div class="uc-role">🛒 電商 / 產品經理</div>
+    <div class="uc-desc">研究用戶評價、功能需求、競品定位。用 Reddit + X + YouTube 評論為主。</div>
+  </div>
+
+  <h3>技巧 3：搭配 headroom 省 token</h3>
+
+  <p>last30days-skill 的 agentic 研究流程會消耗相當多 token，特別是深度研究任務。建議搭配 <a href="/blog/headroom-llm-token-compression-2026.html">headroom</a>（Claude Code token 壓縮工具）使用：</p>
+
+  <pre><code># 先啟動 headroom proxy
+headroom wrap claude
+
+# 然後在壓縮後的 context 下執行研究
+/last30days [your topic]</code></pre>
+
+  <p>根據測試，headroom 可以在不影響研究品質的情況下，將 token 用量降低 <strong>60-91%</strong>。每次研究成本從 $0.50 降到 $0.05-0.20。</p>
+
+  <!-- ==================== CTA 1 ==================== -->
+  <div class="cta-box primary">
+    <h3>🚀 DataCamp — 學完 last30days-skill，接著學 AI 研究系統化方法論</h3>
+    <p>last30days-skill 是強大的工具，但知道<strong>怎麼問對問題</strong>才是關鍵。DataCamp 的 AI Fundamentals 和 Data Analysis 課程教你如何設計有效的研究框架、解讀社群數據、轉化為商業洞察。</p>
+    <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener" class="cta-btn blue">開始學 DataCamp →</a>
+  </div>
+
+  <!-- ==================== SECTION 5 ==================== -->
+  <h2>last30days-skill vs 其他研究工具比較</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>工具</th>
+        <th>平台覆蓋</th>
+        <th>自動化程度</th>
+        <th>費用</th>
+        <th>輸出品質</th>
+        <th>適合對象</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>last30days-skill</strong></td>
+        <td class="winner">6+ 平台</td>
+        <td class="winner">全自動 agentic</td>
+        <td>免費 + Claude token</td>
+        <td class="winner">高，帶來源引用</td>
+        <td>工程師/研究者</td>
+      </tr>
+      <tr>
+        <td>ChatGPT 搜尋</td>
+        <td>單次一平台</td>
+        <td>手動逐查</td>
+        <td>$20/月 Plus</td>
+        <td>中，來源不完整</td>
+        <td>一般用戶</td>
+      </tr>
+      <tr>
+        <td>Perplexity AI</td>
+        <td>網頁為主</td>
+        <td>半自動</td>
+        <td>$20/月 Pro</td>
+        <td>高，即時引用</td>
+        <td>一般用戶</td>
+      </tr>
+      <tr>
+        <td>手動搜尋</td>
+        <td>無限制</td>
+        <td>完全手動</td>
+        <td>免費</td>
+        <td>取決於個人</td>
+        <td>所有人</td>
+      </tr>
+      <tr>
+        <td>Brandwatch/Mention</td>
+        <td>多平台監控</td>
+        <td>全自動</td>
+        <td>$$$（企業方案）</td>
+        <td>高，即時監控</td>
+        <td>行銷團隊</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>last30days-skill 的定位很清楚：<strong>適合有 Claude Code 環境的技術型用戶，做一次性深度研究或競品調查</strong>。如果你需要即時監控（7×24 持續追蹤），商業方案更合適；如果只是偶爾查一次，last30days-skill 是最划算的選擇。</p>
+
+  <!-- ==================== SECTION 6 ==================== -->
+  <h2>進階用法：建立研究工作流</h2>
+
+  <p>last30days-skill 的真正威力在於可以融入你的研究工作流。以下是幾個實用的進階組合：</p>
+
+  <h3>組合 1：競品情報週報自動化</h3>
+
+  <pre><code># 每週一執行
+/last30days 
+Topic: [competitor name] product updates, user feedback, pricing changes
+Time range: Last 7 days
+Output: Bullet point summary for team Slack report
+Platforms: Reddit, X, HN, ProductHunt</code></pre>
+
+  <h3>組合 2：搭配 n8n 定時觸發</h3>
+
+  <p>配合 <a href="/blog/n8n-automation-tutorial-2026.html">n8n 自動化</a>，設定每週自動跑 last30days 研究，結果直接 POST 到 Slack 或 Notion：</p>
+
+  <pre><code># n8n workflow：
+# Cron trigger (每週一 09:00)
+# → Execute Command: claude --print "/last30days [topic]"
+# → Slack: Post to #competitive-intel channel</code></pre>
+
+  <h3>組合 3：SEO 關鍵字機會發掘</h3>
+
+  <pre><code>/last30days
+Topic: "AI coding tools" "vibe coding" Taiwan
+Focus: Questions people are asking, pain points mentioned, keywords used
+Output: List of unanswered questions that could become blog articles
+Platforms: Reddit, YouTube comments, HN</code></pre>
+
+  <p>這個用法特別適合 SEO 內容策略：讓 AI 幫你找出市場上還沒有好答案的問題，直接變成文章主題。</p>
+
+  <!-- ==================== CTA 2 ==================== -->
+  <div class="cta-box secondary">
+    <h3>⚡ DigitalOcean — 用 VPS 跑 last30days-skill 定時研究流程</h3>
+    <p>把 last30days-skill 整合到 n8n 或 cron job，需要一台持續運行的伺服器。DigitalOcean 最低 <strong>$6/月</strong> Droplet 就能跑，新用戶享 <strong>$200 免費額度</strong>（60天），足夠測試整個研究自動化流程。</p>
+    <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="cta-btn purple">獲取 $200 DO 免費額度 →</a>
+  </div>
+
+  <!-- ==================== SECTION 7 ==================== -->
+  <h2>常見問題與疑難排解</h2>
+
+  <h3>問：搜尋結果偏向英文，怎麼搜到更多台灣/中文討論？</h3>
+  <p>在 prompt 中明確指定：<code>Include Traditional Chinese (zh-TW) results from Taiwan communities. Also search: PTT, Dcard, Facebook groups</code>。目前 PTT 和 Dcard 沒有原生整合，但可以透過網頁搜尋間接覆蓋。</p>
+
+  <h3>問：token 消耗太快怎麼辦？</h3>
+  <p>三個方法：(1) 縮小研究範圍，指定 2-3 個平台而非全部；(2) 搭配 <a href="/blog/headroom-llm-token-compression-2026.html">headroom</a> 壓縮 context；(3) 直接用 Anthropic API 而非 Claude Pro 訂閱，按用量計費更靈活。</p>
+
+  <h3>問：ScrapeCreators API 一定要設定嗎？</h3>
+  <p>不一定。Reddit、HN、網頁搜尋在沒有 API key 的情況下都能正常使用。X 和 YouTube 深度爬取需要 ScrapeCreators，但輕度使用其免費方案（每月有限額度）即可。</p>
+
+  <h3>問：搜尋結果有時不準確或漏掉重要討論？</h3>
+  <p>Claude 的搜尋是 agentic 但不是窮舉式的，可能漏掉小型社群的討論。建議：(1) 多跑幾次同一主題（每次結果可能不同）；(2) 用不同角度的 prompt 補充；(3) 把 last30days-skill 的輸出作為起點，不是終點。</p>
+
+  <!-- ==================== CTA 3 ==================== -->
+  <div class="cta-box tertiary">
+    <h3>🎁 Gumroad Claude Code 省費工具包</h3>
+    <p>last30days-skill 只是 Claude Code Skills 生態系的一部分。<strong>Claude Code 省費工具包</strong>收錄了讓你用 $5 做到 $50 效果的完整工具鏈：headroom token 壓縮 + RTK Rust 省費 + DeepClaude 17x 加速 + 完整 Skills 安裝指南，一次打包搞定。</p>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener" class="cta-btn green">取得 Claude Code 省費工具包 →</a>
+  </div>
+
+  <!-- ==================== SECTION 8 ==================== -->
+  <h2>為什麼 last30days-skill 爆紅？</h2>
+
+  <p>GitHub 週榜 #1 不是偶然。last30days-skill 爆紅的原因有幾個層面：</p>
+
+  <h3>1. 它解決了一個真實且高頻的痛點</h3>
+  <p>研究某個主題的「最新社群討論」是工程師、行銷人、創業者每週都要做的事。沒有人喜歡手動開 10 個分頁，複製貼上，再整理。</p>
+
+  <h3>2. 安裝門檻極低</h3>
+  <p>如果你已經有 Claude Code 環境，安裝 last30days-skill 只要一個 <code>cp</code> 指令。不需要新申請任何服務，不需要設定 API（ScrapeCreators 是可選的）。</p>
+
+  <h3>3. 輸出品質達到實用水準</h3>
+  <p>早期 AI 搜尋工具的問題是輸出太模糊，或來源不可靠。last30days-skill 強制輸出帶來源引用的摘要，讓結果可驗證，大幅提升實用性。</p>
+
+  <h3>4. 時機點：Claude 4 Sonnet 的 agentic 能力成熟</h3>
+  <p>2025 年之前，這種多平台 agentic 搜尋任務的成功率不夠高，容易跑偏或中途失敗。Claude 4 系列的指令跟隨能力和 tool use 穩定性讓這類工具真正可用。</p>
+
+  <!-- ==================== FAQ ==================== -->
+  <h2>常見問題（FAQ）</h2>
+
+  <h3>last30days-skill 是什麼？</h3>
+  <p>last30days-skill 是一個開源（MIT授權）的 Claude Code Agent Skill，能用單一 slash command 跨平台搜尋並摘要某個主題過去 30 天的討論，涵蓋 Reddit、X、YouTube、HN、Polymarket 等平台。</p>
+
+  <h3>last30days-skill 需要付費嗎？</h3>
+  <p>工具本身完全免費。唯一費用是 Claude Code 的 API 使用費（約 $0.10-0.50/次研究，搭配 headroom 可省 60-90%）。</p>
+
+  <h3>支援哪些平台？</h3>
+  <p>預設支援 Reddit、X/Twitter、YouTube、Hacker News、Polymarket 和一般網頁搜尋。深度爬取 X/YouTube 需要可選的 ScrapeCreators API。</p>
+
+  <h3>last30days-skill 和直接用 ChatGPT 搜尋有什麼差別？</h3>
+  <p>ChatGPT 每次只能查單一平台，需手動整理。last30days-skill 是完整的 agentic 研究流程：自動分解問題、多平台並行搜尋、過濾整合，輸出帶來源引用的結構化報告。</p>
+
+  <h3>台灣用戶可以用 last30days-skill 研究中文內容嗎？</h3>
+  <p>可以。在 prompt 中明確指定中文關鍵字和繁中社群來源（如 X 台灣討論、YouTube 繁中影片），效果良好。Reddit 中文內容較少，HN 主要為英文。</p>
+
+  <!-- ==================== Related ==================== -->
+  <div class="related-links">
+    <h3>📚 延伸閱讀 — Claude Code Skills 生態系</h3>
+    <ul>
+      <li><a href="/blog/headroom-llm-token-compression-2026.html">headroom：Claude Code 省 91% Token，60-95% 壓縮率實測</a></li>
+      <li><a href="/blog/everything-claude-code-ecc-tutorial-2026.html">Everything Claude Code（ECC）繁中完整教學：209K Stars，38個Agent</a></li>
+      <li><a href="/blog/career-ops-ai-job-hunting-2026.html">career-ops：Claude Code 幫你投 740 份履歷，AI 求職系統</a></li>
+      <li><a href="/blog/opencode-vs-cursor-vs-claude-code-2026.html">OpenCode vs Cursor vs Claude Code：三方終極比較</a></li>
+      <li><a href="/blog/mattpocock-skills-claude-code-2026.html">mattpocock/skills：Claude Code 最強 Skills 套件教學</a></li>
+    </ul>
+  </div>
+
+  <!-- ==================== Closing ==================== -->
+  <h2>總結</h2>
+
+  <p>如果你每週都在做市場研究、競品調查、或主題趨勢分析，last30days-skill 值得立刻裝起來試試。安裝不到 5 分鐘，第一次跑完你就會明白它為什麼能在一週內拿下 11,000+ GitHub stars。</p>
+
+  <p>它不是完美的工具——有時會漏掉小型社群，有時 token 消耗比預期高——但在這個價位（基本上免費），沒有競爭對手。</p>
+
+  <p>下一步建議：</p>
+  <ul>
+    <li>安裝 last30days-skill，用自己最關心的主題跑一次</li>
+    <li>搭配 headroom 把 token 費用控制在 $0.10 以下</li>
+    <li>如果想深度學習 AI 工具鏈的系統設計，DataCamp 的 AI Engineering 課程是目前最結構化的學習路徑</li>
+  </ul>
+
+</article>
+
+<footer>
+  <p>© 2026 AutoDev AI · <a href="/privacy.html">隱私權政策</a> · <a href="/disclaimer.html">免責聲明</a></p>
+  <p style="margin-top:0.4rem;"><a href="https://autodev-ai.com/blog/">← 回部落格列表</a></p>
+</footer>
+
+</body>
+</html>
