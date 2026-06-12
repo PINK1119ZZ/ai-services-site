@@ -1,5 +1,46 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 87 | 2026-06-12 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-06-12 22:00 UTC | 搜尋範圍：GitHub trending weekly（TypeScript + 全語言）、AI changelog 本週、Anthropic/Google/JetBrains 新聞
+
+### 🔥 本輪頭條：Claude Fable 5 公開（6/22 免費試用截止）+ next-ai-draw-io TypeScript 週榜#1 + LMCache Jensen keynote + MiniMax M3 + JetBrains Mellum2 開源
+
+---
+
+#### 1. 🔥🔥🔥🔥🔥 Claude Fable 5（Anthropic，2026-06-09）— 限時 10 天 P1-URGENT
+- Anthropic Mythos 級別首次公開版，2026-06-09 上線，6/22 前企業方案免費試用
+- 最強力公開模型，軟體工程/研究/知識工作最強，危險領域 fallback Opus 4.8
+- IPO 前發布，TechCrunch + CNBC 大量報導，媒體窗口最寬
+- 繁中評測：0篇；企業免費試用截止日 = 最高緊迫度
+- **P1-URGENT，autodev-ai/blog/claude-fable-5-vs-opus-enterprise-guide-2026.html**
+
+#### 2. 🔥🔥🔥🔥 DayuanJiang/next-ai-draw-io — TypeScript 週榜 #1（31K stars，+333/天）
+- Next.js + AI 自然語言生成 draw.io 架構圖/UML/流程圖，支援 MCP
+- AI 推理顯示（o1/o3/Claude 思考過程可視化）；版本歷史還原；PDF 上傳提取圖表
+- SiliconFlow 官方文件整合確認；有桌面版 Win/Mac/Linux
+- 繁中評測：0篇；工程師 + PM + 技術文件受眾
+- **P1-HIGH，autodev-ai/blog/next-ai-draw-io-architecture-tutorial-2026.html**
+
+#### 3. 🔥🔥🔥🔥 LMCache/LMCache — vLLM KV Cache 3-10x 加速，Jensen keynote
+- 開源 KV cache 管理層，Jensen Huang GTC keynote 提及，NVIDIA SVP spotlight
+- 3-10× 更快 TTFT；8× 降低 GPU 成本（offload CPU/NVMe）；Prometheus/OTel 監控
+- Q2 2026 Roadmap：KV 壓縮/量化/blending、多元儲存後端
+- 繁中評測：0篇；省費系列第7篇機會
+- **P1-HIGH，autodev-ai/blog/lmcache-vllm-kv-cache-tutorial-2026.html**
+
+#### 4. 🔥🔥🔥 MiniMax M3 — 1M token，多模態前沿（P2）
+- 1 million token context，原生多模態，前沿 coding + agentic AI
+- 與 Fable 5 + Gemini Omni 同期，三模型比較文配角機會
+- 繁中評測：0篇
+
+#### 5. 🔥🔥🔥 JetBrains Mellum2 開源（12B MoE，2.5B active params，P2）
+- 12B MoE，2.5B active parameters/token，routing + summarization + 中間推理
+- 省費角度：比 Claude/GPT-4o 便宜的中間推理層
+- JetBrains 受眾（IntelliJ/WebStorm 工程師）在台灣大量存在；繁中評測：0篇
+
+---
+
 ## Round 84 | 2026-06-10 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-06-10 22:00 UTC | 搜尋範圍：GitHub trending weekly、HN 趨勢、AI changelog
