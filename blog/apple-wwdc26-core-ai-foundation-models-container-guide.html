@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WWDC26 Apple AI 完整開發者指南：Core AI + Foundation Models + Container 三大更新繁中教學</title>
+<meta content="WWDC26 Apple AI 開發者完整指南：Core AI Framework、Foundation Models 第三方 LLM 接入（Claude/Gemini/MLX）、apple/container 輕量化容器。iOS 27 / macOS Golden Gate，台灣 iOS 開發者必讀，附 Swift 實戰範例。" name="description"/>
+<link href="https://autodev-ai.com/blog/apple-wwdc26-core-ai-foundation-models-container-guide.html" rel="canonical"/>
+<meta content="WWDC26 Apple AI 完整開發者指南：Core AI + Foundation Models + Container 三大更新繁中教學" property="og:title"/>
+<meta content="WWDC26 Apple AI 開發者完整指南：Core AI Framework、Foundation Models 第三方 LLM 接入、apple/container 輕量化容器。iOS 27 / macOS Golden Gate，台灣 iOS 開發者必讀。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://autodev-ai.com/blog/apple-wwdc26-core-ai-foundation-models-container-guide.html" property="og:url"/>
+<meta content="https://images.unsplash.com/photo-1621839673705-6617adf9e890?w=1200&q=80" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "WWDC26 Apple AI 完整開發者指南：Core AI + Foundation Models + Container 三大更新繁中教學",
+  "description": "WWDC26 Apple AI 開發者完整指南：Core AI Framework、Foundation Models 第三方 LLM 接入（Claude/Gemini/MLX）、apple/container 輕量化容器。iOS 27 / macOS Golden Gate，台灣 iOS 開發者必讀，附 Swift 實戰範例。",
+  "author": {"@type": "Organization", "name": "AutoDev AI"},
+  "publisher": {"@type": "Organization", "name": "AutoDev AI"},
+  "datePublished": "2026-06-13",
+  "dateModified": "2026-06-13",
+  "image": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?w=1200&q=80",
+  "url": "https://autodev-ai.com/blog/apple-wwdc26-core-ai-foundation-models-container-guide.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apple Foundation Models Framework 支援哪些第三方 LLM？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "透過 LanguageModelExecutor 協議，目前確認支援：MLXLanguageModel（本地 MLX 社群模型）、Google Gemini（雲端）、Anthropic Claude（雲端）。Apple 設計成開放協議，未來第三方 LLM 可以自行實作 executor 加入生態系。裝置端模型（3B 參數）免費使用，雲端 LLM 需自備 API Key。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Core AI Framework 跟 Foundation Models Framework 有什麼差別？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Foundation Models Framework 是 WWDC25 推出的高階 API，直接呼叫裝置端 3B 參數模型，適合一般 App 快速整合 AI 功能。Core AI Framework 是 WWDC26 新推出的底層框架，提供更細粒度的模型管理、推論管線配置、多模型協調能力，適合需要精密控制 AI 行為的進階開發者。兩者可以搭配使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "apple/container 跟 Docker 有什麼不同？需要 Docker Desktop 嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "apple/container 是 Apple 官方開源的輕量化容器工具，專為 Apple Silicon（M1/M2/M3/M4）優化，使用 Swift + Virtualization Framework 實作，不需要安裝 Docker Desktop。它比 Docker Desktop 啟動更快（通常 < 2 秒），記憶體佔用更小，支援 Linux 容器原生執行。適合 Mac 開發者在本機跑 AI 推論服務、微服務開發、CI 測試環境。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "iOS 27 什麼時候正式發布？Foundation Models 現在可以用嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iOS 27 預計 2026 年 9 月正式發布（跟隨 iPhone 18 系列）。目前 iOS 27 Developer Beta 已開放，有 Apple Developer 帳號的開發者可以下載。Foundation Models Framework 在 iOS 26 Developer Beta 就可以開始使用，開發者現在就能在 beta 環境測試 AI 功能，不必等正式版。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "台灣 iOS 開發者最適合從哪個 API 開始學習？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "建議從 Foundation Models Framework 的 LanguageModelSession 開始，這是最高階也最容易上手的 API，三行 Swift 就能呼叫裝置端 AI。熟悉後再學 @Generable 結構化輸出（強型別 JSON 生成），最後才進階到 Core AI Framework 的底層控制。WWDC26 Session 339（Foundation Models）和 Session 341（Core AI）都有官方範例，建議搭配本文閱讀。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/">AutoDev AI</a>
+    <nav>
+      <a href="/">首頁</a>
+      <a href="/blog/">部落格</a>
+      <a href="/en/">English</a>
+      <a href="/contact.html">聯絡我們</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container article-layout">
+<article>
+
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?w=1200&q=80" alt="WWDC26 Apple AI Core AI Foundation Models Container 開發者指南" loading="eager"/>
+</div>
+
+<div class="article-meta">
+  <span class="tag">Apple 開發</span>
+  <span class="tag">iOS 27</span>
+  <span class="date">2026-06-13</span>
+  <span class="read-time">約 12 分鐘閱讀</span>
+</div>
+
+<h1>WWDC26 Apple AI 完整開發者指南：Core AI + Foundation Models + Container 三大更新繁中教學</h1>
+
+<p class="article-lead">
+  WWDC26 是 Apple 近五年對開發者最友善的一屆。三個重大 AI 開發更新同時落地：<strong>Core AI Framework</strong>（底層 AI 推論管線）、<strong>Foundation Models 開放第三方 LLM 接入</strong>（Claude/Gemini/MLX）、<strong>apple/container 輕量化容器</strong>（Apple Silicon 原生，比 Docker Desktop 更快）。這篇文章是台灣 iOS 開發者的完整繁中指南。
+</p>
+
+<div class="highlight-box">
+  <strong>⚡ 本文涵蓋</strong>
+  <ul>
+    <li>Core AI Framework：WWDC26 底層 AI 管線新 API</li>
+    <li>Foundation Models 第三方 LLM 接入：Claude + Gemini + MLX</li>
+    <li>LanguageModelSession 三行 Swift 快速上手</li>
+    <li>apple/container：Apple Silicon 原生容器，告別 Docker Desktop</li>
+    <li>台灣 iOS 開發者 5 個實戰場景</li>
+    <li>費用比較：裝置端免費 vs 雲端 API</li>
+  </ul>
+</div>
+
+<h2>WWDC26 Apple AI：三個更新的全局觀</h2>
+
+<p>
+  在深入每個技術細節前，先建立全局觀。WWDC26 的 Apple AI 架構可以分成三層：
+</p>
+
+<div class="architecture-diagram">
+  <table>
+    <thead>
+      <tr>
+        <th>層次</th>
+        <th>框架</th>
+        <th>適用對象</th>
+        <th>Session</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>高階（最容易）</strong></td>
+        <td>Foundation Models Framework</td>
+        <td>一般 App 開發者，快速加入 AI</td>
+        <td>Session 339</td>
+      </tr>
+      <tr>
+        <td><strong>中階（進階）</strong></td>
+        <td>Core AI Framework</td>
+        <td>需要精密控制 AI 行為的開發者</td>
+        <td>Session 341</td>
+      </tr>
+      <tr>
+        <td><strong>基礎設施</strong></td>
+        <td>apple/container</td>
+        <td>需要本地 Linux 容器的 Mac 開發者</td>
+        <td>GitHub OSS</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  三個框架可以獨立使用，也可以組合：例如用 <code>apple/container</code> 跑本地 MLX 推論服務，再透過 Core AI Framework 的自訂 executor 連接，最後用 Foundation Models 的高階 API 呼叫。
+</p>
+
+<h2>Part 1：Foundation Models Framework — 第三方 LLM 接入</h2>
+
+<p>
+  Foundation Models 是 WWDC25 推出的高階 API，讓開發者三行 Swift 就能呼叫 Apple 裝置端的 3B 參數模型。WWDC26 最大的更新是：<strong>正式開放第三方 LLM 接入協議</strong>（Session 339，2026 年 6 月 8 日）。
+</p>
+
+<h3>裝置端模型：零 API 費用的本地推論</h3>
+
+<p>
+  Apple 裝置端的 Foundation Model 是一個 3 billion 參數的通用模型，100% 在裝置上執行：
+</p>
+
+<ul>
+  <li>📱 支援裝置：iPhone 15 Pro 以上、iPad Pro（M2+）、所有 Apple Silicon Mac</li>
+  <li>💰 費用：完全免費（裝置端推論，零 API 成本）</li>
+  <li>🔒 隱私：資料不離開裝置，適合處理敏感資料</li>
+  <li>⚡ 速度：M4 晶片上約 30-50 tokens/秒</li>
+  <li>🎁 PCC 配額：App 下載量未達 200 萬前，Private Cloud Compute 額外雲端推論也免費</li>
+</ul>
+
+<h3>三行 Swift 快速上手（LanguageModelSession）</h3>
+
+<p>
+  最基礎的 Foundation Models 用法：
+</p>
+
+<pre><code class="language-swift">import FoundationModels
+
+// 建立 session（預設使用裝置端模型）
+let session = LanguageModelSession()
+
+// 非同步呼叫，streaming 回應
+let response = try await session.respond(to: "幫我寫一個 iOS 15 的 UserNotifications 教學摘要")
+print(response.content)
+</code></pre>
+
+<p>就這樣。不需要 API Key，不需要網路，不需要任何設定。</p>
+
+<h3>Streaming 回應（即時顯示文字）</h3>
+
+<pre><code class="language-swift">import FoundationModels
+import SwiftUI
+
+struct AIView: View {
+    @State private var output = ""
+
+    var body: some View {
+        Text(output)
+            .task { await generateResponse() }
+    }
+
+    func generateResponse() async {
+        let session = LanguageModelSession()
+        let stream = session.streamResponse(to: "解釋 Swift Concurrency 的 actor 模型")
+
+        for try await chunk in stream {
+            output += chunk
+        }
+    }
+}
+</code></pre>
+
+<h3>@Generable：強型別結構化輸出</h3>
+
+<p>
+  WWDC26 新增的 <code>@Generable</code> 巨集，讓 Foundation Models 直接輸出強型別 Swift struct，告別手動解析 JSON：
+</p>
+
+<pre><code class="language-swift">import FoundationModels
+
+@Generable
+struct BugReport {
+    let title: String
+    let severity: String  // "low" | "medium" | "high" | "critical"
+    let affectedComponent: String
+    let reproductionSteps: [String]
+    let suggestedFix: String
+}
+
+// 直接生成結構化 bug report
+let session = LanguageModelSession()
+let report: BugReport = try await session.generate(
+    BugReport.self,
+    from: "App 在 iOS 17.3 上啟動後立即 crash，log 顯示 NSInternalInconsistencyException"
+)
+
+print(report.severity)           // "high"
+print(report.reproductionSteps)  // ["啟動 App", "等待 2 秒", "Crash"]
+</code></pre>
+
+<h3>接入第三方 LLM：LanguageModelExecutor 協議</h3>
+
+<p>
+  WWDC26 Session 339 最大亮點：透過 <code>LanguageModelExecutor</code> 協議，任何 LLM 都可以接入 Foundation Models 的高階 API。
+</p>
+
+<p>目前官方確認支援的三個 executor：</p>
+
+<div class="executor-cards">
+  <div class="executor-card">
+    <h4>🍎 SystemLanguageModel（預設）</h4>
+    <p>Apple 裝置端 3B 模型，完全免費，100% 本地，適合一般任務。</p>
+    <pre><code class="language-swift">let session = LanguageModelSession()
+// 等同 LanguageModelSession(model: .default)
+</code></pre>
+  </div>
+
+  <div class="executor-card">
+    <h4>🤖 MLXLanguageModel</h4>
+    <p>本地 MLX 社群模型（如 Mistral-7B-Instruct MLX、Llama-3-8B MLX），搭配 <code>apple/container</code> 跑更大模型。</p>
+    <pre><code class="language-swift">import MLXFoundationModels
+
+let mlxModel = MLXLanguageModel(modelName: "mistralai/Mistral-7B-Instruct-v0.3")
+let session = LanguageModelSession(model: mlxModel)
+</code></pre>
+  </div>
+
+  <div class="executor-card">
+    <h4>☁️ 雲端 LLM（Claude / Gemini）</h4>
+    <p>網路可用時升級到更強的雲端模型，API Key 存放在 Keychain，不硬寫在程式碼裡。</p>
+    <pre><code class="language-swift">// Anthropic Claude executor（社群套件）
+import ClaudeFoundationModels
+
+let claude = ClaudeLanguageModel(
+    apiKey: KeychainHelper.retrieve("ANTHROPIC_API_KEY"),
+    model: "claude-opus-4-5"
+)
+let session = LanguageModelSession(model: claude)
+</code></pre>
+  </div>
+</div>
+
+<h3>實戰：根據網路狀況自動切換 LLM</h3>
+
+<pre><code class="language-swift">import FoundationModels
+import Network
+
+class SmartAISession {
+    private var session: LanguageModelSession
+
+    init() {
+        // 預設使用裝置端（離線也能用）
+        self.session = LanguageModelSession()
+    }
+
+    func upgradeIfOnline() {
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler = { [weak self] path in
+            if path.status == .satisfied {
+                // 有網路時切換到 Claude（更強）
+                let claude = ClaudeLanguageModel(
+                    apiKey: KeychainHelper.retrieve("ANTHROPIC_API_KEY"),
+                    model: "claude-sonnet-4-5"
+                )
+                self?.session = LanguageModelSession(model: claude)
+            }
+        }
+        monitor.start(queue: .global())
+    }
+
+    func respond(to prompt: String) async throws -> String {
+        let response = try await session.respond(to: prompt)
+        return response.content
+    }
+}
+</code></pre>
+
+<p>
+  這個模式非常適合台灣 App 開發者：離線時用裝置端免費模型，上線時自動升級到雲端強模型，用戶體驗無縫切換。
+</p>
+
+<h2>Part 2：Core AI Framework — 底層 AI 推論管線</h2>
+
+<p>
+  Core AI Framework 是 WWDC26 新推出的底層框架（Session 341），提供比 Foundation Models 更細粒度的控制能力。
+</p>
+
+<h3>Core AI vs Foundation Models：何時用哪個？</h3>
+
+<div class="comparison-table">
+  <table>
+    <thead>
+      <tr>
+        <th>需求</th>
+        <th>Foundation Models</th>
+        <th>Core AI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>快速加入 AI 對話功能</td>
+        <td>✅ 首選</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>結構化 JSON 輸出（@Generable）</td>
+        <td>✅ 首選</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>多模型協調（A 模型分類，B 模型生成）</td>
+        <td>—</td>
+        <td>✅ 首選</td>
+      </tr>
+      <tr>
+        <td>自訂推論管線（RAG、重排序）</td>
+        <td>—</td>
+        <td>✅ 首選</td>
+      </tr>
+      <tr>
+        <td>精密 token 預算控制</td>
+        <td>—</td>
+        <td>✅ 首選</td>
+      </tr>
+      <tr>
+        <td>模型效能監控（延遲、throughput）</td>
+        <td>—</td>
+        <td>✅ 首選</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Core AI 基礎用法</h3>
+
+<pre><code class="language-swift">import CoreAI
+
+// 建立推論管線
+let pipeline = CoreAI.InferencePipeline.builder()
+    .setModel(.deviceDefault)
+    .setMaxTokens(512)
+    .setTemperature(0.7)
+    .setTopP(0.9)
+    .build()
+
+// 執行推論
+let result = try await pipeline.infer(
+    prompt: "分析這段 Swift 程式碼的效能瓶頸：\n\(codeSnippet)"
+)
+
+// 取得 token 使用量（省費監控）
+print("使用 tokens: \(result.tokenUsage.total)")
+print("推論時間: \(result.latency)ms")
+</code></pre>
+
+<h3>多模型協調管線</h3>
+
+<p>
+  Core AI 最強大的功能是協調多個模型，例如：先用輕量模型分類任務，再用重型模型處理複雜任務：
+</p>
+
+<pre><code class="language-swift">import CoreAI
+
+// 分類器管線（輕量，本地）
+let classifier = CoreAI.InferencePipeline.builder()
+    .setModel(.deviceDefault)
+    .setMaxTokens(64)  // 只需要短回應
+    .build()
+
+// 生成器管線（強大，可選雲端）
+let generator = CoreAI.InferencePipeline.builder()
+    .setModel(.claude("claude-opus-4-5"))
+    .setMaxTokens(2048)
+    .build()
+
+// 路由邏輯
+func smartRespond(to userMessage: String) async throws -> String {
+    // Step 1：用本地輕量模型分類（免費）
+    let classification = try await classifier.infer(
+        prompt: "將以下訊息分類為 'simple' 或 'complex'（只回答一個詞）：\(userMessage)"
+    )
+
+    // Step 2：根據分類選擇模型
+    if classification.content.contains("simple") {
+        // 簡單問題：繼續用本地模型（免費）
+        let response = try await classifier.infer(prompt: userMessage)
+        return response.content
+    } else {
+        // 複雜問題：升級到 Claude（付費但品質好）
+        let response = try await generator.infer(prompt: userMessage)
+        return response.content
+    }
+}
+</code></pre>
+
+<p>
+  這個模式可以大幅降低 API 費用——只有真正需要的複雜任務才呼叫雲端 LLM，簡單任務全部本地處理。
+</p>
+
+<h2>Part 3：apple/container — Apple Silicon 原生輕量容器</h2>
+
+<p>
+  <code>apple/container</code>（GitHub：<a href="https://github.com/apple/container" target="_blank" rel="noopener">github.com/apple/container</a>）是 Apple 在 WWDC26 週期開源的輕量化容器工具，本週 GitHub trending 第 4 名（+7,781 stars/週，35K stars）。
+</p>
+
+<h3>為什麼 apple/container 值得關注？</h3>
+
+<ul>
+  <li><strong>告別 Docker Desktop：</strong> Docker Desktop for Mac 記憶體佔用大（通常 2-4GB），啟動慢（15-30 秒）。<code>apple/container</code> 使用 Apple Virtualization Framework，啟動時間 &lt; 2 秒，記憶體佔用更小。</li>
+  <li><strong>Apple Silicon 原生：</strong> 完全為 M1/M2/M3/M4 優化，支援 ARM64 Linux 容器直接執行，效能接近原生。</li>
+  <li><strong>Swift 實作：</strong> 開源，輕量，可以直接嵌入到 macOS App 中。</li>
+  <li><strong>AI 開發神器：</strong> 用 container 跑本地 MLX 推論服務 + Ollama，再從 Xcode App 連接，是完整的本地 AI 開發環境。</li>
+</ul>
+
+<h3>安裝 apple/container</h3>
+
+<pre><code class="language-bash"># 需要 macOS Tahoe（macOS 26）+ Apple Silicon
+# 透過 Homebrew 安裝（最簡單）
+brew install apple/container/container
+
+# 驗證安裝
+container --version
+</code></pre>
+
+<h3>基礎使用：跑一個 Ubuntu 容器</h3>
+
+<pre><code class="language-bash"># 拉取並啟動 Ubuntu 24.04
+container run --rm -it ubuntu:24.04 bash
+
+# 或跑 Alpine（更輕量）
+container run --rm -it alpine:3.20 sh
+</code></pre>
+
+<h3>AI 開發場景：本地 Ollama + MLX 推論服務</h3>
+
+<pre><code class="language-bash"># 用 container 跑 Ollama（本地 LLM 服務）
+container run -d \
+  --name ollama \
+  -p 11434:11434 \
+  -v ollama_data:/root/.ollama \
+  ollama/ollama
+
+# 進入容器下載模型
+container exec -it ollama ollama pull llama3.2:3b
+
+# 從 Mac 呼叫 API（不用離開容器）
+curl http://localhost:11434/api/generate \
+  -d '{"model": "llama3.2:3b", "prompt": "Hello in Swift"}'
+</code></pre>
+
+<p>
+  這樣就有了一個完全本地、零 API 費用的 LLM 服務，可以從 iOS Simulator 或 macOS App 直接呼叫。
+</p>
+
+<h3>搭配 apple/container + Core AI：本地模型接入 Foundation Models</h3>
+
+<pre><code class="language-bash"># 1. 用 container 跑 MLX 推論服務（container 內）
+container run -d \
+  --name mlx-server \
+  -p 8080:8080 \
+  ghcr.io/ml-explore/mlx-server:latest \
+  --model mlx-community/Mistral-7B-Instruct-v0.3-4bit
+
+# 2. 在 Xcode 專案中，定義自訂 executor 連到 container
+</code></pre>
+
+<pre><code class="language-swift">// 自訂 executor：連接到 apple/container 跑的 MLX 服務
+struct LocalContainerExecutor: LanguageModelExecutor {
+    let baseURL = URL(string: "http://localhost:8080")!
+
+    func infer(request: InferenceRequest) async throws -> InferenceResponse {
+        var urlRequest = URLRequest(url: baseURL.appendingPathComponent("/v1/chat/completions"))
+        urlRequest.httpMethod = "POST"
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        // ... 組裝 OpenAI-compatible request
+        let (data, _) = try await URLSession.shared.data(for: urlRequest)
+        return try JSONDecoder().decode(InferenceResponse.self, from: data)
+    }
+}
+
+// 使用自訂 executor
+let localModel = LocalContainerExecutor()
+let session = LanguageModelSession(model: localModel)
+let response = try await session.respond(to: "幫我 review 這段 Swift 程式碼")
+</code></pre>
+
+<h2>台灣 iOS 開發者 5 個實戰場景</h2>
+
+<p>
+  以下 5 個場景是台灣 iOS 開發者最常遇到的需求，每個都附上最小可行實作：
+</p>
+
+<h3>1. AI 智慧日記（Foundation Models + @Generable）</h3>
+
+<pre><code class="language-swift">@Generable
+struct DiaryEntry {
+    let mood: String        // "開心" | "平靜" | "低落" | "興奮"
+    let summary: String     // 一句話總結
+    let keyEvents: [String] // 今天發生的事
+    let suggestions: String // AI 給的心理支持
+}
+
+// 用戶輸入語音轉文字後，AI 自動整理
+let session = LanguageModelSession()
+let entry: DiaryEntry = try await session.generate(
+    DiaryEntry.self,
+    from: "今天工作很累，但是和朋友吃了好吃的火鍋，心情好一點了"
+)
+</code></pre>
+
+<h3>2. 程式碼審查助理（Core AI + 雲端 LLM）</h3>
+
+<pre><code class="language-swift">// 複雜程式碼用 Claude，簡單問題用本地模型
+let codeReviewer = SmartAISession()
+await codeReviewer.upgradeIfOnline()
+
+let review = try await codeReviewer.respond(
+    to: "審查這段 Swift 程式碼的記憶體管理：\n\(pastedCode)"
+)
+</code></pre>
+
+<h3>3. 離線翻譯 App（Foundation Models，完全本地）</h3>
+
+<pre><code class="language-swift">let session = LanguageModelSession()
+
+// 完全離線翻譯，適合出差海外無網路情境
+func translate(_ text: String, to language: String) async throws -> String {
+    let response = try await session.respond(
+        to: "將以下文字翻譯成\(language)（只回答翻譯結果）：\(text)"
+    )
+    return response.content
+}
+
+let translated = try await translate("今天天氣很好", to: "英文")
+// "The weather is very nice today."
+</code></pre>
+
+<h3>4. 客服 FAQ 機器人（Foundation Models + 本地知識庫）</h3>
+
+<pre><code class="language-swift">@Generable
+struct CustomerServiceResponse {
+    let answer: String
+    let confidence: Double  // 0.0-1.0
+    let needsHumanEscalation: Bool
+    let relatedFAQs: [String]
+}
+
+// 把 FAQ 文件當 context 傳入
+let faqContext = try String(contentsOfFile: Bundle.main.path(forResource: "faq", ofType: "txt")!)
+let session = LanguageModelSession(systemPrompt: "你是客服助理，根據以下 FAQ 回答問題：\n\(faqContext)")
+
+let response: CustomerServiceResponse = try await session.generate(
+    CustomerServiceResponse.self,
+    from: userQuestion
+)
+
+if response.needsHumanEscalation {
+    // 轉接真人客服
+}
+</code></pre>
+
+<h3>5. 寫作助理（Foundation Models + Streaming）</h3>
+
+<pre><code class="language-swift">struct WritingAssistantView: View {
+    @State private var draft: String = ""
+    @State private var suggestion: String = ""
+    @State private var isGenerating = false
+
+    var body: some View {
+        VStack {
+            TextEditor(text: $draft)
+            Button("AI 續寫") {
+                Task { await generateContinuation() }
+            }
+            Text(suggestion)
+        }
+    }
+
+    func generateContinuation() async {
+        isGenerating = true
+        suggestion = ""
+        let session = LanguageModelSession(
+            systemPrompt: "你是台灣繁體中文寫作助理，幫助用戶延續寫作風格，自然流暢。"
+        )
+
+        let stream = session.streamResponse(to: "請在以下段落後繼續：\n\(draft)")
+        for try await chunk in stream {
+            suggestion += chunk
+        }
+        isGenerating = false
+    }
+}
+</code></pre>
+
+<h2>費用比較：裝置端 vs 雲端 API</h2>
+
+<div class="comparison-table">
+  <table>
+    <thead>
+      <tr>
+        <th>方案</th>
+        <th>月費（1000 次/天）</th>
+        <th>延遲</th>
+        <th>離線</th>
+        <th>適合場景</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Foundation Models（裝置端）</strong></td>
+        <td>$0（完全免費）</td>
+        <td>低（本地）</td>
+        <td>✅</td>
+        <td>一般摘要、翻譯、簡單問答</td>
+      </tr>
+      <tr>
+        <td><strong>PCC（私有雲端配額）</strong></td>
+        <td>$0（&lt;200萬下載免費）</td>
+        <td>中</td>
+        <td>❌</td>
+        <td>需要更強模型但還在起步階段</td>
+      </tr>
+      <tr>
+        <td><strong>Claude Sonnet API</strong></td>
+        <td>~$9/月</td>
+        <td>中</td>
+        <td>❌</td>
+        <td>複雜推理、長文件分析</td>
+      </tr>
+      <tr>
+        <td><strong>Claude Opus API</strong></td>
+        <td>~$45/月</td>
+        <td>中高</td>
+        <td>❌</td>
+        <td>最高品質任務（程式碼 review 等）</td>
+      </tr>
+      <tr>
+        <td><strong>Gemini 1.5 Pro API</strong></td>
+        <td>~$7/月</td>
+        <td>中</td>
+        <td>❌</td>
+        <td>多模態（圖片+文字）</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  <strong>建議策略：</strong> 預設使用裝置端（免費），有網路時透過 Core AI 的路由邏輯，只在必要時升級到雲端 LLM。這樣一個 App 的平均 AI 成本可以降低 70-90%。
+</p>
+
+<!-- CTA 1: DataCamp -->
+<div class="affiliate-cta">
+  <div class="cta-content">
+    <h3>🎓 系統學習 AI + iOS 開發：DataCamp</h3>
+    <p>
+      Foundation Models 和 Core AI 只是開始。要在 2026 年成為真正有競爭力的 iOS AI 工程師，需要更深的 ML 基礎和 AI 系統設計能力。DataCamp 提供完整的 AI Engineering 學習路徑，從 Python + ML 基礎到 LLM 應用開發，全部有結構化課程。
+    </p>
+    <ul>
+      <li>✅ Machine Learning Engineer 認證路徑</li>
+      <li>✅ LLM Concepts &amp; Applications 課程</li>
+      <li>✅ AI in Production 系統設計課程</li>
+      <li>✅ 可按月訂閱，新課程持續新增</li>
+    </ul>
+    <a class="cta-button primary" href="https://afflink.one/s/aavAC" rel="noopener noreferrer" target="_blank">
+      → 免費試用 DataCamp（首月免費）
+    </a>
+    <p class="cta-note">DataCamp 提供 40% 佣金的 AI 課程平台，是我們整個 affiliate 組合裡佣金率最高的工具</p>
+  </div>
+</div>
+
+<h2>開發環境設定：一次到位</h2>
+
+<p>
+  完整的 WWDC26 Apple AI 開發環境設定步驟：
+</p>
+
+<pre><code class="language-bash"># Step 1: 安裝 Xcode 26 Beta（支援 iOS 27 + Foundation Models + Core AI）
+# 從 developer.apple.com/download 下載 Xcode 26 Beta
+
+# Step 2: 確認 macOS Tahoe（macOS 26）
+sw_vers  # 應顯示 macOS 26.x
+
+# Step 3: 安裝 apple/container
+brew install apple/container/container
+container --version
+
+# Step 4: 建立新 Xcode 專案，確認 target 為 iOS 27+
+# File > New Project > iOS App > 設定 Deployment Target: iOS 27.0
+
+# Step 5: 在 Package.swift 或 Xcode Package Manager 加入依賴
+# 裝置端 Foundation Models 不需要額外套件（系統框架）
+# 若需要 Claude executor，加入社群套件：
+# .package(url: "https://github.com/anthropics/claude-foundation-models-swift", from: "1.0.0")
+</code></pre>
+
+<!-- CTA 2: DigitalOcean -->
+<div class="affiliate-cta secondary">
+  <div class="cta-content">
+    <h3>☁️ iOS CI/CD Pipeline：DigitalOcean VPS</h3>
+    <p>
+      用 apple/container 建立本地開發環境後，生產環境的 CI/CD Pipeline 需要雲端 VPS。DigitalOcean 提供 $6/月起的 Droplet，可以跑 TestFlight 自動化上傳、API 服務、MLX 推論端點。新用戶享有 $200 免費額度（60天），足夠跑兩個月完整的 iOS CI/CD 環境。
+    </p>
+    <a class="cta-button secondary" href="https://m.do.co/c/6121a295f624" rel="noopener noreferrer" target="_blank">
+      → 領取 DigitalOcean $200 免費額度
+    </a>
+  </div>
+</div>
+
+<h2>常見問題 FAQ</h2>
+
+<div class="faq-section">
+
+  <div class="faq-item">
+    <h3>Q: Apple Foundation Models Framework 支援哪些第三方 LLM？</h3>
+    <p>透過 <code>LanguageModelExecutor</code> 協議，目前確認支援：MLXLanguageModel（本地 MLX 社群模型）、Google Gemini（雲端）、Anthropic Claude（雲端）。Apple 設計成開放協議，未來第三方可以自行實作 executor 加入生態系。裝置端模型完全免費，雲端 LLM 需自備 API Key。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q: Core AI Framework 跟 Foundation Models Framework 有什麼差別？</h3>
+    <p>Foundation Models 是高階 API，三行 Swift 呼叫裝置端 AI，適合一般 App 快速整合。Core AI 是底層框架，提供更細粒度的模型管理、多模型協調、自訂推論管線，適合需要精密控制 AI 行為的進階開發者。兩者可以搭配使用。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q: apple/container 跟 Docker 有什麼不同？需要 Docker Desktop 嗎？</h3>
+    <p><code>apple/container</code> 是 Apple 官方開源的輕量化容器，專為 Apple Silicon 優化，使用 Swift + Virtualization Framework，不需要 Docker Desktop。啟動比 Docker Desktop 快（&lt; 2 秒），記憶體佔用更小，支援 Linux 容器原生執行。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q: iOS 27 什麼時候正式發布？Foundation Models 現在可以用嗎？</h3>
+    <p>iOS 27 預計 2026 年 9 月正式發布。iOS 27 Developer Beta 已開放，有 Apple Developer 帳號可以下載。Foundation Models Framework 在 iOS 26 Developer Beta 就能開始開發，現在就可以測試 AI 功能。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q: 台灣 iOS 開發者最適合從哪個 API 開始學習？</h3>
+    <p>建議從 <code>LanguageModelSession</code> 開始（三行 Swift），熟悉後學 <code>@Generable</code> 結構化輸出，最後才進階到 Core AI Framework 底層控制。WWDC26 Session 339（Foundation Models）和 Session 341（Core AI）的官方範例搭配本文效果最佳。</p>
+  </div>
+
+</div>
+
+<!-- CTA 3: Gumroad -->
+<div class="affiliate-cta">
+  <div class="cta-content">
+    <h3>📦 Claude Code 省費工具包：搭配 iOS AI 開發</h3>
+    <p>
+      在 Mac 上用 Claude Code 輔助 iOS 開發？這個工具包包含 13 個即用 Agent Skills + 一鍵安裝腳本，包含程式碼審查、TDD、安全審查等技能，讓 Claude Code 的 token 消耗降低 30-60%。
+    </p>
+    <a class="cta-button tertiary" href="https://xiaofan8.gumroad.com/l/kknad" rel="noopener noreferrer" target="_blank">
+      → 取得 Claude Code 省費工具包（$29）
+    </a>
+  </div>
+</div>
+
+<h2>總結</h2>
+
+<p>
+  WWDC26 對 iOS 開發者來說是真正的里程碑：
+</p>
+
+<ul>
+  <li><strong>Foundation Models + 第三方 LLM</strong>：一套 API 統一呼叫本地和雲端模型，離線優先 + 網路升級，降低 AI 成本的最佳架構。</li>
+  <li><strong>Core AI Framework</strong>：需要複雜 AI 管線的開發者終於有原生工具，多模型協調不再需要自己造輪子。</li>
+  <li><strong>apple/container</strong>：Mac 開發者告別 Docker Desktop，輕量原生容器讓本地 AI 開發環境更流暢。</li>
+</ul>
+
+<p>
+  iOS 27 正式版 9 月才到，但 Developer Beta 現在就可以開始探索。對台灣 iOS 開發者來說，<strong>現在是最好的時機</strong>——趁著英文評測滿天飛、繁中教學資源還稀少的視窗，把這些新 API 掌握起來，在下一批 AI-native App 浪潮中搶到先機。
+</p>
+
+<div class="article-footer-cta">
+  <p>📚 <strong>延伸閱讀（省費系列）：</strong></p>
+  <ul>
+    <li><a href="/blog/headroom-llm-token-compression-2026.html">headroom：60-95% Token 壓縮，Claude Code 省費系列第6篇</a></li>
+    <li><a href="/blog/everything-claude-code-ecc-tutorial-2026.html">Everything Claude Code (ECC) 完整繁中教學</a></li>
+    <li><a href="/blog/opencode-vs-cursor-vs-claude-code-2026.html">OpenCode vs Cursor vs Claude Code：三方終極比較</a></li>
+    <li><a href="/blog/last30days-skill-ai-research-2026.html">last30days-skill：讓 AI Agent 自動做市場研究</a></li>
+  </ul>
+</div>
+
+</article>
+
+<aside class="sidebar">
+  <div class="sidebar-card">
+    <h3>本站精選工具</h3>
+    <ul>
+      <li><a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener">DataCamp — AI 技能課程（40%佣金）</a></li>
+      <li><a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener">DigitalOcean — VPS（$200免費）</a></li>
+      <li><a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener">Claude Code 省費工具包</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-card">
+    <h3>省費系列文章</h3>
+    <ul>
+      <li><a href="/blog/headroom-llm-token-compression-2026.html">headroom（-91% tokens）</a></li>
+      <li><a href="/blog/rtk-rust-token-killer-review-2026.html">RTK Rust Token Killer</a></li>
+      <li><a href="/blog/deepclaude-run-claude-code-deepseek-17x-cheaper-2026.html">DeepClaude（17x 省費）</a></li>
+    </ul>
+  </div>
+</aside>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 AutoDev AI | <a href="/">首頁</a> | <a href="/blog/">部落格</a> | <a href="/contact.html">聯絡我們</a></p>
+    <p class="disclaimer">本站含有聯盟行銷連結，點擊購買我們可能獲得佣金，不影響您的購買成本。</p>
+  </div>
+</footer>
+
+</body>
+</html>
