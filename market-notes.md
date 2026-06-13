@@ -621,3 +621,117 @@
 → 見 directives/researcher-to-strategist-2026-06-07-round77.md
 
 ---
+
+---
+
+## 2026-06-14（市場研究 Round 89 — 週日 07:00 UTC cron）
+
+### 一、🔥 本輪最高價值新發現
+
+#### 1. RunPod Affiliate — 10% CASH 全消費循環（GPU Cloud 最高佣金）
+| 欄位 | 詳情 |
+|------|------|
+| 佣金 | **Affiliate tier: 10% on ALL spend（現金出款）**；一般 referral: 3% Pod + 5% Serverless，前6個月 |
+| Cookie | 長期追蹤（spend-based，非 cookie 限制）|
+| 申請 | runpod.io/referral-and-affiliate-program（需申請 Affiliate tier）|
+| 定價 | GPU 按需計費，$0.44/hr（RTX 4090）起 |
+| 受眾 | AI 開發者、本地模型用戶、ComfyUI/Stable Diffusion 用戶 |
+| 台灣缺口 | RunPod 繁中完整評測 = 0篇；「跑本地模型但沒 GPU」受眾巨大 |
+| 預估 | 開發者用戶月均 $50-200 消費 × 10% = $5-20/用戶/月；50客 = $250-1000/月 |
+| 評估 | ⭐⭐⭐⭐ 高佣金 GPU 雲，DigitalOcean 互補（一個 VPS，一個 GPU）|
+
+**行動步驟：**
+1. Ivan 申請 RunPod Affiliate tier（affiliate@runpod.io 或官網申請）
+2. seo-writer 寫「RunPod 評測 2026：台灣開發者最佳 GPU 雲，跑 AI 不買顯卡」
+3. 與 headroom/LMCache 省費系列交叉 CTA（GPU 省費 + token 省費雙線）
+
+---
+
+#### 2. Synthflow AI — 20% 循環 15個月（Voice AI，B2B 高單價）
+| 欄位 | 詳情 |
+|------|------|
+| 佣金 | 20% monthly recurring，15個月 |
+| 平台 | PartnerStack（market.partnerstack.com/page/synthflowai）|
+| 另有 | Creator Program via Tolt（更高佣金率，需申請）|
+| 定價 | 企業方案，月費高（8x8 戰略合作，B2B 大客戶）|
+| 受眾 | 台灣客服中心、電商客服自動化、預約系統業者 |
+| 台灣缺口 | Voice AI 繁中評測 = 0篇；台灣企業 AI 客服需求爆發（2026 Q1 GDP +14.55%）|
+| 預估 | 方案 $100-500/月/企業客戶 × 20% × 15月 = $300-1500/客終身值 |
+| 評估 | ⭐⭐⭐⭐ B2B 高單價，台灣企業 AI 採購潮受益；繁中首篇評測即可佔位 |
+
+**行動步驟：**
+1. Ivan 申請 PartnerStack Synthflow 聯盟（快速審核）
+2. seo-writer 寫「Synthflow AI 評測：台灣企業導入 AI 客服語音機器人完整指南」
+3. 可搭配 autodev-ai 服務頁（企業 AI 建置服務 CTA）
+
+---
+
+#### 3. NVIDIA SkillSpector — 安全掃描工具，⭐⭐⭐⭐ P1-HIGH NEW
+| 欄位 | 詳情 |
+|------|------|
+| 工具 | NVIDIA 官方出品的 AI agent skills 安全掃描器 |
+| Stars | 4,381（本週 +2,616，爆發增長）|
+| 功能 | 64種安全檢查、prompt injection偵測、惡意模式識別；支援 SARIF/CI/CD |
+| 數據 | 研究顯示 26.1% skills 含漏洞，5.2% 有惡意意圖 |
+| 受眾 | 企業 AI 部署團隊、devops、安全工程師 |
+| 台灣缺口 | 繁中資安 + AI agent 結合教學 = 0篇；NVIDIA 品牌背書可信度高 |
+| Affiliate | ❌ 無（開源）→ DataCamp DevSecOps 課程 40% + DigitalOcean |
+| 評估 | ⭐⭐⭐⭐ NVIDIA 品牌 + agent security 全新賽道，繁中完全空白 |
+
+---
+
+#### 4. goose (AAIF) — 開源全功能 AI Agent，49K Stars ⭐⭐⭐ P2
+| 欄位 | 詳情 |
+|------|------|
+| 工具 | Block（Jack Dorsey）開源 AI agent，已遷移至 Linux Foundation AAIF |
+| Stars | 49,224；本週 +2,479（持續成長）|
+| 功能 | Desktop App + CLI + API；70+ MCP extensions；macOS/Linux/Windows |
+| 差異化 | 不只是 coding agent — research、writing、automation 通用 |
+| 受眾 | 台灣知識工作者（非工程師也能用）；opencode/Codex 替代方案比較受眾 |
+| 台灣缺口 | 繁中完整評測 = 0篇；「不會 coding 也能用的 AI agent」角度未有人寫 |
+| Affiliate | ❌ 無（開源）→ DigitalOcean + DataCamp |
+| 評估 | ⭐⭐⭐ P2，與 opencode 合體比較文效益更高 |
+
+---
+
+#### 5. CopilotKit / AG-UI Protocol — 前端 Agent 基建，35K Stars ⭐⭐⭐ P2
+| 欄位 | 詳情 |
+|------|------|
+| 工具 | CopilotKit：React/Angular/Mobile AI agent 前端框架；AG-UI 開放協議 |
+| Stars | 34,999（本週 +2,473）；AWS、Google 戰略夥伴 |
+| 角度 | AG-UI = 「AI agent 界的 USB-C」——連接任何 agent backend 到任何 UI |
+| 受眾 | 台灣前端工程師 + fullstack 開發者（React 受眾龐大）|
+| 台灣缺口 | AG-UI 繁中教學 = 0篇；CopilotKit 繁中 = 0篇 |
+| Affiliate | ❌ 無（開源）→ DataCamp React/AI課程 40% |
+| 評估 | ⭐⭐⭐ P2；開發者受眾文章，適合 autodev-ai |
+
+---
+
+### 二、📊 新 Affiliate 機會彙整（本輪）
+
+| 程式 | 佣金 | 類型 | Cookie | 平台 | 申請連結 |
+|------|------|------|--------|------|---------|
+| **RunPod** | **10% cash 全消費** | GPU Cloud | spend-based | 直接 | runpod.io/referral-and-affiliate-program |
+| **Synthflow AI** | 20% recurring 15個月 | Voice AI B2B | PartnerStack | PartnerStack | market.partnerstack.com/page/synthflowai |
+| Castmagic | 已在 PartnerStack | AI podcast/影片 | — | PartnerStack | market.partnerstack.com |
+| Browse AI | 已在 PartnerStack | AI 網頁爬取 | — | PartnerStack | market.partnerstack.com |
+
+**本輪淨新增：RunPod Affiliate（高優先）、Synthflow AI（高優先）**
+
+---
+
+### 三、🌐 台灣流量管道更新（本輪確認）
+
+| 事件 | 影響 | 行動 |
+|------|------|------|
+| 台灣 2026 Q1 GDP +14.55%（AI 出口爆發）| 台灣企業 AI 採購預算充裕，B2B 工具 CPC 上升 | Synthflow 企業評測時機最佳 |
+| 台灣 Xiaohongshu（小紅書）被封禁（2025-12起）| 3M 台灣用戶被迫遷移至 Threads/Instagram | Threads AI 內容流量紅利延續 |
+| Taiwan Gumroad 數位產品：工具類 59.5% 轉換率 vs 自助類 17% | 我們的 Gumroad 工具（kknad、skills pack）有天然優勢 | 確保工具型產品上架完整 |
+
+---
+
+### 四、💡 高價值機會 → 已寫入 directives
+
+→ 見 directives/researcher-to-strategist-2026-06-14-round89.md
+
+---
