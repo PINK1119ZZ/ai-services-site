@@ -13,7 +13,7 @@ service = build("searchconsole", "v1", credentials=creds)
 
 # Submit sitemaps
 sitemaps = [
-    ("https://pink1119zz.github.io/ai-tools-tw/", "https://pink1119zz.github.io/ai-tools-tw/sitemap.xml"),
+    ("https://autodev-ai.com/", "https://autodev-ai.com/sitemap.xml"),
     ("https://pink1119zz.github.io/ai-tools-en/", "https://pink1119zz.github.io/ai-tools-en/sitemap.xml"),
 ]
 
