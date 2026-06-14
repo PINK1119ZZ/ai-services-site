@@ -3024,3 +3024,96 @@ Obsidian CEO Steph Ango（kepano）在 2026 年初官方發布 kepano/obsidian-s
 4. **career-ops（53K stars）**：Claude Code加持，14種求職技能，台灣失業率受眾正在查AI求職工具，繁中評測0篇。DataCamp AI求職課程40%直接相關。
 
 ---
+
+## 2026-06-14（Researcher Round 90：Anthropic $965B + Claude Fable 5 + SpaceX IPO + Synthflow 20% 循環 + RunPod 10% + GitHub Skills 生態系持續爆發）
+
+> 本輪執行時間：2026-06-14 00:30 UTC | 搜尋範圍：GitHub trending weekly、AI新聞、PartnerStack affiliate 確認、Product Hunt、HN
+
+### 🔥 本輪最大宏觀信號（高緊急度）
+
+| 日期 | 事件 | 影響 | 變現角度 | 優先序 |
+|------|------|------|---------|-------|
+| 2026-06-09 | **Anthropic 募資 $65B，估值 $965B，成全球最高估值 AI 新創** | Claude Opus 4.8 同步發布；Fable 5（Mythos 公開版）也在同日/周上線；Anthropic S-1 IPO 申請 | Claude affiliate 無直接，但 Claude Fable 5 評測（已有 Round 87 指令）+ DataCamp 課程 40% CTA；「Anthropic IPO 前夕：Claude 工具鏈完整指南」 | ⭐⭐⭐⭐⭐ P1-HIGH |
+| 2026-06-11 | **SpaceX $75B IPO 完成（SPCX, Nasdaq），含 xAI/Grok 業務** | 史上最大 IPO；SpaceX 收購 xAI，Grok 整合 Starlink；「AI 基礎設施三大 IPO」（SpaceX + OpenAI + Anthropic）= 市場話題頂峰 | 投資人受眾：DataCamp AI 課程（「IPO 後 AI 技能需求暴增」）；ai-tools-tw 投資教育文；無直接 affiliate | ⭐⭐⭐⭐ P1-HIGH 限時視窗 |
+| 2026-06-08 | **Apple WWDC 2026：Siri AI 全面重建，iOS 27，Xcode 27 整合 Claude/GPT/Gemini Agent** | Apple + Google Gemini 官方合作；iOS 27 公開 beta；EU 用戶不支援 Siri AI | WWDC 積壓文（Round 86-87-88）：Apple Foundation Models + Core AI + Container 三合一文，DataCamp 40% | ⭐⭐⭐⭐ P1-HIGH WWDC 視窗持續 |
+| 2026-06-09 | **Google Gemini 3.5 Flash 整合 Search AI Mode；新 Neural Expressive UI** | Gemini 3.5 Flash = agent/coding 長任務優化；Android 17 預覽 | Gemini API 比較文（Gemini 3.5 Flash vs Claude Fable 5 vs GPT-5.5）；DataCamp + DigitalOcean CTA | ⭐⭐⭐ P2 |
+| 2026-06-01 | **Microsoft MXC：OS 層 AI Agent 沙盒，OpenAI + NVIDIA 加入** | AI Agent 安全執行環境；企業級 agent 部署新標準 | 企業 AI Agent 選型文；DataCamp + DigitalOcean CTA；autodev-ai 企業受眾 | ⭐⭐⭐ P2 |
+
+---
+
+### 🆕 本輪新發現 Affiliate 確認（高價值）
+
+| 工具 | Affiliate 狀態 | 佣金 | 平台 | 備注 |
+|------|--------------|------|------|------|
+| **Synthflow AI** | ✅ 有！20% 循環 12 個月（PartnerStack 確認） | 20%/12m | PartnerStack | Voice AI Agent 平台，no-code，自動電話/預約/客服；台灣繁中評測=0篇；**30%+ 門檻未達，但20%/12m + Voice AI市場爆發 = 高評估潛力** |
+| **RunPod** | ✅ 有！10% 循環 6 個月（PartnerStack Affiliate）或 3%/5% Referral | 10%/6m（Affiliate Tier）或 3%Pod/5%Serverless（Referral） | PartnerStack | GPU 雲端平台；Serverless 5%；Premium Affiliate 10% cash；台灣 AI 工程師受眾；**「RunPod vs Vast.ai vs Lambda vs Clore.ai 比較頁」= 多個affiliate疊加機會** |
+
+---
+
+### 📊 GitHub Weekly Trending 本週榜（2026-06-14 週榜）
+
+| 日期 | 工具 | 本週星星 | 關鍵字 | 建議站點 | 優先序 |
+|------|------|----------|--------|---------|-------|
+| 2026-06-14 | **mvanhorn/last30days-skill** | 12,602/週（41.2K total）| 積壓工具（已處理 Round 88-89）| autodev-ai | 已 BUILT |
+| 2026-06-14 | **apple/container** | 9,173/週（36.2K total）| `apple container 繁中教學`、`mac linux container 工具 2026`、`apple container vs docker 比較` | autodev-ai | 🔴 P1 — WWDC26 發布，macOS Docker 競爭者，4+輪積壓，繁中=0篇，DO CTA 天然 |
+| 2026-06-14 | **phuryn/pm-skills** | ~新進（12.6K+ total）| PM Skills 積壓，5輪未處理 | autodev-ai | 繼承積壓 🔴 P1-HIGH |
+| 2026-06-14 | **chopratejas/headroom** | 10,406/週（26.2K total）| `headroom token 壓縮 2026`、省費系列 | autodev-ai | 🔴 P1 — 已在 proposals，待執行 |
+| 2026-06-14 | **NVIDIA/SkillSpector** | 2,799/週（4.4K total）| `NVIDIA SkillSpector 教學`、`AI agent skill 安全掃描 繁中`、`claude code skill 漏洞掃描` | autodev-ai | 🟡 P2 — NVIDIA 品牌背書，Apache 2.0，工程師受眾，安全受眾 |
+| 2026-06-14 | **addyosmani/agent-skills** | 9,348/週（58.3K total）| 積壓工具，多輪未處理 | autodev-ai | 繼承積壓 🔴 P1-HIGH |
+| 2026-06-14 | **Panniantong/Agent-Reach** | 5,183/週（27.4K total）| 積壓工具，6+輪 | autodev-ai | 繼承積壓 🔴 P1-HIGH |
+| 2026-06-14 | **Leonxlnx/taste-skill** | 8,097/週（43K total）| 積壓工具，多輪 | autodev-ai | 繼承積壓 🔴 P1-HIGH |
+| 2026-06-14 | **lfnovo/open-notebook** | 3,570/週（30.1K total）| `open notebook 2026 繁中`、`notebooklm open source 替代` | ai-tools-tw | 🟡 P2 — 已在 Round 88-89 提案 |
+| 2026-06-14 | **aaif-goose/goose** | 2,366/週（49.2K total）| `goose ai agent 繁中評測 2026`、`block goose ai open source`、`goose vs openclaw vs claude code 比較` | autodev-ai | 🟡 P2 — Block 公司（Square 母公司）出品，Rust，開源 Agent，49K stars |
+| 2026-06-14 | **roboflow/supervision** | 4,022/週（44K total）| `roboflow supervision 教學 繁中`、`computer vision python 2026 台灣`、`supervision vs opencv 比較` | autodev-ai | 🟡 P2 — Computer Vision，44K stars，旁白 AI + DataCamp 課程 CTA |
+| 2026-06-14 | **CopilotKit/CopilotKit** | 2,034/週（35K total）| 積壓工具 P2 | autodev-ai | 繼承積壓 |
+| 2026-06-14 | **huggingface/OpenEnv** | 235/週（2.1K total）| `huggingface openenv 教學`、`rl post training environment 繁中` | autodev-ai | ⚪ 觀察 — 新進榜，RL 後訓練，HuggingFace 品牌 |
+| 2026-06-14 | **NVIDIA/cosmos** | 554/週（10.1K total）| `nvidia cosmos 3 繁中教學`、`physical ai 機器人 2026 台灣`、`nvidia omnimodel 評測` | autodev-ai | 🟡 P2 — NVIDIA Cosmos 3，物理 AI，機器人受眾，NVIDIA 品牌 |
+
+---
+
+### 💡 本輪最高價值發現（含 30%+ 循環 Affiliate 搜尋結果）
+
+本輪透過 PartnerStack AI affiliate 清單掃描，確認以下現有未收錄高佣金工具：
+
+| 工具 | 佣金 | 平台 | 台灣繁中空白？ | 評估 |
+|------|------|------|-------------|------|
+| **Synthflow AI** | 20%/12m（PartnerStack 確認） | PartnerStack | ✅ 0 篇 | Voice AI Agent，no-code，自動電話客服；台灣 SMB/診所/餐廳受眾 |
+| **RunPod** | 10%/6m Affiliate（Premium）or 3-5% Referral | PartnerStack | ✅ 評測少 | GPU 雲端，AI 工程師受眾；可做 GPU 雲端比較頁 |
+| **ElevenLabs** | 22%/12m（PartnerStack，待 Ivan 申請）| PartnerStack | ✅ 評測稀少 | AI 語音，TTS，已在 state 待申請 |
+| **Browse AI** | 待確認（PartnerStack 收錄）| PartnerStack | ✅ 繁中少 | Web scraping no-code，搭配 Scrapling/ScrapingAnt 系列文 |
+
+---
+
+### 🗺️ 本輪積壓清單（截至 Round 90）
+
+| 工具 | 積壓輪數 | 優先級 | 備注 |
+|------|---------|--------|------|
+| apple/container | 4+輪（87-90）| ⭐⭐⭐⭐⭐ P1-URGENT | WWDC26 發布，macOS Docker競爭者，繁中=0篇 |
+| turbovec | 6輪（84-90）| ⭐⭐⭐⭐⭐ P1-HIGH 嚴重 | Google Research TurboQuant，32GB→2GB |
+| openmed | 6輪（84-90）| ⭐⭐⭐⭐⭐ P1-HIGH 嚴重 | 1000+醫療模型，100%離線 |
+| pm-skills | 6輪（85-90）| ⭐⭐⭐⭐ P1-HIGH 嚴重 | Pawel Huryn，PM受眾 |
+| Open-LLM-VTuber | 6輪（85-90）| ⭐⭐⭐⭐ P1-HIGH 嚴重 | ElevenLabs/Murf CTA |
+| addyosmani/agent-skills | 6輪（85-90）| ⭐⭐⭐⭐ P1-HIGH 嚴重 | 58K stars，Gumroad交叉銷售 |
+| taste-skill | 多輪 | ⭐⭐⭐⭐ P1-HIGH | 43K stars，設計受眾 |
+| Agent-Reach | 7+輪 | ⭐⭐⭐⭐ P1-HIGH 最嚴重 | OpenClaw 品牌機會 |
+| compound-engineering | 5輪（86-90）| ⭐⭐⭐⭐ P1-HIGH | EveryInc，工程師受眾 |
+| zhangxuefeng-skill | 4輪（87-90）| ⭐⭐⭐⭐ P1-HIGH | 台灣升學市場 |
+| opencode（anomalyco）| 4輪（87-90）| ⭐⭐⭐⭐ P1-HIGH | 55K+ stars |
+| Synthflow AI | 本輪新進 | ⭐⭐⭐⭐ P1-HIGH | 20%/12m 有 affiliate！Voice AI 繁中=0篇 |
+| goose (aaif-goose) | 本輪新進 | ⭐⭐⭐ P2 | Block/Square出品，49K stars |
+| NVIDIA/SkillSpector | 本輪新進 | ⭐⭐⭐ P2 | 安全掃描 skills |
+| roboflow/supervision | 本輪新進 | ⭐⭐⭐ P2 | Computer Vision，44K stars |
+
+---
+
+### 🔑 本輪關鍵洞察
+
+1. **Synthflow AI 是本輪最重要的新 Affiliate 發現**：20%/12m，PartnerStack，Voice AI no-code 平台（電話/預約/客服），台灣 SMB 受眾（診所/餐廳/服務業），繁中評測=0篇。符合「30%+ 不常有，20% + 台灣藍海 + SMB高LTV = 值得優先」原則。→ **寫入 Directive 給 Strategist**。
+
+2. **RunPod Affiliate 是本輪第二重要發現**：10% Affiliate（PartnerStack）或 5% Serverless Referral。GPU 雲端比較頁（RunPod vs Vast.ai vs Lambda vs Clore.ai）= 一頁四個視角，高工程師意圖流量。繁中 GPU 雲端比較=稀少。→ **寫入 Directive 給 Strategist**。
+
+3. **三大 AI IPO 宏觀敘事（SpaceX SPCX + OpenAI S-1 + Anthropic S-1）**：市場情緒頂峰期，台灣投資人/AI 工具用戶對「該訂哪個 AI 工具」搜尋量上升。「IPO 前夕 AI 工具完整指南」= 高意圖內容，ChatGPT Plus / Claude API + DataCamp 課程 CTA。
+
+4. **apple/container 積壓清除時機**：4+ 輪，WWDC26 的重要 Apple Silicon 工具（用 Swift 寫的 Linux container VM），Docker 競爭者概念。DO VPS 反向 CTA（「不用 VM 的 container 解法，但要跑 CI/CD 還是得 VPS」）= 高轉換。
+
+---
