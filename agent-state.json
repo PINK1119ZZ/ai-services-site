@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-14T00:30:00Z",
-  "lastAuditDate": "2026-06-08",
+  "lastUpdated": "2026-06-14T02:06:00Z",
+  "lastAuditDate": "2026-06-14",
   "lastResearchDate": "2026-06-14",
   "lastResearchRound": 90,
   "sites": {
@@ -14,7 +14,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-06-13"
+      "lastChecked": "2026-06-14"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -23,7 +23,7 @@
       "lastNewArticle": "2026-04-12",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-06-13"
+      "lastChecked": "2026-06-14"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -48,7 +48,7 @@
       "issues": [
         "2026-04-30 health check: all tracked ai-tools-tw URLs healthy (200); mitigated Gumroad n8n product 404 by replacing direct purchase CTAs on landing page with coming-soon notice and tutorial links until Ivan uploads the product."
       ],
-      "lastChecked": "2026-06-13"
+      "lastChecked": "2026-06-14"
     },
     "autodev_ai": {
       "url": "https://autodev-ai.com",
@@ -59,7 +59,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-06-13"
+      "lastChecked": "2026-06-14"
     }
   },
   "affiliateLinks": {
@@ -1748,6 +1748,46 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-06-14T02:06:00Z",
+      "agent": "strategist",
+      "session": "passive-income-audit-sun-1000",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json -- lastResearchRound=90, articleCount=57",
+        "Read directives/researcher-to-strategist-2026-06-14-round90.md",
+        "Read directives/strategist-weekly-2026-06-08.md",
+        "Curl checked all site roots + Gumroad + key affiliate URLs",
+        "All 3 site roots healthy (200)",
+        "Gumroad agent-skills-tw (200) + kknad (200) -- OK",
+        "gumroad n8n-tw-templates still 404 -- known issue, Ivan upload pending",
+        "403s on NordVPN/blym/afflink/vbtrax/cloudways = JS bot-protection, normal",
+        "DigitalOcean 301 redirect = normal",
+        "No broken affiliate links found in active articles",
+        "Reviewed Round 90 directive: 2 new affiliates confirmed (Synthflow 20%/12m, RunPod 10%/6m)",
+        "Reviewed backlog: 10 articles pending (turbovec/openmed/pm-skills/Agent-Reach top priority)",
+        "No small fixes applicable without Ivan affiliate links",
+        "Updated lastAuditDate + agentLog",
+        "git add . && git commit && git push origin main"
+      ],
+      "results": {
+        "sitesChecked": 3,
+        "allHealthy": true,
+        "gumroadHealthy": [
+          "agent-skills-tw (200)",
+          "kknad (200)"
+        ],
+        "knownIssues": [
+          "gumroad n8n-tw-templates 404 -- Ivan upload pending (6+ weeks)"
+        ],
+        "affiliateLinksStatus": "All active links healthy (403=bot-protection normal, 301=redirect normal)",
+        "newAffiliatesFromRound90": [
+          "Synthflow AI 20%/12m PartnerStack",
+          "RunPod 10%/6m PartnerStack"
+        ],
+        "backlogArticleCount": 10
+      }
+    },
     {
       "timestamp": "2026-06-14T00:30:00Z",
       "agent": "researcher",
