@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-14T13:00:00Z",
+  "lastUpdated": "2026-06-14T14:30:00Z",
   "lastAuditDate": "2026-06-14",
   "lastResearchDate": "2026-06-14",
   "lastResearchRound": 90,
@@ -10,7 +10,7 @@
       "repo": "/root/ai-services-site",
       "articleCount": 58,
       "lastNewArticle": "2026-06-14",
-      "lastRefresh": "2026-04-19",
+      "lastRefresh": "2026-06-14",
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
@@ -55,7 +55,7 @@
       "repo": "/root/ai-services-site",
       "articleCount": 58,
       "lastNewArticle": "2026-06-14",
-      "lastRefresh": "2026-04-19",
+      "lastRefresh": "2026-06-14",
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
@@ -1748,6 +1748,41 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-06-14T14:30:00Z",
+      "agent": "content-refresher",
+      "session": "content-refresher-sun-1400",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json",
+        "Parsed sitemap.xml: identified 3 oldest blog articles (all lastmod 2026-05-06)",
+        "Target articles: geo-generative-engine-optimization-taiwan-2026.html, google-ice-privacy-vpn-2026.html, hostinger-vps-review-2026.html",
+        "geo article: Updated Perplexity MAU stat (1,500万→1億) and ChatGPT stat (5億→8億) to 2026 Q2 figures",
+        "geo article: Added DataCamp affiliate CTA to bottom CTA block",
+        "vpn article: Added DataCamp AI資安課程 CTA to bottom CTA block (DataCamp link was missing)",
+        "hostinger article: Replaced 2x HOSTINGER_AFFILIATE_LINK placeholders with direct link (affiliate not yet applied)",
+        "hostinger article: Added DataCamp AI Engineering CTA to bottom CTA box",
+        "sitemap.xml: Updated lastmod for all 3 articles from 2026-05-06 to 2026-06-14",
+        "git add . && git commit -m \"content: refresh old articles\" && git push origin main"
+      ],
+      "results": {
+        "articlesRefreshed": 3,
+        "dataUpdated": [
+          "geo article: Perplexity 1500万→1億, ChatGPT 5億→8億 (2026 Q2)"
+        ],
+        "affiliateLinksAdded": [
+          "geo article: DataCamp (afflink.one/s/aavAC)",
+          "vpn article: DataCamp (afflink.one/s/aavAC)",
+          "hostinger article: DataCamp (afflink.one/s/aavAC)"
+        ],
+        "placeholdersFixed": [
+          "hostinger article: HOSTINGER_AFFILIATE_LINK x2 → direct non-sponsored link (Hostinger affiliate not yet applied)"
+        ],
+        "ivanPendingItems": [
+          "Apply Hostinger affiliate (hostinger.com/affiliates) to get real referral link — then update hostinger-vps-review-2026.html with actual affiliate URL"
+        ]
+      }
+    },
     {
       "timestamp": "2026-06-14T10:30:00Z",
       "agent": "affiliate-monitor",
