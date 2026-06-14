@@ -3117,3 +3117,26 @@ Obsidian CEO Steph Ango（kepano）在 2026 年初官方發布 kepano/obsidian-s
 4. **apple/container 積壓清除時機**：4+ 輪，WWDC26 的重要 Apple Silicon 工具（用 Swift 寫的 Linux container VM），Docker 競爭者概念。DO VPS 反向 CTA（「不用 VM 的 container 解法，但要跑 CI/CD 還是得 VPS」）= 高轉換。
 
 ---
+
+---
+
+### 🆕 Round 91 新發現 Affiliate（2026-06-14）
+
+| 工具 | Affiliate 狀態 | 佣金 | 平台 | 備注 |
+|------|--------------|------|------|------|
+| **KrispCall** | ✅ 確認 30% lifetime | 30% lifetime | PartnerStack | VoIP 雲端電話；G2 Asia Pacific Leader；台灣繁中=0篇；90天cookie；30% lifetime = 最高複利效應 |
+| **Castmagic** | ✅ 確認 30%/18m | 30%/18m | PartnerStack | 音訊/影片→內容自動化；60+語言；Podcast/YouTube創作者受眾；繁中=0篇 |
+| **MeetGeek** | ✅ 確認 30% recurring | 30% recurring | PartnerStack | AI 會議紀錄；Free tier 有；台灣DopiNote本土競品出現 = 比較文機會 |
+| **Browse AI** | ✅ 確認 20% forever | 20% forever | PartnerStack | No-code 網頁爬蟲；370K+ 用戶；繁中極少 |
+
+### 💡 Round 91 關鍵洞察
+
+1. **KrispCall 30% lifetime = 本輪最高複利效應 Affiliate**：每月 13 號付款，PartnerStack，90 天 cookie，G2 Asia Pacific Leader，台灣繁中 0 篇。VoIP + 遠距工作台灣市場 = 高 LTV 受眾。
+
+2. **台灣 AEO 先行者優勢正在擴大**：Google 台灣市佔滑落至 84.9%，ChatGPT/Perplexity 等 AI 搜尋崛起，繁中評測文 = AI 推薦引用的原始內容來源。我們的系統性繁中佈局是 2026 年最難買到的競爭壁壘。
+
+3. **DopiNote 台灣本土競品出現**：AI 會議助理台灣團隊，2 個月前剛上線，流量尚小。「MeetGeek vs DopiNote vs Fathom 比較文」= 搶先佔領本土競品比較關鍵字的機會窗口。
+
+4. **Browse AI 20% forever**：No-code 爬蟲，永久佣金，搭配 Scrapling/Firecrawl 系列文 = 內容叢集可能性。
+
+---
