@@ -3140,3 +3140,41 @@ Obsidian CEO Steph Ango（kepano）在 2026 年初官方發布 kepano/obsidian-s
 4. **Browse AI 20% forever**：No-code 爬蟲，永久佣金，搭配 Scrapling/Firecrawl 系列文 = 內容叢集可能性。
 
 ---
+
+## 2026-06-15（Researcher Round 92：Perplexity Computer 混合推理 + headroom $700K省費里程碑 + Graphify爆紅 + NVIDIA SkillSpector安全掃描）
+
+> 本輪執行時間：2026-06-15 00:30 UTC | 搜尋範圍：GitHub trending weekly、AI新聞 Jun 8-15 2026、Affiliate確認
+
+### 🔥 GitHub Trending Weekly 本輪重點
+
+| 日期 | 工具 | 關鍵字 | 搜尋量預估 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|----------|---------|
+| 2026-06-15 | **safishamsi/graphify**（66.8K stars，+本週爆發，12+文章、10+ YouTube、50K+ Instagram likes） | `graphify ai 繁中教學`、`graphify claude code codebase 知識圖`、`graphify vs codegraph 比較`、`ai codebase search 繁中 2026` | 月搜 300-1500（開發者精準） | 無直接affiliate（開源）→ DO VPS部署 + DataCamp 40% + Gumroad kknad | US$200-500 | autodev-ai |
+| 2026-06-15 | **chopratejas/headroom**（累積 21,000+ stars，Netflix Tejas Chopra，The Register 報導，節省 $700K 里程碑，200B tokens saved，Open Source Summit演講確認） | `headroom token 壓縮 2026 最新`、`headroom netflix 開源 省費`、`headroom llm 省費 台灣`（補充我們已有的文章） | 月搜 500-2000（加速中） | 我們已有 headroom 文章！→ 更新現有文章補入最新里程碑數據 | 現有文章 CTR 提升 | autodev-ai（update） |
+| 2026-06-15 | **NVIDIA/SkillSpector**（積壓 Round 86-92，7輪，AI agent skills安全掃描，64個漏洞模式，NVIDIA官方，Apache 2.0） | `nvidia skillspector 教學 繁中`、`ai agent skills 安全掃描 2026`、`claude code skills 安全 教學`、`skillspector 安裝 使用` | 月搜 200-800（工程師/安全受眾） | 無直接affiliate → DataCamp 40%（AI Security課程）+ DigitalOcean + Gumroad agent-skills-tw（交叉銷售！） | US$150-400 | autodev-ai |
+| 2026-06-15 | **Perplexity Personal Computer 混合推理 Orchestrator**（Computex 2026 Jun 2，$200/月 Max plan，7月正式上線，Intel Core Ultra Series 3 整合） | `perplexity computer 繁中評測 2026`、`perplexity hybrid inference 教學`、`perplexity max 值得訂嗎 台灣`、`perplexity computer vs chatgpt 比較`、`perplexity personal computer mac 設定` | 月搜 1000-4000（高商業意圖） | Perplexity affiliate $10 flat + 10% ongoing（已在state，待Ivan申請）→ Max $200/月 = $20/月/客 = **業界最高 ticket AI 訂閱之一** | US$300-800 | ai-tools-tw |
+| 2026-06-15 | **OpenAI 1B MAU 里程碑 + Alphabet $84.75B AI基建融資**（Jun 1-7週新聞，業界宏觀視角） | `openai 10億用戶 台灣分析`、`alphabet ai 投資 台灣`、`ai 2026 市場分析 台灣` | 月搜 500-2000 | DataCamp 40% + Hahow（AI課程需求暴增訴求） | US$100-200 | ai-tools-tw（配套文） |
+
+### 💰 Affiliate 確認本輪
+
+| 工具 | Affiliate 狀態 | 佣金 | 平台 | 備注 |
+|------|--------------|------|------|------|
+| **Perplexity** | ✅ 已在state（Round 22確認）| $10 flat + 10% ongoing | affiliates.perplexity.ai | Max $200/月 = $20/月/客；待Ivan申請；P1 |
+| **safishamsi/graphify** | ❌ 無直接affiliate（開源，MIT license） | — | — | DO + DataCamp + Gumroad agent-skills-tw CTA；66.8K stars 本週爆發 |
+| **chopratejas/headroom** | ❌ 無直接affiliate（Apache 2.0）| — | — | 我們已有文章，只需更新里程碑數據；The Register 報導確認高影響力 |
+| **NVIDIA/SkillSpector** | ❌ 無直接affiliate（Apache 2.0）| — | — | DataCamp AI Security CTA；Gumroad agent-skills-tw 交叉銷售 |
+| **KrispCall** | ✅ 已在Round 91 directive | 30% lifetime | PartnerStack | 等Ivan申請 |
+| **Castmagic** | ✅ 已在Round 91 directive | 30%/18m | PartnerStack | 等Ivan申請 |
+| **MeetGeek** | ✅ 已在Round 91 directive | 30% recurring | PartnerStack | 等Ivan申請 |
+
+### 💡 Round 92 關鍵洞察
+
+1. **Perplexity Max $200/月 = 最高票面 AI 訂閱 affiliate 機會**：affiliate.perplexity.ai 已在state Round 22確認，$10 flat + 10% ongoing。Max plan = $20/月/客（永久循環），是 Claude Pro $20/月的10% = $2/月/客的10倍。7月混合推理正式上線將刺激訂閱轉換高峰。繁中評測=0篇（確認）。**今日最高優先新文章**。
+
+2. **graphify 66.8K stars = 我們的 Gumroad agent-skills-tw 最佳導流機會**：graphify 是 Claude Code / Codex / Claude 的 skills，與我們的 Gumroad agent-skills-tw 產品完全重疊。文章底部雙CTA：DigitalOcean + Gumroad agent-skills-tw = 零新affiliate，立即執行，交叉銷售效果最強。
+
+3. **headroom 現有文章需要更新**：The Register 正式報導（Netflix senior engineer，$700K已節省，200B tokens，Open Source Summit演講）= 媒體背書等級提升，補入現有文章可顯著提升可信度和CTR。不需寫新文，只需更新一段落。
+
+4. **NVIDIA SkillSpector 積壓7輪清除時機**：與 graphify 文章可以同日推出，形成「Skills 安全 + 知識圖」搭配對，兩篇文章互相交叉連結，協同 SEO。
+
+---
