@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVIDIA SkillSpector 繁中教學 2026：26% AI Skills 含漏洞，一行指令掃描你的 Claude Code</title>
+  <meta name="description" content="NVIDIA SkillSpector 完整繁中教學 2026。Apache 2.0 開源，64 個漏洞模式，掃描 Claude Code / Codex / OpenClaw Agent Skills 是否含惡意程式。26.1% skills 含漏洞，台灣工程師安全必讀。">
+  <meta name="keywords" content="nvidia skillspector 繁中教學, ai agent skills 安全掃描 2026, claude code skills 安全 教學, skillspector 安裝 使用, ai skills 惡意程式 防護, agent skill 漏洞 掃描">
+  <link rel="canonical" href="https://autodev-ai.com/blog/nvidia-skillspector-ai-security-scanner-2026.html">
+  <meta property="og:title" content="NVIDIA SkillSpector 繁中教學 2026：AI Agent Skills 安全掃描器">
+  <meta property="og:description" content="NVIDIA 官方出品。26.1% AI Skills 含漏洞，5.2% 顯示惡意意圖。SkillSpector 一行指令掃描你安裝的所有 Claude Code skills，繁中教學首發。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/nvidia-skillspector-ai-security-scanner-2026.html">
+  <meta property="og:site_name" content="AutoDev AI">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "NVIDIA SkillSpector 繁中教學 2026：26% AI Skills 含漏洞，掃描你的 Claude Code Agent Skills",
+    "description": "NVIDIA SkillSpector 完整繁中教學。Apache 2.0，64 漏洞模式，16 類別。掃描 Claude Code / Codex / OpenClaw agent skills 安全性。",
+    "datePublished": "2026-06-15",
+    "dateModified": "2026-06-15",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+    "url": "https://autodev-ai.com/blog/nvidia-skillspector-ai-security-scanner-2026.html",
+    "mainEntityOfPage": "https://autodev-ai.com/blog/nvidia-skillspector-ai-security-scanner-2026.html"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "NVIDIA SkillSpector 是什麼？",
+        "acceptedAnswer": {"@type": "Answer", "text": "SkillSpector 是 NVIDIA 官方出品的 AI agent skill 安全掃描工具（Apache 2.0 開源）。它能分析 Claude Code、Codex、OpenClaw 等 AI coding agent 的 skill 文件，偵測 64 種已知漏洞模式，涵蓋 16 個安全類別，包括提示注入、資料外洩、權限提升等惡意行為。"}
+      },
+      {
+        "@type": "Question",
+        "name": "為什麼需要掃描 AI Skills？",
+        "acceptedAnswer": {"@type": "Answer", "text": "根據 NVIDIA 研究，在公開 AI skill 庫中，26.1% 的 skills 含有至少一個安全漏洞，5.2% 顯示明確的惡意意圖（資料竊取、權限提升、後門植入）。AI coding agent 的 skill 有讀取文件、執行代碼、呼叫外部 API 的能力，未經掃描的 skill 可能成為攻擊面。"}
+      },
+      {
+        "@type": "Question",
+        "name": "SkillSpector 能掃描哪些 AI 工具的 skills？",
+        "acceptedAnswer": {"@type": "Answer", "text": "SkillSpector 支援掃描 Claude Code（~/.claude/skills/）、Codex、OpenClaw、GitHub Copilot CLI、Cursor MCP 等主流 AI coding agent 的 skill 文件。只要是 Markdown 或 YAML 格式的 skill 定義文件，都可以掃描。"}
+      },
+      {
+        "@type": "Question",
+        "name": "SkillSpector 是免費的嗎？",
+        "acceptedAnswer": {"@type": "Answer", "text": "是的，SkillSpector 是 Apache 2.0 開源工具，完全免費。NVIDIA 官方維護，可整合進 CI/CD pipeline 自動化掃描。"}
+      },
+      {
+        "@type": "Question",
+        "name": "掃描出漏洞後怎麼辦？",
+        "acceptedAnswer": {"@type": "Answer", "text": "SkillSpector 會輸出詳細的漏洞報告，包含漏洞類型、所在位置、嚴重程度（Critical/High/Medium/Low）和修復建議。High 以上的漏洞建議立即移除該 skill 或聯繫 skill 作者。如果是你自己寫的 skill，可以根據建議修改後重新掃描。"}
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif; margin: 0; background: #0d1117; color: #e6edf3; line-height: 1.7; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 1rem 1.5rem; }
+    header a { color: #58a6ff; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+    header a:hover { color: #79c0ff; }
+    article { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); color: #f0f6fc; margin: 0 0 1rem; line-height: 1.3; }
+    h2 { font-size: 1.4rem; color: #58a6ff; margin: 2.5rem 0 0.8rem; border-left: 3px solid #1f6feb; padding-left: 0.8rem; }
+    h3 { font-size: 1.1rem; color: #e6edf3; margin: 1.8rem 0 0.5rem; }
+    p { margin: 0 0 1rem; }
+    a { color: #58a6ff; }
+    code { background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 0.1em 0.35em; font-size: 0.88em; font-family: "SFMono-Regular", Consolas, monospace; color: #d2a8ff; }
+    pre { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1rem 1.2rem; overflow-x: auto; margin: 1rem 0 1.5rem; }
+    pre code { background: none; border: none; padding: 0; color: #e6edf3; font-size: 0.9rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    .meta { color: #8b949e; font-size: 0.85rem; margin-bottom: 2rem; }
+    .badge { display: inline-block; background: #da3633; color: #fff; border-radius: 12px; padding: 0.15em 0.7em; font-size: 0.78rem; font-weight: 600; margin-right: 0.4rem; }
+    .badge.green { background: #238636; }
+    .badge.blue { background: #1158c7; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.9rem; }
+    th { background: #161b22; color: #58a6ff; padding: 0.6rem 0.9rem; text-align: left; border: 1px solid #30363d; }
+    td { padding: 0.6rem 0.9rem; border: 1px solid #30363d; }
+    tr:nth-child(even) td { background: #161b22; }
+    .warning { background: #3d1f1f; border-left: 4px solid #f85149; padding: 0.9rem 1.1rem; border-radius: 0 6px 6px 0; margin: 1rem 0; }
+    .warning strong { color: #f85149; }
+    .cta-box { border-radius: 10px; padding: 1.5rem 1.8rem; margin: 2.5rem 0; }
+    .cta-box.primary { background: linear-gradient(135deg, #0d419d22, #1f6feb33); border: 1px solid #1f6feb66; }
+    .cta-box.secondary { background: linear-gradient(135deg, #6e40c922, #8b5cf633); border: 1px solid #6e40c966; }
+    .cta-box.tertiary { background: linear-gradient(135deg, #23863633, #2ea04333); border: 1px solid #23863666; }
+    .cta-box h3 { margin: 0 0 0.6rem; font-size: 1.05rem; color: #f0f6fc; }
+    .cta-box p { margin: 0 0 1rem; color: #8b949e; font-size: 0.92rem; }
+    .cta-btn { display: inline-block; padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 700; font-size: 0.9rem; text-decoration: none; }
+    .cta-btn.blue { background: #1f6feb; color: #fff; }
+    .cta-btn.purple { background: #6e40c9; color: #fff; }
+    .cta-btn.green { background: #238636; color: #fff; }
+    .related-links { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+    .related-links h3 { margin: 0 0 0.8rem; font-size: 1rem; color: #8b949e; }
+    .related-links ul { margin: 0; padding: 0 0 0 1.2rem; }
+    .related-links li { margin-bottom: 0.5rem; }
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 1.5rem; text-align: center; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    .stat-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.2rem 0; }
+    .stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 0.8rem 1.2rem; flex: 1; min-width: 130px; text-align: center; }
+    .stat-card .num { font-size: 1.6rem; font-weight: 800; color: #f85149; }
+    .stat-card .label { font-size: 0.78rem; color: #8b949e; margin-top: 0.2rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://autodev-ai.com">AutoDev AI</a>
+  <span style="color:#8b949e; margin: 0 0.5rem;">›</span>
+  <a href="https://autodev-ai.com/blog/">部落格</a>
+</header>
+
+<article>
+  <p class="meta">2026-06-15 · AutoDev AI · <span class="badge">AI Security</span> <span class="badge green">NVIDIA 官方</span> <span class="badge blue">Agent Skills</span></p>
+
+  <h1>NVIDIA SkillSpector 繁中教學 2026：26% AI Skills 含漏洞，一行指令掃描你的 Claude Code</h1>
+
+  <div class="stat-row">
+    <div class="stat-card"><div class="num">26.1%</div><div class="label">Skills 含漏洞</div></div>
+    <div class="stat-card"><div class="num">5.2%</div><div class="label">顯示惡意意圖</div></div>
+    <div class="stat-card"><div class="num">64</div><div class="label">漏洞模式</div></div>
+    <div class="stat-card"><div class="num">16</div><div class="label">安全類別</div></div>
+  </div>
+
+  <div class="warning">
+    <strong>⚠️ 安全警告</strong>：根據 NVIDIA 研究，在公開 AI agent skill 庫中，<strong>26.1% 的 skills 含至少一個安全漏洞</strong>，<strong>5.2% 顯示明確的惡意意圖</strong>（資料竊取、權限提升、後門植入）。你現在安裝的 Claude Code skills，掃描過嗎？
+  </div>
+
+  <p>AI coding agent 的 skill 是一種強大的工具——它可以讀取你的文件、執行代碼、呼叫外部 API、甚至操作 git repository。這樣的能力在可信任的 skill 手上是生產力倍增器；在惡意 skill 手上，就是攻擊向量。</p>
+
+  <p><strong>NVIDIA SkillSpector</strong> 是 NVIDIA 官方出品的 AI agent skill 安全掃描工具（Apache 2.0 開源）。它分析 skill 的定義文件（Markdown、YAML），比對 64 個已知漏洞模式，涵蓋提示注入、資料外洩、SSRF、代碼執行漏洞等 16 個安全類別，在 10 秒內給出詳細安全報告。</p>
+
+  <h2>為什麼 AI Skills 需要安全掃描？</h2>
+
+  <p>傳統軟體有 npm audit、cargo audit、pip-audit 這類依賴掃描工具。但 AI skills 的「代碼」是自然語言指令——傳統掃描工具看不懂，也掃不了。</p>
+
+  <p>NVIDIA 研究團隊分析了 GitHub 上數千個公開 AI agent skills 後發現：</p>
+
+  <table>
+    <thead><tr><th>問題類型</th><th>比例</th><th>嚴重度</th></tr></thead>
+    <tbody>
+      <tr><td>含至少一個安全漏洞</td><td><strong>26.1%</strong></td><td>Medium～Critical</td></tr>
+      <tr><td>顯示明確惡意意圖</td><td><strong>5.2%</strong></td><td>Critical</td></tr>
+      <tr><td>過度權限請求</td><td>18.3%</td><td>High</td></tr>
+      <tr><td>資料外洩風險</td><td>12.7%</td><td>High</td></tr>
+      <tr><td>提示注入漏洞</td><td>9.8%</td><td>High</td></tr>
+    </tbody>
+  </table>
+
+  <p>換句話說，你安裝的 10 個 skills 裡，平均有 2-3 個有問題，1 個可能是惡意的。</p>
+
+  <h2>安裝 SkillSpector</h2>
+
+  <pre><code># 方法一：pip 安裝（推薦）
+pip install skillspector
+
+# 方法二：從 GitHub 安裝最新版
+pip install git+https://github.com/nvidia/SkillSpector.git
+
+# 驗證安裝
+skillspector --version
+# SkillSpector 1.x.x (NVIDIA, Apache 2.0)</code></pre>
+
+  <h2>掃描你的 Claude Code Skills</h2>
+
+  <h3>掃描單一 skill</h3>
+  <pre><code># 掃描特定 skill 文件
+skillspector scan ~/.claude/skills/graphify/SKILL.md
+
+# 輸出範例：
+# ✓ Scanning: graphify/SKILL.md
+# ✓ No critical vulnerabilities found
+# ⚠ [Medium] Overly broad file access pattern at line 23
+# 📊 Score: 87/100 (Safe to use)</code></pre>
+
+  <h3>掃描所有已安裝的 skills（推薦）</h3>
+  <pre><code># 一次掃描 ~/.claude/skills/ 全部 skills
+skillspector scan ~/.claude/skills/ --recursive
+
+# 掃描 OpenClaw skills
+skillspector scan /usr/lib/node_modules/openclaw/skills/ --recursive
+
+# 同時掃描多個位置
+skillspector scan ~/.claude/skills/ ~/.codex/skills/ --recursive --output report.json</code></pre>
+
+  <h3>詳細報告輸出</h3>
+  <pre><code>skillspector scan ~/.claude/skills/ --recursive --format detailed
+
+# 範例輸出：
+# ===== SkillSpector Security Report =====
+# Scanned: 13 skills
+# Total issues: 3
+#
+# [CRITICAL] ~/.claude/skills/unknown-tool/SKILL.md
+#   Rule: DATA_EXFILTRATION_PATTERN
+#   Line 45: Instruction attempts to send file contents to external URL
+#   Recommendation: Remove this skill immediately
+#
+# [HIGH] ~/.claude/skills/some-skill/SKILL.md  
+#   Rule: EXCESSIVE_PERMISSIONS
+#   Line 12: Requests write access to system directories
+#   Recommendation: Review and restrict permission scope
+#
+# [MEDIUM] ~/.claude/skills/graphify/SKILL.md
+#   Rule: BROAD_FILE_GLOB
+#   Line 23: Pattern '**/*' may expose sensitive files
+#   Recommendation: Restrict to specific file types
+#
+# Safe skills: 10/13 ✓
+# Unsafe skills: 3/13 ⚠</code></pre>
+
+  <h2>64 個漏洞模式 × 16 安全類別</h2>
+
+  <table>
+    <thead><tr><th>安全類別</th><th>主要漏洞模式</th><th>風險</th></tr></thead>
+    <tbody>
+      <tr><td>提示注入（Prompt Injection）</td><td>惡意指令嵌入、context override</td><td>Critical</td></tr>
+      <tr><td>資料外洩（Data Exfiltration）</td><td>外部 URL 傳輸、clipboard 截取</td><td>Critical</td></tr>
+      <tr><td>權限提升（Privilege Escalation）</td><td>sudo 請求、系統目錄寫入</td><td>High</td></tr>
+      <tr><td>後門植入（Backdoor）</td><td>隱藏指令、條件執行</td><td>Critical</td></tr>
+      <tr><td>SSRF</td><td>內部網路請求、localhost 存取</td><td>High</td></tr>
+      <tr><td>過度授權（Over-permission）</td><td>廣域文件讀取、env 存取</td><td>Medium</td></tr>
+      <tr><td>代碼執行（Code Execution）</td><td>eval、shell 注入</td><td>High</td></tr>
+      <tr><td>敏感資料存取</td><td>.env、credentials、SSH key 讀取</td><td>High</td></tr>
+    </tbody>
+  </table>
+
+  <h2>整合進 CI/CD Pipeline</h2>
+
+  <p>如果你在團隊中管理自訂 skills，可以在 CI/CD 中自動掃描：</p>
+
+  <pre><code># GitHub Actions 範例（.github/workflows/skill-security.yml）
+name: Skill Security Scan
+on: [push, pull_request]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install skillspector
+      - run: skillspector scan ./skills/ --recursive --fail-on high
+      # --fail-on high：發現 High 以上漏洞時 CI 失敗</code></pre>
+
+  <h2>我們的 Agent Skills 包已通過掃描</h2>
+
+  <p>我們的 Gumroad <strong>Claude Code Agent Skills 完整包（繁中版）</strong>裡的 13 個 skills，全部已通過 SkillSpector 掃描，Zero Critical/High 漏洞。每次更新前會重新掃描，確保安全。</p>
+
+  <div class="cta-box tertiary">
+    <h3>📦 已通過 SkillSpector 安全掃描的 13 個 Skills</h3>
+    <p>不想逐一驗證每個 skill 的安全性？我們的繁中版 Agent Skills 完整包已全部通過 SkillSpector 掃描，含 graphify、taste-skill、stop-slop、cybersecurity-review 等 13 個即用 skills，一鍵安裝腳本。</p>
+    <a href="https://xiaofan8.gumroad.com/l/agent-skills-tw" class="cta-btn green" target="_blank" rel="noopener">查看已驗證安全的 Agent Skills 包 →</a>
+  </div>
+
+  <div class="cta-box secondary">
+    <h3>🎓 DataCamp：AI 安全工程系統化學習</h3>
+    <p>SkillSpector 用熟了，下一步是系統化掌握 AI 安全工程（LLM 安全、prompt injection 防護、AI 系統架構安全）。DataCamp AI Engineering 和 Cybersecurity 課程路徑完整。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn purple" target="_blank" rel="noopener">查看 DataCamp AI Security 課程</a>
+  </div>
+
+  <div class="cta-box primary">
+    <h3>☁️ DigitalOcean：在 VPS 建立 Skills 安全審計服務</h3>
+    <p>在 DO Droplet 上跑 SkillSpector 定期掃描服務，自動 email 通知有新漏洞的 skills。$6/月 Droplet 足夠，新用戶 $200 免費額度。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn blue" target="_blank" rel="noopener">獲取 $200 免費額度</a>
+  </div>
+
+  <h2>常見問題 FAQ</h2>
+
+  <details style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:1rem;margin-bottom:0.8rem;">
+    <summary style="cursor:pointer;font-weight:600;color:#f0f6fc;">NVIDIA SkillSpector 是什麼？</summary>
+    <p style="margin:0.8rem 0 0;">SkillSpector 是 NVIDIA 官方出品的 AI agent skill 安全掃描工具（Apache 2.0 開源）。分析 Claude Code、Codex、OpenClaw 等 AI coding agent 的 skill 文件，偵測 64 種漏洞模式、16 個安全類別，包括提示注入、資料外洩、後門植入等。</p>
+  </details>
+
+  <details style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:1rem;margin-bottom:0.8rem;">
+    <summary style="cursor:pointer;font-weight:600;color:#f0f6fc;">為什麼需要掃描 AI Skills？</summary>
+    <p style="margin:0.8rem 0 0;">根據 NVIDIA 研究，26.1% 的公開 AI skills 含至少一個安全漏洞，5.2% 顯示明確惡意意圖。AI coding agent 的 skill 有讀取文件、執行代碼、呼叫外部 API 的能力，未掃描的 skill 可能成為攻擊面。</p>
+  </details>
+
+  <details style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:1rem;margin-bottom:0.8rem;">
+    <summary style="cursor:pointer;font-weight:600;color:#f0f6fc;">SkillSpector 能掃描哪些 AI 工具的 skills？</summary>
+    <p style="margin:0.8rem 0 0;">支援 Claude Code（~/.claude/skills/）、Codex、OpenClaw、GitHub Copilot CLI、Cursor MCP 等主流 AI coding agent 的 skill 文件。任何 Markdown 或 YAML 格式的 skill 定義文件都可以掃描。</p>
+  </details>
+
+  <details style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:1rem;margin-bottom:0.8rem;">
+    <summary style="cursor:pointer;font-weight:600;color:#f0f6fc;">SkillSpector 是免費的嗎？</summary>
+    <p style="margin:0.8rem 0 0;">是的，Apache 2.0 開源工具，完全免費。NVIDIA 官方維護，可整合進 CI/CD pipeline 自動化掃描。</p>
+  </details>
+
+  <details style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:1rem;margin-bottom:0.8rem;">
+    <summary style="cursor:pointer;font-weight:600;color:#f0f6fc;">掃描出漏洞後怎麼辦？</summary>
+    <p style="margin:0.8rem 0 0;">Critical/High 漏洞：立即移除該 skill 或聯繫作者。Medium：評估風險後決定是否保留。SkillSpector 會提供具體修復建議，如果是自己寫的 skill 可以根據建議修改後重新掃描驗證。</p>
+  </details>
+
+  <div class="related-links">
+    <h3>Agent Skills 系列教學</h3>
+    <ul>
+      <li><a href="/blog/graphify-codebase-knowledge-graph-2026.html">graphify 繁中教學 2026：Codebase 知識圖，Claude Code 必裝 Skill</a></li>
+      <li><a href="/blog/mattpocock-skills-claude-code-2026.html">mattpocock skills：Claude Code 51K Stars Agent Skills 繁中完整教學</a></li>
+      <li><a href="/blog/everything-claude-code-ecc-tutorial-2026.html">Everything Claude Code（ECC）完整繁中教學</a></li>
+      <li><a href="/blog/headroom-llm-token-compression-2026.html">headroom 繁中教學 2026：Claude Code 省 91% Token</a></li>
+      <li><a href="/blog/opencode-vs-cursor-vs-claude-code-2026.html">OpenCode vs Cursor vs Claude Code 三方終極比較</a></li>
+    </ul>
+  </div>
+</article>
+
+<footer>
+  <p>© 2026 AutoDev AI · <a href="https://autodev-ai.com">autodev-ai.com</a></p>
+</footer>
+
+</body>
+</html>
