@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent-Reach 繁中完整教學 2026：Claude Code 直讀 16 個平台，小紅書、Bilibili、YouTube 一次搞定</title>
+  <meta name="description" content="Agent-Reach 完整繁中教學：讓 Claude Code 直接讀取小紅書、Bilibili、Twitter、YouTube 等 16 個社群平台。安裝設定、實戰範例、與 last30days-skill 搭配使用，台灣工程師 AI 研究自動化首選。">
+  <meta name="keywords" content="agent-reach 繁中教學, claude code 社群媒體 自動化, agent-reach 安裝 2026, agent-reach 小紅書 bilibili, claude code 多平台 研究, AI 自動化研究 台灣">
+  <link rel="canonical" href="https://autodev-ai.com/blog/agent-reach-social-media-ai-2026.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Agent-Reach 繁中完整教學 2026：Claude Code 直讀 16 個社群平台">
+  <meta property="og:description" content="讓 Claude Code 直接讀取小紅書、Bilibili、Twitter、YouTube 等 16 個平台。完整繁中安裝教學 + 實戰範例。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/agent-reach-social-media-ai-2026.html">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif; background: #0f1117; color: #e2e8f0; line-height: 1.7; }
+    .hero { background: linear-gradient(135deg, #1a1f2e 0%, #0f1117 50%, #1a0a2e 100%); padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid #2d3748; }
+    .hero .badge { display: inline-block; background: #7c3aed; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; line-height: 1.25; max-width: 820px; margin: 0 auto 16px; background: linear-gradient(90deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero .subtitle { font-size: 1.05rem; color: #94a3b8; max-width: 620px; margin: 0 auto 24px; }
+    .hero .meta { font-size: 0.85rem; color: #64748b; }
+    .container { max-width: 820px; margin: 0 auto; padding: 40px 24px 80px; }
+    h2 { font-size: 1.5rem; font-weight: 700; color: #f1f5f9; margin: 48px 0 16px; border-left: 4px solid #7c3aed; padding-left: 12px; }
+    h3 { font-size: 1.15rem; font-weight: 600; color: #cbd5e1; margin: 28px 0 10px; }
+    p { color: #94a3b8; margin-bottom: 16px; }
+    ul, ol { color: #94a3b8; padding-left: 20px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; }
+    strong { color: #e2e8f0; }
+    code { background: #1e2533; color: #a78bfa; padding: 2px 6px; border-radius: 4px; font-family: "JetBrains Mono", "Fira Code", monospace; font-size: 0.88em; }
+    pre { background: #1e2533; border: 1px solid #2d3748; border-radius: 8px; padding: 20px; overflow-x: auto; margin: 16px 0 24px; }
+    pre code { background: none; color: #e2e8f0; padding: 0; font-size: 0.9em; line-height: 1.6; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin: 24px 0; }
+    .stat-card { background: #1a1f2e; border: 1px solid #2d3748; border-radius: 10px; padding: 20px; text-align: center; }
+    .stat-card .num { font-size: 1.8rem; font-weight: 800; color: #a78bfa; }
+    .stat-card .label { font-size: 0.8rem; color: #64748b; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 0.92rem; }
+    th { background: #1e2533; color: #a78bfa; padding: 10px 14px; text-align: left; border: 1px solid #2d3748; }
+    td { padding: 10px 14px; border: 1px solid #2d3748; color: #94a3b8; }
+    tr:nth-child(even) td { background: #141820; }
+    .highlight { background: linear-gradient(135deg, #1a0a2e, #1a1f2e); border: 1px solid #7c3aed; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+    .highlight p { margin: 0; color: #c4b5fd; }
+    /* CTA buttons */
+    .cta-block { background: linear-gradient(135deg, #1e1a2e, #1a2238); border: 1px solid #4c1d95; border-radius: 14px; padding: 28px; margin: 36px 0; text-align: center; }
+    .cta-block h3 { color: #e2e8f0; margin-bottom: 8px; font-size: 1.1rem; }
+    .cta-block p { color: #94a3b8; margin-bottom: 20px; font-size: 0.95rem; }
+    .btn { display: inline-block; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; margin: 6px; transition: opacity 0.2s; }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary { background: linear-gradient(90deg, #7c3aed, #6d28d9); color: #fff; }
+    .btn-secondary { background: linear-gradient(90deg, #0ea5e9, #0284c7); color: #fff; }
+    .btn-accent { background: linear-gradient(90deg, #059669, #047857); color: #fff; }
+    .platform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 20px 0; }
+    .platform-pill { background: #1e2533; border: 1px solid #2d3748; border-radius: 8px; padding: 10px 14px; text-align: center; font-size: 0.85rem; color: #a78bfa; font-weight: 600; }
+    .step-box { background: #141820; border: 1px solid #2d3748; border-radius: 10px; padding: 20px 24px; margin: 12px 0; }
+    .step-box .step-num { color: #7c3aed; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .faq-item { border: 1px solid #2d3748; border-radius: 10px; padding: 20px 24px; margin: 12px 0; background: #141820; }
+    .faq-item h3 { color: #c4b5fd; margin: 0 0 10px; font-size: 1rem; }
+    .faq-item p { margin: 0; font-size: 0.95rem; }
+    .breadcrumb { font-size: 0.82rem; color: #64748b; margin-bottom: 32px; }
+    .breadcrumb a { color: #7c3aed; text-decoration: none; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+    .tag { background: #1e2533; color: #64748b; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Agent-Reach 繁中完整教學 2026：Claude Code 直讀 16 個平台",
+    "description": "Agent-Reach 讓 Claude Code 直接讀取小紅書、Bilibili、Twitter、YouTube 等 16 個社群平台。完整繁中安裝教學與實戰範例。",
+    "author": { "@type": "Organization", "name": "AutoDev AI" },
+    "publisher": { "@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com" },
+    "datePublished": "2026-06-15",
+    "dateModified": "2026-06-15",
+    "url": "https://autodev-ai.com/blog/agent-reach-social-media-ai-2026.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Agent-Reach 是什麼？",
+        "acceptedAnswer": { "@type": "Answer", "text": "Agent-Reach 是一個開源 Claude Code Agent Skill，讓 AI agent 能直接讀取小紅書、Bilibili、Twitter/X、YouTube、GitHub、Reddit 等 16 個社群媒體平台的內容，無需離開終端機或 Claude Code 工作流程。" }
+      },
+      {
+        "@type": "Question",
+        "name": "Agent-Reach 支援哪些平台？",
+        "acceptedAnswer": { "@type": "Answer", "text": "Agent-Reach 支援 16 個平台：小紅書（XiaoHongshu）、Bilibili、Twitter/X、YouTube、GitHub、Reddit、LinkedIn、Hacker News、Product Hunt、Instagram、TikTok、Weibo、Zhihu（知乎）、Medium、Dev.to、Substack。" }
+      },
+      {
+        "@type": "Question",
+        "name": "Agent-Reach 需要 API key 嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "基本功能不需要額外 API key，使用 Claude Code 原有的工具呼叫能力即可。部分平台（如 Twitter/X 深度搜尋）可選配對應平台 API key 以提升抓取品質，但非強制。" }
+      },
+      {
+        "@type": "Question",
+        "name": "Agent-Reach 和 last30days-skill 有什麼差別？",
+        "acceptedAnswer": { "@type": "Answer", "text": "last30days-skill 專注於「過去 30 天跨平台熱點彙整」，適合做週期性趨勢研究。Agent-Reach 則提供即時、深度的單平台或多平台內容讀取，適合需要現時資訊或特定帳號/關鍵字追蹤的工作流程，兩者可以搭配使用。" }
+      },
+      {
+        "@type": "Question",
+        "name": "在 Windows 上能用 Agent-Reach 嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "可以，Agent-Reach 支援 macOS、Linux、Windows（含 WSL2）。Windows 建議使用 WSL2 + Ubuntu，搭配 Claude Code 的標準安裝流程，與 macOS 體驗完全一致。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge">🔥 9 輪熱門 · 繁中首發</div>
+  <h1>Agent-Reach 繁中完整教學 2026：Claude Code 直讀 16 個平台，小紅書、Bilibili、YouTube 一次搞定</h1>
+  <p class="subtitle">不用離開終端機，讓 AI agent 直接抓取全球最大社群平台的內容。研究、競品分析、趨勢追蹤，從此全自動。</p>
+  <p class="meta">AutoDev AI · 2026 年 6 月 15 日 · 預計閱讀時間 10 分鐘</p>
+</div>
+
+<div class="container">
+  <div class="breadcrumb"><a href="https://autodev-ai.com">首頁</a> › <a href="https://autodev-ai.com/blog/">部落格</a> › Agent-Reach 教學 2026</div>
+
+  <div class="tag-row">
+    <span class="tag">Claude Code</span>
+    <span class="tag">Agent Skills</span>
+    <span class="tag">社群媒體自動化</span>
+    <span class="tag">繁中首發</span>
+    <span class="tag">開源工具</span>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="num">16</div><div class="label">支援平台數</div></div>
+    <div class="stat-card"><div class="num">27K+</div><div class="label">GitHub Stars</div></div>
+    <div class="stat-card"><div class="num">MIT</div><div class="label">授權，完全免費</div></div>
+    <div class="stat-card"><div class="num">1 行</div><div class="label">指令安裝</div></div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>你是否有這樣的痛點？</strong> 研究競品、追蹤趨勢、做市場分析，每次都要手動開瀏覽器在小紅書、Bilibili、Twitter 各自搜尋，然後複製貼上給 Claude？Agent-Reach 直接解決這個問題：讓 Claude Code 自己去抓資料，你只要下指令。</p>
+  </div>
+
+  <h2>Agent-Reach 是什麼？</h2>
+  <p>Agent-Reach 是一個為 Claude Code 設計的 Agent Skill（代理技能），核心概念是讓 AI agent 擁有「觸角」（Reach），能直接伸進 16 個主流社群媒體平台抓取內容，無需人工開瀏覽器或複製貼上。</p>
+  <p>這個工具在 GitHub 上已累積 <strong>27,000+ stars</strong>，是目前社群媒體整合類 Agent Skill 中評分最高的之一。它的設計哲學很直接：讓 Claude Code 在做研究、分析、寫報告的過程中，能夠主動去「觸達」（reach）各個平台，而不是被動等待人類餵資料。</p>
+
+  <h3>支援的 16 個平台</h3>
+  <p>Agent-Reach 覆蓋了中文市場和英文市場最重要的社群平台：</p>
+  <div class="platform-grid">
+    <div class="platform-pill">🇨🇳 小紅書</div>
+    <div class="platform-pill">📹 Bilibili</div>
+    <div class="platform-pill">🐦 Twitter/X</div>
+    <div class="platform-pill">▶️ YouTube</div>
+    <div class="platform-pill">🐙 GitHub</div>
+    <div class="platform-pill">💬 Reddit</div>
+    <div class="platform-pill">💼 LinkedIn</div>
+    <div class="platform-pill">📰 Hacker News</div>
+    <div class="platform-pill">🚀 Product Hunt</div>
+    <div class="platform-pill">📸 Instagram</div>
+    <div class="platform-pill">🎵 TikTok</div>
+    <div class="platform-pill">🌊 Weibo</div>
+    <div class="platform-pill">🟦 知乎</div>
+    <div class="platform-pill">📝 Medium</div>
+    <div class="platform-pill">💻 Dev.to</div>
+    <div class="platform-pill">📨 Substack</div>
+  </div>
+  <p>對台灣工程師和內容創作者來說，<strong>小紅書 + Bilibili + 知乎</strong>這三個中文平台的整合特別有價值——這是市面上很少有工具能同時支援的組合。</p>
+
+  <h2>安裝 Agent-Reach：3 步完成</h2>
+
+  <div class="step-box">
+    <div class="step-num">步驟一 — 確認環境</div>
+    <p>需要 Claude Code 已安裝（npm 或 pip 均可）。如果還沒裝 Claude Code，先執行：</p>
+    <pre><code>npm install -g @anthropic-ai/claude-code
+# 或
+pip install claude-code</code></pre>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">步驟二 — 安裝 Agent-Reach</div>
+    <p>Agent-Reach 作為 Claude Code 的 Agent Skill 安裝，指令如下：</p>
+    <pre><code># 克隆到本地 skills 目錄
+git clone https://github.com/agent-reach/agent-reach ~/.claude/skills/agent-reach
+
+# 或透過 Claude Code 內建 skill 管理器
+claude skill install agent-reach</code></pre>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">步驟三 — 確認安裝成功</div>
+    <p>開啟 Claude Code，輸入以下指令確認 Agent-Reach 已載入：</p>
+    <pre><code># 在 Claude Code 終端機中輸入
+/skills list
+
+# 應該看到 agent-reach 出現在清單中
+# ✓ agent-reach  v1.x.x  Social media content retrieval for 16 platforms</code></pre>
+  </div>
+
+  <h2>基礎用法：5 個即用指令</h2>
+  <p>安裝完成後，直接在 Claude Code 對話中用自然語言呼叫，或使用以下標準指令格式：</p>
+
+  <h3>1. 搜尋小紅書趨勢</h3>
+  <pre><code>/reach xiaohongshu search "AI工具 台灣" --limit 20 --sort popular
+
+# 或自然語言：
+# "幫我搜尋小紅書上關於 AI 工具的最新熱門貼文，前 20 篇"</code></pre>
+
+  <h3>2. 抓取 YouTube 頻道最新影片摘要</h3>
+  <pre><code>/reach youtube channel @TechChannelName --recent 10 --summarize
+
+# Claude 會自動：
+# 1. 抓取最新 10 支影片
+# 2. 讀取字幕/說明欄
+# 3. 生成每支影片摘要</code></pre>
+
+  <h3>3. Bilibili 關鍵字競品分析</h3>
+  <pre><code>/reach bilibili search "Claude Code 教學" --sort views --analyze competitors
+
+# 輸出：前 10 名影片的標題、觀看數、
+# 評論關鍵字分析、內容差距報告</code></pre>
+
+  <h3>4. 多平台交叉搜尋</h3>
+  <pre><code>/reach multi "n8n automation" --platforms twitter,reddit,hackernews --days 7
+
+# 跨三個平台搜尋過去 7 天相關討論
+# 自動去重、彙整熱點、標記情緒</code></pre>
+
+  <h3>5. GitHub 趨勢 + 社群反應整合</h3>
+  <pre><code>/reach github trending --lang python --days 7
+/reach multi "{trending_repo}" --platforms reddit,hackernews,twitter
+
+# Agent-Reach 的殺手級用法：
+# 先抓 GitHub 趨勢，再去社群媒體確認市場反應</code></pre>
+
+  <h2>進階用法：完整研究工作流</h2>
+  <p>Agent-Reach 真正的威力在於和其他工具組合使用，形成全自動研究流水線。以下是一個台灣 AI 工具研究者的典型工作流：</p>
+
+  <pre><code># 完整競品研究指令（自然語言版）
+"幫我做一個完整的競品研究：
+1. 搜尋 GitHub 本週新上榜的 AI coding 工具
+2. 去 Twitter/X、Reddit、HN 看這些工具的社群討論
+3. 去 YouTube、Bilibili 找相關教學影片數量
+4. 整理成一份競品分析報告，標出哪些工具在中文市場還沒有教學內容"
+
+# Agent-Reach 會自動：
+# - 呼叫 GitHub trending API
+# - 跨平台搜尋每個工具名稱
+# - 分析中文 vs 英文內容比例
+# - 輸出帶有「繁中內容空白」標記的機會清單</code></pre>
+
+  <div class="cta-block">
+    <h3>☁️ 把 Agent-Reach 部署到雲端，24 小時自動研究</h3>
+    <p>在本地跑 Agent-Reach 需要開著電腦。用 DigitalOcean VPS 部署後，可以設定排程任務讓它每天自動收集多平台情報，早上起床就有現成報告。新帳號享 <strong>$200 免費額度</strong>。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="btn btn-primary" target="_blank" rel="noopener">🚀 免費試用 DigitalOcean $200 額度</a>
+  </div>
+
+  <h2>Agent-Reach vs 其他研究工具比較</h2>
+  <table>
+    <tr>
+      <th>工具</th>
+      <th>平台覆蓋</th>
+      <th>中文平台</th>
+      <th>Claude Code 整合</th>
+      <th>費用</th>
+      <th>適合情境</th>
+    </tr>
+    <tr>
+      <td><strong>Agent-Reach</strong></td>
+      <td>16 個</td>
+      <td>✅ 小紅書、B站、知乎、微博</td>
+      <td>✅ 原生 Skill</td>
+      <td>免費 (MIT)</td>
+      <td>深度多平台整合研究</td>
+    </tr>
+    <tr>
+      <td>last30days-skill</td>
+      <td>8 個</td>
+      <td>❌ 英文平台為主</td>
+      <td>✅ 原生 Skill</td>
+      <td>免費 (MIT)</td>
+      <td>30 天週期性趨勢彙整</td>
+    </tr>
+    <tr>
+      <td>Browse AI</td>
+      <td>任意網站</td>
+      <td>⚠️ 需手動設定</td>
+      <td>❌ 需 API 橋接</td>
+      <td>$49+/月</td>
+      <td>通用網頁爬蟲</td>
+    </tr>
+    <tr>
+      <td>Apify</td>
+      <td>100+</td>
+      <td>⚠️ 有限支援</td>
+      <td>❌ 需額外整合</td>
+      <td>按使用量計費</td>
+      <td>企業級大規模爬取</td>
+    </tr>
+    <tr>
+      <td>手動搜尋</td>
+      <td>無限</td>
+      <td>✅</td>
+      <td>❌</td>
+      <td>0（但耗時間）</td>
+      <td>一次性小型研究</td>
+    </tr>
+  </table>
+
+  <p><strong>結論：</strong> 如果你是在台灣做 AI 工具研究、內容創作或競品分析，Agent-Reach 是目前唯一同時覆蓋小紅書、Bilibili、知乎和英文主流平台的免費 Claude Code Skill。</p>
+
+  <h2>和 last30days-skill 搭配使用</h2>
+  <p>這兩個工具設計上互補，組合起來威力倍增：</p>
+
+  <div class="step-box">
+    <div class="step-num">組合用法 — 週期趨勢 + 即時深挖</div>
+    <pre><code># 第一步：用 last30days-skill 找趨勢
+/last30days research "Claude Code" --platforms all
+
+# 輸出：過去 30 天最熱門的 10 個相關話題
+
+# 第二步：用 Agent-Reach 深挖中文市場反應
+/reach multi "{top_topic}" --platforms xiaohongshu,bilibili,zhihu --analyze gaps
+
+# 輸出：中文市場內容空白報告 = 你的下一篇文章選題</code></pre>
+  </div>
+
+  <p>這個組合對台灣的 AI 工具部落客特別實用：先用 last30days-skill 確認哪些英文話題在爆發，再用 Agent-Reach 確認中文市場是否還沒有相關教學——找到空白就寫。</p>
+
+  <h2>實戰案例：台灣 AI 工具部落客的使用流程</h2>
+  <p>以下是一個具體的「從研究到文章選題」全流程，在 Claude Code 中只需要一個對話：</p>
+
+  <pre><code># 在 Claude Code 中輸入：
+"我想寫一篇關於 AI 影片工具的文章。
+請幫我：
+1. 找 GitHub 本週最熱門的 AI 影片相關開源工具
+2. 搜尋 Twitter/X 和 Reddit 最近 7 天的討論情緒
+3. 去 Bilibili 和 YouTube 各搜尋這些工具，統計影片數量
+4. 告訴我哪些工具在 Bilibili（中文）幾乎沒有教學，但在 YouTube（英文）很熱
+5. 給我一份選題建議清單，按照'空白程度 × 搜尋熱度'排序"
+
+# Agent-Reach 自動執行以上所有步驟，
+# 最後輸出一份帶有機會評分的選題清單</code></pre>
+
+  <p>這個流程過去需要 2-3 小時人工搜尋，現在 Claude Code + Agent-Reach 可以在 5-10 分鐘內完成。</p>
+
+  <div class="cta-block">
+    <h3>📊 系統化學習 AI 自動化工作流</h3>
+    <p>Agent-Reach 只是開始。DataCamp 的 AI Engineering 課程可以幫你把這類工具整合進完整的自動化系統，從資料收集到報告生成全自動化。</p>
+    <a href="https://afflink.one/s/aavAC" class="btn btn-secondary" target="_blank" rel="noopener">📚 探索 DataCamp AI Engineering 課程</a>
+  </div>
+
+  <h2>在 VPS 上部署 Agent-Reach 排程任務</h2>
+  <p>想讓 Agent-Reach 每天自動執行、早上起床就有報告？以下是在 DigitalOcean Droplet 上設定的步驟：</p>
+
+  <h3>1. 建立 Droplet</h3>
+  <pre><code># 選擇 Ubuntu 22.04 LTS
+# 建議規格：Basic，2 vCPU / 2GB RAM（$14/月）
+# 地區：Singapore（台灣最近節點）</code></pre>
+
+  <h3>2. 安裝環境</h3>
+  <pre><code">sudo apt update && sudo apt install -y nodejs npm git
+npm install -g @anthropic-ai/claude-code
+git clone https://github.com/agent-reach/agent-reach ~/.claude/skills/agent-reach</code></pre>
+
+  <h3>3. 設定排程腳本</h3>
+  <pre><code">#!/bin/bash
+# daily-research.sh
+
+export ANTHROPIC_API_KEY="your_key_here"
+
+claude -p "用 agent-reach 搜尋今天 Twitter/X、HN、GitHub 上
+關於 Claude Code 的最新討論，整理成摘要，儲存到 
+/reports/$(date +%Y-%m-%d).md" --print
+
+echo "研究報告已生成：/reports/$(date +%Y-%m-%d).md"</code></pre>
+
+  <h3>4. 設定 Cron 每天自動執行</h3>
+  <pre><code"># 每天早上 7:00 台灣時間（UTC+8 = UTC 23:00 前一天）
+0 23 * * * /home/ubuntu/daily-research.sh >> /var/log/research.log 2>&1</code></pre>
+
+  <h2>常見問題解答（FAQ）</h2>
+
+  <div class="faq-item">
+    <h3>Q1：Agent-Reach 是什麼？</h3>
+    <p>Agent-Reach 是一個開源 Claude Code Agent Skill，讓 AI agent 能直接讀取小紅書、Bilibili、Twitter/X、YouTube、GitHub、Reddit 等 16 個社群媒體平台的內容，無需離開終端機或 Claude Code 工作流程。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q2：Agent-Reach 支援哪些平台？</h3>
+    <p>Agent-Reach 目前支援 16 個平台：小紅書、Bilibili、Twitter/X、YouTube、GitHub、Reddit、LinkedIn、Hacker News、Product Hunt、Instagram、TikTok、Weibo、知乎、Medium、Dev.to、Substack。對中文市場而言，小紅書、Bilibili、知乎、微博的同時支援是最大亮點。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q3：Agent-Reach 需要 API key 嗎？</h3>
+    <p>基本功能不需要額外 API key，使用 Claude Code 原有的工具呼叫能力即可。部分平台（如 Twitter/X 深度搜尋）可選配對應平台的官方 API key 以提升抓取品質和速率限制，但非強制要求。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q4：Agent-Reach 和 last30days-skill 有什麼差別？</h3>
+    <p>兩者定位不同但互補：last30days-skill 專注「過去 30 天跨平台熱點彙整」，適合做週期性趨勢研究；Agent-Reach 提供即時、深度的單平台或多平台內容讀取，適合需要現時資訊或特定帳號/關鍵字追蹤的情境。最強的用法是兩者搭配：先用 last30days-skill 找趨勢，再用 Agent-Reach 深挖中文市場反應。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q5：Windows 用戶能用 Agent-Reach 嗎？</h3>
+    <p>可以，Agent-Reach 支援 macOS、Linux、Windows（含 WSL2）。Windows 用戶建議安裝 WSL2 + Ubuntu 22.04，搭配 Claude Code 標準安裝流程，與 macOS 體驗完全一致。不建議在原生 Windows CMD 或 PowerShell 環境下直接執行，WSL2 是最穩定的方案。</p>
+  </div>
+
+  <div class="cta-block">
+    <h3>🛍️ Claude Code 省費工具包</h3>
+    <p>Agent-Reach 執行多平台研究時會消耗大量 token。搭配我們整理的 <strong>Claude Code 省費工具包</strong>，可以在不降低研究品質的前提下，大幅降低 API 費用。</p>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="btn btn-accent" target="_blank" rel="noopener">🎁 取得 Claude Code 省費工具包</a>
+    <a href="https://m.do.co/c/6121a295f624" class="btn btn-primary" target="_blank" rel="noopener">🚀 DigitalOcean $200 免費額度</a>
+  </div>
+
+  <h2>延伸閱讀</h2>
+  <ul>
+    <li><a href="https://autodev-ai.com/blog/last30days-skill-ai-research-2026.html" style="color:#7c3aed">last30days-skill 繁中教學：Claude Code 一鍵抓 30 天情報</a></li>
+    <li><a href="https://autodev-ai.com/blog/everything-claude-code-ecc-tutorial-2026.html" style="color:#7c3aed">Everything Claude Code：最完整的 Claude Code 工具生態系指南</a></li>
+    <li><a href="https://autodev-ai.com/blog/mattpocock-skills-claude-code-2026.html" style="color:#7c3aed">mattpocock/skills 繁中教學：50K Stars 的 Agent Skills 精選包</a></li>
+    <li><a href="https://autodev-ai.com/blog/opencode-vs-cursor-vs-claude-code-2026.html" style="color:#7c3aed">OpenCode vs Cursor vs Claude Code：2026 年台灣工程師選擇指南</a></li>
+    <li><a href="https://autodev-ai.com/blog/headroom-llm-token-compression-2026.html" style="color:#7c3aed">headroom 繁中教學：Claude Code 省 91% token，省費系列第 6 篇</a></li>
+  </ul>
+
+  <hr style="border-color:#2d3748; margin: 40px 0;">
+  <p style="font-size:0.82rem; color:#4a5568; text-align:center;">本文含聯盟行銷連結。透過本站連結購買，我們可能獲得少許佣金，不影響您的費用，也是支持我們持續產出繁中 AI 教學的方式。感謝支持。</p>
+</div>
+
+</body>
+</html>

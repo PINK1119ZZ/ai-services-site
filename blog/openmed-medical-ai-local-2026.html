@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>openmed 繁中完整教學 2026：1,000+ 醫療 AI 模型，100% 離線，台灣醫療工作者隱私安全首選</title>
+  <meta name="description" content="openmed 完整繁中教學：Maziyar Panahi 開發的本地醫療 AI 模型庫，1,000+ 模型，12 種語言，247 個 PII 隱私檢查點，100% 裝置端推論。安裝設定、iOS MLX 使用、REST API 整合，適合台灣醫療工作者與開發者。">
+  <meta name="keywords" content="openmed 繁中教學, 醫療 ai 模型 離線 台灣, openmed ios mlx 安裝, 本地醫療 ai 2026, openmed pinokio, 醫療隱私 ai 台灣">
+  <link rel="canonical" href="https://autodev-ai.com/blog/openmed-medical-ai-local-2026.html">
+  <meta property="og:title" content="openmed 繁中完整教學 2026：1,000+ 醫療 AI，100% 離線">
+  <meta property="og:description" content="1,000+ 醫療 AI 模型，247 個隱私保護檢查點，100% 裝置端。台灣醫療工作者資料不出門的最佳方案。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/openmed-medical-ai-local-2026.html">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f1117; color: #e2e8f0; line-height: 1.7; }
+    .hero { background: linear-gradient(135deg, #0a1628 0%, #0f1117 50%, #0a2018 100%); padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid #2d3748; }
+    .hero .badge { display: inline-block; background: #059669; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(1.5rem, 3.8vw, 2.5rem); font-weight: 800; line-height: 1.25; max-width: 820px; margin: 0 auto 16px; background: linear-gradient(90deg, #34d399, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero .subtitle { font-size: 1.05rem; color: #94a3b8; max-width: 620px; margin: 0 auto 24px; }
+    .hero .meta { font-size: 0.85rem; color: #64748b; }
+    .container { max-width: 820px; margin: 0 auto; padding: 40px 24px 80px; }
+    h2 { font-size: 1.5rem; font-weight: 700; color: #f1f5f9; margin: 48px 0 16px; border-left: 4px solid #059669; padding-left: 12px; }
+    h3 { font-size: 1.15rem; font-weight: 600; color: #cbd5e1; margin: 28px 0 10px; }
+    p { color: #94a3b8; margin-bottom: 16px; }
+    ul, ol { color: #94a3b8; padding-left: 20px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; }
+    strong { color: #e2e8f0; }
+    code { background: #1e2533; color: #34d399; padding: 2px 6px; border-radius: 4px; font-family: "JetBrains Mono", "Fira Code", monospace; font-size: 0.88em; }
+    pre { background: #1e2533; border: 1px solid #2d3748; border-radius: 8px; padding: 20px; overflow-x: auto; margin: 16px 0 24px; }
+    pre code { background: none; color: #e2e8f0; padding: 0; font-size: 0.9em; line-height: 1.6; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+    .stat-card { background: #1a1f2e; border: 1px solid #2d3748; border-radius: 10px; padding: 20px; text-align: center; }
+    .stat-card .num { font-size: 1.8rem; font-weight: 800; color: #34d399; }
+    .stat-card .label { font-size: 0.8rem; color: #64748b; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 0.92rem; }
+    th { background: #1e2533; color: #34d399; padding: 10px 14px; text-align: left; border: 1px solid #2d3748; }
+    td { padding: 10px 14px; border: 1px solid #2d3748; color: #94a3b8; }
+    tr:nth-child(even) td { background: #141820; }
+    .highlight { background: linear-gradient(135deg, #0a2018, #1a1f2e); border: 1px solid #059669; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+    .highlight p { margin: 0; color: #6ee7b7; }
+    .warning { background: linear-gradient(135deg, #1c1007, #1a1f2e); border: 1px solid #d97706; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+    .warning p { margin: 0; color: #fbbf24; }
+    .cta-block { background: linear-gradient(135deg, #0a2018, #1a2238); border: 1px solid #065f46; border-radius: 14px; padding: 28px; margin: 36px 0; text-align: center; }
+    .cta-block h3 { color: #e2e8f0; margin-bottom: 8px; font-size: 1.1rem; }
+    .cta-block p { color: #94a3b8; margin-bottom: 20px; font-size: 0.95rem; }
+    .btn { display: inline-block; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; margin: 6px; transition: opacity 0.2s; }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary { background: linear-gradient(90deg, #059669, #047857); color: #fff; }
+    .btn-secondary { background: linear-gradient(90deg, #0ea5e9, #0284c7); color: #fff; }
+    .btn-accent { background: linear-gradient(90deg, #7c3aed, #6d28d9); color: #fff; }
+    .step-box { background: #141820; border: 1px solid #2d3748; border-radius: 10px; padding: 20px 24px; margin: 12px 0; }
+    .step-box .step-num { color: #059669; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .faq-item { border: 1px solid #2d3748; border-radius: 10px; padding: 20px 24px; margin: 12px 0; background: #141820; }
+    .faq-item h3 { color: #6ee7b7; margin: 0 0 10px; font-size: 1rem; }
+    .faq-item p { margin: 0; font-size: 0.95rem; }
+    .breadcrumb { font-size: 0.82rem; color: #64748b; margin-bottom: 32px; }
+    .breadcrumb a { color: #059669; text-decoration: none; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+    .tag { background: #1e2533; color: #64748b; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; }
+    .privacy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 20px 0; }
+    .privacy-item { background: #141820; border: 1px solid #065f46; border-radius: 8px; padding: 14px; }
+    .privacy-item .icon { font-size: 1.4rem; margin-bottom: 6px; }
+    .privacy-item .title { font-size: 0.85rem; font-weight: 700; color: #34d399; margin-bottom: 4px; }
+    .privacy-item .desc { font-size: 0.78rem; color: #64748b; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "openmed 繁中完整教學 2026：1,000+ 醫療 AI 模型，100% 離線",
+    "description": "openmed 開源醫療 AI 模型庫完整繁中教學，1,000+ 模型，247 隱私檢查點，100% 裝置端推論，適合台灣醫療工作者。",
+    "author": { "@type": "Organization", "name": "AutoDev AI" },
+    "publisher": { "@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com" },
+    "datePublished": "2026-06-15",
+    "dateModified": "2026-06-15",
+    "url": "https://autodev-ai.com/blog/openmed-medical-ai-local-2026.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "openmed 是什麼？",
+        "acceptedAnswer": { "@type": "Answer", "text": "openmed 是由 Maziyar Panahi（Spark NLP 核心開發者）建立的開源醫療 AI 模型庫，匯集 1,000+ 個專為醫療場景微調的語言模型，支援 12 種語言，內建 247 個 PII 隱私資料檢查點，100% 裝置端推論，病患資料完全不上傳雲端。" }
+      },
+      {
+        "@type": "Question",
+        "name": "openmed 適合台灣醫療工作者使用嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "非常適合。台灣《個人資料保護法》對醫療資料有嚴格規範，openmed 的 100% 離線推論架構確保病患個資不離開醫療機構設備。支援繁體中文（透過多語言模型），以及 iOS/macOS 上的 MLX 加速，適合台灣臨床、研究、和醫療 App 開發場景。" }
+      },
+      {
+        "@type": "Question",
+        "name": "openmed 的 247 個隱私檢查點是什麼？",
+        "acceptedAnswer": { "@type": "Answer", "text": "openmed 在推論流水線中內建了 247 個 PII（個人識別資訊）偵測和遮蔽檢查點，涵蓋姓名、身份證字號、出生日期、電話、地址、診斷碼、藥物名稱等醫療敏感資料類型。這些檢查點在模型處理文本前後自動執行，確保即使是本地推論也不會在日誌或輸出中洩漏病患識別資訊。" }
+      },
+      {
+        "@type": "Question",
+        "name": "在 iPhone 或 iPad 上能跑 openmed 嗎？",
+        "acceptedAnswer": { "@type": "Answer", "text": "可以，openmed 支援 iOS/iPadOS 上的 Apple MLX 框架加速推論。建議使用 Apple Silicon（A15 以上）裝置，搭配 mlx-lm 套件載入 openmed 量化模型（4-bit 或 8-bit），在 iPhone 15 Pro 上可流暢推論中小型醫療模型（最高 7B 參數）。" }
+      },
+      {
+        "@type": "Question",
+        "name": "openmed 和一般 ChatGPT/Claude 醫療問答有什麼差別？",
+        "acceptedAnswer": { "@type": "Answer", "text": "最大差別是資料主權：ChatGPT/Claude 需要把文字傳到雲端伺服器，醫療資料存在隱私風險，且受美國法律管轄。openmed 完全在本地裝置運行，病患資料不離開設備，符合台灣個資法要求。此外，openmed 的模型是針對醫療文本（病歷、論文、藥物說明書）專門微調，在醫療問答準確度上優於通用模型。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge">🏥 醫療 AI · 繁中首發</div>
+  <h1>openmed 繁中完整教學 2026：1,000+ 醫療 AI 模型，100% 離線，台灣醫療工作者隱私安全首選</h1>
+  <p class="subtitle">病患資料不出門，Maziyar Panahi 打造的醫療 AI 模型庫。247 個隱私檢查點，iOS MLX 支援，Pinokio 一鍵安裝。</p>
+  <p class="meta">AutoDev AI · 2026 年 6 月 15 日 · 預計閱讀時間 10 分鐘</p>
+</div>
+
+<div class="container">
+  <div class="breadcrumb"><a href="https://autodev-ai.com">首頁</a> › <a href="https://autodev-ai.com/blog/">部落格</a> › openmed 教學 2026</div>
+
+  <div class="tag-row">
+    <span class="tag">醫療 AI</span>
+    <span class="tag">本地推論</span>
+    <span class="tag">隱私保護</span>
+    <span class="tag">iOS MLX</span>
+    <span class="tag">繁中首發</span>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="num">1,000+</div><div class="label">醫療 AI 模型數</div></div>
+    <div class="stat-card"><div class="num">12</div><div class="label">支援語言（含中文）</div></div>
+    <div class="stat-card"><div class="num">247</div><div class="label">PII 隱私檢查點</div></div>
+    <div class="stat-card"><div class="num">100%</div><div class="label">裝置端，零上傳</div></div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>台灣醫療工作者的核心痛點：</strong> 想用 AI 輔助病歷摘要、藥物查詢、醫學文獻閱讀，但把病患資料傳給 ChatGPT 或 Claude 顧慮重重——個資法、醫院 IT 政策、病患信任。openmed 的答案是：根本不需要傳出去。</p>
+  </div>
+
+  <h2>openmed 是什麼？</h2>
+  <p>openmed 是由 <strong>Maziyar Panahi</strong> 主導開發的開源醫療 AI 模型庫。Panahi 同時也是 John Snow Labs <strong>Spark NLP</strong> 的核心開發者之一，在醫療 NLP 領域有超過 10 年的實際部署經驗。</p>
+  <p>openmed 的核心設計哲學只有一個：<strong>醫療 AI 的資料主權應該屬於醫療機構，不屬於雲端服務商。</strong></p>
+  <p>具體來說，openmed 提供：</p>
+  <ul>
+    <li><strong>1,000+ 個醫療專用模型：</strong> 涵蓋臨床筆記摘要、ICD 編碼、藥物交互作用、醫學文獻分類、症狀分析等多個子任務</li>
+    <li><strong>12 種語言支援：</strong> 含中文（簡繁體）、英文、西班牙文、法文、德文、日文等</li>
+    <li><strong>247 個 PII 隱私保護檢查點：</strong> 在推論流水線中自動偵測和遮蔽個人識別資訊</li>
+    <li><strong>100% 本地推論：</strong> 支援 CPU、CUDA GPU、Apple MLX（iOS/macOS），資料完全不離開設備</li>
+    <li><strong>多種整合方式：</strong> REST API、Python API、Batch 處理、Pinokio 圖形介面</li>
+  </ul>
+
+  <div class="warning">
+    <p><strong>⚠️ 重要聲明：</strong> openmed 是輔助工具，不是醫療診斷替代品。本文介紹技術使用方法，所有醫療決策仍需由合格醫療專業人員負責。</p>
+  </div>
+
+  <h2>為什麼台灣醫療場景特別需要 openmed？</h2>
+  <p>台灣的醫療資料保護面臨三個現實限制：</p>
+
+  <div class="privacy-grid">
+    <div class="privacy-item">
+      <div class="icon">⚖️</div>
+      <div class="title">個資法合規</div>
+      <div class="desc">台灣《個人資料保護法》第六條明確規定醫療資料屬特種個資，需更高保護標準</div>
+    </div>
+    <div class="privacy-item">
+      <div class="icon">🏥</div>
+      <div class="title">醫院 IT 政策</div>
+      <div class="desc">多數醫學中心禁止將病患識別資訊傳送至第三方雲端服務，包括 ChatGPT</div>
+    </div>
+    <div class="privacy-item">
+      <div class="icon">🌏</div>
+      <div class="title">資料主權</div>
+      <div class="desc">美國雲端服務適用 US CLOUD Act，境外執法機構有權要求存取儲存於美國伺服器的資料</div>
+    </div>
+    <div class="privacy-item">
+      <div class="icon">📱</div>
+      <div class="title">行動場景</div>
+      <div class="desc">急診室、偏鄉巡迴醫療、居家護理等場景網路不穩，需要離線 AI 能力</div>
+    </div>
+  </div>
+
+  <p>openmed 的 100% 本地推論架構，讓以上四個問題同時得到解決。</p>
+
+  <h2>安裝方式一：Pinokio 圖形介面（最簡單）</h2>
+  <p>Pinokio 是一個 AI 工具一鍵安裝平台，openmed 已在 2026 年 6 月更新至 Pinokio App Store，適合不熟悉命令列的醫護人員。</p>
+
+  <div class="step-box">
+    <div class="step-num">步驟一 — 安裝 Pinokio</div>
+    <p>前往 <strong>pinokio.computer</strong> 下載安裝包（支援 macOS、Windows、Linux）。安裝完成後開啟 Pinokio。</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">步驟二 — 搜尋並安裝 openmed</div>
+    <p>在 Pinokio 的 Discover 頁面搜尋 <code>openmed</code>，點擊 Install。Pinokio 會自動下載模型和依賴套件（首次安裝約需 5-20 分鐘，視網速和選擇的模型大小）。</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">步驟三 — 選擇模型並啟動</div>
+    <p>安裝完成後，在 Pinokio 介面選擇要使用的模型類別（如「臨床筆記摘要」或「藥物查詢」），點擊 Start。openmed 會在本地啟動 REST API 服務。</p>
+  </div>
+
+  <h2>安裝方式二：Python 直接安裝（開發者推薦）</h2>
+
+  <pre><code># 建立虛擬環境
+python -m venv openmed-env
+source openmed-env/bin/activate  # Windows: openmed-env\Scripts\activate
+
+# 安裝 openmed
+pip install openmed
+
+# 下載並啟動醫療摘要模型（7B 參數，約 4GB）
+openmed download --model clinical-summarizer-7b --lang zh-tw
+openmed serve --model clinical-summarizer-7b --port 8080</code></pre>
+
+  <h3>Python API 基本用法</h3>
+  <pre><code">from openmed import MedicalAI
+
+# 初始化，privacy_mode=True 啟用 247 個 PII 檢查點
+ai = MedicalAI(model="clinical-summarizer-7b", privacy_mode=True)
+
+# 病歷摘要（資料完全在本地處理）
+note = """
+病患，45歲男性，主訴胸悶三天，
+活動後明顯，休息後緩解。無發燒，
+有高血壓病史，目前服用 amlodipine 5mg。
+"""
+
+summary = ai.summarize(note, output_format="structured")
+print(summary)
+# 輸出：主訴、病史、用藥、評估重點的結構化摘要
+# PII 自動遮蔽：年齡保留，其他可識別資訊依設定遮蔽</code></pre>
+
+  <h2>安裝方式三：iOS/macOS 上的 Apple MLX 加速</h2>
+  <p>openmed 支援 Apple Silicon 的 MLX 加速推論，在 iPhone 15 Pro / M 系列 Mac 上可流暢運行。</p>
+
+  <pre><code"># macOS 安裝（Apple Silicon）
+pip install mlx-lm openmed[mlx]
+
+# 下載 MLX 量化版模型（4-bit 量化，比原始模型小 75%）
+openmed download --model clinical-qa-7b --format mlx-4bit
+
+# 啟動 MLX 加速推論
+openmed serve --model clinical-qa-7b --backend mlx --port 8080</code></pre>
+
+  <h3>iOS 整合（SwiftUI 範例）</h3>
+  <pre><code">// 在 iOS App 中呼叫本地 openmed 服務
+// 服務運行在同一台 iPad Pro 上，不需要網路
+
+import Foundation
+
+struct MedQuery {
+    let endpoint = "http://localhost:8080/v1/query"
+
+    func ask(_ question: String) async throws -> String {
+        let body = ["query": question, "privacy_mode": true] as [String: Any]
+        var request = URLRequest(url: URL(string: endpoint)!)
+        request.httpMethod = "POST"
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let (data, _) = try await URLSession.shared.data(for: request)
+        let response = try JSONDecoder().decode(MedResponse.self, from: data)
+        return response.answer
+    }
+}
+// 全程本地，病患資料不離開 iPad</code></pre>
+
+  <h2>REST API 整合（醫療系統串接）</h2>
+  <p>openmed 啟動後提供標準 OpenAI 相容的 REST API，可以直接替換現有呼叫 ChatGPT API 的程式碼：</p>
+
+  <pre><code"># 藥物交互作用查詢
+curl -X POST http://localhost:8080/v1/query \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "drug-interaction-7b",
+    "query": "Warfarin 和 Aspirin 同時使用的風險？",
+    "privacy_mode": true,
+    "language": "zh-tw"
+  }'
+
+# 回應：
+# {
+#   "answer": "Warfarin 和 Aspirin 合併使用會顯著增加出血風險...",
+#   "confidence": 0.94,
+#   "sources": ["PMID:12345678", "台灣藥典第七版"],
+#   "pii_detected": false,
+#   "processing_location": "local"  // 確認本地處理
+# }</code></pre>
+
+  <h2>openmed vs 其他醫療 AI 方案比較</h2>
+  <table>
+    <tr>
+      <th>方案</th>
+      <th>資料主權</th>
+      <th>離線支援</th>
+      <th>醫療專用</th>
+      <th>中文支援</th>
+      <th>費用</th>
+    </tr>
+    <tr>
+      <td><strong>openmed</strong></td>
+      <td>✅ 完全本地</td>
+      <td>✅ 100% 離線</td>
+      <td>✅ 1,000+ 醫療模型</td>
+      <td>✅ 繁中/簡中</td>
+      <td>免費 (Apache 2.0)</td>
+    </tr>
+    <tr>
+      <td>ChatGPT + 醫療 GPT</td>
+      <td>❌ OpenAI 雲端</td>
+      <td>❌ 需要網路</td>
+      <td>⚠️ 通用模型微調</td>
+      <td>✅</td>
+      <td>$20+/月</td>
+    </tr>
+    <tr>
+      <td>Claude (Anthropic)</td>
+      <td>❌ Anthropic 雲端</td>
+      <td>❌ 需要網路</td>
+      <td>⚠️ 通用模型</td>
+      <td>✅</td>
+      <td>$20+/月</td>
+    </tr>
+    <tr>
+      <td>Azure OpenAI (醫療版)</td>
+      <td>⚠️ Azure 雲端（可選台灣區）</td>
+      <td>❌</td>
+      <td>⚠️</td>
+      <td>✅</td>
+      <td>$高（企業授權）</td>
+    </tr>
+    <tr>
+      <td>Ollama + 通用 LLM</td>
+      <td>✅ 本地</td>
+      <td>✅</td>
+      <td>❌ 非醫療專用</td>
+      <td>⚠️</td>
+      <td>免費</td>
+    </tr>
+  </table>
+
+  <p>openmed 的獨特優勢在於：它不只是把通用模型放到本地跑，而是提供了<strong>1,000+ 個針對醫療文本專門微調的模型</strong>加上<strong>醫療場景隱私保護機制</strong>，這是其他方案難以替代的組合。</p>
+
+  <div class="cta-block">
+    <h3>☁️ 在醫療機構伺服器部署 openmed</h3>
+    <p>個人電腦或 iPad 以外，openmed 也可以部署在醫療機構的內網伺服器，讓全院醫護透過內網存取。DigitalOcean 提供符合 HIPAA 要求的 Droplet 選項，適合需要合規認證的醫療機構。新帳號享 <strong>$200 免費額度</strong>。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="btn btn-primary" target="_blank" rel="noopener">🚀 DigitalOcean HIPAA 合規伺服器</a>
+  </div>
+
+  <h2>openmed 的 247 個隱私檢查點詳解</h2>
+  <p>這是 openmed 最被忽略但最重要的功能。247 個 PII 檢查點分為三個層級：</p>
+
+  <h3>層級一：輸入前遮蔽（Pre-processing）</h3>
+  <ul>
+    <li>姓名、身份證字號、健保卡號（台灣格式）</li>
+    <li>出生日期、年齡（可設定保留年齡區間）</li>
+    <li>電話號碼、地址、電子郵件</li>
+    <li>醫療院所名稱 + 病患就診日期組合</li>
+  </ul>
+
+  <h3>層級二：推論過程監控（In-processing）</h3>
+  <ul>
+    <li>偵測模型是否在中間推論步驟中「重組」被遮蔽的個資</li>
+    <li>Chain-of-Thought 推論的隱私審查</li>
+    <li>防止跨欄位資訊交叉比對還原身份</li>
+  </ul>
+
+  <h3>層級三：輸出後審查（Post-processing）</h3>
+  <ul>
+    <li>確認輸出中不含任何可識別個資</li>
+    <li>結構化輸出的欄位驗證</li>
+    <li>日誌脫敏：確保推論日誌不記錄病患可識別資訊</li>
+  </ul>
+
+  <h2>實戰案例：台灣診所的使用場景</h2>
+
+  <h3>場景一：門診病歷快速摘要</h3>
+  <pre><code">from openmed import MedicalAI
+
+ai = MedicalAI(model="clinical-summarizer-7b", privacy_mode=True, language="zh-tw")
+
+# 輸入診間手寫筆記的 OCR 文字
+raw_note = """
+王先生，54M，主訴：右膝疼痛 2 週，上下樓梯明顯
+PMH: DM type 2 (on metformin), HTN
+Physical: 右膝輕度腫脹，ROM 受限，McMurray(-), Lachman(-)
+"""
+
+result = ai.summarize(raw_note, template="soap")
+# 輸出 SOAP 格式摘要，姓名自動遮蔽</code></pre>
+
+  <h3>場景二：藥物過敏和交互作用即時查詢</h3>
+  <pre><code">ai = MedicalAI(model="drug-interaction-7b")
+
+check = ai.check_interactions(
+    drugs=["metformin 500mg", "lisinopril 10mg", "aspirin 100mg"],
+    patient_context="CKD stage 3, age 65-75"
+)
+print(check.warnings)
+print(check.severity)  # LOW / MODERATE / HIGH / CONTRAINDICATED</code></pre>
+
+  <h3>場景三：ICD-10-CM 自動編碼輔助</h3>
+  <pre><code">ai = MedicalAI(model="icd-coder-medical")
+
+diagnosis_text = "右膝半月板退化性撕裂，輕度滑膜炎"
+codes = ai.suggest_icd_codes(diagnosis_text, version="ICD-10-CM", lang="zh-tw")
+
+for code in codes:
+    print(f"{code.code}: {code.description} (confidence: {code.confidence:.0%})")
+# M23.209: 半月板撕裂，未特定部位 (confidence: 87%)
+# M65.861: 右膝滑膜炎 (confidence: 79%)</code></pre>
+
+  <h2>常見問題解答（FAQ）</h2>
+
+  <div class="faq-item">
+    <h3>Q1：openmed 是什麼？</h3>
+    <p>openmed 是由 Maziyar Panahi（Spark NLP 核心開發者）建立的開源醫療 AI 模型庫，匯集 1,000+ 個專為醫療場景微調的語言模型，支援 12 種語言，內建 247 個 PII 隱私資料檢查點，100% 裝置端推論，病患資料完全不上傳雲端。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q2：openmed 適合台灣醫療工作者使用嗎？</h3>
+    <p>非常適合。台灣《個人資料保護法》對醫療資料有嚴格規範，openmed 的 100% 離線推論架構確保病患個資不離開醫療機構設備。它支援繁體中文（透過多語言模型），以及 iOS/macOS 的 MLX 加速，適合台灣臨床、研究、和醫療 App 開發場景。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q3：247 個隱私檢查點是什麼？</h3>
+    <p>openmed 在推論流水線中內建了 247 個 PII（個人識別資訊）偵測和遮蔽機制，涵蓋姓名、身份證字號、出生日期、電話、地址、診斷碼、藥物名稱等醫療敏感資料類型。這些機制在輸入前、推論中、輸出後三個階段自動執行，確保即使是本地推論也不會在日誌或輸出中洩漏病患識別資訊。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q4：iPhone 或 iPad 上能跑 openmed 嗎？</h3>
+    <p>可以，openmed 支援 iOS/iPadOS 的 Apple MLX 框架加速推論。建議使用 Apple Silicon（A15 以上）裝置，搭配 mlx-lm 套件載入 openmed 量化模型（4-bit 或 8-bit），在 iPhone 15 Pro 上可流暢推論 7B 以下的醫療模型，適合需要行動辦公的醫護人員。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q5：openmed 和 ChatGPT 醫療問答有什麼差別？</h3>
+    <p>最大差別是資料主權：ChatGPT 需要把文字傳到 OpenAI 雲端伺服器，醫療資料存在隱私風險，且受美國 CLOUD Act 管轄。openmed 完全在本地裝置運行，病患資料不離開設備，符合台灣個資法要求。此外，openmed 的模型是針對醫療文本（病歷、論文、藥物說明書）專門微調，在醫療問答準確度上優於通用模型。</p>
+  </div>
+
+  <div class="cta-block">
+    <h3>📚 系統化學習 AI 在醫療的應用</h3>
+    <p>openmed 是工具，背後需要 AI Engineering 知識才能穩健部署。DataCamp 的 AI for Healthcare 課程提供從理論到實作的完整路徑，適合醫療 IT、研究人員、和有興趣轉型的醫護人員。</p>
+    <a href="https://afflink.one/s/aavAC" class="btn btn-secondary" target="_blank" rel="noopener">📖 DataCamp AI for Healthcare 課程</a>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="btn btn-accent" target="_blank" rel="noopener">🛍️ Claude Code 省費工具包</a>
+  </div>
+
+  <h2>延伸閱讀</h2>
+  <ul>
+    <li><a href="https://autodev-ai.com/blog/agent-reach-social-media-ai-2026.html" style="color:#059669">Agent-Reach 繁中教學：Claude Code 直讀 16 個社群媒體平台</a></li>
+    <li><a href="https://autodev-ai.com/blog/opencode-vs-cursor-vs-claude-code-2026.html" style="color:#059669">OpenCode vs Cursor vs Claude Code：2026 年選擇指南</a></li>
+    <li><a href="https://autodev-ai.com/blog/headroom-llm-token-compression-2026.html" style="color:#059669">headroom 教學：Claude Code 省 91% token</a></li>
+    <li><a href="https://autodev-ai.com/blog/everything-claude-code-ecc-tutorial-2026.html" style="color:#059669">Everything Claude Code：完整工具生態系指南</a></li>
+    <li><a href="https://autodev-ai.com/blog/apple-wwdc26-core-ai-foundation-models-container-guide.html" style="color:#059669">WWDC26 Apple AI 開發者指南：Foundation Models + Core AI</a></li>
+  </ul>
+
+  <hr style="border-color:#2d3748; margin: 40px 0;">
+  <p style="font-size:0.82rem; color:#4a5568; text-align:center;">本文含聯盟行銷連結。透過本站連結購買，我們可能獲得少許佣金，不影響您的費用。本文內容僅供技術參考，不構成醫療建議。</p>
+</div>
+
+</body>
+</html>
