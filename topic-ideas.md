@@ -3178,3 +3178,68 @@ Obsidian CEO Steph Ango（kepano）在 2026 年初官方發布 kepano/obsidian-s
 4. **NVIDIA SkillSpector 積壓7輪清除時機**：與 graphify 文章可以同日推出，形成「Skills 安全 + 知識圖」搭配對，兩篇文章互相交叉連結，協同 SEO。
 
 ---
+
+---
+
+## 2026-06-16（Researcher Round 93：Kimi K2.7-Code + Omnigent + Trellis + career-ops + Reclaim AI 40% + OpenCode 120K stars）
+
+> 本輪執行時間：2026-06-16 00:30 UTC | 搜尋範圍：GitHub trending June 12-16 2026、AI新聞 Jun 12-16 2026、Affiliate確認
+
+### 🔥 GitHub Trending 本輪重點
+
+| 日期 | 工具 | 關鍵字 | 搜尋量預估 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|----------|---------|
+| 2026-06-16 | **Moonshot AI Kimi K2.7-Code**（Jun 12 發布，MoE 384 experts/8 active，256K context，+21.8% Kimi Code Bench v2 over K2.6，30% fewer reasoning tokens，$19/月 Kimi Code 訂閱，Fireworks/OpenRouter/Azure day-0 支援） | `kimi k2.7 code 繁中評測 2026`、`kimi k2.7-code vs claude code 比較`、`kimi code 訂閱值得嗎 台灣`、`moonshot ai 繁中 2026` | 月搜 800-3000（爆發中，Jun 14 YT 8K+ views） | Kimi Code 訂閱 $19/月（無公開affiliate確認）→ 比較頁 Claude Code vs Kimi Code → Claude Code Anthropic partner redirect + DataCamp 40% CTA | US$200-500 | autodev-ai |
+| 2026-06-16 | **omnigent-ai/omnigent**（Databricks 開源，Jun 13 2026，Matei Zaharia 親自宣布，meta-harness for Claude Code + Codex + Pi，parallel agent orchestration，cost budget policy，git push governance，Apache 2.0，AI Agents Directory Jun 15 報導） | `omnigent databricks 教學 繁中`、`omnigent meta-harness 安裝 使用`、`多 agent 並行 claude code codex 繁中`、`omnigent vs langchain 比較` | 月搜 300-1200（工程師/企業 AI 受眾，Matei Zaharia = spark co-creator，媒體覆蓋廣） | 無直接affiliate（Apache 2.0）→ DigitalOcean $200 credit（部署場景）+ DataCamp 40%（multi-agent課程）+ Databricks training partner CTA | US$150-400 | autodev-ai |
+| 2026-06-16 | **mindfold-ai/Trellis**（10.1K stars，+1K在60小時內，AGPL-3.0，context persistence for 14 AI coding platforms，`.trellis/spec/` 自動注入，multi-platform support Claude Code + Codex + Cursor + Gemini CLI等） | `trellis agent context 教學 繁中 2026`、`trellis mindfold 安裝設定`、`agent 記憶 持久化 claude code 繁中`、`ai coding context memory 比較` | 月搜 200-800（開發者精準，新爆發，60小時1K stars） | 無直接affiliate（AGPL-3.0）→ DigitalOcean + DataCamp + 與 graphify/Understand-Anything 形成「agent memory + knowledge graph」系列文叢集 | US$100-300 | autodev-ai |
+| 2026-06-16 | **santifer/career-ops**（53.3K stars，MIT，14 skill modes，740 listings evaluated → Head of AI role landed，支援 Claude Code/Codex/OpenCode/Gemini CLI，Product Hunt featured，README.cn.md 已有中文版但繁中 0 篇） | `career-ops 繁中教學 2026`、`ai 求職工具 claude code 繁中`、`career ops 安裝使用 台灣`、`ai 履歷自動化 繁中` | 月搜 300-1200（職涯/AI工具雙受眾，現有cn README=簡中，繁中 0） | 無直接affiliate（MIT）→ DataCamp 40%（AI skills課程）+ Gumroad career-template-tw（可能新產品）+ Claude Code Anthropic CTA | US$100-400 | autodev-ai（繁中先行者優勢高）|
+| 2026-06-16 | **anomalyco/opencode**（55.5K stars，+557 今日，GitHub AI ranking #15，120K+ total stars全平台，開源免費 AI coding agent，75+ LLM providers，YouTube 10K+ views tutorial） | `opencode 繁中安裝教學 2026`、`opencode vs claude code 比較 繁中`、`opencode 免費 ai coding 設定`、`opencode gemini groq ollama 繁中教學` | 月搜 500-2000（快速上升，YouTube 10K+ views） | 無直接affiliate（開源）→ DigitalOcean + DataCamp 40% + 比較頁（opencode vs claude code vs codex） | US$150-400 | autodev-ai |
+
+### 💰 Affiliate 本輪新發現 — 高優先
+
+| 工具 | Affiliate 狀態 | 佣金 | 平台 | 備注 |
+|------|--------------|------|------|------|
+| **Reclaim AI** | ✅ 確認（本輪調查）| **40% recurring 12個月** + $1/work-email signup | reclaim.ai/affiliate | 生產力AI，最高率之一；Target：遠距工作 + 台灣職場 AI；目標關鍵字 `reclaim ai 台灣評測 2026` |
+| **Kimi Code** | ❓ 未確認 | $19/月訂閱（無公開affiliate）| — | 需直接查 platform.moonshot-ai.com/partner；Kimi API OpenRouter 有但非官方affiliate |
+| **OpenCode** | ❌ 開源免費 | — | — | 流量導向 DigitalOcean + DataCamp |
+| **Omnigent** | ❌ Apache 2.0 | — | — | Databricks training affiliate 可能（待查） |
+| **Trellis** | ❌ AGPL-3.0 | — | — | 叢集文策略 |
+| **career-ops** | ❌ MIT | — | — | Gumroad 周邊產品機會 |
+
+### 🆕 Reclaim AI 專項評估（本輪最高 Affiliate 新發現）
+
+- **佣金**：40% recurring 12個月（確認來源：reclaim.ai/affiliate + openaffiliate.dev/programs/reclaim）
+- **額外**：$1/工作郵件 signup（25% 個人郵件）
+- **目標受眾**：遠距工作者、忙碌主管、AI 行事曆受眾
+- **台灣競爭狀況**：繁中評測 0 篇（待確認）
+- **目標關鍵字**：`reclaim ai 評測 台灣 2026`、`reclaim ai google calendar 整合`、`ai 行事曆管理 工具 繁中`
+- **月搜量**：月搜 400-1500（生產力 AI 台灣市場）
+- **預估月收入**：Reclaim Pro $12/月 × 40% = $4.8/月/客（永久12個月 × 5客/月 = $240/月後穩定遞減）→ **US$200-600/月**
+- **建議**：寫給 strategist directive，P1（40% recurring = 30%+ threshold）
+
+### 💡 Round 93 關鍵洞察
+
+1. **Reclaim AI 40% recurring = 本輪最高優先 Affiliate 新發現**：搜索確認 40% recurring 12個月 + $1/signup，PartnerStack 系列。台灣繁中 AI 行事曆評測稀缺。「Reclaim AI vs Motion AI 比較文」= 雙 affiliate 互相補強。**立即發 directive 給 strategist**。
+
+2. **Kimi K2.7-Code = 台灣繁中評測窗口（72小時內）**：Jun 12 發布，Jun 14 YT 8K+ views，但繁中評測接近 0。k2.7-code vs Claude Code/Codex 比較文 + Kimi Code $19/月 訂閱評測 = 高商業意圖受眾。Fireworks/OpenRouter day-0 部署教學可綁定 DigitalOcean CTA。
+
+3. **Omnigent = Databricks 品牌背書，Matei Zaharia（Spark 共同創辦人）親自發布**：這是企業級 AI 工程師受眾。「Omnigent 教學繁中 2026」= 0 競爭。企業 DataOps 受眾 + Databricks 認證課程 CTA = DataCamp 高轉換。
+
+4. **career-ops 53K stars + README.cn 但無繁中**：MIT 開源，0 直接 affiliate，但「繁中求職族群 + Claude Code skills 用戶」= DataCamp 轉換 + 潛在 Gumroad 繁中求職包（career-template-tw）= 新產品線機會。Product Hunt featured = 高信任度。
+
+5. **OpenCode 55K stars 急升 = Claude Code 最大開源替代競品評測機會**：「OpenCode vs Claude Code 繁中比較 2026」= 雙邊 SEO，兩個工具都在台灣受眾關心。OpenCode 用戶 → DataCamp AI課程 CTA = 自然轉換路徑。
+
+---
+
+### 💡 Round 93 關鍵洞察
+
+1. **Reclaim AI 40% recurring = 本輪最高優先 Affiliate 新發現**：搜索確認 40% recurring 12個月 + $1/signup。台灣繁中 AI 行事曆評測稀缺。「Reclaim AI vs Motion AI 比較文」= 雙 affiliate 互相補強。**立即發 directive 給 strategist**。
+
+2. **Kimi K2.7-Code 繁中評測窗口 72 小時**：Jun 12 發布，搜熱度快速上升，繁中近 0。k2.7-code vs Claude Code/Codex 比較文 = 高商業意圖受眾。
+
+3. **Omnigent Databricks 品牌背書**：企業級 AI 工程師受眾，繁中 0 競爭，DataCamp 高轉換 CTA。
+
+4. **career-ops 53K stars + 繁中先行者機會**：MIT 開源無直接 affiliate，但 Gumroad 繁中求職包（career-template-tw）= 潛在新產品線。
+
+5. **OpenCode 55K stars 急升 + 120K 全平台**：Claude Code 最大開源替代品評測機會，雙邊 SEO 效益。
+
