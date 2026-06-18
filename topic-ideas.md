@@ -3243,3 +3243,50 @@ Obsidian CEO Steph Ango（kepano）在 2026 年初官方發布 kepano/obsidian-s
 
 5. **OpenCode 55K stars 急升 + 120K 全平台**：Claude Code 最大開源替代品評測機會，雙邊 SEO 效益。
 
+
+---
+
+## 2026-06-18（Researcher Round 94：codebase-memory-mcp + system_prompts_leaks + agent-skills 11K stars + Claude Fable 5 離開訂閱 + addyosmani agent-skills 爆發）
+
+> 本輪執行時間：2026-06-18 00:30 UTC | 搜尋範圍：GitHub trending weekly June 18 2026、AI新聞 Jun 16-18 2026
+
+### 🔥 GitHub Trending 本輪完整榜單（週榜 2026-06-18）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量預估 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|----------|---------|
+| 2026-06-18 | **apple/container**（38.2K stars，+9,735/週，Mac上用Swift打造Linux輕量VM容器，Apple Silicon優化，Swift） | `apple container 教學 繁中 2026`、`mac linux 容器 apple silicon`、`apple container vs docker 比較` | 月搜 500-2000（Mac開發者爆發需求） | 無直接affiliate（Apple開源）→ DigitalOcean（部署擴展）+ DataCamp 40% | US$100-300 | autodev-ai |
+| 2026-06-18 | **NVIDIA/SkillSpector**（7,470 stars，+5,257/週，持續加速榜上第2，安全掃描AI agent skills） | `nvidia skillspector 繁中教學`、`ai agent skills 安全掃描`（積壓8輪，本輪清除確認） | 月搜 300-1000 | DataCamp 40% + DigitalOcean + Gumroad agent-skills-tw（已驗證安全背書）| US$150-400 | autodev-ai |
+| 2026-06-18 | **addyosmani/agent-skills**（62,269 stars，**+11,684/週，本週第3名，加速爆發**，production-grade AI coding skills，Shell） | `addyosmani agent skills 繁中教學 2026`、`production agent skills 安裝 claude code`、`addy osmani ai skills 完整清單` | 月搜 600-2500（Addy Osmani = Google Chrome DevRel Lead，信任度極高） | 無直接affiliate（MIT）→ DigitalOcean + DataCamp 40% + Gumroad agent-skills-tw（「完整 skills 包一次安裝」直接交叉銷售）| US$200-600 | autodev-ai |
+| 2026-06-18 | **Panniantong/Agent-Reach**（33,154 stars，+6,855/週，**積壓10輪最嚴重**，Claude Code讀16平台：Twitter/Reddit/YouTube/GitHub/Bilibili/小紅書等） | `agent-reach 繁中教學 2026`、`claude code 社群媒體自動化`、`agent-reach 安裝 api-free`（積壓清除緊急）| 月搜 400-1500 | DigitalOcean + DataCamp 40% + Gumroad agent-skills-tw | US$150-450 | autodev-ai |
+| 2026-06-18 | **chopratejas/headroom**（31,588 stars，+9,475/週，**本週最高週增速之一**，LLM token壓縮60-95%）| `headroom llm 繁中教學 2026`（現有文章，補The Register/Netflix $700K里程碑更新）| — | DigitalOcean + DataCamp（現有文章更新，無需新affiliate）| 提升現有文章CTR 10-20% | autodev-ai（更新現有） |
+| 2026-06-18 | **DeusData/codebase-memory-mcp**（5,246 stars，+1,097/週，**新進榜**，C語言，高性能MCP server，158語言，sub-ms查詢，99% tokens節省，arXiv論文，單一靜態binary無依賴） | `codebase-memory-mcp 繁中教學 2026`、`mcp server codebase knowledge graph`、`claude code 整個 codebase 記憶 設定` | 月搜 200-800（開發者精準，有arXiv論文背書，媒體覆蓋廣）| 無直接affiliate（MIT/開源）→ DigitalOcean（大型repo部署）+ DataCamp 40%（MCP/AI Engineering）| US$100-300 | autodev-ai |
+| 2026-06-18 | **asgeirtj/system_prompts_leaks**（43,116 stars，+1,506/週，**Claude Fable 5 + GPT-5.5 + Claude Code Opus 4.8 系統提示詞全部收錄**，Claude Fable 5 June 9 diff vs Opus 4.8，JS）| `claude fable 5 system prompt 繁中分析`、`gpt 5.5 system prompt 完整版`、`claude vs gpt 系統提示詞比較 2026`| 月搜 500-2000（AI工程師/台灣AI社群高關注度，Claude Fable 5離開訂閱6/22截止日 = 緊迫感）| 無直接affiliate（MIT）→ Claude Pro/Max affiliate（Anthropic，若Ivan申請）+ DataCamp 40% | US$100-350 | autodev-ai |
+
+### 💰 Affiliate 本輪新確認
+
+| 工具 | Affiliate 狀態 | 佣金 | 平台 | 備注 |
+|------|--------------|------|------|------|
+| **codebase-memory-mcp** | ❌ 開源免費 | — | — | 完全免費，DigitalOcean + DataCamp CTA |
+| **apple/container** | ❌ Apple開源 | — | — | DigitalOcean + DataCamp CTA |
+| **agent-skills (addyosmani)** | ❌ MIT開源 | — | — | Gumroad agent-skills-tw 天然交叉銷售 |
+| **system_prompts_leaks** | ❌ MIT | — | — | Claude Pro affiliate（待確認）CTA |
+| **Claude Fable 5** | ✅ Claude Max/Pro 訂閱 | Anthropic affiliate（待Ivan確認）| — | $100/月 Max 訂閱，6/22截止創造緊迫感 |
+
+### 🔥 緊急事件：Claude Fable 5 訂閱截止（June 22）
+
+- **Claude Fable 5** 免費包含在 Claude Pro/Max 訂閱直到 **2026-06-22**，之後轉為消耗計費（$10/$50 per M tokens）
+- 台灣繁中「Claude Fable 5值不值得訂閱？」評測 = **零篇**（確認）
+- **視窗：今日-6/22 = 4天緊迫視窗**，比較文「Claude Fable 5 vs GPT-5.5 vs Kimi K2.7-Code 繁中評測 2026」= 高商業意圖 + 時事觸發搜尋
+- Claude Max $100/月 → Anthropic affiliate（若有）= 高 ticket
+- 即使無Anthropic affiliate → DataCamp（AI課程如何用Fable 5）+ system_prompts_leaks文章交叉連結
+
+### 💡 Round 94 關鍵洞察
+
+1. **addyosmani/agent-skills 11,684/週 = 本週GitHub最大AI coding爆發**：Addy Osmani（Google Chrome DevRel Leader）品牌背書 + production-grade = 台灣工程師高信任度。與我們的 Gumroad agent-skills-tw 直接相關，文章底部雙CTA = 最強交叉銷售。搭配 SkillSpector 安全掃描 = 「安裝 skills + 安全掃描」完整系列。
+
+2. **Claude Fable 5 June 22截止日 = 4天緊迫視窗**：系統提示詞洩漏庫 + Fable 5功能比較 = 高搜尋意圖。Claude Fable 5 vs GPT-5.5 比較文 = 台灣AI工程師現在最想看的文章之一。
+
+3. **codebase-memory-mcp arXiv論文背書**：5K stars新進榜，C語言超高性能，arXiv:2603.27277，99% token節省，與graphify類似定位但更低階/高效。「codebase-memory-mcp vs graphify 比較」= 雙文叢集SEO機會。
+
+4. **Agent-Reach 33K stars 積壓10輪 = 系統最長積壓**：6,855/週 加速上升，seo-writer 必須本週優先執行（strategist週報已多輪列為P1-CRITICAL）。
+
