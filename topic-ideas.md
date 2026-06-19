@@ -3290,3 +3290,33 @@ Obsidian CEO Steph Ango（kepano）在 2026 年初官方發布 kepano/obsidian-s
 
 4. **Agent-Reach 33K stars 積壓10輪 = 系統最長積壓**：6,855/週 加速上升，seo-writer 必須本週優先執行（strategist週報已多輪列為P1-CRITICAL）。
 
+
+---
+
+## Round 95 | 2026-06-19 00:30 UTC
+
+### 🔥 新發現（GitHub Trending + Product Hunt + AI News）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|-----------|---------|
+| 2026-06-19 | **Gemini Omni**（Google I/O 2026，AI影片編輯/合成/重混，Google Flow + YouTube Shorts整合，445K YouTube views，MindStudio/Mashable/Google官方覆蓋）| `gemini omni 繁中教學 2026`、`google flow 影片編輯 教學`、`gemini omni flash youtube shorts`、`ai 影片製作 google 2026` | 月搜 2,000-10,000（Google I/O最大AI視頻事件，全球媒體報導，台灣YouTuber/行銷人最廣受眾）| 無直接affiliate（Google）→ DataCamp 40%（AI Creator課程）+ Hahow（台灣影片創作課程）+ CapCut affiliate（後製流程）| US$200-500 | ai-tools-tw |
+| 2026-06-19 | **Headroom 里程碑更新**（30.5K stars，Global Rank #1075，$700K省費 The Register報導，200B tokens saved，Open Source Summit演講，headroom learn MCP跨代理記憶新功能）| `headroom 2026 更新`、`headroom netflix 省費`、`headroom learn mcp 教學` | 現有文章更新，非新文章 | DO + DataCamp + Gumroad kknad（現有CTA）| N/A（更新現有文章 E-E-A-T提升）| autodev-ai（更新） |
+| 2026-06-19 | **Notte**（browser agent，Product Hunt 2026年最佳開源產品上榜，credit-based pricing，sessions/proxies/vaults/personas）| `notte browser agent 繁中`、`ai browser agent 比較 2026`、`notte vs browserbase 比較` | 月搜 500-2,000（emerging）| 無affiliate（無公開program）→ DigitalOcean（自架）間接 | US$50-150（低優先）| autodev-ai（延後，P3）|
+
+### 💰 Affiliate 本輪新確認
+
+| 工具 | Affiliate 狀態 | 佣金 | 平台 | 備注 |
+|------|--------------|------|------|------|
+| **Gemini Omni / Google** | ❌ Google產品，無公開affiliate | — | — | DataCamp + Hahow + CapCut CTA |
+| **Notte** | ❌ 無公開affiliate程序 | — | — | credit SaaS，enterprise申請型 |
+| **Headroom（chopratejas）** | ❌ Apache 2.0 開源 | — | — | 先前已確認，本輪再確認 |
+
+### 💡 Round 95 關鍵洞察
+
+1. **Gemini Omni = 2026 AI影片市場最大事件之一**：Google I/O 2026 最矚目功能，已整合進 Google Flow + YouTube Shorts。台灣 YouTuber 受眾是我們最廣的目標群，DataCamp 40% 佣金率是整個 affiliate 組合最高。繁中教學=0篇，進入速度決定搜尋引擎佔位。
+
+2. **Headroom 30.5K stars + Netflix origin story = 現有文章更新高優先**：The Register（May 31）報導「Netflix engineer saves $700K」= 全球工程師受眾信任背書，E-E-A-T 大幅提升。更新成本低，效益高（補新聞引用 + headroom learn MCP功能段落）。
+
+3. **Product Hunt June 2026 signal**：Tabstack by Mozilla + Notte = browser productivity + AI agent 兩大方向，但目前均無affiliate，觀察期。
+
+4. **積壓狀況仍嚴重**：Agent-Reach 11輪（系統最長），addyosmani/agent-skills 2輪（P1-HIGH，Gumroad交叉銷售最強機會），openmed 9輪，Open-LLM-VTuber 9輪。seo-writer 本週若只能完成兩篇：Agent-Reach（清最長積壓）+ addyosmani/agent-skills（Gumroad交叉銷售）。
