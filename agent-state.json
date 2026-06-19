@@ -2683,6 +2683,27 @@
         "fixes": 0,
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
       }
+    },
+    {
+      "timestamp": "2026-06-19T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json, reviewed latest directives, and checked recent agentLog before running health checks",
+        "Reviewed latest directive strategist-weekly-2026-06-15.md; noted content tasks (n8n-cloud CTA coverage, affiliate roundup refresh, ai-tools-tw indexing follow-up)",
+        "Curl checked 3 tracked site roots from state records: autodev-ai, ai-tools-en, and ai-tools-tw",
+        "Confirmed all 3 checked URLs returned HTTP 200 from cron host",
+        "Fixed incorrect Gumroad CTA target in blog/n8n-automation-tutorial-2026.html (template CTA now points to n8n-tw-templates instead of agent-skills-tw)",
+        "Updated lastChecked to 2026-06-19 for tracked site records and recorded daily health result"
+      ],
+      "results": {
+        "checkedUrls": 3,
+        "http200": 3,
+        "failures": 0,
+        "fixes": 1,
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
+      }
     }
   ],
   "fbPosted": [
@@ -3583,12 +3604,18 @@
           "task": "daily site health check",
           "result": "Pulled latest main, reviewed latest directives and recent agentLog, curl-checked 15 deduped tracked URLs from state records; all returned HTTP 200. No site repairs or cross-agent directives were needed. Updated tracked site lastChecked fields and recorded daily health result.",
           "status": "done"
+        },
+        {
+          "date": "2026-06-19",
+          "task": "daily site health check",
+          "result": "Pulled latest main, reviewed latest directives and recent agentLog, curl-checked 3 tracked site roots from state records; all returned HTTP 200. Fixed one incorrect n8n template CTA in blog/n8n-automation-tutorial-2026.html to point at the n8n Gumroad product. Updated tracked site lastChecked fields and recorded daily health result.",
+          "status": "done"
         }
       ],
-      "lastRun": "2026-06-18"
+      "lastRun": "2026-06-19"
     }
   },
-  "lastChecked": "2026-06-18",
+  "lastChecked": "2026-06-19",
   "dailyLog": [
     {
       "timestamp": "2026-05-31T00:00:00Z",
@@ -3934,6 +3961,27 @@
         "http200": 15,
         "failures": 0,
         "fixes": 0,
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
+      }
+    },
+    {
+      "timestamp": "2026-06-19T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json, reviewed latest directives, and checked recent agentLog before running health checks",
+        "Reviewed latest directive strategist-weekly-2026-06-15.md; noted content tasks (n8n-cloud CTA coverage, affiliate roundup refresh, ai-tools-tw indexing follow-up)",
+        "Curl checked 3 tracked site roots from state records: autodev-ai, ai-tools-en, and ai-tools-tw",
+        "Confirmed all 3 checked URLs returned HTTP 200 from cron host",
+        "Fixed incorrect Gumroad CTA target in blog/n8n-automation-tutorial-2026.html (template CTA now points to n8n-tw-templates instead of agent-skills-tw)",
+        "Updated lastChecked to 2026-06-19 for tracked site records and recorded daily health result"
+      ],
+      "results": {
+        "checkedUrls": 3,
+        "http200": 3,
+        "failures": 0,
+        "fixes": 1,
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
       }
     }
