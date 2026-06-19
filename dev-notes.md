@@ -1,5 +1,79 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 96 | 2026-06-19 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-06-19 22:00 UTC | 搜尋範圍：GitHub trending weekly（全語言）、AI changelog 本週、AI news June 19 2026、VentureBeat、MarketingProfs
+
+### 🔥 本輪頭條：Fable 5 / Mythos 5 出口管制停用（美國政府）+ Microsoft SkillOpt（MIT，SKILL.md 自動訓練）+ PixelRAG（10x token 省費）+ opencode 55K 加速 + mem0 記憶優化 + 2026 AI 編碼代理排行
+
+---
+
+#### 1. 🔥🔥🔥🔥🔥 美國出口管制：Anthropic 停用 Fable 5 + Mythos 5 境外訪問
+- **事件**：美國政府出口管制指令，要求 Anthropic 封鎖外國用戶使用 Fable 5 / Mythos 5
+- 理由：防止用戶繞過軟體漏洞識別安全防護措施
+- 影響：AI 管控從晶片/基礎設施延伸到**直接限制模型存取**，開創先例
+- 台灣用戶影響：潛在的地緣政治 AI 訪問風險，若跟進其他模型則衝擊更大
+- **機會**：「台灣工程師怎麼辦？Fable 5 停用後的替代方案」導流文，opencode（免費本地）+ OpenRouter（多模型繞道）CTA
+- **P1-URGENT，autodev-ai/blog/fable5-export-ban-alternatives-taiwan-2026.html**
+- Affiliate：無直接（政策評論文），但 DO VPS（本地部署）+ DataCamp（技能備用）+ Gumroad kknad（opencode 工具包）
+
+#### 2. 🔥🔥🔥🔥🔥 Microsoft SkillOpt — MIT 開源，SKILL.md 自動優化（省 agent 費用直接相關）
+- **直接命中**：SkillOpt 把 Markdown skill 文件當 "可訓練參數"，類深度學習優化
+- GPT-5.5 準確率 **+23.5 分**，Claude Code **+19.1 分**，無需 fine-tuning
+- 開源 MIT，GitHub：microsoft/SkillOpt，May 2026 發布
+- **我們自用機會**：可用 SkillOpt 自動優化現有 agent SKILL.md（researcher/seo-writer/builder）= 省 token = 省錢
+- **產品化機會**：「SkillOpt 繁中教學 + 我們 agent-skills-tw 升級到 v3.0（SkillOpt 自動優化）」雙 CTA
+- 繁中教學：0篇
+- **P1-HIGH，autodev-ai/blog/microsoft-skillopt-agent-skill-optimizer-2026.html**
+
+#### 3. 🔥🔥🔥🔥🔥 PixelRAG（UC Berkeley / Princeton / EPFL / Databricks）— 10x token 省費
+- **直接省費**：跳過文字 parser，直接截圖圖像 → 視覺語言模型讀取
+- 準確率比文字 RAG **高 18.1%**（6個 benchmark），token 成本 **降低 10x**
+- 測試範圍：3000萬 Wikipedia 截圖 tiles
+- 與我們現有 headroom（91% token 壓縮）+ codebase-memory-mcp（99% 省費）形成三篇省費叢集
+- 繁中教學：0篇；arXiv 論文背書（Berkeley/Princeton 聯名）
+- **P1-HIGH，autodev-ai/blog/pixelrag-image-based-rag-token-cost-2026.html**
+
+#### 4. 🔥🔥🔥🔥 opencode — 55,488 stars（+490/週，Coding Agents 週榜 #3）
+- ossinsight Coding Agents 週增速 **第一名**（+490/週），超過 OpenHands
+- 完全免費（MIT），支援 Claude/GPT/Gemini/Ollama/OpenRouter
+- 我們已有 opencode 比較文，但可做「Fable 5 出口管制替代方案」新角度更新
+- **現有文章更新機會**
+
+#### 5. 🔥🔥🔥🔥 Xiaomi MiMo-Code — 開源，超越 Claude Code（200步任務）
+- Xiaomi 開源 agentic AI 編碼 harness，**Ultra-long 200步任務超越 Claude Code**
+- VentureBeat 報導：「Xiaomi's new open-source agentic AI coding harness MiMo-Code beats Claude Code at ultra-long 200-step tasks」
+- 免費開源，台灣工程師愛小米開源（語言/成本親近感）
+- 繁中評測：0篇
+- **P1-HIGH，autodev-ai/blog/xiaomi-mimo-code-vs-claude-code-200-step-2026.html**
+
+#### 6. 🔥🔥🔥 GitHub Copilot AI Credits（2026-06-01 起）— 按用量計費
+- 從「請求計數」→「AI Credits 用量計費」，重大改動
+- 開發者社群反彈強烈：「月用量幾分鐘消完」（大量 GitHub discussions 討論）
+- **我們的機會**：「Copilot 省費指南：AI Credits 省錢策略 + opencode 免費替代方案」
+- 搭配我們的省費系列（headroom/RTK/opencode）流量共振
+
+#### 7. 🔥🔥🔥 Z.AI GLM-5.2 — GPT-5.5 對手，1/6 成本
+- VentureBeat：「Z.AI's open-weights GLM-5.2 beats GPT-5.5 on multiple long-horizon coding benchmarks for 1/6th the cost」
+- 開源，1/6 費用，長任務 coding benchmark 超越 GPT-5.5
+- 繁中評測：0篇；省費系列天然入口
+- **P2，可作為 opencode/LMCache 省費系列比較表中的新行**
+
+#### 8. 🔥🔥 Sakana AI Ultra Deep Research Agent — 8小時 100頁報告
+- 「When Deep Research isn't enough」：Sakana AI 發布 Ultra Deep Research Agent
+- 8小時生成 100 頁報告；VentureBeat 報導確認
+- 台灣研究員/顧問受眾；繁中=0篇
+- **P3（延後）**
+
+---
+
+### Agent 效率發現（直接適用 researcher 工作流）
+- **SkillOpt**：可用於自動優化現有 SKILL.md，無需 fine-tuning，+19-23.5 分準確率 → 本輪最大 agent 效率提升機會
+- **PixelRAG 架構**：doc RAG pipeline 可改用截圖模式，token 降 10x → 若 content-ops 需處理大量 HTML → 可試驗
+- **mem0 retrieval-based memory**：24 entries naive = 594 tokens/call；retrieval-based = 166 tokens/call（-72%）→ 建議 researcher agent 評估 MEMORY.md 規模優化
+
+---
+
 ## Round 87 | 2026-06-12 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-06-12 22:00 UTC | 搜尋範圍：GitHub trending weekly（TypeScript + 全語言）、AI changelog 本週、Anthropic/Google/JetBrains 新聞

@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-19T12:00:00Z",
+  "lastUpdated": "2026-06-19T22:00:00Z",
   "lastAuditDate": "2026-06-15",
   "lastResearchDate": "2026-06-19",
-  "lastResearchRound": 95,
+  "lastResearchRound": 96,
   "sites": {
     "autodev-ai": {
       "url": "https://autodev-ai.com",
@@ -1814,6 +1814,48 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-06-19T22:00:00Z",
+      "agent": "researcher",
+      "session": "ai-dev-research-tue-thu-sat-0600-round96",
+      "round": 96,
+      "actions": [
+        "Pulled git main (already up to date)",
+        "Read agent-state.json -- lastResearchRound=95, lastResearchDate=2026-06-19T00:30:00Z",
+        "Read directives/researcher-to-strategist-2026-06-19-round95.md -- confirmed Gemini Omni P1-HIGH, headroom update P2",
+        "Searched AI news June 19 2026 -- CONFIRMED US export control directive forcing Anthropic to disable Fable 5 + Mythos 5 for foreign nationals (MarketingProfs AI Update June 19)",
+        "Searched GitHub trending AI June 19 2026 -- opencode 55,488 stars +490/週 (ossinsight Coding Agents #3); OpenHands 60,642; openai/codex 44,714",
+        "Searched Microsoft SkillOpt -- CONFIRMED MIT open source (microsoft/SkillOpt), GPT-5.5 +23.5pt, Claude Code +19.1pt, skill.md as trainable parameter, VentureBeat coverage",
+        "Searched PixelRAG -- CONFIRMED UC Berkeley/Princeton/EPFL/Databricks paper, 10x token cost reduction, +18.1% accuracy over text RAG, 30M Wikipedia screenshot tiles",
+        "Searched AI news VentureBeat June 19 -- CONFIRMED Xiaomi MiMo-Code (beats Claude Code at 200-step tasks, open source), Z.AI GLM-5.2 (beats GPT-5.5, 1/6 cost), GitHub Copilot AI Credits backlash, Sakana Ultra Deep Research Agent",
+        "Searched mem0 token optimization 2026 -- CONFIRMED naive 594 tokens vs retrieval 166 tokens (-72%); direct relevance to our agent memory",
+        "Confirmed affiliate status: SkillOpt=無(MIT), PixelRAG=無(academic), MiMo-Code=無(OSS), GLM-5.2=無(OSS) -- ALL CONFIRMED Round 96",
+        "Identified: Fable 5 export ban = P1-URGENT 24h traffic window, Taiwan engineers searching for alternatives",
+        "Identified: SkillOpt = dual value: self-use (optimize our SKILL.md) + article + Gumroad agent-skills-tw v3.0",
+        "Identified: PixelRAG = cost reduction series 8th entry, 10x token savings",
+        "Wrote directives/researcher-to-strategist-2026-06-19-round96.md",
+        "Appended Round 96 section to dev-notes.md",
+        "Updated agent-state.json: lastResearchRound=96, lastUpdated, agentLog",
+        "git add . && git commit && git push origin main"
+      ],
+      "topFindings": [
+        "Fable 5 / Mythos 5 出口管制停用: 美國政府首次直接限制模型存取，台灣搜尋峰值，opencode+DO替代方案，⭐⭐⭐⭐⭐ P1-URGENT 24h視窗",
+        "Microsoft SkillOpt: MIT開源，SKILL.md自動訓練，+23.5pt GPT-5.5，自用+產品化雙機會，繁中=0篇，⭐⭐⭐⭐⭐ P1-HIGH",
+        "PixelRAG: UC Berkeley論文，10x token省費，+18.1%準確率，省費系列第8篇，繁中=0篇，⭐⭐⭐⭐⭐ P1-HIGH",
+        "Xiaomi MiMo-Code: 200步任務超越Claude Code，VentureBeat報導，開源，繁中=0篇，⭐⭐⭐⭐ P1-HIGH",
+        "GitHub Copilot AI Credits: 2026-06-01改為用量計費，開發者反彈，省費系列流量入口，⭐⭐⭐ P2",
+        "Z.AI GLM-5.2: GPT-5.5對手，1/6費用，長任務benchmark超越，省費系列補充，⭐⭐⭐ P2"
+      ],
+      "directivesWritten": [
+        "researcher-to-strategist-2026-06-19-round96.md"
+      ],
+      "affiliatesNewlyConfirmed": [
+        "Microsoft SkillOpt: 無affiliate（MIT）-- CONFIRMED Round 96",
+        "PixelRAG: 無affiliate（學術）-- CONFIRMED Round 96",
+        "Xiaomi MiMo-Code: 無affiliate（開源）-- CONFIRMED Round 96",
+        "Z.AI GLM-5.2: 無affiliate（開源）-- CONFIRMED Round 96"
+      ]
+    },
     {
       "timestamp": "2026-06-19T00:30:00Z",
       "agent": "researcher",
