@@ -3320,3 +3320,67 @@ Obsidian CEO Steph Ango（kepano）在 2026 年初官方發布 kepano/obsidian-s
 3. **Product Hunt June 2026 signal**：Tabstack by Mozilla + Notte = browser productivity + AI agent 兩大方向，但目前均無affiliate，觀察期。
 
 4. **積壓狀況仍嚴重**：Agent-Reach 11輪（系統最長），addyosmani/agent-skills 2輪（P1-HIGH，Gumroad交叉銷售最強機會），openmed 9輪，Open-LLM-VTuber 9輪。seo-writer 本週若只能完成兩篇：Agent-Reach（清最長積壓）+ addyosmani/agent-skills（Gumroad交叉銷售）。
+
+---
+
+## Round 96 | 2026-06-19 22:00 UTC
+
+### 🔥 新發現（VentureBeat + MarketingProfs + GitHub Trending）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|-----------|---------|
+| 2026-06-19 | **美國出口管制 Fable 5 / Mythos 5**（US BIS new directive，Anthropic被要求對外國國籍停用，台灣工程師替代方案搜尋峰值，MarketingProfs AI Update 6/19報導）| `claude fable 5 台灣 使用`、`anthropic 出口管制 台灣`、`claude 替代方案 2026`、`opencode 免費 claude 替代` | 急速高峰（24-48h視窗，新聞效應）| opencode（免費，MIT）→ DigitalOcean DO CTA + Gumroad kknad（Claude Code省費包）| US$100-300（新聞流量峰值）| autodev-ai (P1-URGENT 24h) |
+| 2026-06-19 | **Microsoft SkillOpt**（MIT開源，SKILL.md訓練參數，GPT-5.5 +23.5pt，Claude Code +19.1pt，VentureBeat報導）| `skillopt 繁中教學 2026`、`skill.md 優化 教學`、`microsoft skillopt claude code`、`ai agent skill 訓練 繁中` | 月搜 1,000-5,000（台灣AI工程師高興趣，繁中=0篇）| 無直接affiliate（MIT）→ DataCamp 40%（AI Engineering）+ Gumroad agent-skills-tw v2.0交叉銷售 | US$200-500 | autodev-ai |
+| 2026-06-19 | **PixelRAG**（UC Berkeley/Princeton/EPFL/Databricks，10x token省費，+18.1%準確率，30M Wikipedia截圖tiles，省費系列第8篇）| `pixelrag 繁中教學 2026`、`rag token 省費 2026`、`visual rag 繁中`、`pixelrag vs text rag 比較` | 月搜 500-3,000（研究論文驅動，工程師受眾）| 無直接affiliate（學術）→ DataCamp 40% + DigitalOcean（GPU VPS）| US$150-400 | autodev-ai |
+| 2026-06-19 | **Xiaomi MiMo-Code**（200步任務超越Claude Code，VentureBeat報導，開源，MIT licence）| `mimo-code 繁中評測 2026`、`xiaomi mimo-code vs claude code`、`mimo code 繁中` | 月搜 800-3,000（繁中=0篇）| 無affiliate（開源）→ DataCamp + DigitalOcean | US$100-250 | autodev-ai |
+
+### 💰 Affiliate 本輪新確認
+
+| 工具 | Affiliate 狀態 | 佣金 | 平台 | 備注 |
+|------|--------------|------|------|------|
+| **Microsoft SkillOpt** | ❌ MIT開源，無affiliate | — | — | Gumroad agent-skills-tw v3.0交叉銷售 |
+| **PixelRAG** | ❌ 學術論文，無affiliate | — | — | DataCamp + DO CTA |
+| **MiMo-Code** | ❌ 開源，無affiliate | — | — | DataCamp + DO CTA |
+| **Fable 5 出口管制** | ❌ Anthropic無公開affiliate | — | — | opencode替代文 + DO + Gumroad kknad |
+
+### 💡 Round 96 關鍵洞察
+
+1. **Fable 5出口管制 = 24h流量峰值機會**：美國BIS首次直接限制大型語言模型存取，台灣工程師第一反應是搜尋替代方案。opencode（MIT免費）是天然對應工具，我們已有比較文，只需補「出口管制後替代方案」段落。
+
+2. **SkillOpt 自用 + 產品化雙機會**：SKILL.md作為訓練參數這個概念可以直接提升我們自己的agent skills（自用），同時作為文章和Gumroad v3.0更新的素材。
+
+3. **PixelRAG = 省費系列第8篇**：繼headroom(1st)→RTK→CodeGraph→claude-context→opencode(5th)→DeepClaude→LMCache(7th)，PixelRAG是視覺RAG省費的新角度，不重複。
+
+---
+
+## Round 97 | 2026-06-20 00:30 UTC
+
+### 🔥 新發現（GitHub Trending + VentureBeat + YouTube AI Channels）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|-----------|---------|
+| 2026-06-20 | **DietrichGebert/ponytail**（37K stars，+29K本週，GitHub All Language全球 #1，「Makes your AI agent think like the laziest senior dev」，YAGNI/KISS原則AI discipline，open-source agent skill，繁中=0篇）| `ponytail ai skill 繁中教學`、`ponytail claude code yagni`、`ponytail agent skill 安裝`、`ai agent yagni discipline 2026`、`claude code lazy senior dev` | 月搜 2,000-8,000（GitHub #1爆發，TechWealth/BrewBytes等大量轉發，台灣工程師受眾，繁中完全空白）| 無直接affiliate（開源）→ DataCamp 40%（AI Engineering）+ Gumroad agent-skills-tw v2.0/v3.0交叉銷售（ponytail可納入下版本）+ DigitalOcean | US$200-500 | autodev-ai |
+| 2026-06-20 | **omnigent-ai/omnigent**（Databricks開源meta-harness，3.6K stars快速成長，Cole Medin YouTube 7,617 views，Claude Code+Codex+Pi+Cursor統一協調層，governance+sandbox+live collaboration，繁中=0篇）| `omnigent meta-harness 繁中教學`、`omnigent claude code codex 協調`、`ai agent meta-harness 2026 繁中`、`omnigent 安裝 教學` | 月搜 1,000-4,000（Databricks品牌背書，VentureBeat+MarkTechPost報導，多agent工作流程是台灣工程師高需求）| 無直接affiliate（Apache 2.0 OSS）→ DataCamp 40% + DigitalOcean（VPS部署）+ Gumroad kknad | US$150-400 | autodev-ai |
+| 2026-06-20 | **NVIDIA/SkillSpector**（7.2K stars+，Apache 2.0，64種安全漏洞掃描，16類別，26.1%的AI skills有漏洞，5.2%高危，MarkTechPost 2026-06-17教學，繁中評測=0篇）| `nvidia skillspector 繁中教學`、`ai agent skill 安全掃描 2026`、`skillspector 安裝 使用`、`ai skill 漏洞 掃描 繁中`、`prompt injection scanner ai` | 月搜 800-3,000（NVIDIA品牌背書極強，資安工程師受眾，台灣繁中=0篇，1-in-4數據勾起恐懼感）| 無affiliate（Apache 2.0）→ DataCamp 40% + DigitalOcean + Gumroad agent-skills-tw（「掃了才知安不安全，買了包才知用什麼」）| US$200-450 | autodev-ai |
+| 2026-06-20 | **Sakana Marlin**（東京，$135M融資，「Virtual CSO」，8小時100頁企業策略報告，VentureBeat報導，B2B enterprise only，pay-as-you-go定價）| `sakana marlin 企業 ai 研究`、`sakana marlin 繁中評測`、`ultra deep research agent 2026`、`ai virtual cso 台灣` | 月搜 1,500-5,000（VentureBeat報導帶來全球搜尋，台灣企業/VC受眾，繁中=0篇）| 無affiliate（B2B直銷）→ DataCamp 40%（「使用Marlin輸出前先學AI分析基礎」）+ 服務詢問CTA（autodev-ai客製服務）| US$100-300 | ai-tools-tw |
+| 2026-06-20 | **OpenCode 160K stars + Enterprise tier**（anomalyco/opencode，MIT開源，全球Coding Agent #1 by stars，Desktop beta全平台，Enterprise SSO+AI gateway，opencode.ai/enterprise）| `opencode enterprise 教學 2026`、`opencode desktop beta 安裝`、`opencode 企業部署 台灣`、`opencode 160k stars 繁中` | 月搜（里程碑更新，現有文章補充）| 無affiliate（MIT）→ DataCamp + DigitalOcean（現有CTA，現有文章更新）| N/A（現有文章E-E-A-T更新）| autodev-ai（更新 opencode-vs-cursor-vs-claude-code-2026.html）|
+
+### 💰 Affiliate 本輪新確認
+
+| 工具 | Affiliate 狀態 | 佣金 | 平台 | 備注 |
+|------|--------------|------|------|------|
+| **ponytail** | ❌ 開源，無affiliate | — | — | Gumroad agent-skills-tw次版本素材 |
+| **Omnigent** | ❌ Apache 2.0 OSS（Databricks），無affiliate | — | — | DataCamp + DO CTA |
+| **NVIDIA SkillSpector** | ❌ Apache 2.0，無affiliate | — | — | 資安+skills叢集文章 |
+| **Sakana Marlin** | ❌ B2B直銷，無公開affiliate | — | — | 企業評測文，DataCamp CTA |
+| **OpenCode Enterprise** | ❌ MIT開源，無affiliate | — | — | 現有文章更新 |
+
+### 💡 Round 97 關鍵洞察
+
+1. **ponytail 37K stars = GitHub All Language #1週榜爆發**：「The best code is the code you never wrote」這個理念和YAGNI完全契合，正在台灣工程師社群廣泛轉發（Threads/@brewbytes.ai/@pv2dev等）。繁中教學=0篇。可與 SkillSpector 搭配一篇「安裝了skills，用ponytail想清楚要不要做，用SkillSpector確認安不安全」= 三段式完整開發紀律文章。
+
+2. **Omnigent = meta-harness是2026最重要AI工程趨勢之一**：Claude Code+Codex+Pi可互換使用，這是我們已有多篇文章的受眾天然需求。Databricks品牌加持，VentureBeat/MarkTechPost報導確認市場重視。Cole Medin（20萬訂閱）YouTube 7K views確認英文受眾已有，繁中完全空白。
+
+3. **NVIDIA SkillSpector = 資安角度切入skills系列**：「1-in-4 AI skills你裝的有漏洞」這個恐懼行銷數據極具震撼力。26.1%漏洞率 + 5.2%高危 = 台灣工程師必看。可與 agent-skills-tw 產品頁交叉銷售。文章主軸：「你的skills安全嗎？用SkillSpector掃一下，30秒知道」。**送directive給strategist：SkillSpector+ponytail+agent-skills-tw v3.0三件套 = 高優先組合策略。**
+
+4. **積壓關鍵清單**：Agent-Reach 12輪（全系統最嚴重），SkillOpt P1-HIGH（R96新增），PixelRAG P1-HIGH（R96新增），ponytail P1-URGENT（R97新增，本週週榜#1），Omnigent P1-HIGH（R97新增），SkillSpector P1-HIGH（R97新增，積壓2輪）。
