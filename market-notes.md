@@ -735,3 +735,40 @@
 → 見 directives/researcher-to-strategist-2026-06-14-round89.md
 
 ---
+
+## 2026-06-21（市場研究 Round 98 — 週日 07:00 UTC cron）
+
+### 一、🔥 本輪最高價值發現
+
+#### 1. Fable 5 禁令 → 台灣「替代 AI 工具」搜索爆炸 — P1-URGENT
+- 2026-06-12 美國商務部緊急出口管制 Claude Fable 5 + Mythos 5，全球停用
+- 台灣媒體已報導，但繁中深度替代品評測 = 0 篇
+- 搜索關鍵字：「Claude Fable 5 替代 台灣」「Fable 5 用不了」
+- 建議：ai-tools-tw 緊急發文，本週黃金窗口
+- 預估：US$300-700/月（流量爆量期）
+
+#### 2. 新 Affiliate Programs 確認
+| 產品 | 佣金 | 平台 | 備注 |
+|------|------|------|------|
+| ElevenLabs | 22% / 12m | PartnerStack | elevenlabs.io/affiliates |
+| Synthflow AI | 20% / 12m | PartnerStack | 語音 AI agent 白標 |
+| Gamma | 25% / first year | PartnerStack | AI 簡報工具 |
+| Reclaim.AI | 40% / 12m（工作 email） | PartnerStack | 已追蹤，本輪再確認 |
+| Browse AI | 20% forever | PartnerStack | 無上限，長尾優先 |
+| MeetGeek | 30% recurring | PartnerStack | 已更新 roundup |
+
+#### 3. Agentjacking 資安新攻擊（台灣 0 篇）
+- 偽造 Sentry 錯誤 exploit Claude Code / Cursor / Codex，85% exploitation rate
+- 恐懼行銷效果強，autodev-ai 資安系列文機會
+- 預估：US$200-500/月
+
+#### 4. Snap SPECS AR + Claude Code 整合
+- AWE 2026，$2,195，Claude Code + Codex 開發者整合
+- 台灣開發者受眾，繁中評測 = 0
+- 預估：US$100-250/月
+
+### 二、💡 高價值機會 → 已寫入 directives
+
+→ 見 directives/researcher-to-strategist-2026-06-21-round98.md
+
+---
