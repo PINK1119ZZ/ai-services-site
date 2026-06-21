@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-21T07:00:00Z",
+  "lastUpdated": "2026-06-21T00:00:00Z",
   "lastAuditDate": "2026-06-15",
   "lastResearchDate": "2026-06-21",
   "lastResearchRound": 98,
@@ -14,7 +14,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-06-20"
+      "lastChecked": "2026-06-21"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -23,7 +23,7 @@
       "lastNewArticle": "2026-04-12",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-06-20"
+      "lastChecked": "2026-06-21"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -48,7 +48,7 @@
       "issues": [
         "2026-04-30 health check: all tracked ai-tools-tw URLs healthy (200); mitigated Gumroad n8n product 404 by replacing direct purchase CTAs on landing page with coming-soon notice and tutorial links until Ivan uploads the product."
       ],
-      "lastChecked": "2026-06-20"
+      "lastChecked": "2026-06-21"
     },
     "autodev_ai": {
       "url": "https://autodev-ai.com",
@@ -59,7 +59,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-06-20"
+      "lastChecked": "2026-06-21"
     }
   },
   "affiliateLinks": {
@@ -2972,6 +2972,28 @@
         ],
         "marketNotesSections": 1
       }
+    },
+    {
+      "timestamp": "2026-06-21T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json, reviewed latest directives, and checked recent agentLog before running health checks",
+        "Reviewed latest directives strategist-weekly-2026-06-19.md and researcher-to-strategist-2026-06-21-round98.md; no blocking outage repair was required for this run",
+        "Curl checked 15 deduped tracked URLs from state records: 3 site roots + 12 tracked ai-tools-tw pages/groups",
+        "Confirmed all checked URLs returned HTTP 200 from cron host",
+        "Completed partial strategist content-ops directive: added n8n Cloud CTA coverage to 5 relevant autodev-ai articles and corrected 2 lingering n8n template CTA targets from agent-skills-tw to n8n-tw-templates",
+        "Updated lastChecked to 2026-06-21 for tracked site records and recorded daily health result"
+      ],
+      "results": {
+        "checkedUrls": 15,
+        "http200": 15,
+        "failures": 0,
+        "fixes": 5,
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)",
+        "extraCompleted": "n8n Cloud CTA coverage expanded in 5 autodev-ai articles; 2 n8n template CTA targets corrected to Gumroad n8n-tw-templates"
+      }
     }
   ],
   "fbPosted": [
@@ -3882,12 +3904,18 @@
           "task": "daily site health check",
           "result": "Pulled latest main, reviewed latest directives and recent agentLog, curl-checked 3 tracked site roots from state records; all returned HTTP 200. Fixed one incorrect n8n template CTA in blog/n8n-automation-tutorial-2026.html to point at the n8n Gumroad product. Updated tracked site lastChecked fields and recorded daily health result.",
           "status": "done"
+        },
+        {
+          "date": "2026-06-21",
+          "task": "daily site health check",
+          "result": "Pulled latest main, reviewed latest directives and recent agentLog, curl-checked 15 deduped tracked URLs from state records; all returned HTTP 200. Expanded n8n Cloud CTA coverage in 5 relevant articles and corrected 2 lingering n8n template CTA targets to the Gumroad n8n product. Updated tracked site lastChecked fields and recorded daily health result.",
+          "status": "done"
         }
       ],
-      "lastRun": "2026-06-19"
+      "lastRun": "2026-06-21"
     }
   },
-  "lastChecked": "2026-06-19",
+  "lastChecked": "2026-06-21",
   "dailyLog": [
     {
       "timestamp": "2026-05-31T00:00:00Z",
@@ -4255,6 +4283,28 @@
         "failures": 0,
         "fixes": 1,
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json, reviewed latest directives, and checked recent agentLog before running health checks",
+        "Reviewed latest directives strategist-weekly-2026-06-19.md and researcher-to-strategist-2026-06-21-round98.md; no blocking outage repair was required for this run",
+        "Curl checked 15 deduped tracked URLs from state records: 3 site roots + 12 tracked ai-tools-tw pages/groups",
+        "Confirmed all checked URLs returned HTTP 200 from cron host",
+        "Completed partial strategist content-ops directive: added n8n Cloud CTA coverage to 5 relevant autodev-ai articles and corrected 2 lingering n8n template CTA targets from agent-skills-tw to n8n-tw-templates",
+        "Updated lastChecked to 2026-06-21 for tracked site records and recorded daily health result"
+      ],
+      "results": {
+        "checkedUrls": 15,
+        "http200": 15,
+        "failures": 0,
+        "fixes": 5,
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)",
+        "extraCompleted": "n8n Cloud CTA coverage expanded in 5 autodev-ai articles; 2 n8n template CTA targets corrected to Gumroad n8n-tw-templates"
       }
     }
   ],
