@@ -3412,3 +3412,65 @@ Obsidian CEO Steph Ango（kepano）在 2026 年初官方發布 kepano/obsidian-s
 
 5. **積壓最嚴重清單（需要strategist立刻安排寫手）**：Agent-Reach 13輪（本系統最嚴重積壓），ponytail P1-URGENT（R97新增），SkillOpt P1-HIGH（R96），PixelRAG P1-HIGH（R96），Omnigent P1-HIGH（R97），SkillSpector P1-HIGH（R97）。
 
+
+---
+
+## 2026-06-21（Researcher Round 99：競品監控 — 雷蒙三十 / 追日 Gucci / GeniusHub GEO 賽道）
+
+> 本輪執行時間：2026-06-21 03:10 UTC | 搜尋範圍：台灣 AI 服務競品動態、對手變現方式、關鍵字缺口、可複製聯盟
+
+### 競品動態快照
+
+| 競品 | 最新動態 | 變現方式 | 我們的缺口 |
+|------|---------|---------|-----------|
+| **雷蒙三十** (raymondhouch.com) | Claude Code 轉 Codex 搬家教學（6/9）、Context Window/Compact 管理教學、Claude Code vs Codex 完整比較文 | ①迷你課（lifehacker.tw，$NT 不詳）②Zeabur affiliate（最高 100% 佣金）③Notion 課程（11,000+ 學員）④生活黑客會員訂閱 | 我們有 Claude Code 系列文但**未補 Zeabur affiliate CTA**；「Claude Code 轉 Codex 教學」繁中我們缺這篇 |
+| **追日 Gucci** (guccidgi.com) | Threads 主題：K 型分化、AI 技能溢價（IMF 2026/1 引用）；Skool 社群「AI 效率革命聯盟」$59/月 | ①Skool 社群（40% affiliate 循環）②YouTube + Facebook 全線 Skool 導流 | 我們無繁中 **Skool 評測文**；Skool 40% affiliate **尚未申請**（積壓多輪） |
+| **GeniusHub (Sorla)** | YouTube「Google I/O 2026 SEO 完蛋了！GEO 時代到來」10,310 views，推 geniushub.cc 免費 GEO 健檢 + 線上課程 | ①線上課程（academy.geniushub.cc）②免費 GEO 健檢 → 課程導流 | **GEO（生成式引擎優化）繁中深度文章 = 0 篇**（我們的最大內容缺口之一） |
+| **maplefeather.com** | 「實測 3 年留下的 14 款 AI 工具」+ 4 種創作者預算組合（NT$0 / NT$500-700 / NT$1,500-2,500 / NT$2,000-3,500） | affiliate 多聯盟疊加 + 預算分級頁 | 我們的 AI 工具比較頁**未做「分級預算方案」格式**，這種格式 SEO 留存率高 |
+
+### 🔴 關鍵字缺口（對手在打、我們沒有）
+
+| 關鍵字 | 對手 | 我們的狀態 | 建議 |
+|-------|------|-----------|------|
+| `GEO 生成式引擎優化 繁中` | GeniusHub（YouTube，無深度文） | 完全空白 | → topic-ideas P1-URGENT |
+| `AI SEO 2026 台灣` | GeniusHub | 空白 | → topic-ideas P1 |
+| `Claude Code 轉 Codex 搬家教學` | 雷蒙三十（6/9 新文） | 我們有比較文，但無「搬家/遷移」角度 | → 補充文章或更新現有文 |
+| `Skool 評測 繁中 2026` | 追日 Gucci（推廣但無文） | 空白 | → topic-ideas P1 |
+| `AI 工具 月費預算 台灣` | maplefeather.com | 空白 | → 升級現有比較頁 |
+| `K 型分化 AI 技能 台灣` | 追日 Gucci（Threads 熱帖） | 空白 | → ai-tools-tw 職場受眾文 |
+
+### 💰 聯盟機會（對手在用、我們未申請）
+
+| 聯盟 | 佣金 | 對手使用情況 | 我們的狀態 | 行動 |
+|------|------|-----------|-----------|------|
+| **Zeabur** | LV1=20%～LV5=100% | 雷蒙三十最大隱性收入（1,000+ 付費用戶） | 未申請（多輪積壓） | Ivan 申請 + 補入 Claude Code 系列文 |
+| **Skool** | 40% 循環 | 追日 Gucci YouTube/FB 全線推 | 未申請（多輪積壓） | Ivan 申請 + seo-writer 評測文 |
+| **Cloudflare** | $50-200/sale（CJ 平台）+ 25% Partners 循環 | 未知競品，但 Flue 文章天然 CTA | 未申請 | Ivan 申請 CJ.com 上的 Cloudflare 計畫 |
+
+### 📋 Round 99 新增 topic-ideas
+
+| 日期 | 工具/主題 | 關鍵字 | 搜尋量評估 | 變現方式 | 潛在月收 | 建議站點 |
+|------|---------|--------|-----------|---------|---------|---------|
+| 2026-06-21 | **GEO（生成式引擎優化）台灣完整教學** | `GEO 生成式引擎優化`、`AI SEO 2026 台灣`、`ChatGPT GEO 優化`、`讓 AI 引用你的網站` | 高（Google I/O 2026 後全球新趨勢，繁中空白） | DataCamp 40%（SEO/行銷課程）+ Hahow（數位行銷）+ Blym.co（AI SEO 寫作，50%/12m） | $400-900/月 ⭐P1-URGENT | ai-tools-tw |
+| 2026-06-21 | **Skool 繁中完整評測 2026** | `skool 評測 繁中`、`skool vs teachable 比較`、`ai 社群平台 台灣`、`skool 如何建立社群` | 中高（追日 Gucci 12萬 YouTube 訂閱在推，無深度繁中文） | Skool 40% 循環（待申請）+ Hahow（課程平台比較 CTA） | $300-700/月 ⭐P1-HIGH | ai-tools-tw |
+| 2026-06-21 | **Claude Code 轉 Codex 遷移完整指南** | `claude code 轉 codex 教學`、`codex 桌面版 怎麼用`、`claude code 搬家`、`agents.md claude.md 比較` | 高（雷蒙三十最新熱門文，搜尋需求確認） | Zeabur affiliate（100% 佣金，天然 hosting CTA）+ Gumroad kknad（工具包） | $300-600/月 ⭐P1-HIGH | autodev-ai |
+| 2026-06-21 | **AI 工具月費規劃指南 2026（4種預算組合）** | `ai 工具 月費 台灣`、`最便宜 ai 工具組合`、`ai 工具 免費 推薦`、`ai 訂閱費用 比較` | 中高（maplefeather.com 格式驗證，長駐 SEO） | 多聯盟疊加（Claude/Hahow/DataCamp/Perplexity）+ Gumroad 免費工具包導流 | $500-1,000/月 ⭐P1-HIGH | ai-tools-tw |
+| 2026-06-21 | **K 型分化與 AI 技能溢價 2026（台灣職場）** | `ai 技能 薪資溢價 台灣`、`K 型分化 職場`、`ai 技能 台灣 2026`、`imf ai 技能 報告` | 中（Gucci Threads 熱帖主題，台灣職場焦慮受眾） | DataCamp 40%（AI Engineering）+ Hahow（AI 職場課程） | $200-400/月 P2 | ai-tools-tw |
+
+### Round 99 分析師備忘
+
+1. **GEO = 2026 下半年最大搜尋新需求**：Google I/O 2026 之後，「如何讓 AI 搜尋引擎引用你的網站」成為全球行銷人的新痛點。GeniusHub 有 10K+ views YouTube 影片但沒有深度繁中文章。我們可以做繁中版 GEO 完整指南，搭配 Blym.co（AI SEO 寫作工具，50%/12m，active）+ DataCamp 40% 雙 CTA。**窗口：現在到年底，持續需求期。**
+
+2. **Zeabur affiliate 持續積壓是最大漏財點**：雷蒙三十靠 Zeabur affiliate 帶了 1,000+ 付費用戶，我們在 Claude Code 系列有完整的技術文章卻沒有 Zeabur CTA。Zeabur LV1=20%～LV5=100% 是台灣本土品牌最強佣金。**Ivan 申請 → 補入現有文章 CTA = 最高 ROI 的單一行動。**
+
+3. **Skool 40% 積壓超過 5 輪**：追日 Gucci 每月靠 Skool 社群收費 $59/會員，且他的 YouTube/Facebook 全線用 Skool affiliate 40% 循環導流。我們沒有繁中 Skool 評測文，也沒有申請 Skool affiliate。一篇評測文 + affiliate = 追日 Gucci 受眾的自然攔截。
+
+4. **maplefeather.com 的「分級預算」格式是高 SEO 存活率格式**：4 種預算方案（NT$0/月、NT$500-700/月、NT$1,500-2,500/月、NT$2,000-3,500/月）對應不同受眾，每個方案推不同 affiliate 工具。這種格式停留時間長、回訪率高、在 AI 搜尋引擎（GEO）被引用機率大。我們的 ai-tools-tw 工具比較頁可以用這個格式重新組織。
+
+5. **本輪新增積壓優先序（需 strategist 排入下週執行計畫）**：
+   - 🔴 P1-URGENT：GEO 教學文（繁中最大空白）
+   - 🔴 P1-HIGH：Skool 評測文（積壓 5+ 輪）
+   - 🔴 P1-HIGH：Claude Code → Codex 遷移指南（雷蒙三十在打的關鍵字）
+   - 🔴 P1-HIGH：AI 工具預算分級頁（maplefeather 格式）
+   - 🔧 Ivan 行動：Zeabur 申請 + Skool 申請 + Cloudflare CJ 申請
+
