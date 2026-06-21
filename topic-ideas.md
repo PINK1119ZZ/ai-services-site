@@ -3384,3 +3384,31 @@ Obsidian CEO Steph Ango（kepano）在 2026 年初官方發布 kepano/obsidian-s
 3. **NVIDIA SkillSpector = 資安角度切入skills系列**：「1-in-4 AI skills你裝的有漏洞」這個恐懼行銷數據極具震撼力。26.1%漏洞率 + 5.2%高危 = 台灣工程師必看。可與 agent-skills-tw 產品頁交叉銷售。文章主軸：「你的skills安全嗎？用SkillSpector掃一下，30秒知道」。**送directive給strategist：SkillSpector+ponytail+agent-skills-tw v3.0三件套 = 高優先組合策略。**
 
 4. **積壓關鍵清單**：Agent-Reach 12輪（全系統最嚴重），SkillOpt P1-HIGH（R96新增），PixelRAG P1-HIGH（R96新增），ponytail P1-URGENT（R97新增，本週週榜#1），Omnigent P1-HIGH（R97新增），SkillSpector P1-HIGH（R97新增，積壓2輪）。
+
+---
+
+## Round 98 — 2026-06-21
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|----------|-----------|---------|
+| 2026-06-21 | Headroom (chopratejas/headroom) | "reduce llm token cost", "headroom ai token compression", "60-95% fewer tokens LLM" | 高 (40K GitHub stars, 15K/週) | 評測文 + MCP教學 + 關聯Claude Code/OpenClaw affiliate | $400–800/月 | ai-tools-tw |
+| 2026-06-21 | Z.ai GLM-5.2 + Z Code | "GLM 5.2 review", "Z Code AI coding agent", "free Claude Code alternative", "best open source coding model 2026" | 高 (MIT open weights, API即將上線) | Z.ai Coding Plan affiliate（Lite/Pro/Max/Team）+ 比較頁 Claude Code vs Z Code vs Codex | $600–1,200/月 | ai-tools-tw |
+| 2026-06-21 | Arbor (RUC-NLPIR/Arbor) | "Arbor AI framework", "autonomous research agent", "ai coding 2.5x faster same compute" | 中高 (VentureBeat報導，Reddit r/BayAreaHomes熱議) | 評測文 + Claude Code/Codex比較頁 + 工具目錄收錄 | $200–400/月 | ai-tools-tw |
+| 2026-06-21 | NanoClaw × JFrog 整合 | "NanoClaw JFrog security", "AI agent malicious code protection", "nanoclaw security 2026" | 中 (VentureBeat + The Register雙報導) | 資安評測文 + JFrog affiliate（企業授權）+ NanoCo AI商業方案 | $300–600/月 | ai-tools-tw |
+| 2026-06-21 | Flue Framework (withastro/flue) | "flue agent framework", "sandbox agent TypeScript", "Cloudflare agent SDK", "Pi framework agents 2026" | 中 (5.3K stars, Cloudflare官方合作) | 評測文 + 工具比較頁（Flue vs MAF vs OpenClaw）+ Cloudflare affiliate（25%/月 recurring） | $400–900/月 ⭐HIGH | ai-tools-tw |
+| 2026-06-21 | VibeThinker-3B (WeiboAI) | "VibeThinker 3B review", "3B model beats GPT-5.5", "small model reasoning 2026", "vibethinker benchmark" | 中高 (VentureBeat爭議報導，HuggingFace 357 likes, MIT license) | 評測文 + 本地跑模型教學 + Dell Pro/Precision affiliate（Sam Witteveen模式）| $200–400/月 | ai-tools-tw |
+| 2026-06-21 | codebase-memory-mcp (DeusData) | "codebase memory MCP server", "120x token reduction coding", "code knowledge graph MCP 2026" | 中 (9.3K stars, 5.4K/週, 120x token reduction) | MCP教學 + Claude Code整合評測 + MCP目錄頁 | $150–300/月 | ai-tools-tw |
+| 2026-06-21 | Flue × Cloudflare Agents SDK | "cloudflare agent framework 2026", "flue cloudflare", "durable AI agents edge" | 中 (Cloudflare官方部落格報導) | Cloudflare affiliate 25% recurring ★★★★ | $500–1,200/月 ⭐P1 | ai-tools-tw |
+
+### Round 98 分析師備忘
+
+1. **Z.ai GLM-5.2 = 最高潛力 affiliate 發現（本輪P1-URGENT）**：Z.ai Coding Plan（Lite/Pro/Max/Team）有訂閱制affiliate程序待確認，GLM-5.2已在DataCamp有「如何在Claude Code/OpenClaw/Cline切換至GLM-5.2」教學，代表搜尋需求明確。MIT開源模型 + 1M context + 免費5M token/天 = 繁中評測文完全空白，競爭低，行銷角度：「免費的Claude Code替代品，每天5百萬token」。**→ 立即送directive給strategist確認Z.ai affiliate條款。**
+
+2. **Flue Framework × Cloudflare = 高價值recurring affiliate機會**：Flue是Astro團隊（50K+ GitHub stars，品牌可信）推出的開源agent harness框架，已獲Cloudflare官方部落格背書整合。Cloudflare affiliate提供25% recurring佣金，AI agent hosting需求爆發中。「如何用Flue + Cloudflare部署你的第一個AI Agent」這個標題SEO力極強。**→ 送P1-HIGH directive給strategist。**
+
+3. **Headroom = 40K stars爆紅工具，token成本焦慮剛需**：「幫你省60-95%的Claude Code/Codex token費用」這個痛點對台灣工程師極具吸引力。MCP模式 + proxy模式 + 程式庫模式三種整合方式，有大量教學機會。開源無affiliate，但可串聯Claude/OpenAI affiliate連結（每次讀者點進去註冊就賺）。
+
+4. **NanoClaw × JFrog = 企業安全角度新切入**：NanoCo AI商業服務剛啟動，JFrog企業授權有一定佣金。「你的AI agent在偷偷下載惡意程式碼？」這個恐懼標題點擊率高。資安主題在繁中AI圈幾乎無人寫。
+
+5. **積壓最嚴重清單（需要strategist立刻安排寫手）**：Agent-Reach 13輪（本系統最嚴重積壓），ponytail P1-URGENT（R97新增），SkillOpt P1-HIGH（R96），PixelRAG P1-HIGH（R96），Omnigent P1-HIGH（R97），SkillSpector P1-HIGH（R97）。
+
