@@ -2407,6 +2407,25 @@
         "fixes": 0,
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)"
       }
+    },
+    {
+      "timestamp": "2026-06-22T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json",
+        "Reviewed strategist-weekly-2026-06-19.md and researcher-to-strategist-2026-06-21-round99.md",
+        "Curl checked 3 tracked site roots: autodev-ai 200, autodev-ai/en 200, ai-tools-tw 200",
+        "Verified n8n Cloud CTA coverage in 11 relevant articles (weekly directive threshold met)",
+        "Updated lastChecked to 2026-06-22 and wrote daily health result"
+      ],
+      "results": {
+        "checkedUrls": 3,
+        "http200": 3,
+        "failures": 0,
+        "fixes": 0
+      }
     }
   ],
   "fbPosted": [
@@ -3488,7 +3507,7 @@
       "lastRun": "2026-06-21"
     }
   },
-  "lastChecked": "2026-06-21",
+  "lastChecked": "2026-06-22",
   "dailyLog": [
     {
       "timestamp": "2026-05-31T00:00:00Z",
@@ -3878,6 +3897,31 @@
         "fixes": 5,
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)",
         "extraCompleted": "n8n Cloud CTA coverage expanded in 5 autodev-ai articles; 2 n8n template CTA targets corrected to Gumroad n8n-tw-templates"
+      }
+    },
+    {
+      "timestamp": "2026-06-22T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "Pulled latest main branch before checks",
+        "Read agent-state.json, reviewed latest directives, and checked recent agentLog before running health checks",
+        "Reviewed strategist-weekly-2026-06-19.md and researcher-to-strategist-2026-06-21-round99.md; no blocking outage repair task was required for this run",
+        "Curl checked 3 tracked site roots from state records: autodev-ai, autodev-ai/en, and ai-tools-tw",
+        "Confirmed all 3 checked URLs returned HTTP 200 from cron host",
+        "Verified n8n Cloud CTA coverage now appears in 11 n8n-related autodev-ai articles, satisfying this week's minimum scan/add directive",
+        "No site issues required repair and no new cross-agent directives were needed",
+        "Updated lastChecked to 2026-06-22 for tracked site records and recorded daily health result"
+      ],
+      "results": {
+        "checkedUrls": 3,
+        "http200": 3,
+        "failures": 0,
+        "fixes": 0,
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)",
+        "notes": [
+          "n8n Cloud CTA coverage verified in 11 relevant articles, above the weekly minimum of 8."
+        ]
       }
     }
   ],
