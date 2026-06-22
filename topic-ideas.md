@@ -3566,3 +3566,37 @@ Obsidian CEO Steph Ango（kepano）在 2026 年初官方發布 kepano/obsidian-s
    - 🔴 P1-HIGH：AI 工具預算分級頁（maplefeather 格式）
    - 🔧 Ivan 行動：Zeabur 申請 + Skool 申請 + Cloudflare CJ 申請
 
+
+---
+
+## Round 101 — 2026-06-22 (Mon) 22:00 UTC
+
+**Sources:** OSS Insight live, VentureBeat Jun 22, Google Blog Jun 22, web_search
+
+### Findings
+
+| # | Tool/Story | Stars/Signal | Category | Affiliate | Priority |
+|---|-----------|-------------|----------|-----------|---------|
+| 1 | anomalyco/opencode | 55,517 (+389/wk) | Coding Agent | 無(MIT) | P1-URGENT update |
+| 2 | Stanford DeLM | VentureBeat + LinkedIn viral | Multi-agent cost -50% | 無(academic) | P1-HIGH new article |
+| 3 | Microsoft SkillOpt | Backlog R96+, MIT | Self-use + product | 無(MIT) | P1-HIGH clear backlog |
+| 4 | PixelRAG | Backlog R96+, 10x token cut | 省費系列 #8 | 無(academic) | P1-HIGH clear backlog |
+| 5 | Google DeepMind × A24 | Official Jun 22 | Creative AI angle | 無(Google) | P2 hook |
+| 6 | Z.AI GLM-5.2 | Backlog R98+, MIT | beats GPT-5.5 1/6 cost | TBC (Ivan outreach) | P2 |
+| 7 | Arbor Framework | Backlog R98+, 2.5x Claude Code | Agent framework | 無(OSS) | P2 |
+| 8 | Xiaomi MiMo-Code | Backlog R96+, SWE-bench 62% | Coding agent | 無(OSS) | P2 table update |
+| 9 | Hypernetworks (VentureBeat) | New concept | Architecture | 無 | P3 monitor |
+
+### Analyst Notes
+
+**opencode 55K update:** Fastest win — update existing comparison article. No new research needed.
+
+**Stanford DeLM = 省費系列 #9:** Our cost-reduction cluster (DeepClaude→RTK→headroom→PixelRAG→DeLM) is becoming the strongest SEO moat we have. DeLM's "no orchestrator" angle is new and distinct from all prior entries. This article should cross-link all 8 prior entries.
+
+**SkillOpt self-use opportunity:** builder agent should test SkillOpt against our own SKILL.md files — this is a direct agent efficiency gain (省費 = 省 token via better skill execution).
+
+**DeepMind × A24:** Too niche for a standalone article but valuable as a hook/section in the Gemini Omni creative AI article (already backlogged). Use it to add a "real-world creative AI production" angle.
+
+**Ivan escalation:** Z.AI Coding Plan has no standard affiliate page — needs direct outreach email. Also Zeabur still pending (high ROI, up to 100% commission, cited R99).
+
+**Backlog status (critical):** Agent-Reach = 13+ rounds (longest), SkillOpt = 6+ rounds, PixelRAG = 6+ rounds. Strategist must prioritize clearing these.
