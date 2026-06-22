@@ -4,6 +4,98 @@
 
 ---
 
+## 2026-06-22（Researcher Round 100：Fundraisly #1 PH Launch + Arbor 2.5x框架 + MiMo-Code 200步任務 + Sakana Marlin B2B CSO + DeLM 50%省費 + GitHub 週榜熱門）
+
+> 本輪執行時間：2026-06-22 00:30 UTC | 搜尋範圍：VentureBeat Jun 21-22、GitHub trending weekly、Product Hunt Jun 22、HN frontpage
+
+### 🎯 本輪里程碑：Round 100
+
+### 🔥 Product Hunt 本週最熱 — Fundraisly
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|----------|---------|
+| 2026-06-22 | **Fundraisly**（fundraisly.com）— AI投資人媒合代理人，分析30萬+投資人，自動鋪排warm intro路徑，90天訂滿10-50場VC會議。PH Week #1 Launch（Jun 2026），1,700+追蹤，5.0評分，3條評論。 | `fundraisly 評測 繁中`、`ai 募資工具 台灣 2026`、`vc investor outreach ai`、`startup ai fundraising agent` | 中（台灣新創圈+英文搜尋量合計估 2K-8K/月） | 評測文 → 推廣Fundraisly affiliate（**待確認**：PH頁底或直接聯繫）；搭配DataCamp AI創業課程CTA；Gumroad VC Pitch Deck模板數位產品延伸 | **$100-300/月**（affiliate待確認；台灣新創/VC圈英文受眾，付費意願高；B2B新創工具 = 高LTV） | ai-tools-tw / ai-tools-en |
+
+**Fundraisly 變現評估：**
+- 有無 affiliate：**待確認**（theaiagentindex.com收錄確認工具成熟度；PH頁底或直接 founders@fundraisly.com 詢問）
+- 適合評測文：✅ 高度適合（新創族群付費意願強，台灣英文新創社群受眾精準）
+- 工具頁/比較頁：✅ 可做「AI VC Outreach 工具比較」（Fundraisly vs Calendly + Clay + Apollo）
+- 目標關鍵字：`fundraisly 評測`、`ai startup fundraising tool 2026`、`ai investor outreach automation`
+
+---
+
+### 💡 GitHub Weekly Trending — 變現機會分析（2026-06-22）
+
+從 OSSInsight / GitHub trending 本週確認數據：
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|----------|---------|
+| 2026-06-22 | **Arbor**（RUC-NLPIR/Arbor）— Renmin University + Microsoft Research，Hypothesis Tree Refinement（HTR）框架，2.5x優於Claude Code & Codex，MLE-Bench Lite 86.36% Any-Medal。VentureBeat + CryptoBriefing雙報導。開源。 | `arbor ai 框架 繁中`、`arbor vs claude code 比較`、`ai 自主優化框架 2026`、`hypothesis tree refinement 教學` | 中（2.5x headline正在爆發，估 1K-5K/月搜尋） | 開源無affiliate → DataCamp（AI Research Engineering課程）+ DigitalOcean（VPS跑Arbor任務）+ Gumroad kknad（Claude Code工具包：「Arbor已出，還需要省費嗎？」邏輯）| **$150-400/月**（VentureBeat報導確認受眾在，繁中=0篇，DO+DataCamp雙CTA） | autodev-ai |
+| 2026-06-22 | **Xiaomi MiMo-Code V0.1.0**（xiaomimimo.com）— 終端機原生AI編程代理，SWE-bench Pro 62% vs Claude Code 57%，Terminal Bench 2: 73% vs 68%，200步以上長任務優勢。開源。注意：benchmark自評、中國伺服器資安疑慮。 | `mimo code 繁中教學`、`xiaomi mimo code vs claude code 比較`、`mimo-v2.5-pro 評測`、`terminal ai coding agent 2026` | 高（VentureBeat報導確認，台灣工程師搜尋中，估 3K-10K/月） | 開源無affiliate → DataCamp + DigitalOcean + Gumroad kknad；**加入現有「opencode vs cursor vs claude code」比較頁更新段落** = 最快執行路徑 | **$200-500/月**（更新現有比較頁+新獨立評測文雙策略；比較頁已有排名基礎） | autodev-ai |
+| 2026-06-22 | **LMCache**（LMCache/LMCache）— vLLM官方KV cache加速層，4-10x吞吐量提升，60%延遲降低，PD分離+跨節點KV共享。企業LLM推論基礎設施。GitHub trending確認。 | `lmcache 教學 繁中`、`vllm kv cache 加速`、`lm cache llm inference 2026`、`llm 推論加速 台灣` | 中低（LLM基礎設施受眾精準，估 800-3K/月） | 開源無affiliate → DigitalOcean（GPU VPS部署vLLM+LMCache）+ DataCamp（MLOps/LLMOps課程）+ Hahow（台灣AI工程師課程） | **$100-300/月**（精準LLM工程師受眾，DO VPS天然需求，繁中=0篇） | autodev-ai |
+
+---
+
+### 🧠 VentureBeat Jun 21-22 重大發現 — 變現分析
+
+| 日期 | 工具/事件 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|----------|--------|--------|---------|----------|---------|
+| 2026-06-22 | **Sakana Marlin**（sakana.ai/marlin）— 「Virtual CSO」，8小時自主推論，100頁策略報告，面向企業/金融機構/think tanks。$135M融資，Tokyo-based。Pay-as-you-go定價。無affiliate（B2B直銷）。 | `sakana marlin 評測 繁中`、`ai 策略研究 agent 企業`、`virtual cso ai tool`、`ultra deep research agent 2026` | 中（B2B企業受眾精準，估 500-2K/月） | 無直接affiliate → DataCamp（AI Strategy/Business課程）+ Hahow（台灣企業AI轉型）+ beehiiv（newsletter創作者建立深研報告流程）；**可做「AI Deep Research工具比較」（Sakana Marlin vs Perplexity Deep Research vs OpenAI Deep Research）** | **$100-300/月**（B2B受眾LTV極高，台灣繁中=0篇，DataCamp+beehiiv 雙CTA） | ai-tools-tw |
+| 2026-06-22 | **Stanford DeLM**（Decentralized Language Model）— 無中央協調器多代理架構，50%推論費用節省，代理間直接溝通共享verified knowledge base。VentureBeat + Welcome.AI + LinkedIn報導。開源研究成果。 | `stanford delm 繁中`、`decentralized multi-agent 架構`、`多代理 ai 省費 50% 2026`、`delm vs autogen 比較` | 中低（AI工程師受眾，估 500-2K/月） | 開源研究無affiliate → DataCamp（MLOps/Multi-Agent課程）+ DigitalOcean（多代理部署）；**可加入「多代理AI省費系列」叢集文** | **$80-250/月**（省費系列天然叢集；台灣AI工程師受眾；繁中=0篇） | autodev-ai |
+| 2026-06-22 | **Adobe Creative Cloud Agentic AI**（VentureBeat報導）— Adobe將agentic工作流嵌入整個Creative Cloud，從媒體生成轉向production orchestration。Adobe affiliate有30-85%/首月方案（CJ平台）。 | `adobe creative cloud ai agent 2026`、`adobe cc agentic workflow 繁中`、`adobe ai 功能 評測 台灣` | 高（Adobe受眾龐大，台灣設計師圈，估 5K-20K/月） | **Adobe affiliate（CJ Platform）：30-85%首月**（CreativeCloud個人版 NT$672/月×30%=NT$201/客）+ Hahow（Adobe AI課程）+ CapCut（「不想付Adobe？CapCut AI也做到了」比較訴求） | **$300-800/月**（Adobe龐大台灣受眾，設計師高LTV，繁中agentic AI評測=0篇）⭐⭐⭐⭐ | ai-tools-tw |
+| 2026-06-22 | **Anthropic Claude Design Overhaul**（VentureBeat報導）— 設計系統匯入、code round-trips、token燃燒修復。Anthropic Max $200/月。Perplexity affiliate: $10 flat + 10% ongoing（Max=$20/月/客）。 | `claude 新功能 2026 繁中`、`anthropic claude 設計 更新`、`claude max vs pro 比較`、`claude 200美元 值得嗎` | 高（台灣Claude用戶搜尋，估 3K-10K/月） | Perplexity affiliate($10+10%)作為替代工具CTA；Gumroad kknad（Claude省費）；DataCamp | **$150-400/月**（Claude新功能 → 台灣用戶搜尋峰值；kknad省費CTA高轉換；繁中=0篇） | autodev-ai / ai-tools-tw |
+| 2026-06-22 | **Hypernetworks（VentureBeat特稿）**— 動態為agent構建所需模型，fine-tuning遺忘問題解決方案，RAG洩漏替代方案。Microsoft Research + academia研究趨勢。 | `hypernetworks agent 繁中`、`fine-tuning vs rag 比較 2026`、`dynamic model agent 台灣` | 低中（AI研究受眾，估 300-1K/月） | 開源研究 → DataCamp（ML Research課程）；省費系列叢集延伸 | **$50-150/月**（受眾精準但量小；省費叢集增量內容） | autodev-ai |
+
+---
+
+### 💰 本輪新 Affiliate 確認
+
+| Affiliate | 佣金 | 平台 | 狀態 | 筆記 |
+|-----------|------|------|------|------|
+| **Fundraisly** | 待確認 | 待確認 | ⚠️ 待查 | PH Week #1，1,700+追蹤，founders需直接聯繫確認affiliate計畫；B2B新創工具高LTV |
+| **Adobe Creative Cloud（CJ平台）** | 30-85%/首月 | Commission Junction | ⚠️ 待Ivan申請 | Creative Cloud Individual NT$672/月；台灣設計師受眾龐大；agentic AI更新提供新評測角度 |
+
+---
+
+### 🚨 本輪高優先指令（→ strategist）
+
+**P1-URGENT：Adobe Creative Cloud Affiliate（30-85%首月）**
+- 台灣設計師受眾最廣的設計工具，2026 agentic AI更新提供全新評測角度
+- CJ平台申請：commission.junction.com → 搜尋 Adobe
+- 搭配文章：「Adobe Creative Cloud Agentic AI 2026 完整評測：設計師該知道的10個新功能」
+- CapCut（已有）作為平替CTA = 雙affiliate比較頁
+
+**P1-HIGH：MiMo-Code 繁中評測（更新現有比較頁 + 獨立文章）**
+- 最快執行：更新 `opencode-vs-cursor-vs-claude-code-2026.html` 加入MiMo-Code段落（2小時）
+- 然後獨立文章：`xiaomi-mimo-code-vs-claude-code-2026.html`（1天）
+- 台灣工程師受眾：VentureBeat + TechTimes雙重確認搜尋需求
+
+**P1-HIGH：Arbor Framework 繁中首發教學**
+- VentureBeat + CryptoBriefing + Reddit多平台報導 = 需求確認
+- 文章角度：「比Claude Code快2.5倍的開源框架：Arbor HTR教學」
+- DataCamp + DO + Gumroad kknad 三CTA
+
+**P2：Fundraisly Affiliate確認**
+- 聯繫 founders@fundraisly.com 或PH頁底詢問affiliate計畫
+- 台灣繁中新創受眾評測文已可開始寫（不用等affiliate）
+
+---
+
+### 📊 Round 100 分析師筆記
+
+**本輪最強賺錢機會排序：**
+1. **Adobe CC Affiliate（CJ，30-85%首月）** — 龐大台灣受眾+agentic AI新角度+未被競品覆蓋。立即申請。
+2. **MiMo-Code比較頁更新** — 成本最低（更新現有排名文章），VentureBeat確認流量。
+3. **Arbor Framework教學** — 2.5x headline在Reddit/Twitter持續發酵，繁中=0篇，DO VPS天然CTA。
+4. **Fundraisly評測** — B2B新創受眾LTV高，affiliate待確認但文章現在就可寫。
+5. **Sakana Marlin深研工具比較** — B2B enterprise受眾，DataCamp CTA高轉換。
+
+**本輪無affiliate（開源/學術）：** Arbor、MiMo-Code、LMCache、Stanford DeLM、Hypernetworks → 全部走 DataCamp + DO + Gumroad kknad 三CTA策略。
+
+**積壓清除提醒（strategist注意）：** Agent-Reach已積壓13+輪（全系統最長）、SkillSpector積壓多輪、ponytail R97 P1-URGENT — Round 100是清除積壓的里程碑時機，建議seo-writer本週優先清三個積壓。
+
+---
+
 ## 2026-04-28（Researcher Round 33：Jet Admin 30% Affiliate 確認 + OpenAI Workspace Agents + Zed 平行代理 + TradingAgents 44K Stars）
 
 > 本輪執行時間：2026-04-28 00:30 UTC | 搜尋範圍：Product Hunt 今日（Apr 28）、HN frontpage、GitHub trending、聯盟佣金確認
