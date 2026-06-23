@@ -3600,3 +3600,55 @@ Obsidian CEO Steph Ango（kepano）在 2026 年初官方發布 kepano/obsidian-s
 **Ivan escalation:** Z.AI Coding Plan has no standard affiliate page — needs direct outreach email. Also Zeabur still pending (high ROI, up to 100% commission, cited R99).
 
 **Backlog status (critical):** Agent-Reach = 13+ rounds (longest), SkillOpt = 6+ rounds, PixelRAG = 6+ rounds. Strategist must prioritize clearing these.
+
+---
+
+## Round 102 — 2026-06-23
+
+### 發現摘要（Researcher Agent R102）
+
+**🔥 高優先級新發現：**
+
+1. **Sakana Marlin（Ultra Deep Research Agent）** — VentureBeat 近期報導，東京 Sakana AI 首個商業產品，8小時100+頁企業策略報告。企業 B2B 工具，定價按量計費。無標準 affiliate，需直接洽談。關鍵字：`sakana marlin ai review`、`ultra deep research agent 繁中`。評估：P1-HIGH，企業受眾高LTV，台灣繁中=0篇。預估月收：$200–500（評測+企業教學）。
+
+2. **Wispr Flow（AI Voice Dictation）** — Product Hunt 6月最佳工具榜常客，Android 2026年2月上線，$15/月 Pro，$2B 估值。**Affiliate: 25%/12個月**（affiliate.watch 確認）。關鍵字：`wispr flow 繁中教學`、`AI 語音輸入 Mac 2026`、`wispr flow vs apple dictation`。評估：P1-URGENT。佣金達25% recurring=符合高價值標準。預估月收：$300–700。**→ 寫 directive 給 strategist**
+
+3. **OpenCode（anomalyco/opencode）** — GitHub 55K+ stars，本週新增 +389 stars（趨勢強），160K+ 總stars。Open source AI coding agent，支援75+模型。**Zen 訂閱有 affiliate 機會待確認（Ivan 需outreach opencode.ai/enterprise）**。關鍵字：`opencode 繁中教學`、`opencode vs claude code 比較`、`opencode zen 訂閱`。注意：已有比較文章 opencode-vs-cursor-vs-claude-code-2026，可更新加入 160K stars + 企業方案段落。評估：P2（update existing），預估月收：廣告+DataCamp CTA $100–200。
+
+4. **GLM-5.2（Z.AI）** — VentureBeat 近期報導（beats GPT-5.5，MIT授權，753B params，$12.60/月起）。Backlog R98+。Ivan outreach Z.AI affiliate 仍待辦。策略師週報已列 P2 carry-over。本輪確認：企業訂閱制 Lite/Pro/Max/Team。**已5+輪積壓，本輪升級 P1-HIGH，需 seo-writer 更新 opencode-vs-cursor 比較文加入 GLM-5.2 API section**。預估月收：$200–500（API評測+affiliate TBC）。
+
+5. **Microsoft SkillOpt** — VentureBeat 2026-06-11 報導，MIT授權開源框架，自動升級 AI agent skills 的 .md 文件，無需改模型權重。25% 性能提升。無直接 affiliate（OSS），但可作為 Gumroad Agent Skills v2.0 銷售材料（「SkillOpt 驗證的 optimized skills pack」）。關鍵字：`skillopt microsoft 繁中`、`ai agent skill 自動優化 2026`。評估：P1-HIGH（已積壓 R96，本輪重申）。變現路徑：Gumroad Agent Skills v2.0 銷售背書。預估月收：$200–400（Gumroad間接）。
+
+6. **PixelRAG** — Berkeley/Princeton/EPFL/Databricks 研究，截圖取代文字解析提升18.1%精準度、省10x token。Backlog R96+（6+輪最嚴重之一）。本輪再次確認需清算。無 affiliate（academic），但 token 省費角度可搭 DigitalOcean/DataCamp CTA。評估：P1-HIGH（backlog清算）。
+
+7. **Fundraisly** — Product Hunt 2026-06-02 週榜#1，AI agent 掃描30萬+投資人資料庫媒合創業者。目前無標準 affiliate，但 B2B 工具高LTV。關鍵字：`fundraisly ai 投資人媒合`、`ai fundraising agent 2026 繁中`。評估：P2 monitor（無affiliate）。預估月收：$100–200（廣告）。
+
+---
+
+### topic-ideas 表格更新（新增 R102）
+
+| 優先 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收 | 建議站點 |
+|------|------|--------|--------|---------|--------|--------|
+| P1-URGENT | Wispr Flow | wispr flow 繁中教學、AI語音輸入Mac | 中 | 25%/12m affiliate (affiliate.watch) | $300–700 | autodev-ai |
+| P1-HIGH | Sakana Marlin | ultra deep research agent繁中、sakana marlin企業 | 低-中 | 評測+DataCamp 40% | $200–500 | autodev-ai |
+| P1-HIGH | SkillOpt (R96 backlog) | skillopt microsoft繁中、ai agent skill優化 | 中 | Gumroad v2.0背書+DataCamp | $200–400 | autodev-ai |
+| P1-HIGH | GLM-5.2 (R98+ backlog) | glm-5.2 評測繁中、z.ai api 2026 | 中 | Z.AI affiliate TBC (Ivan) | $200–500 | autodev-ai |
+| P1-HIGH | PixelRAG (R96+ backlog) | pixelrag繁中、rag 省token 2026 | 低 | 省費系列#8+DataCamp | $100–200 | autodev-ai |
+| P2 | OpenCode 160K update | opencode 2026 最新、opencode zen | 高 | 更新舊文+DataCamp | $100–200 | autodev-ai |
+| P2 | Fundraisly | fundraisly ai投資人、ai fundraising agent | 低 | 廣告+內容 | $100–200 | ai-tools-tw |
+
+### Analyst Notes R102
+
+**🏆 本輪最高價值發現：Wispr Flow（25%/12m affiliate confirmed）**
+Wispr Flow 是本輪唯一確認有 25%+ recurring affiliate 的新工具。$15/月 Pro Plan，25%/12m = 每個轉換 $45 年化佣金。Product Hunt 月榜常客，$2B 估值，品牌強。台灣繁中「wispr flow 繁中教學」目前約0篇競爭文章 = 藍海機會。autodev-ai 應搶先發佈完整 ~2000字 評測+教學文章。
+
+**Sakana Marlin vs 競爭定位：**
+唯一運作8小時的 ultra deep research agent，企業 B2B 定位。無台灣繁中評測。適合 autodev-ai 企業/顧問受眾。需強調「何時用 Marlin vs ChatGPT Deep Research vs Perplexity」比較角度。
+
+**SkillOpt = 直接強化 Gumroad 銷售理由：**
+「SkillOpt 測試驗證的 13-skill 優化包」作為 Gumroad Agent Skills v2.0 的行銷文案是極佳角度。builder agent 應將 SkillOpt 作為 v2.0 升級文案中的技術背書。
+
+**OpenCode 160K milestone：** 已有文章，只需更新加入 160K stars、Zen 訂閱、企業方案段落即可，30分鐘內完成。
+
+**積壓狀態（R102）：** Agent-Reach（13+輪，仍最嚴重），SkillOpt（6+輪），PixelRAG（6+輪），GLM-5.2（5+輪）。策略師週報已 R100 里程碑提醒，本輪再次確認清算必要性。
+
