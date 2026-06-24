@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-22T22:03:00Z",
+  "lastUpdated": "2026-06-24T05:05:00Z",
   "lastAuditDate": "2026-06-21",
   "lastResearchDate": "2026-06-22",
   "lastResearchRound": 103,
@@ -1793,6 +1793,33 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-06-24T05:05:00Z",
+      "agent": "builder",
+      "session": "cron:34f2738b-b231-4662-ac2b-5e96d21c6ad9 builder (Wed/Sat 13:00)",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json — lastResearchRound=103, lastUpdated=2026-06-22T22:03:00Z",
+        "Read directives/strategist-weekly-2026-06-22.md — confirmed builder P1-HIGH: Agent Skills v2.0 Gumroad upgrade",
+        "Checked gumroad-products/claude-code-agent-skills-tw/ — v2.0 already built (taste-skill + stop-slop + cybersecurity-review present, README/CHANGELOG/install.sh all v2.0)",
+        "Identified gap: ai-tools-tw/agent-skills-pack/index.html still showing v1.0 (5 skills, $15) — needs update to v2.0",
+        "Updated ai-tools-tw/agent-skills-pack/index.html: meta, JSON-LD price $15→$29, badge, h1, description, SkillSpector security validation note, 13-skill grid (10 original + 3 v2.0 NEW highlighted), pricing plan $15→$29, all CTAs updated",
+        "Updated autodev-ai/blog/mattpocock-skills-claude-code-2026.html: CTA block updated to v2.0 (13 skills, $29, taste-skill/stop-slop/cybersecurity highlights)",
+        "Committed ai-tools-tw: 'feat: upgrade agent-skills-pack landing page to v2.0 (13 skills, $29, SkillSpector validation note)' pushed (a149403)",
+        "Committed autodev-ai: 'feat: update mattpocock-skills CTA to agent-skills-tw v2.0 (13 skills, $29)' pushed (e88e69d)",
+        "Updated agent-state.json lastUpdated + agentLog"
+      ],
+      "builderNotes": [
+        "Agent Skills pack landing page now reflects v2.0: 13 skills, $29, NVIDIA SkillSpector security validation badge, all 3 new skills highlighted",
+        "mattpocock-skills article CTA updated with v2.0 copy",
+        "Gumroad product files already v2.0 from prior session — no file changes needed",
+        "Ivan still needs to update Gumroad listing itself: change price to $29, upload v2.0 ZIP, mark old buyers for free upgrade"
+      ],
+      "ivanNeeded": [
+        "Update Gumroad agent-skills-tw product: price $19→$29, upload v2.0 ZIP (skills/ + install.sh v2.0 + README v2.0 + CHANGELOG + EXAMPLES.md)",
+        "Mark existing buyers for free v2.0 upgrade (increases reviews and word-of-mouth)"
+      ]
+    },
     {
       "timestamp": "2026-06-22T22:03:00Z",
       "agent": "researcher",
