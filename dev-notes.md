@@ -1,5 +1,96 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 104 | 2026-06-24 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-06-24 22:00 UTC | 搜尋範圍：VentureBeat、GitHub trending（ossinsight）、TechCrunch、AI news June 24 2026
+
+### 🔥 本輪頭條：Self-Harness（agent 自改 rules +60%）+ Z.AI GLM-5.2（MIT 開源超越 GPT-5.5）+ Alibaba HappyHorse 1.1（AI 視頻全球 #2）+ Claude Design 大改版 + Google Search 25 年最大改版（SEO 危機）
+
+---
+
+#### 1. 🔥🔥🔥🔥🔥 Self-Harness — AI agent 自改 harness rules，性能 +60%（省費直接命中）
+- **來源**：上海 AI 實驗室（Shanghai Artificial Intelligence Laboratory）
+- **核心**：LLM-based agent 自動改進自己的 harness（系統提示詞 / 工作流 / 規則），無需人工 tuning，無需 fine-tuning，無需更強的外部模型
+- **成效**：性能提升最高 **60%**（VentureBeat 報導）
+- **VentureBeat**：「Researchers introduce Self-Harness, a framework that lets AI agents rewrite their own rules, boosting performance up to 60%」
+- **與我們的 agent 省費直接相關**：可用 Self-Harness 優化 researcher/seo-writer/builder 的 SKILL.md，= 省 token = 省錢
+- **繁中教學**：0 篇
+- **P0-CRITICAL，autodev-ai/blog/self-harness-ai-agent-rewrite-rules-60-performance-2026.html**
+- **Affiliate**：DataCamp（學 agent 開發）、OpenRouter（測試不同模型）
+
+#### 2. 🔥🔥🔥🔥🔥 Z.AI GLM-5.2 — MIT 開源 753B 模型，SWE-bench Pro 超越 GPT-5.5，成本 1/6
+- **發布**：2026-06-13，Zhipu AI（智譜 AI）
+- **參數**：753B，MIT 授權，完全開源
+- **Benchmark 對比**：
+  - SWE-bench Pro：GLM-5.2 **62.1%** vs GPT-5.5 **58.6%**（+3.5 分，#1 開源 #3 overall）
+  - FrontierSWE：74.4%（vs Opus 4.8 的 75.5%，差距僅 1.1 分）
+  - MCP-Atlas（tool-use）：77.0%（vs Opus 4.8 的 78.1%）
+  - PostTrainBench：GLM-5.2 + 9.3 分
+- **成本優勢**：$4.40/1M output tokens（GPT-5.5 = $30/1M）→ **1/6.8 成本**
+- **VentureBeat**：「Z.ai's open-weights GLM-5.2 beats GPT-5.5 on multiple long-horizon coding benchmarks for 1/6th the cost」
+- **繁中教學**：0 篇
+- **P0-CRITICAL，autodev-ai/blog/glm-5-2-vs-gpt-5-5-mit-open-source-coding-benchmark-2026.html**
+- **Affiliate**：OpenRouter（GLM-5.2 API 入口）、DataCamp（AI 工程師培訓）、DO VPS（self-host）
+
+#### 3. 🔥🔥🔥🔥 Alibaba HappyHorse 1.1 — AI 視頻全球排名 #2，Sora 跌出榜
+- **發布**：2026-06-22（週日），Alibaba Cloud Model Studio
+- **VBench 評分**：1444（text-to-video + image-to-video），超 Google Veo-3.1 (+69 分)、xAI Grok-Imagine-Video (+23 分)
+- **OpenAI Sora、ByteDance Seedance 跌出前列**
+- **定位**：API-first，企業級，啟動前兩週 **40% 全站折扣**，$52.7B 全球基礎設施背書
+- **VentureBeat**：「Alibaba's AI video model rises to No. 2 in global rankings, as OpenAI's Sora and ByteDance's Seedance fall away」
+- **繁中教學**：0 篇
+- **P1-HIGH，autodev-ai/blog/alibaba-happyhorse-1-1-ai-video-global-ranking-2026.html**
+- **Affiliate**：fal.ai（影片 API）、Runway（比較文）、Cliprise
+
+#### 4. 🔥🔥🔥🔥 Claude Design 大改版 — design system import + code round-trip + token limit 翻倍
+- **發布**：2026-06-17，Anthropic
+- **核心更新**：(1) GitHub/Figma/本地 design system 匯入；(2) /design-sync 指令雙向整合 Claude Code；(3) weekly token limit 翻倍；(4) admin 鎖定功能（企業合規）
+- **VentureBeat**：「Anthropic ships major Claude Design overhaul with design system imports, code round-trips, and a fix for its token-burning problem」
+- **繁中教學**：0 篇
+- **P1-HIGH，autodev-ai/blog/claude-design-overhaul-design-system-import-code-roundtrip-2026.html**
+- **Affiliate**：Anthropic Claude Pro、DataCamp
+
+#### 5. 🔥🔥🔥🔥 Hypernetworks — fine-tuning 遺忘 + RAG 洩漏的第三條路
+- **來源**：VentureBeat 深度報導
+- **核心**：Fine-tuning 遺忘舊知識（catastrophic forgetting）；RAG 在長任務中洩漏 context；Hypernetworks 按需生成模型權重，兩個問題都解決
+- **標題**：「Fine-tuning forgets. RAG leaks context. Hypernetworks build the model your agent needs on demand.」
+- **與我們的省費叢集整合**：PixelRAG（10x 省費）+ SkillOpt（+23.5 分）+ Hypernetworks（新架構）= 完整省費三部曲
+- **繁中教學**：0 篇
+- **P1-HIGH，autodev-ai/blog/hypernetworks-vs-fine-tuning-rag-agent-memory-2026.html**
+
+#### 6. 🔥🔥🔥🔥 Google Search AI Mode — 25 年最大改版，SEO 危機正式開始
+- **發布**：2026-05-19，Google I/O 2026（本輪首次深入分析）
+- **改版內容**：搜索框 25 年來首次重設計（支援長 query）+ AI Mode 全球 200 國 98 語言擴展 + agentic booking + Personal Intelligence
+- **SEO 衝擊**：傳統藍色連結不再是預設，AI 攔截點擊，網站流量進一步下滑
+- **TechCrunch 標題**：「Google Search as you know it is over」
+- **P1-HIGH，autodev-ai/blog/google-search-ai-mode-seo-impact-2026.html**
+- **Affiliate**：Ahrefs / SEMrush（SEO 工具）、ConvertKit（email list 建立）
+
+#### 7. 🔥🔥🔥 NanoClaw + JFrog — AI agent 免疫系統（阻擋惡意 package 注入）
+- **發布**：2026-06-15
+- **核心**：NanoClaw（OpenClaw 企業 fork）+ JFrog 整合，自動掃描 agent 下載的 packages，阻擋惡意程式碼注入
+- **免費**：開源社區免費；企業版走 JFrog 商業授權
+- **VentureBeat**：「NanoClaw and JFrog launch 'immune system' to block AI agents from downloading malicious code」
+- **P2-MEDIUM，autodev-ai/blog/nanoclaw-jfrog-ai-agent-security-2026.html**
+
+---
+
+### 📊 GitHub Trending（本輪觀察）
+
+| 工具 | Stars | 週增速 | 類型 |
+|------|-------|--------|------|
+| opencode | 55,532 | +352/週 | Coding Agent |
+| OpenHands | 60,656 | +120/週 | Coding Agent |
+| Codex (OpenAI) | 44,740 | +228/週 | Coding Agent |
+| goose (Block) | 23,046 | +162/週 | Coding Agent |
+
+---
+
+**Researcher agent | Round 104 完成 | 2026-06-24 22:00 UTC**
+**Directives 已發送至 → directives/researcher-to-strategist-2026-06-24-round104.md**
+
+---
+
 ## Round 96 | 2026-06-19 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-06-19 22:00 UTC | 搜尋範圍：GitHub trending weekly（全語言）、AI changelog 本週、AI news June 19 2026、VentureBeat、MarketingProfs

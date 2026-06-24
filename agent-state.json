@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-24T07:01:00Z",
+  "lastUpdated": "2026-06-24T22:00:00Z",
   "lastAuditDate": "2026-06-21",
   "lastResearchDate": "2026-06-22",
   "lastResearchRound": 103,
@@ -1786,168 +1786,6 @@
   ],
   "agentLog": [
     {
-      "timestamp": "2026-06-24T07:01:00Z",
-      "agent": "internal-linker",
-      "session": "cron:bea62040-8268-4fe2-937e-b91a684a8b93",
-      "actions": [
-        "git pull origin main (already up to date)",
-        "Scanned all HTML files across /root/ai-services-site, /root/ai-tools-tw, /root/ai-tools-en",
-        "ai-tools-tw and ai-tools-en only have index/404 pages — skipped for deep linking",
-        "Read about.html, pricing.html — identified 3 internal link opportunities",
-        "Edit 1: about.html hero para — wrapped LINE Bot/AI客服/工作流程自動化 → /services.html",
-        "Edit 2: about.html pricing para — wrapped NT$8,000小型LINE Bot案件 → /pricing.html",
-        "Edit 3: pricing.html — added /line-bot-saas.html link alongside existing bot-cloud link in 月費維護 note",
-        "git add about.html pricing.html && git commit -m \"seo: add internal links\" && git push origin main (284fda7)"
-      ],
-      "linksAdded": [
-        {
-          "file": "about.html",
-          "anchor": "LINE Bot、AI 客服、工作流程自動化",
-          "href": "/services.html",
-          "context": "hero paragraph"
-        },
-        {
-          "file": "about.html",
-          "anchor": "NT$8,000 的小型 LINE Bot 案件",
-          "href": "/pricing.html",
-          "context": "why choose section"
-        },
-        {
-          "file": "pricing.html",
-          "anchor": "LINE Bot SaaS 月費方案",
-          "href": "/line-bot-saas.html",
-          "context": "月費維護 feature list note"
-        }
-      ]
-    },
-    {
-      "timestamp": "2026-06-24T05:05:00Z",
-      "agent": "builder",
-      "session": "cron:34f2738b-b231-4662-ac2b-5e96d21c6ad9 builder (Wed/Sat 13:00)",
-      "actions": [
-        "git pull origin main (already up to date)",
-        "Read agent-state.json — lastResearchRound=103, lastUpdated=2026-06-22T22:03:00Z",
-        "Read directives/strategist-weekly-2026-06-22.md — confirmed builder P1-HIGH: Agent Skills v2.0 Gumroad upgrade",
-        "Checked gumroad-products/claude-code-agent-skills-tw/ — v2.0 already built (taste-skill + stop-slop + cybersecurity-review present, README/CHANGELOG/install.sh all v2.0)",
-        "Identified gap: ai-tools-tw/agent-skills-pack/index.html still showing v1.0 (5 skills, $15) — needs update to v2.0",
-        "Updated ai-tools-tw/agent-skills-pack/index.html: meta, JSON-LD price $15→$29, badge, h1, description, SkillSpector security validation note, 13-skill grid (10 original + 3 v2.0 NEW highlighted), pricing plan $15→$29, all CTAs updated",
-        "Updated autodev-ai/blog/mattpocock-skills-claude-code-2026.html: CTA block updated to v2.0 (13 skills, $29, taste-skill/stop-slop/cybersecurity highlights)",
-        "Committed ai-tools-tw: 'feat: upgrade agent-skills-pack landing page to v2.0 (13 skills, $29, SkillSpector validation note)' pushed (a149403)",
-        "Committed autodev-ai: 'feat: update mattpocock-skills CTA to agent-skills-tw v2.0 (13 skills, $29)' pushed (e88e69d)",
-        "Updated agent-state.json lastUpdated + agentLog"
-      ],
-      "builderNotes": [
-        "Agent Skills pack landing page now reflects v2.0: 13 skills, $29, NVIDIA SkillSpector security validation badge, all 3 new skills highlighted",
-        "mattpocock-skills article CTA updated with v2.0 copy",
-        "Gumroad product files already v2.0 from prior session — no file changes needed",
-        "Ivan still needs to update Gumroad listing itself: change price to $29, upload v2.0 ZIP, mark old buyers for free upgrade"
-      ],
-      "ivanNeeded": [
-        "Update Gumroad agent-skills-tw product: price $19→$29, upload v2.0 ZIP (skills/ + install.sh v2.0 + README v2.0 + CHANGELOG + EXAMPLES.md)",
-        "Mark existing buyers for free v2.0 upgrade (increases reviews and word-of-mouth)"
-      ]
-    },
-    {
-      "timestamp": "2026-06-22T22:03:00Z",
-      "agent": "researcher",
-      "session": "ai-dev-research-tue-thu-sat-0600-round101",
-      "round": 101,
-      "actions": [
-        "git pull origin main (already up to date)",
-        "Read agent-state.json -- lastResearchRound=100, lastResearchDate=2026-06-22",
-        "Read directives/researcher-to-strategist-2026-06-22-round100.md and strategist-weekly-2026-06-22.md",
-        "Searched VentureBeat AI June 22 2026 -- CONFIRMED Stanford DeLM 50% cost cut, Hypernetworks, DeepMind×A24 partnership, Claude Fable 5 enterprise, MiMo-Code, Arbor",
-        "Searched GitHub trending weekly June 22 2026 -- CONFIRMED opencode 55,517 stars (#3 Coding Agents OSS Insight), OpenHands 60,653, openai/codex 44,737",
-        "Searched Stanford DeLM details -- CONFIRMED Yuzhen Mao + Azalia Mirhoseini, shared KB substrate, 50% cost cut, no central orchestrator, academic/no affiliate",
-        "Searched Google DeepMind A24 partnership June 22 -- CONFIRMED Eli Collins Jun 22 official blog post",
-        "Confirmed: opencode 55K=無affiliate(MIT); DeLM=無affiliate(academic); DeepMind=無(Google); GLM-5.2 affiliate TBC; Arbor=無(OSS)",
-        "Wrote directives/researcher-to-strategist-2026-06-22-round101.md",
-        "Appended Round 101 section to topic-ideas.md",
-        "Updated agent-state.json: lastResearchRound=101, lastResearchDate=2026-06-22, agentLog",
-        "git add . && git commit && git push origin main"
-      ],
-      "topFindings": [
-        "opencode 55,517 stars: update existing comparison article with milestone + Enterprise tier -- P1-URGENT update",
-        "Stanford DeLM: 50% multi-agent cost cut, no orchestrator, VentureBeat viral, 省費系列 #9, 繁中=0篇 -- P1-HIGH",
-        "PixelRAG: backlog R96+ cleared directive, 省費系列 #8, 10x token cut -- P1-HIGH clear",
-        "Microsoft SkillOpt: backlog R96+ self-use (optimize own SKILL.md) + article -- P1-HIGH clear",
-        "DeepMind×A24: Creative AI hook for Gemini Omni article -- P2",
-        "GLM-5.2 Z.AI: affiliate TBC, Ivan direct outreach needed -- P2",
-        "Arbor, MiMo-Code: article + comparison table update -- P2"
-      ],
-      "directivesWritten": [
-        "researcher-to-strategist-2026-06-22-round101.md"
-      ],
-      "affiliatesNewlyConfirmed": [
-        "Stanford DeLM: 無affiliate (academic) -- CONFIRMED Round 101",
-        "DeepMind×A24: 無affiliate (Google) -- CONFIRMED Round 101",
-        "opencode 55K: 無affiliate (MIT) -- RECONFIRMED Round 101",
-        "Arbor: 無affiliate (OSS) -- RECONFIRMED Round 101",
-        "MiMo-Code: 無affiliate (OSS) -- RECONFIRMED Round 101",
-        "Z.AI GLM-5.2 Coding Plan: TBC -- PENDING Ivan direct outreach Round 101"
-      ]
-    },
-    {
-      "timestamp": "2026-06-22T01:30:00Z",
-      "agent": "strategist",
-      "session": "seo-weekly-report-2026-06-22",
-      "actions": [
-        "git pull origin main (already up to date)",
-        "Read agent-state.json",
-        "Read directives/researcher-to-strategist-2026-06-22-round100.md (Round 100 milestone)",
-        "Read directives/strategist-weekly-2026-06-19.md (last week carry-overs)",
-        "Read topic-ideas.md tail (rounds 96-100)",
-        "Read market-notes.md tail (affiliate confirmations)",
-        "Analyzed newAssetProposals (PENDING: Zebracat, Reclaim, Cursor-enterprise, taste-skill v2.0, Teal, Castmagic/KrispCall/MeetGeek cluster)",
-        "Wrote directives/strategist-weekly-2026-06-22.md",
-        "Marked answrr as deprecated in affiliateLinks (3+ consecutive timeouts, no article references)",
-        "Updated agent-state.json agentLog + lastUpdated",
-        "git add . && git commit && git push origin main"
-      ],
-      "weeklyDecisions": {
-        "seoWriter": [
-          "P1-CRITICAL: Agent-Reach (13-round backlog, must clear this week)",
-          "P1-URGENT: ponytail (GitHub All Language #1 weekly, 37K stars, time window)",
-          "P1-URGENT: GEO generative engine optimization Taiwan (biggest content gap, R99)",
-          "P1-HIGH: MiMo-Code (update existing comparison article, fastest path)",
-          "P1-HIGH: Arbor Framework (VentureBeat + Reddit + CryptoBriefing 3-platform)"
-        ],
-        "builder": [
-          "P1-HIGH: Agent Skills v2.0 Gumroad upgrade (taste-skill + stop-slop + cybersecurity, carry from last week)",
-          "P2: Teal AI job search calculator (pending Ivan affiliate approval)"
-        ],
-        "researcher": [
-          "Adobe CC Agentic AI deep-dive for seo-writer angles",
-          "Z.ai GLM-5.2 Coding Plan affiliate terms confirm",
-          "Cloudflare CJ affiliate eligibility",
-          "NVIDIA SkillSpector article materials"
-        ],
-        "contentOps": [
-          "Mark answrr deprecated (done this session)",
-          "Zeabur CTA plant in 4 Claude Code articles (post Ivan approval)",
-          "Headroom article update (The Register 00K quote + 40K stars + headroom learn)",
-          "ai-affiliate-programs-taiwan add: KrispCall + Castmagic + Reclaim + Adobe CC"
-        ]
-      },
-      "newAffiliateHighlight": {
-        "name": "Adobe Creative Cloud",
-        "commission": "30-85% first month",
-        "platform": "Commission Junction (CJ)",
-        "priority": "P1-URGENT NEW",
-        "ivanAction": "Apply at CJ.com for Adobe CC affiliate program"
-      },
-      "ivanUrgentActions": [
-        "P0: Upload Gumroad n8n-tw-templates (10-week backlog)",
-        "P0: Upload Gumroad Prompt Template Library (already built)",
-        "P1: Apply Adobe CC affiliate (CJ, 30-85%/first month)",
-        "P1: Apply Zeabur affiliate (up to 100% commission)",
-        "P1: Apply Skool affiliate (40% recurring)",
-        "P1: Apply Teal affiliate (0/CPA, Impact)",
-        "P1: Apply KrispCall PartnerStack (30% lifetime)",
-        "P1: Apply Castmagic PartnerStack (30%/18m)"
-      ]
-    },
-    {
       "timestamp": "2026-06-22T00:30:00Z",
       "agent": "researcher",
       "session": "ai-trend-hunter-daily-0830-round100",
@@ -2757,6 +2595,20 @@
           "estimatedMonthly": "$100",
           "note": "Add to coding agent comparison page update"
         }
+      ]
+    },
+    {
+      "round": 104,
+      "timestamp": "2026-06-24T22:00:00Z",
+      "agent": "researcher",
+      "summary": "Round 104 研究完成。主要發現：(1) Self-Harness框架（上海AI實驗室）讓agent自改harness rules，性能+60%；(2) Z.AI GLM-5.2 MIT開源753B，SWE-bench Pro 62.1% > GPT-5.5 58.6%，成本1/6；(3) Alibaba HappyHorse 1.1 AI視頻全球#2；(4) Claude Design大改版含design system import + code round-trip；(5) Hypernetworks按需生成模型；(6) Google Search 25年首次重設計→SEO危機文機會。已創建directives給strategist。",
+      "findings": [
+        "Self-Harness: AI agent自改rules框架，+60%性能",
+        "GLM-5.2: MIT開源，SWE-bench Pro #1開源，成本1/6 GPT-5.5",
+        "HappyHorse 1.1: Alibaba AI視頻全球#2，API-first",
+        "Claude Design大改版: design system import + code round-trip",
+        "Hypernetworks: fine-tune/RAG替代，按需生成模型",
+        "Google Search AI Mode: 25年最大改版→SEO衝擊"
       ]
     }
   ],
@@ -3849,6 +3701,10 @@
         }
       ],
       "lastRun": "2026-06-24"
+    },
+    "researcher": {
+      "lastRun": "2026-06-24T22:00:00Z",
+      "lastRound": 104
     }
   },
   "lastChecked": "2026-06-24",
