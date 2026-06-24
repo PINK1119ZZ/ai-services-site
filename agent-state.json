@@ -2631,6 +2631,25 @@
           "estimatedMonthly": "$100-200"
         }
       ]
+    },
+    {
+      "timestamp": "2026-06-24T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json",
+        "Reviewed strategist-weekly-2026-06-22.md and researcher-to-strategist-2026-06-23-round102.md",
+        "Curl checked 147 deduped canonical URLs across autodev-ai.com, autodev-ai.com/en, ai-tools-tw, and ai-tools-en from in-repo HTML and sitemap files",
+        "Confirmed all 147 checked URLs returned HTTP 200 from cron host",
+        "Updated lastChecked to 2026-06-24 and wrote daily health result"
+      ],
+      "results": {
+        "checkedUrls": 147,
+        "http200": 147,
+        "failures": 0,
+        "fixes": 0
+      }
     }
   ],
   "fbPosted": [
@@ -3711,12 +3730,18 @@
           "task": "daily site health check",
           "result": "Pulled latest main, reviewed latest directives and recent agentLog, curl-checked 15 deduped tracked URLs from state records; all returned HTTP 200. Expanded n8n Cloud CTA coverage in 5 relevant articles and corrected 2 lingering n8n template CTA targets to the Gumroad n8n product. Updated tracked site lastChecked fields and recorded daily health result.",
           "status": "done"
+        },
+        {
+          "date": "2026-06-24",
+          "task": "daily site health check",
+          "result": "Pulled latest main, reviewed latest directives and recent agentLog, curl-checked 147 deduped canonical URLs discovered from in-repo HTML and sitemap files across autodev-ai.com, autodev-ai.com/en, ai-tools-tw, and ai-tools-en; all returned HTTP 200. No site repairs or cross-agent directives were needed. Updated tracked site lastChecked fields and recorded daily health result.",
+          "status": "done"
         }
       ],
-      "lastRun": "2026-06-21"
+      "lastRun": "2026-06-24"
     }
   },
-  "lastChecked": "2026-06-22",
+  "lastChecked": "2026-06-24",
   "dailyLog": [
     {
       "timestamp": "2026-05-31T00:00:00Z",
@@ -4130,6 +4155,30 @@
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)",
         "notes": [
           "n8n Cloud CTA coverage verified in 11 relevant articles, above the weekly minimum of 8."
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json",
+        "Reviewed strategist-weekly-2026-06-22.md and researcher-to-strategist-2026-06-23-round102.md; noted content-ops directives (answrr deprecated, Zeabur CTA pending Ivan, headroom update, affiliate roundup additions, claude-fable export-control addendum) but no blocking outage repair task for this health run",
+        "Curl checked 147 deduped canonical URLs discovered from in-repo HTML and sitemap files across autodev-ai.com, autodev-ai.com/en, ai-tools-tw, and ai-tools-en",
+        "Confirmed all 147 checked URLs returned HTTP 200 from cron host",
+        "No site issues required repair and no new cross-agent directives were needed",
+        "Updated lastChecked to 2026-06-24 for tracked site records and recorded daily health result"
+      ],
+      "results": {
+        "checkedUrls": 147,
+        "http200": 147,
+        "failures": 0,
+        "fixes": 0,
+        "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)",
+        "notes": [
+          "Weekly content-ops directives remain pending but are not availability incidents: Zeabur CTA insertion awaits Ivan referral link; headroom and affiliate roundup updates are content tasks."
         ]
       }
     }
