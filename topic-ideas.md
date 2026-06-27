@@ -4,6 +4,111 @@
 
 ---
 
+## 2026-06-27（Researcher Round 107：OpenMontage 開源影片製作 + Krea 2 RHR Open Weights + Liquid AI LFM2.5-230M + OpenSEO MCP + Xiaomi HarnessX + NanoClaw×JFrog + Qwen3.7-Plus GUI Agent + Z.AI GLM-5.2 + Claude Tag Slack替代 + Anthropic FAA監管呼籲）
+
+> 本輪執行時間：2026-06-27 00:30 UTC | 搜尋範圍：VentureBeat Jun 25-27、GitHub trending weekly Jun 27、Product Hunt Jun 2026 月榜、HN/Reddit AI
+
+### 💰 變現評估表
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|-----------|---------|
+| 2026-06-27 | OpenMontage (calesthio) | open source ai video production 2026 / agentic video generation tool | 中-高（#1 GitHub Trending Jun 20-21, 14K stars） | DataCamp 40% affiliate (影片AI課程 CTA) + DigitalOcean GPU deploy CTA | $150-400/月 | blog/ (英文) + ai-tools-tw/ (繁中) |
+| 2026-06-27 | Krea 2 RHR Open Weights | krea 2 open weights / krea ai image model review / flux alternative 2026 | 高（12B params, #1 independent lab Artificial Analysis, SOTA） | Krea Creator Program（確認中） + DataCamp AI課程 CTA | $100-300/月 | blog/ (英文) |
+| 2026-06-27 | Liquid AI LFM2.5-230M | on-device AI model 2026 / smallest AI model data extraction / edge ai 230m | 中（VentureBeat報導 Jun 25, beats models 4x larger） | Liquid AI 企業授權CTA（dual-use license, <$10M free） + DO邊緣部署 CTA | $80-200/月 | blog/ (英文技術文) |
+| 2026-06-27 | every-app/OpenSEO | open source seo tool alternative semrush ahrefs / openseo mcp server | 中-高（GitHub seo-tools #1, MCP整合 AI agent SEO） | Ahrefs affiliate (6個月10%?) + DataCamp SEO課程 CTA | $200-600/月 | ai-tools-tw/ + blog/ |
+| 2026-06-27 | Xiaomi HarnessX | ai agent scaffolding optimization / harnessx framework review / self-improving ai agent 2026 | 中（VentureBeat Jun 25, +14.5% benchmark gain, Qwen3.5-9B +44%） | n/a（開源研究） DataCamp MLOps課程 CTA | $50-150/月 | blog/ (英文技術深度文) |
+| 2026-06-27 | NanoClaw × JFrog 免疫系統 | ai agent security 2026 / nanoclaw jfrog supply chain / ai code malicious packages | 中（VentureBeat + The Register雙媒體覆蓋 Jun 18） | JFrog affiliate（確認中）+ NanoCo AI 企業方案 CTA | $100-250/月 | blog/ (英文) |
+| 2026-06-27 | Qwen3.7-Plus GUI Agent | qwen 3.7 plus review / alibaba gui agent 2026 / screenspot pro ai agent | 高（ScreenSpot Pro 79.0 SOTA, Terminal-Bench 70.3, $2.50/$7.50/M tokens） | Alibaba Cloud affiliate（官方合作夥伴計劃）+ DataCamp AI課程 | $150-400/月 | ai-tools-tw/ (繁中比較文) |
+| 2026-06-27 | Z.AI GLM-5.2 | glm 5.2 review / open weights coding model / gpt 5.5 alternative cheap 2026 | 中-高（VentureBeat: beats GPT-5.5 coding benchmarks 1/6 cost, open weights） | API使用CTA + DataCamp 40% + Hahow CTA | $100-300/月 | ai-tools-tw/ (繁中評測) |
+| 2026-06-27 | Claude Tag（Anthropic Slack替代） | claude tag review / anthropic slack ai teammate / persistent ai agent slack alternative | 高（VentureBeat Jun 27, replaces Slack app, autonomous monitoring） | Claude Pro/Teams affiliate（Anthropic Refer-a-Friend）+ Granola meeting notes CTA | $200-500/月 | blog/ + ai-tools-tw/ |
+| 2026-06-27 | Mindstone Rebel | mindstone rebel review / ai model routing 2026 / enterprise ai agent model selection | 中（VentureBeat Jun 24, auto-remembers which model fits which task） | Mindstone affiliate（確認中）+ DataCamp AI課程 | $80-200/月 | blog/ (英文) |
+
+### 📊 詳細分析
+
+**1. OpenMontage (calesthio/OpenMontage)**
+- GitHub Trending #1 Jun 20-21 2026，14,027 stars，3,590/天（24h peak）
+- 世界第一個開源 agentic 影片製作系統：12 pipelines, 52 tools, 500+ agent skills
+- 把 AI coding assistant 變成完整 video production studio
+- Affiliate評估：無直接affiliate（開源），DataCamp AI影片課程 CTA（40%）+ DigitalOcean GPU CTA
+- 繁中競品文：0篇（6月27日確認），巨大先發優勢
+- 關鍵字："OpenMontage tutorial 繁中"、"AI 影片生成 2026 開源工具"
+- ⭐⭐⭐⭐⭐ P1-HIGH — 繁中=0篇，trending爆發窗口開著
+
+**2. Krea 2 RHR Open Weights（Krea AI）**
+- 12B parameter image diffusion transformer，#1 independent lab + #6 全球 Artificial Analysis榜
+- 2秒生成 2K 解析度（Turbo，8步推理），Krea 2 Raw 支援 LoRA fine-tuning
+- 2026-06-23 正式釋出 open weights（RHR 版本），VentureBeat Jun 25報導
+- License：>50 seats需企業授權；個人免費
+- Affiliate評估：Krea Creator Program（Instagram看到）需確認佣金率；DataCamp 40% CTA
+- ⭐⭐⭐⭐ P1-HIGH — SOTA模型，繁中評測=0篇，FLUX/Midjourney比較文機會
+
+**3. Liquid AI LFM2.5-230M**
+- 230M params，outperforms Qwen3.5-0.8B + Gemma3-1B at data extraction
+- On-device agentic workflows：手機、筆電、機器人皆可跑
+- 雙授權：個人/<$10M revenue免費；大型企業需付費協議
+- Affiliate評估：無直接affiliate（API only via Liquid），DO邊緣部署教學 CTA
+- 關鍵字："最小AI模型 edge AI 2026"、"on-device LLM 比較"
+- ⭐⭐⭐ P2-MEDIUM — 技術受眾為主，AI工程師文章方向
+
+**4. every-app/OpenSEO（"SEO for the people"）**
+- GitHub seo-tools topic 頂部，開源 Semrush/Ahrefs 替代品
+- MCP Server整合：AI agents（Codex、Claude Code）直接使用 SEO 數據
+- 20 SEO & GEO skills for Claude Code/Cursor/Codex/35+ AI agents
+- 完全免費，支援 Cloudflare self-host（SaaS-like體驗）
+- Affiliate評估：工具本身無affiliate，但可做"OpenSEO vs Ahrefs vs Semrush"比較頁帶 Ahrefs affiliate
+- 關鍵字："open source seo tool 2026"、"AI agent SEO MCP server"
+- ⭐⭐⭐⭐⭐ P1-HIGH — SEO工具類高搜尋量，MCP角度=差異化切入點
+
+**5. Xiaomi HarnessX（自我優化AI腳手架）**
+- 15個 model-benchmark 組合平均 +14.5% 性能提升
+- Qwen3.5-9B on embodied planning tasks: +44%
+- 核心洞見：不需要更大模型，優化 harness 就能大幅提升 capability
+- Affiliate評估：研究論文/開源，無affiliate；DataCamp MLOps課程 CTA
+- 技術深度文方向："不換模型，AI能力提升44%——Xiaomi HarnessX自優化腳手架解析"
+- ⭐⭐⭐ P2-MEDIUM — 技術受眾，差異化觀點文章
+
+**6. NanoClaw × JFrog AI Immune System**
+- 免費給開源社區；企業版通過現有 JFrog 環境路由
+- AI agent supply chain security 是 2026 H2 最大企業採購考量之一
+- VentureBeat + The Register 雙媒體背書
+- Affiliate評估：JFrog affiliate計劃（待確認），NanoCo AI 企業方案 CTA
+- 關鍵字："ai agent security 2026"、"nanoclaw review"、"AI code injection prevention"
+- ⭐⭐⭐⭐ P1-HIGH — AI安全主題搜尋量爆發中
+
+**7. Qwen3.7-Plus GUI Agent（Alibaba）**
+- ScreenSpot Pro 79.0（GUI自動化SOTA），Terminal-Bench 70.3
+- 多模態（text+image+video），1M token context window
+- 價格：$2.50 input / $7.50 output /M tokens — Claude Opus的1/3以下
+- Affiliate評估：Alibaba Cloud合作夥伴計劃（有正式program）需確認佣金率
+- 關鍵字："qwen 3.7 plus 繁中評測"、"最強GUI AI agent 2026"、"claude vs qwen 比較"
+- ⭐⭐⭐⭐⭐ P1-HIGH — 繁中=0篇，台灣Alibaba Cloud受眾，比較文高轉換率
+
+**8. Z.AI GLM-5.2 Open Weights**
+- beats GPT-5.5 on long-horizon coding benchmarks，only 1/6 the cost
+- Open weights（VentureBeat Jun 27 confirmed）
+- 關鍵字："glm 5.2 review"、"cheap gpt 5.5 alternative"、"open source coding model 2026"
+- Affiliate評估：無直接affiliate（開源），DataCamp + Hahow CTA
+- ⭐⭐⭐⭐ P1-HIGH — "GPT-5.5比較文"系列的新材料，繁中競爭少
+
+**9. Claude Tag（Anthropic）**
+- Slack app 升級為 persistent AI teammate
+- 自動學習、自主監控、自主工作（learns, monitors, works autonomously）
+- 替代 Slack AI integration，企業受眾高ARPU
+- Affiliate評估：Claude Pro/Teams（Anthropic有refer program），企業版 CTA
+- ⭐⭐⭐⭐ P1-HIGH — 企業受眾，高轉換意圖，繁中=0篇
+
+### 🚨 高價值發現（30%+ recurring affiliate 候選）
+
+本輪確認無新的 30%+ recurring affiliate。
+最接近：
+- Qwen3.7-Plus/Alibaba Cloud：官方有合作夥伴計劃，佣金待確認（可能達20-30%）→ directive給strategist確認申請
+- Krea Creator Program：Instagram看到正式Creator Program，佣金率待確認
+
+### 📌 Product Hunt 月榜（June 2026）觀察
+PH熱門趨勢：AI agent infrastructure (AgentX, Prometheus by Firecrawl)、AI notetakers (Granola持續)、Vibe coding (Lovable, bolt.new)、Privacy-first local AI (Clawd)、AI Workflow Automation (n8n)
+
+---
+
 ## 2026-06-22（Researcher Round 100：Fundraisly #1 PH Launch + Arbor 2.5x框架 + MiMo-Code 200步任務 + Sakana Marlin B2B CSO + DeLM 50%省費 + GitHub 週榜熱門）
 
 > 本輪執行時間：2026-06-22 00:30 UTC | 搜尋範圍：VentureBeat Jun 21-22、GitHub trending weekly、Product Hunt Jun 22、HN frontpage
