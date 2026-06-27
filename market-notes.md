@@ -772,3 +772,79 @@
 → 見 directives/researcher-to-strategist-2026-06-21-round98.md
 
 ---
+
+---
+
+## 2026-06-27（市場研究 Round 108 — 週六 23:00 UTC cron）
+
+### 一、🔥 本輪最高價值新發現
+
+#### 1. Vibe-Trading 繁中教學產品 ⭐⭐⭐⭐⭐
+| 欄位 | 詳情 |
+|------|------|
+| 來源 | HKUDS/Vibe-Trading — GitHub 13,400+ stars，v0.1.10（50個MCP工具）|
+| 功能 | AI 量化交易平台，支援 A股/台股/港股/美股/加密/外匯，自然語言下指令 |
+| 繁中缺口 | 幾乎 0 篇繁中深度教學；台灣 Facebook 已有「AI台股教學」需求訊號 |
+| 產品機會 | Gumroad/LemonSqueezy：「Vibe-Trading 繁中完全指南」$19-29 |
+| 預估月收 | $500-2,000（教學產品 + 可能的聯盟）|
+| 行動 | 做繁中指南電子書 + YouTube/Threads 短影片導流 |
+
+#### 2. ai-website-cloner-template 繁中教學 ⭐⭐⭐⭐
+| 欄位 | 詳情 |
+|------|------|
+| 來源 | JCodesMore/ai-website-cloner-template — 22,075 stars，2026-06-24 GitHub #1 trending |
+| 功能 | 一個指令讓 Claude Code/Codex 複製任何網站，輸出 Next.js 16 codebase |
+| 繁中缺口 | 完全無繁中教學 |
+| 機會 | 繁中教學文章 + Claude Code 聯盟 + 「幫你複製競品網站」服務 |
+| 預估月收 | $200-600 |
+
+#### 3. ai-berkshire 巴菲特 AI 投資框架 ⭐⭐⭐⭐
+| 欄位 | 詳情 |
+|------|------|
+| 來源 | xbtlin/ai-berkshire — 今日 686 stars（GitHub 熱門），4,045 total |
+| 功能 | Berkshire Hathaway 風格 AI 價值投資研究框架 |
+| 繁中缺口 | 完全空白，今日剛爆發，first-mover 機會 |
+| 機會 | 今天就可發 Threads/IG 貼文，建立 SEO 資產 |
+| 預估月收 | $100-400（流量變現）|
+
+#### 4. GitHub Copilot 改計費 → 替代方案比較文 ⭐⭐⭐⭐
+| 欄位 | 詳情 |
+|------|------|
+| 事件 | Copilot 2026-06-01 改 usage-based billing（AI Credits），開發者大量不滿 |
+| 搜尋需求 | 「GitHub Copilot 替代方案 2026」搜尋量爆發 |
+| 繁中缺口 | 英文比較文多，繁中幾乎空白 |
+| 機會 | 繁中比較文：Cursor/opencode/Claude Code/Windsurf，搭配各工具聯盟連結 |
+| 預估月收 | $300-1,500 |
+
+#### 5. 台灣中小企業 AI 導入數位產品 ⭐⭐⭐
+| 欄位 | 詳情 |
+|------|------|
+| 背景 | IDC：台灣2026企業AI導入加速；《AI基本法》2026-01施行；91%中小企業需輔導 |
+| 機會 | Gumroad：「台灣中小企業AI導入自評工具+SOP模板」$29-49 |
+| 目標受眾 | 中小企業主、AI應用規劃師備考者 |
+| 預估月收 | $400-2,000 |
+
+---
+
+### 二、📊 Gumroad 市場數據確認
+
+InsightRaider 追蹤 146,271 個產品，$206M+ 總收益：
+- Software Development：$65.8M 總收益（競爭激烈）
+- Writing & Publishing：$15,750/產品（226個產品，新手最佳切入）
+- 暢銷品類：AI Prompt Packs、Notion 模板、教學 ebook
+- 注意：Gumroad 收 10% 手續費，考慮 Lemon Squeezy
+
+---
+
+### 三、📌 新流量管道確認
+
+- **Threads**：台灣帳號 @aiposthub 做繁中AI內容，互動高 → 可複製此模式
+- **SkillsLLM.com / ClawHub**：工具目錄，可提交我們內容免費曝光
+
+---
+
+### 四、💡 高價值機會 → 已寫入 directives
+
+→ 見 directives/researcher-to-strategist-2026-06-27-round108.md
+
+---
