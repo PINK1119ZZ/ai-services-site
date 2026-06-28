@@ -3083,7 +3083,8 @@
         "就算題材本身是比較文，只要放進 04:00 UTC 批次導流格式，互動仍會接近歸零。",
         "本週 Graph API 雖接受 post_impressions_unique/post_clicks/post_reactions_by_type_total 欄位，但逐篇回傳仍為空值，依然無法誠實計算觸及率與互動率。",
         "本週沒有貼文突破 5% 觸及率，代表目前文案優化只能先追求止血，不足以證明出現真正的高擴散格式。",
-        "04:00 UTC 的外鏈導流格式（尤其是直接『Read the full article／完整文章看這裡』）幾乎可視為穩定失敗模板。"
+        "04:00 UTC 的外鏈導流格式（尤其是直接『Read the full article／完整文章看這裡』）幾乎可視為穩定失敗模板。",
+        "04:00 UTC 的英文外鏈導流貼若只有標題 + Read the full article，這個粉專目前幾乎穩定 0 互動。"
       ],
       "weeklyReviews": [
         {
@@ -3786,6 +3787,115 @@
             "04:00 UTC 若不做強鉤子改寫，直接降到 0-1 則測試貼，不再承擔互動目標。",
             "若要真正做觸及率 >5% / <1% 分層，下週前必須先補齊可用的 Facebook post insights 權限或改 API 設計。"
           ]
+        },
+        {
+          "week": "2026-W26",
+          "period": "2026-06-21 to 2026-06-28",
+          "generatedAt": "2026-06-28T13:00:00Z",
+          "summary": "本週共發 12 則貼文。已再次嘗試依任務要求用 Graph API 讀取 post_impressions / post_engaged_users / post_clicks，但 v20.0 仍回 valid insights metric 錯誤，逐篇 insights 端點也因 singular statuses API deprecated 無法使用，因此本週仍無法誠實計算觸及率與互動率。改用公開互動代理分析後，結果更集中：中午主貼文 7/7 有留言，04:00 UTC 的 5 則導流貼全數 0 互動。",
+          "totals": {
+            "posts": 12,
+            "publicInteractions": 8,
+            "postsWithAnyInteraction": 8,
+            "reachAvailablePosts": 0,
+            "clickMetricAvailablePosts": 0,
+            "winsOver5Percent": 0,
+            "failsUnder1Percent": 0
+          },
+          "topPostsByObservableInteraction": [
+            {
+              "created_time": "2026-06-21T12:00:06+0000",
+              "message_preview": "🔥 GitHub Copilot vs Cursor 2026: Which AI Coding Assistant Wins?  GitHub Copilot vs Cursor 2026 — honest head-to-head on autocomplete, multi-file edits, context windows, pricing, and which AI coding tool fits your workfl",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0
+            },
+            {
+              "created_time": "2026-06-22T12:00:06+0000",
+              "message_preview": "💡 Microsoft GitHub 供應鏈攻擊 2026：Claude Code / Gemini CLI 密碼遭竊風險完整解析  TeamPCP 駭客組織入侵 Microsoft GitHub，植入密碼竊取惡意程式於 73 個套件，Claude Code、Gemini CLI、VS Code 使用者直接受影響。繁中完整解析 + trivy 掃描教學，台灣 AI 開發者必讀。  📋 文章重點：   ✅ 事件全貌：到底發生了什麼？   ",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0
+            },
+            {
+              "created_time": "2026-06-23T12:00:09+0000",
+              "message_preview": "🔥 GitHub Copilot Agent Mode 評測 2026：Coding Agent、MCP 整合，vs Cursor Cloud Agents、Windsurf Cascade 完整比較，台灣開發者教學  GitHub Copilot Agent Mode 2026 完整評測：Copilot Coding Agent 自動處理 Issue→PR、VS Code Agent Mode 本地多步驟執行、MCP 支援、Next ",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0
+            },
+            {
+              "created_time": "2026-06-24T12:00:10+0000",
+              "message_preview": "🔥 Notion AI vs ChatGPT vs Microsoft Copilot 知識管理比較 2026：台灣上班族、學生怎麼選最強筆記 AI？  2026 最完整知識管理 AI 比較：Notion AI（$10/月）vs ChatGPT（$20-25/月）vs Microsoft 365 Copilot（$30/月）。繁中品質、筆記整合、協作功能全評測，台灣上班族、學生、創業者最佳選購指南。  📋 文章重點：   ✅ ⚡ 30 ",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0
+            },
+            {
+              "created_time": "2026-06-25T12:00:12+0000",
+              "message_preview": "🔍 Cloudways Review 2026: Is It Worth It? (Honest Deep Dive)  Cloudways review 2026 — honest verdict on pricing, speed, ease of use, support, and who it's actually for. We break down every plan and test it against the com",
+              "interactions": 1,
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0
+            }
+          ],
+          "weakPostsByObservableInteraction": [
+            {
+              "created_time": "2026-06-21T04:00:02+0000",
+              "message_preview": "📝 Replit Vs Cursor 2026  Read the full article 👇 https://pink1119zz.github.io/ai-tools-en/posts/replit-vs-cursor-2026.html  #AITools #Tech #AutoDevAI #ProductivityHacks",
+              "interactions": 0,
+              "comments": 0,
+              "reactions": 0,
+              "shares": 0
+            },
+            {
+              "created_time": "2026-06-25T04:00:03+0000",
+              "message_preview": "📝 Claude Code vs Cursor 2026: Which AI Coding Tool Actually Wins?  Deep comparison of Claude Code and Cursor — agentic workflows, context handling, pricing, and which developer gets the most value from each tool.  Read t",
+              "interactions": 0,
+              "comments": 0,
+              "reactions": 0,
+              "shares": 0
+            },
+            {
+              "created_time": "2026-06-28T04:00:02+0000",
+              "message_preview": "📝 GLM-5.2 繁中完整教學 2026：Z.ai $12.60/月，OpenClaw 設定指南  Z.ai GLM-5.2 繁中首發教學。Coding Plan Lite 年付 $12.60/月 = Claude Code 的 63%。SWE-bench Pro 62.1% 贏 GPT-5.5，1M context，MIT 開放。OpenClaw 官方指定支援工具。  完整文章看這裡 👇 https://autodev-ai.com",
+              "interactions": 0,
+              "comments": 0,
+              "reactions": 0,
+              "shares": 0
+            },
+            {
+              "created_time": "2026-06-28T04:00:14+0000",
+              "message_preview": "📝 9 Best AI Tools for Developers in 2026 (Ranked by Real Impact)  From coding assistants to cloud hosting, these are the AI tools developers are actually using to ship faster in 2026.  Read the full article 👇 https://pin",
+              "interactions": 0,
+              "comments": 0,
+              "reactions": 0,
+              "shares": 0
+            }
+          ],
+          "blockers": [
+            "Facebook Graph API v20.0 對 /{page_id}/posts?fields=insights.metric(post_impressions,post_engaged_users,post_clicks) 仍回 (#100) The value must be a valid insights metric。",
+            "改用 /{post_id}/insights 逐篇查詢時，又回 (#12) singular statuses API is deprecated for versions v2.4 and higher。",
+            "因此本週無法完成任務要求中的「觸及率 > 5% / < 1%」與「觸及率 < 1%」硬性分類，只能以公開互動做代理分析並把 blocker 寫入策略。"
+          ],
+          "newRulesAdded": [
+            "04:00 UTC 的英文外鏈導流貼若只有標題 + Read the full article，這個粉專目前幾乎穩定 0 互動；要嘛改寫成繁中決策句，要嘛停發。"
+          ],
+          "observations": [
+            "中午主貼文 7 則中 7 則都有至少 1 則留言；04:00 UTC 的 5 則外鏈導流貼全部 0 互動。",
+            "本週有互動的貼文仍集中在比較、評測、風險提醒、價格差、值不值得等明確 verdict 題材。",
+            "單純英文標題 + 外鏈 CTA 的 04:00 UTC 貼文，現在幾乎可直接視為失敗模板。"
+          ],
+          "nextWeekActions": [
+            "保留中午主時段給比較 / 評測 / 風險提醒 / 價格差 / 值不值得內容。",
+            "把 04:00 UTC 英文外鏈導流貼降到 0，除非先改寫成繁中決策句並帶明確數字鉤子。",
+            "若要恢復真實觸及率與互動率計算，需先改 Facebook insights 讀法或補足可用權限。"
+          ]
         }
       ]
     },
@@ -3819,7 +3929,8 @@
         "優先在文案前兩行加入具體數字（價格、星數、節省比例、名次），提高停留機率。",
         "Facebook 中午主貼文若是英文，也要保留比較 / 排名 / verdict 結構，避免退化成單純外鏈導流。",
         "04:00 UTC 貼文若只有「Read the full article / 完整文章看這裡」，幾乎可預期互動歸零；這種格式應停發或重寫。",
-        "同週最值得保留的主題框架仍是：比較、評測、排名、價格差、值不值得；純教學或新聞摘要需要先包成明確決策句。"
+        "同週最值得保留的主題框架仍是：比較、評測、排名、價格差、值不值得；純教學或新聞摘要需要先包成明確決策句。",
+        "停發 04:00 UTC 的英文標題直貼外鏈文；若一定要發，先改寫成繁中決策句 + 具體數字鉤子。"
       ]
     }
   },
