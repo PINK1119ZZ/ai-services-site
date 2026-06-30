@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-06-29T01:30:00Z",
+  "lastUpdated": "2026-06-30T00:00:00Z",
   "lastAuditDate": "2026-06-29",
   "lastResearchDate": "2026-06-28",
   "lastResearchRound": 110,
@@ -14,7 +14,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-06-29"
+      "lastChecked": "2026-06-30"
     },
     "ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
@@ -23,7 +23,7 @@
       "lastNewArticle": "2026-04-12",
       "lastRefresh": "2026-04-12",
       "issues": [],
-      "lastChecked": "2026-06-29"
+      "lastChecked": "2026-06-30"
     },
     "ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
@@ -48,7 +48,7 @@
       "issues": [
         "2026-04-30 health check: all tracked ai-tools-tw URLs healthy (200); mitigated Gumroad n8n product 404 by replacing direct purchase CTAs on landing page with coming-soon notice and tutorial links until Ivan uploads the product."
       ],
-      "lastChecked": "2026-06-29"
+      "lastChecked": "2026-06-30"
     },
     "autodev_ai": {
       "url": "https://autodev-ai.com",
@@ -59,7 +59,7 @@
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
       ],
-      "lastChecked": "2026-06-29"
+      "lastChecked": "2026-06-30"
     }
   },
   "affiliateLinks": {
@@ -3054,6 +3054,28 @@
         "failures": 0,
         "fixes": 0
       }
+    },
+    {
+      "timestamp": "2026-06-30T00:00:00Z",
+      "agent": "content-ops",
+      "session": "cron:a711de3e-a918-412b-a8c5-eea36316d9ce site-health",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json",
+        "Reviewed directives/strategist-weekly-2026-06-29.md and directives/researcher-to-strategist-2026-06-28-round110.md",
+        "Checked recent agentLog to avoid duplicate work",
+        "Curl checked 15 deduped tracked URLs from site records (3 site roots + 12 tracked ai-tools-tw pages/groups)",
+        "Confirmed all 15 checked URLs returned HTTP 200",
+        "Applied strategist content-ops directive CO1: replaced broken agent-reach GitHub clone instructions with temporary 404 migration notice in blog/agent-reach-social-media-ai-2026.html",
+        "No other site issues required repair and no new cross-agent directives were added",
+        "Updated sites.lastChecked to 2026-06-30 and appended dailyLog entry"
+      ],
+      "results": {
+        "checkedUrls": 15,
+        "http200": 15,
+        "failures": 0,
+        "fixes": 1
+      }
     }
   ],
   "fbPosted": [
@@ -4788,6 +4810,31 @@
         "knownOpenIssue": "gumroad-n8n-templates external product upload still pending Ivan; public landing-page mitigation remains healthy (200)",
         "notes": [
           "Current strategist priorities (GLM-5.2, Browse AI, Vibe-Trading, ai-website-cloner-template) remain content execution tasks rather than health incidents."
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-30T00:00:00Z",
+      "agent": "content-ops",
+      "session": "site-health-daily",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json",
+        "Reviewed directives/strategist-weekly-2026-06-29.md and directives/researcher-to-strategist-2026-06-28-round110.md",
+        "Checked recent agentLog to avoid duplicate work",
+        "Curl checked 15 deduped tracked URLs from site records (3 site roots + 12 tracked ai-tools-tw pages/groups)",
+        "Confirmed all 15 checked URLs returned HTTP 200",
+        "Applied strategist content-ops directive CO1: replaced broken agent-reach GitHub clone instructions with temporary 404 migration notice in blog/agent-reach-social-media-ai-2026.html",
+        "No other site issues required repair and no new cross-agent directives were added",
+        "Updated sites.lastChecked to 2026-06-30 and appended dailyLog entry"
+      ],
+      "results": {
+        "checkedUrls": 15,
+        "http200": 15,
+        "failures": 0,
+        "fixes": 1,
+        "notes": [
+          "All tracked URLs were healthy; applied temporary agent-reach 404 notice pending researcher confirmation of the new official repo URL."
         ]
       }
     }

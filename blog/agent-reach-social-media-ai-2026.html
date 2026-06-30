@@ -177,12 +177,14 @@ pip install claude-code</code></pre>
 
   <div class="step-box">
     <div class="step-num">步驟二 — 安裝 Agent-Reach</div>
-    <p>Agent-Reach 作為 Claude Code 的 Agent Skill 安裝，指令如下：</p>
-    <pre><code># 克隆到本地 skills 目錄
-git clone https://github.com/agent-reach/agent-reach ~/.claude/skills/agent-reach
+    <p><strong>注意：</strong> 原文引用的 GitHub 倉庫 <code>agent-reach/agent-reach</code> 目前已 404，代表專案可能已遷移、改名或暫停公開。正式新網址確認前，請先以「搜尋 Agent-Reach 官方最新安裝方式」為準，不要直接複製舊的 clone 指令。</p>
+    <pre><code># 舊倉庫目前已 404，先不要直接使用這條：
+# git clone https://github.com/agent-reach/agent-reach ~/.claude/skills/agent-reach
 
-# 或透過 Claude Code 內建 skill 管理器
-claude skill install agent-reach</code></pre>
+# 暫時建議：
+# 1. 先搜尋 Agent-Reach 官方最新倉庫 / 官網
+# 2. 再依最新文件安裝
+# 3. 或等待本文更新後的正式安裝指令</code></pre>
   </div>
 
   <div class="step-box">
@@ -359,7 +361,8 @@ claude skill install agent-reach</code></pre>
   <h3>2. 安裝環境</h3>
   <pre><code">sudo apt update && sudo apt install -y nodejs npm git
 npm install -g @anthropic-ai/claude-code
-git clone https://github.com/agent-reach/agent-reach ~/.claude/skills/agent-reach</code></pre>
+# 注意：原本文章中的 agent-reach GitHub 倉庫目前已 404
+# 請先查找 Agent-Reach 官方最新倉庫，再補上正確 clone 指令</code></pre>
 
   <h3>3. 設定排程腳本</h3>
   <pre><code">#!/bin/bash
