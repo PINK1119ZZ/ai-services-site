@@ -4,6 +4,103 @@
 
 ---
 
+## 2026-07-04（Researcher Round 108：GitHub Trending AI + Reddit LocalLLaMA + AI Affiliate Programs 30%+ 掃描 + HackerNews AI Tools）
+
+> 本輪執行時間：2026-07-04 00:30 UTC | 搜尋範圍：GitHub trending AI weekly、Reddit r/LocalLLaMA July、AI Affiliate Programs 30%+ recurring、HackerNews AI tools
+
+### 💰 變現評估表（本輪新發現）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|----------|---------|
+| 2026-07-04 | **Dify 完整評測 2026**（$30M 融資，開源 AI workflow 平台，30-50% recurring affiliate 確認） | `dify 評測 繁中`、`dify vs n8n 比較 2026`、`ai workflow platform 台灣`、`dify 教學` | 高（GitHub 4.3M+ AI repos 中持續前列，開源 AI workflow 最熱工具） | **Dify Affiliate 30-50% recurring**（官方確認，待 Ivan 申請）+ n8n Cloud 30% 比較頁雙聯盟 | **$300-800/月**（30-50% recurring 是 AI workflow 類最高；Dify vs n8n 比較頁 = 雙聯盟導流） | ai-tools-tw（⭐⭐⭐ 最高優先） |
+| 2026-07-04 | **LangChain 開發者教學 2026**（GitHub AI 框架 Top 3，DeepSeek-V3/RAGFlow 等均基於 LangChain） | `langchain 教學 繁中`、`langchain vs langflow 比較`、`langchain 台灣開發者入門` | 高（AI 開發者必學框架，ByteByteGo Newsletter 2026 確認持續熱度） | DigitalOcean $200（LangChain 部署場景）+ DataCamp AI 開發課程聯盟 | **$200-500/月**（開發者高意圖受眾；DO 自架場景自然） | autodev-ai |
+| 2026-07-04 | **Ollama 完整教學 2026**（GitHub trending 持續前列，本地 LLM 執行工具，LocalLLaMA 社群核心工具） | `ollama 教學 繁中`、`ollama mac 安裝 2026`、`本地 llm 自架 免費`、`ollama vs lm studio` | 高（Reddit r/LocalLLaMA 7月持續討論「local AI 是否成為 default」話題，Ollama 是核心工具） | DigitalOcean $200（Ollama server 自架）+ Open WebUI 教學導流 | **$200-600/月**（LocalLLaMA 趨勢確認；DO 自架場景完美匹配） | autodev-ai |
+| 2026-07-04 | **Writesonic 完整評測 2026**（AI 寫作工具，**30% lifetime recurring affiliate**，最高可達 40%） | `writesonic 評測 繁中`、`writesonic vs jasper 比較`、`ai 寫作工具 台灣 2026` | 中高（AI 寫作工具市場成熟；繁中評測競爭中等） | **Writesonic Affiliate 30% lifetime recurring**（最高 40% at top tier）+ Jasper 25% 比較頁雙聯盟 | **$200-600/月**（30% lifetime = 真正長期複利；寫作工具受眾廣） | ai-tools-tw（⭐⭐⭐ 高優先） |
+| 2026-07-04 | **Kit (ConvertKit) 完整評測 2026**（**50% recurring 前 12 個月 + 持續分級佣金**，email marketing 工具） | `kit convertkit 評測`、`convertkit 台灣`、`email 行銷工具 ai 2026`、`kit vs mailchimp 比較` | 中（創作者/email 行銷受眾） | **Kit Affiliate 50% recurring 前 12 個月 + 持續分級**（業界最高 email 工具佣金）+ Systeme.io 60% lifetime 比較 | **$250-700/月**（50% recurring 前 12m 是 email 工具最高；創作者受眾高轉換） | ai-tools-tw（⭐⭐⭐） |
+| 2026-07-04 | **Inkfluence AI 評測 2026**（AI 書籍創作，30% recurring 12 個月，針對作家/出版者） | `inkfluence ai 評測`、`ai 寫書工具 台灣`、`inkfluence ai 繁中` | 低-中（利基市場，但藍海） | **Inkfluence AI Affiliate 30% recurring 12 個月**（Premium 年費最高 $72/次佣金）+ Sudowrite 25% 比較 | **$100-300/月**（利基但藍海；作家受眾高 ARPU） | ai-tools-tw（⭐⭐） |
+| 2026-07-04 | **Claude Code vs Cursor vs Gemini CLI 2026 終極比較**（AI coding tools 三強，2026 持續更新比較頁） | `claude code vs cursor 2026`、`ai coding assistant 比較 台灣`、`gemini cli vs cursor` | 高（常青關鍵字，HN/Reddit 持續討論） | Claude Pro/Max + Cursor 雙聯盟 + DigitalOcean 自架 Gemini CLI 教學 | **$400-1000/月**（常青比較頁；三工具覆蓋最廣受眾） | autodev-ai（⭐⭐⭐ 常青旗艦文） |
+
+### 📊 詳細分析
+
+**1. Dify 30-50% recurring affiliate 確認（本輪最大新發現）**
+- Dify 是 2026 開源 AI workflow 平台融資王（$30M），ByteByteGo Newsletter 2026 AI GitHub Repos 確認持續前列
+- 官方確認 30-50% recurring affiliate 計畫（待 Ivan 申請）
+- Dify vs n8n 是台灣開發者最常問的 AI workflow 選擇問題，繁中比較文幾乎空白
+- **變現策略**：Dify 30-50% + n8n Cloud 30% 雙聯盟比較頁 = 兩個高佣金工具一篇涵蓋
+- ⭐⭐⭐ P1-URGENT — 立即申請 Dify affiliate，寫比較文
+
+**2. Writesonic 30% lifetime recurring + Jasper 25% = AI 寫作工具雙聯盟黃金組合**
+- Writesonic：30% lifetime recurring（最高 40% at top tier）
+- Jasper：25% recurring 12 個月（已在 topic-ideas.md 多次確認）
+- 兩者都是 AI 寫作工具市場 Top 3（另一個是 Copy.ai 45% 第一年）
+- 「Writesonic vs Jasper vs Copy.ai 2026 三方比較」= 三重聯盟導流頁
+- ⭐⭐⭐ P1-HIGH — Writesonic 繁中評測空白，立即申請
+
+**3. Kit (ConvertKit) 50% recurring 前 12 個月是 email 工具最高佣金**
+- Kit（原 ConvertKit）：50% recurring 前 12 個月 + 持續分級佣金（終身）
+- 這是 email marketing 工具業界最高佣金結構之一
+- 創作者/部落客/Newsletter 受眾完美匹配我們的 ai-tools-tw 受眾
+- Kit vs Systeme.io（60% lifetime）比較頁 = email 工具雙聯盟
+- ⭐⭐⭐ P1-HIGH — 繁中 Kit 評測完全空白
+
+**4. Reddit LocalLLaMA 2026 July：Local AI 是否成為 Default 的討論確認市場趨勢**
+- r/LocalLLaMA 7月討論：「Is 2026 the Year Local AI Becomes the Default (Not the Alternative)?」
+- Qwen 3 Coder 80B topping download charts、4B–8B 模型手機可跑
+- Ollama 是 local LLM 執行的核心工具，繁中深度教學仍然稀少
+- **變現角度**：Ollama 教學 → DigitalOcean VPS 自架 Ollama server（完美 DO 聯盟場景）
+- ⭐⭐⭐ P1-HIGH — Local AI 趨勢確認，Ollama 教學文立即寫
+
+**5. GitHub Trending AI 2026 持續觀察（OSS Insight 數據）**
+- AI Agents (46.7K stars) > LLM Tools (21K) > Coding Agents (17.2K) > RAG (14K) > MCP (6.3K)
+- Dify 持續在 AI Workflow 分類前列
+- LangChain 在 RAG/Multi-Agent 分類持續領先
+- DeepSeek-V3（GitHub trending 2026）MoE 架構開源，ByteByteGo Newsletter 重點報導
+- **策略**：我們的 autodev-ai 主站應持續覆蓋 GitHub Trending AI 前 10 工具的繁中教學
+
+**6. HackerNews AI Tools 討論 2026 觀察**
+- Claude Code、Codex、Cursor 三者討論熱度持續
+- Hacker News 用戶關注「AI coding assistant quotas」話題（Copilot 配額限制問題）
+- 「Skills Officially Comes to Codex」是 HN 近期高分 AI agent 討論
+- **策略**：HN 討論的工具 = 開發者高意圖受眾，繁中教學空白 = 我們的機會
+
+### 🚨 高價值發現（30%+ recurring affiliate 新確認）
+
+| 工具 | 佣金結構 | 申請連結 | 優先度 | 備註 |
+|------|---------|---------|-------|------|
+| **Dify** | 30-50% recurring | dify.ai/affiliate（待 Ivan 申請確認） | 🔴 URGENT | 開源 AI workflow 平台，$30M 融資，與 n8n 雙聯盟比較頁 |
+| **Writesonic** | 30% lifetime recurring（最高 40%） | writesonic.com/affiliate | 🔴 HIGH | AI 寫作工具，與 Jasper 25% 雙聯盟比較頁 |
+| **Kit (ConvertKit)** | 50% recurring 前 12m + 持續分級 | kit.com/affiliates | 🔴 HIGH | Email 工具最高佣金，創作者受眾 |
+| **Inkfluence AI** | 30% recurring 12 個月 | inkfluenceai.com/affiliate | 🟠 MEDIUM | AI 書籍創作，利基但藍海 |
+
+### 📌 本輪高優先指令（→ strategist）
+
+**P1-URGENT：Dify Affiliate 申請 + Dify vs n8n 比較文**
+- Dify 30-50% recurring 是 AI workflow 類最高佣金
+- 與 n8n Cloud 30% 做雙聯盟比較頁
+- 繁中「dify vs n8n」完全空白
+- 台灣開發者 AI workflow 選擇必經問題
+
+**P1-HIGH：Writesonic 繁中評測 + Writesonic vs Jasper 比較文**
+- Writesonic 30% lifetime recurring
+- Jasper 25% recurring 12m（已確認）
+- AI 寫作工具雙聯盟比較頁
+
+**P1-HIGH：Kit (ConvertKit) 繁中評測**
+- 50% recurring 前 12 個月是 email 工具最高
+- 創作者/Newsletter 受眾完美匹配
+- 繁中評測完全空白
+
+**P1-HIGH：Ollama 完整教學 2026**
+- Reddit LocalLLaMA 確認 local AI 趨勢
+- Ollama 是核心工具
+- DigitalOcean 自架場景完美匹配
+
+**P2：Claude Code vs Cursor vs Gemini CLI 比較文更新**
+- 常青比較頁，2026 持續更新
+- 三工具覆蓋最廣 AI coding 受眾
+
+---
+
 ## 2026-06-27（Researcher Round 107：OpenMontage 開源影片製作 + Krea 2 RHR Open Weights + Liquid AI LFM2.5-230M + OpenSEO MCP + Xiaomi HarnessX + NanoClaw×JFrog + Qwen3.7-Plus GUI Agent + Z.AI GLM-5.2 + Claude Tag Slack替代 + Anthropic FAA監管呼籲）
 
 > 本輪執行時間：2026-06-27 00:30 UTC | 搜尋範圍：VentureBeat Jun 25-27、GitHub trending weekly Jun 27、Product Hunt Jun 2026 月榜、HN/Reddit AI
