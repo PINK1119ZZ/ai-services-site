@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-07-05T10:30:00Z",
+  "lastUpdated": "2026-07-05T13:00:00Z",
   "lastAuditDate": "2026-07-01",
   "lastResearchDate": "2026-07-04",
   "lastResearchRound": 108,
@@ -1948,6 +1948,30 @@
   ],
   "agentLog": [
     {
+      "timestamp": "2026-07-05T13:00:00Z",
+      "agent": "fb-weekly-review",
+      "session": "cron:0f6b51a1-2f06-4c52-b8d9-0585c18b8aba fb-weekly-review",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json",
+        "Read /root/.openclaw/fb-config.json",
+        "Queried Facebook Graph API for this week posts and insights",
+        "Confirmed Graph API blocker persists: post_impressions/post_engaged_users invalid metric; post_clicks* and post_reactions_by_type_total return empty data",
+        "Computed observable public interactions proxy (comments + reactions + shares) for 20 posts",
+        "Updated fbStrategy.performance.weeklyReviews with 2026-W27 review",
+        "Appended new failPatterns and autoDevAIStrategy.postRules based on this week results"
+      ],
+      "findings": {
+        "posts": 21,
+        "publicInteractions": 8,
+        "postsWithAnyInteraction": 8,
+        "middayPostsWithInteraction": 8,
+        "fourAmPosts": 13,
+        "fourAmPostsWithInteraction": 0
+      },
+      "notes": "Could not honestly calculate reach rate or engagement rate because Graph API insights remain unavailable for per-post reach/engaged users/clicks. Used public interactions proxy and wrote blocker into strategy to preserve learning loop integrity."
+    },
+    {
       "timestamp": "2026-07-05T10:30:00Z",
       "agent": "affiliate-monitor",
       "session": "cron:5ce35778-401d-4421-8202-c3a05a71289d affiliate-monitor (Sun 10:00)",
@@ -3639,7 +3663,10 @@
         "本週 Graph API 雖接受 post_impressions_unique/post_clicks/post_reactions_by_type_total 欄位，但逐篇回傳仍為空值，依然無法誠實計算觸及率與互動率。",
         "本週沒有貼文突破 5% 觸及率，代表目前文案優化只能先追求止血，不足以證明出現真正的高擴散格式。",
         "04:00 UTC 的外鏈導流格式（尤其是直接『Read the full article／完整文章看這裡』）幾乎可視為穩定失敗模板。",
-        "04:00 UTC 的英文外鏈導流貼若只有標題 + Read the full article，這個粉專目前幾乎穩定 0 互動。"
+        "04:00 UTC 的英文外鏈導流貼若只有標題 + Read the full article，這個粉專目前幾乎穩定 0 互動。",
+        "本週 Graph API 仍無法拿到任何可用的 per-post reach / engaged users / clicks；post_impressions 與 post_engaged_users 仍 invalid metric，post_clicks* 仍回空陣列。",
+        "本週 04:00 UTC 的 12 則外鏈導流貼全部 0 互動，這個時段目前可視為穩定失敗。",
+        "就算題材本身不差，只要是 04:00 UTC 的外鏈導流格式且開頭沒有決策鉤子，互動幾乎直接歸零。"
       ],
       "weeklyReviews": [
         {
@@ -4451,6 +4478,178 @@
             "把 04:00 UTC 英文外鏈導流貼降到 0，除非先改寫成繁中決策句並帶明確數字鉤子。",
             "若要恢復真實觸及率與互動率計算，需先改 Facebook insights 讀法或補足可用權限。"
           ]
+        },
+        {
+          "week": "2026-W27",
+          "period": "2026-06-28 to 2026-07-05",
+          "generatedAt": "2026-07-05T13:00:00Z",
+          "summary": "本週共發 20 則貼文。Facebook Graph API 這週仍無法提供可用的 per-post reach / engaged users / clicks：post_impressions、post_engaged_users 直接回 valid insights metric 錯誤，post_clicks / post_clicks_by_type / post_reactions_by_type_total 則逐篇回空陣列。因此本週仍無法誠實計算任務要求的觸及率與互動率；改以公開互動代理分析後，結果延續上週：中午主貼文有互動，04:00 UTC 外鏈導流貼幾乎全滅。",
+          "totals": {
+            "posts": 21,
+            "publicInteractions": 8,
+            "postsWithAnyInteraction": 8,
+            "reachAvailablePosts": 0,
+            "clickMetricAvailablePosts": 0,
+            "winsOver5Percent": 0,
+            "failsUnder1Percent": 0
+          },
+          "topPostsByObservableInteraction": [
+            {
+              "id": "1056283757571950_122117316392778539",
+              "created_time": "2026-06-28T12:00:06+0000",
+              "message_preview": "💡 OpenAI 上市 S  OpenAI 提交 S-1 申報文件，IPO 倒數計時。台灣用戶現在該怎麼看待 ChatGPT Plus 訂閱？AI 工具投資邏輯、OpenAI vs 競爭對手分析、Anthropic Claude vs Google Gemini 格局全解析。  📋 文章重點：   ✅ OpenAI 上市 S-1 申報完整分析 2026：現在該訂 ChatGPT Plus 嗎？AI 工具投資邏輯全解析   ✅ OpenA",
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "interactions": 1,
+              "whyItWorked": [
+                "中午主時段",
+                "比較／評測／值不值得框架明確",
+                "前段有具體數字或明確利益點"
+              ]
+            },
+            {
+              "id": "1056283757571950_122117431028778539",
+              "created_time": "2026-06-29T12:00:08+0000",
+              "message_preview": "🔍 DataCamp 評測 2026：值得訂閱嗎？台灣人學 AI 資料科學的最佳平台？  DataCamp 2026 完整評測：課程品質、定價方案、vs Coursera vs Udemy，台灣用戶適合嗎？資料科學、AI 學習路徑完整解析，一篇告訴你值不值得訂閱。  📋 文章重點：   ✅ DataCamp 評測 2026：值得訂閱嗎？台灣人學 AI 和資料科學的最佳平台？   ✅ 🎓 立即免費試用 DataCamp   ✅ DataC",
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "interactions": 1,
+              "whyItWorked": [
+                "中午主時段",
+                "比較／評測／值不值得框架明確",
+                "前段有具體數字或明確利益點"
+              ]
+            },
+            {
+              "id": "1056283757571950_122117550374778539",
+              "created_time": "2026-06-30T12:00:39+0000",
+              "message_preview": "🔍 DigitalOcean Review 2026: Is It Worth It for Developers &amp; Indie Hackers?  DigitalOcean review 2026 — honest verdict on Droplets, App Platform, managed databases, pricing, support, and who it's actually built for. W",
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "interactions": 1,
+              "whyItWorked": [
+                "中午主時段"
+              ]
+            },
+            {
+              "id": "1056283757571950_122117654864778539",
+              "created_time": "2026-07-01T12:00:29+0000",
+              "message_preview": "📚 NVIDIA SkillSpector 繁中教學 2026：26% AI Skills 含漏洞，一行指令掃描你的 Claude Code  NVIDIA SkillSpector 完整繁中教學 2026。Apache 2.0 開源，64 個漏洞模式，掃描 Claude Code / Codex / OpenClaw Agent Skills 是否含惡意程式。26.1% skills 含漏洞，台灣工程師安全必讀。  📋 文章重點：  ",
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "interactions": 1,
+              "whyItWorked": [
+                "中午主時段",
+                "前段有具體數字或明確利益點"
+              ]
+            },
+            {
+              "id": "1056283757571950_122117774072778539",
+              "created_time": "2026-07-02T12:00:07+0000",
+              "message_preview": "💡 小店家也能自動化！5 個 AI 工具幫你省時間降成本  中小企業自動化完整指南：5 個實用 AI 自動化工具（LINE 自動回覆、預約系統、通知機器人、自動報表、AI 客服），每月省 40+ 小時，ROI 分析與實際案例。  📋 文章重點：   ✅ 小店家也能自動化！   ✅ 為什麼小店家更需要自動化？   ✅ 工具 1：LINE 自動回覆機器人   ✅ 解決什麼問題？   ✅ 能省多少時間？  你的選擇是什麼？一起聊聊 👇  #A",
+              "comments": 1,
+              "reactions": 0,
+              "shares": 0,
+              "interactions": 1,
+              "whyItWorked": [
+                "中午主時段",
+                "比較／評測／值不值得框架明確",
+                "前段有具體數字或明確利益點"
+              ]
+            }
+          ],
+          "weakPostsByReachRate": [
+            {
+              "id": "1056283757571950_122117277722778539",
+              "created_time": "2026-06-28T04:00:02+0000",
+              "message_preview": "📝 GLM-5.2 繁中完整教學 2026：Z.ai $12.60/月，OpenClaw 設定指南  Z.ai GLM-5.2 繁中首發教學。Coding Plan Lite 年付 $12.60/月 = Claude Code 的 63%。SWE-bench Pro 62.1% 贏 GPT-5.5，1M context，MIT 開放。OpenClaw 官方指定支援工具。  完整文章看這裡 👇 https://autodev-ai.com",
+              "comments": 0,
+              "reactions": 0,
+              "shares": 0,
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 外鏈導流時段持續偏弱",
+                "開頭仍像導流貼，社群原生感偏弱"
+              ]
+            },
+            {
+              "id": "1056283757571950_122117277764778539",
+              "created_time": "2026-06-28T04:00:14+0000",
+              "message_preview": "📝 9 Best AI Tools for Developers in 2026 (Ranked by Real Impact)  From coding assistants to cloud hosting, these are the AI tools developers are actually using to ship faster in 2026.  Read the full article 👇 https://pin",
+              "comments": 0,
+              "reactions": 0,
+              "shares": 0,
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 外鏈導流時段持續偏弱",
+                "開頭仍像導流貼，社群原生感偏弱",
+                "缺少強數字、強對比或明確 verdict"
+              ]
+            },
+            {
+              "id": "1056283757571950_122117507390778539",
+              "created_time": "2026-06-30T04:00:02+0000",
+              "message_preview": "📝 GEO 生成式引擎優化完整教學 2026：Blym AI + SEO 台灣實戰指南  GEO（Generative Engine Optimization）是什麼？2026年 AI 搜尋時代，ChatGPT/Claude/Perplexity 引用你的內容才是流量。Blym AI SEO writer 50% 佣金，台灣繁中完整教學。  完整文章看這裡 👇 https://autodev-ai.com/blog/geo-blym-s",
+              "comments": 0,
+              "reactions": 0,
+              "shares": 0,
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 外鏈導流時段持續偏弱",
+                "開頭仍像導流貼，社群原生感偏弱"
+              ]
+            },
+            {
+              "id": "1056283757571950_122117615126778539",
+              "created_time": "2026-07-01T04:00:03+0000",
+              "message_preview": "📝 Self-Harness 教學 2026：AI Agent 自動優化規則，性能提升 60%  Self-Harness 讓 AI Agent 自動重寫 harness rules，無需更強模型即可提升最高 60% 性能。台灣繁中首發完整教學。  完整文章看這裡 👇 https://autodev-ai.com/blog/self-harness-ai-agent-optimization-2026.html  #AI自動化 #科技 ",
+              "comments": 0,
+              "reactions": 0,
+              "shares": 0,
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 外鏈導流時段持續偏弱",
+                "開頭仍像導流貼，社群原生感偏弱"
+              ]
+            },
+            {
+              "id": "1056283757571950_122117615150778539",
+              "created_time": "2026-07-01T04:00:15+0000",
+              "message_preview": "📝 免費 AI 工具推薦 2026：10 個台灣用戶最值得用的免費 AI 工具  ChatGPT、Claude、Gemini、Perplexity、Canva AI、CapCut 等 10 款免費 AI 工具深度評測，台灣用戶實測心得與使用場景完整指南。  完整文章看這裡 👇 https://pink1119zz.github.io/ai-tools-tw/blog/free-ai-tools-taiwan-2026.html  #AI",
+              "comments": 0,
+              "reactions": 0,
+              "shares": 0,
+              "interactions": 0,
+              "whyItMissed": [
+                "04:00 UTC 外鏈導流時段持續偏弱",
+                "開頭仍像導流貼，社群原生感偏弱"
+              ]
+            }
+          ],
+          "blockers": [
+            "Facebook Graph API v20.0 對 /{page_id}/posts?fields=insights.metric(post_impressions,post_engaged_users,post_clicks) 仍回 (#100) The value must be a valid insights metric。",
+            "逐篇 /{post_id}/insights 測試時，post_clicks / post_clicks_by_type / post_reactions_by_type_total 雖可請求，但全部回空 data；post_impressions / post_engaged_users 仍直接 invalid metric。",
+            "因此本週無法完成任務要求中的「觸及率 > 5% / < 1%」硬性分類，只能以公開互動做代理分析並把 blocker 寫入策略。"
+          ],
+          "newRulesAdded": [
+            "中午主貼文若走教學題，也要先包成「值不值得學／能省多少／誰該用」的決策句，再進正文。",
+            "04:00 UTC 的外鏈導流格式（尤其是直接「Read the full article／完整文章看這裡」）幾乎可視為穩定失敗模板。",
+            "比較、評測、風險提醒、價格差、效率提升這五種框架，仍是目前最穩的 Facebook 主貼文格式。"
+          ],
+          "observations": [
+            "本週 8 則中午主貼文全部有至少 1 則留言；12 則 04:00 UTC 外鏈導流貼全部 0 互動。",
+            "有互動的內容仍集中在比較／評測／工具選擇／效率提升題材。",
+            "單純外鏈導流格式即使題材不差，只要放在 04:00 UTC 且沒有決策鉤子，互動幾乎歸零。"
+          ],
+          "nextWeekActions": [
+            "保留中午主時段給比較 / 評測 / 風險提醒 / 價格差 / 效率提升內容。",
+            "停發 04:00 UTC 的英文外鏈直貼；若一定要發，改成繁中決策句 + 具體數字鉤子。",
+            "若要恢復真實觸及率與互動率計算，需先更換 Facebook insights 取法或補足可用權限。"
+          ]
         }
       ]
     },
@@ -4485,7 +4684,9 @@
         "Facebook 中午主貼文若是英文，也要保留比較 / 排名 / verdict 結構，避免退化成單純外鏈導流。",
         "04:00 UTC 貼文若只有「Read the full article / 完整文章看這裡」，幾乎可預期互動歸零；這種格式應停發或重寫。",
         "同週最值得保留的主題框架仍是：比較、評測、排名、價格差、值不值得；純教學或新聞摘要需要先包成明確決策句。",
-        "停發 04:00 UTC 的英文標題直貼外鏈文；若一定要發，先改寫成繁中決策句 + 具體數字鉤子。"
+        "停發 04:00 UTC 的英文標題直貼外鏈文；若一定要發，先改寫成繁中決策句 + 具體數字鉤子。",
+        "中午主貼文若是教學題，前兩行也要先翻成「值不值得學／能省多少／誰該用」的決策句。",
+        "停發 04:00 UTC 的外鏈直貼格式；若一定要發，至少改成繁中決策句 + 數字鉤子，不再用「Read the full article／完整文章看這裡」開頭。"
       ]
     }
   },
