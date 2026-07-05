@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-07-05T00:00:00Z",
+  "lastUpdated": "2026-07-05T10:30:00Z",
   "lastAuditDate": "2026-07-01",
   "lastResearchDate": "2026-07-04",
   "lastResearchRound": 108,
@@ -65,37 +65,37 @@
   "affiliateLinks": {
     "digitalocean": {
       "url": "https://m.do.co/c/6121a295f624",
-      "lastChecked": "2026-06-28",
+      "lastChecked": "2026-07-05",
       "status": "active"
     },
     "hahow": {
       "url": "https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71",
-      "lastChecked": "2026-06-28",
+      "lastChecked": "2026-07-05",
       "status": "JS/bot protection (normal for affiliate networks)"
     },
     "n8n-cloud": {
       "url": "https://n8n.io/cloud/",
-      "lastChecked": "2026-06-28",
+      "lastChecked": "2026-07-05",
       "status": "active"
     },
     "systeme-io": {
       "url": "https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f",
-      "lastChecked": "2026-06-28",
+      "lastChecked": "2026-07-05",
       "status": "active"
     },
     "gumroad-n8n-templates": {
       "url": "https://xiaofan8.gumroad.com/l/n8n-tw-templates",
-      "lastChecked": "2026-06-28",
-      "status": "KNOWN ISSUE - Ivan upload pending 9+ weeks"
+      "lastChecked": "2026-07-05",
+      "status": "KNOWN ISSUE - Ivan upload pending 10+ weeks (404 confirmed 2026-07-05)"
     },
     "gumroad-agent-skills": {
       "url": "https://xiaofan8.gumroad.com/l/agent-skills-tw",
-      "lastChecked": "2026-06-28",
+      "lastChecked": "2026-07-05",
       "status": "active"
     },
     "gumroad-claude-crons": {
       "url": "https://xiaofan8.gumroad.com/l/kknad",
-      "lastChecked": "2026-06-28",
+      "lastChecked": "2026-07-05",
       "status": "active"
     },
     "cloudways": {
@@ -1947,6 +1947,42 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-07-05T10:30:00Z",
+      "agent": "affiliate-monitor",
+      "session": "cron:5ce35778-401d-4421-8202-c3a05a71289d affiliate-monitor (Sun 10:00)",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json",
+        "Curl checked primary affiliate links: DigitalOcean 200, n8n-cloud 200, systeme-io 200, gumroad-agent-skills 200, gumroad-claude-crons 200",
+        "Curl checked JS-protected: Hahow 403 (normal bot protection)",
+        "Curl checked known issue: gumroad-n8n-templates 404 (confirmed still down, Ivan upload pending 10+ weeks)",
+        "Found 3 articles referencing broken n8n-templates link: line-bot-tutorial-2026.html, n8n-automation-tutorial-2026.html, telegram-bot-business-guide.html",
+        "All 64 blog articles have at least one affiliate CTA (grep confirmed)",
+        "Updated affiliateLinks lastChecked and statuses",
+        "Updated agent-state.json",
+        "git add . && git commit && git push origin main"
+      ],
+      "findings": {
+        "totalAffiliateLinksChecked": 7,
+        "active200": 5,
+        "active403JSProtection": 1,
+        "404Known": 1,
+        "articlesScanned": 64,
+        "articlesWithAffiliateLinks": 64,
+        "articlesWithoutAffiliateLinks": 0,
+        "articlesReferencingBroken404": 3
+      },
+      "issues": [
+        {
+          "link": "xiaofan8.gumroad.com/l/n8n-tw-templates",
+          "status": "404 (10+ weeks)",
+          "severity": "HIGH - referenced in 3 articles: line-bot-tutorial-2026.html, n8n-automation-tutorial-2026.html, telegram-bot-business-guide.html",
+          "action": "Ivan URGENT: upload n8n-tw-templates to Gumroad immediately to stop revenue leak from 3 articles"
+        }
+      ],
+      "notes": "All active affiliate links healthy (5/7 200 OK, 1 JS protection normal). n8n-templates 404 persists 10+ weeks, blocking 3 LINE Bot articles. No new broken links found. All 64 articles confirmed to have affiliate CTAs."
+    },
     {
       "timestamp": "2026-07-04T05:00:00Z",
       "agent": "builder",
