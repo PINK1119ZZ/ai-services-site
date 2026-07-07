@@ -4065,3 +4065,145 @@ TechTimes已有完整警告文（中國伺服器資料法規問題），繁中�
 **hackernewstrends.com（工具）**
 - HN 791分，「Google Trends for Hacker News」，可追蹤18年HN評論趨勢
 - 未來研究工具使用，不做內容
+
+---
+
+## 2026-07-07（Researcher Round 114：GitHub Trending + 高佣金 AI Affiliate Programs 掃描）
+
+> 本輪執行時間：2026-07-07 00:30 UTC | 搜尋範圍：GitHub trending today、Firecrawl/Meetily/RuView等新工具、AI affiliate programs 25%+ recurring
+
+### 💰 變現評估表（本輪新發現）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|----------|---------|
+| 2026-07-07 | **Firecrawl 完整評測 2026**（146K+ GitHub stars，網頁抓取API，**25% recurring 12個月 + 15% 終身**） | `firecrawl 評測 繁中`、`firecrawl vs apify 比較`、`網頁抓取 api ai 2026`、`firecrawl 教學` | 高（AI agents/RAG必備工具，80K+公司使用含Shopify/Canva/Replit） | **Firecrawl Affiliate 25% recurring 12個月 + 15% 終身**（Standard $83/月 = $20.75/月 × 12 = $249首年；然後終身$12.45/月）+ Apify比較頁 | **$400-1200/月**（25%+15%終身是web scraping類最高；AI agent必備基礎設施） | autodev-ai（⭐⭐⭐⭐⭐ P0-URGENT 最高優先） |
+| 2026-07-07 | **Firecrawl vs Apify 2026 終極比較**（兩大網頁抓取API對決） | `firecrawl vs apify 比較`、`網頁抓取 api 選擇 2026`、`scraping api for ai agents` | 中高（開發者/AI builder核心需求） | Firecrawl 25%+15% + Apify affiliate（待確認）雙聯盟比較頁 | **$300-800/月**（雙聯盟導流；開發者受眾高轉換） | autodev-ai（⭐⭐⭐⭐ P1-HIGH） |
+| 2026-07-07 | **claude-video skill 教學 2026**（bradautomates，4.2K stars，讓Claude看任何影片） | `claude video skill 教學`、`claude code 看影片`、`bradautomates claude-video 繁中` | 中（Claude Code用戶利基需求） | 無直接affiliate，但可導流Groq Whisper API（免費tier）+ Claude Code教學 | **$50-150/月**（教學文SEO價值；間接導流Claude Pro） | autodev-ai（⭐⭐） |
+| 2026-07-07 | **Meetily 評測 2026**（15.6K stars，隱私優先AI會議助手，100%本地處理） | `meetily 評測 繁中`、`本地 ai 會議記錄 2026`、`meetily vs otter.ai 比較` | 低-中（隱私受眾利基但成長） | Meetily PRO $1/月（無affiliate確認，開源專案）；比較頁可放Otter.ai affiliate（如有） | **$50-200/月**（開源專案，低變現；但隱私議題SEO價值高） | ai-tools-tw（⭐⭐） |
+| 2026-07-07 | **taste-skill 教學 2026**（Leonxlnx，58.9K stars，讓AI有「品味」，停止生成無聊內容） | `taste skill claude code`、`ai 品味訓練 2026`、`設計感 ai 輸出` | 中（設計師/創作者受眾） | 無直接affiliate；教學文導流設計類AI工具（Framer/Webflow/v0） | **$100-300/月**（設計師受眾高價值；間接導流Framer 50%） | ai-tools-tw（⭐⭐⭐） |
+| 2026-07-07 | **agent-skills 完整教學 2026**（addyosmani，70.8K stars，AI coding agents工程技能庫） | `agent skills 教學 繁中`、`claude code skills 開發`、`ai coding agent 技能` | 高（AI coding開發者核心資源） | DigitalOcean $200（agent部署場景）+ Claude Code教學導流 | **$200-500/月**（開發者教學常青內容） | autodev-ai（⭐⭐⭐） |
+| 2026-07-07 | **RuView 評測 2026**（WiFi空間智能，透過WiFi訊號「看穿牆壁」，$9 ESP32實現） | `ruview 評測 繁中`、`wifi 空間感知 2026`、`esp32 ai 專案` | 低（極利基，但話題性高） | 無商業affiliate；Amazon ESP32硬體聯盟（低佣金） | **$30-100/月**（話題文SEO價值 > 變現；Maker社群流量） | tech-gadgets（⭐） |
+
+### 📊 詳細分析
+
+**1. ⭐⭐⭐⭐⭐ Firecrawl 25% recurring 12個月 + 15% 終身 = 網頁抓取API最高佣金（本輪最大發現）**
+- **GitHub trending #1**：146,240 stars，+867 today，網頁抓取/爬蟲API類最大開源專案
+- **客戶群證明市場需求**：80,000+ 公司使用，包括 Shopify、Canva、Replit、Zapier、Lovable
+- **affiliate結構超優**：
+  - 前12個月：25% recurring
+  - 12個月後：15% recurring 終身
+  - Standard方案 $83/月（年付）= 首年佣金 $249，然後每年 $149.4 終身
+  - 無內容要求，無審核門檻，24-48小時批准
+- **市場定位**：AI agents/RAG pipelines必備基礎設施，2026年「LLM時代的網頁資料API」
+- **競爭對手**：Apify（主要競爭者），但Apify affiliate政策不明確
+- **SEO機會**：
+  - 「Firecrawl 評測 2026 繁中」完全空白
+  - 「Firecrawl vs Apify 比較」英文有，繁中無
+  - 「AI agent 網頁抓取 API」相關繁中內容稀少
+- **變現路徑**：
+  1. Firecrawl 深度評測（定價/功能/使用案例）
+  2. Firecrawl vs Apify 比較頁（雙聯盟導流）
+  3. 「AI RAG pipeline 建立教學」系列文章（導流 Firecrawl + DigitalOcean VPS）
+- **P0-URGENT 行動**：立即申請 Firecrawl affiliate（https://www.firecrawl.dev/affiliates），寫評測文準備7月中旬發布
+
+**2. taste-skill：讓AI停止生成「boring generic slop」（設計師受眾高價值）**
+- GitHub trending，58,905 stars (+1,458 today)
+- 功能：透過簡單標註控制AI行為，讓AI輸出有「品味」，避免千篇一律的AI生成感
+- 受眾：設計師、創作者、前端開發者（對「AI生成感」最敏感的群體）
+- 變現角度：
+  - 無直接affiliate，但教學文可導流設計類AI工具
+  - Framer 50% recurring（設計師建站工具）
+  - Webflow affiliate（如有）
+  - v0.dev 使用教學（Vercel生態）
+- SEO價值：「如何讓AI輸出有設計感」「AI生成內容品味訓練」都是藍海關鍵字
+
+**3. claude-video：讓Claude Code「看」影片（4.2K stars，bradautomates）**
+- 功能：給Claude Code餵入YouTube/本地影片，讓Claude分析影片內容（frame + transcript）
+- 使用場景：
+  - 分析競爭對手影片創意
+  - 影片內容轉筆記
+  - 課程影片快速摘要
+- 成本：~$1/45分鐘影片（Groq Whisper通常免費tier涵蓋）
+- 變現：間接導流 Claude Pro/Groq API 教學
+
+**4. agent-skills（addyosmani，70.8K stars）：AI coding agents工程技能標準庫**
+- GitHub trending #2，+1,112 stars today
+- 定位：「Production-grade engineering skills for AI coding agents」
+- 支援：Claude Code、Codex、Gemini CLI、Cursor等
+- 變現角度：
+  - DigitalOcean VPS部署agent教學（完美DO聯盟場景）
+  - Claude Code深度教學系列
+  - 常青SEO價值：「AI coding agent skills開發」
+
+**5. Meetily（15.6K stars）：隱私優先AI會議助手，100%本地處理**
+- GitHub trending，Privacy-first AI meeting assistant
+- 特點：
+  - 4x faster Parakeet/Whisper本地轉錄
+  - 100%本地處理，無雲端依賴
+  - MIT開源，Community Edition免費
+  - PRO版 $1/月（進階功能）
+- 競爭對手：Otter.ai、Granola.ai（都是雲端訂閱制）
+- 變現：
+  - Meetily本身PRO $1/月（無affiliate確認）
+  - 比較頁可放Otter.ai affiliate（如有）
+  - 隱私議題SEO價值高，但直接變現低
+- 受眾：隱私敏感用戶、企業IT（不想會議內容上雲）
+
+**6. RuView：用WiFi「看穿牆壁」（極利基但話題性高）**
+- 功能：將普通WiFi訊號轉換為「空間智能」，偵測人、呼吸、心率，穿牆監測
+- 技術：ESP32（$9硬體）+ Hugging Face預訓練模型
+- 82.3%時序三元組準確率
+- 變現：
+  - 無商業affiliate
+  - Amazon ESP32聯盟（低佣金）
+  - 話題文SEO價值 > 直接變現
+  - Maker/IoT社群流量
+
+### 🎯 本輪P0-URGENT行動項
+
+1. **立即申請 Firecrawl affiliate**（https://www.firecrawl.dev/affiliates）
+   - 25% recurring 12個月 + 15% 終身 = web scraping API最高佣金
+   - 預計批准時間：24-48小時
+   - 寫好評測文初稿，等affiliate批准後立即發布
+
+2. **寫 directive 給 strategist**：
+   - Firecrawl 評測 2026（P0-URGENT，預估 $400-1200/月）
+   - Firecrawl vs Apify 比較頁（P1-HIGH，預估 $300-800/月）
+   - taste-skill 教學（P1，設計師受眾，間接導流Framer 50%）
+
+3. **SEO研究**：
+   - 「firecrawl 評測 繁中」競爭度（預期：空白）
+   - 「網頁抓取 api ai」搜尋量
+   - 「ai agent 資料來源」相關長尾
+
+### 📈 GitHub Trending 其他觀察
+
+- **system_prompts_leaks**（asgeirtj，51.5K stars）：洩漏的AI系統提示詞合集（Claude/GPT/Gemini等）
+  - 話題性高，但無商業變現角度
+  - 可作為「AI提示詞工程」教學補充資料
+  
+- **karakeep**（26.9K stars）：自架書籤管理工具（links/notes/images），AI自動標籤
+  - 開源自架工具，無affiliate
+  - DigitalOcean VPS自架教學機會（間接導流DO $200）
+
+- **firecrawl trending持續**：從6月至今持續在trending前列，證明市場需求強勁
+
+### 💡 市場趨勢觀察
+
+**1. AI infrastructure affiliate佣金結構變化**
+- Firecrawl 25%+15%終身：基礎設施類工具開始採用「前期高+終身低」結構
+- 對比傳統SaaS「30% recurring 12個月後歸零」，終身15%更有吸引力
+- 預測：2026下半年更多AI基礎設施工具會跟進此模式
+
+**2. 本地AI隱私需求上升**
+- Meetily（100%本地會議轉錄）15.6K stars快速成長
+- RuView（本地WiFi感知）話題性高
+- LocalLLaMA subreddit討論「local AI成為default」
+- → 「隱私優先AI工具」是2026下半年內容方向之一
+
+**3. AI coding agents生態成熟**
+- agent-skills（70.8K stars）：標準化技能庫
+- taste-skill（58.9K stars）：品味/風格控制
+- claude-video（4.2K stars）：多模態能力擴充
+- → AI coding agent「週邊工具」生態爆發，教學內容機會多
+

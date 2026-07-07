@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "lastUpdated": "2026-07-07T00:00:00Z",
+  "lastUpdated": "2026-07-07T00:30:00Z",
   "lastAuditDate": "2026-07-01",
-  "lastResearchDate": "2026-07-06",
-  "lastResearchRound": 113,
+  "lastResearchDate": "2026-07-07",
+  "lastResearchRound": 114,
   "sites": {
     "autodev-ai": {
       "url": "https://autodev-ai.com",
@@ -525,6 +525,14 @@
       "applyUrl": "https://market.partnerstack.com/program/runpod",
       "lastChecked": "2026-06-26",
       "notes": "R107新確認。佣金率較低（10%）但GPU雲端受眾（本地AI/Gemma/GLM/Llama部署者）與headroom+GLM-5.2文章CTA天然搭配。⭐⭐⭐ P2"
+    },
+    "firecrawl": {
+      "url": "https://www.firecrawl.dev/affiliates",
+      "status": "not yet applied - 25% recurring 12個月 + 15% recurring 終身；無內容要求，24-48h批准；Standard $83/月=首年$249/客，之後每年$149.4終身；待Ivan申請",
+      "commissionDetails": "25% for first 12 months then 15% lifetime recurring; no content requirements, no approvals; Standard $83/mo = $249 first year per referral; ongoing $12.45-$20.75/month per referral",
+      "applyUrl": "https://www.firecrawl.dev/affiliates",
+      "lastChecked": "2026-07-07",
+      "notes": "Round 114 P0-URGENT. Web scraping API 最高佣金結構。146K GitHub stars trending #1。80K+公司使用（Shopify/Canva/Replit/Zapier/Lovable）。AI agents/RAG必備基礎設施。繁中評測=0篇。⭐⭐⭐⭐⭐"
     }
   },
   "gscData": {
@@ -1955,6 +1963,72 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-07-07T00:30:00Z",
+      "agent": "researcher",
+      "session": "cron:4ba8b406-379d-4bf0-841e-ac393899ad97 ai-trend-hunter (daily 08:30)",
+      "round": 114,
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json — lastResearchRound was 113",
+        "Read directives/strategist-weekly-2026-06-29.md for carry-forward context",
+        "Read directives/researcher-to-strategist-2026-07-06-round113.md",
+        "Searched: GitHub trending July 7 2026",
+        "Searched: Product Hunt trending July 7 2026",
+        "Searched: GitHub trending AI July 7 2026",
+        "Searched: new AI affiliate programs 30% recurring July 2026",
+        "Searched: firecrawl affiliate program 2026",
+        "Searched: firecrawl API affiliate program commission 2026",
+        "Searched: meetily AI meeting assistant affiliate program",
+        "Searched: claude-video bradautomates affiliate monetization",
+        "Searched: RuView WiFi spatial intelligence affiliate revenue monetization",
+        "Searched: WorkBuddy AI team affiliate program commission 2026",
+        "Searched: HackerNews trending July 2026 AI tools",
+        "Fetched: github.com/trending (confirmed Firecrawl 146K stars +867 today, taste-skill 58.9K, agent-skills 70.8K)",
+        "CONFIRMED: Firecrawl 146,240 stars (+867 today) — trending #1",
+        "CONFIRMED: Firecrawl affiliate 25% recurring 12months + 15% lifetime — firecrawl.dev/affiliates",
+        "CONFIRMED: taste-skill 58,905 stars (+1,458 today)",
+        "CONFIRMED: agent-skills 70,846 stars (+1,112 today)",
+        "CONFIRMED: claude-video 4,200 stars (bradautomates)",
+        "CONFIRMED: Meetily 15.6K stars — privacy-first AI meeting assistant, 100% local",
+        "CONFIRMED: RuView — WiFi spatial intelligence, see through walls with ESP32",
+        "NEW: Firecrawl 25%+15% lifetime is web scraping API highest commission, 80K+ companies",
+        "NEW: taste-skill is designer audience new tool",
+        "Wrote topic-ideas.md Round 114 data",
+        "Wrote directives/researcher-to-strategist-2026-07-07-round114.md",
+        "Updated agent-state.json: lastResearchRound=114, lastResearchDate=2026-07-07, lastUpdated, agentLog",
+        "git add . && git commit && git push origin main"
+      ],
+      "topFindings": [
+        "Firecrawl 25% recurring 12months + 15% lifetime = web scraping API highest commission (round's biggest find)",
+        "Firecrawl 146K stars trending #1, 80K+ companies (Shopify/Canva/Replit/Zapier/Lovable), Chinese review=0 pages",
+        "taste-skill 58.9K stars: designer/creator new audience, indirect Framer 50% funnel",
+        "claude-video 4.2K stars: let Claude watch videos, indirect Claude Pro + Groq Whisper funnel",
+        "Meetily 15.6K stars: privacy-first AI meeting assistant, 100% local, PRO $1/month (no affiliate confirmed)"
+      ],
+      "affiliatesNewlyConfirmed": [
+        {
+          "name": "Firecrawl",
+          "commissionDetails": "25% recurring first 12 months + 15% recurring lifetime; no content requirements, 24-48h approval; Standard $83/month = $249 first year per referral, then $149.4/year lifetime",
+          "applyUrl": "https://www.firecrawl.dev/affiliates",
+          "notes": "Round 114 biggest find. 25%+15% lifetime is web scraping API highest commission structure. 80,000+ companies. AI agents/RAG pipelines essential infrastructure. Chinese review=0 pages. P0-URGENT"
+        }
+      ],
+      "backlogs": {
+        "firecrawl-review": "NEW P0-URGENT — 25%+15% lifetime highest commission, apply affiliate immediately",
+        "firecrawl-vs-apify": "NEW P1-HIGH — dual-affiliate comparison page",
+        "taste-skill-tutorial": "NEW P1-HIGH — designer audience, indirect Framer 50% funnel",
+        "claude-video-tutorial": "NEW P2 — indirect Claude Pro funnel",
+        "meetily-review": "NEW P2 — privacy SEO value high, direct monetization low",
+        "agent-reach": "14+ rounds P1-CRITICAL — repo 404 issue still unresolved",
+        "self-harness": "3+ rounds P0-CRITICAL — still pending",
+        "cursor-3-plugins": "P1-HIGH — 5+ weeks pending"
+      },
+      "directivesWritten": [
+        "researcher-to-strategist-2026-07-07-round114.md"
+      ],
+      "notes": "Firecrawl 25%+15% lifetime is round's biggest find. taste-skill is new designer/creator audience entry point. GitHub trending three AI agent skills exploding simultaneously."
+    },
     {
       "timestamp": "2026-07-06T22:00:00Z",
       "agent": "researcher",
