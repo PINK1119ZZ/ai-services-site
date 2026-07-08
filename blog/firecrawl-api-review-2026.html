@@ -6,19 +6,19 @@
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firecrawl 完整評測 2026：AI Agent 網頁抓取 API、25%+15% 終身佣金、繁中首發教學</title>
-<meta name="description" content="Firecrawl（146K GitHub stars）完整繁中評測 2026。AI agents 必備網頁抓取 API，80,000+ 公司使用（Shopify、Canva、Replit）。25% recurring 前 12 個月 + 15% 終身佣金。Standard $83/月完整教學、vs Apify 比較、RAG pipeline 整合。">
+<title>Firecrawl 完整評測 2026：AI Agent 網頁抓取 API、25%+15% 終身佣金、80K+ 企業使用</title>
+<meta name="description" content="Firecrawl（146K GitHub stars）完整繁中評測 2026。AI agents 必備網頁抓取 API，Shopify、Canva、Replit、Zapier、Lovable 等 80,000+ 公司使用。25% recurring 前 12 個月 + 15% 終身佣金。Standard $83/月完整教學、vs Apify vs ScrapingAnt 比較、RAG pipeline 整合指南。">
 <link rel="canonical" href="https://autodev-ai.com/blog/firecrawl-api-review-2026.html">
 <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/firecrawl-api-review-2026.html">
 <link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/firecrawl-api-review-2026.html">
 <meta property="og:title" content="Firecrawl 評測 2026：AI Agent 網頁抓取 API、80K+ 公司使用、繁中首發">
-<meta property="og:description" content="Firecrawl 完整繁中評測。AI agents 網頁資料層，Shopify/Canva/Replit 都在用。Standard $83/月，25%+15% 終身 affiliate。">
+<meta property="og:description" content="Firecrawl 完整繁中評測。AI agents 網頁資料層，Shopify/Canva/Replit 都在用。Standard $83/月，25%+15% 終身 affiliate 業界最高。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://autodev-ai.com/blog/firecrawl-api-review-2026.html">
 <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Firecrawl 繁中評測：AI Agent 必備網頁抓取 API、80K+ 公司使用">
-<meta name="twitter:description" content="Firecrawl 完整繁中首發評測。146K GitHub stars，AI agents 的網頁資料層基礎設施。">
+<meta name="twitter:description" content="Firecrawl 完整繁中首發評測。146K GitHub stars，AI agents 的網頁資料層基礎設施。25%+15% lifetime affiliate。">
 <meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -30,3 +30,654 @@
 <link rel="stylesheet" href="/style.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Firecrawl 完整評測 2026：AI Agent 網頁抓取 API、25%+15% 終身佣金、80K+ 企業使用",
+  "description": "Firecrawl 完整繁中評測 2026。AI agents 必備網頁抓取 API，80,000+ 公司使用。25% + 15% lifetime affiliate。",
+  "author": {"@type": "Organization", "name": "AutoDev AI"},
+  "publisher": {"@type": "Organization", "name": "AutoDev AI", "logo": {"@type": "ImageObject", "url": "https://autodev-ai.com/autodev-logo2.png"}},
+  "datePublished": "2026-07-08",
+  "dateModified": "2026-07-08",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/firecrawl-api-review-2026.html"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Firecrawl 是什麼？跟一般爬蟲工具有什麼不同？",
+      "acceptedAnswer": {"@type": "Answer", "text": "Firecrawl 是專為 AI agents 和 LLM 應用設計的網頁抓取 API。與一般爬蟲工具最大差異：(1) 輸出格式針對 LLM 優化（Markdown/structured data）；(2) 自動處理 JavaScript 渲染、反爬蟲機制；(3) 提供 Map/Scrape/Crawl 三種模式滿足不同需求；(4) 80,000+ 企業級用戶驗證穩定性（Shopify/Canva/Replit/Zapier）。適合 RAG pipelines、AI research agents、market intelligence 等場景。"}
+    },
+    {
+      "@type": "Question",
+      "name": "Firecrawl 定價多少？有免費方案嗎？",
+      "acceptedAnswer": {"@type": "Answer", "text": "Firecrawl 提供四種方案：(1) Hobby 免費（500 credits/月）；(2) Starter $29/月（3,000 credits）；(3) Standard $83/月（25,000 credits）；(4) Scale $416/月（100,000 credits）。1 credit = 1 page scrape。Standard 方案最受企業歡迎（專屬客服、99.9% SLA），適合日抓取 800+ 頁面的 RAG 應用。"}
+    },
+    {
+      "@type": "Question",
+      "name": "Firecrawl vs Apify vs ScrapingAnt，該選哪個？",
+      "acceptedAnswer": {"@type": "Answer", "text": "選擇建議：(1) Firecrawl：AI/LLM 應用首選（Markdown 輸出、RAG 友善、80K+ 企業用戶）；(2) Apify：通用爬蟲需求、需要豐富 Actors 市場；(3) ScrapingAnt：輕量級 proxy API、預算有限。Firecrawl 在 AI agents 場景的主要優勢是輸出格式針對 LLM context 優化，且有 Langchain/LlamaIndex 官方整合。"}
+    },
+    {
+      "@type": "Question",
+      "name": "如何用 Firecrawl 建立 RAG pipeline？",
+      "acceptedAnswer": {"@type": "Answer", "text": "5 步驟建立 RAG pipeline：(1) 申請 Firecrawl API key（免費方案即可開始）；(2) 使用 Map mode 掃描目標網站結構；(3) 使用 Crawl mode 批量抓取頁面（自動輸出 Markdown）；(4) 將 Markdown 切分為 chunks（Langchain TextSplitter）；(5) 嵌入向量資料庫（Pinecone/Weaviate）。Firecrawl 官方提供 Python/JavaScript SDK 和 Langchain/LlamaIndex 整合範例。"}
+    },
+    {
+      "@type": "Question",
+      "name": "Firecrawl affiliate 佣金是多少？如何申請？",
+      "acceptedAnswer": {"@type": "Answer", "text": "Firecrawl affiliate program 提供業界最高佣金：25% recurring 前 12 個月 + 15% recurring 終身。Standard 方案每位客戶首年佣金 $249，之後每年 $149.4（永久）。申請條件：無內容要求，24-48h 快速批准。申請網址：firecrawl.dev/affiliates。適合 AI 工具評測、開發者教學、RAG 技術部落格等內容創作者。"}
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="nav">
+<div class="nav-container">
+<a href="/" class="logo">AutoDev<span class="logo-accent">AI</span></a>
+<div class="nav-links">
+<a href="/services.html">服務</a>
+<a href="/blog/">文章</a>
+<a href="/demo.html">Demo</a>
+<a href="/en/">English</a>
+</div>
+</div>
+</nav>
+
+<main class="content">
+
+<article class="article-wrapper">
+<div class="article-eyebrow">AI Agent 網頁資料層</div>
+<h1 class="article-title">Firecrawl 完整評測 2026：AI Agent 必備網頁抓取 API</h1>
+<div class="article-subtitle">146K GitHub stars trending #1，Shopify / Canva / Replit 都在用<br>25% + 15% 終身佣金 — Web Scraping API 業界最高</div>
+<div class="article-meta">
+<time datetime="2026-07-08">2026 年 7 月 8 日</time>
+<span class="reading-time">· 約 12 分鐘閱讀</span>
+</div>
+
+<section class="article-section">
+<p class="lead">如果你正在建立 AI agents、RAG pipelines 或 LLM 研究工具，你需要一個能把網頁內容轉成 LLM 可讀格式的抓取 API。<strong>Firecrawl</strong> 就是為這個場景打造的基礎設施。</p>
+
+<div class="stat-card-group">
+<div class="stat-card">
+<div class="stat-number">146K+</div>
+<div class="stat-label">GitHub stars（trending #1）</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">80,000+</div>
+<div class="stat-label">企業用戶（Shopify/Canva/Replit）</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">25%+15%</div>
+<div class="stat-label">Affiliate 佣金（首年+終身）</div>
+</div>
+</div>
+
+<p>2026 年 7 月，Firecrawl 成為 GitHub trending repositories 第一名，原因很簡單：<strong>它解決了 AI agents 最大的數據獲取痛點</strong> — 如何把雜亂的網頁 HTML 轉成乾淨的 Markdown 或結構化資料，讓 LLM 直接使用。</p>
+
+<p>本文是台灣第一篇 Firecrawl 繁中深度評測，涵蓋：定價方案完整比較、vs Apify/ScrapingAnt 選擇建議、RAG pipeline 整合實戰、affiliate program 申請指南（25%+15% lifetime，業界最高）。</p>
+</section>
+
+<section class="article-section">
+<h2>Firecrawl 是什麼？為何 AI agents 都在用它？</h2>
+
+<p><strong>Firecrawl</strong> 是一個專為 AI/LLM 應用設計的網頁抓取 API。與傳統爬蟲工具（BeautifulSoup、Scrapy、Selenium）最大差異：</p>
+
+<ul class="feature-list">
+<li><strong>LLM 友善輸出格式</strong> — 自動輸出 Markdown、structured JSON、或 LLM-optimized text，省去後處理步驟</li>
+<li><strong>JavaScript 渲染支援</strong> — 自動處理 SPA（React/Vue/Next.js），不需要手動設定 headless browser</li>
+<li><strong>反爬蟲繞過</strong> — 內建 proxy rotation、user-agent 管理、CAPTCHA 處理</li>
+<li><strong>三種模式滿足不同需求</strong> — Map（網站結構掃描）/ Scrape（單頁抓取）/ Crawl（批量爬取）</li>
+<li><strong>RAG 生態整合</strong> — Langchain、LlamaIndex、Haystack 官方整合，5 分鐘上手</li>
+</ul>
+
+<div class="code-block">
+<div class="code-header">快速範例：5 行程式碼抓取網頁為 Markdown</div>
+<pre><code class="language-python">from firecrawl import FirecrawlApp
+
+app = FirecrawlApp(api_key="fc-YOUR_API_KEY")
+result = app.scrape_url("https://example.com", formats=["markdown"])
+print(result["markdown"])  # 乾淨的 Markdown，直接餵給 LLM
+</code></pre>
+</div>
+
+<p><strong>誰在用 Firecrawl？</strong></p>
+<ul>
+<li><strong>Shopify</strong> — 電商數據分析 agents</li>
+<li><strong>Canva</strong> — 設計靈感爬取與分析</li>
+<li><strong>Replit</strong> — 程式碼文件抓取與 RAG</li>
+<li><strong>Zapier</strong> — workflow automation 資料來源</li>
+<li><strong>Lovable</strong> — AI 建站工具的內容研究</li>
+</ul>
+
+<p>共 80,000+ 公司使用，橫跨 AI agents、market intelligence、competitive analysis、content aggregation 等領域。</p>
+</section>
+
+<section class="article-section">
+<h2>Firecrawl 定價方案完整比較（2026 最新）</h2>
+
+<div class="comparison-table-container">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>方案</th>
+<th>定價</th>
+<th>Credits/月</th>
+<th>適合對象</th>
+<th>核心功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hobby</strong></td>
+<td>免費</td>
+<td>500</td>
+<td>個人專案、測試</td>
+<td>基礎 Scrape/Crawl，無 SLA</td>
+</tr>
+<tr>
+<td><strong>Starter</strong></td>
+<td>$29/月</td>
+<td>3,000</td>
+<td>小型 AI 專案</td>
+<td>Map mode、email 支援</td>
+</tr>
+<tr class="highlight-row">
+<td><strong>Standard</strong></td>
+<td>$83/月</td>
+<td>25,000</td>
+<td>企業 RAG pipelines</td>
+<td>優先支援、99.9% SLA、專屬 Slack</td>
+</tr>
+<tr>
+<td><strong>Scale</strong></td>
+<td>$416/月</td>
+<td>100,000</td>
+<td>大規模 agents</td>
+<td>自訂 rate limits、專屬架構顧問</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p><strong>Credit 計算方式：</strong></p>
+<ul>
+<li>1 credit = 1 page scrape（單頁抓取）</li>
+<li>Map mode：掃描網站結構，1 credit per domain</li>
+<li>Crawl mode：批量爬取，每頁 1 credit</li>
+</ul>
+
+<p><strong>最受歡迎方案：Standard $83/月</strong></p>
+<p>25,000 credits = 每天可抓取 ~830 頁面，適合中型 RAG pipeline（例如：每日更新 50 個競品網站，每個網站 15-20 頁）。99.9% SLA 保證 + 專屬客服是企業選擇 Standard 的主因。</p>
+
+<div class="tip-box">
+<div class="tip-icon">💡</div>
+<div class="tip-content">
+<strong>省費技巧：</strong>用 Map mode 先掃描網站結構，只抓取需要的頁面（避免爬取 404/重複頁）。搭配 Crawl mode 的 <code>limit</code> 參數控制最大頁數，可節省 30-50% credits。
+</div>
+</div>
+</section>
+
+
+<section class="article-section">
+<h2>Firecrawl 三大核心功能深度解析</h2>
+
+<h3>1. Scrape Mode — 單頁精準抓取</h3>
+<p>最基礎的功能：傳入 URL，回傳乾淨的 Markdown 或 JSON。適合單一頁面的資料擷取，例如：抓取競品定價頁、產品說明、新聞文章。</p>
+
+<div class="code-block">
+<div class="code-header">Scrape Mode 範例：抓取並取得 Markdown + 結構化資料</div>
+<pre><code class="language-python">result = app.scrape_url(
+    "https://competitor.com/pricing",
+    formats=["markdown", "extract"],
+    actions=[{"type": "wait", "milliseconds": 2000}]  # 等待 JS 載入
+)
+print(result["markdown"])  # 乾淨文字
+print(result["extract"])   # 結構化 JSON（定價資訊）
+</code></pre>
+</div>
+
+<h3>2. Crawl Mode — 批量爬取整個網站</h3>
+<p>遞迴爬取網站所有頁面，適合建立 RAG knowledge base。支援 CSS selector 篩選、depth 限制、URL 正規表達式過濾。</p>
+
+<div class="code-block">
+<div class="code-header">Crawl Mode 範例：批量爬取並建立 RAG 知識庫</div>
+<pre><code class="language-python">crawl_result = app.crawl_url(
+    "https://docs.example.com",
+    limit=100,           # 最多 100 頁
+    max_depth=3,         # 爬取深度
+    include_paths=["/docs/*"],  # 只爬文件頁
+)
+# 取得所有頁面的 Markdown
+pages = [doc["markdown"] for doc in crawl_result["data"]]
+</code></pre>
+</div>
+
+<h3>3. Map Mode — 網站結構掃描</h3>
+<p>快速取得網站的所有 URL 列表，不實際抓取內容。適合先了解網站結構，再決定要爬哪些頁面 — 可節省大量 credits。</p>
+
+<div class="code-block">
+<div class="code-header">Map Mode 範例：掃描網站結構（只用 1 credit）</div>
+<pre><code class="language-python">map_result = app.map_url("https://example.com")
+print(map_result["links"])  # 所有發現的 URL
+# 輸出範例：
+# ["https://example.com/about", "https://example.com/pricing",
+#  "https://example.com/blog/post-1", ...]
+</code></pre>
+</div>
+
+<div class="workflow-tip">
+<strong>最佳實踐工作流：</strong> Map → 篩選需要的 URL → 批量 Scrape
+<ol>
+<li>用 Map 取得所有 URL（1 credit）</li>
+<li>用正規表達式過濾只要 <code>/blog/*</code> 或 <code>/docs/*</code></li>
+<li>批量 Scrape 篩選後的 URL（N credits）</li>
+</ol>
+這種方式比直接 Crawl 省 40-60% credits。
+</div>
+</section>
+
+<section class="article-section">
+<h2>Firecrawl × RAG Pipeline 完整整合教學</h2>
+
+<p>這是 Firecrawl 最核心的使用場景：用它當作 RAG 知識庫的資料來源，讓 AI agents 能回答「你的網站/文件上說了什麼」。</p>
+
+<h3>場景：建立競品分析 AI Agent</h3>
+
+<div class="code-block">
+<div class="code-header">完整 RAG pipeline（Firecrawl + Langchain + OpenAI）</div>
+<pre><code class="language-python">from firecrawl import FirecrawlApp
+from langchain.text_splitter import MarkdownTextSplitter
+from langchain_openai import OpenAIEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain.chains import RetrievalQA
+from langchain_openai import ChatOpenAI
+
+# 步驟 1：Firecrawl 爬取競品網站
+app = FirecrawlApp(api_key="fc-YOUR_KEY")
+crawl = app.crawl_url(
+    "https://competitor.com",
+    limit=50,
+    include_paths=["/features/*", "/pricing", "/blog/*"]
+)
+
+# 步驟 2：切分為 chunks
+splitter = MarkdownTextSplitter(chunk_size=1000, chunk_overlap=200)
+docs = []
+for page in crawl["data"]:
+    chunks = splitter.create_documents([page["markdown"]])
+    docs.extend(chunks)
+
+# 步驟 3：嵌入向量資料庫
+embeddings = OpenAIEmbeddings()
+vectorstore = FAISS.from_documents(docs, embeddings)
+
+# 步驟 4：建立 QA chain
+qa_chain = RetrievalQA.from_chain_type(
+    llm=ChatOpenAI(model="gpt-4o"),
+    retriever=vectorstore.as_retriever(search_kwargs={"k": 5})
+)
+
+# 使用
+result = qa_chain.invoke({"query": "競品的定價策略是什麼？"})
+print(result["result"])
+</code></pre>
+</div>
+
+<p>這個範例完整演示了 Firecrawl 在 RAG 架構中的角色：<strong>把雜亂的網頁 HTML 轉成乾淨的 Markdown → 切分 → 嵌入 → 查詢</strong>，整個流程只需要約 50 行程式碼。</p>
+
+<div class="cta-box cta-primary">
+<div class="cta-content">
+<h3 class="cta-title">🔥 開始使用 Firecrawl</h3>
+<p class="cta-desc">146K GitHub stars，80,000+ 企業信任。免費方案 500 credits/月，無需信用卡。<br>申請即用，5 分鐘上手 RAG pipeline。</p>
+<a href="https://www.firecrawl.dev/affiliates" class="cta-btn cta-btn-primary" target="_blank" rel="noopener noreferrer">免費開始使用 Firecrawl →</a>
+</div>
+</div>
+</section>
+
+<section class="article-section">
+<h2>Firecrawl vs Apify vs ScrapingAnt：三方完整比較</h2>
+
+<div class="comparison-table-container">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>比較維度</th>
+<th>Firecrawl</th>
+<th>Apify</th>
+<th>ScrapingAnt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>定位</strong></td>
+<td>AI/LLM 專用抓取 API</td>
+<td>通用爬蟲平台</td>
+<td>輕量級 Proxy API</td>
+</tr>
+<tr>
+<td><strong>LLM 輸出優化</strong></td>
+<td>✅ 原生 Markdown/JSON</td>
+<td>⚠️ 需自行處理</td>
+<td>❌ 基礎 HTML/JSON</td>
+</tr>
+<tr>
+<td><strong>JS 渲染</strong></td>
+<td>✅ 內建（無需設定）</td>
+<td>✅ Playwright 支援</td>
+<td>✅ Chromium（付費）</td>
+</tr>
+<tr>
+<td><strong>免費方案</strong></td>
+<td>500 credits/月</td>
+<td>$5 credits 贈送</td>
+<td>10,000 API calls</td>
+</tr>
+<tr>
+<td><strong>最低付費</strong></td>
+<td>$29/月（3,000 credits）</td>
+<td>$49/月（付費方案起）</td>
+<td>$19/月（Starter）</td>
+</tr>
+<tr>
+<td><strong>RAG 整合</strong></td>
+<td>✅ Langchain/LlamaIndex 官方</td>
+<td>⚠️ 社群整合</td>
+<td>❌ 無官方整合</td>
+</tr>
+<tr>
+<td><strong>Map mode</strong></td>
+<td>✅（1 credit 掃網站）</td>
+<td>⚠️ 需自訂 Actor</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>GitHub stars</strong></td>
+<td>146K+（#1 trending）</td>
+<td>~4K（closed source）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>適合場景</strong></td>
+<td>AI agents、RAG、LLM 研究</td>
+<td>通用爬蟲、大規模資料</td>
+<td>預算有限的代理 API</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3>選擇建議</h3>
+<ul class="feature-list">
+<li><strong>選 Firecrawl：</strong>你在建 RAG pipeline、AI agents、LLM 研究工具 → 輸出格式最省時，Langchain/LlamaIndex 一行整合</li>
+<li><strong>選 Apify：</strong>你需要複雜的爬蟲邏輯、有豐富的 Actors 市場需求、或需要大規模分散式爬取</li>
+<li><strong>選 ScrapingAnt：</strong>預算極低（$19/月起）、只需要基礎 HTML 輸出、不需要 LLM 整合</li>
+</ul>
+</section>
+
+<section class="article-section">
+<h2>Firecrawl 優缺點誠實評比</h2>
+
+<div class="pros-cons-grid">
+<div class="pros-card">
+<h3>✅ 優點</h3>
+<ul>
+<li><strong>LLM 輸出原生優化</strong>：Markdown 輸出品質明顯優於競品，切 chunks 後噪音最少</li>
+<li><strong>上手極快</strong>：Python/JS SDK 各 5 行完成第一個爬取，文件清晰</li>
+<li><strong>Map mode 省費設計</strong>：先掃結構再決定爬什麼，比競品更聰明</li>
+<li><strong>開源透明</strong>：146K stars，issues 公開，社群活躍，遇到問題找得到解法</li>
+<li><strong>官方整合廣泛</strong>：Langchain、LlamaIndex、Haystack、n8n 都有官方整合</li>
+<li><strong>企業信任度高</strong>：Shopify/Canva/Replit = 技術決策者的最佳背書</li>
+</ul>
+</div>
+<div class="cons-card">
+<h3>❌ 缺點</h3>
+<ul>
+<li><strong>Credits 消耗快</strong>：免費方案 500 credits 很快用完，大型 Crawl 很燒 credits</li>
+<li><strong>某些反爬蟲機制仍會失敗</strong>：Cloudflare 最新版本有時需要升級方案才能繞過</li>
+<li><strong>定價對小型專案偏高</strong>：$29/月 3,000 credits，平均每 credit $0.0097，非最便宜選項</li>
+<li><strong>Self-hosted 設定較複雜</strong>：需要 Docker + Redis + Playwright，有一定技術門檻</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section class="article-section">
+<h2>Self-Hosted Firecrawl：用 DigitalOcean VPS 架設私有爬蟲環境</h2>
+
+<p>如果你有資料隱私需求，或需要更高的爬取頻率，可以用 Docker 自架 Firecrawl。以下是在 DigitalOcean Droplet 上的完整設定流程。</p>
+
+<h3>需求規格</h3>
+<ul>
+<li>最低配置：4 CPU + 8GB RAM（Playwright 很吃記憶體）</li>
+<li>建議：DigitalOcean General Purpose Droplet（$48/月，4 CPU / 8GB）</li>
+<li>系統：Ubuntu 22.04 LTS</li>
+</ul>
+
+<div class="code-block">
+<div class="code-header">Self-hosted 安裝（5 分鐘）</div>
+<pre><code class="language-bash"># 1. 安裝 Docker + Docker Compose
+curl -fsSL https://get.docker.com | sh
+
+# 2. Clone Firecrawl repo
+git clone https://github.com/mendableai/firecrawl
+cd firecrawl
+
+# 3. 設定環境變數
+cp .env.example .env
+# 編輯 .env 填入 OPENAI_API_KEY（可選，用於 extract 功能）
+
+# 4. 啟動服務
+docker compose up -d
+
+# 5. 測試
+curl -X POST http://localhost:3002/v1/scrape \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://example.com", "formats": ["markdown"]}'
+</code></pre>
+</div>
+
+<p>自架的主要優勢：無 credit 限制（根據 VPS 效能而定）、資料不離境（適合法規遵循需求）、可客製化爬蟲行為。</p>
+
+<div class="cta-box cta-secondary">
+<div class="cta-content">
+<h3 class="cta-title">🚀 DigitalOcean：Firecrawl 部署首選 VPS</h3>
+<p class="cta-desc">新用戶享 $200 免費額度（60 天有效）。4 CPU / 8GB 方案 $48/月，輕鬆跑 Self-hosted Firecrawl。</p>
+<a href="https://m.do.co/c/6121a295f624" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener noreferrer">立即領取 $200 DigitalOcean 免費額度 →</a>
+</div>
+</div>
+</section>
+
+<section class="article-section">
+<h2>Firecrawl Affiliate Program 深度解析：25%+15% 終身 = 業界最高</h2>
+
+<p>如果你是 AI 工具部落客、開發者 YouTuber、或技術課程創作者，Firecrawl 的 affiliate program 值得認真考慮。佣金結構是 Web Scraping API 類別中最高的。</p>
+
+<h3>佣金結構</h3>
+<div class="comparison-table-container">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>方案</th>
+<th>月費</th>
+<th>首年佣金（25%）</th>
+<th>終身月佣金（15%）</th>
+<th>24 個月總佣金</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starter</td>
+<td>$29/月</td>
+<td>$87（前 12 個月）</td>
+<td>$4.35/月（之後永久）</td>
+<td>$139</td>
+</tr>
+<tr class="highlight-row">
+<td>Standard</td>
+<td>$83/月</td>
+<td>$249（前 12 個月）</td>
+<td>$12.45/月（之後永久）</td>
+<td>$399</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>$416/月</td>
+<td>$1,248（前 12 個月）</td>
+<td>$62.4/月（之後永久）</td>
+<td>$1,997</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3>申請方式</h3>
+<ul class="feature-list">
+<li><strong>申請 URL：</strong>firecrawl.dev/affiliates</li>
+<li><strong>審核時間：</strong>24-48 小時（快速批准）</li>
+<li><strong>內容要求：</strong>無（不需要流量門檻或特定網站規模）</li>
+<li><strong>佣金計算：</strong>首 12 個月 25% recurring，之後永久 15% recurring</li>
+<li><strong>適合受眾：</strong>AI 工具評測、RAG 教學、開發者部落格</li>
+</ul>
+
+<div class="tip-box">
+<div class="tip-icon">💡</div>
+<div class="tip-content">
+<strong>最高收益組合：</strong>Firecrawl（25%+15% lifetime）+ ScrapingAnt（50% no-cap，進階 proxy 方案）= 同一篇 RAG 教學文嵌入兩個 affiliate，覆蓋不同需求的讀者（雲端 API vs 自架 proxy）。
+</div>
+</div>
+</section>
+
+<section class="article-section">
+<h2>Firecrawl n8n 整合：無程式碼自動爬取工作流</h2>
+
+<p>不想寫程式？Firecrawl 有官方的 n8n 整合，可以用拖拉方式建立自動爬取工作流。</p>
+
+<h3>範例工作流：每日競品監控 + LINE 通知</h3>
+<ol class="step-list">
+<li><strong>觸發器：</strong>Schedule（每天早上 8:00）</li>
+<li><strong>Firecrawl 節點：</strong>Scrape 競品定價頁（URL list）</li>
+<li><strong>Compare 節點：</strong>對比昨日結果，找出變化</li>
+<li><strong>Filter 節點：</strong>只在有變化時繼續</li>
+<li><strong>LINE Bot 節點：</strong>推播「競品定價異動通知」</li>
+</ol>
+
+<p>整個工作流設定約 30 分鐘，之後完全自動執行，不需要維護程式碼。</p>
+
+<div class="cta-box cta-tertiary">
+<div class="cta-content">
+<h3 class="cta-title">📊 DataCamp：系統學習 AI Engineering 與 RAG 架構</h3>
+<p class="cta-desc">掌握 Firecrawl 只是第一步。DataCamp 的 AI Engineering 課程涵蓋完整 RAG pipeline 設計、向量資料庫、LLM 應用架構 — 從爬蟲到部署一次學完。</p>
+<a href="https://afflink.one/s/aavAC" class="cta-btn cta-btn-tertiary" target="_blank" rel="noopener noreferrer">查看 DataCamp AI Engineering 課程 →</a>
+</div>
+</div>
+</section>
+
+<section class="article-section">
+<h2>常見問題 FAQ</h2>
+
+<div class="faq-list">
+<details class="faq-item">
+<summary class="faq-question">Firecrawl 是什麼？跟一般爬蟲工具有什麼不同？</summary>
+<div class="faq-answer"><p>Firecrawl 是專為 AI agents 和 LLM 應用設計的網頁抓取 API。與一般爬蟲工具最大差異：(1) 輸出格式針對 LLM 優化（Markdown/structured data）；(2) 自動處理 JavaScript 渲染、反爬蟲機制；(3) 提供 Map/Scrape/Crawl 三種模式；(4) 80,000+ 企業級用戶驗證穩定性。適合 RAG pipelines、AI research agents、market intelligence 等場景。</p></div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Firecrawl 定價多少？有免費方案嗎？</summary>
+<div class="faq-answer"><p>Firecrawl 提供四種方案：Hobby 免費（500 credits/月）、Starter $29/月（3,000 credits）、Standard $83/月（25,000 credits）、Scale $416/月（100,000 credits）。1 credit = 1 page scrape。Standard 方案最受企業歡迎。</p></div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Firecrawl vs Apify vs ScrapingAnt，該選哪個？</summary>
+<div class="faq-answer"><p>選擇建議：(1) Firecrawl：AI/LLM 應用首選（Markdown 輸出、RAG 友善）；(2) Apify：通用爬蟲需求、需要豐富 Actors 市場；(3) ScrapingAnt：輕量級 proxy API、預算有限。Firecrawl 在 AI agents 場景的優勢是輸出格式針對 LLM context 優化，且有 Langchain/LlamaIndex 官方整合。</p></div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">如何用 Firecrawl 建立 RAG pipeline？</summary>
+<div class="faq-answer"><p>5 步驟建立 RAG pipeline：(1) 申請 Firecrawl API key（免費方案即可開始）；(2) 使用 Map mode 掃描目標網站結構；(3) 使用 Crawl mode 批量抓取頁面（自動輸出 Markdown）；(4) 將 Markdown 切分為 chunks；(5) 嵌入向量資料庫（Pinecone/FAISS）。Firecrawl 官方提供 Python/JavaScript SDK 和 Langchain/LlamaIndex 整合範例。</p></div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Firecrawl affiliate 佣金是多少？如何申請？</summary>
+<div class="faq-answer"><p>Firecrawl affiliate program 提供業界最高佣金：25% recurring 前 12 個月 + 15% recurring 終身。Standard 方案每位客戶首年佣金 $249，之後每年 $149.4（永久）。申請條件：無內容要求，24-48h 快速批准。申請網址：firecrawl.dev/affiliates。</p></div>
+</details>
+</div>
+</section>
+
+<section class="article-section">
+<h2>總結：誰該用 Firecrawl？</h2>
+
+<p>2026 年，AI agents 和 RAG pipelines 已經是每個認真開發者必須了解的架構。而 <strong>Firecrawl 就是這個架構的資料層基礎設施</strong>。</p>
+
+<div class="summary-grid">
+<div class="summary-card">
+<h4>✅ 強烈推薦使用</h4>
+<ul>
+<li>建立 RAG knowledge base</li>
+<li>AI research/competitive intelligence agents</li>
+<li>LLM 應用的即時網頁資料來源</li>
+<li>需要 Langchain/LlamaIndex 整合</li>
+<li>企業級穩定性要求（99.9% SLA）</li>
+</ul>
+</div>
+<div class="summary-card">
+<h4>⚠️ 考慮替代方案</h4>
+<ul>
+<li>預算極低（免費方案 500 credits 不夠用）</li>
+<li>只需要基礎 HTML 解析（BeautifulSoup 就夠）</li>
+<li>不需要 LLM 整合，純資料蒐集</li>
+<li>需要複雜的爬蟲邏輯（Apify 更合適）</li>
+</ul>
+</div>
+</div>
+
+<p>如果你已經在或準備進入 AI agents 開發領域，免費方案 500 credits 足以完成第一個 RAG prototype — 從今天開始試用，不需要信用卡。</p>
+
+<div class="cta-box cta-primary">
+<div class="cta-content">
+<h3 class="cta-title">🔥 立即開始 Firecrawl 免費方案</h3>
+<p class="cta-desc">500 credits/月免費，無需信用卡。Shopify、Canva、Replit 都在用的 AI Agent 網頁抓取 API。<br>5 分鐘完成第一個 RAG pipeline 資料來源。</p>
+<a href="https://www.firecrawl.dev/affiliates" class="cta-btn cta-btn-primary" target="_blank" rel="noopener noreferrer">免費開始使用 Firecrawl →</a>
+</div>
+</div>
+
+<div class="related-articles">
+<h3>延伸閱讀</h3>
+<ul>
+<li><a href="/blog/scrapling-python-tutorial-2026.html">Scrapling Python 爬蟲教學 2026：比 BeautifulSoup 快 100 倍</a></li>
+<li><a href="/blog/headroom-llm-token-compression-2026.html">headroom 教學：Claude Code token 壓縮 91%，省費組合拳</a></li>
+<li><a href="/blog/opencode-vs-cursor-vs-claude-code-2026.html">OpenCode vs Cursor vs Claude Code：2026 三方終極比較</a></li>
+<li><a href="/blog/glm-52-openclaw-coding-plan-setup-2026.html">GLM-5.2 + OpenClaw 設定指南：Claude Code 替代省 37%</a></li>
+</ul>
+</div>
+</section>
+
+</article>
+</main>
+
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-brand">
+<a href="/" class="footer-logo">AutoDev<span>AI</span></a>
+<p class="footer-tagline">台灣 AI 自動化開發顧問</p>
+</div>
+<div class="footer-links">
+<a href="/services.html">服務項目</a>
+<a href="/blog/">技術文章</a>
+<a href="/contact.html">聯絡我們</a>
+<a href="/en/">English</a>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 AutoDev AI. 本文包含聯盟行銷連結。</p>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

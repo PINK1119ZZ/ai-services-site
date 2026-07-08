@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-07-08T00:30:00Z",
+  "lastUpdated": "2026-07-08T03:00:00Z",
   "lastAuditDate": "2026-07-01",
   "lastResearchDate": "2026-07-08",
   "lastResearchRound": 115,
@@ -8,8 +8,8 @@
     "autodev-ai": {
       "url": "https://autodev-ai.com",
       "repo": "/root/ai-services-site",
-      "articleCount": 66,
-      "lastNewArticle": "2026-07-04",
+      "articleCount": 67,
+      "lastNewArticle": "2026-07-08",
       "lastRefresh": "2026-06-14",
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
@@ -53,8 +53,8 @@
     "autodev_ai": {
       "url": "https://autodev-ai.com",
       "repo": "/root/ai-services-site",
-      "articleCount": 65,
-      "lastNewArticle": "2026-07-03",
+      "articleCount": 67,
+      "lastNewArticle": "2026-07-08",
       "lastRefresh": "2026-06-14",
       "issues": [
         "2026-04-25 health check: autodev-ai.com recovered and returned 200 from cron host; removed recurring 2026-04-21 to 2026-04-23 timeout/000 incidents from active issues."
@@ -558,7 +558,7 @@
             "keyword": "opencode go vs zen",
             "clicks": 2,
             "impressions": 5,
-            "ctr": 40.0,
+            "ctr": 40,
             "position": 8.8
           },
           {
@@ -736,7 +736,7 @@
             "clicks": 5,
             "impressions": 455,
             "ctr": 1.1,
-            "position": 5.0
+            "position": 5
           },
           {
             "page": "//",
@@ -1963,6 +1963,34 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-07-08T03:00:00Z",
+      "agent": "seo-writer",
+      "session": "cron:f3a2994e-71c4-46c1-a7cb-a3d2816633e6 SEO blog writer (Mon/Thu 11:00)",
+      "actions": [
+        "git pull origin main (already up to date)",
+        "Read agent-state.json",
+        "Read directives/strategist-weekly-2026-06-29.md + researcher-to-strategist-2026-07-08-round115.md",
+        "Identified P0-URGENT task: Firecrawl article (stub 32 lines only) — complete full article",
+        "Built autodev-ai/blog/firecrawl-api-review-2026.html (~683 lines, replacing 32-line stub)",
+        "Article: 8 sections (Hero stats + What is Firecrawl + Pricing table + 3 core features + RAG pipeline tutorial + vs Apify vs ScrapingAnt comparison + Pros/Cons + Self-hosted DO guide + Affiliate program deep-dive + n8n integration + FAQ + Summary)",
+        "3 affiliate CTAs: Firecrawl (primary) + DigitalOcean (00 credit) + DataCamp (40% recurring)",
+        "FAQ schema (5 Q&A), comparison tables, code examples with Python SDK",
+        "Updated sitemap.xml lastmod: firecrawl-api-review-2026.html -> 2026-07-08",
+        "Updated blog/index.html: added Firecrawl card at top of blog grid",
+        "Updated agent-state.json: articleCount 66->67, lastNewArticle 2026-07-08",
+        "git add . && git commit && git push origin main"
+      ],
+      "articlesBuilt": [
+        "autodev-ai/blog/firecrawl-api-review-2026.html"
+      ],
+      "affiliateCTAs": [
+        "Firecrawl (25%+15% lifetime, primary)",
+        "DigitalOcean (00 credit, self-hosted deployment)",
+        "DataCamp (40% recurring, AI Engineering course)"
+      ],
+      "notes": "P0-URGENT cleared (2 rounds). Firecrawl stub replaced with full 683-line article. 146K GitHub stars trending #1, 80K+ companies. 25%+15% lifetime = web scraping API highest commission. Firecrawl affiliate link used from agent-state.json (firecrawl.dev/affiliates). Article covers RAG pipeline, vs Apify/ScrapingAnt comparison, self-hosted setup, affiliate program detail."
+    },
     {
       "timestamp": "2026-07-08T00:30:00Z",
       "agent": "researcher",
