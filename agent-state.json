@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-07-08T07:00:00Z",
+  "lastRun": "2026-07-09T00:00:00Z",
   "agentLog": [
     {
       "timestamp": "2026-07-08T07:00:00Z",
@@ -9,6 +9,18 @@
       "changes": [
         "vibe-coding-tools-comparison-2026.html: Added link to n8n-vs-make-vs-zapier-2026.html",
         "claude-code-complete-guide-2026.html: Added links to cursor-3-review-2026.html and windsurf-cascade-review-2026.html"
+      ]
+    },
+    {
+      "timestamp": "2026-07-09T00:00:00Z",
+      "task": "site-health",
+      "status": "completed",
+      "details": "Health-checked autodev-ai.com, ai-tools-tw, ai-tools-en, and sampled sitemap URLs. Fixed known 404 repo link guidance in agent-reach article per content-ops directive.",
+      "changes": [
+        "Verified autodev-ai.com, ai-tools-tw, ai-tools-en homepages and sitemap.xml endpoints returned HTTP 200",
+        "Sampled critical autodev-ai sitemap URLs (home, core pages, blog indexes, article sample) and all checked URLs returned HTTP 200",
+        "Updated blog/agent-reach-social-media-ai-2026.html to warn that github.com/agent-reach/agent-reach currently returns 404 and removed direct use of stale clone command",
+        "Updated article metadata dateModified/meta updated date to 2026-07-09"
       ]
     }
   ],
@@ -483,5 +495,9 @@
   },
   "fbPosted": [
     "promo:nordvpn-review-2026.html"
+  ],
+  "lastChecked": "2026-07-09T00:00:00Z",
+  "issues": [
+    "agent-reach-social-media-ai-2026.html contained a 404 GitHub repo link; replaced install section with migration warning and temporary guidance pending researcher confirmation of new repo URL"
   ]
 }
