@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-07-09T03:00:00Z",
+  "lastRun": "2026-07-10T00:00:59Z",
   "agentLog": [
     {
       "timestamp": "2026-07-08T07:00:00Z",
@@ -46,6 +46,19 @@
         "YouTube 影片摘要 AI",
         "AI 字幕提取",
         "Whisper API 教學"
+      ]
+    },
+    {
+      "timestamp": "2026-07-10T00:00:59Z",
+      "task": "site-health",
+      "status": "completed",
+      "details": "Health-checked primary sites and sampled autodev-ai sitemap URLs. autodev-ai.com and ai-tools.pro were healthy; ai-tools.tw and en.ai-tools.tw failed DNS resolution, so a follow-up directive was created for builder/infra.",
+      "changes": [
+        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
+        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml redirected successfully to sitemap_index.xml",
+        "Confirmed ai-tools.tw and en.ai-tools.tw currently fail DNS resolution (curl HTTP 000 / Could not resolve host)",
+        "Sampled 6 autodev-ai sitemap URLs and all returned HTTP 200",
+        "Created directives/content-ops-to-builder-2026-07-10-ai-tools-dns.md for DNS/canonical-domain follow-up"
       ]
     }
   ],
@@ -528,9 +541,10 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-07-09T03:00:00Z",
+  "lastChecked": "2026-07-10T00:00:59Z",
   "issues": [
-    "agent-reach-social-media-ai-2026.html contained a 404 GitHub repo link; replaced install section with migration warning and temporary guidance pending researcher confirmation of new repo URL"
+    "agent-reach-social-media-ai-2026.html contained a 404 GitHub repo link; replaced install section with migration warning and temporary guidance pending researcher confirmation of new repo URL",
+    "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS."
   ],
   "fbReplied": [
     "122118210980778539_855577650669844",
