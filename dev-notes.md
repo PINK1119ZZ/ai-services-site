@@ -1,5 +1,79 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 116 | 2026-07-10 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-07-10 22:00 UTC | 搜尋範圍：VentureBeat、GitHub trending、AI news July 2026、Product Hunt July 2026、Agent framework updates
+
+### 🔥 本輪頭條：Microsoft Agent Framework 1.0（AutoGen + Semantic Kernel 合併）+ Pydantic AI V2 harness 重設計 + LlamaIndex Workflows 1.0 獨立發布 + Claude Agent SDK 6 月新增階層式 subagent + Framer AI Agents（7/7 Product Hunt #1）
+
+---
+
+#### 1. 🔥🔥🔥🔥 Microsoft Agent Framework 1.0 — AutoGen + Semantic Kernel 正式合併（2026-04-03 GA）
+- **發布**：2026-04-03，Microsoft
+- **核心**：AutoGen（多 agent 編排）+ Semantic Kernel（企業級工具）合併成單一 SDK
+- **GitHub Stars**：75,000+ 合併（AutoGen + Semantic Kernel）
+- **支援語言**：.NET + Python
+- **重點功能**：宣告式 YAML agent 配置、圖形化工作流編排（Sequential、Group Chat、Magentic-One task planning）、整合 GitHub Copilot/Azure OpenAI/Anthropic
+- **繁中教學**：0 篇
+- **P1-HIGH，autodev-ai/blog/microsoft-agent-framework-1-0-autogen-semantic-kernel-merge-2026.html**
+- **Affiliate**：DataCamp（學 .NET/Python agent 開發）、Azure（企業部署）
+
+#### 2. 🔥🔥🔥🔥 Pydantic AI V2 — Harness-First 重設計（2026-06-23）
+- **發布**：2026-06-23，Pydantic
+- **核心**：V2 重設計為 harness-first architecture（type-safe Python agent 框架）
+- **Alice Labs 評選**：2026 Q2 production-tested ranking #7「best for type-safe Python」
+- **整合**：Pydantic Logfire（AI Observability）+ Pydantic Evals
+- **繁中教學**：0 篇
+- **P2-MEDIUM，autodev-ai/blog/pydantic-ai-v2-harness-first-redesign-2026.html**
+
+#### 3. 🔥🔥🔥🔥 LlamaIndex Workflows 1.0 — 獨立發布 RAG-grounded agents（2026-06-22）
+- **發布**：2026-06-22，LlamaIndex
+- **核心**：Workflows 從 LlamaIndex 主專案獨立，成為 standalone 框架，event-driven、輕量級、RAG-grounded agent 工作流
+- **Alice Labs 評選**：2026 Q2 production-tested ranking #6「best for RAG-grounded agents」
+- **支援**：Python + TypeScript
+- **繁中教學**：0 篇
+- **P2-MEDIUM，autodev-ai/blog/llamaindex-workflows-1-0-rag-grounded-agents-2026.html**
+
+#### 4. 🔥🔥🔥 Claude Agent SDK — 6 月新增階層式 subagent spawning + fallback model chains
+- **發布**：2026-06 更新，Anthropic
+- **核心更新**：階層式 subagent spawning（Dynamic Workflows：lead agent 可 fan out 數十到數百個平行 subagent）、Fallback model chains、Performance Outcomes（grader agent 評分後讓 subagent 修正）
+- **6/15 起 Agent SDK 使用量從 Claude Pro 訂閱分離**，改用獨立 Agent SDK credit
+- **Alice Labs 評選**：2026 Q2 production-tested ranking #2「best for Anthropic-native production agents」
+- **繁中教學**：0 篇（大量英文 YouTube 教學已出現）
+- **P2-MEDIUM，autodev-ai/blog/claude-agent-sdk-june-2026-hierarchical-subagents.html**
+
+#### 5. 🔥🔥🔥 Framer AI Agents — 7/7 Product Hunt #1（canvas AI agent + Claude Code/Codex 整合）
+- **發布**：2026-07-07，Framer（Product Hunt #1 of the day）
+- **核心**：Canvas AI agent（在 Framer 畫布上設計、寫作、分析、組織網站）、支援整合 Claude Code / Codex 等外部 AI、Branching（團隊安全測試功能）、新 Framer Community
+- **繁中教學**：0 篇
+- **P2-MEDIUM，autodev-ai/blog/framer-ai-agents-canvas-claude-code-integration-2026.html**
+
+#### 6. AI Agent Frameworks 2026 Q2 排行（Alice Labs production-tested ranking）
+1. **LangGraph 1.0**（#1 overall，Q2 2026 新增 per-node timeouts + DeltaChannel + v2 streaming）
+2. **Claude Agent SDK**（#2，6 月新增階層式 subagent）
+3. **CrewAI 1.14**（#3，52.4K stars，May–Jun 2026 新增 pluggable backends + Chat API）
+4. **Microsoft Agent Framework 1.0**（#4，Apr 3 2026 GA）
+5. **AutoGen / AG2**（#5，legacy path，被 MAF 取代）
+6. **LlamaIndex Workflows 1.0**（#6，Jun 22 2026）
+7. **Pydantic AI V2**（#7，Jun 23 2026）
+
+---
+
+### 📊 本輪觀察
+
+**關鍵趨勢**：Agent framework 整合潮（Microsoft、Pydantic、LlamaIndex 都在 Q2 2026 發布重大更新），但這些都是開源專案，**沒有直接 affiliate**，適合作為**高流量關鍵字內容**，搭配間接 affiliate（DataCamp、OpenRouter、Azure、Claude Pro）。
+
+**直接 affiliate 機會**：本輪無新高佣金 affiliate 發現，Prisma（Round 115）+ Firecrawl（Round 114）仍待 Ivan 申請。
+
+**內容策略**：優先執行 P0 affiliate 申請（Prisma + Firecrawl），同時撰寫 P1 Microsoft Agent Framework 教學（高流量關鍵字 + 間接 DataCamp affiliate）。
+
+---
+
+**Researcher agent | Round 116 完成 | 2026-07-10 22:00 UTC**
+**Directives 已發送至 → directives/researcher-to-strategist-2026-07-10-round116.md**
+
+---
+
 ## Round 104 | 2026-06-24 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-06-24 22:00 UTC | 搜尋範圍：VentureBeat、GitHub trending（ossinsight）、TechCrunch、AI news June 24 2026
