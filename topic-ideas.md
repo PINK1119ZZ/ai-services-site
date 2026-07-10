@@ -6,6 +6,137 @@
 
 ---
 
+## 2026-07-10 Round 115
+
+### 🔥 P0-URGENT: Prisma 7 ORM（20% recurring 2 years，12M npm 下載）
+
+**日期：** 2026-07-10
+**工具：** Prisma ORM v7（prisma.io）
+**背景：** Prisma 7 於 2025-11-19 發布，拋棄 Rust engine 改用純 TypeScript runtime，速度提升 3x、bundle 縮小 90%。截至 2026-04 npm 週下載 **12,033,822 次**（`prisma` CLI），是 Node.js 生態系最多安裝的 type-safe ORM。
+**關鍵字：** prisma orm 教學 繁中, prisma vs drizzle 2026, typescript orm 比較, prisma 7 migration guide, prisma orm 入門
+**搜尋量預估：** 高（12M 週下載，開發者受眾大；「prisma vs drizzle」在 dev.to/medium/zenstack 三平台皆有 2026 深度文章，繁中缺口仍大）
+**變現方式：** Prisma Partner Network Affiliate — **20% recurring commission 2 years**（via PartnerStack）
+**佣金計算：** Prisma Accelerate/Pulse 企業方案 $149-499/月，20% × 2年 = 每轉換 $71-239（24個月累計）
+**預估月收入：** US$300-800（開發者付費意願高，TypeScript 生態系必備工具，評測文 + 比較頁雙打）
+**建議站點：** autodev-ai（繁中工程師受眾）
+**備註：**
+- 20% recurring **2 年**是 DevTool SaaS 佣金天花板
+- 「prisma vs drizzle 2026」已有英文競爭，繁中 = 0 篇（先佔坑）
+- Prisma 7 新特性（TypeScript engine）是新聞鉤子，寫 migration guide 搶流量
+- 申請：prisma.io/partners（PartnerStack 管理）
+
+**文章角度：**
+1. Prisma 7 完整入門教學（繁中，~3000字，autodev-ai）
+2. Prisma vs Drizzle vs ZenStack TypeScript ORM 三方比較頁（affiliate 三疊加）
+3. Prisma 7 migration guide：從 Rust engine 升級到 TypeScript runtime
+
+---
+
+### 🔥 P1-HIGH: OfficeCLI（MCP + Office 自動化，爆紅工具）
+
+**日期：** 2026-07-10
+**工具：** OfficeCLI（iOfficeAI/OfficeCLI）
+**GitHub Stars：** #1 C# repo of the month（May 2026），#1 GitHub Trending on Jun 21, 2026
+**背景：** AI agent 專用的 Office suite CLI，一行命令操作 Word/Excel/PPT，無需安裝 Office，開源免費。Gigazine（2026-07-08）等媒體已報導。
+**關鍵字：** officecli 教學 繁中, AI agent office 自動化, word excel ai 操作, mcp office 工具, iofficeai 評測
+**搜尋量預估：** 中高（企業自動化受眾，MCP 生態系熱度）
+**變現方式：** 無直接 affiliate（MIT 開源）；間接導流：
+- **DigitalOcean**（VPS 部署 + Claude Code 教學配套）
+- **DataCamp**（Office 自動化課程）
+- **Cloudways**（雲端主機）
+**預估月收入：** US$150-400（間接導流，企業/自動化受眾高價值）
+**建議站點：** autodev-ai
+**備註：**
+- 繁中評測 = 0 篇（剛被 Gigazine 報導，趨勢熱度窗口 1-2週）
+- 文章角度：OfficeCLI + Claude Code 整合教學（MCP Server 設定）
+- 可與 Firecrawl、Page-Agent 組「AI agent 工具集」系列文
+
+---
+
+### 🔥 P1-HIGH: Fable/Riddle reMarkable AI 日記（病毒式傳播，504 HN 點數）
+
+**日期：** 2026-07-10
+**工具：** MaximeRivest/Riddle（reMarkable + Claude Fable 5 + Vision LLM）
+**HN 熱度：** 504 points（#10 今日 HN 首頁）
+**背景：** 加拿大開發者 Maxime Rivest 把 reMarkable Paper Pro 變成哈利波特「湯姆‧瑞多日記」—手寫字跡消失、AI 以花體字回覆。MIT 授權開源。
+**關鍵字：** reMarkable ai 日記, fable ai 湯姆瑞多, remarkable paper pro review 2026, ai 手寫 筆記板, remarkable vs kindle scribe
+**搜尋量預估：** 中（病毒式傳播，reMarkable 設備受眾 + Harry Potter 粉絲 + AI 愛好者）
+**變現方式：**
+- **reMarkable 官方 affiliate**（設備售價 $449-629，佣金約 5-8%）= 每轉換 $22-50
+- **Anthropic Claude Pro**（間接 Fable 5 使用導流）
+**預估月收入：** US$200-600（病毒效應 + 設備高單價 + HN/Reddit 有機流量）
+**建議站點：** ai-tools-en（英文受眾，reMarkable 主要市場在歐美）
+**備註：**
+- HN 今日 #10（504 pts）= 流量窗口 24-72 小時，**需快速發文**
+- reMarkable affiliate 申請：remarkable.com/store/partners
+- 英文文章 → ai-tools-en 或 autodev-ai /en/blog/
+- 可搭 YouTube 嵌入 demo 視頻提升停留時間
+
+---
+
+### 🟡 P2: VoltAgent Framework + awesome-design-md（開源，間接變現）
+
+**日期：** 2026-07-10
+**工具：** VoltAgent（voltagent.dev）+ VoltAgent/awesome-design-md（97.5K Stars，Global Rank #125）
+**背景：** VoltAgent 是 TypeScript AI agent 框架（開源）；awesome-design-md 是 95.6K Star 的 DESIGN.md 設計系統收藏，讓 Claude Code/Codex 生成有品牌感的 UI。
+**關鍵字：** voltagent typescript 教學, awesome-design-md 使用方法, ai 設計系統 markdown, claude code ui 改善, design.md 教學
+**搜尋量預估：** 中（TypeScript AI agent 框架受眾 + 前端/設計師受眾）
+**變現方式：** 無直接 affiliate（開源）；間接：
+- **VoltOps 雲端平台**（VoltAgent 商業版，觀察是否推出 affiliate）
+- 與 **Cursor/Windsurf affiliate** 組合（設計開發者受眾疊加）
+**預估月收入：** US$100-250（間接導流，與 Cursor 評測文交叉連結）
+**建議站點：** autodev-ai / ai-tools-tw
+**備註：**
+- awesome-design-md 可與 Round 114 的 taste-skill 合併寫「AI 設計工具比較」文
+- VoltAgent 開源框架目前無 affiliate，等待 VoltOps 商業化進展
+
+---
+
+### 🟡 P2: Ternlight 7MB WASM 嵌入模型（HN 260 pts，開發者工具）
+
+**日期：** 2026-07-10
+**工具：** Ternlight（ternlight-demo.vercel.app）
+**HN 熱度：** 260 points（#13 今日 HN 首頁）
+**背景：** 7 MB WebAssembly 嵌入模型，可在瀏覽器/Node/Edge 執行，無需 API 呼叫，2ms 延遲。適合語意搜尋/RAG/FAQ 匹配。
+**關鍵字：** browser embedding model 2026, wasm ai semantic search, ternlight review, on-device nlp javascript, edge ai embedding
+**搜尋量預估：** 低中（開發者利基，但高付費意願）
+**變現方式：** 無直接 affiliate（開源）；間接：
+- **Vercel**（部署平台，有 affiliate/partner 計畫）
+- **Cloudflare Workers**（Edge 部署，有 partner 計畫）
+**預估月收入：** US$50-200（開發者工具，間接導流）
+**建議站點：** autodev-ai /en/blog/（英文，開發者受眾）
+**備註：**
+- HN 今日 #13（260 pts）= 流量窗口 24-48 小時
+- 對 Firecrawl 文章形成互補（embedding model 減少 API 費用，Firecrawl 增加爬蟲能力）
+
+---
+
+### 🔴 高佣金 Affiliate 機會整理（本輪新增）
+
+| 工具 | 佣金 | 類型 | 申請連結 |
+|------|------|------|---------|
+| Prisma ORM | 20% recurring 2 years | PartnerStack | prisma.io/partners |
+| Firecrawl | 25%+15% lifetime | Direct | firecrawl.dev/affiliates |
+| reMarkable | ~5-8% per device | Direct | remarkable.com/store/partners |
+
+---
+
+## 變現機會總結（Round 115 更新）
+
+### 本輪最高價值機會（依佣金結構排序）
+
+1. **Firecrawl（P0-URGENT Round 114 延續）：** 25%+15% lifetime，待 Ivan 申請
+2. **Prisma 7（P0-URGENT 本輪新增）：** 20% recurring 2年，12M 週下載，繁中無競爭
+3. **Fable/Riddle + reMarkable（P1-HIGH）：** HN 504 pts 今日，48小時流量窗口，設備高單價 affiliate
+
+### Ivan 緊急行動項（本輪）
+
+- **Prisma affiliate 申請：** prisma.io/partners（PartnerStack）
+- **reMarkable affiliate 申請：** remarkable.com/store/partners（英文文章配套）
+- 繼續追蹤 Firecrawl affiliate 申請狀態
+
+---
+
 ## 2026-07-08 Round 114
 
 ### 🔥 P0-URGENT: Firecrawl
