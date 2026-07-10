@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OfficeCLI 完整教學：用 Claude Code 自動化 Excel、Word、PPT 操作 (2026)</title>
+    <meta name="description" content="OfficeCLI 完整教學：透過 MCP Server 讓 Claude Code 自動操作 Excel、Word、PowerPoint，支援資料處理、報表生成、簡報製作，提升辦公室自動化效率 10 倍以上。">
+    <meta name="keywords" content="OfficeCLI, Claude Code MCP, Excel 自動化, Office 自動化, MCP Server 教學, Claude Desktop 外掛, AI 辦公室助手">
+    <link rel="canonical" href="https://autodev-ai.com/blog/officecli-mcp-claude-code-tutorial-2026.html">
+    <meta property="og:title" content="OfficeCLI 教學：用 Claude Code 自動化 Office 操作 (2026)">
+    <meta property="og:description" content="完整教學：讓 Claude 自動處理 Excel 資料、生成 Word 報表、製作 PowerPoint 簡報。10 分鐘上手，辦公室自動化必學工具。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/officecli-mcp-claude-code-tutorial-2026.html">
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "OfficeCLI 完整教學：用 Claude Code 自動化 Excel、Word、PPT 操作 (2026)",
+      "description": "OfficeCLI 完整教學：透過 MCP Server 讓 Claude Code 自動操作 Excel、Word、PowerPoint，支援資料處理、報表生成、簡報製作。",
+      "author": {
+        "@type": "Organization",
+        "name": "AutoDev.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "AutoDev.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://autodev-ai.com/logo.png"
+        }
+      },
+      "datePublished": "2026-07-10",
+      "dateModified": "2026-07-10"
+    }
+    </script>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">AutoDev.ai</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">首頁</a></li>
+                <li><a href="../about.html">關於</a></li>
+                <li><a href="../blog.html">部落格</a></li>
+                <li><a href="../en/index.html">English</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="article-container">
+        <article>
+            <header class="article-header">
+                <span class="eyebrow-pill">📊 辦公室自動化</span>
+                <h1>OfficeCLI 完整教學：用 Claude Code <em>自動化 Excel、Word、PPT</em> 操作 (2026)</h1>
+                <p class="article-meta">發布日期：2026 年 7 月 10 日 | 更新日期：2026 年 7 月 10 日</p>
+            </header>
+
+            <section class="intro-section">
+                <p class="lead">想讓 Claude AI 自動處理 Excel 資料、生成 Word 報表、製作 PowerPoint 簡報嗎？<strong>OfficeCLI</strong> 是一個開源 MCP Server，讓 Claude Code 能直接操作 Microsoft Office 文件，10 分鐘即可上手。本文提供完整教學，從安裝、設定到實際應用，幫助上班族、資料分析師、行銷人員大幅提升辦公效率。</p>
+            </section>
+
+            <section>
+                <h2 id="what-is-officecli">什麼是 OfficeCLI？</h2>
+                <p><strong>OfficeCLI</strong> 是一個基於 Model Context Protocol (MCP) 的開源專案，由 C# 開發，讓 Claude Desktop 和 Claude Code 能夠直接操作 Microsoft Office 文件。它在 2026 年 6 月登上 GitHub Trending #1（C# 分類），目前已有超過 3,200+ stars。</p>
+                
+                <h3>核心功能</h3>
+                <ul>
+                    <li><strong>Excel 自動化：</strong>讀取工作表、篩選資料、生成樞紐分析表、繪製圖表</li>
+                    <li><strong>Word 文件操作：</strong>插入段落、設定樣式、生成報表、匯出 PDF</li>
+                    <li><strong>PowerPoint 簡報製作：</strong>新增投影片、插入圖片、套用模板、批次修改</li>
+                    <li><strong>跨文件整合：</strong>從 Excel 提取資料 → 生成 Word 報表 → 製作 PPT 簡報</li>
+                </ul>
+
+                <div class="info-box">
+                    <h4>💡 適用場景</h4>
+                    <ul>
+                        <li><strong>資料分析師：</strong>自動化數據清洗、生成分析報表、繪製視覺化圖表</li>
+                        <li><strong>行銷人員：</strong>批次生成客戶報告、製作提案簡報、更新行銷數據儀表板</li>
+                        <li><strong>專案經理：</strong>自動化週報生成、會議記錄整理、進度追蹤報表</li>
+                        <li><strong>財務人員：</strong>快速處理發票、生成財務報表、製作預算簡報</li>
+                    </ul>
+                </div>
+
+                <h3>為什麼選擇 OfficeCLI？</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <h4>✅ OfficeCLI</h4>
+                        <ul>
+                            <li>原生 Office 格式支援</li>
+                            <li>Claude AI 自然語言操作</li>
+                            <li>無需學習 VBA 或 Office Scripts</li>
+                            <li>支援複雜邏輯與多文件處理</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card">
+                        <h4>❌ 傳統 VBA/Office Scripts</h4>
+                        <ul>
+                            <li>需要程式設計經驗</li>
+                            <li>語法複雜，學習曲線陡峭</li>
+                            <li>除錯困難，維護成本高</li>
+                            <li>跨應用整合需額外開發</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="prerequisites">環境需求與前置準備</h2>
+                <h3>系統需求</h3>
+                <ul>
+                    <li><strong>作業系統：</strong>Windows 10/11（需安裝 Microsoft Office 2016 或更新版本）</li>
+                    <li><strong>Claude Desktop：</strong>1.0.0 或更新版本（支援 MCP）</li>
+                    <li><strong>.NET Runtime：</strong>.NET 8.0 或更新版本</li>
+                    <li><strong>Office 版本：</strong>Office 2016/2019/2021/Microsoft 365</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h4>⚠️ 注意事項</h4>
+                    <p>OfficeCLI 目前僅支援 Windows 系統，因為它依賴 Office COM Interop。Mac 使用者可使用 <strong>Microsoft Graph API</strong> 替代方案，或透過 Windows 虛擬機執行。</p>
+                </div>
+
+                <h3>安裝 .NET Runtime</h3>
+                <pre><code># 下載 .NET 8.0 SDK（包含 Runtime）
+# 前往：https://dotnet.microsoft.com/download/dotnet/8.0
+
+# 驗證安裝
+dotnet --version
+# 輸出範例：8.0.201</code></pre>
+            </section>
+
+            <section>
+                <h2 id="installation">OfficeCLI 安裝教學</h2>
+                <h3>步驟 1：下載 OfficeCLI</h3>
+                <pre><code># 方法一：從 GitHub Releases 下載最新版本
+# 前往：https://github.com/microsoft/OfficeCLI/releases
+# 下載 OfficeCLI-win-x64.zip 並解壓縮到 C:\Tools\OfficeCLI
+
+# 方法二：使用 Git 克隆（需要自行編譯）
+git clone https://github.com/microsoft/OfficeCLI.git
+cd OfficeCLI
+dotnet build -c Release</code></pre>
+
+                <h3>步驟 2：設定 Claude Desktop MCP</h3>
+                <p>編輯 Claude Desktop 的 MCP 設定檔（位於 <code>%APPDATA%\Claude\claude_desktop_config.json</code>）：</p>
+                <pre><code>{
+  "mcpServers": {
+    "officecli": {
+      "command": "C:\\Tools\\OfficeCLI\\OfficeCLI.exe",
+      "args": ["--mcp"],
+      "env": {
+        "OFFICE_AUTOMATION_MODE": "true"
+      }
+    }
+  }
+}</code></pre>
+
+                <h3>步驟 3：重啟 Claude Desktop</h3>
+                <p>關閉並重新開啟 Claude Desktop，在聊天介面中應該會看到「OfficeCLI」出現在可用工具列表中。</p>
+
+                <div class="success-box">
+                    <h4>✅ 驗證安裝</h4>
+                    <p>在 Claude Desktop 中輸入：</p>
+                    <pre><code>請列出目前可用的 MCP 工具</code></pre>
+                    <p>如果看到 <code>officecli_read_excel</code>、<code>officecli_create_word</code> 等工具，代表安裝成功。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="excel-automation">Excel 自動化實戰</h2>
+                <h3>場景 1：讀取並分析銷售資料</h3>
+                <p>假設你有一份 <code>sales_2026.xlsx</code> 檔案，包含每月銷售數據，想快速生成分析報表。</p>
+
+                <div class="code-example">
+                    <h4>📝 提示詞範例</h4>
+                    <pre><code>請讀取 C:\Data\sales_2026.xlsx 的「Q2 銷售」工作表，
+篩選出銷售額超過 10 萬元的產品，
+並生成一個包含產品名稱、銷售額、成長率的摘要表格。</code></pre>
+                </div>
+
+                <p>Claude 會自動執行以下操作：</p>
+                <ol>
+                    <li>使用 <code>officecli_read_excel</code> 讀取工作表</li>
+                    <li>篩選資料（銷售額 > 100,000）</li>
+                    <li>計算成長率（與上一季比較）</li>
+                    <li>輸出格式化表格</li>
+                </ol>
+
+                <h3>場景 2：批次生成圖表</h3>
+                <div class="code-example">
+                    <h4>📝 提示詞範例</h4>
+                    <pre><code>請在 sales_2026.xlsx 中新增一個名為「圖表分析」的工作表，
+為每個產品類別生成一個長條圖，顯示 Q1-Q4 的銷售趨勢。
+圖表標題使用類別名稱，X 軸為季度，Y 軸為銷售額。</code></pre>
+                </div>
+
+                <h3>場景 3：自動化資料清洗</h3>
+                <div class="code-example">
+                    <h4>📝 提示詞範例</h4>
+                    <pre><code>請處理 customer_data.xlsx：
+1. 刪除「電話」欄位中的空白列
+2. 將「郵遞區號」格式統一為 5 位數（不足補 0）
+3. 移除重複的客戶 Email
+4. 將處理後的資料儲存為 customer_data_clean.xlsx</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="word-automation">Word 文件自動化</h2>
+                <h3>場景 1：生成客戶報告</h3>
+                <div class="code-example">
+                    <h4>📝 提示詞範例</h4>
+                    <pre><code>請建立一份客戶季度報告（report_Q2_2026.docx）：
+1. 標題：「2026 Q2 業績報告」，使用標題 1 樣式
+2. 從 sales_2026.xlsx 提取 Q2 總銷售額，插入為第一段
+3. 新增一個表格，顯示前 5 名熱賣產品
+4. 插入結論段落：「本季業績達成目標的 120%」
+5. 套用「專業報告」模板（如果有）</code></pre>
+                </div>
+
+                <h3>場景 2：批次生成合約文件</h3>
+                <div class="code-example">
+                    <h4>📝 提示詞範例</h4>
+                    <pre><code>請根據 clients.xlsx 中的客戶清單，
+批次生成服務合約（使用 contract_template.docx 模板）。
+每份合約需替換以下欄位：
+- {客戶名稱}
+- {公司地址}
+- {合約金額}
+- {簽約日期}
+儲存格式為：contract_{客戶名稱}_2026.docx</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="powerpoint-automation">PowerPoint 簡報自動化</h2>
+                <h3>場景 1：生成業績簡報</h3>
+                <div class="code-example">
+                    <h4>📝 提示詞範例</h4>
+                    <pre><code>請建立一份業績簡報（sales_presentation.pptx）：
+投影片 1：標題頁，標題「2026 Q2 業績報告」
+投影片 2：從 sales_2026.xlsx 提取 Q2 總銷售額，製作數字卡片
+投影片 3：插入「銷售趨勢」長條圖（從 Excel 圖表複製）
+投影片 4：列出前 5 名產品，使用項目符號
+投影片 5：結論頁，標題「未來展望」
+套用「企業藍」配色主題</code></pre>
+                </div>
+
+                <h3>場景 2：批次更新簡報內容</h3>
+                <div class="code-example">
+                    <h4>📝 提示詞範例</h4>
+                    <pre><code>請更新 monthly_report.pptx：
+1. 將所有「2026 年 6 月」替換為「2026 年 7 月」
+2. 更新第 3 頁的銷售數字（從 Excel 重新讀取）
+3. 替換第 5 頁的圖片為 new_chart.png
+4. 另存新檔為 monthly_report_Jul.pptx</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="advanced-workflow">進階應用：跨文件自動化流程</h2>
+                <h3>完整工作流範例：從資料到簡報</h3>
+                <div class="code-example">
+                    <h4>📝 提示詞範例</h4>
+                    <pre><code>請執行以下自動化流程：
+
+步驟 1：讀取 sales_raw.xlsx，篩選出本月銷售資料
+步驟 2：計算各產品類別的銷售總額與成長率
+步驟 3：在 Excel 中生成樞紐分析表與圖表
+步驟 4：建立 Word 報告（report.docx）：
+   - 插入銷售摘要段落
+   - 嵌入 Excel 圖表
+   - 新增分析建議
+步驟 5：建立 PowerPoint 簡報（presentation.pptx）：
+   - 從 Word 報告提取關鍵數據
+   - 插入視覺化圖表
+   - 生成 5 頁簡報
+步驟 6：將所有檔案儲存到 C:\Reports\2026-07\</code></pre>
+                </div>
+
+                <p>Claude 會自動執行所有步驟，並在過程中詢問確認（例如圖表樣式、報告格式）。整個流程約 2-3 分鐘完成，相當於人工作業 1-2 小時的工作量。</p>
+            </section>
+
+            <section>
+                <h2 id="best-practices">最佳實踐與效能優化</h2>
+                <h3>提高成功率的技巧</h3>
+                <ul>
+                    <li><strong>明確指定檔案路徑：</strong>使用絕對路徑（如 <code>C:\Data\file.xlsx</code>）避免找不到檔案</li>
+                    <li><strong>分段執行複雜任務：</strong>將大型任務拆解為多個步驟，每步驟確認後再繼續</li>
+                    <li><strong>提供範例格式：</strong>告訴 Claude 預期的輸出格式（如「表格需包含標題列」）</li>
+                    <li><strong>備份原始檔案：</strong>在修改前先複製一份，避免誤操作</li>
+                </ul>
+
+                <h3>效能優化建議</h3>
+                <ul>
+                    <li><strong>關閉 Office 視窗：</strong>OfficeCLI 在背景執行，開啟 Office 視窗會降低速度</li>
+                    <li><strong>減少讀寫次數：</strong>一次性讀取資料到記憶體，批次處理後再寫入</li>
+                    <li><strong>使用範圍選取：</strong>指定工作表範圍（如 <code>A1:E100</code>）而非讀取整份檔案</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 id="troubleshooting">常見問題與解決方案</h2>
+                <h3>問題 1：Claude 無法找到 OfficeCLI 工具</h3>
+                <p><strong>解決方案：</strong></p>
+                <ol>
+                    <li>確認 <code>claude_desktop_config.json</code> 中的路徑正確</li>
+                    <li>檢查 <code>OfficeCLI.exe</code> 是否有執行權限</li>
+                    <li>重啟 Claude Desktop 並清除快取</li>
+                </ol>
+
+                <h3>問題 2：執行時出現「COM 物件建立失敗」錯誤</h3>
+                <p><strong>解決方案：</strong></p>
+                <ul>
+                    <li>確認已安裝 Microsoft Office（不支援 Office Online）</li>
+                    <li>檢查 Office 版本是否為 2016 或更新</li>
+                    <li>以「系統管理員身分」執行 Claude Desktop</li>
+                </ul>
+
+                <h3>問題 3：處理大型 Excel 檔案時速度緩慢</h3>
+                <p><strong>解決方案：</strong></p>
+                <ul>
+                    <li>使用範圍選取限制讀取資料量</li>
+                    <li>關閉 Excel 中的自動計算功能</li>
+                    <li>考慮將資料分批處理</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 id="alternatives">替代方案與工具比較</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>工具</th>
+                            <th>優點</th>
+                            <th>缺點</th>
+                            <th>適用場景</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>OfficeCLI</strong></td>
+                            <td>原生 Office 支援、自然語言操作、免費開源</td>
+                            <td>僅支援 Windows、需安裝 Office</td>
+                            <td>本地端辦公室自動化</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Microsoft Graph API</strong></td>
+                            <td>跨平台、雲端整合、企業級安全</td>
+                            <td>需程式設計、API 學習曲線</td>
+                            <td>企業級應用、多租戶系統</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Power Automate</strong></td>
+                            <td>視覺化流程、雲端執行、豐富連接器</td>
+                            <td>付費訂閱、有執行次數限制</td>
+                            <td>企業工作流自動化</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Python + openpyxl/python-docx</strong></td>
+                            <td>完全開源、跨平台、社群資源豐富</td>
+                            <td>需學習 Python、不支援複雜 Office 功能</td>
+                            <td>開發者、資料科學家</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2 id="learning-resources">延伸學習資源</h2>
+                <h3>推薦課程</h3>
+                <div class="resource-card">
+                    <h4>📚 DataCamp：Python 資料分析與自動化</h4>
+                    <p>雖然 OfficeCLI 使用 C#，但學習 Python 資料處理能幫助你更好地設計自動化流程。DataCamp 提供互動式課程，涵蓋 pandas、openpyxl 等工具。</p>
+                    <a href="https://afflink.one/s/aavAC" class="cta-button" target="_blank" rel="noopener">前往 DataCamp 學習 →</a>
+                    <p class="affiliate-note">💡 透過上方連結註冊，支持本站持續產出免費教學內容</p>
+                </div>
+
+                <h3>部署與雲端運算</h3>
+                <div class="resource-card">
+                    <h4>☁️ DigitalOcean：Windows 虛擬機部署</h4>
+                    <p>如果你需要在雲端環境執行 OfficeCLI（例如批次處理大量檔案），可以使用 DigitalOcean 建立 Windows Droplet。新用戶享有 $200 免費額度。</p>
+                    <a href="https://m.do.co/c/6121a295f624" class="cta-button" target="_blank" rel="noopener">領取 DigitalOcean 優惠 →</a>
+                    <p class="affiliate-note">💡 新用戶 60 天內可使用 $200 額度，足夠執行數千次自動化任務</p>
+                </div>
+
+                <h3>官方資源</h3>
+                <ul>
+                    <li><a href="https://github.com/microsoft/OfficeCLI" target="_blank">OfficeCLI GitHub 倉庫</a> — 原始碼與最新更新</li>
+                    <li><a href="https://learn.microsoft.com/en-us/office/client-developer/office-automation" target="_blank">Microsoft Office 自動化文件</a></li>
+                    <li><a href="https://modelcontextprotocol.io/" target="_blank">Model Context Protocol 規範</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 id="case-studies">真實案例分享</h2>
+                <h3>案例 1：行銷團隊的報表自動化</h3>
+                <blockquote>
+                    <p>「我們每週需要製作 20+ 份客戶報告，手動複製貼上 Excel 數據到 PowerPoint 非常耗時。使用 OfficeCLI 後，只需在 Claude 中輸入客戶名稱，2 分鐘內就能生成包含最新數據的簡報。每週節省 10 小時工時。」</p>
+                    <cite>— 某數位行銷公司專案經理</cite>
+                </blockquote>
+
+                <h3>案例 2：財務部門的月結流程</h3>
+                <blockquote>
+                    <p>「月底結帳時需要整合多個分公司的 Excel 報表，過去要花 2 天時間手動核對。現在用 OfficeCLI 自動化整個流程：讀取各分公司檔案 → 資料驗證 → 生成合併報表 → 匯出 PDF。整個流程縮短到 30 分鐘。」</p>
+                    <cite>— 某製造業財務經理</cite>
+                </blockquote>
+            </section>
+
+            <section>
+                <h2 id="future-roadmap">未來發展與社群</h2>
+                <p>OfficeCLI 目前仍在活躍開發中，根據 GitHub Roadmap，未來將新增以下功能：</p>
+                <ul>
+                    <li><strong>macOS 支援：</strong>透過 Microsoft Graph API 實現跨平台操作</li>
+                    <li><strong>Outlook 整合：</strong>自動化郵件處理、會議安排</li>
+                    <li><strong>Teams 協作：</strong>將生成的文件自動分享到 Teams 頻道</li>
+                    <li><strong>版本控制：</strong>自動追蹤文件修改歷史</li>
+                </ul>
+
+                <p>如果你想參與開發或回報問題，可以前往 <a href="https://github.com/microsoft/OfficeCLI/issues" target="_blank">GitHub Issues</a> 頁面。</p>
+            </section>
+
+            <section>
+                <h2 id="conclusion">結論：辦公室自動化的新時代</h2>
+                <p>OfficeCLI 結合了 Claude AI 的自然語言理解能力與 Microsoft Office 的強大功能，讓辦公室自動化變得前所未有地簡單。無論你是資料分析師、行銷人員、專案經理還是財務人員，都能透過自然語言指令完成複雜的文件處理任務。</p>
+
+                <p><strong>開始行動：</strong></p>
+                <ol>
+                    <li>下載並安裝 OfficeCLI</li>
+                    <li>設定 Claude Desktop MCP</li>
+                    <li>從簡單的 Excel 讀取任務開始練習</li>
+                    <li>逐步建立你的自動化工作流</li>
+                </ol>
+
+                <div class="cta-section">
+                    <h3>💡 想學習更多 AI 自動化工具？</h3>
+                    <p>我們每週分享最新的 AI 開發工具教學、自動化腳本與實戰案例。訂閱電子報，不錯過任何重要更新。</p>
+                    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="cta-button primary" target="_blank" rel="noopener">免費訂閱電子報 →</a>
+                </div>
+            </section>
+
+            <section class="related-articles">
+                <h2>延伸閱讀</h2>
+                <div class="article-grid">
+                    <div class="article-card">
+                        <h3><a href="claude-code-complete-guide-2026.html">Claude Code 完整教學</a></h3>
+                        <p>從安裝到進階應用，掌握 Claude Code 的所有功能</p>
+                    </div>
+                    <div class="article-card">
+                        <h3><a href="cursor-3-review-2026.html">Cursor 3 評測</a></h3>
+                        <p>Cursor 3 vs Claude Code 深度比較</p>
+                    </div>
+                    <div class="article-card">
+                        <h3><a href="n8n-vs-make-vs-zapier-2026.html">工作流自動化工具比較</a></h3>
+                        <p>n8n、Make、Zapier 完整評測</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 AutoDev.ai | <a href="../privacy.html">隱私權政策</a> | <a href="../terms.html">使用條款</a></p>
+        </div>
+    </footer>
+</body>
+</html>

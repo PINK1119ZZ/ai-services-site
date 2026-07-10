@@ -1,6 +1,32 @@
 {
-  "lastRun": "2026-07-10T00:30:00Z",
+  "lastRun": "2026-07-10T03:00:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-07-10T03:00:00Z",
+      "task": "seo-writer",
+      "status": "completed",
+      "details": "Published new SEO article: OfficeCLI + Claude Code MCP 教學（2026）。Directive Round 115 P1-HIGH: OfficeCLI MCP 整合教學，GitHub Trending #1 C# 專案，間接推廣 DigitalOcean/DataCamp。",
+      "changes": [
+        "Created blog/officecli-mcp-claude-code-tutorial-2026.html (469 lines, 25KB)",
+        "Updated sitemap.xml: added officecli-mcp-claude-code-tutorial-2026.html entry (priority 0.9)",
+        "Updated blog/index.html: added new card at top of listing"
+      ],
+      "affiliateLinks": [
+        "DigitalOcean: https://m.do.co/c/6121a295f624 (x1 CTA - Windows VM 部署)",
+        "DataCamp: https://afflink.one/s/aavAC (x1 CTA - Python 資料分析課程)",
+        "Systeme.io: https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f (x1 CTA - 電子報訂閱)"
+      ],
+      "seoTargetKeywords": [
+        "OfficeCLI 教學",
+        "Claude Code MCP",
+        "Excel 自動化",
+        "Office 自動化",
+        "MCP Server",
+        "Claude Desktop 外掛",
+        "Word 報表自動化",
+        "PowerPoint 自動化"
+      ]
+    },
     {
       "timestamp": "2026-07-10T00:30:00Z",
       "task": "ai-trend-hunter",
@@ -33,25 +59,16 @@
       ]
     },
     {
-      "timestamp": "2026-07-08T07:00:00Z",
-      "task": "internal-linker",
-      "status": "completed",
-      "details": "Added 2 internal links to ai-tools-tw blog articles",
-      "changes": [
-        "vibe-coding-tools-comparison-2026.html: Added link to n8n-vs-make-vs-zapier-2026.html",
-        "claude-code-complete-guide-2026.html: Added links to cursor-3-review-2026.html and windsurf-cascade-review-2026.html"
-      ]
-    },
-    {
-      "timestamp": "2026-07-09T00:00:00Z",
+      "timestamp": "2026-07-10T00:00:59Z",
       "task": "site-health",
       "status": "completed",
-      "details": "Health-checked autodev-ai.com, ai-tools-tw, ai-tools-en, and sampled sitemap URLs. Fixed known 404 repo link guidance in agent-reach article per content-ops directive.",
+      "details": "Health-checked primary sites and sampled autodev-ai sitemap URLs. autodev-ai.com and ai-tools.pro were healthy; ai-tools.tw and en.ai-tools.tw failed DNS resolution, so a follow-up directive was created for builder/infra.",
       "changes": [
-        "Verified autodev-ai.com, ai-tools-tw, ai-tools-en homepages and sitemap.xml endpoints returned HTTP 200",
-        "Sampled critical autodev-ai sitemap URLs (home, core pages, blog indexes, article sample) and all checked URLs returned HTTP 200",
-        "Updated blog/agent-reach-social-media-ai-2026.html to warn that github.com/agent-reach/agent-reach currently returns 404 and removed direct use of stale clone command",
-        "Updated article metadata dateModified/meta updated date to 2026-07-09"
+        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
+        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml redirected successfully to sitemap_index.xml",
+        "Confirmed ai-tools.tw and en.ai-tools.tw currently fail DNS resolution (curl HTTP 000 / Could not resolve host)",
+        "Sampled 6 autodev-ai sitemap URLs and all returned HTTP 200",
+        "Created directives/content-ops-to-builder-2026-07-10-ai-tools-dns.md for DNS/canonical-domain follow-up"
       ]
     },
     {
@@ -80,16 +97,25 @@
       ]
     },
     {
-      "timestamp": "2026-07-10T00:00:59Z",
+      "timestamp": "2026-07-09T00:00:00Z",
       "task": "site-health",
       "status": "completed",
-      "details": "Health-checked primary sites and sampled autodev-ai sitemap URLs. autodev-ai.com and ai-tools.pro were healthy; ai-tools.tw and en.ai-tools.tw failed DNS resolution, so a follow-up directive was created for builder/infra.",
+      "details": "Health-checked autodev-ai.com, ai-tools-tw, ai-tools-en, and sampled sitemap URLs. Fixed known 404 repo link guidance in agent-reach article per content-ops directive.",
       "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml redirected successfully to sitemap_index.xml",
-        "Confirmed ai-tools.tw and en.ai-tools.tw currently fail DNS resolution (curl HTTP 000 / Could not resolve host)",
-        "Sampled 6 autodev-ai sitemap URLs and all returned HTTP 200",
-        "Created directives/content-ops-to-builder-2026-07-10-ai-tools-dns.md for DNS/canonical-domain follow-up"
+        "Verified autodev-ai.com, ai-tools-tw, ai-tools-en homepages and sitemap.xml endpoints returned HTTP 200",
+        "Sampled critical autodev-ai sitemap URLs (home, core pages, blog indexes, article sample) and all checked URLs returned HTTP 200",
+        "Updated blog/agent-reach-social-media-ai-2026.html to warn that github.com/agent-reach/agent-reach currently returns 404 and removed direct use of stale clone command",
+        "Updated article metadata dateModified/meta updated date to 2026-07-09"
+      ]
+    },
+    {
+      "timestamp": "2026-07-08T07:00:00Z",
+      "task": "internal-linker",
+      "status": "completed",
+      "details": "Added 2 internal links to ai-tools-tw blog articles",
+      "changes": [
+        "vibe-coding-tools-comparison-2026.html: Added link to n8n-vs-make-vs-zapier-2026.html",
+        "claude-code-complete-guide-2026.html: Added links to cursor-3-review-2026.html and windsurf-cascade-review-2026.html"
       ]
     }
   ],
@@ -125,160 +151,6 @@
             "impressions": 3,
             "ctr": 0,
             "position": 13.7
-          },
-          {
-            "keyword": "auto dev",
-            "clicks": 0,
-            "impressions": 3,
-            "ctr": 0,
-            "position": 7
-          },
-          {
-            "keyword": "autodev",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 25.2
-          },
-          {
-            "keyword": "autodev.ai",
-            "clicks": 0,
-            "impressions": 96,
-            "ctr": 0,
-            "position": 1.6
-          },
-          {
-            "keyword": "autodev.co",
-            "clicks": 0,
-            "impressions": 20,
-            "ctr": 0,
-            "position": 8.6
-          },
-          {
-            "keyword": "autodev.com",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 4
-          },
-          {
-            "keyword": "autodev.io",
-            "clicks": 0,
-            "impressions": 12,
-            "ctr": 0,
-            "position": 9.5
-          },
-          {
-            "keyword": "autodev.net",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 7.8
-          },
-          {
-            "keyword": "autodev.org",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 2.5
-          },
-          {
-            "keyword": "autodev.tech",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 2
-          },
-          {
-            "keyword": "chatbot費用",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 82.5
-          },
-          {
-            "keyword": "demo chatbot",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 55
-          },
-          {
-            "keyword": "devauto.ai",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 2
-          },
-          {
-            "keyword": "free demo service",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 73
-          },
-          {
-            "keyword": "gemma 4 12b crack",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 38
-          },
-          {
-            "keyword": "gemma 4 12b ram",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 10
-          },
-          {
-            "keyword": "gemma 4 硬 體 需求",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 68
-          },
-          {
-            "keyword": "gemma4 12b download",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 12
-          },
-          {
-            "keyword": "line bot 要 錢 嗎",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 20
-          },
-          {
-            "keyword": "line bot 開發 報價 台灣",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 2
-          },
-          {
-            "keyword": "markitdown 教學",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 8.5
-          },
-          {
-            "keyword": "micro1",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 3
-          },
-          {
-            "keyword": "microsoft markitdown",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 7
           }
         ],
         "topPages": [
@@ -302,160 +174,6 @@
             "impressions": 23,
             "ctr": 17.4,
             "position": 5.9
-          },
-          {
-            "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
-            "clicks": 3,
-            "impressions": 36,
-            "ctr": 8.3,
-            "position": 11.8
-          },
-          {
-            "page": "//en/",
-            "clicks": 3,
-            "impressions": 180,
-            "ctr": 1.7,
-            "position": 4.7
-          },
-          {
-            "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
-            "clicks": 2,
-            "impressions": 21,
-            "ctr": 9.5,
-            "position": 10.2
-          },
-          {
-            "page": "//blog/markitdown-microsoft-tutorial-2026.html",
-            "clicks": 1,
-            "impressions": 20,
-            "ctr": 5.0,
-            "position": 7.4
-          },
-          {
-            "page": "//blog/rtk-rust-token-killer-review-2026.html",
-            "clicks": 1,
-            "impressions": 9,
-            "ctr": 11.1,
-            "position": 7.1
-          },
-          {
-            "page": "//en/blog/deerflow-vs-dify-vs-n8n-2026.html",
-            "clicks": 1,
-            "impressions": 9,
-            "ctr": 11.1,
-            "position": 9.2
-          },
-          {
-            "page": "//about.html",
-            "clicks": 0,
-            "impressions": 6,
-            "ctr": 0,
-            "position": 7
-          },
-          {
-            "page": "//blog/agentmemory-claude-code-tutorial-2026.html",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 9
-          },
-          {
-            "page": "//blog/ai-chatbot-for-business.html",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 6.5
-          },
-          {
-            "page": "//blog/ai-tools-comparison-2026.html",
-            "clicks": 0,
-            "impressions": 26,
-            "ctr": 0,
-            "position": 10.1
-          },
-          {
-            "page": "//blog/chatgpt-claude-gemini-comparison.html",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 43
-          },
-          {
-            "page": "//blog/claude-code-desktop-vs-terminal-2026.html",
-            "clicks": 0,
-            "impressions": 11,
-            "ctr": 0,
-            "position": 6.2
-          },
-          {
-            "page": "//blog/claude-fable-5-vs-opus-enterprise-guide-2026.html",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 30
-          },
-          {
-            "page": "//blog/claude-sonnet-5-vs-46-tokenizer-guide-2026.html",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 22
-          },
-          {
-            "page": "//blog/cloudways-review-2026.html",
-            "clicks": 0,
-            "impressions": 3,
-            "ctr": 0,
-            "position": 7
-          },
-          {
-            "page": "//blog/hermes-agent-vs-openclaw-2026.html",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 5.8
-          },
-          {
-            "page": "//blog/line-bot-booking-system.html",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 5.5
-          },
-          {
-            "page": "//blog/line-bot-cost.html#comparison",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 6.2
-          },
-          {
-            "page": "//blog/line-bot-cost.html#factors",
-            "clicks": 0,
-            "impressions": 24,
-            "ctr": 0,
-            "position": 5.0
-          },
-          {
-            "page": "//blog/line-bot-cost.html#price-range",
-            "clicks": 0,
-            "impressions": 24,
-            "ctr": 0,
-            "position": 5.0
-          },
-          {
-            "page": "//blog/line-bot-cost.html#save-money",
-            "clicks": 0,
-            "impressions": 23,
-            "ctr": 0,
-            "position": 5.2
-          },
-          {
-            "page": "//blog/line-bot-tutorial-2026.html",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 6.2
           }
         ]
       },
@@ -517,48 +235,6 @@
         "ctr": 0,
         "impressions": 96,
         "action": "improve title/meta for higher CTR"
-      },
-      {
-        "site": "autodev-ai",
-        "keyword": "autodev.co",
-        "position": 8.6,
-        "impressions": 20,
-        "action": "optimize to push to page 1"
-      },
-      {
-        "site": "autodev-ai",
-        "keyword": "autodev.co",
-        "ctr": 0,
-        "impressions": 20,
-        "action": "improve title/meta for higher CTR"
-      },
-      {
-        "site": "autodev-ai",
-        "keyword": "autodev.io",
-        "position": 9.5,
-        "impressions": 12,
-        "action": "optimize to push to page 1"
-      },
-      {
-        "site": "autodev-ai",
-        "keyword": "autodev.io",
-        "ctr": 0,
-        "impressions": 12,
-        "action": "improve title/meta for higher CTR"
-      },
-      {
-        "site": "autodev-ai",
-        "keyword": "gemma 4 12b ram",
-        "position": 10,
-        "impressions": 4,
-        "action": "optimize to push to page 1"
-      },
-      {
-        "site": "autodev-ai",
-        "keyword": "markitdown 教學",
-        "position": 8.5,
-        "impressions": 4,
-        "action": "optimize to push to page 1"
       }
     ]
   },
@@ -567,17 +243,15 @@
     "promo:best-ai-tools-for-digital-marketers-2026.html"
   ],
   "pendingDirectives": {
-    "prisma-orm-article": "NEW P0-URGENT: Prisma 7 教學 + 比較頁，20% recurring 2yr affiliate（待 Ivan 申請 prisma.io/partners）",
-    "remarkable-fable-article": "NEW P1-HIGH 時效性：reMarkable + Fable/Riddle 英文文章，HN 504 pts 今日流量窗口 24-72h（待 Ivan 申請 remarkable.com/store/partners）",
+    "prisma-orm-article": "P0-URGENT: Prisma 7 教學 + 比較頁，20% recurring 2yr affiliate（待 Ivan 申請 prisma.io/partners）",
+    "remarkable-fable-article": "P1-HIGH 時效性：reMarkable + Fable/Riddle 英文文章，HN 504 pts 今日流量窗口 24-72h（待 Ivan 申請 remarkable.com/store/partners）",
     "firecrawl-article": "P0 延續 Round 114：待 Ivan 取得 affiliate 連結後執行（firecrawl.dev/affiliates）",
-    "officecli-tutorial": "NEW P1-HIGH: OfficeCLI + Claude Code MCP 整合教學（間接 DigitalOcean/DataCamp）",
     "agent-reach-tutorial": "正確 URL 已確認：github.com/Panniantong/Agent-Reach，積壓 14+ rounds",
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-07-10T00:00:59Z",
+  "lastChecked": "2026-07-10T03:00:00Z",
   "issues": [
-    "agent-reach-social-media-ai-2026.html contained a 404 GitHub repo link; replaced install section with migration warning and temporary guidance pending researcher confirmation of new repo URL",
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS."
   ],
   "fbReplied": [
