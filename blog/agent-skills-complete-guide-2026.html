@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Skills 完整指南：讓 AI 變成超級員工（2026）</title>
+    <meta name="description" content="Agent Skills 讓 Claude Code、Cursor、Codex 等 AI 工具獲得超能力。76K stars GitHub 專案完整教學，從安裝到實戰應用。">
+    <meta name="keywords" content="Agent Skills, Claude Code, Cursor, AI 自動化, AI 工具, 開發工具, Agent Skills 教學">
+    <meta property="og:title" content="Agent Skills 完整指南：讓 AI 變成超級員工（2026）">
+    <meta property="og:description" content="Agent Skills 讓 Claude Code、Cursor、Codex 等 AI 工具獲得超能力。76K stars GitHub 專案完整教學，從安裝到實戰應用。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/agent-skills-complete-guide-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="robots" content="index, follow">
+    <meta name="date" content="2026-07-11">
+    <link rel="canonical" href="https://autodev-ai.com/blog/agent-skills-complete-guide-2026.html">
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Agent Skills 完整指南：讓 AI 變成超級員工（2026）",
+      "description": "Agent Skills 讓 Claude Code、Cursor、Codex 等 AI 工具獲得超能力。76K stars GitHub 專案完整教學，從安裝到實戰應用。",
+      "author": {
+        "@type": "Organization",
+        "name": "AutoDev AI Team"
+      },
+      "datePublished": "2026-07-11",
+      "dateModified": "2026-07-11"
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">AutoDev AI</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">首頁</a></li>
+                <li><a href="index.html">部落格</a></li>
+                <li><a href="../about.html">關於</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="blog-post">
+        <header class="post-header">
+            <h1>Agent Skills 完整指南：讓 AI 變成超級員工（2026）</h1>
+            <p class="post-meta">發布於 2026-07-11 | 作者：AutoDev AI Team</p>
+        </header>
+
+        <div class="post-content">
+
+        <p>你有沒有覺得 Claude Code、Cursor、Codex 這些 AI 工具很強大，但每次遇到特定任務還是要重複解釋一堆背景？Agent Skills 就是來解決這件事的。</p>
+
+        <p>這個專案在 2026 年七月初爆發，短短幾天衝上 GitHub trending 第一名，累積 76,000+ stars。主要貢獻者是 Google Chrome 的首席工程師 Addy Osmani。</p>
+
+        <p>簡單說：<strong>Agent Skills 是一套給 AI 工具用的「技能包」系統</strong>，讓你的 AI 助手知道怎麼處理特定任務、遵循什麼規範、用什麼工具——不需要每次重新說明。</p>
+
+        <h2>Agent Skills 是什麼？</h2>
+
+        <p>傳統上，當你叫 Claude Code 或 Cursor 幫你做事，你需要把所有脈絡都塞進 prompt 裡：「這個專案用 React 18，測試用 Vitest，部署在 Vercel，code style 遵守 Airbnb，記得寫 JSDoc...」</p>
+
+        <p>Agent Skills 翻轉了這個流程。你把這些規則和流程預先打包成一個「Skill」，放在特定位置，AI 工具在執行任務前自動讀取，等於幫你的 AI 配備了「肌肉記憶」。</p>
+
+        <p>一個 Skill 本質上是一個 Markdown 檔案（<code>SKILL.md</code>），裡面定義：</p>
+        <ul>
+            <li>這個技能負責什麼任務</li>
+            <li>使用什麼工具和命令</li>
+            <li>遵循哪些規範和流程</li>
+            <li>輸入輸出格式要求</li>
+        </ul>
+
+        <h2>支援哪些 AI 工具？</h2>
+
+        <p>Agent Skills 設計上是工具中立的，目前已確認支援：</p>
+        <ul>
+            <li><strong>Claude Code</strong>（Anthropic）— 透過 <code>AGENTS.md</code> 系統整合</li>
+            <li><strong>Cursor</strong>（.cursor/rules 路徑）</li>
+            <li><strong>GitHub Copilot Codex</strong></li>
+            <li><strong>Gemini CLI</strong>（Google）</li>
+            <li><strong>Windsurf</strong>（.windsurf/rules）</li>
+        </ul>
+
+        <p>基本上只要是支援「讀取工作目錄規則檔案」的 AI 工具，都能使用。</p>
+
+        <h2>為什麼現在爆發？</h2>
+
+        <p>三個因素同時到位：</p>
+
+        <p><strong>1. AI 工具進入「熟練工」時代。</strong>2026 年，越來越多工程師把 AI 工具用在正式生產流程，不再只是 demo。熟練工需要技能，而不只是聰明腦袋。</p>
+
+        <p><strong>2. Addy Osmani 的背書。</strong>他是 Google Chrome 的首席工程師，寫過《Learning Patterns》，在前端開發圈有巨大影響力。他主導這個專案，本身就是一個強力信號。</p>
+
+        <p><strong>3. 時機點剛好。</strong>Claude Code 和 Cursor 同期都做了重大更新，開發者在尋找更好的使用方式，Agent Skills 剛好填補了這個空缺。</p>
+
+        <h2>快速上手：安裝你的第一個 Agent Skill</h2>
+
+        <p>假設你用 Claude Code，流程如下：</p>
+
+        <h3>方法一：使用 clawhub CLI</h3>
+        <p>如果你用 OpenClaw 或支援 clawhub 的環境：</p>
+        <pre><code>npm install -g clawhub
+clawhub search typescript
+clawhub install typescript-best-practices</code></pre>
+
+        <h3>方法二：手動安裝（Claude Code / AGENTS.md 系統）</h3>
+        <pre><code># 在你的專案根目錄建立 skills 資料夾
+mkdir -p .claude/skills
+
+# 下載或建立 SKILL.md
+# 範例：TypeScript 開發規範 Skill
+cat > .claude/skills/typescript/SKILL.md << 'EOF'
+# TypeScript Best Practices Skill
+
+## Purpose
+Enforce TypeScript strict mode conventions and project standards.
+
+## Rules
+- Always use `strict: true` in tsconfig.json
+- Prefer `interface` over `type` for object shapes
+- Use `const` assertions for literal types
+- Never use `any` — use `unknown` and narrow types
+- Document public APIs with JSDoc
+
+## Testing
+- Use Vitest for unit tests
+- Test file naming: `*.test.ts` next to source files
+- Minimum 80% coverage for business logic
+
+## Commands
+- Build: `pnpm build`
+- Test: `pnpm test`
+- Lint: `pnpm lint`
+EOF</code></pre>
+
+        <p>之後當你叫 Claude Code 執行任何 TypeScript 相關任務，它會自動參照這份規範。</p>
+
+        <h3>方法三：從 GitHub 官方 repo 直接複製</h3>
+        <pre><code>git clone https://github.com/addyosmani/agent-skills
+ls agent-skills/skills/</code></pre>
+
+        <p>官方 repo 已經有幾十個預製 Skill，涵蓋 React、Node.js、Python、Docker、CI/CD 等常見場景。</p>
+
+        <h2>實戰範例：幾個有用的 Skills</h2>
+
+        <h3>1. Code Review Skill</h3>
+        <pre><code># skills/code-review/SKILL.md
+## Purpose
+Perform thorough code reviews following team standards.
+
+## Checklist
+- Security: Check for injection vulnerabilities, exposed secrets
+- Performance: Identify N+1 queries, unnecessary re-renders
+- Readability: Variable names, function length, complexity
+- Tests: Coverage for new logic, edge cases
+
+## Output Format
+Use GitHub PR comment format with severity levels:
+- 🔴 BLOCKER: Must fix before merge
+- 🟡 SUGGESTION: Nice to have
+- 🟢 PRAISE: Highlight good patterns</code></pre>
+
+        <h3>2. Git Commit Skill</h3>
+        <pre><code># skills/git-conventions/SKILL.md
+## Purpose
+Enforce Conventional Commits standard.
+
+## Format
+type(scope): description
+
+## Types
+feat, fix, docs, style, refactor, test, chore
+
+## Rules
+- Max 72 characters in subject line
+- Always write in English
+- Reference issue number when applicable: `fix(auth): resolve JWT expiry #123`</code></pre>
+
+        <h3>3. API Design Skill</h3>
+        <pre><code># skills/rest-api/SKILL.md
+## Purpose
+Design RESTful APIs following OpenAPI 3.1 standard.
+
+## Conventions
+- Use kebab-case for URL paths: /user-profiles
+- Version prefix: /api/v1/
+- Always return consistent error format:
+  { "error": { "code": "...", "message": "...", "details": [...] } }
+- Pagination: cursor-based preferred over offset
+
+## Documentation
+- Generate OpenAPI spec for all new endpoints
+- Include request/response examples</code></pre>
+
+        <!-- CTA Block 1: DataCamp -->
+        <div class="cta-block" style="background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%); border-radius: 12px; padding: 28px; margin: 36px 0; text-align: center; color: #fff;">
+            <h3 style="margin: 0 0 10px; font-size: 1.3em;">想深入學習 AI 開發技能？</h3>
+            <p style="margin: 0 0 18px; opacity: 0.9;">DataCamp 提供 Python、機器學習、LLM 開發等 400+ 課程，適合從零到進階的開發者。</p>
+            <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored"
+               style="display: inline-block; background: #fff; color: #1a73e8; font-weight: 700; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-size: 1em;">
+                🎓 免費試用 DataCamp →
+            </a>
+        </div>
+
+        <h2>進階用法：組合多個 Skills</h2>
+
+        <p>Agent Skills 真正的威力在於組合。一個複雜的工程流程可以拆成多個 Skill，讓 AI 在不同情境切換：</p>
+
+        <pre><code>project/
+├── .claude/
+│   └── skills/
+│       ├── typescript/SKILL.md      # 語言規範
+│       ├── testing/SKILL.md         # 測試策略
+│       ├── git-conventions/SKILL.md # 提交規範
+│       ├── code-review/SKILL.md     # 程式碼審查
+│       └── deployment/SKILL.md      # 部署流程
+├── src/
+└── AGENTS.md  # 告訴 Claude Code skills 的位置</code></pre>
+
+        <p>在 <code>AGENTS.md</code> 裡，你可以指定哪些 Skill 適用於哪些路徑：</p>
+
+        <pre><code># AGENTS.md
+## Skills
+
+For all TypeScript files in src/: follow skills/typescript/SKILL.md
+For all test files: follow skills/testing/SKILL.md
+For git operations: follow skills/git-conventions/SKILL.md</code></pre>
+
+        <h2>自己製作 Skill：最佳實踐</h2>
+
+        <p>根據 Addy Osmani 和社群整理出的最佳實踐：</p>
+
+        <h3>保持單一職責</h3>
+        <p>每個 Skill 只做一件事。「TypeScript 規範」和「API 設計」分開，而不是塞進同一個 Skill。這樣才容易維護和升級。</p>
+
+        <h3>用動詞開頭描述規則</h3>
+        <p>「Use `interface` over `type`」比「interface is preferred」更清楚，AI 更容易理解這是個要執行的規則。</p>
+
+        <h3>提供負面範例</h3>
+        <p>只說「做什麼」有時不夠，補上「不要做什麼」能讓 AI 更準確：</p>
+
+        <pre><code>## Rules
+✅ Do: `const data = await fetch(url).then(r => r.json())`
+❌ Don't: Use XMLHttpRequest or jQuery.ajax()</code></pre>
+
+        <h3>版本控制你的 Skills</h3>
+        <p>Skill 也是程式碼，放進 Git 管理。團隊共用同一套 Skills，保持一致性。</p>
+
+        <h2>與其他工具的整合</h2>
+
+        <h3>Cursor 整合</h3>
+        <p>Cursor 使用 <code>.cursor/rules</code> 目錄，Agent Skills 可以直接對應：</p>
+        <pre><code>.cursor/
+└── rules/
+    ├── typescript.md
+    └── testing.md</code></pre>
+
+        <h3>Windsurf 整合</h3>
+        <p>類似地，Windsurf 使用 <code>.windsurf/rules</code>，格式基本相同。</p>
+
+        <h3>與 CI/CD 整合</h3>
+        <p>你可以在 GitHub Actions 裡用 Agent Skills 來自動化 code review：</p>
+        <pre><code># .github/workflows/ai-review.yml
+- name: AI Code Review
+  run: |
+    claude-code review \
+      --skill .claude/skills/code-review/SKILL.md \
+      --pr ${{ github.event.pull_request.number }}</code></pre>
+
+        <!-- CTA Block 2: DigitalOcean -->
+        <div class="cta-block" style="background: linear-gradient(135deg, #0080ff 0%, #0057b3 100%); border-radius: 12px; padding: 28px; margin: 36px 0; text-align: center; color: #fff;">
+            <h3 style="margin: 0 0 10px; font-size: 1.3em;">在雲端部署你的 AI 開發環境</h3>
+            <p style="margin: 0 0 18px; opacity: 0.9;">DigitalOcean 提供簡單易用的雲端 VPS，用 Droplet 跑 Claude Code + Agent Skills 工作流。新用戶免費獲得 $200 點數。</p>
+            <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored"
+               style="display: inline-block; background: #fff; color: #0080ff; font-weight: 700; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-size: 1em;">
+                ☁️ 獲得 $200 DigitalOcean 免費點數 →
+            </a>
+        </div>
+
+        <h2>社群分享的實用 Skill 案例</h2>
+
+        <p>自從 Agent Skills 走紅，GitHub 和 Reddit 上湧現了很多社群分享的 Skill 包：</p>
+
+        <h3>🔥 最受歡迎的社群 Skills</h3>
+
+        <ul>
+            <li><strong>React 18 + TypeScript 完整規範</strong> — 涵蓋 hooks 使用規則、狀態管理模式、效能優化</li>
+            <li><strong>Security Audit Skill</strong> — OWASP Top 10 安全審查清單</li>
+            <li><strong>Database Migration Skill</strong> — Prisma + PostgreSQL 遷移流程</li>
+            <li><strong>Documentation Writer Skill</strong> — 自動生成 README、API 文檔</li>
+            <li><strong>Accessibility Checker Skill</strong> — WCAG 2.2 合規檢查</li>
+            <li><strong>Performance Profiler Skill</strong> — Core Web Vitals 優化指引</li>
+        </ul>
+
+        <h2>Agent Skills vs 其他方案的比較</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>方案</th>
+                    <th>優點</th>
+                    <th>缺點</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Agent Skills</strong></td>
+                    <td>跨工具、開源、社群資源豐富</td>
+                    <td>需要手動維護</td>
+                </tr>
+                <tr>
+                    <td>Cursor Rules</td>
+                    <td>深度整合 Cursor UI</td>
+                    <td>僅限 Cursor</td>
+                </tr>
+                <tr>
+                    <td>System Prompt 硬塞</td>
+                    <td>即時生效</td>
+                    <td>每次都要重複、耗用 token</td>
+                </tr>
+                <tr>
+                    <td>.editorconfig</td>
+                    <td>格式化標準化</td>
+                    <td>只管格式，不管邏輯規範</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>常見問題</h2>
+
+        <h3>Q：Skills 會增加 API 費用嗎？</h3>
+        <p>每次對話都會把 Skill 內容加入 context，所以會消耗少量額外 token。建議保持 Skill 精簡（< 500 tokens），成本影響不大。</p>
+
+        <h3>Q：可以用在私有專案嗎？</h3>
+        <p>完全可以。Skill 就是本機的 Markdown 檔案，你的業務規則和系統設計不需要分享出去。</p>
+
+        <h3>Q：Skills 和 MCP（Model Context Protocol）有什麼關係？</h3>
+        <p>MCP 解決的是「AI 如何連接外部工具和資料」，Agent Skills 解決的是「AI 如何遵循特定流程和規範」。兩者互補，可以同時使用。</p>
+
+        <h3>Q：不同 AI 工具讀取 Skill 的效果一樣嗎？</h3>
+        <p>基本上接近，但各工具對規則的遵循度略有差異。Claude Code 和 Cursor 目前對結構化 Markdown 指令的遵循度最高。</p>
+
+        <h2>未來展望</h2>
+
+        <p>Agent Skills 的走紅預示著一個趨勢：<strong>AI 工具的使用方式正在從「每次互動式提問」轉向「預設化、制度化」</strong>。</p>
+
+        <p>就像軟體工程從手動 checklist 進化到 CI/CD 自動化，AI 輔助開發也正在從「每次手動說明」進化到「預設知識庫驅動」。</p>
+
+        <p>預計接下來會看到：</p>
+        <ul>
+            <li>企業級 Skill marketplace（類似 npm，但賣的是 AI 規範包）</li>
+            <li>Skill 版本管理和衝突解析工具</li>
+            <li>與 IDE 更深度整合的 Skill 管理 UI</li>
+            <li>基於 Skill 效果的 A/B 測試框架</li>
+        </ul>
+
+        <!-- CTA Block 3: Systeme.io -->
+        <div class="cta-block" style="background: linear-gradient(135deg, #f97316 0%, #c2410c 100%); border-radius: 12px; padding: 28px; margin: 36px 0; text-align: center; color: #fff;">
+            <h3 style="margin: 0 0 10px; font-size: 1.3em;">用 AI 技能打造你的線上事業</h3>
+            <p style="margin: 0 0 18px; opacity: 0.9;">Systeme.io 提供完整的線上創業平台：銷售頁、電子郵件行銷、線上課程、聯盟計畫，免費方案可用。</p>
+            <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" target="_blank" rel="noopener sponsored"
+               style="display: inline-block; background: #fff; color: #f97316; font-weight: 700; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-size: 1em;">
+                🚀 免費開始用 Systeme.io →
+            </a>
+        </div>
+
+        <h2>結語</h2>
+
+        <p>Agent Skills 不是什麼革命性的技術突破，它的核心概念非常簡單：把你的規範寫成 AI 讀得懂的格式，讓 AI 記住它。但就像 Conventional Commits 和 ESLint 當初也只是「把規範寫下來」，Agent Skills 有可能成為 AI 輔助開發的基礎設施之一。</p>
+
+        <p>76K stars 不是巧合。它印證了一件事：開發者已經準備好用更系統化的方式使用 AI 工具了。</p>
+
+        <p>現在入手，趁社群還在快速成長，貢獻你自己的 Skill，也讓你的工作流程變得更聰明。</p>
+
+        <div style="border-top: 2px solid #e5e7eb; margin-top: 48px; padding-top: 24px;">
+            <h3>延伸閱讀</h3>
+            <ul>
+                <li><a href="ruflo-claude-code-multi-agent-2026.html">Ruflo：Claude Code 多代理協作實戰</a></li>
+                <li><a href="officecli-mcp-claude-code-tutorial-2026.html">OfficeCLI + Claude Code MCP 自動化 Office 文件</a></li>
+                <li><a href="opencode-vs-cursor-vs-claude-code-2026.html">OpenCode vs Cursor vs Claude Code 完整比較</a></li>
+            </ul>
+        </div>
+
+        </div><!-- .post-content -->
+    </article>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 AutoDev AI. 本文含有聯盟行銷連結。</p>
+        </div>
+    </footer>
+</body>
+</html>
