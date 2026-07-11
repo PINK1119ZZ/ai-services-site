@@ -848,3 +848,56 @@ InsightRaider 追蹤 146,271 個產品，$206M+ 總收益：
 → 見 directives/researcher-to-strategist-2026-06-27-round108.md
 
 ---
+
+---
+
+## 2026-07-11（市場研究 Round 117 — 週日 23:00 UTC cron）
+
+### 一、🔥 本輪最高價值新發現
+
+#### 1. Kit (ConvertKit) 50% recurring 聯盟 ⭐⭐⭐⭐⭐
+| 欄位 | 詳情 |
+|------|------|
+| 工具 | Kit (原 ConvertKit) — 電子報平台，600,000+ 創作者 |
+| 佣金 | **50% recurring 首年** + Bronze/Silver/Gold tier 後 10-20% 永久 recurring |
+| 客單價 | $25-100/月 |
+| LTV per referral | $150-600 (首年) |
+| 申請連結 | kit.com/affiliate |
+| Cookie | 30 天 |
+| 預估月收入 | $800-2,000 |
+| 優先級 | **P0-URGENT（本輪最強）** |
+
+Kit 50% = 業界最高（超過 Jasper 25%、Writesonic 30%）。達 Bronze tier (10 referrals/年) 後永久 recurring 10-20%。創作者/開發者受眾與 autodev-ai 完美匹配。
+
+#### 2. Supademo 30% recurring ⭐⭐⭐⭐
+| 欄位 | 詳情 |
+|------|------|
+| 工具 | Supademo — 互動式產品 demo 製作工具（B2B SaaS） |
+| 佣金 | 30% recurring |
+| 客單價 | $39-99/月 |
+| Cookie | 30 天 |
+| 預估月收入 | $400-1,000 |
+| 優先級 | P1-HIGH |
+
+#### 3. 台灣中小企業 AI 落地市場 ⭐⭐⭐⭐
+- 經濟部 2026/4 數據：2,058 家企業導入（91% 中小企業）、9 億補助
+- 需求缺口：「如何做」實戰教學幾乎空白，工具教學氾濫
+- Gumroad 機會：「台灣中小企業 AI 導入實戰手冊」$49（含自評工具、5 個台灣案例、政府補助 SOP、ROI 模板）
+- 預估月收：$600-1,500
+
+#### 4. Gumroad $29 定價最佳轉換點（新數據）⭐⭐⭐
+- Digital Applied 2026 研究（146,271 產品）驗證 $29 為衝動購買甜蜜點
+- 關鍵差異化因素：測試證明（附 Claude/GPT 實際輸出截圖）+ 季度更新承諾
+- Round 115 Claude Code Prompt Pack 建議定價從 $19-27 上調至 $29
+
+#### 5. 小紅書 2026 流量機制（免費導流新機會）⭐⭐⭐
+- 2026 演算法偏好：真實體驗 + 稀缺視角，不再吃關鍵字堆砌
+- CES 公式：評論×4、轉發×4、關注×8
+- 搜推互通：推薦 + 搜尋雙流量引擎
+- 台灣創作者機會：繁中「台灣視角」差異化，導流至 autodev-ai
+
+### 二、💡 高價值機會 → 已寫入 directives
+
+→ 見 directives/researcher-to-strategist-2026-07-11-round117.md
+
+---
