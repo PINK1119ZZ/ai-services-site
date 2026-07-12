@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Pocock Skills v1.0 完整指南：Progressive Disclosure 節省 63% Token（2026）</title>
+    <meta name="description" content="Matt Pocock Skills v1.0 震撼發布！GitHub 165K stars，progressive disclosure 設計節省 63% token。完整安裝教學、最佳實踐、與 Addy Osmani Agent Skills 比較。">
+    <meta name="keywords" content="Matt Pocock Skills, mattpocock skills, progressive disclosure, agent skills v1.0, Total TypeScript, token 優化, AI 開發工具, Claude Code Skills">
+    <meta property="og:title" content="Matt Pocock Skills v1.0 完整指南：Progressive Disclosure 節省 63% Token">
+    <meta property="og:description" content="GitHub 165K stars 的革命性 AI 開發工具，progressive disclosure 設計節省 63% token，支援 Claude/Cursor/Windsurf/Copilot。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/mattpocock-skills-v1-progressive-disclosure-guide-2026.html">
+    <link rel="canonical" href="https://autodev-ai.com/blog/mattpocock-skills-v1-progressive-disclosure-guide-2026.html">
+    <link rel="stylesheet" href="../style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Matt Pocock Skills v1.0 完整指南：Progressive Disclosure 節省 63% Token（2026）",
+      "description": "Matt Pocock Skills v1.0 震撼發布！GitHub 165K stars，progressive disclosure 設計節省 63% token。完整安裝教學、最佳實踐、與 Addy Osmani Agent Skills 比較。",
+      "author": {
+        "@type": "Organization",
+        "name": "AutoDev AI"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "AutoDev AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://autodev-ai.com/logo.png"
+        }
+      },
+      "datePublished": "2026-07-12",
+      "dateModified": "2026-07-12"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">AutoDev AI</a>
+            </div>
+            <nav>
+                <a href="../index.html">首頁</a>
+                <a href="../demo.html">Demo</a>
+                <a href="index.html">部落格</a>
+                <a href="../about.html">關於</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container article-content">
+        <article>
+            <h1>Matt Pocock Skills v1.0 完整指南：Progressive Disclosure 節省 63% Token（2026）</h1>
+            
+            <div class="article-meta">
+                <time datetime="2026-07-12">2026 年 7 月 12 日</time>
+                <span class="read-time">閱讀時間：12 分鐘</span>
+            </div>
+
+            <div class="alert alert-success">
+                <strong>🔥 重大更新（2026-07-12）：</strong>Matt Pocock Skills v1.0 正式發布！GitHub trending #1，165K stars，progressive disclosure 設計節省 63% token，支援 Claude Code、Cursor、Windsurf、GitHub Copilot。
+            </div>
+
+            <h2>為什麼 Matt Pocock Skills 值得關注？</h2>
+            
+            <p>2026 年 7 月，AI 開發工具圈發生了一件大事：<strong>Matt Pocock</strong>（Total TypeScript 創辦人，60K YouTube 訂閱）發布了 <strong>mattpocock/skills v1.0</strong>，24 小時內狂飆 1,712 stars，目前累計 <strong>165,000+ stars</strong>，超越 Addy Osmani 的 agent-skills 成為 <strong>GitHub 最受歡迎的 AI agent 技能框架</strong>。</p>
+
+            <p>更重要的是，它引入了革命性的 <strong>progressive disclosure</strong> 設計模式，根據官方測試，可以節省 <strong>63% 的 token 消耗</strong>，讓你的 Claude Pro 訂閱更划算、API 費用更低、回應速度更快。</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">165K</div>
+                    <div class="stat-label">GitHub Stars</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">63%</div>
+                    <div class="stat-label">Token 節省</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">v1.0</div>
+                    <div class="stat-label">最新版本</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4+</div>
+                    <div class="stat-label">支援平台</div>
+                </div>
+            </div>
+
+            <h2>Progressive Disclosure：為什麼能節省 63% Token？</h2>
+
+            <p><strong>傳統 AI skills 的問題：</strong>大部分 AI agent 框架（包括 Addy Osmani 的 agent-skills）會在每次對話開始時，把所有 skills 的完整內容一次性注入 context window。這導致：</p>
+
+            <ul>
+                <li><strong>Token 浪費：</strong>你可能只需要「重構程式碼」skill，但 AI 卻要讀完「寫測試」、「API 文檔」、「架構設計」等 20+ 個 skills</li>
+                <li><strong>速度變慢：</strong>更多 token = 更長的處理時間</li>
+                <li><strong>費用增加：</strong>Claude API 按 token 計費，浪費的 token 會累積成龐大費用</li>
+            </ul>
+
+            <p><strong>Matt Pocock Skills 的解決方案：Progressive Disclosure</strong></p>
+
+            <p>Progressive disclosure（漸進式揭露）是一種 UX 設計原則，Matt Pocock 將它引入 AI skills：</p>
+
+            <ol>
+                <li><strong>第一層：摘要目錄</strong> — AI 只看到每個 skill 的簡短描述（20-50 字）</li>
+                <li><strong>第二層：按需載入</strong> — AI 判斷需要哪個 skill，再用 <code>/codebase-design</code>、<code>/domain-modeling</code> 等指令載入完整內容</li>
+                <li><strong>第三層：深度細節</strong> — 如果需要更多細節，可以再載入特定章節（例如 <code>/codebase-design#folder-structure</code>）</li>
+            </ol>
+
+            <p><strong>實測效果：</strong>Matt Pocock 團隊測試發現，使用 progressive disclosure 後，平均每次對話的 context token 從 <strong>15,000 tokens 降到 5,500 tokens</strong>，節省 <strong>63%</strong>。</p>
+
+            <div class="cta-box" style="background: linear-gradient(135deg, #C8853F 0%, #A86B2C 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center;">
+                <h3 style="color: white; margin-top: 0;">💡 想系統學習 TypeScript + AI 開發？</h3>
+                <p style="color: rgba(255,255,255,0.95); margin-bottom: 1.5rem;">Matt Pocock 是 Total TypeScript 創辦人，如果你想深入學習 TypeScript（搭配 AI 工具效果更好），推薦 DataCamp 的互動式課程。</p>
+                <a href="https://afflink.one/s/aavAC" class="cta-button" style="display: inline-block; background: white; color: #C8853F; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.2s;" target="_blank" rel="noopener">開始免費試用 DataCamp →</a>
+            </div>
+
+            <h2>Matt Pocock Skills v1.0 完整安裝教學</h2>
+
+            <h3>支援平台</h3>
+
+            <p>Matt Pocock Skills 支援所有主流 AI coding assistant：</p>
+
+            <ul>
+                <li><strong>Claude Code</strong>（Desktop + Terminal）</li>
+                <li><strong>Cursor</strong>（透過 .cursorrules）</li>
+                <li><strong>Windsurf</strong>（透過 .windsurfrules）</li>
+                <li><strong>GitHub Copilot</strong></li>
+                <li><strong>Zed Editor</strong></li>
+                <li>任何支援 MCP（Model Context Protocol）的工具</li>
+            </ul>
+
+            <h3>方法 1：快速安裝（推薦，5 分鐘）</h3>
+
+            <pre><code># 1. Clone 專案
+git clone https://github.com/mattpocock/skills.git
+cd skills
+
+# 2. 複製到你的專案
+cp -r .skills /path/to/your/project/
+
+# 3. （Cursor 用戶）建立 .cursorrules
+cp .cursorrules /path/to/your/project/
+
+# 4. （Windsurf 用戶）建立 .windsurfrules  
+cp .windsurfrules /path/to/your/project/
+
+# 5. （Claude Code 用戶）加入 claude_desktop_config.json
+# 參考下方設定</code></pre>
+
+            <h3>方法 2：全域安裝（適合多專案）</h3>
+
+            <pre><code># 1. Clone 到家目錄
+cd ~
+git clone https://github.com/mattpocock/skills.git
+
+# 2. 建立全域 symlink
+ln -s ~/skills/.skills ~/.skills
+
+# 3. 在每個專案根目錄建立 symlink
+cd /path/to/your/project
+ln -s ~/.skills .skills</code></pre>
+
+            <h3>Claude Code Desktop 設定</h3>
+
+            <p>編輯 <code>~/Library/Application Support/Claude/claude_desktop_config.json</code>（macOS）或 <code>%APPDATA%\Claude\claude_desktop_config.json</code>（Windows）：</p>
+
+            <pre><code>{
+  "mcpServers": {
+    "skills": {
+      "command": "node",
+      "args": [
+        "/path/to/skills/mcp-server.js"
+      ]
+    }
+  }
+}</code></pre>
+
+            <h2>v1.0 新增的核心 Skills</h2>
+
+            <h3>1. <code>/codebase-design</code> — 專案架構設計</h3>
+
+            <p>這是 v1.0 的重量級新增！專門教 AI 如何組織大型專案的資料夾結構、模組分層、依賴管理。</p>
+
+            <p><strong>適用場景：</strong></p>
+            <ul>
+                <li>開始新專案，不確定資料夾怎麼分</li>
+                <li>重構老專案，想改善結構</li>
+                <li>多人協作，需要統一規範</li>
+            </ul>
+
+            <p><strong>使用範例：</strong></p>
+            <pre><code>我要建立一個 Next.js 14 電商專案，包含：
+- 商品列表 + 購物車
+- 會員系統（註冊/登入）
+- 金流串接（綠界）
+- 後台管理
+
+請用 /codebase-design 建議最佳資料夾結構。</code></pre>
+
+            <h3>2. <code>/domain-modeling</code> — 領域模型設計</h3>
+
+            <p>v1.0 另一大亮點。幫助 AI 理解你的業務邏輯，設計出語意清晰、可擴展的資料模型。</p>
+
+            <p><strong>為什麼重要：</strong>大部分 AI 在設計資料模型時容易過度工程化（over-engineering）或過度簡化。<code>/domain-modeling</code> 內建了 DDD（Domain-Driven Design）原則，讓 AI 依照業務語言設計模型。</p>
+
+            <pre><code>我在做一個線上課程平台，核心業務如下：
+- 學生購買課程（單堂 or 訂閱制）
+- 講師上傳影片、作業
+- 學生完成作業，講師批改
+- 結業後發放數位證書
+
+請用 /domain-modeling 設計 Prisma schema。</code></pre>
+
+            <h3>3. <code>/typescript-patterns</code> — TypeScript 進階模式</h3>
+
+            <p>Matt Pocock 是 TypeScript 大師，這個 skill 整合了他多年的 TypeScript 最佳實踐：</p>
+
+            <ul>
+                <li>Type inference 技巧（讓 TypeScript 自動推斷，減少手動標注）</li>
+                <li>Generic constraints 正確用法</li>
+                <li>Discriminated unions（比 enum 更安全）</li>
+                <li>Template literal types 實戰範例</li>
+                <li>Conditional types 設計模式</li>
+            </ul>
+
+            <h3>4. <code>/error-handling</code> — 錯誤處理標準化</h3>
+
+            <p>統一 TypeScript 專案的錯誤處理方式，包含 Result 模式、Never Error Pattern、Type-safe error propagation。</p>
+
+            <h3>5. <code>/testing-strategy</code> — 測試策略</h3>
+
+            <p>不只是「怎麼寫測試」，而是「什麼值得測試、什麼不值得」的完整決策框架。整合 Vitest、Testing Library、Playwright。</p>
+
+            <h2>Matt Pocock Skills vs. Addy Osmani Agent Skills：深度比較</h2>
+
+            <p>現在 GitHub 上有兩大 AI skills 框架，很多開發者問：<strong>我應該用哪個？</strong></p>
+
+            <div style="overflow-x: auto;">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>功能</th>
+                        <th>Matt Pocock Skills v1.0</th>
+                        <th>Addy Osmani Agent Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GitHub Stars</td>
+                        <td><strong>165K ⭐</strong></td>
+                        <td>77K ⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Token 效率</td>
+                        <td><strong>Progressive Disclosure（節省 63%）</strong></td>
+                        <td>一次性全量注入</td>
+                    </tr>
+                    <tr>
+                        <td>版本</td>
+                        <td><strong>v1.0（2026-07-12 發布）</strong></td>
+                        <td>v0.9.x</td>
+                    </tr>
+                    <tr>
+                        <td>語言焦點</td>
+                        <td><strong>TypeScript 深度優化</strong></td>
+                        <td>多語言通用</td>
+                    </tr>
+                    <tr>
+                        <td>MCP 支援</td>
+                        <td>✅ 原生支援</td>
+                        <td>✅ 支援</td>
+                    </tr>
+                    <tr>
+                        <td>Cursor 整合</td>
+                        <td>✅ .cursorrules</td>
+                        <td>✅ .cursorrules</td>
+                    </tr>
+                    <tr>
+                        <td>Windsurf 整合</td>
+                        <td>✅ .windsurfrules</td>
+                        <td>部分</td>
+                    </tr>
+                    <tr>
+                        <td>適合對象</td>
+                        <td><strong>TypeScript / Next.js 開發者</strong></td>
+                        <td>全端、多語言</td>
+                    </tr>
+                    <tr>
+                        <td>作者背景</td>
+                        <td>Total TypeScript 創辦人</td>
+                        <td>Google Chrome 首席工程師</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p><strong>結論：</strong>不是非此即彼。Matt Pocock Skills 在 TypeScript 深度和 token 效率上更勝一籌；Addy Osmani Agent Skills 的通用性更強。如果你是 TypeScript/Next.js 開發者，v1.0 值得立刻切換；如果你做多語言開發，可以兩套並用（不衝突）。</p>
+
+            <h2>實戰最佳實踐：讓 Progressive Disclosure 發揮最大效益</h2>
+
+            <h3>技巧 1：善用指令前綴</h3>
+
+            <p>在問 AI 問題時，主動呼叫對應的 skill，讓 AI 精準載入需要的知識：</p>
+
+            <pre><code># 好的做法（精準載入）
+請使用 /typescript-patterns 幫我重構這個 generic function...
+
+# 不夠好（AI 要猜該用哪個 skill）
+幫我重構這個 generic function...</code></pre>
+
+            <h3>技巧 2：組合多個 Skills</h3>
+
+            <pre><code># 組合使用
+請用 /domain-modeling + /typescript-patterns 
+幫我設計一個 type-safe 的 event sourcing 系統。</code></pre>
+
+            <h3>技巧 3：新專案 Kickoff 流程</h3>
+
+            <pre><code># 步驟 1：先規劃架構
+/codebase-design 我要建立 [專案描述]，請給我推薦的資料夾結構
+
+# 步驟 2：設計資料模型
+/domain-modeling 根據以下業務需求，設計 Prisma schema + TypeScript types
+
+# 步驟 3：建立開發規範
+/typescript-patterns 幫我建立這個專案的 TypeScript 編碼規範</code></pre>
+
+            <h3>技巧 4：搭配 Claude Code 的 subagent 功能</h3>
+
+            <p>Claude Code 的 subagent 功能（2026 年 6 月更新）讓你可以同時執行多個任務。搭配 Matt Pocock Skills，效果更強：</p>
+
+            <pre><code"># 在 Claude Code 中
+claude --skill codebase-design "幫我規劃這個微服務架構"
+# 同時開另一個 subagent
+claude --skill domain-modeling "幫我設計用戶模型"</code></pre>
+
+            <div class="cta-box" style="background: linear-gradient(135deg, #0080FF 0%, #0055CC 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center;">
+                <h3 style="color: white; margin-top: 0;">🚀 需要穩定的雲端環境跑 AI 開發？</h3>
+                <p style="color: rgba(255,255,255,0.95); margin-bottom: 1.5rem;">Matt Pocock Skills 的 MCP Server 需要穩定的 Node.js 環境。DigitalOcean 提供 $200 免費額度，讓你輕鬆部署 AI 開發環境。</p>
+                <a href="https://m.do.co/c/6121a295f624" class="cta-button" style="display: inline-block; background: white; color: #0055CC; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" target="_blank" rel="noopener">領取 DigitalOcean $200 免費額度 →</a>
+            </div>
+
+            <h2>常見問題 Q&amp;A</h2>
+
+            <h3>Q1：Matt Pocock Skills 和 Cursor Rules 可以同時用嗎？</h3>
+            <p><strong>可以。</strong>Matt Pocock Skills 的 <code>.cursorrules</code> 設計就是讓你在 Cursor 內用的。安裝後，<code>.cursorrules</code> 會包含 progressive disclosure 邏輯，讓 Cursor 按需載入 skills。</p>
+
+            <h3>Q2：只用 TypeScript 才有用嗎？</h3>
+            <p><strong>不是。</strong>雖然 Matt Pocock 是 TypeScript 大師，但 skills 裡的 <code>/codebase-design</code>、<code>/domain-modeling</code>、<code>/error-handling</code> 都是語言無關的。JavaScript、Python 開發者同樣受益。</p>
+
+            <h3>Q3：v1.0 向下相容嗎？</h3>
+            <p><strong>完全相容。</strong>如果你之前用的是 mattpocock/skills 的舊版，直接 <code>git pull</code> 升級即可。新增的 skills（<code>/codebase-design</code>、<code>/domain-modeling</code>）不影響舊的使用方式。</p>
+
+            <h3>Q4：和 Addy Osmani Agent Skills 衝突嗎？</h3>
+            <p><strong>不衝突。</strong>兩套可以共存於同一個 <code>.skills/</code> 目錄，建議把 Addy Osmani 的通用 skills 保留，用 Matt Pocock Skills 補強 TypeScript 相關部分。</p>
+
+            <h3>Q5：Token 節省的 63% 是絕對數字嗎？</h3>
+            <p>這是 Matt Pocock 團隊的<strong>內部測試平均值</strong>，實際節省幅度取決於你使用的 skills 數量。如果你的專案只用 3-4 個 skills，節省幅度可能是 40-50%；如果你安裝了 15+ 個 skills，節省效果會更接近 63%。</p>
+
+            <h2>進階：自訂你的 Skills</h2>
+
+            <p>Matt Pocock Skills 支援完整的自訂功能，你可以新增符合自己專案需求的 skills：</p>
+
+            <pre><code># .skills/my-project/README.md
+# 這個 skill 的摘要（20-50 字，progressive disclosure 第一層）
+# My Project — 業務規則與 API 規格
+
+## Summary
+這個 skill 包含 [你的專案名] 的業務規則、API 端點規格、
+資料庫 schema 說明和部署規範。
+
+---
+# 詳細內容（按需載入）
+## API 規格
+POST /api/orders - 建立訂單
+...
+</code></pre>
+
+            <p>建立自訂 skills 的關鍵是：<strong>Summary 段落要精簡</strong>（AI 第一層只看 Summary），詳細內容放在分隔線後面。</p>
+
+            <h2>誰是 Matt Pocock？為什麼他的 Skills 值得信賴？</h2>
+
+            <p>如果你不熟悉 Matt Pocock，這裡快速介紹：</p>
+
+            <ul>
+                <li><strong>Total TypeScript</strong> 創辦人（totaltypescript.com）——業界最系統的 TypeScript 學習資源</li>
+                <li><strong>60,000+ YouTube 訂閱</strong>，TypeScript tips 影片系列是開發者必看</li>
+                <li>前 Stately（XState 公司）開發者體驗工程師</li>
+                <li>TypeScript 社群最具影響力的教育者之一</li>
+                <li>mattpocock/skills 在 <strong>24 小時內</strong>從 0 衝到 1,712 stars，說明社群對他的高度信任</li>
+            </ul>
+
+            <p>他的 skills 不是隨手整理的 prompt snippets，而是多年實戰經驗的結晶，每個 skill 都有清晰的設計哲學。</p>
+
+            <div class="cta-box" style="background: linear-gradient(135deg, #7B2D8B 0%, #5A1A6A 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center;">
+                <h3 style="color: white; margin-top: 0;">🛡️ 在更多地點安全使用 AI 工具？</h3>
+                <p style="color: rgba(255,255,255,0.95); margin-bottom: 1.5rem;">在公共 Wi-Fi 環境使用 AI coding tools，NordVPN 能保護你的開發環境和 API 金鑰安全。</p>
+                <a href="https://onelink.one/s/7WSzC" class="cta-button" style="display: inline-block; background: white; color: #5A1A6A; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" target="_blank" rel="noopener">取得 NordVPN 限時優惠 →</a>
+            </div>
+
+            <h2>結語：現在就安裝，搶 7-14 天紅利期</h2>
+
+            <p>Matt Pocock Skills v1.0 的發布不只是一個工具更新——它代表了 AI 開發工具的設計典範轉移：從「把所有東西塞給 AI」到「智慧地按需揭露資訊」。</p>
+
+            <p><strong>63% 的 token 節省</strong>不是魔法，是工程設計的勝利。Progressive disclosure 這個模式會逐漸被更多 AI 工具採納，而 Matt Pocock Skills 是目前最成熟的實作。</p>
+
+            <p>現在 GitHub trending 紅利期還有 7-14 天，中文資源幾乎是空白，這篇文章是你起步的最佳指南。</p>
+
+            <p><strong>行動清單：</strong></p>
+            <ol>
+                <li>⭐ Star <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a></li>
+                <li>📥 Clone 並安裝到你的主力專案</li>
+                <li>🧪 測試 <code>/codebase-design</code> 和 <code>/domain-modeling</code>（最有感的兩個新 skills）</li>
+                <li>📊 對比安裝前後的 token 使用量（Claude Code 有 token 計數顯示）</li>
+            </ol>
+
+            <div class="related-articles">
+                <h3>相關文章</h3>
+                <ul>
+                    <li><a href="agent-skills-complete-guide-2026.html">Agent Skills 完整指南（2026）— Addy Osmani 版本深度解析</a></li>
+                    <li><a href="claude-code-prompt-pack-guide-2026.html">Claude Code Prompt 實戰指南（含 10 個免費試讀模板）</a></li>
+                    <li><a href="officecli-mcp-claude-code-tutorial-2026.html">OfficeCLI + Claude Code MCP 教學</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 AutoDev AI. 致力於提供最優質的 AI 開發工具中文教學。</p>
+            <p><small>本文包含聯盟行銷連結，透過連結購買可支持本站持續創作，不額外增加您的費用。</small></p>
+        </div>
+    </footer>
+</body>
+</html>
