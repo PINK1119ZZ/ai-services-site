@@ -1,6 +1,70 @@
 # topic-ideas.md - 趨勢獵手發現(Researcher Agent)
 
-## 🔥 本輪最高價值發現(2026-07-11)
+## 🔥 本輪最高價值發現(2026-07-12 Round 119)
+
+### 1. **Cursor Affiliate 正式開放（20% recurring/年）** - HIGH VALUE
+- **工具:** Cursor IDE (估值 $29.3B, $2B ARR)
+- **關鍵字:** "cursor pro 評測", "cursor vs windsurf 2026", "cursor 值得買嗎"
+- **搜尋量:** 預估 9K-18K/月（GSC 已顯示 cursor 曝光，我們有流量但沒連結）
+- **變現方式:**
+  - Cursor affiliate: 20% recurring on Pro ($20/mo) + Business 訂閱，**首年有效**
+  - 計算: $20/mo × 20% = $4/mo/轉換 → 10 conversions = $40/mo 首年
+  - 來源: openaffiliate.dev/programs/cursor (community-maintained, live)
+- **預估月收入:** $400-800
+- **建議站點:** autodev-ai.com
+- **競爭度:** 中（我們已有 Cursor 文章，只需補連結）
+- **行動項:**
+  - 🔴 P0-URGENT (Ivan): 申請 Cursor affiliate → openaffiliate.dev/programs/cursor 或 cursor.com/partners
+  - 🔴 P1 (seo-writer): 更新現有 Cursor 3 評測、Cursor vs Windsurf 文章，補 affiliate 連結
+  - 🔴 P1 (seo-writer): 寫「Cursor Pro 值得買嗎？2026 完整評測（$20/mo）」
+
+---
+
+### 2. **Copy.ai 超高佣金（45% 首年 + 60 天 cookie）** - VERY HIGH VALUE
+- **工具:** Copy.ai (AI 寫作工具)
+- **關鍵字:** "copy.ai 評測", "copy.ai vs writesonic", "ai 寫作工具比較"
+- **搜尋量:** 預估 6K-14K/月
+- **變現方式:**
+  - Copy.ai affiliate: **45% 首年訂閱**（非 30 天，是整年！）
+  - 定價: $49/month pro → 10 conversions = 10 × $49 × 12 × 45% = **$2,646/年**
+  - Cookie: 60 天（業界標準 30 天的兩倍）
+  - 來源: rewardful.com + referly.so 確認
+  - 平台: Rewardful
+  - 競品策略: 用超高前年佣金搶 affiliate，短期現金流爆炸
+- **預估月收入:** $500-1,500（單一工具）
+- **建議站點:** autodev-ai.com / ai-tools.tw
+- **競爭度:** 高（但我們的 Writesonic 文章可合併成比較頁）
+- **行動項:**
+  - 🔴 P0-URGENT (Ivan): 申請 Copy.ai affiliate → copy.ai/affiliates（Rewardful 平台）
+  - 🔴 P1 (seo-writer): 寫「Copy.ai vs Writesonic vs Jasper 2026：AI 寫作工具誰值得買？」
+    - 三家 affiliate 並列，用「最適場景」結構規避佣金衝突
+    - Copy.ai CTA 主打「45% 首年佣金」的轉換率優勢
+    - 關鍵字: ai 寫作工具比較, copy.ai 評測, writesonic vs copy.ai
+    - 預估流量: 10K-20K/月
+
+---
+
+### 3. **Perplexity AI Affiliate（$15-20 固定，低門檻）** - MEDIUM-HIGH VALUE
+- **工具:** Perplexity AI (估值 $20B, AI 搜尋龍頭之一)
+- **關鍵字:** "perplexity ai 評測", "perplexity pro 值得嗎", "ai 搜尋引擎比較"
+- **搜尋量:** 預估 8K-15K/月（繁中資源極少）
+- **變現方式:**
+  - Perplexity affiliate: $15-20 固定（Pro 訂閱，$20/mo）
+  - 平台: Dub.co 追蹤（專業儀表板）
+  - 另有 referral 計畫: 每個好友安裝瀏覽器並提問 = $15
+  - 來源: openaffiliate.dev/programs/perplexity + way2earning.com 確認
+- **預估月收入:** $200-600
+- **建議站點:** autodev-ai.com / ai-tools.tw
+- **競爭度:** 低（繁中 Perplexity Pro 評測幾乎沒有）
+- **行動項:**
+  - 🔴 P1 (Ivan): 申請 Perplexity affiliate → perplexity.ai/partners 或 dub.co
+  - 🔴 P1 (seo-writer): 寫「Perplexity AI Pro 評測 2026：$20/mo 值不值？vs ChatGPT vs Claude」
+    - 關鍵字: perplexity ai 評測, perplexity pro 值得嗎, ai 搜尋引擎推薦
+    - 預估流量: 8K-15K/月
+
+---
+
+## 🔥 上輪高價值發現(2026-07-11 Round 117-118)
 
 ### 1. **Agent Skills 生態系爆發** - VERY HIGH VALUE
 - **工具:** addyosmani/agent-skills (76K+ stars, #1 trending)

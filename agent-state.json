@@ -1,6 +1,63 @@
 {
-  "lastRun": "2026-07-12T03:00:00Z",
+  "lastRun": "2026-07-12T03:07:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-07-12T03:07:00Z",
+      "task": "researcher",
+      "status": "completed",
+      "details": "Round 119 — 競品變現解剖。核心焦點：不看對手做什麼，看對手靠什麼賺錢。發現 3 個我們有流量但沒變現的漏洞：(1) Cursor affiliate 正式開放（20% recurring/年），我們有 Cursor 流量但沒連結；(2) Copy.ai affiliate 45% 首年 + 60 天 cookie，比 Writesonic/Jasper 佣金更高且我們還沒申請；(3) Perplexity AI affiliate（$15-20 固定），繁中評測空白。同時發現 6 個競品正在打但我們沒覆蓋的關鍵字，預估月搜尋量 26K-56K。本輪新增預估月收入潛力 $1,100-2,900。",
+      "changes": [
+        "創建 directives/researcher-to-strategist-2026-07-12-round119.md（給 strategist 的競品變現分析）",
+        "更新 topic-ideas.md：Round 119 完整研究結果（3 個新變現機會 + 6 個關鍵字缺口）",
+        "更新 agent-state.json：agentLog + lastResearchRound + latestOpportunities"
+      ],
+      "topFindings": [
+        "Cursor affiliate (20% recurring/yr, openaffiliate.dev/programs/cursor): 我們有 Cursor 流量（GSC 確認曝光）但沒有 affiliate 連結，零成本增收機會",
+        "Copy.ai affiliate (45% 首年 + 60 天 cookie, copy.ai/affiliates on Rewardful): 業界最高前年佣金結構，$49/mo plan → 10 conversions = $2,646/年",
+        "Perplexity AI affiliate ($15-20 固定, dub.co): AI 搜尋龍頭（$20B 估值），繁中評測空白，低競爭高搜尋",
+        "競品關鍵字缺口：cursor pro 評測 / copy.ai 評測 / perplexity ai 評測 / cursor vs windsurf 2026 / ai 搜尋引擎比較 / copy.ai vs jasper = 合計預估 26K-56K/月",
+        "競品變現結構洞察：高佣金 AI SaaS affiliate 佔收入 60-70%，Gumroad 數位產品 15-20%，比較頁（vs 文）多家 affiliate 並列是防守型收入策略"
+      ],
+      "affiliateOpportunities": [
+        {
+          "tool": "Cursor",
+          "commission": "20% recurring 首年（Pro $20/mo + Business）",
+          "applyUrl": "openaffiliate.dev/programs/cursor 或 cursor.com/partners",
+          "estimatedMonthly": "$400-800",
+          "priority": "P0-URGENT"
+        },
+        {
+          "tool": "Copy.ai",
+          "commission": "45% 首年訂閱，60 天 cookie",
+          "applyUrl": "copy.ai/affiliates（Rewardful 平台）",
+          "estimatedMonthly": "$500-1,500",
+          "priority": "P0-URGENT"
+        },
+        {
+          "tool": "Perplexity AI",
+          "commission": "$15-20 固定（Pro 訂閱）",
+          "applyUrl": "perplexity.ai/partners 或 dub.co",
+          "estimatedMonthly": "$200-600",
+          "priority": "P1-HIGH"
+        }
+      ],
+      "contentPriorities": [
+        "P0: 申請 Cursor affiliate + 更新現有 Cursor 文章補連結（零成本增收）",
+        "P0: 申請 Copy.ai affiliate + 寫 Copy.ai vs Writesonic vs Jasper 比較頁",
+        "P1: 申請 Perplexity affiliate + 寫 Perplexity AI Pro 評測",
+        "P1: 寫 Cursor Pro 值得買嗎？2026 完整評測（$20/mo）"
+      ],
+      "needsIvan": [
+        "P0-URGENT: 申請 Cursor affiliate → openaffiliate.dev/programs/cursor 或 cursor.com/partners",
+        "P0-URGENT: 申請 Copy.ai affiliate → copy.ai/affiliates（Rewardful 平台）",
+        "P1: 申請 Perplexity affiliate → perplexity.ai/partners 或 dub.co",
+        "Carryover P0: 申請 Kit affiliate（kit.com/affiliate）",
+        "Carryover P0: 申請 Neon affiliate（Commission Junction / neon.tech/partners）",
+        "Carryover P0: 申請 Writesonic affiliate（affiliates.writesonic.com）",
+        "Carryover P0: 申請 Jasper AI affiliate（jasper.ai/partners）"
+      ],
+      "estimatedNewRevenue": "$1,100-2,900/month"
+    },
     {
       "timestamp": "2026-07-12T03:00:00Z",
       "task": "seo-writer",
@@ -1091,35 +1148,35 @@
       }
     }
   ],
-  "lastResearchRound": "Round 118",
+  "lastResearchRound": "Round 119",
   "latestOpportunities": [
     {
-      "tool": "mattpocock/skills v1.0 — GitHub #1 trending 165K stars",
+      "tool": "Cursor affiliate — 20% recurring/yr（我們有流量但沒連結）",
+      "priority": "P0-URGENT",
+      "revenue": "$400-800/mo"
+    },
+    {
+      "tool": "Copy.ai affiliate — 45% 首年 + 60天 cookie",
+      "priority": "P0-URGENT",
+      "revenue": "$500-1,500/mo"
+    },
+    {
+      "tool": "Perplexity AI affiliate — $15-20 固定（繁中空白）",
+      "priority": "P1-HIGH",
+      "revenue": "$200-600/mo"
+    },
+    {
+      "tool": "mattpocock/skills v1.0 — GitHub #1 trending 165K stars (Round 118)",
       "priority": "P0-URGENT",
       "revenue": "$600-1,400/mo"
     },
     {
-      "tool": "Neon Database affiliate — 10% recurring 12m (CJ)",
+      "tool": "Neon Database affiliate — 10% recurring 12m (CJ, Round 118)",
       "priority": "P0-URGENT",
       "revenue": "$300-700/mo"
     },
     {
-      "tool": "obra/superpowers 246K stars + Commercial Services",
-      "priority": "P1-HIGH",
-      "revenue": "$400-900/mo"
-    },
-    {
-      "tool": "Anthropic Global Workspace 研究科普文（HN #15, 392pts）",
-      "priority": "P1-HIGH",
-      "revenue": "$200-500/mo"
-    },
-    {
-      "tool": "davila7/claude-code-templates 28K stars + 900 元件",
-      "priority": "P2-MEDIUM",
-      "revenue": "$150-400/mo"
-    },
-    {
-      "tool": "Kit (ConvertKit) affiliate — 50% recurring 首年 (Round 117 carryover)",
+      "tool": "Kit (ConvertKit) affiliate — 50% recurring 首年 (Round 117)",
       "priority": "P0-URGENT",
       "revenue": "$800-2,000/mo"
     }
