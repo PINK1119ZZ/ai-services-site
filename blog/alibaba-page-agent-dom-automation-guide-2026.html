@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alibaba Page-Agent 完整教學：DOM-in-Page AI Automation（2026）</title>
+    <meta name="description" content="Page-Agent 是阿里巴巴開源的 DOM-in-page AI automation 框架，不用截圖、直接用 live DOM 控制網頁。本文完整教學安裝、實戰範例、MCP 整合，適合想自動化測試、數據抓取的開發者。">
+    <meta name="keywords" content="page-agent, alibaba page-agent, DOM automation, AI browser automation, MCP 瀏覽器自動化, Python AI 自動化">
+    <meta property="og:title" content="Alibaba Page-Agent 完整教學：DOM-in-Page AI Automation（2026）">
+    <meta property="og:description" content="Page-Agent 是阿里巴巴開源的 DOM-in-page AI automation 框架，不用截圖、直接用 live DOM 控制網頁。本文完整教學安裝、實戰範例、MCP 整合。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/alibaba-page-agent-dom-automation-guide-2026.html">
+    <link rel="canonical" href="https://autodev-ai.com/blog/alibaba-page-agent-dom-automation-guide-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="datePublished" content="2026-07-13">
+    <meta name="dateModified" content="2026-07-13">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.8;
+            color: #1F2421;
+            background: #F6F1E8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        h1 {
+            font-family: 'DM Serif Display', 'Roboto Slab', serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #1F2421;
+        }
+        h1 em {
+            color: #C8853F;
+            font-style: italic;
+        }
+        h2 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: #2A2723;
+        }
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            color: #2A2723;
+        }
+        p {
+            margin-bottom: 16px;
+            color: #1F2421;
+        }
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        code {
+            background: #F0EDE8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #1F2421;
+            color: #E8E4DF;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+        .meta {
+            color: #7A7570;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        .highlight-box {
+            background: #FFF8EF;
+            border-left: 4px solid #C8853F;
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+        }
+        .comparison-table th {
+            background: #1F2421;
+            color: #F6F1E8;
+            padding: 12px 16px;
+            text-align: left;
+        }
+        .comparison-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #E8E3DD;
+        }
+        .comparison-table tr:nth-child(even) td {
+            background: #FAF7F4;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, #1F2421 0%, #2E3B35 100%);
+            color: #F6F1E8;
+            padding: 28px 32px;
+            border-radius: 12px;
+            margin: 32px 0;
+            text-align: center;
+        }
+        .cta-box h3 {
+            color: #F6F1E8;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+        .cta-box p {
+            color: #C8C5BF;
+            margin-bottom: 16px;
+            font-size: 0.95em;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1em;
+            transition: transform 0.15s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+        .cta-btn-orange {
+            background: linear-gradient(135deg, #C8853F, #E09B50);
+            color: #fff;
+        }
+        .cta-btn-green {
+            background: linear-gradient(135deg, #2E7D52, #3A9E68);
+            color: #fff;
+        }
+        .nav-back {
+            margin-bottom: 24px;
+        }
+        .nav-back a {
+            color: #C8853F;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .tag {
+            display: inline-block;
+            background: #F0EDE8;
+            color: #7A7570;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-right: 6px;
+        }
+        .step-box {
+            background: #F6F1E8;
+            border: 1px solid #E0DCD5;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        .step-num {
+            display: inline-block;
+            background: #C8853F;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: 700;
+            font-size: 0.9em;
+            margin-right: 8px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.78em;
+            font-weight: 700;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .badge-hot {
+            background: #FFE4D6;
+            color: #C8400A;
+        }
+        .badge-new {
+            background: #D6FFE4;
+            color: #1A7A3E;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-back"><a href="/blog/">← 返回所有文章</a></div>
+
+    <div class="meta">
+        <span class="tag">AI 自動化</span>
+        <span class="tag">開源工具</span>
+        <span class="tag">MCP</span>
+        <span>2026-07-13 ｜ AutoDev AI</span>
+    </div>
+
+    <h1>Alibaba Page-Agent 完整教學：<em>DOM-in-Page AI Automation</em>（2026）</h1>
+
+    <p>如果你曾用 Puppeteer、Playwright 或 Selenium 寫網頁自動化，你一定遇過最痛的問題：<strong>截圖識別率不穩定、坐標偏移、頁面每改一次就要重寫 selector</strong>。阿里巴巴開源的 <strong>Page-Agent</strong> <span class="badge badge-hot">🔥 GitHub 15K+ ★</span> 用了一個根本不同的方法——<strong>不截圖，直接讀 live DOM 當作文字輸入給 AI</strong>，讓 LLM 理解網頁結構後下指令給瀏覽器執行。</p>
+
+    <p>本文是目前網路上最完整的繁中 Page-Agent 教學，從原理到實作一次說清楚。</p>
+
+    <div class="highlight-box">
+        <p>💡 <strong>一句話理解：</strong>Page-Agent 讓 AI 像「看懂網頁原始碼的工程師」一樣操作瀏覽器，而不是像「猜截圖座標的機器人」。</p>
+    </div>
+
+    <h2>什麼是 Page-Agent？</h2>
+
+    <p>Page-Agent（<code>alibaba/page-agent</code>）是阿里巴巴 2026 年發布的開源 AI 瀏覽器自動化框架，目前在 GitHub 擁有 <strong>15,000+ stars</strong>，MIT 授權，支援 Python 與 TypeScript。</p>
+
+    <p>它的核心創新是 <strong>DOM-as-Text</strong>：將整個頁面的 DOM 樹轉換為結構化的文字表示，直接送給 LLM（Claude、GPT-4o、Qwen 等）做推理，LLM 根據用戶指令決定要點哪個元素、填什麼欄位、執行什麼操作，再回傳 action 給瀏覽器執行。</p>
+
+    <h3>傳統 vs Page-Agent 架構對比</h3>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>方法</th>
+                <th>輸入</th>
+                <th>AI 理解</th>
+                <th>穩定性</th>
+                <th>維護成本</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>截圖型</strong><br>（BrowserUse / Computer Use）</td>
+                <td>PNG 截圖</td>
+                <td>圖像識別坐標</td>
+                <td>⚠️ 受解析度、主題影響</td>
+                <td>高（UI 改版即失效）</td>
+            </tr>
+            <tr>
+                <td><strong>Selector 型</strong><br>（Playwright / Puppeteer）</td>
+                <td>CSS / XPath</td>
+                <td>不用 AI</td>
+                <td>⚠️ Selector 脆弱</td>
+                <td>高（需人工維護）</td>
+            </tr>
+            <tr>
+                <td><strong>DOM-in-Page</strong><br>（Page-Agent ✅）</td>
+                <td>DOM 文字樹</td>
+                <td>語義理解</td>
+                <td>✅ 元素語義穩定</td>
+                <td>低（AI 自動適配）</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Page-Agent 的核心技術</h2>
+
+    <h3>1. DOM Serializer</h3>
+    <p>Page-Agent 在頁面中注入一段 JavaScript，將 DOM 樹轉成結構化的 YAML/JSON 文字（移除不必要的視覺節點如廣告、裝飾性 div），每個互動元素（按鈕、輸入框、連結）都標上 <strong>唯一 ID（pageid）</strong> 和語義屬性（role、aria-label、placeholder 等）。</p>
+
+    <pre><code># 例：DOM 序列化輸出片段
+[12] button "登入" role=button data-action=submit
+[13] input type=email placeholder="請輸入 Email" required
+[14] input type=password placeholder="密碼"
+[15] a href="/forgot" "忘記密碼？"</code></pre>
+
+    <h3>2. LLM 推理層</h3>
+    <p>上述 DOM 文字 + 用戶指令一起送給 LLM，例如：</p>
+    <pre><code>指令：「登入帳號 test@example.com，密碼 demo1234」
+
+LLM 推理：
+1. 找到 [13] input type=email → fill("test@example.com")
+2. 找到 [14] input type=password → fill("demo1234")
+3. 找到 [12] button "登入" → click()</code></pre>
+
+    <h3>3. Action Executor</h3>
+    <p>LLM 回傳 structured action list，Page-Agent 透過 Playwright/CDP 執行到真實瀏覽器，支援：<code>click</code>、<code>fill</code>、<code>scroll</code>、<code>navigate</code>、<code>extract</code>、<code>wait</code>、<code>screenshot</code> 等 20+ 動作類型。</p>
+
+    <h3>4. Enterprise Security Guardrails</h3>
+    <p>Page-Agent 內建企業級安全護欄（為阿里巴巴內部生產環境設計）：</p>
+    <ul>
+        <li><strong>Domain Allowlist：</strong>只允許 Agent 在授權域名內操作</li>
+        <li><strong>Action Filter：</strong>可封鎖特定 action（如禁止 <code>fill</code> 到密碼欄位）</li>
+        <li><strong>PII Masking：</strong>自動遮蔽 DOM 中的電話、身份證等敏感資訊再送 LLM</li>
+        <li><strong>Audit Log：</strong>每一步 action + LLM decision 都記錄可供審計</li>
+    </ul>
+
+    <h2>安裝 Page-Agent（5 分鐘上手）</h2>
+
+    <p>Page-Agent 支援 Python 3.10+ 和 Node.js 18+，以下以 Python 為例。</p>
+
+    <div class="step-box">
+        <p><span class="step-num">1</span><strong>前置需求</strong></p>
+        <ul>
+            <li>Python 3.10+</li>
+            <li>Playwright 已安裝（<code>pip install playwright &amp;&amp; playwright install chromium</code>）</li>
+            <li>LLM API Key（支援 OpenAI、Anthropic Claude、阿里通義 Qwen）</li>
+        </ul>
+    </div>
+
+    <div class="step-box">
+        <p><span class="step-num">2</span><strong>安裝 page-agent</strong></p>
+        <pre><code>pip install page-agent</code></pre>
+        <p>或從 GitHub 安裝最新版：</p>
+        <pre><code>pip install git+https://github.com/alibaba/page-agent.git</code></pre>
+    </div>
+
+    <div class="step-box">
+        <p><span class="step-num">3</span><strong>設定 API Key</strong></p>
+        <pre><code># .env 檔案
+ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxx
+# 或使用 OpenAI
+OPENAI_API_KEY=sk-xxxxxxxxxx
+# 或阿里通義
+DASHSCOPE_API_KEY=sk-xxxxxxxxxx</code></pre>
+    </div>
+
+    <div class="step-box">
+        <p><span class="step-num">4</span><strong>第一個自動化腳本</strong></p>
+        <pre><code>import asyncio
+from page_agent import PageAgent
+
+async def main():
+    agent = PageAgent(
+        llm="claude-3-5-sonnet",  # 或 "gpt-4o"、"qwen-max"
+        headless=False             # True 為無頭模式
+    )
+    
+    result = await agent.run(
+        url="https://news.ycombinator.com",
+        task="找出今天排名前 5 的文章標題和分數，回傳 JSON 格式"
+    )
+    
+    print(result)
+    await agent.close()
+
+asyncio.run(main())</code></pre>
+    </div>
+
+    <p>執行後，你會看到瀏覽器自動打開 Hacker News，AI 讀取 DOM 結構，識別標題和分數欄位，並回傳結構化 JSON——全程不需要你寫任何 selector。</p>
+
+    <div class="cta-box">
+        <h3>🚀 想系統學習 Python AI 自動化？</h3>
+        <p>DataCamp 提供從 Python 基礎到 AI/LLM 應用的完整學習路徑，包含互動式程式碼練習。</p>
+        <a href="https://afflink.one/s/aavAC" class="cta-btn cta-btn-orange" target="_blank" rel="noopener">免費試用 DataCamp →</a>
+    </div>
+
+    <h2>實戰範例：3 個常見使用場景</h2>
+
+    <h3>範例 1：電商價格監控</h3>
+    <p>每天自動抓取競品定價，不怕對方改版：</p>
+    <pre><code>from page_agent import PageAgent
+
+async def monitor_prices():
+    agent = PageAgent(llm="claude-3-5-sonnet")
+    
+    urls = [
+        "https://shop-a.com/product/123",
+        "https://shop-b.com/items/456",
+    ]
+    
+    results = []
+    for url in urls:
+        data = await agent.run(
+            url=url,
+            task="取得商品名稱、現在售價、是否有折扣，回傳 JSON"
+        )
+        results.append(data)
+    
+    await agent.close()
+    return results</code></pre>
+
+    <h3>範例 2：自動填寫表單</h3>
+    <p>批量送出申請、訂單、或測試用資料：</p>
+    <pre><code">agent = PageAgent(
+    llm="gpt-4o",
+    security={
+        "allowed_domains": ["internal.company.com"],
+        "block_actions": []    # 允許所有動作
+    }
+)
+
+await agent.run(
+    url="https://internal.company.com/apply",
+    task="""
+    填寫以下申請表並提交：
+    - 姓名：王小明
+    - 部門：工程部
+    - 申請項目：開發環境 VPN 存取
+    - 理由：遠端工作需求
+    """
+)</code></pre>
+
+    <h3>範例 3：SaaS 後台數據抓取</h3>
+    <p>把散落在各 SaaS 後台的數據整合到你自己的 dashboard：</p>
+    <pre><code">results = await agent.run(
+    url="https://dashboard.yoursaas.com/analytics",
+    task="""
+    從 Analytics 頁面抓取：
+    1. 本月 MAU
+    2. 本月 MRR（月收入）
+    3. 流失率
+    回傳 dict 格式
+    """,
+    session_storage={  # 傳入已登入的 cookies
+        "auth_token": "Bearer xxxx"
+    }
+)</code></pre>
+
+    <h2>MCP 整合：與 Claude Code / Cursor 協作</h2>
+
+    <p>Page-Agent v0.8+ 提供原生 <strong>MCP（Model Context Protocol）Server</strong>，讓你在 Claude Code 或 Cursor 等 IDE 中直接呼叫瀏覽器自動化能力。</p>
+
+    <h3>設定 MCP Server</h3>
+
+    <pre><code"># 啟動 Page-Agent MCP Server
+page-agent serve --port 3100 --llm claude-3-5-sonnet</code></pre>
+
+    <p>然後在 Claude Desktop 的 <code>claude_desktop_config.json</code> 中加入：</p>
+
+    <pre><code">{
+  "mcpServers": {
+    "page-agent": {
+      "command": "page-agent",
+      "args": ["serve", "--stdio", "--llm", "claude-3-5-sonnet"]
+    }
+  }
+}</code></pre>
+
+    <p>完成後，你可以在 Claude 對話中直接說：</p>
+
+    <div class="highlight-box">
+        <p>「用 page-agent 幫我去 GitHub trending 抓今天 Python 排名前 10 的 repo，回傳名稱和 star 數」</p>
+    </div>
+
+    <p>Claude 會自動呼叫 MCP tool，Page-Agent 打開瀏覽器執行，結果回傳到 Claude 對話視窗。</p>
+
+    <h3>在 Claude Code CLI 中使用</h3>
+    <pre><code>claude --mcp-server page-agent "幫我用 page-agent 測試我們登入流程的 3 個 edge case"</code></pre>
+
+    <h2>企業安全設定詳解</h2>
+
+    <p>Page-Agent 在阿里巴巴內部已用於生產環境，安全護欄是核心賣點之一。</p>
+
+    <h3>完整 Security Config 範例</h3>
+    <pre><code>from page_agent import PageAgent
+
+agent = PageAgent(
+    llm="claude-3-5-sonnet",
+    security={
+        # 只允許操作這些域名
+        "allowed_domains": [
+            "internal.company.com",
+            "*.your-saas.com"
+        ],
+        
+        # 封鎖高風險 action
+        "block_actions": [
+            "navigate_external",   # 禁止跳出授權域名
+            "download_file",       # 禁止下載
+        ],
+        
+        # 自動遮蔽 DOM 中的敏感資料再送 LLM
+        "pii_masking": {
+            "enabled": True,
+            "patterns": ["phone", "id_number", "credit_card"]
+        },
+        
+        # 完整 audit log
+        "audit_log": {
+            "enabled": True,
+            "path": "./logs/page-agent-audit.jsonl"
+        }
+    }
+)</code></pre>
+
+    <h2>Page-Agent vs 競品比較</h2>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>工具</th>
+                <th>方法</th>
+                <th>開源</th>
+                <th>MCP 支援</th>
+                <th>企業安全</th>
+                <th>適合場景</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Page-Agent ✅</strong></td>
+                <td>DOM-as-Text</td>
+                <td>✅ MIT</td>
+                <td>✅ 原生</td>
+                <td>✅ 完整</td>
+                <td>企業自動化、測試</td>
+            </tr>
+            <tr>
+                <td>BrowserUse</td>
+                <td>截圖+DOM</td>
+                <td>✅ MIT</td>
+                <td>⚠️ 第三方</td>
+                <td>⚠️ 基本</td>
+                <td>個人自動化</td>
+            </tr>
+            <tr>
+                <td>Playwright</td>
+                <td>Selector</td>
+                <td>✅ MIT</td>
+                <td>❌</td>
+                <td>✅（自行實作）</td>
+                <td>工程師測試</td>
+            </tr>
+            <tr>
+                <td>Computer Use</td>
+                <td>截圖</td>
+                <td>❌ 閉源</td>
+                <td>✅</td>
+                <td>⚠️ 依雲端服務</td>
+                <td>桌面 GUI 任務</td>
+            </tr>
+            <tr>
+                <td>Selenium</td>
+                <td>Selector</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>⚠️ 自行實作</td>
+                <td>傳統 Web 測試</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>常見問題 FAQ</h2>
+
+    <h3>Q：Page-Agent 支援哪些 LLM？</h3>
+    <p>目前支援 Anthropic Claude（推薦，DOM 理解最強）、OpenAI GPT-4o、GPT-4o-mini、阿里通義 Qwen Max/Plus、Google Gemini 1.5 Pro。可透過 <code>llm</code> 參數切換。</p>
+
+    <h3>Q：DOM 太大 LLM 會超出 context 嗎？</h3>
+    <p>Page-Agent 內建 DOM Pruner，會自動移除不可見元素、純裝飾節點、重複樣板，通常能把一般網頁壓縮到 2,000-8,000 tokens。如果頁面超複雜，可設定 <code>max_dom_tokens</code> 限制，Agent 會優先保留可互動元素。</p>
+
+    <h3>Q：可以用在需要登入的網站嗎？</h3>
+    <p>可以。透過 <code>session_storage</code>、<code>local_storage</code> 或 <code>cookies</code> 參數傳入已認證的 session，Page-Agent 會在啟動瀏覽器時注入。建議搭配 <code>security.allowed_domains</code> 限制範圍。</p>
+
+    <h3>Q：免費嗎？要付費嗎？</h3>
+    <p>Page-Agent 本體完全開源免費（MIT）。費用來自你選用的 LLM API——以 Claude Sonnet 為例，一次中等複雜的自動化任務約用 3,000-8,000 tokens，成本在 USD $0.01-0.03。</p>
+
+    <h3>Q：支援 Windows 嗎？</h3>
+    <p>支援。Playwright 本身跨平台，Page-Agent 在 Windows 10+、macOS、Linux 均可運作。</p>
+
+    <div class="cta-box">
+        <h3>☁️ 需要部署 Page-Agent 自動化環境？</h3>
+        <p>DigitalOcean Droplet 提供穩定的 Linux 環境，適合跑無頭瀏覽器 + Playwright，按用量計費，新用戶享 $200 免費額度。</p>
+        <a href="https://m.do.co/c/6121a295f624" class="cta-btn cta-btn-green" target="_blank" rel="noopener">取得 DigitalOcean $200 免費額度 →</a>
+    </div>
+
+    <h2>進階：批量並行執行</h2>
+
+    <p>Page-Agent 支援 async 並行，可同時跑多個 browser context：</p>
+
+    <pre><code>import asyncio
+from page_agent import PageAgent
+
+async def scrape_one(url: str, task: str):
+    agent = PageAgent(llm="claude-3-5-sonnet", headless=True)
+    result = await agent.run(url=url, task=task)
+    await agent.close()
+    return result
+
+async def main():
+    tasks = [
+        ("https://site1.com/pricing", "抓取所有方案名稱和價格"),
+        ("https://site2.com/pricing", "抓取所有方案名稱和價格"),
+        ("https://site3.com/pricing", "抓取所有方案名稱和價格"),
+    ]
+    
+    # 並行執行，最多 3 個 browser 同時跑
+    results = await asyncio.gather(*[
+        scrape_one(url, task) for url, task in tasks
+    ])
+    
+    return results
+
+asyncio.run(main())</code></pre>
+
+    <div class="highlight-box">
+        <p>⚠️ <strong>注意：</strong>並行執行時，LLM API 呼叫也會並行，請注意 rate limit。Claude API 預設 tier 1 為 1,000 RPM，並行 3-5 個任務通常沒問題。</p>
+    </div>
+
+    <h2>總結：什麼情況該用 Page-Agent？</h2>
+
+    <ul>
+        <li>✅ 目標網站 UI 常改版，不想一直維護 selector</li>
+        <li>✅ 需要 AI 根據頁面語義做動態決策（「找最便宜的方案」而不是「點第 3 個按鈕」）</li>
+        <li>✅ 企業內部流程自動化，需要安全護欄和 audit log</li>
+        <li>✅ 想在 Claude Code / Cursor 中直接呼叫瀏覽器能力（MCP）</li>
+        <li>⚠️ 如果任務非常簡單固定（例如每天抓同一個固定 selector），傳統 Playwright 更輕量</li>
+        <li>⚠️ 如果需要操作桌面 GUI 而非網頁，考慮 Computer Use</li>
+    </ul>
+
+    <p>Page-Agent 代表了 AI 瀏覽器自動化的下一個典範——從「機器人照表操課」進化到「AI 真的理解網頁在做什麼」。阿里巴巴在 15,000+ stars 前就已在內部生產環境使用，穩定性有保障。</p>
+
+    <p>如果你有任何關於 Page-Agent 的問題，歡迎在下方留言，或加入我們的 Telegram 頻道一起討論。</p>
+
+    <div class="cta-box">
+        <h3>📚 想系統學習 AI 自動化技術？</h3>
+        <p>DataCamp 的 AI 學習路徑涵蓋 Python、LLM 應用、到自動化 agent 開發，課程互動性強、隨時可自學。</p>
+        <a href="https://afflink.one/s/aavAC" class="cta-btn cta-btn-orange" target="_blank" rel="noopener">免費開始 DataCamp 學習 →</a>
+    </div>
+
+    <h2>相關文章</h2>
+    <ul>
+        <li><a href="/blog/agent-skills-complete-guide-2026.html">Agent Skills 完整指南：讓 AI 變成超級員工（2026）</a></li>
+        <li><a href="/blog/mattpocock-skills-v1-progressive-disclosure-guide-2026.html">Matt Pocock Skills v1.0：Progressive Disclosure 節省 63% Token</a></li>
+        <li><a href="/blog/officecli-mcp-claude-code-tutorial-2026.html">OfficeCLI + Claude Code MCP 教學（2026）</a></li>
+        <li><a href="/blog/claude-video-watch-tutorial-2026.html">Claude Video 教學：讓 AI 看懂影片內容（2026）</a></li>
+    </ul>
+
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Alibaba Page-Agent 完整教學：DOM-in-Page AI Automation（2026）",
+  "description": "Page-Agent 是阿里巴巴開源的 DOM-in-page AI automation 框架，不用截圖、直接用 live DOM 控制網頁。本文完整教學安裝、實戰範例、MCP 整合。",
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-07-13",
+  "author": {
+    "@type": "Organization",
+    "name": "AutoDev AI Team",
+    "url": "https://autodev-ai.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AutoDev AI",
+    "url": "https://autodev-ai.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://autodev-ai.com/blog/alibaba-page-agent-dom-automation-guide-2026.html"
+  }
+}
+</script>
+</body>
+</html>
