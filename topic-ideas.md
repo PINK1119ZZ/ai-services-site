@@ -1,6 +1,108 @@
 # topic-ideas.md - 趨勢獵手發現(Researcher Agent)
 
-## 🔥 本輪最高價值發現(2026-07-12 Round 119)
+## 🔥 本輪最高價值發現(2026-07-13 Round 120)
+
+### 1. **Alibaba Page-Agent（DOM AI 自動化新典範）** - VERY HIGH VALUE
+- **工具:** alibaba/page-agent (15K+ stars in weeks, GitHub trending, MIT license)
+- **關鍵字:** "page-agent 教學", "alibaba page agent", "browser automation AI", "DOM AI agent", "MCP browser automation"
+- **搜尋量:** 預估 8K-16K/月（GitHub trending + LinkedIn 130+ likes viral post）
+- **變現方式:**
+  - 無直接 affiliate（開源專案）
+  - 間接變現: DataCamp (AI/browser automation 課程) + DigitalOcean (Node.js hosting)
+  - 內容護城河: 繁中完整教學幾乎為 0，技術門檻高（DOM dehydration + MCP + Zod）
+- **預估月收入:** $300-700（間接 affiliate + 高質量技術流量）
+- **建議站點:** autodev-ai.com（開發者受眾）
+- **競爭度:** 低（繁中資源幾乎為 0，只有 YouTube 英文教學）
+- **技術亮點:**
+  - 不用截圖！在網頁內直接執行，讀取 live DOM as text
+  - 企業級安全: data masking + proxy authorization + human approval workflows
+  - MCP 整合，可外部編排（vs Puppeteer/Selenium 遠端控制）
+  - DOM dehydration 節省 token（vs computer vision 大量圖片 token）
+- **行動項:**
+  - 🔴 P1-HIGH (seo-writer): 寫「Alibaba Page-Agent 完整教學 2026：DOM AI 自動化新時代」
+    - 繁中首發技術深度文，包含實戰範例（MCP 整合、企業安全設定）
+    - 關鍵字: page-agent 教學, DOM AI agent, browser automation 2026, MCP 整合
+    - 預估流量: 8K-16K/月
+  - 🟡 P2 (seo-writer): 寫「Page-Agent vs Puppeteer vs Selenium 2026 比較」
+    - 對比截圖 vs DOM 兩種典範，說明何時該用哪種
+    - 關鍵字: browser automation 比較, page-agent vs puppeteer
+- **競品參考:** 
+  - YouTube: "Alibaba Page Agent GitHub MCP Tutorial" (312 views, Jun 29)
+  - LinkedIn viral post: 130 likes (Dhawal Chheda, Jun 2026)
+  - 繁中市場空白
+
+---
+
+### 2. **Orca by Stably.ai（多 Agent 並行編排 IDE）** - HIGH VALUE
+- **工具:** stablyai/orca (12.5K stars, GitHub trending #3 TypeScript Jun 24-25)
+- **關鍵字:** "orca ai coding", "stably orca", "parallel agents IDE", "multi-agent coding"
+- **搜尋量:** 預估 5K-12K/月（GitHub trending + Product Hunt 關注）
+- **變現方式:**
+  - 無直接 affiliate（開源專案，但 Stably.ai 可能有商業計畫）
+  - 間接變現: DataCamp + DigitalOcean + Cursor/Claude Code affiliate（Orca 支援任何 CLI agent）
+  - 內容護城河: 繁中教學為 0，技術受眾精準
+- **預估月收入:** $200-500（間接 affiliate + 高質量開發者流量）
+- **建議站點:** autodev-ai.com
+- **競爭度:** 低（繁中資源為 0）
+- **技術亮點:**
+  - 在一個 IDE 內同時跑多個 agent（Cursor + Claude Code + Codex 等）
+  - 支援 diff review、line-level comments、commit without leaving Orca
+  - Desktop + mobile 都能用
+  - 適合「讓 3 個 agent 分別寫 frontend/backend/test，你負責編排」工作流
+- **行動項:**
+  - 🟡 P2 (seo-writer): 寫「Orca 多 Agent 編排教學 2026：一次管理 Cursor + Claude Code + Codex」
+    - 關鍵字: orca ai coding, 多 agent 編排, parallel coding agents
+    - 預估流量: 5K-12K/月
+  - 🟡 P2 (seo-writer): 寫「Orca vs Herdr 2026 比較：哪個 Agent Orchestrator 更好用？」
+    - YouTube 已有英文對比影片，但繁中空白
+
+---
+
+### 3. **OpenAI Codex Plugin for Claude Code（官方跨 Agent 協作）** - MEDIUM-HIGH VALUE
+- **工具:** openai/codex-plugin-cc (27.8K stars, GitHub trending, official OpenAI repo)
+- **關鍵字:** "codex claude code plugin", "claude code codex", "openai codex plugin"
+- **搜尋量:** 預估 4K-9K/月（官方 plugin，技術受眾關注度高）
+- **變現方式:**
+  - 無直接 affiliate（OpenAI/Anthropic 官方專案）
+  - 間接變現: Claude Pro ($20/mo) + Codex 訂閱 + DataCamp 課程
+  - 內容護城河: 繁中教學為 0，雙 agent 協作是新興工作流
+- **預估月收入:** $150-400（間接 affiliate）
+- **建議站點:** autodev-ai.com
+- **競爭度:** 低（繁中資源為 0）
+- **技術亮點:**
+  - 在 Claude Code 內用 `/codex:review` 呼叫 Codex 來 review code
+  - 在 Claude Code 內用 `/codex:transfer` 把 session 轉交給 Codex
+  - 背景執行: Codex 在背景跑，Claude Code 繼續工作
+  - Sendbird 有 fork 版本 (sendbird/cc-plugin-codex) 增加 adversarial review 功能
+- **行動項:**
+  - 🟡 P2 (seo-writer): 寫「Claude Code + Codex Plugin 教學 2026：讓兩個 AI 互相 Review」
+    - 關鍵字: codex claude code plugin, claude code 外掛, AI code review
+    - 預估流量: 4K-9K/月
+  - 🟢 P3 (seo-writer): 寫「OpenAI Codex Plugin vs Sendbird Fork 比較：哪個 Review 功能更強？」
+
+---
+
+### 4. **SaaS Affiliate 市場趨勢變化（2026 Q2-Q3）** - STRATEGIC INSIGHT
+- **發現來源:** Reddit r/Affiliatemarketing + 多個 2026 SaaS affiliate 指南
+- **關鍵趨勢:**
+  1. **Recurring > One-time**: 市場共識從「一次性 $50」轉向「20-50% recurring/12m+」
+  2. **Cookie 窗口延長**: 從 30 天標準延長至 60-90 天（因 SaaS 試用期變長）
+  3. **Attribution 窗口**: 14-30 天免費試用，attribution 必須覆蓋試用期
+  4. **Fraud 防禦**: 假註冊攻擊增加，平台開始要求 email verification + payment method on file
+  5. **Tier 結構普及**: 不再是固定 %，而是「10 conversions = 30%, 100 conversions = 40%」階梯式
+- **市場數據:**
+  - GetResponse: 40-60% recurring (tier-based)
+  - ManyChat: 50% first payment + 120-day cookie（業界最長）
+  - HubSpot: 30% for 12 months（大企業首選）
+  - NordVPN: up to 100%（特殊 promotion）
+- **對我們的啟示:**
+  - P0: 優先申請 recurring 結構的 affiliate（Kit 50%/12m, Copy.ai 45%/12m, Neon 10%/12m）
+  - P1: 在現有聯盟連結文章補上「試用期內取消也能拿佣金」說明（降低用戶疑慮）
+  - P2: 關注 tier 結構，當單一 affiliate 達 50+ conversions 時主動聯繫談升級
+
+---
+
+## 🔥 上輪最高價值發現(2026-07-12 Round 119)
 
 ### 1. **Cursor Affiliate 正式開放（20% recurring/年）** - HIGH VALUE
 - **工具:** Cursor IDE (估值 $29.3B, $2B ARR)
