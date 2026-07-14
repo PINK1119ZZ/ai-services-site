@@ -2,6 +2,50 @@
   "lastRun": "2026-07-13T03:00:00Z",
   "agentLog": [
     {
+      "timestamp": "2026-07-14T00:30:00Z",
+      "task": "ai-trend-hunter",
+      "status": "completed",
+      "details": "Round 121 — HN / Product Hunt / Reddit / GitHub / Affiliate 市場研究。本輪聚焦三個方向：(1) VEED.io affiliate 新發現（25-30% recurring 12個月，Supademo blog 2026確認，台灣創作者受眾吻合，待 Ivan 申請）；(2) SLM 爆發趨勢（IEEE Spectrum HN 171pts 今日，Phi-3.5/Qwen3/Gemma4/LLaMA3.2 比較，繁中空白，Gemma4 已有 GSC 流量可內連）；(3) LLM分發時代確認（Reddit r/micro_saas 熱議，$3.2K MRR SEO+content案例，LLM citations = 2026 分發核心）。額外發現：Lago AI-native billing（YC S21, MCP server, PayPal/Synthesia/Mistral使用，Hiring中）。本輪預估新增月收入潛力 $550-1,400。",
+      "changes": [
+        "更新 topic-ideas.md：Round 121 完整研究結果（3個新機會 + 1個市場洞察）",
+        "創建 directives/researcher-to-strategist-2026-07-14-round121.md（給 strategist 的指令）",
+        "更新 agent-state.json：agentLog + lastResearchRound + latestOpportunities"
+      ],
+      "topFindings": [
+        "VEED.io affiliate (25-30% recurring/12mo, 30天cookie, veed.io/affiliates): AI影片編輯龍頭，$12-$49/月，台灣創作者受眾高吻合，繁中評測空白",
+        "SLM 趨勢 (HN 171pts IEEE Spectrum '小型AI模型在網路不穩地區崛起'): Phi-3.5/Qwen3/Gemma4/LLaMA3.2/Mistral Small3.1，本地AI/離線AI/隱私AI是2026主旋律",
+        "Ternlight (HN 260pts 今日): 7MB WASM embedding model，瀏覽器內跑AI，無需後端，創作者工具整合機會",
+        "Lago AI-native billing (YC S21, $22M, GitHub OSS + MCP server): PayPal/Synthesia/Mistral使用，今日HN Hiring帖=成長期，B2B開發者教學機會",
+        "市場訊號: Reddit r/micro_saas 確認 '不在LLM citations=不存在'，高質量繁中評測文=天然LLM引用來源，現有策略正確",
+        "Framer AI Agents (PH #1 Jul 7): Claude Code/Codex整合，Canvas AI agent，Branching功能，仍在熱度窗口內"
+      ],
+      "affiliateOpportunities": [
+        {
+          "tool": "VEED.io",
+          "commission": "25-30% recurring 12 個月",
+          "cookie": "30 天",
+          "pricing": "$12-$49/月",
+          "applyUrl": "veed.io/affiliates 或 veed.com/partners",
+          "estimatedMonthly": "$300-700",
+          "priority": "P1-HIGH"
+        }
+      ],
+      "contentPriorities": [
+        "P1-HIGH: 申請 VEED.io affiliate + 寫 VEED.io 完整評測 2026",
+        "P2: 寫 VEED vs CapCut vs Runway 2026 比較頁（三個 affiliate 並列）",
+        "P2: 寫 2026 本地AI完整指南：SLM 實戰比較（Phi-3.5/Qwen3/Gemma4，內連現有Gemma4文章）",
+        "P3: 寫 Lago 教學 2026：開源帳單 + MCP 整合"
+      ],
+      "needsIvan": [
+        "P1-HIGH: 申請 VEED.io affiliate → veed.io/affiliates 或 veed.com/partners",
+        "P0-URGENT（carryover）: 申請 Cursor affiliate → openaffiliate.dev/programs/cursor",
+        "P0-URGENT（carryover）: 申請 Copy.ai affiliate → copy.ai/affiliates",
+        "P0-URGENT（carryover）: 申請 Kit affiliate → kit.com/affiliate",
+        "P0-URGENT（carryover）: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026"
+      ],
+      "estimatedNewRevenue": "$550-1,400/month"
+    },
+    {
       "timestamp": "2026-07-13T03:00:00Z",
       "task": "seo-writer",
       "status": "completed",
@@ -1353,22 +1397,22 @@
       }
     }
   ],
-  "lastResearchRound": "Round 120",
+  "lastResearchRound": "Round 121",
   "latestOpportunities": [
     {
-      "tool": "alibaba/page-agent — DOM-in-page AI automation（15K+ stars trending）",
+      "tool": "VEED.io affiliate — 25-30% recurring 12個月（AI影片編輯龍頭，Round 121 新發現）",
       "priority": "P1-HIGH",
       "revenue": "$300-700/mo"
     },
     {
-      "tool": "stablyai/orca — 多 Agent 並行 IDE（12.5K stars TypeScript #3）",
-      "priority": "P2-MEDIUM",
-      "revenue": "$200-500/mo"
-    },
-    {
-      "tool": "openai/codex-plugin-cc — Claude Code×Codex 官方 plugin（27.8K stars）",
+      "tool": "SLM 趨勢（Phi-3.5/Qwen3/Gemma4）— HN 171pts 今日 IEEE Spectrum",
       "priority": "P2-MEDIUM",
       "revenue": "$150-400/mo"
+    },
+    {
+      "tool": "Lago 開源帳單 + MCP server（YC S21，$22M，PayPal/Mistral 使用）",
+      "priority": "P3",
+      "revenue": "$100-300/mo"
     },
     {
       "tool": "Cursor affiliate — 20% recurring/yr（我們有流量但沒連結，Round 119 carryover）",

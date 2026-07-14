@@ -1,5 +1,79 @@
 # topic-ideas.md - 趨勢獵手發現(Researcher Agent)
 
+## 🔥 本輪最高價值發現(2026-07-14 Round 121)
+
+### 1. **VEED.io affiliate — 25-30% recurring 12 個月（AI 影片編輯龍頭）** - HIGH VALUE
+- **工具:** VEED.io（AI 影片編輯 SaaS，$12-$49/月，Supademo blog 確認有 affiliate）
+- **關鍵字:** "veed.io 教學", "AI 影片剪輯工具", "veed.io 評測", "線上影片編輯 2026"
+- **搜尋量:** 預估 6K-14K/月（AI 影片工具持續高需求）
+- **變現方式:**
+  - VEED affiliate: 25-30% recurring 12 個月，cookie 30 天
+  - $12/月 plan → 10 conversions = $432-$540/年
+  - $49/月 plan → 5 conversions = $735-$882/年
+- **預估月收入:** $300-$700（依轉換數）
+- **建議站點:** autodev-ai.com（英文） + ai-tools.pro
+- **競爭度:** 中（英文競爭較多，繁中教學空白）
+- **行動項:**
+  - 🔴 P1-HIGH (Ivan): 申請 VEED affiliate → veed.io/affiliates 或 veed.com/partners
+  - 🔴 P1-HIGH (seo-writer): 寫「VEED.io 完整評測 2026：AI 影片編輯一鍵搞定」
+    - 關鍵字: veed.io 評測, AI 影片編輯工具, 線上影片剪輯 2026
+  - 🟡 P2 (seo-writer): 寫「VEED vs CapCut vs Runway 2026 比較頁」（三個 affiliate 並列）
+
+---
+
+### 2. **Small Language Models (SLM) 爆發趨勢 — IEEE HN 171 pts 今日** - MEDIUM-HIGH VALUE
+- **工具:** SLM 生態系（Phi-3.5 / Qwen 3 / Gemma 4 / LLaMA 3.2 / Mistral Small 3.1）
+- **關鍵字:** "小型語言模型", "SLM 教學", "local AI 2026", "offline AI 模型", "edge AI 教學"
+- **搜尋量:** 預估 5K-10K/月（HN 171 pts 今日 — IEEE Spectrum 報導 SLM 在網路不穩地區崛起）
+- **變現方式:**
+  - 無直接 affiliate（開源模型）
+  - 間接: DigitalOcean（本地部署 VPS）+ DataCamp（AI/ML 課程）+ Ollama 相關工具
+  - 台灣角度: 離線 AI、隱私保護、低成本 = 繁中市場教學缺口
+- **預估月收入:** $150-$400（間接 affiliate）
+- **建議站點:** autodev-ai.com
+- **競爭度:** 低（繁中 SLM 實戰教學幾乎為 0）
+- **技術亮點:**
+  - Phi-3.5（3.8B）勝過 40 倍大的模型
+  - Qwen 3（0.6B-14B）119 語言支援，含繁中
+  - Gemma 4 已在我們站有流量（GSC 曝光 34 次，8.8% CTR）— 可內連
+  - Ternlight（HN 260 pts 今日）7MB WASM embedding model = 瀏覽器內跑 AI
+- **行動項:**
+  - 🟡 P2 (seo-writer): 寫「2026 本地 AI 完整指南：小型語言模型 Phi-3.5 / Qwen 3 / Gemma 4 實戰比較」
+    - 繁中首發，搭配 Ollama 安裝教學，內連 gemma-4 現有文章
+    - 關鍵字: 本地 AI 教學, SLM 比較, Ollama 教學 2026
+
+---
+
+### 3. **Lago — AI-native 開源帳單平台（YC S21，$22M 融資，Hiring）** - MEDIUM VALUE
+- **工具:** getlago/lago（GitHub 開源計費引擎，AI-native billing + MCP server，PayPal/Synthesia/Mistral 使用）
+- **關鍵字:** "usage-based billing", "lago billing 教學", "AI SaaS 計費方案", "open source billing 2026"
+- **搜尋量:** 預估 3K-6K/月（B2B 開發者受眾，精準低競爭）
+- **變現方式:**
+  - Lago 無公開 affiliate（確認）
+  - 間接: 寫「Lago vs Stripe Billing vs Orb 比較頁」嵌入 DigitalOcean（Lago 自架）+ DataCamp
+  - Lago Cloud 0.75% fee 模式 → 推動讀者選擇 Lago Cloud 版（未來可能有 referral）
+  - 今日 HN Hiring 帖子 = Lago 正在快速成長期，SEO 時機好
+- **預估月收入:** $100-$300（間接 affiliate + 開發者高質量流量）
+- **建議站點:** autodev-ai.com（開發者 B2B 受眾）
+- **競爭度:** 很低（繁中 billing 教學幾乎為 0）
+- **行動項:**
+  - 🟡 P3 (seo-writer): 寫「Lago 教學 2026：開源 Usage-Based Billing 完整入門」
+    - 關鍵字: lago billing, usage-based billing 教學, open source billing
+
+---
+
+### 4. **市場洞察 — Micro SaaS LLM 分發趨勢（Reddit $3.2K MRR 案例）** - MARKET INSIGHT
+- **發現:** Reddit r/micro_saas 熱議「2026 年 SaaS 分發已轉移到 LLM 內部」
+  - 有人分享: 靠 SEO + content 做到 $3.2K MRR
+  - 核心觀點: 2026 不在 LLM citations 裡 = 你的產品不存在
+- **對我們的意義:**
+  - 我們的 AI 工具評測文章 **正在做對的事** — 繁中高質量內容 = LLM 引用來源
+  - 優先寫有 affiliate 的工具 = 每篇文章雙重變現（SEO 流量 + LLM citation 流量）
+  - Ternlight（HN 260 pts）= WASM 7MB 模型 = 「瀏覽器內 AI」是下一個大關鍵字群
+- **行動建議:** 繼續現有策略，但確保每篇文章都有清晰的 schema markup + FAQ section（強化 LLM 引用機率）
+
+---
+
 ## 🔥 本輪最高價值發現(2026-07-13 Round 120)
 
 ### 1. **Alibaba Page-Agent（DOM AI 自動化新典範）** - VERY HIGH VALUE
