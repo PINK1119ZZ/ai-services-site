@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## v3.0.0 — 2026-07-15
+
+### 新增 3 個 Skills 🎉
+
+- `mcp-agent.md` — MCP Server 開發助手（工具/資源/Prompt 設計、TypeScript+Python 骨架生成、IPI/工具注入安全檢查、Claude Desktop config 生成）
+- `ai-agent-security.md` — AI Agent 安全審查，聚焦 2026 最新攻擊向量：直接/間接 Prompt Injection、工具濫用、記憶體污染、多 Agent 信任邊界、憑證竊取
+- `performance-profiler.md` — 效能分析與優化建議（前端 Core Web Vitals、後端 API 延遲、資料庫查詢優化）
+
+### 更新
+- `README.md` — 升級為 v3.0，新增 16 Skills 完整清單、AI Agent/MCP 開發者角色矩陣、新組合流程
+- `install.sh` — 升級為 v3.0.0，安裝訊息新增 3 個新 Skills 說明
+
+### 受眾擴展
+- MCP Server / AI Agent 開發者（mcp-agent）
+- AI 安全研究人員 / AI Agent 開發團隊（ai-agent-security）
+- 效能優化工程師（performance-profiler）
+
+### 背景
+呼應 2026 年 AI Agent 安全事件頻發（Zscaler 野外 IPI 攻擊報告、Llama/Gemini 遭誘導執行付款操作）與 MCP 生態快速成長，新增專項 skills 補齊工程師在 Agent 開發與安全審查上的缺口。
+
+---
+
 ## v2.0.0 — 2026-05-30
 
 ### 新增 3 個 Skills 🎉

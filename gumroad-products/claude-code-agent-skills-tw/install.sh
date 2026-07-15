@@ -18,7 +18,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 echo ""
-echo "🤖 Claude Code Agent Skills 繁中工程師包 v2.0.0"
+echo "🤖 Claude Code Agent Skills 繁中工程師包 v3.0.0"
 echo "================================================"
 echo ""
 
@@ -98,6 +98,11 @@ echo "   ── v2.0 新增 ──"
 echo "   /taste-skill           → AI 前端設計品質守門員"
 echo "   /stop-slop             → AI 寫作品質過濾器"
 echo "   /cybersecurity-review  → 資安漏洞審查（MITRE ATT&CK）"
+echo ""
+echo "   ── v3.0 新增 ──"
+echo "   /mcp-agent              → MCP Server 開發助手"
+echo "   /ai-agent-security      → AI Agent 安全審查（2026 攻擊向量）"
+echo "   /performance-profiler   → 效能分析與優化建議"
 echo ""
 echo "📖 更多使用範例請參閱 EXAMPLES.md"
 echo ""

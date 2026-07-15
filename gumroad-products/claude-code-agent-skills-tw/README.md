@@ -1,7 +1,7 @@
-# Claude Code Agent Skills 繁中工程師包 2026 — v2.0
+# Claude Code Agent Skills 繁中工程師包 2026 — v3.0
 
-> 13 個即用 Agent Skills + 一鍵安裝腳本 + 台灣工程師實戰範例
-> **v2.0 新增：前端設計品質守門員、AI 寫作去 Slop、資安漏洞審查（MITRE ATT&CK）**
+> 16 個即用 Agent Skills + 一鍵安裝腳本 + 台灣工程師實戰範例
+> **v3.0 新增：MCP Agent 開發助手、AI Agent 安全審查（2026 攻擊向量）、效能分析與優化**
 
 ---
 
@@ -9,7 +9,7 @@
 
 | 目錄/檔案 | 說明 |
 |-----------|------|
-| `skills/` | 13 個 `.md` Agent Skill 指令檔 |
+| `skills/` | 16 個 `.md` Agent Skill 指令檔 |
 | `install.sh` | 一鍵安裝腳本（複製到 `~/.claude/` 目錄）|
 | `README.md` | 本說明文件 |
 | `EXAMPLES.md` | 台灣工程師實戰 Prompt 範例（前端/後端/全端）|
@@ -34,7 +34,7 @@ bash install.sh --force
 
 ---
 
-## 🎯 13 個 Skills 完整清單
+## 🎯 16 個 Skills 完整清單
 
 ### 🔧 工程品質（原版 v1.0）
 | Skill | 指令 | 用途 |
@@ -57,6 +57,13 @@ bash install.sh --force
 | stop-slop | `/stop-slop` | AI 寫作品質過濾器，移除空洞套話 |
 | cybersecurity-review | `/cybersecurity-review` | 資安漏洞審查（MITRE ATT&CK 映射） |
 
+### 🚀 v3.0 新增（2026-07-15）
+| Skill | 指令 | 用途 |
+|-------|------|------|
+| mcp-agent | `/mcp-agent` | MCP Server 開發助手（工具/資源/Prompt 設計 + 安全檢查） |
+| ai-agent-security | `/ai-agent-security` | AI Agent 安全審查，涵蓋 2026 最新攻擊向量（IPI、工具濫用、多 Agent 信任邊界） |
+| performance-profiler | `/performance-profiler` | 效能分析與優化建議（前端/後端/資料庫） |
+
 ---
 
 ## 👥 適合誰用？
@@ -67,8 +74,9 @@ bash install.sh --force
 | 後端工程師 | security-review, cybersecurity-review, api-docs, deploy-check |
 | 全端工程師 | 全部 |
 | 技術寫作者 | stop-slop, explain-code, to-prd |
-| 資安工程師 | cybersecurity-review, security-review, grill-me |
+| 資安工程師 | cybersecurity-review, security-review, ai-agent-security, grill-me |
 | 台灣電商開發者 | taiwan-code-review, deploy-check, security-review |
+| AI Agent / MCP 開發者 | mcp-agent, ai-agent-security, performance-profiler |
 
 ---
 
@@ -84,6 +92,12 @@ bash install.sh --force
 
 # 文件品質流程
 /stop-slop → /explain-code → /api-docs
+
+# MCP Server 開發流程
+/mcp-agent → /ai-agent-security → /deploy-check
+
+# 效能優化流程
+/performance-profiler → /refactor → /grill-me
 ```
 
 ### 搭配 Claude Code 最佳實踐
@@ -91,18 +105,19 @@ bash install.sh --force
 2. 使用 `/to-prd` 先定義需求
 3. 用 `/tdd` 寫測試
 4. 用 `/grill-me` 審查實作
-5. 用 `/cybersecurity-review` 確保安全
-6. 用 `/deploy-check` 上線前把關
+5. 用 `/cybersecurity-review` + `/ai-agent-security` 確保安全
+6. 用 `/performance-profiler` 檢查效能
+7. 用 `/deploy-check` 上線前把關
 
 ---
 
 ## 🔄 版本升級
 
-如果你已有 v1.0，升級到 v2.0 只需：
+無論你是 v1.0 或 v2.0 買家，升級到最新版都只需：
 ```bash
 bash install.sh --force
 ```
-這會安裝 3 個新 Skills，不影響現有 Skills。
+這會安裝所有新 Skills，不影響現有 Skills。
 
 ---
 
@@ -116,4 +131,4 @@ bash install.sh --force
 
 ---
 
-*Claude Code Agent Skills 繁中工程師包 v2.0 — 2026-05-30*
+*Claude Code Agent Skills 繁中工程師包 v3.0 — 2026-07-15*
