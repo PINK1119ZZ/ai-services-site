@@ -1,5 +1,97 @@
 # topic-ideas.md - 趨勢獵手發現(Researcher Agent)
 
+## 🔥 本輪最高價值發現(2026-07-15 Round 122)
+
+### 1. **AdCreative.ai — 30-40% LIFETIME 永久遞迴佣金（AI 廣告創意龍頭）** ⭐ TOP FIND - VERY HIGH VALUE
+- **工具:** AdCreative.ai（AI 廣告 creatives 生成 SaaS，幫品牌/代理商一鍵產高轉換率廣告圖）
+- **關鍵字:** "adcreative.ai 評測", "AI 廣告設計工具", "AI ad creative 教學", "自動生成廣告圖 2026"
+- **搜尋量:** 預估 4K-8K/月（B2B 行銷受眾，付費意願極高）
+- **變現方式:**
+  - ✅ **LIFETIME 永久遞迴佣金: 30-40% of revenue，無期限**（直接官網 adcreative.ai/affiliate 確認）
+  - 方案 $29-$299/月，依使用量級距
+  - 10 個客戶 @ $29/月 → $87-$116/月（永久）
+  - 10 個客戶 @ $99/月 → $297-$396/月（永久）
+  - 透過 PartnerStack 管理，即時 dashboard
+- **預估月收入:** $300-$1,200（持續複利成長，無12個月上限）
+- **建議站點:** autodev-ai.com（英文 B2B）+ ai-tools.pro
+- **競爭度:** 中（英文競爭多，繁中幾乎 0）
+- **為何勝過 VEED.io:** VEED 限 12 個月遞迴，AdCreative 是**永久遞迴**——每帶一個客戶終身吃佣
+- **行動項:**
+  - 🔴 P1-HIGH (Ivan): 申請 AdCreative affiliate → adcreative.ai/affiliate（PartnerStack）
+  - 🔴 P1-HIGH (seo-writer): 寫「AdCreative.ai 完整評測 2026：AI 自動生成廣告 creatives」
+    - 關鍵字: adcreative.ai 評測, AI 廣告圖設計, 自動生成廣告 2026
+  - 🟡 P2 (seo-writer): 寫「AdCreative.ai vs Canva AI vs Creatify 2026 比較頁」（多 affiliate 並列）
+
+---
+
+### 2. **Reclaim.ai — 40% recurring 12 個月（AI 行事曆自動排程）** - HIGH VALUE
+- **工具:** Reclaim.ai（AI 日曆工具，為 Google Calendar 自動安排任務/習慣/會議時間，$8-$18/月）
+- **關鍵字:** "reclaim ai 評測", "AI 行事曆工具 2026", "自動排程 Google Calendar AI", "time blocking AI"
+- **搜尋量:** 預估 5K-10K/月（生產力工具受眾，上班族/遠端工作者）
+- **變現方式:**
+  - ✅ **40% recurring 12 個月（工作信箱）+ $1/signup bonus**（官方 help.reclaim.ai 確認）
+  - 25% recurring 12 個月（個人信箱）+ $0.25/signup
+  - $8/月 Lite plan → 5 conversions @ 40% = $192/年
+  - $18/月 Pro plan → 5 conversions @ 40% = $432/年
+  - PartnerStack 2026 最佳 AI 生產力工具清單上榜
+- **預估月收入:** $200-$600（12 個月後需持續帶新客）
+- **建議站點:** autodev-ai.com + ai-tools.pro
+- **競爭度:** 低（繁中 AI 排程工具教學幾乎為 0）
+- **行動項:**
+  - 🔴 P1-HIGH (Ivan): 申請 Reclaim affiliate → reclaim.ai/affiliate-program（PartnerStack）
+  - 🔴 P1-HIGH (seo-writer): 寫「Reclaim.ai 評測 2026：AI 幫你自動填滿行事曆」
+    - 關鍵字: reclaim ai 評測, AI 行事曆 2026, Google Calendar 自動排程教學
+  - 🟡 P2 (seo-writer): 寫「Reclaim.ai vs Motion vs Clockwise 2026 AI 行事曆比較」
+
+---
+
+### 3. **OpenCut — GitHub 今日 #1 Trending（69K⭐，開源 CapCut）** - SEO OPPORTUNITY
+- **工具:** OpenCut（MIT 授權開源影片編輯器，Rust 核心 + WebAssembly，跨 Web/Desktop/Mobile，TypeScript，4,276 stars 今日）
+- **關鍵字:** "opencut 教學", "opencut vs capcut", "免費開源影片剪輯 2026", "CapCut 替代方案"
+- **搜尋量:** 預估 8K-20K/月（爆炸性上升中，CapCut 系列關鍵字搜尋量原本就高）
+- **變現方式:**
+  - OpenCut 本身無 affiliate（MIT 開源）
+  - 間接: 在「CapCut 替代方案」文章中嵌入 VEED.io + InVideo AI affiliate（已在管道中）
+  - 比較頁格局: OpenCut（免費）vs VEED.io（有付費/affiliate）vs Clypra（同日 trending，2.6K⭐）
+  - CapCut 使用者外溢流量 = 極高搜尋量背書
+- **預估月收入:** $200-$500（間接 affiliate，流量 × 轉換至有 affiliate 的替代品）
+- **建議站點:** autodev-ai.com（英文）+ ai-tools.pro
+- **競爭度:** 低（今日爆發，繁中教學空白）
+- **行動項:**
+  - 🟡 P2 (seo-writer): 寫「CapCut 替代方案 2026：OpenCut / VEED / Clypra 完整比較」
+    - 關鍵字: opencut 教學, capcut 開源替代, 免費影片剪輯 AI 2026
+    - 嵌入 VEED.io + InVideo AI affiliate 連結
+
+---
+
+### 4. **Hallmark (Nutlope) — 反 AI slop 設計 skill，今日 GitHub trending** - CONTENT ANGLE
+- **工具:** Nutlope/hallmark（Anti-AI-slop 設計 skill for Claude Code / Cursor / Codex，6.1K⭐，1,015 stars 今日，MIT）
+- **關鍵字:** "vibe coding 設計品質", "AI 生成 UI 醜的解決方案", "claude code 設計 skill", "anti AI slop design"
+- **搜尋量:** 預估 2K-5K/月（新興關鍵字，競爭幾乎 0）
+- **變現方式:**
+  - Hallmark 本身無 affiliate（開源）
+  - 文章角度: 「用 Hallmark + Cursor 打造不像 AI 做的網站」→ 嵌入 Cursor affiliate（20% recurring/年）
+  - 擴展: Claude Pro affiliate + Cursor affiliate 在同一篇文章
+- **預估月收入:** $100-$300（間接 Cursor/Claude affiliate）
+- **建議站點:** autodev-ai.com（英文開發者受眾）
+- **競爭度:** 極低（新興工具，繁中空白）
+- **行動項:**
+  - 🟡 P3 (seo-writer): 寫「Vibe Coding 設計升級：Hallmark skill 讓你的 AI 網站脫離 slop」
+    - 關鍵字: hallmark claude code, anti AI slop design, cursor 設計 skill 2026
+
+---
+
+### 5. **市場訊號 — AI Agent Security 爆發（Zscaler 報告 + GitHub 260 pts）** - AWARENESS
+- **發現:** webpro255/awesome-ai-agent-attacks（GitHub trending）記錄今日 Zscaler 首次捕捉到野外 AI agent 間接 prompt injection 攻擊，Llama/Gemini 模型被騙付款 $3 + 0.0012 ETH
+- **對我們的意義:**
+  - AI agent 安全 = 2026 下半年大趨勢，教學缺口超大
+  - 「AI Agent 安全指南 2026」= 開發者高流量關鍵字
+  - 可嵌入 DigitalOcean（安全部署）+ DataCamp（AI 安全課程）affiliate
+- **預估月收入:** $100-$250（間接 affiliate，但有長尾高質量流量）
+- **行動建議:** 納入下輪 P3 候補，等更多 CVE/報告支撐後再寫
+
+---
+
 ## 🔥 本輪最高價值發現(2026-07-14 Round 121)
 
 ### 1. **VEED.io affiliate — 25-30% recurring 12 個月（AI 影片編輯龍頭）** - HIGH VALUE

@@ -1,6 +1,59 @@
 {
-  "lastRun": "2026-07-13T03:00:00Z",
+  "lastRun": "2026-07-15T00:30:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-07-15T00:30:00Z",
+      "task": "ai-trend-hunter",
+      "status": "completed",
+      "details": "Round 122 — GitHub Trending / HN / Product Hunt / Affiliate 市場研究。本輪聚焦三方向：(1) AdCreative.ai 30-40% LIFETIME永久遞迴佣金（本輪最強發現，無12月上限，複利最佳）；(2) Reclaim.ai 40% recurring 12個月 + $1/signup（AI行事曆，PartnerStack 2026最佳清單）；(3) OpenCut GitHub #1今日(4,276 stars/day, 69K total) + Hallmark anti-slop設計skill。本輪估算潛力 $800-2,400/mo（AdCreative永久複利）。",
+      "changes": [
+        "更新 topic-ideas.md：Round 122 完整研究結果（4個新機會 + 1個市場洞察）",
+        "創建 directives/researcher-to-strategist-2026-07-15-round122.md（高價值 affiliate 指令）",
+        "更新 agent-state.json：agentLog + lastResearchRound + latestOpportunities"
+      ],
+      "topFindings": [
+        "AdCreative.ai 30-40% LIFETIME 永久遞迴（adcreative.ai/affiliate, PartnerStack, $29-299/月）: 唯一無期限永久遞迴 AI SaaS affiliate，10客戶@$99/mo = $297-396/mo 永久",
+        "Reclaim.ai 40% recurring 12個月 (work email) + $1/signup（reclaim.ai/affiliate-program, PartnerStack）: AI 行事曆 Google Calendar，$8-18/月，繁中空白",
+        "OpenCut GitHub #1今日 (4,276 stars/day, 69K total, MIT): 開源 CapCut 替代方案，CapCut關鍵字高流量，可嵌入 VEED/InVideo affiliate",
+        "Hallmark Nutlope (1,015 stars/day, 6.1K total): Anti-AI-slop設計skill，Cursor/Claude affiliate文章角度",
+        "AI Agent Security爆發 (Zscaler野外IPI攻擊, Llama/Gemini被騙付款): 2026下半年開發者安全教學缺口"
+      ],
+      "affiliateOpportunities": [
+        {
+          "tool": "AdCreative.ai",
+          "commission": "30-40% LIFETIME 永久遞迴（無期限）",
+          "cookie": "30 天",
+          "pricing": "$29-299/月",
+          "applyUrl": "adcreative.ai/affiliate（PartnerStack）",
+          "estimatedMonthly": "$300-1,200（複利成長）",
+          "priority": "P1-HIGH"
+        },
+        {
+          "tool": "Reclaim.ai",
+          "commission": "40% recurring 12個月（工作信箱）+ $1/signup",
+          "cookie": "未確認",
+          "pricing": "$8-18/月",
+          "applyUrl": "reclaim.ai/affiliate-program（PartnerStack）",
+          "estimatedMonthly": "$200-600",
+          "priority": "P1-HIGH"
+        }
+      ],
+      "contentPriorities": [
+        "P1-HIGH: 申請 AdCreative.ai affiliate + 寫 AdCreative.ai 完整評測 2026（英文+繁中）",
+        "P1-HIGH: 申請 Reclaim.ai affiliate + 寫 Reclaim.ai 評測 2026（繁中）",
+        "P2: 寫「CapCut 替代方案 2026：OpenCut vs VEED vs Clypra」（嵌入 VEED/InVideo affiliate）",
+        "P3: 寫「Hallmark + Cursor：Vibe Coding 設計升級」（嵌入 Cursor affiliate）"
+      ],
+      "needsIvan": [
+        "P1-HIGH: 申請 AdCreative.ai affiliate → adcreative.ai/affiliate（PartnerStack）",
+        "P1-HIGH: 申請 Reclaim.ai affiliate → reclaim.ai/affiliate-program（PartnerStack）",
+        "P1-HIGH（carryover）: 申請 VEED.io affiliate → veed.io/affiliates",
+        "P0-URGENT（carryover）: 申請 Cursor affiliate → openaffiliate.dev/programs/cursor",
+        "P0-URGENT（carryover）: 申請 Copy.ai affiliate → copy.ai/affiliates",
+        "P0-URGENT（carryover）: 申請 Kit affiliate → kit.com/affiliate"
+      ],
+      "estimatedNewRevenue": "$800-2,400/month"
+    },
     {
       "timestamp": "2026-07-14T00:30:00Z",
       "task": "ai-trend-hunter",
@@ -1400,40 +1453,40 @@
       }
     }
   ],
-  "lastResearchRound": "Round 121",
+  "lastResearchRound": "Round 122",
   "latestOpportunities": [
     {
-      "tool": "VEED.io affiliate — 25-30% recurring 12個月（AI影片編輯龍頭，Round 121 新發現）",
+      "tool": "AdCreative.ai — 30-40% LIFETIME 永久遞迴（Round 122 新發現）",
       "priority": "P1-HIGH",
-      "revenue": "$300-700/mo"
+      "revenue": "$300-1,200/mo（複利）"
     },
     {
-      "tool": "SLM 趨勢（Phi-3.5/Qwen3/Gemma4）— HN 171pts 今日 IEEE Spectrum",
-      "priority": "P2-MEDIUM",
-      "revenue": "$150-400/mo"
-    },
-    {
-      "tool": "Lago 開源帳單 + MCP server（YC S21，$22M，PayPal/Mistral 使用）",
-      "priority": "P3",
-      "revenue": "$100-300/mo"
-    },
-    {
-      "tool": "Cursor affiliate — 20% recurring/yr（我們有流量但沒連結，Round 119 carryover）",
-      "priority": "P0-URGENT",
-      "revenue": "$400-800/mo"
-    },
-    {
-      "tool": "Copy.ai affiliate — 45% 首年 + 60天 cookie（Round 119 carryover）",
-      "priority": "P0-URGENT",
-      "revenue": "$500-1,500/mo"
-    },
-    {
-      "tool": "Perplexity AI affiliate — $15-20 固定（繁中空白，Round 119 carryover）",
+      "tool": "Reclaim.ai — 40% recurring 12個月 + $1/signup（Round 122 新發現）",
       "priority": "P1-HIGH",
       "revenue": "$200-600/mo"
     },
     {
-      "tool": "Kit (ConvertKit) affiliate — 50% recurring 首年 (Round 117 carryover)",
+      "tool": "VEED.io affiliate — 25-30% recurring 12個月（Round 121 carryover）",
+      "priority": "P1-HIGH",
+      "revenue": "$300-700/mo"
+    },
+    {
+      "tool": "OpenCut CapCut替代方案比較頁（間接VEED/InVideo affiliate）",
+      "priority": "P2",
+      "revenue": "$200-500/mo"
+    },
+    {
+      "tool": "Cursor affiliate — 20% recurring/yr（Round 119 carryover）",
+      "priority": "P0-URGENT",
+      "revenue": "$400-800/mo"
+    },
+    {
+      "tool": "Copy.ai affiliate — 45% 首年（Round 119 carryover）",
+      "priority": "P0-URGENT",
+      "revenue": "$500-1,500/mo"
+    },
+    {
+      "tool": "Kit affiliate — 50% recurring 首年（Round 117 carryover）",
       "priority": "P0-URGENT",
       "revenue": "$800-2,000/mo"
     }
