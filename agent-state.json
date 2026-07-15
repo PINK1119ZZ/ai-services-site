@@ -1,6 +1,31 @@
 {
-  "lastRun": "2026-07-15T00:30:00Z",
+  "lastRun": "2026-07-15T07:00:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-07-15T07:00:00Z",
+      "task": "internal-linker",
+      "status": "completed",
+      "details": "內部連結優化 Round 1：在 3 篇高流量文章中新增 9 個自然內部連結。優先連結到有聯盟連結的評測文章、工具比較頁、教學文。所有連結自然嵌入段落，無強行插入。",
+      "changes": [
+        "wispr-flow-review-2026.html: +4 內部連結（claude-code-routines, free-claude-code, workflow-automation, small-business-automation）",
+        "rtk-rust-token-killer-review-2026.html: +3 內部連結（ai-tools-comparison, chatgpt-claude-gemini, claude-code-routines）",
+        "n8n-automation-tutorial-2026.html: +3 內部連結（chatgpt-claude-gemini, how-to-write-ai-prompts, workflow-automation）",
+        "git commit + push: b9408ca"
+      ],
+      "stats": {
+        "articlesModified": 3,
+        "internalLinksAdded": 10,
+        "targetArticleTypes": [
+          "affiliate review (claude-code-routines, free-claude-code)",
+          "tool comparison (ai-tools-comparison, chatgpt-claude-gemini)",
+          "tutorial (workflow-automation, small-business-automation, how-to-write-ai-prompts)"
+        ]
+      },
+      "nextActions": [
+        "下次執行：再挑 2-3 篇無內部連結的文章（systeme-io-review, telegram-bot-business-guide, small-business-automation）",
+        "優先對象：0 內部連結 + 有流量 + 主題相關性高的文章"
+      ]
+    },
     {
       "timestamp": "2026-07-15T00:30:00Z",
       "task": "ai-trend-hunter",
@@ -835,23 +860,23 @@
     }
   ],
   "gscData": {
-    "lastUpdated": "2026-07-14 07:00",
+    "lastUpdated": "2026-07-15 05:30",
     "period": "14 days",
     "sites": {
       "autodev-ai": {
         "summary": {
-          "totalClicks": 28,
-          "totalImpressions": 910,
-          "avgCTR": 3.1,
-          "avgPosition": 8.1
+          "totalClicks": 25,
+          "totalImpressions": 779,
+          "avgCTR": 3.2,
+          "avgPosition": 8.6
         },
         "topQueries": [
           {
             "keyword": "autodev ai",
             "clicks": 2,
-            "impressions": 8,
-            "ctr": 25.0,
-            "position": 2.4
+            "impressions": 5,
+            "ctr": 40.0,
+            "position": 2.8
           },
           {
             "keyword": "opencode zen 費用",
@@ -891,23 +916,9 @@
           {
             "keyword": "autodev",
             "clicks": 0,
-            "impressions": 2,
+            "impressions": 1,
             "ctr": 0,
-            "position": 41
-          },
-          {
-            "keyword": "autodev.ai",
-            "clicks": 0,
-            "impressions": 17,
-            "ctr": 0,
-            "position": 1.8
-          },
-          {
-            "keyword": "autodev.co",
-            "clicks": 0,
-            "impressions": 7,
-            "ctr": 0,
-            "position": 8.9
+            "position": 58
           },
           {
             "keyword": "autodev.com",
@@ -915,20 +926,6 @@
             "impressions": 2,
             "ctr": 0,
             "position": 4
-          },
-          {
-            "keyword": "autodev.io",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 9
-          },
-          {
-            "keyword": "autodev.org",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 2
           },
           {
             "keyword": "chatbot費用",
@@ -959,13 +956,6 @@
             "position": 68
           },
           {
-            "keyword": "gemma4 12b download",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 12
-          },
-          {
             "keyword": "line bot 要 錢 嗎",
             "clicks": 0,
             "impressions": 2,
@@ -994,13 +984,6 @@
             "position": 8.7
           },
           {
-            "keyword": "microsoft markitdown",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 7
-          },
-          {
             "keyword": "n8n 全名",
             "clicks": 0,
             "impressions": 1,
@@ -1015,69 +998,104 @@
             "position": 25
           },
           {
-            "keyword": "n8n 自動化 教學",
+            "keyword": "openclaw hermes ai",
             "clicks": 0,
             "impressions": 1,
             "ctr": 0,
-            "position": 8
+            "position": 10
+          },
+          {
+            "keyword": "opencode claude code 比較",
+            "clicks": 0,
+            "impressions": 5,
+            "ctr": 0,
+            "position": 9
+          },
+          {
+            "keyword": "sonet 5 vs sonet 4.6",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 9
+          },
+          {
+            "keyword": "sonnet 5 vs 4.6",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 10
+          },
+          {
+            "keyword": "付費ai 比較",
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 26.5
+          },
+          {
+            "keyword": "台灣 line bot 開發 報價 2025",
+            "clicks": 0,
+            "impressions": 6,
+            "ctr": 0,
+            "position": 2.5
+          },
+          {
+            "keyword": "台灣 line bot 開發 報價 notion 串接",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 2
           }
         ],
         "topPages": [
           {
-            "page": "//blog/line-bot-cost.html",
-            "clicks": 8,
-            "impressions": 420,
-            "ctr": 1.9,
-            "position": 5.1
-          },
-          {
             "page": "//",
             "clicks": 7,
-            "impressions": 90,
-            "ctr": 7.8,
+            "impressions": 89,
+            "ctr": 7.9,
             "position": 6.0
+          },
+          {
+            "page": "//blog/line-bot-cost.html",
+            "clicks": 7,
+            "impressions": 350,
+            "ctr": 2.0,
+            "position": 5.4
           },
           {
             "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
             "clicks": 3,
-            "impressions": 34,
-            "ctr": 8.8,
-            "position": 9.2
+            "impressions": 30,
+            "ctr": 10.0,
+            "position": 9.4
           },
           {
             "page": "//blog/opencode-zen-vs-go-pricing-2026.html",
             "clicks": 3,
-            "impressions": 16,
-            "ctr": 18.8,
-            "position": 5.7
-          },
-          {
-            "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
-            "clicks": 2,
-            "impressions": 26,
-            "ctr": 7.7,
-            "position": 7.6
-          },
-          {
-            "page": "//blog/markitdown-microsoft-tutorial-2026.html",
-            "clicks": 1,
-            "impressions": 20,
-            "ctr": 5.0,
-            "position": 7.1
+            "impressions": 13,
+            "ctr": 23.1,
+            "position": 5.9
           },
           {
             "page": "//blog/rtk-rust-token-killer-review-2026.html",
             "clicks": 1,
-            "impressions": 4,
-            "ctr": 25.0,
-            "position": 7.5
+            "impressions": 3,
+            "ctr": 33.3,
+            "position": 6.7
+          },
+          {
+            "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
+            "clicks": 1,
+            "impressions": 25,
+            "ctr": 4.0,
+            "position": 7.2
           },
           {
             "page": "//en/",
             "clicks": 1,
-            "impressions": 74,
-            "ctr": 1.4,
-            "position": 9.7
+            "impressions": 38,
+            "ctr": 2.6,
+            "position": 13.9
           },
           {
             "page": "//en/blog/deerflow-vs-dify-vs-n8n-2026.html",
@@ -1180,23 +1198,30 @@
           {
             "page": "//blog/line-bot-cost.html#comparison",
             "clicks": 0,
-            "impressions": 4,
+            "impressions": 3,
             "ctr": 0,
-            "position": 5
+            "position": 3.3
           },
           {
             "page": "//blog/line-bot-cost.html#factors",
             "clicks": 0,
-            "impressions": 22,
+            "impressions": 18,
             "ctr": 0,
-            "position": 4.5
+            "position": 4.6
           },
           {
             "page": "//blog/line-bot-cost.html#price-range",
             "clicks": 0,
-            "impressions": 22,
+            "impressions": 18,
             "ctr": 0,
-            "position": 4.5
+            "position": 4.6
+          },
+          {
+            "page": "//blog/line-bot-cost.html#save-money",
+            "clicks": 0,
+            "impressions": 17,
+            "ctr": 0,
+            "position": 4.7
           }
         ]
       },
@@ -1240,27 +1265,6 @@
     "opportunities": [
       {
         "site": "autodev-ai",
-        "keyword": "autodev.ai",
-        "ctr": 0,
-        "impressions": 17,
-        "action": "improve title/meta for higher CTR"
-      },
-      {
-        "site": "autodev-ai",
-        "keyword": "autodev.co",
-        "position": 8.9,
-        "impressions": 7,
-        "action": "optimize to push to page 1"
-      },
-      {
-        "site": "autodev-ai",
-        "keyword": "autodev.io",
-        "position": 9,
-        "impressions": 4,
-        "action": "optimize to push to page 1"
-      },
-      {
-        "site": "autodev-ai",
         "keyword": "gemma 4 12b ram",
         "position": 10,
         "impressions": 4,
@@ -1271,6 +1275,13 @@
         "keyword": "markitdown 教學",
         "position": 8.7,
         "impressions": 3,
+        "action": "optimize to push to page 1"
+      },
+      {
+        "site": "autodev-ai",
+        "keyword": "opencode claude code 比較",
+        "position": 9,
+        "impressions": 5,
         "action": "optimize to push to page 1"
       }
     ]
