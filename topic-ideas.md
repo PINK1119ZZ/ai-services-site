@@ -1,5 +1,127 @@
 # topic-ideas.md - 趨勢獵手發現(Researcher Agent)
 
+## 🔥 本輪最高價值發現(2026-07-16 Round 124)
+
+### 1. **Inkling (Thinking Machines Lab) — 975B 開源模型，HN #1 今日 607分，Mira Murati 首作** ⭐ TIME-SENSITIVE
+- **工具:** Inkling — 975B 參數 MoE 開源模型（41B active），由前 OpenAI CTO Mira Murati 創立的 Thinking Machines Lab 於 2026-07-15 發布
+- **規格:** 1M token context window，支援 text/image/audio 輸入，Databricks/Baseten/Tinker 同日支援
+- **關鍵字:** "inkling 模型", "thinking machines lab 評測", "mira murati AI 模型", "inkling vs llama 3 2026", "open weights model 比較 2026"
+- **搜尋量預估:** 8K-20K/月（事件驅動，72小時內高峰）
+- **有無 affiliate:** ❌ 無直接 affiliate。間接：
+  - Databricks / Baseten 企業部署 → DataCamp 課程 CTA（自然嵌入）
+  - DigitalOcean 部署 Tinker API → DigitalOcean CTA
+  - 對比 Claude Code / OpenCode 整合角度 → Claude Code 系列內連
+- **變現方式:** 間接 DataCamp + DigitalOcean affiliate，主要價值在於流量 + SEO authority
+- **繁中教學:** 0 篇（今日發布，72小時窗口）
+- **為何值得寫:**
+  1. Mira Murati 知名度極高（台灣科技媒體追蹤中）
+  2. HN 今日 #1，607分，TechCrunch/Axios 頭條
+  3. 官方文件顯示直接整合 OpenCode harness — 與我們現有 OpenCode 文章天然內連
+  4. 繁中資源今日幾乎為 0
+- **預估月收入:** $200-400（間接，DataCamp + DigitalOcean）
+- **預估流量:** 15K-40K/月（72h 紅利期後穩定在 3K-8K）
+- **建議站點:** autodev-ai.com（繁中）
+- **行動:**
+  - 🔴 **P1-HIGH (seo-writer): 今日寫「Inkling 完整評測 2026：Mira Murati 首個開源模型，比 LLaMA 好在哪？」**
+    - 關鍵字: inkling 模型, thinking machines lab, mira murati AI, open weights 2026
+    - 嵌入: DataCamp CTA（AI 課程）、DigitalOcean CTA（API 部署）、內連 opencode 文章
+
+---
+
+### 2. **Gemma 4 26B CPU-only (HN #12, 221pts) — 現有文章優化機會** - SEO OPTIMIZATION
+- **發現:** HN 今日 #12（221分）——「Running Gemma 4 26B at 5 tokens/sec on a 13-year-old Xeon with no GPU」
+- **與現有文章關係:** 我們已有 `blog/gemma-4-12b-local-ai-guide-2026.html`（GSC 顯示 4 impressions，position 10 for "gemma 4 12b ram"）
+- **機會:** 不需要寫新文章——更新現有 Gemma4 文章加入 26B CPU-only / QAT Q4_0 段落，可搶「gemma 4 26b cpu」「gemma 4 xeon 教學」等長尾詞
+- **關鍵字新增:** "gemma 4 26b cpu only", "gemma 4 不需要 gpu", "gemma 4 26b 執行需求", "QAT q4_0 gemma 4"
+- **行動:**
+  - 🟡 **P2 (content-refresher): 更新 gemma-4-12b-local-ai-guide-2026.html，加入 26B-A4B CPU-only 段落（QAT + Koboldcpp + llama.cpp 範例）**
+
+---
+
+### 3. **Grok Build 開源 (HN #4, 212pts) — 比較文角度，無直接 affiliate**
+- **工具:** Grok Build CLI（xAI），terminal-native coding agent，plan-review-approve 工作流，8 parallel subagents，Git worktree isolation
+- **已確認:** 無 affiliate program（xAI 目前無公開聯盟計畫）
+- **機會角度:** Grok Build vs Claude Code vs Codex CLI 三方比較文，嵌入 DataCamp（AI 課程）間接 CTA
+- **關鍵字:** "grok build 教學", "grok cli vs claude code 2026", "xai coding agent 比較"
+- **繁中教學:** 0 篇
+- **預估月收入:** $100-200（間接）
+- **行動:**
+  - 🟡 **P2 (seo-writer): 寫「Grok Build vs Claude Code vs Codex CLI 2026：三大 AI Coding Agent 完整比較」**
+  - 注意：無 affiliate，純流量文章，優先級低於 Inkling
+
+---
+
+### 市場洞察：2026-07-16 開源模型競爭加劇
+Inkling 的發布確認了 2026 下半年開源大模型競爭進入新階段：
+- **企業自訂模型**成為下一波戰場（Inkling Tinker fine-tuning、Llama 3.3 fine-tuning service、Grok Build local-first）
+- 台灣開發者對「自己部署的 AI」需求升高（隱私、成本、客製化）
+- 繁中「open weights 模型評測 + 部署教學」內容缺口明顯
+- **策略建議：** 搶佔「Inkling 繁中首發」定位，同時優化現有 Gemma4 文章，建立本地 AI 教學系列 SEO authority
+
+---
+
+### 彙整表（2026-07-16 Round 124）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|----------|-----------|---------|
+| 2026-07-16 | Inkling (975B MoE) | inkling 模型, thinking machines lab, mira murati AI | 8K-20K（事件驅動） | DataCamp+DigitalOcean 間接 | $200-400 | autodev-ai.com |
+| 2026-07-16 | Gemma 4 26B CPU-only | gemma 4 26b cpu, gemma 4 不需要 gpu | 3K-8K | 現有文章更新（SEO） | 現有流量提升 | autodev-ai.com |
+| 2026-07-16 | Grok Build CLI | grok build 教學, grok cli vs claude code | 5K-12K | DataCamp 間接 | $100-200 | autodev-ai.com |
+
+---
+
+## 🔥 本輪最高價值發現(2026-07-15 Round 123)
+
+### 1. **Voibe — 25% FOREVER 永久遞迴（Mac 離線語音輸入，開發者/創作者受眾）** ⭐ TOP FIND
+- **工具:** Voibe（Mac 私密離線語音輸入 app，無需雲端，開發者/作家/顧問受眾）
+- **關鍵字:** "voibe 評測", "mac 語音輸入工具", "離線語音辨識 mac 2026", "Whisper mac app"
+- **變現方式:**
+  - ✅ **25% recurring FOREVER（無期限上限）**，含訂閱續費、年費、每次付款
+  - Lifetime plan $149 → $37.25 一次性
+  - 無審核、即時批准
+- **預估月收入:** $200-$500/月（複利，無到期日）
+- **受眾吻合度:** 極高 — autodev-ai 台灣開發者受眾，Mac 用量高
+- **繁中教學:** 0 篇
+- **行動:**
+  - 🔴 P1-HIGH (Ivan): 申請 → getvoibe.com/resources/affiliate-program
+  - 🔴 P1-HIGH (seo-writer): 寫「Voibe 評測 2026：Mac 最好用的離線 AI 語音輸入」
+
+---
+
+### 2. **beehiiv — 最高 60% recurring/12 個月（電子報平台）** - HIGH VALUE
+- **工具:** beehiiv（電子報平台，Kit/Substack 直接競品，$29-$99/月）
+- **關鍵字:** "beehiiv 評測", "beehiiv vs kit vs substack 2026", "電子報平台比較", "newsletter 賺錢"
+- **變現方式:**
+  - ✅ **最高 60% recurring 12 個月**（tier 制：Bronze 起升）
+  - 60 天 cookie，達標後提供共同品牌 landing page + badge
+  - beehiiv.com/partners，即時開通
+- **預估月收入:** $400-$900/月（60% 遠高於 Kit 的 50%，且 beehiiv 定價更高）
+- **繁中教學:** 極少（以英文為主）
+- **行動:**
+  - 🔴 P1-HIGH (Ivan): 申請 → beehiiv.com/partners
+  - 🟡 P2 (seo-writer): 寫「beehiiv vs Kit vs Substack 2026：台灣電子報創作者完整比較」
+
+---
+
+### 3. **GitHub Trending 今日新發現：3 個 Agent Skills 生態系延伸** - SEO OPPORTUNITY
+- **coreyhaines31/marketingskills** (39.7K⭐, +390 today, JS): marketing skills for Claude Code/AI agents — CRO/copywriting/SEO/analytics。autodev-ai 直接受眾，繁中教學 0 篇
+- **Dicklesworthstone/destructive_command_guard** (4.7K⭐, +497 today, Rust): dcg — 阻止 agent 執行危險 git/shell 指令。AI 安全教學角度，DataCamp 間接 CTA
+- **HKUDS/Vibe-Trading** (GitHub trending): 個人 AI trading agent。繁中理財受眾大，但 affiliate 連結較難找
+
+---
+
+### 市場洞察：2026 Affiliate 佣金結構全景
+
+從今日研究確認，2026 頂級 AI SaaS affiliate 四種結構：
+1. **FOREVER 永久遞迴**：AdCreative.ai (30-40%), Voibe (25%), Writesonic (30%)
+2. **高比例 12 個月**：beehiiv (60%), Kit (50%), VEED.io (25-30%), Copy.ai (45%)
+3. **高比例 +bonus**：Reclaim.ai (40% + $1/signup)
+4. **高額固定**：Semrush ($200-450/sale, 120天 cookie)
+
+**策略結論：** 優先佈局 FOREVER 結構（AdCreative + Voibe + Writesonic），其次補上高比例 12 個月（beehiiv + Kit）。一旦 Ivan 申請通過，每帶一個客戶終身吃佣。
+
+---
+
 ## 🔥 本輪最高價值發現(2026-07-15 Round 122)
 
 ### 1. **AdCreative.ai — 30-40% LIFETIME 永久遞迴佣金（AI 廣告創意龍頭）** ⭐ TOP FIND - VERY HIGH VALUE
