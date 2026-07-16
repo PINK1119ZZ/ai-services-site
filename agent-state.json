@@ -857,6 +857,20 @@
         "Sampled 10 autodev-ai sitemap URLs and all returned HTTP 200",
         "Updated agent-state.json and memory/2026-07-15.md"
       ]
+    },
+    {
+      "timestamp": "2026-07-16T00:00:00Z",
+      "task": "site-health",
+      "status": "completed",
+      "details": "Health-checked primary sites, GitHub Pages fallback URLs, and sampled autodev-ai sitemap URLs. autodev-ai.com and ai-tools.pro were healthy; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; pink1119zz.github.io fallback URLs remained healthy. No new in-repo fix available beyond the existing builder/infra directive.",
+      "changes": [
+        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
+        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml redirected successfully to sitemap_index.xml",
+        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (urllib: [Errno -2] Name or service not known / HTTP 000 equivalent)",
+        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
+        "Sampled 10 autodev-ai sitemap URLs and all returned HTTP 200",
+        "Updated agent-state.json and memory/2026-07-16.md"
+      ]
     }
   ],
   "gscData": {
@@ -1304,7 +1318,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-07-15T00:00:00Z",
+  "lastChecked": "2026-07-16T00:00:00Z",
   "issues": [
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
     "2026-07-11 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
@@ -1313,7 +1327,8 @@
     "2026-07-12 fb-weekly-review: Graph API v23.0 with current page token rejected requested post insights metrics (post_impressions/post_engaged_users/post_clicks) with code #100 valid insights metric; weekly review fell back to public interaction signals only.",
     "2026-07-13 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
     "2026-07-14 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
-    "2026-07-15 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl/urllib HTTP 000 equivalent / Could not resolve host); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid."
+    "2026-07-15 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl/urllib HTTP 000 equivalent / Could not resolve host); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
+    "2026-07-16 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (urllib: [Errno -2] Name or service not known / HTTP 000 equivalent); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid."
   ],
   "fbReplied": [
     "122119012724778539_1712722629953865",
