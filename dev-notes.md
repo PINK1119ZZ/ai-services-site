@@ -1,5 +1,47 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 123 | 2026-07-15 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-07-15 22:00 UTC | 搜尋範圍：GitHub trending、Affiliate market research、HN、SaaS program comparison
+
+### 🔥 本輪頭條：Voibe FOREVER 25% 遞迴（Mac離線AI語音）+ beehiiv 60% 遞迴/12月（電子報）+ GitHub trending marketingskills（39.7K⭐）+ 2026 Affiliate 結構全景分析
+
+---
+
+#### 1. 🔥🔥🔥 Voibe — 25% FOREVER 永久遞迴（Mac 離線語音輸入）
+- **工具:** Voibe（Mac 私密離線 AI 語音輸入 app，Whisper-based，開發者/作家/顧問受眾）
+- **佣金:** 25% recurring FOREVER（含續費、年費），即時審核通過
+- **定價:** 月訂閱 + Lifetime $149（$37.25 一次性佣金）
+- **受眾吻合度:** autodev-ai 開發者受眾 = Mac 用量高，且 Voibe 強調「AI power users」
+- **繁中教學:** 0 篇
+- **Apply:** getvoibe.com/resources/affiliate-program
+- **預估月收入:** $200-500（無到期，複利）
+- **P1-HIGH**
+
+#### 2. 🔥🔥🔥 beehiiv — 最高 60% recurring/12 個月
+- **工具:** beehiiv（電子報平台，Kit 直接競品，$29-$99/月，Bronze+ tier 觸發 60%）
+- **佣金:** 50-60% recurring 12 個月，60 天 cookie
+- **vs Kit:** Kit 是 50% + 永久 bonus；beehiiv 是 60% 前 12 個月，短期更高但到期停
+- **Apply:** beehiiv.com/partners（免審核）
+- **預估月收入:** $400-900/月
+- **P1-HIGH — 尤其搭配「beehiiv vs Kit vs Substack 比較頁」效果最強**
+
+#### 3. 🔥🔥 GitHub Trending：marketingskills + destructive_command_guard
+- **coreyhaines31/marketingskills** (39.7K⭐, +390 今日): Claude Code / AI agent 行銷技能包，CRO/copywriting/SEO/analytics，autodev-ai 直接受眾，繁中 0 篇
+- **Dicklesworthstone/destructive_command_guard** (4.7K⭐, +497 今日): Rust，防止 AI agent 執行危險 git/shell 指令，AI 安全題材，繁中 0 篇
+
+#### 4. 🟡 2026 Affiliate 佣金結構全景（策略洞察）
+- FOREVER 永久遞迴：AdCreative.ai (30-40%), Voibe (25%), Writesonic (30%)
+- 高比例 12 個月：beehiiv (60%), Kit (50%), VEED.io (25-30%), Copy.ai (45%)
+- 單次高額：Semrush ($200-450/sale, 120天 cookie)
+- **建議：優先佈局 FOREVER 結構，其次補高比例 12 個月**
+
+### 🛠️ Agent 效率發現
+- **marketingskills** 可作為 seo-writer agent skills 補充（CRO + copywriting + analytics），與現有 mattpocock/skills 互補
+- **destructive_command_guard** 適合 builder agent 安裝，防止破壞性指令，直接提升 AI agent 安全性
+
+---
+
 ## Round 116 | 2026-07-10 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-07-10 22:00 UTC | 搜尋範圍：VentureBeat、GitHub trending、AI news July 2026、Product Hunt July 2026、Agent framework updates
