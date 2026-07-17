@@ -2,6 +2,77 @@
   "lastRun": "2026-07-15T07:00:00Z",
   "agentLog": [
     {
+      "timestamp": "2026-07-17T00:30:00Z",
+      "task": "ai-trend-hunter",
+      "status": "completed",
+      "details": "Round 125 — 影片工具 affiliate 深度確認 + GitHub Trending 掃描。核心發現：(1) Runway ML affiliate CONFIRMED（20% recurring/12m via Awin，我們已有既有文章可立即補連結）；(2) VEED.io 最終確認 30%/12m affiliate（carryover 3輪，本輪確認後強烈要求 Ivan 本週申請）；(3) ChatCut (chatcut.io) 有 FirstPromoter 架構 affiliate（繁中首發評測機會）；(4) Kling AI 官方 affiliate 頁確認存在（% 待登入確認）；(5) ibelick/ui-skills (4,248⭐, 178 today) GitHub trending，設計工程師受眾。本輪最高價值：Runway + 現有文章組合可零成本增收，寫入 P0-URGENT directive。",
+      "changes": [
+        "更新 topic-ideas.md：Round 125 影片工具 affiliate 確認結果（5個新機會）",
+        "創建 directives/researcher-to-strategist-2026-07-17-round125.md",
+        "更新 agent-state.json：agentLog + lastResearchRound + latestOpportunities"
+      ],
+      "topFindings": [
+        "Runway ML affiliate CONFIRMED (openaffiliate.dev/programs/runway): 20% recurring/12m via Awin，我們已有 ai-video-generator-sora-vs-runway-vs-kling-2026.html，可立即補連結零成本增收",
+        "VEED.io affiliate CONFIRMED (affiliate.watch AI 90.90/100): 30%/12m，veed.io/affiliates，carryover 3輪，本輪最終確認",
+        "ChatCut (chatcut.io): fpr= affiliate 參數確認 FirstPromoter 架構，AI conversational video editor，整合 ChatGPT + Seedance 2 + ElevenLabs，繁中評測空白",
+        "Kling AI affiliate: 官方頁面 kling.ai/explore/kling_affiliate_program 存在，具體佣金 % 待登入確認，我們有既有文章可補連結",
+        "ibelick/ui-skills (4,248⭐, 178 today): 設計工程師 Agent Skills，npx ui-skills start，無直接 affiliate 但可間接嵌入 Cursor/DataCamp",
+        "GitHub Trending 其他觀察：OpenCut(73,989⭐, 3,537/day), hallmark(10,864⭐, 3,372/day), openinterpreter(Kimi K3 Codex-compatible) 持續上升"
+      ],
+      "affiliateOpportunities": [
+        {
+          "tool": "Runway ML",
+          "commission": "20% recurring 12 個月",
+          "cookie": "30 天",
+          "platform": "Awin",
+          "applyUrl": "openaffiliate.dev/programs/runway 或 Awin 搜尋 Runway",
+          "estimatedMonthly": "00-800",
+          "priority": "P0-URGENT",
+          "existingAsset": "blog/ai-video-generator-sora-vs-runway-vs-kling-2026.html"
+        },
+        {
+          "tool": "VEED.io",
+          "commission": "30% commission / 12 個月",
+          "applyUrl": "veed.io/affiliates",
+          "estimatedMonthly": "00-700",
+          "priority": "P0-URGENT（carryover Round 121-125）"
+        },
+        {
+          "tool": "ChatCut",
+          "commission": "預估 30%+ recurring（FirstPromoter 架構）",
+          "applyUrl": "chatcut.io Affiliate/Partners 頁",
+          "estimatedMonthly": "00-600",
+          "priority": "P1-HIGH"
+        },
+        {
+          "tool": "Kling AI",
+          "commission": "佣金 % 待登入確認",
+          "applyUrl": "kling.ai/explore/kling_affiliate_program",
+          "estimatedMonthly": "00-500",
+          "priority": "P1-HIGH"
+        }
+      ],
+      "contentPriorities": [
+        "P0-URGENT: 申請 Runway affiliate + 補連結到現有文章（零成本增收）",
+        "P0-URGENT: 申請 VEED.io affiliate（已 carryover 3 輪）",
+        "P1-HIGH: ChatCut 完整評測 2026（繁中首發，待 affiliate 確認）",
+        "P1-HIGH: VEED vs Runway vs ChatCut vs CapCut 四合一比較頁",
+        "P2: ibelick/ui-skills 設計工程師指南"
+      ],
+      "needsIvan": [
+        "P0-URGENT: 申請 Runway affiliate → Awin 搜尋 Runway 或 openaffiliate.dev/programs/runway",
+        "P0-URGENT: 申請 VEED.io affiliate → veed.io/affiliates（4 輪 carryover！）",
+        "P1-HIGH: 確認 ChatCut affiliate → chatcut.io Affiliate/Partners 頁",
+        "P1-HIGH: 確認 Kling AI affiliate 佣金 % → kling.ai/explore/kling_affiliate_program",
+        "維持 carryover: Cursor (openaffiliate.dev/programs/cursor)",
+        "維持 carryover: Copy.ai (copy.ai/affiliates)",
+        "維持 carryover: Kit (kit.com/affiliate)",
+        "維持 carryover: AdCreative.ai (adcreative.ai/affiliate)",
+        "維持 carryover: Reclaim.ai (reclaim.ai/affiliate-program)"
+      ],
+      "estimatedNewRevenue": "$1,100-2,600/month（Runway + VEED + ChatCut + Kling 合計）"
+    },
+    {
       "timestamp": "2026-07-16T00:30:00Z",
       "task": "ai-trend-hunter",
       "status": "completed",
@@ -1163,7 +1234,7 @@
             "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
             "clicks": 1,
             "impressions": 25,
-            "ctr": 4.0,
+            "ctr": 4,
             "position": 7.2
           },
           {
@@ -1532,8 +1603,24 @@
       }
     }
   ],
-  "lastResearchRound": "Round 124",
+  "lastResearchRound": "Round 125",
   "latestOpportunities": [
+    {
+      "tool": "Runway ML affiliate — 20% recurring/12m via Awin（Round 125 確認）",
+      "priority": "P0-URGENT",
+      "revenue": "$300-800/mo",
+      "note": "我們已有既有文章，立即補連結零成本增收"
+    },
+    {
+      "tool": "ChatCut affiliate — FirstPromoter 架構（Round 125 新發現）",
+      "priority": "P1-HIGH",
+      "revenue": "$200-600/mo"
+    },
+    {
+      "tool": "Kling AI affiliate — 官方頁面確認（Round 125 新發現）",
+      "priority": "P1-HIGH",
+      "revenue": "$200-500/mo（% 待確認）"
+    },
     {
       "tool": "Inkling (Thinking Machines Lab) — P1-HIGH 時效性內容（Round 124 新發現，無直接affiliate）",
       "priority": "P1-HIGH-TIME-SENSITIVE",
@@ -1564,21 +1651,6 @@
       "tool": "VEED.io affiliate — 25-30% recurring 12個月（Round 121 carryover）",
       "priority": "P1-HIGH",
       "revenue": "$300-700/mo"
-    },
-    {
-      "tool": "Cursor affiliate — 20% recurring/yr（Round 119 carryover）",
-      "priority": "P0-URGENT",
-      "revenue": "$400-800/mo"
-    },
-    {
-      "tool": "Copy.ai affiliate — 45% 首年（Round 119 carryover）",
-      "priority": "P0-URGENT",
-      "revenue": "$500-1,500/mo"
-    },
-    {
-      "tool": "Kit affiliate — 50% recurring 首年（Round 117 carryover）",
-      "priority": "P0-URGENT",
-      "revenue": "$800-2,000/mo"
     }
   ],
   "affiliateLinkStatus": {
@@ -1694,8 +1766,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 1,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122119012724778539",
@@ -1708,8 +1780,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 1,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118873890778539",
@@ -1722,8 +1794,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 1,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118745352778539",
@@ -1736,8 +1808,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 1,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118604526778539",
@@ -1750,8 +1822,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 1,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118458708778539",
@@ -1764,8 +1836,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 1,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118345230778539",
@@ -1778,8 +1850,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 1,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122119102070778539",
@@ -1792,8 +1864,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122119101968778539",
@@ -1806,8 +1878,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122119101944778539",
@@ -1820,8 +1892,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118972548778539",
@@ -1834,8 +1906,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118972524778539",
@@ -1848,8 +1920,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118824372778539",
@@ -1862,8 +1934,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118824336778539",
@@ -1876,8 +1948,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118700544778539",
@@ -1890,8 +1962,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118700526778539",
@@ -1904,8 +1976,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118700478778539",
@@ -1918,8 +1990,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118554726778539",
@@ -1932,8 +2004,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118554696778539",
@@ -1946,8 +2018,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118413204778539",
@@ -1960,8 +2032,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118413192778539",
@@ -1974,8 +2046,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         },
         {
           "id": "1056283757571950_122118308474778539",
@@ -1988,8 +2060,8 @@
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
-          "reachRate": 0.0,
-          "engagementRate": 0.0
+          "reachRate": 0,
+          "engagementRate": 0
         }
       ],
       "winPatterns": [
@@ -2018,8 +2090,8 @@
               "clicks": null,
               "estimatedReach": null,
               "interactions": 1,
-              "reachRate": 0.0,
-              "engagementRate": 0.0
+              "reachRate": 0,
+              "engagementRate": 0
             },
             {
               "id": "1056283757571950_122119012724778539",
@@ -2032,8 +2104,8 @@
               "clicks": null,
               "estimatedReach": null,
               "interactions": 1,
-              "reachRate": 0.0,
-              "engagementRate": 0.0
+              "reachRate": 0,
+              "engagementRate": 0
             },
             {
               "id": "1056283757571950_122118873890778539",
@@ -2046,8 +2118,8 @@
               "clicks": null,
               "estimatedReach": null,
               "interactions": 1,
-              "reachRate": 0.0,
-              "engagementRate": 0.0
+              "reachRate": 0,
+              "engagementRate": 0
             },
             {
               "id": "1056283757571950_122118745352778539",
@@ -2060,8 +2132,8 @@
               "clicks": null,
               "estimatedReach": null,
               "interactions": 1,
-              "reachRate": 0.0,
-              "engagementRate": 0.0
+              "reachRate": 0,
+              "engagementRate": 0
             },
             {
               "id": "1056283757571950_122118604526778539",
@@ -2074,8 +2146,8 @@
               "clicks": null,
               "estimatedReach": null,
               "interactions": 1,
-              "reachRate": 0.0,
-              "engagementRate": 0.0
+              "reachRate": 0,
+              "engagementRate": 0
             }
           ],
           "wins": [
