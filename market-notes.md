@@ -901,3 +901,69 @@ Kit 50% = 業界最高（超過 Jasper 25%、Writesonic 30%）。達 Bronze tier
 → 見 directives/researcher-to-strategist-2026-07-11-round117.md
 
 ---
+
+---
+
+## 2026-07-19（市場研究 Round 126 — 週日 07:00 UTC cron）
+
+### 一、🔥 本輪最高價值新發現
+
+#### 1. beehiiv affiliate — 50-60% recurring 12個月 ⭐⭐⭐⭐⭐
+| 欄位 | 詳情 |
+|------|------|
+| 佣金 | **50% 基礎，最高 60% recurring / 12個月** |
+| Cookie | **60 天**（業界少見的長 cookie） |
+| 客單價 | $39-99/月（Scale/Max 方案） |
+| 被介紹人獎勵 | 14天 free trial + 首 3個月 8折（雙向激勵，轉換率高） |
+| 申請連結 | beehiiv.com/partners/affiliate |
+| 里程碑 | Bronze 達成後：共同品牌 landing page + beehiiv 周邊商品 $100 |
+| 預估月收 | $400-900/月 |
+| 優先級 | **P1-HIGH（carryover Round 123-126）** |
+
+#### 2. Voibe affiliate — 25% FOREVER 永久遞迴 ⭐⭐⭐⭐⭐（最終確認）
+| 欄位 | 詳情 |
+|------|------|
+| 佣金 | **25% recurring 永久（無期限上限）** — superframeworks.com 2026 #1 pick 確認 |
+| Cookie | 30 天 |
+| 產品 | Mac 語音輸入 App，lifetime plan = $37.25/sale |
+| 特色 | 包含訂閱續費持續領佣；May 2026 giveaway（MacBook Neo + AirPods） |
+| 申請連結 | getvoibe.com/resources/affiliate-program |
+| 預估月收 | $200-500/月（複利成長） |
+| 優先級 | **P1-HIGH（carryover Round 123-126，本輪最終確認）** |
+
+#### 3. Blym AI SEO affiliate — 50%/12個月（新發現）⭐⭐⭐⭐
+| 欄位 | 詳情 |
+|------|------|
+| 工具 | Blym — AI SEO writer，適合行銷團隊/品牌 |
+| 佣金 | **50% commission 首年訂閱 / 12個月** |
+| 申請連結 | blym.co/affiliates |
+| 定位 | 與 Writesonic/Jasper 同類，可並排比較嵌入 affiliate |
+| 預估月收 | $300-800/月 |
+| 優先級 | **P1-HIGH（本輪新發現）** |
+
+#### 4. AI SaaS Affiliate 2026 佣金全景數據（本輪研究彙整）
+- 市場標準：20-50% recurring = 新常態，flat-rate 結構快速被淘汰
+- Cookie 窗口：業界從 30 天往 60-90 天移動（beehiiv 60天，ManyChat 120天為最長）
+- 永久遞迴三強：Voibe（25% 永久）、AdCreative.ai（30-40% 永久）、Kit 10-20% tier 後永久
+- 最佳 LTV 計算：recurring % × 月費 × 12 > headline 比例，$29/月 × 50% × 12 = $174/referral
+
+#### 5. 2026 新免費流量管道確認
+| 平台 | 特色 | 適合內容 | 行動優先 |
+|------|------|----------|---------|
+| 小紅書 | 搜推互通，繁中稀缺，CES 評論×4 | 台灣 AI 工具實測短評 | Ivan 開帳號 P1 |
+| Threads | 演算法比 FB 開放，文字創作者友好 | 繁中 AI 工具一句話評測 | P2 |
+| Bluesky | 技術社群（開發者），分散式有機觸達 | Claude Code / Cursor 技巧 | P3 |
+| Medium | DA 95，canonical 策略保留 SEO 值 | 英文 AI 工具比較導流 | P2（已議） |
+
+#### 6. 台灣數位產品需求缺口（本輪確認）
+搜量高、賣家幾乎為 0 的繁中數位產品：
+1. AI 工具實測 Notion 模板包（$29）— 無競品
+2. 中小企業 AI 導入 SOP 模板 + 補助申請指南（$49）— 9億補助商機
+3. 繁中 Cursor vs opencode 比較 PDF — 積壓多輪
+4. Claude Code Prompt Pack — 已建，Gumroad 404 第 5+ 週（Ivan P0-URGENT）
+
+### 二、💡 高價值機會 → 已寫入 directives
+
+→ 見 directives/researcher-to-strategist-2026-07-19-round126.md
+
+---
