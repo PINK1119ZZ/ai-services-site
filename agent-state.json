@@ -1,8 +1,41 @@
 {
-  "lastRun": "2026-07-19T07:00:00Z",
+  "lastRun": "2026-07-19T14:30:00Z",
   "agentLog": [
     {
-      "timestamp": "2026-07-19T10:30:00Z",
+      "timestamp": "2026-07-19T14:30:00Z",
+      "task": "content-refresher",
+      "status": "completed",
+      "details": "Content refresh cron (Sun 14:00): Updated 3 oldest articles. (1) claude-fable-5-vs-opus-enterprise-guide-2026.html: removed stale '6/22 限時免費試用' urgent badge, warning box, stat card, FAQ answer, action list — replaced with current credits 計費 language; updated meta description + JSON-LD dateModified. (2) claude-code-prompt-pack-guide-2026.html: added DataCamp affiliate CTA section at end of article. (3) career-ops-ai-job-hunting-2026.html: updated GitHub stars 48.9K → 52K+ across all occurrences (stat card, body, meta description, JSON-LD, summary box); updated JSON-LD dateModified to 2026-07-19. Updated sitemap.xml lastmod for all 3 articles to 2026-07-19.",
+      "changes": [
+        "blog/claude-fable-5-vs-opus-enterprise-guide-2026.html: removed stale 6/22 urgent badge + warning box; updated stat card, action list, FAQ answer, meta description, JSON-LD dateModified → 2026-07-19",
+        "blog/claude-code-prompt-pack-guide-2026.html: added DataCamp affiliate CTA (afflink.one/s/aavAC) at article end",
+        "blog/career-ops-ai-job-hunting-2026.html: stars 48.9K → 52K+ (6 occurrences); JSON-LD dateModified → 2026-07-19",
+        "sitemap.xml: career-ops lastmod 2026-06-10 → 2026-07-19; claude-code-prompt-pack lastmod 2026-07-11 → 2026-07-19; claude-fable-5 lastmod 2026-06-13 → 2026-07-19",
+        "git commit a2b1fdc + push origin main"
+      ],
+      "articlesRefreshed": [
+        {
+          "file": "blog/claude-fable-5-vs-opus-enterprise-guide-2026.html",
+          "oldLastmod": "2026-06-13",
+          "newLastmod": "2026-07-19",
+          "updates": ["Removed stale 6/22 free trial badge/warning", "Updated to credits billing language", "Updated meta description"]
+        },
+        {
+          "file": "blog/claude-code-prompt-pack-guide-2026.html",
+          "oldLastmod": "2026-07-11",
+          "newLastmod": "2026-07-19",
+          "updates": ["Added DataCamp affiliate CTA section"],
+          "affiliateLinksAdded": 1
+        },
+        {
+          "file": "blog/career-ops-ai-job-hunting-2026.html",
+          "oldLastmod": "2026-06-10",
+          "newLastmod": "2026-07-19",
+          "updates": ["Updated GitHub stars 48.9K → 52K+ (6 occurrences)", "Updated dateModified"]
+        }
+      ]
+    },
+
       "task": "affiliate-monitor",
       "status": "completed",
       "details": "聯盟連結週檢（Sun 10:30）。掃描 73 篇文章 + 18 個聯盟連結。無外部 404；Gumroad 2 個持續 404（claude-code-prompt-pack-2026 + n8n-tw-templates，Ivan P0）；DataCamp/NordVPN/Cloudways/abzcoupon/aftck/vbtrax 403 屬防爬正常；blog/perplexity-ai-pro-review-2026.html 無任何聯盟連結 → 寫入 directives 給 content-refresher。",
