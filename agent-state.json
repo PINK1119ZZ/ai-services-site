@@ -2,6 +2,30 @@
   "lastRun": "2026-07-19T07:00:00Z",
   "agentLog": [
     {
+      "timestamp": "2026-07-19T10:30:00Z",
+      "task": "affiliate-monitor",
+      "status": "completed",
+      "details": "聯盟連結週檢（Sun 10:30）。掃描 73 篇文章 + 18 個聯盟連結。無外部 404；Gumroad 2 個持續 404（claude-code-prompt-pack-2026 + n8n-tw-templates，Ivan P0）；DataCamp/NordVPN/Cloudways/abzcoupon/aftck/vbtrax 403 屬防爬正常；blog/perplexity-ai-pro-review-2026.html 無任何聯盟連結 → 寫入 directives 給 content-refresher。",
+      "changes": [
+        "檢查 18 個聯盟連結：14 個 200/正常，4 個 403 防爬正常，2 個 404（Gumroad）",
+        "掃描 73 篇 HTML 文章外部連結：無 404",
+        "發現 blog/perplexity-ai-pro-review-2026.html 無任何聯盟連結",
+        "創建 directives/affiliate-monitor-to-content-refresher-2026-07-19.md",
+        "更新 agent-state.json affiliateLinkStatus + lastChecked"
+      ],
+      "criticalIssues": [
+        "Gumroad claude-code-prompt-pack-2026 → 404（第 6+ 次記錄，Ivan P0-URGENT）",
+        "Gumroad n8n-tw-templates → 404（持續問題）"
+      ],
+      "articlesNoAffiliate": [
+        "blog/perplexity-ai-pro-review-2026.html → 0 聯盟連結，需補 DataCamp/DigitalOcean CTA"
+      ],
+      "needsIvan": [
+        "P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（已積壓 6+ 週！）",
+        "P1: 確認 n8n-tw-templates Gumroad 狀態（是否下架）"
+      ]
+    },
+    {
       "timestamp": "2026-07-19T02:11:00Z",
       "task": "strategist",
       "status": "completed",
@@ -1639,7 +1663,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-07-19T00:00:00Z",
+  "lastChecked": "2026-07-19T10:30:00Z",
   "issues": [
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
     "2026-07-11 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
@@ -1849,7 +1873,7 @@
     }
   ],
   "affiliateLinkStatus": {
-    "lastChecked": "2026-07-12T10:31:00Z",
+    "lastChecked": "2026-07-19T10:30:00Z",
     "results": {
       "DataCamp (afflink.one/s/aavAC)": {
         "status": 403,
@@ -1871,16 +1895,6 @@
         "note": "正常",
         "ok": true
       },
-      "DataCamp (datacamp.pxf.io)": {
-        "status": 403,
-        "note": "防爬機制-用戶點擊正常",
-        "ok": true
-      },
-      "Cloudways (vbtrax.com)": {
-        "status": 403,
-        "note": "防爬機制-用戶點擊正常",
-        "ok": true
-      },
       "Gumroad agent-skills-tw": {
         "status": 200,
         "note": "正常",
@@ -1893,59 +1907,75 @@
       },
       "Gumroad claude-code-prompt-pack-2026": {
         "status": 404,
-        "note": "P0-URGENT: 需 Ivan 上架",
+        "note": "P0-URGENT: 需 Ivan 上架（第 6+ 次記錄）",
         "ok": false
       },
       "Gumroad n8n-tw-templates": {
         "status": 404,
-        "note": "需 Ivan 確認是否下架",
+        "note": "需 Ivan 確認是否下架（持續）",
         "ok": false
       },
-      "Hostinger": {
+      "wisprflow.ai": {
         "status": 200,
         "note": "正常",
         "ok": true
       },
-      "Warp.dev": {
+      "hermes-agent.ai/affiliates": {
         "status": 200,
         "note": "正常",
         "ok": true
       },
-      "Wisprflow": {
+      "llmclicks.ai": {
         "status": 200,
         "note": "正常",
         "ok": true
       },
-      "Hermes Agent": {
+      "hostinger.com": {
         "status": 200,
         "note": "正常",
         "ok": true
       },
-      "LLMClicks": {
+      "warp.dev": {
         "status": 200,
         "note": "正常",
         "ok": true
       },
-      "Blym": {
+      "shortspro.co": {
         "status": 200,
         "note": "正常",
         "ok": true
       },
-      "Zeabur": {
-        "status": 200,
-        "note": "正常",
+      "DataCamp (datacamp.pxf.io)": {
+        "status": 403,
+        "note": "防爬機制-用戶點擊正常",
+        "ok": true
+      },
+      "vbtrax.com (Cloudways)": {
+        "status": 403,
+        "note": "防爬機制-用戶點擊正常",
+        "ok": true
+      },
+      "abzcoupon.com": {
+        "status": 403,
+        "note": "防爬機制-用戶點擊正常",
+        "ok": true
+      },
+      "aftck.com": {
+        "status": 403,
+        "note": "防爬機制-用戶點擊正常",
         "ok": true
       }
     },
     "brokenLinks": [
-      "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026 → 404 (需 Ivan 上架)",
+      "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026 → 404 (需 Ivan 上架，第 6+ 次記錄)",
       "xiaofan8.gumroad.com/l/n8n-tw-templates → 404 (確認是否下架)"
     ],
-    "articlesLowAffiliate": [
-      "blog/line-bot-complete-guide-2026.html (1 個連結，建議補強)"
+    "articlesNoAffiliate": [
+      "blog/perplexity-ai-pro-review-2026.html (0 個聯盟連結，需補強)"
     ],
     "total404External": 0,
-    "note": "70 篇文章全部含至少 1 個聯盟連結，無外部 404 發現"
+    "totalArticlesScanned": 73,
+    "note": "73 篇文章中 72 篇含至少 1 個聯盟連結；無外部 404；403 均為防爬正常"
   },
   "fbStrategy": {
     "performance": {
