@@ -2,6 +2,58 @@
   "lastRun": "2026-07-19T07:00:00Z",
   "agentLog": [
     {
+      "timestamp": "2026-07-19T00:30:00Z",
+      "task": "ai-trend-hunter",
+      "status": "completed",
+      "details": "Round 127 — GitHub Trending / HN / Product Hunt / Affiliate 市場研究。本輪核心發現：(1) Arvow 30% LIFETIME 永久遞迴 affiliate（arvow.com/affiliates，Agency $449/月，複利無上限，本輪最高價值）；(2) LM Studio Bionic（2026-07-16 發布，開源模型 AI Agent，Code+Work Projects，Voxtral 語音，繁中教學空白，72h 時效窗口）；(3) Kimi K3 API（Moonshot AI，2.8T MoE，1M context，$3/$15 per 1M tokens，OpenRouter 已上架，中文評測空白）；(4) ReactIn B2B LinkedIn 自動化（$69/月起，affiliate 待確認）；(5) AI Agent Security 趨勢（Orca Security 2026 報告，99.9% 漏洞未修補，內容機會）。本輪總預估月收入潛力 $950-3,100（Arvow LIFETIME 複利為主力）。",
+      "changes": [
+        "更新 topic-ideas.md：Round 127 完整研究結果（5個新機會）",
+        "創建 directives/researcher-to-strategist-2026-07-19-round127.md",
+        "更新 agent-state.json：agentLog + lastResearchRound + latestOpportunities"
+      ],
+      "topFindings": [
+        "Arvow 30% LIFETIME 永久遞迴（arvow.com/affiliates）: Solo $69/Business $129/Agency $449/月，10 Business 客戶 = $387/月永久複利，本輪最強 affiliate 發現",
+        "LM Studio Bionic（2026-07-16）: 開源模型 agentic app，Code Projects + Work Projects，Voxtral 語音，ZDR 安全雲，繁中教學空白，72h 時效窗口",
+        "Kimi K3 API（Moonshot AI，2026-07-16）: 2.8T MoE，1M context window，$3/$15 per 1M tokens，OrcaRouter+OpenRouter 已上架，中文社群熱度高",
+        "ReactIn（reactin.io）: B2B LinkedIn intent-based automation，$69/月 Growth，affiliate 待確認",
+        "AI Agent Security 2026（Orca Report）: 99.9% 未修補漏洞，Claude Code 防禦性最強，CVE-2026-61447/54769/57572 等，教學缺口"
+      ],
+      "affiliateOpportunities": [
+        {
+          "tool": "Arvow",
+          "commission": "30% LIFETIME 永久遞迴（無期限）",
+          "cookie": "未確認",
+          "pricing": "$69-449/月（Solo/Business/Agency）",
+          "applyUrl": "arvow.com/affiliates",
+          "estimatedMonthly": "$400-1,500（複利成長）",
+          "priority": "P1-HIGH（本輪新發現）"
+        },
+        {
+          "tool": "ReactIn",
+          "commission": "待確認",
+          "applyUrl": "reactin.io/affiliates（待查詢）",
+          "estimatedMonthly": "$200-600（若有 30%+）",
+          "priority": "P1-HIGH（待確認）"
+        }
+      ],
+      "contentPriorities": [
+        "P1-HIGH 時效性：LM Studio Bionic 完整教學 2026（72h 窗口，繁中首發）",
+        "P1-HIGH 時效性：Kimi K3 完整評測 2026（72h 窗口，中文社群熱度高）",
+        "P1-HIGH：Arvow 完整評測 2026（30% LIFETIME，待 Ivan 申請後補連結）",
+        "P2：AI Agent Security 2026 完整指南（CVE 清單 + Claude Code 防禦）",
+        "P2：ReactIn LinkedIn B2B 評測（待 affiliate 確認）"
+      ],
+      "needsIvan": [
+        "P1-HIGH: 申請 Arvow affiliate → arvow.com/affiliates（30% LIFETIME 永久遞迴）",
+        "P1-HIGH: 查詢 ReactIn affiliate → reactin.io/affiliates 或 Email 聯繫",
+        "P0-URGENT carryover: 申請 Kit affiliate → kit.com/affiliate（6+ 輪）",
+        "P0-URGENT carryover: 申請 Runway ML affiliate → Awin 搜尋 Runway（2 輪）",
+        "P0-URGENT carryover: 申請 VEED.io affiliate → veed.io/affiliates（5+ 輪）",
+        "P0-URGENT carryover: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026"
+      ],
+      "estimatedNewRevenue": "$950-3,100/month"
+    },
+    {
       "timestamp": "2026-07-19T07:00:00Z",
       "task": "researcher",
       "status": "completed",
@@ -1720,8 +1772,13 @@
       }
     }
   ],
-  "lastResearchRound": "Round 126",
+  "lastResearchRound": "Round 127",
   "latestOpportunities": [
+    {
+      "tool": "Arvow — 30% LIFETIME 永久遞迴（Round 127 新發現）",
+      "priority": "P1-HIGH",
+      "revenue": "$400-1,500/mo（複利）"
+    },
     {
       "tool": "beehiiv — 50-60%/12m + 60天 cookie（Round 126 最終確認）",
       "priority": "P1-HIGH",
@@ -1744,7 +1801,7 @@
       "note": "我們已有既有文章，立即補連結零成本增收"
     },
     {
-      "tool": "Kit affiliate — 50% 首年（5+ rounds carryover）",
+      "tool": "Kit affiliate — 50% 首年（6+ rounds carryover）",
       "priority": "P0-URGENT",
       "revenue": "$800-2,000/mo"
     },
@@ -1752,11 +1809,6 @@
       "tool": "VEED.io affiliate — 30%/12m（5+ rounds carryover）",
       "priority": "P1-HIGH",
       "revenue": "$300-700/mo"
-    },
-    {
-      "tool": "AdCreative.ai — 30-40% LIFETIME 永久遞迴",
-      "priority": "P1-HIGH",
-      "revenue": "$300-1,200/mo（複利）"
     }
   ],
   "affiliateLinkStatus": {

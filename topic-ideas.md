@@ -939,3 +939,151 @@ Inkling 的發布確認了 2026 下半年開源大模型競爭進入新階段：
 3. **查詢 Kling AI affiliate 佣金** — kling.ai/explore/kling_affiliate_program
 4. **查詢 ChatCut affiliate** — chatcut.io 找 Affiliate/Partners 頁面（FirstPromoter 架構）
 
+
+---
+
+## 🔍 Round 127 — 2026-07-19（ai-trend-hunter）
+
+### 本輪掃描來源
+- GitHub Trending（今日）
+- HN / Reddit（近 48h）
+- Product Hunt（近 7 天）
+- Affiliate 市場掃描
+
+---
+
+### 1. **LM Studio Bionic** — HIGH VALUE ⭐⭐（時效性 72h）
+
+- **工具：** LM Studio Bionic — AI Agent for open models（Mac + Windows）
+- **發布：** 2026-07-16，距今 3 天，繁中資源幾乎 0
+- **背景：**
+  - LM Studio 從模型瀏覽器擴展為完整 agentic 應用
+  - Code Projects（repo-aware coding, inline diffs）+ Work Projects（docs/PDF/slides）
+  - 支援 local runtime + LM Link（Tailscale）+ Secure Cloud（ZDR）
+  - Voxtral 語音整合（Mistral open voice model）
+  - 開源社群熱度高，9to5mac/explainx.ai/bitdoze.com 都已報導（英文），繁中 = 0
+- **關鍵字：** "LM Studio Bionic 教學", "LM Studio Bionic vs Cursor", "open model agent 2026", "本地 AI agent"
+- **搜尋量：** 預估 5K-15K/月（新工具熱度窗口）
+- **Affiliate：** 無直接 affiliate（LM Studio 免費）
+  - 間接：DataCamp（AI/Python課程 CTA）、DigitalOcean（部署遠端模型 CTA）
+- **變現方式：** 流量 + 間接 affiliate（$100-300/月）
+- **預估月收入：** $100-300（間接）
+- **建議站點：** autodev-ai.com
+- **行動項：**
+  - ✅ P1-HIGH: 寫「LM Studio Bionic 完整教學 2026：開源模型 AI Agent 評測（vs Cursor vs Claude Code）」（繁中首發，72h 時效窗口）
+
+---
+
+### 2. **Kimi K3（Moonshot AI）** — HIGH VALUE ⭐⭐（時效性 72h）
+
+- **工具：** Kimi K3 API — Moonshot AI 旗艦模型
+- **發布：** 2026-07-16（API live），2026-07-27 預計開源完整權重
+- **背景：**
+  - 2.8 兆參數 MoE，1M token 上下文窗口，原生 multimodal（text/image）
+  - API 定價：$3.00 input / $15.00 output / $0.30 cache-hit per 1M tokens（OpenRouter 可 60-80% 更便宜）
+  - 已上 OrcaRouter、OpenRouter（model slug: moonshotai/kimi-k3）
+  - OpenAI-compatible endpoint：api.moonshot.ai/v1，model ID: kimi-k3
+  - Morningstar/PR Newswire 已報導，中文評測資源稀少
+- **關鍵字：** "Kimi K3 評測", "Kimi K3 API 教學", "Kimi K3 vs Claude", "moonshot ai 2026", "kimi k3 pricing"
+- **搜尋量：** 預估 8K-20K/月（新模型 72h 熱度窗口，中文社群尤其熱）
+- **Affiliate：** 無直接 affiliate（Moonshot AI 無公開計畫）
+  - 間接：OrcaRouter affiliate 待查 / DataCamp（AI 課程）
+- **變現方式：** 流量 + 間接（$150-400/月）
+- **預估月收入：** $150-400（間接）
+- **建議站點：** autodev-ai.com + ai-tools.pro（英文）
+- **行動項：**
+  - ✅ P1-HIGH: 寫「Kimi K3 完整評測 2026：2.8兆參數旗艦模型 API 教學＆定價比較」（繁中 + 英文雙語機會）
+
+---
+
+### 3. **Arvow** — HIGHEST VALUE ⭐⭐⭐（30%+ LIFETIME affiliate，直接高收益）
+
+- **工具：** Arvow — AI SEO 自動內容生成平台（WordPress/Shopify 自動發布）
+- **Affiliate：** ✅ CONFIRMED 30% LIFETIME 永久遞迴（arvow.com/affiliates）
+  - 佣金：30% 每月 recurring，終身有效
+  - 最高 $128.70/sale/month（Agency $449 × 30% ≈ $134.70）
+  - 高轉化率（SEO 內容自動化市場剛需）
+- **定價方案：**
+  - Solo $69/月（30% = $20.70/月/客戶）
+  - Business $129/月（30% = $38.70/月/客戶）
+  - Agency $449/月（30% = $134.70/月/客戶）
+  - Enterprise $2,000/月起
+- **關鍵字：** "arvow 評測", "AI SEO 自動化", "arvow vs surfer seo", "AI autoblogging tool 2026", "自動化 SEO 內容生成"
+- **搜尋量：** 預估 5K-15K/月（AI SEO 工具競爭激烈但繁中空白）
+- **預估月收入：** $400-1,500/月（10客戶 Business 方案 = $387/月，複利成長）
+- **建議站點：** autodev-ai.com + ai-tools.pro
+- **行動項：**
+  - ✅ P1-HIGH（→ Directive to Strategist）: Ivan 申請 Arvow affiliate → arvow.com/affiliates
+  - ✅ P1-HIGH: 寫「Arvow 完整評測 2026：AI SEO 自動內容生成（vs Jasper vs Writesonic）」
+
+---
+
+### 4. **AI Agent Security 爆發趨勢** — MEDIUM VALUE ⭐（內容機會）
+
+- **來源：** Orca Security 2026 State of AI Security Report（2026-07-13），GitHub repo: webpro255/awesome-ai-agent-attacks（持續更新）
+- **背景：**
+  - 99.9% of AI vulnerability alerts with available fixes remain unpatched
+  - 81.2% of companies running AI packages carry at least one known CVE
+  - 56% of AI adopters have pushed agent frameworks to production
+  - Claude Code 在所有測試模型中拒絕被攻擊（防禦性最強）
+  - CVE-2026-61447（PraisonAI）、CVE-2026-54769（Langroid）、CVE-2026-57572（Crawl4AI）等 RCE 漏洞
+- **關鍵字：** "AI agent security 2026", "Claude Code 安全性", "AI 漏洞防護", "agent CVE 2026"
+- **搜尋量：** 預估 3K-10K/月（新興但成長快）
+- **Affiliate：** 間接：NordVPN（安全 CTA）、DataCamp（AI 安全課程）
+- **預估月收入：** $100-300（間接）
+- **建議站點：** autodev-ai.com
+- **行動項：**
+  - ✅ P2: 寫「2026 AI Agent 安全漏洞完整指南：CVE 清單 + Claude Code 防禦策略」
+
+---
+
+### 5. **ReactIn（B2B LinkedIn 自動化）** — MEDIUM VALUE ⭐（待 Affiliate 確認）
+
+- **工具：** ReactIn — B2B LinkedIn Intent-Based Automation（reactin.io）
+- **背景：**
+  - 價格：Basic $29/月、Growth $69/月、Agency $799/月
+  - 標榜取代 3-4 工具（vs $300+/月競品組合），單一平台 $69/月
+  - 20+ intent signals, AI enrichment, unified inbox
+  - 2026 活躍使用者增長，SEO 內容策略積極（自有 blog 高流量）
+- **Affiliate：** ❓ 未確認（需手動查詢 reactin.io/affiliates 或聯繫）
+- **關鍵字：** "reactin review", "linkedin automation 2026", "B2B lead generation tool", "waalaxy alternative 2026"
+- **搜尋量：** 預估 5K-15K/月（LinkedIn 自動化工具高競爭但高 CPC）
+- **預估月收入：** $200-600/月（若有 30%+ affiliate）
+- **建議站點：** ai-tools.pro（英文受眾）
+- **行動項：**
+  - ✅ P1-HIGH（待確認）: Ivan 查詢 reactin.io affiliate program
+
+---
+
+## 📊 Round 127 變現機會總結
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|-----------|---------|
+| 2026-07-19 | LM Studio Bionic | LM Studio Bionic 教學, open model agent | 5K-15K | 間接 DataCamp/DO | $100-300 | autodev-ai |
+| 2026-07-19 | Kimi K3 API | Kimi K3 評測, moonshot api 2026 | 8K-20K | 間接（OrcaRouter 待查） | $150-400 | autodev-ai + ai-tools.pro |
+| 2026-07-19 | Arvow | arvow 評測, AI SEO autoblog | 5K-15K | 30% LIFETIME affiliate | $400-1,500 | autodev-ai + ai-tools.pro |
+| 2026-07-19 | AI Agent Security | AI agent CVE 2026, Claude Code 安全 | 3K-10K | 間接 NordVPN/DataCamp | $100-300 | autodev-ai |
+| 2026-07-19 | ReactIn | linkedin automation 2026, reactin review | 5K-15K | 待確認 affiliate | $200-600 | ai-tools.pro |
+
+**本輪總預估月收入潛力：** $950-3,100
+
+**最高優先：**
+1. **Arvow affiliate 申請（P1-HIGH）**：30% LIFETIME，複利型，最高潛力
+2. **LM Studio Bionic 評測文（P1-HIGH）**：72h 時效窗口
+3. **Kimi K3 評測文（P1-HIGH）**：72h 時效窗口，中文社群熱度高
+
+---
+
+## 🎯 Ivan 緊急行動項（Round 127）
+
+### P1-HIGH（本週內）
+1. **申請 Arvow affiliate** → arvow.com/affiliates
+   - 佣金：30% LIFETIME 永久遞迴，最高 $134.70/客戶/月
+2. **查詢 ReactIn affiliate** → reactin.io/affiliates 或 Email 聯繫
+
+### Carryover（仍未處理）
+- P0-URGENT: 申請 Kit affiliate → kit.com/affiliate（6+ 輪 carryover）
+- P0-URGENT: 申請 Runway ML affiliate → Awin 搜尋 Runway（2 輪 carryover）
+- P0-URGENT: 申請 VEED.io affiliate → veed.io/affiliates（5+ 輪 carryover）
+- P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026
+
