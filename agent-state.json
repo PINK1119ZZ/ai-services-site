@@ -1,6 +1,61 @@
 {
-  "lastRun": "2026-07-19T14:30:00Z",
+  "lastRun": "2026-07-20T00:30:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-07-20T00:30:00Z",
+      "task": "ai-trend-hunter",
+      "status": "completed",
+      "details": "Round 128 — HN / GitHub Trending / Affiliate 市場研究。本輪核心發現：(1) Answrr 30% LIFETIME 永久遞迴 affiliate（企業 AI 接待員，$2.3B 市場，訂閱+top-up 雙計，Barchart 評為 2026 最佳 AI SaaS Affiliate，企業客戶高 LTV）；(2) OutlierKit 30% recurring + 60-day cookie（YouTube 研究 SaaS，Product Hunt 4.9/5，outlierkit.tolt.io）；(3) GPT-5.6 Sol/Terra/Luna 深度評測機會（HN 576pts，Sol 解決 30 年凸優化難題，15K-40K/月搜尋量，三層定價 Sol $5/$30 / Terra $2.50/$15 / Luna $1/$6 per 1M tokens，2026-07-09 GA）；(4) moonshine-ai（<500KB 離線語音辨識 TTS，HN 510pts，Pete Warden，開源 MIT）；(5) Google Stitch MCP + stitch-skills（台灣技術社群熱傳，繁中完整教學空白）。本輪總預估月收入潛力 $1,100-3,050。",
+      "changes": [
+        "更新 topic-ideas.md：Round 128 完整研究結果（5個新機會）",
+        "創建 directives/researcher-to-strategist-2026-07-20-round128.md",
+        "更新 agent-state.json：agentLog + lastResearchRound + latestOpportunities"
+      ],
+      "topFindings": [
+        "Answrr 30% LIFETIME affiliate（answrr.com/affiliates）: 企業 AI 接待員，訂閱+top-up 雙計，無上限無期限，Barchart 2026 最佳 AI SaaS Affiliate，$500-1,500/月",
+        "OutlierKit 30% recurring / 60-day cookie（outlierkit.tolt.io）: YouTube 研究工具，Product Hunt 4.9/5，$29-49/月客單，$200-600/月",
+        "GPT-5.6 Sol/Terra/Luna 評測機會（HN 576pts, 2026-07-18）: Sol 解決 30 年凸優化難題（Lean 驗證，arXiv），三層定價確認，15K-40K/月搜尋量，繁中空白",
+        "moonshine-ai（github.com/moonshine-ai，HN 510pts）: <500KB STT+TTS，edge device，Pete Warden 背書，MIT，開發者受眾",
+        "Google Stitch MCP + stitch-skills（google-labs-code/stitch-skills）: 台灣 FB 社群熱傳，繁中完整教學空白，Q4 2026 收費後追蹤 affiliate"
+      ],
+      "affiliateOpportunities": [
+        {
+          "tool": "Answrr",
+          "commission": "30% LIFETIME 永久遞迴（訂閱+top-up）",
+          "cookie": "永久（lifetime per referral）",
+          "pricing": "企業訂閱制（高單價）",
+          "applyUrl": "answrr.com/affiliates",
+          "estimatedMonthly": "$500-1,500（企業客戶複利）",
+          "priority": "P1-HIGH（本輪最高價值）"
+        },
+        {
+          "tool": "OutlierKit",
+          "commission": "30% recurring / 60-day cookie",
+          "cookie": "60 天",
+          "pricing": "$29-49/月",
+          "applyUrl": "outlierkit.tolt.io",
+          "estimatedMonthly": "$200-600",
+          "priority": "P1-HIGH"
+        }
+      ],
+      "contentPriorities": [
+        "P1-HIGH: Answrr 完整評測 2026（ai-tools.pro 英文，待 Ivan 申請後補連結）",
+        "P1-HIGH: GPT-5.6 Sol vs Terra vs Luna 完整評測 2026（繁中首發，高搜尋量）",
+        "P2: OutlierKit vs TubeBuddy vs vidIQ 比較 2026（ai-tools.pro，待 affiliate）",
+        "P2: moonshine-ai 教學 2026（autodev-ai，開發者受眾）",
+        "P2: Google Stitch MCP 完整教學 2026（autodev-ai，繁中首發）"
+      ],
+      "needsIvan": [
+        "P1-HIGH: 申請 Answrr affiliate → answrr.com/affiliates（30% LIFETIME，企業級）",
+        "P1-HIGH: 申請 OutlierKit affiliate → outlierkit.tolt.io（30% recurring，60-day cookie）",
+        "P0-URGENT carryover: 申請 Kit affiliate → kit.com/affiliate（7+ 輪！）",
+        "P0-URGENT carryover: 申請 VEED.io affiliate → veed.io/affiliates（6+ 輪！）",
+        "P0-URGENT carryover: 申請 Runway ML affiliate → Awin 搜尋 Runway（3 輪）",
+        "P0-URGENT carryover: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（7+ 週！）",
+        "P1-HIGH carryover: 申請 Arvow affiliate → arvow.com/affiliates（Round 127）"
+      ],
+      "estimatedNewRevenue": "$1,100-3,050/month"
+    },
     {
       "timestamp": "2026-07-19T14:30:00Z",
       "task": "content-refresher",
@@ -1912,8 +1967,18 @@
       }
     }
   ],
-  "lastResearchRound": "Round 127",
+  "lastResearchRound": "Round 128",
   "latestOpportunities": [
+    {
+      "tool": "Answrr — 30% LIFETIME 永久遞迴（Round 128 新發現）",
+      "priority": "P1-HIGH",
+      "revenue": "$500-1,500/mo（企業客戶複利）"
+    },
+    {
+      "tool": "OutlierKit — 30% recurring / 60-day cookie（Round 128 新發現）",
+      "priority": "P1-HIGH",
+      "revenue": "$200-600/mo"
+    },
     {
       "tool": "Arvow — 30% LIFETIME 永久遞迴（Round 127 新發現）",
       "priority": "P1-HIGH",

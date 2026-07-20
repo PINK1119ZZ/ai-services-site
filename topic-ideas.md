@@ -1087,3 +1087,161 @@ Inkling 的發布確認了 2026 下半年開源大模型競爭進入新階段：
 - P0-URGENT: 申請 VEED.io affiliate → veed.io/affiliates（5+ 輪 carryover）
 - P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026
 
+
+---
+
+# Round 128 — 2026-07-20（日常研究）
+
+## 來源掃描：HN frontpage / GitHub Trending / Affiliate 市場
+
+---
+
+### 1. **Answrr（AI 接待員平台）** — HIGHEST VALUE ⭐⭐⭐（30% LIFETIME affiliate）
+
+- **工具：** Answrr — AI 接待員 SaaS（AIQ Labs Limited）
+- **發布：** 2026-07 affiliate 計畫正式公告（Barchart/PRNewswire）
+- **背景：**
+  - 企業 AI 語音自動化市場（$2.3 Billion），AI 電話接待、call center 自動化
+  - 每通電話自動接聽、預約、FAQ 回覆，整合主流 CRM
+  - 訂閱制 + account top-up 雙重收費結構（兩種都計佣金）
+- **Affiliate：** ✅ CONFIRMED 30% LIFETIME 永久遞迴
+  - 30% on every subscription payment + top-up，終身有效，無上限，無期限
+  - 被 Barchart 評為「2026 年最佳 AI SaaS Affiliate 計畫」
+  - 企業客戶單價高，LTV 遠超一般 B2C AI 工具
+  - 申請：answrr.com/affiliates（或 AIQ Labs 聯繫）
+- **關鍵字：** "answrr review 2026", "AI receptionist software", "AI phone answering 2026", "best ai receptionist affiliate", "answrr affiliate"
+- **搜尋量：** 預估 8K-20K/月（企業 AI 自動化高 CPC，$3-8/click）
+- **變現方式：** 30% LIFETIME affiliate（企業客戶單價高，LTV 極強）
+- **預估月收入：** $500-1,500/月（5 企業客戶 × $200 avg × 30% = $300/月起，複利成長）
+- **建議站點：** ai-tools.pro（英文 B2B 受眾）+ autodev-ai.com（繁中商業自動化）
+- **行動項：**
+  - ✅ P1-HIGH（→ Directive to Strategist）: Ivan 申請 Answrr affiliate → answrr.com/affiliates
+  - ✅ P1-HIGH: 寫「Answrr 完整評測 2026：AI 接待員 30% LIFETIME affiliate（vs 傳統電話接待）」
+
+---
+
+### 2. **OutlierKit（YouTube 研究平台）** — HIGH VALUE ⭐⭐（30% Recurring affiliate）
+
+- **工具：** OutlierKit — YouTube 內容策略 & 競品分析 SaaS（4.9/5 Product Hunt）
+- **背景：**
+  - YouTube 關鍵字研究、outlier 內容識別、競品追蹤、心理分析（psychographic）
+  - Trend discovery、competitor channel monitoring
+  - Product Hunt 4.9/5，活躍用戶成長中
+  - 定價：約 $29-49/月（starter）
+- **Affiliate：** ✅ CONFIRMED 30% recurring，60-day cookie
+  - 30% on all paid customers（含 renewal），60天 cookie 窗口（業界偏長）
+  - 申請：outlierkit.com/resources/outlierkit-affiliate-program 或 outlierkit.tolt.io
+  - 12 個月遞迴（每次付款都算）
+- **關鍵字：** "outlierkit review", "youtube research tool 2026", "youtube keyword research affiliate", "outlierkit affiliate", "AI youtube analytics"
+- **搜尋量：** 預估 5K-12K/月（YouTuber 工具市場穩定成長）
+- **變現方式：** 30% recurring / 60-day cookie
+- **預估月收入：** $200-600/月（20 客戶 × $29/月 × 30% = $174/月，可與現有 YouTube 相關文章整合）
+- **建議站點：** ai-tools.pro（英文 YouTuber 受眾）
+- **行動項：**
+  - ✅ P1-HIGH（→ Directive to Strategist）: Ivan 申請 OutlierKit affiliate → outlierkit.tolt.io
+  - ✅ P2: 寫「OutlierKit 完整評測 2026：YouTube 內容策略 AI 工具（vs TubeBuddy vs vidIQ）」
+
+---
+
+### 3. **GPT-5.6 Sol 解決 30 年數學難題** — HIGH CONTENT VALUE ⭐⭐（病毒式傳播）
+
+- **來源：** HN frontpage（2026-07-18），576 points, 371 comments，r/math 原帖
+- **背景：**
+  - GPT-5.6 Sol（配合研究者 10 頁精心 prompt 框架）完成 Omega(d^2) 下界證明
+  - 解決凸優化（Derivative-Free Convex Optimization）1996 年至今的 30 年理論缺口
+  - Lean 驗證 proof，已上 arXiv（Phillip Kerger: "Closing the Oracle-Complexity Gap..."）
+  - OpenAI 已有 Cycle Double Cover Conjecture 也在同週宣布
+  - HN 評論：「是 prompt 設計讓 AI 完成了數學家 30 年未解的問題」
+- **定價快照（GPT-5.6 API）：**
+  - Sol: $5.00 input / $30.00 output per 1M tokens
+  - Terra: $2.50 / $15.00（= GPT-5.5 效能，半價）
+  - Luna: $1.00 / $6.00（速度快、預算友好型 agentic）
+  - 全部 context window 1.05M，2026-07-09 GA
+- **Affiliate：** 無直接 affiliate（OpenAI 無公開計畫）
+  - 間接：DataCamp（AI 課程）、DigitalOcean（API 部署環境）
+- **關鍵字：** "GPT-5.6 Sol 評測", "GPT-5.6 Sol Terra Luna 比較", "GPT-5.6 數學突破", "GPT-5.6 pricing 2026", "AI 解決數學難題 2026"
+- **搜尋量：** 預估 15K-40K/月（GPT-5.6 系列發布熱度高，7/9 GA，仍在流量窗口內）
+- **變現方式：** 間接 DataCamp/DigitalOcean affiliate + 高流量 × 廣告 / 其他工具 CTA
+- **預估月收入：** $200-500/月（高流量間接轉化）
+- **建議站點：** autodev-ai.com（繁中深度評測）+ ai-tools.pro（英文）
+- **行動項：**
+  - ✅ P1-HIGH: 寫「GPT-5.6 Sol vs Terra vs Luna 完整評測 2026：定價、基準測試、使用場景」（含數學突破角度，繁中首發）
+
+---
+
+### 4. **moonshine-ai（語音辨識 + TTS，<500KB）** — MEDIUM VALUE ⭐
+
+- **來源：** HN #3，510 points（2026-07-14 上架，本週仍熱）
+- **背景：**
+  - GitHub: github.com/moonshine-ai，MIT 授權
+  - 完整 STT（語音轉文字）+ TTS（文字轉語音）模型，打包 < 500KB
+  - 設計目標：在設備端（edge device）即時執行，無需網路
+  - 適用：瀏覽器、行動 App、嵌入式設備、離線語音助理
+  - HN 作者 petewarden（Pete Warden，TF Mobile 創辦人之一）背書
+- **Affiliate：** 無直接 affiliate（開源專案）
+  - 間接：DataCamp（AI/語音課程）、DigitalOcean（邊緣運算部署）
+- **關鍵字：** "moonshine ai 教學", "on-device speech recognition 2026", "edge tts model", "離線語音辨識 ai", "moonshine speech model"
+- **搜尋量：** 預估 3K-8K/月（開發者受眾，小眾但高意圖）
+- **預估月收入：** $100-200/月（間接）
+- **建議站點：** autodev-ai.com
+- **行動項：**
+  - ✅ P2: 寫「Moonshine AI 教學 2026：500KB 以下完整語音辨識 TTS 模型，設備端零雲端」
+
+---
+
+### 5. **Google Stitch + stitch-skills（MCP 設計→程式碼）** — MEDIUM VALUE ⭐
+
+- **來源：** github.com/google-labs-code/stitch-skills（GitHub trending），台灣 FB 技術社群熱傳
+- **背景：**
+  - Google Stitch 2.0（2026-03 更新）：AI UI 設計工具，400 daily design credits 免費
+  - stitch-skills repo：Stitch MCP 整合技能，讓 AI coding 工具（Claude Code/Cursor/Windsurf）直接調用 Stitch 生成 UI 設計
+  - Google Codelabs 已有「Stitch + Antigravity MCP」官方教學（zh-cn）
+  - Taiwan FB AI 社群（gaitech）已有繁中分享，但完整教學仍稀少
+  - 目前完全免費（Google Labs beta），預計 Q4 2026 推出付費方案
+- **Affiliate：** 無（目前免費工具）
+  - Q4 2026 收費後可能開放 affiliate
+  - 間接：DataCamp + Figma 相關課程
+- **關鍵字：** "Google Stitch MCP 教學", "stitch skills 繁中", "google stitch claude code", "AI 設計工具 2026 教學", "stitch figma mcp"
+- **搜尋量：** 預估 5K-12K/月（設計工程師受眾，中文資源極少）
+- **預估月收入：** $100-250/月（間接，Q4 2026 收費後潛力大幅提升）
+- **建議站點：** autodev-ai.com（繁中首發）
+- **行動項：**
+  - ✅ P2: 寫「Google Stitch MCP 完整教學 2026：從設計到程式碼，Claude Code/Cursor 一鍵整合」
+  - ⏰ 後續追蹤：Q4 2026 Stitch 推出付費方案後，立即查詢 affiliate 計畫並補連結
+
+---
+
+## 📊 Round 128 變現機會總結
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|-----------|---------|
+| 2026-07-20 | Answrr | answrr review, AI receptionist 2026 | 8K-20K | **30% LIFETIME affiliate** | $500-1,500 | ai-tools.pro + autodev-ai |
+| 2026-07-20 | OutlierKit | outlierkit review, youtube research tool | 5K-12K | 30% recurring / 60-day cookie | $200-600 | ai-tools.pro |
+| 2026-07-20 | GPT-5.6 Sol/Terra/Luna | GPT-5.6 評測, 數學突破 | 15K-40K | 間接 DataCamp/DO | $200-500 | autodev-ai + ai-tools.pro |
+| 2026-07-20 | moonshine-ai | moonshine 語音辨識, edge TTS | 3K-8K | 間接 DataCamp/DO | $100-200 | autodev-ai |
+| 2026-07-20 | Google Stitch MCP | stitch mcp 教學, stitch skills | 5K-12K | 間接（Q4 收費後追蹤） | $100-250 | autodev-ai |
+
+**本輪總預估月收入潛力：** $1,100-3,050
+
+**最高優先：**
+1. **Answrr affiliate 申請（P1-HIGH）**：30% LIFETIME + 企業級高單價，→ Directive to Strategist
+2. **OutlierKit affiliate 申請（P1-HIGH）**：30% recurring + 60-day cookie，→ Directive to Strategist
+3. **GPT-5.6 評測文（P1-HIGH）**：高搜尋量，數學突破角度有病毒傳播力
+
+---
+
+## 🎯 Ivan 緊急行動項（Round 128）
+
+### P1-HIGH（本週內）
+1. **申請 Answrr affiliate** → answrr.com/affiliates
+   - 30% LIFETIME，企業客戶，無上限無期限
+2. **申請 OutlierKit affiliate** → outlierkit.tolt.io
+   - 30% recurring，60-day cookie
+
+### Carryover（仍未處理，升級警告）
+- P0-URGENT: 申請 Kit affiliate → kit.com/affiliate（7+ 輪 carryover！）
+- P0-URGENT: 申請 Runway ML affiliate → Awin 搜尋 Runway（3 輪）
+- P0-URGENT: 申請 VEED.io affiliate → veed.io/affiliates（6+ 輪！）
+- P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（已積壓 7+ 週）
+- P1-HIGH: 申請 Arvow affiliate → arvow.com/affiliates（Round 127 新發現）
+
