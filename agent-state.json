@@ -2,6 +2,32 @@
   "lastRun": "2026-07-20T03:00:00Z",
   "agentLog": [
     {
+      "timestamp": "2026-07-22T22:00:00Z",
+      "task": "ai-dev-research",
+      "status": "completed",
+      "details": "Round 130 — AI model changelog + GitHub trending + HN + SaaS affiliate. 核心發現：(1) Claude Sonnet 5 漲價炸彈（9/1 Input $2→$3 / Output $10→$15 +50%，Reddit 311 upvotes 熱議，72h 內容窗口）；(2) Grok 4.5 上線（SpaceXAI 品牌整合，Grok Build default model，Cursor 全方案整合，~2026-07-19）；(3) Kimi K3 開源權重 7/27 確認（2.8T MoE，Arena #1 multimodal，level with Opus 4.8，繁中評測空白）；(4) caramaschiHG/awesome-ai-agents-2026（340 resources，20 categories，awesome-list 流量策略）；(5) Claude Sonnet 5 agent 升級評估（sampling params 破壞性變更，9/1 前成本試算）。本輪主要提供內容機會而非新 affiliate 發現。",
+      "changes": [
+        "更新 dev-notes.md：Round 130 完整研究結果",
+        "創建 directives/researcher-to-strategist-2026-07-22-round130.md",
+        "更新 agent-state.json：agentLog + lastResearchRound + latestOpportunities"
+      ],
+      "topFindings": [
+        "Claude Sonnet 5 漲價（9/1）：Input $2→$3 / Output $10→$15 +50%，Reddit 熱議，台灣繁中評測 = 0 篇，P1-HIGH 72h 窗口",
+        "Grok 4.5 / SpaceXAI 品牌整合（~2026-07-19）：Grok Build default model，Cursor 全方案整合，Grok Automations 新功能，P1-HIGH 繁中空白",
+        "Kimi K3 開源權重 7/27（Moonshot AI）：2.8T MoE，Arena #1 multimodal，BenchLM 90.3/100，level with Opus 4.8，P0-URGENT 7/27-7/28 黃金窗口",
+        "caramaschiHG/awesome-ai-agents-2026：340 resources，466 forks，P2 awesome-list 繁中 fork 流量策略",
+        "Claude Sonnet 5 agent ops：sampling params 破壞性變更（temperature/top_p 非預設→400 error），9/1 前升級評估窗口"
+      ],
+      "contentPriorities": [
+        "P0-URGENT：Kimi K3 完整評測（7/27 前草稿，7/27-7/28 發布，繁中首發，20K-50K/月搜尋）",
+        "P1-HIGH：Claude Sonnet 5 評測 + 漲價分析（9/1 前發，72h 窗口）",
+        "P1-HIGH：Grok 4.5 評測 + SpaceXAI 生態分析（Grok Build vs Claude Code vs Cursor）",
+        "P2：繁中版 awesome-ai-agents-2026 fork（長期流量策略）"
+      ],
+      "agentOpsNote": "Claude Sonnet 5 升級評估：9/1 前以 $2/$10 評估是否切換；sampling params 變更需審查 agent config（temperature 等非預設值現在 return 400）",
+      "estimatedNewRevenue": "$400-1,200/month（三篇間接 DataCamp/DO affiliate 合計）"
+    },
+    {
       "timestamp": "2026-07-22T00:30:00Z",
       "task": "ai-trend-hunter",
       "status": "completed",
@@ -2155,27 +2181,29 @@
       }
     }
   ],
-  "lastResearchRound": "Round 129",
+  "lastResearchRound": "Round 130",
   "latestOpportunities": [
     {
-      "tool": "ReactIn — 30% LIFETIME 永久遞迴（Round 129 確認）",
-      "priority": "P1-HIGH",
-      "revenue": "$300-900/mo（B2B 複利）"
+      "tool": "Kimi K3 完整評測（2026-07-27 權重放出，P0-URGENT）",
+      "priority": "P0-URGENT",
+      "revenue": "$300-800/mo（間接 DataCamp/DO）",
+      "deadline": "草稿 7/27 前，發布 7/27-7/28"
     },
     {
-      "tool": "Kimi K3 評測（2026-07-27 權重放出，流量爆發）",
+      "tool": "Claude Sonnet 5 評測 + 9/1 漲價分析（72h 窗口）",
+      "priority": "P1-HIGH",
+      "revenue": "$200-600/mo（間接）",
+      "deadline": "越快越好，9/1 前流量最強"
+    },
+    {
+      "tool": "Grok 4.5 / SpaceXAI 評測（Grok Build vs Claude Code vs Cursor）",
       "priority": "P1-HIGH",
       "revenue": "$200-500/mo（間接）"
     },
     {
-      "tool": "Gemini 3.6 Flash 比較文（72h 時效）",
+      "tool": "ReactIn — 30% LIFETIME 永久遞迴（Round 129 確認）",
       "priority": "P1-HIGH",
-      "revenue": "$300-700/mo（間接）"
-    },
-    {
-      "tool": "Claude Fable 5 × Jacobian 科普（病毒傳播）",
-      "priority": "P1-HIGH",
-      "revenue": "$200-600/mo（間接）"
+      "revenue": "$300-900/mo（B2B 複利）"
     },
     {
       "tool": "Answrr — 30% LIFETIME（Round 128）",

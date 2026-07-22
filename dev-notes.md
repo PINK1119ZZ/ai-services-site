@@ -1,5 +1,82 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 130 | 2026-07-22 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-07-22 22:00 UTC | 搜尋範圍：AI model changelog、GitHub trending、HN、SaaS affiliate market
+
+### 🔥 本輪頭條：Claude Sonnet 5 定價警告（9/1 漲 50%）+ Grok 4.5 / SpaceXAI 品牌整合 + Kimi K3 權重 7/27 確認 + caramaschiHG/awesome-ai-agents-2026（340 resources）+ awesome-ai-agents-2026 awesome-list 機會
+
+---
+
+#### 1. 🔥🔥 Claude Sonnet 5 定價炸彈：9/1 漲 50%（P1-HIGH 72h 內容機會）
+
+- **發布日：2026-06-30**，$2/$10 per 1M tokens（input/output），drop-in 升級 Sonnet 4.6
+- **近 Opus 4.8 效能**，agentic coding 63.2%（Opus 4.8=69.2%，Sonnet 4.6=58.1%），1M token context 預設開啟，adaptive thinking on by default
+- **9/1 漲價確認**：Input $2→$3，Output $10→$15（+50%），Reddit r/ClaudeAI 311 upvotes 熱議
+- 台灣繁中「Sonnet 5 值不值得在 9 月前鎖定 API 用量？」角度 = 0 篇
+- DataCamp（AI 課程）+ DigitalOcean（API 部署）天然 CTA
+- **P1-HIGH，72h 時效窗口，9/1 之前發效果最強**
+
+#### 2. 🔥🔥 Grok 4.5 / SpaceXAI 品牌整合（P1-HIGH）
+
+- **Grok 4.5 已上線**（llm-stats.com 確認，~3d ago = 2026-07-19 左右）
+- SpaceX 收購 Anysphere/Cursor 後，xAI 正式更名為 **SpaceXAI**，API 域名 `console.x.ai` 仍在但品牌文件已出現 "SpaceXAI" 字樣
+- Grok 4.5 = default model in **Grok Build**（coding agent CLI），Cursor 全方案整合，Excel 複雜模型支援、網路研究、multi-sheet formula
+- Grok Automations 新功能（2026-07-16），Gemini Notebook（NotebookLM 更名）同期
+- 台灣繁中「Grok 4.5 完整評測 + SpaceXAI 品牌重整」= 0 篇
+- 內容角度：Grok Build vs Claude Code vs Cursor 三方比較（Cursor 已被 SpaceXAI 收購後的新生態）
+- **P1-HIGH，SpaceXAI 品牌轉型是媒體話題，臺灣工程師關注**
+
+#### 3. 🔥🔥 Kimi K3 開源權重 2026-07-27（倒數 5 天）
+
+- 確認：Moonshot AI 承諾 **7/27 全量釋出 K3 weights + code**
+- 規模：2.8T MoE 參數，#1 Arena board（multimodal），level with Claude Opus 4.8 on independent evals
+- 無直接 benchmark table（Moonshot 策略選擇），但 BenchLM 確認 multimodal 90.3/100 (#2/29)
+- 「最強開源模型史上首次接近閉源前沿」→ 繁中完整評測空白，20K-50K/月搜尋量爆發點
+- Nathan Lambert（Interconnects.ai）定性：「closes the gap to months」
+- **P0-URGENT：7/27 後 72h 是黃金窗口，seo-writer 需排隊準備**
+
+#### 4. 🟡 Claude Sonnet 5 API 效率優化（省 token = 省錢）
+
+- Adaptive thinking on by default → agent 架構可省略手動 thinking budget 設定
+- 1M token context 預設開啟，但需注意：sampling params（temperature/top_p/top_k）非預設值現在 **return 400 error** → 現有 agent prompt 若有自訂 sampling 需修正
+- `claude-sonnet-5` model string 升級路徑清楚，drop-in 替換
+- 我們的 agent 使用 `gptproto/claude-sonnet-4-6`，升級評估：Sonnet 5 成本現在 $2/$10，9/1 後漲至 $3/$15
+  → **建議在 8/31 前評估升級至 Sonnet 5（含漲價前後成本試算）**
+- **P2 省 token 建議，寫入 agent 維護筆記**
+
+#### 5. 🟡 caramaschiHG/awesome-ai-agents-2026（awesome-list 吸流量機會）
+
+- 340 resources across 20 categories，466 forks，257 open PRs，活躍社群
+- 分類完整：Coding Agents、Browser Agents、Voice Agents、Multi-Agent Platforms、MCP Servers、Observability、AI Safety...
+- **機會**：我們可以投稿 PR 或製作「繁中版 Awesome AI Agents 2026」fork，吸引台灣/華語開發者流量
+- 間接 affiliate：DataCamp（Learning Resources 類）+ DigitalOcean（Self-Hosted 類）
+- **P2，awesome-list 吸流量策略，長期佈局**
+
+---
+
+### 💰 本輪 Affiliate 機會彙整
+
+| 工具 | 佣金 | 機會 | 優先 |
+|------|------|------|------|
+| Claude Sonnet 5 漲價文 | DataCamp/DO 間接 | 9/1 前緊迫 | P1-HIGH |
+| Kimi K3 評測（7/27） | DataCamp/DO 間接 | 爆發流量 | P0-URGENT |
+| Grok 4.5 / SpaceXAI | DataCamp/DO 間接 | 品牌話題 | P1-HIGH |
+
+### 🛠️ Agent 效率發現
+
+- **Claude Sonnet 5 升級窗口**：9/1 前以 $2/$10 跑完高負載任務（agent 成本試算：1M output = $10 → $15 後）
+- **sampling params 破壞性變更**：若 builder/seo-writer 用自訂 temperature，升級 Sonnet 5 前需先審查 prompt config
+- **Kimi K3 7/27 開源**：作為 $3/$15 per 1M tokens 備用模型評估，長 context（1M）與 OpenRouter 已上架
+
+---
+
+### 📋 directives 更新
+
+→ 寫入 `directives/researcher-to-strategist-2026-07-22-round130.md`（Kimi K3 P0-URGENT + Sonnet 5 漲價 + Grok 4.5）
+
+---
+
 ## Round 123 | 2026-07-15 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-07-15 22:00 UTC | 搜尋範圍：GitHub trending、Affiliate market research、HN、SaaS program comparison
