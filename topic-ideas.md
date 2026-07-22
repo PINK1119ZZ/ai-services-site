@@ -1245,3 +1245,156 @@ Inkling 的發布確認了 2026 下半年開源大模型競爭進入新階段：
 - P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（已積壓 7+ 週）
 - P1-HIGH: 申請 Arvow affiliate → arvow.com/affiliates（Round 127 新發現）
 
+
+---
+
+## 🔥 Round 129 研究結果（2026-07-22）
+
+### 1. **Gemini 3.6 Flash + 3.5 Flash-Lite + 3.5 Flash Cyber — Google 三模型齊發，HN #3 今日 492分** ⭐ TIME-SENSITIVE + HIGH VALUE
+- **工具:** Google Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber（2026-07-21 發布）
+- **核心賣點:**
+  - Gemini 3.6 Flash：$1.50/$7.50 per 1M tokens（比 GPT-5.6 Terra Max / Kimi K3 / Qwen 3.7 Max 更便宜）
+  - 3.5 Flash-Lite：$0.30/$2.50 per 1M tokens（超低成本，Google Search 整合）
+  - 3.5 Flash Cyber：首個為資安漏洞掃描+修補特化的模型，比大模型更低 token 成本
+  - Gemini 4 預告中，3.5 Pro 仍在測試
+  - 在 long-horizon engineering tasks 中，token 成本削減高達 65%
+- **關鍵字:** "Gemini 3.6 Flash 評測", "Gemini 3.5 Flash-Lite vs 3.6 Flash", "Gemini 3.5 Flash Cyber 資安", "google gemini 定價 2026", "gemini vs gpt-5.6 比較", "最便宜 AI API 2026"
+- **搜尋量預估:** 15K-35K/月（新模型發布即時搜尋量高）
+- **有無 Affiliate:** ⚠️ Google 官方無 affiliate，但：
+  - **Google Cloud 間接路線：** Cloudways/DigitalOcean（部署 Gemini API 環境）
+  - **DataCamp：** Gemini API 課程（afflink.one/s/aavAC）
+  - 比較頁可嵌入 3-4 個現有 affiliate 工具
+- **預估月收入:** $300-700/月（間接）
+- **建議站點:** autodev-ai.com（繁中首發）+ ai-tools.pro（英文比較頁）
+- **內容方向:**
+  - 「Gemini 3.6 Flash 完整評測：比 GPT-5.6 便宜 65%？2026 最划算 API？」（繁中）
+  - 「Gemini 3.5 Flash Cyber: The First AI Built for Cybersecurity Audits (2026)」（英文）
+  - 「Gemini 3.6 Flash vs GPT-5.6 Terra vs Kimi K3 定價比較」（繁中比較頁）
+- **行動項:** ✅ P1-HIGH（72h 時效窗口）：seo-writer 立即寫 Gemini 定價比較 + 評測文
+
+---
+
+### 2. **Claude Fable 5 解開 87 年數學難題（Jacobian Conjecture）— 全球 20M 人次瀏覽，病毒式傳播** ⭐⭐ VIRAL CONTENT OPPORTUNITY
+- **工具/事件:** Anthropic Claude Fable 5，Levant Alpöge（數學家）2026-07-20 X貼文，HN #2 今日 777分
+- **核心賣點:**
+  - Claude Fable 5 幫助數學家 Levant Alpöge 找到 Jacobian Conjecture 的**反例**（1939 年起 87 年未解）
+  - 反例為 C³→C³ 的多項式映射，Jacobian 行列式 = -2 但非一一映射（三組輸入 → 同輸出）
+  - 可手工驗證，已有 20M+ X 貼文瀏覽，Fortune/Mashable/CoinDesk 全都報導
+  - AI × 數學突破的内容具高病毒傳播力（可類比 AlphaFold 時代）
+- **關鍵字:** "Claude Fable 5 數學", "Jacobian Conjecture 反例", "AI 數學突破 2026", "claude fable 5 評測", "anthropic fable 5 能力", "AI 解數學難題"
+- **搜尋量預估:** 10K-25K/月（事件型高峰 + 長尾「AI 數學能力」）
+- **有無 Affiliate:** 
+  - ✅ **Claude Fable 5 本身即為 Anthropic 產品**，可嵌入 Claude API / Claude.ai 推廣
+  - ⚠️ Anthropic 目前無直接 affiliate，但：
+    - DataCamp AI 課程（間接）
+    - DigitalOcean（API 部署）
+  - 如果 claude-code-prompt-pack-2026 上架，是最自然的 CTA 嵌入點
+- **預估月收入:** $200-600/月（間接）；若 Gumroad 上架後 $400-1,000/月
+- **建議站點:** autodev-ai.com（繁中科普）+ ai-tools.pro（英文）
+- **內容方向:**
+  - 「Claude Fable 5 解 87 年數學難題！Jacobian Conjecture 破功，AI 數學能力到哪了？」（繁中，病毒傳播力強）
+  - 「Claude Fable 5 vs GPT-5.6 Sol：誰在數學上更強？」（比較頁，嵌入多個工具）
+  - 英文版：「How Claude Fable 5 Cracked a 87-Year-Old Math Problem (And What It Means for AI)」
+- **行動項:** ✅ P1-HIGH 時效性（本週內）：科普文 + AI 數學能力評測文
+
+---
+
+### 3. **Poolside Laguna S 2.1 — 118B MoE agentic coding 王者，HN #7 今日 95分，70.2% Terminal-Bench** ⭐ CODING AUDIENCE
+- **工具:** Poolside Laguna S 2.1（2026-07-22 發布）
+- **核心賣點:**
+  - 118B total params / 8B activated per token（MoE），最大 1M context
+  - Terminal-Bench 2.1 評分 70.2%（同類型最高），開放 trajectories.poolside.ai 全公開
+  - 同級 agentic coding 模型中性價比最高（poolside.ai + OpenRouter）
+  - Thinking mode + no-thinking mode 雙模
+  - Kilo Code / Cursor / Windsurf / VS Code 均可接入
+- **關鍵字:** "Laguna S 2.1 評測", "poolside coding model 2026", "best agentic coding model 2026", "terminal-bench 排名", "laguna vs claude code"
+- **搜尋量預估:** 5K-12K/月（開發者受眾）
+- **有無 Affiliate:**
+  - ⚠️ Poolside 官方目前無公開 affiliate
+  - ✅ 間接：**Kilo Code**（有 affiliate 可能性，需查詢）、DataCamp、DigitalOcean
+  - 可作為「2026 最強 coding agent 比較」文章錨點，並排其他有 affiliate 的工具
+- **預估月收入:** $150-400/月（間接）
+- **建議站點:** autodev-ai.com（繁中開發者教學）
+- **內容方向:**
+  - 「Laguna S 2.1 完整評測：118B MoE 打趴 Claude Code？agentic coding 新王者」（繁中）
+  - 「Best Agentic Coding Models 2026: Laguna S 2.1 vs Claude Code vs GPT-5.6 Sol」（英文比較）
+- **行動項:** ✅ P2: 納入下週 coding agent 比較文章計畫
+
+---
+
+### 4. **Kimi K3 (Moonshot AI) 全球最大開源模型 — 2.8T 參數，2026-07-27 放出權重** ⭐⭐ HIGH SEARCH VOLUME
+- **工具:** Kimi K3 by Moonshot AI（2026-07-16-17 發布，2026-07-27 放出完整權重）
+- **核心賣點:**
+  - 2.8 兆參數，**人類有史以來最大的開源模型**（接近 3T 大關）
+  - 前端開發 benchmark #1（超越 GPT-5.6 / Claude Fable 5）
+  - 完整 API 定價 $3/$15 per 1M tokens（低於多數美系旗艦）
+  - 完整權重 2026-07-27 開放下載（本週末！重大事件）
+  - OpenRouter 已上架；Booz Allen Hamilton 研究：中國模型拒絕惡意請求能力強
+  - China open-weights AI 策略贏面廣（HN #1 1,179 points Jul 20）
+- **關鍵字:** "Kimi K3 評測", "kimi k3 開源下載", "moonshot kimi k3 2026", "2.8兆 AI 模型", "最大開源模型 2026", "kimi k3 vs claude fable"
+- **搜尋量預估:** 20K-50K/月（2026-07-27 放出後搜尋量爆發）
+- **有無 Affiliate:**
+  - ⚠️ Moonshot 無直接 affiliate
+  - ✅ 間接：OpenRouter（有可能的 API reseller 機會）、DigitalOcean（自架推論環境）、DataCamp（課程）
+  - 但文章本身可作為「中國 AI 開源策略」分析文，帶高分享流量
+- **預估月收入:** $200-500/月（間接）
+- **建議站點:** autodev-ai.com（繁中深度分析）
+- **內容方向:**
+  - 「Kimi K3 完整評測：2.8兆參數的開源模型，真的超越 Claude Fable 5 了嗎？」（繁中，2026-07-27 前後發布）
+  - 「中國 AI 開源策略正在贏：Kimi K3、Qwen、DeepSeek 改變了什麼？」（觀點文，高分享性）
+- **行動項:** ✅ P1-HIGH（時效性）：2026-07-27 前後發布評測，趁權重釋出搶流量高峰
+
+---
+
+### 5. **ReactIn — B2B LinkedIn 自動化，30% LIFETIME affiliate 確認（Round 127 追蹤完成）** ⭐⭐ HIGH AFFILIATE VALUE
+- **工具:** ReactIn（reactin.io）— LinkedIn intent-based B2B outbound automation
+- **Affiliate 確認:**
+  - ✅ **30% recurring LIFETIME（無上限）**
+  - 60-day cookie
+  - 最低 $21/referral 保底
+  - Growth Plan $69/月 × 30% = $20.70/month/referral 永久
+  - 業界比較：ReactIn 是 B2B LinkedIn 類別的最高 LIFETIME 遞迴方案（超過 HubSpot 30%/12m）
+- **關鍵字:** "reactin review 2026", "reactin.io linkedin automation", "best linkedin automation tool 2026", "b2b outbound ai tool", "linkedin lead gen tool review"
+- **搜尋量預估:** 5K-12K/月（B2B 受眾）
+- **有無 Affiliate:** ✅ **reactin.io/affiliates（30% LIFETIME）**
+- **預估月收入:** $300-900/月（B2B 客戶 LTV 高，長期複利）
+- **建議站點:** ai-tools.pro（英文評測）
+- **行動項:**
+  - ✅ **P1-HIGH：Ivan 申請 ReactIn affiliate → reactin.io/affiliates**
+  - ✅ P1-HIGH：seo-writer 寫英文評測「ReactIn Review 2026: Best LinkedIn Automation Tool?」
+
+---
+
+## 📊 Round 129 變現機會總結
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|-----------|---------|
+| 2026-07-22 | Gemini 3.6 Flash 比較 | gemini 3.6 flash 評測, 最便宜 AI API 2026 | 15K-35K | 間接 DataCamp/DO | $300-700 | autodev-ai + ai-tools.pro |
+| 2026-07-22 | Claude Fable 5 × Jacobian | claude fable 5 數學, AI 數學突破 | 10K-25K | 間接 DataCamp + Gumroad CTA | $200-600 | autodev-ai + ai-tools.pro |
+| 2026-07-22 | Poolside Laguna S 2.1 | laguna s 2.1 評測, agentic coding 2026 | 5K-12K | 間接（比較文錨點） | $150-400 | autodev-ai |
+| 2026-07-22 | Kimi K3 (2026-07-27 權重) | kimi k3 評測, 最大開源模型 2026 | 20K-50K | 間接 DO/DataCamp | $200-500 | autodev-ai |
+| 2026-07-22 | ReactIn | reactin review, linkedin automation 2026 | 5K-12K | **30% LIFETIME affiliate** | $300-900 | ai-tools.pro |
+
+**本輪總預估月收入潛力：** $1,150-3,100
+
+**最高優先：**
+1. **ReactIn affiliate 申請（P1-HIGH）**：30% LIFETIME，B2B 高 LTV，→ 寫入 Directive to Strategist
+2. **Kimi K3 評測（P1-HIGH）**：2026-07-27 權重放出是流量爆發點，繁中空白
+3. **Gemini 3.6 Flash 評測（P1-HIGH）**：72h 窗口，定價是核心角度
+4. **Claude Fable 5 × Jacobian（P1-HIGH）**：病毒傳播力強，科普文高分享性
+
+---
+
+## 🎯 Ivan 緊急行動項（Round 129）
+
+### P1-HIGH（本週內）
+1. **申請 ReactIn affiliate** → reactin.io/affiliates（30% LIFETIME，B2B LinkedIn 自動化）
+
+### Carryover（升級警告 — 每輪未處理就再升一級）
+- P0-URGENT: 申請 Kit affiliate → kit.com/affiliate（**8+ 輪 carryover！**）
+- P0-URGENT: 申請 Runway ML affiliate → Awin（**4 輪**）
+- P0-URGENT: 申請 VEED.io affiliate → veed.io/affiliates（**7+ 輪**）
+- P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（**8+ 週！**）
+- P1-HIGH: 申請 Arvow affiliate → arvow.com/affiliates（Round 127）
+- P1-HIGH: 申請 Answrr affiliate → answrr.com/affiliates（Round 128）
+- P1-HIGH: 申請 OutlierKit affiliate → outlierkit.tolt.io（Round 128）
