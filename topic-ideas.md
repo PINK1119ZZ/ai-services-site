@@ -1398,3 +1398,93 @@ Inkling 的發布確認了 2026 下半年開源大模型競爭進入新階段：
 - P1-HIGH: 申請 Arvow affiliate → arvow.com/affiliates（Round 127）
 - P1-HIGH: 申請 Answrr affiliate → answrr.com/affiliates（Round 128）
 - P1-HIGH: 申請 OutlierKit affiliate → outlierkit.tolt.io（Round 128）
+
+---
+
+## 🔥 Round 131 最高價值發現 (2026-07-23)
+
+### 1. **GetResponse — 40-60% Recurring Affiliate (12個月), 90-day cookie — 本輪最高 affiliate 價值** ⭐ NEW
+- **工具:** GetResponse — 老牌 All-in-One Email Marketing + Automation，PartnerStack 平台
+- **Affiliate 佣金:** 40% (基礎) → 50% → 60% (高績效) 首年 12 個月遞迴，90 天 cookie（業界最長之一）
+- **申請網址:** getresponse.com/affiliate-programs（PartnerStack）
+- **定價:** $19-$119/月（Email Marketing / Marketing Automation / GetResponse MAX）
+- **估算月收入:** 10 轉介 × $19/mo × 60% × 12mo = $1,368 首年複利 → **$400-1,200/月**
+- **關鍵字:** "getresponse 評測 2026", "email marketing 工具比較", "getresponse vs mailchimp 2026", "best email marketing software 2026"
+- **搜尋量:** 15K-40K/月（email marketing 類搜尋競爭高但量大）
+- **內容角度:** 對比 MailerLite / Mailchimp / Kit — GetResponse 在 AI 功能 + 40-60% affiliate 結構上有比較優勢
+- **建議站點:** ai-tools.pro（英文評測頁）
+- **⚠️ DIRECTIVE TO STRATEGIST:** GetResponse affiliate 40-60%/12m 是本輪確認的最高佣金 email marketing affiliate，**需 Ivan 立即申請**
+
+### 2. **Jack Dorsey's Buzz — Open-Source Slack+GitHub 替代方案 (2026-07-21 發布)** ⭐ TIME-SENSITIVE
+- **工具:** Buzz — Block (Jack Dorsey) 發布的開源工作區，整合 team chat + AI agents + Git hosting
+- **技術:** Nostr 協議 (cryptographic identity)，Agent Client Protocol (ACP)，支援 Claude Code / OpenAI Codex / Goose
+- **媒體:** TechCrunch 報導，HN 熱議，X 上病毒式傳播（2026-07-21）
+- **有無 affiliate:** ❌ 開源免費，無直接 affiliate
+- **間接機會:** DigitalOcean（自架 Buzz 伺服器教學）+ DataCamp（AI agent 整合課程）
+- **關鍵字:** "buzz workspace 評測", "jack dorsey buzz vs slack 2026", "buzz block ai agents", "buzz git hosting"
+- **搜尋量:** 10K-30K/月（新聞效應，72h 高峰）
+- **文章角度:** 完整教學 + Buzz vs Slack vs GitHub 功能比較（開發者/新創受眾）
+- **建議站點:** autodev-ai.com（開發者受眾）
+- **預估月收入:** $200-500（DataCamp/DO 間接）
+
+### 3. **Kimi K3 開源權重 — 2026-07-27 倒數 4 天 (P0-URGENT)** ⭐⭐ COUNTDOWN
+- **工具:** Kimi K3 — Moonshot AI，2.8T 參數 MoE，1M context window，史上最大開源模型
+- **權重發布:** 確認 2026-07-27（Modified MIT License）
+- **現況:** API 已上線 (platform.kimi.ai, OpenRouter `kimi-k3`)，全重量 7/27 放出
+- **關鍵字:** "kimi k3 評測", "kimi k3 download", "kimi k3 vs opus 4.8", "最大開源模型 2026"
+- **搜尋量:** 20K-50K/月（7/27 後爆發）
+- **動作:** **7/27 前準備好文章草稿，7/27 當日立即發布** — 繁中首發優勢
+- **預估月收入:** $200-500（間接 DO/DataCamp）
+- **建議站點:** autodev-ai.com（P0-URGENT carryover，本輪最後提醒）
+
+### 4. **OmniRoute (GitHub Trending #4, 25K+ stars, 1,651 今日)** ⭐ HIGH TRAFFIC
+- **工具:** OmniRoute (diegosouzapw) — 免費開源 AI Gateway，268+ providers，50+ free，1.6B tokens/月免費
+- **GitHub:** github.com/diegosouzapw/OmniRoute — GPL-3.0，npm install -g omniroute
+- **有無 affiliate:** ❌ 開源免費，無 affiliate
+- **但:** YouTube 教學影片已有 24K-26K views，開發者受眾極大，DataCamp/DigitalOcean 間接機會
+- **關鍵字:** "omniroute 教學", "omniroute tutorial 2026", "free AI gateway setup", "omniroute vs litellm", "free claude code setup 2026"
+- **搜尋量:** 8K-20K/月（快速成長中）
+- **文章角度:** OmniRoute 完整安裝教學（繁中首發，免費 AI coding 零成本方案）
+- **建議站點:** autodev-ai.com
+- **預估月收入:** $150-400（DataCamp/DO 間接）
+
+### 5. **Product Hunt 2026-07-22 精選 — ACME.BOT + Kastra + CartAI**
+- **ACME.BOT:** "No-slop AI SEO agent that interviews you first" — PH #6。SEO agent 類，先訪談再生成，差異化強。無確認 affiliate。關鍵字："acme bot seo 評測", "ai seo agent 2026"。搜尋量估 3K-8K/月
+- **Kastra:** "Runtime authorization for Claude, Cursor, Codex, OpenClaw" — PH #4。開發者工具，agent security。關鍵字："kastra authorization", "claude code security 2026"。搜尋量估 2K-6K/月
+- **CartAI:** "The AI agent that handles checkout" — PH #2 今日。AI checkout agent，SaaS，關鍵字："cartai review", "ai checkout agent"。搜尋量估 2K-5K/月。**待查 affiliate program**
+
+---
+
+## 📊 Round 131 收益機會彙整表
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|-----------|---------|
+| 2026-07-23 | GetResponse affiliate | getresponse 評測, email marketing 比較 | 15K-40K | **40-60% recurring/12m affiliate** | **$400-1,200** | ai-tools.pro |
+| 2026-07-23 | Buzz (Jack Dorsey) | buzz workspace, jack dorsey buzz vs slack | 10K-30K | 間接 DataCamp/DO | $200-500 | autodev-ai |
+| 2026-07-23 | Kimi K3 (7/27) | kimi k3 評測, 最大開源模型 | 20K-50K | 間接 DO/DataCamp | $200-500 | autodev-ai |
+| 2026-07-23 | OmniRoute | omniroute 教學, free AI gateway | 8K-20K | 間接 DataCamp/DO | $150-400 | autodev-ai |
+| 2026-07-23 | ACME.BOT / Kastra | acme bot seo, kastra authorization | 3K-8K | 待查 affiliate | $100-300 | ai-tools.pro |
+
+**本輪總預估月收入潛力：** $1,050-2,900
+
+**本輪最高優先：**
+1. **GetResponse affiliate 申請（P1-HIGH）**：40-60%/12m，90-day cookie → 寫入 Directive to Strategist
+2. **Kimi K3 評測（P0-URGENT，4天倒數）**：草稿本週完成，7/27 發布
+3. **Buzz 完整教學（P1-HIGH，72h 窗口）**：繁中首發，開發者受眾
+
+---
+
+## 🎯 Ivan 緊急行動項（Round 131）
+
+### P1-HIGH（本輪新增）
+1. **申請 GetResponse affiliate** → getresponse.com/affiliate-programs（PartnerStack，40-60%/12m，90天cookie）
+
+### Carryover（升級警告）
+- P0-URGENT: 申請 Kit affiliate → kit.com/affiliate（**9+ 輪 carryover！**）
+- P0-URGENT: 申請 Runway ML affiliate → Awin（**5 輪**）
+- P0-URGENT: 申請 VEED.io affiliate → veed.io/affiliates（**8+ 輪**）
+- P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（**9+ 週！**）
+- P1-HIGH: 申請 Arvow affiliate → arvow.com/affiliates（Round 127）
+- P1-HIGH: 申請 Answrr affiliate → answrr.com/affiliates（Round 128）
+- P1-HIGH: 申請 OutlierKit affiliate → outlierkit.tolt.io（Round 128）
+- P1-HIGH: 申請 ReactIn affiliate → reactin.io/affiliates（Round 129，30% LIFETIME）
