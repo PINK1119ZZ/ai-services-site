@@ -1488,3 +1488,122 @@ Inkling 的發布確認了 2026 下半年開源大模型競爭進入新階段：
 - P1-HIGH: 申請 Answrr affiliate → answrr.com/affiliates（Round 128）
 - P1-HIGH: 申請 OutlierKit affiliate → outlierkit.tolt.io（Round 128）
 - P1-HIGH: 申請 ReactIn affiliate → reactin.io/affiliates（Round 129，30% LIFETIME）
+
+---
+
+## Round 132 — 2026-07-24 00:30 UTC
+
+### GitHub Trending Today (July 24, 2026)
+
+| Repo | Stars | Today | 語言 | 備注 |
+|------|-------|-------|------|------|
+| koala73/worldmonitor | 71,572 | 3,175 | TypeScript | 全球情報儀表板，AGPL-3.0，商業版授權 |
+| block/buzz | 6,878 | 2,162 | Rust | Jack Dorsey 蜂巢通訊平台（Round 131 carryover）|
+| diegosouzapw/OmniRoute | 27,166 | 1,929 | TypeScript | AI Gateway（Round 131 carryover）|
+| agegr/pi-web | 2,354 | 315 | TypeScript | Pi coding agent Web UI |
+| citrolabs/ego-lite | 1,631 | 247 | JavaScript | AI Agent 瀏覽器（NEW 今日 trending）|
+| earthtojake/text-to-cad | 9,973 | 230 | JavaScript | CAD/機器人 agent skills |
+| alibaba/open-code-review | 11,504 | 180 | Go | 開源程式碼審查（Alibaba 規模驗證）|
+| Automattic/harper | 12,289 | 624 | Rust | 離線私密語法檢查器 |
+| likec4/likec4 | 4,692 | 472 | TypeScript | 軟體架構即程式碼視覺化 |
+| ComposioHQ/awesome-claude-skills | — | — | — | 精選 Claude Skills 清單 |
+
+### HN Front Page Today (July 24, 2026)
+
+| 標題 | 分數 | 備注 |
+|------|------|------|
+| Show HN: Echo – Fable-level results at 1/3 cost (open-weight) | ~200pts | AI 路由系統，今日 ShowHN #1 |
+| Writing by hand is good for your brain | 930pts | 非 AI，無關 |
+| Show HN: Palmier Pro – Open-source macOS video editor for AI | 115pts | 開源，無 affiliate |
+| humanlayer: Why Software Factories Fail | 155pts | Harness engineering |
+| Building on ATProto | 119pts | Bluesky 生態 |
+| DARPA AI-controlled F-16 | 168pts | 新聞，無 affiliate |
+
+### 本輪 3 大發現
+
+---
+
+#### 1. 🟢 Browse AI — 20% LIFETIME 永久遞迴（PartnerStack 確認）
+
+| 項目 | 數據 |
+|------|------|
+| 工具 | Browse AI（browseai.com）|
+| 分類 | 無程式碼網頁爬蟲 + 監控自動化 |
+| 佣金 | **20% LIFETIME 永久遞迴**（每個新客戶終身計）|
+| 平台 | PartnerStack |
+| 客單價 | 有免費方案，付費方案含額度 |
+| 整合 | Google Sheets、Airtable、Zapier（7K+ 整合）|
+| 關鍵字 | browse ai 評測 / 網頁爬蟲工具 / no-code scraping 2026 |
+| 搜尋量估計 | 中等（3K-8K/月，低競爭）|
+| 目標站點 | autodev-ai.com（開發者受眾）|
+| 預估月收入 | **$300-800/月（20% LIFETIME 複利）** |
+| 申請 URL | PartnerStack → 搜尋 Browse AI |
+| 優先級 | **P1-HIGH（本輪新確認）** |
+
+**變現方式：** 評測文 + 「Browse AI vs Apify vs Firecrawl 比較」頁，LIFETIME 複利適合長期持有
+
+---
+
+#### 2. 🔴 Kimi K3 — 倒數 3 天（7/27 開源權重，P0-URGENT 第三輪）
+
+| 項目 | 數據 |
+|------|------|
+| 工具 | Kimi K3（Moonshot AI）|
+| 發布日 | 2026-07-27（開源權重，Hugging Face 待上架）|
+| 規格 | 2.8T 參數 MoE，Kimi Delta Attention，1M context，原生多模態 |
+| 排名 | BenchLM #4 全球（80.96/100），超越 Claude Opus 4.8 |
+| 對比 | 落後 Claude Fable 5（83.93）、Claude Mythos 5（83.68）|
+| API | kimi-k3（platform.kimi.ai），可用 API 試用 |
+| 繁中空白 | 確認（未見任何繁中完整評測）|
+| 關鍵字 | kimi k3 評測 / kimi k3 下載 / kimi k3 vs fable 5 / 最大開源 AI 模型 2026 |
+| 搜尋量 | **20K-50K/月（7/27-7/30 爆發期）** |
+| affiliate | 無直接，嵌入 DataCamp + DigitalOcean 間接 |
+| 預估月收入 | $300-700/月（搜尋流量 × 間接 affiliate）|
+| 截止時間 | **草稿今天（7/24）完成，7/27 發布** |
+| 優先級 | **P0-URGENT（第三輪！今輪必須執行）** |
+
+**變現方式：** 繁中首發評測 → 有機流量 → DataCamp AI 課程 + DigitalOcean 部署教學 CTA
+
+---
+
+#### 3. 🟡 ego-lite — AI Agent 瀏覽器（GitHub Trending，YouTube affiliate 確認存在）
+
+| 項目 | 數據 |
+|------|------|
+| 工具 | ego-lite（citrolabs/ego-lite）|
+| 分類 | Chromium-based AI Agent 專用瀏覽器 |
+| GitHub Stars | 1,631（247 today）|
+| 版本 | v1.2.5（2026-07-17 最新）|
+| 特點 | AI Agent 在獨立 Spaces 跑任務，用戶 tab 不受干擾；支援 Claude Code / Codex / Cursor |
+| 整合 | ego-browser CLI，OpenAI-compatible |
+| YouTube 教學 | Dan - Smart Tutorials：24,138 views（3 Jul 2026），描述確認有 affiliate 連結 |
+| 繁中空白 | 確認（無繁中完整教學）|
+| affiliate 確認 | YouTube 描述有 affiliate links → 推測 citrolabs 有 partner program，需直接確認 |
+| 申請 URL | ego-lite GitHub README 或 citrolabs.io 查 affiliate/partner 頁 |
+| 關鍵字 | ego lite 教學 / AI agent 瀏覽器 / ego browser claude code / ego-lite tutorial 2026 |
+| 搜尋量估計 | 低-中（1K-5K/月，增長期）|
+| 預估月收入 | **$200-600/月**（若 affiliate 確認 30%+）|
+| 優先級 | **P1-HIGH（待 Ivan 確認 affiliate，先寫文章再補連結）** |
+
+**變現方式：** 繁中首發教學（autodev-ai）+ ego-browser CLI 實戰，如有 affiliate 補連結
+
+---
+
+### Round 132 附加觀察
+
+- **Echo (HN ShowHN #1 今日)** - 開源 AI 路由系統，Fable-level 品質 1/3 成本，OpenAI-compatible API。無明確 SaaS 商業化，但評測文機會存在（開發者受眾），可嵌入 DataCamp + DigitalOcean CTA
+- **harper (Automattic)** - 12,289⭐，624 today。離線隱私語法檢查，Rust 驅動，開源 MIT。Automattic 旗下可能有商業版，追蹤是否推出 affiliate
+- **worldmonitor** - 71K⭐ 超強。AGPL-3.0，商業使用需授權。無 SaaS affiliate，但 DigitalOcean 自架教學 + "全球情報工具" 內容角度強
+- **Browse AI vs Apify vs Firecrawl 比較頁** - 三工具各有 affiliate（Browse AI 20% LIFETIME，Firecrawl 待確認，Apify 有 affiliate），做比較頁可三方並列
+
+### Ivan 待辦（Round 132 新增）
+
+- **P1-HIGH 新增：** 申請 Browse AI affiliate → PartnerStack 搜尋 Browse AI（20% LIFETIME 永久遞迴）
+- **P1-HIGH 新增：** 確認 ego-lite affiliate → citrolabs.io 或 GitHub README 查 partner/affiliate 頁
+- **P0-URGENT carryover：** 上架 Claude Code Prompt Pack（第 **9+** 週！）
+- **P0-URGENT carryover：** 申請 Kit affiliate → kit.com/affiliate（**9+** 輪）
+- **P0-URGENT carryover：** 申請 VEED.io affiliate → veed.io/affiliates（**8+** 輪）
+- **P0-URGENT carryover：** 申請 Runway ML affiliate → Awin
+
+**本輪預估新增月收入潛力：$800-2,100/月**（Browse AI LIFETIME + ego-lite + Kimi K3 間接流量合計）
+

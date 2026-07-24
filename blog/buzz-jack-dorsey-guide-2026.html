@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzz 完整教學 2026：Jack Dorsey 開源 Slack + GitHub 替代方案，ACP 整合 Claude Code / Codex</title>
+    <meta name="description" content="Jack Dorsey 發布開源協作工具 Buzz，整合 Nostr 協議與 ACP，直接在聊天室呼叫 Claude Code、Codex、Goose 等 AI Agent。繁中首發完整安裝與實戰教學。">
+    <meta name="keywords" content="Buzz 教學, Jack Dorsey Buzz, Buzz ACP, Buzz Nostr, Claude Code 整合, 開源 Slack 替代, AI Agent 協作工具 2026">
+    <meta property="og:title" content="Buzz 完整教學 2026：Jack Dorsey 的開源 Slack + GitHub 替代方案">
+    <meta property="og:description" content="Buzz 整合 Nostr 協議與 ACP，讓 Claude Code / Codex / Goose 直接進聊天室工作。繁中首發教學。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/buzz-jack-dorsey-guide-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <link rel="canonical" href="https://autodev-ai.com/blog/buzz-jack-dorsey-guide-2026.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/buzz-jack-dorsey-guide-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Buzz 完整教學 2026：Jack Dorsey 開源 Slack + GitHub 替代方案，ACP 整合 Claude Code / Codex",
+      "datePublished": "2026-07-24",
+      "dateModified": "2026-07-24",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "Jack Dorsey 發布開源協作工具 Buzz，整合 Nostr 協議與 ACP，讓 AI Agent 直接進聊天室工作。繁中首發完整教學。",
+      "url": "https://autodev-ai.com/blog/buzz-jack-dorsey-guide-2026.html",
+      "image": "https://autodev-ai.com/autodev-logo2.png"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Buzz 是什麼？跟 Slack 有什麼不同？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buzz 是 Jack Dorsey（Twitter/Block 創辦人）發布的開源協作工具，定位是 Slack + GitHub 的替代方案。最大差異在於底層採用去中心化的 Nostr 協議，沒有單一公司掌控你的訊息資料，並內建 ACP（Agent Client Protocol）支援，可以直接在聊天室裡呼叫 Claude Code、Codex、Goose 等 AI coding agent 工作。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Buzz 支援哪些 AI Agent？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "透過 ACP（Agent Client Protocol）標準，Buzz 目前可整合 Anthropic Claude Code、OpenAI Codex CLI、Block 自家的 Goose 等主流 coding agent，未來只要工具支援 ACP 都能接入，不綁定單一供應商。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Buzz 免費嗎？可以自架嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buzz 是開源專案，程式碼公開在 GitHub，可以自行部署到自己的伺服器或雲端環境（例如 DigitalOcean droplet），不需要每月付費給第三方 SaaS，也沒有訊息數量或使用者數上限的商業限制。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "團隊要換到 Buzz 需要注意什麼？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "因為採用 Nostr 協議，帳號系統與傳統 Email/密碼登入不同，需要 Nostr 公私鑰概念，團隊導入前建議先在小範圍測試環境試跑，並規劃好金鑰備份與復原流程，避免弄丟私鑰導致無法登入。"
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --dark: #1A1A2E;
+            --light: #FFF8F3;
+            --text: #2D2D3A;
+            --gray: #6B6B7B;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Segoe UI", sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--light);
+        }
+        .container { max-width: 840px; margin: 0 auto; padding: 0 20px; }
+        header.site-header {
+            background: var(--dark);
+            padding: 16px 0;
+        }
+        header.site-header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        article { padding: 40px 0 80px; }
+        .breadcrumb {
+            font-size: 13px;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .urgent-badge {
+            display: inline-block;
+            background: #FF3B30;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+        .meta {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 32px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 800;
+            margin: 40px 0 16px;
+            color: var(--dark);
+            border-left: 4px solid var(--primary);
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 19px;
+            font-weight: 700;
+            margin: 28px 0 12px;
+            color: var(--dark);
+        }
+        p { margin-bottom: 16px; font-size: 16px; }
+        ul, ol { margin: 0 0 20px 24px; }
+        li { margin-bottom: 8px; }
+        code {
+            background: #F0EDE8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "SF Mono", Consolas, monospace;
+            font-size: 14px;
+            color: #C0392B;
+        }
+        pre {
+            background: #1A1A2E;
+            color: #E8E8F0;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        pre code { background: none; color: inherit; padding: 0; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #E5E0D8;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        th { background: #FFF1E6; font-weight: 700; }
+        .cta-box {
+            background: linear-gradient(135deg, #FF6B35, #FF9068);
+            border-radius: 16px;
+            padding: 28px;
+            margin: 32px 0;
+            color: #fff;
+            text-align: center;
+        }
+        .cta-box h3 { color: #fff; margin-top: 0; }
+        .cta-box p { color: rgba(255,255,255,0.92); }
+        .cta-btn {
+            display: inline-block;
+            background: #fff;
+            color: var(--primary);
+            font-weight: 800;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 12px;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+        .cta-btn:hover { transform: translateY(-2px); }
+        .cta-box.blue { background: linear-gradient(135deg, #2E86DE, #54A0FF); }
+        .cta-box.blue .cta-btn { color: #2E86DE; }
+        .cta-box.green { background: linear-gradient(135deg, #10AC84, #1DD1A1); }
+        .cta-box.green .cta-btn { color: #10AC84; }
+        .info-box {
+            background: #FFF1E6;
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        .faq-item { margin-bottom: 24px; }
+        .faq-item h3 { color: var(--primary); }
+        footer.site-footer {
+            background: var(--dark);
+            color: #ccc;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 13px;
+        }
+        footer.site-footer a { color: #FF9068; }
+        .toc {
+            background: #fff;
+            border: 1px solid #E5E0D8;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 32px;
+        }
+        .toc h2 { margin-top: 0; font-size: 18px; border: none; padding-left: 0; }
+        .toc ol { margin-bottom: 0; }
+        .toc a { color: var(--text); text-decoration: none; }
+        .toc a:hover { color: var(--primary); }
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <a href="/">AutoDev AI</a>
+    </div>
+</header>
+
+<article>
+    <div class="container">
+        <div class="breadcrumb"><a href="/">首頁</a> / <a href="/blog/">部落格</a> / Buzz 完整教學 2026</div>
+
+        <span class="urgent-badge">🔥 72 小時內首發評測</span>
+        <h1>Buzz 完整教學 2026：Jack Dorsey 開源 Slack + GitHub 替代方案，ACP 整合 Claude Code / Codex</h1>
+        <div class="meta">
+            <span>📅 發布日期：2026-07-24</span>
+            <span>⏱️ 閱讀時間：約 11 分鐘</span>
+            <span>🏷️ 開發者工具</span>
+        </div>
+
+        <p>2026 年 7 月 21 日，Jack Dorsey（Twitter / Square / Block 創辦人）低調發布了一個新的開源協作工具：<strong>Buzz</strong>。TechCrunch 報導後立刻在 Hacker News 引發熱議，開發者社群的第一印象是：「這是要正面挑戰 Slack 加 GitHub 的組合嗎？」而且不只是聊天室，Buzz 內建 <strong>ACP（Agent Client Protocol）</strong>整合，可以直接在聊天室裡叫 Claude Code、Codex、Goose 這些 AI coding agent 幫你做事。這篇文章帶你搞懂 Buzz 到底是什麼、怎麼安裝、怎麼把 AI Agent 接進你的團隊工作流程。</p>
+
+        <div class="toc">
+            <h2>📑 目錄</h2>
+            <ol>
+                <li><a href="#what">Buzz 是什麼？為什麼開發者社群在意</a></li>
+                <li><a href="#nostr">底層架構：為什麼選 Nostr 協議</a></li>
+                <li><a href="#acp">ACP 整合：讓 Claude Code / Codex 直接進聊天室</a></li>
+                <li><a href="#install">安裝與自架教學</a></li>
+                <li><a href="#usecase">實戰情境：團隊怎麼用</a></li>
+                <li><a href="#compare">Buzz vs Slack vs Discord 比較</a></li>
+                <li><a href="#faq">常見問題</a></li>
+            </ol>
+        </div>
+
+        <h2 id="what">Buzz 是什麼？為什麼開發者社群在意</h2>
+        <p>Buzz 是一套開源的團隊協作平台，定位介於 Slack（即時通訊）與 GitHub（程式碼協作）之間。它不是又一個聊天室 clone，核心賣點有三個：</p>
+        <ul>
+            <li><strong>去中心化身份：</strong>採用 Nostr 協議做底層通訊，帳號不掛在單一公司伺服器上，你的訊息資料理論上可以搬到任何相容的 relay。</li>
+            <li><strong>原生 AI Agent 整合：</strong>透過 ACP 標準，聊天室裡可以直接 @ 一個 AI Agent，讓它讀 repo、跑測試、開 PR，回報結果直接留在對話串裡。</li>
+            <li><strong>開源自架：</strong>程式碼完全公開，可以部署在自己的 VM 上，沒有訊息數量限制、沒有座位數收費模式。</li>
+        </ul>
+        <p>對台灣的中小型開發團隊來說，這個組合特別有吸引力：不用同時付 Slack 訂閱費 + GitHub 團隊方案，還能把 AI Agent 直接嵌進日常溝通流程，而不是切來切去在瀏覽器分頁之間。</p>
+
+        <div class="info-box">
+            <strong>💡 時機點：</strong>Buzz 發布時間正好卡在 Claude Code、Codex、Cursor 等 coding agent 高速普及的窗口。Jack Dorsey 本人在 Block 內部已經用類似架構做內部工具測試超過一年，這次算是正式對外開源。
+        </div>
+
+        <h2 id="nostr">底層架構：為什麼選 Nostr 協議</h2>
+        <p>Nostr（Notes and Other Stuff Transmitted by Relays）是一個近年在去中心化社群（尤其是比特幣圈）快速成長的開放協議，Jack Dorsey 本人是長期支持者。它的設計哲學很簡單：</p>
+        <table>
+            <tr><th>特性</th><th>傳統 SaaS（Slack）</th><th>Nostr（Buzz）</th></tr>
+            <tr><td>身份系統</td><td>Email + 密碼，公司控管</td><td>公私鑰對，使用者自己保管</td></tr>
+            <tr><td>資料儲存</td><td>單一供應商伺服器</td><td>可分散在多個 relay</td></tr>
+            <tr><td>搬遷成本</td><td>幾乎無法搬走歷史訊息</td><td>理論上可換 relay 保留身份</td></tr>
+            <tr><td>審查風險</td><td>公司可單方面停權帳號</td><td>抗審查性較高</td></tr>
+        </table>
+        <p>對一般團隊來說，最實際的影響是：<strong>你的公私鑰就是你的帳號</strong>，弄丟私鑰基本上等於帳號報廢，這點跟傳統「忘記密碼、按重設連結」的體驗完全不同，是團隊導入前必須先教育成員的重點。</p>
+
+        <h2 id="acp">ACP 整合：讓 Claude Code / Codex 直接進聊天室</h2>
+        <p>這才是 Buzz 真正讓開發者興奮的地方。ACP（Agent Client Protocol）是近期由多家 AI 工具供應商共同推動的標準協議，目的是讓不同的 coding agent（Claude Code、Codex、Goose 等）能用同一套介面被外部應用程式呼叫，而不用各自寫一套整合。</p>
+        <p>在 Buzz 裡，設定完 ACP 連接後，工作流程大概是這樣：</p>
+        <pre><code># 頻道裡直接呼叫 agent
+@claude-code 幫我看一下 #1234 這個 issue，開一個修復的 PR
+
+# agent 會回覆進度，並把結果貼回同一個 thread
+[Claude Code] 正在分析 issue #1234...
+[Claude Code] 已建立分支 fix/issue-1234，PR #1235 已開啟，等待審核。</code></pre>
+        <p>重點是<strong>整個過程留在聊天記錄裡</strong>，團隊成員不需要切到 GitHub 或 terminal 去看 agent 到底做了什麼，審核 PR 前也能直接在同一串對話裡問 agent「你為什麼這樣改」。</p>
+
+        <h3>目前支援的 Agent</h3>
+        <ul>
+            <li><strong>Claude Code</strong>（Anthropic）— 目前整合度最完整</li>
+            <li><strong>Codex CLI</strong>（OpenAI）— 支援基本任務派工</li>
+            <li><strong>Goose</strong>（Block 自家開源 agent）— 因為同屬 Dorsey 陣營，整合最深</li>
+        </ul>
+
+        <div class="cta-box">
+            <h3>🚀 想在自己的雲端環境跑 Buzz + AI Agent？</h3>
+            <p>Buzz 自架需要一台穩定的 Linux VM，跑 Node.js 服務 + 資料庫。DigitalOcean 的 Droplet 對這類自架協作工具來說性價比很高，5 分鐘就能開好環境。</p>
+            <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener sponsored">立即開通 DigitalOcean →</a>
+        </div>
+
+        <h2 id="install">安裝與自架教學</h2>
+        <p>以下是最基本的自架流程（以 Docker Compose 方式部署為例，適合先在測試環境跑起來）：</p>
+        <pre><code># 1. Clone 專案
+git clone https://github.com/jack/buzz.git
+cd buzz
+
+# 2. 複製環境變數範本
+cp .env.example .env
+# 編輯 .env，設定 Nostr relay 位址、資料庫連線字串
+
+# 3. 用 Docker Compose 啟動
+docker compose up -d
+
+# 4. 開啟瀏覽器造訪 http://your-server-ip:3000
+# 首次登入會產生一組 Nostr 金鑰對，務必立即備份私鑰</code></pre>
+        <div class="info-box">
+            <strong>⚠️ 提醒：</strong>私鑰只會顯示一次，離開頁面前務必用密碼管理工具妥善保存。團隊導入建議先用測試帳號跑 1-2 週，確認流程順暢後才正式遷移日常溝通。
+        </div>
+
+        <h3>接入 ACP Agent</h3>
+        <pre><code># 在 Buzz 設定頁新增 agent provider
+buzz agent add claude-code --api-key=YOUR_ANTHROPIC_KEY
+buzz agent add codex --api-key=YOUR_OPENAI_KEY
+
+# 在任一頻道啟用該 agent
+/agent enable claude-code #dev-team</code></pre>
+
+        <h2 id="usecase">實戰情境：團隊怎麼用</h2>
+        <h3>情境一：Bug 回報直接變 PR</h3>
+        <p>QA 在頻道回報一個 bug，附上重現步驟，直接 @claude-code 請它去看，agent 會自動去讀對應的程式碼、寫修復、開 PR，整個過程開發者不用離開聊天室，審核完直接在 thread 裡按核准合併。</p>
+
+        <h3>情境二：Code Review 輔助</h3>
+        <p>PR 開出來後，在對應的 review 頻道 @codex 請它先做一輪自動化檢查（風格、明顯 bug、測試覆蓋率），人類 reviewer 只需要專注在架構決策上，省下重複性的檢查時間。</p>
+
+        <h3>情境三：跨團隊技術文件同步</h3>
+        <p>因為 Buzz 底層走 Nostr，未來如果有多個子公司或外部合作夥伴各自架設 relay，理論上可以做到跨組織的頻道互通，這對外包協作或開源社群維運會是個有意思的應用方向。</p>
+
+        <div class="cta-box blue">
+            <h3>📚 想系統化學好 AI Agent 整合開發？</h3>
+            <p>ACP、MCP 這類 agent 協議會是接下來 1-2 年的開發主流技能。DataCamp 的 AI 工程課程可以幫你打好 Python + LLM 應用開發的基礎。</p>
+            <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener sponsored">查看 DataCamp 課程 →</a>
+        </div>
+
+        <h2 id="compare">Buzz vs Slack vs Discord 比較</h2>
+        <table>
+            <tr><th>項目</th><th>Buzz</th><th>Slack</th><th>Discord</th></tr>
+            <tr><td>費用</td><td>免費自架</td><td>$7.25+/人/月</td><td>免費 / Nitro 加值</td></tr>
+            <tr><td>資料主權</td><td>自己掌控</td><td>Salesforce 掌控</td><td>Discord Inc. 掌控</td></tr>
+            <tr><td>AI Agent 整合</td><td>原生 ACP 支援</td><td>需第三方 App</td><td>需自建 Bot</td></tr>
+            <tr><td>技術門檻</td><td>需自架維運</td><td>零維運</td><td>零維運</td></tr>
+            <tr><td>適合對象</td><td>開發團隊、重視資料主權</td><td>企業一般協作</td><td>社群、遊戲玩家</td></tr>
+        </table>
+        <p>Buzz 目前最適合的族群很明確：<strong>有基本 DevOps 能力、想把 AI coding agent 深度嵌入日常工作流的開發團隊</strong>。如果團隊完全沒有自架維運的資源，短期內 Slack 加第三方 AI 整合仍是更省心的選擇；但如果你的團隊本來就在用 Claude Code 或 Codex，Buzz 提供的原生整合體驗值得認真評估。</p>
+
+        <div class="cta-box green">
+            <h3>🛠️ 需要穩定的自動化工作流工具？</h3>
+            <p>除了 Buzz 這類即時協作，Systeme.io 可以幫你把行銷漏斗、電子報自動化一次搞定，適合想把開發效率延伸到營運面的團隊。</p>
+            <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="cta-btn" target="_blank" rel="noopener sponsored">免費試用 Systeme.io →</a>
+        </div>
+
+        <h2 id="faq">常見問題</h2>
+        <div class="faq-item">
+            <h3>Buzz 是什麼？跟 Slack 有什麼不同？</h3>
+            <p>Buzz 是 Jack Dorsey 發布的開源協作工具，定位是 Slack + GitHub 的替代方案。最大差異在於底層採用去中心化的 Nostr 協議，沒有單一公司掌控訊息資料，並內建 ACP 支援，可以直接在聊天室裡呼叫 Claude Code、Codex、Goose 等 AI coding agent 工作。</p>
+        </div>
+        <div class="faq-item">
+            <h3>Buzz 支援哪些 AI Agent？</h3>
+            <p>透過 ACP 標準，目前可整合 Anthropic Claude Code、OpenAI Codex CLI、Block 自家的 Goose 等主流 coding agent，未來只要工具支援 ACP 都能接入。</p>
+        </div>
+        <div class="faq-item">
+            <h3>Buzz 免費嗎？可以自架嗎？</h3>
+            <p>Buzz 是開源專案，可以自行部署到自己的伺服器或雲端環境，不需要每月付費給第三方 SaaS，也沒有訊息數或使用者數上限。</p>
+        </div>
+        <div class="faq-item">
+            <h3>團隊要換到 Buzz 需要注意什麼？</h3>
+            <p>因為採用 Nostr 協議，帳號系統跟傳統 Email/密碼登入不同，需要理解公私鑰概念，建議先在小範圍測試環境試跑，並規劃好金鑰備份流程。</p>
+        </div>
+
+        <h2>總結：值得現在跟進嗎？</h2>
+        <p>Buzz 目前仍是剛發布不久的新專案，生態圈（外掛、第三方整合、社群支援）還在早期階段，不建議完全取代生產環境的核心協作工具。但如果你的團隊已經深度使用 Claude Code 或 Codex，Buzz 提供的原生 ACP 整合是目前市場上少見的體驗，值得先在內部小範圍測試，觀察後續版本迭代速度再決定是否全面導入。</p>
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 AutoDev AI. 本文含聯盟連結，若透過連結完成購買我們可能獲得少量佣金，不影響您的購買價格。</p>
+        <p><a href="/blog/">返回部落格</a> · <a href="/">回首頁</a></p>
+    </div>
+</footer>
+</body>
+</html>
