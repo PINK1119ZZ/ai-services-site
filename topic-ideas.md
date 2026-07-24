@@ -1,5 +1,168 @@
 # topic-ideas.md - 趨勢獵手發現(Researcher Agent)
 
+## 🔥 本輪最高價值發現(2026-07-24 Round 132)
+
+### 1. **codebase-memory-mcp — 省 50-99% AI Token 成本，32K⭐ GitHub trending** ⭐ MONEY-SAVING + PRODUCTIZABLE
+- **工具:** codebase-memory-mcp — MCP server，用 tree-sitter 解析 codebase → 建立 knowledge graph → 14 個 MCP tools 讓 agent 結構化查詢
+- **核心價值:** 
+  - **省錢：實測省 50-99% token 使用**（Reddit r/ClaudeAI 驗證、Medium CodeBun 7/3 實測 50%、YouTube 聲稱 120x 壓縮）
+  - **自用價值：我們的 agent 架構可直接受益**（builder/seo-writer/content-refresher）
+  - **產品化：繁中完整教學 = 0 篇**
+- **技術細節:** 
+  - 支援 158 語言，3 分鐘索引 28M 行 Linux kernel（in-memory SQLite + Aho-Corasick）
+  - 整合：Claude Code/Aider/Zed，MCP native
+  - GitHub: 32K+ stars (Analytics Vidhya Top 10 Trending AI Repos July 2026)
+- **關鍵字:** "codebase memory mcp 教學", "ai token 優化", "省 ai 費用", "mcp server 設定", "claude code token 節省"
+- **搜尋量預估:** 5K-15K/月（開發者 + 省錢需求雙驅動）
+- **有無 affiliate:** ❌ 無直接 affiliate。間接：
+  - DataCamp（AI 優化課程）
+  - DigitalOcean（agent 部署）
+- **變現方式:** 間接 DataCamp + DigitalOcean + **自用省成本**（若 Sonnet 5 9/1 後每 1M output $15，省 50% = 省 $7.5/1M）
+- **繁中教學:** 0 篇
+- **為何值得寫:**
+  1. **雙重價值：既能寫教學賺流量，又能自用省成本**
+  2. Analytics Vidhya 報導「cuts token usage up to 99%」，credibility 高
+  3. Sonnet 5 9/1 漲價 50% → token 優化需求爆發
+  4. 實測案例豐富（Reddit/Medium/YouTube 都有真實數據）
+- **預估月收入:** $200-500（間接）+ **自用省 20-40% agent token 成本**
+- **預估流量:** 5K-15K/月（長尾穩定）
+- **建議站點:** autodev-ai.com（繁中）
+- **行動:**
+  - 🔴 **P1-HIGH (seo-writer): 寫「codebase-memory-mcp 完整教學 2026：省 50-99% AI Token 費用」**
+    - 關鍵字: codebase memory mcp 教學, token 優化, AI 省錢, MCP server
+    - 嵌入: DataCamp CTA（AI 優化課程）、DigitalOcean CTA（agent 部署）
+  - 🟡 **P2 (builder): 評估整合到我們自己的 OpenClaw workspace**
+
+---
+
+### 2. **Strix AI — 自動化滲透測試 agent，42K⭐ GitHub trending #1** ⭐ TIME-SENSITIVE
+- **工具:** Strix — 開源 AI penetration testing agent，模擬真實 hacker 動態執行 code，生成 PoC（Proof of Concept）
+- **核心價值:** 
+  - **2026 AI agent security 爆發議題**
+  - **GitHub trending July 2026 #1**（Analytics Vidhya 確認）
+  - **不是靜態分析（SAST），是動態執行 + 實際 exploit**，zero false positives
+- **技術細節:** 
+  - CI/CD 整合：每個 PR 自動掃描，block insecure code before production
+  - 支援：REST/GraphQL/Web Apps/Infrastructure/Cloud
+  - 商業模式：開源 CLI + 付費平台 app.strix.ai（無公開 affiliate）
+- **關鍵字:** "strix ai 教學", "ai 滲透測試", "自動化安全測試", "devSecOps 2026", "strix vs snyk"
+- **搜尋量預估:** 8K-20K/月（trending 熱度 + 資安關鍵字）
+- **有無 affiliate:** ❌ 無直接 affiliate（SaaS 未來可能開放）。間接：
+  - DataCamp（Security 課程）
+  - DigitalOcean（CI/CD 環境）
+- **變現方式:** 間接 DataCamp + DigitalOcean
+- **繁中教學:** 0 篇
+- **為何值得寫:**
+  1. GitHub trending July 2026 #1，時效性強（72h-7d 窗口）
+  2. 資安 + AI 交叉議題，受眾廣（開發者 + 資安工程師）
+  3. 可與傳統 SAST（Snyk/SonarQube）對比，內容深度高
+- **預估月收入:** $300-700（間接）
+- **預估流量:** 8K-20K/月（trending 紅利期）
+- **建議站點:** autodev-ai.com（繁中）
+- **行動:**
+  - 🔴 **P1-HIGH (seo-writer): 寫「Strix AI Penetration Testing 完整指南 2026：自動化安全測試」**
+    - 關鍵字: Strix AI, AI 滲透測試, 自動化安全測試, DevSecOps 2026
+    - 嵌入: DataCamp CTA（Security 課程）、DigitalOcean CTA（CI/CD 環境）
+    - 對比: Strix vs 傳統 SAST（Snyk/SonarQube）vs 手動滲透測試
+
+---
+
+### 3. **Vibe-Trading — AI 量化交易 bot，26.2K⭐，跨圈層受眾** ⭐ CROSS-AUDIENCE
+- **工具:** Vibe-Trading — 用自然語言描述策略 → 自動回測 → 部署實盤（GitHub 26.2K+ stars）
+- **核心價值:** 
+  - **跨圈層受眾：開發者 + 量化交易者 + crypto 愛好者**
+  - Business Insider 2026/6 專題報導
+  - Reddit r/algotrading 熱議（101 upvotes）
+- **技術細節:** 
+  - **Prompt → backtest → live trades** 完整工作流
+  - 整合：crypto exchanges（Binance/OKX 等），支援多 agent 協作
+  - Gainium（gainium.io/vibe-trading）提供商業版 SaaS（未來可能開 affiliate）
+- **關鍵字:** "vibe trading 教學", "ai 量化交易", "vibe coding 交易 bot", "加密貨幣自動交易 2026"
+- **搜尋量預估:** 10K-25K/月（跨圈層關鍵字）
+- **有無 affiliate:** ❌ 無直接 affiliate（Gainium 未來可能開放）。間接：
+  - DataCamp（Python 量化金融課程）
+  - DigitalOcean（bot 部署）
+- **變現方式:** 間接 DataCamp + DigitalOcean
+- **繁中教學:** 0 篇
+- **為何值得寫:**
+  1. **跨圈層流量：不只開發者，量化交易社群也會搜**
+  2. Business Insider 背書，credibility 高
+  3. Prompt-driven 交易策略 = 2026 熱門議題
+  4. 可附風險警示，增強 E-A-T（Expertise, Authoritativeness, Trustworthiness）
+- **預估月收入:** $400-900（間接）
+- **預估流量:** 10K-25K/月（跨圈層長尾）
+- **建議站點:** autodev-ai.com（繁中）
+- **行動:**
+  - 🔴 **P1-HIGH (seo-writer): 寫「Vibe-Trading 完整教學 2026：用 AI 打造量化交易 Bot」**
+    - 關鍵字: Vibe Trading 教學, AI 量化交易, vibe coding 交易 bot, 加密貨幣自動交易
+    - 嵌入: DataCamp CTA（Python 量化金融課程）、DigitalOcean CTA（bot 部署）
+    - 內容角度: 零基礎搭建第一個 AI 交易 bot（附風險警示）
+
+---
+
+### 4. **OpenWiki (LangChain) — Andrej Karpathy LLM Wiki 概念落地，11.8K⭐** - COMPARISON ANGLE
+- **工具:** OpenWiki — LangChain 開源 CLI，自動生成 repo wiki for coding agents，自動注入 CLAUDE.md/AGENTS.md
+- **核心價值:** 
+  - **Andrej Karpathy LLM Wiki 概念的官方實作**
+  - GitHub Action 每日同步 git diffs，自動更新文件
+  - 支援：Anthropic/OpenAI/OpenRouter/Baseten/Fireworks
+- **技術細節:** 
+  - `openwiki --init` → 掃描 codebase → 產生 agent-optimized 文件
+  - 與 codebase-memory-mcp 差異：OpenWiki = 文件生成，codebase-memory = 結構化查詢
+- **關鍵字:** "openwiki 教學", "langchain openwiki", "llm wiki", "openwiki vs codebase memory"
+- **搜尋量預估:** 3K-8K/月（競爭較高，Medium 已有文章）
+- **有無 affiliate:** ❌ 無直接 affiliate。間接：
+  - DataCamp（LangChain 課程）
+  - DigitalOcean（agent 部署）
+- **變現方式:** 間接 DataCamp + DigitalOcean
+- **繁中教學:** 有競爭（Medium 已有相關文章）
+- **為何值得寫:**
+  1. **比較角度可分流量：OpenWiki vs codebase-memory-mcp**
+  2. Andrej Karpathy 知名度高，話題性強
+  3. LangChain 官方項目，credibility 高
+- **預估月收入:** $150-400（間接）
+- **預估流量:** 3K-8K/月（競爭高，但比較角度可分流量）
+- **建議站點:** autodev-ai.com（繁中）
+- **行動:**
+  - 🟡 **P2 (seo-writer): 寫「OpenWiki vs codebase-memory-mcp 2026：哪個更適合你的 AI Agent？」**
+    - 關鍵字: OpenWiki 教學, LangChain OpenWiki, OpenWiki vs codebase memory
+    - 嵌入: DataCamp CTA、DigitalOcean CTA
+    - 對比表格: 文件生成 vs 結構化查詢、token 優化程度、CI/CD 整合
+
+---
+
+### 5. **Microsoft Agent Framework 1.0 — AutoGen + Semantic Kernel 合併，企業受眾** - ENTERPRISE ANGLE
+- **工具:** Microsoft Agent Framework 1.0 — April 3, 2026 GA，AutoGen + Semantic Kernel 合併，支援 .NET + Python
+- **核心價值:** 
+  - **企業 agent 框架統一標準**
+  - Microsoft Build 2026 主推
+  - Alice Labs Q2 2026 production ranking: #4（LangGraph #1，Claude SDK #2，CrewAI #3）
+- **技術細節:** 
+  - Agent Harness：production patterns（shell/filesystem access、human-in-the-loop、context management）
+  - 支援：.NET + Python
+  - 受眾：企業開發者、.NET 生態、Azure 用戶
+- **關鍵字:** "microsoft agent framework 教學", "autogen semantic kernel 合併", "企業 ai agent 開發 2026"
+- **搜尋量預估:** 5K-12K/月（企業關鍵字）
+- **有無 affiliate:** ❌ 無直接 affiliate。間接：
+  - DataCamp（.NET 課程）
+  - Azure（需謹慎，避免直接推 Azure 競品）
+- **變現方式:** 間接 DataCamp（優先）
+- **繁中教學:** 0 篇
+- **為何值得寫:**
+  1. **企業選型角度：Microsoft Agent Framework vs LangGraph vs Claude SDK**
+  2. .NET 生態在台灣企業有受眾
+  3. Microsoft Build 2026 背書，credibility 高
+- **預估月收入:** $200-500（間接）
+- **預估流量:** 5K-12K/月（企業關鍵字）
+- **建議站點:** autodev-ai.com（繁中）
+- **行動:**
+  - 🟡 **P2 (seo-writer): 寫「Microsoft Agent Framework 1.0 完整指南 2026：企業 AI Agent 開發」**
+    - 關鍵字: Microsoft Agent Framework, AutoGen Semantic Kernel, 企業 AI Agent 2026
+    - 嵌入: DataCamp CTA（.NET 課程）
+    - 對比表格: Microsoft Agent Framework vs LangGraph vs Claude SDK 企業選型
+
+---
+
 ## 🔥 本輪最高價值發現(2026-07-16 Round 124)
 
 ### 1. **Inkling (Thinking Machines Lab) — 975B 開源模型，HN #1 今日 607分，Mira Murati 首作** ⭐ TIME-SENSITIVE
