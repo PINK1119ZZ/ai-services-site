@@ -1,5 +1,126 @@
 # topic-ideas.md - 趨勢獵手發現(Researcher Agent)
 
+## 🔥 本輪最高價值發現(2026-07-25 Round 133)
+
+### 1. **Kimi K3 Open Weights — 2.8T 參數，48 小時內發布，繁中教學黃金窗口** ⭐ TIME-CRITICAL 72h
+
+- **工具:** Kimi K3（Moonshot AI）— 2.8 兆參數 MoE，1M context，native 多模態，**July 27 weights 發布**（距今 ~48h）
+- **數據:**
+  - Arena.ai Frontend Code Arena leaderboard **#1**（盲測）
+  - Artificial Analysis Intelligence Index：近 frontier 水準
+  - ⚠️ 幻覺率：51%（前代 39%），Artificial Analysis 實測，官方未揭露
+  - API 定價：已上線（platform.kimi.ai），weights 7/27 公開
+- **繁中機會:** 繁中深度教學空白（英文指南已多，但繁中「自架部署 + 成本試算」型內容 0 篇）
+- **CTA:**
+  - DigitalOcean（GPU 雲部署 Kimi K3 weights，每月 recurring）
+  - DataCamp（AI/ML 模型選型課程）
+- **affiliate:** 間接（DigitalOcean + DataCamp）；Kimi 本身無 affiliate
+- **預估月收入:** $200-500/月（技術受眾 + 7/27 weights 流量高峰）
+- **建議站點:** autodev-ai.com
+- **優先級:** P1-HIGH，72h 視窗
+- **關鍵字:** Kimi K3 教學、Kimi K3 部署、Moonshot AI 2026、最大開源模型、2.8T 模型
+
+---
+
+### 2. **OfficeCLI — AI Agent 控制 Office 文件，21.4K⭐，繁中 0 教學** ⭐ PRODUCTIZABLE
+
+- **工具:** OfficeCLI（iOfficeAI/OfficeCLI）— 開源 CLI，讓任何 AI agent（Claude Code、Cursor、Codex）讀寫 Word/Excel/PPT，**不需安裝 Microsoft Office**
+- **數據:**
+  - GitHub: 21.4K⭐（star-history.com 確認），Global Rank #2004（7/24 數據）
+  - GIGAZINE 報導（英日語媒體），Gigazine = 繁中讀者基礎受眾
+  - 含 HTML rendering engine（AI 可「看到」生成結果）
+  - 單一 binary，一行命令整合任何 agent
+- **繁中機會:** 繁中教學 0 篇（Gigazine 有日文版，但繁中無對應教學）
+- **CTA:**
+  - DataCamp（Office 自動化/Python 課程）
+  - DigitalOcean（agent 伺服器部署）
+- **affiliate:** 間接（DataCamp + DigitalOcean）；OfficeCLI 本身開源免費
+- **預估月收入:** $150-350/月（長尾「AI 自動化 Office」關鍵字穩定流量）
+- **建議站點:** autodev-ai.com
+- **優先級:** P2
+- **關鍵字:** OfficeCLI 教學、AI 操作 Excel、AI 自動化 Office 2026、Claude Code Word
+
+---
+
+### 3. **Palmier Pro — AI macOS 視頻編輯器，HN 181pts，有付費 SaaS** ⭐ AFFILIATE POTENTIAL
+
+- **工具:** Palmier Pro（palmier-io/palmier-pro）— 開源 macOS 視頻編輯器，MCP 整合（Claude Code/Codex/Cursor），AI 生成內嵌於 timeline
+- **數據:**
+  - HN ShowHN：181 點（2026-07-23），Product Hunt July 2026 #6 名
+  - GitHub: 開源主體，付費 Pro $29/mo（launch price，原 $49）、Max $69/mo（原 $99）
+  - YC 公司（Marcos + Harrison 兩人團隊）
+  - 「5,000 credits ≈ 333 張圖 或 3-7 分鐘影片」
+- **繁中機會:** AI 視頻編輯 + Claude Code MCP 整合教學，台灣創作者受眾，繁中 0 篇
+- **Affiliate 評估:**
+  - 官網目前無明確 affiliate 頁面（YC 早期，可能未推出）
+  - **建議行動：** Email 詢問 affiliate 合作（partners@palmier.io 或透過 GitHub）
+  - 暫時 CTA：DigitalOcean（「用 cloud 跑 AI 生成」）+ DataCamp
+- **預估月收入:** $100-300/月（暫用 DigitalOcean CTA）；若有 affiliate → $300-700/月
+- **建議站點:** autodev-ai.com（教學角度）
+- **優先級:** P2，先寫文章，同時接觸 affiliate
+- **關鍵字:** Palmier Pro 教學、AI 視頻編輯 macOS 2026、Claude Code 視頻編輯
+
+---
+
+### 4. **Echo（HN 447pts）— 開源 LLM 路由，Fable-level 品質 1/3 成本** ⭐ DEVELOPER BUZZ
+
+- **工具:** Echo（Show HN）— 不選單一模型，而是「一池開源模型」動態路由；每次請求選最適模型
+- **數據:**
+  - HN：447 點（2026-07-23，top story），AI Weekly 報導
+  - 聲稱 Fable-level（Claude Fable 5）品質 at 1/3 成本
+  - API: OpenAI-compatible
+  - 開源，尚無商業 SaaS（早期）
+- **繁中機會:** AI 降成本 + 開源路由，台灣開發者關注點，但商業化未成熟
+- **CTA:** DataCamp（AI 課程）+ DigitalOcean（self-host）
+- **affiliate:** 間接，無直接 affiliate
+- **預估月收入:** $100-200/月（技術受眾，DataCamp CTA）
+- **建議站點:** autodev-ai.com
+- **優先級:** P3（等商業化成熟再評估）
+- **關鍵字:** Echo LLM 路由、AI 降成本 2026、開源模型池路由
+
+---
+
+### 5. **OneCLI — AI Agent 憑證閘道，YC 公司，2.5K⭐，安全市場** ⭐ SECURITY NICHE
+
+- **工具:** OneCLI（YC 公司，onecli/onecli）— AI agent 憑證隔離閘道，agent 看到假 key，真 key 在網路層注入；50+ 整合（Gmail/GitHub/Jira/Slack）
+- **數據:**
+  - GitHub: 2.5K⭐，300K+ downloads
+  - YC 公司（前 Argon Security 工程師、Unit 8200）
+  - HN ShowHN：101 點（2026-07-23）
+  - NanoClaw v2 已採用為預設 credential layer
+- **繁中機會:** DevSecOps + AI agent 安全，企業受眾，繁中教學 0 篇
+- **Affiliate 評估:** YC 早期，無公開 affiliate；但安全工具受眾願意付費
+- **CTA:** DigitalOcean（self-host OneCLI）+ DataCamp（Security 課程）
+- **預估月收入:** $100-250/月
+- **建議站點:** autodev-ai.com
+- **優先級:** P3（market 較小，等成長）
+- **關鍵字:** OneCLI 教學、AI agent 安全、API key 保護 agent 2026
+
+---
+
+### 📊 本輪 topic-ideas 表格
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|---------|---------|-----------|---------|
+| 2026-07-25 | Kimi K3 教學（weights 7/27） | Kimi K3 教學、Moonshot AI 開源 | 8K-20K/mo | DigitalOcean + DataCamp（間接） | $200-500 | autodev-ai.com |
+| 2026-07-25 | OfficeCLI 完整教學 | OfficeCLI、AI 操作 Office | 3K-8K/mo | DataCamp + DigitalOcean（間接） | $150-350 | autodev-ai.com |
+| 2026-07-25 | Palmier Pro 教學 | Palmier Pro、AI 視頻編輯 macOS | 2K-6K/mo | DigitalOcean + 未來 affiliate | $100-300→$700 | autodev-ai.com |
+| 2026-07-25 | Echo LLM 路由 | Echo LLM、AI 降成本 | 1K-3K/mo | DataCamp（間接） | $100-200 | autodev-ai.com |
+| 2026-07-25 | OneCLI AI 安全 | OneCLI、AI agent 安全 | 1K-3K/mo | DigitalOcean（間接） | $100-250 | autodev-ai.com |
+
+**本輪預估新增月收入潛力：$650-2,300/月**（若 Kimi K3 + OfficeCLI 均執行）
+
+---
+
+### 💡 本輪市場洞察
+
+1. **「開源 frontier」趨勢加速**：Kimi K3 是首個真正達 frontier 水準的開源模型，標誌著「花錢用 API」vs「自架開源」的商業決策點。這對 DigitalOcean GPU 教學有直接拉力。
+2. **AI Agent DevSec 崛起**：OneCLI + Strix AI（Round 132）均指向 2026 AI agent 安全成為獨立市場。
+3. **macOS 創作者工具有 YC 背書**：Palmier Pro（YC）+ Palmier（YC 另一家）在台灣創作者中有轉化空間，但 affiliate 尚未就位。
+4. **Microsoft 7 個 in-house MAI 模型**（Build 2026，89% 更便宜）：對「企業選型」教學有長尾機會，但非急迫。可以做 MAI-Thinking-1 vs Claude Sonnet vs GPT-5 比較文（P3）。
+
+---
+
 ## 🔥 本輪最高價值發現(2026-07-24 Round 132)
 
 ### 1. **codebase-memory-mcp — 省 50-99% AI Token 成本，32K⭐ GitHub trending** ⭐ MONEY-SAVING + PRODUCTIZABLE
