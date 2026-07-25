@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude / GPT / Gemini Token 成本計算器 2026｜AI 月費試算</title>
-<meta name="description" content="免費 AI Token 成本計算器 2026，即時對比 Claude Opus / Sonnet / GPT-5 / Gemini 的輸入輸出成本。輸入每月對話量秒算美金月費，比官方 Pricing 頁快 10 倍。">
+<title>AI Token 成本計算器 2026｜GPT-5.6 Sol/Luna vs Claude Sonnet 5 vs Kimi K3 月費試算</title>
+<meta name="description" content="免費 AI Token 成本計算器 2026（7月最新）。對比 GPT-5.6 Sol/Terra/Luna、Claude Sonnet 5（9/1 漲價預警）、Gemini 3.6 Flash、Kimi K3 API 的實際月費。輸入對話量一鍵試算。">
 <link rel="canonical" href="https://autodev-ai.com/tools/token-cost-calculator.html">
 <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/tools/token-cost-calculator.html">
 <link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/tools/token-cost-calculator.html">
-<meta property="og:title" content="Claude / GPT / Gemini Token 成本計算器 2026">
-<meta property="og:description" content="一鍵估算每月 AI API 費用。對比 Claude、GPT、Gemini 的 input/output token 實際月成本。">
+<meta property="og:title" content="AI Token 成本計算器 2026｜GPT-5.6 Sol/Luna vs Claude Sonnet 5 vs Kimi K3">
+<meta property="og:description" content="一鍵估算每月 AI API 費用。對比 GPT-5.6 Sol/Terra/Luna、Claude Sonnet 5、Gemini 3.6 Flash、Kimi K3 的 input/output token 實際月成本。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://autodev-ai.com/tools/token-cost-calculator.html">
 <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
@@ -117,13 +117,86 @@
 <div class="model-grid" id="modelGrid"></div>
 
 <div class="info-strip">
- <strong>省錢秘訣：</strong>Claude Sonnet 4.6 / GPT-5.4 mini / Gemini 2.5 Flash 的性價比通常高於旗艦模型 5-10 倍。中小流量建議先用 Sonnet / Mini / Flash，遇到複雜任務再切 Opus / GPT-5 / Gemini Pro。自建 Bot 在 <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener">DigitalOcean</a>$18/月 VPS 跑綽綽有餘。
+ <strong>省錢秘訣：</strong>GPT-5.6 Luna / Gemini 3.5 Flash-Lite / Kimi K3 的性價比通常高於旗艦模型 10-20 倍。中小流量建議先用 Luna / Flash-Lite / Kimi K3 API，遇到複雜推理再切 Sol / Fable 5。自建 Bot 在 <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener">DigitalOcean</a> GPU Droplet 跑 Kimi K3 open weights 每月僅需 $20-48。想系統學 AI API 整合？<a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener">DataCamp AI 課程</a> 有完整 LLM API 實戰路徑。
 </div>
 
 <div class="disclaimer">
-* 價格基於 2026-04 官方公告，未含 prompt caching / batch discount。實際以各家 API pricing 為準。
+* 價格基於 2026-07 官方公告（Claude Sonnet 5 將於 9/1 漲價至 $3/$15），未含 prompt caching / batch discount。實際以各家 API pricing 為準。
 * 不想自己管 Token 成本？<a href="/bot-cloud.html" style="color:var(--accent);">AutoDev AI 雲託管</a>月費已包含 AI 額度。
 </div>
+
+<script>
+(function(){
+  var MODELS = [
+    // GPT-5.6 tier
+    {name:"GPT-5.6 Sol",provider:"OpenAI",in:5,out:30,note:"數學推理 + 30年凸優化突破",badge:"旗艦推理"},
+    {name:"GPT-5.6 Terra",provider:"OpenAI",in:2.5,out:15,note:"通用高性能，均衡選擇"},
+    {name:"GPT-5.6 Luna",provider:"OpenAI",in:1,out:6,note:"高性價比日常任務"},
+    // Claude
+    {name:"Claude Fable 5",provider:"Anthropic",in:15,out:75,note:"頂級 enterprise / 長文脈",badge:"最強"},
+    {name:"Claude Sonnet 5",provider:"Anthropic",in:2,out:10,note:"現行最佳均衡（9/1 起漲至 $3/$15）"},
+    {name:"Claude Sonnet 4.6",provider:"Anthropic",in:3,out:15,note:"穩定版，廣泛支援"},
+    // Gemini
+    {name:"Gemini 3.6 Flash",provider:"Google",in:1.5,out:7.5,note:"65% token 成本削減，Google Search 生態"},
+    {name:"Gemini 3.5 Flash-Lite",provider:"Google",in:0.3,out:2.5,note:"超低成本，邊緣 agent 首選",badge:"最便宜"},
+    // Kimi
+    {name:"Kimi K3 API",provider:"Moonshot AI",in:2,out:8,note:"2.8T MoE，1M context，Arena FE #1（open weights 7/27）"},
+    // Grok
+    {name:"Grok 4.5",provider:"xAI / SpaceXAI",in:5,out:15,note:"Grok Build default，Cursor 全方案整合"},
+  ];
+
+  function calcCost(m,convs,inTok,outTok){
+    var inCost = (convs * inTok / 1e6) * m.in;
+    var outCost = (convs * outTok / 1e6) * m.out;
+    return inCost + outCost;
+  }
+
+  function render(){
+    var convs = parseFloat(document.getElementById('convs').value)||0;
+    var inTok = parseFloat(document.getElementById('inTok').value)||0;
+    var outTok = parseFloat(document.getElementById('outTok').value)||0;
+    var fx = parseFloat(document.getElementById('fx').value)||32;
+    var grid = document.getElementById('modelGrid');
+
+    var costs = MODELS.map(function(m){return {m:m,cost:calcCost(m,convs,inTok,outTok)};});
+    costs.sort(function(a,b){return a.cost-b.cost;});
+    var minCost = costs[0].cost;
+
+    grid.innerHTML = costs.map(function(c){
+      var cheapest = (c.cost === minCost && c.cost > 0) ? ' cheapest' : '';
+      var ntd = (c.cost * fx).toFixed(0);
+      var badge = c.m.badge ? '<span style="display:inline-block;padding:.1rem .5rem;border-radius:50px;background:rgba(196,165,123,.25);color:var(--primary-light);font-size:.7rem;font-weight:700;margin-left:.5rem;">'+c.m.badge+'</span>' : '';
+      return '<div class="model-card'+cheapest+'">'
+        +'<div class="model-name">'+c.m.name+badge+'<span class="provider">'+c.m.provider+'</span></div>'
+        +'<div class="model-pricing">Input <span class="rate">$'+c.m.in+'</span> / Output <span class="rate">$'+c.m.out+'</span> per 1M tokens<br><span style="font-size:.75rem;">'+c.m.note+'</span></div>'
+        +'<div class="model-cost">'
+          +'<div class="m">$'+c.cost.toFixed(2)+'</div>'
+          +'<div class="per">USD / 月</div>'
+          +'<div class="ntd">≈ NT$'+ntd+'</div>'
+        +'</div>'
+        +'</div>';
+    }).join('');
+  }
+
+  function init(){
+    document.querySelectorAll('input[type=number]').forEach(function(el){
+      el.addEventListener('input',render);
+    });
+    document.querySelectorAll('.preset-btn').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        document.getElementById('convs').value = btn.dataset.c;
+        document.getElementById('inTok').value = btn.dataset.i;
+        document.getElementById('outTok').value = btn.dataset.o;
+        render();
+      });
+    });
+    render();
+  }
+
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
+  else init();
+})();
+</script>
 
 </div>
 
