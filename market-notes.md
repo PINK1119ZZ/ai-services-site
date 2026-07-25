@@ -4,6 +4,35 @@
 
 ---
 
+## 2026-07-25（市場研究 Round 134 — 23:00 UTC cron）
+
+### 🔥 本輪重點：AI 視頻 Affiliate 集中爆發 + B2B SaaS 新管道
+
+#### 新 Affiliate 機會（全部尚未研究過）
+
+| 工具 | 佣金 | Cookie | 定價 | 申請連結 | 月潛力 |
+|------|------|--------|------|---------|--------|
+| Colossyan | 25-50% tiered / 12m | 90 天 | $27-88/月 | colossyan.com/affiliate-program | $400-1,200 |
+| Context.dev (YC S26) | 25%/12m | 未明確 | API 訂閱 | context.dev/blog/launching-context-dev-affiliate-program | $200-600 |
+| Taplio (LinkedIn) | 30%/12m | 30 天 | 訂閱制 | taplio.com/affiliates（即時批准）| $200-600 |
+| BoldDesk | 30%/12m + 週付 | 90 天 | B2B SaaS | bolddesk.com/affiliate-program | $300-900 |
+| Pictory | 最高 50% | 30 天 | — | PartnerStack 搜尋 Pictory | $300-800 |
+| InVideo | 50%（月）/25%（年）| 120 天 | — | invideo.io/affiliate | $300-700 |
+
+#### 市場洞察
+
+- AI 視頻 affiliate 佣金均超 40%：InVideo/Pictory/Colossyan 三工具都在 50% 上下，且 cookie 從 30-120 天，遠高於其他類別
+- B2B SaaS（BoldDesk/Taplio/Context.dev）是下一個高價值管道，繁中競爭幾乎為零
+- Taplio 申請即批，是本輪最快能啟動的 affiliate
+- Context.dev 受眾（AI agent builder）與 autodev-ai 完美吻合
+
+#### GitHub 新趨勢
+
+- Bumblebee（Perplexity AI）：read-only 供應鏈安全掃描，檢查 MCP servers/dependencies，繁中 0 教學
+- awesome-claude-skills：1,000+ production-ready Claude skills（可更新既有 skills 文章）
+
+---
+
 ## 2026-04-26（市場研究 Round 28 — 週日 07:00 UTC cron）
 
 ### 一、🔥 本輪最高價值新發現
