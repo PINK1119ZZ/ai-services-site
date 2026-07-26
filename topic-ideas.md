@@ -1891,3 +1891,105 @@ Inkling 的發布確認了 2026 下半年開源大模型競爭進入新階段：
 
 **本輪預估新增月收入潛力：$800-2,100/月**（Browse AI LIFETIME + ego-lite + Kimi K3 間接流量合計）
 
+
+---
+
+## Round 135 — 2026-07-26 00:30 UTC
+
+**本輪聚焦：Kimi K3 weights 倒數 <24h + HN 新趨勢 + Qwen 3.8 預熱 + AI Agent 安全工具**
+
+### 🚨 P0-URGENT：Kimi K3 weights 7/27 00:00 UTC（<24小時！）
+
+| 日期 | 2026-07-26 | 工具 | Kimi K3（Moonshot AI）|
+|------|-----------|------|----------------------|
+| 關鍵字 | kimi k3 評測 2026 / kimi k3 weights / kimi k3 open source | 搜尋量 | 20K-50K/月（預估爆發）|
+| 變現方式 | DataCamp + DigitalOcean 間接 | 預估月收入 | $300-700/月 |
+| 建議站點 | autodev-ai（繁中首發）| 截止 | **今天草稿，7/27 00:00 UTC 立即發布** |
+
+**本輪新增情報（補充 Round 134）：**
+- 重量：~594GB BF16（第三方確認，Moonshot 未官方公告）
+- Moonshot 自認 3 大弱點：thinking-history sensitivity（提示歷史敏感）、excessive proactiveness（過度主動回應）、UX gap（落後 Claude Fable 5 / GPT-5.6 Sol）
+- 獨立測試 hallucination rate：51%（前代 39% → 上升！benchmark 強但幻覺更多）
+- Nathan Lambert（Interconnects）：開放模型與前沿差距從 6-9 個月縮短至 3-5 個月
+- Hugging Face 目前無官方 K3 repo（截至 7/25），所有「立即下載」貼文均為 K2.6 重貼
+- License 尚未公告（weights 未出前）
+- Moonshot $30B 港股 IPO 計畫（Bloomberg 報導）
+- **文章角度：** benchmark #1 代碼 + hallucination 51% 警告 + weights 594GB 硬體需求 + 三大已知限制
+
+---
+
+### ⭐ P1-HIGH：OneCLI — AI Agent 憑證安全閘道（YC、HN 101pts、300K 下載）
+
+| 項目 | 數據 |
+|------|------|
+| 工具 | OneCLI（onecli.sh）|
+| 分類 | AI agent credential gateway（開源，Rust 驅動）|
+| YC | YC 背書，ex-Argon Security / Aqua Security / Unit 8200 創辦人 |
+| GitHub Stars | 2,500+（HN Show HN 今日 101pts）|
+| 下載量 | 300,000+（NanoClaw 等工具已採用為 default credential layer）|
+| 核心功能 | AI agent 永不看到真實 API key；MCP tool calls、CLI、curl、agent code 全路徑 intercepted |
+| 定價 | **Free forever（≤2 agents）**；企業方案（更多 agent + 稽核）|
+| 整合 | Gmail, GitHub, Jira, Slack + 50 個 app；Claude Code / Cursor / Codex / Grok Build |
+| 繁中現況 | **0 篇教學**（確認）|
+| 關鍵字 | OneCLI 教學 / AI agent 安全 / api key 保護 AI / credential gateway claude code |
+| 搜尋量 | 中低（但 AI 開發者受眾高 LTV，autodev-ai 完美吻合）|
+| Affiliate | 無直接 affiliate，但嵌入 DataCamp（AI security 課程）+ DigitalOcean（self-host 教學）|
+| 預估月收入 | $200-500/月（間接 + 工具頁 / 比較頁潛力）|
+| 建議站點 | autodev-ai（繁中）|
+| 優先級 | **P1-HIGH（autodev-ai 受眾完美吻合，AI agent 安全是 2026 H2 主題）** |
+
+---
+
+### ⭐ P1-HIGH：Qwen 3.8-Max — 2.4T 參數，open weights 即將（WAIC 2026）
+
+| 項目 | 數據 |
+|------|------|
+| 工具 | Qwen 3.8-Max（Alibaba）|
+| 宣布 | 2026-07-19 WAIC 上海，現有 Qwen3.8-Max-Preview API |
+| 規模 | 2.4T 參數（全球第二大，次於 Kimi K3 2.8T）|
+| 廠商宣稱 | "second only to Claude Fable 5"（無獨立 benchmark 驗證）|
+| Open Weights | "going open-weight soon"（無日期，無 license 公告）|
+| API | qwencloud.com/pricing（Max-Preview 已可用）|
+| 繁中現況 | 低競爭（多為英文報導，繁中空白）|
+| 文章角度 | "Qwen 3.8 完整評測：2.4T 開源參數能打敗 Kimi K3 嗎？" |
+| Affiliate | 無直接，DataCamp + DigitalOcean 間接 |
+| 預估月收入 | $200-500/月（weights 一出搜尋量爆發）|
+| 建議站點 | autodev-ai（繁中）|
+| 優先級 | **P1-HIGH（watchlist：weights 一出立即執行，與 Kimi K3 比較文搭配）** |
+
+---
+
+### ⭐ P2：claude-thermos — 保持 Claude session 熱機（HN 104pts，open source）
+
+| 項目 | 數據 |
+|------|------|
+| 工具 | claude-thermos（github.com/izeigerman/claude-thermos）|
+| HN | 104pts，83 則留言（今日），Show HN |
+| 功能 | 自動保持 Claude Code session 暖機狀態，避免 idle timeout |
+| 受眾 | Claude Code 進階用戶 |
+| 繁中空白 | 確認 |
+| Affiliate | 無直接；CTA 嵌入 Claude Pro subscription 提升（間接）|
+| 預估月收入 | $100-300/月（流量附加，搭配現有 Claude Code 文章 internal link）|
+| 建議 | 加入現有 claude-code 系列文章附錄段落，無需單獨文章 |
+| 優先級 | P2 |
+
+---
+
+### 📊 Round 135 機會彙整
+
+| 工具 | 類型 | 優先級 | 預估月收入 | 截止 |
+|------|------|--------|-----------|------|
+| Kimi K3 完整評測 | P0-URGENT 內容 | P0-URGENT | $300-700 | 7/27 00:00 UTC |
+| OneCLI 教學 | P1-HIGH 內容 | P1-HIGH | $200-500 | 無時效，但 HN 熱度窗口 48h |
+| Qwen 3.8-Max 評測 | P1-HIGH watchlist | P1-HIGH | $200-500 | weights 發布時 |
+| claude-thermos | P2 附錄嵌入 | P2 | $100-300 | 無急迫 |
+
+**本輪預估新增月收入潛力：$800-2,000/月**
+
+---
+
+### 💡 Round 135 市場洞察
+
+**「開放重量軍備競賽」進入衝刺階段：** Kimi K3（2.8T，明天 weights），Qwen 3.8（2.4T，即將），都在同一週宣布。Nathan Lambert 稱開放模型與前沿差距已從 6-9 月縮短至 3-5 月——這對台灣 AI 開發者內容市場是巨大的機會，因為本地部署 + 硬體需求 + 中文性能比較，全是繁中受眾的剛需。
+
+**AI Agent 安全工具爆發：** OneCLI（HN 今日）+ Bumblebee（上輪）+ Kastra（Product Hunt 上週）——三工具在同一週獲得社群關注。AI agent 安全是 2026 H2 開發者社群最熱門話題之一。autodev-ai 的受眾完美吻合，這是差異化內容機會。
