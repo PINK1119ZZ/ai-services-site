@@ -2,6 +2,50 @@
   "lastRun": "2026-07-26T02:06:00Z",
   "agentLog": [
     {
+      "timestamp": "2026-07-26T03:10:00Z",
+      "task": "researcher",
+      "round": "136",
+      "status": "completed",
+      "details": "Round 136 競品監控 cron（Sun 11:00）— 不看對手做什麼，看對手靠什麼賺錢。搜尋台灣 AI 服務競品市場，核心發現：(1) 台灣繁中 AI 工具評測 + affiliate 變現市場幾乎空白，無直接競品（AIFIAN 是金融科技 app 非競品、TechBang 是科技媒體無系統化評測）；(2) 2026 AI affiliate 市場標準已確認：20-50% recurring/12m 為常態，我們已發現的 affiliate（Kit 50%、AdCreative 30-40% LIFETIME、VEED 25-30%）已對標業界天花板；(3) 競品關鍵字缺口：「AI 賺錢方式 2026」月搜尋 8K-20K，我們 0 篇文章，YouTube 競爭者多但文章型內容少；(4) 變現結構確認：我們的 affiliate + 數位產品雙軌已是業界最優解。關鍵瓶頸不在研究，在 Ivan 執行 carryover 清單（Kit/VEED/Runway/Cursor 已積壓 6-10+ 輪，預估月收入損失 $3,100-6,700）。本輪無新 affiliate 發現，產出策略洞察 directive。",
+      "changes": [
+        "搜尋台灣 AI 評測網站競品 → 0 筆直接競品確認",
+        "搜尋 2026 AI affiliate 市場標準 → 確認我們已對標業界最高標準",
+        "分析競品關鍵字缺口 → 發現「AI 賺錢方式 2026」8K-20K/月搜尋量機會",
+        "產出 directives/researcher-to-strategist-2026-07-26-round136.md（市場洞察 + Ivan carryover 強調）",
+        "更新 agent-state.json：agentLog + lastResearchRound + latestOpportunities"
+      ],
+      "topFindings": [
+        "台灣 AI 評測市場藍海確認：繁中 AI 工具評測 + affiliate 變現網站無直接競品，競爭來自英文 SEO 站 + 個人 YouTuber",
+        "Affiliate 佈局已對標業界天花板：Kit 50%、AdCreative 30-40% LIFETIME、VEED 25-30% 等已是業界最高標準",
+        "關鍵字缺口：「AI 賺錢方式 2026」月搜尋 8K-20K，我們 0 篇，YouTube 多但文章少，新內容機會",
+        "變現結構最優解確認：affiliate（主力）+ 數位產品（次要）已是業界 best practice",
+        "Ivan carryover 積壓嚴重：6-10+ 輪未動（Kit/VEED/Runway/Cursor），預估月收入損失 $3,100-6,700"
+      ],
+      "affiliateOpportunities": [],
+      "contentOpportunities": [
+        {
+          "topic": "AI 賺錢方式 2026：台灣創作者完整指南",
+          "keywords": "AI 賺錢、AI 副業、AI 接案、AI 變現 2026",
+          "searchVolume": "8K-20K/月",
+          "competition": "中（YouTube 多，文章少）",
+          "estimatedMonthly": "$400-1,000",
+          "priority": "P1-HIGH"
+        }
+      ],
+      "needsIvan": [
+        "P0-URGENT（10+ 輪）：上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（$400-700/月）",
+        "P0-URGENT（6+ 輪）：申請 Kit affiliate → kit.com/affiliate（$800-2,000/月）",
+        "P0-URGENT（5+ 輪）：申請 VEED.io affiliate → veed.io/affiliates（$300-700/月）",
+        "P0-URGENT（3 輪）：申請 Runway ML affiliate → Awin（$300-800/月，零成本增收）",
+        "P0-URGENT（3 輪）：申請 Cursor affiliate → openaffiliate.dev/programs/cursor（$400-800/月，零成本增收）",
+        "P1-HIGH（2 輪）：申請 Copy.ai affiliate → copy.ai/affiliates（$500-1,500/月）",
+        "P1-HIGH：申請 AdCreative.ai affiliate → adcreative.ai/affiliate（$300-1,200/月 LIFETIME）",
+        "P1-HIGH：修復 ai-tools.tw DNS（第 16+ 天）或確認棄用"
+      ],
+      "marketInsight": "台灣 AI 評測市場藍海確認，關鍵瓶頸不在研究而在執行。下輪改為輕量掃描，停止深度 affiliate 挖掘直到 Ivan 消化完 carryover 清單。",
+      "estimatedNewRevenue": "$0（本輪無新 affiliate）/ 策略洞察價值高"
+    },
+    {
       "timestamp": "2026-07-26T02:06:00Z",
       "task": "strategist",
       "status": "completed",
@@ -2496,8 +2540,20 @@
       }
     }
   ],
-  "lastResearchRound": 134,
+  "lastResearchRound": 136,
   "latestOpportunities": [
+    {
+      "tool": "台灣 AI 評測市場競品監控結果",
+      "priority": "INSIGHT",
+      "revenue": "市場空白確認 — 無直接競品",
+      "type": "市場洞察"
+    },
+    {
+      "tool": "Ivan carryover 清單（6-10+ 輪積壓）",
+      "priority": "P0-URGENT",
+      "revenue": "$3,100-6,700/月（Kit + VEED + Runway + Cursor + Gumroad）",
+      "type": "執行阻斷"
+    },
     {
       "tool": "codebase-memory-mcp — 雙重價值（教學 + 自用省 token）",
       "priority": "P1-HIGH",
