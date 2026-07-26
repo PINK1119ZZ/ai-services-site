@@ -1963,6 +1963,25 @@
         "Sampled 10 autodev-ai sitemap URLs and all returned HTTP 200",
         "Updated agent-state.json and memory/2026-07-26.md"
       ]
+    },
+    {
+      "timestamp": "2026-07-26T13:00:00Z",
+      "task": "fb-weekly-review",
+      "status": "completed-with-fallback",
+      "details": "Facebook 粉專週報：拉取 2026-07-20 ~ 2026-07-26 共 13 則貼文。Graph API 在現有 page token/v23.0 下仍拒絕 post_impressions/post_engaged_users/post_clicks（#100），且單篇 /insights 路徑也遇到 deprecated 狀況，因此持續用公開互動訊號（comments/likes/shares）做代理分析。結果更明確：12:00 UTC 原生摘要主貼穩定有留言；04:00 UTC 外鏈直貼 6/6 零互動。已更新 fbStrategy.performance 與 autoDevAIStrategy.postRules。",
+      "changes": [
+        "抓取本週 13 則粉專貼文（created_time, message, permalink, likes/comments/shares）",
+        "再次驗證 Graph API insights metrics 仍不可用並記錄 fallback / deprecated 問題",
+        "更新 fbStrategy.performance.winPatterns",
+        "更新 fbStrategy.performance.failPatterns",
+        "更新 fbStrategy.autoDevAIStrategy.postRules",
+        "新增 fbStrategy.performance.weeklyReviews 週報"
+      ],
+      "topFindings": [
+        "12:00 UTC 原生摘要主貼本週 7/7 有留言；04:00 UTC 外鏈貼 6/6 全為 0 互動",
+        "「完整指南 / 完整比較 / 台灣情境」+ emoji 鉤子 + 問句 CTA 持續有效",
+        "Graph API insights 仍卡 metric / 路徑 / 權限問題，下週應先修追蹤基礎"
+      ]
     }
   ],
   "gscData": {
@@ -2803,24 +2822,10 @@
     "performance": {
       "lastWeeklyRaw": [
         {
-          "id": "1056283757571950_122120161382778539",
-          "created_time": "2026-07-19T12:00:06+0000",
-          "headline": "📚 n8n 自動化教學：5 個真實案例讓你每天省 2 小時（2026）",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120161382778539",
-          "likes": 0,
-          "comments": 1,
-          "shares": 0,
-          "clicks": null,
-          "estimatedReach": null,
-          "interactions": 1,
-          "reachRate": 0,
-          "engagementRate": 0
-        },
-        {
-          "id": "1056283757571950_122120124458778539",
-          "created_time": "2026-07-19T04:00:10+0000",
-          "headline": "📝 7 Best Cloud Hosting Providers in 2026 (Ranked by Real Performance)",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120124458778539",
+          "id": "1056283757571950_122120254376778539",
+          "created_time": "2026-07-20T04:00:02+0000",
+          "headline": "📝 GPT-5.6 Sol vs Terra vs Luna 完整評測 2026：哪個方案最值得？",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120254376778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2831,10 +2836,10 @@
           "engagementRate": 0
         },
         {
-          "id": "1056283757571950_122120124446778539",
-          "created_time": "2026-07-19T04:00:02+0000",
-          "headline": "📝 AI 翻譯工具推薦 2026：DeepL vs Google 翻譯 vs ChatGPT 完整比較 — 台灣用戶怎麼選？",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120124446778539",
+          "id": "1056283757571950_122120254412778539",
+          "created_time": "2026-07-20T04:00:10+0000",
+          "headline": "📝 Cloudways vs DigitalOcean App Platform 2026: Which Managed Hosting Actually Wins?",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120254412778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2845,24 +2850,10 @@
           "engagementRate": 0
         },
         {
-          "id": "1056283757571950_122120039936778539",
-          "created_time": "2026-07-18T12:00:05+0000",
-          "headline": "🔥 Kinsta vs WP Engine 2026: Which Managed WordPress Host Wins?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120039936778539",
-          "likes": 0,
-          "comments": 1,
-          "shares": 0,
-          "clicks": null,
-          "estimatedReach": null,
-          "interactions": 1,
-          "reachRate": 0,
-          "engagementRate": 0
-        },
-        {
-          "id": "1056283757571950_122119996322778539",
-          "created_time": "2026-07-18T04:00:12+0000",
-          "headline": "📝 Kinsta vs WP Engine 2026: Which Managed WordPress Host Wins?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122119996322778539",
+          "id": "1056283757571950_122120384708778539",
+          "created_time": "2026-07-21T04:00:02+0000",
+          "headline": "📝 LM Studio Bionic 完整教學 2026：本地 AI Agent 全攻略",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120384708778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2873,10 +2864,24 @@
           "engagementRate": 0
         },
         {
-          "id": "1056283757571950_122119996280778539",
-          "created_time": "2026-07-18T04:00:02+0000",
-          "headline": "📝 Perplexity AI Pro 評測 2026：值不值得買？完整分析",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122119996280778539",
+          "id": "1056283757571950_122120426768778539",
+          "created_time": "2026-07-21T12:00:11+0000",
+          "headline": "🔥 AI 客服工具推薦 2026：Intercom vs Zendesk vs Freshdesk 完整比較 — 台灣中小企業最佳選擇",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120426768778539",
+          "likes": 0,
+          "comments": 1,
+          "shares": 0,
+          "clicks": null,
+          "estimatedReach": null,
+          "interactions": 1,
+          "reachRate": 0,
+          "engagementRate": 0
+        },
+        {
+          "id": "1056283757571950_122120529050778539",
+          "created_time": "2026-07-22T04:00:03+0000",
+          "headline": "📝 NordVPN vs Surfshark 2026: Which VPN Is Actually Worth It?",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120529050778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2887,10 +2892,10 @@
           "engagementRate": 0
         },
         {
-          "id": "1056283757571950_122119899458778539",
-          "created_time": "2026-07-17T12:00:34+0000",
-          "headline": "💡 7 Best AI Tools for Freelancers in 2026 (Ranked by ROI)",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122119899458778539",
+          "id": "1056283757571950_122120564246778539",
+          "created_time": "2026-07-22T12:00:04+0000",
+          "headline": "🔥 GitHub Copilot Agent Mode 評測 2026：Coding Agent、MCP 整合，vs Cursor Cloud Agents、Windsurf Cascade 完整比較，台灣開發者教學",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120564246778539",
           "likes": 0,
           "comments": 1,
           "shares": 0,
@@ -2901,10 +2906,10 @@
           "engagementRate": 0
         },
         {
-          "id": "1056283757571950_122119850162778539",
-          "created_time": "2026-07-17T04:00:02+0000",
-          "headline": "📝 Copy.ai vs Writesonic vs Jasper AI 比較 2026：哪個最值得買？",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122119850162778539",
+          "id": "1056283757571950_122120657384778539",
+          "created_time": "2026-07-23T04:00:02+0000",
+          "headline": "📝 AI 文案寫作工具推薦 2026：ChatGPT vs Jasper vs Copy.ai 台灣完整比較",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120657384778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2915,10 +2920,10 @@
           "engagementRate": 0
         },
         {
-          "id": "1056283757571950_122119758512778539",
-          "created_time": "2026-07-16T12:00:06+0000",
-          "headline": "🔍 Cursor Cloud Agents 評測 2026：雲端 VM 平行開發、BugBot 自動審 PR，30% 程式碼已由 AI 寫完",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122119758512778539",
+          "id": "1056283757571950_122120704940778539",
+          "created_time": "2026-07-23T12:01:05+0000",
+          "headline": "💡 LINE Bot 完整指南 2026｜台灣中小企業從 0 到上線",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120704940778539",
           "likes": 0,
           "comments": 1,
           "shares": 0,
@@ -2929,10 +2934,10 @@
           "engagementRate": 0
         },
         {
-          "id": "1056283757571950_122119708502778539",
-          "created_time": "2026-07-16T04:00:02+0000",
-          "headline": "📝 Copy.ai vs Writesonic vs Jasper AI 比較 2026：哪款 AI 文案工具最值得買？",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122119708502778539",
+          "id": "1056283757571950_122120834144778539",
+          "created_time": "2026-07-24T04:00:02+0000",
+          "headline": "📝 Buzz 完整教學 2026：Jack Dorsey 的開源 Slack + GitHub 替代方案",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120834144778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2943,10 +2948,10 @@
           "engagementRate": 0
         },
         {
-          "id": "1056283757571950_122119627880778539",
-          "created_time": "2026-07-15T12:00:06+0000",
-          "headline": "🔥 GitHub Copilot vs Cursor 2026: Which AI Coding Assistant Wins?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122119627880778539",
+          "id": "1056283757571950_122120883038778539",
+          "created_time": "2026-07-24T12:04:47+0000",
+          "headline": "🔥 ChatGPT vs Claude vs Gemini 比較｜2026 哪個最好用？實測結果",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120883038778539",
           "likes": 0,
           "comments": 1,
           "shares": 0,
@@ -2957,44 +2962,44 @@
           "engagementRate": 0
         },
         {
-          "id": "1056283757571950_122119466258778539",
-          "created_time": "2026-07-14T12:00:08+0000",
-          "headline": "🔍 CapCut Review 2026: Is It the Best Free AI Video Editor? (Honest Verdict)",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122119466258778539",
-          "likes": 0,
-          "comments": 1,
-          "shares": 0,
-          "clicks": null,
-          "estimatedReach": null,
-          "interactions": 1,
-          "reachRate": 0,
-          "engagementRate": 0
-        },
-        {
-          "id": "1056283757571950_122119306682778539",
-          "created_time": "2026-07-13T12:00:07+0000",
-          "headline": "🔍 Systeme.io 評測 2026：免費的 ClickFunnels 替代？台灣人完整使用心得",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122119306682778539",
-          "likes": 0,
-          "comments": 1,
-          "shares": 0,
-          "clicks": null,
-          "estimatedReach": null,
-          "interactions": 1,
-          "reachRate": 0,
-          "engagementRate": 0
-        },
-        {
-          "id": "1056283757571950_122119261958778539",
-          "created_time": "2026-07-13T04:00:21+0000",
-          "headline": "📝 Cloudways vs Kinsta 2026: Which Managed WordPress Hosting Wins?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122119261958778539",
+          "id": "1056283757571950_122120980514778539",
+          "created_time": "2026-07-25T04:00:02+0000",
+          "headline": "📝 DigitalOcean vs Vultr 2026: Which Cloud VPS Actually Wins?",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120980514778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
           "clicks": null,
           "estimatedReach": null,
           "interactions": 0,
+          "reachRate": 0,
+          "engagementRate": 0
+        },
+        {
+          "id": "1056283757571950_122121022730778539",
+          "created_time": "2026-07-25T12:00:04+0000",
+          "headline": "📚 Claude Video 教學：讓 Claude AI 看懂影片內容的完整指南 (2026)",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122121022730778539",
+          "likes": 0,
+          "comments": 1,
+          "shares": 0,
+          "clicks": null,
+          "estimatedReach": null,
+          "interactions": 1,
+          "reachRate": 0,
+          "engagementRate": 0
+        },
+        {
+          "id": "1056283757571950_122121162140778539",
+          "created_time": "2026-07-26T12:00:04+0000",
+          "headline": "💡 9 Best AI Tools for Developers in 2026 (Ranked by Real Impact)",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122121162140778539",
+          "likes": 0,
+          "comments": 1,
+          "shares": 0,
+          "clicks": null,
+          "estimatedReach": null,
+          "interactions": 1,
           "reachRate": 0,
           "engagementRate": 0
         }
@@ -3002,12 +3007,18 @@
       "winPatterns": [
         "連續三週都證明：12:00 UTC 的「原生摘要 + 重點條列 + 問句 CTA」是目前唯一穩定拿到公開互動的格式。",
         "本週 7 則有留言貼文全部是中午主貼，且開頭都有強鉤子 emoji（📚 / 🔥 / 💡 / 🔍）與明確利益點，表示首屏包裝很重要。",
-        "繁中教學、評測、比較題依然最穩；即使英文題材，只要包成原生摘要貼而不是單純貼連結，仍有機會拿到互動。"
+        "繁中教學、評測、比較題依然最穩；即使英文題材，只要包成原生摘要貼而不是單純貼連結，仍有機會拿到互動。",
+        "本週再次驗證：12:00 UTC 的原生摘要主貼仍是唯一穩定拿到公開互動的格式，已從「可能有效」升級成固定主策略。",
+        "成功貼文共同特徵更清楚了：開頭 emoji + 明確利益點 + 繁中摘要 + 問句 CTA，尤其「完整指南／完整比較／台灣使用情境」最容易換到留言。",
+        "技術/工具題材也能拿互動，只要先用中文講清楚「這對誰有用、能省什麼時間或錢」，而不是直接丟英文標題或外鏈。"
       ],
       "failPatterns": [
         "本週 7 則 04:00 UTC 貼文全部 0 互動，外鏈直貼與自動分發感太重，已可視為明確失敗時段與格式。",
         "同一篇文章若先發 04:00 連結版、再發 12:00 原生版，只有原生版有回應，表示粉專受眾幾乎不吃冷啟動外鏈。",
-        "英文 hosting / tool list 類內容在 04:00 直貼完全無反應，語言不匹配加上外站連結，雙重削弱觸發率。"
+        "英文 hosting / tool list 類內容在 04:00 直貼完全無反應，語言不匹配加上外站連結，雙重削弱觸發率。",
+        "本週 6 則 04:00 UTC 外鏈貼全部 0 互動，失敗已不是偶發，而是穩定重現；這個時段 + 這個格式應視為明確停用組合。",
+        "英文 comparison / hosting 題在清晨直貼特別弱，受眾語言不匹配再加上外鏈摩擦，等於先天吃虧。",
+        "就算主題本身強（如 GPT-5.6、Buzz、LM Studio），只要包裝成自動分發式連結貼，Facebook 端仍幾乎不給回饋。"
       ],
       "weeklyReviews": [
         {
@@ -3195,6 +3206,99 @@
             "優先修 Graph API insights 欄位對照與 token 權限，恢復真正的觸及 / 點擊追蹤。"
           ],
           "dataNote": "fan_count / followers_count 仍回 0，且 Graph API 對 post_impressions、post_engaged_users、post_clicks 回 (#100) valid insights metric；因此本週 reachRate / engagementRate 暫記 0，只用公開互動做相對比較。"
+        },
+        {
+          "weekOf": "2026-07-20_to_2026-07-26",
+          "summary": "本週共發 13 則貼文，公開可見互動合計 7 則留言、0 讚、0 分享。所有互動仍 100% 集中在 12:00 UTC 的原生摘要主貼；6 則 04:00 UTC 外鏈貼全部 0 互動，已可視為穩定失敗模式。Graph API 在現有 page token / v23.0 下依然無法拉到 post_impressions、post_engaged_users、post_clicks，本週只能沿用公開互動訊號做 fallback 分析，因此觸及率與互動率暫記 0，不作真實績效判讀。",
+          "topPosts": [
+            {
+              "id": "1056283757571950_122120426768778539",
+              "created_time": "2026-07-21T12:00:11+0000",
+              "headline": "🔥 AI 客服工具推薦 2026：Intercom vs Zendesk vs Freshdesk 完整比較 — 台灣中小企業最佳選擇",
+              "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120426768778539",
+              "likes": 0,
+              "comments": 1,
+              "shares": 0,
+              "clicks": null,
+              "estimatedReach": null,
+              "interactions": 1,
+              "reachRate": 0,
+              "engagementRate": 0
+            },
+            {
+              "id": "1056283757571950_122120564246778539",
+              "created_time": "2026-07-22T12:00:04+0000",
+              "headline": "🔥 GitHub Copilot Agent Mode 評測 2026：Coding Agent、MCP 整合，vs Cursor Cloud Agents、Windsurf Cascade 完整比較，台灣開發者教學",
+              "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120564246778539",
+              "likes": 0,
+              "comments": 1,
+              "shares": 0,
+              "clicks": null,
+              "estimatedReach": null,
+              "interactions": 1,
+              "reachRate": 0,
+              "engagementRate": 0
+            },
+            {
+              "id": "1056283757571950_122120704940778539",
+              "created_time": "2026-07-23T12:01:05+0000",
+              "headline": "💡 LINE Bot 完整指南 2026｜台灣中小企業從 0 到上線",
+              "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120704940778539",
+              "likes": 0,
+              "comments": 1,
+              "shares": 0,
+              "clicks": null,
+              "estimatedReach": null,
+              "interactions": 1,
+              "reachRate": 0,
+              "engagementRate": 0
+            },
+            {
+              "id": "1056283757571950_122120883038778539",
+              "created_time": "2026-07-24T12:04:47+0000",
+              "headline": "🔥 ChatGPT vs Claude vs Gemini 比較｜2026 哪個最好用？實測結果",
+              "permalink_url": "https://www.facebook.com/122105152964778539/posts/122120883038778539",
+              "likes": 0,
+              "comments": 1,
+              "shares": 0,
+              "clicks": null,
+              "estimatedReach": null,
+              "interactions": 1,
+              "reachRate": 0,
+              "engagementRate": 0
+            },
+            {
+              "id": "1056283757571950_122121022730778539",
+              "created_time": "2026-07-25T12:00:04+0000",
+              "headline": "📚 Claude Video 教學：讓 Claude AI 看懂影片內容的完整指南 (2026)",
+              "permalink_url": "https://www.facebook.com/122105152964778539/posts/122121022730778539",
+              "likes": 0,
+              "comments": 1,
+              "shares": 0,
+              "clicks": null,
+              "estimatedReach": null,
+              "interactions": 1,
+              "reachRate": 0,
+              "engagementRate": 0
+            }
+          ],
+          "wins": [
+            "本週所有有互動的貼文都發在 12:00 UTC 左右，且都是原生摘要貼，不是單純連結貼。",
+            "高表現主題集中在「完整指南 / 完整比較 / 台灣情境」：AI 客服、Copilot Agent Mode、LINE Bot、ChatGPT vs Claude vs Gemini、Claude Video、開發者工具清單。",
+            "鉤子 emoji（🔥 / 💡 / 📚）+ 明確利益點 + 問句 CTA 的組合已連續多週有效，值得固化成模板。"
+          ],
+          "fails": [
+            "6 則 04:00 UTC 外鏈貼全部 0 互動，包含 GPT-5.6、Buzz、LM Studio、雲端主機、VPN、AI 文案工具等不同題材，代表問題在發法，不只在題材。",
+            "英文 comparison / hosting 類貼文在 Facebook 上特別弱，若沒有先中文化包裝，幾乎沒有社交反應。",
+            "目前無法取得官方 reach / click insight，導致無法辨別「沒互動但有觸及」與「根本沒被看到」的差別，這是下週最該修的測量缺口。"
+          ],
+          "nextWeekFocus": [
+            "只保留 12:00 UTC 原生主貼作為預設發文時段。",
+            "暫停 04:00 UTC 外鏈直貼，若要測試改成低頻單篇 A/B。",
+            "優先發繁中教學 / 比較 / 評測，尤其帶「台灣使用情境」的題材。",
+            "修正 Graph API metrics 路徑、post id 格式或權限，恢復真正的 reach / click 追蹤。"
+          ],
+          "dataNote": "嘗試以 /{page_id}/posts?fields=...insights.metric(post_impressions,post_engaged_users,post_clicks) 仍回 (#100) The value must be a valid insights metric；改打單篇 /{post_id}/insights 也遇到 singular statuses API deprecated。故本週持續以 comments/likes/shares 做相對分析，reachRate / engagementRate 先記 0。"
         }
       ]
     },
@@ -3204,7 +3308,9 @@
         "04:00 UTC 不再發純外鏈導流貼；若要測試次時段，至少改成原生摘要版並與主貼錯開 8 小時以上。",
         "同一篇內容不要先丟外鏈版再補原生版；直接發原生版，把唯一連結放文末即可。",
         "繁中教學 / 評測 / 比較繼續當主力；英文內容若要發，首段必須先補中文價值摘要。",
-        "Graph API 在現有 token / v23.0 組合下仍拿不到 post_impressions、post_engaged_users、post_clicks；下週前先補一輪 metrics 對照或權限檢查，否則觸及率與互動率只能維持 fallback 0 值。"
+        "Graph API 在現有 token / v23.0 組合下仍拿不到 post_impressions、post_engaged_users、post_clicks；下週前先補一輪 metrics 對照或權限檢查，否則觸及率與互動率只能維持 fallback 0 值。",
+        "貼文標題優先使用「完整指南／完整比較／值不值得買／台灣怎麼選」這類高意圖框架，少用單純英文標題直貼。",
+        "若內容原文是英文評測，Facebook 首段先翻成中文並點出 1 個成本、1 個場景、1 個結論，再放連結。"
       ]
     }
   },
