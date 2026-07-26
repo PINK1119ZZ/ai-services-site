@@ -2,6 +2,75 @@
   "lastRun": "2026-07-26T02:06:00Z",
   "agentLog": [
     {
+      "timestamp": "2026-07-26T10:30:00Z",
+      "task": "affiliate-monitor",
+      "status": "completed",
+      "details": "聯盟連結週檢（Sun 10:30）。掃描 100 篇文章 + 18 個聯盟連結。外部連結 1 個 404（adcreative.ai/pricing，en 文章需更新）；Gumroad 2 個持續 404（claude-code-prompt-pack-2026 第 11 週 + n8n-tw-templates，Ivan P0）；DataCamp/NordVPN/Cloudways/abzcoupon/aftck 403 屬防爬正常；10 篇文章無任何聯盟連結 → 寫入 directives 給 content-refresher。",
+      "changes": [
+        "掃描 100 篇 HTML 文章：發現 10 篇無聯盟連結",
+        "檢查 18 個聯盟連結：14 個 200/正常，4 個 403 防爬正常，2 個 404（Gumroad）",
+        "發現 adcreative.ai/pricing 外部 404（en/blog/adcreative-ai-review-2026.html）",
+        "創建 directives/affiliate-monitor-to-content-refresher-2026-07-26.md",
+        "更新 agent-state.json affiliateLinkStatus + lastChecked"
+      ],
+      "criticalIssues": [
+        "Gumroad claude-code-prompt-pack-2026 → 404（第 11 週，Ivan P0-URGENT）",
+        "Gumroad n8n-tw-templates → 404（持續問題）",
+        "adcreative.ai/pricing → 404（en/blog/adcreative-ai-review-2026.html 需更新 URL）"
+      ],
+      "articlesNoAffiliate": [
+        "blog/perplexity-ai-pro-review-2026.html",
+        "blog/lm-studio-bionic-guide-2026.html",
+        "en/blog/cloudways-review-2026.html",
+        "en/blog/hostinger-vps-review-2026.html",
+        "en/blog/n8n-automation-tutorial-2026.html",
+        "en/blog/n8n-hitl-tutorial-2026.html",
+        "en/blog/line-bot-complete-guide-2026.html",
+        "en/blog/deerflow-vs-dify-vs-n8n-2026.html",
+        "en/blog/best-geo-tools-comparison-2026.html",
+        "en/blog/geo-generative-engine-optimization-taiwan-2026.html"
+      ],
+      "needsIvan": [
+        "P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（第 11 週！）",
+        "P1: 確認 n8n-tw-templates Gumroad 狀態",
+        "P1: 提供 en/blog/adcreative-ai-review-2026.html 正確 adcreative.ai/pricing URL"
+      ]
+    },
+    {
+      "timestamp": "2026-07-26T10:30:00Z",
+      "task": "affiliate-monitor",
+      "status": "completed",
+      "details": "聯盟連結週檢（Sun 10:30）。掃描 100 篇文章 + 15 個聯盟連結。無外部真實 404（adcreative.ai/pricing URL 已變更，需更新文章）；Gumroad 2 個持續 404（claude-code-prompt-pack-2026 Ivan P0-URGENT 第 7 次記錄 11 週以上、n8n-tw-templates）；DataCamp/NordVPN/Cloudways/afflink 403 屬防爬正常。發現 10 篇無聯盟連結文章（含 6 篇英文）→ 寫入 directives 給 content-refresher。",
+      "changes": [
+        "掃描 100 篇 HTML 文章：90 篇含至少 1 個聯盟連結，10 篇無聯盟連結",
+        "檢查 15 個聯盟連結：11 個 200/正常，4 個 403 防爬正常，2 個 404（Gumroad）",
+        "外部內容連結：adcreative.ai/pricing 404（URL 已變更，舊路徑）",
+        "創建 directives/affiliate-monitor-to-content-refresher-2026-07-26.md",
+        "更新 agent-state.json affiliateLinkStatus + lastChecked"
+      ],
+      "criticalIssues": [
+        "Gumroad claude-code-prompt-pack-2026 → 404（第 7 次記錄，Ivan P0-URGENT，已積壓 11 週以上！）",
+        "Gumroad n8n-tw-templates → 404（持續問題，確認是否棄用）",
+        "adcreative.ai/pricing → 404（URL 已變更，en/blog/adcreative-ai-review-2026.html 需更新連結）"
+      ],
+      "articlesNoAffiliate": [
+        "blog/lm-studio-bionic-guide-2026.html",
+        "blog/perplexity-ai-pro-review-2026.html",
+        "en/blog/best-geo-tools-comparison-2026.html",
+        "en/blog/cloudways-review-2026.html",
+        "en/blog/deerflow-vs-dify-vs-n8n-2026.html",
+        "en/blog/geo-generative-engine-optimization-taiwan-2026.html",
+        "en/blog/hostinger-vps-review-2026.html",
+        "en/blog/line-bot-complete-guide-2026.html",
+        "en/blog/n8n-automation-tutorial-2026.html",
+        "en/blog/n8n-hitl-tutorial-2026.html"
+      ],
+      "needsIvan": [
+        "P0-URGENT（第 11 週！）：上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026",
+        "P1：確認 n8n-tw-templates Gumroad 狀態（是否永久下架）"
+      ]
+    },
+    {
       "timestamp": "2026-07-26T03:10:00Z",
       "task": "researcher",
       "round": "136",
@@ -1904,7 +1973,7 @@
         "summary": {
           "totalClicks": 39,
           "totalImpressions": 787,
-          "avgCTR": 5.0,
+          "avgCTR": 5,
           "avgPosition": 11.3
         },
         "topQueries": [
@@ -1919,7 +1988,7 @@
             "keyword": "autodev ai",
             "clicks": 3,
             "impressions": 6,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 1.8
           },
           {
@@ -2181,7 +2250,7 @@
             "clicks": 0,
             "impressions": 26,
             "ctr": 0,
-            "position": 15.0
+            "position": 15
           },
           {
             "page": "//blog/best-geo-tools-comparison-2026.html",
@@ -2357,7 +2426,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-07-26T00:00:00Z",
+  "lastChecked": "2026-07-26T10:30:00Z",
   "issues": [
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
     "2026-07-11 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
@@ -2615,7 +2684,7 @@
     }
   ],
   "affiliateLinkStatus": {
-    "lastChecked": "2026-07-19T10:30:00Z",
+    "lastChecked": "2026-07-26T10:30:00Z",
     "results": {
       "DataCamp (afflink.one/s/aavAC)": {
         "status": 403,
@@ -2649,7 +2718,7 @@
       },
       "Gumroad claude-code-prompt-pack-2026": {
         "status": 404,
-        "note": "P0-URGENT: 需 Ivan 上架（第 6+ 次記錄）",
+        "note": "P0-URGENT: 需 Ivan 上架（第 11 週）",
         "ok": false
       },
       "Gumroad n8n-tw-templates": {
@@ -2662,22 +2731,7 @@
         "note": "正常",
         "ok": true
       },
-      "hermes-agent.ai/affiliates": {
-        "status": 200,
-        "note": "正常",
-        "ok": true
-      },
       "llmclicks.ai": {
-        "status": 200,
-        "note": "正常",
-        "ok": true
-      },
-      "hostinger.com": {
-        "status": 200,
-        "note": "正常",
-        "ok": true
-      },
-      "warp.dev": {
         "status": 200,
         "note": "正常",
         "ok": true
@@ -2687,12 +2741,27 @@
         "note": "正常",
         "ok": true
       },
+      "Hostinger": {
+        "status": 200,
+        "note": "正常",
+        "ok": true
+      },
+      "Warp.dev": {
+        "status": 200,
+        "note": "正常",
+        "ok": true
+      },
+      "hermes-agent.ai": {
+        "status": 200,
+        "note": "正常",
+        "ok": true
+      },
       "DataCamp (datacamp.pxf.io)": {
         "status": 403,
         "note": "防爬機制-用戶點擊正常",
         "ok": true
       },
-      "vbtrax.com (Cloudways)": {
+      "Cloudways (vbtrax.com)": {
         "status": 403,
         "note": "防爬機制-用戶點擊正常",
         "ok": true
@@ -2709,15 +2778,25 @@
       }
     },
     "brokenLinks": [
-      "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026 → 404 (需 Ivan 上架，第 6+ 次記錄)",
-      "xiaofan8.gumroad.com/l/n8n-tw-templates → 404 (確認是否下架)"
+      "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026 → 404 (第11週，Ivan P0-URGENT)",
+      "xiaofan8.gumroad.com/l/n8n-tw-templates → 404 (確認是否下架)",
+      "adcreative.ai/pricing → 404 (en/blog/adcreative-ai-review-2026.html 中需更新 URL)"
     ],
     "articlesNoAffiliate": [
-      "blog/perplexity-ai-pro-review-2026.html (0 個聯盟連結，需補強)"
+      "blog/perplexity-ai-pro-review-2026.html",
+      "blog/lm-studio-bionic-guide-2026.html",
+      "en/blog/cloudways-review-2026.html",
+      "en/blog/hostinger-vps-review-2026.html",
+      "en/blog/n8n-automation-tutorial-2026.html",
+      "en/blog/n8n-hitl-tutorial-2026.html",
+      "en/blog/line-bot-complete-guide-2026.html",
+      "en/blog/deerflow-vs-dify-vs-n8n-2026.html",
+      "en/blog/best-geo-tools-comparison-2026.html",
+      "en/blog/geo-generative-engine-optimization-taiwan-2026.html"
     ],
-    "total404External": 0,
-    "totalArticlesScanned": 73,
-    "note": "73 篇文章中 72 篇含至少 1 個聯盟連結；無外部 404；403 均為防爬正常"
+    "totalArticlesScanned": 100,
+    "articlesWithNoAffiliate": 10,
+    "total404External": 1
   },
   "fbStrategy": {
     "performance": {
