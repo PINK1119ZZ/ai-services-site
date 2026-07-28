@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-07-27T01:30:00Z",
+  "lastRun": "2026-07-28T00:00:00Z",
   "lastStrategistRun": "2026-07-20T01:30:00Z",
   "agentLog": [
     {
@@ -2097,6 +2097,19 @@
         "Sampled 10 autodev-ai sitemap URLs and all returned HTTP 200",
         "Updated agent-state.json and memory/2026-07-27.md"
       ]
+    },
+    {
+      "timestamp": "2026-07-28T00:00:00Z",
+      "task": "site-health",
+      "status": "completed",
+      "details": "Health-checked primary sites and GitHub Pages fallback URLs. autodev-ai.com and ai-tools.pro were healthy; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; pink1119zz.github.io fallback URLs remained healthy. No new in-repo fix available beyond the existing builder/infra directive.",
+      "changes": [
+        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
+        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml redirected successfully to sitemap_index.xml",
+        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl HTTP 000 / Could not resolve host)",
+        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
+        "Updated agent-state.json and memory/2026-07-28.md"
+      ]
     }
   ],
   "gscData": {
@@ -2569,7 +2582,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-07-27T00:00:00Z",
+  "lastChecked": "2026-07-28T00:00:00Z",
   "issues": [
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
     "2026-07-11 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
@@ -2591,7 +2604,8 @@
     "2026-07-24 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (urllib: [Errno -2] Name or service not known / HTTP 000 equivalent); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
     "2026-07-25 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (urllib: [Errno -2] Name or service not known / HTTP 000 equivalent); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
     "2026-07-26 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (urllib: [Errno -2] Name or service not known / HTTP 000 equivalent); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
-    "2026-07-27 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (urllib: [Errno -2] Name or service not known / HTTP 000 equivalent); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid."
+    "2026-07-27 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (urllib: [Errno -2] Name or service not known / HTTP 000 equivalent); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
+    "2026-07-28 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid."
   ],
   "fbReplied": [
     "122120161382778539_1342184138020745",
