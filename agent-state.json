@@ -1,7 +1,53 @@
 {
-  "lastRun": "2026-07-31T00:30:00Z",
-  "lastStrategistRun": "2026-07-20T01:30:00Z",
+  "lastRun": "2026-07-31T12:00:00Z",
+  "lastStrategistRun": "2026-07-31T12:00:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-07-31T12:00:00Z",
+      "task": "strategist",
+      "subtype": "income-ideation",
+      "status": "completed",
+      "details": "Income ideation cron（Fri 20:00）。市場掃描：Gumroad 暢銷分析（146K 產品樣本）、GitHub trending July 2026、AI video affiliate 市場確認。本輪核心發現：(1) Pictory AI 30% LIFETIME recurring affiliate（pictory.ai/partnernow，PartnerStack，60-day cookie）— AI 視頻剪輯，業界最高長期複利，繁中評測空白；(2) Claude Code Skills Pack v2.0（Gumroad $29，skills + slash commands + MCP 範本，解決 v1 第 11 週積壓問題的替代方案）；(3) HeyGen 25% recurring/12m affiliate（heygen.getrewardful.com，60-day cookie，AI Avatar 視頻龍頭，繁中評測空白）。三個提案合計月潛力 $1,200-3,200。產出 directives/strategist-income-ideation-2026-07-31.md。",
+      "changes": [
+        "搜尋 Gumroad 暢銷數位產品 2026 → 確認 $29 定價甜蜜點，digital downloads 平均 293 次銷售",
+        "搜尋 GitHub trending July 2026 → agent skills 第二波：mattpocock/skills 40K+、emilkowalski/skills 18K+、i-have-adhd 11K+",
+        "搜尋 AI video affiliate programs 2026 → Pictory 30% LIFETIME（60d cookie）+ HeyGen 25%/12m（60d cookie）確認",
+        "搜尋 Pictory affiliate 條款 → 確認 PartnerStack，最高 50% 遞進，30% 基本，$1,000 頂尖績效獎金",
+        "搜尋 HeyGen affiliate 條款 → 確認 Rewardful，25%/12m，60-day cookie，手動審核 1-5 天",
+        "產出 3 個具體提案（A: Pictory、B: Skills Pack v2、C: HeyGen）",
+        "創建 directives/strategist-income-ideation-2026-07-31.md",
+        "更新 agent-state.json：lastRun + lastStrategistRun + lastIncomeIdeation + agentLog + newAssetProposals"
+      ],
+      "newProposals": [
+        {
+          "id": "proposal-pictory-affiliate-2026-07-31",
+          "type": "affiliate_review_article",
+          "title": "Pictory AI 完整評測 2026（30% LIFETIME affiliate）",
+          "revenueModel": "Pictory affiliate 30% LIFETIME recurring，60-day cookie，PartnerStack",
+          "estimatedMonthlyRevenue": "$400-1,200",
+          "priority": "P1-HIGH",
+          "ivanAction": "申請 pictory.ai/partnernow（PartnerStack）"
+        },
+        {
+          "id": "proposal-skills-pack-v2-2026-07-31",
+          "type": "digital_product",
+          "title": "Claude Code Skills Pack v2.0（Gumroad $29）",
+          "revenueModel": "Gumroad 一次性銷售 $29，目標 20-30 次/月",
+          "estimatedMonthlyRevenue": "$400-900",
+          "priority": "P1-HIGH",
+          "ivanAction": "上架 xiaofan8.gumroad.com/l/claude-code-skills-pack-v2"
+        },
+        {
+          "id": "proposal-heygen-affiliate-2026-07-31",
+          "type": "affiliate_review_article",
+          "title": "HeyGen AI Avatar 完整評測 2026（25%/12m affiliate）",
+          "revenueModel": "HeyGen affiliate 25% recurring/12m，60-day cookie，Rewardful",
+          "estimatedMonthlyRevenue": "$400-1,100",
+          "priority": "P1-HIGH",
+          "ivanAction": "申請 heygen.getrewardful.com（手動審核 1-5 天）"
+        }
+      ]
+    },
     {
       "timestamp": "2026-07-31T00:30:00Z",
       "task": "ai-trend-hunter",
@@ -2237,23 +2283,23 @@
     }
   ],
   "gscData": {
-    "lastUpdated": "2026-07-30 07:00",
+    "lastUpdated": "2026-07-31 05:30",
     "period": "14 days",
     "sites": {
       "autodev-ai": {
         "summary": {
-          "totalClicks": 47,
-          "totalImpressions": 831,
-          "avgCTR": 5.7,
-          "avgPosition": 11.6
+          "totalClicks": 51,
+          "totalImpressions": 854,
+          "avgCTR": 6.0,
+          "avgPosition": 11.8
         },
         "topQueries": [
           {
             "keyword": "opencode zen 費用",
             "clicks": 5,
-            "impressions": 23,
-            "ctr": 21.7,
-            "position": 7.2
+            "impressions": 28,
+            "ctr": 17.9,
+            "position": 7.1
           },
           {
             "keyword": "autodev ai",
@@ -2263,18 +2309,18 @@
             "position": 1.8
           },
           {
+            "keyword": "opencode go vs zen",
+            "clicks": 2,
+            "impressions": 3,
+            "ctr": 66.7,
+            "position": 3
+          },
+          {
             "keyword": "line liff 費用",
             "clicks": 1,
             "impressions": 4,
             "ctr": 25.0,
             "position": 10.2
-          },
-          {
-            "keyword": "opencode go vs zen",
-            "clicks": 1,
-            "impressions": 2,
-            "ctr": 50.0,
-            "position": 3.5
           },
           {
             "keyword": "opencode go 比較",
@@ -2300,9 +2346,9 @@
           {
             "keyword": "ai chatbot demo",
             "clicks": 0,
-            "impressions": 21,
+            "impressions": 25,
             "ctr": 0,
-            "position": 70.1
+            "position": 70.9
           },
           {
             "keyword": "ai 訂閱 比較",
@@ -2389,6 +2435,20 @@
             "position": 5
           },
           {
+            "keyword": "buzz code",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 4
+          },
+          {
+            "keyword": "buzz jack",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 4
+          },
+          {
             "keyword": "buzz 教學",
             "clicks": 0,
             "impressions": 3,
@@ -2405,67 +2465,53 @@
           {
             "keyword": "chatbot demo",
             "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 64.2
-          },
-          {
-            "keyword": "chatbot demo online",
-            "clicks": 0,
             "impressions": 3,
             "ctr": 0,
-            "position": 63.3
-          },
-          {
-            "keyword": "chatbot費用",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 79
+            "position": 67.3
           }
         ],
         "topPages": [
           {
             "page": "//blog/opencode-zen-vs-go-pricing-2026.html",
-            "clicks": 22,
-            "impressions": 147,
-            "ctr": 15.0,
-            "position": 6.4
+            "clicks": 23,
+            "impressions": 158,
+            "ctr": 14.6,
+            "position": 6.5
           },
           {
             "page": "//blog/line-bot-cost.html",
-            "clicks": 6,
-            "impressions": 154,
-            "ctr": 3.9,
-            "position": 6.8
+            "clicks": 9,
+            "impressions": 138,
+            "ctr": 6.5,
+            "position": 7.1
+          },
+          {
+            "page": "//en/",
+            "clicks": 4,
+            "impressions": 64,
+            "ctr": 6.2,
+            "position": 7.9
           },
           {
             "page": "//blog/claude-video-watch-tutorial-2026.html",
             "clicks": 3,
-            "impressions": 36,
-            "ctr": 8.3,
-            "position": 6.1
+            "impressions": 39,
+            "ctr": 7.7,
+            "position": 6.2
           },
           {
             "page": "//blog/markitdown-microsoft-tutorial-2026.html",
             "clicks": 3,
-            "impressions": 9,
-            "ctr": 33.3,
-            "position": 6.7
-          },
-          {
-            "page": "//en/",
-            "clicks": 3,
-            "impressions": 64,
-            "ctr": 4.7,
-            "position": 8.2
+            "impressions": 10,
+            "ctr": 30.0,
+            "position": 6.4
           },
           {
             "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
             "clicks": 2,
-            "impressions": 51,
-            "ctr": 3.9,
-            "position": 8.2
+            "impressions": 57,
+            "ctr": 3.5,
+            "position": 8.7
           },
           {
             "page": "//",
@@ -2477,8 +2523,8 @@
           {
             "page": "//blog/agent-skills-complete-guide-2026.html",
             "clicks": 1,
-            "impressions": 32,
-            "ctr": 3.1,
+            "impressions": 31,
+            "ctr": 3.2,
             "position": 7.9
           },
           {
@@ -2491,44 +2537,37 @@
           {
             "page": "//blog/buzz-jack-dorsey-guide-2026.html",
             "clicks": 1,
-            "impressions": 11,
-            "ctr": 9.1,
-            "position": 5.7
+            "impressions": 24,
+            "ctr": 4.2,
+            "position": 6.3
           },
           {
             "page": "//blog/line-bot-tutorial-2026.html",
             "clicks": 1,
-            "impressions": 9,
-            "ctr": 11.1,
-            "position": 14.1
+            "impressions": 8,
+            "ctr": 12.5,
+            "position": 9.6
           },
           {
             "page": "//blog/n8n-automation-tutorial-2026.html",
             "clicks": 1,
-            "impressions": 24,
-            "ctr": 4.2,
-            "position": 10.6
+            "impressions": 22,
+            "ctr": 4.5,
+            "position": 11.0
           },
           {
             "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
             "clicks": 1,
-            "impressions": 17,
-            "ctr": 5.9,
-            "position": 6.7
+            "impressions": 21,
+            "ctr": 4.8,
+            "position": 7.0
           },
           {
             "page": "//en/about.html",
             "clicks": 1,
-            "impressions": 32,
-            "ctr": 3.1,
-            "position": 21.2
-          },
-          {
-            "page": "//en/demo.html",
-            "clicks": 1,
-            "impressions": 56,
-            "ctr": 1.8,
-            "position": 55.3
+            "impressions": 31,
+            "ctr": 3.2,
+            "position": 21.5
           },
           {
             "page": "//about.html",
@@ -2547,9 +2586,9 @@
           {
             "page": "//blog/ai-tools-comparison-2026.html",
             "clicks": 0,
-            "impressions": 32,
+            "impressions": 33,
             "ctr": 0,
-            "position": 14.1
+            "position": 13.5
           },
           {
             "page": "//blog/best-geo-tools-comparison-2026.html",
@@ -2599,6 +2638,13 @@
             "impressions": 15,
             "ctr": 0,
             "position": 7.5
+          },
+          {
+            "page": "//blog/glm-52-openclaw-coding-plan-setup-2026.html",
+            "clicks": 0,
+            "impressions": 35,
+            "ctr": 0,
+            "position": 10.9
           }
         ]
       },
@@ -2658,7 +2704,7 @@
         "site": "autodev-ai",
         "keyword": "ai chatbot demo",
         "ctr": 0,
-        "impressions": 21,
+        "impressions": 25,
         "action": "improve title/meta for higher CTR"
       },
       {
@@ -2760,6 +2806,33 @@
     "122119154570778539_1520525622815548"
   ],
   "newAssetProposals": [
+    {
+      "id": "proposal-pictory-affiliate-2026-07-31",
+      "type": "affiliate_review_article",
+      "title": "Pictory AI 完整評測 2026（30% LIFETIME affiliate）",
+      "revenueModel": "Pictory affiliate 30% LIFETIME recurring，60-day cookie，PartnerStack",
+      "estimatedMonthlyRevenue": "$400-1,200",
+      "priority": "P1-HIGH",
+      "ivanAction": "申請 pictory.ai/partnernow（PartnerStack）"
+    },
+    {
+      "id": "proposal-skills-pack-v2-2026-07-31",
+      "type": "digital_product",
+      "title": "Claude Code Skills Pack v2.0（Gumroad $29）",
+      "revenueModel": "Gumroad 一次性銷售 $29，目標 20-30 次/月",
+      "estimatedMonthlyRevenue": "$400-900",
+      "priority": "P1-HIGH",
+      "ivanAction": "上架 xiaofan8.gumroad.com/l/claude-code-skills-pack-v2"
+    },
+    {
+      "id": "proposal-heygen-affiliate-2026-07-31",
+      "type": "affiliate_review_article",
+      "title": "HeyGen AI Avatar 完整評測 2026（25%/12m affiliate）",
+      "revenueModel": "HeyGen affiliate 25% recurring/12m，60-day cookie，Rewardful",
+      "estimatedMonthlyRevenue": "$400-1,100",
+      "priority": "P1-HIGH",
+      "ivanAction": "申請 heygen.getrewardful.com（手動審核 1-5 天）"
+    },
     {
       "id": "proposal-2026-07-10-A",
       "type": "digital-product",
@@ -3581,5 +3654,6 @@
   },
   "lastGscCheckAt": "2026-07-22T07:10:00Z",
   "lastGscSummary": "ranking: n/a; high-impr low-CTR: 5; pos 11-20 opps: 7",
-  "lastResearchRoundDate": "2026-07-25"
+  "lastResearchRoundDate": "2026-07-25",
+  "lastIncomeIdeation": "2026-07-31T12:00:00Z"
 }
