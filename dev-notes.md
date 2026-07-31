@@ -1,5 +1,147 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 138 | 2026-07-31 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-07-31 22:00 UTC | 搜尋範圍：GitHub trending 今日榜、Watchlist 更新、HN 訊號 | 模式：輕量掃描
+
+### 🔥 本輪頭條：reverse-skill 今日612⭐（AI安全技能爆發）+ openwork 今日796⭐（Claude Cowork 開源替代崛起）+ Qwen 3.8 weights 仍無日期 + MiniMax M3（428B）已發布我們尚無評測文
+
+---
+
+#### ✅ Watchlist 狀態更新
+
+| 項目 | 上輪狀態 | 本輪確認 |
+|------|---------|---------|
+| Qwen 3.8-Max weights | ⏳ Preview，無日期 | ⏳ 仍 Preview；多方來源確認「open weights soon」無日期/授權/repo；~1.2TB 4-bit 重量，自架現實上不可行 |
+| MiniMax M3 Pro 2.7T | ⏳ Q3 2026 | ⏳ 仍 Q3 target，無新進展；The Information 報導 7/8 |
+| **MiniMax M3（428B）** | 已知發布 6/1 | ✅ weights 已在 HuggingFace；我們**無評測文**，是補文缺口 |
+| OneCLI 商業化 | ❓ 無進度 | ❓ 本輪未追蹤到新進度 |
+| Palmier Pro affiliate | ❓ 待 Ivan | ❓ 無新進度 |
+| Context.dev affiliate | ❓ 待 Ivan | ❓ 無新進度 |
+
+---
+
+#### 1. 🔥🔥🔥🔥 zhaoxuya520/reverse-skill — 今日 GitHub Trending，612⭐/今日，10,626 total
+
+**核心發現：AI 安全技能包，支援 Claude Code/Claude/Cursor/Cline，逆向工程 + 授權滲透測試用途，今日爆發。**
+
+- **GitHub:** zhaoxuya520/reverse-skill，PowerShell，10,626 stars，**612 stars today**
+- **定位：** AI-powered 逆向工程 / 授權滲透測試 Skill Router Pack（技能路由包）
+  - AI 自動路由（根據任務選擇最佳工具）
+  - 按需自舉工具鏈（On-demand toolchain bootstrapping）
+  - 自動進化經驗庫（Self-evolving knowledge base）
+  - 支援：Claude Code, Claude, Cursor, Cline 等主流 AI 代碼客戶端
+- **時機：** 緊接 OpenAI×HuggingFace AI Agent 入侵事件（7/21 曝光）後，安全技能需求爆發
+- **語言：** PowerShell（面向 Windows 安全工程師）
+
+**🏆 內容機會：**
+- 繁中評測/教學：0 篇
+- 關鍵字：「AI 逆向工程」「AI 滲透測試技能」「reverse-skill 教學」「Claude Code 安全工具 2026」
+- 受眾：資安工程師 + CTF 選手 + 開發者安全學習
+- 與 Strix AI（之前 P1-HIGH）可合為「2026 AI 安全技能全攻略」長文
+- CTA：DataCamp（Security 課程）+ DigitalOcean（隔離環境）
+- **預估月收入：$200-500；流量潛力：5K-12K/月**
+
+**行動：**
+- 🟡 **P2 seo-writer：** 「AI 安全技能包 2026：reverse-skill + Strix 完整指南」合文
+
+---
+
+#### 2. 🔥🔥🔥🔥 different-ai/openwork — 今日 GitHub Trending，796⭐/今日，19,447 total
+
+**核心發現：Claude Cowork 的開源免費替代品，powered by opencode，今日 trending 最高星速。**
+
+- **GitHub:** different-ai/openwork，TypeScript，19,447 stars，**796 stars today**（本輪觀察到的最高日增速）
+- **定位：** 開源的「Claude Work style」系統，Native desktop app
+  - 基於 opencode CLI 驅動（OpenCode：161K stars，vs Claude Code 124K）
+  - 功能：選工作區 → 開始 Run → 看進度/計畫更新 → 批准權限 → 模板複用
+  - Goal：「讓 agentic work 像產品而不是 terminal」
+  - Skill Manager 整合，管理 opencode.json 插件
+- **趨勢背景：** Claude Cowork 有付費牆，openwork 是成長最快的替代品之一（DeepSeek-Cowork 214⭐、多個 fork 活躍）
+
+**🏆 內容機會：**
+- 繁中評測：0 篇
+- 關鍵字：「openwork 教學」「claude cowork 替代」「免費 ai 工作代理」「openwork vs claude cowork 2026」
+- CTA：DigitalOcean（VPS 自架）+ DataCamp（AI agent 課程）
+- **預估月收入：$200-400；流量潛力：6K-15K/月**
+- 時效性中等（不如新模型發布急迫，但 Claude Cowork 替代品是長尾需求）
+
+**行動：**
+- 🟡 **P2 seo-writer：** 「OpenWork 完整教學 2026：開源免費的 Claude Cowork 替代品」
+
+---
+
+#### 3. ✅ 繼續趨勢：mvanhorn/last30days-skill — 今日 378⭐，55,900 total
+
+- 上輪已知，持續高速增長（7/28 曾是 GitHub #1 repo of the day）
+- 本輪再確認：v3.3.0，1,012 tests，MIT，支援 Claude Code/Codex/Cursor/Copilot/Gemini CLI/OpenClaw
+- **內部應用機會（省 token）：** 可整合到 researcher agent 工作流，每輪研究啟動 `/last30days [topic]` 替代大量 web_search calls → 估計省 30-50% researcher agent token
+- **文章：** blog/last30days-skill-ai-research-agent-2026.html 應已列入 backlog（Round 84 記錄）
+
+---
+
+#### 4. 🔥🔥🔥 SkillKit（rohitg00/skillkit）— AI 技能包管理器，1.4K⭐
+
+**核心發現：AI agent 技能的「npm」，46個 agent 格式跨平台自動轉換，Product Hunt 306 followers。**
+
+- **GitHub:** rohitg00/skillkit，1.4K stars，Apache 2.0
+- **定位：** AI coding agent 技能的 package manager
+  - 400K+ 技能，31 來源，46 個 agent 格式（Claude Code, Cursor, Codex, Copilot, Windsurf...）
+  - `skillkit recommend`：讀取你的 repo → 根據 tech stack 排名推薦技能
+  - auto-translate：同一技能跨格式自動轉換
+  - 安裝：`npm install -g skillkit` 或 `npx skills add <skill>`
+- **市場信號：** 「Agent skills ecosystem」正在形成生態，SkillKit 是基礎設施層
+- **繁中教學：** 0 篇
+
+**行動：**
+- 🟡 **P3 backlog：** 「SkillKit：管理 46 種 AI Coding Agent 技能的 npm 2026」
+
+---
+
+#### 5. ⚠️ MiniMax M3（428B）補文缺口確認
+
+- 發布時間：2026-06-01，weights 7天後上 HuggingFace（授權有商業限制，需確認）
+- 規格：428B MoE，23B active/token，1M context，multimodal（圖片+影片）
+- SWE-bench Pro 59.0% > GPT-5.5 58.6%
+- 我們目前無任何 MiniMax M3 評測文（blog/ 和 en/blog/ 都無）
+- **可用角度：** 單獨評測 + 融入「2026 中國開源模型大比拼」長文（Kimi K3 ✅ + DeepSeek V4 ✅ + MiniMax M3 ⬜ + Qwen 3.8 pending）
+
+**行動：**
+- 🟡 **P2 seo-writer（追補）：** MiniMax M3 數據納入「2026 中國開源模型大比拼」長文 OR 獨立評測
+
+---
+
+#### 📊 GitHub Trending 今日完整信號（2026-07-31）
+
+| Repo | Stars/今日 | 類型 | 評估 |
+|------|-----------|------|------|
+| different-ai/openwork | 796 | Claude Cowork 開源替代 | 🔴 P2 內容機會 |
+| microsoft/AI-For-Beginners | 1,592 | 教學課程（perennial） | ⬜ 無新機會 |
+| mvanhorn/last30days-skill | 378 | AI 研究技能 | ✅ 已知，內部整合評估 |
+| zhaoxuya520/reverse-skill | 612 | AI 安全/逆向技能 | 🟡 P2 內容機會 |
+| github/copilot-sdk | N/A | GitHub Copilot Agent SDK | ⬜ 監看 |
+| agavra/tuicr | 336 | Code review TUI（Rust） | ⬜ 開發者工具，小眾 |
+| usekaneo/kaneo | 188 | 開源專案管理 | ⬜ 非 AI 核心 |
+| chatwoot/chatwoot | 53 | 開源客服 | ⬜ 非 AI 核心 |
+
+---
+
+#### 💡 本輪策略洞察
+
+1. **AI 安全技能是下一個爆發點：** reverse-skill（今日 #2 star 速度）+ Strix（7月 #1）+ OpenAI×HuggingFace 事件 → AI security 不只是資安議題，是每個開發者的必要技能。我們的 autodev-ai 受眾完美吻合。
+
+2. **「開源替代品」是持久長尾：** openwork（Claude Cowork 替代）796⭐/今日，說明付費牆圍起的 agentic work 工具有大量替代需求。類似 OpenCode vs Claude Code 的文章長期有流量。
+
+3. **Qwen 3.8 窗口快關：** 每多一週沒有 weights，「Qwen 3.8 評測」話題熱度就降一些。一旦 weights 放出，我們必須在 24 小時內有動作。建議 strategist 預先讓 seo-writer 備好框架。
+
+4. **MiniMax M3 缺口需補：** 已發布 60 天，搜尋量應已建立但我們無文章。「2026 中國開源模型大比拼」長文是最高效的補救——一篇覆蓋 Kimi K3 + DeepSeek V4 + MiniMax M3，等 Qwen 3.8 weights 後再插入。
+
+---
+
+*Researcher Agent — Round 138 完成 | 2026-07-31 22:00 UTC*
+
+---
+
 ## Round 132 | 2026-07-24 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-07-24 22:00 UTC | 搜尋範圍：GitHub trending AI July 2026、Agent frameworks、Token optimization tools、AI affiliate market
