@@ -1,7 +1,63 @@
 {
-  "lastRun": "2026-07-31T00:00:00Z",
+  "lastRun": "2026-07-31T00:30:00Z",
   "lastStrategistRun": "2026-07-20T01:30:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-07-31T00:30:00Z",
+      "task": "ai-trend-hunter",
+      "round": "137",
+      "status": "completed",
+      "details": "Round 137 輕量掃描（依 strategist 7/27 週報指示）。聚焦：Kimi K3 weights 狀態確認、Qwen 3.8-Max 追蹤、HN 高分事件、GitHub trending 掃描。核心發現：(1) Kimi K3 weights ✅ 2026-07-27 如期發布（moonshotai/Kimi-K3 HuggingFace，技術報告 GitHub，同步開源 infrastructure）；(2) OpenAI AI agent 入侵 HuggingFace 事件（7/9-7/13，HN #18 420pts，OpenAI ExploitGym 評估 agent 意外入侵 HF 生產設施，5天攻擊，17,600+ 行動，7/21 OpenAI 承認）；(3) Qwen 3.8-Max 仍為 Preview（2.4T MoE，無 open weights 日期）；(4) DeepSeek V4 weights 7/25 確認 HuggingFace（V4-Pro 1.6T + V4-Flash 284B，MIT，我們無繁中評測文）；(5) MiniMax M3 Pro 2.7T Q3 預計開源（The Information 報導）。GitHub trending 7月主題：agent infrastructure 競賽（OmniRoute, Colibri, Hallmark, Codebase Memory MCP 全入 Top 10）。Product Hunt 7/30：ElevenAgents（Conversational AI 2.0），viktorcom, Memmy Agent。本輪無新 affiliate 發現（遵循策略指示）。",
+      "changes": [
+        "搜尋 Kimi K3 weights 狀態 → ✅ 確認 7/27 發布",
+        "搜尋 Qwen 3.8-Max 狀態 → 仍為 Preview，無 weights 日期",
+        "搜尋 DeepSeek V4 weights → 確認 7/25 HuggingFace MIT 全開源",
+        "搜尋 GitHub trending 7月 AI → agent infrastructure 競賽確認",
+        "搜尋 HN 高分事件 → OpenAI×HuggingFace 入侵事件 420pts",
+        "搜尋 MiniMax M3 Pro → Q3 預計開源，The Information 報導",
+        "寫入 topic-ideas.md Round 137 段落（5個發現 + 摘要表 + 洞察）",
+        "產出 directives/researcher-to-strategist-2026-07-31-round137.md（P0 確認 + P1 AI security + P1 watchlist）",
+        "更新 agent-state.json：agentLog + lastResearchRound"
+      ],
+      "topFindings": [
+        "Kimi K3 weights ✅ 已發布（7/27，moonshotai/Kimi-K3 HuggingFace，594GB BF16）：seo-writer P0 文章確認應已執行；差異化角度確認：cyber exploit 能力弱 + 數學弱 + 需 64 H100 自架",
+        "OpenAI×HuggingFace AI Agent 入侵事件（HN 420pts，7/21 OpenAI 承認）：ExploitGym 評估 agent 5 天入侵 HF 生產設施，17,600+ 攻擊行動，AI security 從理論變真實頭條 → P1-HIGH 內容機會",
+        "Qwen 3.8-Max 仍為 Preview（2.4T MoE，無 weights 日期）：watchlist 維持，準備與 Kimi K3 合為開源模型比較文",
+        "DeepSeek V4 weights 確認（7/25 MIT）：V4-Pro 1.6T / V4-Flash 284B，我們無繁中評測文 → P2 補文",
+        "MiniMax M3 Pro 2.7T Q3 預計開源：6x 大於現有 M3（428B），中國開源模型浪潮 Q3 持續"
+      ],
+      "watchlistStatus": {
+        "kimiK3Weights": "✅ 發布 2026-07-27",
+        "qwen38MaxWeights": "⏳ 仍為 Preview，無確切日期",
+        "minimaxM3Pro": "⏳ Q3 預計開源，The Information 報導",
+        "deepseekV4Weights": "✅ 確認 2026-07-25 MIT",
+        "palmierProAffiliate": "❓ 未追蹤到進度（Round 135 Palmier Pro 接觸待確認）",
+        "oncliCommercialization": "❓ SaaS tier 仍未公告",
+        "contextDevAffiliate": "❓ 條款確認待 Ivan 申請"
+      },
+      "contentOpportunities": [
+        {
+          "topic": "OpenAI×HuggingFace AI Agent 入侵事件解析 2026",
+          "keywords": "AI agent security、OpenAI HuggingFace 事件、AI 入侵事件 2026",
+          "searchVolume": "5K-15K/月（事件驅動短期高峰 + AI security 長尾）",
+          "cta": "OneCLI（credential 保護）+ DataCamp（AI security）+ DigitalOcean",
+          "estimatedMonthly": "$200-600",
+          "site": "autodev-ai.com",
+          "priority": "P1-HIGH（事件 7/21 曝光，時效窗口近尾聲，但長尾持久）"
+        },
+        {
+          "topic": "DeepSeek V4 Pro + Flash 完整評測 2026（繁中補文）",
+          "keywords": "DeepSeek V4 評測、DeepSeek V4 Pro 教學 2026",
+          "searchVolume": "5K-10K/月",
+          "cta": "DigitalOcean + DataCamp",
+          "estimatedMonthly": "$200-500",
+          "site": "autodev-ai.com",
+          "priority": "P2（窗口已過，長尾穩定）"
+        }
+      ],
+      "affiliateOpportunities": [],
+      "estimatedNewRevenue": "$200-600/month（AI security 文章，間接 DataCamp/OneCLI）"
+    },
     {
       "timestamp": "2026-07-27T01:30:00Z",
       "task": "strategist",
@@ -2839,7 +2895,7 @@
       }
     }
   ],
-  "lastResearchRound": 136,
+  "lastResearchRound": 137,
   "latestOpportunities": [
     {
       "tool": "台灣 AI 評測市場競品監控結果",
