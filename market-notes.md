@@ -4,6 +4,71 @@
 
 ---
 
+## 2026-08-01（市場研究 Round 140 — 23:00 UTC market-research cron）
+
+### 🔥 本輪重點：7 個全新 Affiliate 管道 + Bluesky 流量空白 + 台灣數位產品缺口確認
+
+#### 新 Affiliate 機會（全部首次確認，未列入 Ivan 待辦清單）
+
+| 工具 | 佣金 | Cookie | 定價 | 申請連結 | 月潛力 | 優先 |
+|------|------|--------|------|---------|--------|------|
+| **Buzz.ai** | 30%/12m | 60 天 | $225-450/月 | Reditus marketplace | **$800-2,200** | P1-HIGH |
+| **involve.me** | **30% LIFETIME** | 60 天 | $99 avg/account | Reditus marketplace | $400-1,000 | P1-HIGH |
+| **Taskade** | **20% LIFETIME** | 90 天 | $19-49/月 | taskade.com/partners | $300-800 | P1-HIGH |
+| **ElevenLabs** | 22%/12m | 90 天 | $22-99/月 | elevenlabs.io/affiliates (PartnerStack) | $400-1,000 | P1-HIGH |
+| **Synthesia** | 25%/12m | 60 天 | Starter+Creator | synthesia.io/partners/affiliates (Rewardful) | $300-800 | P1-HIGH |
+| **Browse AI** | **20% LIFETIME** | 60 天 | SaaS 訂閱 | PartnerStack 搜尋 Browse AI | $200-600 | P1-HIGH |
+| **Viktor (Zeta Labs)** | 15%→20%/12m | — | — | dub.co（需登入申請） | $100-300 | P2 |
+
+#### Buzz.ai 重點說明（本輪最高 LTV）
+- **$500 avg revenue/account** — 業界最高之一，30% = **$150/月每個客戶 = $1,800/年**
+- AI 銷售自動化（LinkedIn + email），B2B 受眾高 LTV
+- 在 Reditus marketplace 申請（getreditus.com）
+- 市場大小：B2B 銷售工具市場 2026 持續爆發，競爭比消費端少
+
+#### involve.me 重點說明（LIFETIME 複利）
+- 30% LIFETIME：$99 avg/account × 30% = **$29.7/月每個客戶，無期限**
+- AI quiz funnel + email automation，行銷受眾高轉換
+- 低 $20 出金門檻
+- 對比：HeyGen 25%/12m 結束後收入歸零，involve.me 永久累積
+
+#### Taskade 重點說明（LIFETIME 確認）
+- 官方文章確認：**20% LIFETIME**（第三方有說30-50%，官方頁是20%，以官方為準）
+- 90天 cookie 是業界最長之一
+- AI agents + workflow automation，受眾與 autodev-ai 高度吻合
+- 申請：taskade.com/partners 或 help.taskade.com
+
+#### ElevenLabs 重點說明
+- **PartnerStack** 管理，申請連結：elevenlabs.io/affiliates
+- 22% for 12m（Starter/Creator/Pro/Scale），Business plan = 11%
+- 90天 cookie，$5 最低出金，每月1-15日付款
+- 注意：佣金在購買後90天才「激活」（2月10日購買→5月10日激活→6月付款）
+
+#### 台灣數位產品需求缺口（本輪確認）
+
+| 缺口 | 競爭狀況 | 建議定價 | 行動 |
+|------|---------|---------|------|
+| **Polar 繁中平台教學** | 幾乎 0 篇中文介紹 | 免費（部落格）| 寫 Polar vs Gumroad vs Lemon Squeezy 台灣版指南 |
+| **AI 工具 Notion 模板包** | Gumroad 英文多，繁中 = 0 | $29 甜蜜點 | Ivan 上架 Gumroad |
+| **Gumroad 交易/trading 產品** | winner avg revenue $75K（最高類別）| $100-500 | P2 評估 trading indicator PDF |
+| **中小企業 AI SOP 模板包** | 繁中 = 0 | $49 | 打包既有教學為模板 |
+
+#### 新流量管道評估
+
+**Bluesky（強烈推薦進場）：**
+- 45M+ 用戶（2026年6月），仍在快速增長
+- **不懲罰外部連結**（X 演算法壓制連結帖，Bluesky 不壓制）= 直接導流效率最高
+- 50,000+ 社區自建演算法 feed，可在 AI 技術類 feed 中曝光
+- **中文 AI 工具創作者幾乎為 0**，先佔者優勢巨大
+- 行動：Ivan 開設 @autodev-ai.bsky.social，同步發佈 autodev-ai 文章摘要 + 連結
+
+**Xiaohongshu（謹慎）：**
+- 2025上半年：3.2M 假筆記 + 600K 低質量 AI 生成內容被下架
+- AI 生成內容被嚴格審查，台灣 IP 訪問限制
+- 建議：先觀察，不急進
+
+---
+
 ## 2026-07-25（市場研究 Round 134 — 23:00 UTC cron）
 
 ### 🔥 本輪重點：AI 視頻 Affiliate 集中爆發 + B2B SaaS 新管道
