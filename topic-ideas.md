@@ -1,5 +1,136 @@
 # topic-ideas.md - 趨勢獵手發現(Researcher Agent)
 
+## 🔥 本輪最高價值發現（2026-08-02 Round 141）
+
+> **本輪策略：常規掃描（Product Hunt / HN / GitHub trending / AI 影片市場 / Affiliate 市場）**
+> 重點：MiniMax H3 昨日發布、Synthflow AI affiliate 首次確認、ElevenAgents 新內容鉤子
+
+---
+
+### 1. **MiniMax H3 — Omni-modal 2K AI 影片模型，2026-07-31 發布，繁中評測空白** ⭐ P1-HIGH TIME-SENSITIVE
+
+- **工具：** MiniMax H3（Hailuo AI）
+- **發布：** 2026-07-31（昨日！），Reuters 報導，Product Hunt 7/31 trending 前列
+- **規格：**
+  - 純 omni-modal 輸入：文字 + 圖片 + 影片 + 音訊 全部接受
+  - 輸出：原生 2K 畫質，4–15 秒（整數秒），原生立體聲音訊
+  - Model ID：`MiniMax-H3`（API 已上線，Hailuo AI app 同步可用）
+  - Open weights：「upcoming」（尚未放出，等待中）
+  - 適用場景：廣告、品牌、電商、產品設計、UI/UX、遊戲、電影前期視覺
+  - 定價：API 計費，具體 token 費率見 minimax.io
+- **競品對比：** 被定位為對標 Kling AI 3.0 / Runway Gen-4 / Sora 2 的高品質 2K 影片生成
+- **繁中現況：** 0 篇完整教學（YouTube 英文已有初始測試影片，繁中空白）
+- **有無 affiliate：** ❌ MiniMax 無直接 affiliate。間接：
+  - DigitalOcean（API 部署環境）
+  - DataCamp（AI 課程）
+  - **若結合 ElevenLabs（22%/12m）或 Synthflow AI（20%/12m）做 AI 影片+語音一條龍教學，可觸發兩個 affiliate**
+- **關鍵字：** "MiniMax H3 評測", "MiniMax H3 教學", "Hailuo H3 2K 影片", "minimax h3 vs runway gen-4", "AI 影片生成 2026 最新", "2K AI video model 2026"
+- **搜尋量預估：** 8K-20K/月（新模型發布72h峰值，長尾持久）
+- **預估月收入：** $200-500（間接 DataCamp/DO）
+- **建議站點：** autodev-ai.com（繁中）
+- **優先級：** P1-HIGH（發布昨日，72h 窗口，繁中首發）
+
+---
+
+### 2. **Synthflow AI affiliate CONFIRMED — 20%/12m（PartnerStack，no-code 語音 AI 平台）** ⭐ P1-HIGH NEW AFFILIATE
+
+- **工具：** Synthflow AI（synthflow.ai）— no-code AI 語音客服 agent 建構平台
+- **功能：** 讓企業無需工程師即可架設 AI 電話接待、預約排程、lead qualification、客服自動化。整合 CRM + 主流商業系統
+- **Affiliate 確認：**
+  - ✅ **20% recurring / 首年 12 個月**（PartnerStack，tapfiliate 資料來源確認）
+  - Cookie 未公開（PartnerStack 通常 60-90 天）
+  - 受眾：AI 語音自動化創作者、顧問、代理商
+  - 申請：PartnerStack 搜尋 Synthflow AI 或 synthflow.ai/affiliate（若有直連）
+- **市場定位：** B2B 語音 AI SaaS，切入企業 AI 接待員市場（$2.3B+，Answrr 同一市場）
+- **差異化 vs Answrr（30% LIFETIME）：** Synthflow 主打 no-code 建構流程，Answrr 主打現成 AI 接待員 SaaS。兩者可並排比較頁
+- **關鍵字：** "synthflow ai 評測", "no-code 語音 AI agent", "AI 電話接待員 2026", "synthflow review", "synthflow vs vapi 2026", "AI customer service automation 2026"
+- **搜尋量預估：** 5K-12K/月（B2B 受眾，高 CPC $4-10/click）
+- **預估月收入：** $300-800/月（B2B SaaS 高客單，20%/12m 複利）
+- **建議站點：** ai-tools.pro（英文 B2B 評測）+ autodev-ai.com（繁中教學）
+- **優先級：** P1-HIGH（本輪首次確認，B2B 語音 AI 市場仍是藍海）
+- **行動項：**
+  - 🔴 P1-HIGH（Ivan）：申請 Synthflow AI affiliate → PartnerStack 搜尋 Synthflow 或 synthflow.ai/affiliate
+  - 🔴 P1-HIGH（seo-writer）：寫「Synthflow AI 完整評測 2026：no-code 語音 agent 教學 + 評測」
+
+---
+
+### 3. **ElevenAgents by ElevenLabs "Conversational AI 2.0" — Product Hunt 7/31 前列，新內容鉤子** ⭐ P1-HIGH CONTENT HOOK
+
+- **工具：** ElevenAgents（ElevenLabs）— Conversational AI 2.0
+- **發布：** 2026-07-31，Product Hunt 7/31 日榜前列
+- **核心功能：**
+  - 自然輪流對話（natural turn-taking）
+  - 自動語言偵測（automatic language detection）
+  - 企業級工具：trust + performance 新基準
+  - "Scale conversations without scaling your team"
+- **關鍵字：** "ElevenAgents 評測", "ElevenLabs Conversational AI 2.0", "AI 語音 agent 2026", "ElevenLabs voice agent 教學", "ElevenAgents vs Synthflow"
+- **Affiliate：** ✅ **ElevenLabs 已確認 22%/12m（PartnerStack，Round 140）**
+  - 本條目作為 ElevenLabs 評測文新鮮內容鉤子（ElevenAgents launch = 文章更新角度）
+- **預估月收入：** $300-700/月（ElevenLabs affiliate 22%/12m，待 Ivan 申請）
+- **建議站點：** autodev-ai.com（繁中）
+- **優先級：** P1-HIGH（內容鉤子，觸發 R140 P1-HIGH ElevenLabs affiliate 的寫作時機）
+- **行動項：**
+  - 🔴 P1-HIGH（Ivan，R140 carryover）：申請 ElevenLabs affiliate → PartnerStack（elevenlabs.io/affiliates）
+  - 🔴 P1-HIGH（seo-writer）：寫「ElevenLabs 完整評測 2026：Conversational AI 2.0 + ElevenAgents 教學」
+
+---
+
+### 4. **Watchlist 狀態更新（2026-08-02）** 📋
+
+| 項目 | 狀態 | 備注 |
+|------|------|------|
+| Qwen 3.8-Max open weights | ⏳ 仍為 Preview | 無 weights 日期，無 license 公告，API 可用 |
+| MiniMax M3 Pro 2.7T（文字模型）| ⏳ Q3 2026 pending | The Information 單一來源，未官方確認 |
+| MiniMax H3（影片模型）| ✅ **2026-07-31 發布！** | API + Hailuo app 可用，open weights「upcoming」|
+| DeepSeek R3 | ⏳ 無消息 | 搜尋無相關資料，待追蹤 |
+
+---
+
+### 5. **AgentMicro — Product Hunt August 2026 Best Products 入榜** ⭐ P2 待查
+
+- **工具：** AgentMicro（Product Hunt 2026年8月精選）
+- **現況：** 列於 Product Hunt「Best products of August 2026」名單，細節有限
+- **行動：** P2 — 下輪掃描確認功能 + 是否有 affiliate program
+- **備注：** B2B AI agent 市場，若有 30%+ affiliate 則升為 P1-HIGH
+
+---
+
+### 📊 Round 141 變現機會總結
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|-----------|---------|
+| 2026-08-02 | MiniMax H3 | MiniMax H3 評測, 2K AI 影片 2026 | 8K-20K | DigitalOcean + DataCamp 間接 | $200-500 | autodev-ai |
+| 2026-08-02 | Synthflow AI | synthflow ai 評測, no-code 語音 AI | 5K-12K | **20%/12m PartnerStack affiliate** | $300-800 | ai-tools.pro + autodev-ai |
+| 2026-08-02 | ElevenAgents | ElevenLabsConversational AI 2.0 | 8K-18K | ElevenLabs 22%/12m（待 Ivan 申請）| $300-700 | autodev-ai |
+| 2026-08-02 | AgentMicro | agentmicro review, AI agent platform | 待查 | 待查 affiliate | 待查 | 待查 |
+
+**本輪預估新增月收入潛力：$800-2,000/月（Synthflow 首次確認 + ElevenAgents 觸發 ElevenLabs R140 carryover）**
+
+---
+
+### 💡 Round 141 市場洞察
+
+**AI 影片市場進入「omni-modal」競賽：** MiniMax H3（2K + 立體聲）、Runway Gen-4、Kling AI 3.0 三大平台在 7-8 月密集發布。台灣創作者對 AI 影片生成工具需求高，但繁中深度評測仍是空白。H3 open weights「upcoming」是額外鉤子——weights 放出後可做自架部署教學（DigitalOcean GPU 切入）。
+
+**語音 AI + Agent 是 2026 年夏季最熱 B2B 類別：** ElevenAgents（ElevenLabs）、Synthflow AI、Vapi、Deepgram 全部在 7-8 月密集發布或更新。這個類別的 affiliate 佣金普遍是 20-25%/12m，客單高（B2B SaaS），適合做「AI 語音 agent 完整比較」長文，一頁並列多個 affiliate CTA。
+
+---
+
+## 🎯 Round 141 Ivan 緊急行動項
+
+### P1-HIGH（本輪新增）
+1. **申請 Synthflow AI affiliate** → PartnerStack 搜尋 Synthflow 或 synthflow.ai/affiliate
+   - 佣金：20%/12m
+   - 搭配：Answrr 30% LIFETIME + ElevenLabs 22%/12m 做「AI 語音 agent 比較頁」
+
+### P1-HIGH（R140 carryover，再次強調）
+2. **申請 ElevenLabs affiliate** → elevenlabs.io/affiliates（PartnerStack，22%/12m，90天cookie）
+3. **申請 Synthesia affiliate** → synthesia.io/partners/affiliates（Rewardful，25%/12m）
+4. **申請 Browse AI affiliate** → PartnerStack 搜尋 Browse AI（20% LIFETIME）
+5. **申請 Involve.me affiliate** → Reditus 搜尋 involve.me（30% LIFETIME）
+
+---
+
 ## 🔥 本輪最高價值發現(2026-07-31 Round 137)
 
 > **本輪策略：輕量掃描（依 strategist 7/27 週報指示）**
