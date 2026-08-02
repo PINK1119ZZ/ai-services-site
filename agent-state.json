@@ -1221,6 +1221,48 @@
         "P1: 修復 ai-tools.tw DNS（第 10 天失效）",
         "P1: 確認 n8n-tw-templates Gumroad 狀態"
       ]
+    },
+    {
+      "timestamp": "2026-08-02T03:10:00Z",
+      "task": "researcher",
+      "status": "completed",
+      "details": "Round 142 competitor-watch cron（Sun 11:00）— 不看對手做什麼，看對手靠什麼賺錢。搜尋競品變現結構 + 新 affiliate 機會 + 關鍵字空白。核心發現：(1) Murf AI 20%/24mo affiliate（murf.ai/partner-with-us/affiliate，PartnerStack，90-day cookie，繁中評測空白，Ivan P1-HIGH）；(2) Frase.io 30%/12mo affiliate（frase.io/partners/affiliates，SEO+GEO 工具，繁中完全空白，Ivan P1）；(3) CustomGPT.ai 15-20%/24mo affiliate（customgpt.ai/partners，RAG chatbot，Ivan P2）；(4) Seedance 2.5 關鍵字空白（BBC 繁中有報導但零評測，月搜尋 10K-25K 估，seo-writer P1-HIGH）；(5) AI 視頻比較頁（Seedance/Kling/Hailuo/Runway）繁中空白，競品英文站已有但繁中無。競品變現分析：TechRadar/ZDNET/PCMag 以 affiliate roundup + 比較頁為主要變現，「I tried X tools」格式繁中完全空白。已產出 directives/researcher-to-strategist-2026-08-02-round142.md，更新 topic-ideas.md。",
+      "changes": [
+        "創建 directives/researcher-to-strategist-2026-08-02-round142.md",
+        "更新 topic-ideas.md：Seedance 2.5 P1-HIGH + AI 視頻比較頁 P1 + Murf AI P1 + Frase.io P1 + CustomGPT.ai P2",
+        "更新 agent-state.json agentLog"
+      ],
+      "newAffiliatesFound": [
+        {
+          "name": "Murf AI",
+          "commission": "20%/24mo",
+          "cookie": "90天",
+          "url": "murf.ai/partner-with-us/affiliate",
+          "priority": "P1-HIGH",
+          "monthlyEst": -400
+        },
+        {
+          "name": "Frase.io",
+          "commission": "30%/12mo",
+          "url": "frase.io/partners/affiliates",
+          "priority": "P1",
+          "monthlyEst": -300
+        },
+        {
+          "name": "CustomGPT.ai",
+          "commission": "15-20%/24mo",
+          "cookie": "60天",
+          "url": "customgpt.ai/partners",
+          "priority": "P2",
+          "monthlyEst": -400
+        }
+      ],
+      "keywordGaps": [
+        "Seedance 2.5 評測（繁中零評測，BBC有報導，月搜尋10K-25K估）",
+        "AI 視頻生成器比較頁 2026（Seedance/Kling/Hailuo/Runway，競品英文有繁中無）",
+        "Murf AI 評測（20%/24mo affiliate，繁中空白）",
+        "Frase.io 評測（SEO+GEO tool，30%/12mo，繁中空白）"
+      ]
     }
   ],
   "gscData": {
@@ -2600,5 +2642,6 @@
   "lastGscCheckAt": "2026-07-22T07:10:00Z",
   "lastGscSummary": "ranking: n/a; high-impr low-CTR: 5; pos 11-20 opps: 7",
   "lastResearchRoundDate": "2026-07-25",
-  "lastIncomeIdeation": "2026-07-31T12:00:00Z"
+  "lastIncomeIdeation": "2026-07-31T12:00:00Z",
+  "lastResearcherRun": "2026-08-02T03:10:00Z"
 }

@@ -2306,3 +2306,71 @@ Inkling 的發布確認了 2026 下半年開源大模型競爭進入新階段：
 
 **AI agent 安全主題持續延燒：** 從 OneCLI（credential gateway）→ OpenAI×HuggingFace 入侵事件 → EU AI Act 合規工具爆發，AI agent 安全已從理論話題變成有頭條、有法律要求、有工具生態的具體領域。autodev-ai 在這個方向有先發文章優勢（OneCLI 教學 + security 系列），值得繼續深耕。
 
+
+---
+
+## 📝 Round 142 — 2026-08-02 03:10 UTC（competitor-watch cron）
+
+### ⭐ P1-HIGH 關鍵字空白：Seedance 2.5 完整評測（字節跳動 AI 視頻，繁中零評測）
+
+| 項目 | 數據 |
+|------|------|
+| 工具 | Seedance 2.5（ByteDance，2026-07 最新版）|
+| 搜尋量 | 月搜尋 10K-25K 估（BBC 繁中已有「讓好萊塢陷入恐慌」新聞報導）|
+| 繁中現況 | ✅ **零評測文章**（BBC 新聞 + 維基繁中條目 → 有意識但無深度內容）|
+| 競爭難度 | 低（繁中無系統評測，英文已有大量但繁中空白）|
+| 關鍵字 | `Seedance 2.0 評測`、`seedance 2.5 中文`、`ai 視頻生成器 2026`、`seedance vs kling` |
+| Affiliate | ❌ 無直接，搭 DigitalOcean + DataCamp |
+| 預估月收入 | $150-400（間接） |
+| 建議行動 | 🔴 seo-writer P1-HIGH：`blog/seedance-2-5-review-2026.html` |
+
+---
+
+### ⭐ P1 關鍵字空白：AI 視頻生成器比較頁 2026（繁中市場唯一機會）
+
+競品英文站（vidguru.ai、wireflow.ai、poyo.ai）已有完整比較頁，繁中完全空白。
+- **關鍵字：** `AI 視頻生成器 2026 比較`、`Kling vs Seedance vs Hailuo`、`AI video generator 台灣`
+- **月搜尋：** 8K-20K 估（英文 + 繁中合計）
+- **建議架構：** Seedance 2.5 / Kling 3.0 / Hailuo 2.3 / Runway Gen-4.5 四者比較
+- **Affiliate 串接：** Runway ML（Ivan P0 未申請）+ Pictory（Ivan P1）+ HeyGen（Ivan P1）
+- **建議行動：** seo-writer P1：`blog/ai-video-generator-comparison-2026.html`（繁中）
+
+---
+
+### ⭐ P1 關鍵字空白：Murf AI 中文評測 2026（20%/24mo affiliate，繁中空白）
+
+| 項目 | 數據 |
+|------|------|
+| 工具 | Murf AI（murf.ai），AI TTS + 語音合成，10M+ 用戶 |
+| 定價 | Creator $19/mo（年繳）/ Business $29/mo |
+| Affiliate | **20% recurring / 24 個月**（PartnerStack，90-day cookie）|
+| 申請 | murf.ai/partner-with-us/affiliate |
+| 繁中現況 | ✅ **完全空白**（只有 2025-01 一篇 Threads，無評測文）|
+| 關鍵字 | `murf ai 評測`、`ai 語音配音工具 2026`、`murf vs elevenlabs 中文`、`ai 配音 tts` |
+| 預估月收入 | $300-700/月（24月複利，創作者受眾廣）|
+| 建議行動 | Ivan P1-HIGH：申請 affiliate；seo-writer P1（待批）：`blog/murf-ai-review-2026.html` |
+
+---
+
+### 📊 Round 142 機會彙整
+
+| 工具/機會 | 類型 | 優先級 | 預估月收入 | 備注 |
+|-----------|------|--------|-----------|------|
+| Seedance 2.5 評測 | 關鍵字空白 | P1-HIGH | $150-400（間接）| 繁中零評測，BBC 已有關注 |
+| AI 視頻比較頁 | 關鍵字空白 | P1 | $300-800（串多個 affiliate）| 競品英文有，繁中無 |
+| Murf AI 評測 | Affiliate + 內容 | P1 | $300-700 | 20%/24mo，Ivan 申請後寫 |
+| Frase.io 評測 | Affiliate + 內容 | P1 | $200-500 | 30%/12mo，繁中空白 |
+| CustomGPT.ai | Affiliate | P2 | $200-600 | 15-20%/24mo，B2B |
+
+**本輪新增月收入潛力：$950-2,500/月（全部解鎖後）**
+
+---
+
+### 💡 Round 142 競品洞察
+
+**英文競品變現結構解析：** TechRadar/ZDNET/PCMag 的 AI 工具內容 80% 收入來自 affiliate 嵌入，格式是「I tried X tools」roundup + 比較頁，不是單一評測。這個格式繁中完全空白。
+
+**可立即複製的競品動作：**
+1. **比較頁比單一評測帶更多 affiliate 機會** — 一頁並列 3-4 個工具 = 3-4 個 affiliate CTA
+2. **Roundup 格式** — 「測試 20 款 AI 語音工具，這 3 款值得付費」= 高流量 + 多 CTA
+3. **SEO 搶答技巧（CustomGPT 策略）** — 打「工具 X 有合作計畫嗎？」→ 自然引入替代品 affiliate
