@@ -4,6 +4,82 @@
 
 ---
 
+## Round 144 — 2026-08-03 22:00 UTC（輕量掃描）
+
+### 🚨 頭條：Qwen 3.8-Max 開源權重「下週」發布（官方確認）
+
+**這是本輪最重要發現。** 今天（8/3）Alibaba 官方 X 帳號宣布：
+> "Next week, the open weights of Qwen3.8-Max will be released, and Qwen3.8-27B is also going open-weights!"
+
+- **規格：** 2.4T 參數 MoE，~1M token context，128K output，always-on reasoning，image understanding
+- **定價（API）：** Input $2 / Output $6 / Cache $0.25 per 1M tokens（比 Qwen 3.7 便宜 20%）
+- **Benchmark：** Arena Frontend Code #4（1,668 pts），僅次 Claude Opus 5 Max（1,705）、Kimi K3 Max（1,676）、Claude Opus 5 High（1,669）
+- **開源條件：** 下週發布 Qwen3.8-Max weights + Qwen3.8-27B weights（雙重開源）
+- **自架現實：** ~1.2TB 4-bit 權重，需 8x H200，一般團隊不可行（評測文差異化角度）
+- **繁中評測現況：** 空白（英文站 yottalabs、coursiv.io、eesel.ai 已有）
+
+**窗口：** 下週（8/10 前後）發布時為 72h 黃金窗口 → **今天開始準備草稿**
+
+**內容機會：**
+- 文章：「Qwen 3.8-Max 完整評測 + 開源權重教學 2026：2.4T 參數，比 Kimi K3 更便宜？」
+- 角度差異化：API 定價比較（Qwen 3.8 vs Kimi K3 vs GPT-5.6）+ 自架可行性評估 + Qwen3.8-27B 小模型實測
+- 關鍵字：Qwen 3.8-Max 評測、Qwen 3.8 開源、qwen 3.8 vs kimi k3、Alibaba AI 2026
+- 搜尋量估計：15K-40K/月（Kimi K3 搜尋量基準推算，Qwen 品牌知名度更高）
+- CTA：DataCamp（AI 課程）+ DigitalOcean（自架 GPU 教學）
+- **預估月收入：$400-1,000**
+- **優先級：P0-URGENT（草稿今天，發布時間跟上）**
+
+---
+
+### Watchlist 狀態更新
+
+| 項目 | 上輪狀態 | 本輪確認 |
+|------|---------|---------|
+| **Qwen 3.8-Max weights** | ⏳ Preview，無日期 | ✅ **下週發布（官方 8/3 宣布）** |
+| **Qwen 3.8-27B weights** | ❓ 未知 | ✅ **同週發布（官方確認）** |
+| MiniMax M3 Pro 2.7T | ⏳ Q3 2026 | ⏳ Head of engineering 暗示即將開源，無確切日期 |
+| DeepSeek R3 | ⏳ 無消息 | ⏳ 無新進展 |
+
+---
+
+### HN 訊號（8/2 Show HN Top）
+
+**Sprocket — AI Agent for Hardware and Software Development（Show HN #4，117pts）**
+- GitHub: amronos/sprocket
+- 定位：硬體 + 軟體開發 AI agent，罕見的跨領域定位
+- 繁中教學：空白
+- 優先級：P3（利基受眾，觀察中）
+
+**注：** 本日 HN 前三名與 AI 無直接關聯（cycloidal gearbox / Linux policy / macOS-on-ARM），AI 信號較弱。
+
+---
+
+### Product Hunt August 2026 月榜（截至今日）
+
+目前 August 2026 月榜前列：DeepSeek、NudgeForMe、AgentMicro、Basedash（AI data analyst）、Port22、Tandem
+
+- **Basedash（AI data analyst）：** P2 待查 affiliate，SQL 資料分析 AI，企業受眾
+- **AgentMicro：** 已在 R141 記錄，持續 P2 觀察
+- 無新 P1 級別機會，月榜信號一般
+
+---
+
+### 市場洞察
+
+**開源大模型 8 月爆發：** Qwen 3.8-Max（2.4T）+ Qwen 3.8-27B 同週雙重開源，加上已發布的 Kimi K3（2.8T）+ DeepSeek V4（1.6T），2026 Q3 成為史上開源模型最密集發布季。**比較文章（Qwen 3.8 vs Kimi K3 vs DeepSeek V4）是長尾流量最高的格式。**
+
+---
+
+### 本輪行動建議
+
+| 優先級 | 執行者 | 行動 |
+|--------|--------|------|
+| P0-URGENT | seo-writer | Qwen 3.8-Max 草稿今天準備，下週 weights 一出立即發布 |
+| P1 | seo-writer | Qwen 3.8-27B 小模型實測文（輕量版，自架友好角度）|
+| 長期 | researcher | MiniMax M3 Pro 繼續追蹤（head of eng 暗示，可能 Q3 末） |
+
+---
+
 ## Round 143 — 2026-08-03 00:30 UTC（今日）
 
 ### 核心發現
