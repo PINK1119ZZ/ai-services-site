@@ -4,6 +4,52 @@
   "lastStrategistRun": "2026-08-02T02:10:00Z",
   "agentLog": [
     {
+      "timestamp": "2026-08-02T14:30:00Z",
+      "agent": "content-refresher",
+      "task": "content-refresher",
+      "status": "completed",
+      "details": "Content refresh cron (Sun 14:00): Updated 3 oldest en/blog articles (all lastmod 2026-05-06). (1) en/blog/best-geo-tools-comparison-2026.html: added DataCamp + DigitalOcean affiliate CTAs; updated JSON-LD dateModified → 2026-08-02. (2) en/blog/chatgpt-claude-gemini-comparison.html: added DataCamp affiliate CTA; updated JSON-LD dateModified → 2026-08-02. (3) en/blog/cloudways-review-2026.html: added DigitalOcean + DataCamp affiliate CTAs; updated JSON-LD dateModified → 2026-08-02. Updated sitemap.xml lastmod for all 3 articles → 2026-08-02. git commit 5ace054 + push origin main.",
+      "changes": [
+        "en/blog/best-geo-tools-comparison-2026.html: added DataCamp + DigitalOcean affiliate CTAs; JSON-LD dateModified → 2026-08-02",
+        "en/blog/chatgpt-claude-gemini-comparison.html: added DataCamp affiliate CTA; JSON-LD dateModified → 2026-08-02",
+        "en/blog/cloudways-review-2026.html: added DigitalOcean + DataCamp affiliate CTAs; JSON-LD dateModified → 2026-08-02",
+        "sitemap.xml: 3 lastmod entries updated → 2026-08-02 (best-geo-tools, chatgpt-claude-gemini, cloudways-review)",
+        "git commit 5ace054 + push origin main"
+      ],
+      "articlesRefreshed": [
+        {
+          "file": "en/blog/best-geo-tools-comparison-2026.html",
+          "oldLastmod": "2026-05-06",
+          "newLastmod": "2026-08-02",
+          "updates": [
+            "Added DataCamp + DigitalOcean affiliate CTAs",
+            "Updated JSON-LD dateModified"
+          ],
+          "affiliateLinksAdded": 2
+        },
+        {
+          "file": "en/blog/chatgpt-claude-gemini-comparison.html",
+          "oldLastmod": "2026-05-06",
+          "newLastmod": "2026-08-02",
+          "updates": [
+            "Added DataCamp affiliate CTA",
+            "Updated JSON-LD dateModified"
+          ],
+          "affiliateLinksAdded": 1
+        },
+        {
+          "file": "en/blog/cloudways-review-2026.html",
+          "oldLastmod": "2026-05-06",
+          "newLastmod": "2026-08-02",
+          "updates": [
+            "Added DigitalOcean + DataCamp affiliate CTAs",
+            "Updated JSON-LD dateModified"
+          ],
+          "affiliateLinksAdded": 2
+        }
+      ]
+    },
+    {
       "timestamp": "2026-08-02T10:30:00Z",
       "agent": "affiliate-monitor",
       "task": "affiliate-monitor",
@@ -1295,6 +1341,22 @@
         "Murf AI 評測（20%/24mo affiliate，繁中空白）",
         "Frase.io 評測（SEO+GEO tool，30%/12mo，繁中空白）"
       ]
+    },
+    {
+      "timestamp": "2026-08-03T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy; sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200. No new in-repo fix available, so existing builder/infra DNS directive remains the action path.",
+      "changes": [
+        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
+        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
+        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl: Could not resolve host)",
+        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
+        "Sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200",
+        "Updated agent-state.json siteHealth + lastChecked",
+        "Updated memory/2026-08-03.md"
+      ]
     }
   ],
   "gscData": {
@@ -1766,7 +1828,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-08-02T10:30:00Z",
+  "lastChecked": "2026-08-03T00:00:00Z",
   "issues": [
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
     "2026-07-11 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
@@ -1795,7 +1857,8 @@
     "2026-07-31 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
     "2026-08-01 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
     "2026-08-02 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (requests/curl equivalent: Failed to resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
-    "2026-08-02 fb-weekly-review: Graph API v23.0 with current page token still returned (#100) valid insights metric for requested post_impressions/post_engaged_users/post_clicks; weekly review again used published_posts public interaction fallback only."
+    "2026-08-02 fb-weekly-review: Graph API v23.0 with current page token still returned (#100) valid insights metric for requested post_impressions/post_engaged_users/post_clicks; weekly review again used published_posts public interaction fallback only.",
+    "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-08-03 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active."
   ],
   "fbReplied": [
     "122119899458778539_2184979269018335",
@@ -2689,5 +2752,47 @@
   "lastGscSummary": "ranking: n/a; high-impr low-CTR: 5; pos 11-20 opps: 7",
   "lastResearchRoundDate": "2026-07-25",
   "lastIncomeIdeation": "2026-07-31T12:00:00Z",
-  "lastResearcherRun": "2026-08-02T03:10:00Z"
+  "lastResearcherRun": "2026-08-02T03:10:00Z",
+  "siteHealth": {
+    "autodev-ai.com": {
+      "url": "https://autodev-ai.com/",
+      "status": "200 OK",
+      "lastChecked": "2026-08-03T00:00:00Z"
+    },
+    "autodev-ai.com/sitemap.xml": {
+      "url": "https://autodev-ai.com/sitemap.xml",
+      "status": "200 OK",
+      "lastChecked": "2026-08-03T00:00:00Z"
+    },
+    "ai-tools.pro": {
+      "url": "https://ai-tools.pro/",
+      "status": "200 OK",
+      "lastChecked": "2026-08-03T00:00:00Z"
+    },
+    "ai-tools.pro/sitemap.xml": {
+      "url": "https://ai-tools.pro/sitemap.xml",
+      "status": "200 OK (redirect to sitemap_index.xml)",
+      "lastChecked": "2026-08-03T00:00:00Z"
+    },
+    "ai-tools.tw": {
+      "url": "https://ai-tools.tw/",
+      "status": "DNS FAIL",
+      "lastChecked": "2026-08-03T00:00:00Z"
+    },
+    "en.ai-tools.tw": {
+      "url": "https://en.ai-tools.tw/",
+      "status": "DNS FAIL",
+      "lastChecked": "2026-08-03T00:00:00Z"
+    },
+    "ai-tools-tw-fallback": {
+      "url": "https://pink1119zz.github.io/ai-tools-tw/",
+      "status": "200 OK",
+      "lastChecked": "2026-08-03T00:00:00Z"
+    },
+    "ai-tools-en-fallback": {
+      "url": "https://pink1119zz.github.io/ai-tools-en/",
+      "status": "200 OK",
+      "lastChecked": "2026-08-03T00:00:00Z"
+    }
+  }
 }
