@@ -4,6 +4,134 @@
 
 ---
 
+## Round 145 — 2026-08-04 00:30 UTC（PH / HN / GitHub trending / 深度掃描）
+
+### 🚨 頭條 1：Qwen 3.8-Max **GA 已發布**，開源權重「下週」（~8/8-10）
+
+R144 追蹤的「下週發布」現已確認為 **8/2 官方 blog 正式上線**。
+qwen.ai/blog?id=qwen3.8 完整公告：
+> "Today, we are officially releasing Qwen 3.8-Max, the most capable model in the Qwen family to date. This also marks the first time we will open-source the weights of a Qwen-Max-class model — the open weights will be released next week."
+
+- **參數：** 2.4T MoE，1M context，128K output，always-on reasoning，multimodal
+- **API 定價：** Input $2 / Output $6 per 1M tokens（比 Qwen 3.7 便宜 20%）
+- **Benchmark（截至 8/3）：** FrontierSWE 評估用 Claude Code harness；MLS-Bench-Lite 5hr timeout
+- **開源時間：** 下週（約 8/8-10）放上 HuggingFace + ModelScope
+- **同步開源：** Qwen3.8-27B 小模型也一起開源
+- **繁中現況：** 完全空白（英文已有 yottalabs、emergent.sh、marktechpost 等多篇）
+
+**窗口確認：** 權重發布當天 = **真正 72h 黃金窗口**（約 8/8-10）→ **草稿今天完成**
+
+| 項目 | 內容 |
+|------|------|
+| 目標文章 | Qwen 3.8-Max 完整評測 2026：2.4T 開源旗艦，比 Kimi K3 更便宜？ |
+| 關鍵字 | Qwen 3.8-Max 評測、Qwen 3.8 開源、qwen 3.8 vs kimi k3、Alibaba AI 2026 |
+| 搜尋量 | 15K-40K/月（Kimi K3 基準推算） |
+| Affiliate | ❌ 無直接 affiliate；CTA: DataCamp + DigitalOcean |
+| 預估月收入 | $400-1,000 |
+| 優先級 | **P0-URGENT（草稿今天，weights 一出立即發布）** |
+
+---
+
+### 🔥 頭條 2：TencentDB Agent Memory — 10K⭐，#1 GitHub Trending，OpenClaw 原生插件
+
+**這是本輪最高價值非 affiliate 發現，且與我們的站點完美契合。**
+
+- **GitHub：** TencentCloud/TencentDB-Agent-Memory — **10K+ stars**（7/8 首次 #1 GitHub Trending）
+- **OpenClaw 插件：** ✅ `@tencentdb-agent-memory/memory-tencentdb`（npm，Node 22.16+，一行 config 啟用）
+- **核心功能：** 4 層記憶架構（L0 raw → L1 事實 → L2 場景 → L3 persona），Chat Memory + Skills + LLM-Wiki + CodeGraph
+- **效能：** WideSearch +51.52%，SWE-bench +9.93%，**token 減少 61%**，PersonaMem +59%
+- **後端：** SQLite + sqlite-vec（本地，無需外部 API），支援 TCVDB 雲端後端
+- **Santiago @svpino 推文：** 15.7K views（2026-07-31），明確提到「61% fewer tokens with OpenClaw」
+- **Hermes Gateway：** 也支援 Hermes Agent，框架中立
+- **授權：** MIT（開源）
+- **有無 affiliate：** ❌ 無直接 affiliate（開源 MIT）。間接：TencentCloud 雲端後端（DataCamp AI agent 課程）
+
+**為什麼這是機會：**
+- autodev-ai.com 受眾是 OpenClaw 用戶 → 「OpenClaw + TencentDB 記憶插件完整教學」= **受眾 100% 匹配**
+- 61% token 省成本角度 = **直接省 Sonnet 5 漲價衝擊**（9/1 漲 50% 正好有解法）
+- 繁中 OpenClaw + TencentDB 教學：空白（英文已有 regolo.ai 完整指南）
+- 我們的 blog/agentmemory-claude-code-tutorial-2026.html 已有相關文章（GSC 1 次點擊）→ 可強化內連
+
+| 項目 | 內容 |
+|------|------|
+| 目標文章 | TencentDB Agent Memory + OpenClaw 完整教學 2026：61% 省 token，持久記憶安裝指南 |
+| 關鍵字 | TencentDB Agent Memory 教學、OpenClaw 記憶插件、ai agent 長期記憶、tencent db memory openclaw |
+| 搜尋量 | 3K-8K/月（利基高轉換） |
+| CTA | DataCamp（AI agent 課程）+ DigitalOcean（自架後端）|
+| 預估月收入 | $200-500 |
+| 優先級 | **P1-HIGH（OpenClaw 受眾完美吻合，省成本角度，長尾持久）** |
+
+---
+
+### GitHub Trending 本週（Jul 27 - Aug 3, 2026）
+
+**來源：** trendshift.io/weekly/2026/31 + star-history.com Jul 24-30
+
+| 排名 | 工具 | 亮點 | 變現角度 |
+|------|------|------|---------|
+| #1（8/1）| mvanhorn/last30days-skill | Agent-led 搜索引擎（Reddit/X/YouTube/Polymarket）| P2 教學 |
+| #2（8/1）| different-ai/openwork | Claude Cowork 開源替代，MCP 共享 skills | P2 教學 |
+| #3（8/1）| github/copilot-sdk | Copilot agent runtime SDK，跨平台 | P2 教學 |
+| #4（8/1）| geo-tp/ESP32-Bit-Pirate | 硬體 I2C/SPI 黑客工具 | ❌ 與受眾無關 |
+| Top（週榜）| TencentDB Agent Memory | 10K⭐，#1 Trending 7/8 | **P1-HIGH（見上）** |
+| Top（週榜）| agentscope-ai/QwenPaw | +21 stars，Qwen-powered 伴侶 AI app | P3 觀察 |
+| Top（週榜）| earendil-works/pi | +24 stars，個人 AI agent | P3 觀察 |
+| Top（週榜）| firecrawl/firecrawl | +18 stars（老朋友，持續成長）| 待 Ivan firecrawl affiliate |
+
+---
+
+### Product Hunt August 2026（本週新增）
+
+**Zinley — Your Personal AI Representative（August 月榜爭奪中）**
+- **定位：** AI 個人代表人（電話接聽、Email 回覆、任務處理），擁有自己的電話號碼和 inbox
+- **整合：** Gmail、Slack、Google Calendar、Notion、Linear、GitHub、Figma、Stripe、iMessage、Discord
+- **PH 月榜：** 657 followers，持續上升
+- **定價：** "Start free"（詳細方案未公開，仍在 waitlist 為主）
+- **Affiliate：** ❌ 無公開 affiliate program（產品仍早期，waitlist 階段）
+- **教學缺口：** 繁中 Zinley 教學 = 0 篇
+- **建議：** P3 觀察，等產品正式上線 + affiliate 推出再追蹤
+
+---
+
+### HN 訊號（Aug 3-4, 2026）
+
+本日 HN 頭條以 Qwen 3.8-Max 發布為主，無新 P1 級 SaaS 工具。次要訊號：
+- **openwork** (#2 GitHub 8/1，Claude Cowork 開源 alt) — HN 開發者討論，P3 內容觀察
+- **last30days** (#1 GitHub 8/1，agent 搜索引擎) — 工具導向教學機會，P3
+
+---
+
+### Watchlist 狀態更新（Round 145）
+
+| 項目 | R144 狀態 | R145 更新 |
+|------|-----------|----------|
+| **Qwen 3.8-Max GA** | ✅ 已 GA（8/2 blog）| ✅ **確認 GA，weights 下週（~8/8-10）** |
+| **Qwen3.8-27B 開源** | ✅ 下週 | ✅ **同週確認，小模型友好** |
+| MiniMax M3 Pro 2.7T | ⏳ Head of eng 暗示 | ⏳ 仍無確切日期 |
+| DeepSeek R3 | ⏳ 無消息 | ⏳ 無新進展 |
+
+---
+
+### 本輪新增內容機會摘要
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|-----------|---------|
+| 2026-08-04 | Qwen 3.8-Max 完整評測 | qwen 3.8-max 評測、qwen 3.8 開源 | 15K-40K | DataCamp+DO 間接 | $400-1,000 | autodev-ai.com |
+| 2026-08-04 | TencentDB + OpenClaw 教學 | tencentdb agent memory openclaw | 3K-8K | DataCamp+DO 間接 | $200-500 | autodev-ai.com |
+
+### 本輪新增 Affiliate 機會
+
+無新 affiliate 發現（遵循策略師降頻指示，R143 已有 Murf AI + Frase.io 待 Ivan 批准）。
+
+### 本輪預估新增月收入潛力
+
+- Qwen 3.8-Max 文章（P0-URGENT）：$400-1,000/月
+- TencentDB+OpenClaw 教學（P1-HIGH）：$200-500/月
+
+**合計：$600-1,500/月（2 篇文章，皆可立即執行）**
+
+---
+
 ## Round 144 — 2026-08-03 22:00 UTC（輕量掃描）
 
 ### 🚨 頭條：Qwen 3.8-Max 開源權重「下週」發布（官方確認）
