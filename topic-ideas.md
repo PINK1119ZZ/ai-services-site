@@ -4,6 +4,164 @@
 
 ---
 
+## Round 146 — 2026-08-05 00:30 UTC（PH / HN / GitHub trending / Affiliate 掃描）
+
+### 🚨 頭條 1：MiniMax M3 Pro — 2.7T 參數，Q3 開源，中國最大開源模型倒數計時
+
+The Information 7/8 報導確認，MiniMax 正在內部開發代號 M3 Pro 的 2.7T 參數模型，計畫最快 Q3 開源。現有 M3（428B，6/1 發布，$0.12/1M tokens）已是業界最便宜旗艦之一。M3 Pro 若成真將是：
+- 參數量 6x 大於現有 M3（428B → 2.7T）
+- 比 DeepSeek V4-Pro（1.6T）+ DeepSeek V4-Flash（284B）都大
+- Q3 = 7/1-9/30，目前剩 8-9 月，**窗口可能在本月至下月**
+- 繁中：M3 Pro 評測文章完全空白（英文已有 aiweekly.co、gptproto.com 報導）
+
+**狀態：** ⏳ 未發布（仍為 reported plan，MiniMax 官方無確認）。Watchlist 維持高優先。
+
+| 項目 | 內容 |
+|------|------|
+| 目標文章 | MiniMax M3 Pro 完整解析 2026：2.7T 開源旗艦，中國最大模型？ |
+| 關鍵字 | MiniMax M3 Pro、minimax m3 pro release date、MiniMax 2.7T、中國開源 AI 模型 2026 |
+| 搜尋量 | 8K-20K/月（M3 基準推算，發布日爆發） |
+| Affiliate | ❌ 無直接 affiliate；CTA: DataCamp + DigitalOcean |
+| 預估月收入 | $200-500（預發布分析文）→ $400-900（發布後評測） |
+| 優先級 | P1-HIGH Watchlist（一旦發布立即觸發） |
+
+---
+
+### 🔥 頭條 2：DeepSeek V4-Flash 更新（2026-07-31）+ 繁中空白
+
+DeepSeek API changelog 確認：2026-07-31 DeepSeek-V4-Flash 更新上線。加上 4/24 的 V4-Pro，DeepSeek 現有雙模型 API 生態：
+- **V4-Pro：** $0.435/1M input（促銷）— 旗艦推理
+- **V4-Flash：** $0.14/1M input / $0.28/1M output — 速度優先
+- **無直接 affiliate**（DeepSeek 無公開 affiliate program）
+- 繁中現況：V4 完整評測文章仍空白（R137 carryover P2）
+
+| 項目 | 內容 |
+|------|------|
+| 目標文章 | DeepSeek V4 Pro + Flash 完整評測 2026：最便宜旗艦 vs 最快 Flash |
+| 關鍵字 | DeepSeek V4 評測、DeepSeek V4 Flash 教學、deepseek v4 vs claude sonnet 2026 |
+| 搜尋量 | 8K-20K/月 |
+| Affiliate | ❌ 無；CTA: DataCamp + DigitalOcean |
+| 預估月收入 | $200-500 |
+| 優先級 | P2（窗口過，長尾穩定） |
+
+---
+
+### 🎯 頭條 3：Framer Agents + External Agents — 50%/12mo affiliate，新功能爆發
+
+Framer 在 2026 頁面確認新功能：AI + Agents + External Agents。Framer affiliate 條款：
+- **佣金：** 50% recurring / 12 個月（agencies 可達 50%，一般 affiliate 確認 50%/12mo）
+- **Cookie：** 90 天
+- **最低提領：** $30，月付，PayPal/銀行轉帳
+- **申請：** openaffiliate.dev/programs/framer（自動批准）
+- 搜尋關鍵字：「Framer vs Webflow 2026」「Framer AI website builder」繁中競品少
+- 相關比較頁已有英文競品但繁中 **完全空白**
+
+**→ 這是本輪最高 affiliate 價值發現：50%/12mo = 業界前 5%**
+
+| 項目 | 內容 |
+|------|------|
+| 目標文章 | Framer 完整評測 2026：AI 網站建置器 + 50% affiliate 怎麼賺？ |
+| 關鍵字 | Framer 評測 2026、Framer vs Webflow、Framer AI website builder 繁中 |
+| 搜尋量 | 10K-25K/月 |
+| Affiliate | ✅ **50%/12mo，90d cookie，自動批准** |
+| 預估月收入 | $400-1,200 |
+| 優先級 | **P1-HIGH（申請連結免審核，立即可執行）** |
+
+---
+
+### 🎯 頭條 4：Context.dev affiliate — 25%/3年 Web Intelligence API
+
+Context.dev（#3 Product Hunt July 2026，R139 carryover）正式確認 affiliate program：
+- **佣金：** 25% per sale / **3 年**（partners.dub.co/context-dev）
+- **LTV：** 10 customers → 25%/3yr 複利（收益計算器顯示顯著）
+- **產品定位：** #1 Web Intelligence API，TypeScript/Python/Ruby/Go SDK，generous free tier
+- **受眾：** 開發者 + AI teams（= autodev-ai 讀者完美吻合）
+- 相關 HN 討論熱度持續，繁中教學空白
+
+**→ 25%/3yr = LTV 遠高於標準 12m 方案，優先級應提升**
+
+| 項目 | 內容 |
+|------|------|
+| 目標文章 | Context.dev 完整評測 2026：AI agent 最強 Web Context API 教學 |
+| 關鍵字 | Context.dev 評測、web context API、AI agent web scraping 2026 |
+| 搜尋量 | 3K-8K/月（利基但轉換率高） |
+| Affiliate | ✅ **25%/3yr，dub.co 追蹤** |
+| 預估月收入 | $200-600 |
+| 優先級 | P1-HIGH（受眾完美吻合，LTV 最高之一） |
+
+---
+
+### 🔥 頭條 5：AI 視頻市場 — Kling v3 登頂 + Seedance 2.0 Fast + Happy Horse 1.0
+
+llm-stats.com leaderboard（August 2026，1,382 blind votes）：
+1. **Kling v3** — 1,934 arena score（業界第一）
+2. **Happy Horse 1.0** — 1,816（新晉黑馬，幾乎無繁中報導）
+3. **Seedance 2.0 Fast** — 1,747（R143 Seedance 2.5 carryover 更新）
+
+**Kling AI affiliate 確認：** 公開 affiliate program（kling.ai/app/commission-share），佣金待查詳細條款。
+
+本輪關鍵洞察：AI 視頻比較頁（R143 carryover）現有更強排行榜數據支撐，繁中競品仍 0。
+
+| 項目 | 內容 |
+|------|------|
+| 目標文章 | 2026 AI 影片生成器排行榜：Kling v3 vs Seedance 2.5 vs Happy Horse 完整比較 |
+| 關鍵字 | AI 影片生成器比較 2026、Kling v3 評測、kling vs seedance、best ai video generator |
+| 搜尋量 | 15K-35K/月 |
+| Affiliate | Kling affiliate（待查佣金）+ 間接 DataCamp/DO |
+| 預估月收入 | $400-1,000 |
+| 優先級 | P1（比較頁長尾，R143 carryover 強化版） |
+
+---
+
+### 🔥 頭條 6：GitHub Trending — esengine/DeepSeek-Reasonix（29.6K⭐，Go terminal coding agent）
+
+DeepSeek-native terminal AI coding agent，Go + TypeScript，prefix-cache-first 設計，MIT，#1/#2 GitHub Trending多次（5月-8月持續）。
+- **29.6K stars，66 contributors**
+- 受眾：開發者 + DeepSeek API 用戶
+- 繁中完整教學：空白（中文 README 存在但無深度教學文）
+- 無 affiliate，但 DataCamp + DigitalOcean CTA 自然吻合
+
+| 項目 | 內容 |
+|------|------|
+| 目標文章 | DeepSeek-Reasonix 完整教學 2026：Go terminal AI coding agent 安裝設定 |
+| 關鍵字 | DeepSeek Reasonix 教學、deepseek terminal agent、go ai coding agent 2026 |
+| 搜尋量 | 3K-8K/月（利基開發者受眾，轉換率高） |
+| Affiliate | ❌ 無；CTA: DataCamp + DigitalOcean |
+| 預估月收入 | $100-300 |
+| 優先級 | P2 |
+
+---
+
+### 📊 本輪市場洞察
+
+**AI 視頻市場格局（August 2026）：**
+- Kling v3 #1（1,934 pts，1,382 blind votes）= 業界認可，affiliate program 存在
+- Happy Horse 1.0 是新黑馬，幾乎無繁中報導 = 早鳥機會
+- Seedance 2.5 vs 2.0 Fast 同系列，ByteDance 持續迭代
+
+**Affiliate 市場格局（本輪新確認）：**
+- Framer 50%/12mo = 業界前 5%，自動批准，**最低執行門檻之一**
+- Context.dev 25%/3yr = LTV 最高之一（超越多數 12m 方案）
+- Kling AI affiliate program 存在（佣金待查）
+
+**執行缺口持續（R145 carryover）：**
+- Qwen 3.8-Max 草稿：weights ~8/8-10，今週必須完成草稿
+- Seedance 2.5 評測：8月窗口持續，P1-HIGH
+- Ivan carryover：Framer 自動批准 = 零障礙，本週可申請
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|----------|------------|----------|
+| 2026-08-05 | Framer AI website builder | Framer 評測 2026、Framer vs Webflow | 10K-25K | Framer affiliate 50%/12mo | $400-1,200 | ai-tools.pro |
+| 2026-08-05 | Context.dev Web Intelligence API | Context.dev 評測、AI agent web API | 3K-8K | Context.dev affiliate 25%/3yr | $200-600 | autodev-ai.com |
+| 2026-08-05 | MiniMax M3 Pro（2.7T，Q3 開源） | MiniMax M3 Pro、2.7T 開源 AI | 8K-20K | 間接 DataCamp/DO | $200-900 | autodev-ai.com |
+| 2026-08-05 | AI視頻排行榜比較頁（Kling v3 #1） | AI 影片生成器比較 2026、Kling v3 | 15K-35K | Kling affiliate + 間接 | $400-1,000 | autodev-ai.com |
+| 2026-08-05 | DeepSeek V4 Flash 更新（7/31） | DeepSeek V4 評測、deepseek flash | 8K-20K | 間接 DataCamp/DO | $200-500 | autodev-ai.com |
+| 2026-08-05 | DeepSeek-Reasonix（29.6K⭐ GitHub） | deepseek reasonix 教學 | 3K-8K | 間接 DataCamp/DO | $100-300 | autodev-ai.com |
+
+**本輪新增月收入潛力：$1,500-4,500**（Framer + Context.dev 兩個高佣金 affiliate 為主力）
+
+---
+
 ## Round 145 — 2026-08-04 00:30 UTC（PH / HN / GitHub trending / 深度掃描）
 
 ### 🚨 頭條 1：Qwen 3.8-Max **GA 已發布**，開源權重「下週」（~8/8-10）
