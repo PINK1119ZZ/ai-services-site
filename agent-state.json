@@ -1,8 +1,27 @@
 {
-  "lastRun": "2026-08-05T00:30:00Z",
+  "lastRun": "2026-08-05T07:00:00Z",
   "lastResearchRound": 146,
   "lastStrategistRun": "2026-08-03T01:30:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-05T07:00:00Z",
+      "agent": "content-ops",
+      "task": "internal-linker",
+      "status": "completed",
+      "summary": "內部連結優化（Wed 15:00 cron）。掃描 ai-services-site 服務頁，新增 3 個自然內部連結，跨 3 篇文章。",
+      "changes": [
+        "bot-cloud.html：hero 段落 'LINE Bot' 文字加入 <a href='/line-bot-saas.html'> 連結，導流至 LINE Bot 專頁",
+        "line-bot-saas.html：痛點對比段落補加一句，新增 <a href='/bot-cloud.html'> 連結（多平台 Bot 需求導流）",
+        "ai-model.html：定價區底部說明文字，將 /services.html 泛連結替換為更精準的 /line-bot-saas.html + /bot-cloud.html 雙連結",
+        "git commit 24c207d + push origin main"
+      ],
+      "linksAdded": [
+        { "from": "bot-cloud.html", "to": "/line-bot-saas.html", "anchor": "LINE Bot", "context": "hero p 第一行" },
+        { "from": "line-bot-saas.html", "to": "/bot-cloud.html", "anchor": "Bot 雲託管方案", "context": "痛點對比 AutoDev AI 卡片底部" },
+        { "from": "ai-model.html", "to": "/line-bot-saas.html", "anchor": "LINE Bot 雲託管", "context": "定價區底部說明文字" },
+        { "from": "ai-model.html", "to": "/bot-cloud.html", "anchor": "Bot 雲託管方案", "context": "定價區底部說明文字" }
+      ]
+    },
     {
       "timestamp": "2026-08-05T00:30:00Z",
       "agent": "researcher",
