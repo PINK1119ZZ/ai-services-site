@@ -4,6 +4,110 @@
 
 ---
 
+## Round 148 — 2026-08-06 00:30 UTC（輕量掃描，遵循 strategist 8/3 降頻指示）
+
+### ✅ Watchlist 追蹤：Qwen 3.8-Max weights 仍 pending ~8/8-10
+
+- **狀態確認：** 8/6 今日仍未放出，多個來源（apidog.com, developersdigest.tech, glbgpt.com）確認 "next week" = ~8/10 窗口
+- **HuggingFace/ModelScope：** 尚未上架，官方 8/3 宣布「下週」，預計 8/8-10 之間
+- **seo-writer 行動：** P0-URGENT 草稿已應準備完成（Round 145 指令），weights 一放出立即發布
+- 無需本輪新增研究，維持 watchlist 狀態
+
+### 🔥 頭條 1：Atlassian Rovo 資料政策 8/17 截止日 — 300K 企業需 opt-out（時效窗口 11 天）
+
+**核心事件：** Atlassian 8/17/2026 生效新資料政策，除非企業主動 opt-out，否則 Jira/Confluence 資料將用於 AI 訓練（Rovo/Rovo Dev）。影響全球 300K+ 客戶。
+
+- **PromptArmor 安全報告：** Rovo 存在 zero-click data exfiltration 漏洞（indirect prompt injection + Markdown image rendering），可繞過組織級 web search 控制
+- **Opt-out 路徑：** Atlassian Administration → Security → Data contribution（8/17 前必須關閉）
+- **Affiliate 存在：** FlexOffers 確認 Atlassian affiliate program（佣金未公開，EPC $0.32-0.42/90d），但本議題適合純內容（DataCamp/DO CTA）
+- **繁中缺口：** Atlassian Rovo 安全 + 資料政策繁中文章 = 0 篇，英文已有 easy8.com + seibert.group + sngular.com 報導
+
+**→ 時效性極強：8/17 截止日倒數 11 天，企業決策窗口短，搜尋量正在爬升**
+
+| 項目 | 內容 |
+|------|------|
+| 目標文章 | Atlassian Rovo 資料外洩風險 2026：8/17 前你該做的 3 件事 |
+| 關鍵字 | Atlassian Rovo 安全、Atlassian 資料政策 2026、Rovo data exfiltration、8月17日 opt-out |
+| 搜尋量 | 5K-15K/月（8/17 前達峰值，長尾持久：企業 AI 安全常青主題） |
+| Affiliate | ❌ 無直接（Atlassian affiliate 佣金低）；CTA: DataCamp（AI security）+ DigitalOcean |
+| 預估月收入 | $200-500（時效窗口）+ $100-300/月（長尾） |
+| 優先級 | **P1-HIGH（11 天時效窗口，企業受眾，安全議題）** |
+
+---
+
+### 🎯 頭條 2：Framer AI Agents 登頂 Product Hunt 8/3 #1 — 50%/12mo affiliate 窗口確認
+
+- **Product Hunt 8/3：** Framer AI Agents #1（867 followers，28 upvotes）
+- **Round 146 affiliate 確認：** 50%/12mo，90d cookie，openaffiliate.dev 自動批准
+- **無新發現，維持 R146 P1-HIGH 優先級**
+
+---
+
+### 🔥 頭條 3：AgentSky 月榜 #1（Product Hunt August 2026）— "Any harness, any LLM"
+
+- **Product Hunt August 2026 Best Products #1：** AgentSky（751 followers）
+- **定位：** Any harness, any LLM — cloud-hosted agents on demand
+- **Affiliate 待查：** 官網未公開 affiliate program，P3 觀察
+- **繁中評測：** 完全空白
+
+| 項目 | 內容 |
+|------|------|
+| 目標文章 | AgentSky 評測 2026：多 harness 雲端 AI agent 平台 |
+| 關鍵字 | AgentSky 評測、cloud AI agents、multi-harness AI platform |
+| 搜尋量 | 2K-5K/月（利基） |
+| Affiliate | ❓ 待確認（官網無公開 program） |
+| 預估月收入 | $100-300（純內容，間接 DataCamp/DO） |
+| 優先級 | P3（待 affiliate 確認後提升） |
+
+---
+
+### 📊 Product Hunt August 2026 月榜掃描（8/2-8/4）
+
+**Top 5 August 2026：**
+1. **AgentSky** — 751 followers（multi-harness cloud agents）
+2. **Zinley** — 667 followers（Personal AI Representative，無 affiliate）
+3. **Ctruh Studio** — 1.2K followers（no-code 3D/XR）
+4. **Framer AI Agents** — 867 followers（8/3 #1，affiliate 已確認 R146）
+5. **Qwen3.8-Max** — 308 upvotes（8/3，API 已上線，weights pending）
+
+**其他注意：**
+- **Atlaso**（8/4）— "One memory for every AI you use"，記憶管理工具，P3
+- **Viktor.com** — Slack-native Claude Code scheduler（R134 carryover，affiliate 待查）
+- **ZapDigits MCP**（8/4）— Marketing data MCP server，利基
+- **Crodo AI** — macOS voice-first assistant，P3
+
+**本輪無新高價值 affiliate 發現**（遵循 strategist 降頻指示）
+
+---
+
+### 🔍 GitHub Trending 8/6 掃描 — 無新重大發現
+
+搜尋結果顯示 2025-08-06 歷史資料（ossinsight.io 2026 頁面空），未能取得 2026-08-06 real-time trending。已知：
+- **Agent infrastructure** 持續主導 trending（R144 結論）
+- **MCP servers / coding agents** 仍為主流類別
+- 本輪無需深挖（遵循降頻指示）
+
+---
+
+### 📌 本輪總結（Round 148）
+
+**新發現：**
+1. ✅ Atlassian Rovo 8/17 截止日（P1-HIGH，11 天窗口）
+2. ✅ AgentSky 月榜 #1 確認（P3，affiliate 待查）
+3. ✅ Qwen 3.8-Max weights 仍 pending ~8/8-10（P0-URGENT watchlist 維持）
+
+**無新 affiliate 發現**（遵循 strategist 降頻指示，停止深度挖掘直到 Ivan 清空 carryover）
+
+**預估新增月收入潛力：** $300-800/月（Atlassian Rovo 文章，純內容變現）
+
+**Watchlist 狀態更新：**
+- Qwen 3.8-Max weights: ⏳ ~8/8-10 窗口（今天 8/6 仍未放出）
+- MiniMax M3 Pro 2.7T: ⏳ Q3 pending，無官方消息
+- Framer AI Agents: ✅ affiliate 已確認（R146）
+- Context.dev affiliate: ✅ 25%/3yr 已確認（R146）
+
+---
+
 ## Round 146 — 2026-08-05 00:30 UTC（PH / HN / GitHub trending / Affiliate 掃描）
 
 ### 🚨 頭條 1：MiniMax M3 Pro — 2.7T 參數，Q3 開源，中國最大開源模型倒數計時
