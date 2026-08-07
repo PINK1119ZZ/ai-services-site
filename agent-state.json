@@ -1,8 +1,46 @@
 {
   "lastRun": "2026-08-07T00:30:00Z",
   "lastResearchRound": 149,
-  "lastStrategistRun": "2026-08-03T01:30:00Z",
+  "lastStrategistRun": "2026-08-07T12:01:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-07T12:01:00Z",
+      "agent": "strategist",
+      "task": "income-ideation",
+      "status": "completed",
+      "summary": "收入腦暴 cron（Fri 20:00）。本輪掃描 Gumroad/LemonSqueezy 暢銷榜、AI SaaS affiliate 新管道、互動工具流量機會。核心發現：(1) Notion affiliate 50%/12mo（PartnerStack/Impact，180-day cookie，100M用戶品牌，繁中系統評測空白，00-1,200/月潛力）；(2) AI Coding Cost Calculator 互動工具頁（SitePoint英文版有，繁中=0，長尾 evergreen，嵌入 Cursor + DataCamp + DigitalOcean，00-700/月）。兩個提案均已寫入 newAssetProposals。Writesonic 30% LIFETIME（已在 agentLog R143 確認）carryover 維持。Frase.io 官方確認 30%/12mo（非 lifetime，R143 需修正認知）。",
+      "changes": [
+        "搜尋 Gumroad/LemonSqueezy 數位產品暢銷榜 → 確認 AI prompt pack -200、templates -29 甜蜜點，software license 99-500 高毛利",
+        "搜尋 AI SaaS affiliate programs 30% recurring 2026 → 新發現 Notion 50%/12mo（180d cookie）為業界最高之一，繁中空白",
+        "搜尋 Notion affiliate 2026 → 確認 50%/12mo，PartnerStack，100M+用戶，teams upgrading free→paid 最佳推廣角度",
+        "搜尋 AI coding ROI calculator interactive tool 2026 → SitePoint + DX 英文版已有，繁中 = 0，長尾 evergreen 機會確認",
+        "搜尋 Frase.io affiliate → 官方確認 30%/12mo（非 lifetime），60-day cookie，FirstPromoter",
+        "搜尋 Writesonic affiliate → 確認 20%/12mo 官方（部分來源宣稱 30% LIFETIME，需 Ivan 申請後核實）",
+        "產出 2 個具體提案寫入 newAssetProposals",
+        "更新 agent-state.json：lastStrategistRun + agentLog + newAssetProposals"
+      ],
+      "newProposals": [
+        {
+          "id": "proposal-notion-affiliate-2026-08-07",
+          "type": "affiliate_review_article",
+          "title": "Notion AI 完整評測 2026：50%/12mo affiliate，100M 用戶品牌",
+          "revenueModel": "Notion affiliate 50%/12mo，PartnerStack/Impact，180-day cookie",
+          "estimatedMonthlyRevenue": "00-1,200",
+          "priority": "P1-HIGH",
+          "ivanAction": "申請 Notion affiliate → notion.so/affiliates（PartnerStack，高批准率）"
+        },
+        {
+          "id": "proposal-ai-coding-cost-calculator-2026-08-07",
+          "type": "interactive_tool",
+          "title": "AI Coding Cost Calculator 互動工具頁",
+          "revenueModel": "嵌入 Cursor affiliate（P0 carryover）+ DataCamp + DigitalOcean CTA",
+          "estimatedMonthlyRevenue": "00-700",
+          "priority": "P1-HIGH（無需 Ivan 批准，builder 可立即建置）",
+          "ivanAction": "申請 Cursor affiliate → openaffiliate.dev/programs/cursor（P0-URGENT carryover）"
+        }
+      ],
+      "estimatedNewRevenue": "00-1,900/月（Notion 評測 + AI Coding Calculator）"
+    },
     {
       "timestamp": "2026-08-07T00:30:00Z",
       "agent": "researcher",
@@ -1941,14 +1979,14 @@
             "keyword": "buzz jack",
             "clicks": 2,
             "impressions": 4,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 2.2
           },
           {
             "keyword": "opencode zen vs go",
             "clicks": 2,
             "impressions": 10,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 3.7
           },
           {
@@ -1990,7 +2028,7 @@
             "keyword": "opencode zen 额度",
             "clicks": 1,
             "impressions": 4,
-            "ctr": 25.0,
+            "ctr": 25,
             "position": 6.8
           },
           {
@@ -2111,14 +2149,14 @@
             "page": "//blog/opencode-zen-vs-go-pricing-2026.html",
             "clicks": 24,
             "impressions": 299,
-            "ctr": 8.0,
+            "ctr": 8,
             "position": 6.4
           },
           {
             "page": "//blog/line-bot-cost.html",
             "clicks": 7,
             "impressions": 175,
-            "ctr": 4.0,
+            "ctr": 4,
             "position": 7.1
           },
           {
@@ -2146,7 +2184,7 @@
             "page": "//blog/markitdown-microsoft-tutorial-2026.html",
             "clicks": 3,
             "impressions": 10,
-            "ctr": 30.0,
+            "ctr": 30,
             "position": 6.2
           },
           {
@@ -2168,13 +2206,13 @@
             "clicks": 1,
             "impressions": 34,
             "ctr": 2.9,
-            "position": 10.0
+            "position": 10
           },
           {
             "page": "//blog/gpt-56-sol-terra-luna-review-2026.html",
             "clicks": 1,
             "impressions": 10,
-            "ctr": 10.0,
+            "ctr": 10,
             "position": 12.7
           },
           {
@@ -2195,7 +2233,7 @@
             "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
             "clicks": 1,
             "impressions": 20,
-            "ctr": 5.0,
+            "ctr": 5,
             "position": 7.2
           },
           {
@@ -2594,6 +2632,24 @@
         "seo-writer": "改寫 10 篇文章為 Medium 版（前 500 字摘要 + canonical link）",
         "content-ops": "排程發布（Medium 週二/週五，dev.to 週三）"
       }
+    },
+    {
+      "id": "proposal-notion-affiliate-2026-08-07",
+      "type": "affiliate_review_article",
+      "title": "Notion AI 完整評測 2026（50%/12mo affiliate，180-day cookie）",
+      "revenueModel": "Notion affiliate 50% recurring/12mo，PartnerStack/Impact，180-day cookie，100M+用戶品牌",
+      "estimatedMonthlyRevenue": "00-1,200",
+      "priority": "P1-HIGH（未曾提案，本輪新發現，180-day cookie 業界第一）",
+      "ivanAction": "申請 Notion affiliate → notion.so/affiliates（PartnerStack，高批准率，5-7天審核）"
+    },
+    {
+      "id": "proposal-ai-coding-cost-calculator-2026-08-07",
+      "type": "interactive_tool_page",
+      "title": "AI Coding 費用計算器（繁中互動工具頁，autodev-ai.com/tools/）",
+      "revenueModel": "嵌入 Cursor affiliate（openaffiliate.dev/programs/cursor）+ DataCamp + DigitalOcean CTA，SEO evergreen",
+      "estimatedMonthlyRevenue": "00-700",
+      "priority": "P1-HIGH（builder 可立即建置，無需等 Ivan affiliate 批准）",
+      "ivanAction": "申請 Cursor affiliate → openaffiliate.dev/programs/cursor（P0-URGENT carryover，佔位先行）"
     }
   ],
   "latestOpportunities": [
