@@ -2492,3 +2492,60 @@ mattpocock/skills 從昨日 2519★ 加速到今日 **5551★/天**（+120%）�
 **SpaceX/Cursor 合併後 Cursor 受眾流失風險：**
 - 台灣部分工程師可能因 Musk 品牌轉向 Windsurf / Claude Code
 - 我們的 claude-code / autodev-ai 文章是受益方，可加「Cursor 替代方案」關鍵字
+
+## Round 150 | 2026-08-07 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-08-07 22:00 UTC | 搜尋範圍：Watchlist 追蹤 + GitHub/PH/HN 輕量掃描 | 模式：輕量掃描（遵循 strategist 8/3 降頻指示）
+
+### 🔥 本輪頭條：Qwen 3.8-Max weights 窗口重新校準 8/10-14 + MiniMax M3 Pro Q3 維持
+
+---
+
+#### ✅ Watchlist 狀態更新
+
+| 項目 | 上輪狀態 | 本輪確認 |
+|------|---------|---------|
+| Qwen 3.8-Max weights | ⏳ 8/8-10 窗口 | ⏳ 重新校準 8/10-14（官方「next week」= 8/10 起那週），今日 8/7 仍未上線 |
+| Qwen3.8-27B weights | ⏳ 同週 | ⏳ 同週確認 |
+| MiniMax M3 Pro 2.7T | ⏳ Q3 pending | ⏳ 仍無官方確認，The Information 單一來源，Q3 剩 8-9 月 |
+| MiniMax M3（428B） | 已知發布 6/1 | ✅ weights 在 HuggingFace；我們**無評測文**，P2 補文缺口 |
+
+---
+
+#### 1. 🔴 P0-URGENT：Qwen 3.8-Max weights 窗口 8/10-14
+
+**核心確認：**
+- 官方 blog（qwen.ai/blog?id=qwen3.8）：「open weights will be released **next week**」（8/3 發布時）
+- 「next week」= 8/10（週日）～ 8/14（週四）
+- 多方來源確認：felloai.com（「promised week of August 10」）、yottalabs.ai、developersdigest.tech
+- 今日 8/7（週五）= 「next week」前一天，weights 尚未出現在 HuggingFace 或 ModelScope
+- 規格確認：2.4T MoE，~95B active，$2/$6 API，FrontierSWE 評估，Qwen3.8-27B 同步開源
+
+**seo-writer 草稿今天完成，weights 上線立即發布。**
+
+---
+
+#### 2. ⏳ MiniMax M3 Pro 2.7T — Q3 watchlist 維持
+
+- The Information 單一報導（7/8）：2.7T params，內部代號 M3 Pro，計畫 Q3 開源
+- 本輪無新官方確認，gptproto.com 確認「No official announcement from MiniMax」
+- 窗口：Q3 2026 = 8-9 月剩餘時間
+- **補文機會：MiniMax M3（428B）已發布 6/1，weights 在 HuggingFace，我們無評測文（P2 長尾 SEO）**
+
+---
+
+#### 3. GitHub/PH/HN 8/7 輕量掃描結果
+
+- **GitHub trending：** Agent infrastructure 持續主導（R137-149 延續），無新重大發現
+- **Product Hunt 8/6：** Framer AI Agents #1 week（R146 已記錄），AI Spend Console by Rippling #2（無 affiliate），ElevenAgents #5（R141 已記錄）
+- **HN 8/7：** Ask HN August 2026 side projects + Ask HN predictions 討論，無新 P1+ AI 工具訊號
+- **Affiliate：** 無新 30%+ recurring 發現（遵循降頻指示）
+
+---
+
+#### 市場洞察：降頻策略驗證 ✅
+
+本輪輕量掃描確認降頻策略正確：GitHub/PH/HN 訊號均較弱，無新高價值 affiliate。研究月潛力 $7,000+（Rounds 137-149 累積）但執行率 0%，瓶頸在 Ivan carryover 不動。下輪繼續輕量掃描。
+
+**Ivan carryover 預估月收入損失：$3,100-6,700/月（P0-URGENT 6 項）**
+
