@@ -698,3 +698,65 @@ qwen.ai/blog?id=qwen3.8 完整公告：
 ---
 
 **更早輪次記錄請見檔案底部或 directives/ 資料夾內對應 researcher-to-strategist-*.md 檔案。**
+
+---
+
+## Round 149 — 2026-08-07 00:30 UTC
+
+### 核心發現
+
+**1. 🚨 P0-URGENT — Qwen 3.8-Max 開源權重本週（~8/8-10）**
+
+R144-R148 watchlist 終於落地。Alibaba 8/3 官方確認「next week on HuggingFace + ModelScope」，今天是 8/7，權重最快明天起陸續上架。
+
+規格確認：
+- 2.4T MoE，95B active per token
+- 1M context window
+- $2/$6 per 1M tokens（API 已上線 8/3）
+- PaperBench 93.0（業界最高）
+- 推理成本約為 Fable 5 的 30%
+- 首次 Max 級別開源（Qwen 歷史性突破）
+- Claude Code + Codex 協議相容
+
+競品比較角度：Kimi K3（7/27 上架，2.8T，$3/$15）vs Qwen 3.8-Max（2.4T，$2/$6）→ 價格更低、自架更輕、coding 差距有限。
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|----------|------------|----------|
+| 2026-08-07 | Qwen 3.8-Max 開源評測 | Qwen 3.8-Max 評測, qwen 3.8 vs kimi k3, 開源大模型 2026 | 15K-40K/月 | DataCamp + DigitalOcean CTA（間接） | $400-1,000 | autodev-ai.com |
+| 2026-08-07 | 開源大模型比較頁 | Qwen 3.8 vs Kimi K3 vs DeepSeek V4, 最強開源 AI 模型 2026 | 8K-20K/月 | DataCamp + DigitalOcean CTA | $300-700 | autodev-ai.com |
+
+**⚠️ 注意：** 本輪搜索確認 open weights 尚未正式上線（8/7 00:30 UTC 為止），仍在「next week」承諾窗口內。一旦 HuggingFace repo 出現立即發布文章。
+
+---
+
+**2. 🔥 Product Hunt 本週（8/3-9）高分產品**
+
+| 日期 | 工具 | 說明 | PH 分數 | Affiliate | 預估月收入 | 優先級 |
+|------|------|------|---------|-----------|------------|--------|
+| 2026-08-04 | Framer AI Agents | PH #1 day + week，876 upvotes | 876 | ✅ 50%/12mo（R146確認，openaffiliate.dev） | $400-1,200 | **P1-HIGH（Ivan 已有連結待執行）** |
+| 2026-08-04 | Hey Noah | PH #1 Aug 4，576 upvotes，AI exec assistant | 576 | ❓ 未確認 | 待查 | P3 觀察 |
+| 2026-08-07 | AdAnt AI | PH Aug 週榜 #3，「Claude for viral social ads」 | 高 | ❓ 未確認 | 待查 | P2 待查 |
+| 2026-08-05 | ngrok AI Gateway | PH Aug 5 #4，654 followers，single AI gateway | 中 | ❌ 無 affiliate program（搜索確認） | $0 | P3 內容佔位 |
+| 2026-08-04 | Wispr Flow Notetaker | PH Aug 週榜 #2，AI 會議記錄 | 高 | ⚠️ affiliate 存在但追蹤嚴重問題（多人確認 $0） | 風險高，跳過 | 跳過 |
+
+Wispr Flow affiliate 明確風險：2026/5 YouTube 影片（1,710 views）記錄 4 位確認轉換但佣金全部為 $0，dub.co 平台追蹤失效。**不建議推廣。**
+
+---
+
+**3. 本輪 Affiliate 新發現**
+
+無新高價值 affiliate（遵循 strategist 8/3 降頻指示）。本輪主要確認：
+- Wispr Flow：跳過（追蹤問題）
+- ngrok AI Gateway：無 affiliate program
+- AdAnt AI：未確認，P2 待查（Ivan 可查 adant.ai 官網）
+- Hey Noah：未確認，P3
+
+---
+
+**本輪優先行動建議（→ strategist / seo-writer）：**
+
+1. **P0-URGENT**：Qwen 3.8-Max 完整評測草稿已在 R144/145/148 反覆提醒，今天必須確認 seo-writer 已有初稿，等 HuggingFace repo 一出立即補充本機部署數據後發布。
+2. **P1-HIGH**：Framer AI Agents 評測 — 876 PH votes + 50%/12mo affiliate 已確認，Ivan 是否已申請連結？
+3. **P2**：開源大模型三方比較頁（Qwen 3.8 vs Kimi K3 vs DeepSeek V4）— 需等 Qwen weights 上線後執行。
+
+*合計本輪新增月收入潛力：$700-1,700（Qwen 評測 + 比較頁）*
