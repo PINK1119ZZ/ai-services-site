@@ -4,6 +4,55 @@
 
 ---
 
+## 2026-08-09（市場研究 Round 152 — 07:00 UTC market-research cron）
+
+### 🔥 本輪重點：MeetGeek 30% LIFETIME 確認 + Lemon Squeezy 平台 Affiliate + Oakgen.ai + Bluesky 高轉換率 + Gumroad Trading 類數據
+
+#### 🚨 重大更正：MeetGeek 30% LIFETIME（非 one-time）
+
+Round 143（2026-08-03）錯誤記錄 MeetGeek 為「30% one-time」。本輪三方交叉確認：
+- PartnerStack 官方頁：30% recurring for the lifetime of referred customers
+- OpenAffiliate.dev 2026：Rate 30% one-time（注：此處 "one-time" 指每次訂閱付款，非指只發一次佣金）
+- PartnerStack 2026-06 文章（官方）：30 per cent recurring for every customer conversion
+
+**最終確認：MeetGeek = 30% LIFETIME recurring（永久遞迴）**
+
+#### 新 Affiliate 機會（全部首次確認）
+
+| 工具 | 佣金 | Cookie | 申請連結 | 月潛力 | 優先 |
+|------|------|--------|---------|--------|------|
+| **MeetGeek** | **30% LIFETIME** | 30天 | meetgeek.ai/partner（PartnerStack）| **$300-900** | **P0-URGENT** |
+| **Lemon Squeezy** | 30%/6mo | Lifetime | app.lemonsqueezy.com/affiliates | $200-600 | P1-HIGH |
+| **Oakgen.ai** | 25%/6mo | 30天 | oakgen.ai/refer（無審核）| $300-800 | P1-HIGH |
+| Perplexity Publisher | 引用分潤 | N/A | perplexity.ai/hub | $100-400 | P1 |
+| Perplexity Affiliate | $2-20/lead | N/A | affiliates.perplexity.ai | $100-300 | P2 |
+
+#### Gumroad 200K+ 產品數據（InsightRaider 2026）
+
+| 品類 | 平均收益/產品 | 競爭度 | 台灣缺口 |
+|------|--------------|--------|---------|
+| **Money/Trading** | **$75,398**（最高）| 低（24.8% 成功）| AI Trading 繁中指南 = 0 |
+| Software Development | 未公開（$65.8M 總收）| 高 | 工具比較 |
+| **Writing & Publishing** | **$15,750**（226 產品）| 低 | **新手最佳切入** |
+| AI Tools | $18,163 | 中 | 仍未飽和 |
+
+**新機會：AI Trading Indicator 繁中指南 $99-199（月潛力 $1,000-3,000）**
+
+#### 免費流量管道（本輪確認）
+
+| 平台 | 轉換效率 | 台灣競爭 | 行動 |
+|------|---------|---------|------|
+| **Bluesky** | 3-4× Threads / 177× X（per follower）| 繁中創作者 = 0 | Ivan 建帳號 P1 |
+| Threads | 台灣 21% 全球流量 | 中等競爭 | 已建議多輪 |
+
+#### 台灣數位產品需求缺口（本輪）
+
+1. **數位產品平台比較指南**（Gumroad vs Lemon Squeezy vs Polar 繁中版）— Shareuhack 英文版已有，繁中 = 空白
+2. **AI Trading Indicator 繁中入門**（Gumroad Money/Trading 類平均 $75K，台灣幣圈/股票受眾大）
+3. **MeetGeek 繁中評測**（AI 會議助理，Otter/Fireflies 繁中空白）
+
+---
+
 ## 2026-08-01（市場研究 Round 140 — 23:00 UTC market-research cron）
 
 ### 🔥 本輪重點：7 個全新 Affiliate 管道 + Bluesky 流量空白 + 台灣數位產品缺口確認
