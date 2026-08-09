@@ -4,6 +4,39 @@
   "lastStrategistRun": "2026-08-09T02:10:00Z",
   "agentLog": [
     {
+      "timestamp": "2026-08-09T10:30:00Z",
+      "agent": "affiliate-monitor",
+      "task": "affiliate-link-check",
+      "status": "completed",
+      "summary": "聯盟連結週檢（Sun 10:30）。掃描 103 篇文章 + 17 個聯盟連結。核心發現：(1) Gumroad claude-code-prompt-pack-2026 持續 404（第 15 週，Ivan P0-URGENT）；(2) Gumroad n8n-tw-templates 持續 404；(3) 本週新發現 2 篇無聯盟連結文章（seedance-25-review-2026.html + atlassian-rovo-data-risk-2026.html，P1-HIGH）；(4) 前輪積壓文章持續累積（perplexity、lm-studio、7 篇英文文章）；(5) 外部連結僅 1 個 404（api.z.ai/v1，API demo endpoint，非聯盟連結，不影響收入）。",
+      "changes": [
+        "檢查 17 個聯盟連結：15 個正常（200/301/302/308），2 個 404（Gumroad）",
+        "掃描 103 篇 HTML 文章外部連結：1 個 404（api.z.ai/v1，非聯盟連結）",
+        "發現 2 篇新文章無聯盟連結：blog/seedance-25-review-2026.html + blog/atlassian-rovo-data-risk-2026.html",
+        "創建 directives/affiliate-monitor-to-content-refresher-2026-08-09.md",
+        "更新 agent-state.json affiliateLinkStatus + lastChecked"
+      ],
+      "criticalIssues": [
+        "Gumroad claude-code-prompt-pack-2026 → 404（第 15 週，Ivan P0-URGENT）",
+        "Gumroad n8n-tw-templates → 404（持續問題）"
+      ],
+      "articlesNoAffiliate": [
+        "blog/seedance-25-review-2026.html → P1-HIGH（新文章，立即補）",
+        "blog/atlassian-rovo-data-risk-2026.html → P1-HIGH（新文章，立即補）",
+        "blog/perplexity-ai-pro-review-2026.html → P1-HIGH carryover（前輪積壓）",
+        "blog/lm-studio-bionic-guide-2026.html → P1 carryover",
+        "en/blog/n8n-automation-tutorial-2026.html → P2（英文文章）",
+        "en/blog/n8n-hitl-tutorial-2026.html → P2",
+        "en/blog/line-bot-complete-guide-2026.html → P2",
+        "en/blog/deerflow-vs-dify-vs-n8n-2026.html → P2",
+        "en/blog/geo-generative-engine-optimization-taiwan-2026.html → P2"
+      ],
+      "needsIvan": [
+        "P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（第 15 週！）",
+        "P1: 確認 n8n-tw-templates Gumroad 狀態（是否下架）"
+      ]
+    },
+    {
       "timestamp": "2026-08-09T03:03:00Z",
       "agent": "researcher",
       "task": "competitor-watch",
@@ -1606,7 +1639,7 @@
     }
   ],
   "affiliateLinkStatus": {
-    "lastChecked": "2026-08-02T10:30:00Z",
+    "lastChecked": "2026-08-09T10:30:00Z",
     "results": {
       "DataCamp (afflink.one/s/aavAC)": {
         "status": 403,
@@ -1614,8 +1647,8 @@
         "ok": true
       },
       "DigitalOcean (m.do.co)": {
-        "status": 200,
-        "note": "正常",
+        "status": 301,
+        "note": "正常重定向",
         "ok": true
       },
       "NordVPN": {
@@ -1624,8 +1657,8 @@
         "ok": true
       },
       "Systeme.io": {
-        "status": 200,
-        "note": "正常",
+        "status": 302,
+        "note": "正常重定向",
         "ok": true
       },
       "Gumroad agent-skills-tw": {
@@ -1635,17 +1668,17 @@
       },
       "Gumroad kknad": {
         "status": 200,
-        "note": "正常",
+        "note": "正常（前次 502 為暫時錯誤，重試 200）",
         "ok": true
       },
       "Gumroad claude-code-prompt-pack-2026": {
         "status": 404,
-        "note": "P0-URGENT: 需 Ivan 上架（第 14 週）",
+        "note": "P0-URGENT: 需 Ivan 上架（第 15 週）",
         "ok": false
       },
       "Gumroad n8n-tw-templates": {
         "status": 404,
-        "note": "需 Ivan 確認是否下架（持續）",
+        "note": "持續 404，需 Ivan 確認是否已下架",
         "ok": false
       },
       "wisprflow.ai": {
@@ -1659,18 +1692,18 @@
         "ok": true
       },
       "shortspro.co": {
-        "status": 200,
-        "note": "正常",
+        "status": 308,
+        "note": "正常重定向",
         "ok": true
       },
       "Hostinger": {
-        "status": 200,
-        "note": "正常",
+        "status": 301,
+        "note": "正常重定向",
         "ok": true
       },
       "Warp.dev": {
-        "status": 204,
-        "note": "正常",
+        "status": 302,
+        "note": "正常重定向",
         "ok": true
       },
       "hermes-agent.ai": {
@@ -1679,38 +1712,40 @@
         "ok": true
       },
       "Cloudways (vbtrax.com)": {
-        "status": 403,
-        "note": "防爬機制-用戶點擊正常",
+        "status": 301,
+        "note": "正常重定向",
         "ok": true
       },
       "abzcoupon.com": {
-        "status": 403,
-        "note": "防爬機制-用戶點擊正常",
+        "status": 301,
+        "note": "正常重定向",
         "ok": true
       },
       "aftck.com": {
-        "status": 403,
-        "note": "防爬機制-用戶點擊正常",
+        "status": 301,
+        "note": "正常重定向",
         "ok": true
       }
     },
     "brokenLinks": [
-      "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026 → 404 (第14週，Ivan P0-URGENT)",
-      "xiaofan8.gumroad.com/l/n8n-tw-templates → 404 (確認是否下架)"
+      "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026 → 404 (第15週，Ivan P0-URGENT)",
+      "xiaofan8.gumroad.com/l/n8n-tw-templates → 404 (持續，確認是否下架)"
     ],
     "articlesNoAffiliate": [
       "blog/perplexity-ai-pro-review-2026.html",
       "blog/lm-studio-bionic-guide-2026.html",
+      "blog/seedance-25-review-2026.html",
+      "blog/atlassian-rovo-data-risk-2026.html",
       "en/blog/n8n-automation-tutorial-2026.html",
       "en/blog/n8n-hitl-tutorial-2026.html",
       "en/blog/line-bot-complete-guide-2026.html",
       "en/blog/deerflow-vs-dify-vs-n8n-2026.html",
-      "en/blog/best-geo-tools-comparison-2026.html",
       "en/blog/geo-generative-engine-optimization-taiwan-2026.html"
     ],
-    "totalArticlesScanned": 100,
-    "articlesWithNoAffiliate": 8,
-    "total404External": 0
+    "totalArticlesScanned": 103,
+    "articlesWithNoAffiliate": 9,
+    "total404External": 1,
+    "external404Detail": "api.z.ai/v1 in blog/glm-52-openclaw-coding-plan-setup-2026.html (API demo endpoint, not affiliate)"
   },
   "fbStrategy": {
     "performance": {
