@@ -4,6 +4,99 @@
 
 ---
 
+## Round 155 — 2026-08-10 00:30 UTC（ai-trend-hunter 08:30 cron）
+
+### 🔥 頭條：KrispCall — 30% LIFETIME 電話系統 Affiliate（PartnerStack，本輪首次確認）
+
+| 項目 | 內容 |
+|------|------|
+| 官網 | krispcall.com/partners/affiliates |
+| 佣金 | **30% commission LIFETIME**（+額外每位同 workspace 新成員獎勵）|
+| 平台 | PartnerStack（機構審核）|
+| 定位 | AI 雲端電話系統（虛擬號碼、IVR、CRM 整合）|
+| 受眾 | 中小企業、遠距工作、客服部門 |
+| 關鍵字 | krispcall 評測, 雲端電話系統比較, ai 電話系統 2026 |
+| 搜尋量 | 1K-3K/月（繁中零競品）|
+| 預估月收入 | **$300-800/月**（B2B 企業客戶，LIFETIME 複利）|
+| 優先級 | **P1-HIGH（本輪新確認，Ivan 需申請）** |
+| 站點 | ai-tools.pro（英文評測）|
+| 申請 | krispcall.com/partners/affiliates（PartnerStack）|
+
+### 🔥 頭條：Coldtea.ai — PH 8/9 #1（459 upvotes，自駕軟體交付）
+
+| 項目 | 內容 |
+|------|------|
+| 發布 | 2026-08-09（Product Hunt 當日 #1，459 upvotes）|
+| 官網 | coldtea.ai |
+| 定位 | "Make your software self-driving"（terminal + 端對端測試 + production monitoring 一體 agentic IDE）|
+| 整合 | Claude Code, Codex, OpenCode 等主流 coding agent |
+| 定價 | Free tier + $20/座位/月（Pro）+ Agentic testing $120/月 + Self-driving from $49/月 |
+| Affiliate | ❌ 暫無 affiliate program（早期產品）|
+| 關鍵字 | coldtea.ai 教學, ai 端對端測試 2026, 自駕軟體開發 |
+| 搜尋量 | 2K-6K/月（PH #1 熱度，快速爬升）|
+| 預估月收入 | $200-500/月（間接 DataCamp + DigitalOcean）|
+| 優先級 | **P1-HIGH（72h 時效窗口，autodev-ai 開發者受眾完美吻合）** |
+| 站點 | autodev-ai.com |
+
+### 🧠 GitHub 熱門：TencentDB-Agent-Memory — 18.7K★，團隊級 Agent 記憶中樞
+
+| 項目 | 內容 |
+|------|------|
+| 倉庫 | github.com/TencentCloud/TencentDB-Agent-Memory |
+| Stars | **18.7K**（8/4 曾達 GitHub 日榜 #1）|
+| 技術 | 四種記憶資產：Chat Memory + Skill + LLM-Wiki + Code-Graph |
+| 整合 | Claude Code, Codex CLI, OpenClaw plugin |
+| License | MIT（商業可用）|
+| Affiliate | ❌ 無（開源）|
+| 關鍵字 | tencentdb agent memory 教學, ai agent 記憶管理 2026, claude code 記憶 |
+| 搜尋量 | 3K-8K/月（agent infrastructure 持續爆炸）|
+| 預估月收入 | $200-500/月（間接，省 token 角度強力 CTA）|
+| 優先級 | **P1-HIGH（autodev-ai 開發者受眾，省成本角度+OpenClaw 整合 = 雙重鉤子）** |
+| 站點 | autodev-ai.com |
+
+### 💰 新 Affiliate 確認：Inkfluence AI — 30% recurring / 12mo
+
+| 項目 | 內容 |
+|------|------|
+| 官網 | inkfluenceai.com |
+| 佣金 | **30% recurring 12 months**（年訂閱最高 $72/次轉介）|
+| 定位 | AI 寫作助手（SEO + content marketing 導向）|
+| 受眾 | SEO 部落客、內容行銷、freelancer |
+| 申請 | inkfluenceai.com affiliate（Tapfiliate）|
+| 預估月收入 | $150-400/月 |
+| 優先級 | **P2（AI 寫作工具比較頁可補入，無需獨立文章）** |
+
+### 🧠 PH 月榜更新（2026-08-10 截止前）
+
+| 排名 | 產品 | Followers | 定位 | Affiliate 機會 |
+|------|------|-----------|------|---------------|
+| #1 | Wispr Flow | 8.5K | 聲音生產力（寫作+會議）| 待查 R149 carryover |
+| #2 | Hey Noah | 1.2K | AI 執行助理（創業者）| 待查 |
+| #3 | AdAnt AI | 1.2K | Claude for viral social ads | 待查 |
+| #4 | Coldtea.ai | 807 | 自駕軟體交付 | ❌ 暫無 |
+| #10 | Zinley | 686 | AI 電話/郵件/任務代表 | 待查 |
+
+### 📊 7/29-8/4 GitHub 週榜快覽（Full Stack YT 報導）
+
+- **本週 top 10 repos 合計 45,000+ stars**，主題：AI agents、code review、browser automation
+- TencentDB-Agent-Memory 確認 8/4 GitHub 日榜 #1（TypeScript）
+- 趨勢主軸：**team-level agent infrastructure**（跨 agent 共享記憶 + context）
+- 繁中教學空白：TencentDB-Agent-Memory 至今零繁中深度教學
+
+### 📋 本輪 Affiliate 市場確認清單
+
+| 工具 | 佣金 | 平台 | 狀態 |
+|------|------|------|------|
+| KrispCall | 30% LIFETIME | PartnerStack | **本輪新確認，Ivan P1** |
+| Inkfluence AI | 30%/12mo | Tapfiliate | **本輪新確認，P2** |
+| Kit (ConvertKit) | 50%/12mo | kit.com | **7+輪 carryover，Ivan P0-URGENT** |
+| Notion AI | 50%/12mo | notion.so | **R154 carryover，Ivan P1** |
+| MeetGeek | 30% LIFETIME | PartnerStack | **R152 確認，Ivan carryover** |
+| Thinkific | 30% LIFETIME | thinkific.com | **R154 carryover，Ivan P1** |
+| ElevenLabs | 20%/12mo | N/A | 已知，低優先 |
+
+---
+
 ## Round 153 — 2026-08-09 00:30 UTC（輕量掃描，遵循 strategist 8/3 降頻指示）
 
 ### ⏳ Watchlist：Qwen 3.8-Max weights — 8/9 仍未上線（窗口 8/10-14 持續）
