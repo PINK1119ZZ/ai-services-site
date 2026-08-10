@@ -1,5 +1,80 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 156 | 2026-08-10 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-08-10 22:00 UTC | 搜尋範圍：GitHub trending + Product Hunt 月榜 + affiliate 掃描 | 模式：降頻輕量掃描
+
+### 🔥 本輪頭條：Qwen 3.8-Max weights 窗口今日開放（文章已就緒）+ OpenAI Astra $2K 解 10 道數學難題（繁中零競品）+ StealthWriter 30% recurring affiliate 首次確認 + Frase.io LIFETIME 升級（Round 142 錯誤更正）
+
+---
+
+#### ✅ Watchlist 狀態更新
+
+| 項目 | 上輪狀態 | 本輪確認 |
+|------|---------|---------|
+| Qwen 3.8-Max weights | ⏳ 窗口 8/10-14 | ✅ **8/10 正式開放**（apidog.com 確認）；文章 blog/qwen-38-max-review-2026.html 已就緒 |
+| Qwen 3.8-27B | ⏳ 同週預計 | ⏳ 同週仍持續 |
+| OpenAI Astra | 不在 watchlist | 🔥 **新加入**：8/1 宣布，10 道難題，繁中零深度分析 |
+| Cloudflare OS | 不在 watchlist | ⏳ **新加入**：PH 月榜 #6（475票），下輪確認 |
+
+---
+
+#### 1. ✅ Qwen 3.8-Max weights 窗口開放確認
+
+- **文章已就緒：** blog/qwen-38-max-review-2026.html（2026-08-09 上線）
+- **窗口：** 8/10 正式確認（apidog.com、augmentedmind.substack.com、yottalabs.ai 三方同步）
+- **seo-writer 可選動作：** 補一行「⚠️ 2026-08-10 更新：開源權重已上線」至文章開頭
+- **預估月流量爆發：** 15K-40K/月
+
+#### 2. 🔥🔥🔥 OpenAI Astra — 10 道數學難題 $2,000 破解（P1-HIGH）
+
+- **2026-08-01 宣布：** 內部模型 Astra 解決 10 道困擾學界 10 年以上的數學/TCS 難題
+- **成本：~$2,000**（compute cost for 249 頁 manuscript + Lean 4 形式驗證，全在 GitHub Apache 2.0）
+- **傳播力：** Yahoo Tech、Quanta Magazine、Instagram reels 瘋傳；8/1 後持續熱議
+- **繁中競品：零**（只有英文新聞簡短翻譯，無深度分析）
+- **seo-writer P1-HIGH：** 深度科普文「$2,000 讓 AI 解決人類 10 年難題 — 這代表什麼？」
+- 站點：autodev-ai.com；間接 DataCamp + DigitalOcean CTA
+- 預估：$150-500/月
+
+#### 3. 🆕 StealthWriter — 30% recurring affiliate 首次確認（P1-HIGH）
+
+- **URL：** stealthwriter.ai/affiliate
+- **佣金：** 30% recurring（月月複利）
+- **Cookie：** 60 天
+- **付款：** USDC via Solana（即時，無最低門檻）
+- **定價：** Plus $50/月 → 每位用戶 $15/月
+- **受眾：** AI 反偵測寫作（humanizer），2026 搜尋量持續爆炸
+- **Ivan P1-HIGH：** 申請 stealthwriter.ai/affiliate
+- 預估：$200-600/月
+
+#### 4. 📝 Frase.io LIFETIME 升級確認（更正 Round 142 記錄）
+
+- Round 142 記錄：30%/12mo（錯誤）
+- **本輪確認：** 30% LIFETIME（outlierkit.com/resources 驗證）
+- LTV 翻倍，從 P1 升為 P1-HIGH
+- **Ivan P1-HIGH：** 申請 frase.io/partners/affiliates
+- 預估月收入：$300-900（從 $200-600 上修）
+
+#### 5. 📊 PH August 2026 月榜快照（8/10）
+
+| # | 產品 | 票數 | 我們的狀態 |
+|---|------|------|-----------|
+| 1 | AdAnt AI | 608 | 待查 affiliate |
+| 2 | Hey Noah | 603 | 無評測 |
+| 3 | Wispr Flow | 577 | 無評測 |
+| 4 | **Coldtea.ai** | 517 | ✅ **我們文章 8/10 已發** |
+| 6 | Cloudflare OS | 475 | ⏳ 下輪追蹤 |
+| 8 | AgentSky | 461 | 待追蹤 |
+
+**GitHub trending 本輪無新 P1+ 訊號**（mattpocock/skills, AI-For-Beginners 持續，OmniRoute/firecrawl/Agent-Reach carryover 積壓）
+
+---
+
+**本輪預估新增月收入潛力：$1,050-3,000**
+**directive 已創建：** directives/researcher-to-strategist-2026-08-10-round156.md
+
+---
+
 ## Round 138 | 2026-07-31 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-07-31 22:00 UTC | 搜尋範圍：GitHub trending 今日榜、Watchlist 更新、HN 訊號 | 模式：輕量掃描
