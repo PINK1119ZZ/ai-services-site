@@ -4,6 +4,91 @@
 
 ---
 
+## Round 157 — 2026-08-11 00:30 UTC（ai-trend-hunter 08:30 cron，輕量掃描）
+
+### ⏳ Watchlist Update：Qwen 3.8-Max weights — 8/11 仍未上線
+
+- **狀態：** 8/3 官方承諾「next week」= 窗口 8/10-14，今天 8/11 HuggingFace 仍未見權重
+- **來源：** benchlm.ai（8/9最新）、yottalabs.ai（8/4）、qwen.ai 官方部落格確認「open weights will follow next week」
+- **Qwen3.8-27B：** 同週開源確認（小模型，27B可本機跑）
+- **seo-writer 行動：** 文章 blog/qwen-38-max-review-2026.html 已就緒（8/9 cron 完成），weights 上線立即發布
+
+### 📊 Product Hunt August 2026 月榜更新（8/11 快照）
+
+**前 5 名（按 upvotes 排序）：**
+1. **AdAnt AI** — 608 votes（維持 #1）
+2. **Hey Noah** — 603 votes
+3. **Wispr Flow** — 577 votes
+4. **Coldtea.ai** — 517 votes（我們已發文）
+5. **Framer 3.0** — 495 votes
+
+**按 followers 排序：**
+1. **Framer AI Agents** — **886 followers**（新 #1！）
+2. Ctruh Studio — 418 followers
+3. Zinley — 400 followers
+
+**PH 8/10 日榜 #1：**
+- **Viktor.com** — 126 upvotes，AI employee in Slack/Teams，3,200+ integrations
+- 無公開 affiliate program（查 viktor.com/affiliate, viktor.com/partners 皆無）
+- 內容角度：「AI Slack agents 比較 2026：Viktor vs Slack AI vs Zapier」（P2，間接 DataCamp/DO）
+
+### 🔥 GitHub Trending 8/11 — Agent-Reach 爆發式成長
+
+| Repo | Stars 今日 | 總計 | 類別 | Affiliate? |
+|------|------------|------|------|------------|
+| **Panniantong/Agent-Reach** | **+5,325** | **64,373** | AI agent web access CLI（Twitter/Reddit/YouTube/GitHub/Bilibili 等 16 平台） | ❌ 開源，無 affiliate |
+| 逆向/渗透/安全技能路由包 | +1,902 | 12,677 | Security skill router（Claude Code/Claude/Cursor） | ❌ 開源 |
+| Cursor Agent | +1,857 | 28,806 | DeepSeek-native AI coding agent | ❌ 開源 |
+
+**Agent-Reach 重大里程碑：**
+- **Round 143 首次發現（7K★）→ Round 157 今日 64K★**（14+ rounds carryover，今日單日 +5,325 stars 史上最高）
+- **pendingDirectives 積壓任務已確認 URL**：github.com/Panniantong/Agent-Reach
+- **內容價值：** 繁中 Agent-Reach 完整教學（autodev-ai 開發者受眾完美吻合，「給 AI agent 看全網」角度）
+- **變現方式：** 間接 DataCamp/DigitalOcean affiliate（教學型內容）
+- **預估月收入：** $200-500/月（長尾 SEO，GitHub trending 熱度）
+- **優先級：** P1-HIGH（14+ rounds 積壓，今日單日爆量應立即執行）
+
+### 🆕 Affiliate 市場確認（本輪無新高價值發現）
+
+本輪重點為 **Systeme.io 60% LIFETIME recurring 再次確認**（已知但值得強調）：
+
+| 工具 | 佣金 | Cookie | 來源 | 備註 |
+|------|------|--------|------|------|
+| **Systeme.io** | **60% LIFETIME recurring** | Lifetime（永久歸因） | systeme.io/affiliate-program（官方確認 2026-04） | **業界最高佣金**，outlierkit.com/resources 與 getreditus.com 雙重確認 |
+| **VidIQ** | 30% LIFETIME recurring | 60 days | vidiq.com/affiliates | TubeBuddy 已關閉新 affiliates，VidIQ 成 YouTube 工具唯一 LIFETIME 選項 |
+
+**本輪無新 30%+ recurring affiliate 發現**，主要確認現有高價值項目。
+
+### 🎯 本輪內容機會總結
+
+| 機會 | 類型 | 預估月收入 | 優先級 | Ivan 行動 |
+|------|------|------------|--------|-----------|
+| Agent-Reach 完整教學 | 開源工具教學 | $200-500 | **P1-HIGH**（14+ rounds carryover） | 無（開源） |
+| Qwen 3.8-Max 評測（權重上線後） | 時效評測 | $400-1,000 | **P0-URGENT**（文章已就緒） | 無（文章已完成） |
+| Viktor.com vs Slack AI 比較 | 比較頁 | $200-400 | P2 | 無（Viktor 無 affiliate） |
+| AI 寫作工具比較頁 2026（Systeme.io 60% 強化 CTA） | Roundup 比較頁 | $500-1,200 | **P1-HIGH**（Systeme.io 業界最高佣金角度） | 無（Systeme.io affiliate 已有） |
+
+**本輪總預估新增月收入潛力：** $1,300-3,100
+
+### 📋 Strategist 行動建議（本輪輕量掃描，遵循 8/10 strategist 降頻指示）
+
+**P1-HIGH 立即執行：**
+1. **Agent-Reach 教學**（14+ rounds carryover，今日 GitHub trending 爆量 +5,325 stars，autodev-ai 受眾完美吻合）
+2. **Qwen 3.8-Max 發布確認**（文章已就緒，weights 上線立即發布，窗口 8/10-14 持續監控）
+
+**P1 中期執行：**
+3. **AI 寫作工具比較頁 2026**（強化 Systeme.io 60% LIFETIME 為業界最高佣金角度，先用 DataCamp/DO CTA 佔位）
+
+**P2 長尾機會：**
+4. Viktor.com vs Slack AI 比較（無 affiliate，間接變現）
+
+**Ivan carryover（無新增，本輪維持現狀）：**
+- P0-URGENT: Gumroad claude-code-prompt-pack-2026（第 15 週）
+- P0-URGENT: Kit affiliate（12+ 輪，$800-2,000/月）
+- P1-HIGH: KrispCall PartnerStack 確認（Round 155）
+
+---
+
 ## Round 155 — 2026-08-10 00:30 UTC（ai-trend-hunter 08:30 cron）
 
 ### 🔥 頭條：KrispCall — 30% LIFETIME 電話系統 Affiliate（PartnerStack，本輪首次確認）
