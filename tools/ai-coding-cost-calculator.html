@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Coding 費用計算器 2026｜Claude Code、Cursor、Copilot 月費 + ROI 試算</title>
+<meta name="description" content="輸入團隊人數、工程師時薪，立刻算出 Claude Code、Cursor、Copilot、Windsurf 等 AI coding 工具的月費與投資回報率。繁中首創 AI 開發工具費用計算器，免費試算不需要註冊。">
+<link rel="canonical" href="https://autodev-ai.com/tools/ai-coding-cost-calculator.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/tools/ai-coding-cost-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/tools/ai-coding-cost-calculator.html">
+<meta property="og:title" content="AI Coding 費用計算器 2026｜Claude Code、Cursor 月費 + ROI">
+<meta property="og:description" content="輸入人數與時薪，算出 AI coding 工具的月費總和與投資回報率。Claude Code、Cursor、Copilot 一鍵比較。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autodev-ai.com/tools/ai-coding-cost-calculator.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AI Coding 費用計算器 2026",
+  "description": "計算 Claude Code、Cursor、GitHub Copilot、Windsurf 等 AI coding 工具的月費與 ROI",
+  "url": "https://autodev-ai.com/tools/ai-coding-cost-calculator.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<meta name="theme-color" content="#FFF8F3">
+<style>
+/* ===== Layout ===== */
+.calc-wrap{max-width:1100px;margin:0 auto;padding:7rem 1.5rem 4rem;}
+.calc-header{text-align:center;margin-bottom:2.5rem;}
+.calc-header h1{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:.8rem;font-weight:900;line-height:1.2;}
+.calc-header p{color:var(--gray);font-size:1.05rem;max-width:700px;margin:0 auto;}
+
+/* ===== Two-column layout ===== */
+.calc-columns{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;}
+@media(max-width:800px){.calc-columns{grid-template-columns:1fr;}}
+
+/* ===== Input Panel ===== */
+.input-panel{background:var(--dark-2);border:2px solid rgba(255,255,255,.07);border-radius:18px;padding:1.8rem;}
+.panel-title{font-size:1.15rem;font-weight:900;color:var(--light);margin-bottom:1.4rem;display:flex;align-items:center;gap:.5rem;}
+.field-group{margin-bottom:1.3rem;}
+.field-label{font-size:.9rem;color:var(--gray);margin-bottom:.4rem;display:block;}
+.field-label strong{color:var(--light);}
+.range-row{display:flex;align-items:center;gap:.8rem;}
+.range-row input[type=range]{flex:1;accent-color:var(--accent);}
+.range-value{font-size:1.3rem;font-weight:900;color:var(--primary-light);min-width:3.5rem;text-align:right;}
+
+/* ===== Tool Toggle Cards ===== */
+.tool-section-title{font-size:1rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;margin:.5rem 0 .8rem;}
+.tool-toggles{display:flex;flex-direction:column;gap:.6rem;}
+.tool-toggle{display:flex;align-items:flex-start;gap:.9rem;background:rgba(255,255,255,.03);border:2px solid rgba(255,255,255,.06);border-radius:12px;padding:.9rem 1rem;cursor:pointer;transition:all .22s;position:relative;}
+.tool-toggle:hover{border-color:rgba(184,148,106,.35);background:rgba(196,165,123,.03);}
+.tool-toggle.active{border-color:var(--accent);background:rgba(196,165,123,.06);}
+.toggle-check{width:20px;height:20px;border:2px solid rgba(255,255,255,.2);border-radius:5px;flex-shrink:0;margin-top:.1rem;position:relative;transition:all .18s;}
+.tool-toggle.active .toggle-check{background:var(--accent);border-color:var(--accent);}
+.tool-toggle.active .toggle-check::after{content:'✓';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:.8rem;font-weight:700;}
+.toggle-info{flex:1;}
+.toggle-name{font-size:.95rem;font-weight:700;color:var(--light);}
+.toggle-price{font-size:1.05rem;font-weight:900;color:var(--primary-light);margin:.1rem 0;}
+.toggle-desc{font-size:.78rem;color:var(--gray);line-height:1.4;}
+.toggle-badge{font-size:.7rem;font-weight:700;padding:.15rem .45rem;border-radius:4px;margin-left:.4rem;}
+.badge-free{background:rgba(96,200,120,.15);color:#60C878;}
+.badge-popular{background:rgba(196,165,123,.15);color:var(--primary-light);}
+
+/* ===== Results Panel ===== */
+.results-panel{display:flex;flex-direction:column;gap:1.2rem;}
+.result-card{background:var(--dark-2);border:2px solid rgba(255,255,255,.07);border-radius:18px;padding:1.6rem;}
+.result-card.highlight{border-color:rgba(196,165,123,.3);background:linear-gradient(135deg,rgba(196,165,123,.06),rgba(184,148,106,.02));}
+.result-label{font-size:.85rem;color:var(--gray);margin-bottom:.3rem;}
+.result-big{font-size:2.8rem;font-weight:900;line-height:1.1;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.result-sub{font-size:1rem;color:var(--gray);margin-top:.3rem;}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1rem;}
+@media(max-width:480px){.result-grid{grid-template-columns:1fr;}}
+.result-item{background:rgba(255,255,255,.03);border-radius:10px;padding:.9rem;}
+.result-item-label{font-size:.78rem;color:var(--gray);margin-bottom:.2rem;}
+.result-item-value{font-size:1.3rem;font-weight:900;color:var(--primary-light);}
+.roi-bar-wrap{margin-top:1rem;}
+.roi-bar-label{display:flex;justify-content:space-between;font-size:.8rem;color:var(--gray);margin-bottom:.4rem;}
+.roi-bar-track{background:rgba(255,255,255,.08);border-radius:8px;height:10px;overflow:hidden;}
+.roi-bar-fill{height:100%;background:var(--gradient-1);border-radius:8px;transition:width .5s ease;}
+.roi-verdict{margin-top:1rem;padding:.8rem 1rem;border-radius:10px;font-size:.9rem;font-weight:600;line-height:1.5;}
+.verdict-great{background:rgba(96,200,120,.1);border:1px solid rgba(96,200,120,.25);color:#7DDC8F;}
+.verdict-ok{background:rgba(196,165,123,.1);border:1px solid rgba(196,165,123,.25);color:var(--primary-light);}
+.verdict-low{background:rgba(150,150,200,.1);border:1px solid rgba(150,150,200,.2);color:#AAAACC;}
+
+/* ===== Comparison Table ===== */
+.compare-section{margin-top:2rem;}
+.compare-title{font-size:1.3rem;font-weight:900;margin-bottom:1rem;color:var(--light);}
+.compare-table{width:100%;border-collapse:collapse;font-size:.88rem;}
+.compare-table th{background:rgba(255,255,255,.04);color:var(--gray);font-weight:700;text-align:left;padding:.7rem .9rem;border-bottom:2px solid rgba(255,255,255,.07);}
+.compare-table td{padding:.7rem .9rem;border-bottom:1px solid rgba(255,255,255,.05);color:var(--light);vertical-align:top;}
+.compare-table tr:last-child td{border-bottom:none;}
+.compare-table tr:hover td{background:rgba(255,255,255,.02);}
+.tag-free{display:inline-block;font-size:.7rem;font-weight:700;padding:.1rem .4rem;border-radius:4px;background:rgba(96,200,120,.12);color:#60C878;margin-left:.3rem;}
+.tag-best{display:inline-block;font-size:.7rem;font-weight:700;padding:.1rem .4rem;border-radius:4px;background:rgba(196,165,123,.15);color:var(--primary-light);margin-left:.3rem;}
+
+/* ===== CTA / Info Strips ===== */
+.cta-strip{background:rgba(196,165,123,.05);border:1px solid rgba(196,165,123,.2);border-radius:14px;padding:1.2rem 1.4rem;margin-top:1.5rem;}
+.cta-strip-title{font-size:1rem;font-weight:700;color:var(--light);margin-bottom:.6rem;}
+.cta-links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.8rem;}
+.cta-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:8px;font-size:.85rem;font-weight:700;text-decoration:none;transition:all .2s;}
+.cta-btn-primary{background:var(--accent);color:#1a1208;}
+.cta-btn-primary:hover{background:var(--primary-light);}
+.cta-btn-secondary{background:rgba(255,255,255,.07);color:var(--light);border:1px solid rgba(255,255,255,.12);}
+.cta-btn-secondary:hover{background:rgba(255,255,255,.12);}
+
+.info-strip{background:rgba(196,165,123,.04);border:1px solid rgba(196,165,123,.18);border-radius:10px;padding:.9rem 1.1rem;margin-top:1.5rem;font-size:.85rem;color:#C5C5D5;line-height:1.6;}
+.info-strip a{color:var(--primary-light);text-decoration:none;border-bottom:1px dotted var(--primary-light);}
+.info-strip a:hover{border-bottom-style:solid;}
+.disclaimer{color:var(--gray);font-size:.75rem;margin-top:2rem;text-align:center;line-height:1.6;}
+
+/* ===== FAQ ===== */
+.faq-section{margin-top:3rem;}
+.faq-title{font-size:1.5rem;font-weight:900;margin-bottom:1.2rem;color:var(--light);}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.07);padding:1rem 0;}
+.faq-q{font-size:.95rem;font-weight:700;color:var(--light);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--gray);flex-shrink:0;margin-top:-.1rem;}
+.faq-item.open .faq-q::after{content:'−';}
+.faq-a{font-size:.88rem;color:var(--gray);line-height:1.7;padding-top:.6rem;display:none;}
+.faq-item.open .faq-a{display:block;}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo">AutoDev AI</a>
+<div class="nav-links" id="navLinks">
+<a href="/services.html">服務</a>
+<a href="/bot-cloud.html">雲託管</a>
+<a href="/ai-model.html">AI 模特</a>
+<a class="active" href="/tools/">工具</a>
+<a href="/pricing.html">方案</a>
+<a href="/blog/">Blog</a>
+<a href="/about.html">關於</a>
+<a class="nav-cta" href="/contact.html">免費諮詢</a>
+</div>
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="開啟選單">&#9776;</button>
+</div>
+</nav>
+
+<div class="calc-wrap">
+
+<div class="calc-header">
+  <h1>AI Coding 費用計算器 2026</h1>
+  <p>輸入團隊規模與工程師時薪，立刻算出 Claude Code、Cursor、Copilot 等工具的每月費用與投資回報率（ROI）。不需要註冊，即時計算。</p>
+</div>
+
+<div class="calc-columns">
+
+  <!-- ===== LEFT: Inputs + Tool Selection ===== -->
+  <div class="input-panel">
+    <div class="panel-title">⚙️ 設定條件</div>
+
+    <div class="field-group">
+      <label class="field-label" for="devCount"><strong>開發者人數</strong></label>
+      <div class="range-row">
+        <input type="range" id="devCount" min="1" max="50" value="1" oninput="calc()">
+        <span class="range-value" id="devCountVal">1 人</span>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="hoursPerWeek"><strong>每人每週使用時數</strong></label>
+      <div class="range-row">
+        <input type="range" id="hoursPerWeek" min="1" max="50" value="20" oninput="calc()">
+        <span class="range-value" id="hoursVal">20 hr</span>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="hourlyRate"><strong>工程師時薪（USD）</strong></label>
+      <div class="range-row">
+        <input type="range" id="hourlyRate" min="5" max="200" step="5" value="40" oninput="calc()">
+        <span class="range-value" id="rateVal">$40</span>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="productivityGain"><strong>預估生產力提升幅度</strong></label>
+      <div class="range-row">
+        <input type="range" id="productivityGain" min="5" max="60" step="5" value="25" oninput="calc()">
+        <span class="range-value" id="gainVal">25%</span>
+      </div>
+      <div style="font-size:.78rem;color:var(--gray);margin-top:.4rem;">業界研究中位數：15-35%（McKinsey 2026）</div>
+    </div>
+
+    <div class="tool-section-title">選擇工具組合</div>
+    <div class="tool-toggles" id="toolToggles"></div>
+  </div>
+
+  <!-- ===== RIGHT: Results ===== -->
+  <div class="results-panel">
+
+    <div class="result-card highlight">
+      <div class="result-label">每月工具費用（全團隊）</div>
+      <div class="result-big" id="totalMonthlyCost">$0</div>
+      <div class="result-sub" id="totalNTD">約 NT$0 / 月</div>
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="result-item-label">每人每月</div>
+          <div class="result-item-value" id="perPersonCost">$0</div>
+        </div>
+        <div class="result-item">
+          <div class="result-item-label">全年費用</div>
+          <div class="result-item-value" id="annualCost">$0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-card">
+      <div class="result-label">每月節省的工時價值</div>
+      <div class="result-big" id="savedValue">$0</div>
+      <div class="result-sub" id="savedHours">節省 0 小時/月</div>
+      <div class="roi-bar-wrap">
+        <div class="roi-bar-label">
+          <span>投資回報率（ROI）</span>
+          <span id="roiPct">—</span>
+        </div>
+        <div class="roi-bar-track">
+          <div class="roi-bar-fill" id="roiBar" style="width:0%"></div>
+        </div>
+      </div>
+      <div class="roi-verdict" id="roiVerdict"></div>
+    </div>
+
+    <div class="result-card">
+      <div class="result-label">損益平衡點</div>
+      <div style="font-size:.9rem;color:var(--gray);line-height:1.7;" id="breakevenText">選擇工具後計算。</div>
+    </div>
+
+    <div class="cta-strip">
+      <div class="cta-strip-title">🚀 深入了解各工具</div>
+      <div style="font-size:.85rem;color:var(--gray);line-height:1.6;">比較 Claude Code、Cursor、Copilot 的功能差異，找到最適合你的工具組合。</div>
+      <div class="cta-links">
+        <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="cta-btn cta-btn-primary">☁️ DigitalOcean 部署 AI 環境</a>
+        <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener" class="cta-btn cta-btn-secondary">📚 DataCamp 學 AI 開發</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== Comparison Table ===== -->
+<div class="compare-section">
+  <div class="compare-title">📊 AI Coding 工具費用完整比較（2026）</div>
+  <div style="overflow-x:auto;">
+  <table class="compare-table" aria-label="AI coding 工具費用比較表">
+    <thead>
+      <tr>
+        <th>工具</th>
+        <th>月費（/人）</th>
+        <th>免費方案</th>
+        <th>適合對象</th>
+        <th>主要差異</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Claude Code</strong><span class="tag-best">⭐ 推薦</span></td>
+        <td>$100</td>
+        <td>—</td>
+        <td>全端開發者、Agent 開發</td>
+        <td>Terminal-first，Agentic 任務最強，原生 MCP 支援</td>
+      </tr>
+      <tr>
+        <td><strong>Cursor Pro</strong></td>
+        <td>$20</td>
+        <td>✅ 免費版</td>
+        <td>IDE 使用者、前後端</td>
+        <td>VS Code 相容，Tab 補全最快，Composer 多檔修改</td>
+      </tr>
+      <tr>
+        <td><strong>GitHub Copilot</strong></td>
+        <td>$10</td>
+        <td>✅ 免費版</td>
+        <td>GitHub 用戶、企業</td>
+        <td>GitHub 深度整合，PR Summary，企業 SSO</td>
+      </tr>
+      <tr>
+        <td><strong>Windsurf Pro</strong></td>
+        <td>$15</td>
+        <td>✅ 免費版</td>
+        <td>全端、React/TS 為主</td>
+        <td>Cascade 多步驟任務，流程式 AI，介面簡潔</td>
+      </tr>
+      <tr>
+        <td><strong>OpenCode</strong><span class="tag-free">免費</span></td>
+        <td>$0</td>
+        <td>✅ 全免費</td>
+        <td>開源愛好者、輕量需求</td>
+        <td>Terminal-based，帶自己的 API Key，200K+ stars</td>
+      </tr>
+      <tr>
+        <td><strong>Codeium Pro</strong></td>
+        <td>$12</td>
+        <td>✅ 免費版</td>
+        <td>多語言開發者</td>
+        <td>支援 70+ IDE，企業本地部署，速度快</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ===== Info Strip ===== -->
+<div class="info-strip" style="margin-top:2rem;">
+  💡 <strong>省錢建議：</strong>獨立開發者可考慮 OpenCode（免費）+ 自帶 API Key，重度 Agent 使用者才值得付 Claude Code $100。團隊 5 人以上建議評估 GitHub Copilot Business（$19/人/月，含管理後台）。<br>
+  🔗 看我們的深度評測：<a href="https://autodev-ai.com/blog/opencode-surpasses-claude-code-2026.html">OpenCode vs Claude Code 完整比較 2026</a> ｜ <a href="https://autodev-ai.com/blog/claude-code-vs-cursor-2026.html">Claude Code vs Cursor 2026</a>
+</div>
+
+<!-- ===== FAQ ===== -->
+<div class="faq-section">
+  <div class="faq-title">常見問題</div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Claude Code $100/月值得嗎？</div>
+    <div class="faq-a">Claude Code 針對 Agentic 任務（自動修 bug、重構、撰寫測試、MCP 整合）有明顯優勢，使用量高的開發者通常在 2-3 週內就能靠省下的時間回本。如果每天使用 2 小時以上，$100 月費通常是划算的。使用量較低（每天不到 1 小時）則 Cursor Pro $20 會是更好的 CP 值選擇。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Cursor 和 GitHub Copilot 有什麼不同？</div>
+    <div class="faq-a">Cursor 是完整的 IDE（基於 VS Code 分叉），強調多檔修改（Composer）和上下文理解；Copilot 是外掛式助手，可以裝在現有 IDE（VS Code、JetBrains 等），GitHub 整合更緊密，適合企業環境與 PR 流程自動化。習慣 JetBrains 的工程師通常選 Copilot；全新設定工作站的開發者通常選 Cursor。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">AI coding 工具真的能提升 25% 生產力嗎？</div>
+    <div class="faq-a">McKinsey 2026 研究顯示，AI coding 工具對開發速度的平均提升約為 15-40%，中位數落在 25% 左右。但實際效果因任務類型差異很大：重複性高的任務（寫 CRUD、補測試、文件）提升幅度可達 40-60%；需要深度系統理解的任務（架構設計、複雜 debugging）提升幅度通常只有 10-20%。計算器預設值 25% 是保守中位數估算。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">團隊應該統一用同一套工具，還是讓工程師自選？</div>
+    <div class="faq-a">5 人以下團隊讓工程師自選通常效率更高，因為每個人習慣不同。5 人以上建議統一工具，原因是：共享上下文、統一知識庫（MCP server）、方便企業計費管理。GitHub Copilot Business 和 Cursor Business 都有集中管理後台，適合 10 人以上團隊。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">有沒有免費的 AI coding 工具可以先試用？</div>
+    <div class="faq-a">有幾個選項：OpenCode 完全免費（需自帶 API Key）、GitHub Copilot 有免費版（每月 2,000 次補全）、Cursor 有免費版（每月 50 次慢速請求）、Codeium 個人版免費（無使用量限制）。建議先用免費版感受工作流程，確認習慣後再考慮付費升級。</div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  * 月費以 2026 年 8 月官網公告為準，實際費用請以各工具官網為主。匯率按 1 USD = 31 TWD 估算。<br>
+  ROI 計算基於輸入的時薪與生產力提升幅度，僅供參考，實際效益因個人使用情況而異。<br>
+  部分連結為聯盟推薦連結，透過連結購買我們可能獲得佣金，但不影響你的價格。
+</div>
+
+</div><!-- /calc-wrap -->
+
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-col">
+<div class="footer-title">AutoDev AI</div>
+<p>企業級 AI 開發與自動化服務</p>
+</div>
+<div class="footer-col">
+<div class="footer-subtitle">快速連結</div>
+<a href="/services.html">服務項目</a>
+<a href="/pricing.html">方案價格</a>
+<a href="/blog/">技術文章</a>
+<a href="/tools/">免費工具</a>
+</div>
+<div class="footer-col">
+<div class="footer-subtitle">聯絡我們</div>
+<a href="/contact.html">免費諮詢</a>
+<a href="/about.html">關於我們</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 AutoDev AI. All rights reserved.</p>
+</div>
+</footer>
+
+<script src="/nav.js"></script>
+<script>
+const USD_TO_TWD = 31;
+
+const TOOLS = [
+  { id: 'claude-code',  name: 'Claude Code',      pricePerUser: 100, desc: 'Anthropic 官方 CLI，Agentic 任務最強', badge: 'popular' },
+  { id: 'cursor',       name: 'Cursor Pro',        pricePerUser: 20,  desc: 'AI-first IDE，Tab 補全最快', badge: '' },
+  { id: 'copilot',      name: 'GitHub Copilot',    pricePerUser: 10,  desc: 'GitHub 官方助手，PR 自動摘要', badge: '' },
+  { id: 'windsurf',     name: 'Windsurf Pro',      pricePerUser: 15,  desc: 'Cascade 多步驟任務，流程式 AI', badge: '' },
+  { id: 'opencode',     name: 'OpenCode',          pricePerUser: 0,   desc: '完全免費，需自帶 API Key', badge: 'free' },
+  { id: 'codeium',      name: 'Codeium Pro',       pricePerUser: 12,  desc: '70+ IDE 支援，速度快', badge: '' },
+  { id: 'datacamp',     name: 'DataCamp Premium',  pricePerUser: 25,  desc: 'AI/Data Science 課程，團隊學習', badge: '' },
+  { id: 'digitalocean', name: 'DigitalOcean Basic', pricePerUser: 6,  desc: 'AI 開發雲端環境（Droplet）', badge: '' },
+];
+
+let selected = new Set();
+
+function renderToggles() {
+  const container = document.getElementById('toolToggles');
+  container.innerHTML = TOOLS.map(t => {
+    const badgeHtml = t.badge === 'free'
+      ? '<span class="toggle-badge badge-free">免費</span>'
+      : t.badge === 'popular'
+        ? '<span class="toggle-badge badge-popular">熱門</span>'
+        : '';
+    return `
+      <div class="tool-toggle" id="toggle-${t.id}" onclick="toggleTool('${t.id}')">
+        <div class="toggle-check"></div>
+        <div class="toggle-info">
+          <div class="toggle-name">${t.name}${badgeHtml}</div>
+          <div class="toggle-price">${t.pricePerUser === 0 ? '免費' : '$' + t.pricePerUser + '<span style="font-size:.75rem;color:var(--gray);font-weight:400;">/人/月</span>'}</div>
+          <div class="toggle-desc">${t.desc}</div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function toggleTool(id) {
+  if (selected.has(id)) {
+    selected.delete(id);
+    document.getElementById('toggle-' + id).classList.remove('active');
+  } else {
+    selected.add(id);
+    document.getElementById('toggle-' + id).classList.add('active');
+  }
+  calc();
+}
+
+function calc() {
+  const devCount = parseInt(document.getElementById('devCount').value);
+  const hoursPerWeek = parseInt(document.getElementById('hoursPerWeek').value);
+  const hourlyRate = parseInt(document.getElementById('hourlyRate').value);
+  const productivityGain = parseInt(document.getElementById('productivityGain').value);
+
+  document.getElementById('devCountVal').textContent = devCount + ' 人';
+  document.getElementById('hoursVal').textContent = hoursPerWeek + ' hr';
+  document.getElementById('rateVal').textContent = '$' + hourlyRate;
+  document.getElementById('gainVal').textContent = productivityGain + '%';
+
+  // Cost calculation
+  let perPersonCost = 0;
+  TOOLS.forEach(t => {
+    if (selected.has(t.id)) perPersonCost += t.pricePerUser;
+  });
+  const totalMonthlyCost = perPersonCost * devCount;
+  const annualCost = totalMonthlyCost * 12;
+
+  document.getElementById('totalMonthlyCost').textContent = '$' + totalMonthlyCost.toLocaleString();
+  document.getElementById('totalNTD').textContent = '約 NT$' + (totalMonthlyCost * USD_TO_TWD).toLocaleString() + ' / 月';
+  document.getElementById('perPersonCost').textContent = '$' + perPersonCost;
+  document.getElementById('annualCost').textContent = '$' + annualCost.toLocaleString();
+
+  // ROI calculation
+  const hoursPerMonth = hoursPerWeek * 4.33;
+  const savedHoursPerPersonPerMonth = hoursPerMonth * (productivityGain / 100);
+  const savedHoursTotal = savedHoursPerPersonPerMonth * devCount;
+  const savedValue = savedHoursTotal * hourlyRate;
+
+  document.getElementById('savedValue').textContent = '$' + Math.round(savedValue).toLocaleString();
+  document.getElementById('savedHours').textContent = '節省 ' + savedHoursTotal.toFixed(1) + ' 小時/月（全團隊）';
+
+  let roiPct = 0;
+  let roiText = '—';
+  let roiBarWidth = 0;
+  let verdictHtml = '';
+
+  if (totalMonthlyCost > 0) {
+    roiPct = ((savedValue - totalMonthlyCost) / totalMonthlyCost) * 100;
+    roiText = (roiPct >= 0 ? '+' : '') + Math.round(roiPct) + '%';
+    roiBarWidth = Math.min(Math.max((roiPct + 100) / 5, 0), 100);
+
+    if (roiPct >= 200) {
+      verdictHtml = '<div class="roi-verdict verdict-great">✅ 非常划算：每花 $1 工具費，省下約 $' + (savedValue / totalMonthlyCost).toFixed(1) + ' 的工時成本。強烈建議維持或擴大訂閱。</div>';
+    } else if (roiPct >= 50) {
+      verdictHtml = '<div class="roi-verdict verdict-ok">👍 划算：ROI 正向，工具費用有賺回來。可考慮進一步評估哪些工具貢獻最大。</div>';
+    } else if (roiPct >= 0) {
+      verdictHtml = '<div class="roi-verdict verdict-ok">⚖️ 損益平衡附近：費用和節省的工時價值差不多。建議提高使用頻率，或考慮縮減低使用率的工具。</div>';
+    } else {
+      verdictHtml = '<div class="roi-verdict verdict-low">⚠️ 目前工具費用高於節省的工時價值。可能原因：使用時數偏低、生產力提升幅度未達預期。建議先從免費方案開始，確認工作流程契合後再付費。</div>';
+    }
+
+    // Breakeven
+    const breakevenHours = totalMonthlyCost / (hourlyRate * (productivityGain / 100));
+    const breakevenDays = (breakevenHours / (hoursPerWeek / 5)).toFixed(1);
+    document.getElementById('breakevenText').innerHTML =
+      '以目前設定，全團隊每月只需額外節省 <strong style="color:var(--primary-light)">' + breakevenHours.toFixed(1) + ' 小時</strong>（平均每人 ' + (breakevenHours / devCount).toFixed(1) + ' 小時）就能回本。<br>' +
+      '相當於每位工程師平均每 <strong style="color:var(--primary-light)">' + breakevenDays + ' 個工作天</strong>省出 1 小時。';
+  } else {
+    document.getElementById('breakevenText').textContent = '請先從左側選擇至少一個工具。';
+    verdictHtml = '<div class="roi-verdict verdict-low" style="opacity:.5">請選擇工具以計算 ROI。</div>';
+  }
+
+  document.getElementById('roiPct').textContent = roiText;
+  document.getElementById('roiBar').style.width = roiBarWidth + '%';
+  document.getElementById('roiVerdict').outerHTML = verdictHtml + '<div id="roiVerdict" style="display:none"></div>';
+}
+
+function toggleFaq(el) {
+  el.closest('.faq-item').classList.toggle('open');
+}
+
+// Init
+renderToggles();
+calc();
+</script>
+</body>
+</html>
