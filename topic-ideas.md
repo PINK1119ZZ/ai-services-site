@@ -4,6 +4,80 @@
 
 ---
 
+## Round 159 — 2026-08-12 22:00 UTC（ai-dev-research Wed 22:00 cron，輕量掃描）
+
+### ⏳ Watchlist Update：Qwen 3.8-Max weights — 8/12 22:00 仍未上線（最後窗口 8/13-14）
+
+> 執行時間：2026-08-12 22:00 UTC | 搜尋範圍：Qwen weights HuggingFace + GitHub trending + Product Hunt 月榜 + NOOA 框架 | 模式：降頻輕量掃描
+
+---
+
+#### ✅ Watchlist 狀態更新
+
+| 項目 | 上輪（R158）狀態 | 本輪確認 |
+|------|----------------|---------|
+| Qwen 3.8-Max weights | ⏳ 8/12 仍未上線，窗口剩 8/13-14 | ⏳ **8/12 22:00 仍未上線**（HuggingFace Qwen 頁無新 Max weights，窗口最後 2 天 8/13-14） |
+| Paritok affiliate | 🆕 R158 發現，未確認 affiliate | ❌ **本輪無法確認 affiliate** — 搜尋 Paritok affiliate program 無結果，標記為無公開 affiliate |
+| Agent-Reach | 🔥 64K★ carryover | ⏳ carryover 持續，seo-writer 須執行 |
+
+---
+
+#### 1. ⏳ Qwen 3.8-Max weights 最後窗口（8/13-14）
+
+- **8/12 22:00 UTC 確認：** HuggingFace Qwen org 頁無新 Max-class weights 出現
+- **背景：** 8/3 正式 API 發布時承諾「next week open weights」→ 窗口 8/10-14
+- **今日觀察：** DataCamp blog + yottalabs.ai 均記錄窗口為 8/10-14；截至本輪第3天仍未上線
+- **剩餘窗口：** 8/13（台灣時間 8/13 早上）、8/14 共 2 天
+- **文章狀態：** blog/qwen-38-max-review-2026.html 已就緒，上線即可 SEO 爆發
+- **若 8/15 仍無：** 文章角度需更新為「已 GA API 版評測，開源版 pending」
+
+---
+
+#### 2. 🔥🔥 NVIDIA NOOA — 一個 Python Class 建 AI Agent（P1 教學）
+
+- **發布：** 2026-08-07，github.com/NVIDIA-NeMo/labs-OO-Agents，Apache 2.0
+- **核心：** Object-Oriented Agents — 把 AI agent 的 state、capabilities、prompt、typed interface 全部收進一個 Python class（方法用 `...` 體，runtime 由 LLM 執行）
+- **牽引力：** 1,100-1,300 GitHub stars（10 天），New Stack + MarkTechPost + EnterpriseDNA 報導，開發者反應強
+- **繁中教學空白：** 目前零繁中深度教學（English tutorials already on Medium/EnterpriseDNA）
+- **autodev-ai 受眾吻合：** Python 開發者 + agent 開發者完美受眾
+- **無 affiliate**（NVIDIA Labs 開源項目）→ 間接 DataCamp + DigitalOcean CTA
+- **seo-writer P1：** 「NVIDIA NOOA 教學 2026：用一個 Python Class 打造 AI Agent」
+- **關鍵字：** nvidia nooa 教學, 一個 python class 建 ai agent, nooa framework 2026
+- **預估：** $200-500/月（開發者長尾流量 + DataCamp CTA）
+
+---
+
+#### 3. 📊 Product Hunt August 月榜更新（8/12 22:00）
+
+| # | 產品 | 追蹤數 | 我們的狀態 |
+|---|------|--------|-----------|
+| 1 | AdAnt AI | 1.3K followers | 無評測 |
+| 2 | Hey Noah | 1.3K followers | 無評測 |
+| 3 | Wispr Flow | 8.6K followers | 無評測（前輪記錄）|
+| 4 | **Coldtea.ai** | **864 followers** | ✅ **文章 8/10 已發** |
+| 5 | **Soloop** | **1K followers** | 🆕 新進月榜 #5 |
+| 6 | Cloudflare | 6.1K followers | 待評測 |
+
+**Soloop（PH 月榜 #5，1K followers）：**
+- Approval-first Agent OS for solo founders（AI agents 帶任務回人類審批）
+- 8/7 PH launch；自動化工作流 + multi-agent 協調
+- **無公開 affiliate 發現**；P2 內容機會（solo founder + AI agent 受眾）
+
+---
+
+#### 4. 📊 GitHub Trending 今日快照
+
+- **AI-For-Beginners** (microsoft)：+2,617 stars 今日（總 58,565★）— 持續強勢，已有教學在其他站，非新機會
+- **airllm** (lyogavin)：+242 stars 今日（總 25,306★）— 4GB GPU 跑 70B 推理，開發者工具，P3
+- **無新 P1+ 爆量訊號**（本輪 GitHub 無超過 3K today stars 的 AI 新工具）
+
+---
+
+**本輪預估新增月收入潛力：$200-500（NVIDIA NOOA 間接）**
+**directive 已創建：** directives/researcher-to-strategist-2026-08-12-round159.md
+
+---
+
 ## Round 158 — 2026-08-12 00:30 UTC（ai-trend-hunter 08:30 cron，輕量掃描）
 
 ### ⏳ Watchlist Update：Qwen 3.8-Max weights — 8/12 仍未上線（窗口第3天）
