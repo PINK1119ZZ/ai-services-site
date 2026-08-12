@@ -4,6 +4,84 @@
 
 ---
 
+## Round 158 — 2026-08-12 00:30 UTC（ai-trend-hunter 08:30 cron，輕量掃描）
+
+### ⏳ Watchlist Update：Qwen 3.8-Max weights — 8/12 仍未上線（窗口第3天）
+
+- **狀態：** 8/10-14 窗口第 3 天，aitooltier.com 仍標注「Qwen3-Max (API only)」，HuggingFace 無 open weights 上線訊號
+- **來源：** aitooltier.com（8/12 最新頁面快照），多個搜尋結果均無 open weights 宣布
+- **窗口剩餘：** 8/13、8/14 各1天（明後天是最後機會）
+- **seo-writer 行動：** 繼續監控 HuggingFace / Qwen 官方；weights 一出立即發布
+
+### 📊 Product Hunt 8/10 日榜 + 本週月榜更新
+
+**PH 8/10 日榜 Top 5：**
+1. **oqoqo** — "Build evals and custom benchmarks for real-world tasks"（Software Engineering + AI，開發者工具，無 affiliate）
+2. **Portfolio Lab** — AI investing responsibly（金融 AI，無相關 affiliate）
+3. **Paritok** — "Spend up to 85% less and run 3× longer coding agent sessions"（P1 內容機會，見下）
+4. **SecondBrain Note by GenSpark** — MagSafe AI recorder（AI 會議記錄）
+5. **AI Group Call** — voice call with 6 AI minds（實驗性工具）
+
+**PH 月榜持續追蹤（8/12 快照）：**
+- AnySearch: 672 upvotes（月榜新強者）
+- Framer AI Agents: 886 followers（followers #1，已連續3輪）
+- AdAnt AI: 維持 upvotes 前列
+
+**本週週榜 #1：oqoqo（348 upvotes，8/10 日）**
+
+### 🔥 PH 8/10 #3：Paritok — AI Coding Agent 成本優化工具（P1 內容機會）
+
+| 項目 | 內容 |
+|------|------|
+| 產品名 | Paritok |
+| 定位 | 「Spend up to 85% less and run 3× longer coding agent sessions」|
+| PH 成績 | 8/10 日榜 #3（257 upvotes），週榜 #3 |
+| 受眾 | 開發者、Claude Code / Codex / Cursor 用戶 |
+| Affiliate | 待查（本輪輕量掃描，未深入確認）|
+
+**內容機會：** autodev-ai 開發者受眾完美吻合（Claude Code 費用痛點）；角度「讓 Claude Code Sessions 跑 3 倍久，費用省 85%？Paritok 2026 評測」
+- **優先級：** P1（待確認是否有 affiliate）
+- **關鍵字：** paritok 評測 2026, claude code 費用節省, ai coding agent 優化
+- **變現：** 間接 DataCamp/DigitalOcean；若有 affiliate 升級至直接變現
+
+### ✅ KrispCall Affiliate — 完整官方條款三源確認（Round 155 P1-HIGH 升級為已確認）
+
+| 項目 | 確認內容 |
+|------|---------|
+| 佣金 | **30% LIFETIME**（workspace 訂閱永久遞迴）|
+| 額外獎勵 | **每位同 workspace 新成員**額外佣金 |
+| Cookie | **90 天** |
+| 平台 | **PartnerStack** |
+| 申請連結 | krispcall.com/partners/affiliates |
+| 聯繫 | affiliate@krispcall.com |
+| 條款更新日 | 2026-07-21（最新版本）|
+| 來源 | krispcall.com/partners/affiliates（官方）+ PartnerStack marketplace + krispcall.com/legal/partners-terms（法律條款）|
+| 客單 | $15-30/月（Essential/Business plan）|
+
+**三源交叉確認，條款無歧義，Ivan 可直接申請。**
+
+### 🆕 輕量掃描中發現的附加 Affiliate（遵循降頻指示，僅記錄不開新 directive）
+
+| 工具 | 佣金 | Cookie | 說明 | 優先 |
+|------|------|--------|------|------|
+| **InVideo** | 30% recurring | 90 天 | 熱門 AI 影片編輯工具，tapfiliate.com 推薦清單（2026年確認）| P1（carryover 積壓後補）|
+| **Merlin AI** | 30% recurring | 60 天 | AI 全平台瀏覽器助手，tapfiliate.com 推薦清單 | P1（carryover 積壓後補）|
+
+**注：因 strategist 已明確指示停止深度 affiliate 挖掘（carryover 超過執行能力），以上僅存檔，不開新 directive。待積壓清空後再執行。**
+
+### 🎯 本輪內容機會總結
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|----------|---------|
+| 2026-08-12 | Qwen 3.8-Max（待 weights）| qwen 3.8-max 評測 | 15K-40K | DataCamp+DO 間接 | $400-1,000 | autodev-ai.com |
+| 2026-08-12 | Paritok | paritok 評測, coding agent 費用節省 | 800-3K | 間接（待確認 affiliate）| $200-500 | autodev-ai.com |
+| 2026-08-12 | oqoqo | oqoqo eval benchmark 教學 | 500-2K | 間接 DataCamp/DO | $100-300 | autodev-ai.com |
+| 2026-08-12 | KrispCall affiliate 評測 | krispcall 評測 2026, AI 電話系統 | 1K-3K | KrispCall 30% LIFETIME（待 Ivan 申請）| $300-800 | ai-tools.pro |
+
+**本輪總預估新增月收入潛力：$900-2,400**（Paritok $200-500 + Qwen 3.8-Max $400-1,000 + KrispCall 長尾 $300-800，注：Qwen 為 carryover）
+
+---
+
 ## Round 157 — 2026-08-11 00:30 UTC（ai-trend-hunter 08:30 cron，輕量掃描）
 
 ### ⏳ Watchlist Update：Qwen 3.8-Max weights — 8/11 仍未上線
