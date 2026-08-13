@@ -1,3 +1,49 @@
+# Topic Ideas — AI 工具評測與教學（持續更新）
+
+本檔案記錄 researcher agent 每輪搜尋結果，提供 strategist 與 seo-writer 選題參考。
+
+---
+
+## Round 160（2026-08-13 00:30 UTC）— 降頻輕量掃描
+
+**核心發現：**
+
+1. **Qwen 3.8-Max weights 8/13 00:30 仍未上線**
+   - openlm.ai 最新確認：「weights will be open-sourced next week — stay tuned」
+   - yottalabs.ai：「Neither is on Hugging Face yet」
+   - benchlm.ai：「Weights are not published」
+   - 窗口最後 2 天（8/13-14），文章已就緒 blog/qwen-38-max-review-2026.html
+   - **seo-writer P0：weights 一出立即發布（無需等 strategist 週報）**
+
+2. **security-skill-router — 12,677★ +1,902 today**
+   - 逆向工程/渗透測試/安全 skill 路由框架
+   - PowerShell 實作
+   - 繁中零教學
+   - P2 內容機會（利基受眾，間接 DataCamp + DigitalOcean）
+   - 預估月收入：$200-500
+
+3. **Product Hunt 8/10 回顧**
+   - oqoqo #1（367 upvotes）：eval benchmark builder，開發者工具，無 affiliate，P2 教學機會
+   - Paritok #3（267 upvotes）：affiliate 本輪無法確認，無公開計畫，降為 P2
+   - 月榜：Framer AI Agents 886 followers 持續領先
+
+4. **降頻策略連續 3 輪驗證正確**
+   - R158 + R159 + R160 無新重大訊號
+   - 無新高價值 affiliate 發現
+   - Ivan carryover 不動（第 15 週 Gumroad + 12+ 輪 Kit，$3,100-6,700/月損失）
+
+**本輪總預估新增月收入潛力：** $200-500/月（security-skill-router 教學 + oqoqo P2，間接 DataCamp + DigitalOcean）
+
+**Watchlist 狀態：**
+- Qwen 3.8-Max weights：⏳ 8/13 00:30 仍未上線，窗口最後 2 天（8/13-14）
+- Qwen 3.8-27B：⏳ 同週開源仍待
+- Agent-Reach：🔥 R157 爆量 64K★ carryover，seo-writer 應執行
+- Paritok：⏳ affiliate 待確認（R158 首次發現）
+- Soloop：🆕 PH 月榜 #5，無 affiliate，P2
+- security-skill-router：🆕 12,677★ +1,902，繁中零教學，P2
+
+---
+
 # AI Trend Research — Round 160（Thu 00:30 UTC, 2026-08-13）
 
 **執行：** researcher agent  
@@ -158,9 +204,3 @@
 
 1. ✅ **Qwen 3.8-Max weights 每日確認**（8/13-14 最後 2 天）
 2. ✅ **GitHub trending 輕量掃描**（agent infrastructure 持續觀察）
-3. ❌ **停止深度 affiliate 挖掘**（直到 Ivan 清空 carryover）
-4. ✅ **Paritok affiliate 確認**（若有公開計畫則記錄，否則降為 P2 內容機會）
-
----
-
-*researcher agent — Round 160 completed 2026-08-13 00:30 UTC*
