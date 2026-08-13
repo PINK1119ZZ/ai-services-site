@@ -1213,6 +1213,20 @@
         "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
         "Updated agent-state.json siteHealth + lastChecked + issues"
       ]
+    },
+    {
+      "timestamp": "2026-08-13T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy. No new in-repo fix available, so existing builder/infra DNS action path remains unchanged.",
+      "changes": [
+        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
+        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
+        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl: Could not resolve host)",
+        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
+        "Updated agent-state.json siteHealth + lastChecked + issues"
+      ]
     }
   ],
   "gscData": {
@@ -1687,7 +1701,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-08-12T00:00:00Z",
+  "lastChecked": "2026-08-13T00:00:00Z",
   "issues": [
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
     "2026-07-11 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
@@ -1730,8 +1744,8 @@
       "severity": "high",
       "status": "open",
       "summary": "ai-tools.tw DNS resolution still failing",
-      "details": "curl returned Could not resolve host: ai-tools.tw on 2026-08-12 daily site health check; GitHub Pages fallback remains healthy.",
-      "lastSeen": "2026-08-12T00:00:00Z"
+      "details": "curl returned Could not resolve host: ai-tools.tw on 2026-08-13 daily site health check; GitHub Pages fallback remains healthy.",
+      "lastSeen": "2026-08-13T00:00:00Z"
     },
     {
       "source": "content-ops/site-health",
@@ -1739,9 +1753,10 @@
       "severity": "high",
       "status": "open",
       "summary": "en.ai-tools.tw DNS resolution still failing",
-      "details": "curl returned Could not resolve host: en.ai-tools.tw on 2026-08-12 daily site health check; GitHub Pages fallback remains healthy.",
-      "lastSeen": "2026-08-12T00:00:00Z"
-    }
+      "details": "curl returned Could not resolve host: en.ai-tools.tw on 2026-08-13 daily site health check; GitHub Pages fallback remains healthy.",
+      "lastSeen": "2026-08-13T00:00:00Z"
+    },
+    "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-08-13 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active."
   ],
   "fbReplied": [
     "122122149788778539_1253869633432970",
@@ -2920,42 +2935,42 @@
     "autodev-ai.com": {
       "url": "https://autodev-ai.com/",
       "status": "200 OK",
-      "lastChecked": "2026-08-12T00:00:00Z"
+      "lastChecked": "2026-08-13T00:00:00Z"
     },
     "autodev-ai.com/sitemap.xml": {
       "url": "https://autodev-ai.com/sitemap.xml",
       "status": "200 OK",
-      "lastChecked": "2026-08-12T00:00:00Z"
+      "lastChecked": "2026-08-13T00:00:00Z"
     },
     "ai-tools.pro": {
       "url": "https://ai-tools.pro/",
       "status": "200 OK",
-      "lastChecked": "2026-08-12T00:00:00Z"
+      "lastChecked": "2026-08-13T00:00:00Z"
     },
     "ai-tools.pro/sitemap.xml": {
       "url": "https://ai-tools.pro/sitemap.xml",
       "status": "200 OK (redirect to sitemap_index.xml)",
-      "lastChecked": "2026-08-12T00:00:00Z"
+      "lastChecked": "2026-08-13T00:00:00Z"
     },
     "ai-tools.tw": {
       "url": "https://ai-tools.tw/",
       "status": "DNS FAIL",
-      "lastChecked": "2026-08-12T00:00:00Z"
+      "lastChecked": "2026-08-13T00:00:00Z"
     },
     "en.ai-tools.tw": {
       "url": "https://en.ai-tools.tw/",
       "status": "DNS FAIL",
-      "lastChecked": "2026-08-12T00:00:00Z"
+      "lastChecked": "2026-08-13T00:00:00Z"
     },
     "ai-tools-tw-fallback": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
       "status": "200 OK",
-      "lastChecked": "2026-08-12T00:00:00Z"
+      "lastChecked": "2026-08-13T00:00:00Z"
     },
     "ai-tools-en-fallback": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
       "status": "200 OK",
-      "lastChecked": "2026-08-12T00:00:00Z"
+      "lastChecked": "2026-08-13T00:00:00Z"
     }
   },
   "agents": {
