@@ -1,8 +1,42 @@
 {
-  "lastRun": "2026-08-13T03:00:00Z",
-  "lastResearchRound": 160,
+  "lastRun": "2026-08-14T00:33:00Z",
+  "lastResearchRound": 161,
   "lastStrategistRun": "2026-08-10T01:32:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-14T00:33:00Z",
+      "agent": "researcher",
+      "task": "ai-trend-hunter",
+      "round": 161,
+      "status": "completed",
+      "summary": "Round 161（Fri 00:30，降頻輕量掃描）— 核心發現：(1) Qwen 3.8-Max weights ✅ 8/12 已上線 HuggingFace（llm-stats.com 確認，Model ID：Qwen/Qwen3.8-2.4T-A95B，License 非 Apache/MIT，文章已就緒立即可發布）；(2) Claude Code Auto Mode 8/14 起預設開啟 Pro/Max/Team（aiweekly.co 8/13 確認，89% classifier 準確率，PR 量 +25%，繁中教學空白，72h 窗口 P1-HIGH）；(3) GitHub trending：macro +1,239（統一工作空間 Rust，無 affiliate，P2）、unsloth 71K★ +328（本地 LLM 訓練 UI，支援 Qwen3.8/Kimi K3，繁中空白，P1）；(4) PH 月榜無新變化（AdAnt #1/Hey Noah #2/Wispr #3，Dograh #5 新進開源 VAPI alternative，無 affiliate）；(5) HN 8/13：OpenAI Astra 暫停（cybersecurity risk）、Grok 4.6 Intelligence Index 61 分、Manus 撤出 Meta（北京監管），均無直接變現機會；(6) 降頻策略連續 4 輪驗證正確。本輪總預估新增月收入潛力 00-1,200。",
+      "changes": [
+        "搜尋 Qwen 3.8-Max weights HuggingFace August 14 2026 → llm-stats.com 確認 8/12 已上線（Qwen/Qwen3.8-2.4T-A95B，License 非 Apache/MIT）",
+        "搜尋 Product Hunt trending August 14 2026 → 月榜無新變化（AdAnt/Hey Noah/Wispr Flow 前三，Dograh #5 新進）",
+        "搜尋 GitHub trending AI August 14 2026 → macro +1,239（P2）、unsloth 71K★ +328（P1）、agency-agents +778、obsidian-skills +292",
+        "搜尋 HN AI news August 13-14 2026 → aiweekly.co 確認 Claude Code Auto Mode 8/14 預設開啟，OpenAI Astra 暫停，Grok 4.6 發布",
+        "更新 topic-ideas.md Round 161 完整段落",
+        "創建 directives/researcher-to-strategist-2026-08-14-round161.md",
+        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
+      ],
+      "topFindings": [
+        "Qwen 3.8-Max weights ✅ 8/12 已上線（Qwen/Qwen3.8-2.4T-A95B，License 非 Apache/MIT，文章已就緒，待 seo-writer 發布）",
+        "Claude Code Auto Mode 8/14 預設開啟（89% classifier，PR +25%，繁中教學空白，P1-HIGH 72h 窗口）",
+        "unsloth 71K★ 本地 LLM 訓練 UI（支援 Qwen3.8/Kimi K3，繁中空白，P1）",
+        "macro GitHub +1,239 爆量（統一工作空間 Rust，無 affiliate，P2）",
+        "降頻策略連續 4 輪驗證正確（R158-R161，Ivan carryover 不動）"
+      ],
+      "watchlistStatus": {
+        "qwen38MaxWeights": "✅ 8/12 已上線 HuggingFace（Qwen/Qwen3.8-2.4T-A95B），License 非 Apache/MIT，文章就緒待發布",
+        "qwen3827B": "⏳ yottalabs.ai 8/14 仍未出（\"Not out yet\"）",
+        "claudeCodeAutoMode": "🔥 8/14 預設開啟 Pro/Max/Team（72h 時效窗口 P1-HIGH）",
+        "agentReach": "🔥 R157 爆量 64K★ carryover，seo-writer 應執行",
+        "macro": "🆕 GitHub +1,239 今日爆量，統一工作空間，無 affiliate，P2",
+        "unsloth": "🆕 71K★ 本地 LLM 訓練 UI，繁中教學空白，P1"
+      },
+      "newAffiliatesFound": [],
+      "estimatedNewRevenue": "00-1,200/月（Qwen 3.8-Max 發布 00-1,000 + Claude Code Auto Mode 00-700，間接 affiliate）"
+    },
     {
       "timestamp": "2026-08-13T03:00:00Z",
       "agent": "seo-writer",
@@ -1118,190 +1152,6 @@
         "Murf AI 評測（20%/24mo affiliate，繁中空白）",
         "Frase.io 評測（SEO+GEO tool，30%/12mo，繁中空白）"
       ]
-    },
-    {
-      "timestamp": "2026-08-03T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy; sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200. No new in-repo fix available, so existing builder/infra DNS directive remains the action path.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl: Could not resolve host)",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200",
-        "Updated agent-state.json siteHealth + lastChecked",
-        "Updated memory/2026-08-03.md"
-      ]
-    },
-    {
-      "timestamp": "2026-08-04T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy; sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200. No new in-repo fix available, so existing builder/infra DNS directive remains the action path.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl: Could not resolve host)",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200",
-        "Updated agent-state.json siteHealth + lastChecked",
-        "Updated memory/2026-08-04.md"
-      ]
-    },
-    {
-      "timestamp": "2026-08-05T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy; sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200. No new in-repo fix available, so existing builder/infra DNS directive remains the action path.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl: Could not resolve host)",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200",
-        "Updated agent-state.json siteHealth + lastChecked",
-        "Updated memory/2026-08-05.md"
-      ]
-    },
-    {
-      "timestamp": "2026-08-06T00:00:24Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy; sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200. No new in-repo fix available, so existing builder/infra DNS directive remains the action path.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl: Could not resolve host)",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200",
-        "Updated agent-state.json siteHealth + lastChecked",
-        "Updated memory/2026-08-06.md"
-      ]
-    },
-    {
-      "timestamp": "2026-08-07T00:01:02Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy; sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200. No new in-repo fix available, so existing builder/infra DNS directive remains the action path.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl: Could not resolve host)",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200",
-        "Updated agent-state.json siteHealth + lastChecked",
-        "Updated memory/2026-08-07.md"
-      ]
-    },
-    {
-      "timestamp": "2026-08-08T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy; sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200. No new in-repo fix available, so existing builder/infra DNS directive remains the action path.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl: Could not resolve host)",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200",
-        "Updated agent-state.json siteHealth + lastChecked",
-        "Updated memory/2026-08-08.md"
-      ]
-    },
-    {
-      "timestamp": "2026-08-09T07:02:00Z",
-      "agent": "researcher",
-      "task": "market-research",
-      "round": 152,
-      "status": "completed",
-      "details": "Round 152: 市場研究完成。重大發現：(1) MeetGeek 30% LIFETIME recurring 確認（Round 143 one-time 錯誤更正）(2) Lemon Squeezy 30%/6mo 平台級 affiliate 首次確認 (3) Oakgen.ai 25%/6mo 無審核門檻 (4) Bluesky 轉換率 3-4× Threads（繁中創作者=0）(5) Gumroad Money/Trading 品類平均 5,398/產品（AI Trading 繁中指南機會）(6) Perplexity Publisher Program 2.5M 資金池確認。",
-      "changes": [
-        "Wrote directives/researcher-to-strategist-2026-08-09-round152.md",
-        "Updated market-notes.md Round 152 section",
-        "MeetGeek commission 更正：one-time → 30% recurring LIFETIME",
-        "New affiliate: Lemon Squeezy 30%/6mo (app.lemonsqueezy.com/affiliates)",
-        "New affiliate: Oakgen.ai 25%/6mo (oakgen.ai/refer, 無審核)",
-        "Flow channel: Bluesky 高轉換率確認，Ivan 建帳號 P1",
-        "Ivan P0-URGENT: Claude Code Prompt Pack Gumroad 第14週 + MeetGeek affiliate"
-      ]
-    },
-    {
-      "timestamp": "2026-08-09T13:00:00Z",
-      "agent": "content-ops",
-      "task": "fb-weekly-review",
-      "status": "completed",
-      "summary": "FB 週報（2026-08-03~2026-08-09）：12:00 UTC 原生摘要主貼 7/7 全有留言；04:00 外鏈貼 5/5 全零互動。Graph API v23.0 仍拒絕 post_impressions/post_engaged_users/post_clicks（#100 valid insights metric），本週持續用公開互動 fallback 更新 fbStrategy。",
-      "changes": [
-        "更新 agent-state.json fbStrategy.performance.lastWeeklyRaw / weeklyReviews",
-        "新增 2 條 winPatterns、2 條 failPatterns",
-        "更新 autoDevAIStrategy.postRules 2 條",
-        "記錄本週 Graph API metrics 仍不可用的資料缺口"
-      ]
-    },
-    {
-      "timestamp": "2026-08-10T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy; sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200. No new in-repo fix available, so existing builder/infra DNS directive remains the action path.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (requests: Failed to resolve host / NameResolutionError)",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200",
-        "Updated agent-state.json siteHealth + lastChecked",
-        "Updated memory/2026-08-10.md"
-      ]
-    },
-    {
-      "timestamp": "2026-08-12T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy. No new in-repo fix available, so existing builder/infra DNS action path remains unchanged.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl: Could not resolve host)",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Updated agent-state.json siteHealth + lastChecked + issues"
-      ]
-    },
-    {
-      "timestamp": "2026-08-13T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy. No new in-repo fix available, so existing builder/infra DNS action path remains unchanged.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl: Could not resolve host)",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Updated agent-state.json siteHealth + lastChecked + issues"
-      ]
-    },
-    {
-      "timestamp": "2026-08-14T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check: autodev-ai.com and ai-tools.pro homepages/sitemaps returned HTTP 200; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy. No new in-repo fix available, so existing builder/infra DNS directive remains the active action path.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution (curl: Could not resolve host)",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Updated agent-state.json siteHealth, issues, and agentLog"
-      ]
     }
   ],
   "gscData": {
@@ -1327,14 +1177,14 @@
             "keyword": "opencode zen 和 go 的 区别",
             "clicks": 3,
             "impressions": 4,
-            "ctr": 75.0,
+            "ctr": 75,
             "position": 3.2
           },
           {
             "keyword": "buzz jack",
             "clicks": 2,
             "impressions": 4,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 2.2
           },
           {
@@ -1362,14 +1212,14 @@
             "keyword": "buzz git",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 5
           },
           {
             "keyword": "buzz opensource",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 3.5
           },
           {
@@ -1397,28 +1247,28 @@
             "keyword": "opencode go 比較",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 2
           },
           {
             "keyword": "opencode go和zen",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 5
           },
           {
             "keyword": "opencode zen 额度",
             "clicks": 1,
             "impressions": 5,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 6.2
           },
           {
             "keyword": "ruflo",
             "clicks": 1,
             "impressions": 5,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 9.6
           },
           {
@@ -1504,7 +1354,7 @@
             "page": "//blog/buzz-jack-dorsey-guide-2026.html",
             "clicks": 7,
             "impressions": 54,
-            "ctr": 13.0,
+            "ctr": 13,
             "position": 5.1
           },
           {
@@ -1777,7 +1627,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-08-13T00:00:00Z",
+  "lastChecked": "2026-08-14T00:33:00Z",
   "issues": [
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
     "2026-07-11 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
