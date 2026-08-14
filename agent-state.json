@@ -1,8 +1,32 @@
 {
   "lastRun": "2026-08-14T03:00:00Z",
   "lastResearchRound": 161,
-  "lastStrategistRun": "2026-08-10T01:32:00Z",
+  "lastStrategistRun": "2026-08-14T12:00:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-14T12:00:00Z",
+      "agent": "strategist",
+      "task": "income-ideation",
+      "status": "completed",
+      "summary": "Fri 12:00 income-ideation cron（週報 + 腦暴模式）。彙整 Rounds 156-161 + 當前 agentLog 狀態。本週完成：Claude Code Auto Mode 文章發布（72h 窗口）、Qwen 3.8-Max 文章更新（weights 8/12 上線）、AI Coding 費用計算器上線。Ivan 積壓：Gumroad claude-code-prompt-pack-2026 第 15 週 404，Kit affiliate 12+ 輪，合計阻斷 $2,000-4,700/月。本輪新提案 3 個：(A) AI/ML API affiliate 評測（30% LIFETIME，90-day，開發者受眾完美，估 $400-1,000/月）；(B) n8n×Claude Code 工作流程模板包 Gumroad $39（可直接跑的 JSON，非 prompt dump，估 $500-1,000/月，builder 可立即執行）；(C) ManyChat affiliate 評測（50% recurring，120-day，LINE Bot 系列導流，估 $500-1,200/月）。新發現affiliate：AI/ML API 30% LIFETIME，ManyChat 50% recurring。",
+      "changes": [
+        "創建 directives/strategist-weekly-2026-08-14.md（完整週報 + 三個新提案 + 各 agent 指令）",
+        "更新 agent-state.json：lastStrategistRun + agentLog + newAssetProposals（新增3項）"
+      ],
+      "newProposals": [
+        "proposal-aimlapi-affiliate-2026-08-14：AI/ML API 評測，$400-1,000/月，P1-HIGH",
+        "proposal-n8n-workflow-templates-2026-08-14：n8n模板包 Gumroad $39，$500-1,000/月，P1-HIGH",
+        "proposal-manychat-affiliate-2026-08-14：ManyChat 評測，$500-1,200/月，P1"
+      ],
+      "ivanCarryover": [
+        "P0-URGENT: claude-code-prompt-pack-2026 → 404（第15週）",
+        "P0-URGENT: Kit affiliate → 12+輪",
+        "P1-HIGH: AI/ML API affiliate → 本輪新發現",
+        "P1-HIGH: n8n-claude-templates-v1 Gumroad 上架 → 本輪新提案",
+        "P1: ManyChat affiliate → 本輪新發現"
+      ],
+      "estimatedNewRevenue": "$1,400-3,200/月（3 個新提案合計）"
+    },
     {
       "timestamp": "2026-08-14T03:00:00Z",
       "agent": "seo-writer",
@@ -1780,6 +1804,57 @@
     "122119899458778539_2184979269018335"
   ],
   "newAssetProposals": [
+    {
+      "id": "proposal-aimlapi-affiliate-2026-08-14",
+      "type": "affiliate_review_article",
+      "title": "AI/ML API 完整評測 2026（100+ 模型統一 API，30% LIFETIME affiliate）",
+      "revenueModel": "AI/ML API affiliate 30% recurring LIFETIME，90-day cookie，$50 起付（PartnerStack）",
+      "estimatedMonthlyRevenue": "$400-1,000",
+      "priority": "P1-HIGH（開發者受眾完美吻合，30% LIFETIME，繁中零評測）",
+      "buildSteps": [
+        "Ivan 申請 aimlapi.com/affiliates（30% LIFETIME，90-day cookie）",
+        "seo-writer 撰寫 blog/aimlapi-review-2026.html（~2,500字，繁中）",
+        "核心角度：100+ 模型一個 API key（Claude + GPT-5.4 + Qwen + Llama）",
+        "對比表：AI/ML API vs OpenRouter vs Together AI vs Fireworks AI",
+        "暫用 DataCamp + DigitalOcean CTA 佔位，Ivan 批准後換 affiliate link",
+        "SEO keywords: aimlapi 評測, openrouter 替代, ai api gateway 比較 2026"
+      ],
+      "ivanAction": "申請 aimlapi.com/affiliates（30% LIFETIME，90-day，$50 min payout）"
+    },
+    {
+      "id": "proposal-n8n-workflow-templates-2026-08-14",
+      "type": "digital_product",
+      "title": "n8n × Claude Code 工作流程自動化模板包 v1.0（Gumroad $39）",
+      "revenueModel": "Gumroad 一次性銷售 $39，目標 15-25 次/月（n8n 教學文章導流）",
+      "estimatedMonthlyRevenue": "$500-1,000",
+      "priority": "P1-HIGH（builder 可立即執行不需等 Ivan affiliate，利用現有 n8n 流量）",
+      "buildSteps": [
+        "builder 建立 5 個可直接匯入的 n8n workflow JSON（claude-code-pr-summary, content-auto-publish, lead-gen-webhook, line-bot-claude-reply, competitor-watch）",
+        "附 README.md（繁中，每個 workflow 前置需求 + 設定步驟）+ QUICKSTART.pdf",
+        "打包 .zip（JSON files + README + PDF）",
+        "Ivan 上架 Gumroad：xiaofan8.gumroad.com/l/n8n-claude-templates-v1（$39）",
+        "seo-writer 撰寫 blog/n8n-claude-code-workflow-templates-2026.html（landing article + Gumroad CTA）",
+        "content-refresher 在現有 3 篇 n8n 文章底部新增 Gumroad 產品 CTA"
+      ],
+      "differentiator": "可直接匯入跑的 n8n JSON（非 prompt dump），台灣繁中零競品，英文競品 $29-79",
+      "ivanAction": "收到 builder 打包檔後上架 xiaofan8.gumroad.com/l/n8n-claude-templates-v1（$39）"
+    },
+    {
+      "id": "proposal-manychat-affiliate-2026-08-14",
+      "type": "affiliate_review_article",
+      "title": "ManyChat 完整評測 2026（50% recurring affiliate，120-day cookie）",
+      "revenueModel": "ManyChat affiliate 50% recurring（chatbot 類業界最高），120-day cookie",
+      "estimatedMonthlyRevenue": "$500-1,200",
+      "priority": "P1（需 Ivan 申請，有 LINE Bot 系列流量加持）",
+      "buildSteps": [
+        "Ivan 確認 ManyChat affiliate 2026 條款 → manychat.com/affiliate",
+        "seo-writer 撰寫 blog/manychat-line-bot-review-2026.html（~2,000字）",
+        "核心角度：ManyChat 在台灣 LINE Bot + FB Messenger 雙平台場景",
+        "對比表：ManyChat vs LINE Bot 原生 API vs Landbot",
+        "SEO keywords: ManyChat 評測 2026, ManyChat LINE 教學, chatbot 台灣推薦"
+      ],
+      "ivanAction": "申請/確認 manychat.com/affiliate（50% recurring，120-day cookie，需確認 2026 條款是否仍有效）"
+    },
     {
       "id": "proposal-pictory-affiliate-2026-07-31",
       "type": "affiliate_review_article",
