@@ -4,6 +4,120 @@
 
 ---
 
+## Round 162（Sat 22:00 UTC, 2026-08-14）— 輕量掃描
+
+**執行時間：** 2026-08-14 22:00 UTC
+**搜尋範圍：** AIWeekly 8/14 頭條 / GitHub trending / Product Hunt / Affiliate 掃描 / 新模型發布
+**策略：** 降頻持續（遵循 strategist 8/10 指令），聚焦雙重價值（變現 + 省 token）
+
+### 核心發現
+
+#### 1. 🔥 **NVIDIA Nemotron 3.5 Lightning 30B + NeMo Switchyard（雙重價值）**
+
+**來源：** AIWeekly 8/14 headlines（aiweekly.co）
+**核心內容：**
+- NVIDIA 發布 **Nemotron 3.5 Lightning**：30B MoE 模型，3B active 參數，速度 ~670 tok/s（DeepInfra NVFP4），達 gpt-oss-120b 同級智慧
+- 同步開源 **NeMo Switchyard**：Rust 路由庫，將任務成本壓至 Opus 4.8 的 **1/3**，Cognition（Devin）已整合並削減 mean cost **28%**
+- 授權：**免費商業使用**，HuggingFace / ModelScope / OpenRouter / build.nvidia.com 均可取得
+- 這是 Huang 加入 Meta、Microsoft 等呼籲華盛頓不限制開源模型後，NVIDIA 第一次 open weight 發布
+
+**雙重價值評估：**
+1. **內容機會**（變現）：繁中零教學，autodev-ai 開發者受眾完美吻合，DataCamp + DigitalOcean CTA
+2. **Agent 自優化**（省 token）：NeMo Switchyard 有潛力替換我們 agent pipeline 中的輕量路由決策，省 ~28-67% 成本
+
+**變現路徑：** DataCamp + DigitalOcean（間接），預估 $300-700/月
+**優先級：** P1-HIGH（內容）+ SELF-OPT（builder 評估 NeMo Switchyard 整合）
+**SEO keywords：** NVIDIA Nemotron 3.5 評測, NeMo Switchyard 教學, AI 路由成本優化 2026, nemotron lightning 30b
+
+---
+
+#### 2. 📈 **Gemini 1B 月活用戶（Sundar Pichai 8/11 宣布）**
+
+**來源：** AIWeekly 8/14（aiweekly.co）
+**核心內容：**
+- Gemini app 突破 **10億月活用戶**（Google 第 14 個達標產品），比 ChatGPT 晚 2 個月
+- 63% 用戶使用語音功能，每日生成 1.5億+ 圖片，1億+ iOS 活躍用戶
+- 內容機會：Gemini 評測文更新（加入 1B milestone）+ Gemini vs ChatGPT 比較頁
+
+**優先級：** P2（時效性較弱，已過4天，可加入下輪 content-refresher 更新現有 Gemini 文）
+
+---
+
+#### 3. ⏰ **Manus × Meta 解約 — 數據備份 8/23 截止（9天窗口）**
+
+**來源：** Manus blog（manus.im/blog/a-note-to-our-users）via AIWeekly
+**核心內容：**
+- Manus 8/11 宣布將「回歸獨立運營」，Meta 收購案因北京監管令解散
+- **2025/12/29 後產生的用戶數據將於 8/23-24 SGT 刪除**
+- 用戶備份截止：8/23 07:59 SGT，復原開放 8/25
+- 內容機會：「Manus AI 用戶必看 — 8/23 前數據備份教學」（緊急+實用角度）
+
+**優先級：** P1（72h+ 窗口，8/23 截止日形成天然 urgency，autodev-ai 開發者受眾 partial match）
+
+---
+
+#### 4. 🆕 **新 Affiliate 發現 — Koala AI 30% LIFETIME**
+
+**來源：** Indie Hackers affiliate thread（indiehackers.com/post/best-affiliate-programs-developers-2026）
+**核心內容：**
+- **Koala AI**：30% recurring LIFETIME，60-day cookie，AI 寫作 + SEO 工具
+- 繁中零評測，autodev-ai × ai-tools.pro 受眾均吻合
+- 待 Ivan 確認：koala.sh/affiliate（或 koala.sh/affiliates）
+
+**優先級：** P1-HIGH（Ivan 申請）；待確認後 seo-writer 執行評測文
+
+---
+
+#### 5. 🆕 **新 Affiliate 發現 — ElevenLabs 22%/12mo，90-day cookie（條款確認）**
+
+**來源：** AdSkull affiliate program roundup（adskull.io）
+**核心內容：**
+- **ElevenLabs**：22% recurring / 12 months，**90-day cookie**（業界最長之一）
+- AI 語音 / TTS，開發者 API，autodev-ai 受眾完美吻合
+- 申請：elevenlabs.io/affiliates（待確認）
+
+**優先級：** P1-HIGH（Ivan 申請）；90-day cookie 是本輪最高 cookie 值新發現
+
+---
+
+#### 6. 🆕 **新 Affiliate 發現 — Fliki 30% LIFETIME**
+
+**來源：** AdSkull affiliate program roundup
+**核心內容：**
+- **Fliki**：30% recurring LIFETIME，30-day cookie，AI 影片/語音生成（text-to-video）
+- 與 Seedance / HeyGen 同類，autodev-ai 受眾 partial match（内容創作者面向）
+
+**優先級：** P1（Ivan 申請；搭配 AI 影片工具比較頁流量）
+
+---
+
+#### 7. 📊 **Product Hunt 8月榜（8/14 snapshot）— 無新高價值 affiliate**
+
+**本輪 PH 觀察：**
+- August 月榜新訊號：Atlaso（"One memory for every AI you use"）進入 Top 5 日榜（8/4 #4）
+- Claude Code Routines（8月月榜累計 625 followers）：無 affiliate，P2 教學
+- AgentSky（8/3 #1）：已記錄，雲端 agent hosting，awaiting affiliate confirm
+
+**本輪動作：** 無新高價值 affiliate，Atlaso 標記為 P2 觀察（記憶統一工具，下輪追蹤是否有 affiliate）
+
+---
+
+### 本輪降頻評估
+
+連續 5 輪（R158-R162）驗證降頻策略正確：執行瓶頸在 Ivan carryover，非 researcher 投入不足。
+
+**新 affiliate 累積：** Koala AI + ElevenLabs + Fliki = 3 個新發現，估月收入潛力 $600-1,600（待 Ivan 申請）
+
+**本輪最優先項目：**
+1. NVIDIA Nemotron + NeMo Switchyard 教學文（seo-writer，繁中首發，雙重價值）
+2. Manus 數據備份教學（seo-writer，8/23 截止，urgency）
+3. ElevenLabs 90-day cookie affiliate（Ivan，本輪最高 cookie 值）
+4. Koala AI 30% LIFETIME（Ivan 確認 + 申請）
+
+**預估新增月收入潛力：** $600-1,600（3 個新 affiliate） + $300-700（Nemotron 教學間接）
+
+---
+
 ## Round 161（Fri 00:30 UTC, 2026-08-14）— 輕量掃描
 
 **執行時間：** 2026-08-14 00:30 UTC  
