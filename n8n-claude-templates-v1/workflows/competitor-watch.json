@@ -1,0 +1,200 @@
+{
+  "name": "05. 競品監控日報（GitHub Trending → Claude 摘要 → Telegram）",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "id": "aa111111-bb22-cc33-dd44-ee5566778899",
+      "name": "每日觸發（09:00 UTC）",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.gitterapp.com/repositories?language=&since=daily&spoken_language_code=",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "n8n-workflow/1.0"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false
+            }
+          }
+        }
+      },
+      "id": "bb222222-cc33-dd44-ee55-ff6677889900",
+      "name": "抓 GitHub Trending（今日）",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const repos = $input.first().json;\n\n// 只取前10名，過濾AI相關\nconst top10 = repos.slice(0, 10);\nconst aiKeywords = ['ai', 'llm', 'gpt', 'claude', 'agent', 'ml', 'neural', 'nlp', 'openai', 'anthropic', 'model', 'llama', 'mistral', 'gemini', 'code'];\n\nconst formatted = top10.map((repo, index) => {\n  const isAI = aiKeywords.some(kw => \n    (repo.name || '').toLowerCase().includes(kw) || \n    (repo.description || '').toLowerCase().includes(kw)\n  );\n  \n  return {\n    rank: index + 1,\n    name: repo.name || '',\n    fullName: repo.full_name || '',\n    description: repo.description || '（無描述）',\n    stars: repo.stars || 0,\n    todayStars: repo.currentPeriodStars || 0,\n    language: repo.language || 'Unknown',\n    url: `https://github.com/${repo.full_name}`,\n    isAI: isAI\n  };\n});\n\nconst summary = formatted.map(r => \n  `#${r.rank} ${r.fullName} (+${r.todayStars}⭐) [${r.language}]\\n${r.description}`\n).join('\\n\\n');\n\nreturn [{ json: { repos: formatted, rawSummary: summary } }];"
+      },
+      "id": "cc333333-dd44-ee55-ff66-778899001122",
+      "name": "解析 Trending 資料",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $credentials.anthropicApiKey }}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 600,\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"以下是今日 GitHub Trending 前10名，請用繁體中文整理成簡短日報（400字以內）：\\n1. 找出其中 AI/LLM/Agent 相關的 repo（重點標注）\\n2. 若有爆量工具（今日 +500 stars 以上），特別說明用途\\n3. 以 Telegram 訊息格式輸出（適合手機閱讀，重點粗體用 *文字* 表示）\\n\\n資料：\\n{{ $json.rawSummary }}\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "dd444444-ee55-ff66-7788-990011223344",
+      "name": "Claude 整理日報",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [900, 300],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "anthropic-cred",
+          "name": "Anthropic API Key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const claudeResponse = $input.first().json;\nconst digest = claudeResponse.content[0].text;\nconst today = new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' });\n\nconst message = `📊 *GitHub AI 日報 ${today}*\\n\\n${digest}\\n\\n🔗 完整榜單：https://github.com/trending`;\n\nreturn [{ json: { message } }];"
+      },
+      "id": "ee555555-ff66-7788-9900-112233445566",
+      "name": "組合 Telegram 訊息",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "sendMessage",
+        "chatId": "={{ $credentials.telegramChatId }}",
+        "text": "={{ $json.message }}",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "ff666666-7788-9900-1122-334455667788",
+      "name": "推送 Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1340, 300],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram-cred",
+          "name": "Telegram Bot Token"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "每日觸發（09:00 UTC）": {
+      "main": [
+        [
+          {
+            "node": "抓 GitHub Trending（今日）",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "抓 GitHub Trending（今日）": {
+      "main": [
+        [
+          {
+            "node": "解析 Trending 資料",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "解析 Trending 資料": {
+      "main": [
+        [
+          {
+            "node": "Claude 整理日報",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude 整理日報": {
+      "main": [
+        [
+          {
+            "node": "組合 Telegram 訊息",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "組合 Telegram 訊息": {
+      "main": [
+        [
+          {
+            "node": "推送 Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "competitor-watch-v1-2026",
+  "id": "n8n-claude-05-competitor-watch",
+  "tags": [
+    { "name": "claude-code" },
+    { "name": "github" },
+    { "name": "telegram" },
+    { "name": "automation" }
+  ]
+}

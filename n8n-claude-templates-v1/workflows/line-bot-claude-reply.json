@@ -1,0 +1,215 @@
+{
+  "name": "04. LINE Bot × Claude 自動回覆",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "line-bot-webhook",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "11aa22bb-33cc-44dd-55ee-66ff77889900",
+      "name": "LINE Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "line-bot-webhook"
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.first().json.body;\n\n// LINE 送來的是事件陣列\nconst events = body.events || [];\nif (events.length === 0) {\n  return [{ json: { skip: true } }];\n}\n\n// 只處理文字訊息\nconst event = events[0];\nif (event.type !== 'message' || event.message.type !== 'text') {\n  return [{ json: { skip: true, replyToken: event.replyToken } }];\n}\n\nreturn [{\n  json: {\n    skip: false,\n    replyToken: event.replyToken,\n    userId: event.source.userId,\n    userMessage: event.message.text,\n    messageId: event.message.id,\n    timestamp: event.timestamp\n  }\n}];"
+      },
+      "id": "22bb33cc-44dd-55ee-66ff-778899001111",
+      "name": "解析 LINE 事件",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "cond-skip-line",
+              "leftValue": "={{ $json.skip }}",
+              "rightValue": false,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "33cc44dd-55ee-66ff-7788-990011223344",
+      "name": "是文字訊息？",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $credentials.anthropicApiKey }}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 300,\n  \"system\": \"你是 autodev-ai.com 的 LINE Bot 客服助理。請用繁體中文、親切友善的語氣回覆用戶。如果是技術問題，提供簡單實用的答案；如果是業務詢問，引導用戶來信 support@autodev-ai.com。回覆限制在 150 字以內，符合 LINE 訊息閱讀習慣。\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"{{ $json.userMessage }}\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "44dd55ee-66ff-7788-9900-112233445566",
+      "name": "Claude 生成回覆",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [900, 260],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "anthropic-cred",
+          "name": "Anthropic API Key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.line.me/v2/bot/message/reply",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $credentials.lineChannelAccessToken }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"replyToken\": \"{{ $('解析 LINE 事件').first().json.replyToken }}\",\n  \"messages\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"{{ $json.content[0].text }}\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "55ee66ff-7788-9900-1122-334455667788",
+      "name": "回覆 LINE 用戶",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1120, 260],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "line-channel-cred",
+          "name": "LINE Channel Access Token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "OK",
+        "options": {
+          "responseCode": 200
+        }
+      },
+      "id": "66ff7788-9900-1122-3344-556677889900",
+      "name": "回應 LINE 平台（200 OK）",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1340, 300]
+    }
+  ],
+  "connections": {
+    "LINE Webhook": {
+      "main": [
+        [
+          {
+            "node": "解析 LINE 事件",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "解析 LINE 事件": {
+      "main": [
+        [
+          {
+            "node": "是文字訊息？",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "是文字訊息？": {
+      "main": [
+        [
+          {
+            "node": "Claude 生成回覆",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "回應 LINE 平台（200 OK）",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude 生成回覆": {
+      "main": [
+        [
+          {
+            "node": "回覆 LINE 用戶",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "回覆 LINE 用戶": {
+      "main": [
+        [
+          {
+            "node": "回應 LINE 平台（200 OK）",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "line-bot-v1-2026",
+  "id": "n8n-claude-04-line-bot",
+  "tags": [
+    { "name": "claude-code" },
+    { "name": "line-bot" },
+    { "name": "chatbot" }
+  ]
+}

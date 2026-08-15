@@ -1,0 +1,201 @@
+{
+  "name": "02. 內容自動發布（AI 寫完直推 Blog + FB）",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "id": "11111111-2222-3333-4444-555566667777",
+      "name": "每日檢查排程（09:00 UTC）",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $credentials.anthropicApiKey }}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 4096,\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"撰寫一篇繁體中文 AI 工具介紹短文（500-800字），主題：今日 GitHub Trending AI 工具精選。包含：(1) 工具名稱與用途 (2) 適合誰用 (3) 快速上手步驟。語氣友善實用。請以 HTML 片段格式輸出（不需要完整 head/body），包含 <h2> 標題、<p> 段落、<ul><li> 清單。\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "22222222-3333-4444-5555-666677778888",
+      "name": "Claude 生成文章",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [460, 300],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "anthropic-cred",
+          "name": "Anthropic API Key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const claudeResponse = $input.first().json;\nconst content = claudeResponse.content[0].text;\nconst today = new Date().toISOString().split('T')[0];\nconst filename = `ai-tools-daily-${today}.html`;\n\n// 組合完整 HTML 文章\nconst fullHtml = `<!DOCTYPE html>\n<html lang=\"zh-TW\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>AI 工具日報 - ${today}</title>\n</head>\n<body>\n  <article>\n    ${content}\n    <footer>\n      <p>發布時間：${new Date().toLocaleString('zh-TW')}</p>\n      <p><a href=\"https://autodev-ai.com\">← 返回首頁</a></p>\n    </footer>\n  </article>\n</body>\n</html>`;\n\nreturn [{\n  json: {\n    filename,\n    htmlContent: fullHtml,\n    plainContent: content.replace(/<[^>]+>/g, '').substring(0, 300) + '...',\n    publishDate: today\n  }\n}];"
+      },
+      "id": "33333333-4444-5555-6666-777788889999",
+      "name": "組合 HTML 文章",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "operation": "upload",
+        "fileName": "={{ $json.filename }}",
+        "binaryData": false,
+        "fileContent": "={{ $json.htmlContent }}",
+        "options": {
+          "repositoryName": "owner/repo",
+          "filePath": "blog/daily/{{ $json.filename }}",
+          "commitMessage": "🤖 Auto-publish: {{ $json.filename }}"
+        }
+      },
+      "id": "44444444-5555-6666-7777-888899990000",
+      "name": "推送到 GitHub",
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [900, 300],
+      "credentials": {
+        "githubApi": {
+          "id": "github-token-cred",
+          "name": "GitHub Token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.first().json;\nconst fbMessage = `📚 每日 AI 工具精選（${data.publishDate}）\\n\\n${data.plainContent}\\n\\n👉 完整閱讀：https://autodev-ai.com/blog/daily/${data.filename}`;\n\nreturn [{ json: { message: fbMessage } }];"
+      },
+      "id": "55555555-6666-7777-8888-999900001111",
+      "name": "組合 FB 貼文",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v23.0/{{ $credentials.facebookPageId }}/feed",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "access_token",
+              "value": "={{ $credentials.facebookPageToken }}"
+            },
+            {
+              "name": "message",
+              "value": "={{ $json.message }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "66666666-7777-8888-9999-000011112222",
+      "name": "發布 Facebook 貼文",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1340, 300],
+      "credentials": {
+        "facebookGraphApi": {
+          "id": "fb-page-cred",
+          "name": "Facebook Page Token"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "每日檢查排程（09:00 UTC）": {
+      "main": [
+        [
+          {
+            "node": "Claude 生成文章",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude 生成文章": {
+      "main": [
+        [
+          {
+            "node": "組合 HTML 文章",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "組合 HTML 文章": {
+      "main": [
+        [
+          {
+            "node": "推送到 GitHub",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "推送到 GitHub": {
+      "main": [
+        [
+          {
+            "node": "組合 FB 貼文",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "組合 FB 貼文": {
+      "main": [
+        [
+          {
+            "node": "發布 Facebook 貼文",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "auto-publish-v1-2026",
+  "id": "n8n-claude-02-auto-publish",
+  "tags": [
+    { "name": "claude-code" },
+    { "name": "automation" },
+    { "name": "facebook" }
+  ]
+}

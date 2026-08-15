@@ -1,0 +1,265 @@
+{
+  "name": "03. 潛客自動分類（表單 → Claude 分類 → Notion + 自動回信）",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-intake",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "aaaa1111-bbbb-2222-cccc-333344445555",
+      "name": "Webhook 接收表單",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "lead-intake-webhook"
+    },
+    {
+      "parameters": {
+        "jsCode": "const formData = $input.first().json.body;\n\nreturn [{\n  json: {\n    name: formData.name || '（未提供）',\n    email: formData.email || '',\n    company: formData.company || '（個人）',\n    message: formData.message || '',\n    source: formData.utm_source || 'direct',\n    timestamp: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "bbbb2222-cccc-3333-dddd-444455556666",
+      "name": "解析表單資料",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $credentials.anthropicApiKey }}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 256,\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"請分析以下潛在客戶的需求，回傳 JSON 格式：{ \\\"category\\\": \\\"企業客製｜技術諮詢｜產品試用｜其他\\\", \\\"priority\\\": \\\"高｜中｜低\\\", \\\"suggestedAction\\\": \\\"建議處理方式（1句話）\\\" }\\n\\n客戶資料：\\n公司：{{ $json.company }}\\n訊息：{{ $json.message }}\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "cccc3333-dddd-4444-eeee-555566667777",
+      "name": "Claude 分類潛客",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [680, 300],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "anthropic-cred",
+          "name": "Anthropic API Key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const leadData = $('解析表單資料').first().json;\nconst claudeResponse = $input.first().json;\nconst classification = JSON.parse(claudeResponse.content[0].text);\n\nreturn [{\n  json: {\n    ...leadData,\n    category: classification.category,\n    priority: classification.priority,\n    suggestedAction: classification.suggestedAction\n  }\n}];"
+      },
+      "id": "dddd4444-eeee-5555-ffff-666677778888",
+      "name": "合併分類結果",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "create",
+        "databaseId": "={{ $credentials.notionDatabaseId }}",
+        "title": "={{ $json.name }} - {{ $json.company }}",
+        "properties": {
+          "customProperties": [
+            {
+              "key": "Email",
+              "type": "email",
+              "email": "={{ $json.email }}"
+            },
+            {
+              "key": "公司",
+              "type": "rich_text",
+              "richText": "={{ $json.company }}"
+            },
+            {
+              "key": "類別",
+              "type": "select",
+              "select": "={{ $json.category }}"
+            },
+            {
+              "key": "優先度",
+              "type": "select",
+              "select": "={{ $json.priority }}"
+            },
+            {
+              "key": "建議處理",
+              "type": "rich_text",
+              "richText": "={{ $json.suggestedAction }}"
+            },
+            {
+              "key": "來源",
+              "type": "select",
+              "select": "={{ $json.source }}"
+            },
+            {
+              "key": "訊息內容",
+              "type": "rich_text",
+              "richText": "={{ $json.message }}"
+            }
+          ]
+        }
+      },
+      "id": "eeee5555-ffff-6666-aaaa-777788889999",
+      "name": "存入 Notion",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [1120, 300],
+      "credentials": {
+        "notionApi": {
+          "id": "notion-cred",
+          "name": "Notion Integration Token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.first().json;\n\nconst emailTemplate = {\n  high: {\n    subject: '感謝您的詢問 — 我們將優先為您服務',\n    body: `${data.name} 您好，\\n\\n感謝您透過 autodev-ai.com 與我們聯繫！\\n\\n我們已收到您關於「${data.category}」的需求，將在 24 小時內由專人與您聯繫。\\n\\n${data.suggestedAction}\\n\\n如有急事，歡迎直接來信：support@autodev-ai.com\\n\\nautodev-ai 團隊`\n  },\n  medium: {\n    subject: '感謝您的詢問 — 我們會儘快回覆',\n    body: `${data.name} 您好，\\n\\n感謝您的來信！我們已收到您的訊息，將在 2-3 個工作天內回覆。\\n\\n若需更快速的協助，歡迎參考我們的文件：https://autodev-ai.com/blog/\\n\\nautodev-ai 團隊`\n  },\n  low: {\n    subject: '感謝您的來信',\n    body: `${data.name} 您好，\\n\\n感謝您與我們聯繫！我們會將您的訊息列入處理清單。\\n\\n歡迎隨時瀏覽我們的最新內容：https://autodev-ai.com/\\n\\nautodev-ai 團隊`\n  }\n};\n\nconst priorityKey = data.priority === '高' ? 'high' : (data.priority === '中' ? 'medium' : 'low');\nconst template = emailTemplate[priorityKey];\n\nreturn [{\n  json: {\n    to: data.email,\n    subject: template.subject,\n    body: template.body\n  }\n}];"
+      },
+      "id": "ffff6666-aaaa-7777-bbbb-888899990000",
+      "name": "組合自動回信",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1340, 300]
+    },
+    {
+      "parameters": {
+        "fromEmail": "noreply@autodev-ai.com",
+        "toEmail": "={{ $json.to }}",
+        "subject": "={{ $json.subject }}",
+        "text": "={{ $json.body }}",
+        "options": {}
+      },
+      "id": "aaaa7777-bbbb-8888-cccc-999900001111",
+      "name": "寄送 Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [1560, 300],
+      "credentials": {
+        "smtp": {
+          "id": "smtp-cred",
+          "name": "SMTP Email"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={ \"status\": \"success\", \"message\": \"感謝您的來信，我們已收到！\" }",
+        "options": {}
+      },
+      "id": "bbbb8888-cccc-9999-dddd-000011112222",
+      "name": "回應表單",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1780, 300]
+    }
+  ],
+  "connections": {
+    "Webhook 接收表單": {
+      "main": [
+        [
+          {
+            "node": "解析表單資料",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "解析表單資料": {
+      "main": [
+        [
+          {
+            "node": "Claude 分類潛客",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude 分類潛客": {
+      "main": [
+        [
+          {
+            "node": "合併分類結果",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "合併分類結果": {
+      "main": [
+        [
+          {
+            "node": "存入 Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "存入 Notion": {
+      "main": [
+        [
+          {
+            "node": "組合自動回信",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "組合自動回信": {
+      "main": [
+        [
+          {
+            "node": "寄送 Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "寄送 Email": {
+      "main": [
+        [
+          {
+            "node": "回應表單",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "lead-gen-v1-2026",
+  "id": "n8n-claude-03-lead-gen",
+  "tags": [
+    { "name": "claude-code" },
+    { "name": "notion" },
+    { "name": "email" }
+  ]
+}
