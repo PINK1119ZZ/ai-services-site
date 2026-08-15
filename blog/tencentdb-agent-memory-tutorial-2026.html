@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TencentDB Agent Memory 完整教學 2026：AI Agent 跨 Session 持久記憶，四層記憶架構解析</title>
+    <meta name="description" content="TencentDB Agent Memory 繁中完整教學：21.5K GitHub Stars，OpenClaw 一鍵安裝，四種記憶資產（Chat Memory/Skill/LLM-Wiki/Code-Graph），Team Memory 8/13 正式發布。讓 Claude Code、Cursor、Codex 真正記住你的專案。">
+    <meta name="keywords" content="TencentDB Agent Memory 教學, ai agent 記憶管理 2026, tencentdb agent memory 繁中, claude code 持久記憶, openclaw memory plugin, ai agent long term memory, 跨 session 記憶 2026">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="canonical" href="https://autodev-ai.com/blog/tencentdb-agent-memory-tutorial-2026.html">
+    <meta property="og:title" content="TencentDB Agent Memory 完整教學 2026：四層記憶架構，讓 AI Agent 不再失憶">
+    <meta property="og:description" content="21.5K GitHub Stars，OpenClaw 一鍵安裝，Team Memory 8/13 發布。TencentDB Agent Memory 繁中完整教學，台灣開發者首選。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/tencentdb-agent-memory-tutorial-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "TencentDB Agent Memory 完整教學 2026：AI Agent 跨 Session 持久記憶，四層記憶架構解析",
+      "datePublished": "2026-08-15",
+      "dateModified": "2026-08-15",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "TencentDB Agent Memory 繁中完整教學：21.5K GitHub Stars，OpenClaw 一鍵安裝，四種記憶資產（Chat Memory/Skill/LLM-Wiki/Code-Graph），Team Memory 8/13 正式發布。讓 Claude Code、Cursor、Codex 真正記住你的專案。"
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">AutoDev AI</a>
+            <ul class="nav-links">
+                <li><a href="../services.html">服務</a></li>
+                <li><a href="../portfolio.html">作品集</a></li>
+                <li><a href="index.html">部落格</a></li>
+                <li><a href="../contact.html">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="blog-post">
+        <div class="container">
+            <header class="post-header">
+                <div class="post-badge">🆕 Team Memory 2026-08-13 正式發布</div>
+                <h1>TencentDB Agent Memory 完整教學 2026：AI Agent 跨 Session 持久記憶，四層記憶架構解析</h1>
+                <div class="post-meta">
+                    <time datetime="2026-08-15">2026 年 8 月 15 日</time>
+                    <span class="reading-time">⏱️ 閱讀時間：12 分鐘</span>
+                    <span class="tag">AI Agent</span>
+                    <span class="tag">記憶管理</span>
+                    <span class="tag">OpenClaw</span>
+                    <span class="tag">Claude Code</span>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <p class="lead">你有沒有這個問題：每次重開 Claude Code，它就忘記上週你說的「我們專案用 PostgreSQL，記得加 connection pool」？每個 session 都要重新解釋架構決策，token 燒光，時間浪費。<strong>TencentDB Agent Memory</strong> 就是專門解決這個問題的工具。90 天內從 0 衝到 21.5K GitHub Stars，2026-08-13 剛發布 Team Memory 多人協作版，是目前最熱門的 AI Agent 記憶管理開源專案。這是<strong>全網首篇繁中完整教學</strong>。</p>
+
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-number">21.5K</div>
+                        <div class="stat-label">GitHub Stars</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">90天</div>
+                        <div class="stat-label">達成速度</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4種</div>
+                        <div class="stat-label">記憶資產類型</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8/13</div>
+                        <div class="stat-label">Team Memory 發布日</div>
+                    </div>
+                </div>
+
+                <div class="toc">
+                    <h2>📋 目錄</h2>
+                    <ol>
+                        <li><a href="#what-is">TencentDB Agent Memory 是什麼？</a></li>
+                        <li><a href="#four-memory-types">四種記憶資產詳解</a></li>
+                        <li><a href="#architecture">記憶架構：語義金字塔</a></li>
+                        <li><a href="#install-openclaw">安裝教學（OpenClaw 一鍵安裝）</a></li>
+                        <li><a href="#install-docker">Docker 安裝方式</a></li>
+                        <li><a href="#config">設定參數優化</a></li>
+                        <li><a href="#team-memory">Team Memory：多 Agent 協作記憶</a></li>
+                        <li><a href="#vs-agentmemory">與 agentmemory 比較</a></li>
+                        <li><a href="#token-saving">省 Token 實測</a></li>
+                        <li><a href="#faq">常見問題</a></li>
+                    </ol>
+                </div>
+
+                <!-- Section 1 -->
+                <h2 id="what-is">TencentDB Agent Memory 是什麼？</h2>
+                <p>TencentDB Agent Memory（GitHub: <code>TencentCloud/TencentDB-Agent-Memory</code>）是由騰訊雲資料庫團隊開源的 AI Agent 記憶管理系統。它的核心定位是<strong>「AI Agent 與 LLM 之間的記憶中介層」</strong>——不是一個新的 Agent，而是讓你現有的 Claude Code、Cursor、Codex、OpenClaw 等 AI 工具，擁有真正的長期記憶。</p>
+
+                <p>傳統的 AI coding agent 記憶方式是把所有歷史對話塞進 context window，結果就是：token 貴、速度慢、重要資訊被淹沒在無用的工具呼叫記錄裡。TencentDB Agent Memory 的解法是把記憶「符號化、分層化」——把對話萃取成結構化知識，而不是原始文字堆疊。</p>
+
+                <div class="highlight-box">
+                    <h3>🎯 適合誰用？</h3>
+                    <ul>
+                        <li><strong>有長期專案的開發者</strong>：不想每次 session 重新解釋架構</li>
+                        <li><strong>使用 OpenClaw 的人</strong>：官方 plugin，一個指令安裝完成</li>
+                        <li><strong>多人 AI 協作團隊</strong>：Team Memory 讓多個 Agent 共享知識庫</li>
+                        <li><strong>Claude Code / Cursor 重度用戶</strong>：降低重複 context 的 token 成本</li>
+                    </ul>
+                </div>
+
+                <!-- Section 2 -->
+                <h2 id="four-memory-types">四種記憶資產詳解</h2>
+                <p>這是 TencentDB Agent Memory 最核心的設計。它把 AI Agent 需要記住的東西分成四種「記憶資產」，每種有不同的用途和儲存方式：</p>
+
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>記憶類型</th>
+                                <th>儲存內容</th>
+                                <th>典型場景</th>
+                                <th>更新頻率</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Chat Memory</strong><br><span class="tag-small">對話記憶</span></td>
+                                <td>歷史對話摘要、使用者偏好、決策記錄</td>
+                                <td>「上次說 prefer TypeScript」「不要用 any」</td>
+                                <td>每 N 輪對話自動蒸餾</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Skill Memory</strong><br><span class="tag-small">技能記憶</span></td>
+                                <td>可重用的操作流程、工具使用範例</td>
+                                <td>「這個專案的部署流程是...」「如何跑 migration」</td>
+                                <td>由 Agent 學習後寫入</td>
+                            </tr>
+                            <tr>
+                                <td><strong>LLM-Wiki</strong><br><span class="tag-small">知識庫</span></td>
+                                <td>領域知識、技術規格、API 文檔摘要</td>
+                                <td>「公司內部 API 端點」「資料庫 schema 說明」</td>
+                                <td>手動或自動匯入</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Code-Graph</strong><br><span class="tag-small">程式碼圖譜</span></td>
+                                <td>程式碼結構、函數關係、模組依賴</td>
+                                <td>「UserService 依賴 AuthModule」「這個 function 在哪」</td>
+                                <td>掃描 repo 自動建立</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>這四種記憶資產是<strong>獨立管理、按需載入</strong>的。當 Agent 需要回答問題時，系統用混合檢索（BM25 + 向量搜尋，RRF 融合）找出最相關的記憶片段，而不是把全部歷史都丟進 prompt。</p>
+
+                <!-- Section 3 -->
+                <h2 id="architecture">記憶架構：語義金字塔</h2>
+                <p>TencentDB Agent Memory 的記憶儲存採用「語義金字塔」設計，從最原始的對話到最抽象的個人檔案，分為四層：</p>
+
+                <div class="architecture-diagram">
+                    <div class="arch-level" style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 8px 0; border-radius: 4px;">
+                        <strong>L3 Persona（個人/專案檔案）</strong> — 最持久的抽象層：使用者偏好、專案風格、長期決策
+                    </div>
+                    <div class="arch-level" style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 12px 16px; margin: 8px 0; border-radius: 4px;">
+                        <strong>L2 Scenario（場景區塊）</strong> — 事件摘要：「這週修復了 auth bug，改用 JWT」
+                    </div>
+                    <div class="arch-level" style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 8px 0; border-radius: 4px;">
+                        <strong>L1 Atom（原子事實）</strong> — 獨立的結構化事實：「DB = PostgreSQL」「測試框架 = Vitest」
+                    </div>
+                    <div class="arch-level" style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 12px 16px; margin: 8px 0; border-radius: 4px;">
+                        <strong>L0 Conversation（原始對話）</strong> — 短期工作記憶，處理後壓縮為 Mermaid 符號圖
+                    </div>
+                </div>
+
+                <p>短期記憶（Short-term）方面，沉重的工具呼叫日誌會被壓縮成緊湊的 Mermaid 符號圖（symbol maps），大幅減少 context 佔用。長期記憶（Long-term）方面，對話被蒸餾成結構化的 persona 和 scene，而不是平面的向量堆疊。系統完全本地運行，使用 SQLite + 向量搜尋，<strong>零外部 API 依賴</strong>。每一層記憶都是可讀的 Markdown 檔案，透明可檢查。</p>
+
+                <!-- Section 4 -->
+                <h2 id="install-openclaw">安裝教學（OpenClaw 一鍵安裝）</h2>
+                <p>如果你已經在用 OpenClaw，這是最簡單的安裝方式：</p>
+
+                <h3>前置需求</h3>
+                <pre><code># 確認版本
+openclaw --version   # 需要 >= 2026.3.13
+node -v              # 需要 >= 22.16.0</code></pre>
+
+                <h3>Step 1：安裝 plugin</h3>
+                <pre><code>openclaw plugins install @tencentdb-agent-memory/memory-tencentdb</code></pre>
+
+                <p>若已安裝過，執行更新：</p>
+                <pre><code>openclaw plugins update memory-tencentdb</code></pre>
+
+                <h3>Step 2：最小設定</h3>
+                <p>編輯 <code>~/.openclaw/openclaw.json</code>，加入：</p>
+                <pre><code>{
+  "memory-tencentdb": {
+    "enabled": true
+  }
+}</code></pre>
+                <p>這樣就能運行基礎功能了。零配置，本地儲存，開箱即用。</p>
+
+                <h3>Step 3：重啟 Gateway</h3>
+                <pre><code>openclaw gateway restart</code></pre>
+                <p>重啟後在 log 中確認看到 <code>[memory-tdai]</code> 相關記錄，表示 plugin 已正常載入。</p>
+
+                <h3>Step 4：驗證</h3>
+                <p>開始新對話，進行幾輪互動後，確認記憶資料目錄已建立：</p>
+                <pre><code>ls ~/.openclaw/memory-tencentdb/</code></pre>
+                <p>應該看到 <code>chat/</code>、<code>skill/</code>、<code>wiki/</code>、<code>code-graph/</code> 等目錄，以及 SQLite 資料庫檔案。</p>
+
+                <!-- Section 5 -->
+                <h2 id="install-docker">Docker 安裝方式</h2>
+                <p>如果你用的是 Claude Code、Cursor、Codex 或其他非 OpenClaw 環境，可以用 Docker 把 TencentDB Agent Memory 跑成獨立服務，再透過 MCP provider 接入：</p>
+
+                <pre><code># 拉取最新映像
+docker pull tencentcloud/agent-memory:latest
+
+# 啟動服務（本地 3721 port）
+docker run -d \
+  --name agent-memory \
+  -p 3721:3721 \
+  -v ~/.agent-memory-data:/data \
+  tencentcloud/agent-memory:latest</code></pre>
+
+                <p>服務啟動後，在你的 AI 工具 MCP 設定中加入 provider：</p>
+
+                <pre><code># Claude Code MCP 設定範例（~/.claude/mcp.json）
+{
+  "providers": [
+    {
+      "name": "tencentdb-memory",
+      "type": "http",
+      "url": "http://localhost:3721",
+      "enabled": true
+    }
+  ]
+}</code></pre>
+
+                <p>重新啟動 Claude Code，就能開始使用記憶功能了。</p>
+
+                <!-- Section 6 -->
+                <h2 id="config">設定參數優化</h2>
+                <p>基礎安裝完成後，以下是幾個值得調整的進階參數：</p>
+
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>參數</th>
+                                <th>預設值</th>
+                                <th>建議值</th>
+                                <th>說明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>recall.scoreThreshold</code></td>
+                                <td>0.7</td>
+                                <td>0.65</td>
+                                <td>記憶召回的相似度門檻，調低可召回更多相關記憶</td>
+                            </tr>
+                            <tr>
+                                <td><code>pipeline.everyNConversations</code></td>
+                                <td>5</td>
+                                <td>3（活躍）/ 10（輕量）</td>
+                                <td>每幾輪對話觸發一次記憶蒸餾</td>
+                            </tr>
+                            <tr>
+                                <td><code>persona.triggerEveryN</code></td>
+                                <td>10</td>
+                                <td>7</td>
+                                <td>每幾輪更新一次 Persona 長期記憶</td>
+                            </tr>
+                            <tr>
+                                <td><code>embedding.model</code></td>
+                                <td>local</td>
+                                <td>保持 local</td>
+                                <td>零外部 API 依賴，本地向量化</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>完整設定範例（加入 <code>~/.openclaw/openclaw.json</code> 的 memory-tencentdb 區塊）：</p>
+                <pre><code>{
+  "memory-tencentdb": {
+    "enabled": true,
+    "recall": {
+      "scoreThreshold": 0.65,
+      "topK": 10
+    },
+    "pipeline": {
+      "everyNConversations": 3
+    },
+    "persona": {
+      "triggerEveryN": 7
+    }
+  }
+}</code></pre>
+
+                <!-- Section 7 -->
+                <h2 id="team-memory">Team Memory：多 Agent 協作記憶（2026-08-13 新功能）</h2>
+                <p>這是 8/13 最新發布的重要功能。原本的記憶管理是個人層級的，Team Memory 把記憶延伸到<strong>多 Agent、多人協作</strong>的場景。</p>
+
+                <p>Team Memory 的設計原則是：<strong>讓記憶在 Agent 和 LLM 之間流動，而不是把 Agent 本身當成記憶的儲存容器</strong>。當 Agent A 執行完一個任務，學到的知識（Skill、Code-Graph 的更新）可以被 Agent B 在下一個任務中直接使用，不需要重新學習。</p>
+
+                <div class="highlight-box">
+                    <h3>🏢 Team Memory 適用場景</h3>
+                    <ul>
+                        <li><strong>CI/CD Agent 流水線</strong>：PR 審查 Agent → 部署 Agent → 監控 Agent，共享同一套 Code-Graph</li>
+                        <li><strong>多人開發團隊</strong>：A 工程師跟 Agent 建立的架構決策知識，B 工程師的 Agent 也能取用</li>
+                        <li><strong>長期維護專案</strong>：新加入的 Agent（或新開的 session）直接繼承歷史專案知識</li>
+                        <li><strong>OpenClaw 多 session</strong>：主對話和背景 sub-agent 共享記憶</li>
+                    </ul>
+                </div>
+
+                <p>啟用 Team Memory 只需在設定中加入 <code>team</code> 區塊：</p>
+                <pre><code>{
+  "memory-tencentdb": {
+    "enabled": true,
+    "team": {
+      "enabled": true,
+      "namespace": "my-project-2026",
+      "shareTypes": ["skill", "llm-wiki", "code-graph"]
+    }
+  }
+}</code></pre>
+                <p><code>namespace</code> 是團隊共享記憶庫的隔離空間，不同專案用不同 namespace。<code>shareTypes</code> 可以指定哪些類型的記憶共享，Chat Memory 通常保持私人（個人對話習慣不需要共享）。</p>
+
+                <!-- Section 8 -->
+                <h2 id="vs-agentmemory">與 agentmemory 比較：該選哪個？</h2>
+                <p>如果你已經在用 <a href="agentmemory-claude-code-tutorial-2026.html">agentmemory</a>，可能會想知道有什麼差別：</p>
+
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>功能</th>
+                                <th>TencentDB Agent Memory</th>
+                                <th>agentmemory</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GitHub Stars</td>
+                                <td>21.5K ⭐</td>
+                                <td>11.5K ⭐</td>
+                            </tr>
+                            <tr>
+                                <td>記憶架構</td>
+                                <td>四層語義金字塔（L0-L3）</td>
+                                <td>向量資料庫 + 摘要</td>
+                            </tr>
+                            <tr>
+                                <td>記憶資產類型</td>
+                                <td>4 種（Chat/Skill/LLM-Wiki/Code-Graph）</td>
+                                <td>1 種（統一記憶庫）</td>
+                            </tr>
+                            <tr>
+                                <td>Team / 多人協作</td>
+                                <td>✅ Team Memory（8/13 正式版）</td>
+                                <td>❌ 個人使用</td>
+                            </tr>
+                            <tr>
+                                <td>OpenClaw Plugin</td>
+                                <td>✅ 官方支援</td>
+                                <td>✅ 官方支援</td>
+                            </tr>
+                            <tr>
+                                <td>短期記憶壓縮</td>
+                                <td>✅ Mermaid 符號圖壓縮</td>
+                                <td>✅ LLM 摘要壓縮</td>
+                            </tr>
+                            <tr>
+                                <td>本地優先</td>
+                                <td>✅ SQLite + 本地向量</td>
+                                <td>✅ SQLite</td>
+                            </tr>
+                            <tr>
+                                <td>Persona 準確率</td>
+                                <td>76%（官方測試）</td>
+                                <td>未公開</td>
+                            </tr>
+                            <tr>
+                                <td>授權</td>
+                                <td>Custom License（檢查商業條款）</td>
+                                <td>MIT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>🤔 選擇建議</h3>
+                    <ul>
+                        <li><strong>個人開發者、簡單需求</strong> → agentmemory（MIT 授權更友善，設定更簡單）</li>
+                        <li><strong>有多人協作需求、或需要 Code-Graph</strong> → TencentDB Agent Memory</li>
+                        <li><strong>OpenClaw 用戶</strong> → 兩者都支援，可以先試 TencentDB 的 Team Memory</li>
+                        <li><strong>商業專案</strong> → 先確認 TencentDB Agent Memory 的 Custom License 條款</li>
+                    </ul>
+                </div>
+
+                <!-- Section 9 -->
+                <h2 id="token-saving">省 Token 實測數據</h2>
+                <p>根據官方數據和社群測試，TencentDB Agent Memory 在以下場景有明顯的 token 節省效果：</p>
+
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-number">~61%</div>
+                        <div class="stat-label">短期記憶壓縮率<br>（工具日誌 → 符號圖）</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">76%</div>
+                        <div class="stat-label">Persona 記憶準確率<br>（vs 原始對話 48%）</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">~40%</div>
+                        <div class="stat-label">長期專案 context<br>平均 token 減少</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">外部 API 依賴<br>（全本地運算）</div>
+                    </div>
+                </div>
+
+                <p>以 Claude Sonnet 4.6（$3/$15 per 1M tokens）為例，一個活躍開發者每月大約使用 2M input tokens。若透過 TencentDB Agent Memory 的 context 壓縮節省 40%，每月可節省約 0.8M input tokens，折合約 <strong>$2.4/月</strong>。聽起來不多，但在 Claude Code Max 方案或 Team 方案的大量使用下，效益明顯放大。</p>
+
+                <!-- Section 10 -->
+                <h2 id="faq">常見問題</h2>
+
+                <div class="faq-item">
+                    <h3>Q：TencentDB Agent Memory 的 Custom License 是否允許商業使用？</h3>
+                    <p>需要自行確認最新條款。截至撰文時，個人和非商業用途通常允許；商業部署建議先閱讀 GitHub repo 的 LICENSE 檔案，或聯繫 Tencent Cloud 確認。agentmemory（MIT）若有商業顧慮可作為替代選擇。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q：記憶資料儲存在哪裡？有隱私疑慮嗎？</h3>
+                    <p>完全本地儲存，預設在 <code>~/.openclaw/memory-tencentdb/</code>（OpenClaw 安裝）或 Docker volume（Docker 安裝）。無需外部 API，向量化也在本機進行，對話內容不會離開你的機器。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q：跟 Claude Code 的 MEMORY.md 有什麼不同？</h3>
+                    <p>MEMORY.md 是手動維護的靜態 Markdown 檔案，需要你自己決定寫什麼。TencentDB Agent Memory 是自動學習、結構化儲存的動態記憶系統，會自動從對話中萃取重要資訊，支援向量搜尋，且有分層壓縮機制。兩者可以並用：MEMORY.md 放固定的專案規格，Agent Memory 負責動態學習的部分。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q：安裝後記憶什麼時候開始生效？</h3>
+                    <p>安裝完成後，從下一輪對話開始就會記錄。但 Chat Memory 的蒸餾是每 N 輪（預設 5 輪）觸發一次，所以頭幾輪對話的資訊要等到觸發蒸餾後才會進入長期記憶。建議先進行 5-10 輪對話後，檢查 <code>~/.openclaw/memory-tencentdb/</code> 目錄確認記憶已生成。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q：可以匯入現有的文件或 README 到 LLM-Wiki 嗎？</h3>
+                    <p>可以。LLM-Wiki 支援手動匯入 Markdown 文件。在 OpenClaw 環境中可以透過 plugin 指令匯入；Docker 版本則提供 REST API 可以批量匯入。這對於把公司內部文檔或 API 規格變成 Agent 知識庫特別有用。</p>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="affiliate-cta" style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a9e 100%); color: white; padding: 32px; border-radius: 12px; margin: 40px 0; text-align: center;">
+                    <h3 style="color: white; margin-top: 0;">🚀 把 AI 技能變成職涯競爭力</h3>
+                    <p style="color: rgba(255,255,255,0.9); margin: 12px 0;">學會 AI Agent 記憶管理只是開始。DataCamp 提供完整的 AI/ML 學習路徑，從 LLM 應用開發到 MLOps，業界認可的結業證書。</p>
+                    <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" style="display: inline-block; background: white; color: #1e3a5f; padding: 14px 32px; border-radius: 8px; font-weight: bold; text-decoration: none; margin: 8px; font-size: 16px;">
+                        📚 DataCamp 免費試用 →
+                    </a>
+                </div>
+
+                <div class="affiliate-cta" style="background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%); color: white; padding: 32px; border-radius: 12px; margin: 40px 0; text-align: center;">
+                    <h3 style="color: white; margin-top: 0;">☁️ 部署你的 Agent Memory 到雲端伺服器</h3>
+                    <p style="color: rgba(255,255,255,0.9); margin: 12px 0;">想把 TencentDB Agent Memory 的 Team Memory 部署給整個開發團隊使用？DigitalOcean Droplet 最低 $6/月起，新用戶 $200 免費額度，設定 30 分鐘完成。</p>
+                    <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display: inline-block; background: white; color: #0066ff; padding: 14px 32px; border-radius: 8px; font-weight: bold; text-decoration: none; margin: 8px; font-size: 16px;">
+                        🌊 DigitalOcean 新用戶 $200 額度 →
+                    </a>
+                </div>
+
+                <div class="affiliate-cta" style="background: linear-gradient(135deg, #ff90e8 0%, #ff6b6b 100%); color: white; padding: 32px; border-radius: 12px; margin: 40px 0; text-align: center;">
+                    <h3 style="color: white; margin-top: 0;">📦 Claude Code Prompt 實戰模板包</h3>
+                    <p style="color: rgba(255,255,255,0.9); margin: 12px 0;">搭配 Agent Memory 使用效果更佳。包含 50+ 個針對長期專案設計的 Claude Code prompt 模板，讓 AI 更好地利用記憶上下文。</p>
+                    <a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener sponsored" style="display: inline-block; background: white; color: #ff6b6b; padding: 14px 32px; border-radius: 8px; font-weight: bold; text-decoration: none; margin: 8px; font-size: 16px;">
+                        🎁 查看 Gumroad 產品 →
+                    </a>
+                </div>
+
+                <!-- Summary -->
+                <div class="summary-box" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; margin: 40px 0;">
+                    <h3>📝 本文重點總結</h3>
+                    <ul>
+                        <li><strong>TencentDB Agent Memory</strong> 是目前最熱門的 AI Agent 記憶管理工具，90 天達成 21.5K GitHub Stars</li>
+                        <li><strong>四種記憶資產</strong>：Chat Memory / Skill Memory / LLM-Wiki / Code-Graph，各司其職</li>
+                        <li><strong>語義金字塔架構</strong>（L0-L3）比平面向量儲存更高效，Persona 準確率從 48% 提升至 76%</li>
+                        <li><strong>OpenClaw 用戶</strong>：一個指令安裝，<code>openclaw plugins install @tencentdb-agent-memory/memory-tencentdb</code></li>
+                        <li><strong>Team Memory</strong>（8/13 新功能）支援多 Agent 共享記憶庫，適合團隊協作場景</li>
+                        <li><strong>商業使用</strong>前請確認 Custom License 條款；個人用途 MIT 的 agentmemory 也是好選擇</li>
+                    </ul>
+                </div>
+
+                <div class="related-posts">
+                    <h3>延伸閱讀</h3>
+                    <ul>
+                        <li><a href="agentmemory-claude-code-tutorial-2026.html">agentmemory 完整教學：讓 Claude Code 記住你的程式架構</a></li>
+                        <li><a href="claude-code-auto-mode-guide-2026.html">Claude Code Auto Mode 完整教學 2026：89% 準確率自動審批</a></li>
+                        <li><a href="opencode-zen-vs-go-pricing-2026.html">OpenCode Zen vs Go 費用比較 2026</a></li>
+                        <li><a href="glm-52-openclaw-coding-plan-setup-2026.html">GLM-5.2 + OpenClaw 完整設定教學 2026</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 AutoDev AI. 台灣 AI 開發者社群</p>
+            <p><a href="../index.html">首頁</a> | <a href="index.html">部落格</a> | <a href="../services.html">服務</a> | <a href="../contact.html">聯絡我們</a></p>
+            <p style="font-size: 0.8em; color: #888;">本文包含聯盟行銷連結，點擊後我們可能獲得佣金，不影響您的費用。</p>
+        </div>
+    </footer>
+</body>
+</html>

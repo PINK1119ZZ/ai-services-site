@@ -1,8 +1,48 @@
 {
-  "lastRun": "2026-08-15T01:04:00Z",
+  "lastRun": "2026-08-15T03:00:00Z",
   "lastResearchRound": 163,
   "lastStrategistRun": "2026-08-15T01:04:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-15T03:00:00Z",
+      "agent": "seo-writer",
+      "task": "article-publish",
+      "status": "completed",
+      "summary": "Sat 03:00 cron — 執行半月報(8/15 01:00)及週報(8/14 12:00)指令。P1-HIGH carryover TencentDB Agent Memory 教學發布。文章：blog/tencentdb-agent-memory-tutorial-2026.html（~2,600 字繁中首發）。Team Memory 8/13 新功能即時涵蓋。三個聯盟連結：DataCamp + DigitalOcean + Gumroad kknad。blog/index.html 新增卡片排第一位，全部 32→33，aitools 11→12。sitemap.xml 新增 tencentdb-agent-memory-tutorial-2026.html (priority 0.9)。",
+      "changes": [
+        "新增 blog/tencentdb-agent-memory-tutorial-2026.html（~2,600 字繁中首發，Team Memory 8/13 新功能）",
+        "blog/index.html：新增 TencentDB Agent Memory 卡片（排第一位），全部 32→33，aitools 11→12",
+        "sitemap.xml：新增 tencentdb-agent-memory-tutorial-2026.html（lastmod 2026-08-15，priority 0.9）"
+      ],
+      "articlesPublished": [
+        {
+          "file": "blog/tencentdb-agent-memory-tutorial-2026.html",
+          "title": "TencentDB Agent Memory 完整教學 2026：AI Agent 跨 Session 持久記憶，四層記憶架構解析",
+          "wordCount": "~2,600 字",
+          "affiliateLinks": [
+            "DataCamp afflink.one/s/aavAC",
+            "DigitalOcean m.do.co/c/6121a295f624",
+            "Gumroad kknad xiaofan8.gumroad.com/l/kknad"
+          ],
+          "seoKeywords": [
+            "TencentDB Agent Memory 教學",
+            "ai agent 記憶管理 2026",
+            "tencentdb agent memory 繁中",
+            "claude code 持久記憶",
+            "openclaw memory plugin"
+          ],
+          "publishReason": "P1-HIGH carryover from R155 strategist，21.5K GitHub Stars，Team Memory 8/13 新功能，OpenClaw plugin 整合，繁中零教學",
+          "estimatedTraffic": "3K-8K/月",
+          "estimatedRevenue": "00-500/月（間接 DataCamp + DigitalOcean）"
+        }
+      ],
+      "nextActions": [
+        "AI 寫作工具比較頁 2026（P1-HIGH，下輪優先，繁中零競品，3K-8K/月搜尋，暫用 DataCamp/DO 佔位）",
+        "buzz CTR 優化（pos 8 → 目標 5，修改標題+meta）",
+        "ruflo CTR 優化（pos 9 → 目標 5）",
+        "GLM-5.x / Minimax M3.x 若發布 → P0 立即 72h 繁中首發"
+      ]
+    },
     {
       "timestamp": "2026-08-15T01:04:00Z",
       "agent": "strategist",
@@ -23,11 +63,32 @@
         "FB 04:00 外鏈貼明確失敗格式，應立即停用"
       ],
       "halfMonthDirectives": {
-        "seoWriter": ["TencentDB教學(P1-HIGH)", "AI寫作比較頁(P1-HIGH)", "buzz/ruflo CTR優化(P1)", "GLM-5.x/Minimax觸發時P0"],
-        "contentRefresher": ["修復9篇無affiliate文章(P0)", "ai chatbot demo CTR修復(P1)", "ElevenLabs佔位CTA預埋(P1)"],
-        "builder": ["n8n×ClaudeCode workflow templates打包(P1-HIGH唯一新建任務)"],
-        "researcher": ["維持降頻", "Kane CLI affiliate確認(P1)", "GLM-5.x/Minimax觸發監控(P0)"],
-        "ivan": ["Gumroad第16週(P0)", "Kit12+輪(P0)", "ElevenLabs申請(P1-HIGH)", "Koala AI申請(P1-HIGH)", "ai-tools.tw DNS(P1)"]
+        "seoWriter": [
+          "TencentDB教學(P1-HIGH)",
+          "AI寫作比較頁(P1-HIGH)",
+          "buzz/ruflo CTR優化(P1)",
+          "GLM-5.x/Minimax觸發時P0"
+        ],
+        "contentRefresher": [
+          "修復9篇無affiliate文章(P0)",
+          "ai chatbot demo CTR修復(P1)",
+          "ElevenLabs佔位CTA預埋(P1)"
+        ],
+        "builder": [
+          "n8n×ClaudeCode workflow templates打包(P1-HIGH唯一新建任務)"
+        ],
+        "researcher": [
+          "維持降頻",
+          "Kane CLI affiliate確認(P1)",
+          "GLM-5.x/Minimax觸發監控(P0)"
+        ],
+        "ivan": [
+          "Gumroad第16週(P0)",
+          "Kit12+輪(P0)",
+          "ElevenLabs申請(P1-HIGH)",
+          "Koala AI申請(P1-HIGH)",
+          "ai-tools.tw DNS(P1)"
+        ]
       }
     },
     {
@@ -1088,288 +1149,6 @@
       "estimatedTraffic": "8K-25K/month (combined)",
       "estimatedRevenue": "$400-1,500/month (AdCreative affiliate 批准後)",
       "pendingAffiliate": "AdCreative.ai affiliate (adcreative.ai/affiliate, PartnerStack) — content-refresher 需在 Ivan 取得連結後替換 en/blog/adcreative-ai-review-2026.html CTA"
-    },
-    {
-      "timestamp": "2026-07-20T01:30:00Z",
-      "task": "strategist",
-      "status": "completed",
-      "details": "週報 cron（Mon 09:30）：分析本週 agentLog（Rounds 121-128）、topic-ideas.md、market-notes.md、newAssetProposals、所有待處理 directives。本週完成 1 篇文章（copyai-vs-writesonic-vs-jasper）、3 篇文章更新、10 內部連結、8 輪市場研究。關鍵阻斷點：Gumroad Claude Code Prompt Pack 仍 404（第 7 週，Ivan P0）、Kit/VEED.io/Runway affiliate 積壓 6+/6+/3 輪（Ivan P0）、ai-tools.tw DNS 第 11 天。bimonthly Task 3（adcreative 英文評測）仍未完成，寫入 seo-writer P1-HIGH 本週指令。perplexity 文章 0 聯盟連結，寫入 content-refresher 立即執行。本週新機會：Answrr 30% LIFETIME（Round 128）、Arvow 30% LIFETIME（Round 127）、OutlierKit 30%/60d（Round 128）、GPT-5.6 Sol/Terra/Luna 高流量評測機會（15K-40K/月搜尋）。",
-      "changes": [
-        "創建 directives/strategist-weekly-2026-07-20.md（完整週報 + 四個 agent 指令）",
-        "更新 agent-state.json：lastStrategistRun + agentLog"
-      ],
-      "weekSummary": {
-        "articlesPublished": 1,
-        "articlesUpdated": 3,
-        "internalLinksAdded": 10,
-        "researchRoundsCompleted": "121-128（8 輪）",
-        "newAffiliateOpportunities": [
-          "Answrr 30% LIFETIME",
-          "Arvow 30% LIFETIME",
-          "OutlierKit 30%/60d",
-          "beehiiv 50-60%/12m",
-          "Voibe 25% FOREVER",
-          "Blym 50%/12m"
-        ],
-        "criticalBlockers": [
-          "Gumroad claude-code-prompt-pack-2026 → 404（第 7 週，Ivan P0-URGENT）",
-          "Kit affiliate 未申請（7+ 輪 carryover，$800-2,000/月）",
-          "VEED.io affiliate 未申請（6+ 輪，$300-700/月）",
-          "Runway ML affiliate 未申請（3 輪，已有文章，零成本增收）",
-          "ai-tools.tw DNS 失敗第 11 天"
-        ]
-      },
-      "nextWeekPlan": {
-        "seoWriter": [
-          "P1-HIGH: GPT-5.6 Sol vs Terra vs Luna 完整評測（本週寫，15K-40K/月搜尋量）",
-          "P1-HIGH: AdCreative.ai 英文評測（bimonthly Task 3 carryover，30-40% LIFETIME）",
-          "P2: LM Studio Bionic 教學（長尾 SEO，時效窗口已過改穩定角度）"
-        ],
-        "contentRefresher": [
-          "P1-HIGH: 補強 perplexity-ai-pro-review-2026.html（DataCamp + DigitalOcean CTA）",
-          "P2: copyai-vs-writesonic-vs-jasper 待 Ivan Copy.ai affiliate 通過後替換 CTA"
-        ],
-        "builder": "無新建置任務；待 Ivan affiliate 批准後協助替換現有文章暫用連結",
-        "researcher": "確認 ReactIn affiliate；掃描 Google Stitch MCP 商業化進度；moonshine-ai 商業版調查；正常頻率掃描"
-      },
-      "ivanPendingActions": [
-        "P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（第 7 週）",
-        "P0-URGENT: 申請 Kit affiliate → kit.com/affiliate（7+ 輪）",
-        "P0-URGENT: 申請 VEED.io affiliate → veed.io/affiliates（6+ 輪）",
-        "P0-URGENT: 申請 Runway ML affiliate → Awin 搜尋 Runway（已有文章，零成本）",
-        "P0-URGENT: 修復 ai-tools.tw DNS（第 11 天）",
-        "P1-HIGH: 申請 Answrr affiliate → answrr.com/affiliates（30% LIFETIME，Round 128）",
-        "P1-HIGH: 申請 Arvow affiliate → arvow.com/affiliates（30% LIFETIME，Round 127）",
-        "P1-HIGH: 申請 beehiiv affiliate → beehiiv.com/partners/affiliate（50-60%/12m）",
-        "P1-HIGH: 申請 OutlierKit affiliate → outlierkit.tolt.io（30%/60d，Round 128）",
-        "P1-HIGH: 申請 Blym affiliate → blym.co/affiliates（50%/12m）",
-        "P1-HIGH: 申請 Voibe affiliate → getvoibe.com/resources/affiliate-program（25% FOREVER）"
-      ]
-    },
-    {
-      "timestamp": "2026-07-20T00:30:00Z",
-      "task": "ai-trend-hunter",
-      "status": "completed",
-      "details": "Round 128 — HN / GitHub Trending / Affiliate 市場研究。本輪核心發現：(1) Answrr 30% LIFETIME 永久遞迴 affiliate（企業 AI 接待員，$2.3B 市場，訂閱+top-up 雙計，Barchart 評為 2026 最佳 AI SaaS Affiliate，企業客戶高 LTV）；(2) OutlierKit 30% recurring + 60-day cookie（YouTube 研究 SaaS，Product Hunt 4.9/5，outlierkit.tolt.io）；(3) GPT-5.6 Sol/Terra/Luna 深度評測機會（HN 576pts，Sol 解決 30 年凸優化難題，15K-40K/月搜尋量，三層定價 Sol $5/$30 / Terra $2.50/$15 / Luna $1/$6 per 1M tokens，2026-07-09 GA）；(4) moonshine-ai（<500KB 離線語音辨識 TTS，HN 510pts，Pete Warden，開源 MIT）；(5) Google Stitch MCP + stitch-skills（台灣技術社群熱傳，繁中完整教學空白）。本輪總預估月收入潛力 $1,100-3,050。",
-      "changes": [
-        "更新 topic-ideas.md：Round 128 完整研究結果（5個新機會）",
-        "創建 directives/researcher-to-strategist-2026-07-20-round128.md",
-        "更新 agent-state.json：agentLog + lastResearchRound + latestOpportunities"
-      ],
-      "topFindings": [
-        "Answrr 30% LIFETIME affiliate（answrr.com/affiliates）: 企業 AI 接待員，訂閱+top-up 雙計，無上限無期限，Barchart 2026 最佳 AI SaaS Affiliate，$500-1,500/月",
-        "OutlierKit 30% recurring / 60-day cookie（outlierkit.tolt.io）: YouTube 研究工具，Product Hunt 4.9/5，$29-49/月客單，$200-600/月",
-        "GPT-5.6 Sol/Terra/Luna 評測機會（HN 576pts, 2026-07-18）: Sol 解決 30 年凸優化難題（Lean 驗證，arXiv），三層定價確認，15K-40K/月搜尋量，繁中空白",
-        "moonshine-ai（github.com/moonshine-ai，HN 510pts）: <500KB STT+TTS，edge device，Pete Warden 背書，MIT，開發者受眾",
-        "Google Stitch MCP + stitch-skills（google-labs-code/stitch-skills）: 台灣 FB 社群熱傳，繁中完整教學空白，Q4 2026 收費後追蹤 affiliate"
-      ],
-      "affiliateOpportunities": [
-        {
-          "tool": "Answrr",
-          "commission": "30% LIFETIME 永久遞迴（訂閱+top-up）",
-          "cookie": "永久（lifetime per referral）",
-          "pricing": "企業訂閱制（高單價）",
-          "applyUrl": "answrr.com/affiliates",
-          "estimatedMonthly": "$500-1,500（企業客戶複利）",
-          "priority": "P1-HIGH（本輪最高價值）"
-        },
-        {
-          "tool": "OutlierKit",
-          "commission": "30% recurring / 60-day cookie",
-          "cookie": "60 天",
-          "pricing": "$29-49/月",
-          "applyUrl": "outlierkit.tolt.io",
-          "estimatedMonthly": "$200-600",
-          "priority": "P1-HIGH"
-        }
-      ],
-      "contentPriorities": [
-        "P1-HIGH: Answrr 完整評測 2026（ai-tools.pro 英文，待 Ivan 申請後補連結）",
-        "P1-HIGH: GPT-5.6 Sol vs Terra vs Luna 完整評測 2026（繁中首發，高搜尋量）",
-        "P2: OutlierKit vs TubeBuddy vs vidIQ 比較 2026（ai-tools.pro，待 affiliate）",
-        "P2: moonshine-ai 教學 2026（autodev-ai，開發者受眾）",
-        "P2: Google Stitch MCP 完整教學 2026（autodev-ai，繁中首發）"
-      ],
-      "needsIvan": [
-        "P1-HIGH: 申請 Answrr affiliate → answrr.com/affiliates（30% LIFETIME，企業級）",
-        "P1-HIGH: 申請 OutlierKit affiliate → outlierkit.tolt.io（30% recurring，60-day cookie）",
-        "P0-URGENT carryover: 申請 Kit affiliate → kit.com/affiliate（7+ 輪！）",
-        "P0-URGENT carryover: 申請 VEED.io affiliate → veed.io/affiliates（6+ 輪！）",
-        "P0-URGENT carryover: 申請 Runway ML affiliate → Awin 搜尋 Runway（3 輪）",
-        "P0-URGENT carryover: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（7+ 週！）",
-        "P1-HIGH carryover: 申請 Arvow affiliate → arvow.com/affiliates（Round 127）"
-      ],
-      "estimatedNewRevenue": "$1,100-3,050/month"
-    },
-    {
-      "timestamp": "2026-07-19T14:30:00Z",
-      "task": "content-refresher",
-      "status": "completed",
-      "details": "Content refresh cron (Sun 14:00): Updated 3 oldest articles. (1) claude-fable-5-vs-opus-enterprise-guide-2026.html: removed stale '6/22 限時免費試用' urgent badge, warning box, stat card, FAQ answer, action list — replaced with current credits 計費 language; updated meta description + JSON-LD dateModified. (2) claude-code-prompt-pack-guide-2026.html: added DataCamp affiliate CTA section at end of article. (3) career-ops-ai-job-hunting-2026.html: updated GitHub stars 48.9K → 52K+ across all occurrences (stat card, body, meta description, JSON-LD, summary box); updated JSON-LD dateModified to 2026-07-19. Updated sitemap.xml lastmod for all 3 articles to 2026-07-19.",
-      "changes": [
-        "blog/claude-fable-5-vs-opus-enterprise-guide-2026.html: removed stale 6/22 urgent badge + warning box; updated stat card, action list, FAQ answer, meta description, JSON-LD dateModified → 2026-07-19",
-        "blog/claude-code-prompt-pack-guide-2026.html: added DataCamp affiliate CTA (afflink.one/s/aavAC) at article end",
-        "blog/career-ops-ai-job-hunting-2026.html: stars 48.9K → 52K+ (6 occurrences); JSON-LD dateModified → 2026-07-19",
-        "sitemap.xml: career-ops lastmod 2026-06-10 → 2026-07-19; claude-code-prompt-pack lastmod 2026-07-11 → 2026-07-19; claude-fable-5 lastmod 2026-06-13 → 2026-07-19",
-        "git commit a2b1fdc + push origin main"
-      ],
-      "articlesRefreshed": [
-        {
-          "file": "blog/claude-fable-5-vs-opus-enterprise-guide-2026.html",
-          "oldLastmod": "2026-06-13",
-          "newLastmod": "2026-07-19",
-          "updates": [
-            "Removed stale 6/22 free trial badge/warning",
-            "Updated to credits billing language",
-            "Updated meta description"
-          ]
-        },
-        {
-          "file": "blog/claude-code-prompt-pack-guide-2026.html",
-          "oldLastmod": "2026-07-11",
-          "newLastmod": "2026-07-19",
-          "updates": [
-            "Added DataCamp affiliate CTA section"
-          ],
-          "affiliateLinksAdded": 1
-        },
-        {
-          "file": "blog/career-ops-ai-job-hunting-2026.html",
-          "oldLastmod": "2026-06-10",
-          "newLastmod": "2026-07-19",
-          "updates": [
-            "Updated GitHub stars 48.9K → 52K+ (6 occurrences)",
-            "Updated dateModified"
-          ]
-        }
-      ]
-    },
-    {
-      "timestamp": "2026-07-19T10:30:00Z",
-      "task": "affiliate-monitor",
-      "status": "completed",
-      "details": "聯盟連結週檢（Sun 10:30）。掃描 73 篇文章 + 18 個聯盟連結。無外部 404；Gumroad 2 個持續 404（claude-code-prompt-pack-2026 + n8n-tw-templates，Ivan P0）；DataCamp/NordVPN/Cloudways/abzcoupon/aftck/vbtrax 403 屬防爬正常；blog/perplexity-ai-pro-review-2026.html 無任何聯盟連結 → 寫入 directives 給 content-refresher。",
-      "changes": [
-        "檢查 18 個聯盟連結：14 個 200/正常，4 個 403 防爬正常，2 個 404（Gumroad）",
-        "掃描 73 篇 HTML 文章外部連結：無 404",
-        "發現 blog/perplexity-ai-pro-review-2026.html 無任何聯盟連結",
-        "創建 directives/affiliate-monitor-to-content-refresher-2026-07-19.md",
-        "更新 agent-state.json affiliateLinkStatus + lastChecked"
-      ],
-      "criticalIssues": [
-        "Gumroad claude-code-prompt-pack-2026 → 404（第 6+ 次記錄，Ivan P0-URGENT）",
-        "Gumroad n8n-tw-templates → 404（持續問題）"
-      ],
-      "articlesNoAffiliate": [
-        "blog/perplexity-ai-pro-review-2026.html → 0 聯盟連結，需補 DataCamp/DigitalOcean CTA"
-      ],
-      "needsIvan": [
-        "P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（已積壓 6+ 週！）",
-        "P1: 確認 n8n-tw-templates Gumroad 狀態（是否下架）"
-      ]
-    },
-    {
-      "timestamp": "2026-07-19T02:11:00Z",
-      "task": "strategist",
-      "status": "completed",
-      "details": "收入管道健檢（Sun 10:00 cron）：URL 全檢、聯盟連結驗證、Gumroad 產品頁、agentLog 週報彙整。主站 autodev-ai.com + ai-tools.pro 正常；ai-tools.tw / en.ai-tools.tw 持續 DNS 失敗（第 10 天）。Gumroad 兩個 404 持續：claude-code-prompt-pack-2026 + n8n-tw-templates（Ivan P0-URGENT 不動）。DigitalOcean/Systeme.io 正常；DataCamp/NordVPN/Cloudways 403 防爬為正常。本週最新研究 Round 127 帶來 Arvow 30% LIFETIME affiliate（新最高潛力發現）及 LM Studio Bionic / Kimi K3 72h 時效性內容機會。Ivan carryover 積壓 7+ 項 affiliate 申請全部未處理。",
-      "changes": [
-        "URL 健檢：autodev-ai.com 200 ✓、ai-tools.pro 200 ✓、ai-tools.tw DNS失敗 ✗、en.ai-tools.tw DNS失敗 ✗",
-        "Gumroad 確認：claude-code-prompt-pack-2026 404 ✗、agent-skills-tw 200 ✓、n8n-tw-templates 404 ✗",
-        "聯盟連結確認：DigitalOcean 301→OK ✓、afflink.one 403防爬/正常 ✓、Systeme.io 200 ✓",
-        "讀取 Round 127 directive：Arvow 30% LIFETIME + LM Studio Bionic + Kimi K3 時效機會",
-        "更新 agent-state.json：lastStrategistRun + agentLog"
-      ],
-      "healthSummary": {
-        "sites": {
-          "autodev-ai.com": "200 OK",
-          "ai-tools.pro": "200 OK",
-          "ai-tools.tw": "DNS FAIL（第10天）",
-          "en.ai-tools.tw": "DNS FAIL（第10天）"
-        },
-        "gumroad": {
-          "claude-code-prompt-pack-2026": "404 BROKEN（Ivan P0）",
-          "agent-skills-tw": "200 OK",
-          "n8n-tw-templates": "404 BROKEN"
-        },
-        "affiliateLinks": {
-          "DigitalOcean": "OK",
-          "DataCamp": "403防爬/正常",
-          "NordVPN": "403防爬/正常",
-          "Systeme.io": "200 OK"
-        }
-      },
-      "ivanActionRequired": [
-        "P0-URGENT: 上架 Claude Code Prompt Pack → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（已積壓 5+ 週）",
-        "P0-URGENT: 申請 Kit affiliate → kit.com/affiliate（6+ 輪 carryover，$800-2,000/mo）",
-        "P0-URGENT: 申請 Runway ML affiliate → Awin 搜尋 Runway（已有現有文章，零成本增收）",
-        "P0-URGENT: 申請 VEED.io affiliate → veed.io/affiliates（5+ 輪 carryover）",
-        "P1-HIGH: 申請 Arvow affiliate → arvow.com/affiliates（30% LIFETIME 永久遞迴，Round 127 新發現）",
-        "P1-HIGH: 申請 beehiiv affiliate → beehiiv.com/partners/affiliate",
-        "P1-HIGH: 申請 Blym affiliate → blym.co/affiliates（50%/12m）",
-        "P1: 修復 ai-tools.tw DNS（第 10 天失效）",
-        "P1: 確認 n8n-tw-templates Gumroad 狀態"
-      ]
-    },
-    {
-      "timestamp": "2026-08-02T03:10:00Z",
-      "task": "researcher",
-      "status": "completed",
-      "details": "Round 142 competitor-watch cron（Sun 11:00）— 不看對手做什麼，看對手靠什麼賺錢。搜尋競品變現結構 + 新 affiliate 機會 + 關鍵字空白。核心發現：(1) Murf AI 20%/24mo affiliate（murf.ai/partner-with-us/affiliate，PartnerStack，90-day cookie，繁中評測空白，Ivan P1-HIGH）；(2) Frase.io 30%/12mo affiliate（frase.io/partners/affiliates，SEO+GEO 工具，繁中完全空白，Ivan P1）；(3) CustomGPT.ai 15-20%/24mo affiliate（customgpt.ai/partners，RAG chatbot，Ivan P2）；(4) Seedance 2.5 關鍵字空白（BBC 繁中有報導但零評測，月搜尋 10K-25K 估，seo-writer P1-HIGH）；(5) AI 視頻比較頁（Seedance/Kling/Hailuo/Runway）繁中空白，競品英文站已有但繁中無。競品變現分析：TechRadar/ZDNET/PCMag 以 affiliate roundup + 比較頁為主要變現，「I tried X tools」格式繁中完全空白。已產出 directives/researcher-to-strategist-2026-08-02-round142.md，更新 topic-ideas.md。",
-      "changes": [
-        "創建 directives/researcher-to-strategist-2026-08-02-round142.md",
-        "更新 topic-ideas.md：Seedance 2.5 P1-HIGH + AI 視頻比較頁 P1 + Murf AI P1 + Frase.io P1 + CustomGPT.ai P2",
-        "更新 agent-state.json agentLog"
-      ],
-      "newAffiliatesFound": [
-        {
-          "name": "Murf AI",
-          "commission": "20%/24mo",
-          "cookie": "90天",
-          "url": "murf.ai/partner-with-us/affiliate",
-          "priority": "P1-HIGH",
-          "monthlyEst": -400
-        },
-        {
-          "name": "Frase.io",
-          "commission": "30%/12mo",
-          "url": "frase.io/partners/affiliates",
-          "priority": "P1",
-          "monthlyEst": -300
-        },
-        {
-          "name": "CustomGPT.ai",
-          "commission": "15-20%/24mo",
-          "cookie": "60天",
-          "url": "customgpt.ai/partners",
-          "priority": "P2",
-          "monthlyEst": -400
-        }
-      ],
-      "keywordGaps": [
-        "Seedance 2.5 評測（繁中零評測，BBC有報導，月搜尋10K-25K估）",
-        "AI 視頻生成器比較頁 2026（Seedance/Kling/Hailuo/Runway，競品英文有繁中無）",
-        "Murf AI 評測（20%/24mo affiliate，繁中空白）",
-        "Frase.io 評測（SEO+GEO tool，30%/12mo，繁中空白）"
-      ]
-    },
-    {
-      "timestamp": "2026-08-15T00:00:00Z",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check completed. autodev-ai.com, autodev-ai.com/sitemap.xml, ai-tools.pro, ai-tools.pro/sitemap.xml, and both GitHub Pages fallback URLs were healthy. ai-tools.tw and en.ai-tools.tw still failed DNS resolution. Sampled 10 autodev-ai sitemap URLs; all returned HTTP 200. No in-repo content or sitemap fix was needed today; unresolved issue remains external DNS for ai-tools.tw domains.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml redirected successfully to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Sampled 10 autodev-ai sitemap URLs and all returned HTTP 200",
-        "Updated agent-state.json siteHealth timestamps and agentLog"
-      ],
-      "issues": [
-        "ai-tools.tw DNS FAIL",
-        "en.ai-tools.tw DNS FAIL"
-      ]
     }
   ],
   "gscData": {
@@ -1846,7 +1625,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-08-14T00:33:00Z",
+  "lastChecked": "2026-08-15T03:00:00Z",
   "issues": [
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
     "2026-07-11 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
