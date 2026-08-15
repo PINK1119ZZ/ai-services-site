@@ -1,8 +1,52 @@
 {
-  "lastRun": "2026-08-15T05:06:00Z",
-  "lastResearchRound": 163,
+  "lastRun": "2026-08-15T23:00:00Z",
+  "lastResearchRound": 164,
   "lastStrategistRun": "2026-08-15T01:04:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-15T23:00:00Z",
+      "agent": "researcher",
+      "task": "ai-trend-hunter",
+      "round": 164,
+      "status": "completed",
+      "summary": "Round 164（Sun 23:00，降頻輕量掃描）— P0 watchlist：GLM-5.x 截至 8/12 仍未發布（Z.AI 無官方宣布，glm5.app 確認，Manifold 87% Aug 未實現，持續 watchlist 至月底）。Minimax M3.x watchlist 移除：M3 已於 2026-06-01 發布（六月舊聞），M3 Pro 2.7T 從未出現在官方來源，H3（8/3）為影片模型非 LLM 且 license 排除美國；watchlist 清除。P1 確認：TestMu AI（前 LambdaTest）affiliate = 50% first transaction + 25% recurring（manual）/ 15% recurring（automation），90-day cookie，FirstPromoter 平台，2026-05-22 驗證；Kane CLI 為 TestMu AI 官方產品，affiliate 適用，Ivan 可申請 testmuai.com/partners。PH 月榜：無新高價值訊號（Dograh #4 維持，Kane CLI 454 upvotes）。GitHub trending：無新 P1+ 爆量訊號。降頻策略連續 7 輪驗證正確。",
+      "changes": [
+        "搜尋 GLM-5.x / GLM-5.5 August 15 2026 → glm5.app 8/12 確認仍未發布，Z.AI API docs 最新為 glm-4.7，Hugging Face 無 GLM-5 repository",
+        "搜尋 Minimax M3 release August 2026 → M3 已 2026-06-01 發布（cline.bot, gmicloud.ai 確認），M3 Pro 從未官方確認，H3 8/3 為影片模型非 LLM",
+        "搜尋 TestMu AI LambdaTest affiliate 2026 → affiliateotter.com 2026-05-22 驗證：50%/25% recurring manual + 15% recurring automation + 90-day cookie + FirstPromoter",
+        "搜尋 Product Hunt trending August 15 16 2026 → 月榜快照：AdAnt AI #1, Dograh #4（543）, Kane CLI 454 upvotes",
+        "更新 topic-ideas.md Round 164 完整段落",
+        "創建 directives/researcher-to-strategist-2026-08-15-round164.md",
+        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
+      ],
+      "topFindings": [
+        "GLM-5.x 8/15 仍未發布（glm5.app 8/12 確認，Z.AI 無官方宣布，watchlist 持續至月底）",
+        "Minimax M3.x watchlist 移除（M3 六月舊聞，M3 Pro 未實現，H3 非 LLM）",
+        "TestMu AI affiliate 確認：50% first + 25% recurring（manual）/ 15% recurring（automation），90-day cookie，Kane CLI 適用（P1-HIGH）",
+        "PH 月榜：無新高價值 affiliate 訊號",
+        "降頻策略連續 7 輪驗證正確（R158-R164）"
+      ],
+      "watchlistStatus": {
+        "glm5x": "⏳ 8/15 仍未發布，Manifold 87% Aug 未實現，watchlist 持續至 8 月底",
+        "minimaxM3x": "❌ watchlist 移除（M3 六月舊聞，M3 Pro 未實現，H3 非 LLM）",
+        "testmuAiAffiliate": "✅ P1-HIGH 確認（50%/25% recurring manual + 15% automation，90-day cookie）",
+        "kaneCliAffiliate": "✅ TestMu AI affiliate 適用（Kane CLI 為 TestMu AI 官方產品）"
+      },
+      "newAffiliatesFound": [
+        {
+          "name": "TestMu AI (Formerly LambdaTest)",
+          "commission": "50% first + 25% recurring/month（manual）/ 15% recurring（automation）",
+          "cookie": "90 天",
+          "platform": "FirstPromoter",
+          "pricing": "$49-299/月（automation plans）",
+          "url": "testmuai.com/partners",
+          "priority": "P1-HIGH",
+          "monthlyEst": "$300-800",
+          "note": "Round 164 確認，Kane CLI 導流，automation plans 15% recurring"
+        }
+      ],
+      "estimatedNewRevenue": "$300-800/月（TestMu AI affiliate 15% recurring on automation plans）"
+    },
     {
       "timestamp": "2026-08-15T05:06:00Z",
       "agent": "builder",
@@ -1224,7 +1268,7 @@
             "keyword": "opencode zen 和 go 的 区别",
             "clicks": 3,
             "impressions": 4,
-            "ctr": 75.0,
+            "ctr": 75,
             "position": 3.2
           },
           {
@@ -1259,21 +1303,21 @@
             "keyword": "autodev",
             "clicks": 1,
             "impressions": 10,
-            "ctr": 10.0,
+            "ctr": 10,
             "position": 30
           },
           {
             "keyword": "buzz git",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 5
           },
           {
             "keyword": "buzz opensource",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 3.5
           },
           {
@@ -1294,21 +1338,21 @@
             "keyword": "opencode go 比較",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 2
           },
           {
             "keyword": "opencode go和zen",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 5
           },
           {
             "keyword": "ruflo",
             "clicks": 1,
             "impressions": 5,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 9
           },
           {
@@ -1316,7 +1360,7 @@
             "clicks": 0,
             "impressions": 31,
             "ctr": 0,
-            "position": 79.0
+            "position": 79
           },
           {
             "keyword": "ai 付費 比較",
@@ -1409,7 +1453,7 @@
             "clicks": 7,
             "impressions": 66,
             "ctr": 10.6,
-            "position": 10.0
+            "position": 10
           },
           {
             "page": "//blog/claude-video-watch-tutorial-2026.html",
@@ -1422,21 +1466,21 @@
             "page": "//blog/line-bot-cost.html",
             "clicks": 4,
             "impressions": 198,
-            "ctr": 2.0,
+            "ctr": 2,
             "position": 7.2
           },
           {
             "page": "//en/",
             "clicks": 4,
             "impressions": 67,
-            "ctr": 6.0,
+            "ctr": 6,
             "position": 18.2
           },
           {
             "page": "//blog/gpt-56-sol-terra-luna-review-2026.html",
             "clicks": 2,
             "impressions": 20,
-            "ctr": 10.0,
+            "ctr": 10,
             "position": 10.3
           },
           {
@@ -1457,7 +1501,7 @@
             "page": "//",
             "clicks": 1,
             "impressions": 33,
-            "ctr": 3.0,
+            "ctr": 3,
             "position": 7.3
           },
           {
@@ -1472,7 +1516,7 @@
             "clicks": 1,
             "impressions": 21,
             "ctr": 4.8,
-            "position": 9.0
+            "position": 9
           },
           {
             "page": "//en/blog/line-bot-tutorial-2026.html",

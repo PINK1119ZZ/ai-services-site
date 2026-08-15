@@ -1,4 +1,109 @@
 # AI Trend Hunter — Research Rounds & Topic Ideas
+## Round 164 — 2026-08-15 23:00 UTC（Sun 降頻輕量掃描）
+
+### 🔍 本輪掃描範圍
+GLM-5.x/Minimax M3.x watchlist、TestMu AI affiliate 確認、PH 月榜更新、GitHub trending 概況
+
+---
+
+### ❌ GLM-5.x / GLM-5.5 — 8/15 仍未發布（P0 watchlist 持續）
+
+| 欄位 | 內容 |
+|---|---|
+| 日期 | 2026-08-15 |
+| 狀態 | ❌ 未發布 |
+| 來源 | glm5.app, verdent.ai, z.ai API docs |
+| 最新確認 | 截至 8/12/2026，Z.AI 無任何 GLM-5.x 官方宣布 |
+| 當前旗艦 | GLM-5.2（2026-06-16 發布） |
+
+**摘要：** glm5.app（8/12 更新）確認：「No. As of August 12, 2026, Z.AI has made no official announcement, and no official channel (z.ai, Hugging Face, GitHub, arXiv) shows any GLM 5.5 trace. The current flagship is GLM 5.2, released June 16, 2026.」Verdent.ai tracker 同樣標注 GLM-5 為 ❌ Not released，最新模型為 glm-4.7（Dec 2025）。**Manifold 87% Aug 可能性未實現，持續 watchlist 至月底。**
+
+**優先級：P0 watchlist**（若 8 月底仍未發布，調降為 P2）
+
+---
+
+### ❌ Minimax M3.x / M3 Pro — 已存在但非新發布（watchlist 澄清）
+
+| 欄位 | 內容 |
+|---|---|
+| 日期 | 2026-08-15 |
+| 狀態 | ✅ M3 已於 2026-06-01 發布 |
+| 來源 | cline.bot, gmicloud.ai, atlascloud.ai |
+| 參數 | 428B total, 23B active, 1M context |
+
+**摘要：** 搜尋發現 **MiniMax M3 已於 2026-06-01 發布**（Medium, cline.bot, gmicloud.ai 三源確認），並非 8 月新事件。M3 = 428B total / 23B active / 1M context / native multimodal / open weight，June 2026 release。**M3 Pro 2.7T 從未出現在任何官方來源**，The Information 單一來源推測未實現。**MiniMax H3（video model）於 8/3 發布 weights，但為影片生成模型非 LLM，且 license 排除美國/歐盟/英國/加拿大。**
+
+**優先級：N/A**（M3 六月舊聞，H3 非 LLM 且 license 排除，watchlist 移除）
+
+---
+
+### ✅ P1-HIGH：TestMu AI (Formerly LambdaTest) Affiliate — 50% first + 25% recurring（Kane CLI 適用）
+
+| 欄位 | 內容 |
+|---|---|
+| 日期 | 2026-08-15 |
+| 工具 | TestMu AI (Formerly LambdaTest) |
+| Affiliate | 50% first transaction + 25% recurring/monthly（manual），15% recurring（automation） |
+| Cookie | 90 天 |
+| 平台 | FirstPromoter |
+| 申請 | testmuai.com/partners（partner program）或 affiliate page |
+| 驗證日期 | 2026-05-22（AffiliateOtter） |
+
+**摘要：** TestMu AI（前 LambdaTest，2026-01-12 改名）有 **official affiliate program**：Manual testing plans = **50% commission first transaction + 25% recurring monthly**；Automation testing plans = **15% recurring**；90-day cookie；FirstPromoter 平台；付款每月兩次。**Kane CLI 屬於 TestMu AI 產品家族**（2026-04-28 發布），因此 TestMu AI affiliate **應適用於 Kane CLI 相關流量導流至 TestMu AI 付費方案**。值得 Ivan 申請，autodev-ai 開發者受眾可導流至 TestMu AI automation plans（15% recurring，但 $49-299/月客單價高）。
+
+**優先級：P1-HIGH**（50%/25% commission 高，90-day cookie 業界強，Ivan 申請後 seo-writer 執行 Kane CLI 教學 + TestMu AI affiliate CTA）
+
+---
+
+### 📊 Product Hunt 月榜更新（8/15 快照）
+
+| 排名 | 產品 | Upvotes | Followers |
+|---|---|---|---|
+| #1 | AdAnt AI | 610 | 88 |
+| #2 | Hey Noah | 604 | 101 |
+| #3 | Wispr Flow | 584 | 72 |
+| #4 | Dograh | 543 | 154 |
+| #5 | Framer 3.0 + Coldtea.ai | 519 | 70 |
+| #6 | Grok Bot | 505 | 20 |
+| #7 | Soloop | 486 | 67 |
+| #8 | Cloudflare OS | 472 | 3 |
+| #9 | NextDoor.Company | 458 | 63 |
+| #10 | TestMu AI | — | 3.3K |
+
+**摘要：** Dograh 維持 #4（543 upvotes），Kane CLI 月榜 454 upvotes（排在 10-15 名區間），Coldtea.ai 升至 #5（519 upvotes，R160 時為 #4/517）。Framer AI Agents 以 895 followers 領先（非 upvotes 排名）。**本輪無新 P1+ affiliate 訊號**，月榜前 10 多為已知產品或無 affiliate 的開源/免費工具。
+
+**優先級：N/A**（無新高價值機會）
+
+---
+
+### 📊 GitHub Trending 概況（8/15）
+
+**搜尋結果顯示通用 trending 頁面，無具體 8/15 單日爆量項目。** 根據 GitHub Trending AI 聚合器（yuxiaopeng/Github-Ranking-AI, HarlonWang/TrendingAI），8 月中旬主要為 agent infrastructure / skills / MCP 相關持續強勢，**無新 P1+ 單日爆量訊號**（定義：單日 +2K stars，繁中零教學，autodev-ai 受眾吻合）。
+
+**優先級：N/A**（無新高價值機會）
+
+---
+
+### 🎯 Ivan Action Items（本輪新增）
+
+| 優先級 | 項目 | 說明 |
+|---|---|---|
+| P1-HIGH | 申請 TestMu AI affiliate | testmuai.com/partners，50% first + 25% recurring（manual），15% recurring（automation），90-day cookie，適用 Kane CLI 導流 |
+
+---
+
+### 📝 Strategist Directive Summary（本輪建議）
+
+1. **GLM-5.x watchlist 持續**：8 月底前仍未發布 → 調降為 P2
+2. **Minimax M3.x watchlist 移除**：M3 六月舊聞，M3 Pro 未實現，H3 非 LLM
+3. **TestMu AI affiliate 升級為 P1-HIGH**：Ivan 申請後 seo-writer 撰寫 Kane CLI 完整教學（blog/kane-cli-testmuai-tutorial-2026.html，~2,000 字，TestMu AI affiliate CTA）
+4. **維持降頻策略**：本輪連續 7 輪驗證正確（R158-R164），研究/執行比已平衡
+
+**預估新增月收入潛力：** $300-800（TestMu AI affiliate 15% recurring on automation plans $49-299/月）
+
+---
+
+*researcher agent — Round 164 完成於 2026-08-15 23:00 UTC*
 
 本檔案紀錄 researcher agent 每輪市場掃描結果，包含新機會、變現路徑、優先級、執行狀態。
 
