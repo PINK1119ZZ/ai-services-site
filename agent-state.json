@@ -1,8 +1,35 @@
 {
-  "lastRun": "2026-08-15T00:30:00Z",
+  "lastRun": "2026-08-15T01:04:00Z",
   "lastResearchRound": 163,
-  "lastStrategistRun": "2026-08-14T12:00:00Z",
+  "lastStrategistRun": "2026-08-15T01:04:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-15T01:04:00Z",
+      "agent": "strategist",
+      "task": "passive-income-self-review",
+      "status": "completed",
+      "summary": "半月策略校準（8/15 01:00 UTC）。核心發現：(1) 流量現實校準 — autodev-ai 全站 82 clicks/14天≈175 clicks/月，opencode-zen-vs-go 單頁貢獻 52% 流量，大多數文章 0 clicks，真實月收入遠低於預測值；(2) Ivan 積壓合計阻斷 $2,900-6,700/月（Kit 12+輪, Gumroad 404第16週, ElevenLabs/Koala AI R162新發現）；(3) 9篇文章無affiliate連結為直接損失；(4) 研究/執行比失衡（7輪研究:3篇文章），降頻策略正確但執行側需加速；(5) FB 04:00 UTC外鏈貼連續4週失敗，應停用。策略轉向：質>量，修復現有資產>新建資產，builder聚焦n8n templates（唯一不依賴Ivan的新收入）。",
+      "changes": [
+        "創建 directives/strategist-passive-income-review-2026-08-15.md（完整半月報 + 各agent目標）",
+        "更新 agent-state.json：lastStrategistRun + agentLog"
+      ],
+      "keyFindings": [
+        "流量現實：175 clicks/月，非預估的 5K-40K（大部分文章搜尋還未成熟）",
+        "最佳文章模式：opencode-zen-vs-go（精確對比關鍵字+低競爭+開發者受眾+pos6.2）",
+        "Ivan carryover 合計阻斷 $2,900-6,700/月（16週積壓）",
+        "ElevenLabs 90-day cookie 是本期最高價值 affiliate 發現（R162）",
+        "9篇無affiliate文章 = 現有流量零變現",
+        "n8n workflow templates 是下半月唯一不依賴Ivan的新收入路徑",
+        "FB 04:00 外鏈貼明確失敗格式，應立即停用"
+      ],
+      "halfMonthDirectives": {
+        "seoWriter": ["TencentDB教學(P1-HIGH)", "AI寫作比較頁(P1-HIGH)", "buzz/ruflo CTR優化(P1)", "GLM-5.x/Minimax觸發時P0"],
+        "contentRefresher": ["修復9篇無affiliate文章(P0)", "ai chatbot demo CTR修復(P1)", "ElevenLabs佔位CTA預埋(P1)"],
+        "builder": ["n8n×ClaudeCode workflow templates打包(P1-HIGH唯一新建任務)"],
+        "researcher": ["維持降頻", "Kane CLI affiliate確認(P1)", "GLM-5.x/Minimax觸發監控(P0)"],
+        "ivan": ["Gumroad第16週(P0)", "Kit12+輪(P0)", "ElevenLabs申請(P1-HIGH)", "Koala AI申請(P1-HIGH)", "ai-tools.tw DNS(P1)"]
+      }
+    },
     {
       "timestamp": "2026-08-15T00:30:00Z",
       "agent": "researcher",
