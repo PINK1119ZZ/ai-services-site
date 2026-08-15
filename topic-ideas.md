@@ -339,3 +339,97 @@
 ---
 
 *researcher agent — Round 161 完成於 2026-08-14 00:30 UTC*
+
+---
+
+## Round 163 — 2026-08-15 00:30 UTC（Sat 輕量掃描）
+
+### 🔍 本輪掃描範圍
+Product Hunt 週榜（8/10-16）、GitHub trending、AI model 追蹤、HN 概況
+
+---
+
+### 🟡 P2：Dograh — PH 週榜 #1（Open Source VAPI Alternative）
+
+| 欄位 | 內容 |
+|---|---|
+| 日期 | 2026-08-15 |
+| 工具 | Dograh |
+| 關鍵字 | dograh 評測, vapi 替代方案, 開源 voice AI agent |
+| 搜尋量 | 800-2K/月（估） |
+| 變現方式 | 教學文 → DataCamp/DigitalOcean CTA（無 affiliate，開源） |
+| 預估月收入 | $100-300（間接） |
+| 建議站點 | autodev-ai.com |
+
+**摘要：** PH 週榜（8/10-16）#1，YC alumni 打造，自托管 Voice AI platform，open source VAPI/Retell 替代，支援 MCP native、ElevenLabs/Deepgram/AssemblyAI、完整 telephony。開發者受眾完美吻合 autodev-ai。**無公開 affiliate**（OSS 產品），但有 Cloud 版本（未確認是否有 affiliate）。教學角度：「Vapi 太貴？用 Dograh 自架 Voice AI Agent 省 80%」。
+
+**優先級：P2**（無 affiliate，但 PH 熱度 + 開發者受眾吻合，可排在 Nemotron/TencentDB 之後）
+
+---
+
+### 🟡 P2：Kane CLI — PH 週榜 #3（自然語言瀏覽器測試，Claude Code 整合）
+
+| 欄位 | 內容 |
+|---|---|
+| 日期 | 2026-08-15 |
+| 工具 | Kane CLI（TestMu AI / LambdaTest） |
+| 關鍵字 | kane cli 教學, 自然語言 e2e 測試, claude code 測試工具 |
+| 搜尋量 | 500-1.5K/月（估） |
+| 變現方式 | LambdaTest affiliate 待確認（enterprise testing platform，可能有高佣金） |
+| 預估月收入 | $200-600（若 LambdaTest affiliate 確認） |
+| 建議站點 | autodev-ai.com |
+
+**摘要：** PH 週榜（8/10-16）#3，TestMu AI（前 LambdaTest）出品，自然語言瀏覽器+手機 app E2E 測試 CLI，直接整合 Claude Code/Cursor/Codex（`.agents/skills/kane-cli` + `.claude/skills/kane-cli` 已內建），228 GitHub★，Apache 2.0。開發者受眾 = autodev-ai 完美吻合。**LambdaTest 有 affiliate program（高價企業客戶）待確認是否適用 Kane CLI**。
+
+**優先級：P2**（affiliate 待確認，星數偏低，但 Claude Code 整合角度有獨特性）
+
+---
+
+### 📊 Model Watchlist 更新
+
+| 模型 | 狀態 | 來源 |
+|---|---|---|
+| GLM-5.x | ⏳ Pending（Manifold 87% Aug 可能） | Manifold Markets |
+| Minimax M3.x | ⏳ Pending（Manifold 79% Aug 可能） | Manifold Markets |
+| Seedance 2.5 | ✅ 8/8 已發布（LLMGateway 最新） | llmgateway.io |
+| 其他 | 8/15 無新發布 | llm-stats.com |
+
+**GLM-5.x 與 Minimax M3.x 為 August 高機率發布（87%/79%），若觸發→ P1-HIGH 教學窗口**
+
+---
+
+### 📌 本輪總結
+
+- **無新 P1+ affiliate 發現**（降頻策略第 6 輪連續驗證正確）
+- **PH 週榜 8/10-16 重點：** Dograh #1（OSS Voice AI，P2）、Grok Bot #2（無教學缺口）、Kane CLI #3（Claude Code 整合，P2，affiliate 待確認）
+- **PH 月榜：** 無新變化（同 R162）
+- **Model：** 8/15 無新發布；GLM-5.x/M3.x 仍 pending
+- **HN：** 無新 P1+ 訊號（August AI hiring active，agent infrastructure 持續主導）
+- **預估新增月收入潛力：$300-900**（Dograh $100-300 + Kane CLI $200-600 若 affiliate 確認）
+
+---
+
+### 執行建議
+
+#### 暫不產出新 Directive（維持降頻）
+- 無新 30%+ recurring affiliate
+- 無 72h 時效性窗口
+- Nemotron（R162）+ TencentDB（R160）+ AI/ML API 評測（R162 strategist 週報）carryover 已足夠 seo-writer 3 輪
+
+#### 監控清單新增
+- **Kane CLI LambdaTest affiliate**：下輪確認是否有可申請的 affiliate program
+- **GLM-5.x / Minimax M3.x**：Manifold 高機率，一旦發布即 P1 教學窗口
+
+---
+
+### 降頻策略連續 6 輪驗證正確
+
+R158 + R159 + R160 + R161 + R162 + R163 連續確認：
+- GitHub trending 無新重大工具爆量
+- Product Hunt 無新 30%+ recurring affiliate
+- HN 無新商業化 P1+ 機會
+- **Ivan carryover 不動 = 研究超速執行**
+
+---
+
+*researcher agent — Round 163 完成於 2026-08-15 00:30 UTC*
