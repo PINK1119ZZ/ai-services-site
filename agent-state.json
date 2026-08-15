@@ -1292,6 +1292,24 @@
         "Murf AI 評測（20%/24mo affiliate，繁中空白）",
         "Frase.io 評測（SEO+GEO tool，30%/12mo，繁中空白）"
       ]
+    },
+    {
+      "timestamp": "2026-08-15T00:00:00Z",
+      "task": "site-health",
+      "status": "completed",
+      "details": "Daily site health check completed. autodev-ai.com, autodev-ai.com/sitemap.xml, ai-tools.pro, ai-tools.pro/sitemap.xml, and both GitHub Pages fallback URLs were healthy. ai-tools.tw and en.ai-tools.tw still failed DNS resolution. Sampled 10 autodev-ai sitemap URLs; all returned HTTP 200. No in-repo content or sitemap fix was needed today; unresolved issue remains external DNS for ai-tools.tw domains.",
+      "changes": [
+        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
+        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml redirected successfully to sitemap_index.xml",
+        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution",
+        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
+        "Sampled 10 autodev-ai sitemap URLs and all returned HTTP 200",
+        "Updated agent-state.json siteHealth timestamps and agentLog"
+      ],
+      "issues": [
+        "ai-tools.tw DNS FAIL",
+        "en.ai-tools.tw DNS FAIL"
+      ]
     }
   ],
   "gscData": {
@@ -3056,42 +3074,42 @@
     "autodev-ai.com": {
       "url": "https://autodev-ai.com/",
       "status": "200 OK",
-      "lastChecked": "2026-08-14T00:00:00Z"
+      "lastChecked": "2026-08-15T00:00:00Z"
     },
     "autodev-ai.com/sitemap.xml": {
       "url": "https://autodev-ai.com/sitemap.xml",
       "status": "200 OK",
-      "lastChecked": "2026-08-14T00:00:00Z"
+      "lastChecked": "2026-08-15T00:00:00Z"
     },
     "ai-tools.pro": {
       "url": "https://ai-tools.pro/",
       "status": "200 OK",
-      "lastChecked": "2026-08-14T00:00:00Z"
+      "lastChecked": "2026-08-15T00:00:00Z"
     },
     "ai-tools.pro/sitemap.xml": {
       "url": "https://ai-tools.pro/sitemap.xml",
       "status": "200 OK (redirect to sitemap_index.xml)",
-      "lastChecked": "2026-08-14T00:00:00Z"
+      "lastChecked": "2026-08-15T00:00:00Z"
     },
     "ai-tools.tw": {
       "url": "https://ai-tools.tw/",
       "status": "DNS FAIL",
-      "lastChecked": "2026-08-14T00:00:00Z"
+      "lastChecked": "2026-08-15T00:00:00Z"
     },
     "en.ai-tools.tw": {
       "url": "https://en.ai-tools.tw/",
       "status": "DNS FAIL",
-      "lastChecked": "2026-08-14T00:00:00Z"
+      "lastChecked": "2026-08-15T00:00:00Z"
     },
     "ai-tools-tw-fallback": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
       "status": "200 OK",
-      "lastChecked": "2026-08-14T00:00:00Z"
+      "lastChecked": "2026-08-15T00:00:00Z"
     },
     "ai-tools-en-fallback": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
       "status": "200 OK",
-      "lastChecked": "2026-08-14T00:00:00Z"
+      "lastChecked": "2026-08-15T00:00:00Z"
     }
   },
   "agents": {
