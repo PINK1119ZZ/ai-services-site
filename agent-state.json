@@ -1,8 +1,63 @@
 {
-  "lastRun": "2026-08-17T03:00:00Z",
-  "lastResearchRound": 167,
+  "lastRun": "2026-08-17T22:00:00Z",
+  "lastResearchRound": 168,
   "lastStrategistRun": "2026-08-17T01:31:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-17T22:00:00Z",
+      "agent": "researcher",
+      "task": "ai-dev-research",
+      "round": 168,
+      "status": "completed",
+      "summary": "Round 168（Mon 22:00，ai-dev-research cron）— 核心發現：(1) Wiz Red Agent vs GitHub Copilot Autofix（8/17 發布）：AI 安全代理發現 AI coding 工具引入的 CI/CD script injection 漏洞，存取 Snowflake 內部 Jira，繁中零深度分析，P1-HIGH seo-writer 72h 窗口；(2) LiteLLM SANDCLOCK 供應鏈攻擊（8/17）：2,038 個 repo 憑證暴露，TheHackerNews 頭條，可合併 Wiz 文章或獨立快訊；(3) Invisible AI Prompts 法院制裁（8/17）：prompt injection 法律後果首例，P1；(4) GLM-5.5 最後 48h 窗口（aireleasetracker.com 顯示 Z.AI 預期 8/19，仍 unannounced）；(5) Reclaim.AI cookie 三源完整確認（90天，40%/12mo + $1/work signup，Ivan P1 申請）；(6) Wan-Animate-2 Apache 2.0 完整確認（HuggingFace + ComfyUI，beats Dreamina/Kling，P1 教學）；(7) PH August 月榜無新變化（AdAnt AI #1，Coldtea.ai #5 我們文章已發）；(8) GitHub trending 8/17 當機（13:40-17:00 UTC），trending 資料不完整；(9) Paritok 無公開 affiliate 確認，降為 P2 純內容機會；(10) AI security 本輪三連爆（Wiz + LiteLLM + 法院制裁），敘事升溫為 8月最強訊號。",
+      "changes": [
+        "搜尋 GLM-5.5 release Z.AI August 2026 → evolink.ai 8/14：GLM-5.5 仍 unannounced，aireleasetracker.com：Z.AI 預期 ~8/19",
+        "搜尋 AI model release announcement August 17 18 2026 → llmgateway.io 最新仍 Seedance 2.5（8/8），無新 GA",
+        "搜尋 Wiz AI agent GitHub Copilot vulnerability August 2026 → wiz.io/blog 8/17 發布：Red Agent + Copilot Autofix + Snowflake CI/CD，繁中零深度分析確認",
+        "搜尋 HackerNews AI news August 16 17 2026 → securityaffairs.com 8/17：LiteLLM SANDCLOCK + Invisible AI Prompts 法院制裁 + McDonald's breach",
+        "搜尋 Product Hunt trending August 17 18 2026 → PH August 月榜無新變化（AdAnt AI #1 1.4K, Hey Noah #2 1.4K, Wispr Flow #3 8.7K, Dograh #4, Coldtea.ai #5）",
+        "搜尋 GitHub trending AI August 17 2026 → GitHub 8/17 全球大當機（13:40-17:00 UTC），trending 資料不完整",
+        "搜尋 Reclaim AI affiliate cookie window PartnerStack 2026 → getreditus.com 2026-08-08 三源確認：90天 cookie + 40%/12mo（工作信箱）+ $1/signup + 25%（個人信箱）",
+        "搜尋 Paritok affiliate program 2026 → 無公開 affiliate，降為 P2 純內容機會",
+        "搜尋 Wan-Animate-2 HuggingFace → Apache 2.0 完整確認（Wan-AI/Wan2.2-Animate-2-14B，ComfyUI 整合，beats Dreamina）",
+        "創建 directives/researcher-to-strategist-2026-08-17-round168.md",
+        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
+      ],
+      "topFindings": [
+        "Wiz Red Agent vs Copilot Autofix（8/17，繁中零深度分析，AI 安全敘事最強訊號，P1-HIGH 72h 窗口）",
+        "LiteLLM SANDCLOCK 供應鏈攻擊（8/17，2,038 repos，TheHackerNews，可與 Wiz 合併，P1）",
+        "Invisible AI Prompts 法院制裁（8/17，prompt injection 法律後果首例，P1）",
+        "GLM-5.5 最後 48h 窗口（aireleasetracker.com ~8/19，若發布 → P0-URGENT）",
+        "Reclaim.AI cookie 90天三源完整確認（getreditus.com 2026-08-08，Ivan P1 申請）",
+        "Wan-Animate-2 Apache 2.0 完整確認（HuggingFace，ComfyUI，P1 教學，無 affiliate）",
+        "GitHub 8/17 全球大當機（trending 資料不完整，下輪補掃）",
+        "Paritok 無公開 affiliate（降為 P2 純內容）",
+        "PH August 月榜無新變化（Coldtea.ai #5 我們文章已發）",
+        "AI security 本輪三連爆（Wiz + LiteLLM + 法院制裁），8月最強敘事升溫訊號"
+      ],
+      "watchlistStatus": {
+        "glm55": "⏳ 8/17 仍未發布，aireleasetracker.com 顯示 Z.AI 預期 ~8/19（最後 48h），若發布 → P0-URGENT",
+        "wanAnimate2": "✅ Apache 2.0 完整確認（HuggingFace + ComfyUI），P1 教學，無 affiliate",
+        "reclaimAI": "✅ 90天 cookie 三源確認（getreditus.com 2026-08-08），Ivan P1 申請",
+        "paritok": "❌ 無公開 affiliate，降為 P2 純內容機會",
+        "wizRedAgent": "🔥 8/17 P1-HIGH 新進（AI security 敘事，72h 繁中首發窗口）",
+        "litellmSandclock": "🔥 8/17 P1 新進（供應鏈攻擊，可合併 Wiz 文章）"
+      },
+      "newAffiliatesFound": [
+        {
+          "name": "Reclaim.AI（完整確認）",
+          "commission": "40% recurring / 12 months（工作信箱）；25%（個人信箱）；+$1/工作信箱 signup",
+          "cookie": "90 天（getreditus.com 2026-08-08 驗證）",
+          "platform": "PartnerStack",
+          "pricing": "$0-20/月",
+          "url": "reclaim.ai/affiliate-program",
+          "priority": "P1",
+          "monthlyEst": "$100-400",
+          "note": "R167 首次確認（cookie 不確定），R168 三源完整確認（90天）"
+        }
+      ],
+      "estimatedNewRevenue": "$300-1,000/月（Wiz/AI security 文章 $200-600 + Reclaim.AI Ivan 申請後 $100-400）"
+    },
     {
       "timestamp": "2026-08-17T03:00:00Z",
       "agent": "seo-writer",

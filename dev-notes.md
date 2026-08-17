@@ -1,5 +1,54 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 168 | 2026-08-17 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-08-17 22:00 UTC | 搜尋範圍：GitHub trending + PH 月榜 + HN/SecurityAffairs + affiliate 掃描 + GLM-5.5 watchlist | 模式：降頻輕量掃描
+
+### 🔥 本輪核心：AI Coding Security 三連爆 + GLM-5.5 最後 48h
+
+**P1-HIGH — Wiz Red Agent vs GitHub Copilot Autofix（8/17 發布，繁中首發）**
+- Wiz 自主 AI 安全研究工具「Red Agent」發現 GitHub Copilot Autofix **自動引入** CI/CD script injection 漏洞（Snowflake 公開 repo）
+- Red Agent 無需人工介入直接利用此漏洞存取 Snowflake 內部 Jira（HackerOne responsible disclosure 6/23）
+- 「AI 找到 AI 製造的漏洞」敘事極具傳播力 → 繁中零深度分析，P1-HIGH 72h 窗口
+- 來源：wiz.io/blog/red-agent-snowflake-copilot-cicd-bug（2026-08-17）
+
+**P1 — LiteLLM SANDCLOCK 供應鏈攻擊（8/17）**
+- 攻擊者利用 LiteLLM 供應鏈，暴露 2,038 個 repo 憑證（科技/金融/醫療）
+- TheHackerNews + SecurityAffairs 同日報導，台灣開發者廣用 LiteLLM
+- 可合併 Wiz 文章為「AI 開發工具安全特輯」或獨立快訊
+
+**P1 — Invisible AI Prompts 法院制裁（8/17）**
+- SecurityAffairs：隱藏 prompt injection 導致法院制裁（法律後果首例）
+- 角度：「prompt injection 第一次被法院制裁，開發者需要知道的事 2026」
+
+**GLM-5.5 最後 48h 窗口**
+- aireleasetracker.com：Z.AI 預期下一版本 ~8/19（In 2 days）
+- evolink.ai 8/14：GLM-5.5 仍 unannounced（GLM-5.3 ≠ GLM-5.5）
+- 若 8/18-19 發布 → P0-URGENT seo-writer；若 8/21 仍無 → 降頻至月底
+
+**Reclaim.AI cookie 三源完整確認**
+- getreditus.com 2026-08-08 驗證：90天 cookie + 40%/12mo（工作信箱）+ $1/signup
+- Ivan P1 申請：reclaim.ai/affiliate-program（PartnerStack）
+
+**Wan-Animate-2 Apache 2.0 完整確認**
+- HuggingFace Wan-AI/Wan2.2-Animate-2-14B + ComfyUI 整合（Comfy-Org/Wan-Animate-2）
+- beats Dreamina + matched Kling-MotionControl，無 affiliate，P1 教學
+
+**GitHub 8/17 全球大當機**
+- 13:40-17:00 UTC 全球斷線，trending 資料不完整，下輪（8/19）補掃
+
+**Paritok → P2 純內容機會**
+- 無公開 affiliate 計畫確認，降為 P2
+
+### 📊 降頻驗證
+- 連續 11 輪（R158-R168）降頻策略驗證正確
+- 本輪最大發現來自 SecurityAffairs/Wiz（安全事件），非 GitHub trending（今日當機）
+
+### 📋 Directive 產出
+- 創建：directives/researcher-to-strategist-2026-08-17-round168.md
+
+---
+
 ## Round 156 | 2026-08-10 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-08-10 22:00 UTC | 搜尋範圍：GitHub trending + Product Hunt 月榜 + affiliate 掃描 | 模式：降頻輕量掃描
