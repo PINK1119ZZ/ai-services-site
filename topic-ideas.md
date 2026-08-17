@@ -232,3 +232,158 @@ R154（7 天前）competitor-watch 結論維持有效：
 ---
 
 *researcher agent — Round 166 完成於 2026-08-16 03:08 UTC*
+
+---
+
+## Round 167 — 2026-08-17 00:30 UTC（Mon 08:30 ai-trend-hunter cron）
+
+### 🔥 本輪核心發現
+
+**時間範圍：** 8/16-17，距上輪（R166 competitor-watch 8/16 03:08）約 21 小時
+
+---
+
+### 📌 一、新模型：DeepSeek V4-Pro-0813 正式 GA（P1-HIGH）
+
+**發布時間：** 2026-08-13/14（preview → GA）
+**來源：** yottalabs.ai 確認、Yahoo Finance、thursdai.news
+
+| 項目 | 詳情 |
+|---|---|
+| 模型 ID | deepseek-v4-pro（build 0813） |
+| 規格 | 1.6T total params / 49B active，1M context，384K max output |
+| License | MIT（可商業使用、可自部署）|
+| 定價 | $0.435/MTok input（cache miss）/ $0.003625（cache hit）/ $0.87 output |
+| 發布路徑 | 4/24 preview → 7/31 V4-Flash GA → **8/13-14 V4-Pro GA** |
+| 特點 | coding/reasoning/agentic SOTA，open weights（Hugging Face 166.9GB）|
+
+**變現評估：**
+- Affiliate：無直接 affiliate，間接用 DataCamp + DigitalOcean
+- 文章機會：繁中深度評測完全空白（英文只有 flash vs pro 比較，無繁中）
+- 關鍵字：「deepseek v4 pro 評測 2026」「deepseek v4-pro-0813 benchmark」「deepseek v4 vs gpt-5.6」
+- 估搜尋量：5K-15K/月（中文開發者需求強）
+- 預估月收入：$200-600（間接 DataCamp + DigitalOcean）
+- **建議：P1-HIGH seo-writer blog/deepseek-v4-pro-review-2026.html（繁中首發）**
+
+---
+
+### 🎬 二、Wan 3.0 Public Beta + Wan-Animate-2（P1 繁中機會）
+
+**來源：** thursdai.news August 2026 releases
+
+**Wan 3.0 Public Beta：**
+- Alibaba Tongyi Lab 推出公測，ThursdAI 直播前幾分鐘發布（估 8/14-15 UTC）
+- 30秒原生單鏡頭生成（native 30-second single-shot generation）
+- Omni-Reference 條件控制：文字 + 圖像 + 音頻 + 影片四種模態同時輸入
+- 預計開源（Wan 系列有開源傳統，weights 預計跟進）
+
+**Wan-Animate-2：**
+- 14B 參數，Apache 2.0 License，Hugging Face 開源
+- 盲測偏好 70%+ 勝過 Runway Act-Two 及 ByteDance DreamActor-M1
+- 角色動畫 + 角色替換雙模式
+
+**變現評估：**
+- Affiliate：無直接 Alibaba affiliate，DataCamp/DO 佔位
+- 文章機會：開源影片生成繁中零評測（Wan 系列未有繁中深度文章）
+- 關鍵字：「wan 3.0 評測 2026」「wan animate-2 教學」「ai 影片生成開源 2026」
+- 估搜尋量：2K-6K/月
+- 預估月收入：$150-400（間接，影片創作者受眾）
+- **建議：P1 seo-writer blog/wan-3-video-gen-review-2026.html（ThursdAI 爆量後繁中首發）**
+
+---
+
+### 🔍 三、Watchlist 狀態更新
+
+| 對象 | 狀態 | 備註 |
+|---|---|---|
+| GLM-5.5 | ⏳ 8/17 仍未發布 | Manifold 93% before Sep 2026（evolink.ai 8/14更新：GLM-5.3 ≠ GLM-5.5，GLM-5.5 unannounced）；watchlist 進入最後 2 週 |
+| Grok 5 | ⏳ 長期 watchlist | Manifold 5% before Oct 2026 → 近期不可能，改為 Q4 watchlist |
+| Grok 4.6 | ✅ 已發布（R165 記錄） | llm-stats.com 確認，xAI recent models 第一位 |
+| DeepSeek V4 Pro | ✅ 8/13-14 GA | P1-HIGH seo-writer 評測機會（繁中空白）|
+| Wan 3.0 / Wan-Animate-2 | 🆕 P1 新訊號 | ThursdAI 8/14-15 報導，開源影片生成繁中零評測 |
+
+---
+
+### 💰 四、新 Affiliate 發現：Reclaim.AI（P1）
+
+**來源：** PartnerStack 官方文章確認
+
+| 項目 | 詳情 |
+|---|---|
+| 名稱 | Reclaim.AI（AI 行事曆 / 時間管理） |
+| 佣金 | **40% recurring / 12個月**（工作信箱用戶）；25% 個人信箱；+$1/工作信箱導流 |
+| 平台 | PartnerStack |
+| 產品定位 | AI 自動保護專注時間、優化會議、工作生活平衡 |
+| Cookie | 未確認（PartnerStack 標準通常 90 天） |
+| 定價 | 估 $10-20/月（生產力 SaaS 標準） |
+| 優先級 | P1（40% > 30% 門檻，新受眾：職場生產力） |
+| 預估月收入 | $100-400 |
+| 建議 | Ivan 申請 reclaim.ai/affiliate（PartnerStack），R167 新發現 |
+
+---
+
+### 📊 五、Product Hunt August 月榜快照（8/17）
+
+無新變化（vs R166）：
+1. AdAnt AI (Claude for viral ads)
+2. Hey Noah (AI executive assistant)
+3. Wispr Flow (voice productivity)
+4. Dograh (open source VAPI alternative)
+5. Coldtea.ai (self-driving software)
+6. Grok (The world's smartest AI)
+7. Soloop (Approval-first Agent OS)
+8. Cloudflare
+9. TestMu AI（3.3K followers）
+10. NextDoor.Company
+
+**注意：TestMu AI 持續在 #9，Ivan 申請 affiliate 後 P1-HIGH 文章機會**
+
+---
+
+### 📈 六、GitHub Trending（8/17）
+
+本輪搜尋無特定爆量新訊號。carryover 仍有效：
+- unsloth（71K★，本地 LLM 訓練 UI，支援 Qwen3.8/Kimi K3，繁中空白，P1）
+- Agent-Reach（64K★ carryover，14+ rounds）
+
+---
+
+### 🎯 七、降頻策略驗證
+
+降頻策略連續 **10 輪**（R158-R167）驗證正確。本輪無重複搜尋，新訊號清晰，搜尋效率高。
+
+---
+
+### 📌 本輪總結（R167 ai-trend-hunter）
+
+- 🆕 **DeepSeek V4-Pro-0813 GA**（8/13-14，MIT，1.6T/49B active，繁中空白，P1-HIGH seo-writer）
+- 🆕 **Wan 3.0 Beta + Wan-Animate-2**（Alibaba，30s 單鏡頭，開源影片生成，繁中零評測，P1）
+- ⏳ **GLM-5.5 watchlist 進入最後 2 週**（Manifold 93% before Sep，8/17 仍未發布）
+- 📉 **Grok 5 watchlist 降頻**（Manifold 5% before Oct，改 Q4 監控）
+- 💰 **新 affiliate：Reclaim.AI 40%/12mo**（PartnerStack，工作行事曆，Ivan P1）
+- 📊 **PH 月榜無新變化**，TestMu AI 持續 #9
+- 📉 **GitHub trending：無新 P1+ 爆量訊號**
+- **預估新增月收入潛力：$450-1,400/月**（DeepSeek V4 Pro $200-600 + Wan 3.0 $150-400 + Reclaim.AI $100-400）
+
+---
+
+### 執行建議
+
+#### seo-writer（優先級依序）
+1. **P1-HIGH carryover：blog/claude-opus-5-review-2026.html**（R165+R166 雙確認，繁中深度空白）
+2. **P1-HIGH：blog/deepseek-v4-pro-review-2026.html**（R167 新發現，MIT GA，繁中首發）
+3. **P1：blog/wan-3-video-gen-review-2026.html**（R167，Wan 3.0 + Wan-Animate-2，影片創作者受眾）
+4. **P1 carryover：補完 blog/atlassian-rovo-data-risk-2026.html + blog/seedance-25-review-2026.html**（stub，affiliate monitor 追蹤）
+5. **P1 carryover：blog/krater-ai-review-2026.html**（R166，Ivan 批准後）
+6. **P1 carryover：blog/testmu-ai-kane-cli-review-2026.html**（R164，Ivan 批准後）
+
+#### Ivan
+- **P1 新增：申請 Reclaim.AI affiliate → reclaim.ai/affiliate（PartnerStack，40% recurring/12mo，R167 新發現）**
+- **P1-HIGH carryover：申請 Krater AI affiliate → Dub Partners（25%/12mo + $1K bonus，R166）**
+- **P1-HIGH carryover：申請 TestMu AI affiliate → testmuai.com/partners（50%/25%/15% recurring，R164）**
+- **P0-URGENT carryover：上架 claude-code-prompt-pack-2026（第 16 週！）**
+- **P0-URGENT carryover：申請 Kit affiliate → kit.com/affiliate（13+ 輪！）**
+
+---
+
+*researcher agent — Round 167 完成於 2026-08-17 00:30 UTC*
