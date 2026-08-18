@@ -387,3 +387,154 @@ R154（7 天前）competitor-watch 結論維持有效：
 ---
 
 *researcher agent — Round 167 完成於 2026-08-17 00:30 UTC*
+
+---
+
+## Round 169 — 2026-08-18 00:30 UTC（Tue ai-trend-hunter cron）
+
+### 🔍 本輪掃描範圍
+AI 模型新發布、HN 8/18 熱門、Product Hunt 8/17 日榜、GitHub trending 8/18、新 affiliate 機會、GLM-5.5 最後 24h 窗口
+
+---
+
+### 🔥 發現 1：Qwen3.8-27B 正式 GA（8/14 Apache 2.0 開源）
+
+| 欄位 | 資訊 |
+|------|------|
+| 工具 | Qwen3.8-27B（Alibaba Qwen Team） |
+| 發布日 | 2026-08-14 15:00 UTC |
+| License | Apache 2.0 |
+| 規格 | 27B dense，vision multimodal，262K context（YaRN 可達 1M），17GB GGUF 4-bit quant |
+| 表現 | OSWorld 84.3%（vs Max 86.1%），SWE-bench Pro 61.7%，benchmarks 超越 Qwen3.7-Plus + Claude Opus 4.6 agentic tasks |
+| 已確認 | Simon Willison 8/16 部落格 + benchlm.ai + local-ai-zone.github.io 8/15 + WorldofAI YT 232K subs 374 likes |
+| affiliate | 無直接 affiliate（Alibaba Cloud API 暫無公開計畫） |
+| 關鍵字 | `qwen3.8-27b 評測 2026`、`qwen3.8-27b 本機部署`、`最佳本地 AI 模型 2026`、`qwen 27b 安裝教學`、`qwen vs claude opus local` |
+| 搜尋量 | 估 5K-15K/月（27B 本機部署類，R168 agentLog 記載 latestOpportunities 有 Qwen3.8-27B 教學 P1） |
+| 變現方式 | DigitalOcean（VPS 本機跑）+ DataCamp（AI 學習）CTA 嵌入 |
+| 預估月收入 | $300-700 |
+| 建議站點 | autodev-ai.com（開發者受眾完美吻合） |
+| 優先級 | **P1-HIGH**（已發布 4 天，繁中本機部署教學仍空白，72h 後窗口縮窄） |
+
+**繁中機會分析：** Simon Willison（標竿 AI 部落客）8/16 深度評測確認，WorldofAI YT 6,356 views，繁中目前零深度本機部署教學。"17GB 跑 Claude Opus 等級" 是爆款角度。
+
+---
+
+### 🔥 發現 2：Claude 文字浮水印爭議（HN 484pts，Daring Fireball Gruber 批評）
+
+| 欄位 | 資訊 |
+|------|------|
+| 工具 | Anthropic Claude（EU AI Act 合規浮水印） |
+| 事件日 | 2026-08-11（TechCrunch 首發），2026-08-17（HN Daring Fireball 484pts） |
+| 爭議核心 | EU AI Act 8/2 生效 → Claude 新模型嵌入機器可讀浮水印（persist through copy-paste），Gruber 稱「text adulteration」，HN 444 留言 |
+| 資料來源 | techcrunch.com/2026/08/11 + trendingtopics.eu 確認 + HN 484pts 444 comments |
+| affiliate | 無直接（Anthropic 無公開 affiliate） |
+| 關鍵字 | `claude 浮水印 2026`、`anthropic watermark EU AI Act`、`claude ai 標記 台灣`、`EU AI Act 8月 生效 AI 工具`、`claude 浮水印 怎麼辦` |
+| 搜尋量 | 估 3K-8K/月（時效類，72h 窗口剩 ~54h） |
+| 變現方式 | DataCamp（AI literacy）+ Anthropic 替代工具比較（帶 affiliate）間接導流 |
+| 預估月收入 | $100-300（純內容流量，無直接 affiliate） |
+| 建議站點 | autodev-ai.com |
+| 優先級 | **P1**（高流量時效題材，Gruber 8/17 更新讓窗口再開 48h，但無直接 affiliate，優先級低於 P1-HIGH 有 affiliate 的主題） |
+
+**繁中機會分析：** HN 484pts 是本週最高討論熱度，繁中媒體（T客邦/iThome）迄今只有 EU AI Act 單邊報導，沒有「台灣用戶用 Claude 寫文章會被標記？」的深入分析，是很好的 SEO 落地角度。
+
+---
+
+### 🔥 發現 3：AdCreative.ai 30-40% LIFETIME affiliate（P1-HIGH 觸發 30%+ 門檻）
+
+| 欄位 | 資訊 |
+|------|------|
+| 工具 | AdCreative.ai |
+| 佣金 | **30% recurring LIFETIME**（Bronze），可升至 40%（Gold tier） |
+| Cookie | **90 天**（notta.ai 確認 40%/90-day） |
+| 最低提款 | 無最低門檻（adcreative.ai 官方）/ $5（其他來源）|
+| 平台 | PartnerStack（PayPal / Stripe 月付） |
+| 定價 | $29-299/月（4.2M marketers 使用） |
+| 驗證來源 | adcreative.ai/affiliate 官方 + partnerstack.com 2026 + adskull.io（June 2026 verified）+ notta.ai |
+| 關鍵字 | `adcreative.ai 評測 2026`、`AI 廣告素材生成工具`、`AI ad creative 台灣`、`adcreative vs canva 比較`、`AI 行銷工具推薦 2026` |
+| 搜尋量 | 估 2K-5K/月（行銷 AI 工具類，繁中零深度評測） |
+| 預估月收入 | **$300-900**（LIFETIME 複利，月費 $29-299 × 30%） |
+| 建議站點 | autodev-ai.com 或 ai-tools.pro（行銷工具受眾） |
+| 優先級 | **P1-HIGH（觸發 30%+ LIFETIME 門檻）→ 寫 directive 給 strategist** |
+
+**為何值得注意：** LIFETIME（非 12mo）+ 90天 cookie + 無最低提款 + 4.2M 用戶基礎 = 複利效果強。Ivan 可直接在 PartnerStack 申請，2 天審核。
+
+---
+
+### 📡 發現 4：GLM-5.5 最後 24h 窗口（Z.AI 預期 8/19）
+
+| 欄位 | 資訊 |
+|------|------|
+| 工具 | GLM-5.5（Z.AI） |
+| 狀態 | **8/18 00:30 UTC 仍未發布** |
+| 預期 | aireleasetracker.com 顯示 Z.AI 預期 8/19（tomorrow）— 最後 24h 窗口 |
+| 行動 | 若 8/19 發布 → P0-URGENT，seo-writer 72h 繁中首發 |
+| 備選 | 若 8/19 仍未發布 → 延至 8/25 watchlist（或 Z.AI 官方推延宣布） |
+| affiliate | 無直接（Z.AI 無公開 affiliate），間接 DigitalOcean + DataCamp |
+
+---
+
+### 📡 發現 5：HN 8/18 熱門訊號彙整
+
+| 排名 | 標題 | 分數 | 繁中機會 |
+|------|------|------|---------|
+| #1 | GitHub.com 大當機（incident） | 98pts | 無（系統事件） |
+| #2 | GPT-5.6 Sol 是 OpenAI 最強 vision 模型（Roboflow） | 70pts | P2 — 更新現有 GPT 比較頁 |
+| #9 | Dario Amodei AI regulation tweet | 150pts | P2 — 法規觀察 |
+| #11 | Claude 浮水印「文字竄改」— Daring Fireball | 484pts | **P1（同發現 2）** |
+| #29 | The AI Credit Resale Economy | 314pts | P2 — 新題材，API resale 黑市 |
+| – | GitHub 再次停擺（PR access gone） | 23pts | 無 |
+
+**新題材：AI Credit Resale Economy（314pts）** — 有人在轉賣 OpenAI/Anthropic API credit，黑市定價。繁中完全零報導。可作「AI API 省錢攻略」角度切入，間接帶 DigitalOcean + DataCamp CTA。估 $100-200/月，P2。
+
+---
+
+### 📡 發現 6：Product Hunt 8/17 日榜快照
+
+| 排名 | 產品 | 類型 | affiliate |
+|------|------|------|-----------|
+| #1 | Meridian | AI calendar/productivity | 待確認 |
+| #2 | Omni by xpander | AI agent platform | 待確認 |
+| #3 | Clears | AI task manager | 無（免費工具） |
+| #8 | Treg | OpenRouter for tools，2,617 endpoints，AGPL 開源，0% markup | **無**（開源，Jason Zhou） |
+
+**Treg 分析：** "OpenRouter for AI agent tools" 是未來熱門題材（agent API routing），但無 affiliate，Simon Willison 前評論模式可作 P2 教學文。autodev-ai 開發者受眾吻合。
+
+---
+
+### 📡 發現 7：GitHub trending 8/18（ossinsight 今日資料延遲）
+
+ossinsight.io/trending/ai 今日顯示 0 repos（抓取延遲），無新 P1+ 爆量訊號可確認。
+
+**參考來源（間接）：** Medium/TowardsAI 2026 GitHub top 11 repos 彙整：Ollama、Open WebUI、OpenClaw、Langflow、Dify、n8n 仍是 2026 主力框架，agentic AI 進入 infrastructure 階段。無新 P1+ 爆量訊號。
+
+---
+
+### 💰 本輪新 Affiliate 彙整
+
+| 名稱 | 佣金 | Cookie | 平台 | 月收入估計 | 優先級 | 申請連結 |
+|------|------|--------|------|-----------|--------|---------|
+| **AdCreative.ai** | **30-40% LIFETIME** | **90天** | PartnerStack | **$300-900** | **P1-HIGH** | adcreative.ai/affiliate |
+
+---
+
+### 📊 本輪執行建議
+
+#### seo-writer（優先級依序）
+1. **P1-HIGH：blog/qwen-38-27b-local-deploy-2026.html**（R169 新發現，Apache 2.0，繁中本機部署教學空白，角度：「17GB 跑 Claude Opus 等級，本機 AI 革命」）
+2. **P1-HIGH carryover：blog/deepseek-v4-pro-review-2026.html**（R167 確認，MIT，繁中首發）
+3. **P1：blog/claude-watermark-eu-ai-act-2026.html**（R169 Claude 浮水印 HN 484pts，時效 ~54h 剩餘）
+4. **P1 carryover：blog/wan-3-video-gen-review-2026.html**（R167，Wan 3.0 + Wan-Animate-2）
+5. **P1 carryover：補完 blog/atlassian-rovo-data-risk-2026.html + blog/seedance-25-review-2026.html**（stub）
+6. **P1 carryover（Ivan 批准後）：blog/adcreative-ai-review-2026.html**（R169 新 30-40% LIFETIME）
+
+#### Ivan
+- **P1-HIGH 新增：申請 AdCreative.ai affiliate → adcreative.ai/affiliate（PartnerStack，30-40% LIFETIME，90-day cookie，R169 觸發 30%+ 門檻）**
+- **P1 carryover：申請 Reclaim.AI → reclaim.ai/affiliate（40%/12mo，R167）**
+- **P1-HIGH carryover：申請 Krater AI → Dub Partners（25%/12mo + $1K bonus，R166）**
+- **P1-HIGH carryover：申請 TestMu AI → testmuai.com/partners（50%/25%/15%，R164）**
+- **P0-URGENT carryover：上架 claude-code-prompt-pack-2026（第 17 週！）**
+- **P0-URGENT carryover：申請 Kit affiliate → kit.com/affiliate（14+ 輪！）**
+
+---
+
+*researcher agent — Round 169 完成於 2026-08-18 00:30 UTC*
