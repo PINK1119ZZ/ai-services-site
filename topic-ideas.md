@@ -538,3 +538,141 @@ ossinsight.io/trending/ai 今日顯示 0 repos（抓取延遲），無新 P1+ �
 ---
 
 *researcher agent — Round 169 完成於 2026-08-18 00:30 UTC*
+
+---
+
+## Round 170 — 2026-08-19 00:30 UTC（Wed 08:30 ai-trend-hunter cron）
+
+### 📡 發現 1：GLM-5.5 仍未發布 — watchlist 延至 8/25
+
+| 欄位 | 資訊 |
+|------|------|
+| 工具 | GLM-5.5（Z.AI） |
+| 狀態 | **8/19 00:30 UTC 仍未發布** |
+| 來源 | Wikipedia GLM (AI) 頁面：stable release = GLM-5.3（8/14/2026），felloai.com：GLM-5.3 shipped 8/14，打破發布節奏（benchmarks 到，weights 未到）；kie.ai：GLM-5.5 unreleased，August 2026 target（JPMorgan/Reuters 6/25） |
+| 分析 | aireleasetracker.com R169 顯示「Z.AI 預期 8/19」但 8/19 仍無官方宣布，推測 delay；GLM-5.5 規格傳聞：1T+ 參數、1M context、open weights、coding agent focus |
+| 行動 | watchlist 延至 8/25；若發布 → P0-URGENT，seo-writer 72h 繁中首發 |
+| affiliate | 無直接，間接 DigitalOcean + DataCamp |
+
+---
+
+### 📡 發現 2：GitHub Trending 8/19 — omlx + OpenCut 爆量
+
+#### omlx — Apple Silicon LLM 推理伺服器（P1-HIGH）
+
+| 欄位 | 資訊 |
+|------|------|
+| 工具 | jundot/omlx |
+| 描述 | LLM inference server with continuous batching & SSD caching for Apple Silicon，macOS menu bar 管理 |
+| 數據 | **19,231 Stars，1,652 Forks，366 stars today（GitHub trending 8/19）** |
+| 技術 | Apache 2.0，Python，解決 KV cache invalidation 問題（AI coding agent 場景），支援 Claude Code context scaling、DeepSeek V4 opt-in 8-bit、GLM-5.2、MiniMax M3 custom kernels |
+| 活躍度 | 8/18 單日 PR 爆量（#2792-#2832，40+ PRs in one day），v0.4.4 6/16，上次 push 6/30 |
+| 繁中狀況 | 繁中教學完全空白，CapCut 替代視角（不對，這是 LLM）→ 本機 Mac AI 推理工具教學空白 |
+| affiliate | 無直接（開源），間接 DigitalOcean（Mac VPS）+ DataCamp（ML 學習）+ Gumroad kknad |
+| SEO keywords | omlx 教學、Apple Silicon LLM 本機部署、Mac AI 推理伺服器、omlx vs ollama 2026 |
+| 搜尋量估計 | 1K-3K/月（新興工具，Mac 開發者受眾） |
+| 預估月收入 | $100-300（無直接 affiliate，流量 + 品牌） |
+| 優先級 | **P1（Apple Silicon 本機 AI 熱門題材，繁中零競品，366 stars today 強訊號）** |
+| 建議站點 | autodev-ai.com（開發者受眾） |
+
+#### OpenCut — 開源 CapCut 替代品（P2）
+
+| 欄位 | 資訊 |
+|------|------|
+| 工具 | OpenCut-app/OpenCut |
+| 描述 | 開源 CapCut 替代品，web + desktop + mobile，MIT 授權 |
+| 數據 | **84,533 Stars，8,337 Forks，682 stars today（GitHub trending 8/19 #1）** |
+| 技術 | TypeScript，MIT，Rust engine（WebAssembly + WGPU），MCP 整合，headless rendering |
+| 背景 | 45K+ stars under 1 year，Vercel + fal.ai 贊助，YouTube 教學已有（4.3K views） |
+| affiliate | 無直接（MIT 開源），間接 CapCut Pro → 可對比文章帶 Canva/Adobe 聯盟 |
+| SEO keywords | OpenCut 教學 2026、opencut vs capcut 2026、開源影片剪輯工具 |
+| 搜尋量估計 | 2K-5K/月（CapCut 搜尋外溢） |
+| 預估月收入 | $50-150（間接，無直接 affiliate） |
+| 優先級 | **P2（682 stars today 強訊號，但無直接 affiliate，低變現天花板）** |
+| 建議站點 | autodev-ai.com（創作者 + 開發者交叉受眾） |
+
+---
+
+### 📡 發現 3：Product Hunt August 月榜更新（8/19）
+
+| 排名 | 產品 | 說明 | affiliate 狀況 |
+|------|------|------|---------------|
+| #1 | AdAnt AI | Claude for viral social ads | 待確認（R169 carryover） |
+| #1 | Hey Noah | Proactive AI executive assistant | 待確認 |
+| #3 | Wispr Flow | Voice productivity（8.7K followers） | 待確認 |
+| #7 | Soloop | Approval-first Agent OS for solo founders，1.1K followers，PH 8/7 Launch of the Day | 無公開 affiliate（startup 早期）|
+| #8 | Cloudflare OS | Build AI OS for your company | 無（Cloudflare 無 affiliate）|
+| #9 | TestMu AI | AI QE platform，3.3K followers | **已確認（R164-165，50%/25%/15%，90-day，Ivan 待申請）** |
+| #16 | Meridian | "Don't let your work go unnoticed" productivity | 待確認 |
+| 8/18 日榜 | Clipwing Autopilot | AI clip editor，無 slop | 待確認 |
+| 8/18 日榜 | Reckon | Decision journal | 無（工具類） |
+| 8/18 日榜 | Hubble | Medical records API | 無（B2B enterprise） |
+
+**新訊號 Soloop（PH #7 August 月榜，PH 8/7 Launch of Day）：**
+- "Approval-first Agent OS for solo founders"，AI 代理 + 人工審批混合模式
+- 繁中零評測，適合 autodev-ai 開發者/solo founder 受眾
+- 無公開 affiliate，純教學 P2 機會
+- SEO keywords：soloop 評測 2026、approval-first agent、AI 創業工具
+
+---
+
+### 📡 發現 4：新 Affiliate 掃描 — Notion 50%/12mo 重新確認
+
+| 名稱 | 佣金 | 說明 |
+|------|------|------|
+| **Notion** | **50% recurring / 12 months** | loopcv.pro 2026 確認：50% on new subscriptions for first 12 months，huge brand pull，productivity audience，per-seat modest pricing → volume play |
+| Writesonic | ~30% recurring | customgpt.ai 2026 清單確認，AI writing 受眾吻合 |
+| SEMrush | 30-40% recurring | tapfiliate.com 2026 確認：30-40% on new signups + renewals，30-day cookie |
+
+**Notion affiliate 評估：**
+- 佣金：50%/12mo（業界頂級，高於 AdCreative.ai 30% LIFETIME 單月期間）
+- 受眾：台灣知識工作者、學生、創業者（完美吻合 autodev-ai）
+- 繁中評測：T客邦/數位時代有輕度報導，無深度 Notion AI 繁中教學
+- SEO keywords：Notion AI 評測 2026、notion ai 費用、notion vs obsidian 2026
+- 預估月收入：$300-800（affiliate 50%/12mo + 台灣使用情境）
+- 優先級：**P1-HIGH（50% 超過 30% 門檻，若 Ivan 未申請 → 觸發 directive）**
+- 申請：notion.so/affiliate（Partner Stack 或直接）
+
+---
+
+### 📡 發現 5：HN / 技術社群 8/19 訊號
+
+| 來源 | 訊號 | 繁中機會 |
+|------|------|---------|
+| HN（Anthropic Risk Aug 2026 PDF） | Anthropic 風險報告討論：「27B local model 就是 6-8 個月前的 SOTA」討論串，smaller models catching up 敘事 | Qwen3.8-27B 本機部署仍是 P1-HIGH，敘事吻合「SOTA 下放」|
+| demandsphere.com | frontier model tracker 最新：Qwen3.8-Max 8/15 GA，Claude Opus 5 7/24，無 8/19 新模型 | 確認無新 P0 模型發布 |
+| llmgateway.io | 最新仍 Seedance 2.5（8/8），48h 內會更新 | 確認無新模型 |
+| GitHub trending | omlx 366★/today，OpenCut 682★/today，genlayer-project-boilerplate 543★/today（TypeScript，AI-native smart contracts） | omlx P1-HIGH，genlayer P3（Web3+AI 受眾不吻合）|
+| OrangeBot PH 8/18 | Clipwing Autopilot #18、Reckon #19、Salem Robotics #20、Hubble #21 | 無高價值 affiliate 發現 |
+
+---
+
+### 💰 本輪 Affiliate 彙整
+
+| 名稱 | 佣金 | Cookie | 平台 | 月收入估計 | 優先級 | 申請連結 |
+|------|------|--------|------|-----------|--------|---------|
+| **Notion** | **50% / 12mo** | 待確認（推測 30-90天）| 待確認（PartnerStack 可能）| **$300-800** | **P1-HIGH（觸發 30%+ 門檻）** | notion.so/affiliate |
+
+---
+
+### 📊 本輪執行建議
+
+#### seo-writer（優先級依序）
+1. **P1-HIGH carryover：blog/qwen-38-27b-local-deploy-2026.html**（R169 發現，繁中本機部署零教學，HN 討論「27B = 6-8mo old SOTA」敘事吻合）
+2. **P1-HIGH carryover：blog/deepseek-v4-pro-review-2026.html**（R167-169 carryover，MIT，繁中首發）
+3. **P1（新）：blog/omlx-apple-silicon-llm-server-2026.html**（8/19 366★/today，繁中零教學，Mac AI coding 開發者受眾）
+4. **P1 carryover：blog/claude-watermark-eu-ai-act-2026.html**（時效延長，EU AI Act 持續效期）
+5. **P1 carryover：blog/wan-3-video-gen-review-2026.html**（Wan 3.0 + Wan-Animate-2 教學）
+6. **P2：blog/opencut-vs-capcut-2026.html**（682★/today，但無直接 affiliate，低優先）
+
+#### Ivan
+- **P1-HIGH 新增：確認/申請 Notion affiliate → notion.so/affiliate（50%/12mo，觸發 30%+ 門檻，R170）**
+- **P1-HIGH carryover：申請 AdCreative.ai affiliate → adcreative.ai/affiliate（30-40% LIFETIME，R169）**
+- **P1 carryover：申請 Reclaim.AI → reclaim.ai/affiliate（40%/12mo，R167）**
+- **P1-HIGH carryover：申請 Krater AI → Dub Partners（25%/12mo + $1K bonus，R166）**
+- **P0-URGENT carryover：上架 claude-code-prompt-pack-2026（第 17 週！）**
+- **P0-URGENT carryover：申請 Kit affiliate → kit.com/affiliate（15+ 輪！）**
+
+---
+
+*researcher agent — Round 170 完成於 2026-08-19 00:30 UTC*
