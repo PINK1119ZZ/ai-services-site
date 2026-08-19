@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>n8n × Claude Code 工作流程模板包 2026：5 個可直接匯入的自動化 Workflow | AutoDev AI</title>
+<meta content="n8n × Claude Code 工作流程自動化模板包：5 個可直接匯入的 JSON workflow，涵蓋 GitHub PR 摘要、內容自動發布、潛客分類、LINE Bot 智慧回覆、每日 GitHub Trending 報告。繁中首創，台灣開發者即用。" name="description"/>
+<link href="https://autodev-ai.com/blog/n8n-claude-code-workflow-templates-2026.html" rel="canonical"/>
+<link href="https://autodev-ai.com/blog/n8n-claude-code-workflow-templates-2026.html" hreflang="zh-Hant" rel="alternate"/>
+<link href="https://autodev-ai.com/blog/n8n-claude-code-workflow-templates-2026.html" hreflang="x-default" rel="alternate"/>
+<meta content="n8n × Claude Code 工作流程模板包 2026：5 個可直接匯入的自動化 Workflow" property="og:title"/>
+<meta content="5 個可直接匯入的 n8n × Claude Code workflow JSON。GitHub PR 摘要、內容發布、LINE Bot 智慧回覆、Trending 報告，10 分鐘上手。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://autodev-ai.com/blog/n8n-claude-code-workflow-templates-2026.html" property="og:url"/>
+<meta content="https://autodev-ai.com/autodev-logo2.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="#FFF8F3" name="theme-color"/>
+<meta content="n8n claude code 模板,n8n workflow 模板,n8n 自動化 claude,n8n json 匯入,n8n claude 教學 2026,n8n 工作流程自動化,claude code n8n 整合" name="keywords"/>
+<meta content="AutoDev AI" name="author"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Noto+Serif+TC:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"n8n × Claude Code 工作流程模板包 2026：5 個可直接匯入的自動化 Workflow","description":"5 個可直接匯入的 n8n × Claude Code workflow JSON，涵蓋 GitHub PR 摘要、內容自動發布、潛客分類、LINE Bot 智慧回覆、GitHub Trending 報告。繁中首創。","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-08-19","dateModified":"2026-08-19","mainEntityOfPage":"https://autodev-ai.com/blog/n8n-claude-code-workflow-templates-2026.html","image":"https://autodev-ai.com/autodev-logo2.png"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"n8n × Claude Code 模板包是什麼格式？","acceptedAnswer":{"@type":"Answer","text":"模板包含 5 個標準 n8n JSON 檔案，可直接透過 n8n 的「Import Workflow」功能匯入，不需要手動複製節點。每個 JSON 都附有完整的繁中 README 說明前置需求與設定步驟。"}},{"@type":"Question","name":"使用模板需要什麼前置條件？","acceptedAnswer":{"@type":"Answer","text":"需要一個運行中的 n8n 實例（自架或 n8n Cloud）、Anthropic Claude API Key，以及對應 workflow 的第三方帳號（例如 GitHub、LINE Developers、Notion）。每個 workflow 的 README 都有詳細的 API 設定說明。"}},{"@type":"Question","name":"n8n 需要付費嗎？","acceptedAnswer":{"@type":"Answer","text":"n8n 開源版可自架完全免費。架在 DigitalOcean $6/月 Droplet 上即可穩定運行所有 5 個 workflow，是最省成本的做法。"}},{"@type":"Question","name":"這些模板可以修改嗎？","acceptedAnswer":{"@type":"Answer","text":"完全可以。JSON 格式讓你可以在 n8n 介面中自由調整每個節點的設定、新增條件邏輯或串接其他服務，不限制使用方式。"}},{"@type":"Question","name":"模板包包含哪 5 個 Workflow？","acceptedAnswer":{"@type":"Answer","text":"(1) GitHub PR → Claude 摘要 → LINE Notify；(2) Claude 生成文章 → 自動發布 GitHub Pages + Facebook；(3) 表單潛客 → Claude 分類 → Notion 存檔 + 自動回信；(4) LINE Bot 接收訊息 → Claude 智慧回覆；(5) 每日 GitHub Trending → Claude 整理摘要 → Telegram 推送。"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://autodev-ai.com/"},
+  {"@type":"ListItem","position":2,"name":"Blog","item":"https://autodev-ai.com/blog/"},
+  {"@type":"ListItem","position":3,"name":"n8n × Claude Code 工作流程模板包 2026"}
+]}
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482625906579389"></script>
+<style>
+.blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
+.blog-article h2 { color: var(--primary); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
+.blog-article h3 { color: var(--text); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
+.blog-article p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.2rem; }
+.blog-article ul, .blog-article ol { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.blog-article li { margin-bottom: 0.5rem; }
+.blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; text-align: center; }
+.blog-meta span { margin: 0 0.5rem; }
+.price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+.price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.price-table th { color: var(--primary); font-weight: 700; background: rgba(184,148,106,0.1); }
+.price-table td { color: var(--text-muted); }
+.price-table tr:hover td { background: rgba(184,148,106,0.05); }
+.highlight-box { background: rgba(184,148,106,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0; margin: 1.5rem 0; }
+.highlight-box p { margin-bottom: 0; color: var(--text); }
+.case-box { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; }
+.case-box h4 { color: #10b981; font-size: 1rem; margin: 0 0 0.8rem; }
+.case-box p { color: var(--text-muted); margin-bottom: 0.5rem; }
+.step-box { background: rgba(184,148,106,0.06); border: 1px solid rgba(184,148,106,0.15); border-radius: 4px; padding: 1.5rem; margin: 1rem 0; }
+.step-box h4 { color: var(--primary); font-size: 1rem; margin: 0 0 0.5rem; }
+.step-box p { color: var(--text-muted); margin-bottom: 0; }
+.product-hero { background: linear-gradient(135deg, rgba(184,148,106,0.12), rgba(184,148,106,0.04)); border: 1px solid rgba(184,148,106,0.3); border-radius: 12px; padding: 2.5rem; margin: 2rem 0; text-align: center; }
+.product-hero .price { font-size: 3rem; font-weight: 900; color: var(--primary); line-height: 1; }
+.product-hero .price-note { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem; }
+.product-hero h2 { margin: 0 0 0.5rem; border: none; padding: 0; font-size: 1.4rem; }
+.product-hero p { margin-bottom: 1.5rem; }
+.btn-product { display: inline-block; background: var(--primary); color: #1a1209; font-weight: 800; padding: 1rem 2.5rem; border-radius: 6px; text-decoration: none; font-size: 1.1rem; transition: opacity 0.2s; margin: 0.5rem; }
+.btn-product:hover { opacity: 0.85; }
+.btn-secondary-outline { display: inline-block; border: 2px solid rgba(184,148,106,0.4); color: var(--primary); font-weight: 700; padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; font-size: 1rem; transition: all 0.2s; margin: 0.5rem; }
+.btn-secondary-outline:hover { border-color: var(--primary); background: rgba(184,148,106,0.1); }
+.workflow-card { border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; margin: 1rem 0; background: rgba(255,255,255,0.03); }
+.workflow-card .wf-num { display: inline-block; background: var(--primary); color: #1a1209; font-weight: 800; font-size: 0.75rem; padding: 2px 8px; border-radius: 20px; margin-bottom: 0.8rem; }
+.workflow-card h3 { color: var(--text); font-size: 1.05rem; margin: 0 0 0.5rem; }
+.workflow-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
+.workflow-card .wf-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 0.8rem; }
+.workflow-card .wf-tag { background: rgba(184,148,106,0.12); color: var(--primary); font-size: 0.75rem; padding: 2px 8px; border-radius: 20px; }
+.include-list { list-style: none; padding: 0; }
+.include-list li { padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: flex-start; gap: 0.8rem; color: var(--text-muted); }
+.include-list li:last-child { border-bottom: none; }
+.include-list li::before { content: "✓"; color: #10b981; font-weight: 700; flex-shrink: 0; }
+.compare-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
+.compare-table th, .compare-table td { padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.9rem; }
+.compare-table th { color: var(--primary); font-weight: 700; background: rgba(184,148,106,0.1); }
+.compare-table td { color: var(--text-muted); }
+.compare-table tr:hover td { background: rgba(184,148,106,0.04); }
+.faq-section { margin-top: 3rem; }
+.faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 1.5rem 0; }
+.faq-item h3 { color: var(--text); font-size: 1.05rem; margin: 0 0 0.8rem; }
+.faq-item p { color: var(--text-muted); margin-bottom: 0; }
+.reading-time { text-align: center; color: #888; font-size: 0.9rem; margin-bottom: 1.5rem; }
+.toc { background: rgba(184,148,106,0.08); border: 1px solid rgba(184,148,106,0.2); border-radius: 4px; padding: 1rem 1.5rem; margin-bottom: 2rem; }
+.toc summary { cursor: pointer; font-weight: 700; color: #B8946A; font-size: 1.1rem; }
+.toc ul { list-style: none; padding-left: 0; margin-top: 0.8rem; }
+.toc li { margin-bottom: 0.5rem; }
+.toc a { color: #B8946A; text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+.related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+.related-articles h2 { text-align: center; margin-bottom: 1.5rem; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.related-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 1.2rem; text-decoration: none; transition: all 0.3s; display: block; }
+.related-card:hover { border-color: rgba(184,148,106,0.5); transform: translateY(-2px); }
+.related-card h3 { color: #e2e8f0; font-size: 1rem; margin: 0 0 0.5rem; }
+.related-card p { color: #94a3b8; font-size: 0.85rem; margin: 0; }
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="主選單">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">AutoDev AI</a>
+    <ul class="nav-links">
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/tools/">工具</a></li>
+      <li><a href="/pricing.html">定價</a></li>
+      <li><a href="/about.html">關於</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="page-hero" style="padding:5rem 1.5rem 3rem; text-align:center;">
+  <div style="max-width:760px; margin:0 auto;">
+    <div style="display:inline-block; background:rgba(184,148,106,0.15); border:1px solid rgba(184,148,106,0.3); border-radius:20px; padding:4px 14px; font-size:0.8rem; color:var(--primary); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:1rem;">數位產品 · 即用模板</div>
+    <h1 style="font-size:clamp(1.7rem,4vw,2.8rem); font-weight:900; line-height:1.2; margin-bottom:1rem;">n8n × Claude Code<br/>工作流程自動化模板包 v1.0</h1>
+    <p style="color:var(--text-muted); font-size:1.1rem; max-width:600px; margin:0 auto 1.5rem;">5 個可直接匯入的 n8n workflow JSON，不是 prompt dump，是真正跑得起來的自動化流程。10 分鐘內讓 Claude 幫你自動處理 PR 摘要、內容發布、LINE Bot 回覆。</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; font-size:0.9rem; color:var(--text-muted);">
+      <span>📅 2026-08-19</span>
+      <span>⏱ 閱讀約 6 分鐘</span>
+      <span>🔧 n8n + Claude API</span>
+      <span>🇹🇼 繁中首創</span>
+    </div>
+  </div>
+</header>
+
+<main>
+<article class="blog-article">
+
+<!-- TOC -->
+<details class="toc" open>
+  <summary>📋 目錄</summary>
+  <ul>
+    <li><a href="#what-is-this">模板包是什麼？</a></li>
+    <li><a href="#5-workflows">5 個 Workflow 詳解</a></li>
+    <li><a href="#vs-scratch">為什麼不自己從頭建？</a></li>
+    <li><a href="#requirements">前置需求</a></li>
+    <li><a href="#quickstart">10 分鐘快速上手</a></li>
+    <li><a href="#pricing">取得模板包</a></li>
+    <li><a href="#faq">常見問題</a></li>
+  </ul>
+</details>
+
+<!-- INTRO -->
+<section id="what-is-this">
+  <h2>這個模板包是什麼？</h2>
+  <p>n8n 的視覺化介面很直覺，但從零建立一個穩定運行的 Claude Code 整合 workflow 往往需要花 2-4 小時：設定 HTTP Request 節點、處理 API 認證、調整 prompt 格式、處理錯誤情況……每一個細節都可能讓你卡關。</p>
+  <p><strong>這個模板包解決的就是這件事。</strong>5 個 workflow 全部以 n8n 標準 JSON 格式打包，可直接透過「Import Workflow」一鍵匯入，不需要手動複製節點或查文件。每個 workflow 都附有繁中 README 說明設定步驟，從 API key 填入到測試執行，完整走一遍不超過 10 分鐘。</p>
+  <div class="highlight-box">
+    <p>⚡ <strong>核心差異：</strong>這不是 prompt 清單，也不是截圖教學。是可直接執行的 n8n JSON，匯入後填入你的 API key 就能跑。台灣市場零競品，英文競品定價 $29-79。</p>
+  </div>
+</section>
+
+<!-- 5 WORKFLOWS -->
+<section id="5-workflows">
+  <h2>5 個 Workflow 詳解</h2>
+
+  <div class="workflow-card">
+    <span class="wf-num">WF 01</span>
+    <h3>GitHub PR → Claude 摘要 → LINE Notify</h3>
+    <p>當有新 PR 開啟或更新時，自動觸發 Claude 分析程式碼變更，生成繁中摘要（變更目的、潛在風險、建議檢查點），發送至指定 LINE 群組。適合有多人協作但沒有 code review 文化的台灣小團隊。</p>
+    <p><strong>節點組成：</strong>GitHub Webhook → HTTP Request (Claude API) → LINE Notify</p>
+    <div class="wf-tags">
+      <span class="wf-tag">GitHub</span><span class="wf-tag">Claude API</span><span class="wf-tag">LINE Notify</span><span class="wf-tag">Webhook</span>
+    </div>
+  </div>
+
+  <div class="workflow-card">
+    <span class="wf-num">WF 02</span>
+    <h3>Claude 生成文章 → 自動發布 GitHub Pages + Facebook 貼文</h3>
+    <p>輸入主題關鍵字，Claude 自動生成 2,000 字繁中文章，透過 GitHub API 推送至 Pages repo，同時生成 Facebook 原生摘要貼文（符合本站 12:00 UTC 發布格式）。適合內容創作者或部落客批量生產。</p>
+    <p><strong>節點組成：</strong>Schedule / Manual Trigger → HTTP Request (Claude) → GitHub API → Facebook Graph API</p>
+    <div class="wf-tags">
+      <span class="wf-tag">Claude API</span><span class="wf-tag">GitHub API</span><span class="wf-tag">Facebook</span><span class="wf-tag">內容自動化</span>
+    </div>
+  </div>
+
+  <div class="workflow-card">
+    <span class="wf-num">WF 03</span>
+    <h3>表單潛客 → Claude 分類高/中/低 → Notion 存檔 + 自動回信</h3>
+    <p>收到表單提交（Typeform / Google Form webhook）後，Claude 根據填寫內容自動判斷潛客意向分級（高/中/低），寫入 Notion 資料庫，並依分級發送對應的自動回信。省去業務手動篩選的時間。</p>
+    <p><strong>節點組成：</strong>Webhook → HTTP Request (Claude) → Notion → Gmail / SMTP</p>
+    <div class="wf-tags">
+      <span class="wf-tag">Claude API</span><span class="wf-tag">Notion</span><span class="wf-tag">Gmail</span><span class="wf-tag">潛客管理</span>
+    </div>
+  </div>
+
+  <div class="workflow-card">
+    <span class="wf-num">WF 04</span>
+    <h3>LINE Bot 接收訊息 → Claude 智慧回覆</h3>
+    <p>LINE Bot 收到用戶訊息後，透過 Claude API 生成上下文感知回覆，支援多輪對話記憶（透過 Airtable 儲存對話歷史）。適合中小企業客服自動化、FAQ 機器人、內部知識庫查詢。</p>
+    <p><strong>節點組成：</strong>LINE Webhook → Airtable (讀取歷史) → HTTP Request (Claude) → LINE Reply API → Airtable (寫入歷史)</p>
+    <div class="wf-tags">
+      <span class="wf-tag">LINE Bot</span><span class="wf-tag">Claude API</span><span class="wf-tag">Airtable</span><span class="wf-tag">多輪對話</span>
+    </div>
+  </div>
+
+  <div class="workflow-card">
+    <span class="wf-num">WF 05</span>
+    <h3>每日 GitHub Trending → Claude 整理摘要 → Telegram 推送</h3>
+    <p>每天早上 8:00（台灣時間）自動抓取 GitHub Trending 前 10 個 repo，Claude 分析並生成繁中重點摘要（專案用途、適用對象、值不值得關注），推送至 Telegram 頻道或個人。不再錯過每日爆量開源專案。</p>
+    <p><strong>節點組成：</strong>Schedule Trigger → HTTP Request (GitHub) → HTTP Request (Claude) → Telegram Bot</p>
+    <div class="wf-tags">
+      <span class="wf-tag">GitHub Trending</span><span class="wf-tag">Claude API</span><span class="wf-tag">Telegram</span><span class="wf-tag">每日情報</span>
+    </div>
+  </div>
+</section>
+
+<!-- VS SCRATCH -->
+<section id="vs-scratch">
+  <h2>為什麼不自己從頭建？</h2>
+  <table class="compare-table">
+    <thead>
+      <tr><th>項目</th><th>自己從頭建</th><th>使用模板包</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>初始設定時間</td><td>2-4 小時 / 個</td><td>10 分鐘 / 個</td></tr>
+      <tr><td>Claude API 格式</td><td>查文件 + 試錯</td><td>已設定好，直接填 key</td></tr>
+      <tr><td>錯誤處理</td><td>需自行加</td><td>內建 Error Handler 節點</td></tr>
+      <tr><td>繁中說明</td><td>無</td><td>每個 WF 附完整 README</td></tr>
+      <tr><td>可自訂修改</td><td>✓</td><td>✓（JSON 完全開放）</td></tr>
+      <tr><td>成本</td><td>工時費用</td><td>$39 一次性</td></tr>
+    </tbody>
+  </table>
+  <p>最大的時間成本不是拖拉節點，而是確認每個 API 的正確格式、處理 edge case、以及 debug 為什麼 Claude 回傳的 JSON 解析失敗。這些坑模板包都已經踩過並處理好了。</p>
+</section>
+
+<!-- REQUIREMENTS -->
+<section id="requirements">
+  <h2>前置需求</h2>
+  <ul>
+    <li><strong>n8n 實例：</strong>自架（Docker）或 n8n Cloud 均可。自架推薦 DigitalOcean $6/月 Droplet，足夠跑全部 5 個 workflow。</li>
+    <li><strong>Anthropic Claude API Key：</strong>取得自 <code>console.anthropic.com</code>，新帳號有 $5 免費額度，跑 5 個 WF 測試綽綽有餘。</li>
+    <li><strong>各 workflow 對應帳號：</strong>GitHub、LINE Developers、Notion、Gmail / SMTP、Telegram Bot（依使用的 workflow 而定，不需要全部都有）。</li>
+    <li><strong>n8n 版本：</strong>1.30+ 以上（測試於 2.14 MCP 版）</li>
+  </ul>
+
+  <div class="case-box">
+    <h4>💡 最低成本配置</h4>
+    <p>只想試 WF 05（GitHub Trending → Telegram）？只需要：Claude API Key + Telegram Bot Token + n8n 實例。三個步驟，完全免費額度內即可完成測試。</p>
+  </div>
+</section>
+
+<!-- QUICKSTART -->
+<section id="quickstart">
+  <h2>10 分鐘快速上手流程</h2>
+
+  <div class="step-box">
+    <h4>Step 1 — 解壓縮模板包（1 分鐘）</h4>
+    <p>解壓後你會看到 <code>workflows/</code> 資料夾（5 個 JSON 檔）、<code>README.md</code>（完整繁中說明）、<code>QUICKSTART.md</code>（本流程精簡版）。</p>
+  </div>
+
+  <div class="step-box">
+    <h4>Step 2 — 匯入 Workflow（2 分鐘）</h4>
+    <p>在 n8n 介面點擊右上角 <strong>+</strong> → <strong>Import from file</strong>，選擇你要使用的 JSON 檔。Workflow 所有節點會自動載入，已預設好正確的節點連線與設定。</p>
+  </div>
+
+  <div class="step-box">
+    <h4>Step 3 — 填入 API Credentials（5 分鐘）</h4>
+    <p>每個 workflow 中需要填入 API key 的節點都已用 <code>{{ YOUR_KEY_HERE }}</code> 標記。依照 README 說明，在 n8n 的 Credentials 設定頁填入對應的 key，回到 workflow 選擇已設定的 credential 即可。</p>
+  </div>
+
+  <div class="step-box">
+    <h4>Step 4 — 測試執行（2 分鐘）</h4>
+    <p>點擊 <strong>Test Workflow</strong> 觸發一次手動執行。查看每個節點的輸出是否符合預期。README 中附有常見錯誤排查說明（最常見：API key 格式錯誤、LINE Channel Access Token 過期）。</p>
+  </div>
+
+  <div class="step-box">
+    <h4>Step 5 — 啟用排程（完成）</h4>
+    <p>確認測試無誤後，點擊右上角 <strong>Active</strong> 開關啟用 workflow。WF 05 的 Schedule Trigger 會在每天 08:00 台灣時間自動執行。</p>
+  </div>
+
+  <div class="highlight-box">
+    <p>🚀 需要一台穩定的伺服器跑 n8n？DigitalOcean 新帳號享 <strong>$200 免費額度</strong>，$6/月 Droplet 跑全部 5 個 workflow 綽綽有餘。<a href="https://m.do.co/c/6121a295f624" style="color:var(--primary);" target="_blank" rel="noopener">點此取得 $200 免費額度 →</a></p>
+  </div>
+</section>
+
+<!-- PRODUCT CTA -->
+<section id="pricing">
+  <div class="product-hero">
+    <h2>n8n × Claude Code 工作流程自動化模板包 v1.0</h2>
+    <p>5 個可直接匯入的 workflow JSON + 繁中完整 README + QUICKSTART 指南<br/>一次性購買，永久使用，可自由修改。</p>
+    <div class="price">$39</div>
+    <div class="price-note">USD · 一次性付款 · Gumroad 安全結帳</div>
+    <br/>
+    <a href="https://xiaofan8.gumroad.com/l/n8n-claude-templates-v1" class="btn-product" target="_blank" rel="noopener">立即取得模板包 →</a>
+    <ul class="include-list" style="max-width:480px; margin:2rem auto 0; text-align:left;">
+      <li>5 個 n8n workflow JSON（可直接匯入，非截圖）</li>
+      <li>繁中 README（每個 WF 設定步驟 + 前置需求）</li>
+      <li>QUICKSTART.md（10 分鐘上手指南）</li>
+      <li>常見問題 FAQ + 錯誤排查說明</li>
+      <li>未來版本更新通知（同 Gumroad 連結）</li>
+    </ul>
+  </div>
+</section>
+
+<!-- DATACAMP CTA -->
+<div class="highlight-box" style="margin:2rem 0;">
+  <p>想更系統地學習 AI 工作流程自動化？DataCamp 的 <strong>AI Engineering 課程</strong>涵蓋 n8n、LangChain、Claude API 整合，從基礎到生產部署。<a href="https://afflink.one/s/aavAC" style="color:var(--primary);" target="_blank" rel="noopener">探索 DataCamp 課程 →</a></p>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <h2>常見問題</h2>
+
+  <div class="faq-item">
+    <h3>模板包是什麼格式？可以直接用嗎？</h3>
+    <p>包含 5 個標準 n8n JSON 檔案，可直接透過 n8n 的「Import Workflow」功能匯入，不需要手動複製節點。每個 JSON 都附有完整繁中 README 說明前置需求與設定步驟。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>n8n 需要付費嗎？</h3>
+    <p>n8n 開源版可自架完全免費。架在 DigitalOcean $6/月 Droplet 上即可穩定運行所有 5 個 workflow，是最省成本的做法。n8n Cloud 有免費試用方案，也適合快速測試。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Claude API 用量大概多少？</h3>
+    <p>5 個 workflow 的 API 用量依使用頻率而定。以 WF 05（每日 GitHub Trending）為例，每次執行約消耗 2,000-4,000 tokens（Claude Haiku 約 $0.001/次）。WF 01 和 WF 04 的用量視 PR 大小和對話長度而定，一般月費控制在 $3-10 以內。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>5 個 workflow 需要全部用嗎？</h3>
+    <p>不需要。每個 workflow 完全獨立，你可以只匯入你需要的那幾個。5 個都在同一個 zip 檔案裡，買了就全部拿到，想什麼時候用什麼時候匯入。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>可以修改 workflow 嗎？</h3>
+    <p>完全可以。JSON 格式讓你可以在 n8n 介面中自由調整每個節點的設定、新增條件邏輯或串接其他服務，不限制使用方式。修改後可以重新匯出 JSON 備份你的自訂版本。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>購買後如何下載？</h3>
+    <p>透過 Gumroad 購買後，會立即收到下載連結和收據 email。下載 zip 檔案解壓縮即可取得所有 workflow JSON 和說明文件。</p>
+  </div>
+</section>
+
+<!-- RELATED -->
+<nav class="related-articles" aria-label="相關文章">
+  <h2>延伸閱讀</h2>
+  <div class="related-grid">
+    <a class="related-card" href="/blog/n8n-automation-tutorial-2026.html">
+      <h3>n8n 自動化教學</h3>
+      <p>5 個真實案例讓你每天省 2 小時，新手入門完整指南</p>
+    </a>
+    <a class="related-card" href="/blog/n8n-hitl-tutorial-2026.html">
+      <h3>n8n HITL 教學</h3>
+      <p>Human-in-the-Loop 工作流程，讓 AI 自動化更安全可控</p>
+    </a>
+    <a class="related-card" href="/blog/claude-code-auto-mode-guide-2026.html">
+      <h3>Claude Code Auto Mode</h3>
+      <p>89% 準確率自動審批，開發效率大幅提升完整教學</p>
+    </a>
+    <a class="related-card" href="/blog/agent-reach-social-media-ai-2026.html">
+      <h3>Agent-Reach 教學</h3>
+      <p>Claude Code 直讀 16 個社群平台，AI 研究自動化</p>
+    </a>
+  </div>
+</nav>
+
+</article>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <p>© 2026 AutoDev AI · <a href="/privacy.html">隱私政策</a> · <a href="/sitemap.xml">Sitemap</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
