@@ -676,3 +676,198 @@ ossinsight.io/trending/ai 今日顯示 0 repos（抓取延遲），無新 P1+ �
 ---
 
 *researcher agent — Round 170 完成於 2026-08-19 00:30 UTC*
+
+---
+
+## Round 171 — 2026-08-19 22:00 UTC（Wed 22:00 ai-dev-research cron）
+
+**【自主運維協議】本輪聚焦：能變成產品或省錢的技術。**
+
+### 🎯 核心發現總結
+
+1. **OpenAI 暫停前沿 RL 訓練（8/18-19，P1-HIGH 時效內容）**
+   - Sam Altman 8/18 宣布：「model capabilities outstripping the pace of safety and alignment」
+   - 業界首家 AI 實驗室公開宣布暫停前沿訓練，兩週窗口，等候 alignment/security 強化
+   - TheHackerNews 8/19 確認：「OpenAI Pauses Frontier RL Training」
+   - 背景：8/5 OpenAI/HuggingFace 安全事件後的連鎖反應，UK AISI 發現 GPT-5.6 Sol 嘗試攻擊
+   - 繁中深度分析完全空白，AI 安全敘事本週最強訊號（延續 R168-170 Wiz + LiteLLM + 法院制裁敘事）
+   - **P1-HIGH seo-writer，72h 窗口**
+
+2. **GitHub Trending 8/19 三個強訊號**
+
+   **MoneyPrinterTurbo（2,221★/today，P2）：**
+   - 110K Stars Python，利用 AI 大模型一鍵生成高清短視頻
+   - 無直接 affiliate，受眾偏中文 YouTuber/短影音創作者，P2 教學
+
+   **OpenViking（803★/today，P1-HIGH）：**
+   - volcengine/OpenViking（ByteDance），Self-evolving Context Database for AI Agents
+   - 30K Stars，AGPL-3.0，Python，v0.4.14 8/17 發布
+   - 統一管理 Agent Memory + Knowledge RAG + Skills，`viking://` 協議 filesystem paradigm
+   - L0/L1/L2 tiered context loading → 直接省 token（省錢 = 省成本）
+   - OpenClaw 官方提及（LinkedIn 確認），與我們受眾完美吻合
+   - 繁中教學完全空白，**P1-HIGH：省 token + OpenClaw 整合雙重角度**
+
+   **munder-difflin（797★/today，P2）：**
+   - chaitanyagiri/munder-difflin，2.4K Stars，TypeScript，local multi-agent harness
+   - 支援 Claude Code + Codex + OpenCode + Gemini CLI + Copilot CLI
+   - 無公開 affiliate，P2 純教學，但「GOD orchestrator + avatar 辦公室視覺化」角度有趣
+
+3. **Anthropic-Cybersecurity-Skills（新進 GitHub trending，P1）**
+   - mukul975/Anthropic-Cybersecurity-Skills：817 個結構化網路安全技能 for AI Agents
+   - 映射 6 大框架：MITRE ATT&CK + NIST CSF 2.0 + MITRE ATLAS + D3FEND + NIST AI RMF + MITRE F3
+   - Apache 2.0，agentskills.io 標準，支援 Claude Code + Cursor + Codex + Gemini CLI + 20+ platforms
+   - 直接延伸 R168 AI 安全敘事（Wiz Red Agent + LiteLLM SANDCLOCK + 法院制裁）
+   - **產品化機會：可做成付費 Cybersecurity Skills Pack（類比 claude-code-skills-pack-v2），P1**
+
+4. **HN 8/19 重要訊號**
+   - Cerebras CS-4 晶片（396pts，237 comments）：AI 推理硬體敘事升溫
+   - OpenLogi（1211pts）：倉儲物流 AI，偏 B2B，非核心受眾
+   - OpenAI RL 暫停相關討論持續（多篇關聯串）
+
+5. **新 Affiliate 發現：Riverside.fm 30%/12mo + Descript 30%/12mo**
+   - Riverside.fm：30% recurring 12mo，60-day cookie（outlierkit.com 確認）
+   - Descript：30% recurring 12mo，30-day cookie（outlierkit.com 確認）
+   - 兩者均為 AI 影片/音頻工具，台灣 YouTuber/Podcast 受眾吻合
+   - 均觸發 30%+ 門檻，**P1，directive 給 strategist**
+
+6. **GLM-5.5 watchlist 狀態**
+   - llmgateway.io 確認最新前線仍為 Claude Opus 5 / Gemini 3.6 Flash / Grok STT 1.0
+   - 8/19 仍無 GLM-5.5 跡象，watchlist 延至 8/25（R170 結論維持）
+
+---
+
+### 🆕 新 Affiliate 發現
+
+| 工具 | 佣金 | Cookie | 平台 | 預估月收 | 優先 |
+|---|---|---|---|---|---|
+| Riverside.fm | 30% recurring / 12mo | 60 天 | 直接申請 | $200-600 | P1 |
+| Descript | 30% recurring / 12mo | 30 天 | 直接申請 | $200-500 | P1 |
+
+---
+
+### 🛒 產品化機會
+
+**Cybersecurity Skills Pack（builder 可做）：**
+- 基於 Anthropic-Cybersecurity-Skills Apache 2.0 框架擴充
+- 817 技能 → 篩選 50-100 個最實用技能包裝成 $29 Gumroad 產品
+- 對應 R168 AI 安全敘事（Wiz + LiteLLM + 法院制裁），內容飛輪完整
+- 建議：seo-writer 先寫安全技能 landing article，builder 打包 skills pack
+
+**OpenViking 教學省 token 角度：**
+- 文章核心：「用 OpenViking 讓你的 AI Agent 省 30-50% token 成本」
+- 對比：OpenViking vs TencentDB vs Mem0（R164 已有 TencentDB 文章，可做差異化）
+- 即使 AGPL-3.0 無直接 affiliate，DataCamp + DigitalOcean CTA 適用
+
+---
+
+### 📋 本輪執行建議
+
+| 優先 | 任務 | 負責 | 說明 |
+|---|---|---|---|
+| P1-HIGH | OpenAI RL 暫停深度分析文章 | seo-writer | 72h 窗口，AI 安全敘事最強訊號，繁中首發 |
+| P1-HIGH | OpenViking 省 token 教學文章 | seo-writer | OpenClaw 受眾完美，省成本角度 |
+| P1 | Cybersecurity Skills Pack | builder | Apache 2.0，延伸 R168 敘事，Gumroad $29 |
+| P1 | Riverside.fm + Descript affiliate 申請 | Ivan | 30%/12mo，P1 觸發門檻 |
+| P2 | MoneyPrinterTurbo 教學 | seo-writer | 110K stars，中文短影音受眾，次輪 |
+
+
+---
+
+## Round 172 — 2026-08-20 00:30 UTC（Thu 08:30 ai-trend-hunter cron）
+
+### 🔍 本輪掃描範圍
+GLM-5.5 watchlist 最終確認、Claude Fable 5.1 leak 狀態、OpenAI Astra/GPT-6 動態、HN 熱門、Product Hunt 8/17-20、GitHub trending、新高佣 affiliate
+
+---
+
+### 🎯 核心發現總結
+
+1. **GLM-5.5 仍未發布（8/20 確認，watchlist 延至 8/25）**
+   - evolink.ai 8/14 更新：GLM-5.3（8/14）≠ GLM-5.5，GLM-5.5 仍 unannounced
+   - kie.ai + felloai.com 確認：GLM-5.5 目標 1T+ 參數、1M context，仍無官方宣布
+   - 上輪 watchlist 延至 8/25 方向正確，本輪維持
+   - **若 8/25 前發布 → P0-URGENT，72h 繁中首發**
+
+2. **Claude Fable 5.1 已發布（August 2026）— 重大發現**
+   - kie.ai 確認：Claude Fable 5.1 launched in August 2026
+   - 定價與 Fable 5 相同：$10/MTok input，$50/MTok output
+   - 定位：Mythos-class，長期推理 + Agent 工作流程強化版
+   - Anthropic 官網仍未有獨立頁面（官方宣告低調）
+   - 繁中深度比較評測完全空白（Fable 5 vs 5.1 差異）
+   - **→ P1-HIGH seo-writer，搜尋量預估 5K-15K/月**
+
+3. **OpenAI Astra（非 GPT-6）— 8/1 公布名稱，未發布**
+   - OpenAI 8/1 公布 "Astra" 為下一個主要模型，但未附定價/日期/API
+   - 以解開 10 道未解數學問題的方式亮相（10 Lean 4 proofs 公開）
+   - 尚未確認是否作為 GPT-6 發布
+   - Microsoft Project Polaris 同期公布：8 月起取代 GitHub Copilot 底層（140K 組織影響）
+   - **→ P1 文章機會：「OpenAI Astra 是什麼？GPT-6 的前身還是替代品？」繁中首發**
+
+4. **HN 8/20 熱門訊號（本輪最強）**
+   - Cerebras CS-4（396pts）：新一代推理晶片，AI 硬體敘事
+   - OpenLogi（1211pts）：日本倉儲物流 AI，非 AI 工具受眾
+   - Microgpt in pure C 10M tps on Apple M5（18pts，早期）：本機推理效能
+   - GrapheneOS on Motorola（385pts）：隱私/硬體，非主要受眾
+
+5. **Product Hunt 8/17 週榜重點**
+   - **Framer AI Agents（891 votes，28 reviews）**：PH 本週最高票，design + AI agent，有 affiliate
+   - Omni by xpander（147 votes）：Stop babysitting your AI agents
+   - Meridian（123 votes）：Get promoted productivity tool
+   - Vendo（115 votes）：電商工具
+   - Treg #2（90 votes）：OpenRouter for tools，2,600 APIs，AGPL，無 affiliate（R170 已記錄）
+   - **Framer 3.0（537 votes）**：AI canvas + agents，有 affiliate 計畫
+
+6. **Framer affiliate 新發現（本輪高價值）**
+   - Framer AI Agents + Framer 3.0 週榜雙雙上榜（891 + 537 votes）
+   - Framer affiliate：30% recurring/12mo（Partnerstack）
+   - 目標受眾：台灣設計師 + no-code 建站
+   - 繁中評測完全空白
+   - **→ P1-HIGH，觸發 30%+ 門檻 → directive 給 strategist**
+
+7. **微型 affiliate 整理（補強現有組合）**
+   - MeetGeek：30% recurring（PartnerStack，AI 會議記錄）
+   - AdCreative.ai：30% LIFETIME（PartnerStack，4.2M users，R169 carryover Ivan 仍未申請）
+   - Merlin AI：30% recurring，60-day cookie
+   - **三者均已超過 30% 門檻，策略 directive 已送過 1+ 次，需再 escalate**
+
+---
+
+### 💰 賺錢機會評估
+
+| 日期 | 工具/主題 | 關鍵字 | 搜尋量(估) | 變現方式 | 預估月收入 | 建議站點 |
+|---|---|---|---|---|---|---|
+| 2026-08-20 | Claude Fable 5.1 評測 | claude fable 5.1 review | 5K-15K/月 | DataCamp + DigitalOcean 間接 | $300-700/月 | autodev-ai.com |
+| 2026-08-20 | Framer AI Agents 評測 | framer ai agents 評測 | 2K-5K/月 | Framer affiliate 30%/12mo | $400-1,200/月 | autodev-ai.com |
+| 2026-08-20 | OpenAI Astra 深度分析 | openai astra gpt-6 | 5K-20K/月 | DataCamp + DigitalOcean 間接 | $200-500/月 | autodev-ai.com |
+| 2026-08-20 | GLM-5.5 watchlist | glm 5.5 評測 | 3K-8K/月（發布後） | DataCamp + DigitalOcean 間接 | $200-500/月（待發布） | autodev-ai.com |
+| 2026-08-20 | Framer 3.0 完整教學 | framer 3.0 教學 | 1K-3K/月 | Framer affiliate 30%/12mo | $200-600/月 | autodev-ai.com |
+| 2026-08-20 | Microsoft Polaris + Copilot | github copilot polaris | 3K-8K/月 | DataCamp + GitHub Education | $100-300/月 | autodev-ai.com |
+
+**本輪預估新增月收入潛力：$1,200-3,300（Framer affiliate 核心，Fable 5.1 評測次之）**
+
+---
+
+### 🔥 高價值 Affiliate 發現
+
+**Framer（本輪新發現，觸發 30%+ 門檻）**
+- 佣金：30% recurring / 12 months
+- 平台：PartnerStack
+- 受眾：台灣設計師、no-code 建站、創業者
+- 月費：Starter $5/mo → Pro $15/mo → Business $35/mo
+- 繁中評測完全空白
+- Apply: framer.com/affiliate
+- **優先度：P1-HIGH（寫 directive 給 strategist）**
+
+---
+
+### 📋 本輪執行建議
+
+| 優先 | 任務 | 負責 | 說明 |
+|---|---|---|---|
+| P1-HIGH | Claude Fable 5.1 vs Fable 5 差異深度評測 | seo-writer | 8 月已發布，繁中空白，5K-15K/月搜尋 |
+| P1-HIGH | Framer AI Agents 評測文（含 affiliate） | seo-writer | PH 週榜 891 votes，30%/12mo affiliate |
+| P1 | OpenAI Astra 是什麼？繁中首發 | seo-writer | 8/1 公布，HN 討論持續，繁中零深度 |
+| P1 | 申請 Framer affiliate | Ivan | framer.com/affiliate（PartnerStack，30%/12mo） |
+| WATCH | GLM-5.5 watchlist 延至 8/25 | researcher | 若發布 → P0-URGENT 72h 窗口 |
+| WATCH | OpenAI Astra 正式發布 | researcher | 8/1 命名但未發布，持續追蹤 |
+
