@@ -1,8 +1,67 @@
 {
-  "lastRun": "2026-08-21T03:00:00Z",
+  "lastRun": "2026-08-21T20:00:00Z",
   "lastResearchRound": 172,
-  "lastStrategistRun": "2026-08-17T01:31:00Z",
+  "lastStrategistRun": "2026-08-21T20:00:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-21T20:00:00Z",
+      "agent": "strategist",
+      "task": "income-ideation",
+      "status": "completed",
+      "summary": "Fri 20:00 UTC weekly income-ideation cron. 搜尋 Gumroad 暢銷榜 + 新 affiliate 機會。核心發現：(1) Powerdrill AI 30%/12mo affiliate（affbun.com 確認，AI 數據分析 SaaS，繁中零評測，Ivan P1-HIGH 申請）；(2) Cybersecurity Skills Pack v1.0 數位產品（基於 mukul975/Anthropic-Cybersecurity-Skills Apache 2.0，R171 directive 延續，AI 安全敘事熱度仍在，9，builder P1-HIGH）。Gumroad 數據確認 Software Development 類目 $65.8M 總收入（insightraider.com），每產品均值最高，支持繼續打包技能包路線。延續 carryover：OpenViking P1-HIGH（R172 多輪 carryover，下輪 seo-writer 優先執行）。新增 Riverside.fm + Descript affiliate 至 Ivan 清單。Ivan 積壓 14 個申請/上架項目，估計阻斷收入 $3,500-8,000/月。",
+      "changes": [
+        "創建 directives/strategist-income-ideation-2026-08-21.md（2 個新提案 + Ivan 更新清單 + carryover 優先順序）",
+        "更新 agent-state.json：lastStrategistRun + lastRun + agentLog + newAssetProposals"
+      ],
+      "newProposals": [
+        {
+          "id": "proposal-cybersecurity-skills-pack-2026-08-21",
+          "type": "digital_product",
+          "title": "AI Agent Cybersecurity Skills Pack v1.0（Gumroad $29）",
+          "revenueModel": "Gumroad 一次性 $29，目標 20-30 次/月",
+          "estimatedMonthlyRevenue": "$400-800",
+          "priority": "P1-HIGH",
+          "basis": "mukul975/Anthropic-Cybersecurity-Skills Apache 2.0 + R168 AI 安全敘事三連爆 + claude-code-skills-pack-v2 成功模式複用"
+        },
+        {
+          "id": "proposal-powerdrill-affiliate-2026-08-21",
+          "type": "affiliate_review_article",
+          "title": "Powerdrill AI 評測 2026（30%/12mo affiliate，繁中首發）",
+          "revenueModel": "Powerdrill affiliate 30% recurring/12mo，$50 min payout",
+          "estimatedMonthlyRevenue": "$300-700",
+          "priority": "P1-HIGH（Ivan 申請後執行）",
+          "basis": "affbun.com 2026-08-21 確認，AI 數據分析 SaaS，繁中零評測"
+        }
+      ],
+      "newAffiliatesFound": [
+        {
+          "name": "Powerdrill AI",
+          "commission": "30% recurring / 12 months",
+          "platform": "直接申請（affbun.com 確認入口）",
+          "pricing": "AI SaaS 數據分析，約 $19-99/月",
+          "priority": "P1-HIGH（觸發 30%+ 門檻，繁中零評測空白）",
+          "monthlyEst": "$300-700",
+          "note": "Round 173 / income-ideation 2026-08-21 新發現，affbun.com AI & SaaS vertical 確認"
+        }
+      ],
+      "ivanCarryover": [
+        "P0-URGENT（第17週）：上架 claude-code-skills-pack-v2.zip → xiaofan8.gumroad.com/l/claude-code-skills-pack-v2（$29）",
+        "P0-URGENT（第16週）：上架 n8n-claude-templates-v1.zip → xiaofan8.gumroad.com/l/n8n-claude-templates-v1（$39）",
+        "P0-URGENT（第17週）：上架 claude-code-prompt-pack-2026",
+        "P0-URGENT（14+ 輪）：申請 Kit affiliate → kit.com/affiliate",
+        "P1-HIGH（新）：申請 Powerdrill AI affiliate",
+        "P1-HIGH（新）：申請 Riverside.fm affiliate → riverside.fm/partners（R171）",
+        "P1-HIGH（新）：申請 Descript affiliate → descript.com/affiliate（R171）",
+        "P1：申請 Krater AI（R166）、TestMu AI（R164）、ElevenLabs（R162）、Koala AI（R162）、Reclaim.AI（R167）、AdCreative.ai（R169）、Notion（R170）"
+      ],
+      "nextActions": [
+        "builder P1-HIGH：打包 ai-agent-cybersecurity-skills-pack-v1.zip（Apache 2.0，mukul975 框架）",
+        "seo-writer P1-HIGH：blog/openviking-agent-memory-save-tokens-2026.html（多輪 carryover，最優先）",
+        "seo-writer P1-HIGH：blog/deepseek-v4-pro-review-2026.html（MIT GA，多輪 carryover）",
+        "seo-writer P1（Ivan 批准後）：blog/powerdrill-ai-review-2026.html",
+        "content-ops（Ivan 批准後）：blog/ai-tools-comparison-2026.html 加 Powerdrill 內連"
+      ]
+    },
     {
       "timestamp": "2026-08-21T03:00:00Z",
       "agent": "seo-writer",
@@ -1049,7 +1108,7 @@
           "totalClicks": 95,
           "totalImpressions": 1344,
           "avgCTR": 7.1,
-          "avgPosition": 10.0
+          "avgPosition": 10
         },
         "topQueries": [
           {
@@ -1057,7 +1116,7 @@
             "clicks": 5,
             "impressions": 59,
             "ctr": 8.5,
-            "position": 6.0
+            "position": 6
           },
           {
             "keyword": "autodev",
@@ -1126,21 +1185,21 @@
             "keyword": "opencode go vs zen",
             "clicks": 1,
             "impressions": 10,
-            "ctr": 10.0,
+            "ctr": 10,
             "position": 2.9
           },
           {
             "keyword": "opencode go zen",
             "clicks": 1,
             "impressions": 4,
-            "ctr": 25.0,
+            "ctr": 25,
             "position": 4.8
           },
           {
             "keyword": "opencode go和zen",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 7.5
           },
           {
@@ -1168,7 +1227,7 @@
             "keyword": "opencode zen 和 go 的 区别",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 5
           },
           {
@@ -1182,7 +1241,7 @@
             "keyword": "ruflo",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 8.5
           },
           {
@@ -1269,14 +1328,14 @@
             "clicks": 5,
             "impressions": 65,
             "ctr": 7.7,
-            "position": 12.0
+            "position": 12
           },
           {
             "page": "//en/",
             "clicks": 5,
             "impressions": 66,
             "ctr": 7.6,
-            "position": 20.0
+            "position": 20
           },
           {
             "page": "//blog/markitdown-microsoft-tutorial-2026.html",
@@ -1296,7 +1355,7 @@
             "page": "//blog/chatgpt-claude-gemini-comparison.html",
             "clicks": 1,
             "impressions": 10,
-            "ctr": 10.0,
+            "ctr": 10,
             "position": 9.5
           },
           {
@@ -1617,6 +1676,39 @@
     "122118345230778539_3294282274076456"
   ],
   "newAssetProposals": [
+    {
+      "id": "proposal-cybersecurity-skills-pack-2026-08-21",
+      "type": "digital_product",
+      "title": "AI Agent Cybersecurity Skills Pack v1.0（Gumroad $29）",
+      "revenueModel": "Gumroad 一次性銷售 $29，目標 20-30 次/月（DevSecOps + Claude Code 開發者受眾）",
+      "estimatedMonthlyRevenue": "$400-800",
+      "priority": "P1-HIGH",
+      "buildSteps": [
+        "builder：Clone mukul975/Anthropic-Cybersecurity-Skills（Apache 2.0 合規）",
+        "builder：篩選 60-80 個最實用技能（threat modeling、code injection、secret scanning、supply chain）",
+        "builder：每個技能寫繁中說明 + 30 個 starter prompts + QUICKSTART.md + README.md",
+        "builder：打包 ai-agent-cybersecurity-skills-pack-v1.zip",
+        "ivan：上架 xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1（$29）",
+        "seo-writer（Ivan 上架後）：撰寫 blog/ai-agent-cybersecurity-skills-claude-code-2026.html（~2,200 字）"
+      ],
+      "differentiator": "繁中首創 AI Agent 資安技能包，Apache 2.0 合規，延伸 R168 AI 安全敘事，英文競品未見同類"
+    },
+    {
+      "id": "proposal-powerdrill-affiliate-2026-08-21",
+      "type": "affiliate_review_article",
+      "title": "Powerdrill AI 完整評測 2026（30%/12mo affiliate）",
+      "revenueModel": "Powerdrill affiliate 30% recurring/12mo，$50 min payout，affbun.com 確認",
+      "estimatedMonthlyRevenue": "$300-700",
+      "priority": "P1-HIGH（需 Ivan 申請後執行）",
+      "buildSteps": [
+        "ivan：申請 Powerdrill AI affiliate（powerdrill.ai 或 affbun.com 確認入口）",
+        "seo-writer：撰寫 blog/powerdrill-ai-review-2026.html（~2,000 字，先寫草稿暫用 DataCamp/DO 佔位）",
+        "核心角度：「不需 SQL：Powerdrill AI 5 分鐘看懂自家數據」",
+        "比較表：Powerdrill vs Tableau vs Power BI vs Google Looker Studio",
+        "content-ops：blog/ai-tools-comparison-2026.html 加 Powerdrill 內連（Ivan 批准後）"
+      ],
+      "ivanAction": "申請 Powerdrill AI affiliate（30%/12mo，$50 min payout，affbun.com AI & SaaS vertical）"
+    },
     {
       "id": "proposal-aimlapi-affiliate-2026-08-14",
       "type": "affiliate_review_article",
