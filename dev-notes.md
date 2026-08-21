@@ -1,5 +1,70 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 173 | 2026-08-21 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-08-21 22:00 UTC | 搜尋範圍：GitHub trending + PH 日/月榜 + HN 前頁 + AI 模型發布追蹤 + affiliate 掃描 + watchlist 更新 | 模式：降頻輕量掃描（Tue/Thu/Sat 06:00 cron）
+
+### 🔥 本輪核心：OpenViking 爆量確認 + fx by Vercel 新框架 + MiniMax M3.1 watchlist 更新
+
+**P1-HIGH — OpenViking 804★/today（31,100★ 總計）**
+- R171/R172 多輪 carryover，今日正式觸發爆量：804 stars/today
+- volcengine/OpenViking：Self-evolving Context Database（Memory + RAG + Skills 三位一體）
+- 三層 tiered loader（L0 ~100 tokens → L1 ~2K → L2 Full），實測省 34-91% token
+- GitHub trending 今日 #2（github.com/trending 快照：MoneyPrinterTurbo #1 2,221★/today, OpenViking #2 804★/today）
+- OpenClaw plugin 整合確認（mem0.ai/blog 提及 `@mem0/openclaw-mem0`，OpenViking 有更完整 CLI 整合）
+- 繁中零教學，英文教學也稀少（faun.pub 有基礎介紹，RedHat 有 OpenShift 部署教學）
+- **自用機會：** 導入可讓我們自己的 agent 省 token 成本，雙重價值
+- 多輪 carryover 已超過閾值，**seo-writer 最優先執行**
+
+**P2-HIGH — fx by Vercel（Apache-2.0，8/17 開源，Zig 6MB 編碼 agent）**
+- Vercel Labs 8/17 開源，v0.0.3（8/18），Apache-2.0
+- Zig 語言，6.39 MiB 單一 binary，冷啟動 10 微秒，provider-agnostic
+- PH 8/21 日榜 #7（"Vercel's tiny, open-source coding agent"）
+- 支援 Skills / MCP servers / subagents，experimental 階段
+- 繁中零教學，「冷啟動比 Claude Code 快千倍」角度吸引開發者
+- 無 affiliate，純教學機會，P2（OpenViking 後執行）
+
+**✅ GLM-5.5 watchlist 正式關閉（R172 確認，本輪再確認）**
+- aireleasetracker.com 最新：確認無新 Z.AI GLM-5.5 發布
+- 下一個 Z.AI watchlist → GLM-6 Q4 2026
+
+**✅ MiniMax M3.1 watchlist 降溫**
+- aireiter.com 8/18 確認：M3.1 announced but not GA（M3 = 已 GA，M3.1 = roadmap）
+- M3 API 已半價，M3.1 推遲至 9 月或更晚
+- Manifold 54% August 預測窗口未實現，watchlist 延至 9 月
+
+**📊 本週模型發布：無新 P0 GA**
+- aireleasetracker.com 最新：Qwen3.8-27B（8/14）= 仍為最新前線模型
+- llm-stats.com：8/12 Gemini 3.7 Flash + DeepSeek-V4-Pro-0813（最新確認）
+- 8/21-22 無新重大 GA 確認
+
+**📱 HN 前頁重點（8/20-21）**
+- "Mojo is now open source"（modular.com）：352-401 pts，2 days ago — R172 seo-writer 已發文 ✓
+- "Don't paste the AI, please"（dontpastetheai.com）：1020 pts — 社會議題，無教學機會
+- "Vomit: Clean up Claude 5's token output"（github.com/zachahn）：272 pts — 工具，P3
+- "DiffusionGemma Technical Report"（arxiv.org）：156 pts — 學術，P3
+- "Git at any scale"（cursor.com）：346 pts，Cursor blog — P2 Cursor 受眾素材
+
+**📱 PH 8/21 日榜重點**
+- #6 Epho：Run Claude Code / Codex / Opencode in cloud（開發者受眾，P2 watchlist）
+- #7 fx by Vercel：Tiny open-source coding agent（Apache-2.0，P2 教學）
+- #15 Actx0：Memory infrastructure for AI agents（managed SDK，P2 watchlist）
+- PH August 月榜：AdAnt #1、Hey Noah #2、Wispr Flow #3（無新大變化）
+
+**🔗 Affiliate 掃描：本輪無新觸發 30%+ 門檻**
+- OutlierKit 8/4 最新清單：VidIQ 30% LIFETIME、InVideo 30%（均已知）
+- 無新 AI 工具觸發 30%+ 門檻
+- Ivan 積壓清單仍是主要阻斷因素
+
+### 📊 降頻驗證
+- 連續 14 輪（R158-R173）降頻策略驗證正確
+- 本輪最高價值訊號來自 GitHub trending 實時快照（OpenViking 爆量）
+
+### 📋 Directive 產出
+- 創建：directives/researcher-to-strategist-2026-08-21-round173.md
+
+---
+
 ## Round 168 | 2026-08-17 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-08-17 22:00 UTC | 搜尋範圍：GitHub trending + PH 月榜 + HN/SecurityAffairs + affiliate 掃描 + GLM-5.5 watchlist | 模式：降頻輕量掃描
