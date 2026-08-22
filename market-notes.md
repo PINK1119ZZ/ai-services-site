@@ -1110,3 +1110,156 @@ Kit 50% = 業界最高（超過 Jasper 25%、Writesonic 30%）。達 Bronze tier
 → 見 directives/researcher-to-strategist-2026-07-19-round126.md
 
 ---
+
+---
+
+## 2026-08-23（市場研究 Round 175 — 週日 07:00 UTC market-research cron）
+
+> 本輪為 market-research cron（非 ai-trend-hunter），聚焦：新賺錢管道 / Affiliate / Gumroad 暢銷 / 台灣需求缺口 / 新流量管道
+
+---
+
+### 一、🔥 AI SaaS Affiliate 新發現（未曾碰過的管道）
+
+#### 1. Buzz.ai — 30% / 12 months（高單價 B2B）⭐⭐⭐⭐
+| 欄位 | 詳情 |
+|------|------|
+| 產品 | AI 銷售開發平台（email + SMS + calling，AI 自動找客）|
+| 佣金 | **30% recurring / 12 months** |
+| Cookie | 60 天 |
+| 平均客單價 | $500/account |
+| 預估年收 | 每個客戶約 $1,800/year |
+| 最低提款 | $50 |
+| 申請 | Reditus marketplace（getreditus.com）|
+| 優先級 | **P1-HIGH**（B2B 高單價，30% 觸發門檻，繁中零評測）|
+| 月潛力 | **$300-900/月** |
+| 備注 | 台灣中小企業 AI 業務拓展角度 + getreditus.com AI & SaaS vertical |
+
+#### 2. Joiin — 40-50% / 12 months（財務報表，最高佣金率）⭐⭐⭐⭐⭐
+| 欄位 | 詳情 |
+|------|------|
+| 產品 | 財務報表自動化（整合 Xero / QuickBooks / Sage）|
+| 佣金 | **40-50% recurring / 12 months**（業界罕見高率）|
+| Cookie | 90 天 |
+| 平均客單價 | $350/account |
+| 最低提款 | $50 |
+| 申請 | Reditus marketplace（getreditus.com）|
+| 優先級 | **P1-HIGH**（50% 遠超 30% 門檻，繁中零評測，會計師/財務受眾）|
+| 月潛力 | **$400-1,200/月** |
+| 備注 | 台灣中小企業財務 AI 角度，全新受眾群，未見 AI 工具評測市場涉及 |
+
+#### 3. MeetGeek（再確認） — 30% LIFETIME ⭐⭐⭐⭐⭐
+- 本輪 partnerstack.com/articles/ai-affiliate-programs-2026 再確認：30% recurring for every customer conversion
+- R152 已記錄，Ivan 尚未申請，carryover 繼續
+
+#### 4. Nutshell CRM — 20-40% / 12 months
+| 欄位 | 詳情 |
+|------|------|
+| 產品 | All-in-one AI CRM + 行銷自動化（5K+ 公司，50 國）|
+| 佣金 | 20-40% 第一年所有銷售 |
+| 申請 | PartnerStack |
+| 優先級 | P2（CRM 受眾與開發者有部分重疊，佣金率可接受）|
+| 月潛力 | $200-500/月 |
+
+#### 5. Reditus（B2B SaaS affiliate 管理平台）— 30-40% / 24-36 months
+- 平台本身有 affiliate：30-40% 遞迴 24-36 months（最長 duration），30天 cookie
+- P2 niche product，適合 SaaS 顧問受眾
+
+---
+
+### 二、📦 Gumroad 暢銷 AI 產品分析（2026 最新數據）
+
+**核心數據（insightraider.com 2026）：**
+- 整站 $65.8M 總收入，200K+ 產品
+- **最高單品：** Nano Banana & Flux AI script → **$586K 單品**（AI 圖像生成 automation）
+- AI 工具/腳本類確認是 2026 Gumroad 最強品類
+
+#### 熱賣品類與台灣缺口
+
+| 品類 | 市場情況 | 台灣缺口 | 我們能做什麼 |
+|------|---------|---------|------------|
+| AI 自動化腳本包 | $586K 單品存在，需求爆炸 | 繁中版 = 0 | 打包「AI Agent 自動化腳本包」$29 |
+| AI Prompt 庫 | 最快速起步，50 copies/week 案例 | 我們已有 2 個包 | 繼續，加入 Flux AI prompt |
+| AI Storybooks（兒童）| 新興品類 2026 急速成長 | 繁中 = 0 | 低門檻，圖文 AI 生成，$9-19/冊 |
+| Niche Resource Library | 持續性收入，bundle model | 繁中 = 0 | AI 開發者工具包 / AI 行銷工具包 |
+| Email Sequence 模板 | 穩定需求，寫 3 份就能賣 | 繁中 = 少 | 繁中 AI 行銷 email sequence $19-39 |
+
+**行動建議：**
+1. **立即可做（builder）：** AI Agent 自動化腳本包 v1（bash + n8n + Python，$29），延伸現有 n8n-claude-templates 受眾
+2. **低門檻（seo-writer）：** Flux AI Prompt 包，$9 低價引流，Midjourney + Flux 兩版
+
+---
+
+### 三、🇹🇼 台灣數位產品需求缺口（2026-08-23 掃描）
+
+#### 高搜尋量 + 繁中空白
+
+| 關鍵字方向 | 需求訊號 | 現有供給 | 機會評估 |
+|-----------|---------|---------|---------|
+| AI 工具費用怎麼選 / 取捨 | Yourator 2026-08 文章：「同時訂閱好幾個 AI 工具太貴，怎麼取捨？」問題熱度高 | 散文式建議，無系統比較 | **P1：AI 訂閱費用計算器 + 2026 完整選購指南**（我們已有計算器 proposal）|
+| AI 客服導入教學 | ai.com.tw：「AI 客服怎麼導入 2026」業界熱題 | 顧問式，非教學 | P2：具體技術 how-to，結合 LINE Bot 受眾 |
+| 台灣 AI 商機 / 卡位 2026 | ai.com.tw：「最賺錢的 10 大 AI 方向：台灣企業最該卡位的 AI 商機」| 顧問式，無工具推薦 | P2：開發者切入「10 大 AI 商機配套工具」（結合 affiliate）|
+| AI 工具怎麼用 / 中小企業 | ajmartech.com Roy：「我每天打開的 5 個 AI 工具」高流量 | 已有競品文章 | P3：等我們有差異化角度 |
+| AI 工作流程自動化（中小企業）| ajmartech.com：「AI 自動化工作流程：一個人做到十個人的事」| 有部分內容 | **P2：結合 n8n + Claude Code，我們的強項**（已有文章，考慮更新）|
+
+**最大缺口（值得立即行動）：**
+- **繁中 AI 費用計算器 + 選購指南**：Yourator/ajmartech 有散文建議，但無互動工具。我們有 proposal，builder 可直接建置。
+- **台灣 B2B AI 工具評測**：Buzz.ai / Joiin 類 B2B 工具，繁中完全空白。台灣中小企業 20 萬家，數位化需求強。
+
+---
+
+### 四、📡 新流量管道（2026-08-23 確認）
+
+#### 高優先
+
+| 平台 | 現況 | 適合內容 | 行動建議 |
+|------|------|---------|---------|
+| **LinkedIn** | 2026 最被低估，故事型內容爆量，年輕受眾湧入，長文 / 短影片都有效 | AI 工具導入故事、台灣開發者 case study | **P1：Ivan 建立 LinkedIn 帳號**，每週 1 篇 AI 工具導入 case study |
+| **YouTube Shorts** | Shorts 純創作者已有千萬訂閱案例，YouTube 新增「Reimagine」AI remix 功能 | 30 秒 AI 工具演示 | P2（需影片製作能力）|
+| **Threads** | Live Chats broadcast channel 功能上線，一對多推播 | AI 工具快訊 | P2（Ivan 可開 broadcast channel）|
+| **Substack** | 2026 升格真社交平台（feed + inbox + profile），不只是 newsletter | 繁中 AI 週報 | P2（需額外內容工作量）|
+
+#### 已確認有效（繼續強化）
+- Google Organic（SEO）：主力，持續 ✓
+- Facebook：已運作，CTR 有限但維持 ✓
+
+---
+
+### 五、🌟 本輪最高價值機會評估
+
+#### ⭐⭐⭐⭐⭐ P1-HIGH（立即行動）
+
+**Joiin affiliate（40-50%/12mo）→ 全新受眾（財務/會計），繁中零競品**
+- 市場：中小企業財務 AI，台灣 20 萬中小企業
+- 門檻：低（Reditus 平台快速申請）
+- 行動步驟：① Ivan 申請 getreditus.com → Joiin affiliate ② seo-writer 撰寫 blog/joiin-financial-reporting-review-2026.html（~2,000 字，繁中首發，Xero/QuickBooks 整合角度）
+- 月收入預估：$400-1,200
+
+**Buzz.ai affiliate（30%/12mo，$500 客單）→ B2B 業務開發受眾，繁中零**
+- 行動步驟：① Ivan 申請 getreditus.com → Buzz.ai affiliate ② seo-writer 撰寫 blog/buzz-ai-sales-review-2026.html（注意：與 blog/buzz-jack-dorsey-guide-2026.html 命名相近，需區分）
+- 月收入預估：$300-900
+
+#### ⭐⭐⭐⭐ P1（短期執行）
+
+**繁中 AI 費用計算器**（builder proposal 已存在，直接建置）
+- 缺口：Yourator/ajmartech 有散文建議，無互動工具
+- 結合：已有 AI Cost Calculator proposal（newAssetProposals）
+- 行動步驟：builder 建置 autodev-ai.com/tools/ai-cost-calculator.html
+
+**LinkedIn 帳號建立**（新流量管道，Ivan 操作）
+- 台灣 LinkedIn 2026 開發者受眾快速成長
+- 行動步驟：Ivan 建立品牌 LinkedIn + 每週 1 篇 AI 工具導入 case study
+
+---
+
+### 六、Watchlist 更新（本輪）
+
+| 項目 | 狀態 |
+|------|------|
+| agency-agents（msitarzewski）| 147K★，AI agency prompt framework，MIT，無 affiliate，P2 教學 |
+| mattpocock/skills | 225K★（Claude Code plugin），MIT，Total TypeScript 受眾，P2 watchlist |
+| claude-code-router | 36.8K★，3.0.21 發布 8/14，模型路由工具，P2 教學 |
+| Buzz.ai affiliate | 🆕 P1-HIGH（本輪新發現，getreditus.com，30%/12mo，$500客單）|
+| Joiin affiliate | 🆕 P1-HIGH（本輪新發現，getreditus.com，40-50%/12mo，財務受眾）|
+| LinkedIn 流量管道 | 🆕 P1（Ivan 建帳號）|
+
