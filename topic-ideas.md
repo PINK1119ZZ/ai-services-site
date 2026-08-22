@@ -965,3 +965,70 @@ GitHub Trending 8/21、HackerNews 8/20-21、Product Hunt August 月榜更新、G
 | CLOSED | GLM-5.5 watchlist | researcher | 正式關閉（確認 = GLM-5.3，8/14 已發布，我們已發評測文） |
 | WATCH | Claude Fable 5.x（30% Manifold） | researcher | 低機率但高價值，持續 watchlist |
 
+
+---
+
+## Round 174 — 2026-08-22 00:30 UTC（Sat 08:30 ai-trend-hunter cron）
+
+### 🎯 核心發現總結
+
+1. **OpenViking 31K★ carryover — 再確認 P1-HIGH，本輪新增 Agent Plugins 1.0**
+   - volcengine/OpenViking 總計 31,000★（github.com/volcengine/OpenViking 快照確認）
+   - 8/14 新功能：Agent Plugins 1.0（ChatGPT、Codex、Cursor、GitHub Copilot、Claude、VS Code 統一套件）
+   - blog.openviking.ai 8/7 最新文章：multi-user peer mode、agent swarms memory
+   - **P1-HIGH carryover（R171/R172/R173/R174 四輪，seo-writer 最優先）**
+
+2. **MiniMax M3.1 watchlist — 8/18 確認仍未 GA，9月預期**
+   - aireiter.com 8/18 明確確認：「M3.1 is real as announcement, but as of Aug 18 the model you can call is still M3」
+   - M3 已於 2026-06-01 GA（releasebot.io 確認）
+   - M3.1 WAIC 宣布改進點：更強 native multimodality + million-level context window
+   - **watchlist 延至 9 月，不觸發 P0**
+
+3. **PH 8/21 日榜新發現：Surfdeck、PixelRead AI OCR、Local（Zero friction local AI for Mac）**
+   - Surfdeck（Mac 瀏覽器 tab 管理，Productivity）
+   - PixelRead AI OCR（Mac OCR + 翻譯，Privacy/AI，受眾吻合）
+   - Local（Zero friction local AI for Mac，Privacy + AI，P2 教學潛力）
+   - Wizstar（AI 數位分身 + 演員，Marketing/AI）
+   - PH August 月榜無新變化：AdAnt #1、Hey Noah #2、Wispr Flow #3、Dograh #4、Grok #5
+
+4. **HN 本輪快照（8/21-22）**
+   - Mojo is now open source 352pts（carryover，我們 8/21 已發文）
+   - Aaron Swartz vs Meta scraping 1124pts（法律/倫理，非 AI 工具，P3）
+   - AliExpress WebAudio fingerprinting 913pts（安全，非 AI 工具，P3）
+   - **無新 P1+ AI 工具訊號**
+
+5. **新 affiliate 搜尋結果**
+   - Rytr 30%/12mo recurring（inkfluenceai.com 8/22 確認，低門檻批准，繁中零評測，P2）
+   - 本輪未發現新 30%+ 觸發門檻之全新 AI 工具 affiliate（AdCreative/Notion/Reclaim 均已記錄）
+   - **本輪無新 30%+ affiliate 觸發**
+
+6. **模型 watchlist 更新**
+   - Qwen 3.8 open weights：aitoolsrecap.com 8/6 確認「Alibaba promised weights 'soon', no HF repo as of Aug 6, day 18 no update」→ 仍未開源，watchlist 持續
+   - llmgateway.io 最新仍為 Seedance 2.5（8/8）→ 8/21-22 無新 P0 模型 GA
+   - OpenAI IPO：S-1 已提交（5/22），公開說明書預計 8 月中下旬，9 月上市目標 → 非模型，但高流量議題
+
+---
+
+### 📊 Topic Ideas 新增
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|---|---|---|---|---|---|---|
+| 2026-08-22 | OpenViking Agent Plugins 1.0（R174 新功能） | openviking agent plugins 教學、openviking claude claude code | 2K-5K/月 | DigitalOcean + DataCamp 間接 | $100-300/月 | autodev-ai.com |
+| 2026-08-22 | Local（Zero friction local AI for Mac） | local ai mac 2026、local llm mac 教學 | 1K-3K/月 | DataCamp + DigitalOcean 間接 | $50-200/月 | autodev-ai.com |
+| 2026-08-22 | OpenAI IPO S-1 分析（非模型但高流量） | openai ipo 2026、openai 上市 台灣 | 5K-15K/月 | DataCamp + DigitalOcean 間接 | $100-300/月 | autodev-ai.com |
+| 2026-08-22 | Rytr affiliate（30%/12mo） | rytr 評測 2026、ai 寫作工具 | 2K-5K/月 | Rytr 30%/12mo recurring | $200-500/月 | autodev-ai.com |
+| 2026-08-22 | MiniMax M3.1（9 月 watchlist） | minimax m3.1 評測 2026 | 3K-10K/月（發布後） | DataCamp + DigitalOcean 間接 | $200-600/月（9 月） | autodev-ai.com |
+
+---
+
+### 🔥 高優先執行建議
+
+| 優先 | 任務 | 負責 | 說明 |
+|---|---|---|---|
+| P1-HIGH carryover | blog/openviking-agent-memory-save-tokens-2026.html | seo-writer | 四輪 carryover，31K★，Agent Plugins 1.0 新角度，繁中零教學，立即執行 |
+| P2 新 | blog/openai-ipo-2026-analysis.html | seo-writer | OpenAI IPO S-1 已提交，高流量議題，台灣投資者 + 開發者受眾，間接 DataCamp/DO |
+| P2 新 | blog/local-mac-ai-zero-friction-2026.html | seo-writer | PH 8/21 新品，Mac local AI，隱私角度，繁中零教學 |
+| P1（Ivan 申請後） | blog/rytr-review-2026.html | seo-writer | 30%/12mo，低門檻，繁中零評測，Ivan 申請後執行 |
+| WATCH | Minimax M3.1 watchlist | researcher | 9 月發布預期，若 GA → P0-URGENT |
+| WATCH | Qwen 3.8 open weights | researcher | HF repo 尚未出現，若開源 → P1-HIGH 72h 窗口 |
+
