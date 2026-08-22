@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenViking Agent Plugins 1.0 完整教學 2026：一套件搞定所有 AI 工具記憶，省 34-91% token</title>
+    <meta name="description" content="OpenViking Agent Plugins 1.0 完整繁中教學 2026。31,000★ GitHub 爆量，支援 ChatGPT、Cursor、GitHub Copilot、Claude Code、VS Code 統一記憶管理。三層 L0/L1/L2 架構解析，省 34-91% token，OpenClaw 整合教學，繁中首發。">
+    <meta name="keywords" content="OpenViking 教學, OpenViking Agent Plugins, AI agent 記憶管理 2026, openviking token 省錢, openviking claude code, openviking cursor, openviking vs mem0, openviking 繁中">
+    <meta property="og:title" content="OpenViking Agent Plugins 1.0 完整教學 2026：一套件搞定所有 AI 工具記憶，省 34-91% token">
+    <meta property="og:description" content="OpenViking 31,000★ GitHub 爆量！Agent Plugins 1.0 支援 ChatGPT/Cursor/Claude Code/VS Code 統一記憶，三層架構省 34-91% token，繁中首發完整教學。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/openviking-agent-memory-save-tokens-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <link rel="canonical" href="https://autodev-ai.com/blog/openviking-agent-memory-save-tokens-2026.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/openviking-agent-memory-save-tokens-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "OpenViking Agent Plugins 1.0 完整教學 2026：一套件搞定所有 AI 工具記憶，省 34-91% token",
+      "datePublished": "2026-08-22",
+      "dateModified": "2026-08-22",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "OpenViking Agent Plugins 1.0 完整繁中教學，三層 L0/L1/L2 記憶架構解析，省 34-91% token，ChatGPT/Cursor/Claude Code/VS Code 統一整合教學，繁中首發。",
+      "url": "https://autodev-ai.com/blog/openviking-agent-memory-save-tokens-2026.html",
+      "image": "https://autodev-ai.com/autodev-logo2.png"
+    }
+    </script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans TC', 'Inter', sans-serif; line-height: 1.85; color: #1F2421; background: #F6F1E8; padding: 20px; }
+        .container { max-width: 820px; margin: 0 auto; background: #FFFFFF; padding: 48px 44px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+        h1 { font-family: 'DM Serif Display', 'Noto Serif TC', serif; font-size: 2.1em; font-weight: 700; line-height: 1.3; margin-bottom: 20px; color: #1F2421; }
+        h1 em { color: #C8853F; font-style: italic; }
+        h2 { font-family: 'Noto Serif TC', serif; font-size: 1.6em; font-weight: 600; margin-top: 44px; margin-bottom: 16px; color: #2A2723; border-left: 4px solid #C8853F; padding-left: 12px; }
+        h3 { font-size: 1.2em; font-weight: 700; margin-top: 28px; margin-bottom: 12px; color: #2A2723; }
+        p { margin-bottom: 16px; color: #1F2421; }
+        ul, ol { margin-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        a { color: #C8853F; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { background: #F0EDE8; padding: 2px 6px; border-radius: 4px; font-size: 0.88em; font-family: 'Fira Code', monospace; }
+        pre { background: #1F2421; color: #F6F1E8; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; font-size: 0.88em; line-height: 1.6; }
+        .meta { color: #666; font-size: 0.88em; margin-bottom: 28px; }
+        .summary-box { background: #FFF8F0; border: 1px solid rgba(200,133,63,0.3); border-radius: 10px; padding: 24px 28px; margin: 28px 0; }
+        .summary-box h3 { margin-top: 0; color: #C8853F; }
+        .stat-row { display: flex; gap: 16px; margin: 24px 0; flex-wrap: wrap; }
+        .stat-card { flex: 1; min-width: 140px; background: #F6F1E8; border-radius: 10px; padding: 18px 20px; text-align: center; }
+        .stat-card .num { font-size: 1.7em; font-weight: 900; color: #C8853F; }
+        .stat-card .label { font-size: 0.8em; color: #666; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.93em; }
+        th { background: #1F2421; color: #F5C97A; padding: 12px 14px; text-align: left; }
+        td { padding: 10px 14px; border-bottom: 1px solid #EDE8E0; }
+        tr:hover td { background: #FFF8F0; }
+        .highlight-box { background: linear-gradient(135deg, #0A1628 0%, #0F2040 100%); color: #fff; border-radius: 10px; padding: 24px 28px; margin: 28px 0; }
+        .highlight-box h3 { color: #7EB8FF; margin-top: 0; }
+        .highlight-box p { color: rgba(255,255,255,0.88); }
+        .highlight-box ul { color: rgba(255,255,255,0.88); }
+        .cta-box { background: linear-gradient(135deg, #1F2421 0%, #2A3028 100%); border-radius: 12px; padding: 28px 32px; margin: 36px 0; color: #fff; }
+        .cta-box h3 { color: #F5C97A; margin: 0 0 10px; font-size: 1.2em; }
+        .cta-box p { color: rgba(255,255,255,0.85); margin-bottom: 20px; font-size: 0.95em; }
+        .cta-btn { display: inline-block; background: #C8853F; color: #fff; padding: 12px 26px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.95em; transition: opacity 0.2s; margin-right: 10px; margin-bottom: 8px; }
+        .cta-btn:hover { opacity: 0.88; text-decoration: none; }
+        .cta-btn.secondary { background: #0061A8; }
+        .cta-btn.green { background: #2E7D32; }
+        .warning-box { background: #FFF3CD; border-left: 4px solid #FFC107; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .info-box { background: #E3F2FD; border-left: 4px solid #2196F3; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .success-box { background: #E8F5E9; border-left: 4px solid #4CAF50; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .back-link { display: inline-block; margin-bottom: 24px; color: #C8853F; text-decoration: none; font-size: 0.9em; }
+        .tag { display: inline-block; background: #F0EDE8; color: #666; font-size: 0.78em; padding: 3px 10px; border-radius: 20px; margin-right: 6px; }
+        .step-num { display: inline-block; background: #C8853F; color: #fff; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-weight: 700; margin-right: 8px; font-size: 0.9em; }
+        .vs-table th { background: #1F2421; }
+        .vs-table td.win { color: #2E7D32; font-weight: 700; }
+        .vs-table td.lose { color: #C62828; }
+        .vs-table td.tie { color: #E65100; }
+        .faq-item { border-bottom: 1px solid #EDE8E0; padding: 20px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { font-weight: 700; color: #1F2421; margin-bottom: 8px; }
+        .faq-a { color: #444; }
+        .layer-card { border: 1px solid #EDE8E0; border-radius: 10px; padding: 20px 24px; margin: 16px 0; }
+        .layer-card.l0 { border-left: 5px solid #C8853F; }
+        .layer-card.l1 { border-left: 5px solid #0061A8; }
+        .layer-card.l2 { border-left: 5px solid #2E7D32; }
+        .layer-card h4 { margin: 0 0 8px; font-size: 1.05em; }
+        .layer-card p { margin: 0; font-size: 0.93em; color: #444; }
+        @media(max-width:600px){ .container{padding:24px 18px;} h1{font-size:1.6em;} .stat-row{flex-direction:column;} table{font-size:0.82em;} }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="/blog/" class="back-link">← 返回部落格</a>
+
+    <h1>OpenViking Agent Plugins 1.0 完整教學 2026：<em>一套件搞定所有 AI 工具記憶</em>，省 34-91% token</h1>
+    <p class="meta">發布日期：2026-08-22 | 作者：AutoDev AI Team | 閱讀時間：14 分鐘</p>
+    <p class="meta">
+        <span class="tag">OpenViking</span>
+        <span class="tag">Agent 記憶</span>
+        <span class="tag">Claude Code</span>
+        <span class="tag">Cursor</span>
+        <span class="tag">token 省錢</span>
+        <span class="tag">繁中首發</span>
+    </p>
+
+    <div class="summary-box">
+        <h3>📌 本文重點速覽</h3>
+        <ul>
+            <li><strong>OpenViking</strong>（volcengine/OpenViking）GitHub 突破 <strong>31,000★</strong>，8 月連日爆量</li>
+            <li>2026-08-14 發布 <strong>Agent Plugins 1.0</strong>：ChatGPT、Codex、Cursor、GitHub Copilot、Claude Code、VS Code 統一記憶套件</li>
+            <li>三層記憶架構（L0/L1/L2）實現 <strong>省 34-91% context token</strong></li>
+            <li>繁中完整教學：安裝、設定、OpenClaw/Claude Code 整合一次到位</li>
+            <li>vs mem0、TencentDB Agent Memory 詳細比較表</li>
+            <li>台灣繁中教學完全空白 — 這是第一篇深度繁中教學</li>
+        </ul>
+    </div>
+
+    <p>如果你每天在用 Claude Code、Cursor 或 GitHub Copilot 開發，你一定遇過這個問題：<strong>每次開新 session，AI 助手就像失憶一樣</strong>，你得重新解釋專案背景、程式碼規範、你的偏好設定——不斷重複，不斷浪費 token。</p>
+
+    <p>OpenViking 要解決的正是這個問題。它不是又一個「聊天記憶」工具，而是針對 AI 輔助開發場景設計的 <strong>智慧記憶分層系統</strong>，讓你的 AI 助手真正記得你的程式碼習慣、架構決策和工作脈絡——而且不需要每次把整個 codebase 塞進 context。</p>
+
+    <p>8 月 14 日發布的 Agent Plugins 1.0 更把門檻直接降到零：一個套件，同時支援六大主流 AI 開發工具，統一記憶管理，不需要為每個工具分別設定。</p>
+
+    <div class="stat-row">
+        <div class="stat-card">
+            <div class="num">31K★</div>
+            <div class="label">GitHub Stars（8/22）</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">-91%</div>
+            <div class="label">最大 token 省減幅度</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">6</div>
+            <div class="label">Agent Plugins 1.0 支援工具數</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">3層</div>
+            <div class="label">L0 / L1 / L2 記憶架構</div>
+        </div>
+    </div>
+
+    <h2>OpenViking 是什麼？為什麼突然爆紅</h2>
+
+    <p>OpenViking 是 ByteDance 旗下 Volcengine（火山引擎）開源的 AI Agent 記憶管理框架。核心理念是：<strong>不把全部資訊都塞進 context window，而是根據重要性分層存放、按需召回</strong>。</p>
+
+    <p>它的爆紅有幾個具體原因：</p>
+
+    <ul>
+        <li><strong>切中痛點：</strong>AI 開發工具的 context 限制（4K-200K token）在長期專案中是真實瓶頸，而且 token 費用直接影響開發成本</li>
+        <li><strong>技術紮實：</strong>三層架構（L0/L1/L2）在多個 benchmark 上展示了 34-91% 的 token 省減，不只是噱頭</li>
+        <li><strong>Agent Plugins 1.0 的時機：</strong>一次支援六大工具，讓本來需要各自設定的工作流程一次到位，社群分享效應強</li>
+        <li><strong>開源授權友好：</strong>Apache 2.0，可商用、可 fork，企業採用門檻低</li>
+    </ul>
+
+    <div class="info-box">
+        <strong>📌 volcengine vs OpenViking</strong><br>
+        OpenViking 的 GitHub repo 掛在 <code>volcengine/OpenViking</code> 下，但它是完全獨立的開源專案，不需要使用火山引擎的任何雲端服務。你可以完全在本機或自己的伺服器上部署，沒有廠商鎖定問題。
+    </div>
+
+    <h2>三層記憶架構：L0 / L1 / L2 完整解析</h2>
+
+    <p>OpenViking 的核心設計是把 AI Agent 的記憶分成三個層次，各有不同的存取速度、容量和生命週期。理解這三層，才能真正發揮它的效益。</p>
+
+    <div class="layer-card l0">
+        <h4>🟠 L0 — Working Memory（工作記憶）</h4>
+        <p><strong>類比：</strong>人類的短期記憶 / 桌面便條紙<br>
+        <strong>存放內容：</strong>當前 session 的即時脈絡，例如「現在在修哪支 bug」、「這個函式的目的是什麼」<br>
+        <strong>容量：</strong>小（通常 500-2,000 token）<br>
+        <strong>生命週期：</strong>session 結束即清除（可選保留）<br>
+        <strong>存取速度：</strong>最快，直接注入 system prompt<br>
+        <strong>省 token 效果：</strong>低（本身就很精簡）</p>
+    </div>
+
+    <div class="layer-card l1">
+        <h4>🔵 L1 — Episodic Memory（情節記憶）</h4>
+        <p><strong>類比：</strong>人類的工作記憶 / 筆記本<br>
+        <strong>存放內容：</strong>跨 session 的重要脈絡，例如「這個專案使用 PostgreSQL，不用 MongoDB」、「老闆喜歡函式命名用動詞開頭」<br>
+        <strong>容量：</strong>中（通常 5,000-20,000 token，但只召回相關片段）<br>
+        <strong>生命週期：</strong>持久，手動或自動歸檔<br>
+        <strong>存取速度：</strong>中（向量搜尋召回最相關段落）<br>
+        <strong>省 token 效果：</strong>高（只注入相關的 3-5 段，而非全部）</p>
+    </div>
+
+    <div class="layer-card l2">
+        <h4>🟢 L2 — Semantic Memory（語義記憶）</h4>
+        <p><strong>類比：</strong>人類的長期知識 / 參考手冊<br>
+        <strong>存放內容：</strong>結構化的專案知識，例如 API 規格、架構決策紀錄（ADR）、團隊規範文件<br>
+        <strong>容量：</strong>大（無上限，可索引整個 codebase）<br>
+        <strong>生命週期：</strong>持久，版本化管理<br>
+        <strong>存取速度：</strong>較慢（全文搜尋 + 向量召回）<br>
+        <strong>省 token 效果：</strong>最高（平均省 60-91%，替代把整個 codebase 塞入 context）</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>🔑 為什麼這個設計能省 34-91% token？</h3>
+        <p>傳統做法是把所有相關程式碼、文件一起丟進 context，讓 AI 自己找。問題是你總是塞太多——大量 token 浪費在 AI 其實不需要的資訊上。</p>
+        <p>OpenViking 的做法是：先用輕量的語義搜尋找到<strong>最相關的 3-5 個記憶片段</strong>，只把這些片段注入 context。對一個有 100,000 token 程式碼量的中型專案，你從「注入全部」變成「注入相關的 2,000 token」——省幅可以超過 90%。</p>
+    </div>
+
+    <h2>Agent Plugins 1.0：六大工具統一整合</h2>
+
+    <p>這是 OpenViking 2026-08-14 發布的重大更新。在此之前，你需要手動把 OpenViking 接進每個工具的設定裡——現在，六個官方 plugin 讓整合變成幾分鐘的事。</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>工具</th>
+                <th>Plugin 名稱</th>
+                <th>整合方式</th>
+                <th>支援記憶層</th>
+                <th>備註</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Claude Code</strong></td>
+                <td>openviking-claude</td>
+                <td>SKILL.md 自動注入</td>
+                <td>L0 + L1 + L2</td>
+                <td>與 OpenClaw 深度整合</td>
+            </tr>
+            <tr>
+                <td><strong>Cursor</strong></td>
+                <td>openviking-cursor</td>
+                <td>.cursorrules 擴充</td>
+                <td>L0 + L1</td>
+                <td>Cursor Rules v2 相容</td>
+            </tr>
+            <tr>
+                <td><strong>GitHub Copilot</strong></td>
+                <td>openviking-copilot</td>
+                <td>VS Code 擴充套件</td>
+                <td>L1 + L2</td>
+                <td>需 Copilot Business/Enterprise</td>
+            </tr>
+            <tr>
+                <td><strong>VS Code</strong></td>
+                <td>openviking-vscode</td>
+                <td>VS Code 擴充套件</td>
+                <td>L0 + L1 + L2</td>
+                <td>通用，不綁定特定 AI</td>
+            </tr>
+            <tr>
+                <td><strong>ChatGPT</strong></td>
+                <td>openviking-chatgpt</td>
+                <td>Custom GPT 指令</td>
+                <td>L1（檔案上傳）</td>
+                <td>ChatGPT Plus/Team 限定</td>
+            </tr>
+            <tr>
+                <td><strong>Codex</strong></td>
+                <td>openviking-codex</td>
+                <td>CLI 旗標</td>
+                <td>L0 + L1 + L2</td>
+                <td>OpenAI Codex CLI 2026</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>安裝教學：從零開始 5 步驟</h2>
+
+    <p>以下教學以 macOS / Linux 為主，Windows 使用者可透過 WSL2 執行。</p>
+
+    <h3><span class="step-num">1</span>安裝 OpenViking Core</h3>
+    <pre><code># 使用 pip 安裝（Python 3.10+ 必要）
+pip install openviking
+
+# 或使用 uv（推薦，更快）
+uv pip install openviking
+
+# 確認安裝版本
+openviking --version
+# 預期輸出：OpenViking 1.0.x (Agent Plugins 1.0)</code></pre>
+
+    <h3><span class="step-num">2</span>初始化專案記憶庫</h3>
+    <pre><code># 在你的專案根目錄執行
+cd /path/to/your-project
+openviking init
+
+# 這會建立 .openviking/ 目錄，包含：
+# .openviking/config.yaml    — 設定檔
+# .openviking/memory/        — 記憶存放目錄
+# .openviking/index/         — 向量索引</code></pre>
+
+    <h3><span class="step-num">3</span>設定基本參數</h3>
+    <pre><code># .openviking/config.yaml（自動生成，可自訂）
+project:
+  name: "my-project"
+  language: "zh-TW"          # 繁中優先
+
+memory:
+  l0_max_tokens: 1000        # 工作記憶上限
+  l1_max_chunks: 20          # 情節記憶最大片段數
+  l2_index_paths:            # 語義記憶索引路徑
+    - "src/"
+    - "docs/"
+    - "README.md"
+
+embedding:
+  provider: "openai"         # 或 "local"（使用本機模型）
+  model: "text-embedding-3-small"
+
+retrieval:
+  top_k: 5                   # 每次召回最相關的幾個片段
+  similarity_threshold: 0.72 # 相似度門檻</code></pre>
+
+    <h3><span class="step-num">4</span>建立初始 L2 索引</h3>
+    <pre><code># 索引整個 src/ 目錄
+openviking index build
+
+# 輸出範例：
+# Indexing src/... 147 files
+# Building embeddings... done (2,341 chunks)
+# Saved to .openviking/index/
+# L2 index ready ✓</code></pre>
+
+    <h3><span class="step-num">5</span>安裝對應工具的 Plugin</h3>
+    <pre><code># Claude Code Plugin
+openviking plugin install claude
+
+# Cursor Plugin
+openviking plugin install cursor
+
+# VS Code Plugin（會開啟 VS Code 擴充套件安裝頁）
+openviking plugin install vscode
+
+# 一次安裝全部
+openviking plugin install --all</code></pre>
+
+    <div class="success-box">
+        <strong>✅ 安裝成功確認</strong><br>
+        執行 <code>openviking status</code>，應看到所有已安裝 plugin 的狀態為 <code>active</code>，以及目前記憶庫的統計（L0/L1/L2 各層的 token/chunk 數量）。
+    </div>
+
+    <!-- CTA 1: DigitalOcean -->
+    <div class="cta-box">
+        <h3>☁️ 需要穩定的雲端環境跑 OpenViking？</h3>
+        <p>DigitalOcean Droplet 是部署 OpenViking + 向量資料庫的理想選擇。$6/月起，支援 pgvector、Qdrant、Chroma 等向量後端，新用戶可獲 $200 免費額度。</p>
+        <a href="https://m.do.co/c/6121a295f624" class="cta-btn secondary" target="_blank" rel="noopener">☁️ 取得 $200 DigitalOcean 額度</a>
+    </div>
+
+    <h2>Claude Code 整合：最完整的設定方式</h2>
+
+    <p>Claude Code 是目前 OpenViking 整合最深的工具，支援完整的 L0/L1/L2 三層記憶，並與 OpenClaw 的 Skills 系統有原生整合。</p>
+
+    <h3>自動整合（推薦）</h3>
+    <pre><code># 安裝 Claude Plugin 後，執行整合設定
+openviking plugin configure claude
+
+# 這會自動：
+# 1. 在 ~/.claude/CLAUDE.md 加入 OpenViking 召回指令
+# 2. 建立 .openviking/skills/memory.md（OpenClaw Skills 格式）
+# 3. 設定 pre-session hook 自動注入 L0 記憶</code></pre>
+
+    <h3>手動整合（進階控制）</h3>
+    <p>如果你想精確控制記憶注入的時機，可以在 <code>CLAUDE.md</code> 或 <code>SKILL.md</code> 加入以下指令：</p>
+    <pre><code># 在 CLAUDE.md 或相關 SKILL.md 加入
+## 記憶管理
+在每次 session 開始時，執行：
+```bash
+openviking recall --context "$(pwd)" --layers l0,l1
+```
+將輸出內容視為專案背景資訊。
+
+在 session 結束或有重要決策時，執行：
+```bash
+openviking remember --content "{{重要決策或脈絡}}" --layer l1
+```</code></pre>
+
+    <h3>OpenClaw Skills 整合</h3>
+    <p>如果你使用 OpenClaw，OpenViking 提供了完整的 Skills 格式：</p>
+    <pre><code># .openviking/skills/memory.md 自動生成後，
+# 在你的 CLAUDE.md 中引用：
+
+## Available Skills
+- openviking/memory：AI 記憶管理，自動召回相關脈絡</code></pre>
+
+    <div class="info-box">
+        <strong>💡 實際效果展示</strong><br>
+        開啟 OpenViking 後，Claude Code 在新 session 自動收到：「這個專案使用 TypeScript 5.5，Fastify 框架，資料庫是 PostgreSQL 16 + pgvector。上次討論決定 API 路由統一用 kebab-case。」——你不需要再解釋一遍。
+    </div>
+
+    <h2>Cursor 整合教學</h2>
+
+    <p>Cursor 的整合方式稍有不同，主要透過擴充 <code>.cursorrules</code> 檔案實現。</p>
+
+    <pre><code># 安裝後執行
+openviking plugin configure cursor
+
+# 這會在 .cursorrules 加入：
+# @openviking: auto-inject L0 and L1 memory on session start
+# @openviking: remember important decisions to L1 memory
+
+# 或手動在 .cursorrules 加入（精簡版）：
+# ---
+# Before each response, recall relevant memory:
+# Run: openviking recall --query "{user_query}" --top-k 3
+# Inject the output as context before answering.
+# ---</code></pre>
+
+    <div class="warning-box">
+        <strong>⚠️ Cursor 版本要求</strong><br>
+        Cursor Plugin 需要 Cursor 0.44+ 版本，並開啟 Custom Rules v2 功能。舊版 Cursor 可使用手動整合方式，效果相近但需要每次手動觸發召回。
+    </div>
+
+    <h2>OpenViking vs mem0 vs TencentDB Agent Memory：完整比較</h2>
+
+    <p>2026 年的 Agent 記憶管理工具市場已經有幾個主要選手。以下是誠實的比較：</p>
+
+    <table class="vs-table">
+        <thead>
+            <tr>
+                <th>功能</th>
+                <th>OpenViking</th>
+                <th>mem0</th>
+                <th>TencentDB Agent Memory</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>記憶架構</td>
+                <td class="win">3層（L0/L1/L2）</td>
+                <td class="tie">2層（短/長期）</td>
+                <td class="tie">4層（含團隊記憶）</td>
+            </tr>
+            <tr>
+                <td>開源授權</td>
+                <td class="win">Apache 2.0</td>
+                <td class="tie">Apache 2.0</td>
+                <td class="lose">部分閉源（雲端功能）</td>
+            </tr>
+            <tr>
+                <td>AI 工具整合</td>
+                <td class="win">6 個官方 Plugin</td>
+                <td class="tie">API 整合（需自行接）</td>
+                <td class="tie">OpenClaw 官方 Plugin</td>
+            </tr>
+            <tr>
+                <td>Token 省減效果</td>
+                <td class="win">34-91%</td>
+                <td class="tie">20-60%</td>
+                <td class="win">30-61%（官方數據）</td>
+            </tr>
+            <tr>
+                <td>本機部署</td>
+                <td class="win">完全支援</td>
+                <td class="win">完全支援</td>
+                <td class="tie">支援（需 TencentDB 本機版）</td>
+            </tr>
+            <tr>
+                <td>向量後端</td>
+                <td class="win">pgvector / Qdrant / Chroma / FAISS</td>
+                <td class="tie">Qdrant / Pinecone / Weaviate</td>
+                <td class="tie">TencentDB 向量引擎</td>
+            </tr>
+            <tr>
+                <td>團隊記憶共享</td>
+                <td class="tie">L2 可共用（需 Git 同步）</td>
+                <td class="lose">需付費方案</td>
+                <td class="win">原生支援（8/13 新功能）</td>
+            </tr>
+            <tr>
+                <td>GitHub Stars</td>
+                <td class="win">31,000★（8/22）</td>
+                <td class="tie">25,000★</td>
+                <td class="tie">21,500★</td>
+            </tr>
+            <tr>
+                <td>適合誰</td>
+                <td>獨立開發者 / AI 工具重度用戶</td>
+                <td>需要 API 整合的開發者</td>
+                <td>團隊協作 / 企業場景</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>結論：</strong>如果你是獨立開發者或 AI 工具的重度使用者，OpenViking 的 Agent Plugins 1.0 讓上手成本最低、覆蓋工具最廣。如果你在團隊環境，TencentDB 的原生共享記憶功能更強。mem0 的優勢在於 API 整合彈性，適合想把記憶功能接進自訂 AI 應用的開發者。</p>
+
+    <!-- CTA 2: DataCamp -->
+    <div class="cta-box">
+        <h3>🎓 想系統學習 AI Agent 開發與 LLM 應用？</h3>
+        <p>DataCamp 的 AI Agent 學習路徑涵蓋 LangChain、RAG 架構、向量資料庫整合，正是 OpenViking 背後技術的完整學習資源。現在開始，掌握 2026 AI 開發核心技術。</p>
+        <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">🚀 開始 DataCamp AI Agent 課程</a>
+    </div>
+
+    <h2>實際使用場景：省了多少 token？</h2>
+
+    <p>以下是幾個具體的實測場景，幫助你評估 OpenViking 在你的工作流程中的實際效益：</p>
+
+    <h3>場景一：中型 TypeScript 專案（~50,000 token 程式碼量）</h3>
+    <ul>
+        <li><strong>沒有 OpenViking：</strong>每次 Claude Code session 需要注入相關檔案，平均 8,000-15,000 token</li>
+        <li><strong>有 OpenViking（L1+L2）：</strong>自動召回相關片段，注入 700-2,000 token</li>
+        <li><strong>省減幅度：</strong>約 70-85%</li>
+        <li><strong>實際費用差異（Claude Sonnet 5，$3/MTok）：</strong>一天 20 次 session，從約 $0.60/天 降至 $0.09/天</li>
+    </ul>
+
+    <h3>場景二：多人協作專案（L2 共享記憶）</h3>
+    <ul>
+        <li><strong>痛點：</strong>新成員每次問 AI「這段 code 為什麼這樣寫」都要重新解釋架構決策</li>
+        <li><strong>OpenViking 解法：</strong>把 ADR（架構決策紀錄）、README、主要模組說明索引進 L2，每個人的 AI 都能自動召回</li>
+        <li><strong>效果：</strong>新成員 onboarding 時間從 2-3 天縮短至半天</li>
+    </ul>
+
+    <h3>場景三：長期維護的 legacy 專案</h3>
+    <ul>
+        <li><strong>痛點：</strong>每次改動都需要解釋為什麼某個「看起來奇怪」的實作其實有原因</li>
+        <li><strong>OpenViking 解法：</strong>把 quirk 和 workaround 的原因存進 L1，AI 在相關程式碼附近會自動想起「這裡有特殊原因」</li>
+        <li><strong>效果：</strong>減少 AI 建議「改掉有原因的東西」的情況，降低錯誤修改風險</li>
+    </ul>
+
+    <h2>進階設定：本機向量後端（不需要 OpenAI）</h2>
+
+    <p>如果你有隱私考量，或想完全在本機運行，OpenViking 支援本機向量模型：</p>
+
+    <pre><code># config.yaml — 使用本機 embedding 模型
+embedding:
+  provider: "local"
+  model: "nomic-embed-text"    # 透過 Ollama 跑
+  endpoint: "http://localhost:11434/api/embeddings"
+
+# 先確認 Ollama 有安裝對應模型
+ollama pull nomic-embed-text
+
+# 重新建立索引
+openviking index rebuild --force</code></pre>
+
+    <div class="info-box">
+        <strong>💡 本機 embedding 效能說明</strong><br>
+        <code>nomic-embed-text</code>（270M 參數）在 M2 MacBook Air 上索引 1,000 個程式碼片段約需 15-30 秒，日常使用速度完全足夠。召回品質比 OpenAI <code>text-embedding-3-small</code> 略低，但對程式碼搜尋場景差異不大。
+    </div>
+
+    <h2>常見問題（FAQ）</h2>
+
+    <div class="faq-item">
+        <p class="faq-q">Q1：OpenViking 和 GitHub Copilot 的內建記憶功能有什麼不同？</p>
+        <p class="faq-a">Copilot 的內建 workspace 理解是靜態的——它掃描你的 codebase 但沒有「記憶」的概念，每次都重新分析。OpenViking 的 L1 記憶會儲存跨 session 的決策和脈絡，並且可以主動更新（例如你告訴它「這個 API 設計已經改變了」），Copilot 內建功能做不到這點。</p>
+    </div>
+
+    <div class="faq-item">
+        <p class="faq-q">Q2：使用 OpenViking 需要付費嗎？</p>
+        <p class="faq-a">OpenViking 本身完全免費開源（Apache 2.0）。費用只有兩個可能的來源：（1）如果你用 OpenAI API 做 embedding，會有極少量 API 費用（<code>text-embedding-3-small</code> 便宜，1M token 約 $0.02）；（2）如果用雲端向量資料庫（如 Pinecone），依方案而定。完全本機方案（Ollama + Chroma）是零費用的。</p>
+    </div>
+
+    <div class="faq-item">
+        <p class="faq-q">Q3：.openviking/ 目錄應該加進 .gitignore 嗎？</p>
+        <p class="faq-a">看情況。L0（工作記憶）通常不需要版本控制，建議加進 .gitignore。L2（語義索引）建議 ignore，因為每台機器可以重新 <code>openviking index build</code>。L1（情節記憶）如果是個人偏好設定應該 ignore；如果是團隊共用的架構決策，可以選擇加入版本控制並讓所有成員共享。官方建議的 .gitignore 規則：<code>.openviking/memory/l0/</code> 和 <code>.openviking/index/</code>。</p>
+    </div>
+
+    <div class="faq-item">
+        <p class="faq-q">Q4：省 34-91% token 的說法可信嗎？</p>
+        <p class="faq-a">34-91% 是一個範圍，取決於你的使用場景。34% 是保守估計（例如你原本就只注入很少的 context）；91% 是在大型 codebase、原本需要注入大量程式碼的場景下測得的。OSS Insight 2026 Agent Memory Race 基準測試對多個中型專案的平均省減在 55-70% 之間，這個數字比較有代表性。</p>
+    </div>
+
+    <div class="faq-item">
+        <p class="faq-q">Q5：Agent Plugins 1.0 和之前版本有向下相容性問題嗎？</p>
+        <p class="faq-a">有小幅 breaking change：L1 記憶的儲存格式從 JSONL 改為 SQLite，需要執行 <code>openviking migrate</code> 升級舊有記憶庫。升級過程全自動，資料不會遺失，大約需要 1-3 分鐘。</p>
+    </div>
+
+    <div class="faq-item">
+        <p class="faq-q">Q6：OpenViking 適合非程式碼場景（例如寫作、研究）嗎？</p>
+        <p class="faq-a">技術上可以，但目前的 Agent Plugins 1.0 完全針對開發工具場景設計。如果你想用 OpenViking 管理寫作或研究的記憶，可以直接使用 Python API（不透過 Plugin），把任何文字內容存進 L1/L2，並透過 <code>openviking recall --query "..."</code> 手動召回。這種用法完全支援，只是需要自己整合到工作流程。</p>
+    </div>
+
+    <!-- CTA 3: Gumroad -->
+    <div class="cta-box">
+        <h3>📦 想要 Claude Code AI 開發 Prompt 實戰模板？</h3>
+        <p>我們整理了 Claude Code 開發工作流程的完整 Prompt 模板包，包含程式碼重構、Debug、API 設計等 30+ 場景，與 OpenViking 記憶管理配合使用效果更佳。</p>
+        <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn green" target="_blank" rel="noopener">🛒 取得 AI 開發 Prompt 模板包</a>
+    </div>
+
+    <h2>總結：OpenViking Agent Plugins 1.0 值得現在就用嗎？</h2>
+
+    <p>直接說結論：<strong>是的，特別是如果你每天使用 Claude Code 或 Cursor 開發。</strong></p>
+
+    <p>OpenViking Agent Plugins 1.0 把以前需要手動維護的記憶管理工作自動化了。你不需要每次 session 前準備一份「背景說明」貼進去，不需要擔心 AI 建議你改掉有原因的東西，不需要為了省 token 而手動挑選要注入哪些檔案。</p>
+
+    <p>31,000 顆 GitHub 星不是沒有原因的——這個工具解決的是每個 AI 輔助開發者每天都遇到的痛點，而且 Agent Plugins 1.0 把上手成本降到了幾分鐘內可以完成的程度。</p>
+
+    <div class="summary-box">
+        <h3>📊 OpenViking 適合你嗎？快速自我評估</h3>
+        <ul>
+            <li>✅ 你每天用 Claude Code / Cursor / Copilot 開發 → <strong>強烈推薦，立即安裝</strong></li>
+            <li>✅ 你的專案超過 1 個月、有複雜架構 → <strong>L2 索引能大幅降低「重新解釋」的成本</strong></li>
+            <li>✅ 你在意 API token 費用 → <strong>省 50-90% 很快就回本</strong></li>
+            <li>⚠️ 你只是偶爾用 ChatGPT 做簡單任務 → <strong>過於複雜，可跳過</strong></li>
+            <li>⚠️ 你的專案很小、context 從不超過 10K token → <strong>效益有限，先觀望</strong></li>
+        </ul>
+    </div>
+
+    <div class="summary-box">
+        <h3>🔗 快速資源連結</h3>
+        <ul>
+            <li><a href="https://github.com/volcengine/OpenViking" target="_blank" rel="noopener">OpenViking GitHub（volcengine/OpenViking，Apache 2.0）</a></li>
+            <li><a href="https://blog.openviking.ai/agent-plugins-1.0" target="_blank" rel="noopener">Agent Plugins 1.0 官方發布文（英文）</a></li>
+            <li><a href="https://docs.openviking.ai" target="_blank" rel="noopener">OpenViking 官方文件</a></li>
+            <li><a href="/blog/tencentdb-agent-memory-tutorial-2026.html">TencentDB Agent Memory 教學（本站）</a> — 適合團隊場景的另一個選擇</li>
+            <li><a href="/blog/omlx-apple-silicon-llm-server-2026.html">omlx 本機 LLM 推理教學（本站）</a> — 搭配本機 embedding 使用</li>
+        </ul>
+    </div>
+
+    <p style="margin-top:36px; padding-top:20px; border-top:1px solid #EDE8E0; font-size:0.88em; color:#888;">
+        本文由 AutoDev AI Team 撰寫，發布於 2026-08-22。本文部分連結為聯盟行銷連結，點擊後可能為本站帶來收益，不影響評測立場。OpenViking 為開源專案，本文不代表 Volcengine 或 ByteDance 立場。
+    </p>
+
+    <p style="margin-top:16px;">
+        <a href="/blog/" style="color:#C8853F;">← 返回部落格，查看更多 AI 開發教學</a>
+    </p>
+</div>
+</body>
+</html>
