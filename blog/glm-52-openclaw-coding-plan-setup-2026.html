@@ -312,13 +312,13 @@
 
   <h3>步驟 2：確認 API Endpoint</h3>
   <p>Z.ai 使用 OpenAI 相容的 API 格式，endpoint 為：</p>
-  <pre><code>https://api.z.ai/v1</code></pre>
+  <pre><code>https://open.bigmodel.cn/api/paas/v4</code></pre>
   <p>這意味著任何支援 OpenAI-compatible API 的工具都可以直接接入 GLM-5.2，包括 OpenClaw。</p>
 
   <h3>步驟 3：在 OpenClaw 新增 GLM-5.2 Provider</h3>
   <p>開啟 OpenClaw 設定（<code>Cmd/Ctrl + ,</code>）→ <strong>Models</strong> → <strong>Add Custom Provider</strong>，填入以下資訊：</p>
   <pre><code>Provider Name: Z.ai GLM-5.2
-API Base URL:  https://api.z.ai/v1
+API Base URL:  https://open.bigmodel.cn/api/paas/v4
 API Key:       sk-（你剛才複製的 key）
 Model ID:      glm-5.2[1m]
 Context Window: 1000000</code></pre>
@@ -344,7 +344,7 @@ Context Window: 1000000</code></pre>
 
   <pre><code># 在 .bashrc / .zshrc 加入以下設定
 export ANTHROPIC_API_KEY="sk-xxxxxxxx"   # 你的 Z.ai API Key
-export ANTHROPIC_BASE_URL="https://api.z.ai/v1"
+export ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/paas/v4"
 
 # 在 Claude Code 的設定中指定 model
 # 開啟 ~/.claude/settings.json，加入：
