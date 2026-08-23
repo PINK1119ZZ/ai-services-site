@@ -1018,6 +1018,10 @@ GitHub Trending 8/21、HackerNews 8/20-21、Product Hunt August 月榜更新、G
 | 2026-08-22 | OpenAI IPO S-1 分析（非模型但高流量） | openai ipo 2026、openai 上市 台灣 | 5K-15K/月 | DataCamp + DigitalOcean 間接 | $100-300/月 | autodev-ai.com |
 | 2026-08-22 | Rytr affiliate（30%/12mo） | rytr 評測 2026、ai 寫作工具 | 2K-5K/月 | Rytr 30%/12mo recurring | $200-500/月 | autodev-ai.com |
 | 2026-08-22 | MiniMax M3.1（9 月 watchlist） | minimax m3.1 評測 2026 | 3K-10K/月（發布後） | DataCamp + DigitalOcean 間接 | $200-600/月（9 月） | autodev-ai.com |
+| 2026-08-23 | **ponytail Claude Code plugin 教學**（R176 P1-HIGH） | ponytail claude code、ponytail plugin 教學、claude code 省 token、ai agent 寫更少代碼 2026 | 3K-8K/月 | DigitalOcean + DataCamp 間接 | $150-400/月 | autodev-ai.com |
+| 2026-08-23 | involve.me 評測（R176 P1-HIGH affiliate） | involve.me 評測 2026、ai 問卷工具、ai quiz funnel 教學 | 2K-5K/月 | involve.me 30% LIFETIME | $200-600/月 | autodev-ai.com |
+| 2026-08-23 | ReactIn LinkedIn B2B 評測（R176 P1 affiliate） | reactin 評測 2026、linkedin 自動化工具 2026、linkedin outreach ai | 1.5K-4K/月 | ReactIn 30% LIFETIME | $250-700/月 | autodev-ai.com |
+| 2026-08-23 | turbo-fieldfare 本機推理教學（R176 P2） | turbo-fieldfare 教學、gemma 4 本機 mac 2026、local llm 2gb ram | 1K-2K/月 | DataCamp + DigitalOcean 間接 | $50-150/月 | autodev-ai.com |
 
 ---
 
@@ -1025,7 +1029,10 @@ GitHub Trending 8/21、HackerNews 8/20-21、Product Hunt August 月榜更新、G
 
 | 優先 | 任務 | 負責 | 說明 |
 |---|---|---|---|
+| P1-HIGH 🆕 | blog/ponytail-claude-code-plugin-2026.html | seo-writer | R176 新發現，75K★，MIT，繁中零教學，54% less code + 省 token 角度，英文 232K 觀看，直接執行不需 Ivan 批准 |
 | P1-HIGH carryover | blog/openviking-agent-memory-save-tokens-2026.html | seo-writer | 四輪 carryover，31K★，Agent Plugins 1.0 新角度，繁中零教學，立即執行 |
+| P1-HIGH 🆕（Ivan 申請後） | blog/involveme-ai-quiz-funnel-review-2026.html | seo-writer | R176 新發現，involve.me 30% LIFETIME，60-day cookie，$20 起付，繁中零評測 |
+| P1 🆕（Ivan LinkedIn 後） | blog/reactin-linkedin-b2b-review-2026.html | seo-writer | R176 新發現，ReactIn 30% LIFETIME，LinkedIn B2B，繁中零評測 |
 | P2 新 | blog/openai-ipo-2026-analysis.html | seo-writer | OpenAI IPO S-1 已提交，高流量議題，台灣投資者 + 開發者受眾，間接 DataCamp/DO |
 | P2 新 | blog/local-mac-ai-zero-friction-2026.html | seo-writer | PH 8/21 新品，Mac local AI，隱私角度，繁中零教學 |
 | P1（Ivan 申請後） | blog/rytr-review-2026.html | seo-writer | 30%/12mo，低門檻，繁中零評測，Ivan 申請後執行 |

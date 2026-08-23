@@ -1263,3 +1263,123 @@ Kit 50% = 業界最高（超過 Jasper 25%、Writesonic 30%）。達 Bronze tier
 | Joiin affiliate | 🆕 P1-HIGH（本輪新發現，getreditus.com，40-50%/12mo，財務受眾）|
 | LinkedIn 流量管道 | 🆕 P1（Ivan 建帳號）|
 
+
+---
+
+## Round 176 — 2026-08-23（Sun 11:00 UTC，competitor-watch cron）
+
+### 一、台灣繁中競品市場更新
+
+本輪再次確認：**直接競品仍為零**。三大競品保持原有賽道不變：
+- **autolab.cloud（黃敬峰）**：課程變現路線持續。最新文章方向：OpenClaw 544 使用案例、Claude 記憶功能教學、AI 吸血鬼效率論。無 affiliate，課程/培訓導向，非我方賽道。
+- **ibest.com.tw**：廣告變現，仍在做 AI 市佔統計類文章（Gemini 突破 20% 等），無深度評測。
+- **metamatch.market**：企業顧問/雲市集導向，Claude 評測是企業採購文，非開發者受眾。
+
+新觀察：**ai2web.com.tw** 新站出現（中小企業 AI 工具推薦），廣告變現，無 affiliate，文章品質中等，關鍵字重疊度低，非直接威脅。**goboss.tw** 出現「AI 工具月費怎麼取捨」類文章——正好與我方費用計算器提案方向吻合，確認該需求真實存在。
+
+**結論**：台灣繁中 AI 深度評測 + affiliate 賽道仍為 autodev-ai 獨佔。
+
+---
+
+### 二、新 Affiliate 發現（本輪）
+
+#### 🆕 involve.me — 30% LIFETIME，60-day cookie（觸發 30%+ 門檻）
+
+- **品類**：AI quiz funnel + 互動表單 + email 自動化
+- **佣金**：30% recurring LIFETIME（只要用戶不離開就一直付）
+- **Cookie**：60 天
+- **平台**：Reditus marketplace
+- **定價**：約 $99 avg revenue/account，每轉介每月賺約 $29
+- **Min payout**：$20（業界最低門檻，快速看到收益）
+- **批准率**：官方宣稱 90%+，快速易過審
+- **受眾吻合度**：台灣行銷人、電商、問卷/互動型內容創作者——與 DataCamp/DigitalOcean 現有受眾互補
+- **繁中評測現況**：完全空白
+- **月收入潛力**：$200-600
+- **行動**：Ivan 申請 involve.me/affiliate（快速審核，PayPal 付款，直接申請無需仲介平台帳號）
+- **優先級**：P1-HIGH
+
+#### 🆕 ReactIn — 30% LIFETIME，60-day cookie，GetReditus（觸發 30%+ 門檻）
+
+- **品類**：LinkedIn B2B 自動化外展工具（LinkedIn-led outbound）
+- **佣金**：30% recurring LIFETIME，無 12 月上限
+- **Cookie**：60 天
+- **平台**：GetReditus marketplace
+- **定價**：$69/月起（per LinkedIn 帳號），avg LTV $500+
+- **Min payout**：$50（月結，PayPal）
+- **受眾吻合度**：B2B 業務、行銷、開發者導流 LinkedIn → 與 R175 LinkedIn 管道提案完美交叉
+- **繁中評測現況**：完全空白
+- **月收入潛力**：$250-700
+- **行動**：Ivan 申請 getreditus.com → ReactIn
+- **優先級**：P1（需先確認 Ivan 建立 LinkedIn 帳號後推進，受眾對齊）
+
+---
+
+### 三、GitHub 新品觀察（本輪）
+
+#### 🔥 ponytail（DietrichGebert/ponytail）— 75,000★+，Claude Code plugin
+
+- **定位**：Claude Code plugin，強制 AI agent 優先用原生 API/標準庫，不寫新代碼
+- **效果**：官方 benchmark 54% less code + 20% 省 token + 27% 更快（原始 94% 數字有方法論爭議，已修正）
+- **授權**：開源（MIT 推測）
+- **繁中教學現況**：目前搜尋到 YouTube 232K 次觀看英文影片，繁中完全空白
+- **Affiliate**：無直接 affiliate，但教學文章可嵌入 DigitalOcean + DataCamp CTA
+- **autodev-ai 受眾吻合度**：🔥 極高——Claude Code 開發者受眾完美吻合，省 token = 省錢角度直接
+- **行動**：topic-ideas.md 新增 → seo-writer P1 教學文（blog/ponytail-claude-code-plugin-2026.html）
+- **優先級**：P1-HIGH（stars 量大，繁中空白，省錢角度強）
+
+#### 📌 turbo-fieldfare（drumih/turbo-fieldfare）— ~4,200★，Apple Silicon 本機推理
+
+- **定位**：Swift + Metal 推理引擎，讓 Gemma 4 26B 在 M 系列 Mac 僅需 2GB RAM 跑起來
+- **授權**：Apache 2.0
+- **HN 加持**：2026-07-29，Show HN 893pts / 328 留言爆量（已是 3-4 週前，time-sensitive 窗口收窄）
+- **繁中教學現況**：空白
+- **Affiliate**：無直接 affiliate
+- **行動**：P2 watchlist（HN 窗口已過，但本機推理教學仍有長尾搜尋價值）
+- **優先級**：P2
+
+#### 📌 vercel/zero（PH 2026-08-22 #7）
+
+- **定位**：Vercel 出的 Zero 程式語言，專為 AI agent 設計
+- **PH 排名**：2026-08-22 日榜 #7
+- **Affiliate**：無
+- **行動**：P2 watchlist，等 GitHub stars 累積後評估
+
+---
+
+### 四、PH August 月榜更新（2026-08-23）
+
+月榜前段無重大變化：AdAnt AI #1、Hey Noah #2、Wispr Flow #3、Dograh #4、Grok #5、Astute #6、Coldtea.ai #7（我們已發文）、Soloop #8、Cloudflare #9、Clipto #10
+
+新進 2026-08-22 日榜：Zero（Vercel，AI agent 程式語言）#7、AutoClaw #9、Router by Ramp（tokens 省錢工具）#13、Actx0（記憶基礎設施）#14
+
+---
+
+### 五、變現動作建議（本輪優先）
+
+**P1-HIGH（新發現，Ivan 立即申請）：**
+1. involve.me affiliate → involve.me/affiliate（30% LIFETIME，$20 起付，快速過審）
+2. ponytail 教學文 → seo-writer 執行 blog/ponytail-claude-code-plugin-2026.html（75K★，繁中空白，省 token 角度）
+
+**P1（新發現，Ivan 申請後執行）：**
+3. ReactIn affiliate → getreditus.com（30% LIFETIME，60-day cookie，LinkedIn B2B）
+
+**關鍵字缺口識別（本輪）：**
+- ponytail claude code 教學（繁中完全空白，75K★ 項目）
+- involve.me 評測 2026（繁中完全空白，30% LIFETIME affiliate）
+- ai 工具月費計算器（goboss.tw 確認需求存在，我方計算器 proposal 仍待建置）
+- ReactIn linkedin 自動化評測（繁中空白，B2B LinkedIn 受眾）
+
+---
+
+### 六、Watchlist 更新（本輪 R176）
+
+| 項目 | 狀態 |
+|------|------|
+| ponytail | 🔥 P1-HIGH 新進（75K★，Claude Code plugin，繁中零教學，省 token 角度）|
+| involve.me affiliate | 🆕 P1-HIGH（30% LIFETIME，60-day，$20 起付，快速過審）|
+| ReactIn affiliate | 🆕 P1（30% LIFETIME，60-day，GetReditus，LinkedIn B2B）|
+| turbo-fieldfare | 📌 P2（Apache 2.0，4.2K★，HN 窗口已過，長尾搜尋仍有價值）|
+| vercel/zero | 📌 P2 watchlist（AI agent 語言，PH 8/22 #7）|
+| Buzz.ai affiliate | ⏳ R175 carryover，Ivan 申請中 |
+| Joiin affiliate | ⏳ R175 carryover，Ivan 申請中 |
+| MiniMax M3.1 | ⏳ watchlist 持續（仍未 GA）|
