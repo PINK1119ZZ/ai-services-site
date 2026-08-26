@@ -1,8 +1,21 @@
 {
-  "lastRun": "2026-08-26T05:00:00Z",
+  "lastRun": "2026-08-26T07:00:00Z",
   "lastResearchRound": 177,
   "lastStrategistRun": "2026-08-24T01:30:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-26T07:00:00Z",
+      "agent": "content-ops",
+      "task": "internal-linker",
+      "status": "completed",
+      "summary": "Wed 07:00 UTC cron — 內部連結優化。掃描 ai-services-site 主站 HTML，選出 3 個最缺內連的自然段落並各加入 1 個語境吻合的內部連結：(1) line-bot-saas.html hero 介紹段補連至 /pricing.html；(2) bot-cloud.html AI客服功能段補連至 /line-bot-saas.html；(3) ai-model.html 短影片 Reel 段補連至 /pricing.html。git commit e1fb789 + push origin main。",
+      "changes": [
+        "line-bot-saas.html：hero 介紹段新增「直接看完整方案報價」→ /pricing.html",
+        "bot-cloud.html：AI客服功能段新增「看看 LINE Bot 月費方案」→ /line-bot-saas.html",
+        "ai-model.html：短影片 Reel 段新增「詳見方案報價」→ /pricing.html",
+        "git commit e1fb789 + push origin main"
+      ]
+    },
     {
       "timestamp": "2026-08-26T05:00:00Z",
       "agent": "builder",
@@ -983,15 +996,15 @@
     }
   ],
   "gscData": {
-    "lastUpdated": "2026-08-25 07:00",
+    "lastUpdated": "2026-08-26 05:30",
     "period": "14 days",
     "sites": {
       "autodev-ai": {
         "summary": {
-          "totalClicks": 87,
-          "totalImpressions": 1526,
-          "avgCTR": 5.7,
-          "avgPosition": 9.4
+          "totalClicks": 89,
+          "totalImpressions": 1577,
+          "avgCTR": 5.6,
+          "avgPosition": 9.3
         },
         "topQueries": [
           {
@@ -1000,6 +1013,13 @@
             "impressions": 10,
             "ctr": 30.0,
             "position": 4.3
+          },
+          {
+            "keyword": "opencode zen vs go",
+            "clicks": 3,
+            "impressions": 12,
+            "ctr": 25.0,
+            "position": 3.2
           },
           {
             "keyword": "opencode zen 費用",
@@ -1016,18 +1036,11 @@
             "position": 25
           },
           {
-            "keyword": "opencode zen vs go",
+            "keyword": "gemma 4 12b",
             "clicks": 2,
-            "impressions": 11,
-            "ctr": 18.2,
-            "position": 3.3
-          },
-          {
-            "keyword": "buzz git",
-            "clicks": 1,
-            "impressions": 2,
-            "ctr": 50.0,
-            "position": 4
+            "impressions": 5,
+            "ctr": 40.0,
+            "position": 33.4
           },
           {
             "keyword": "buzz jack",
@@ -1037,13 +1050,6 @@
             "position": 2
           },
           {
-            "keyword": "gemma 4 12b",
-            "clicks": 1,
-            "impressions": 3,
-            "ctr": 33.3,
-            "position": 44.3
-          },
-          {
             "keyword": "line bot 收費",
             "clicks": 1,
             "impressions": 3,
@@ -1051,18 +1057,25 @@
             "position": 35
           },
           {
-            "keyword": "opencode go vs zen",
+            "keyword": "omlx 教學",
             "clicks": 1,
             "impressions": 10,
             "ctr": 10.0,
-            "position": 2.9
+            "position": 7.6
+          },
+          {
+            "keyword": "opencode go vs zen",
+            "clicks": 1,
+            "impressions": 9,
+            "ctr": 11.1,
+            "position": 2.8
           },
           {
             "keyword": "opencode go zen",
             "clicks": 1,
             "impressions": 4,
             "ctr": 25.0,
-            "position": 4.8
+            "position": 5
           },
           {
             "keyword": "opencode go和zen",
@@ -1070,6 +1083,13 @@
             "impressions": 2,
             "ctr": 50.0,
             "position": 5.5
+          },
+          {
+            "keyword": "opencode go和zen的区别",
+            "clicks": 1,
+            "impressions": 1,
+            "ctr": 100,
+            "position": 4
           },
           {
             "keyword": "opencode zen",
@@ -1093,18 +1113,25 @@
             "position": 3.4
           },
           {
-            "keyword": "opencode zen 和 go 的 区别",
-            "clicks": 1,
-            "impressions": 5,
-            "ctr": 20.0,
-            "position": 4.6
-          },
-          {
             "keyword": "opencode zen 额度",
             "clicks": 1,
             "impressions": 6,
             "ctr": 16.7,
             "position": 6.5
+          },
+          {
+            "keyword": "tencentdb agent memory",
+            "clicks": 1,
+            "impressions": 7,
+            "ctr": 14.3,
+            "position": 4
+          },
+          {
+            "keyword": "tencentdb-agent-memory",
+            "clicks": 1,
+            "impressions": 1,
+            "ctr": 100,
+            "position": 4
           },
           {
             "keyword": "\"qwen3.8-8b\"",
@@ -1116,9 +1143,9 @@
           {
             "keyword": "ai chatbot demo",
             "clicks": 0,
-            "impressions": 5,
+            "impressions": 3,
             "ctr": 0,
-            "position": 77.2
+            "position": 76
           },
           {
             "keyword": "ai customer service demo",
@@ -1154,106 +1181,106 @@
             "impressions": 1,
             "ctr": 0,
             "position": 8
-          },
-          {
-            "keyword": "best ai to pay for 2026",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 60
-          },
-          {
-            "keyword": "buzz acp",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 4
           }
         ],
         "topPages": [
           {
             "page": "//blog/opencode-zen-vs-go-pricing-2026.html",
-            "clicks": 51,
-            "impressions": 658,
-            "ctr": 7.8,
-            "position": 6.4
+            "clicks": 49,
+            "impressions": 669,
+            "ctr": 7.3,
+            "position": 6.5
           },
           {
             "page": "//blog/buzz-jack-dorsey-guide-2026.html",
-            "clicks": 6,
-            "impressions": 34,
-            "ctr": 17.6,
-            "position": 5.0
+            "clicks": 5,
+            "impressions": 40,
+            "ctr": 12.5,
+            "position": 7.0
           },
           {
             "page": "//blog/claude-video-watch-tutorial-2026.html",
             "clicks": 5,
-            "impressions": 69,
-            "ctr": 7.2,
+            "impressions": 72,
+            "ctr": 6.9,
             "position": 5.2
+          },
+          {
+            "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
+            "clicks": 5,
+            "impressions": 70,
+            "ctr": 7.1,
+            "position": 11.4
           },
           {
             "page": "//blog/line-bot-cost.html",
             "clicks": 5,
-            "impressions": 133,
+            "impressions": 131,
             "ctr": 3.8,
             "position": 7.6
           },
           {
             "page": "//",
             "clicks": 4,
-            "impressions": 37,
-            "ctr": 10.8,
-            "position": 6.8
-          },
-          {
-            "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
-            "clicks": 4,
-            "impressions": 69,
-            "ctr": 5.8,
-            "position": 11.4
+            "impressions": 41,
+            "ctr": 9.8,
+            "position": 6.5
           },
           {
             "page": "//en/",
             "clicks": 4,
-            "impressions": 59,
-            "ctr": 6.8,
-            "position": 19.1
+            "impressions": 54,
+            "ctr": 7.4,
+            "position": 20.4
           },
           {
             "page": "//blog/omlx-apple-silicon-llm-server-2026.html",
-            "clicks": 2,
-            "impressions": 34,
-            "ctr": 5.9,
-            "position": 7.1
+            "clicks": 3,
+            "impressions": 44,
+            "ctr": 6.8,
+            "position": 6.9
           },
           {
             "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
             "clicks": 2,
-            "impressions": 21,
-            "ctr": 9.5,
-            "position": 9.5
+            "impressions": 25,
+            "ctr": 8.0,
+            "position": 9.2
+          },
+          {
+            "page": "//blog/tencentdb-agent-memory-tutorial-2026.html",
+            "clicks": 2,
+            "impressions": 39,
+            "ctr": 5.1,
+            "position": 8.2
           },
           {
             "page": "//blog/chatgpt-claude-gemini-comparison.html",
             "clicks": 1,
-            "impressions": 16,
-            "ctr": 6.2,
-            "position": 9.1
+            "impressions": 15,
+            "ctr": 6.7,
+            "position": 9.3
           },
           {
             "page": "//blog/glm-53-cyber-coding-review-2026.html",
             "clicks": 1,
-            "impressions": 19,
-            "ctr": 5.3,
-            "position": 9
+            "impressions": 22,
+            "ctr": 4.5,
+            "position": 8.8
           },
           {
-            "page": "//blog/gpt-56-sol-terra-luna-review-2026.html",
+            "page": "//blog/rtk-rust-token-killer-review-2026.html",
             "clicks": 1,
-            "impressions": 15,
-            "ctr": 6.7,
-            "position": 7.7
+            "impressions": 6,
+            "ctr": 16.7,
+            "position": 4.2
+          },
+          {
+            "page": "//blog/systeme-io-review-2026.html",
+            "clicks": 1,
+            "impressions": 8,
+            "ctr": 12.5,
+            "position": 9.9
           },
           {
             "page": "//portfolio.html",
@@ -1293,9 +1320,9 @@
           {
             "page": "//blog/ai-tools-comparison-2026.html",
             "clicks": 0,
-            "impressions": 54,
+            "impressions": 56,
             "ctr": 0,
-            "position": 12.8
+            "position": 12.6
           },
           {
             "page": "//blog/atlassian-rovo-data-risk-2026.html",
@@ -1331,20 +1358,6 @@
             "impressions": 2,
             "ctr": 0,
             "position": 5.5
-          },
-          {
-            "page": "//blog/claude-code-auto-mode-guide-2026.html",
-            "clicks": 0,
-            "impressions": 8,
-            "ctr": 0,
-            "position": 7.5
-          },
-          {
-            "page": "//blog/claude-opus-5-review-2026.html",
-            "clicks": 0,
-            "impressions": 6,
-            "ctr": 0,
-            "position": 5.2
           }
         ]
       },
