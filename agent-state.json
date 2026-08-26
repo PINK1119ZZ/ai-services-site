@@ -1,8 +1,79 @@
 {
-  "lastRun": "2026-08-26T03:00:00Z",
+  "lastRun": "2026-08-26T05:00:00Z",
   "lastResearchRound": 177,
   "lastStrategistRun": "2026-08-24T01:30:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-26T05:00:00Z",
+      "agent": "builder",
+      "task": "ai-cost-calculator-cybersec-pack",
+      "status": "completed",
+      "summary": "Wed 05:00 UTC cron — strategist-weekly-2026-08-24 builder 指令執行。(1) 新建 tools/ai-cost-calculator.html（AI 工具費用計算器，20+ 工具，7 大分類，Vanilla JS，Gumroad 手續費試算，含 DigitalOcean + DataCamp + Gumroad 聯盟連結，sitemap 新增 priority 0.8）。(2) 新建 blog/ai-agent-cybersecurity-skills-claude-code-2026.html（~2,400 字繁中首創，AI Agent Cybersecurity Skills Pack v1.0 landing article，72 個技能 + 30 Prompt + 4 審計流程鏈，5 步驟 Claude Code 整合教學 + GitHub Actions CI/CD 範例 + 工具比較表 + FAQ 6 題，Gumroad CTA 9，DigitalOcean + DataCamp + Gumroad 聯盟連結）。blog/index.html 新增卡片排第一位（95→96 篇）。sitemap.xml 新增兩個 URL（131→133 URLs）。",
+      "changes": [
+        "新增 tools/ai-cost-calculator.html（20+ 工具費用計算器，7 大分類，Gumroad 手續費試算，Vanilla JS，無依賴）",
+        "新增 blog/ai-agent-cybersecurity-skills-claude-code-2026.html（~2,400 字繁中首創，Gumroad CTA 9）",
+        "blog/index.html：新增 AI Agent 資安技能包卡片（排第一位），95→96 篇",
+        "sitemap.xml：新增 ai-agent-cybersecurity-skills-claude-code-2026.html（priority 0.9）+ ai-cost-calculator.html（priority 0.8），131→133 URLs",
+        "agent-state.json：更新 lastRun + agentLog"
+      ],
+      "assetsCreated": [
+        {
+          "type": "interactive_tool_page",
+          "file": "tools/ai-cost-calculator.html",
+          "title": "AI 工具費用計算器 2026｜Claude、Cursor、DataCamp、Midjourney 月費一鍵試算",
+          "features": [
+            "20+ AI 工具，7 大分類（AI 助理/程式/學習/設計/雲端/自動化/電商）",
+            "Sticky 費用顯示欄，即時台幣換算（1 USD ≈ 32 TWD）",
+            "Gumroad 手續費試算器（10% 抽成 + Stripe 2.9% + sh.30/筆）",
+            "多方案切換（Cursor Hobby/Pro/Business 等）",
+            "Vanilla JS，無框架依賴，無障礙 ARIA 標籤",
+            "嵌入 DigitalOcean + DataCamp + Gumroad 聯盟連結"
+          ],
+          "affiliateLinks": [
+            "DigitalOcean m.do.co/c/6121a295f624",
+            "DataCamp afflink.one/s/aavAC",
+            "Gumroad kknad xiaofan8.gumroad.com/l/kknad"
+          ],
+          "revenueModel": "工具頁長尾流量導流至聯盟連結，SEO evergreen",
+          "estimatedMonthlyRevenue": "00-600"
+        },
+        {
+          "type": "landing_article",
+          "file": "blog/ai-agent-cybersecurity-skills-claude-code-2026.html",
+          "title": "AI Agent 資安技能包 2026：讓 Claude Code 自動抓 OWASP 漏洞，72 個 DevSecOps 技能完整教學",
+          "wordCount": "~2,400 字",
+          "gumroadCTA": "xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1（9）",
+          "affiliateLinks": [
+            "DigitalOcean m.do.co/c/6121a295f624",
+            "DataCamp afflink.one/s/aavAC",
+            "Gumroad kknad xiaofan8.gumroad.com/l/kknad"
+          ],
+          "seoKeywords": [
+            "ai agent 資安技能",
+            "claude code 安全審計",
+            "devsecops 2026 教學",
+            "owasp ai 掃描",
+            "claude code 資安",
+            "ai coding 漏洞偵測",
+            "cybersecurity skills pack"
+          ],
+          "revenueModel": "Gumroad 直接銷售 9 + 聯盟間接（DigitalOcean + DataCamp）",
+          "estimatedMonthlyRevenue": "00-800（直接）+ 00-300（間接）"
+        }
+      ],
+      "needsIvan": [
+        "P0-URGENT：上架 ai-agent-cybersecurity-skills-pack-v1.zip → xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1（9）",
+        "P0-URGENT carryover（第18週）：上架 claude-code-prompt-pack-2026",
+        "P0-URGENT carryover：上架 n8n-claude-templates-v1（9）",
+        "P0-URGENT carryover：上架 claude-code-skills-pack-v2（9）",
+        "P0-URGENT carryover（14+ 輪）：申請 Kit affiliate"
+      ],
+      "nextActions": [
+        "Ivan 上架 ai-agent-cybersecurity-skills-pack-v1 後，seo-writer 補充 Gumroad 連結到文章 CTA",
+        "（如有時間）打包 ai-agent-cybersecurity-skills-pack-v1.zip 驗證完整性",
+        "下次 builder cron：content-ops 5 篇英文頁補 affiliate CTA 進度追蹤"
+      ]
+    },
     {
       "timestamp": "2026-08-26T03:00:00Z",
       "agent": "seo-writer",
@@ -908,400 +979,6 @@
         "P1-HIGH：blog/qwen3-27b-local-deploy-2026.html（R169 P1-HIGH，本機部署，HN 加持）",
         "P1-HIGH：blog/openviking-agent-memory-save-tokens-2026.html（R171 新發現，省 30-50% token，OpenClaw 整合）",
         "P1：blog/wan-3-video-gen-review-2026.html（若前項完成後執行）"
-      ]
-    },
-    {
-      "timestamp": "2026-08-19T07:00:00Z",
-      "agent": "content-ops",
-      "task": "internal-linker",
-      "status": "completed",
-      "summary": "Wed 07:00 UTC cron — 內部連結優化。改動 2 個頁面，共新增 4 個內部連結。pricing.html：Pro 方案說明加入 bot-cloud.html 連結（長期穩定運行情境）；CTA 段落加入 ai-model.html 連結（品牌視覺素材情境）。portfolio.html：LINE AI 智慧客服 Demo 加入 line-bot-saas.html 連結（月費開通情境）；Telegram 通知機器人 Demo 加入 bot-cloud.html 連結（多平台長期托管情境）。所有連結均為自然語境插入，不強迫。git commit 759705a + push origin main。",
-      "changes": [
-        "pricing.html Pro 方案 pricing-desc：新增 bot-cloud.html 內部連結（需要長期穩定運行情境）",
-        "pricing.html CTA section：新增 ai-model.html 內部連結（品牌視覺素材情境）",
-        "portfolio.html LINE AI 智慧客服 Demo：新增 line-bot-saas.html 內部連結（月費開通情境）",
-        "portfolio.html Telegram 通知機器人 Demo：新增 bot-cloud.html 內部連結（多平台長期托管情境）",
-        "git commit 759705a + push origin main"
-      ],
-      "pagesEdited": [
-        "pricing.html",
-        "portfolio.html"
-      ],
-      "linksAdded": 4,
-      "linkTargets": [
-        "/bot-cloud.html",
-        "/ai-model.html",
-        "/line-bot-saas.html",
-        "/bot-cloud.html"
-      ]
-    },
-    {
-      "timestamp": "2026-08-19T05:00:00Z",
-      "agent": "builder",
-      "task": "landing-article-skills-pack-v2",
-      "status": "completed",
-      "summary": "Wed 05:00 UTC cron — 執行 strategist-weekly-2026-08-17 builder 指令。(1) 新建 blog/n8n-claude-code-workflow-templates-2026.html（~2,300 字繁中 landing article，n8n × Claude Code 模板包 Gumroad CTA，5 個 workflow 詳解 + 比較表 + 10分鐘快速上手 + FAQ）；(2) 新建 claude-code-skills-pack-v2/ 數位產品完整內容（10 個技能模組 skill.md + 30個 starter-prompts + meta-prompts + chain-prompts + cheatsheet + README + QUICKSTART）；(3) 打包 claude-code-skills-pack-v2.zip（34KB，待 Ivan 上架 Gumroad $29）；blog/index.html 新增 n8n landing 卡片（排第一位，37→38 篇）；sitemap.xml 新增 n8n-claude-code-workflow-templates-2026.html（priority 0.9）。",
-      "changes": [
-        "新增 blog/n8n-claude-code-workflow-templates-2026.html（~2,300 字繁中 landing article，Gumroad CTA + 5 workflow 詳解 + 比較表）",
-        "新增 claude-code-skills-pack-v2/（10 skills + 3 prompts files + cheatsheet + README + QUICKSTART）",
-        "打包 claude-code-skills-pack-v2.zip（34KB，待 Ivan 上架 xiaofan8.gumroad.com/l/claude-code-skills-pack-v2，$29）",
-        "blog/index.html：新增 n8n landing 卡片（排第一位），37→38 篇",
-        "sitemap.xml：新增 n8n-claude-code-workflow-templates-2026.html（lastmod 2026-08-19，priority 0.9）"
-      ],
-      "assetsCreated": [
-        {
-          "type": "landing_article",
-          "file": "blog/n8n-claude-code-workflow-templates-2026.html",
-          "title": "n8n × Claude Code 工作流程模板包 2026：5 個可直接匯入的自動化 Workflow",
-          "wordCount": "~2,300 字",
-          "affiliateLinks": [
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "DataCamp afflink.one/s/aavAC",
-            "Gumroad n8n-claude-templates-v1 xiaofan8.gumroad.com/l/n8n-claude-templates-v1"
-          ],
-          "seoKeywords": [
-            "n8n claude code 模板",
-            "n8n workflow 模板",
-            "n8n 自動化 claude",
-            "n8n json 匯入",
-            "n8n claude 教學 2026"
-          ],
-          "revenueModel": "Gumroad 9 導流（n8n-claude-templates-v1），+ DigitalOcean + DataCamp 聯盟"
-        },
-        {
-          "type": "digital_product",
-          "zipFile": "claude-code-skills-pack-v2.zip",
-          "gumroadUrl": "xiaofan8.gumroad.com/l/claude-code-skills-pack-v2（待 Ivan 上架）",
-          "suggestedPrice": "$29",
-          "contents": [
-            "10 個技能模組 skill.md（code-review, refactor, test-generation, debug, api-design, security-audit, performance, legacy-migration, documentation, agentic-workflows）",
-            "30 個 starter-prompts（prompts/starter-prompts.md）",
-            "Meta-prompts 7 個（prompts/meta-prompts.md）",
-            "Chain prompts 4 條流程（prompts/chain-prompts.md）",
-            "一頁速查表 cheatsheet.md",
-            "README.md + QUICKSTART.md"
-          ],
-          "revenueModel": "Gumroad 一次性 $29，目標 20-30 次/月，00-900/月",
-          "differentiator": "繁中首創 Skills Pack，可直接作為 Claude Code SKILLS.md 整合，非單純 prompt 清單"
-        }
-      ],
-      "needsIvan": [
-        "P1-HIGH（新）：上架 claude-code-skills-pack-v2.zip → xiaofan8.gumroad.com/l/claude-code-skills-pack-v2（$29 定價）",
-        "P0-URGENT carryover：上架 n8n-claude-templates-v1（builder 8/15 完成）",
-        "P0-URGENT carryover：上架 claude-code-prompt-pack-2026（第 17 週！）",
-        "P0-URGENT carryover：申請 Kit affiliate（13+ 輪）"
-      ],
-      "nextActions": [
-        "content-refresher：在現有 Claude Code 文章補 claude-code-skills-pack-v2 Gumroad CTA（Ivan 上架後）",
-        "content-refresher：在現有 n8n 文章補 n8n landing article 內連（blog/n8n-automation-tutorial-2026.html 等）",
-        "builder 下一輪：等 seo-writer 確認 Qwen3-27B 或 Wan-3 文章需要技術細節協助"
-      ]
-    },
-    {
-      "timestamp": "2026-08-19T03:00:00Z",
-      "agent": "seo-writer",
-      "task": "article-publish",
-      "status": "completed",
-      "summary": "Wed 03:00 UTC cron — R170 P1-HIGH 新鮮訊號：omlx Apple Silicon LLM 推理伺服器繁中首發教學（366★/today，19K Stars，8/18 單日 40+ PRs，繁中零教學）。文章：blog/omlx-apple-silicon-llm-server-2026.html（~2,700 字繁中首發）。Continuous batching + SSD caching 完整解析，5 步驟安裝教學，omlx vs Ollama / LM Studio / vLLM / MLX 完整比較表，4 大使用情境，FAQ 6 題。三個聯盟連結：DataCamp + DigitalOcean + Gumroad kknad。blog/index.html 新增卡片排第一位（36→37）。sitemap.xml 新增 omlx-apple-silicon-llm-server-2026.html (priority 0.9)。",
-      "changes": [
-        "新增 blog/omlx-apple-silicon-llm-server-2026.html（~2,700 字繁中首發，continuous batching + SSD cache 完整教學）",
-        "blog/index.html：新增 omlx 卡片（排第一位），36→37 篇",
-        "sitemap.xml：新增 omlx-apple-silicon-llm-server-2026.html（lastmod 2026-08-19，priority 0.9）"
-      ],
-      "articlesPublished": [
-        {
-          "file": "blog/omlx-apple-silicon-llm-server-2026.html",
-          "title": "omlx 完整教學 2026：Apple Silicon 本機 LLM 推理伺服器，比 Ollama 快在哪？",
-          "wordCount": "~2,700 字",
-          "affiliateLinks": [
-            "DataCamp afflink.one/s/aavAC",
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "Gumroad kknad xiaofan8.gumroad.com/l/kknad"
-          ],
-          "seoKeywords": [
-            "omlx 教學",
-            "omlx vs ollama",
-            "Apple Silicon LLM 2026",
-            "本機 LLM 推理",
-            "omlx 安裝",
-            "Mac M1 M2 M3 LLM server"
-          ],
-          "publishReason": "R170 P1-HIGH 新鮮訊號（8/19 366★/today，19.2K Stars，8/18 單日 40+ PRs，繁中零教學，autodev-ai 開發者受眾完美吻合，72h 時效窗口）",
-          "estimatedTraffic": "3K-8K/月",
-          "estimatedRevenue": "$100-300/月（間接 DataCamp + DigitalOcean）"
-        }
-      ],
-      "nextActions": [
-        "P1-HIGH：blog/deepseek-v4-pro-review-2026.html（MIT GA 8/13-14，繁中首發，多輪 carryover）",
-        "P1-HIGH：blog/qwen3-27b-local-deploy-2026.html（R169 P1-HIGH，本機部署，HN 加持）",
-        "P1：blog/wan-3-video-gen-review-2026.html（若前兩項完成後執行）"
-      ]
-    },
-    {
-      "timestamp": "2026-08-19T00:30:00Z",
-      "agent": "researcher",
-      "task": "ai-trend-hunter",
-      "round": 170,
-      "status": "completed",
-      "summary": "Round 170（Wed 00:30，ai-trend-hunter cron）— 核心發現：(1) GLM-5.5 仍未發布（8/19 aireleasetracker 預測誤差，Wikipedia 確認 stable=GLM-5.3 8/14，watchlist 延至 8/25）；(2) GitHub trending 8/19 爆量：omlx 366★/today（Apple Silicon LLM 推理伺服器，19.2K Stars，8/18 單日 40+ PRs，繁中零教學，P1-HIGH seo-writer）+ OpenCut 682★/today（開源 CapCut，84.5K Stars，MIT，無 affiliate，P2）；(3) Notion affiliate 50%/12mo 三源確認（loopcv.pro + tapfiliate.com + customgpt.ai，業界頂級，觸發 30%+ 門檻 → directive 給 strategist，P1-HIGH Ivan 申請）；(4) PH August 月榜：Soloop #7（Approval-first Agent OS，PH 8/7 Launch of Day，無 affiliate，P2 教學）+ TestMu AI #9 持續（已確認 affiliate R164-165）；(5) 無新 P0 模型發布（demandsphere + llmgateway 確認最新仍 Seedance 2.5 8/8）；(6) genlayer TypeScript 543★/today（Web3+AI，受眾不吻合，P3）。預估新增月收入潛力 $400-1,100。",
-      "changes": [
-        "搜尋 GLM-5.5 Z.AI release August 19 2026 → Wikipedia GLM(AI) 確認 stable=GLM-5.3(8/14)；felloai.com + kie.ai 確認 GLM-5.5 unreleased，watchlist 延至 8/25",
-        "搜尋 AI model release announcement August 19 2026 → demandsphere.com 最新 Qwen3.8-Max 8/15；llmgateway.io 最新 Seedance 2.5(8/8)；無新 P0 模型確認",
-        "搜尋 HackerNews AI August 19 2026 → HN Anthropic Risk PDF 討論：「27B local model = 6-8mo old SOTA」敘事，支持 Qwen3.8-27B 本機教學敘事",
-        "搜尋 GitHub trending AI August 19 2026 → github.com/trending 快照：omlx 366★/today(19.2K Stars)、OpenCut 682★/today(84.5K Stars)、genlayer 543★/today",
-        "搜尋 omlx LLM inference Apple Silicon → everydev.ai + aitoolly.com + github.com/jundot/omlx/pulls 確認：Apache 2.0，8/18 40+ PRs，Claude Code + DeepSeek V4 支援，繁中零教學",
-        "搜尋 OpenCut open source CapCut → MIT，TypeScript，84.5K Stars，無 affiliate，P2 確認",
-        "搜尋 new AI affiliate program 30% recurring August 2026 → loopcv.pro + tapfiliate.com + customgpt.ai 確認 Notion 50%/12mo（三源），Writesonic ~30% recurring，SEMrush 30-40%",
-        "搜尋 Soloop approval-first Product Hunt August 2026 → PH 8/7 Launch of Day + August 月榜 #7 確認，無公開 affiliate",
-        "搜尋 Product Hunt trending August 19 2026 → PH August 月榜更新確認：AdAnt #1、Hey Noah #1、Wispr Flow #3、Soloop #7、Cloudflare OS #8、TestMu AI #9",
-        "寫入 topic-ideas.md Round 170 完整段落",
-        "創建 directives/researcher-to-strategist-2026-08-19-round170.md（Notion 50%/12mo 觸發 30%+ 門檻通知）",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
-      ],
-      "topFindings": [
-        "GLM-5.5 watchlist 延至 8/25（8/19 仍未發布，aireleasetracker 預測誤差，Wikipedia 確認 stable=GLM-5.3）",
-        "omlx 366★/today（Apple Silicon LLM 推理，19.2K Stars，8/18 40+ PRs，繁中零教學，P1-HIGH）",
-        "OpenCut 682★/today（開源 CapCut，84.5K Stars，MIT，無 affiliate，P2）",
-        "Notion affiliate 50%/12mo（三源確認，觸發 30%+ 門檻，Ivan P1-HIGH 申請）",
-        "PH 月榜 Soloop #7（Approval-first Agent OS，8/7 Launch of Day，無 affiliate，P2）",
-        "無新 P0 模型發布（demandsphere + llmgateway 確認）",
-        "Qwen3.8-27B 本機部署敘事獲 HN 討論加持（「27B = 6-8mo old SOTA」）"
-      ],
-      "watchlistStatus": {
-        "glm55": "⏳ 8/19 仍未發布（aireleasetracker 預測誤差），watchlist 延至 8/25，若發布 → P0-URGENT",
-        "qwen3827B": "✅ P1-HIGH carryover（HN 討論加持，繁中本機部署零教學）",
-        "omlx": "🆕 P1-HIGH 新進（8/19 366★/today，Apple Silicon，繁中零教學）",
-        "openCut": "🆕 P2 新進（682★/today，MIT，無 affiliate）"
-      },
-      "newAffiliatesFound": [
-        {
-          "name": "Notion",
-          "commission": "50% recurring / 12 months（新訂閱）",
-          "cookie": "待確認（推測 30-90 天）",
-          "platform": "待確認（可能 PartnerStack 或 Impact）",
-          "pricing": "Plus $10/mo，Business $15/mo，AI add-on $10/mo",
-          "url": "notion.so/affiliate",
-          "priority": "P1-HIGH（50% > 30% 門檻，三源確認，100M+ users brand）",
-          "monthlyEst": "$300-800",
-          "note": "Round 170 三源確認，業界頂級條款，台灣知識工作者受眾完美吻合"
-        }
-      ],
-      "estimatedNewRevenue": "$400-1,100/月（Notion 50%/12mo $300-800 + omlx 教學間接 $100-300）"
-    },
-    {
-      "timestamp": "2026-08-18T03:00:00Z",
-      "agent": "seo-writer",
-      "task": "article-publish",
-      "status": "completed",
-      "summary": "Tue 03:00 UTC cron — P1-HIGH stub 補完：Seedance 2.5 完整評測發布（stub→完整文章，~2,600 字繁中）。文章：blog/seedance-25-review-2026.html。業界唯一 30 秒原生連續生成 + 原生 4K + 50 個多模態參考輸入完整解析。與 Kling 3.0、Wan 3.0、Runway Gen-4 對比表。6 個使用情境卡、6 步驟教學、Prompt 技巧、FAQ。三個聯盟連結：DigitalOcean + DataCamp + Gumroad kknad。blog/index.html 新增卡片排第一位（35→36）。sitemap.xml lastmod 2026-08-07→2026-08-18，priority 0.8→0.9。",
-      "changes": [
-        "補完 blog/seedance-25-review-2026.html（stub 36行→完整 ~2,600 字，三個聯盟連結）",
-        "blog/index.html：新增 Seedance 2.5 卡片（排第一位），35→36 篇",
-        "sitemap.xml：seedance-25-review-2026.html lastmod 2026-08-07→2026-08-18，priority 0.8→0.9"
-      ],
-      "articlesPublished": [
-        {
-          "file": "blog/seedance-25-review-2026.html",
-          "title": "Seedance 2.5 完整評測 2026：ByteDance 30 秒 4K AI 影片生成教學與競品比較",
-          "wordCount": "~2,600 字",
-          "affiliateLinks": [
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "DataCamp afflink.one/s/aavAC",
-            "Gumroad kknad xiaofan8.gumroad.com/l/kknad"
-          ],
-          "seoKeywords": [
-            "Seedance 2.5 評測",
-            "ByteDance AI 影片",
-            "seedance vs kling",
-            "AI 影片生成器比較 2026",
-            "30 秒 4K AI 影片",
-            "seedance 教學"
-          ],
-          "publishReason": "P1-HIGH stub 補完（strategist 8/17 週報指令，stub 每天浪費已索引 URL，8/8 GA）",
-          "estimatedTraffic": "3K-8K/月",
-          "estimatedRevenue": "$200-500/月（間接 DigitalOcean + DataCamp）"
-        }
-      ],
-      "nextActions": [
-        "P1-HIGH：blog/deepseek-v4-pro-review-2026.html（MIT GA 8/13-14，繁中首發，下輪優先）",
-        "P1：blog/qwen3-27b-local-deploy-2026.html（R169 P1-HIGH，本機部署零教學）",
-        "P1：Claude 浮水印深度分析（R169，HN 484pts，繁中零深度，時效 ~48h）"
-      ]
-    },
-    {
-      "timestamp": "2026-08-18T00:30:00Z",
-      "agent": "researcher",
-      "task": "ai-trend-hunter",
-      "round": 169,
-      "status": "completed",
-      "summary": "Round 169（Tue 00:30，ai-trend-hunter cron）— 核心發現：(1) Qwen3.8-27B 正式 GA（8/14，Apache 2.0，27B dense multimodal，17GB GGUF，262K context，benchmarks 超越 Qwen3.7-Plus + Claude Opus 4.6 agentic tasks，Simon Willison 8/16 深度評測，繁中本機部署教學完全空白，P1-HIGH seo-writer）；(2) Claude 浮水印爭議（HN 484pts，Daring Fireball Gruber 8/17「text adulteration」，EU AI Act 8/2 生效，444 留言，繁中零深度分析，P1 時效 ~48h）；(3) AdCreative.ai 30-40% LIFETIME affiliate（PartnerStack，90-day cookie， 最低提款，4.2M users，觸發 30%+ 門檻 → directive 給 strategist）；(4) GLM-5.5 最後 24h 窗口（aireleasetracker.com：Z.AI 預期 8/19，若發布 → P0-URGENT）；(5) HN 8/18：GitHub.com 當機（98pts）+ GPT-5.6 Sol vision（70pts）+ AI Credit Resale Economy（314pts，新題材）；(6) PH 8/17：Meridian #1、Omni #2、Treg #8（OpenRouter for tools，AGPL 開源，無 affiliate）；(7) GitHub trending 資料延遲（ossinsight 0 repos）。預估新增月收入潛力 00-1,900。",
-      "changes": [
-        "搜尋 AI model release announcement August 18 2026 → mean.ceo + llmgateway.io + aireleasetracker.com 確認：最新前線模型為 Claude Opus 5 / Gemini 3.6 Flash / Grok STT 1.0 / Qwen3.7 Flash；Qwen3.8-27B 已 GA（8/14）",
-        "搜尋 Qwen3.8-27B HuggingFace released August 15 16 17 2026 → local-ai-zone.github.io 8/15 + Tara AI community Facebook + X/TestingCatalog 確認 8/14 15:00 UTC GA，Apache 2.0，262K context，benchmarks 超越 Opus 4.6 agentic tasks",
-        "搜尋 Anthropic Claude watermark HN 484pts August 2026 → TechCrunch 8/11 首發 + HN 484pts/444 comments 確認（Daring Fireball 8/17 更新觸發新一波討論）+ EU AI Act 8/2 生效",
-        "搜尋 new AI affiliate program 30% recurring August 2026 → adcreative.ai/affiliate 官方確認 30-40% LIFETIME + partnerstack.com 確認 + adskull.io June 2026 verified（90-day cookie，無最低提款，PartnerStack）",
-        "搜尋 AdCreative.ai affiliate program 30% recurring commission 2026 apply → 四源確認（官方 + PartnerStack + adskull.io + notta.ai + YouTube），Bronze 30% LIFETIME，Gold 40% LIFETIME",
-        "搜尋 GLM-5.5 Z.AI release August 18 19 2026 → 仍未發布，aireleasetracker.com 顯示 Z.AI 預期 8/19（最後 24h）",
-        "搜尋 HackerNews AI news August 18 2026 → HN 首頁快照：GitHub 當機 #1（98pts）+ GPT-5.6 Sol vision #2（70pts）+ Claude 浮水印 #11（484pts）+ Dario Amodei AI regulation #9（150pts）+ AI Credit Resale Economy #29（314pts）",
-        "搜尋 Product Hunt trending August 18 2026 → PH 8/17 日榜：Meridian #1、Omni by xpander #2、Clears #3、Treg #8（OpenRouter for tools，2617 endpoints，AGPL，無 affiliate）",
-        "搜尋 GitHub trending AI August 18 2026 → ossinsight 今日資料延遲（0 repos），TowardsAI 2026 GitHub top 11 列舉：Ollama/Open WebUI/OpenClaw/Langflow/Dify/n8n 仍是主力，無新 P1+ 爆量訊號",
-        "寫入 topic-ideas.md Round 169 完整段落",
-        "創建 directives/researcher-to-strategist-2026-08-18-round169.md（AdCreative.ai 30-40% LIFETIME 觸發 30%+ 門檻通知）",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
-      ],
-      "topFindings": [
-        "Qwen3.8-27B GA（8/14，Apache 2.0，17GB GGUF，Simon Willison 8/16，繁中本機部署零教學，P1-HIGH seo-writer）",
-        "Claude 浮水印爭議（HN 484pts 本週最高熱度，Daring Fireball，EU AI Act 8/2，繁中零深度分析，P1 時效 ~48h）",
-        "AdCreative.ai 30-40% LIFETIME affiliate（PartnerStack，90-day cookie，4.2M users，觸發 30%+ 門檻）",
-        "GLM-5.5 最後 24h 窗口（aireleasetracker.com：Z.AI 預期 8/19，若發布 → P0-URGENT）",
-        "AI Credit Resale Economy（HN 314pts，API credit 黑市，繁中零報導，P2 新題材）",
-        "Treg PH 8/17 #8（OpenRouter for tools，2617 endpoints，AGPL，無 affiliate，P2 教學）",
-        "GitHub trending 8/18 資料延遲（ossinsight 0 repos，無新 P1+ 訊號）"
-      ],
-      "watchlistStatus": {
-        "glm55": "⏳ 8/18 00:30 仍未發布，aireleasetracker.com 顯示 Z.AI 預期 8/19（最後 24h），若發布 → P0-URGENT",
-        "qwen3827B": "✅ 8/14 GA（Apache 2.0，17GB GGUF，P1-HIGH seo-writer 教學）",
-        "wizRedAgent": "carryover R168（AI security 敘事，seo-writer 執行中）",
-        "litellmSandclock": "carryover R168（供應鏈攻擊，可合併 Wiz 文章）"
-      },
-      "newAffiliatesFound": [
-        {
-          "name": "AdCreative.ai",
-          "commission": "30% recurring LIFETIME（Bronze）→ 40% LIFETIME（Gold tier）",
-          "cookie": "90 天",
-          "platform": "PartnerStack（PayPal / Stripe 月付）",
-          "pricing": "9-299/月（4.2M marketers worldwide）",
-          "url": "adcreative.ai/affiliate",
-          "priority": "P1-HIGH（觸發 30%+ LIFETIME 門檻，directive 已寫給 strategist）",
-          "monthlyEst": "$300-900",
-          "note": "Round 169 新發現，四源確認，90-day cookie 高複利"
-        }
-      ],
-      "estimatedNewRevenue": "$700-1,900/月（AdCreative.ai LIFETIME $300-900 + Qwen3.8-27B 教學 $300-700 + Claude 浮水印時效文 $100-300）"
-    },
-    {
-      "timestamp": "2026-08-18T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "details": "Daily site health check: verified autodev-ai.com and ai-tools.pro homepages/sitemaps returned expected 200 responses; ai-tools.pro sitemap redirected to sitemap_index.xml as expected; ai-tools.tw and en.ai-tools.tw still failed DNS resolution; GitHub Pages fallback URLs remained healthy; sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200. Also completed strategist carryover quick win by adding DataCamp + DigitalOcean + Gumroad kknad CTA block to blog/lm-studio-bionic-guide-2026.html and updated dateModified.",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml returned HTTP 200 after redirect to sitemap_index.xml",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200",
-        "Updated blog/lm-studio-bionic-guide-2026.html with DataCamp + DigitalOcean + Gumroad CTA and refreshed dateModified to 2026-08-18",
-        "Updated agent-state.json siteHealth + issues + agentLog",
-        "Created memory/2026-08-18.md"
-      ]
-    },
-    {
-      "timestamp": "2026-08-17T22:00:00Z",
-      "agent": "researcher",
-      "task": "ai-dev-research",
-      "round": 168,
-      "status": "completed",
-      "summary": "Round 168（Mon 22:00，ai-dev-research cron）— 核心發現：(1) Wiz Red Agent vs GitHub Copilot Autofix（8/17 發布）：AI 安全代理發現 AI coding 工具引入的 CI/CD script injection 漏洞，存取 Snowflake 內部 Jira，繁中零深度分析，P1-HIGH seo-writer 72h 窗口；(2) LiteLLM SANDCLOCK 供應鏈攻擊（8/17）：2,038 個 repo 憑證暴露，TheHackerNews 頭條，可合併 Wiz 文章或獨立快訊；(3) Invisible AI Prompts 法院制裁（8/17）：prompt injection 法律後果首例，P1；(4) GLM-5.5 最後 48h 窗口（aireleasetracker.com 顯示 Z.AI 預期 8/19，仍 unannounced）；(5) Reclaim.AI cookie 三源完整確認（90天，40%/12mo + $1/work signup，Ivan P1 申請）；(6) Wan-Animate-2 Apache 2.0 完整確認（HuggingFace + ComfyUI，beats Dreamina/Kling，P1 教學）；(7) PH August 月榜無新變化（AdAnt AI #1，Coldtea.ai #5 我們文章已發）；(8) GitHub trending 8/17 當機（13:40-17:00 UTC），trending 資料不完整；(9) Paritok 無公開 affiliate 確認，降為 P2 純內容機會；(10) AI security 本輪三連爆（Wiz + LiteLLM + 法院制裁），敘事升溫為 8月最強訊號。",
-      "changes": [
-        "搜尋 GLM-5.5 release Z.AI August 2026 → evolink.ai 8/14：GLM-5.5 仍 unannounced，aireleasetracker.com：Z.AI 預期 ~8/19",
-        "搜尋 AI model release announcement August 17 18 2026 → llmgateway.io 最新仍 Seedance 2.5（8/8），無新 GA",
-        "搜尋 Wiz AI agent GitHub Copilot vulnerability August 2026 → wiz.io/blog 8/17 發布：Red Agent + Copilot Autofix + Snowflake CI/CD，繁中零深度分析確認",
-        "搜尋 HackerNews AI news August 16 17 2026 → securityaffairs.com 8/17：LiteLLM SANDCLOCK + Invisible AI Prompts 法院制裁 + McDonald's breach",
-        "搜尋 Product Hunt trending August 17 18 2026 → PH August 月榜無新變化（AdAnt AI #1 1.4K, Hey Noah #2 1.4K, Wispr Flow #3 8.7K, Dograh #4, Coldtea.ai #5）",
-        "搜尋 GitHub trending AI August 17 2026 → GitHub 8/17 全球大當機（13:40-17:00 UTC），trending 資料不完整",
-        "搜尋 Reclaim AI affiliate cookie window PartnerStack 2026 → getreditus.com 2026-08-08 三源確認：90天 cookie + 40%/12mo（工作信箱）+ $1/signup + 25%（個人信箱）",
-        "搜尋 Paritok affiliate program 2026 → 無公開 affiliate，降為 P2 純內容機會",
-        "搜尋 Wan-Animate-2 HuggingFace → Apache 2.0 完整確認（Wan-AI/Wan2.2-Animate-2-14B，ComfyUI 整合，beats Dreamina）",
-        "創建 directives/researcher-to-strategist-2026-08-17-round168.md",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
-      ],
-      "topFindings": [
-        "Wiz Red Agent vs Copilot Autofix（8/17，繁中零深度分析，AI 安全敘事最強訊號，P1-HIGH 72h 窗口）",
-        "LiteLLM SANDCLOCK 供應鏈攻擊（8/17，2,038 repos，TheHackerNews，可與 Wiz 合併，P1）",
-        "Invisible AI Prompts 法院制裁（8/17，prompt injection 法律後果首例，P1）",
-        "GLM-5.5 最後 48h 窗口（aireleasetracker.com ~8/19，若發布 → P0-URGENT）",
-        "Reclaim.AI cookie 90天三源完整確認（getreditus.com 2026-08-08，Ivan P1 申請）",
-        "Wan-Animate-2 Apache 2.0 完整確認（HuggingFace，ComfyUI，P1 教學，無 affiliate）",
-        "GitHub 8/17 全球大當機（trending 資料不完整，下輪補掃）",
-        "Paritok 無公開 affiliate（降為 P2 純內容）",
-        "PH August 月榜無新變化（Coldtea.ai #5 我們文章已發）",
-        "AI security 本輪三連爆（Wiz + LiteLLM + 法院制裁），8月最強敘事升溫訊號"
-      ],
-      "watchlistStatus": {
-        "glm55": "⏳ 8/17 仍未發布，aireleasetracker.com 顯示 Z.AI 預期 ~8/19（最後 48h），若發布 → P0-URGENT",
-        "wanAnimate2": "✅ Apache 2.0 完整確認（HuggingFace + ComfyUI），P1 教學，無 affiliate",
-        "reclaimAI": "✅ 90天 cookie 三源確認（getreditus.com 2026-08-08），Ivan P1 申請",
-        "paritok": "❌ 無公開 affiliate，降為 P2 純內容機會",
-        "wizRedAgent": "🔥 8/17 P1-HIGH 新進（AI security 敘事，72h 繁中首發窗口）",
-        "litellmSandclock": "🔥 8/17 P1 新進（供應鏈攻擊，可合併 Wiz 文章）"
-      },
-      "newAffiliatesFound": [
-        {
-          "name": "Reclaim.AI（完整確認）",
-          "commission": "40% recurring / 12 months（工作信箱）；25%（個人信箱）；+$1/工作信箱 signup",
-          "cookie": "90 天（getreditus.com 2026-08-08 驗證）",
-          "platform": "PartnerStack",
-          "pricing": "$0-20/月",
-          "url": "reclaim.ai/affiliate-program",
-          "priority": "P1",
-          "monthlyEst": "$100-400",
-          "note": "R167 首次確認（cookie 不確定），R168 三源完整確認（90天）"
-        }
-      ],
-      "estimatedNewRevenue": "$300-1,000/月（Wiz/AI security 文章 $200-600 + Reclaim.AI Ivan 申請後 $100-400）"
-    },
-    {
-      "timestamp": "2026-08-23T13:00:00Z",
-      "agent": "content-ops",
-      "task": "fb-weekly-review",
-      "status": "completed",
-      "summary": "Sun 13:00 UTC FB 週報。嘗試直接用 Graph API v23.0 拉 post_impressions / post_engaged_users / post_clicks，再次被 (#100) valid insights metric 擋下，故延續公開互動 fallback。本週共發 28 則：12:00 原生摘要主貼 7 則、04:00 外鏈貼 21 則；互動 7 全部來自主貼，清晨外鏈 21/21 全滅。已更新 fbStrategy.performance（raw/win/fail/weeklyReviews）、fbStrategy.autoDevAIStrategy.postRules，並把 measurement failure 持續記入 issues。",
-      "changes": [
-        "Facebook Graph API 驗證：post_impressions/post_engaged_users/post_clicks 仍回 (#100) valid insights metric",
-        "更新 fbStrategy.performance.lastWeeklyRaw（2026-08-17_to_2026-08-23 共 28 則）",
-        "新增本週 winPatterns / failPatterns：7/7 中午主貼有留言、21/21 清晨外鏈 0 互動",
-        "新增 weeklyReviews 2026-08-17_to_2026-08-23",
-        "更新 fbStrategy.autoDevAIStrategy.postRules：正式停用 04:00 外鏈常規排程、強化 fallback 標註規則",
-        "issues 新增本週 Graph API 測量失敗紀錄"
-      ],
-      "metrics": {
-        "posts": 28,
-        "midday_native_posts": 7,
-        "midday_native_interactions": 7,
-        "link_0400_posts": 21,
-        "link_0400_interactions": 0
-      }
-    },
-    {
-      "timestamp": "2026-08-24T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "summary": "Mon 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；兩個 GitHub Pages fallback 200✓。本輪無新站點故障、無需站內修復，沿用既有 builder DNS directive。",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage and sitemap.xml returned HTTP 200",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "No new site issues found; existing builder DNS directive remains active",
-        "Updated agent-state.json siteHealth + issues + agentLog"
-      ]
-    },
-    {
-      "timestamp": "2026-08-25T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "summary": "Tue 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓（sitemap 轉 sitemap_index.xml 正常）；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；兩個 GitHub Pages fallback 200✓；抽樣 autodev-ai sitemap 前 10 個 URL 全部 200✓。本輪無新站點故障、無需站內修復，沿用既有 builder DNS directive。",
-      "changes": [
-        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
-        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml redirected to sitemap_index.xml with HTTP 200",
-        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution",
-        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
-        "Sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200",
-        "No new site issues found; existing builder DNS directive remains active",
-        "Updated agent-state.json siteHealth + issues + agentLog"
       ]
     }
   ],

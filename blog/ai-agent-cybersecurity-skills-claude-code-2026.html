@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent 資安技能包 2026：讓 Claude Code 自動抓 OWASP 漏洞，72 個 DevSecOps 技能完整教學</title>
+<meta name="description" content="AI Agent Cybersecurity Skills Pack v1.0 完整介紹：72 個資安技能讓 Claude Code / Cursor 自動偵測 SQL injection、XSS、供應鏈攻擊。包含 30 個即用 Prompt、4 條審計流程鏈，5 分鐘嵌入 CI/CD pipeline。繁中首創，DevSecOps 工程師必備。">
+<link rel="canonical" href="https://autodev-ai.com/blog/ai-agent-cybersecurity-skills-claude-code-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/ai-agent-cybersecurity-skills-claude-code-2026.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/ai-agent-cybersecurity-skills-claude-code-2026.html">
+<meta property="og:title" content="AI Agent 資安技能包 2026：讓 Claude Code 自動抓 OWASP 漏洞">
+<meta property="og:description" content="72 個 AI Agent 資安技能，30 個即用 Prompt，4 條 DevSecOps 審計流程鏈。Claude Code / Cursor 直接整合，繁中首創。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/ai-agent-cybersecurity-skills-claude-code-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Agent 資安技能包 2026：讓 Claude Code 自動抓 OWASP 漏洞，72 個 DevSecOps 技能完整教學",
+  "description": "AI Agent Cybersecurity Skills Pack v1.0 完整介紹：72 個資安技能讓 Claude Code / Cursor 自動偵測 SQL injection、XSS、供應鏈攻擊。",
+  "image": "https://autodev-ai.com/autodev-logo2.png",
+  "datePublished": "2026-08-26",
+  "dateModified": "2026-08-26",
+  "author": { "@type": "Organization", "name": "AutoDev AI" },
+  "publisher": { "@type": "Organization", "name": "AutoDev AI", "logo": { "@type": "ImageObject", "url": "https://autodev-ai.com/autodev-logo2.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://autodev-ai.com/blog/ai-agent-cybersecurity-skills-claude-code-2026.html" }
+}
+</script>
+<meta name="theme-color" content="#FFF8F3">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo">AutoDev AI</a>
+<div class="nav-links" id="navLinks">
+<a href="/services.html">服務</a>
+<a href="/bot-cloud.html">雲託管</a>
+<a href="/ai-model.html">AI 模特</a>
+<a href="/tools/">工具</a>
+<a href="/pricing.html">方案</a>
+<a class="active" href="/blog/">Blog</a>
+<a href="/about.html">關於</a>
+<a class="nav-cta" href="/contact.html">免費諮詢</a>
+</div>
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="開啟選單">&#9776;</button>
+</div>
+</nav>
+
+<article class="blog-post">
+<div class="post-inner">
+
+<header class="post-header">
+  <div class="post-meta">
+    <span class="post-date">2026 年 8 月 26 日</span>
+    <span class="post-tag">DevSecOps</span>
+    <span class="post-tag">Claude Code</span>
+    <span class="post-tag">AI 資安</span>
+  </div>
+  <h1 class="post-title">AI Agent 資安技能包 2026：讓 Claude Code 自動抓 OWASP 漏洞，72 個 DevSecOps 技能完整教學</h1>
+  <p class="post-lead">2026 年 AI coding 工具的普及帶來新風險：<strong>AI 寫的程式碼不見得安全</strong>。LiteLLM SANDCLOCK 攻擊（8/17）暴露 2,038 個 repo 憑證；Wiz Red Agent 發現 Copilot Autofix 引入 CI/CD injection 漏洞。你的 Claude Code 能自動偵測這些問題嗎？這篇介紹如何用 AI Agent Cybersecurity Skills Pack 讓 AI coding 工具變成你的資安審計員。</p>
+</header>
+
+<!-- TL;DR box -->
+<div style="background:rgba(196,165,123,.07);border:1px solid rgba(196,165,123,.3);border-radius:14px;padding:1.4rem 1.6rem;margin:2rem 0;">
+  <strong style="color:var(--primary-light);">⚡ TL;DR</strong>
+  <ul style="margin:.7rem 0 0;padding-left:1.3rem;line-height:1.8;color:var(--light);">
+    <li>72 個 AI Agent 資安技能，覆蓋 OWASP Top 10 + MITRE ATT&CK + NIST CSF 2.0</li>
+    <li>30 個即用 Security Prompt，7 個 Meta-Prompt，4 條完整審計流程鏈</li>
+    <li>支援 Claude Code、Cursor、GitHub Copilot、VS Code 一鍵整合</li>
+    <li>5 分鐘嵌入 CI/CD，自動掃描 PR 中的安全風險</li>
+    <li>Apache 2.0 授權，商業可用，繁中首創</li>
+  </ul>
+</div>
+
+<h2>為什麼 2026 年開發者需要 AI 資安技能？</h2>
+
+<p>AI coding 工具讓工程師生產力提升 40–60%，但也帶來新的攻擊面。2026 年 8 月就有三個重大事件：</p>
+
+<ul>
+  <li><strong>LiteLLM SANDCLOCK（8/17）</strong>：供應鏈攻擊暴露 2,038 個 GitHub repo 的 API key 與資料庫憑證</li>
+  <li><strong>Wiz Red Agent vs Copilot Autofix（8/17）</strong>：AI 自動修復工具引入 CI/CD script injection 漏洞，攻擊者藉此存取 Snowflake 內部 Jira</li>
+  <li><strong>Claude Mythos 5（8/21）</strong>：Anthropic 旗下安全模型在 Mozilla Firefox 發現 271 個漏洞，其中有 27 年未被發現的 Critical 級問題</li>
+</ul>
+
+<p>傳統資安工具（Snyk、SonarQube、GitHub Advanced Security）能掃描已知漏洞，但對 AI 生成的程式碼邏輯錯誤、prompt injection 和 AI-specific 攻擊向量仍有盲點。這正是 AI Agent 資安技能的切入點。</p>
+
+<h2>AI Agent Cybersecurity Skills Pack v1.0 是什麼？</h2>
+
+<p>這是一個針對 Claude Code / Cursor / Copilot 設計的技能包，讓你的 AI coding 工具在寫程式的同時執行資安審計。基於 <strong>mukul975/Anthropic-Cybersecurity-Skills（Apache 2.0）</strong>框架，整理成繁中可直接使用的 72 個技能模組。</p>
+
+<h3>包含內容</h3>
+
+<div style="overflow-x:auto;margin:1.5rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:.93rem;">
+<thead>
+<tr style="background:rgba(196,165,123,.1);">
+<th style="padding:.7rem 1rem;text-align:left;border-bottom:2px solid rgba(196,165,123,.3);">檔案</th>
+<th style="padding:.7rem 1rem;text-align:left;border-bottom:2px solid rgba(196,165,123,.3);">說明</th>
+<th style="padding:.7rem 1rem;text-align:left;border-bottom:2px solid rgba(196,165,123,.3);">數量</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+<td style="padding:.65rem 1rem;"><code>skills/</code></td>
+<td style="padding:.65rem 1rem;">AI Agent 資安技能模組（繁中說明）</td>
+<td style="padding:.65rem 1rem;color:var(--primary-light);font-weight:700;">72 個</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+<td style="padding:.65rem 1rem;"><code>starter-prompts-security.md</code></td>
+<td style="padding:.65rem 1rem;">即用安全審計 Prompt</td>
+<td style="padding:.65rem 1rem;color:var(--primary-light);font-weight:700;">30 個</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+<td style="padding:.65rem 1rem;"><code>meta-prompts-security.md</code></td>
+<td style="padding:.65rem 1rem;">讓 AI 自動生成更多安全檢查規則</td>
+<td style="padding:.65rem 1rem;color:var(--primary-light);font-weight:700;">7 個</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+<td style="padding:.65rem 1rem;"><code>chain-prompts-security.md</code></td>
+<td style="padding:.65rem 1rem;">完整安全審計流程鏈</td>
+<td style="padding:.65rem 1rem;color:var(--primary-light);font-weight:700;">4 條</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+<td style="padding:.65rem 1rem;"><code>cheatsheet-security.md</code></td>
+<td style="padding:.65rem 1rem;">一頁速查表，隨時參考</td>
+<td style="padding:.65rem 1rem;color:var(--primary-light);font-weight:700;">1 頁</td>
+</tr>
+<tr style="background:rgba(255,255,255,.02);">
+<td style="padding:.65rem 1rem;"><code>QUICKSTART.md</code></td>
+<td style="padding:.65rem 1rem;">5 分鐘上手指南</td>
+<td style="padding:.65rem 1rem;color:var(--primary-light);font-weight:700;">—</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2>72 個技能覆蓋哪些領域？</h2>
+
+<p>技能依 <strong>MITRE ATT&CK、NIST CSF 2.0、OWASP Top 10</strong> 三大框架分類，完整涵蓋現代 Web 應用與雲端服務的資安風險：</p>
+
+<div style="overflow-x:auto;margin:1.5rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:.93rem;">
+<thead>
+<tr style="background:rgba(196,165,123,.1);">
+<th style="padding:.7rem 1rem;text-align:left;border-bottom:2px solid rgba(196,165,123,.3);">技能分類</th>
+<th style="padding:.7rem 1rem;text-align:center;border-bottom:2px solid rgba(196,165,123,.3);">數量</th>
+<th style="padding:.7rem 1rem;text-align:left;border-bottom:2px solid rgba(196,165,123,.3);">代表技能</th>
+<th style="padding:.7rem 1rem;text-align:left;border-bottom:2px solid rgba(196,165,123,.3);">對應框架</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+<td style="padding:.65rem 1rem;font-weight:700;">威脅建模</td>
+<td style="padding:.65rem 1rem;text-align:center;color:var(--primary-light);">12</td>
+<td style="padding:.65rem 1rem;">STRIDE 分析、攻擊面評估、DFD 繪製</td>
+<td style="padding:.65rem 1rem;color:var(--gray);">MITRE ATT&CK</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+<td style="padding:.65rem 1rem;font-weight:700;">程式碼注入防禦</td>
+<td style="padding:.65rem 1rem;text-align:center;color:var(--primary-light);">10</td>
+<td style="padding:.65rem 1rem;">SQL injection、XSS、SSRF、SSTI</td>
+<td style="padding:.65rem 1rem;color:var(--gray);">OWASP A03</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+<td style="padding:.65rem 1rem;font-weight:700;">密鑰與憑證管理</td>
+<td style="padding:.65rem 1rem;text-align:center;color:var(--primary-light);">8</td>
+<td style="padding:.65rem 1rem;">硬編碼掃描、Secret rotation、Vault 整合</td>
+<td style="padding:.65rem 1rem;color:var(--gray);">NIST CSF 2.0</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+<td style="padding:.65rem 1rem;font-weight:700;">供應鏈安全</td>
+<td style="padding:.65rem 1rem;text-align:center;color:var(--primary-light);">8</td>
+<td style="padding:.65rem 1rem;">SCA 依賴審計、SBOM 生成、npm audit</td>
+<td style="padding:.65rem 1rem;color:var(--gray);">SLSA / OWASP A06</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+<td style="padding:.65rem 1rem;font-weight:700;">身份驗證與授權</td>
+<td style="padding:.65rem 1rem;text-align:center;color:var(--primary-light);">10</td>
+<td style="padding:.65rem 1rem;">OAuth 誤設、JWT 弱點、RBAC 審計</td>
+<td style="padding:.65rem 1rem;color:var(--gray);">OWASP A01/A07</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+<td style="padding:.65rem 1rem;font-weight:700;">API 安全</td>
+<td style="padding:.65rem 1rem;text-align:center;color:var(--primary-light);">9</td>
+<td style="padding:.65rem 1rem;">Rate limiting、API key 洩漏、BOLA</td>
+<td style="padding:.65rem 1rem;color:var(--gray);">OWASP API Top 10</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+<td style="padding:.65rem 1rem;font-weight:700;">雲端與容器安全</td>
+<td style="padding:.65rem 1rem;text-align:center;color:var(--primary-light);">9</td>
+<td style="padding:.65rem 1rem;">IAM 最小權限、K8s RBAC、Docker 強化</td>
+<td style="padding:.65rem 1rem;color:var(--gray);">CIS Benchmarks</td>
+</tr>
+<tr style="background:rgba(255,255,255,.02);">
+<td style="padding:.65rem 1rem;font-weight:700;">安全測試</td>
+<td style="padding:.65rem 1rem;text-align:center;color:var(--primary-light);">6</td>
+<td style="padding:.65rem 1rem;">SAST 整合、Fuzzing、滲透測試 Prompt</td>
+<td style="padding:.65rem 1rem;color:var(--gray);">NIST SP 800-115</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2>5 步驟：將技能包整合進 Claude Code</h2>
+
+<p>以下以 Claude Code CLI 為例，5 分鐘完成整合。Cursor / Copilot 方式相同，調整技能載入路徑即可。</p>
+
+<h3>步驟 1：取得技能包</h3>
+
+<pre><code># 從 Gumroad 下載後解壓縮
+unzip ai-agent-cybersecurity-skills-pack-v1.zip -d ~/my-project/security-skills/</code></pre>
+
+<h3>步驟 2：建立 CLAUDE.md 引用技能</h3>
+
+<pre><code># ~/my-project/CLAUDE.md
+## Security Skills
+Load and apply the following security skill modules during code review and generation:
+
+@security-skills/skills/threat-modeling/
+@security-skills/skills/code-injection/
+@security-skills/skills/secrets-management/
+@security-skills/skills/supply-chain/
+@security-skills/skills/auth-authz/
+@security-skills/skills/api-security/
+@security-skills/skills/cloud-container/
+@security-skills/skills/security-testing/
+
+When writing or reviewing code, automatically check for issues defined in these skills.
+Apply starter-prompts-security.md patterns for security-sensitive functions.</code></pre>
+
+<h3>步驟 3：使用即用 Security Prompt 進行程式碼審計</h3>
+
+<pre><code># 在 Claude Code 中直接使用
+claude "依照 OWASP Top 10 審計這個 Express.js 路由，
+特別檢查 SQL injection、XSS、和 broken authentication。
+使用 security-skills 中的 code-injection 和 auth-authz 技能。"</code></pre>
+
+<h3>步驟 4：嵌入 GitHub Actions CI/CD</h3>
+
+<pre><code># .github/workflows/security-review.yml
+name: AI Security Review
+on: [pull_request]
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Run Security Skills Audit
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          claude --print "
+            Load security skills from ./security-skills/skills/.
+            Audit the changed files in this PR for:
+            1. OWASP Top 10 vulnerabilities
+            2. Hardcoded secrets or API keys
+            3. Supply chain risks in package.json changes
+            4. Authentication/authorization issues
+            Output findings as GitHub PR review comments format.
+          " > security-report.md
+      - name: Post Review Comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('security-report.md', 'utf8');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '## 🔐 AI 安全審計報告\n\n' + report
+            });</code></pre>
+
+<p>費用估算：一個 PR 約掃描 500 行程式碼，消耗 ~5K tokens，以 Claude Sonnet 5 API 計算約 <strong>$0.015 / PR</strong>，每週 50 個 PR 的團隊月費約 $3。</p>
+
+<h3>步驟 5：使用審計流程鏈做完整掃描</h3>
+
+<pre><code># chain-prompts-security.md 中的「完整 Web App 審計」流程
+# 步驟 1：威脅建模
+claude "對這個 API 執行 STRIDE 威脅建模分析"
+
+# 步驟 2：程式碼靜態分析  
+claude "掃描 src/ 目錄下所有 injection 漏洞，包括 SQL、XSS、SSRF"
+
+# 步驟 3：依賴項審計
+claude "分析 package.json 和 requirements.txt，找出已知 CVE 和可疑依賴"
+
+# 步驟 4：產出報告
+claude "整合前三步驟發現，依嚴重程度排列，輸出可執行的修復建議"</code></pre>
+
+<h2>4 個實際使用場景</h2>
+
+<h3>場景 1：DevSecOps 工程師 — CI/CD 自動掃描</h3>
+<p>每個 PR 自動觸發，掃描注入漏洞、硬編碼密鑰、依賴項 CVE。比 Snyk 便宜 80%，且能解釋漏洞成因並直接給出修復程式碼。</p>
+
+<h3>場景 2：Claude Code 用戶 — 寫程式同時抓漏洞</h3>
+<p>在 CLAUDE.md 載入技能後，每次 Claude Code 生成 API endpoint 或資料庫查詢，都會自動檢查是否符合安全最佳實踐。相當於一個 24 小時在線的資安同事。</p>
+
+<h3>場景 3：資安從業人員 — 加速滲透測試</h3>
+<p>用 meta-prompts 讓 Claude Code 針對目標應用生成自訂的測試用例，涵蓋 OWASP API Top 10 和 MITRE ATT&CK 技術，大幅縮短手動測試時間。</p>
+
+<h3>場景 4：全端開發者 — 供應鏈安全監控</h3>
+<p>每次 <code>npm install</code> 後自動執行供應鏈審計，識別可疑依賴（仿冒包名、異常 postinstall scripts），防範類 LiteLLM SANDCLOCK 攻擊。</p>
+
+<h2>與市面工具比較</h2>
+
+<div style="overflow-x:auto;margin:1.5rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:.9rem;">
+<thead>
+<tr style="background:rgba(196,165,123,.1);">
+<th style="padding:.7rem 1rem;text-align:left;border-bottom:2px solid rgba(196,165,123,.3);">工具</th>
+<th style="padding:.7rem 1rem;text-align:center;border-bottom:2px solid rgba(196,165,123,.3);">月費</th>
+<th style="padding:.7rem 1rem;text-align:center;border-bottom:2px solid rgba(196,165,123,.3);">AI 理解漏洞</th>
+<th style="padding:.7rem 1rem;text-align:center;border-bottom:2px solid rgba(196,165,123,.3);">自動修復</th>
+<th style="padding:.7rem 1rem;text-align:center;border-bottom:2px solid rgba(196,165,123,.3);">繁中說明</th>
+<th style="padding:.7rem 1rem;text-align:center;border-bottom:2px solid rgba(196,165,123,.3);">客製化</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(196,165,123,.04);">
+<td style="padding:.65rem 1rem;font-weight:700;color:var(--primary-light);">AI Agent Cybersecurity Skills Pack</td>
+<td style="padding:.65rem 1rem;text-align:center;font-weight:700;">$29（一次）</td>
+<td style="padding:.65rem 1rem;text-align:center;">✅ 深度</td>
+<td style="padding:.65rem 1rem;text-align:center;">✅ 是</td>
+<td style="padding:.65rem 1rem;text-align:center;">✅ 是</td>
+<td style="padding:.65rem 1rem;text-align:center;">✅ 完全</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+<td style="padding:.65rem 1rem;">Snyk</td>
+<td style="padding:.65rem 1rem;text-align:center;">$25–98/月</td>
+<td style="padding:.65rem 1rem;text-align:center;">⚠️ 有限</td>
+<td style="padding:.65rem 1rem;text-align:center;">⚠️ 部分</td>
+<td style="padding:.65rem 1rem;text-align:center;">❌ 英文</td>
+<td style="padding:.65rem 1rem;text-align:center;">❌ 固定規則</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);">
+<td style="padding:.65rem 1rem;">SonarQube</td>
+<td style="padding:.65rem 1rem;text-align:center;">$150+/月</td>
+<td style="padding:.65rem 1rem;text-align:center;">❌ 規則庫</td>
+<td style="padding:.65rem 1rem;text-align:center;">❌</td>
+<td style="padding:.65rem 1rem;text-align:center;">❌ 英文</td>
+<td style="padding:.65rem 1rem;text-align:center;">⚠️ 複雜</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.06);">
+<td style="padding:.65rem 1rem;">GitHub Advanced Security</td>
+<td style="padding:.65rem 1rem;text-align:center;">$49/用戶/月</td>
+<td style="padding:.65rem 1rem;text-align:center;">⚠️ CodeQL</td>
+<td style="padding:.65rem 1rem;text-align:center;">⚠️ Copilot 需額外費</td>
+<td style="padding:.65rem 1rem;text-align:center;">❌ 英文</td>
+<td style="padding:.65rem 1rem;text-align:center;">⚠️ 有限</td>
+</tr>
+<tr style="background:rgba(255,255,255,.02);">
+<td style="padding:.65rem 1rem;">手寫 CLAUDE.md 規則</td>
+<td style="padding:.65rem 1rem;text-align:center;">$0</td>
+<td style="padding:.65rem 1rem;text-align:center;">✅ 是</td>
+<td style="padding:.65rem 1rem;text-align:center;">✅ 是</td>
+<td style="padding:.65rem 1rem;text-align:center;">⚠️ 自己寫</td>
+<td style="padding:.65rem 1rem;text-align:center;">✅ 完全</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>手寫 CLAUDE.md 規則是「免費」但需要大量時間：光是覆蓋 OWASP Top 10 就需要數十小時研究與測試。技能包的價值在於省掉這個前置工作，並提供經過驗證的 72 個技能框架。</p>
+
+<h2>技能包使用範例：偵測硬編碼密鑰</h2>
+
+<pre><code># 使用 starter-prompts 中的「密鑰掃描」prompt
+"掃描這個 repository 中所有可能的硬編碼密鑰，包括：
+- AWS / GCP / Azure credential patterns
+- API keys (OpenAI, Anthropic, Stripe 等常見格式)  
+- 資料庫連線字串（含密碼的 connection string）
+- JWT secret / cookie signing keys
+- 任何高熵字串（entropy > 4.5）
+
+對每個發現：
+1. 指出精確的檔案位置和行號
+2. 說明風險等級（Critical/High/Medium）
+3. 提供立即修復方案（改用環境變數或 Vault）"</code></pre>
+
+<p>這一個 Prompt 對應技能包中的 <code>secrets-management/hardcoded-secret-scan.md</code>，包含 Anthropic 最佳實踐的偵測邏輯和 35 種常見密鑰的 regex pattern。</p>
+
+<h2>授權與合規</h2>
+
+<p>技能包基於 <strong>Apache 2.0 授權</strong>，商業使用完全合法：</p>
+<ul>
+  <li>✅ 可用於商業專案和客戶服務</li>
+  <li>✅ 可修改和擴充（鼓勵加入自訂規則）</li>
+  <li>✅ 可在 CI/CD 和自動化流程中使用</li>
+  <li>✅ 可用於安全顧問服務</li>
+</ul>
+
+<!-- CTA box -->
+<div style="background:linear-gradient(135deg,rgba(196,165,123,.12),rgba(184,148,106,.05));border:2px solid rgba(196,165,123,.4);border-radius:18px;padding:2rem;margin:2.5rem 0;text-align:center;">
+  <div style="font-size:1.05rem;color:var(--gray);margin-bottom:.6rem;">🔐 讓你的 Claude Code 變成資安審計員</div>
+  <div style="font-size:1.7rem;font-weight:900;color:var(--light);margin-bottom:.4rem;">AI Agent Cybersecurity Skills Pack v1.0</div>
+  <div style="color:var(--gray);margin-bottom:.5rem;">72 個技能 · 30 個即用 Prompt · 4 條審計流程鏈 · Apache 2.0</div>
+  <div style="font-size:2rem;font-weight:900;color:var(--primary-light);margin-bottom:1.2rem;">$29 一次付費，終身使用</div>
+  <a href="https://xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1" rel="nofollow" target="_blank"
+     style="display:inline-block;background:var(--accent);color:#1a1a2e;font-weight:900;font-size:1.1rem;padding:.9rem 2.2rem;border-radius:12px;text-decoration:none;transition:opacity .2s;"
+     onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+    立即取得技能包 →
+  </a>
+  <div style="font-size:.78rem;color:var(--gray);margin-top:.8rem;">透過 Gumroad 安全付款 · 下載後立即使用 · 30 天退款保證</div>
+</div>
+
+<h2>FAQ</h2>
+
+<h3>Q1：技能包能直接用在 Cursor 和 GitHub Copilot 嗎？</h3>
+<p>可以。技能包以 Markdown 格式提供，適用於任何接受 CLAUDE.md / .cursorrules / 系統 Prompt 的 AI coding 工具。Cursor 用戶將技能載入 <code>.cursorrules</code>；Copilot 用戶放入 GitHub Copilot 的 custom instructions 即可。</p>
+
+<h3>Q2：需要有資安背景才能使用嗎？</h3>
+<p>不需要。技能包每個模組都有繁中說明，解釋漏洞原理和修復方向，適合全端開發者從零開始學習 DevSecOps 實踐。有資安背景的用戶可以直接修改技能內容，加入組織特定規則。</p>
+
+<h3>Q3：與 Claude Code Skills Pack（程式技能包）有什麼差別？</h3>
+<p><a href="/blog/ponytail-claude-code-plugin-2026.html">Claude Code Skills Pack v2</a> 專注於程式碼品質、重構、測試生成等開發效率。本資安技能包專注於安全漏洞偵測和 DevSecOps 流程，兩者互補，可同時使用。</p>
+
+<h3>Q4：技能包會隨 OWASP / MITRE 更新嗎？</h3>
+<p>技能包為一次性購買。OWASP Top 10 2025 版本已納入，MITRE ATT&CK v15 已涵蓋。重大框架更新時會發布新版本，現有購買者可以取得更新版本。</p>
+
+<h3>Q5：API 費用會很高嗎？</h3>
+<p>不會。單次程式碼審計約消耗 3–8K tokens，以 Claude Sonnet 5 計算約 $0.01–0.03 / 次。嵌入 CI/CD 每月掃描 200 個 PR，費用約 $5–10，遠低於任何商業 SAST 工具。</p>
+
+<h3>Q6：可以用來做客戶的資安顧問服務嗎？</h3>
+<p>Apache 2.0 授權允許商業使用，包括用於顧問服務。唯一要求是保留原始授權聲明，且不可以技能包本身的名義聲稱是原創作品。</p>
+
+<!-- Affiliate section -->
+<div style="background:rgba(196,165,123,.05);border:1px solid rgba(196,165,123,.2);border-radius:12px;padding:1.2rem 1.4rem;margin:2rem 0;">
+  <strong style="color:var(--primary-light);">相關資源推薦</strong>
+  <ul style="margin:.7rem 0 0;padding-left:1.3rem;line-height:2;color:var(--light);">
+    <li>🚀 <strong>部署掃描 API</strong>：在 <a href="https://m.do.co/c/6121a295f624" rel="nofollow" target="_blank" style="color:var(--primary-light);">DigitalOcean</a> 架設自己的資安掃描服務 — 新戶 $200 免費額度，$6/月 Droplet 即可跑 Claude Code 自動審計</li>
+    <li>📚 <strong>深入學習 DevSecOps</strong>：<a href="https://afflink.one/s/aavAC" rel="nofollow" target="_blank" style="color:var(--primary-light);">DataCamp</a> 提供 Python 安全測試、SQL injection 防禦等實戰課程，年費方案最划算</li>
+    <li>🛠️ <strong>更多 Claude Code 工具</strong>：<a href="https://xiaofan8.gumroad.com/l/kknad" rel="nofollow" target="_blank" style="color:var(--primary-light);">AutoDev AI 工具包</a> 涵蓋程式開發、n8n 自動化模板等數位產品</li>
+  </ul>
+</div>
+
+<h2>結語</h2>
+
+<p>2026 年的 AI coding 工具讓我們寫程式更快，但速度本身不是問題——問題是 AI 不會主動替你想安全。LiteLLM SANDCLOCK 和 Wiz Red Agent 事件都說明一件事：<strong>你需要一個懂資安的 AI，不只是懂程式的 AI</strong>。</p>
+
+<p>AI Agent Cybersecurity Skills Pack 讓你的 Claude Code / Cursor 在每次生成程式碼的同時，也執行 OWASP Top 10 的安全檢查。72 個技能、30 個即用 Prompt、4 條審計流程鏈，$29 一次投資，換來的是一個永遠不下班的 AI 資安審計員。</p>
+
+</div>
+</article>
+
+<footer class="footer">
+<div class="footer-inner">
+<p>&copy; 2026 AutoDev AI · <a href="/blog/">Blog</a> · <a href="/tools/">工具</a> · <a href="/about.html">關於</a></p>
+</div>
+</footer>
+
+<script>
+const mobileBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+if (mobileBtn && navLinks) {
+  mobileBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    mobileBtn.setAttribute('aria-expanded', open);
+  });
+}
+</script>
+
+</body>
+</html>
