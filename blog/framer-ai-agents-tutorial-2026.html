@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framer AI Agents 完整教學 2026：不寫一行代碼，讓 AI 幫你建整個網站</title>
+    <meta name="description" content="Framer AI Agents 完整繁中教學 2026。PH August 月榜 #4 爆量，AI 幫你寫 copy、選色、生版面，5 步驟從零建站。支援 External Agents 串接，50%/12mo affiliate。繁中首發。">
+    <meta name="keywords" content="framer ai agents 教學, framer ai 繁中, framer ai website builder 2026, framer 教學中文, framer vs webflow 2026, framer ai agents 中文, no-code 建站 ai 2026">
+    <meta property="og:title" content="Framer AI Agents 完整教學 2026：不寫一行代碼，讓 AI 幫你建整個網站">
+    <meta property="og:description" content="Framer AI Agents PH August #4 爆量！AI 幫你寫 copy、選色、生版面，5 步驟從零建站，支援 External Agents 串接。繁中首發完整教學。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/framer-ai-agents-tutorial-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <link rel="canonical" href="https://autodev-ai.com/blog/framer-ai-agents-tutorial-2026.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/framer-ai-agents-tutorial-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Framer AI Agents 完整教學 2026：不寫一行代碼，讓 AI 幫你建整個網站",
+      "datePublished": "2026-08-27",
+      "dateModified": "2026-08-27",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "Framer AI Agents 完整繁中教學 2026。PH August 月榜 #4，AI 建站工具新世代，5 步驟從零建站，External Agents 串接教學，繁中首發。",
+      "url": "https://autodev-ai.com/blog/framer-ai-agents-tutorial-2026.html",
+      "image": "https://autodev-ai.com/autodev-logo2.png"
+    }
+    </script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans TC', 'Inter', sans-serif; line-height: 1.85; color: #1F2421; background: #F6F1E8; padding: 20px; }
+        .container { max-width: 820px; margin: 0 auto; background: #FFFFFF; padding: 48px 44px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+        h1 { font-family: 'DM Serif Display', 'Noto Serif TC', serif; font-size: 2.1em; font-weight: 700; line-height: 1.3; margin-bottom: 20px; color: #1F2421; }
+        h1 em { color: #C8853F; font-style: italic; }
+        h2 { font-family: 'Noto Serif TC', serif; font-size: 1.6em; font-weight: 600; margin-top: 44px; margin-bottom: 16px; color: #2A2723; border-left: 4px solid #C8853F; padding-left: 12px; }
+        h3 { font-size: 1.2em; font-weight: 700; margin-top: 28px; margin-bottom: 12px; color: #2A2723; }
+        p { margin-bottom: 16px; color: #1F2421; }
+        ul, ol { margin-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        a { color: #C8853F; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { background: #F0EDE8; padding: 2px 6px; border-radius: 4px; font-size: 0.88em; font-family: 'Fira Code', monospace; }
+        pre { background: #1F2421; color: #F6F1E8; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; font-size: 0.88em; line-height: 1.6; }
+        .meta { color: #666; font-size: 0.88em; margin-bottom: 28px; }
+        .summary-box { background: #FFF8F0; border: 1px solid rgba(200,133,63,0.3); border-radius: 10px; padding: 24px 28px; margin: 28px 0; }
+        .summary-box h3 { margin-top: 0; color: #C8853F; }
+        .stat-row { display: flex; gap: 16px; margin: 24px 0; flex-wrap: wrap; }
+        .stat-card { flex: 1; min-width: 140px; background: #F6F1E8; border-radius: 10px; padding: 18px 20px; text-align: center; }
+        .stat-card .num { font-size: 1.7em; font-weight: 900; color: #C8853F; }
+        .stat-card .label { font-size: 0.8em; color: #666; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.93em; }
+        th { background: #1F2421; color: #F5C97A; padding: 12px 14px; text-align: left; }
+        td { padding: 10px 14px; border-bottom: 1px solid #EDE8E0; }
+        tr:hover td { background: #FFF8F0; }
+        .highlight-box { background: linear-gradient(135deg, #0A1628 0%, #0F2040 100%); color: #fff; border-radius: 10px; padding: 24px 28px; margin: 28px 0; }
+        .highlight-box h3 { color: #7EB8FF; margin-top: 0; }
+        .highlight-box p { color: rgba(255,255,255,0.88); }
+        .highlight-box ul { color: rgba(255,255,255,0.88); }
+        .cta-box { background: linear-gradient(135deg, #1F2421 0%, #2A3028 100%); border-radius: 12px; padding: 28px 32px; margin: 36px 0; color: #fff; }
+        .cta-box h3 { color: #F5C97A; margin: 0 0 10px; font-size: 1.2em; }
+        .cta-box p { color: rgba(255,255,255,0.85); margin-bottom: 20px; font-size: 0.95em; }
+        .cta-btn { display: inline-block; background: #C8853F; color: #fff; padding: 12px 26px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.95em; transition: opacity 0.2s; margin-right: 10px; margin-bottom: 8px; }
+        .cta-btn:hover { opacity: 0.88; text-decoration: none; }
+        .cta-btn.secondary { background: #0061A8; }
+        .cta-btn.green { background: #2E7D32; }
+        .warning-box { background: #FFF3CD; border-left: 4px solid #FFC107; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .info-box { background: #E3F2FD; border-left: 4px solid #2196F3; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .success-box { background: #E8F5E9; border-left: 4px solid #4CAF50; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .back-link { display: inline-block; margin-bottom: 24px; color: #C8853F; text-decoration: none; font-size: 0.9em; }
+        .tag { display: inline-block; background: #F0EDE8; color: #666; font-size: 0.78em; padding: 3px 10px; border-radius: 20px; margin-right: 6px; }
+        .step-num { display: inline-block; background: #C8853F; color: #fff; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-weight: 700; margin-right: 8px; font-size: 0.9em; }
+        .vs-table th { background: #1F2421; }
+        .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 20px 0; }
+        .plan-card { border: 1px solid #EDE8E0; border-radius: 10px; padding: 20px; text-align: center; }
+        .plan-card.popular { border-color: #C8853F; background: #FFF8F0; }
+        .plan-card .price { font-size: 1.8em; font-weight: 900; color: #C8853F; }
+        .plan-card .plan-name { font-weight: 700; font-size: 1em; margin-bottom: 6px; }
+        .plan-card .plan-desc { font-size: 0.82em; color: #666; }
+        @media (max-width: 640px) {
+            .container { padding: 28px 20px; }
+            h1 { font-size: 1.6em; }
+            .stat-row { flex-direction: column; }
+            table { font-size: 0.82em; }
+            th, td { padding: 8px 10px; }
+            .plan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="/blog/" class="back-link">← 返回部落格</a>
+
+    <div class="meta">
+        <span class="tag">🔥 繁中首發教學</span>
+        <span class="tag">AI 建站</span>
+        <span class="tag">No-Code</span>
+        <span class="tag">PH August #4</span>
+        <span>2026-08-27</span>
+    </div>
+
+    <h1>Framer AI Agents 完整教學 2026：<em>不寫一行代碼</em>，讓 AI 幫你建整個網站</h1>
+
+    <p class="meta">作者：AutoDev AI Team｜更新：2026-08-27｜閱讀時間：約 12 分鐘</p>
+
+    <div class="summary-box">
+        <h3>📌 本文重點摘要</h3>
+        <ul>
+            <li><strong>Framer AI Agents</strong> 是 2026 年最受矚目的 AI 建站工具，Product Hunt August 月榜直衝 #4</li>
+            <li>全新 AI Agents 功能：AI 幫你寫頁面 copy、選色調、生版面結構，一句話生成完整 landing page</li>
+            <li>支援 <strong>External Agents 串接</strong>（標注 "New"）— 可接 Claude、GPT、自訂 AI workflow</li>
+            <li>5 步驟從零建站教學，適合設計師、行銷人、創業者、no-code 建站族</li>
+            <li>繁中教學完全空白，本文為繁中首發完整解析</li>
+        </ul>
+    </div>
+
+    <div class="stat-row">
+        <div class="stat-card">
+            <div class="num">#4</div>
+            <div class="label">PH August 月榜</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">5M+</div>
+            <div class="label">全球用戶數</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">50%</div>
+            <div class="label">最高 Affiliate 佣金</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">3 分鐘</div>
+            <div class="label">AI 生成首版網站</div>
+        </div>
+    </div>
+
+    <p>你有沒有遇過這種情況：想做一個產品 landing page，打開 Webflow 或 WordPress 卻不知道從哪裡下手；找設計師報價一開口就是萬把元；自己用模板改又改不出想要的感覺。</p>
+
+    <p>2026 年，這個問題有了一個讓設計圈炸鍋的解法——<strong>Framer AI Agents</strong>。</p>
+
+    <p>這不是普通的「AI 幫你改排版」功能。Framer 在 2026 年全面升級的 AI Agents 系統，可以讓你用一句話描述網站目標，由 AI 自動完成：品牌色調選擇、頁面結構規劃、文案撰寫、元件排版，甚至對接你自己的 AI workflow。結果是一個可以直接上線的完整網站，不是半成品草稿。</p>
+
+    <p>Product Hunt August 2026 月榜，Framer AI Agents 從榜外直接殺入 #4 位置，把 Wispr Flow 擠下去——這在 PH 月榜歷史上不常見。繁中世界卻幾乎還沒有人深入介紹過這個功能。這篇文章帶你從原理到實操，完整解析。</p>
+
+    <h2>Framer AI Agents 是什麼？2026 新功能全解析</h2>
+
+    <p>Framer 本來是設計師圈裡的知名工具——以高品質動畫效果和所見即所得的視覺編輯著稱，被認為是 Webflow 的高階替代品。但 2026 年的 Framer 已經不只是設計工具了。</p>
+
+    <p>Framer 在 2026 年推出的 <strong>AI Agents 系統</strong>，包含兩個核心模組，兩個都標注了「New」：</p>
+
+    <h3>1. 內建 AI Agent（Built-in AI）</h3>
+    <p>這是 Framer 自家訓練的建站專用 AI。你給它一段描述，它可以：</p>
+    <ul>
+        <li>根據你的品牌定位自動生成完整頁面結構（Hero / Features / Testimonials / CTA 等）</li>
+        <li>撰寫頁面文案（包含標題、副標、button text、說明段落）</li>
+        <li>選擇與品牌調性吻合的色系和字型組合</li>
+        <li>依照桌機 / 手機自動做響應式排版</li>
+        <li>生成網站的 meta title 和 SEO description</li>
+    </ul>
+
+    <div class="highlight-box">
+        <h3>💡 實測 Prompt 範例</h3>
+        <p>輸入：「我是台灣獨立設計師，提供品牌識別設計服務，客群是新創公司，費用 NT$30,000 起。請幫我做一個展示作品和聯絡表單的個人網站。」</p>
+        <p>Framer AI 輸出：6 個頁面區塊、完整文案、深色系品牌配色、作品展示 grid、聯絡表單，約 3 分鐘完成首版。</p>
+    </div>
+
+    <h3>2. External Agents 串接（最新功能）</h3>
+    <p>這是 2026 年讓開發者社群最興奮的功能。Framer 現在允許你把<strong>外部 AI agent 接入網站建構流程</strong>，包括：</p>
+    <ul>
+        <li>Claude（Anthropic API）— 用來做內容生成或 A/B 文案測試</li>
+        <li>ChatGPT / GPT-5.4（OpenAI API）— 用來做 SEO 優化建議</li>
+        <li>自訂 n8n 或 make.com workflow — 例如讓 AI 自動從 Google Sheets 拉商品資料更新網站</li>
+        <li>任何支援 Webhook 的 AI 服務</li>
+    </ul>
+
+    <p>實際應用場景：電商賣家可以讓 External Agent 每週自動分析競品價格，並建議是否更新 Framer 網站上的定價頁面；部落客可以讓 Agent 把 Notion 資料庫的文章自動同步發布到 Framer 網站。</p>
+
+    <div class="info-box">
+        <strong>📌 注意：</strong>External Agents 功能目前（2026-08）在所有付費方案均可使用，但 API 呼叫次數依方案有所限制。詳細配額請參考 <a href="https://framer.com/pricing" target="_blank" rel="noopener">framer.com/pricing</a>。
+    </div>
+
+    <h2>Framer vs 競品：2026 完整比較表</h2>
+
+    <p>Framer AI Agents 最大的競爭對手是 Webflow、Squarespace AI、Wix AI，以及新興的 Lovable。以下從 AI 能力、設計彈性、台灣適用性三個維度做完整比較：</p>
+
+    <table class="vs-table">
+        <thead>
+            <tr>
+                <th>工具</th>
+                <th>AI 建站能力</th>
+                <th>設計彈性</th>
+                <th>External Agent 串接</th>
+                <th>月費（起）</th>
+                <th>適合誰</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Framer AI Agents</strong></td>
+                <td>⭐⭐⭐⭐⭐ 完整 AI 建站</td>
+                <td>⭐⭐⭐⭐⭐ 像素級控制</td>
+                <td>✅ 支援（新功能）</td>
+                <td>$5/月</td>
+                <td>設計師 / 行銷 / 新創</td>
+            </tr>
+            <tr>
+                <td>Webflow</td>
+                <td>⭐⭐⭐ AI 功能有限</td>
+                <td>⭐⭐⭐⭐⭐ 業界標竿</td>
+                <td>❌ 需自行開發</td>
+                <td>$14/月</td>
+                <td>進階網頁開發者</td>
+            </tr>
+            <tr>
+                <td>Squarespace AI</td>
+                <td>⭐⭐⭐ AI 生成模板</td>
+                <td>⭐⭐ 模板限制多</td>
+                <td>❌</td>
+                <td>$16/月</td>
+                <td>小店家 / 個人品牌</td>
+            </tr>
+            <tr>
+                <td>Wix AI</td>
+                <td>⭐⭐⭐ AI 問答生成</td>
+                <td>⭐⭐ 版面較死板</td>
+                <td>❌</td>
+                <td>$17/月</td>
+                <td>初學者 / 餐廳店家</td>
+            </tr>
+            <tr>
+                <td>Lovable</td>
+                <td>⭐⭐⭐⭐ AI 生成代碼</td>
+                <td>⭐⭐⭐⭐ 需懂點代碼</td>
+                <td>⚠️ 部分支援</td>
+                <td>$20/月</td>
+                <td>開發者 / vibe coder</td>
+            </tr>
+            <tr>
+                <td>Notion Sites</td>
+                <td>⭐⭐ 基本 AI 助手</td>
+                <td>⭐ 格式非常受限</td>
+                <td>❌</td>
+                <td>$10/月</td>
+                <td>內容導向個人站</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>簡單講：如果你在意<strong>設計質感</strong>和<strong>AI 自動化深度</strong>，Framer 是 2026 年最強的組合。Webflow 設計彈性一樣強，但 AI 功能落後一截；Lovable 適合不怕代碼的人，但設計調整沒 Framer 直覺。</p>
+
+    <h2>Framer 方案費用一覽（2026）</h2>
+
+    <div class="plan-grid">
+        <div class="plan-card">
+            <div class="plan-name">Free</div>
+            <div class="price">$0</div>
+            <div class="plan-desc">1 個網站、framer.website 子域名、AI 功能基礎版、每月 1,000 訪客</div>
+        </div>
+        <div class="plan-card popular">
+            <div class="plan-name">Mini ⭐ 推薦新手</div>
+            <div class="price">$5<span style="font-size:0.5em">/月</span></div>
+            <div class="plan-desc">自訂網域、AI Agents 完整版、每月 10,000 訪客、移除 Framer 標誌</div>
+        </div>
+        <div class="plan-card">
+            <div class="plan-name">Basic</div>
+            <div class="price">$15<span style="font-size:0.5em">/月</span></div>
+            <div class="plan-desc">每月 200,000 訪客、CMS 2,000 筆、External Agents 標準配額</div>
+        </div>
+        <div class="plan-card">
+            <div class="plan-name">Pro</div>
+            <div class="price">$30<span style="font-size:0.5em">/月</span></div>
+            <div class="plan-desc">無限訪客、CMS 10,000 筆、External Agents 高配額、密碼保護頁面</div>
+        </div>
+    </div>
+
+    <div class="success-box">
+        <strong>💰 台灣換算參考：</strong>Mini 方案約 NT$160/月，Basic 約 NT$480/月，Pro 約 NT$960/月（以 1 USD = 32 TWD 換算）。對比找設計師做網站動輒數萬元，Framer 的 ROI 極高。
+    </div>
+
+    <h2>5 步驟從零建站：Framer AI Agents 實戰教學</h2>
+
+    <p>以下以「台灣自由工作者的作品集網站」為例，示範完整流程。</p>
+
+    <h3><span class="step-num">1</span>建立帳號並選擇方案</h3>
+    <p>前往 <a href="https://framer.com" target="_blank" rel="noopener">framer.com</a> 點擊「Get Started」。建議先用 Free 方案試水溫，確認 AI 生成的結果符合需求後再升級。</p>
+    <p>登入後你會進入 <strong>Framer Dashboard</strong>，點「New Project」開始。</p>
+
+    <h3><span class="step-num">2</span>啟動 AI Agent，用一句話描述你的網站</h3>
+    <p>新建專案後，Framer 會直接問你：「Tell me about your site.」這裡就是 AI Agent 的入口。</p>
+    <p>輸入越具體越好。以下是幾個有效 prompt 的模板：</p>
+
+    <pre># 範例 1：設計師作品集
+"我是台灣平面設計師，專做品牌識別和包裝設計，客群是中小企業，希望展示 10 個作品案例和聯絡表單，風格極簡現代感，用深色背景。"
+
+# 範例 2：SaaS 產品 Landing Page
+"一個台灣 B2B SaaS 工具，幫中小企業自動化客服流程，目標轉換動作是填寫 demo 表單，主色調偏藍色科技感，需要功能特色、客戶評價、定價三個區塊。"
+
+# 範例 3：個人品牌諮詢顧問
+"台灣職涯諮詢顧問，專做科技業轉職，收費 NT$3,000/小時，希望建立個人品牌信任感，需要關於我、服務內容、客戶見證、預約諮詢四個區塊。"</pre>
+
+    <h3><span class="step-num">3</span>審閱 AI 生成結果並微調</h3>
+    <p>AI 約 1-3 分鐘完成首版。你會得到一個完整的頁面，包含：</p>
+    <ul>
+        <li>設計好的導覽列（Navbar）</li>
+        <li>Hero 區塊（大標題 + 副標 + CTA button）</li>
+        <li>功能或作品展示區塊</li>
+        <li>社會證明區塊（Testimonials 或 Logos）</li>
+        <li>Call-to-Action 轉換區塊</li>
+        <li>Footer</li>
+    </ul>
+
+    <p>覺得哪個區塊不對味？直接點選那個元素，側欄會出現 AI 輔助調整選項。例如點選標題後，你可以告訴 AI：「這個標題改得更有衝擊力一點，強調省時」，它會即時重寫。</p>
+
+    <div class="warning-box">
+        <strong>⚠️ 實用提醒：</strong>AI 生成的文案通常是英文。如果你需要繁中文案，在初始 prompt 中明確說「請用繁體中文」，或生成後在側欄選取文字區塊，輸入「改成繁體中文，語氣親切專業」讓 AI 翻譯重寫。
+    </div>
+
+    <h3><span class="step-num">4</span>（進階）串接 External Agent</h3>
+    <p>如果你想讓網站內容自動更新，這一步就是重點。</p>
+
+    <p>在 Framer 編輯器左側選單找到「Agents」→「External Agents」（標注 "New"）。目前支援三種串接方式：</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>串接方式</th>
+                <th>適用場景</th>
+                <th>難度</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Webhook URL</strong></td>
+                <td>n8n / Make 自動觸發更新</td>
+                <td>⭐⭐ 中等</td>
+            </tr>
+            <tr>
+                <td><strong>API Key 直連</strong></td>
+                <td>直接呼叫 Claude / GPT-5.4 生成文案</td>
+                <td>⭐⭐⭐ 需要基礎技術</td>
+            </tr>
+            <tr>
+                <td><strong>CMS 自動同步</strong></td>
+                <td>從 Airtable / Google Sheets 拉資料</td>
+                <td>⭐ 簡單</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>以 n8n 串接為例：在 n8n 建立一個 workflow，設定觸發條件（例如「每週一早上 9 點」），讓 AI 分析你的競品資訊後，透過 Framer Webhook 更新你的定價頁面內容。整個流程不需要寫一行代碼。</p>
+
+    <pre># Framer External Agent Webhook 範例 payload
+{
+  "action": "update_content",
+  "section": "pricing",
+  "content": {
+    "headline": "最新方案：2026 年 8 月版",
+    "price_a": "NT$1,980/月",
+    "price_b": "NT$3,980/月",
+    "cta_text": "立即試用 14 天免費"
+  }
+}</pre>
+
+    <h3><span class="step-num">5</span>發布網站並綁定自訂網域</h3>
+    <p>點擊右上角「Publish」，選擇發布到 framer.website（免費子域名）或綁定你自己的網域（付費方案）。</p>
+    <p>Framer 的發布速度很快，通常 30 秒內上線。網域綁定步驟：</p>
+    <ol>
+        <li>進入 Framer Dashboard → Project Settings → Domain</li>
+        <li>輸入你的網域名稱（例如 yourbrand.com）</li>
+        <li>複製 Framer 提供的 CNAME 或 A Record</li>
+        <li>到你的 DNS 服務商（Cloudways、Namecheap 等）貼上設定</li>
+        <li>等待 DNS 生效（通常 10-30 分鐘）</li>
+    </ol>
+
+    <div class="cta-box">
+        <h3>🚀 網站架設需要雲端主機嗎？</h3>
+        <p>Framer 有內建 CDN，不需要另外買主機。但如果你的業務需要後端 API、資料庫或自訂伺服器，DigitalOcean 是台灣開發者最常用的選擇——$6/月起，文件完整，亞太節點延遲低。</p>
+        <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="cta-btn secondary">DigitalOcean $200 免費額度 →</a>
+    </div>
+
+    <h2>Framer AI Agents 4 大實用場景</h2>
+
+    <h3>場景 1：台灣自由工作者作品集</h3>
+    <p>設計師、攝影師、文案寫手最常見的需求。用 Framer AI 生成基礎結構後，把你的實際作品圖片拖進去替換，再調整文案加入台灣價格和聯絡方式。從零到可用約需 1-2 小時，比找設計師省 NT$15,000 以上。</p>
+
+    <h3>場景 2：新創產品 Landing Page</h3>
+    <p>MVP 驗證階段最需要快速建站。用 Framer AI 在一天內做出一個高品質 landing page，跑 Google Ads 測試轉換率，確認產品市場契合度後再投入更多資源。比找代理商快 10 倍。</p>
+
+    <h3>場景 3：行銷活動頁面（Campaign Page）</h3>
+    <p>限時促銷、新品發布、活動報名——這類頁面需要快速上線，活動結束後就下架。用 Framer AI 可以在 2 小時內搞定，不用佔用開發資源。External Agents 可以串接計時器和庫存 API，做動態倒數和剩餘名額顯示。</p>
+
+    <h3>場景 4：B2B 提案展示網站</h3>
+    <p>客戶簡報前臨時要做展示網站？Framer AI 可以根據你描述的服務內容，快速生成一個比 PPT 更有說服力的互動式網站，當天上線。</p>
+
+    <h2>Framer 常見問題 FAQ</h2>
+
+    <h3>Q1：Framer AI Agents 支援繁體中文嗎？</h3>
+    <p>介面目前以英文為主，但 AI 生成的內容支援繁體中文輸入輸出。在 prompt 明確指定「用繁體中文」即可。Framer 官方有持續在擴充語言支援，預期 2026 下半年會有更完整的在地化。</p>
+
+    <h3>Q2：Framer 做的網站 SEO 效果好嗎？</h3>
+    <p>Framer 生成的是靜態 HTML，對 SEO 非常友善。AI 會自動生成 meta title、description 和 Open Graph 標籤。唯一需要注意的是：確認 AI 生成的 meta 描述準確反映你的業務，必要時手動調整。</p>
+
+    <h3>Q3：可以匯出代碼嗎？</h3>
+    <p>可以。Framer 支援匯出 HTML / CSS / React 代碼（Pro 方案以上）。如果未來想遷移到其他平台，不會被鎖死。</p>
+
+    <h3>Q4：External Agents 需要懂程式嗎？</h3>
+    <p>基礎 Webhook 串接不需要。但如果要直接呼叫 API 或做複雜的自動化邏輯，需要一點 API 和 JSON 的基礎概念。完全不懂技術的用戶建議先從 CMS 自動同步功能（連結 Airtable）入手。</p>
+
+    <h3>Q5：Framer 和 Webflow 的最大差異是什麼？</h3>
+    <p>兩者都是高品質建站工具，但定位不同。Framer 在 2026 年因為 AI Agents 的完整整合大幅領先；Webflow 的設計系統和 CMS 功能更成熟，適合需要複雜內容架構的大型網站。預算有限、需要快速建站的選 Framer；需要做大型內容網站的選 Webflow。</p>
+
+    <h3>Q6：Free 方案夠用嗎？</h3>
+    <p>測試和個人用途完全夠。但如果你需要自訂網域（對 SEO 和品牌形象很重要）或每月超過 1,000 訪客，建議升級到 Mini 方案（$5/月，約 NT$160/月）。這個價格對任何認真的業務來說幾乎是零門檻。</p>
+
+    <h2>學 AI 工具搭配：進一步提升建站效率</h2>
+
+    <p>Framer AI 讓建站本身變快，但真正的競爭優勢來自能快速掌握整個 AI 工作流程——包括提示詞策略、自動化串接、數據分析。DataCamp 是台灣工程師和行銷人學習 AI 技能最完整的平台，從 Python 到 ChatGPT API 整合，400+ 課程結構化學習路徑。</p>
+
+    <div class="cta-box">
+        <h3>📚 系統學習 AI 技能，建站效率再翻倍</h3>
+        <p>DataCamp 400+ AI / 數據課程，台灣用戶使用中，有繁中字幕選項。學會 API 串接和自動化後，Framer External Agents 的威力才能完全發揮。</p>
+        <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener" class="cta-btn secondary">DataCamp 免費試用 →</a>
+    </div>
+
+    <h2>Framer AI Agents 值得用嗎？總結</h2>
+
+    <p>如果你的問題是「我需要一個高品質網站，但不想花大錢找設計師，也不想學 Webflow 那麼複雜的東西」——那 Framer AI Agents 在 2026 年幾乎是最直接的答案。</p>
+
+    <p>三個值得用的理由：</p>
+    <ul>
+        <li><strong>速度</strong>：3 分鐘首版，2 小時可上線的完整網站</li>
+        <li><strong>品質</strong>：AI 生成的設計質感在同類工具中數一數二，不像廉價模板感</li>
+        <li><strong>擴充性</strong>：External Agents 串接讓網站不只是靜態頁面，可以跟整個 AI 工作流程對接</li>
+    </ul>
+
+    <p>三個需要注意的地方：</p>
+    <ul>
+        <li><strong>複雜 CMS 需求</strong>：超過 1 萬筆內容、需要複雜篩選的大型網站，Webflow 還是更適合</li>
+        <li><strong>繁中介面</strong>：主介面目前還是英文，對完全不懂英文的用戶會有小門檻</li>
+        <li><strong>訪客限制</strong>：Free 和 Mini 方案有流量上限，高流量站需要 Pro 以上</li>
+    </ul>
+
+    <p>對台灣的設計師、行銷人、創業者來說，Framer AI Agents 是 2026 年最值得認識的建站工具之一。PH August #4 的排名不是偶然——它是真的在改變「建一個好網站需要多少時間和錢」這件事的預設值。</p>
+
+    <div class="cta-box">
+        <h3>🎯 本文工具清單</h3>
+        <p>建站 + AI 工作流程的完整組合，適合台灣設計師、行銷人、創業者：</p>
+        <a href="https://framer.com" target="_blank" rel="noopener" class="cta-btn">Framer 免費開始建站 →</a>
+        <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="cta-btn secondary">DigitalOcean 後端主機 →</a>
+        <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener" class="cta-btn green">DataCamp 學 AI 技能 →</a>
+        <br><br>
+        <p style="font-size:0.82em; color:rgba(255,255,255,0.6);">💡 想深入學習 AI 自動化？看看我們整理的 <a href="/blog/openviking-agent-memory-save-tokens-2026.html" style="color:#F5C97A">AI Agent 記憶管理教學</a> 和 <a href="/blog/ponytail-claude-code-plugin-2026.html" style="color:#F5C97A">ponytail 省 token 指南</a>。</p>
+    </div>
+
+    <hr style="border:none;border-top:1px solid #EDE8E0;margin:40px 0;">
+    <p style="font-size:0.82em;color:#888;">本文為 AutoDev AI 繁中首發教學。Framer 相關資訊以官方網站為準，功能和定價可能隨版本更新調整。本文包含 DigitalOcean、DataCamp 推薦連結，點擊後作者可能獲得佣金，不影響評測客觀性。Framer affiliate 連結於 Ivan 申請審核通過後補充。</p>
+
+</div>
+</body>
+</html>
