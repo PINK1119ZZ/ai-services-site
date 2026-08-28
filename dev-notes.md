@@ -2810,3 +2810,116 @@ mattpocock/skills 從昨日 2519★ 加速到今日 **5551★/天**（+120%）�
 
 **Ivan carryover 預估月收入損失：$3,100-6,700/月（P0-URGENT 6 項）**
 
+---
+
+## Round 178 | 2026-08-28 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-08-28 22:00 UTC | 搜尋範圍：GitHub trending + PH 日榜/月榜 + HN + AI 模型發布追蹤 + affiliate 掃描 + watchlist 更新 | 模式：Tue/Thu/Sat 06:00 cron（週五 22:00 UTC 觸發）
+
+### 📊 AI 模型發布追蹤（8/28）
+
+**Manifold August 2026 模型市場最新機率：**
+- MiniMax M3.x：**27%**（連續多輪最高，仍未 GA，watchlist 持續）
+- Claude Fable 5.x：22%
+- Kimi K3.x：22%
+- Claude Sonnet 5.x：21%
+- Claude Haiku 5.x：20%
+- Gemini 3.x Pro：17%
+- TML-Large（Thinking Machines）：16%
+- GPT-5.7：8%（降低）
+
+**已 resolved YES（本月 GA 確認）：**
+- Muse Spark 1.2（Meta）✅ — R177 之後新 resolve
+- Grok 4.x ✅
+- DeepSeek V4 Pro GA ✅
+- Qwen 3.8 ✅、GLM-5.x ✅、Gemini 3.x Flash ✅
+
+**llmgateway.io 8/28 最新：** 仍為 GLM-5.2 Turbo（8/17，Z.AI），12 個 August 模型，7 個 provider，**8/28 無新 P0 GA**
+
+**PH 8/27 日榜新發現：**
+- Viktor.com #1（126 votes）— AI coding/productivity platform
+- Context.dev #2（141 votes）— 值得追蹤
+- Qwen3.8-Flash-Next（PH 8/27 listed）— 新 flash 版本，watchlist
+- GLM-5.3-Flash（PH 8/27 listed）— Z.AI 新 flash tier
+
+**PH 8/28 日榜：**
+- Lightfield #1（110 votes）
+- Gemini Omni 1.1 Flash（PH 8/28 listed）— Google 新 Flash 版本
+- DigitalOcean Spot GPU（PH 8/28）— DO 競爭力訊號，強化 DO affiliate 故事
+- coolplugz（PH 8/25 #7）— Claude Code orchestrator，129 votes
+
+**PH August 月榜最新快照（8/28）：**
+- #1 Hey Noah（AI executive assistant）
+- #2 Clipto
+- #3 AdAnt AI（Claude viral social ads）
+- #4 Wispr Flow
+- #5 Astute
+
+### 🐙 GitHub Trending 重大發現
+
+**charmbracelet/crush — 27,585★（Go，MIT，agentic-ai）**
+- 「Glamourous agentic coding for all 💘」
+- 8/27 最新更新，活躍度極高（2,173 forks，271 open issues）
+- Charmbracelet 品牌：TUI 介面體驗業界最佳（bubble tea、glow、lipgloss 系列）
+- 與 Claude Code / Cursor / Copilot CLI / OpenCode / Goose 齊名的 CLI agentic coding 工具
+- bridle（437★ Rust）已將 crush 列為支援的 agentic harness 之一
+- 繁中教學空白（英文 HN 367pts July 2025，仍有長尾搜尋流量）
+- **P1-HIGH seo-writer 直接執行：** 教學文章角度「CLI 派的 Claude Code 替代方案」
+- 月潛力：$150-400（間接 DigitalOcean + DataCamp）
+
+**alirezarezvani/claude-skills — 25.1K★（GitHub topics/agentic-ai）**
+- Claude skills pack，agentic AI 受眾
+- 與 ponytail（R177 已發文）同類型，可能是 P2 carryover 材料
+- 繁中教學狀況：未確認，待下輪驗證
+
+**Composio — 29.9K★（Python/TS，MCP/agent toolkits）**
+- 1000+ toolkits，MCP remote server，AI agent function-calling
+- 高星數但英文教學已多
+- 繁中完整對比 ManyChat/n8n 角度待評估，P2
+
+### 💰 Affiliate 掃描（8/28）
+
+**Jasper — 30% LIFETIME（確認最高持續佣金）**
+- swiftdigitalads.com 確認：$99/mo Pro plan → $30/month per referral LIFETIME
+- 90-day cookie
+- 繁中評測現況：未知，待確認是否仍空白
+- getreditus.com list 更新確認：Reditus 自身 30-40%/24-36mo（平台自家）
+
+**Expandi — 20-30%/12mo（LinkedIn 自動化，getreditus.com 確認）**
+- 60-day cookie，$50 payout，$99/account avg revenue
+- B2B LinkedIn 外展工具
+- 與 ReactIn（R176，Ivan 申請中）同受眾，P2 重疊
+
+**本輪無新 30%+ LIFETIME affiliate 觸發 P1-HIGH（門檻未超越已知項目）**
+
+### 📰 HN / 資安 重點（8/28）
+
+- **Security Incident INC-2026-07-28-01（HN item #49175717）** — UK AISI（AI Security Institute）公開報告，aisi-mythos-inc 事件，Mythos 5 安全研究延續（我們已有 claude-mythos-5-security-review-2026.html）
+- **GLM-5.3 AI Exploit（The Hacker News 8/20）** — GLM-5.3 資安漏洞事件，與我們的 GLM-5.3 評測文高度相關，可補充更新
+- **GhostJacking AI Attacks（THN 8/13）** — AI agent 社交工程新攻擊向量
+- **n8n Workflow-to-RCE（THN 8/20）** — n8n 自動化工具 RCE 漏洞，我們有 n8n 文章，需確認是否需要安全警示補丁
+- HN Ask August 2026 hire/be-hired thread（#49156682）— 開發者就業市場，非 AI 工具訊號
+
+### 🆕 Muse Spark 1.2（Meta）— 新 resolve 值得追蹤
+
+- Manifold 本月 resolved YES（meta model）
+- 尚未確認具體功能，下輪需搜尋「Meta Muse Spark 1.2 release 2026」評估教學機會
+
+---
+
+### 📋 本輪核心結論
+
+**P1-HIGH（seo-writer 直接執行，不需 Ivan）：**
+1. charmbracelet/crush 教學（27,585★，MIT，繁中空白，CLI agentic coding，$150-400/月）
+
+**P1-WATCH（watchlist 更新）：**
+- MiniMax M3.x 仍 27% 最高，未 GA，持續觀察
+- Muse Spark 1.2（Meta）resolve YES，下輪確認功能
+- Qwen3.8-Flash-Next + GLM-5.3-Flash — PH 8/27 listed，輕量 flash 模型，P2
+
+**無新 P0-URGENT：** 8/28 無新重大模型 GA
+
+**n8n 安全警示機會（P2）：** n8n Workflow-to-RCE 漏洞（THN 8/20），可補充至現有 n8n 文章作為時效性更新訊號
+
+**預估新增月收入潛力：$150-400/月（crush 教學間接）**
+
