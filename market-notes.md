@@ -4,6 +4,134 @@
 
 ---
 
+## 2026-08-30（市場研究 Round 180 — Sun 07:00 UTC market-research cron）
+
+### 🔥 本輪重點：Superads 30-40%/12mo 新發現 + Reclaim.AI 40% 再確認 + PH 8/29 Viktor/Context.dev 持續強勢 + Gumroad AI 腳本路線確認 + 台灣「超級個體」受眾洞察
+
+---
+
+#### 🆕 新 Affiliate 機會
+
+**1. Superads（AI 廣告創意分析）— 本輪新發現 P1-HIGH**
+- 佣金：30–40%/12 months（tiered）
+- Cookie：60 天
+- 平台：Reditus marketplace（getreditus.com）
+- 客單：avg $250/account → 40% = $100/月/人，年收 $1,200
+- 受眾：數位行銷、廣告代理、電商賣家（跨 Meta + Google 廣告報表）
+- 繁中評測：**零**
+- 月潛力：$200–600
+- 申請：getreditus.com → Superads
+- 優先：**P1-HIGH**（40% 超門檻，廣告 AI 工具需求高，autodev-ai 受眾中有廣告主）
+- 備注：Reditus 2026 年 Best B2B SaaS 清單第 22 名確認，AI-powered ad reporting，竟品 Foreplay / Motion / MagicBrief 均無繁中評測
+
+**2. Reclaim.AI（AI 日曆排程）— R167 carryover 三方再確認**
+- 佣金：40%/12mo（工作信箱）+ $1/signup；25%/12mo（個人信箱）
+- Cookie：90 天（PartnerStack）
+- 申請：reclaim.ai → affiliate 頁（PartnerStack，free to join）
+- 客單：avg $12/月 → 40% = $4.8/月/人
+- 月潛力：$200–500（volume game，Dropbox 背書品牌力強）
+- 優先：**P1-HIGH carryover**（多輪等待 Ivan，本輪確認 90 天 cookie + $1 signup bonus，值得催促）
+- 備注：help.reclaim.ai 官方確認 40% work email + $1/signup + 25% personal，$5 minimum payout，PayPal/Stripe
+
+---
+
+#### 📊 PH 8/29 日榜觀察
+
+PH 8/29 日榜主要品牌延續 R179 信號：
+- **Viktor.com**（126 votes）持續在榜，AI 自主員工，P1-HIGH carryover 待 Ivan 申請
+- **Context.dev**（141 votes）持續在榜，Web Context API for AI agents，P1-HIGH carryover 待 Ivan 申請
+- **Cohere Parse 5** — 新進，企業 document parsing，P2 watchlist
+- **Cursor Craft v2** — Cursor 生態擴充，P2 教學機會
+- PH August 月榜最終版：Hey Noah #1、Clipto #2、AdAnt AI #3（Wispr Flow 降位）
+- PH Week of Aug 3 榜確認：Wispr Flow 2,726 votes（月內最高單品），AI Spend Console by Rippling 292 votes（B2B AI 成本管理，P2）
+
+**新觀察：AI Spend Console by Rippling（121 votes，PH Week Aug 3）**
+- Rippling 旗下 AI 成本管理工具
+- 受眾：IT 管理員、CFO、B2B SaaS 採購
+- 無直接 affiliate，但「AI 費用管理」主題與我們的 ai-token-cost-calculator.html 高度相關
+- 行動：seo-writer 可在 ai-token-cost-calculator 文章中提及 AI Spend Console 作為企業方案對比，提升文章深度
+
+---
+
+#### 🗂️ Gumroad 數位產品 2026 路線確認
+
+insightraider.com 最新資料（2026 年 8 月）再確認：
+- **最高單品**：Nano Banana & Flux AI script $586K（AI 腳本路線正確）
+- **Writing & Publishing**：226 產品，avg $15,750/產品（繁中新手最佳切入點）
+- **AI Tools**：avg $18,163/產品（仍未飽和）
+- **最佳定價**：$99–290（像產品，非衝動購買）；sub-$0.50 量大但收益極低
+- **結論**：繼續強化 AI prompt pack / 自動化腳本路線（每個 $29–49），目標每產品 20–30 銷量/月
+
+**新洞察（SendOwl 2026）**：
+> 「AI-ready template products bridge 'I have AI tools' and 'I know how to use them'」
+- 台灣缺口：**AI + Notion 工作流程模板包**（繁中零競品，SendOwl 確認 2026 最快成長品類）
+- 具體產品概念：「Claude Code × Notion 專案管理自動化模板 v1.0」（$29，含 5 個可直接用的 Notion database + n8n JSON + QUICKSTART.md）
+
+---
+
+#### 🇹🇼 台灣受眾需求洞察（本輪新發現）
+
+raven.tw 電子報 EP-66（2026 年 AI 代理爆發）揭露關鍵受眾痛點：
+> 「我每個月花 150 美金訂閱 AI 工具，但大部分時間都在『搞懂怎麼用』，而不是解決問題」
+
+**這正是 autodev-ai.com 的核心受眾畫像：**
+- 每月花 NT$4,000–5,000 訂閱 AI 工具
+- 嚴重 FOMO，想追上最新工具
+- 缺的不是工具，是「能用工具解決真實問題的框架」
+
+**行動建議（strategist → seo-writer）：**
+1. 「超級個體」框架文章：「一人公司如何用 AI 代理取代 5 個外包」（繁中，Claude Code + n8n + OpenClaw 實戰）
+2. 針對「每月 AI 訂閱費用取捨」痛點，tools/ai-token-cost-calculator.html 是完美的流量磁鐵（已建置 ✓）
+
+---
+
+#### 📡 流量管道觀察
+
+- **YouTube Shorts**：views 年增 125%+，Shorts 佔平台總觀看超過 50%（Metricool 確認）
+  - 行動：Ivan 考慮用現有文章素材製作 60 秒繁中 AI 教學短影片
+- **Threads**（n8n + Blotato MCP 整合）：已可用 Claude 無 API 設定直接發文
+  - 行動：content-ops 評估 Blotato MCP 自動化 Threads 發文流程
+- **LinkedIn Saves analytics** 新功能：Saves 數量成為演算法強信號
+  - 行動：Ivan 建立 LinkedIn 帳號後，優先發「高 Saves」型內容（清單型、問題型）
+
+---
+
+#### 🔍 GitHub / 技術工具觀察
+
+analyticsvidhya.com Top 10 Trending AI GitHub Repos July 2026：
+- **DeusData/codebase-memory-mcp**（~32K★）— MCP memory for codebases，已在 watchlist
+- 本輪 GitHub trending 搜尋無新 8/29 爆量訊號，ossinsight.io 資料因 GitHub events 不完整暫無新排名
+
+**Cohere Parse 5（PH 8/29）P2 watchlist：**
+- 企業文件解析（PDF/契約/報表）
+- 無 affiliate，但「AI 文件處理」主題教學機會
+
+---
+
+#### ✅ 既有 carryover 狀態確認
+
+| 項目 | 狀態 | 動作 |
+|------|------|------|
+| Context.dev 25%/12mo | ⏳ P1-HIGH（Ivan 申請中）| partners.dub.co/context-dev |
+| Viktor.com 15-20%/12mo | ⏳ P1-HIGH（Ivan 申請中）| partners.dub.co/viktor |
+| ClickUp 30%/12mo | ⏳ P1-HIGH（Ivan 申請中）| clickup.com/affiliates |
+| Framer 50%/12mo | ⏳ P1-HIGH（Ivan 申請中）| framer.com/agencies |
+| Answrr 30% LIFETIME | ⏳ P1-HIGH（Ivan 申請中）| tryanswrr.com/affiliate |
+| Reclaim.AI 40%/12mo | ⏳ P1-HIGH carryover（多輪）| reclaim.ai affiliate PartnerStack |
+| MiniMax M3.x | ⏳ watchlist 持續（Manifold ~27%）| 9 月機率最高 |
+| crush 27.6K★ | ⏳ P1-HIGH carryover | seo-writer 繁中教學（不需 Ivan）|
+
+---
+
+#### 💡 本輪預估新增月收入潛力
+
+- Superads 30-40%/12mo：$200–600
+- Reclaim.AI 40%/12mo（re-confirm）：$200–500
+- Notion + Claude 模板包（新數位產品概念）：$400–900
+- 合計：**$800–2,000/月**
+
+---
+
 ## 2026-08-09（市場研究 Round 152 — 07:00 UTC market-research cron）
 
 ### 🔥 本輪重點：MeetGeek 30% LIFETIME 確認 + Lemon Squeezy 平台 Affiliate + Oakgen.ai + Bluesky 高轉換率 + Gumroad Trading 類數據
