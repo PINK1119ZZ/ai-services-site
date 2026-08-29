@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Token 費用計算器 2026｜Claude vs GPT-5.4 vs Gemini vs DeepSeek，每千字要多少錢？</title>
+<meta name="description" content="輸入每月寫作字數，立即試算 Claude Sonnet 5、GPT-5.4、Gemini 2.5 Pro、DeepSeek V4 Pro 等 10+ 模型的 API Token 費用。含台幣換算、9/1 Claude 漲價前後比較、最省方案推薦。免費使用。">
+<link rel="canonical" href="https://autodev-ai.com/tools/ai-token-cost-calculator.html">
+<meta property="og:title" content="AI Token 費用計算器 2026｜每千字要多少錢？">
+<meta property="og:description" content="輸入字數，立即比較 Claude、GPT-5.4、Gemini、DeepSeek 的 API token 月費，含台幣換算與最省方案推薦。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autodev-ai.com/tools/ai-token-cost-calculator.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI Token 費用計算器 2026",
+  "description": "比較 Claude Sonnet 5、GPT-5.4、Gemini 2.5 Pro、DeepSeek V4 Pro 等模型的 API token 費用，含台幣換算與最省方案推薦",
+  "url": "https://autodev-ai.com/tools/ai-token-cost-calculator.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "inLanguage": "zh-Hant"
+}
+</script>
+<meta name="theme-color" content="#FFF8F3">
+<style>
+.tc-wrap{max-width:1000px;margin:0 auto;padding:7rem 1.5rem 4rem;}
+.tc-header{text-align:center;margin-bottom:2rem;}
+.tc-header h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.2;margin-bottom:.8rem;}
+.tc-header p{color:var(--gray);font-size:1rem;max-width:680px;margin:0 auto;}
+
+/* Claude price warning banner */
+.price-banner{background:linear-gradient(135deg,rgba(255,160,60,.12),rgba(255,100,60,.08));border:1px solid rgba(255,140,60,.35);border-radius:12px;padding:1rem 1.25rem;margin-bottom:2rem;display:flex;align-items:flex-start;gap:.75rem;}
+.price-banner .pb-icon{font-size:1.3rem;margin-top:.05rem;}
+.price-banner .pb-text{font-size:.9rem;line-height:1.55;color:var(--light);}
+.price-banner strong{color:#ffaa55;}
+
+/* Input section */
+.input-section{background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:1.75rem;margin-bottom:2rem;}
+.input-section h2{font-size:1.2rem;font-weight:800;margin-bottom:1.25rem;color:var(--light);}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+@media(max-width:600px){.input-grid{grid-template-columns:1fr;}}
+.input-group{display:flex;flex-direction:column;gap:.4rem;}
+.input-group label{font-size:.85rem;color:var(--gray);font-weight:600;}
+.input-group input,.input-group select{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.65rem .9rem;font-size:1rem;color:var(--light);font-family:inherit;transition:border-color .2s;width:100%;box-sizing:border-box;}
+.input-group input:focus,.input-group select:focus{outline:none;border-color:var(--accent);}
+.input-group select option{background:#1a1a2e;color:var(--light);}
+.input-hint{font-size:.75rem;color:var(--gray);opacity:.7;}
+
+/* Results table */
+.results-section h2{font-size:1.2rem;font-weight:800;margin-bottom:1rem;color:var(--light);}
+.model-table{width:100%;border-collapse:collapse;margin-bottom:1.5rem;}
+.model-table th{text-align:left;padding:.65rem .9rem;font-size:.8rem;color:var(--gray);font-weight:700;border-bottom:1px solid rgba(255,255,255,.08);text-transform:uppercase;letter-spacing:.05em;}
+.model-table td{padding:.8rem .9rem;font-size:.92rem;color:var(--light);border-bottom:1px solid rgba(255,255,255,.05);}
+.model-table tr:last-child td{border-bottom:none;}
+.model-table tr:hover td{background:rgba(255,255,255,.025);}
+.model-table tr.best-pick td{background:rgba(196,165,123,.06);}
+.model-table tr.best-pick td:first-child{border-left:3px solid var(--accent);}
+.cost-usd{font-weight:800;color:var(--primary-light);}
+.cost-twd{font-size:.8rem;color:var(--gray);}
+.badge-best{display:inline-block;background:rgba(196,165,123,.18);color:var(--accent);border:1px solid rgba(196,165,123,.4);border-radius:20px;font-size:.68rem;font-weight:800;padding:.15rem .5rem;margin-left:.4rem;white-space:nowrap;}
+.badge-warn{display:inline-block;background:rgba(255,120,60,.12);color:#ff9055;border:1px solid rgba(255,120,60,.3);border-radius:20px;font-size:.68rem;font-weight:700;padding:.15rem .5rem;margin-left:.4rem;}
+
+/* Recommendation box */
+.recommend-box{background:linear-gradient(135deg,rgba(196,165,123,.1),rgba(196,165,123,.04));border:1px solid rgba(196,165,123,.3);border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:2rem;}
+.recommend-box h3{font-size:1rem;font-weight:800;color:var(--accent);margin-bottom:.6rem;}
+.recommend-box p{font-size:.92rem;color:var(--light);line-height:1.6;margin:0;}
+
+/* Context explanation */
+.context-note{background:var(--dark-2);border-radius:12px;padding:1.25rem 1.4rem;margin-bottom:2rem;font-size:.85rem;color:var(--gray);line-height:1.6;}
+.context-note strong{color:var(--light);}
+
+/* Affiliate CTA row */
+.aff-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;}
+@media(max-width:600px){.aff-row{grid-template-columns:1fr;}}
+.aff-card{background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.25rem;display:flex;flex-direction:column;gap:.5rem;}
+.aff-card .ac-label{font-size:.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;}
+.aff-card .ac-title{font-size:1rem;font-weight:800;color:var(--light);}
+.aff-card .ac-desc{font-size:.82rem;color:var(--gray);line-height:1.5;}
+.aff-card a.ac-btn{display:inline-block;margin-top:.25rem;padding:.5rem 1rem;background:var(--accent);color:#1a1a2e;border-radius:8px;font-size:.82rem;font-weight:800;text-decoration:none;text-align:center;transition:opacity .2s;align-self:flex-start;}
+.aff-card a.ac-btn:hover{opacity:.85;}
+
+.disclaimer{font-size:.78rem;color:var(--gray);opacity:.7;line-height:1.6;margin-top:1.5rem;}
+
+@media(max-width:700px){
+  .model-table th:nth-child(3),.model-table td:nth-child(3){display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a href="/" class="nav-logo">AutoDev AI</a>
+<div class="nav-links" id="navLinks">
+<a href="/services.html">服務</a>
+<a href="/bot-cloud.html">雲託管</a>
+<a href="/ai-model.html">AI 模特</a>
+<a class="active" href="/tools/">工具</a>
+<a href="/pricing.html">方案</a>
+<a href="/blog/">Blog</a>
+<a href="/about.html">關於</a>
+<a class="nav-cta" href="/contact.html">免費諮詢</a>
+</div>
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="開啟選單">&#9776;</button>
+</div>
+</nav>
+
+<main class="tc-wrap">
+
+  <header class="tc-header">
+    <h1>AI Token 費用計算器 2026</h1>
+    <p>輸入你的每月使用量，立即比較 Claude、GPT-5.4、Gemini、DeepSeek 等 10+ 模型的 API 費用，含台幣換算與最省方案推薦。</p>
+  </header>
+
+  <div class="price-banner" role="alert">
+    <span class="pb-icon">⚠️</span>
+    <div class="pb-text">
+      <strong>Claude Sonnet 5 即將漲價！</strong> Anthropic 預計於 2026 年 9 月 1 日調整定價：輸入 $3→$6 / 輸出 $15→$24 per MTok。現在是鎖定 API 用量規劃的最佳時機。
+    </div>
+  </div>
+
+  <!-- Input -->
+  <section class="input-section" aria-labelledby="input-heading">
+    <h2 id="input-heading">📊 輸入你的用量</h2>
+    <div class="input-grid">
+      <div class="input-group">
+        <label for="monthlyWords">每月輸入字數（中文字）</label>
+        <input type="number" id="monthlyWords" value="100000" min="1000" max="50000000" step="10000" aria-describedby="words-hint">
+        <span class="input-hint" id="words-hint">例：100,000 字 ≈ 每天寫 3,300 字（中度用戶）</span>
+      </div>
+      <div class="input-group">
+        <label for="outputRatio">輸出／輸入比例</label>
+        <select id="outputRatio" aria-describedby="ratio-hint">
+          <option value="0.3">輕度輸出（0.3x）— 主要做分析/摘要</option>
+          <option value="0.5">一般輸出（0.5x）— 問答 + 寫作各半</option>
+          <option value="1.0" selected>1:1 輸出（1.0x）— 長文寫作/代碼生成</option>
+          <option value="2.0">重度輸出（2.0x）— 大量生成內容</option>
+        </select>
+        <span class="input-hint" id="ratio-hint">大多數寫作場景選 1.0x</span>
+      </div>
+      <div class="input-group">
+        <label for="charsPerToken">字元/Token 換算</label>
+        <select id="charsPerToken">
+          <option value="1.5" selected>中文（約 1.5 字/token）</option>
+          <option value="4">英文（約 4 字/token）</option>
+          <option value="2.5">中英混合（約 2.5 字/token）</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="usdRate">USD → TWD 匯率</label>
+        <input type="number" id="usdRate" value="32" min="25" max="45" step="0.5" aria-describedby="rate-hint">
+        <span class="input-hint" id="rate-hint">2026 年 8 月參考匯率約 32</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendation -->
+  <div class="recommend-box" id="recommendBox" aria-live="polite" aria-atomic="true">
+    <h3>🏆 最省方案推薦</h3>
+    <p id="recommendText">調整上方用量後自動更新⋯</p>
+  </div>
+
+  <!-- Results -->
+  <section class="results-section" aria-labelledby="results-heading">
+    <h2 id="results-heading">每月 API 費用比較</h2>
+    <div style="overflow-x:auto;">
+      <table class="model-table" id="modelTable" aria-label="AI 模型每月費用比較">
+        <thead>
+          <tr>
+            <th scope="col">模型</th>
+            <th scope="col">每月費用（USD）</th>
+            <th scope="col">台幣估算（TWD）</th>
+            <th scope="col">定價（per MTok）</th>
+            <th scope="col">特色</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Context note -->
+  <div class="context-note">
+    <strong>計算說明：</strong>
+    Token 費用 = 輸入 tokens × 輸入單價 + 輸出 tokens × 輸出單價。中文每字約 1.5 token（繁體中文因字元較複雜，實際可能略高）。本計算器使用字數換算，實際費用依 API 實際 token 計數為準。價格以 2026 年 8 月官方公告為準，未含可能的 Prompt Cache 折扣（最高可省 90%）。
+    <br><br>
+    <strong>省錢技巧：</strong> Claude API 支援 Prompt Caching（首次收費後緩存，後續 90% 折扣），長上下文任務可大幅節省。DeepSeek V4 Pro 提供市面上最低定價之一，適合高用量場景。
+  </div>
+
+  <!-- Affiliate CTAs -->
+  <div class="aff-row">
+    <div class="aff-card">
+      <span class="ac-label">🚀 自架 API Proxy 省費用</span>
+      <span class="ac-title">DigitalOcean — 從 $6/月起</span>
+      <p class="ac-desc">自架 LiteLLM 或 OpenRouter proxy，統一管理多個模型 API，搭配 DigitalOcean Droplet 月費比直接付 OpenAI 更划算。</p>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="ac-btn">查看 DigitalOcean 方案 →</a>
+    </div>
+    <div class="aff-card">
+      <span class="ac-label">🎓 學會 Prompt 技巧省 Token</span>
+      <span class="ac-title">DataCamp — AI 工程師課程</span>
+      <p class="ac-desc">學會 Prompt Engineering、RAG 架構與 Token 優化，同樣任務少用 30-50% token。DataCamp 提供繁中字幕 + 實戰專案。</p>
+      <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" class="ac-btn">查看 DataCamp 課程 →</a>
+    </div>
+  </div>
+
+  <p class="disclaimer">本工具所有 Token 定價來自各模型官方 API 定價頁，以 2026 年 8 月為準。Claude Sonnet 5 漲價日期與金額以 Anthropic 官方公告為準。費用估算僅供參考，實際帳單依 API 日誌為準。部分連結為聯盟推廣連結，您點擊後不需額外付費，佣金幫助我們維持本站免費服務。</p>
+
+</main>
+
+<footer class="footer">
+<div class="footer-inner">
+<p>&copy; 2026 AutoDev AI · <a href="/tools/">工具集</a> · <a href="/blog/">Blog</a> · <a href="/about.html">關於</a></p>
+</div>
+</footer>
+
+<script>
+const USD_TO_TWD_DEFAULT = 32;
+
+// Model definitions: { id, name, inputPricePerMTok, outputPricePerMTok, note, highlight }
+const MODELS = [
+  {
+    id: 'claude-sonnet5-before',
+    name: 'Claude Sonnet 5（漲價前）',
+    inputPrice: 3,
+    outputPrice: 15,
+    note: '8 月現行價',
+    feature: '最強推理 + 200K context，9/1 前使用最划算',
+    badge: 'warn',
+    badgeText: '9/1 漲價'
+  },
+  {
+    id: 'claude-sonnet5-after',
+    name: 'Claude Sonnet 5（漲價後）',
+    inputPrice: 6,
+    outputPrice: 24,
+    note: '9/1 預計',
+    feature: '漲價後同效能，建議提前評估替代',
+    badge: null,
+    badgeText: null
+  },
+  {
+    id: 'claude-haiku35',
+    name: 'Claude Haiku 3.5',
+    inputPrice: 0.8,
+    outputPrice: 4,
+    note: '現行',
+    feature: '速度最快、費用最低的 Claude，適合高頻簡單任務',
+    badge: null,
+    badgeText: null
+  },
+  {
+    id: 'gpt54',
+    name: 'GPT-5.4',
+    inputPrice: 5,
+    outputPrice: 20,
+    note: '現行',
+    feature: '全能旗艦，多模態強，OpenAI 生態最佳整合',
+    badge: null,
+    badgeText: null
+  },
+  {
+    id: 'gpt54mini',
+    name: 'GPT-5.4 mini',
+    inputPrice: 0.6,
+    outputPrice: 2.4,
+    note: '現行',
+    feature: '高效低價，簡單分類/摘要場景首選',
+    badge: null,
+    badgeText: null
+  },
+  {
+    id: 'gemini25pro',
+    name: 'Gemini 2.5 Pro',
+    inputPrice: 3.5,
+    outputPrice: 10.5,
+    note: '現行',
+    feature: '1M context，Google 生態整合，多語言強',
+    badge: null,
+    badgeText: null
+  },
+  {
+    id: 'gemini25flash',
+    name: 'Gemini 2.5 Flash',
+    inputPrice: 0.15,
+    outputPrice: 0.6,
+    note: '現行',
+    feature: '超低成本，速度快，適合高頻 API 呼叫',
+    badge: null,
+    badgeText: null
+  },
+  {
+    id: 'deepseekv4pro',
+    name: 'DeepSeek V4 Pro',
+    inputPrice: 0.27,
+    outputPrice: 1.1,
+    note: '現行',
+    feature: 'MIT 開源，1M context，SWE-bench 72.1%，最超值旗艦',
+    badge: null,
+    badgeText: null
+  },
+  {
+    id: 'qwen3827b',
+    name: 'Qwen3.8-27B（API）',
+    inputPrice: 0.4,
+    outputPrice: 1.2,
+    note: '現行',
+    feature: '中文理解強，本機部署或 API，開源可控',
+    badge: null,
+    badgeText: null
+  },
+  {
+    id: 'grok46',
+    name: 'Grok 4.6',
+    inputPrice: 2,
+    outputPrice: 6,
+    note: '現行',
+    feature: 'xAI 最新，500K context，agentic coding benchmark 領先',
+    badge: null,
+    badgeText: null
+  },
+  {
+    id: 'llama41',
+    name: 'Llama 4.1（via DO）',
+    inputPrice: 0.5,
+    outputPrice: 1.5,
+    note: '參考',
+    feature: 'Meta 開源，透過 DigitalOcean Droplet 自架可更省',
+    badge: null,
+    badgeText: null
+  }
+];
+
+function calc() {
+  const monthlyWords = parseFloat(document.getElementById('monthlyWords').value) || 100000;
+  const outputRatio = parseFloat(document.getElementById('outputRatio').value) || 1.0;
+  const charsPerToken = parseFloat(document.getElementById('charsPerToken').value) || 1.5;
+  const usdRate = parseFloat(document.getElementById('usdRate').value) || 32;
+
+  // Convert words to tokens
+  const inputTokens = (monthlyWords / charsPerToken); // tokens
+  const outputTokens = inputTokens * outputRatio;
+
+  // Calculate cost for each model
+  const results = MODELS.map(m => {
+    const costUSD = (inputTokens / 1e6) * m.inputPrice + (outputTokens / 1e6) * m.outputPrice;
+    return { ...m, costUSD, costTWD: costUSD * usdRate };
+  });
+
+  // Sort by cost
+  const sorted = [...results].sort((a, b) => a.costUSD - b.costUSD);
+  const cheapest = sorted[0];
+
+  // Render table
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = '';
+  results.forEach(r => {
+    const isBest = r.id === cheapest.id;
+    const tr = document.createElement('tr');
+    if (isBest) tr.className = 'best-pick';
+    tr.innerHTML = `
+      <td>
+        <strong>${r.name}</strong>
+        ${isBest ? '<span class="badge-best">✦ 最省</span>' : ''}
+        ${r.badge === 'warn' ? `<span class="badge-warn">${r.badgeText}</span>` : ''}
+      </td>
+      <td><span class="cost-usd">$${r.costUSD < 0.01 ? r.costUSD.toFixed(4) : r.costUSD < 1 ? r.costUSD.toFixed(3) : r.costUSD.toFixed(2)}</span></td>
+      <td><span class="cost-twd">NT$${Math.round(r.costTWD).toLocaleString()}</span></td>
+      <td style="font-size:.82rem;color:var(--gray);">
+        輸入 $${r.inputPrice}/MTok<br>輸出 $${r.outputPrice}/MTok
+      </td>
+      <td style="font-size:.82rem;color:var(--gray);">${r.feature}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  // Recommendation
+  const topThree = sorted.slice(0, 3);
+  let recText = '';
+  if (cheapest.costUSD < 1) {
+    recText = `你的用量每月約 ${(inputTokens/1000).toFixed(0)}K 輸入 token，<strong>${cheapest.name}</strong> 是最省方案（每月約 $${cheapest.costUSD.toFixed(3)} USD）。若對輸出品質要求高，可考慮 <strong>${topThree[2]?.name || sorted[1]?.name}</strong> 作為備選，品質更強但費用仍在合理範圍。`;
+  } else if (cheapest.costUSD < 10) {
+    recText = `你的用量每月約 ${(inputTokens/1000).toFixed(0)}K 輸入 token，<strong>${cheapest.name}</strong> 是最省方案（每月約 $${cheapest.costUSD.toFixed(2)} USD / NT$${Math.round(cheapest.costTWD).toLocaleString()}）。如需更強推理能力，<strong>Claude Sonnet 5（漲價前）</strong>在 9/1 前仍是性價比最高的旗艦選擇。`;
+  } else {
+    recText = `你的月用量較大（約 ${(inputTokens/1e6).toFixed(2)}M 輸入 token），<strong>${cheapest.name}</strong> 最省（每月約 $${cheapest.costUSD.toFixed(2)} USD）。強烈建議評估：1) 使用 <strong>Prompt Caching</strong>（最省 90%）；2) 部分任務路由至 <strong>Haiku 3.5 / Gemini 2.5 Flash</strong> 降低均費；3) 透過 DigitalOcean 自架 proxy 統一管理。`;
+  }
+  document.getElementById('recommendText').innerHTML = recText;
+}
+
+// Event listeners
+['monthlyWords','outputRatio','charsPerToken','usdRate'].forEach(id => {
+  document.getElementById(id).addEventListener('input', calc);
+});
+
+// Mobile nav
+const mobileBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+if (mobileBtn && navLinks) {
+  mobileBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    mobileBtn.setAttribute('aria-expanded', open);
+  });
+}
+
+// Init
+calc();
+</script>
+</body>
+</html>
