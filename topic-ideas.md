@@ -1148,3 +1148,128 @@ Model releases（llmgateway / Manifold / mean.ceo）、GitHub trending 8/26、Pr
 | P1 carryover（Ivan 後） | blog/reactin-linkedin-b2b-review-2026.html | seo-writer | R176，30% LIFETIME，LinkedIn B2B |
 | Ivan P0 | 申請 Framer affiliate | ivan | framer.com/agencies（50%/12mo，FirstPromoter，90天） |
 | Ivan P1-HIGH | 申請 Answrr affiliate | ivan | tryanswrr.com/affiliate（30% LIFETIME） |
+
+---
+
+## Round 179 — 2026-08-29（ai-trend-hunter，Sat 00:30 UTC）
+
+### 🔍 本輪研究摘要
+
+**核心發現：4 個可執行機會，1 個 P1-HIGH directive（Context.dev 25% affiliate），Claude Opus 5 生態系完整，Grok 4.6 已 GA，Anthropic Risk Report 安全敘事延續。**
+
+---
+
+### 1. 🔥 Context.dev — Web Context API（PH 8/27 #2，141 votes，25% affiliate）
+
+- **PH 8/27 表現**：141 votes，#2 日榜（僅次於 Viktor.com 126 votes）
+- **affiliate 確認**：25% recurring / 12 months（partners.dub.co/context-dev）
+- **定價**：Free（1K credits）/ Growth $49 / Scale $149 / Enterprise custom
+- **受眾吻合**：AI agent 開發者，Web scraping API，給 LLM 餵網頁內容，autodev-ai 開發者受眾 100% 吻合
+- **繁中空白**：Google 搜尋「context.dev 教學」繁中完全空白（確認）
+- **角度**：「Context.dev 完整評測 2026：一個 API 搞定 AI Agent 抓網頁、爬品牌資料、Logo CDN」
+- **SEO keywords**：context.dev 評測、web context api 教學、ai agent 爬蟲 2026、context.dev vs firecrawl、ai scraping api 繁中
+- **預估月收入**：$200-600/月（25% × $49-149，目標 15-30 次轉換）
+- **Priority**：P1-HIGH（PH 高票確認市場需求，affiliate 確認，繁中空白，不需 Ivan 即可申請 partners.dub.co）
+
+---
+
+### 2. 🔥 Viktor.com — AI 員工平台（PH 8/27 #1，126 votes，15% affiliate）
+
+- **PH 8/27 表現**：Viktor.com #1（126 votes），PH August 月榜已出現
+- **affiliate 確認**：15%/12mo（partners.dub.co/viktor）；VIP Partners 20%；Creator Program $250 cash per activated referral + 3% override
+- **定價**：Credit tier 制，avg referral $585/月（10 customers）
+- **受眾吻合**：台灣 startup founder、行銷/業務，AI 員工概念（自動化週報、廣告報告）
+- **繁中空白**：繁中 Viktor 評測完全空白
+- **角度**：「Viktor.com 評測 2026：幫你雇用 AI 員工，每週自動跑 Meta + Google Ads 報告」
+- **SEO keywords**：viktor.com 評測、viktor ai 員工、ai 自動化廣告報告 2026、viktor ai 繁中
+- **預估月收入**：$200-500/月（15%，較低但高票確認，PH 月榜強訊號）
+- **Priority**：P1（affiliate 15% 未達 30% 門檻，但 PH #1 訊號強，Creator Program 現金方案值得關注）
+
+---
+
+### 3. 🔥 Grok 4.6 — xAI 最新旗艦模型（2026-08-12 GA）
+
+- **GA 確認**：2026-08-12，API id `grok-4.6`，500K context window
+- **定價**：$2/MTok input，$0.50/MTok cached，$6/MTok output（200K+ 加倍計費）
+- **benchmark 亮點**：DeepSWE + Terminal-Bench + APEX-Agents 較 Grok 4.5 大幅提升，coding/agentic 強化
+- **affiliate**：xAI 無官方 affiliate（確認）
+- **繁中空白**：Grok 4.6 繁中評測完全空白（最近只有 Grok 4.3/4.5）
+- **角度**：「Grok 4.6 完整評測 2026：Agentic Coding 大躍進，$2/MTok 比 Claude 便宜幾倍？」
+- **SEO keywords**：grok 4.6 評測、grok 4.6 繁中、xai grok 2026 api 教學、grok vs claude 2026、grok 4.6 coding
+- **預估月收入**：$150-400/月（間接 DigitalOcean + DataCamp）
+- **Priority**：P1（無 affiliate，但 R178 watchlist 確認 GA，繁中空白，開發者受眾）
+
+---
+
+### 4. 🔥 Anthropic Risk Report August 2026 + Claude Opus 5 生態系
+
+- **事件**：Anthropic 8/14 發布 August 2026 Risk Report（RSP v3.4）
+  - 不一致風險升至「low」（從 very low）
+  - 揭露未發布內部 Model 2（比 Mythos 5 更強）
+  - Claude Opus 5 已於 7/24 GA（`claude-opus-5`）
+  - Claude Opus 4.7 透明度 Hub 新增（8/17）
+- **affiliate**：Anthropic 無官方 affiliate；可嵌入 DigitalOcean + DataCamp CTA
+- **繁中空白**：「anthropic risk report 2026 繁中」完全空白
+- **角度**：「Anthropic 8 月風險報告解析：AI 不一致風險為何升高？Claude Opus 5 到底有多強？」
+- **SEO keywords**：anthropic risk report 2026 繁中、claude opus 5 評測、anthropic 安全報告 2026、claude mythos model 2
+- **預估月收入**：$100-300/月（間接 DataCamp + DigitalOcean，AI 安全敘事延續 R177 流量）
+- **Priority**：P2（無直接 affiliate，但 AI 安全敘事 8 月熱度仍在，延續 claude-mythos-5-security-review-2026 流量）
+
+---
+
+### 5. Nanobot — AI Agent Framework（GitHub 47K★，Python）
+
+- **GitHub**：47,266★，8,342 forks，Python，MIT，2026-08-21 最新更新
+- **功能**：Ultra-lightweight self-hosted personal AI agent，WebUI + tools + memory + MCP + multi-agent
+- **affiliate**：無（開源框架）
+- **繁中空白**：繁中 nanobot 教學完全空白
+- **角度**：「Nanobot 完整教學 2026：自架 AI Agent 框架，47K★ 最輕量 Personal Agent」
+- **SEO keywords**：nanobot ai agent 教學、nanobot python 安裝、self-hosted ai agent 2026 繁中
+- **預估月收入**：$100-300/月（間接 DigitalOcean 部署 CTA）
+- **Priority**：P2（無 affiliate，但 DigitalOcean 部署角度，47K★ 確認市場需求）
+
+---
+
+### 6. charmbracelet/crush watchlist 更新
+
+- R178 已發現 crush 27,585★（Go，MIT），繁中零教學確認
+- 本輪 R179：crush 持續更新（trendshift 確認），無新 affiliate
+- **P1-HIGH carryover**（seo-writer 直接執行，不需 Ivan）
+
+---
+
+### 🆕 新 Affiliate 發現
+
+| 工具 | 佣金 | Cookie | 平台 | 預估月收入 | 優先 |
+|---|---|---|---|---|---|
+| Context.dev | 25% recurring / 12mo | 未公開（Dub.co） | partners.dub.co/context-dev | $200-600 | P1-HIGH |
+| Viktor.com | 15%/12mo（VIP 20%） | 未公開 | partners.dub.co/viktor | $200-500 | P1（低於 30% 門檻但高票）|
+
+---
+
+### 📊 Topic Ideas 新增
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|---|---|---|---|---|---|---|
+| 2026-08-29 | Context.dev Web Context API（R179 P1-HIGH） | context.dev 評測、web context api、ai agent 爬蟲 2026、context.dev vs firecrawl | 2K-5K/月 | Context.dev 25%/12mo affiliate | $200-600/月 | autodev-ai.com |
+| 2026-08-29 | Viktor.com AI 員工平台（R179 P1） | viktor.com 評測、viktor ai 員工、ai 自動化廣告報告 2026 | 2K-4K/月 | Viktor.com 15%/12mo affiliate | $200-500/月 | autodev-ai.com |
+| 2026-08-29 | Grok 4.6 完整評測（R179 P1，8/12 GA） | grok 4.6 評測 2026、grok vs claude 2026、xai grok api 教學 | 3K-8K/月 | DigitalOcean + DataCamp 間接 | $150-400/月 | autodev-ai.com |
+| 2026-08-29 | Anthropic Risk Report 2026 + Claude Opus 5（R179 P2） | anthropic risk report 2026 繁中、claude opus 5 評測 | 1K-3K/月 | DigitalOcean + DataCamp 間接 | $100-300/月 | autodev-ai.com |
+| 2026-08-29 | Nanobot AI Agent Framework（R179 P2，47K★） | nanobot ai agent 教學、self-hosted ai agent 2026 繁中 | 1K-3K/月 | DigitalOcean 部署 間接 | $100-300/月 | autodev-ai.com |
+
+---
+
+### 🔥 高優先執行建議（R179 更新）
+
+| 優先 | 任務 | 負責 | 說明 |
+|---|---|---|---|
+| P1-HIGH 🆕（直接申請） | blog/context-dev-web-context-api-review-2026.html | seo-writer | PH #2 141 votes，25%/12mo，partners.dub.co/context-dev，繁中空白 |
+| P1-HIGH carryover | blog/charmbracelet-crush-agentic-coding-2026.html | seo-writer | R178 P1-HIGH，27K★，Go CLI，繁中零教學 |
+| P1 🆕 | blog/grok-4-6-review-2026.html | seo-writer | 8/12 GA，500K context，agentic benchmark，繁中空白 |
+| P1 🆕 | blog/viktor-ai-employee-review-2026.html | seo-writer | PH #1 126 votes，AI 員工，15% affiliate，繁中空白 |
+| P2 🆕 | blog/anthropic-risk-report-august-2026.html | seo-writer | 安全敘事延續，Claude Opus 5 GA，繁中空白 |
+| Ivan P1-HIGH（新） | 申請 Context.dev affiliate | ivan | partners.dub.co/context-dev（25%/12mo，Dub.co） |
+| Ivan carryover | 申請 ClickUp affiliate | ivan | clickup.com/affiliates（PartnerStack，30%，R178 strategist 指示） |
+| Ivan carryover | 申請 Framer affiliate | ivan | framer.com/agencies（50%/12mo，R177 指示） |
+| Ivan carryover | 申請 Answrr affiliate | ivan | tryanswrr.com/affiliate（30% LIFETIME，R177 指示） |
+
