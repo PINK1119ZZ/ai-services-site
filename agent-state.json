@@ -1,8 +1,51 @@
 {
-  "lastRun": "2026-08-30T03:00:00Z",
+  "lastRun": "2026-08-30T10:30:00Z",
   "lastResearchRound": 181,
   "lastStrategistRun": "2026-08-30T02:05:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-30T10:30:00Z",
+      "agent": "affiliate-monitor",
+      "task": "affiliate-link-check",
+      "status": "completed",
+      "summary": "聯盟連結週檢（Sun 10:30 UTC，2026-08-30）。掃描 121 篇文章（繁中 97 + 英文 24）+ 21 個聯盟連結。核心發現：(1) Gumroad 5 個 404：claude-code-prompt-pack-2026（第19週 P0-URGENT）、n8n-tw-templates（持續）、n8n-claude-templates-v1（builder 完成待 Ivan）、claude-code-skills-pack-v2（builder 完成待 Ivan）、ai-agent-cybersecurity-skills-v1（本週首次確認，用於資安技能包文章）；(2) 主要核心連結全數正常：DigitalOcean 200✓、Gumroad kknad 200✓、agent-skills-tw 200✓、Systeme.io 200✓；(3) NordVPN go.nordvpn.net 404，但無任何文章直接嵌入此追蹤 URL，影響為零；(4) DataCamp/Cloudways/onelink.one 403 防爬正常；(5) 無聯盟連結文章 5 篇（全為 en/blog/ 英文頁，P2，與上週相同）；(6) 繁中 blog/ 全部 97 篇均含聯盟連結 ✓。記錄 content-refresher directive：5 篇英文頁補 DigitalOcean + DataCamp 聯盟連結。",
+      "changes": [
+        "掃描 121 篇 HTML 文章（blog/ 97 篇 + en/blog/ 24 篇）",
+        "檢查 21 個聯盟連結：16 個正常（200/403 防爬），5 個 Gumroad 404",
+        "新確認 Gumroad ai-agent-cybersecurity-skills-v1 → 404（用於 ai-agent-cybersecurity-skills-claude-code-2026.html）",
+        "NordVPN go.nordvpn.net 追蹤 URL 404，確認無文章直接嵌入，影響為零",
+        "無新外部壞連結需修復",
+        "創建 directives/affiliate-monitor-to-content-refresher-2026-08-30.md（5 篇英文頁補聯盟連結）",
+        "更新 agent-state.json affiliateLinks + lastChecked + agentLog"
+      ],
+      "criticalIssues": [
+        "Gumroad claude-code-prompt-pack-2026 → 404（第19週，Ivan P0-URGENT，$500-700/月損失）",
+        "Gumroad n8n-claude-templates-v1 → 404（builder 完成，Ivan 需上架，$500-1,000/月損失）",
+        "Gumroad claude-code-skills-pack-v2 → 404（builder 完成，Ivan 需上架）",
+        "Gumroad ai-agent-cybersecurity-skills-v1 → 404（本週首次確認，Ivan 需上架）",
+        "Gumroad n8n-tw-templates → 404（持續，Ivan 需確認是否下架）"
+      ],
+      "articlesNoAffiliate": [
+        "en/blog/deerflow-vs-dify-vs-n8n-2026.html → P2",
+        "en/blog/geo-generative-engine-optimization-taiwan-2026.html → P2",
+        "en/blog/line-bot-complete-guide-2026.html → P2",
+        "en/blog/n8n-automation-tutorial-2026.html → P2",
+        "en/blog/n8n-hitl-tutorial-2026.html → P2"
+      ],
+      "goodNews": [
+        "繁中 blog/ 全部 97 篇均含聯盟連結 ✓",
+        "DigitalOcean / kknad / agent-skills-tw / Systeme.io 核心連結全數正常 ✓",
+        "無新外部壞連結需修復（上週已清零）",
+        "NordVPN 追蹤 URL 雖 404 但無文章嵌入，影響為零 ✓"
+      ],
+      "needsIvan": [
+        "P0-URGENT（第19週）：上架 claude-code-prompt-pack-2026 → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026",
+        "P0-URGENT：上架 n8n-claude-templates-v1 → xiaofan8.gumroad.com/l/n8n-claude-templates-v1（$39）",
+        "P0-URGENT：上架 claude-code-skills-pack-v2 → xiaofan8.gumroad.com/l/claude-code-skills-pack-v2（$29）",
+        "P0-URGENT：上架 ai-agent-cybersecurity-skills-v1 → xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1（$29）",
+        "P1：確認 n8n-tw-templates 是否需要下架或補上內容"
+      ]
+    },
     {
       "timestamp": "2026-08-30T03:00:00Z",
       "agent": "seo-writer",
@@ -1531,7 +1574,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-08-30T00:00:35Z",
+  "lastChecked": "2026-08-30T10:30:00Z",
   "issues": [
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
     "2026-07-11 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
@@ -3342,24 +3385,19 @@
     ]
   },
   "affiliateLinks": {
-    "lastChecked": "2026-08-23T10:30:00Z",
+    "lastChecked": "2026-08-30T10:30:00Z",
     "results": {
-      "DataCamp (afflink.one/s/aavAC)": {
-        "status": 403,
-        "note": "防爬機制-用戶點擊正常",
-        "ok": true
-      },
       "DigitalOcean (m.do.co)": {
         "status": 200,
         "note": "正常",
         "ok": true
       },
-      "NordVPN": {
+      "DataCamp (afflink.one/s/aavAC)": {
         "status": 403,
         "note": "防爬機制-用戶點擊正常",
         "ok": true
       },
-      "Systeme.io": {
+      "Gumroad kknad": {
         "status": 200,
         "note": "正常",
         "ok": true
@@ -3369,14 +3407,9 @@
         "note": "正常",
         "ok": true
       },
-      "Gumroad kknad": {
-        "status": 200,
-        "note": "正常",
-        "ok": true
-      },
       "Gumroad claude-code-prompt-pack-2026": {
         "status": 404,
-        "note": "P0-URGENT: 需 Ivan 上架（第17週）",
+        "note": "P0-URGENT: 需 Ivan 上架（第19週）",
         "ok": false
       },
       "Gumroad n8n-tw-templates": {
@@ -3394,6 +3427,31 @@
         "note": "P0-URGENT: builder 完成，需 Ivan 上架",
         "ok": false
       },
+      "Gumroad ai-agent-cybersecurity-skills-v1": {
+        "status": 404,
+        "note": "P0-URGENT: 用於 ai-agent-cybersecurity-skills-claude-code-2026.html，需 Ivan 上架",
+        "ok": false
+      },
+      "NordVPN (go.nordvpn.net)": {
+        "status": 404,
+        "note": "affiliate 追蹤 URL 失效，但無文章直接嵌入此追蹤 URL，影響為零",
+        "ok": true
+      },
+      "Systeme.io": {
+        "status": 200,
+        "note": "正常",
+        "ok": true
+      },
+      "Hostinger": {
+        "status": 200,
+        "note": "正常",
+        "ok": true
+      },
+      "Warp.dev": {
+        "status": 200,
+        "note": "正常",
+        "ok": true
+      },
       "wisprflow.ai": {
         "status": 200,
         "note": "正常",
@@ -3409,16 +3467,6 @@
         "note": "正常",
         "ok": true
       },
-      "Hostinger": {
-        "status": 200,
-        "note": "正常",
-        "ok": true
-      },
-      "Warp.dev": {
-        "status": 200,
-        "note": "正常",
-        "ok": true
-      },
       "hermes-agent.ai": {
         "status": 200,
         "note": "正常",
@@ -3429,14 +3477,9 @@
         "note": "防爬機制-用戶點擊正常",
         "ok": true
       },
-      "abzcoupon.com": {
-        "status": 403,
-        "note": "防爬機制-用戶點擊正常",
-        "ok": true
-      },
-      "aftck.com": {
-        "status": 403,
-        "note": "防爬機制-用戶點擊正常",
+      "adcreative.ai": {
+        "status": 200,
+        "note": "正常",
         "ok": true
       },
       "blym.co": {
@@ -3444,26 +3487,18 @@
         "note": "正常",
         "ok": true
       },
-      "adcreative.ai": {
-        "status": 200,
-        "note": "正常",
-        "ok": true
-      },
       "onelink.one/s/7WSzC": {
         "status": 403,
-        "note": "防爬機制-用戶點擊應正常（8篇文章使用）",
+        "note": "防爬機制-用戶點擊正常（8篇文章使用）",
         "ok": true
       }
     },
     "brokenLinks": [
-      "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026 → 404 (第17週，Ivan P0-URGENT)",
-      "xiaofan8.gumroad.com/l/n8n-claude-templates-v1 → 404 (builder完成，Ivan需上架)",
-      "xiaofan8.gumroad.com/l/n8n-tw-templates → 404 (持續，確認是否下架)",
-      "xiaofan8.gumroad.com/l/claude-code-skills-pack-v2 → 404 (builder完成，Ivan需上架)"
-    ],
-    "externalLinksFix": [
-      "blog.openviking.ai/agent-plugins-1.0 → 404，已修復為 blog.openviking.ai（openviking-agent-memory-save-tokens-2026.html）",
-      "api.z.ai/v1 → 404，已修復為 open.bigmodel.cn/api/paas/v4（glm-52 + glm-53 兩篇）"
+      "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026 → 404（第19週，Ivan P0-URGENT）",
+      "xiaofan8.gumroad.com/l/n8n-tw-templates → 404（持續，Ivan 需確認是否下架）",
+      "xiaofan8.gumroad.com/l/n8n-claude-templates-v1 → 404（builder 完成，Ivan 需上架）",
+      "xiaofan8.gumroad.com/l/claude-code-skills-pack-v2 → 404（builder 完成，Ivan 需上架）",
+      "xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1 → 404（本週新確認，Ivan 需上架）"
     ],
     "articlesNoAffiliate": [
       "en/blog/deerflow-vs-dify-vs-n8n-2026.html → P2（英文）",
@@ -3472,11 +3507,9 @@
       "en/blog/n8n-automation-tutorial-2026.html → P2（英文）",
       "en/blog/n8n-hitl-tutorial-2026.html → P2（英文）"
     ],
-    "totalArticlesScanned": 114,
-    "articlesWithAffiliate": 109,
+    "totalArticlesScanned": 121,
+    "articlesWithAffiliate": 116,
     "articlesWithNoAffiliate": 5,
-    "total404External": 3,
-    "fixedThisRun": 3,
-    "note": "繁中 blog/ 全部有聯盟連結。5 篇無連結均為 en/blog/ 英文頁。"
+    "note": "繁中 blog/ 97 篇全部含聯盟連結 ✓。5 篇無連結均為 en/blog/ 英文頁（P2）。NordVPN 追蹤 URL 失效但無文章直接嵌入，影響為零。"
   }
 }
