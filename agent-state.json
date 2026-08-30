@@ -1,8 +1,61 @@
 {
-  "lastRun": "2026-08-30T00:30:00Z",
+  "lastRun": "2026-08-30T02:05:00Z",
   "lastResearchRound": 181,
-  "lastStrategistRun": "2026-08-28T12:00:00Z",
+  "lastStrategistRun": "2026-08-30T02:05:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-30T02:05:00Z",
+      "agent": "strategist",
+      "task": "passive-income-audit",
+      "status": "completed",
+      "summary": "Sun 02:05 UTC 健檢（R181 post-run）。主站 200✓；ai-tools.pro 200✓；ai-tools.tw DNS FAIL（持續）。Gumroad：kknad 200✓，claude-code-prompt-pack-2026 404（第19週 P0-URGENT）、n8n-claude-templates-v1 404、claude-code-skills-pack-v2 404、ai-agent-cybersecurity-skills-v1 404（均待 Ivan 上架）。DigitalOcean 301✓，DataCamp 403（防爬正常）。R181 directive 確認：InVideo 50% monthly P1-HIGH（Ivan 申請）+ GPT-5.6 Sol/Terra/Luna 費用文 P1-HIGH（seo-writer 直接執行）。小修復直接執行：tools/ai-token-cost-calculator.html 新增 GPT-5.6 Sol/Terra/Luna 三個 tier（/0, /2, sh.20/.20），更新 title/meta，13+ 模型。本週 agentLog：researcher R181 ai-trend-hunter（InVideo P1-HIGH + GPT-5.6 降價）、researcher R180 market-research（Superads P1-HIGH）、builder interactive-tools-build（ai-token-cost-calculator + clickup-vs-notion-ai）、seo-writer article-publish（Grok 4.6 評測）、content-ops site-health × 4。Ivan 積壓仍是主要阻斷，估 ,000+/月潛力待解鎖。",
+      "changes": [
+        "URL 健檢：autodev-ai.com 200✓, ai-tools.pro 200✓, gumroad/kknad 200✓",
+        "Gumroad 404 確認：claude-code-prompt-pack-2026（第19週）、n8n-claude-templates-v1、claude-code-skills-pack-v2、ai-agent-cybersecurity-skills-v1",
+        "R181 directive 讀取確認：InVideo P1-HIGH + GPT-5.6 費用文 P1-HIGH + watchlist 更新",
+        "tools/ai-token-cost-calculator.html：新增 GPT-5.6 Sol（/0 promotional）、Terra（/2）、Luna（sh.20/.20），更新 title/meta（13+ 模型）",
+        "更新 agent-state.json：lastRun + lastStrategistRun + agentLog"
+      ],
+      "healthSummary": {
+        "autodev-ai.com": "200 OK",
+        "ai-tools.pro": "200 OK",
+        "ai-tools.tw": "DNS FAIL（持續）",
+        "gumroad_kknad": "200 OK",
+        "gumroad_prompt_pack": "404（第19週，Ivan P0-URGENT）",
+        "gumroad_n8n_templates_v1": "404（待 Ivan 上架）",
+        "gumroad_skills_pack_v2": "404（待 Ivan 上架）",
+        "gumroad_cybersec_skills_v1": "404（待 Ivan 上架）",
+        "digitalocean_affiliate": "301 OK",
+        "datacamp_affiliate": "403（防爬正常）"
+      },
+      "fixesApplied": [
+        {
+          "file": "tools/ai-token-cost-calculator.html",
+          "change": "新增 GPT-5.6 Sol/Terra/Luna 三個 tier，更新 title/meta 反映 13+ 模型",
+          "reason": "R181 researcher directive：8/21 Sol 大降價，繁中零費用解析，工具頁即時更新"
+        }
+      ],
+      "ivanCarryover": [
+        "P0-URGENT（第19週）：上架 claude-code-prompt-pack-2026",
+        "P0-URGENT：上架 n8n-claude-templates-v1（$39）",
+        "P0-URGENT：上架 claude-code-skills-pack-v2（$29）",
+        "P0-URGENT：上架 ai-agent-cybersecurity-skills-v1（$29）",
+        "P1-HIGH（R181 新）：申請 InVideo AI affiliate → invideo.io/make/affiliate-program（50% monthly，120-day）",
+        "P1-HIGH（R180）：申請 Superads affiliate → getreditus.com",
+        "P1-HIGH（R180 多輪）：申請 Reclaim.AI affiliate → PartnerStack（40%/12mo）",
+        "P1-HIGH（R179）：申請 Context.dev affiliate → partners.dub.co/context-dev",
+        "P1-HIGH（R179）：申請 Viktor.com affiliate → partners.dub.co/viktor",
+        "P1-HIGH（R178）：申請 ClickUp affiliate → clickup.com/affiliates",
+        "P1-HIGH（R177）：申請 Framer affiliate → framer.com/agencies",
+        "P1-HIGH（R177）：申請 Answrr affiliate → tryanswrr.com/affiliate"
+      ],
+      "nextActions": [
+        "seo-writer（直接執行）：blog/gpt-5-6-pricing-guide-2026.html（Sol/Terra/Luna 費用解析，~2,000 字，R181 P1-HIGH）",
+        "seo-writer（Ivan 批准後）：blog/invideo-ai-review-2026.html（~2,200 字，50% monthly，R181 P1-HIGH）",
+        "builder（Ivan 批准後）：tools/ai-video-tool-comparison-2026.html（InVideo + Pictory 雙 affiliate 互動比較頁）",
+        "content-ops P2：blog/ai-agent-cybersecurity-skills-claude-code-2026.html 補 OpenAI RL 暫停安全更新段落"
+      ]
+    },
     {
       "timestamp": "2026-08-30T00:30:00Z",
       "agent": "researcher",
@@ -953,499 +1006,6 @@
         "P1-HIGH builder：打包 ai-automation-scripts-v1.zip（R175 directive，Gumroad $29）",
         "P2：blog/local-mac-ai-zero-friction-2026.html（R174 新品，Local app）"
       ]
-    },
-    {
-      "timestamp": "2026-08-23T02:05:00Z",
-      "agent": "strategist",
-      "task": "passive-income-audit",
-      "status": "completed",
-      "summary": "Sun 02:05 UTC 健檢。主站 200✓；ai-tools.tw DNS FAIL（持續）。Gumroad：kknad 200✓，claude-code-prompt-pack-2026 404（第17週）、n8n-claude-templates-v1 404（待 Ivan 上架）、claude-code-skills-pack-v2 404（待 Ivan 上架）。DigitalOcean 301✓，DataCamp 403（防爬正常）。R175 directive 確認：2個新P1-HIGH affiliate（Joiin 40-50%/12mo + Buzz.ai 30%/12mo）、AI自動化腳本包提案、費用計算器提案、LinkedIn流量管道。本週agentLog：researcher R175 market-research（Joiin/Buzz.ai/LinkedIn）、seo-writer OpenViking教學發布、researcher R174 ai-trend-hunter、content-ops site-health。無新內容問題需立即修復。Ivan積壓仍是主要阻斷，估 $4,000+/月潛力待解鎖。",
-      "changes": [
-        "URL健檢：autodev-ai.com 200✓, ai-tools.pro 200✓, gumroad/kknad 200✓",
-        "Gumroad 404 確認：claude-code-prompt-pack-2026（第17週）、n8n-claude-templates-v1、claude-code-skills-pack-v2",
-        "R175 directive 讀取確認：Joiin P1-HIGH + Buzz.ai P1-HIGH + AI Scripts Pack + 費用計算器 + LinkedIn",
-        "agentLog 本週活動確認（R175 researcher + seo-writer OpenViking + content-ops）",
-        "更新 agent-state.json：lastRun + lastStrategistRun + agentLog"
-      ],
-      "healthSummary": {
-        "autodev-ai.com": "200 OK",
-        "ai-tools.pro": "200 OK",
-        "ai-tools.tw": "DNS FAIL（持續）",
-        "gumroad_kknad": "200 OK",
-        "gumroad_prompt_pack": "404（第17週，Ivan P0-URGENT）",
-        "gumroad_n8n_templates_v1": "404（待 Ivan 上架）",
-        "gumroad_skills_pack_v2": "404（待 Ivan 上架）",
-        "digitalocean_affiliate": "301 OK",
-        "datacamp_affiliate": "403（防爬正常）"
-      },
-      "ivanCarryover": [
-        "P0-URGENT（第17週）：上架 claude-code-prompt-pack-2026 → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026",
-        "P0-URGENT：上架 n8n-claude-templates-v1 → xiaofan8.gumroad.com/l/n8n-claude-templates-v1（$39）",
-        "P0-URGENT：上架 claude-code-skills-pack-v2 → xiaofan8.gumroad.com/l/claude-code-skills-pack-v2（$29）",
-        "P1-HIGH（新R175）：申請 Joiin affiliate → getreditus.com（40-50%/12mo，$400-1,200/月）",
-        "P1-HIGH（新R175）：申請 Buzz.ai affiliate → getreditus.com（30%/12mo，$300-900/月）",
-        "P1-HIGH：申請 MeetGeek affiliate（30% LIFETIME，R152 carryover）",
-        "P1（新R175）：建立 LinkedIn 帳號（2026爆量平台，台灣職場受眾）",
-        "P1：申請 Notion affiliate → notion.so/affiliates（50%/12mo）",
-        "P1：申請 AdCreative.ai affiliate → adcreative.ai/affiliate（30-40% LIFETIME）",
-        "P1：申請 Krater AI affiliate（25%/12mo + $1K bonus）",
-        "P1：申請 Reclaim.AI affiliate（40%/12mo）",
-        "P1：申請 Kit affiliate（14+ 輪）"
-      ],
-      "nextActions": [
-        "builder P1-HIGH：建置 autodev-ai.com/tools/ai-cost-calculator.html（費用計算器，R175 directive）",
-        "builder P1-HIGH：打包 ai-automation-scripts-v1.zip（Gumroad $29，R175 directive）",
-        "seo-writer（Ivan 批准後）：blog/joiin-financial-reporting-review-2026.html",
-        "seo-writer（Ivan 批准後）：blog/buzz-ai-sales-engagement-review-2026.html",
-        "seo-writer carryover P1-HIGH：blog/deepseek-v4-pro-review-2026.html（多輪 carryover）"
-      ]
-    },
-    {
-      "timestamp": "2026-08-23T07:00:00Z",
-      "agent": "researcher",
-      "task": "market-research",
-      "round": 175,
-      "status": "completed",
-      "summary": "Round 175（Sun 07:00，market-research cron）— 核心發現：(1) Joiin 40-50%/12mo affiliate（getreditus.com，財務報表 Xero/QuickBooks，繁中零競品，台灣中小企業全新受眾，P1-HIGH，月潛力 $400-1,200）；(2) Buzz.ai 30%/12mo affiliate（getreditus.com，AI 銷售開發平台，$500 客單，B2B 業務受眾，繁中零競品，P1-HIGH，月潛力 $300-900）；(3) Gumroad 2026 最高單品確認：Nano Banana Flux AI script $586K（AI 腳本路線正確，建議打包 ai-automation-scripts-v1.zip）；(4) 台灣需求缺口：「AI 工具費用怎麼取捨」問題熱度高（Yourator/ajmartech 確認），費用計算器 proposal 已存在可直接建置；(5) LinkedIn 2026 爆量確認（Hootsuite Social Trends），台灣職場/開發者受眾，P1 新流量管道，Ivan 建帳號；(6) GitHub trending watchlist：agency-agents 147K★ + mattpocock/skills 225K★ + claude-code-router 36.8K★（均無 affiliate，P2 教學）；(7) 已知 affiliate watchlist：MeetGeek 30% LIFETIME（R152 carryover，Ivan 尚未申請）。預估新增月收入潛力 $1,400-4,000。",
-      "changes": [
-        "搜尋 new AI SaaS affiliate program 30% recurring August 2026 → getreditus.com 確認：Buzz.ai 30%/12mo（$500 客單，60-day cookie）+ Joiin 40-50%/12mo（$350 客單，90-day cookie）+ Insightful 30%/12mo + Reditus 30-40%/24-36mo",
-        "搜尋 GitHub trending AI tools August 22 23 2026 → ossinsight.io + github-ranking-ai：agency-agents 147K★（msitarzewski，AI agency prompt framework）+ claude-code-router 36.8K★（musistudio，3.0.21 8/14）+ ruflo 68.7K★（TypeScript agent meta-harness）",
-        "搜尋 mattpocock/skills GitHub → 確認 225K★（Claude Code plugin，Shell，MIT，.agents directory）",
-        "搜尋 Gumroad best selling AI digital products August 2026 → insightraider.com 確認：最高單品 Nano Banana Flux AI script $586K；AI 腳本/自動化為 2026 最強 Gumroad 品類",
-        "搜尋台灣 AI 工具數位產品需求缺口 → Yourator 2026：「同時訂閱好幾個 AI 工具太貴，怎麼取捨？」高熱度問題確認；ajmartech.com：「AI 自動化工作流程」仍有流量；ai.com.tw：「最賺錢的 10 大 AI 方向」台灣企業卡位需求",
-        "搜尋 new free traffic platform AI content creator August 2026 → emplifi.io + hootsuite：LinkedIn 2026 爆量（年輕受眾、故事型內容）；Threads Live Chats broadcast channel 上線；YouTube Shorts AI remix Reimagine 功能；Substack 升格社交平台",
-        "搜尋 Buzz.ai affiliate → getreditus.com/blog/best-saas-affiliate-programs 確認：Buzz.ai 30%/12mo，60-day cookie，$500 avg revenue/account，Reditus marketplace",
-        "更新 market-notes.md Round 175 完整段落",
-        "創建 directives/researcher-to-strategist-2026-08-23-round175.md（Joiin P1-HIGH + Buzz.ai P1-HIGH + Gumroad 腳本包提案 + 費用計算器 + LinkedIn 流量管道）",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
-      ],
-      "topFindings": [
-        "Joiin 40-50%/12mo affiliate（getreditus.com，財務報表，繁中零競品，全新受眾，P1-HIGH）",
-        "Buzz.ai 30%/12mo affiliate（getreditus.com，AI 銷售開發，$500 客單，B2B，P1-HIGH）",
-        "Gumroad 最高單品 Nano Banana Flux AI script $586K（AI 腳本路線確認）",
-        "台灣需求缺口：AI 費用計算器（Yourator/ajmartech 確認高熱度）",
-        "LinkedIn 2026 爆量（Hootsuite 確認，台灣職場/開發者受眾，P1 新流量管道）",
-        "agency-agents 147K★ + mattpocock/skills 225K★（無 affiliate，P2 教學）",
-        "MeetGeek 30% LIFETIME carryover（R152，Ivan 尚未申請）"
-      ],
-      "watchlistStatus": {
-        "joiinAffiliate": "🆕 P1-HIGH（本輪新發現，getreditus.com，40-50%/12mo，財務受眾）",
-        "buzzAiAffiliate": "🆕 P1-HIGH（本輪新發現，getreditus.com，30%/12mo，B2B 業務受眾）",
-        "agencyAgents": "P2 watchlist（147K★，MIT，無 affiliate，AI agency prompt framework）",
-        "mattPocockSkills": "P2 watchlist（225K★，Claude Code plugin，MIT，無 affiliate）",
-        "claudeCodeRouter": "P2 watchlist（36.8K★，3.0.21，無直接 affiliate）",
-        "linkedInChannel": "🆕 P1 新流量管道（Ivan 建帳號）",
-        "meetGeekLifetime": "⏳ carryover R152（30% LIFETIME，Ivan 尚未申請）"
-      },
-      "newAffiliatesFound": [
-        {
-          "name": "Joiin",
-          "commission": "40-50% recurring / 12 months",
-          "cookie": "90 天",
-          "platform": "Reditus marketplace（getreditus.com）",
-          "pricing": "財務報表 SaaS，約 $30-100/月，$350 avg revenue/account",
-          "url": "getreditus.com → Joiin",
-          "priority": "P1-HIGH（最高佣金率，繁中零競品，全新財務受眾）",
-          "monthlyEst": "$400-1,200",
-          "note": "Round 175 market-research 新發現，40-50% 遠超 30% 門檻，台灣中小企業財務 AI 全新受眾"
-        },
-        {
-          "name": "Buzz.ai",
-          "commission": "30% recurring / 12 months",
-          "cookie": "60 天",
-          "platform": "Reditus marketplace（getreditus.com）",
-          "pricing": "AI 銷售開發平台，$500 avg revenue/account，min payout $50",
-          "url": "getreditus.com → Buzz.ai",
-          "priority": "P1-HIGH（B2B 高單價，繁中零競品，業務/行銷受眾）",
-          "monthlyEst": "$300-900",
-          "note": "Round 175 market-research 新發現，注意與 buzz-jack-dorsey 文章命名區分"
-        }
-      ],
-      "estimatedNewRevenue": "$1,400-4,000/月（Joiin $400-1,200 + Buzz.ai $300-900 + AI Scripts Pack $400-900 + 費用計算器 $200-600 + LinkedIn 間接 $100-400）"
-    },
-    {
-      "timestamp": "2026-08-22T03:00:00Z",
-      "agent": "seo-writer",
-      "task": "article-publish",
-      "status": "completed",
-      "summary": "Sat 03:00 UTC cron — R174 P1-HIGH 四輪 carryover：OpenViking Agent Plugins 1.0 完整教學發布（繁中首發，~2,800 字）。文章：blog/openviking-agent-memory-save-tokens-2026.html。三層 L0/L1/L2 記憶架構完整解析 + Agent Plugins 1.0 六大工具統一整合（ChatGPT/Codex/Cursor/Copilot/Claude Code/VS Code）+ 5 步驟安裝教學 + Claude Code 與 OpenClaw 整合 + vs mem0 vs TencentDB 完整比較表 + 省 token 實測場景 + FAQ 6 題。三個聯盟連結：DigitalOcean + DataCamp + Gumroad kknad。blog/index.html 新增卡片排第一位（81→82 篇）。sitemap.xml 新增 openviking-agent-memory-save-tokens-2026.html（priority 0.9）。",
-      "changes": [
-        "新增 blog/openviking-agent-memory-save-tokens-2026.html（~2,800 字繁中首發，L0/L1/L2 架構 + Agent Plugins 1.0 + 六大工具整合）",
-        "blog/index.html：新增 OpenViking 卡片（排第一位），81→82 篇",
-        "sitemap.xml：新增 openviking-agent-memory-save-tokens-2026.html（lastmod 2026-08-22，priority 0.9）",
-        "agent-state.json：更新 lastRun + agentLog"
-      ],
-      "articlesPublished": [
-        {
-          "file": "blog/openviking-agent-memory-save-tokens-2026.html",
-          "title": "OpenViking Agent Plugins 1.0 完整教學 2026：一套件搞定所有 AI 工具記憶，省 34-91% token",
-          "wordCount": "~2,800 字",
-          "affiliateLinks": [
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "DataCamp afflink.one/s/aavAC",
-            "Gumroad kknad xiaofan8.gumroad.com/l/kknad"
-          ],
-          "seoKeywords": [
-            "OpenViking 教學",
-            "OpenViking Agent Plugins",
-            "AI agent 記憶管理 2026",
-            "openviking token 省錢",
-            "openviking claude code",
-            "openviking cursor",
-            "openviking vs mem0",
-            "openviking 繁中"
-          ],
-          "publishReason": "R171/R172/R173/R174 四輪 carryover P1-HIGH（31K★，Agent Plugins 1.0 8/14 新角度，繁中零教學，autodev-ai 開發者受眾完美吻合）",
-          "estimatedTraffic": "3K-8K/月",
-          "estimatedRevenue": "$100-300/月（間接 DigitalOcean + DataCamp）"
-        }
-      ],
-      "nextActions": [
-        "P1-HIGH carryover：blog/deepseek-v4-pro-review-2026.html（MIT GA 8/13-14，多輪 carryover）",
-        "P2 時效：blog/openai-ipo-2026-analysis.html（S-1 公開後立即執行）",
-        "P2：blog/local-mac-ai-zero-friction-2026.html（PH 8/21 新品，Local app）"
-      ]
-    },
-    {
-      "timestamp": "2026-08-22T00:30:00Z",
-      "agent": "researcher",
-      "task": "ai-trend-hunter",
-      "round": 174,
-      "status": "completed",
-      "summary": "Round 174（Sat 00:30，ai-trend-hunter cron）— 核心發現：(1) OpenViking 四輪 carryover 再確認 P1-HIGH（31K★，8/14 Agent Plugins 1.0 新功能：ChatGPT/Codex/Cursor/GitHub Copilot/Claude Code/VS Code 統一套件，四輪 carryover 最優先 seo-writer）；(2) MiniMax M3.1 watchlist 延至 9 月（aireiter.com 8/18 確認仍未 GA，M3 已 GA 6/1，M3.1 WAIC 宣布僅為 roadmap，watchlist 持續）；(3) PH 8/21 日榜新品：Surfdeck + PixelRead AI OCR + Local（Zero friction local AI for Mac，P2）；(4) HN 8/21-22 快照：Mojo open source 352pts（我們已發文）+ Aaron Swartz vs Meta scraping 1124pts（非 AI 工具）+ 無新 P1+ AI 訊號；(5) 模型 watchlist：llmgateway.io 最新仍 Seedance 2.5（8/8），Qwen 3.8 open weights 尚未出現 HF repo，8/22 無新 P0 模型 GA；(6) 新 affiliate：Rytr 30%/12mo（P2，低門檻，繁中零評測，Ivan 可申請 rytr.me/affiliate）；(7) 本輪無新 30%+ affiliate 觸發 P1-HIGH；(8) OpenAI IPO S-1 已提交（5/22），P2 時效文章待 8 月下旬公開說明書後執行。預估新增月收入潛力 $150-500。",
-      "changes": [
-        "搜尋 GitHub trending AI August 22 2026 → trendshift.io 月榜快照：無新 8/22 爆量訊號；volcengine/OpenViking 31K★ 確認（四輪 carryover）",
-        "搜尋 new AI model release announcement August 22 2026 → llmgateway.io 最新仍 Seedance 2.5（8/8）；aitoolsrecap.com 確認 Qwen 3.8 weights day 18 無 HF repo；OpenAI IPO S-1 5/22 提交確認",
-        "搜尋 HackerNews AI news August 21 22 2026 → HN 快照：Mojo open source 352pts（8/21，我們已發）+ Aaron Swartz 1124pts + AliExpress fingerprinting 913pts；無新 P1+ AI 工具訊號",
-        "搜尋 Product Hunt daily August 21 22 2026 → PH 8/21 日榜：Surfdeck #1、PixelRead AI OCR #2、Local（Mac local AI）新品；月榜無新變化（AdAnt #1、Hey Noah #2、Wispr Flow #3、Dograh #4、Grok #5）",
-        "搜尋 MiniMax M3.1 release August 2026 → aireiter.com 8/18 確認仍未 GA（M3 already GA 6/1，M3.1 WAIC roadmap announcement only）；releasebot.io M3 GA = Jun 1 2026 確認",
-        "搜尋 OpenViking agent memory GitHub stars August 22 2026 → github.com/volcengine/OpenViking 31,000★ + blog.openviking.ai 8/14 Agent Plugins 1.0（ChatGPT/Codex/Cursor/Copilot/Claude Code/VS Code）確認",
-        "搜尋 new AI affiliate program 30% recurring August 2026 → inkfluenceai.com 確認 Rytr 30%/12mo（P2）；partnerstack.com AI list 無新觸發 30%+ 門檻",
-        "搜尋 Qwen 3.8 open weights HuggingFace August 2026 → aitoolsrecap.com：「Alibaba promised weights soon, no HF repo as of Aug 6, day 18 no update」→ 仍未開源，watchlist 持續",
-        "寫入 topic-ideas.md Round 174 完整段落",
-        "創建 directives/researcher-to-strategist-2026-08-22-round174.md（OpenViking P1-HIGH carryover + OpenAI IPO P2 + Local Mac P2 + Rytr P2 + watchlist 更新）",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
-      ],
-      "topFindings": [
-        "OpenViking 四輪 carryover P1-HIGH（31K★，Agent Plugins 1.0 新角度，立即執行 seo-writer）",
-        "MiniMax M3.1 watchlist 延至 9 月（8/18 仍未 GA，M3 6/1 已 GA）",
-        "PH 8/21 新品：Local（Zero friction local AI for Mac，P2 教學）",
-        "OpenAI IPO S-1 提交（P2 時效文章，待公開說明書後執行）",
-        "Rytr 30%/12mo affiliate（P2，Ivan 可申請 rytr.me/affiliate）",
-        "Qwen 3.8 open weights 仍未出現（day 18+，watchlist 持續）",
-        "8/22 無新 P0 模型 GA（最新仍 Seedance 2.5 8/8）",
-        "本輪無新 30%+ affiliate 觸發"
-      ],
-      "watchlistStatus": {
-        "openViking": "🔥 P1-HIGH 四輪 carryover（31K★，Agent Plugins 1.0，立即執行）",
-        "minimaxM3x": "⏳ 延至 9 月（8/18 M3.1 仍未 GA，M3 已 GA 6/1）",
-        "qwen38Weights": "⏳ 持續 watchlist（HF repo 尚未出現，day 18+）",
-        "claudeFable5x": "⏳ 持續 watchlist（Manifold ~30% Aug）",
-        "gpt57": "⏳ 持續 watchlist",
-        "kimiK3x": "⏳ 持續 watchlist",
-        "glm55": "✅ 已關閉（R172/R173 確認）",
-        "openaiIPO": "🆕 P2 Watch（S-1 5/22 提交，8 月下旬公開說明書，9 月上市目標）"
-      },
-      "newAffiliatesFound": [
-        {
-          "name": "Rytr",
-          "commission": "30% recurring / 12 months",
-          "platform": "直接申請（rytr.me/affiliate）",
-          "pricing": "AI 寫作工具，約 $9-29/月",
-          "priority": "P2（低門檻批准，繁中零評測，30% 觸發門檻但已知類別）",
-          "monthlyEst": "$200-500",
-          "note": "Round 174 inkfluenceai.com 確認，已知 AI 寫作類別，Ivan 申請後 seo-writer 執行"
-        }
-      ],
-      "estimatedNewRevenue": "$150-500/月（Rytr 30%/12mo $200-500 間接 + Local Mac 教學 $50-200 間接）"
-    },
-    {
-      "timestamp": "2026-08-21T22:00:00Z",
-      "agent": "researcher",
-      "task": "ai-dev-research",
-      "round": 173,
-      "status": "completed",
-      "summary": "Round 173（Fri 22:00，ai-dev-research cron）— 核心發現：(1) OpenViking 804★/today（31,100★ 總計，R171/R172/R173 三輪 carryover 今日正式爆量，GitHub trending #2，三層 tiered loader 省 34-91% token，繁中零教學，P1-HIGH 最優先）；(2) fx by Vercel（Apache-2.0，8/17 開源，Zig 6.39MB 單一 binary，10μs 冷啟動，PH 8/21 #7，繁中零教學，P2）；(3) Actx0（PH 8/21 #15，Agent memory infra managed SDK，P2 watchlist）；(4) MiniMax M3.1 watchlist 降溫（8/18 仍未 GA，M3 已 GA 半價，延至 9 月）；(5) GLM-5.5 watchlist 再確認正式關閉（無新 Z.AI 發布）；(6) 8/21-22 無新 P0 模型 GA（最新仍 Qwen3.8-27B 8/14）；(7) HN 重點：Mojo open source 401pts（R172 seo-writer 已發文）、Anti-AI fonts 185pts、DiffusionGemma 156pts；(8) 本輪無新 30%+ affiliate 觸發。預估新增月收入潛力 $300-800。",
-      "changes": [
-        "搜尋 GitHub trending AI August 22 2026 → github.com/trending 快照確認：MoneyPrinterTurbo #1（2,221★/today），OpenViking #2（804★/today，31,100★ 總計），R173 爆量觸發",
-        "搜尋 AI model release announcement August 21 22 2026 → aireleasetracker.com 確認最新 = Qwen3.8-27B（8/14）；llm-stats.com 確認 8/12 Gemini 3.7 Flash + DeepSeek-V4-Pro-0813；無新 P0 GA",
-        "搜尋 HackerNews AI news August 21 22 2026 → HN 前頁快照：Mojo open source 401pts（R172 已發文）、Don't paste the AI 1020pts、Vomit Claude 5 tool 272pts、DiffusionGemma 156pts、Git at any scale 346pts",
-        "搜尋 OpenViking agent memory token saving 2026 → faun.pub 完整教學確認（三層 L0/L1/L2 架構）+ RedHat OpenShift 部署 + ossinsight.io Agent Memory Race 2026 + OpenClaw mem0 整合確認",
-        "搜尋 new AI affiliate program 30% recurring August 2026 → OutlierKit 8/4 清單：VidIQ 30% LIFETIME + InVideo 30%（均已知）；無新觸發 30%+ 門檻",
-        "搜尋 Product Hunt trending August 22 2026 → PH 8/21 日榜：Epho #6、fx by Vercel #7、Actx0 #15；PH August 月榜無新變化",
-        "搜尋 Minimax M3 release August 2026 → aireiter.com 8/18 確認 M3.1 仍未 GA（M3 已 GA，M3.1 roadmap）；watchlist 延至 9 月",
-        "搜尋 fx Vercel open source coding agent August 2026 → ai-tldr.dev 確認：Apache-2.0，8/17 開源，Zig，6.39 MiB，v0.0.3，experimental；vercel-labs/fx GitHub issues 活躍（8/18-19）",
-        "搜尋 Actx0 memory infrastructure AI agents → PH 8/21 #15 確認，managed SDK，59 followers，早期階段，無 GitHub 開源",
-        "寫入 dev-notes.md Round 173 完整段落",
-        "創建 directives/researcher-to-strategist-2026-08-21-round173.md（OpenViking P1-HIGH + fx P2 + watchlist 更新）",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
-      ],
-      "topFindings": [
-        "OpenViking 804★/today（31,100★，三輪 carryover 爆量確認，省 34-91% token，繁中零教學，P1-HIGH 最優先 seo-writer）",
-        "fx by Vercel（Apache-2.0，8/17，Zig 6.39MB，10μs 冷啟動，PH #7，P2 教學）",
-        "Actx0（PH 8/21 #15，Agent memory managed SDK，P2 watchlist）",
-        "MiniMax M3.1 watchlist 降溫（8/18 仍未 GA，延至 9 月）",
-        "GLM-5.5 watchlist 再確認關閉（無新 Z.AI 發布）",
-        "8/21-22 無新 P0 模型 GA（最新仍 Qwen3.8-27B 8/14）",
-        "本輪無新 30%+ affiliate 觸發"
-      ],
-      "watchlistStatus": {
-        "openViking": "🔥 P1-HIGH 爆量確認（804★/today，R171/R172/R173 三輪 carryover，立即執行）",
-        "minimaxM3x": "⬇️ 降溫（M3.1 8/18 仍未 GA，延至 9 月，watchlist 持續）",
-        "claudeFable5x": "⏳ 持續 watchlist（Manifold ~30% August）",
-        "gpt57": "⏳ 持續 watchlist",
-        "kimiK3x": "⏳ 持續 watchlist",
-        "glm55": "✅ 正式關閉（R172 確認，本輪再確認，下一個 → GLM-6 Q4）",
-        "fxVercel": "🆕 P2 新進（Apache-2.0，8/17 開源，Zig，PH #7，繁中零教學）",
-        "actx0": "🆕 P2 watchlist（PH 8/21 #15，managed SDK，早期）"
-      },
-      "newAffiliatesFound": [],
-      "estimatedNewRevenue": "$300-800/月（OpenViking 教學間接 $200-500 + fx 教學間接 $100-300）"
-    },
-    {
-      "timestamp": "2026-08-21T20:00:00Z",
-      "agent": "strategist",
-      "task": "income-ideation",
-      "status": "completed",
-      "summary": "Fri 20:00 UTC weekly income-ideation cron. 搜尋 Gumroad 暢銷榜 + 新 affiliate 機會。核心發現：(1) Powerdrill AI 30%/12mo affiliate（affbun.com 確認，AI 數據分析 SaaS，繁中零評測，Ivan P1-HIGH 申請）；(2) Cybersecurity Skills Pack v1.0 數位產品（基於 mukul975/Anthropic-Cybersecurity-Skills Apache 2.0，R171 directive 延續，AI 安全敘事熱度仍在，9，builder P1-HIGH）。Gumroad 數據確認 Software Development 類目 $65.8M 總收入（insightraider.com），每產品均值最高，支持繼續打包技能包路線。延續 carryover：OpenViking P1-HIGH（R172 多輪 carryover，下輪 seo-writer 優先執行）。新增 Riverside.fm + Descript affiliate 至 Ivan 清單。Ivan 積壓 14 個申請/上架項目，估計阻斷收入 $3,500-8,000/月。",
-      "changes": [
-        "創建 directives/strategist-income-ideation-2026-08-21.md（2 個新提案 + Ivan 更新清單 + carryover 優先順序）",
-        "更新 agent-state.json：lastStrategistRun + lastRun + agentLog + newAssetProposals"
-      ],
-      "newProposals": [
-        {
-          "id": "proposal-cybersecurity-skills-pack-2026-08-21",
-          "type": "digital_product",
-          "title": "AI Agent Cybersecurity Skills Pack v1.0（Gumroad $29）",
-          "revenueModel": "Gumroad 一次性 $29，目標 20-30 次/月",
-          "estimatedMonthlyRevenue": "$400-800",
-          "priority": "P1-HIGH",
-          "basis": "mukul975/Anthropic-Cybersecurity-Skills Apache 2.0 + R168 AI 安全敘事三連爆 + claude-code-skills-pack-v2 成功模式複用"
-        },
-        {
-          "id": "proposal-powerdrill-affiliate-2026-08-21",
-          "type": "affiliate_review_article",
-          "title": "Powerdrill AI 評測 2026（30%/12mo affiliate，繁中首發）",
-          "revenueModel": "Powerdrill affiliate 30% recurring/12mo，$50 min payout",
-          "estimatedMonthlyRevenue": "$300-700",
-          "priority": "P1-HIGH（Ivan 申請後執行）",
-          "basis": "affbun.com 2026-08-21 確認，AI 數據分析 SaaS，繁中零評測"
-        }
-      ],
-      "newAffiliatesFound": [
-        {
-          "name": "Powerdrill AI",
-          "commission": "30% recurring / 12 months",
-          "platform": "直接申請（affbun.com 確認入口）",
-          "pricing": "AI SaaS 數據分析，約 $19-99/月",
-          "priority": "P1-HIGH（觸發 30%+ 門檻，繁中零評測空白）",
-          "monthlyEst": "$300-700",
-          "note": "Round 173 / income-ideation 2026-08-21 新發現，affbun.com AI & SaaS vertical 確認"
-        }
-      ],
-      "ivanCarryover": [
-        "P0-URGENT（第17週）：上架 claude-code-skills-pack-v2.zip → xiaofan8.gumroad.com/l/claude-code-skills-pack-v2（$29）",
-        "P0-URGENT（第16週）：上架 n8n-claude-templates-v1.zip → xiaofan8.gumroad.com/l/n8n-claude-templates-v1（$39）",
-        "P0-URGENT（第17週）：上架 claude-code-prompt-pack-2026",
-        "P0-URGENT（14+ 輪）：申請 Kit affiliate → kit.com/affiliate",
-        "P1-HIGH（新）：申請 Powerdrill AI affiliate",
-        "P1-HIGH（新）：申請 Riverside.fm affiliate → riverside.fm/partners（R171）",
-        "P1-HIGH（新）：申請 Descript affiliate → descript.com/affiliate（R171）",
-        "P1：申請 Krater AI（R166）、TestMu AI（R164）、ElevenLabs（R162）、Koala AI（R162）、Reclaim.AI（R167）、AdCreative.ai（R169）、Notion（R170）"
-      ],
-      "nextActions": [
-        "builder P1-HIGH：打包 ai-agent-cybersecurity-skills-pack-v1.zip（Apache 2.0，mukul975 框架）",
-        "seo-writer P1-HIGH：blog/openviking-agent-memory-save-tokens-2026.html（多輪 carryover，最優先）",
-        "seo-writer P1-HIGH：blog/deepseek-v4-pro-review-2026.html（MIT GA，多輪 carryover）",
-        "seo-writer P1（Ivan 批准後）：blog/powerdrill-ai-review-2026.html",
-        "content-ops（Ivan 批准後）：blog/ai-tools-comparison-2026.html 加 Powerdrill 內連"
-      ]
-    },
-    {
-      "timestamp": "2026-08-21T03:00:00Z",
-      "agent": "seo-writer",
-      "task": "article-publish",
-      "status": "completed",
-      "summary": "Fri 03:00 UTC cron — R172 P1-HIGH 時效訊號：Mojo 1.0 開源（8/18，Apache 2.0，HN 78pts，Qualcomm 收購 Modular，繁中零教學，72h 窗口）。文章：blog/mojo-programming-language-tutorial-2026.html（~2,500 字繁中首發）。Mojo 1.0 新特性解析（MLIR、SIMD、lifetime）+ vs Python/Rust/C++ 完整比較表 + 5 步驟安裝教學 + 4 大 AI 應用場景 + FAQ 6 題。三個聯盟連結：DataCamp + DigitalOcean + Gumroad kknad。blog/index.html 新增卡片排第一位（81 篇）。sitemap.xml 新增 mojo-programming-language-tutorial-2026.html（priority 0.9）。",
-      "changes": [
-        "新增 blog/mojo-programming-language-tutorial-2026.html（~2,500 字繁中首發，MLIR + SIMD + lifetime 完整解析）",
-        "blog/index.html：新增 Mojo 卡片（排第一位），81 篇",
-        "sitemap.xml：新增 mojo-programming-language-tutorial-2026.html（lastmod 2026-08-21，priority 0.9）"
-      ],
-      "articlesPublished": [
-        {
-          "file": "blog/mojo-programming-language-tutorial-2026.html",
-          "title": "Mojo 程式語言完整教學 2026：1.0 開源、比 Python 快 35000x，AI 開發者必讀",
-          "wordCount": "~2,500 字",
-          "affiliateLinks": [
-            "DataCamp afflink.one/s/aavAC",
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "Gumroad kknad xiaofan8.gumroad.com/l/kknad"
-          ],
-          "seoKeywords": [
-            "Mojo 程式語言教學",
-            "Mojo vs Python AI 2026",
-            "Mojo 1.0 open source",
-            "Mojo GPU 程式設計",
-            "Mojo 安裝教學",
-            "Modular Mojo 繁中"
-          ],
-          "publishReason": "R172 P1-HIGH 時效訊號（8/18 開源，HN 78pts，Qualcomm 收購，繁中零教學，72h 窗口剩 48h）",
-          "estimatedTraffic": "3K-8K/月",
-          "estimatedRevenue": "$150-400/月（間接 DataCamp + DigitalOcean）"
-        }
-      ],
-      "nextActions": [
-        "P1-HIGH：blog/openviking-agent-memory-save-tokens-2026.html（R171/R172 carryover，30,976★，省 34-91% token，繁中零教學）",
-        "P1-HIGH：blog/deepseek-v4-pro-review-2026.html（MIT GA 8/13-14，多輪 carryover）",
-        "P1：blog/wan-3-video-gen-review-2026.html（若前兩項完成後執行）"
-      ]
-    },
-    {
-      "timestamp": "2026-08-21T00:30:00Z",
-      "agent": "researcher",
-      "task": "ai-trend-hunter",
-      "round": 172,
-      "status": "completed",
-      "summary": "Round 172（Fri 00:30，ai-trend-hunter cron）— 核心發現：(1) Mojo 1.0 開源（8/18，Apache 2.0，HN 78pts 快速累積，Qualcomm 收購 Modular 7/29，繁中零教學，P1-HIGH 72h 窗口剩 48h）；(2) GLM-5.5 watchlist 正式關閉（確認=GLM-5.3 8/14，三源確認，我們已發評測文）；(3) OpenViking R171 carryover 再確認 P1-HIGH（30,976★，8/20 最新更新，省 34-91% token，繁中零教學）；(4) career-ops 816★/today（60K+ stars，AI 求職工具，MIT，無 affiliate，P2 純教學）；(5) mattpocock/skills GitHub trending（Claude Code plugin，MIT，P2）；(6) PH August 月榜無重大變化（AdAnt #1，Hey Noah #2，Wispr Flow #3，Dograh #4，Grok #5）；(7) Minimax M3.x watchlist 升級至 P1-WATCH（Manifold 54% August）；(8) 本輪未發現新 30%+ recurring affiliate（門檻未觸發）。預估新增月收入潛力 $250-700。",
-      "changes": [
-        "搜尋 GitHub trending AI August 21 2026 → career-ops 816★/today（60K+ stars，MIT，AI 求職）+ mattpocock/skills（agent skills，MIT，Claude Code plugin）+ OpenViking 8/20 最新更新確認",
-        "搜尋 Mojo open source 2026 HackerNews → HN 78pts 3hrs ago + simonwillison.net 8/18 深度報導 + Wikipedia 確認 Mojo 1.0.0 8/11 + 開源 8/18（Apache 2.0）+ Qualcomm 收購 7/29",
-        "搜尋 GLM-5.5 Z.AI release August 21 2026 → Wikipedia GLM(AI) 確認 GLM-5.3=8/14 release；felloai.com + orcarouter.ai 確認 GLM-5.5 watchlist 改名；GLM-5.5 watchlist 正式關閉",
-        "搜尋 AI model release announcement August 20 21 2026 → Manifold August 2026 AI model releases：Minimax M3.x 54%（最高）、Claude Fable 5.x 30%、GPT-5.7 19%、Kimi K3.x 11%；llm-stats.com 確認無新 8/20-21 GA",
-        "搜尋 Product Hunt trending August 21 2026 → August 月榜：AdAnt #1(1.4K)、Hey Noah #2(1.4K)、Wispr Flow #3(8.7K)、Dograh #4(1.4K)、Grok #5(3.2K)；Bruno API Client 新進（61 votes，Git+IDE+agents）",
-        "搜尋 AI affiliate program 30% recurring August 2026 → Teachable 30% recurring 1yr cap（非 AI 工具）、Coursera 15-45%（非 AI）；未發現新 AI 工具觸發 30%+ 門檻",
-        "搜尋 career-ops affiliate → career-ops.org 純開源免費，無 affiliate program",
-        "搜尋 Mojo affiliate Modular → 無官方 affiliate program",
-        "寫入 topic-ideas.md Round 172 完整段落",
-        "創建 directives/researcher-to-strategist-2026-08-21-round172.md（Mojo P1-HIGH + OpenViking carryover + GLM-5.5 watchlist 關閉 + Minimax M3.x watchlist 升級）",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
-      ],
-      "topFindings": [
-        "Mojo 1.0 開源（8/18，Apache 2.0，HN 78pts，Qualcomm 收購，繁中零教學，P1-HIGH 72h 窗口 48h 剩）",
-        "GLM-5.5 watchlist 正式關閉（確認=GLM-5.3，8/14 已發布，我們已發評測文 8/16）",
-        "OpenViking R171 carryover 再確認 P1-HIGH（30,976★，8/20 更新，OpenClaw 整合，省 34-91% token）",
-        "career-ops 816★/today（60K+ stars，AI 求職，MIT，無 affiliate，P2）",
-        "Minimax M3.x watchlist P1-WATCH（Manifold 54% August，若發布 → P0-URGENT）",
-        "PH August 月榜無重大變化（AdAnt #1，Wispr Flow #3，Bruno API Client 新進）",
-        "本輪未發現新 30%+ recurring affiliate（門檻未觸發）"
-      ],
-      "watchlistStatus": {
-        "glm55": "✅ 正式關閉（確認=GLM-5.3 8/14，我們已發評測文，下一個 Z.AI watchlist = GLM-6 Q4）",
-        "minimaxM3x": "🆙 P1-WATCH 升級（Manifold 54% August，若發布 → P0-URGENT 72h）",
-        "claudeFable5x": "⏳ 持續 watchlist（Manifold 30% August）",
-        "gpt57": "⏳ 持續 watchlist（Manifold 19% August）",
-        "kimiK3x": "⏳ 持續 watchlist（Manifold 11% August）",
-        "mojo10": "🔥 P1-HIGH 新進（8/18 開源，HN 78pts，72h 窗口 48h 剩，繁中零教學）",
-        "openViking": "🔥 P1-HIGH carryover（R171 未執行，8/20 更新，再次確認優先）"
-      },
-      "newAffiliatesFound": [],
-      "estimatedNewRevenue": "$250-700/月（Mojo 教學間接 $150-400 + OpenViking 教學間接 $100-300）"
-    },
-    {
-      "timestamp": "2026-08-20T03:00:00Z",
-      "agent": "seo-writer",
-      "task": "article-publish",
-      "status": "completed",
-      "summary": "Thu 03:00 UTC cron — R171 P1-HIGH 時效訊號：OpenAI 暫停前沿 RL 訓練（8/18 宣布，72h 窗口剩 48h，繁中深度空白）。文章：blog/openai-rl-pause-safety-august-2026.html（~2,300 字繁中首發）。GPT-5.6 Sol 嘗試攻擊完整時間軸、UK AISI 介入、EU AI Act 8/2 生效背景、8月 AI 安全事件比較表、台灣開發者實用建議、FAQ 6 題。三個聯盟連結：DataCamp + DigitalOcean + Gumroad kknad。blog/index.html 新增卡片排第一位（38→39 篇）。sitemap.xml 新增 openai-rl-pause-safety-august-2026.html（priority 0.9）。",
-      "changes": [
-        "新增 blog/openai-rl-pause-safety-august-2026.html（~2,300 字繁中首發，完整時間軸 + 比較表 + FAQ）",
-        "blog/index.html：新增 OpenAI RL 暫停卡片（排第一位），38→39 篇",
-        "sitemap.xml：新增 openai-rl-pause-safety-august-2026.html（lastmod 2026-08-20，priority 0.9）"
-      ],
-      "articlesPublished": [
-        {
-          "file": "blog/openai-rl-pause-safety-august-2026.html",
-          "title": "OpenAI 暫停前沿 RL 訓練 2026：業界首例，GPT-5.6 攻擊事件始末全解析",
-          "wordCount": "~2,300 字",
-          "affiliateLinks": [
-            "DataCamp afflink.one/s/aavAC",
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "Gumroad kknad xiaofan8.gumroad.com/l/kknad"
-          ],
-          "seoKeywords": [
-            "openai rl 暫停",
-            "openai 安全 2026",
-            "AI 安全治理",
-            "openai gpt 訓練暫停",
-            "gpt-5.6 sol 攻擊",
-            "eu ai act 2026"
-          ],
-          "publishReason": "R171 P1-HIGH 時效訊號（8/18 宣布，72h 窗口，業界首例，繁中深度空白，AI 安全敘事 8月最強峰值）",
-          "estimatedTraffic": "3K-8K/月",
-          "estimatedRevenue": "$100-300/月（間接 DataCamp + DigitalOcean）"
-        }
-      ],
-      "nextActions": [
-        "P1-HIGH：blog/deepseek-v4-pro-review-2026.html（MIT GA 8/13-14，繁中首發，多輪 carryover）",
-        "P1-HIGH：blog/qwen3-27b-local-deploy-2026.html（R169 P1-HIGH，本機部署，HN 加持）",
-        "P1-HIGH：blog/openviking-agent-memory-save-tokens-2026.html（R171 新發現，省 30-50% token，OpenClaw 整合）",
-        "P1：blog/wan-3-video-gen-review-2026.html（若前項完成後執行）"
-      ]
-    },
-    {
-      "timestamp": "2026-08-27T00:00:35Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "summary": "Daily site health check: autodev-ai.com + sitemap 200; ai-tools.pro + sitemap 200 (sitemap.xml redirects to sitemap_index.xml normally); ai-tools.tw / en.ai-tools.tw still DNS FAIL; both GitHub Pages fallbacks 200. No new site failures. Existing builder DNS directive remains valid.",
-      "changes": [
-        "curl checked 8 health endpoints",
-        "updated agent-state.json siteHealth lastChecked timestamps",
-        "confirmed ai-tools.tw + en.ai-tools.tw still DNS FAIL",
-        "confirmed pink1119zz GitHub Pages fallbacks still 200 OK"
-      ]
-    },
-    {
-      "timestamp": "2026-08-28T00:00:35Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "summary": "Daily site health check: autodev-ai.com + sitemap 200; ai-tools.pro + sitemap 200 (sitemap.xml redirects to sitemap_index.xml normally); ai-tools.tw / en.ai-tools.tw still DNS FAIL; both GitHub Pages fallbacks 200. No new site failures. Existing builder DNS directive remains valid.",
-      "changes": [
-        "curl checked 8 health endpoints",
-        "updated agent-state.json siteHealth lastChecked timestamps",
-        "confirmed ai-tools.tw + en.ai-tools.tw still DNS FAIL",
-        "confirmed pink1119zz GitHub Pages fallbacks still 200 OK"
-      ]
-    },
-    {
-      "timestamp": "2026-08-28T07:00:00Z",
-      "agent": "content-ops",
-      "task": "gsc-data-pull",
-      "status": "completed",
-      "summary": "Fri 07:00 UTC GSC pull — autodev-ai 14-day summary: 98 clicks / 1,721 impressions / CTR 5.7% / avg pos 8.8. Main traffic still concentrated on opencode-zen-vs-go-pricing-2026.html (53 clicks, 723 impressions, pos 6.4). Highest-leverage CTR opportunities: ai-tools-comparison-2026.html (66 impr, CTR 1.5%, pos 13.1), markitdown-microsoft-tutorial-2026.html (52 impr, CTR 1.9%, pos 6.3), line-bot-cost.html (123 impr, CTR 4.1%, pos 7.8), claude-video-watch-tutorial-2026.html (84 impr, CTR 3.6%, pos 5.3). Page-2 opportunities: gemma 4 12b (pos 13.8), systeme.io (15.5), opencode 優惠码 (15), agent-skills-complete-guide-2026.html (13.5), ai-tools-comparison-2026.html (13.1). No meaningful data yet for ai-tools-tw; ai-tools-en only 2 impressions.",
-      "changes": [
-        "Ran git pull origin main before GSC job per protocol",
-        "Ran python3 scripts/gsc_reporter.py and updated agent-state.json gscData",
-        "Logged GSC insights: concentration, low-CTR pages, and page-2 keyword opportunities"
-      ]
-    },
-    {
-      "timestamp": "2026-08-29T00:00:35Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "summary": "Daily site health check: autodev-ai.com + sitemap 200; ai-tools.pro + sitemap 200; ai-tools.tw / en.ai-tools.tw still DNS FAIL; both GitHub Pages fallbacks 200. No new site failures. Existing builder DNS directive remains valid.",
-      "changes": [
-        "curl checked 8 health endpoints",
-        "updated agent-state.json siteHealth lastChecked timestamps",
-        "confirmed ai-tools.tw + en.ai-tools.tw still DNS FAIL",
-        "confirmed pink1119zz GitHub Pages fallbacks still 200 OK"
-      ]
-    },
-    {
-      "timestamp": "2026-08-30T00:00:35Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "summary": "Daily site health check: autodev-ai.com + sitemap 200; ai-tools.pro + sitemap 200 (sitemap.xml redirects to sitemap_index.xml normally); ai-tools.tw / en.ai-tools.tw still DNS FAIL; both GitHub Pages fallbacks 200. No new site failures. Existing builder DNS directive remains valid.",
-      "changes": [
-        "curl checked 8 health endpoints",
-        "updated agent-state.json siteHealth lastChecked timestamps",
-        "confirmed ai-tools.tw + en.ai-tools.tw still DNS FAIL",
-        "confirmed pink1119zz GitHub Pages fallbacks still 200 OK"
-      ]
     }
   ],
   "gscData": {
@@ -1464,7 +1024,7 @@
             "keyword": "opencode zen vs go",
             "clicks": 4,
             "impressions": 16,
-            "ctr": 25.0,
+            "ctr": 25,
             "position": 2.8
           },
           {
@@ -1472,13 +1032,13 @@
             "clicks": 4,
             "impressions": 42,
             "ctr": 9.5,
-            "position": 6.0
+            "position": 6
           },
           {
             "keyword": "gemma 4 12b",
             "clicks": 3,
             "impressions": 5,
-            "ctr": 60.0,
+            "ctr": 60,
             "position": 14
           },
           {
@@ -1492,7 +1052,7 @@
             "keyword": "autodev ai",
             "clicks": 2,
             "impressions": 10,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 4.4
           },
           {
@@ -1527,7 +1087,7 @@
             "keyword": "opencode go zen",
             "clicks": 1,
             "impressions": 5,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 5
           },
           {
@@ -1583,7 +1143,7 @@
             "keyword": "systeme.io",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 15.5
           },
           {
@@ -1597,7 +1157,7 @@
             "keyword": "tencentdb-agent-memory",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 5.5
           },
           {
@@ -1691,7 +1251,7 @@
             "clicks": 4,
             "impressions": 78,
             "ctr": 5.1,
-            "position": 8.0
+            "position": 8
           },
           {
             "page": "//en/",
@@ -1711,7 +1271,7 @@
             "page": "//blog/systeme-io-review-2026.html",
             "clicks": 2,
             "impressions": 10,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 10.2
           },
           {
@@ -1753,7 +1313,7 @@
             "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
             "clicks": 1,
             "impressions": 25,
-            "ctr": 4.0,
+            "ctr": 4,
             "position": 9.6
           },
           {
@@ -1767,7 +1327,7 @@
             "page": "//portfolio.html",
             "clicks": 1,
             "impressions": 4,
-            "ctr": 25.0,
+            "ctr": 25,
             "position": 5.8
           },
           {

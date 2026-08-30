@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Token 費用計算器 2026｜Claude vs GPT-5.4 vs Gemini vs DeepSeek，每千字要多少錢？</title>
-<meta name="description" content="輸入每月寫作字數，立即試算 Claude Sonnet 5、GPT-5.4、Gemini 2.5 Pro、DeepSeek V4 Pro 等 10+ 模型的 API Token 費用。含台幣換算、9/1 Claude 漲價前後比較、最省方案推薦。免費使用。">
+<title>AI Token 費用計算器 2026｜Claude vs GPT-5.6 Sol/Terra/Luna vs Gemini vs DeepSeek，每千字要多少錢？</title>
+<meta name="description" content="輸入每月寫作字數，立即試算 Claude Sonnet 5、GPT-5.6 Sol/Terra/Luna、Gemini 2.5 Pro、DeepSeek V4 Pro 等 13+ 模型的 API Token 費用。含台幣換算、GPT-5.6 降價比較、最省方案推薦。免費使用。">
 <link rel="canonical" href="https://autodev-ai.com/tools/ai-token-cost-calculator.html">
 <meta property="og:title" content="AI Token 費用計算器 2026｜每千字要多少錢？">
 <meta property="og:description" content="輸入字數，立即比較 Claude、GPT-5.4、Gemini、DeepSeek 的 API token 月費，含台幣換算與最省方案推薦。">
@@ -259,6 +259,36 @@ const MODELS = [
     feature: '速度最快、費用最低的 Claude，適合高頻簡單任務',
     badge: null,
     badgeText: null
+  },
+  {
+    id: 'gpt56sol',
+    name: 'GPT-5.6 Sol',
+    inputPrice: 4,
+    outputPrice: 20,
+    note: '促銷至11/21',
+    feature: 'OpenAI 旗艦，8/21 降價 20%（$5→$4 in，$30→$20 out），promotional 至 2026/11/21',
+    badge: '降價',
+    badgeText: '限時促銷'
+  },
+  {
+    id: 'gpt56terra',
+    name: 'GPT-5.6 Terra',
+    inputPrice: 2,
+    outputPrice: 12,
+    note: '7/30 降價後',
+    feature: 'GPT-5.6 中階，7/30 降價，平衡效能與成本',
+    badge: null,
+    badgeText: null
+  },
+  {
+    id: 'gpt56luna',
+    name: 'GPT-5.6 Luna',
+    inputPrice: 0.2,
+    outputPrice: 1.2,
+    note: '7/30 降 80%',
+    feature: 'GPT-5.6 輕量，7/30 大降 80%，高頻低成本首選',
+    badge: '超值',
+    badgeText: '降 80%'
   },
   {
     id: 'gpt54',
