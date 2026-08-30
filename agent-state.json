@@ -1,8 +1,31 @@
 {
-  "lastRun": "2026-08-30T10:30:00Z",
+  "lastRun": "2026-08-30T13:00:00Z",
   "lastResearchRound": 181,
   "lastStrategistRun": "2026-08-30T02:05:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-30T13:00:00Z",
+      "agent": "content-ops",
+      "task": "fb-weekly-review",
+      "status": "completed",
+      "summary": "Sun 13:00 UTC fb-weekly-review — 直接以 Graph API v23.0 呼叫 /{page_id}/posts?fields=message,created_time,insights.metric(post_impressions,post_engaged_users,post_clicks) 仍回 (#100) The value must be a valid insights metric；故本週持續改用 published_posts + public interactions fallback。統計 2026-08-24 至 2026-08-30 共 27 則貼文：中午原生摘要主貼 7 則、04:00 外鏈貼 20 則；公開互動合計 7，其中中午主貼 7、04:00 外鏈貼 0。再次確認「12:00 原生主貼」是唯一穩定成功格式，「04:00 外鏈直貼」是已證實停用格式。已更新 fbStrategy.performance.lastWeeklyRaw / weeklyReviews / winPatterns / failPatterns 與 autoDevAIStrategy.postRules。",
+      "changes": [
+        "Graph API 重新驗證：posts insights.metric(post_impressions,post_engaged_users,post_clicks) 仍回 #100 valid insights metric",
+        "published_posts fallback 統計本週 27 則貼文（中午主貼 7、04:00 外鏈貼 20）",
+        "更新 fbStrategy.performance.lastWeeklyRaw",
+        "新增 2026-08-24_to_2026-08-30 weeklyReview",
+        "追加 winPatterns / failPatterns",
+        "新增 3 條 autoDevAIStrategy.postRules（禁止同題材先外鏈後原生、首段固定受眾+痛點+結論、英文 comparison 先中文化）"
+      ],
+      "metrics": {
+        "totalPosts": 27,
+        "middayNativePosts": 7,
+        "middayNativeInteractions": 7,
+        "link0400Posts": 20,
+        "link0400Interactions": 0,
+        "graphApiInsightsAvailable": false
+      }
+    },
     {
       "timestamp": "2026-08-30T10:30:00Z",
       "agent": "affiliate-monitor",
@@ -2162,55 +2185,10 @@
     "performance": {
       "lastWeeklyRaw": [
         {
-          "id": "1056283757571950_122124510878778539",
-          "created_time": "2026-08-17T04:00:02+0000",
-          "headline": "📝 Claude Opus 5 完整評測 2026：「感覺更笨了」的 $10/MTok 王者",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124510878778539",
-          "likes": 0,
-          "comments": 0,
-          "shares": 0,
-          "clicks": null,
-          "estimatedReach": null,
-          "interactions": 0,
-          "reachRate": 0,
-          "engagementRate": 0,
-          "formatBucket": "0400_link"
-        },
-        {
-          "id": "1056283757571950_122124510914778539",
-          "created_time": "2026-08-17T04:00:11+0000",
-          "headline": "📝 AI 設計工具推薦 2026：Canva AI vs Adobe Firefly vs Figma AI 台灣設計師完整比較",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124510914778539",
-          "likes": 0,
-          "comments": 0,
-          "shares": 0,
-          "clicks": null,
-          "estimatedReach": null,
-          "interactions": 0,
-          "reachRate": 0,
-          "engagementRate": 0,
-          "formatBucket": "0400_link"
-        },
-        {
-          "id": "1056283757571950_122124510962778539",
-          "created_time": "2026-08-17T04:00:19+0000",
-          "headline": "📝 7 Best AI App Builders in 2026 (Ranked for Speed, Power & Price)",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124510962778539",
-          "likes": 0,
-          "comments": 0,
-          "shares": 0,
-          "clicks": null,
-          "estimatedReach": null,
-          "interactions": 0,
-          "reachRate": 0,
-          "engagementRate": 0,
-          "formatBucket": "0400_link"
-        },
-        {
-          "id": "1056283757571950_122124570128778539",
-          "created_time": "2026-08-17T12:00:06+0000",
-          "headline": "🔍 DataCamp 評測 2026：值得訂閱嗎？台灣人學 AI 資料科學的最佳平台？",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124570128778539",
+          "id": "1056283757571950_122126741492778539",
+          "created_time": "2026-08-30T12:00:06+0000",
+          "headline": "🔥 AI HR 工具推薦 2026：BambooHR vs Workday vs Rippling 台灣企業完整比較",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126741492778539",
           "likes": 0,
           "comments": 1,
           "shares": 0,
@@ -2222,10 +2200,10 @@
           "formatBucket": "midday_native"
         },
         {
-          "id": "1056283757571950_122124664310778539",
-          "created_time": "2026-08-18T04:00:02+0000",
-          "headline": "📝 AI 語言學習工具推薦 2026：Duolingo Max vs ChatGPT vs Babbel 台灣英文學習完整指南",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124664310778539",
+          "id": "1056283757571950_122126545514778539",
+          "created_time": "2026-08-30T04:00:19+0000",
+          "headline": "📝 ClickUp vs Notion 2026: Which All-in-One Workspace Actually Wins?",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126545514778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2237,10 +2215,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122124664340778539",
-          "created_time": "2026-08-18T04:00:11+0000",
-          "headline": "📝 Lovable vs Webflow 2026: Which Website Builder Actually Wins?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124664340778539",
+          "id": "1056283757571950_122126545460778539",
+          "created_time": "2026-08-30T04:00:11+0000",
+          "headline": "📝 AI 電商工具推薦 2026：Shopify AI vs WooCommerce vs Squarespace 台灣賣家完整比較",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126545460778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2252,10 +2230,25 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122124714596778539",
-          "created_time": "2026-08-18T12:00:09+0000",
-          "headline": "💡 RAG 是什麼?中小企業導入指南 2026",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124714596778539",
+          "id": "1056283757571950_122126545436778539",
+          "created_time": "2026-08-30T04:00:02+0000",
+          "headline": "📝 crush 完整教學 2026：charmbracelet 27K★ Agentic Coding CLI 繁中首發",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126545436778539",
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "clicks": null,
+          "estimatedReach": null,
+          "interactions": 0,
+          "reachRate": 0,
+          "engagementRate": 0,
+          "formatBucket": "0400_link"
+        },
+        {
+          "id": "1056283757571950_122126463668778539",
+          "created_time": "2026-08-29T12:00:06+0000",
+          "headline": "📚 AgentShield 評測 2026：AI Agent 出錯你知道嗎？執行追蹤、風險偵測、成本控制完整教學",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126463668778539",
           "likes": 0,
           "comments": 1,
           "shares": 0,
@@ -2267,10 +2260,10 @@
           "formatBucket": "midday_native"
         },
         {
-          "id": "1056283757571950_122124808094778539",
-          "created_time": "2026-08-19T04:00:02+0000",
-          "headline": "📝 omlx 完整教學 2026：Apple Silicon 本機 LLM 推理伺服器，比 Ollama 快在哪？",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124808094778539",
+          "id": "1056283757571950_122126401994778539",
+          "created_time": "2026-08-29T04:00:17+0000",
+          "headline": "📝 Monday.com vs Asana 2026: Which Project Management Tool Actually Wins?",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126401994778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2282,10 +2275,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122124808178778539",
-          "created_time": "2026-08-19T04:00:11+0000",
-          "headline": "📝 AI 程式碼審查工具推薦 2026：GitHub Copilot vs CodeRabbit vs Qodo 台灣工程師完整比較",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124808178778539",
+          "id": "1056283757571950_122126401958778539",
+          "created_time": "2026-08-29T04:00:09+0000",
+          "headline": "📝 AI 法律工具推薦 2026：Harvey AI vs Clio vs ContractPodAi 台灣接案族合約必備",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126401958778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2297,10 +2290,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122124808220778539",
-          "created_time": "2026-08-19T04:00:18+0000",
-          "headline": "📝 Windsurf vs Lovable 2026: Which AI Builder Actually Wins?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124808220778539",
+          "id": "1056283757571950_122126401922778539",
+          "created_time": "2026-08-29T04:00:02+0000",
+          "headline": "📝 Grok 4.6 完整評測 2026：500K Context、DeepSWE 新王，繁中首發",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126401922778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2312,10 +2305,40 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122124867914778539",
-          "created_time": "2026-08-19T12:00:09+0000",
-          "headline": "🔥 AI Coding 工具比較 2026 終極指南：Windsurf vs Cursor vs Copilot vs Claude Code vs Gemini CLI 五大工具最終決戰",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124867914778539",
+          "id": "1056283757571950_122126254970778539",
+          "created_time": "2026-08-28T04:00:08+0000",
+          "headline": "📝 Salesforce vs Zoho CRM 2026: Which CRM Actually Wins?",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126254970778539",
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "clicks": null,
+          "estimatedReach": null,
+          "interactions": 0,
+          "reachRate": 0,
+          "engagementRate": 0,
+          "formatBucket": "0400_link"
+        },
+        {
+          "id": "1056283757571950_122126254934778539",
+          "created_time": "2026-08-28T04:00:02+0000",
+          "headline": "📝 AI HR 工具推薦 2026：BambooHR vs Workday vs Rippling 台灣企業完整比較",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126254934778539",
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "clicks": null,
+          "estimatedReach": null,
+          "interactions": 0,
+          "reachRate": 0,
+          "engagementRate": 0,
+          "formatBucket": "0400_link"
+        },
+        {
+          "id": "1056283757571950_122126136842778539",
+          "created_time": "2026-08-27T12:00:06+0000",
+          "headline": "🔥 Vibe Coding 工具完整比較 2026：Lovable vs v0 vs Magic Patterns vs CatDoes — 台灣人怎麼選？",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126136842778539",
           "likes": 0,
           "comments": 1,
           "shares": 0,
@@ -2327,10 +2350,10 @@
           "formatBucket": "midday_native"
         },
         {
-          "id": "1056283757571950_122124972002778539",
-          "created_time": "2026-08-20T04:00:02+0000",
-          "headline": "📝 OpenAI 暫停前沿 RL 訓練 2026：AI 安全治理新里程碑，GPT-5.6 攻擊事件始末",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124972002778539",
+          "id": "1056283757571950_122126067968778539",
+          "created_time": "2026-08-27T04:00:26+0000",
+          "headline": "📝 Pipedrive vs HubSpot 2026: Which CRM Actually Wins?",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126067968778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2342,10 +2365,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122124972038778539",
-          "created_time": "2026-08-20T04:00:15+0000",
-          "headline": "📝 n8n × Claude Code 工作流程模板包 2026：5 個可直接匯入的自動化 Workflow",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124972038778539",
+          "id": "1056283757571950_122126067932778539",
+          "created_time": "2026-08-27T04:00:17+0000",
+          "headline": "📝 AI Agent 資安技能包 2026：讓 Claude Code 自動抓 OWASP 漏洞",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126067932778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2357,10 +2380,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122124972068778539",
-          "created_time": "2026-08-20T04:00:32+0000",
-          "headline": "📝 Bubble vs Webflow 2026: Which No-Code Builder Actually Wins?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122124972068778539",
+          "id": "1056283757571950_122126067902778539",
+          "created_time": "2026-08-27T04:00:10+0000",
+          "headline": "📝 AI 會計工具推薦 2026：FreshBooks vs QuickBooks Self-Employed vs Zoho Books 台灣接案族完整比較",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126067902778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2372,10 +2395,25 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122125026170778539",
-          "created_time": "2026-08-20T12:00:06+0000",
-          "headline": "🔥 Hostinger vs Cloudways 2026: Which Web Hosting Is Actually Worth It?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125026170778539",
+          "id": "1056283757571950_122126067872778539",
+          "created_time": "2026-08-27T04:00:02+0000",
+          "headline": "📝 Framer AI Agents 完整教學 2026：不寫一行代碼，讓 AI 幫你建整個網站",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126067872778539",
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "clicks": null,
+          "estimatedReach": null,
+          "interactions": 0,
+          "reachRate": 0,
+          "engagementRate": 0,
+          "formatBucket": "0400_link"
+        },
+        {
+          "id": "1056283757571950_122125951124778539",
+          "created_time": "2026-08-26T12:02:03+0000",
+          "headline": "📚 Buzz 完整教學 2026：Jack Dorsey 開源 Slack + GitHub 替代方案，ACP 整合 Claude Code / Codex",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125951124778539",
           "likes": 0,
           "comments": 1,
           "shares": 0,
@@ -2387,10 +2425,10 @@
           "formatBucket": "midday_native"
         },
         {
-          "id": "1056283757571950_122125108904778539",
-          "created_time": "2026-08-21T04:00:02+0000",
-          "headline": "📝 Mojo 程式語言完整教學 2026：1.0 開源、比 Python 快 35000x，AI 開發者必讀",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125108904778539",
+          "id": "1056283757571950_122125887092778539",
+          "created_time": "2026-08-26T04:00:18+0000",
+          "headline": "📝 HubSpot vs Salesforce 2026: Which CRM Actually Wins?",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125887092778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2402,10 +2440,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122125108928778539",
-          "created_time": "2026-08-21T04:00:11+0000",
-          "headline": "📝 Second_Index",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125108928778539",
+          "id": "1056283757571950_122125887050778539",
+          "created_time": "2026-08-26T04:00:11+0000",
+          "headline": "📝 AI 數據分析工具推薦 2026：Tableau AI vs Power BI vs Looker 台灣企業完整比較",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125887050778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2417,10 +2455,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122125108958778539",
-          "created_time": "2026-08-21T04:00:17+0000",
-          "headline": "📝 AI 聊天機器人工具推薦 2026：Chatbase vs Tidio vs ManyChat 台灣電商/中小企業完整比較",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125108958778539",
+          "id": "1056283757571950_122125887020778539",
+          "created_time": "2026-08-26T04:00:02+0000",
+          "headline": "📝 Claude Mythos 5 完整評測 2026：連 271 個 Firefox 漏洞都找到，企業 AI 安全掃描新標竿",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125887020778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2432,25 +2470,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122125109000778539",
-          "created_time": "2026-08-21T04:00:24+0000",
-          "headline": "📝 Make vs Zapier 2026: Which Automation Tool Actually Wins?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125109000778539",
-          "likes": 0,
-          "comments": 0,
-          "shares": 0,
-          "clicks": null,
-          "estimatedReach": null,
-          "interactions": 0,
-          "reachRate": 0,
-          "engagementRate": 0,
-          "formatBucket": "0400_link"
-        },
-        {
-          "id": "1056283757571950_122125150112778539",
-          "created_time": "2026-08-21T12:03:42+0000",
-          "headline": "🔥 Warp Terminal 繁中評測 2026：AI 終端機值得換嗎？vs iTerm2 完整比較",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125150112778539",
+          "id": "1056283757571950_122125765580778539",
+          "created_time": "2026-08-25T12:00:10+0000",
+          "headline": "💡 AI 生產力工具推薦 2026：上班族每天必用的 10 款 AI 工具完整指南",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125765580778539",
           "likes": 0,
           "comments": 1,
           "shares": 0,
@@ -2462,10 +2485,10 @@
           "formatBucket": "midday_native"
         },
         {
-          "id": "1056283757571950_122125243148778539",
-          "created_time": "2026-08-22T04:00:02+0000",
-          "headline": "📝 OpenViking Agent Plugins 1.0 完整教學 2026：一套件搞定所有 AI 工具記憶，省 34-91% token",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125243148778539",
+          "id": "1056283757571950_122125694198778539",
+          "created_time": "2026-08-25T04:00:19+0000",
+          "headline": "📝 Notion vs Asana 2026: Which Project Management Tool Actually Wins?",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125694198778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2477,10 +2500,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122125243172778539",
-          "created_time": "2026-08-22T04:00:11+0000",
-          "headline": "📝 AI 社群媒體管理工具推薦 2026：Buffer vs Hootsuite vs Later 台灣行銷人完整比較",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125243172778539",
+          "id": "1056283757571950_122125694138778539",
+          "created_time": "2026-08-25T04:00:12+0000",
+          "headline": "📝 AI CRM 工具推薦 2026：HubSpot AI vs Salesforce Einstein vs Pipedrive AI 台灣中小企業完整比較",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125694138778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2492,10 +2515,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122125243202778539",
-          "created_time": "2026-08-22T04:00:19+0000",
-          "headline": "📝 n8n vs Make 2026: Which Automation Tool Actually Wins?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125243202778539",
+          "id": "1056283757571950_122125694114778539",
+          "created_time": "2026-08-25T04:00:02+0000",
+          "headline": "📝 turbo-fieldfare 完整教學 2026：2GB RAM 跑 Gemma 4 26B，M2 MacBook Air 也能本機推理",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125694114778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2507,10 +2530,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122125294346778539",
-          "created_time": "2026-08-22T12:00:06+0000",
-          "headline": "🔥 Cloudways vs Kinsta 2026: Which Managed WordPress Hosting Wins?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125294346778539",
+          "id": "1056283757571950_122125565408778539",
+          "created_time": "2026-08-24T12:00:08+0000",
+          "headline": "📚 headroom 繁中完整教學 2026：Claude Code 省 91% Token，60",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125565408778539",
           "likes": 0,
           "comments": 1,
           "shares": 0,
@@ -2522,10 +2545,10 @@
           "formatBucket": "midday_native"
         },
         {
-          "id": "1056283757571950_122125373102778539",
-          "created_time": "2026-08-23T04:00:02+0000",
-          "headline": "📝 DeepSeek V4 Pro 完整評測 2026：MIT 開源 1.6T 參數，比 Claude Opus 5 便宜 96%",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125373102778539",
+          "id": "1056283757571950_122125520468778539",
+          "created_time": "2026-08-24T04:00:18+0000",
+          "headline": "📝 ActiveCampaign vs Mailchimp 2026: Which Email Marketing Tool Actually Wins?",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125520468778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2537,10 +2560,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122125373114778539",
-          "created_time": "2026-08-23T04:00:10+0000",
-          "headline": "📝 AI 財務管理工具推薦 2026：QuickBooks AI vs Wave vs Xero 台灣自由工作者完整比較",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125373114778539",
+          "id": "1056283757571950_122125520414778539",
+          "created_time": "2026-08-24T04:00:11+0000",
+          "headline": "📝 AI 專案管理工具推薦 2026：Asana vs Monday.com vs ClickUp 台灣團隊完整比較",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125520414778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2552,10 +2575,10 @@
           "formatBucket": "0400_link"
         },
         {
-          "id": "1056283757571950_122125373144778539",
-          "created_time": "2026-08-23T04:00:18+0000",
-          "headline": "📝 Zapier vs n8n 2026: Which Automation Tool Actually Wins?",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125373144778539",
+          "id": "1056283757571950_122125520336778539",
+          "created_time": "2026-08-24T04:00:02+0000",
+          "headline": "📝 ponytail 完整教學 2026：Claude Code plugin 讓 AI 寫 54% 更少代碼，省 20% Token",
+          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125520336778539",
           "likes": 0,
           "comments": 0,
           "shares": 0,
@@ -2565,21 +2588,6 @@
           "reachRate": 0,
           "engagementRate": 0,
           "formatBucket": "0400_link"
-        },
-        {
-          "id": "1056283757571950_122125421774778539",
-          "created_time": "2026-08-23T12:00:06+0000",
-          "headline": "💡",
-          "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125421774778539",
-          "likes": 0,
-          "comments": 1,
-          "shares": 0,
-          "clicks": null,
-          "estimatedReach": null,
-          "interactions": 1,
-          "reachRate": 0,
-          "engagementRate": 0,
-          "formatBucket": "midday_native"
         }
       ],
       "winPatterns": [
@@ -2598,7 +2606,10 @@
         "本週高互動貼文持續偏好「台灣使用情境／完整指南／完整比較」框架，表示受眾更吃具體場景，而不是抽象工具介紹。",
         "即使標題含英文工具名，只要貼文正文先用中文拆解價值、再列重點與問句 CTA，中午主貼依然能穩定拿到留言。",
         "本週 7/7 中午原生摘要主貼再次全部拿到留言，但 21 則 04:00 外鏈貼全數 0 互動，差距已大到不需要再做常規 A/B。",
-        "成功題材跨 DataCamp、RAG、AI coding、主機比較、Warp、Cloudways/Kinsta、泛用工具貼；再次證明真正有效的是「中文結論先講 + 條列重點 + 問句 CTA」，不是題材本身。"
+        "成功題材跨 DataCamp、RAG、AI coding、主機比較、Warp、Cloudways/Kinsta、泛用工具貼；再次證明真正有效的是「中文結論先講 + 條列重點 + 問句 CTA」，不是題材本身。",
+        "本週 7/7 中午原生摘要主貼再次全部拿到留言，而 20 則 04:00 外鏈貼全部 0 互動，勝負已經不是趨勢，而是固定規律。",
+        "成功題材再次橫跨 AI HR、Agent observability、Vibe Coding、Buzz、AI 生產力、headroom、省 token 教學，表示 Facebook 真正獎勵的是「中文結論先講 + 條列重點 + 問句 CTA」而不是單一垂直題材。",
+        "中午主貼若先點出受眾與利益（台灣企業、台灣開發者、上班族、會不會省時間/省成本），仍能穩定拿到至少 1 則留言，這個 opening 應繼續固化。"
       ],
       "failPatterns": [
         "本週 7 則 04:00 UTC 貼文全部 0 互動，外鏈直貼與自動分發感太重，已可視為明確失敗時段與格式。",
@@ -2615,7 +2626,10 @@
         "清晨外鏈貼不只 autodev-ai 文章無效，連 ai-tools-tw / ai-tools-en 的比較文也同樣 0 互動，表示問題在發文格式與時段，不在站點來源。",
         "本週 21 則 04:00 UTC 外鏈貼全數 0 互動，且包含強話題技術文（Claude Opus 5、OpenViking、DeepSeek V4 Pro、Mojo）也完全救不起來，應視為徹底停用格式。",
         "連中午主貼都拿到留言、清晨外鏈卻 0/21，表示問題不是內容品質，而是 Facebook 對「清晨 + 外鏈 + 自動分發感」組合的結構性懲罰。",
-        "Graph API 本週再次直接回 (#100) The value must be a valid insights metric；官方 reach / engaged users / clicks 連續多週不可用，measurement failure 已是 FB 策略最大單點故障。"
+        "Graph API 本週再次直接回 (#100) The value must be a valid insights metric；官方 reach / engaged users / clicks 連續多週不可用，measurement failure 已是 FB 策略最大單點故障。",
+        "本週 20 則 04:00 UTC 外鏈貼全數 0 互動，且題材涵蓋 CRM、HR、法務、專案管理、email、開發者工具、資安、AI 網站生成等，表示不是題材弱，而是「清晨 + 外鏈 + 自動分發感」這個組合本身失敗。",
+        "同一主題本週再次出現明顯落差：例如 AI HR 題材在 04:00 外鏈版 0 互動、12:00 原生版有留言，證明差異主要來自包裝與時段，不是內容主題。",
+        "Graph API 本週仍直接回 (#100) The value must be a valid insights metric；官方 reach / engaged users / clicks 依舊不可用，因此 >5% / <1% 觸及率分層本週仍只能 fallback 記 0。"
       ],
       "weeklyReviews": [
         {
@@ -3282,6 +3296,104 @@
             "優先修 Facebook Graph API insights 權限 / metric 對照；未修好前，所有 reachRate / engagementRate 都必須標註為 fallback 值。"
           ],
           "dataNote": "本週直接呼叫 /{page_id}/posts?fields=message,created_time,insights.metric(post_impressions,post_engaged_users,post_clicks) 仍回 (#100) The value must be a valid insights metric；因此未能取得官方 reach / click / engaged users，所有觸及率與互動率計算皆為 fallback 0 值。"
+        },
+        {
+          "weekOf": "2026-08-24_to_2026-08-30",
+          "summary": "本週共發 27 則貼文：中午原生摘要主貼 7 則、04:00 外鏈貼 20 則。公開可見互動合計 7，其中中午主貼 7、04:00 外鏈貼 0。這代表結構性勝負再度被完整重現：中午原生主貼 7/7 穩定有留言，清晨外鏈直貼 20/20 全滅。Facebook Graph API v23.0 以現有 page token 仍回 (#100) The value must be a valid insights metric，官方 post_impressions / post_engaged_users / post_clicks 依舊不可用，因此本週觸及率與互動率仍只能以 fallback 0 值記錄。",
+          "topPosts": [
+            {
+              "id": "1056283757571950_122126741492778539",
+              "created_time": "2026-08-30T12:00:06+0000",
+              "headline": "🔥 AI HR 工具推薦 2026：BambooHR vs Workday vs Rippling 台灣企業完整比較",
+              "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126741492778539",
+              "likes": 0,
+              "comments": 1,
+              "shares": 0,
+              "clicks": null,
+              "estimatedReach": null,
+              "interactions": 1,
+              "reachRate": 0,
+              "engagementRate": 0,
+              "formatBucket": "midday_native"
+            },
+            {
+              "id": "1056283757571950_122126463668778539",
+              "created_time": "2026-08-29T12:00:06+0000",
+              "headline": "📚 AgentShield 評測 2026：AI Agent 出錯你知道嗎？執行追蹤、風險偵測、成本控制完整教學",
+              "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126463668778539",
+              "likes": 0,
+              "comments": 1,
+              "shares": 0,
+              "clicks": null,
+              "estimatedReach": null,
+              "interactions": 1,
+              "reachRate": 0,
+              "engagementRate": 0,
+              "formatBucket": "midday_native"
+            },
+            {
+              "id": "1056283757571950_122126136842778539",
+              "created_time": "2026-08-27T12:00:06+0000",
+              "headline": "🔥 Vibe Coding 工具完整比較 2026：Lovable vs v0 vs Magic Patterns vs CatDoes — 台灣人怎麼選？",
+              "permalink_url": "https://www.facebook.com/122105152964778539/posts/122126136842778539",
+              "likes": 0,
+              "comments": 1,
+              "shares": 0,
+              "clicks": null,
+              "estimatedReach": null,
+              "interactions": 1,
+              "reachRate": 0,
+              "engagementRate": 0,
+              "formatBucket": "midday_native"
+            },
+            {
+              "id": "1056283757571950_122125951124778539",
+              "created_time": "2026-08-26T12:02:03+0000",
+              "headline": "📚 Buzz 完整教學 2026：Jack Dorsey 開源 Slack + GitHub 替代方案，ACP 整合 Claude Code / Codex",
+              "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125951124778539",
+              "likes": 0,
+              "comments": 1,
+              "shares": 0,
+              "clicks": null,
+              "estimatedReach": null,
+              "interactions": 1,
+              "reachRate": 0,
+              "engagementRate": 0,
+              "formatBucket": "midday_native"
+            },
+            {
+              "id": "1056283757571950_122125765580778539",
+              "created_time": "2026-08-25T12:00:10+0000",
+              "headline": "💡 AI 生產力工具推薦 2026：上班族每天必用的 10 款 AI 工具完整指南",
+              "permalink_url": "https://www.facebook.com/122105152964778539/posts/122125765580778539",
+              "likes": 0,
+              "comments": 1,
+              "shares": 0,
+              "clicks": null,
+              "estimatedReach": null,
+              "interactions": 1,
+              "reachRate": 0,
+              "engagementRate": 0,
+              "formatBucket": "midday_native"
+            }
+          ],
+          "wins": [
+            "本週 7/7 中午 12:00 UTC 原生摘要主貼全部都有留言，表示這個格式已連續多週穩定到可視為固定 SOP。",
+            "成功題材再次橫跨 AI HR、Agent observability、Vibe Coding、Buzz、AI 生產力、headroom，顯示 Facebook 真正獎勵的是「中文結論先講 + 條列重點 + 問句 CTA」，不是題材本身。",
+            "中午主貼若先點名受眾與利益（台灣企業、台灣開發者、上班族、省時間、省成本、該怎麼選），仍能穩定拿到互動，這個首段框架應繼續固化。"
+          ],
+          "fails": [
+            "本週 20 則 04:00 UTC 外鏈貼全數 0 互動，且題材已覆蓋 CRM、HR、法務、專案管理、email、資安、developer tools 等多個類別，失敗原因顯然在格式與時段，不在單一主題。",
+            "同題材對照再次成立：像 AI HR 題材 04:00 外鏈版 0 互動，但 12:00 原生版有留言，證明時段與包裝比題材更關鍵。",
+            "Graph API 官方 insights 本週仍無法取得，導致 >5% / <1% 觸及率分層依然不能成立；measurement failure 仍是 FB 策略最大瓶頸。"
+          ],
+          "nextWeekFocus": [
+            "繼續把 12:00 UTC 原生摘要主貼視為唯一常規格式。",
+            "完全停止 04:00 UTC 外鏈貼常規排程；若未來要測，只能低頻單篇，且必須改成原生摘要版。",
+            "Facebook 首段固定先寫受眾、痛點、結論，再列 3-5 個重點，最後用決策型問句 CTA 收尾。",
+            "持續排查 Graph API insights metric / 權限問題；未修好前，所有 reachRate / engagementRate 都明確標註 fallback。"
+          ],
+          "dataNote": "本週直接呼叫 /{page_id}/posts?fields=message,created_time,insights.metric(post_impressions,post_engaged_users,post_clicks) 仍回 (#100) The value must be a valid insights metric；因此未能取得官方 reach / click / engaged users，所有觸及率與互動率計算皆為 fallback 0 值。"
         }
       ]
     },
@@ -3306,7 +3418,10 @@
         "04:00 UTC 外鏈貼在本週出現 21/21 全滅，正式視為停用格式；沒有明確實驗目的就不要再排。",
         "若同一天要發第二則 Facebook 貼文，必須改成原生摘要版，不能直接丟外鏈標準模板。",
         "清晨時段若一定要測，先縮到每週最多 1 則，且只測「中文結論先講」版本，不測純連結版。",
-        "在 Graph API measurement 修好前，週報與策略討論一律把 reachRate / engagementRate 標成 fallback，避免用假 0 誤判內容。"
+        "在 Graph API measurement 修好前，週報與策略討論一律把 reachRate / engagementRate 標成 fallback，避免用假 0 誤判內容。",
+        "同一主題若要發 Facebook，禁止先丟 04:00 外鏈版再補 12:00 原生版；直接只發 12:00 原生主貼即可，避免把同題材浪費在已證實失敗的格式。",
+        "Facebook 中午主貼首段固定先寫「受眾 + 痛點 + 結論」三件事，例如台灣企業/開發者/上班族適不適合、能省什麼、該怎麼選。",
+        "若是英文 comparison / SaaS 題材，要先中文化成在地使用情境再發；純英文標題外鏈版在清晨時段已連續多週證實無效。"
       ]
     }
   },
