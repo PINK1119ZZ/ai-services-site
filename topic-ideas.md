@@ -1273,3 +1273,96 @@ Model releases（llmgateway / Manifold / mean.ceo）、GitHub trending 8/26、Pr
 | Ivan carryover | 申請 Framer affiliate | ivan | framer.com/agencies（50%/12mo，R177 指示） |
 | Ivan carryover | 申請 Answrr affiliate | ivan | tryanswrr.com/affiliate（30% LIFETIME，R177 指示） |
 
+
+---
+
+## Round 181 — 2026-08-30 00:30 UTC（Sun ai-trend-hunter cron）
+
+### 🔍 本輪掃描範圍
+Product Hunt 8/30 趨勢、HackerNews 8/29-30、GitHub trending AI、新 affiliate 發現、模型動態、GPT-5.6 定價變化
+
+---
+
+### 🎯 核心發現總結
+
+1. **GPT-5.6 Sol 大降價（8/21）— 繁中費用比較文章機會 P1-HIGH（不需 Ivan）**
+   - 8/21：Sol $5→$4 input，$30→$20 output（promotional，至少到 11/21/2026）
+   - 7/30：Terra Luna by 80%（Luna $0.20 in/$1.20 out，Terra $2.00 in/$12.00 out）
+   - 現行最終費率：Sol $4/$20，Terra $2/$12，Luna $0.20/$1.20
+   - 繁中「GPT-5.6 費用完整教學」幾乎零競品，tools/ai-token-cost-calculator.html 需更新
+   - 關鍵字：gpt-5.6 費用、gpt-5.6 sol terra luna 差別、openai api 漲降價 2026
+
+2. **InVideo AI affiliate 50% on monthly / 25% annual（120-day cookie）— P1-HIGH 新發現**
+   - invideo.io/make/affiliate-program（Impact 平台）
+   - 50% monthly plan commission，120-day cookie（AI 影片類業界最長）
+   - $20 min payout，Net30，via Impact（Wire/Check/ACH）
+   - 1000+ 現有 affiliates，190 國用戶，AI video editing #1 on PH
+   - 繁中零深度評測，影片創作/YouTube 受眾龐大
+   - 預估月收入潛力：$400-1,200（月訂閱計畫 50% 觸發門檻）
+
+3. **Manifold 8/30 模型 watchlist 更新**
+   - Claude Fable 5.x 15%（由 22% 降至 15%，月底壓力升高但未 GA）
+   - MiniMax M3.x 10%（由 27% 大降，8 月未 GA）
+   - TML-Large (Thinking Machines) 8%（新進 watchlist）
+   - Gemini 3.x Flash-Lite 6%、Claude Haiku 5.x 6%、Gemini 3.x Pro 5%
+   - **8/30 無新 P0 模型 GA**（llmgateway 最新仍 GLM-5.2 Turbo 8/17）
+   - 9 月機率最高：Claude Fable 5.x（15%）、TML-Large（8%）
+
+4. **PH August 月榜最終快照（8/30 截止前）**
+   - Hey Noah #1、Clipto #2、AdAnt AI #3、Wispr Flow #4、Astute #5、Dograh #6、Grok #7、Coldtea #8、Meridian #9、x1 #10
+   - Viktor.com + Context.dev 未進月榜前 10（日榜強但未翻月榜）
+   - Coldtea、Meridian、x1 為本輪新進月榜前 10（P2 watchlist）
+
+5. **GitHub agentic-ai topic 8/30 快照**
+   - 多哈尼斯特 agentic plugin marketplace：~39.2K★（MCP，multi-harness，8/26 更新）
+   - CopilotKit：37.1K★
+   - Composio：29.9K★（8/28 更新）
+   - crush：27.7K★（8/27 更新，P1-HIGH carryover，seo-writer 執行中）
+   - 無新爆量 8/30 訊號
+
+6. **OpenAI Pauses Frontier RL Training（安全新聞，P2 評論文）**
+   - THN 報導：OpenAI tightens defenses against unsafe AI behavior
+   - AI-enabled ransomware 攻擊 Thailand Finance Ministry（Hermes agent）
+   - 可延伸 claude-mythos-5-security-review + ai-agent-cybersecurity-skills 主題
+   - HN 討論熱度中等，P2 content refresh 機會
+
+7. **adskull.io 確認 InVideo 50% + AdCreative.ai 30-40% LIFETIME（P1 再確認）**
+   - InVideo：50% monthly / 25% annual / 120-day / Impact（新發現，P1-HIGH）
+   - AdCreative.ai：30–40% LIFETIME（getreditus / PartnerStack，Ivan carryover）
+   - GetResponse：最高 60% for 12mo（tiered，P2，email marketing）
+
+---
+
+### 📊 Topic Ideas 表格
+
+| 日期 | 工具/主題 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|-----------|--------|-----------|----------|-----------|---------|
+| 2026-08-30 | GPT-5.6 Sol/Terra/Luna 費用完整解析 | gpt-5.6 費用, gpt-5.6 sol terra luna | 中高（8/21 降價後爆量） | 間接 DigitalOcean + DataCamp | $200-500 | autodev-ai.com |
+| 2026-08-30 | InVideo AI 評測 2026 | invideo ai 評測, invideo 繁中, ai 影片工具 | 中（YouTube 創作者受眾） | InVideo 50% monthly affiliate | $400-1,200 | autodev-ai.com |
+| 2026-08-30 | AI 影片工具比較頁 InVideo vs Creatify vs Pictory | ai 影片工具比較 2026 | 中 | InVideo + Pictory + Creatify affiliate | $600-1,800 | autodev-ai.com |
+| 2026-08-30 | tools/ai-token-cost-calculator.html 更新 | gpt-5.6 費用計算 | 高（現有工具頁更新） | 間接 + 工具頁 CTA | $50-200（更新） | autodev-ai.com |
+| 2026-08-30 | TML-Large Thinking Machines 評測（待 GA） | thinking machines llm, tml-large 評測 | 低→高（GA 後爆量） | 間接 DigitalOcean | $100-300 | autodev-ai.com |
+
+---
+
+### 🔗 新 Affiliate 發現
+
+| 工具 | 佣金 | Cookie | 平台 | 優先級 | Ivan 待辦 |
+|------|------|--------|------|--------|---------|
+| InVideo AI | 50% monthly / 25% annual | 120 天 | Impact | **P1-HIGH** | 申請 invideo.io/make/affiliate-program |
+| GetResponse | 最高 60%/12mo（tiered） | 90 天 | 直接 | P2 | 申請 getresponse.com/affiliate-program |
+
+---
+
+### 📌 Carryover 狀態
+
+- crush 27.7K★ → P1-HIGH（seo-writer 執行，R178 起）
+- Reclaim.AI 40%/12mo → P1-HIGH（Ivan 本週必申請，多輪）
+- Superads 30-40%/12mo → P1-HIGH（R180 新，Ivan 申請）
+- Context.dev 25%/12mo → P1-HIGH（R179 新，Ivan 申請）
+- Viktor.com 15-20% → P1-HIGH（R179 新，Ivan 申請）
+- ClickUp 30%/12mo → P1-HIGH（R178，Ivan 申請）
+- Framer 50%/12mo → P1-HIGH（R177，Ivan 申請）
+- Answrr 30% LIFETIME → P1-HIGH（R177，Ivan 申請）
+- InVideo AI 50% monthly → **P1-HIGH 本輪新發現（Ivan 申請 invideo.io）**
+
