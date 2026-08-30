@@ -1,8 +1,42 @@
 {
-  "lastRun": "2026-08-30T13:00:00Z",
+  "lastRun": "2026-08-30T14:30:00Z",
   "lastResearchRound": 181,
   "lastStrategistRun": "2026-08-30T02:05:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-30T14:30:00Z",
+      "agent": "content-ops",
+      "task": "content-refresher",
+      "status": "completed",
+      "summary": "Sun 14:30 UTC content-refresher cron — 找出 sitemap.xml 最舊的 3 篇 en/blog/ 文章（全部 lastmod 2026-05-06）並執行更新。(1) en/blog/deerflow-vs-dify-vs-n8n-2026.html：dateModified 2026-05-03 → 2026-08-30，顯示日期加「Updated 2026-08-30」，補加 DigitalOcean + DataCamp 聯盟連結段落（Run Your AI Workflows in the Cloud）；(2) en/blog/geo-generative-engine-optimization-taiwan-2026.html：dateModified 2026-05-03 → 2026-08-30，補加 DigitalOcean + DataCamp 聯盟連結段落（Tools to Build Your GEO Infrastructure）；(3) en/blog/n8n-automation-tutorial-2026.html：dateModified 2026-05-03 → 2026-08-30，Cost Breakdown VPS 段落嵌入 DigitalOcean affiliate link，補加 DataCamp 聯盟連結段落（Level Up Your Automation Skills）。sitemap.xml 三篇 en/blog/ lastmod 更新為 2026-08-30。git commit 96e6cc9 + push origin main。",
+      "changes": [
+        "en/blog/deerflow-vs-dify-vs-n8n-2026.html：dateModified 2026-05-03 → 2026-08-30，補加 DigitalOcean（m.do.co/c/6121a295f624）+ DataCamp（afflink.one/s/aavAC）聯盟連結",
+        "en/blog/geo-generative-engine-optimization-taiwan-2026.html：dateModified 2026-05-03 → 2026-08-30，補加 DigitalOcean + DataCamp 聯盟連結",
+        "en/blog/n8n-automation-tutorial-2026.html：dateModified 2026-05-03 → 2026-08-30，Cost Breakdown 嵌入 DigitalOcean，補加 DataCamp 段落",
+        "sitemap.xml：三篇 en/blog/ URL lastmod 更新為 2026-08-30",
+        "git commit 96e6cc9 + push origin main"
+      ],
+      "articlesRefreshed": [
+        {
+          "file": "en/blog/deerflow-vs-dify-vs-n8n-2026.html",
+          "changes": ["dateModified → 2026-08-30", "補加 DigitalOcean + DataCamp 聯盟連結段落"],
+          "previousLastmod": "2026-05-06",
+          "affiliateLinksAdded": ["DigitalOcean m.do.co/c/6121a295f624", "DataCamp afflink.one/s/aavAC"]
+        },
+        {
+          "file": "en/blog/geo-generative-engine-optimization-taiwan-2026.html",
+          "changes": ["dateModified → 2026-08-30", "補加 DigitalOcean + DataCamp 聯盟連結段落"],
+          "previousLastmod": "2026-05-06",
+          "affiliateLinksAdded": ["DigitalOcean m.do.co/c/6121a295f624", "DataCamp afflink.one/s/aavAC"]
+        },
+        {
+          "file": "en/blog/n8n-automation-tutorial-2026.html",
+          "changes": ["dateModified → 2026-08-30", "Cost Breakdown 段落嵌入 DigitalOcean", "補加 DataCamp 段落"],
+          "previousLastmod": "2026-05-06",
+          "affiliateLinksAdded": ["DigitalOcean m.do.co/c/6121a295f624", "DataCamp afflink.one/s/aavAC"]
+        }
+      ]
+    },
     {
       "timestamp": "2026-08-30T13:00:00Z",
       "agent": "content-ops",
