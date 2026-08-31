@@ -1366,3 +1366,100 @@ Product Hunt 8/30 趨勢、HackerNews 8/29-30、GitHub trending AI、新 affilia
 - Answrr 30% LIFETIME → P1-HIGH（R177，Ivan 申請）
 - InVideo AI 50% monthly → **P1-HIGH 本輪新發現（Ivan 申請 invideo.io）**
 
+
+---
+
+## Round 182 — 2026-08-31 00:30 UTC（Mon 08:30 ai-trend-hunter cron）
+
+### 🔍 本輪核心發現
+
+1. **Claude Fable 5.x Manifold watchlist — 實為已 GA（6/9 確認）**
+   - Manifold 15% 機率指的是「Fable 5.x 版本更新」而非首發 GA
+   - Fable 5 已於 2026-06-09 正式發布（公開版 Mythos 5，$10/$50 per MTok，1M context）
+   - 3 天後遭 US Commerce Dept 強制下架（6/9-6/12），Anthropic 公開憤怒聲明
+   - anthropic.com/news/redeploying-fable-5 已確認「coming days」回歸
+   - **繁中機會：Fable 5 完整故事 + redeployment 政策解析，高關注度，P1-HIGH seo-writer**
+   - 關鍵字：claude fable 5 評測、claude fable 5 下架、claude mythos 5 vs fable 5
+
+2. **Fliki AI 30% LIFETIME affiliate — P1-HIGH 新發現**
+   - adskull.io 確認：Fliki 30% recurring LIFETIME，30-day cookie，Rewardful 平台
+   - AI 影片 + 語音/TTS 內容生成工具（文字轉影片，1000+ 語音）
+   - 自動過審（Rewardful auto-approve），立即申請 fliki.ai/affiliates
+   - $29-88/月方案，繁中零深度評測，內容創作者受眾與 InVideo 互補
+   - 預估月收入潛力：$300-900（LIFETIME 觸發門檻，30% 超 threshold）
+   - **P1-HIGH：Ivan 申請 fliki.ai/affiliates（Rewardful auto-approve）**
+
+3. **Composio Claude Code Skills 73.4K★ — P1-HIGH 教學機會**
+   - firecrawl.dev/blog 確認：Composio 73.4K★（最新，已超越 R181 的 29.9K★ 數字）
+   - 78 SaaS app automations（Slack + Notion + GitHub + Linear + Jira）
+   - 含文件處理、開發工具、數據分析、商業工作流程、資安審計
+   - 繁中幾乎零完整教學，autodev-ai Claude Code 受眾完美吻合
+   - **P1-HIGH：seo-writer 直接執行（不需 Ivan affiliate）**
+   - 關鍵字：composio 教學 2026、composio claude code、composio mcp 台灣
+
+4. **PH September 2026 開跑 + Catch The Signal 9/1 #1 衝榜**
+   - PH August 最終月榜確認：Hey Noah #1、Clipto #2、AdAnt AI #3、Lenz #4（新確認）、Astute #5、Dograh #6、Wispr Flow #7、Grok #8、Meridian #9、Coldtea #10、x1 #11
+   - Lenz 為本輪新確認進月榜（R181 未收錄）— P2 watchlist
+   - Catch The Signal：9/1 PH 衝 #1（AI opportunity timing 工具）— P2 watch
+   - September「back-to-business」月份，PH 競爭更激烈，大公司集中上線
+
+5. **模型 watchlist 9 月更新**
+   - Claude Fable 5 已 GA（6/9）但有下架事件，5.x 更新版仍是 watchlist 焦點
+   - 最新 frontier model：Qwen3.8-27B（8/14，aireleasetracker.com 確認）
+   - Google Gemini 3.6 Pro/Ultra：unconfirmed（Flash 7/21 GA，Pro/Ultra 跟進中）
+   - Meta Llama 4 follow-up variants：unconfirmed（Q3-Q4 2026 機率高）
+   - TML-Large（Thinking Machines）：8% Manifold，新進 9 月 watchlist
+   - **9/1 無新 P0 模型 GA 確認**
+
+6. **GitHub 2026 AI 最強趨勢：Agent Tooling 主導**
+   - Composio 73.4K★（Claude Code skills，MCP toolkits，May 2026 更新）
+   - Langflow 146K★、Dify 136K★（視覺化 agent builder）
+   - codebase-memory-mcp ~32K★（July 2026 確認，carryover）
+   - Pixelle-Video 9.2K★（文字轉影片完整 pipeline，Apache 2.0，P2）
+   - agent tooling > 新模型本身，開發工具化是 9 月主軸
+
+7. **HN / 安全新聞 8/31 快照**
+   - THN（8/17）：「Why Your AI Developer Tools Might Be Your Biggest Security Risk」
+   - CSIS（8/24）：「AI Agent Containment Failures: Technical Realities and Policy Responses」
+   - WEF（8/27）：「AI organizations reveal agents hacked other companies」
+   - AI agent 安全主題持續升溫，延伸 claude-mythos-5 + cybersecurity-skills 文章機會（P2 content-refresher）
+
+8. **Reclaim.AI + GetResponse affiliate 再確認（Ivan 必申請）**
+   - Reclaim.AI：40% work email + $1/signup + 25% personal，90-day cookie（PartnerStack）— 多輪最高優先 carryover
+   - GetResponse：40-60% recurring/12mo（tiered），90 天（PartnerStack）— P2，Ivan carryover
+
+---
+
+### 📊 Topic Ideas 表格
+
+| 日期 | 工具/主題 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|-----------|--------|-----------|----------|-----------|---------|
+| 2026-08-31 | Claude Fable 5 完整評測 + 下架政策解析 | claude fable 5 評測, claude fable 5 下架, claude mythos fable 差別 | 高（下架事件高話題性） | 間接 DigitalOcean + DataCamp | $150-500 | autodev-ai.com |
+| 2026-08-31 | Composio Claude Code Skills 完整教學 | composio 教學, composio claude code, composio mcp 台灣 | 中高（73.4K★ 持續爬坡） | 間接 DigitalOcean + DataCamp | $200-600 | autodev-ai.com |
+| 2026-08-31 | Fliki AI 評測 2026（TTS + 影片創作） | fliki ai 評測, fliki 繁中, ai 文字轉影片 2026 | 中（內容創作者受眾） | Fliki 30% LIFETIME affiliate | $300-900 | autodev-ai.com |
+| 2026-08-31 | AI 影片工具比較頁 Fliki vs InVideo vs Creatify | ai 影片工具比較 2026, fliki vs invideo | 中 | Fliki + InVideo 雙 affiliate | $500-1,500 | autodev-ai.com |
+| 2026-08-31 | Lenz 評測（PH August 月榜 #4 新確認） | lenz ai, lenz product hunt 2026 | 低→中（待確認功能） | 待確認 affiliate | P2 watchlist | autodev-ai.com |
+
+---
+
+### 🔗 新 Affiliate 發現
+
+| 工具 | 佣金 | Cookie | 平台 | 優先級 | Ivan 待辦 |
+|------|------|--------|------|--------|---------|
+| Fliki AI | 30% recurring LIFETIME | 30 天 | Rewardful（auto-approve） | **P1-HIGH** | 申請 fliki.ai/affiliates（立即可批） |
+
+---
+
+### 📌 Carryover 狀態
+
+- Reclaim.AI 40%/12mo → **P1-HIGH 最高優先**（Ivan 本週必申請，多輪積壓，PartnerStack）
+- InVideo AI 50% monthly → P1-HIGH（R181 新，Ivan 申請 invideo.io/make/affiliate-program）
+- Fliki AI 30% LIFETIME → **P1-HIGH 本輪新發現**（Ivan 申請 fliki.ai/affiliates，auto-approve）
+- Superads 30-40%/12mo → P1-HIGH（R180，Ivan 申請）
+- Context.dev 25%/12mo → P1-HIGH（R179，Ivan 申請）
+- Viktor.com 15-20% → P1-HIGH（R179，Ivan 申請）
+- ClickUp 30%/12mo → P1-HIGH（R178，Ivan 申請）
+- Framer 50%/12mo → P1-HIGH（R177，Ivan 申請）
+- Answrr 30% LIFETIME → P1-HIGH（R177，Ivan 申請）
+- Composio Claude Code Skills 教學 → P1-HIGH（seo-writer 直接執行，不需 Ivan）
+- Claude Fable 5 完整評測 → P1-HIGH（seo-writer 直接執行，不需 Ivan）
