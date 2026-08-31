@@ -1,7 +1,7 @@
 """GSC Data Fetcher — 每日拉取 Search Console 數據寫入 agent-state.json"""
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, UTC
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
@@ -139,6 +139,24 @@ def main():
     state["gscData"]["opportunities"] = opportunities
     if opportunities:
         print(f"\nFound {len(opportunities)} optimization opportunities")
+
+    # Lightweight rollup for the rest of the system
+    autodev = gsc_data.get("autodev-ai", {})
+    autodev_summary = autodev.get("summary", {})
+    high_impr_low_ctr_pages = [
+        p for p in autodev.get("topPages", [])
+        if p.get("impressions", 0) >= 50 and p.get("ctr", 0) < 4
+    ]
+    pos_11_20_pages = [
+        p for p in autodev.get("topPages", [])
+        if 11 <= p.get("position", 0) <= 20
+    ]
+    state["lastGscCheckAt"] = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+    state["lastGscSummary"] = (
+        f"ranking: avg pos {autodev_summary.get('avgPosition', 0)}; "
+        f"high-impr low-CTR pages: {len(high_impr_low_ctr_pages)}; "
+        f"pos 11-20 opps: {len(pos_11_20_pages)}"
+    )
 
     with open(STATE_PATH, "w") as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
