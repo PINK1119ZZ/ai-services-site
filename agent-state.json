@@ -1,8 +1,24 @@
 {
-  "lastRun": "2026-08-30T14:30:00Z",
+  "lastRun": "2026-08-31T00:00:00Z",
   "lastResearchRound": 181,
   "lastStrategistRun": "2026-08-30T02:05:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-08-31T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Mon 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓（sitemap.xml → sitemap_index.xml 正常）；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；兩個 GitHub Pages fallback 200✓；抽樣 autodev-ai sitemap 前 10 個 URL 全部 200✓。本輪無新站點故障、無需站內修復，沿用既有 builder DNS directive。",
+      "changes": [
+        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
+        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml redirected to sitemap_index.xml with HTTP 200",
+        "Reconfirmed ai-tools.tw and en.ai-tools.tw fail DNS resolution",
+        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
+        "Sampled first 10 autodev-ai sitemap URLs and all returned HTTP 200",
+        "No new site issues found; existing builder DNS directive remains active",
+        "Updated agent-state.json siteHealth + issues + agentLog"
+      ]
+    },
     {
       "timestamp": "2026-08-30T14:30:00Z",
       "agent": "content-ops",
@@ -19,21 +35,40 @@
       "articlesRefreshed": [
         {
           "file": "en/blog/deerflow-vs-dify-vs-n8n-2026.html",
-          "changes": ["dateModified → 2026-08-30", "補加 DigitalOcean + DataCamp 聯盟連結段落"],
+          "changes": [
+            "dateModified → 2026-08-30",
+            "補加 DigitalOcean + DataCamp 聯盟連結段落"
+          ],
           "previousLastmod": "2026-05-06",
-          "affiliateLinksAdded": ["DigitalOcean m.do.co/c/6121a295f624", "DataCamp afflink.one/s/aavAC"]
+          "affiliateLinksAdded": [
+            "DigitalOcean m.do.co/c/6121a295f624",
+            "DataCamp afflink.one/s/aavAC"
+          ]
         },
         {
           "file": "en/blog/geo-generative-engine-optimization-taiwan-2026.html",
-          "changes": ["dateModified → 2026-08-30", "補加 DigitalOcean + DataCamp 聯盟連結段落"],
+          "changes": [
+            "dateModified → 2026-08-30",
+            "補加 DigitalOcean + DataCamp 聯盟連結段落"
+          ],
           "previousLastmod": "2026-05-06",
-          "affiliateLinksAdded": ["DigitalOcean m.do.co/c/6121a295f624", "DataCamp afflink.one/s/aavAC"]
+          "affiliateLinksAdded": [
+            "DigitalOcean m.do.co/c/6121a295f624",
+            "DataCamp afflink.one/s/aavAC"
+          ]
         },
         {
           "file": "en/blog/n8n-automation-tutorial-2026.html",
-          "changes": ["dateModified → 2026-08-30", "Cost Breakdown 段落嵌入 DigitalOcean", "補加 DataCamp 段落"],
+          "changes": [
+            "dateModified → 2026-08-30",
+            "Cost Breakdown 段落嵌入 DigitalOcean",
+            "補加 DataCamp 段落"
+          ],
           "previousLastmod": "2026-05-06",
-          "affiliateLinksAdded": ["DigitalOcean m.do.co/c/6121a295f624", "DataCamp afflink.one/s/aavAC"]
+          "affiliateLinksAdded": [
+            "DigitalOcean m.do.co/c/6121a295f624",
+            "DataCamp afflink.one/s/aavAC"
+          ]
         }
       ]
     },
@@ -1632,7 +1667,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-08-30T10:30:00Z",
+  "lastChecked": "2026-08-31T00:00:00Z",
   "issues": [
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
     "2026-07-11 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
@@ -1698,7 +1733,8 @@
     "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-08-26 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active.",
     "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-08-28 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active.",
     "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-08-29 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active.",
-    "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-08-30 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active."
+    "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-08-30 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active.",
+    "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-08-31 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active."
   ],
   "fbReplied": [
     "122123715668778539_1045056648138694",
@@ -3468,42 +3504,42 @@
     "autodev-ai.com": {
       "url": "https://autodev-ai.com/",
       "status": "200 OK",
-      "lastChecked": "2026-08-30T00:00:35Z"
+      "lastChecked": "2026-08-31T00:00:00Z"
     },
     "autodev-ai.com/sitemap.xml": {
       "url": "https://autodev-ai.com/sitemap.xml",
       "status": "200 OK",
-      "lastChecked": "2026-08-30T00:00:35Z"
+      "lastChecked": "2026-08-31T00:00:00Z"
     },
     "ai-tools.pro": {
       "url": "https://ai-tools.pro/",
       "status": "200 OK",
-      "lastChecked": "2026-08-30T00:00:35Z"
+      "lastChecked": "2026-08-31T00:00:00Z"
     },
     "ai-tools.pro/sitemap.xml": {
       "url": "https://ai-tools.pro/sitemap.xml",
       "status": "200 OK",
-      "lastChecked": "2026-08-30T00:00:35Z"
+      "lastChecked": "2026-08-31T00:00:00Z"
     },
     "ai-tools.tw": {
       "url": "https://ai-tools.tw/",
       "status": "DNS FAIL",
-      "lastChecked": "2026-08-30T00:00:35Z"
+      "lastChecked": "2026-08-31T00:00:00Z"
     },
     "en.ai-tools.tw": {
       "url": "https://en.ai-tools.tw/",
       "status": "DNS FAIL",
-      "lastChecked": "2026-08-30T00:00:35Z"
+      "lastChecked": "2026-08-31T00:00:00Z"
     },
     "ai-tools-tw-fallback": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
       "status": "200 OK",
-      "lastChecked": "2026-08-30T00:00:35Z"
+      "lastChecked": "2026-08-31T00:00:00Z"
     },
     "ai-tools-en-fallback": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
       "status": "200 OK",
-      "lastChecked": "2026-08-30T00:00:35Z"
+      "lastChecked": "2026-08-31T00:00:00Z"
     }
   },
   "agents": {
@@ -3513,7 +3549,7 @@
       "status": "completed"
     }
   },
-  "lastSiteHealthCheck": "2026-08-30T00:00:35Z",
+  "lastSiteHealthCheck": "2026-08-31T00:00:00Z",
   "lastSiteHealthSummary": {
     "healthy": [
       "autodev-ai.com",
