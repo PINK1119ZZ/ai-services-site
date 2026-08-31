@@ -1,5 +1,75 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 183 | 2026-08-31 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-08-31 22:00 UTC | 搜尋範圍：GitHub trending + PH 日榜 + HN 前頁 + AI 模型發布追蹤 + affiliate 掃描 + watchlist 更新 | 模式：降頻輕量掃描（Tue/Thu/Sat 06:00 cron）
+
+### 📋 本輪執行內容
+
+**P1-WATCH — R182/strategist-weekly-2026-08-31 watchlist 追蹤：Claude Fable 5.x 後續、TML-Large、Gemini 3.6**
+
+**🔥 本輪核心發現 1：DeepSeek V4-Flash-Vision-Exp（P2 watchlist → P1 升級候選）**
+- 8/21 發布（aireleasetracker 確認），DeepSeek Vision 實驗版本，Flash 定位
+- 繁中評測市場：零完整教學（搜尋確認）
+- 定價結構：8/16 定價更新（新 pricing tier 確認），Flash-Vision 屬低成本視覺模型路線
+- 與 GPT-5.6 Luna / Gemini Flash 競爭同一客層
+- **評估：繁中視覺模型教學市場空白，P2 watchlist，等 GA 穩定後 seo-writer 執行**
+
+**🔥 本輪核心發現 2：Thinking Machines Lab "Inkling" 開源模型（P2 watchlist）**
+- TML 首個開源模型「Inkling」7/15 TechCrunch 報導（Connie Loizos）
+- 訓練方法：pre-trained from scratch，部分 post-training 使用 Kimi K2.5 生成數據 + RL
+- 定位：反對 one-size-fits-all AI，針對特定任務優化
+- Google Cloud AI Hypercomputer 擴大合作（4/22 GB300 GPU）
+- TML Manifold 8% → 確認為「TML-Large」前置模型，不是 Large 本身
+- **評估：TML-Large 仍是 watchlist，Inkling 是前導；繁中 TML 研究幾乎零，教學機會低（太早期），維持 P2**
+
+**📊 AI 模型發布追蹤（8/31 深夜 UTC）**
+- aireleasetracker 最新確認：Qwen3.8-27B（8/14）仍是最新 frontier，無新 P0 GA
+- DeepSeek V4-Flash-Vision-Exp（8/21）= 本週唯一值得注意的新模型
+- Gemini 3.6 Pro/Ultra：仍 unconfirmed（Flash 7/21 GA，Pro/Ultra 跟進中）
+- TML-Large：Manifold 8%，Inkling = 前導開源模型，Large = 旗艦仍未發布
+- Claude Haiku 5.x：Manifold 6%，watchlist 持續
+- Kimi K3.x：Manifold 5%，watchlist 持續
+- **9/1 無新 P0-URGENT 模型 GA 確認**
+
+**📱 PH 9/1 日榜快照**
+- Catch The Signal（AI opportunity timing）：R182 發現 9/1 衝榜 #1 → 已確認，9/1 日榜強勢
+- PH September 月榜剛開始：無足夠數據，下輪 9/2 再確認
+- PH 9/1 新品：無新超過 200 votes 的 AI 工具新進榜
+
+**🔍 GitHub Trending（8/31 深夜）**
+- Composio 穩定在 agentic-ai topics 前列（73.4K★→持續爬升）— seo-writer 文章已發布 ✓
+- Langflow 146K★ / Dify 136K★：視覺化 AI builder 主導，持續 watchlist
+- 無新爆量訊號（>5K 新增 stars 本週）
+- codebase-memory-mcp ~32K★（analyticsvidhya 確認，仍在 watchlist）
+
+**📰 HN / AI 安全動態（8/31）**
+- AI 安全主題持續升溫：CSIS + WEF + THN 8/17-8/27 報導（R182 已記錄）
+- 無新 HN 爆量 AI 開發工具貼（8/31 無新 P1+ 訊號）
+
+**🔗 Affiliate 掃描**
+- 本輪重點確認：Fliki auto-approve 狀態（Rewardful，30% LIFETIME）— Ivan P1-HIGH 積壓
+- 無新超過 30% 門檻的新 affiliate 觸發
+- Reclaim.AI 40%/12mo 多輪積壓再確認（PartnerStack，Ivan 仍未申請）
+
+**✅ Watchlist 本輪狀態總結**
+- Claude Fable 5.x：✅ 已 GA（6/9），seo-writer R183 前已完成評測文 ✓，後續關注版本更新
+- Composio 73.4K★：✅ seo-writer 文章已發布（2026-08-31）✓
+- TML-Large：⏳ Manifold 8%，Inkling 為前導開源模型，Large 仍未發布，Q4 watchlist
+- Gemini 3.6 Pro/Ultra：⏳ unconfirmed，持續 watchlist
+- DeepSeek V4-Flash-Vision-Exp：🆕 P2 watchlist（8/21，繁中零評測，Flash-Vision 低成本路線）
+- Llama 4 follow-up：⏳ Q3-Q4（70B/405B equiv，3-6mo 跟進模式）
+- Fliki 30% LIFETIME：🔥 P1-HIGH（Ivan 本週 Rewardful auto-approve 最快批准）
+- InVideo 50% monthly：🔥 P1-HIGH carryover（Ivan 申請中，R181）
+- Reclaim.AI 40%/12mo：🔥 P1-HIGH 多輪積壓（Ivan 必申請）
+- Lenz：📌 P2 watch（PH August #4，功能待確認）
+- Catch The Signal：📌 P2（9/1 PH #1 確認，AI opportunity timing，待確認 affiliate）
+
+### 📋 Directive 產出
+- 創建：directives/researcher-to-strategist-2026-08-31-round183.md
+
+---
+
 ## Round 177 | 2026-08-24 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-08-24 22:00 UTC | 搜尋範圍：GitHub trending + PH 月榜 + HN 前頁 + AI 模型發布追蹤 + affiliate 掃描 + watchlist 更新 | 模式：降頻輕量掃描（Tue/Thu/Sat 06:00 cron）
