@@ -1,5 +1,146 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 186 | 2026-09-02 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-09-02 22:00 UTC | 搜尋範圍：GitHub trending + Product Hunt + HackerNews + AI 模型發布追蹤（Grok 4.7 / Gemini 3.5 Pro / Atlas）+ affiliate 掃描 | 模式：Tue/Thu/Sat 06:00 ai-dev-research cron
+
+### 📋 本輪核心發現
+
+---
+
+### 🚨 ITEM 1：Grok 4.7 — 發布窗口正在打開（P1-HIGH，今晚可能 GA）
+
+**狀態：** 未 GA（截至 2026-09-02 22:00 UTC），但發布窗口極近
+
+**關鍵數據：**
+- Musk 8/12 明確說「3-4 weeks from now」= Sep 2-9 窗口
+- Manifold 市場：「Before 2026-09-11」= 51% chance；「Before 2026-10-01」= 74% chance
+- SpaceX data integration 已完成（SpaceX engineering data 融入補充訓練）
+- 2.1T 參數（Musk Twitter 非官方），與 Grok 4.6 最大差異是 SpaceX 資料
+- xAI 現在叫做 **SpaceXAI**（4/17 xAI 被 SpaceX 收購後更名）
+- Grok 4.6 已於 2026-08-12 發布；競爭目標：Claude Fable 5.1（9/1 GA）
+- Grok Build open source（xai-org/grok-build，Apache 2.0，Rust，12K★）carryover
+
+**SEO 窗口評估：**
+- Grok 4.7 一 GA 立即升 P0-URGENT（繁中評測空白確認）
+- 我們已有 grok-4-6-review-2026.html，可快速串聯成系列
+- 與 R185 評估一致，本輪升 P1-HIGH MONITORING（GA 則 P0-URGENT 立即觸發 seo-writer）
+
+---
+
+### 🆕 ITEM 2：World Labs Atlas — 空間智能世界模型（P2-WATCH）
+
+**狀態：** 2026-09-01 發布，early access signup（無定價）
+
+**關鍵數據：**
+- Fei-Fei Li（史丹佛 AI 教授）的 World Labs 公司
+- Atlas 是「第一個多模態世界模型」：輸入影像/影片 + 相機控制指令 → 輸出 3D point cloud / Gaussian splats
+- 功能：生成影片 + 像素級相機控制 + 即時 3D 重建（兩個原本獨立的 AI 任務合一）
+- HN 前頁出現（44 points，1 hour ago）
+- worldlabs.ai/blog/atlas（9/1 公告）
+- 仍在 early access，無 API、無定價 → **尚無可寫的教學或評測入口**
+
+**產品化評估：**
+- 空間智能 + 3D 世界模型：大方向對，但 early access 無定價 → P2-WATCH
+- 若推出公開 API 或定價方案，則升 P1（搭配 AI 影片工具系列）
+- 目前台灣繁中空白，但無實際使用門檻故難寫深度評測
+
+---
+
+### 🆕 ITEM 3：Gemini 3.5 Pro — 仍未 GA，中位預測已推後（P1-WATCH 降溫）
+
+**狀態：** 截至 2026-09-02 仍未發布
+
+**關鍵數據：**
+- FutureSearch 中位預測：從 9/20 推後至 **10/31**（P10 = 8/31 missed，P25 = 9/25）
+- 原因：遞迴架構問題 + DeepMind 8/5 組織重整（Demis Hassabis 升任 Chair）
+- Google 在 8 月密集發布 Gemini 3.6 Flash、3.7 Flash（8/13 GA）補位 Flash 層
+- Gemini 3.5 Pro 架構問題根深，SemiAnalysis 確認「coding capabilities 未達 internal benchmark」
+- 已有報告：Google 正 pre-training Gemini 4，實質可能直接跳過 3.5 Pro
+
+**我們的應對：**
+- R185 strategist 指令「Gemini 3.7 Flash 評測」仍是 P1-HIGH（3.5 Pro 延遲的受益文）
+- 3.5 Pro 的延遲事件本身可融入 Gemini 3.7 Flash 評測文的背景段落
+- 降本輪 watchlist 優先序至 P2-WATCH（從 P1-WATCH 降一級）
+
+---
+
+### 🆕 ITEM 4：Product Hunt 9 月月榜初始名單（P2 觀察）
+
+**PH 9 月 top-listed（截至 9/2）：**
+- Kilo Code（750K+ 下載，VS Code 插件，開源 AI coding agent）
+- Computable GPU Index (CGI)
+- Sider Code
+- Skydive
+- Gauth AI Course
+
+**Kilo Code 特別觀察：**
+- 開源（MIT），750K+ 下載，VS Code + JetBrains + CLI
+- 支援 Kilo Pass（包月 $10 unlimited access，內含 GPT-5.5、Claude Fable 5、Grok 4.6）
+- CEO Scott Breitenother 9 月接任（創辦人 Posma 個人因素暫離）
+- **Affiliate program：** kilo.ai/affiliate（$9-99 one-time，非 recurring）
+- 評估：繁中教學機會存在（competitor 比較文：vs Claude Code vs Codex CLI），但 one-time affiliate 不觸發 P1-HIGH 門檻
+
+---
+
+### 💰 ITEM 5：Affiliate 掃描 — 本輪無新超門檻發現
+
+**確認的高佣金程式（舊 carryover，Ivan 積壓）：**
+- InVideo AI：50% monthly / 120-day cookie（Impact）→ 未申請
+- Fliki：30% LIFETIME（Rewardful auto-approve）→ 未申請
+- Reclaim.AI：40%/12mo（PartnerStack）→ 未申請
+- AdSkull：30% recurring LIFETIME → 可做廣告行銷受眾配套
+
+**本輪無新 30%+ 觸發門檻 affiliate 發現。**
+
+---
+
+### 🔍 ITEM 6：opencodex（lidge-jun）— 星數確認（P1-HIGH carryover）
+
+**狀態：** 13K★（從 R185 的 12.6K 升至 13.0K，+400 stars in ~20 hours）
+
+**評估：**
+- 星數成長率：+400/20h → 日增約 480 stars（超過 R184 strategist 設定的 15K 升 P1 門檻進度）
+- TypeScript，MIT，支援 Claude Code / Codex CLI / OpenRouter / Gemini / Grok / Ollama
+- 繁中零教學確認（skillsllm.com 確認，7/1 last scanned）
+- **升至 P1-HIGH 執行：** builder 立即規劃 blog/opencodex-llm-proxy-tutorial-2026.html（~2,000 字）
+- 受眾完美重疊 autodev-ai（開發者 + LLM proxy + 省錢路由）
+
+---
+
+### 📊 ITEM 7：GSC 數據更新（14 日滾動，09/02 07:07 讀取）
+
+**autodev-ai.com：**
+- 111 clicks / 1,991 impressions / CTR 5.6% / pos 9.4（較 R184 的 105/1,882 再升）
+- 頂尖頁面：opencode-zen-vs-go（55 clicks，49.5%）
+- 集中度稍降（從 54% → 49.5%），流量分散化趨勢開始
+
+**新文章 GSC 首次出現：**
+- gpt-56-sol-terra-luna-review-2026.html：1 click（pos 2！），日曆看 100% CTR，極早期強訊號
+- turbo-fieldfare-gemma4-26b-mac-2026.html：1 click（pos 20）
+
+---
+
+### 📋 本輪核心結論
+
+**P1-HIGH watchlist 更新：**
+1. **Grok 4.7**：Sep 2-9 窗口，一 GA 立即升 P0-URGENT（seo-writer 搶繁中首發）
+2. **opencodex 13K★**：升 P1-HIGH 執行（星數突破日增 480，繁中零教學，builder 排隊）
+3. **Claude Fable 5.1 評測**：R185 P0-URGENT，seo-writer 本週執行中
+
+**P2-WATCH 新進：**
+- Atlas（World Labs，3D 世界模型，early access 無 API，無法深度評測）
+- Gemini 3.5 Pro 降溫（中位推後至 10/31）
+
+**不需重複：**
+- R185 所有項目已充分記錄，本輪僅更新增量
+
+**預估新增月收入潛力：**
+- opencodex 教學：$150-400/月（間接 DO + DataCamp）
+- Grok 4.7 首發評測（if GA）：$200-600/月
+
+---
+
 ## Round 183 | 2026-08-31 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-08-31 22:00 UTC | 搜尋範圍：GitHub trending + PH 日榜 + HN 前頁 + AI 模型發布追蹤 + affiliate 掃描 + watchlist 更新 | 模式：降頻輕量掃描（Tue/Thu/Sat 06:00 cron）
