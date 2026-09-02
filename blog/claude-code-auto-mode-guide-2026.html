@@ -325,7 +325,7 @@ claude-code config get autoMode</code></pre>
     <h3>Q：Cursor / GitHub Copilot 有類似功能嗎？</h3>
     <p>截至 2026-08-14：</p>
     <ul>
-        <li><strong>Cursor：</strong>有類似機制（Cursor Agent Mode），但 classifier 準確率約 82%，略低於 Claude Code 的 89%</li>
+        <li><strong>Cursor：</strong>有類似機制（Cursor Agent Mode），但 classifier 準確率約 82%，略低於 Claude Code 的 89%（詳見 <a href="opencode-vs-cursor-vs-claude-code-2026.html">OpenCode vs Cursor vs Claude Code 三大工具比較</a>）</li>
         <li><strong>GitHub Copilot Agent Mode：</strong>8/1 剛推出，目前仍是 beta，預設關閉</li>
         <li><strong>Windsurf Cascade：</strong>沒有 Auto Mode，所有動作都需手動確認（截至 2026-08）</li>
     </ul>
@@ -360,7 +360,7 @@ Decision: AUTO_APPROVE (autoMode=true, threshold=medium)</code></pre>
     <p><strong>我們的建議：</strong></p>
     <ul>
         <li>如果你是<strong>中小型專案 + 有完整 Git workflow</strong> → 開 Auto Mode，享受效率紅利</li>
-        <li>如果你是<strong>初次使用 Claude Code</strong> → 先關掉，用 1-2 週熟悉行為模式後再開</li>
+        <li>如果你是<strong>初次使用 Claude Code</strong> → 先關掉，用 1-2 週熟悉行為模式後再開；可以先讀 <a href="claude-code-routines-tutorial-2026.html">Claude Code Routines 工作流教學</a>建立基礎認識</li>
         <li>如果你是<strong>生產環境 / 金融醫療專案</strong> → 關掉，或至少設定嚴格的 denyList + requireApprovalForPaths</li>
     </ul>
 
