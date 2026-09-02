@@ -1596,3 +1596,121 @@ Product Hunt 8/30 趨勢、HackerNews 8/29-30、GitHub trending AI、新 affilia
 | 2026-09-01 | Buzz.ai 30%/12mo | buzz.ai 業務自動化 | 2K-5K/月 | Buzz.ai affiliate | $300-800 | autodev-ai | P2（再催 Ivan） |
 | 2026-09-01 | opencodex 12K★ | opencodex 教學, codex cli proxy 繁中 | 1K-3K/月 | 間接 DO+DC | $100-300 | autodev-ai | P1-LOW |
 
+
+---
+
+## Round 185 — 2026-09-02 00:30 UTC（Wed 00:30 ai-trend-hunter cron）
+
+### 🔥 P0-URGENT｜Claude Fable 5.1 正式發布（2026-09-01）— 繁中評測空白 24h 窗口
+
+**確認來源：** anthropic.com/claude/fable 官方頁面 + anthropic.com/claude-fable-and-mythos-5-1
+
+**核心亮點：**
+- 發布日：2026-09-01（昨天）
+- API model ID：`claude-fable-5-1`
+- 定價：$10/$50 per MTok（同 Fable 5），但 **cache reads $0.25/M（較 Fable 5 便宜 75%）**
+- 典型工作負載節省 **25%**；高度 agentic 工作負載節省最高 **45%**
+- 重點角度：「最強 coding + knowledge work + 研究能力早期預覽 / AI 如何貢獻科學進步」
+- 繁中現狀：**零評測文**（Fable 5 文章已在，5.1 是必然跟進）
+- 我站優勢：blog/claude-fable-5-review-2026.html 已有，5.1 評測可從「升級是否值得」角度切入
+
+**變現評估：**
+- 有 affiliate？否（Anthropic 無 affiliate program）
+- 適合評測文？✅ **強烈推薦**（繁中空白 + Fable 5 下架事件後升溫 + 25-45% 節省有說服力）
+- 目標關鍵字：`claude fable 5.1 評測`, `fable 5.1 2026`, `claude fable 5.1 vs 5`, `fable 5.1 cache price`, `claude 最新模型 2026`
+- 搜尋量估計：8K-20K/月（Fable 5 事件後高社群熱度，節省成本角度對開發者很吸引）
+- 預估月收入：$300-800（間接 DigitalOcean + DataCamp）
+- **P0-URGENT：seo-writer 應在 48h 內執行，搶 繁中首發 窗口**
+
+---
+
+### 🔥 P1-HIGH｜Grok 4.7 即將發布（Sep 2-9 窗口，2.1T 參數）
+
+**確認來源：** orca-router.ai + americanbazaar + Musk 8/12 X 貼文（「3-4 weeks from now」）
+
+**核心亮點：**
+- 2.1T 參數（Grok 4.6 是 1.5T）
+- Musk：「better than 4.6 in every way, except slightly slower to serve, with even better token efficiency」
+- 訓練融入大量 SpaceX 工程資料（差異化因素）
+- 與 Claude Fable 5.1 時間點競爭（SpaceXAI 明確以此為競爭目標）
+- 目前 docs.x.ai 仍無 grok-4.7 model ID（尚未 GA，極可能今天-本週發布）
+- 繁中現狀：**零評測文**（我站有 Grok 4.6 文章，4.7 是自然跟進）
+
+**變現評估：**
+- 有 affiliate？❌ SpaceXAI 無官方 affiliate，但 SuperGrok 有創作者方案（需申請）
+- 適合評測文？✅（2.1T + SpaceX data 角度新穎，繁中零評測）
+- 目標關鍵字：`grok 4.7 評測`, `grok 4.7 2026`, `grok 4.7 vs fable 5.1`, `xai grok 2.1t`, `grok 4.7 release`
+- 搜尋量估計：6K-18K/月（Musk 效應 + 2.1T 參數 + 競爭 Fable 5.1 媒體熱度）
+- 預估月收入：$200-600（間接 DigitalOcean + DataCamp）
+- **P1-HIGH：GA 確認後 seo-writer 48h 內執行**
+
+---
+
+### 🆕 P1-HIGH｜Google Gemini 4 確認訓練中 + Gemini 3.5 Pro 實質已取消
+
+**確認來源：** geeky-gadgets.com + nokiapoweruser.com + YouTube SemiAnalysis leak + Mashable
+
+**核心亮點：**
+- Gemini 3.5 Pro：Google 官方說「testing with partners，as soon as it's ready」但 SemiAnalysis 報導「已放棄 3.5 Pro 全力轉向 Gemini 4」
+- Gemini 目前排名：業界分析師稱「第 8-9 名」（落後 Muse Spark 1.2、Grok 4.5+）
+- Gemini 4：已確認「pre-training」（Google 官方），ETA 2027 年初
+- 現役旗艦仍是 Gemini 3.1 Pro（一年後的今天！）
+- 繁中搜尋趨勢：「Gemini 3.5 Pro 還會出嗎？」類型文章需求真實
+- R184 已執行 Gemini 3.7 Flash 評測 directive（seo-writer P1-HIGH #2 待執行）
+
+**變現評估：**
+- 目標關鍵字：`gemini 3.5 pro 取消`, `gemini 4 什麼時候`, `google gemini 2026 落後`, `gemini 3.5 pro 2026 繁中`, `gemini 3.7 flash vs pro`
+- 搜尋量估計：3K-8K/月（「gemini 3.5 pro 取消」高話題性）
+- 預估月收入：$150-400（間接 DO+DC + DataCamp）
+- **P1-HIGH：與 Gemini 3.7 Flash 評測合併，做「Gemini 3.5 Pro 被取消了？Google 2026 AI 戰略完整解析」**
+
+---
+
+### 🆕 P2-WATCH｜Kilo Code 750K+ 下載 + 直接佣金方案確認
+
+**確認來源：** kilo.ai/partners 官方合作夥伴頁面
+
+**佣金細節：**
+- Starter（$19/月）：$9.50/轉介（一次性）
+- Pro（$49/月）：$24.50/轉介（一次性）
+- Expert（$199/月）：$99.50/轉介（一次性）
+- Attribution：last-touch，30-day cookie；**無 recurring**
+- 適合：技術受眾（開發者 AI coding 工作流）
+
+**變現評估：**
+- 有 recurring affiliate？❌（純一次性，不觸發我們 30%+ recurring 門檻）
+- 適合工具比較頁？✅（Kilo Code vs Grok Build vs OpenCode vs Claude Code vs Codex CLI 比較頁）
+- 目標關鍵字：`kilo code 評測`, `kilo code vs grok build`, `ai coding agent 比較 2026`
+- 預估月收入：$100-300（一次性，低於 recurring affiliate 優先級）
+- **P2：可納入 AI coding agent 比較頁，但不單獨製作 affiliate 評測文（非 recurring）**
+
+---
+
+### 🆕 P2-WATCH｜Almanac YC S26 — 共享知識層 for Coding Agents
+
+**確認來源：** news.ycombinator.com/item?id=49511007 + LinkedIn + zeli.app
+
+**核心亮點：**
+- YC S26 batch，HN Launch 討論中
+- 解決：coding agents 每個 session 從零開始（re-explain requirements/decisions）
+- 整合：Slack、Gmail、Google Docs、GitHub、Linear
+- 有 Harvard + NASA 早期客戶
+- 可 proactive task execution（文件草稿、GitHub issue、問答）
+
+**變現評估：**
+- 有 affiliate？❌（早期 YC startup，無公開 affiliate）
+- 適合工具評測？⏳（太新，功能尚未確認穩定）
+- 預估月收入：$0（現在）→ $200-500（6 個月後若 affiliate 可申請）
+- **P3-EARLYWATCH：6-12 週後重新評估**
+
+---
+
+### 📊 Round 185 Summary 表
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 | 優先級 |
+|------|------|--------|-----------|---------|-----------|---------|-------|
+| 2026-09-02 | Claude Fable 5.1（Sep 1 GA） | fable 5.1 評測, cache price | 8K-20K/月 | 間接 DO+DC | $300-800 | autodev-ai | **P0-URGENT** |
+| 2026-09-02 | Grok 4.7（2.1T，Sep 2-9 窗口） | grok 4.7 評測, 2.1t xai | 6K-18K/月 | 間接 DO+DC | $200-600 | autodev-ai | **P1-HIGH** |
+| 2026-09-02 | Gemini 3.5 Pro 取消 / Gemini 4 | gemini 3.5 pro 取消, gemini 4 | 3K-8K/月 | 間接 DO+DC | $150-400 | autodev-ai | **P1-HIGH** |
+| 2026-09-02 | Kilo Code 直接佣金方案 | kilo code vs grok build | 1K-3K/月 | 一次性 $9-99/轉介 | $100-300 | autodev-ai | P2（比較頁） |
+| 2026-09-02 | Almanac YC S26 | almanac coding agents | 500-1K/月 | 無 | $0 | — | P3 早期觀察 |
