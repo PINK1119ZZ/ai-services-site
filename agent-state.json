@@ -1,81 +1,8 @@
 {
-  "lastRun": "2026-09-02T05:00:00Z",
+  "lastRun": "2026-09-02T07:00:00Z",
   "lastResearchRound": 185,
   "lastStrategistRun": "2026-09-01T01:00:00Z",
   "agentLog": [
-    {
-      "timestamp": "2026-09-02T05:00:00Z",
-      "agent": "builder",
-      "task": "article-publish-and-tool-build",
-      "status": "completed",
-      "summary": "Wed 05:00 UTC builder cron (Wed/Sat 13:00) — 執行 strategist-bimonthly-2026-09-01 builder 任務 + researcher-to-strategist-2026-09-02-round185 P1-HIGH directive。確認 claude-fable-5-1-review-2026.html 已存在（seo-writer 先執行）。(1) 新建 blog/gemini-37-flash-review-2026.html（~2,300 字繁中首發，Gemini 3.7 Flash 8/13 GA 完整評測 + Gemini 3.5 Pro 取消 SemiAnalysis 確認內幕 + Google AI 策略大轉向分析 + Gemini 4 時間軸 + API 接入教學三種方式 + LINE Bot 場景 + 費用比較表 + FAQ 6 題，3 個聯盟連結 DigitalOcean + DataCamp + Gumroad kknad，研究模型對比表（Gemini 3.7 Flash vs Claude Fable 5.1 vs GPT-5.4 vs DeepSeek V4 Pro），內連 claude-fable-5-1 + claude-fable-5 + openai-astra + deepseek-v4-pro + grok-4-6 五篇）；(2) 新建 tools/ai-video-tool-comparison-2026.html（AI 影片工具互動比較器，InVideo vs Fliki vs Pictory vs CapCut AI，互動推薦引擎（5 用途 × 4 預算 = 20 個推薦情境），評分視覺化 bar，完整比較表 13 行，使用場景推薦格，費用試算，3 個 CTA DigitalOcean + DataCamp + InVideo/Fliki/Pictory 佔位連結）。blog/index.html 新增 gemini-37-flash 卡片（排第一位，202→203 篇）。sitemap.xml 新增 gemini-37-flash-review-2026.html（priority 0.9）+ ai-video-tool-comparison-2026.html（priority 0.8），140→142 URLs。",
-      "changes": [
-        "新增 blog/gemini-37-flash-review-2026.html（~2,300 字繁中首發，Gemini 3.7 Flash 完整評測 + Gemini 3.5 Pro 取消解析）",
-        "新增 tools/ai-video-tool-comparison-2026.html（AI 影片工具互動比較器，4 工具，20 個推薦情境）",
-        "blog/index.html：新增 gemini-37-flash 卡片（排第一位），202→203 篇",
-        "sitemap.xml：新增兩個 URL（gemini-37-flash priority 0.9，ai-video-tool-comparison priority 0.8），140→142 URLs",
-        "agent-state.json：更新 lastRun + agentLog"
-      ],
-      "assetsCreated": [
-        {
-          "type": "seo_article",
-          "file": "blog/gemini-37-flash-review-2026.html",
-          "title": "Gemini 3.7 Flash 完整評測 2026：Google AI 策略大轉向，Gemini 3.5 Pro 取消真相揭露",
-          "wordCount": "~2,300 字",
-          "affiliateLinks": [
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "DataCamp afflink.one/s/aavAC",
-            "Gumroad kknad xiaofan8.gumroad.com/l/kknad"
-          ],
-          "seoKeywords": [
-            "gemini 3.7 flash 評測",
-            "gemini 3.5 pro 取消",
-            "google gemini 2026",
-            "gemini 4 何時發布",
-            "gemini flash vs pro"
-          ],
-          "internalLinks": [
-            "claude-fable-5-1-review-2026.html",
-            "claude-fable-5-review-2026.html",
-            "openai-astra-gpt6-critical-delay-2026.html",
-            "deepseek-v4-pro-review-2026.html",
-            "grok-4-6-review-2026.html"
-          ],
-          "publishReason": "researcher-to-strategist-2026-09-02-round185 P1-HIGH（Gemini 3.5 Pro 實質取消，繁中零評測，與 Gemini 3.7 Flash 合併角度，不需 Ivan）",
-          "estimatedTraffic": "3K-8K/月",
-          "estimatedRevenue": "00-500/月（間接 DigitalOcean + DataCamp）"
-        },
-        {
-          "type": "interactive_tool_page",
-          "file": "tools/ai-video-tool-comparison-2026.html",
-          "title": "AI 影片工具比較器 2026｜InVideo vs Fliki vs Pictory，哪個最適合台灣內容創作者？",
-          "features": [
-            "4 工具比較（InVideo + Fliki + Pictory + CapCut AI）",
-            "互動推薦引擎（5 用途 × 4 預算 = 20 情境）",
-            "評分視覺化 bar（5 維度評分）",
-            "完整比較表 13 行 × 4 欄",
-            "使用場景推薦格（6 場景）",
-            "費用試算表（4 工具月費對比）"
-          ],
-          "affiliateLinks": [
-            "InVideo（待 Ivan 申請後換入真實 affiliate 連結）",
-            "Fliki（待 Ivan 申請後換入真實 affiliate 連結）",
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "DataCamp afflink.one/s/aavAC"
-          ],
-          "revenueModel": "InVideo 50%/月 + Fliki 30% LIFETIME（Ivan 申請後補入）+ DigitalOcean/DataCamp 間接",
-          "estimatedMonthlyRevenue": "00-1,500（Ivan 申請 InVideo + Fliki 後）",
-          "needsIvan": "申請 InVideo affiliate（invideo.io/make/affiliate-program，50%/月）+ 申請 Fliki affiliate（fliki.ai/affiliates，auto-approve，30% LIFETIME），批准後換入 tools/ai-video-tool-comparison-2026.html CTA 連結"
-        }
-      ],
-      "nextActions": [
-        "Ivan P0-URGENT：申請 Fliki affiliate（fliki.ai/affiliates，auto-approve，5 分鐘搞定）→ 換入 tools/ai-video-tool-comparison-2026.html",
-        "Ivan P0-URGENT：申請 InVideo affiliate（invideo.io/make/affiliate-program，Impact，50%/月）→ 換入比較頁",
-        "seo-writer P1-HIGH（Ivan 批准後）：blog/invideo-ai-review-2026.html（~2,200 字，50% monthly）",
-        "seo-writer P1-HIGH（Ivan 批准後）：blog/fliki-ai-review-2026.html（~2,000 字，30% LIFETIME）",
-        "seo-writer 下輪：監控 Grok 4.7（Sep 2-9 窗口），GA 後 48h 內執行 blog/grok-4-7-review-2026.html"
-      ]
-    },
     {
       "timestamp": "2026-09-02T00:30:00Z",
       "agent": "researcher",
@@ -941,26 +868,46 @@
         "P1-HIGH（Ivan 批准後）：blog/answrr-ai-voice-smb-review-2026.html（R177，30% LIFETIME）",
         "P1（Ivan 批准後）：blog/clickup-review-2026.html（R178 strategist，30%/12mo）"
       ]
+    },
+    {
+      "timestamp": "2026-09-02T07:00:00Z",
+      "agent": "content-ops",
+      "task": "internal-linker",
+      "status": "completed",
+      "summary": "Wed 07:00 UTC 內部連結優化（weekly cron）。掃描 /root/ai-services-site/blog/ 所有文章，找出 0 個內部連結的弱勢文章（14 篇）。選取 3 篇最高 affiliate 價值的文章加入共 6 個內部連結：(1) gpt-56-sol-terra-luna-review-2026.html → 新增連至 chatgpt-claude-gemini-comparison.html（Claude 系列評估脈絡）+ ai-tools-comparison-2026.html（總結段落）；(2) claude-code-auto-mode-guide-2026.html → 新增連至 opencode-vs-cursor-vs-claude-code-2026.html（Cursor 比較 FAQ）+ claude-code-routines-tutorial-2026.html（初學者建議）；(3) perplexity-ai-pro-review-2026.html → 新增連至 chatgpt-claude-gemini-comparison.html（競品比較結論）+ ai-tools-comparison-2026.html（最終總結）。所有連結自然融入段落，不影響閱讀流暢度。git push 成功（c2265f6）。",
+      "changes": [
+        "blog/gpt-56-sol-terra-luna-review-2026.html: +2 內部連結（chatgpt-claude-gemini-comparison, ai-tools-comparison-2026）",
+        "blog/claude-code-auto-mode-guide-2026.html: +2 內部連結（opencode-vs-cursor-vs-claude-code-2026, claude-code-routines-tutorial-2026）",
+        "blog/perplexity-ai-pro-review-2026.html: +2 內部連結（chatgpt-claude-gemini-comparison, ai-tools-comparison-2026）",
+        "git commit c2265f6: seo: add internal links → push origin main 成功"
+      ]
     }
   ],
   "gscData": {
-    "lastUpdated": "2026-09-01 10:58",
+    "lastUpdated": "2026-09-02 05:30",
     "period": "14 days",
     "sites": {
       "autodev-ai": {
         "summary": {
-          "totalClicks": 106,
-          "totalImpressions": 1938,
-          "avgCTR": 5.5,
-          "avgPosition": 9.0
+          "totalClicks": 111,
+          "totalImpressions": 1991,
+          "avgCTR": 5.6,
+          "avgPosition": 9.4
         },
         "topQueries": [
           {
             "keyword": "opencode zen 費用",
-            "clicks": 6,
-            "impressions": 31,
-            "ctr": 19.4,
-            "position": 5.5
+            "clicks": 5,
+            "impressions": 29,
+            "ctr": 17.2,
+            "position": 5.6
+          },
+          {
+            "keyword": "autodev ai",
+            "clicks": 3,
+            "impressions": 9,
+            "ctr": 33.3,
+            "position": 4.6
           },
           {
             "keyword": "gemma 4 12b",
@@ -970,11 +917,11 @@
             "position": 14
           },
           {
-            "keyword": "autodev ai",
-            "clicks": 2,
-            "impressions": 10,
-            "ctr": 20.0,
-            "position": 4.4
+            "keyword": "opencode zen vs go",
+            "clicks": 3,
+            "impressions": 13,
+            "ctr": 23.1,
+            "position": 2.7
           },
           {
             "keyword": "opencode go和zen的区别",
@@ -991,13 +938,6 @@
             "position": 5.3
           },
           {
-            "keyword": "opencode zen vs go",
-            "clicks": 2,
-            "impressions": 13,
-            "ctr": 15.4,
-            "position": 2.8
-          },
-          {
             "keyword": "\"ruflo\"",
             "clicks": 1,
             "impressions": 2,
@@ -1007,9 +947,9 @@
           {
             "keyword": "autodev",
             "clicks": 1,
-            "impressions": 12,
-            "ctr": 8.3,
-            "position": 29.3
+            "impressions": 14,
+            "ctr": 7.1,
+            "position": 26.6
           },
           {
             "keyword": "line bot 收費",
@@ -1028,30 +968,23 @@
           {
             "keyword": "opencode go和zen",
             "clicks": 1,
-            "impressions": 4,
-            "ctr": 25.0,
-            "position": 8.2
+            "impressions": 6,
+            "ctr": 16.7,
+            "position": 7
           },
           {
             "keyword": "opencode zen",
             "clicks": 1,
-            "impressions": 8,
-            "ctr": 12.5,
-            "position": 11.5
+            "impressions": 10,
+            "ctr": 10.0,
+            "position": 11
           },
           {
             "keyword": "opencode zen api",
             "clicks": 1,
-            "impressions": 13,
-            "ctr": 7.7,
+            "impressions": 14,
+            "ctr": 7.1,
             "position": 6.5
-          },
-          {
-            "keyword": "opencode zen go 区别",
-            "clicks": 1,
-            "impressions": 3,
-            "ctr": 33.3,
-            "position": 3
           },
           {
             "keyword": "opencode zen 免费额度",
@@ -1098,9 +1031,9 @@
           {
             "keyword": "\"qwen3.8-8b\"",
             "clicks": 0,
-            "impressions": 8,
+            "impressions": 9,
             "ctr": 0,
-            "position": 6
+            "position": 6.2
           },
           {
             "keyword": "ai customer service demo",
@@ -1108,6 +1041,13 @@
             "impressions": 3,
             "ctr": 0,
             "position": 30
+          },
+          {
+            "keyword": "ai自動化費用",
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 87
           },
           {
             "keyword": "ai費用",
@@ -1135,107 +1075,121 @@
           {
             "page": "//blog/opencode-zen-vs-go-pricing-2026.html",
             "clicks": 55,
-            "impressions": 767,
+            "impressions": 763,
             "ctr": 7.2,
-            "position": 6.3
+            "position": 6.4
           },
           {
             "page": "//blog/omlx-apple-silicon-llm-server-2026.html",
             "clicks": 8,
-            "impressions": 106,
-            "ctr": 7.5,
-            "position": 7.3
+            "impressions": 114,
+            "ctr": 7.0,
+            "position": 7.9
           },
           {
             "page": "//blog/claude-video-watch-tutorial-2026.html",
-            "clicks": 7,
-            "impressions": 94,
-            "ctr": 7.4,
+            "clicks": 6,
+            "impressions": 93,
+            "ctr": 6.5,
             "position": 5.2
           },
           {
             "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
             "clicks": 6,
-            "impressions": 80,
-            "ctr": 7.5,
-            "position": 9.4
+            "impressions": 72,
+            "ctr": 8.3,
+            "position": 9.6
+          },
+          {
+            "page": "//blog/tencentdb-agent-memory-tutorial-2026.html",
+            "clicks": 5,
+            "impressions": 87,
+            "ctr": 5.7,
+            "position": 7.8
           },
           {
             "page": "//",
             "clicks": 4,
-            "impressions": 51,
-            "ctr": 7.8,
+            "impressions": 47,
+            "ctr": 8.5,
             "position": 6.2
           },
           {
-            "page": "//blog/tencentdb-agent-memory-tutorial-2026.html",
+            "page": "//en/",
             "clicks": 4,
-            "impressions": 87,
-            "ctr": 4.6,
-            "position": 7.7
+            "impressions": 60,
+            "ctr": 6.7,
+            "position": 26.6
           },
           {
             "page": "//blog/buzz-jack-dorsey-guide-2026.html",
             "clicks": 3,
-            "impressions": 64,
-            "ctr": 4.7,
-            "position": 6.4
+            "impressions": 66,
+            "ctr": 4.5,
+            "position": 6.3
           },
           {
             "page": "//blog/line-bot-cost.html",
             "clicks": 3,
-            "impressions": 117,
+            "impressions": 116,
             "ctr": 2.6,
-            "position": 9.2
-          },
-          {
-            "page": "//en/",
-            "clicks": 3,
-            "impressions": 54,
-            "ctr": 5.6,
-            "position": 22.9
+            "position": 9.0
           },
           {
             "page": "//blog/markitdown-microsoft-tutorial-2026.html",
-            "clicks": 2,
+            "clicks": 3,
             "impressions": 52,
-            "ctr": 3.8,
-            "position": 6.1
+            "ctr": 5.8,
+            "position": 5.8
           },
           {
             "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
             "clicks": 2,
-            "impressions": 32,
-            "ctr": 6.2,
-            "position": 8.9
+            "impressions": 35,
+            "ctr": 5.7,
+            "position": 8.7
           },
           {
             "page": "//blog/systeme-io-review-2026.html",
             "clicks": 2,
-            "impressions": 13,
-            "ctr": 15.4,
-            "position": 10.5
+            "impressions": 15,
+            "ctr": 13.3,
+            "position": 9.8
           },
           {
             "page": "//blog/ai-tools-comparison-2026.html",
             "clicks": 1,
-            "impressions": 69,
-            "ctr": 1.4,
-            "position": 12.6
+            "impressions": 79,
+            "ctr": 1.3,
+            "position": 12.1
+          },
+          {
+            "page": "//blog/chatgpt-claude-gemini-comparison.html",
+            "clicks": 1,
+            "impressions": 17,
+            "ctr": 5.9,
+            "position": 8.6
           },
           {
             "page": "//blog/glm-53-cyber-coding-review-2026.html",
             "clicks": 1,
-            "impressions": 25,
-            "ctr": 4.0,
-            "position": 8.4
+            "impressions": 28,
+            "ctr": 3.6,
+            "position": 8.3
+          },
+          {
+            "page": "//blog/gpt-56-sol-terra-luna-review-2026.html",
+            "clicks": 1,
+            "impressions": 1,
+            "ctr": 100,
+            "position": 2
           },
           {
             "page": "//blog/line-bot-tutorial-2026.html",
             "clicks": 1,
-            "impressions": 10,
-            "ctr": 10.0,
-            "position": 14.8
+            "impressions": 12,
+            "ctr": 8.3,
+            "position": 13.2
           },
           {
             "page": "//blog/mattpocock-skills-v1-progressive-disclosure-guide-2026.html",
@@ -1243,6 +1197,13 @@
             "impressions": 5,
             "ctr": 20.0,
             "position": 7.2
+          },
+          {
+            "page": "//blog/ponytail-claude-code-plugin-2026.html",
+            "clicks": 1,
+            "impressions": 20,
+            "ctr": 5.0,
+            "position": 6.5
           },
           {
             "page": "//blog/rtk-rust-token-killer-review-2026.html",
@@ -1259,25 +1220,25 @@
             "position": 20
           },
           {
-            "page": "//portfolio.html",
+            "page": "//en/about.html",
             "clicks": 1,
-            "impressions": 3,
-            "ctr": 33.3,
-            "position": 6
+            "impressions": 43,
+            "ctr": 2.3,
+            "position": 34.7
           },
           {
             "page": "//about.html",
             "clicks": 0,
-            "impressions": 10,
+            "impressions": 12,
             "ctr": 0,
-            "position": 7.3
+            "position": 7.2
           },
           {
             "page": "//blog/agent-skills-complete-guide-2026.html",
             "clicks": 0,
-            "impressions": 11,
+            "impressions": 12,
             "ctr": 0,
-            "position": 13.4
+            "position": 12.8
           },
           {
             "page": "//blog/agentmemory-claude-code-tutorial-2026.html",
@@ -1285,49 +1246,44 @@
             "impressions": 1,
             "ctr": 0,
             "position": 3
-          },
-          {
-            "page": "//blog/ai-agent-cybersecurity-skills-claude-code-2026.html",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 7
-          },
-          {
-            "page": "//blog/ai-chatbot-for-business.html",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 6
-          },
-          {
-            "page": "//blog/ai-customer-service-line.html",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 5
           }
         ]
       },
       "ai-tools-tw": {
         "summary": {
           "totalClicks": 0,
-          "totalImpressions": 0,
+          "totalImpressions": 1,
           "avgCTR": 0,
-          "avgPosition": 0
+          "avgPosition": 3
         },
         "topQueries": [],
-        "topPages": []
+        "topPages": [
+          {
+            "page": "/ai-roi-calculator/",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 3
+          }
+        ]
       },
       "ai-tools-en": {
         "summary": {
           "totalClicks": 0,
-          "totalImpressions": 0,
+          "totalImpressions": 1,
           "avgCTR": 0,
-          "avgPosition": 0
+          "avgPosition": 2
         },
         "topQueries": [],
-        "topPages": []
+        "topPages": [
+          {
+            "page": "/",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 2
+          }
+        ]
       }
     },
     "opportunities": [
@@ -1340,16 +1296,9 @@
       },
       {
         "site": "autodev-ai",
-        "keyword": "opencode go和zen",
-        "position": 8.2,
-        "impressions": 4,
-        "action": "optimize to push to page 1"
-      },
-      {
-        "site": "autodev-ai",
         "keyword": "opencode zen",
-        "position": 11.5,
-        "impressions": 8,
+        "position": 11,
+        "impressions": 10,
         "action": "optimize to push to page 1"
       },
       {
@@ -3263,8 +3212,8 @@
       ]
     }
   },
-  "lastGscCheckAt": "2026-09-01T10:58:15Z",
-  "lastGscSummary": "ranking: avg pos 9.0; high-impr low-CTR pages: 3; pos 11-20 opps: 4",
+  "lastGscCheckAt": "2026-09-02T05:30:04Z",
+  "lastGscSummary": "ranking: avg pos 9.4; high-impr low-CTR pages: 2; pos 11-20 opps: 4",
   "lastResearchRoundDate": "2026-08-03",
   "lastIncomeIdeation": "2026-07-31T12:00:00Z",
   "lastResearcherRun": "2026-08-03T00:30:00Z",
