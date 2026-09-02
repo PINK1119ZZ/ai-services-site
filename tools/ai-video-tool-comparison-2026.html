@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 影片工具比較器 2026｜InVideo vs Fliki vs Pictory，哪個最適合台灣內容創作者？</title>
+    <meta name="description" content="2026 年最完整 AI 影片工具互動比較。InVideo（50% affiliate）vs Fliki（30% LIFETIME）vs Pictory vs Capcut AI。輸入你的需求，自動推薦最適合方案。台灣創作者、行銷人必看。">
+    <meta name="keywords" content="ai 影片工具比較 2026, invideo 評測, fliki ai 評測, pictory 評測, ai 影片生成 台灣, 最好用 ai 影片軟體, ai video tool comparison taiwan">
+    <link rel="canonical" href="https://autodev-ai.com/tools/ai-video-tool-comparison-2026.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/tools/ai-video-tool-comparison-2026.html">
+
+    <!-- OG -->
+    <meta property="og:title" content="AI 影片工具比較器 2026｜找出最適合你的 AI 影片軟體">
+    <meta property="og:description" content="InVideo vs Fliki vs Pictory vs Capcut AI 完整比較。互動選擇器，輸入你的需求自動推薦。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autodev-ai.com/tools/ai-video-tool-comparison-2026.html">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "AI 影片工具比較器 2026",
+      "description": "互動式 AI 影片工具比較器，協助台灣創作者選擇最適合的 AI 影片軟體",
+      "url": "https://autodev-ai.com/tools/ai-video-tool-comparison-2026.html",
+      "applicationCategory": "利用工具",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" }
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', 'Segoe UI', sans-serif; background: #0f1117; color: #e0e0e0; line-height: 1.7; }
+        .navbar { background: rgba(15,17,23,0.95); border-bottom: 1px solid #2a2d3e; padding: 1rem 2rem; display: flex; align-items: center; gap: 2rem; position: sticky; top: 0; z-index: 100; }
+        .navbar .brand { color: #7c3aed; font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+        .navbar a { color: #a0a0b0; text-decoration: none; font-size: 0.9rem; }
+        .navbar a:hover { color: #e0e0e0; }
+        .hero { background: linear-gradient(135deg, #1a0533 0%, #0f2040 60%, #0f1117 100%); padding: 2.5rem 1rem 1.8rem; text-align: center; border-bottom: 1px solid #2a2d3e; }
+        .hero-badge { display: inline-block; background: #1e3a5f; color: #60a5fa; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; margin-bottom: 0.8rem; }
+        .hero h1 { font-size: clamp(1.4rem, 3.5vw, 2.2rem); font-weight: 700; color: #fff; max-width: 700px; margin: 0 auto 0.8rem; line-height: 1.3; }
+        .hero p { color: #aaa; font-size: 0.95rem; max-width: 550px; margin: 0 auto; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.2rem; }
+
+        /* Selector */
+        .selector-section { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 14px; padding: 1.8rem; margin: 2rem 0; }
+        .selector-section h2 { font-size: 1.2rem; color: #c4b5fd; margin-bottom: 1.4rem; }
+        .selector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin-bottom: 1.5rem; }
+        .selector-group label { display: block; color: #888; font-size: 0.8rem; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .selector-group select { width: 100%; background: #0f1117; border: 1px solid #3a3d5e; border-radius: 8px; padding: 0.6rem 0.8rem; color: #e0e0e0; font-size: 0.9rem; cursor: pointer; }
+        .selector-group select:focus { outline: none; border-color: #7c3aed; }
+        .result-card { background: linear-gradient(135deg, #1a0533, #0a2340); border: 2px solid #6d28d9; border-radius: 12px; padding: 1.5rem; margin-top: 1rem; display: none; }
+        .result-card.show { display: block; }
+        .result-card .tool-name { font-size: 1.5rem; font-weight: 700; color: #c4b5fd; margin-bottom: 0.5rem; }
+        .result-card .reason { color: #a0a0c0; font-size: 0.92rem; margin-bottom: 1rem; }
+        .result-card .cta-btn { display: inline-block; padding: 0.7rem 1.5rem; background: linear-gradient(135deg, #6d28d9, #4c1d95); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+
+        /* Score bars */
+        .score-section { margin: 2rem 0; }
+        .score-section h2 { font-size: 1.3rem; color: #c4b5fd; margin-bottom: 1.2rem; border-bottom: 1px solid #2a2d3e; padding-bottom: 0.4rem; }
+        .tool-scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
+        .tool-card { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 12px; padding: 1.2rem; }
+        .tool-card .tool-label { font-weight: 700; font-size: 1rem; color: #e0e0e0; margin-bottom: 0.3rem; }
+        .tool-card .price-tag { font-size: 0.8rem; color: #888; margin-bottom: 1rem; }
+        .score-bar { margin-bottom: 0.6rem; }
+        .score-bar .bar-label { display: flex; justify-content: space-between; font-size: 0.78rem; color: #888; margin-bottom: 0.2rem; }
+        .score-bar .bar-track { background: #0f1117; border-radius: 4px; height: 6px; }
+        .score-bar .bar-fill { height: 6px; border-radius: 4px; }
+        .bar-fill.invideo { background: linear-gradient(90deg, #6d28d9, #c4b5fd); }
+        .bar-fill.fliki { background: linear-gradient(90deg, #0369a1, #60a5fa); }
+        .bar-fill.pictory { background: linear-gradient(90deg, #065f46, #34d399); }
+        .bar-fill.capcut { background: linear-gradient(90deg, #7f1d1d, #f87171); }
+
+        /* Comparison table */
+        h2.section-title { font-size: 1.3rem; color: #c4b5fd; margin: 2.5rem 0 1rem; border-bottom: 1px solid #2a2d3e; padding-bottom: 0.4rem; }
+        .table-wrap { overflow-x: auto; margin: 1rem 0; border-radius: 10px; border: 1px solid #2a2d3e; }
+        table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        th { background: #1e2132; color: #c4b5fd; padding: 0.8rem 1rem; text-align: left; font-size: 0.88rem; border-bottom: 2px solid #3730a3; white-space: nowrap; }
+        td { padding: 0.7rem 1rem; border-bottom: 1px solid #1e2132; font-size: 0.88rem; color: #c8c8d8; }
+        tr:hover td { background: #1a1d2e; }
+        .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
+        .badge.green { background: #064e3b; color: #34d399; }
+        .badge.red { background: #450a0a; color: #f87171; }
+        .badge.yellow { background: #451a03; color: #fbbf24; }
+        .badge.blue { background: #1e3a5f; color: #60a5fa; }
+
+        /* CTA section */
+        .cta-section { background: linear-gradient(135deg, #1a0533, #0a2340); border: 1px solid #2a2d3e; border-radius: 12px; padding: 1.8rem; margin: 2rem 0; text-align: center; }
+        .cta-section h2 { color: #c4b5fd; margin-bottom: 0.5rem; border: none; font-size: 1.2rem; }
+        .cta-section p { font-size: 0.9rem; margin-bottom: 1.2rem; color: #a0a0c0; }
+        .cta-buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
+        .cta-btn { display: inline-block; padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s; }
+        .cta-btn.purple { background: linear-gradient(135deg, #6d28d9, #4c1d95); color: #fff; }
+        .cta-btn.blue { background: linear-gradient(135deg, #0069ff, #003aad); color: #fff; }
+        .cta-btn.teal { background: linear-gradient(135deg, #0891b2, #065f72); color: #fff; }
+        .cta-btn.do { background: linear-gradient(135deg, #0069ff, #003aad); color: #fff; }
+        .cta-btn.dc { background: linear-gradient(135deg, #03ef62, #048840); color: #000; }
+        .cta-btn:hover { opacity: 0.85; }
+
+        /* Use case grid */
+        .usecase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
+        .usecase-card { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 10px; padding: 1rem 1.2rem; }
+        .usecase-card .uc-title { font-weight: 700; color: #93c5fd; margin-bottom: 0.4rem; font-size: 0.95rem; }
+        .usecase-card .uc-tool { color: #c4b5fd; font-weight: 600; }
+        .usecase-card .uc-desc { color: #888; font-size: 0.85rem; margin-top: 0.3rem; }
+
+        footer { background: #0a0c14; border-top: 1px solid #1e2132; padding: 1.5rem; text-align: center; color: #666; font-size: 0.85rem; margin-top: 3rem; }
+        footer a { color: #7c3aed; text-decoration: none; }
+
+        @media(max-width: 600px) {
+            .cta-buttons { flex-direction: column; align-items: stretch; }
+            .tool-scores { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="/" class="brand">AutoDev AI</a>
+    <a href="/tools/">工具</a>
+    <a href="/blog/">Blog</a>
+</nav>
+
+<div class="hero">
+    <div class="hero-badge">🎬 互動比較工具 · 2026 最新版</div>
+    <h1>AI 影片工具比較器 2026</h1>
+    <p>InVideo vs Fliki vs Pictory vs Capcut AI — 勾選你的需求，立即找到最適合的工具</p>
+</div>
+
+<div class="container">
+
+    <!-- Selector -->
+    <div class="selector-section">
+        <h2>🎯 告訴我你的需求，自動推薦最適合的工具</h2>
+        <div class="selector-grid">
+            <div class="selector-group">
+                <label>主要用途</label>
+                <select id="sel-usecase">
+                    <option value="">-- 選擇用途 --</option>
+                    <option value="social">社群短影片（YouTube/IG/TikTok）</option>
+                    <option value="marketing">行銷廣告影片</option>
+                    <option value="edu">教育培訓影片</option>
+                    <option value="tts">文字轉語音 / Podcast 配音</option>
+                    <option value="template">模板快速剪輯</option>
+                </select>
+            </div>
+            <div class="selector-group">
+                <label>月預算</label>
+                <select id="sel-budget">
+                    <option value="">-- 選擇預算 --</option>
+                    <option value="free">免費</option>
+                    <option value="low">NT$500 以下</option>
+                    <option value="mid">NT$500-1,500</option>
+                    <option value="high">NT$1,500 以上</option>
+                </select>
+            </div>
+            <div class="selector-group">
+                <label>技術程度</label>
+                <select id="sel-skill">
+                    <option value="">-- 選擇程度 --</option>
+                    <option value="beginner">新手，想要簡單模板</option>
+                    <option value="medium">有基本剪輯經驗</option>
+                    <option value="pro">專業，需要進階功能</option>
+                </select>
+            </div>
+            <div class="selector-group">
+                <label>語言需求</label>
+                <select id="sel-lang">
+                    <option value="">-- 選擇語言 --</option>
+                    <option value="zh">繁體中文為主</option>
+                    <option value="en">英文為主</option>
+                    <option value="multi">多語言</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="result-card" id="result-card">
+            <div class="tool-name" id="result-tool">—</div>
+            <div class="reason" id="result-reason">—</div>
+            <a href="#" class="cta-btn" id="result-cta" target="_blank" rel="noopener">立即試用 →</a>
+        </div>
+    </div>
+
+    <!-- Score bars -->
+    <div class="score-section">
+        <h2>📊 四大工具能力評分</h2>
+        <div class="tool-scores">
+            <div class="tool-card">
+                <div class="tool-label">InVideo AI</div>
+                <div class="price-tag">$25-49/月 · 50% affiliate</div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>AI 腳本生成</span><span>95</span></div>
+                    <div class="bar-track"><div class="bar-fill invideo" style="width:95%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>模板豐富度</span><span>90</span></div>
+                    <div class="bar-track"><div class="bar-fill invideo" style="width:90%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>社群影片</span><span>92</span></div>
+                    <div class="bar-track"><div class="bar-fill invideo" style="width:92%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>中文支援</span><span>75</span></div>
+                    <div class="bar-track"><div class="bar-fill invideo" style="width:75%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>CP 值</span><span>85</span></div>
+                    <div class="bar-track"><div class="bar-fill invideo" style="width:85%"></div></div>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-label">Fliki AI</div>
+                <div class="price-tag">$29-88/月 · 30% LIFETIME affiliate</div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>AI 語音合成</span><span>96</span></div>
+                    <div class="bar-track"><div class="bar-fill fliki" style="width:96%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>文字轉影片</span><span>90</span></div>
+                    <div class="bar-track"><div class="bar-fill fliki" style="width:90%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>Podcast 製作</span><span>93</span></div>
+                    <div class="bar-track"><div class="bar-fill fliki" style="width:93%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>中文語音</span><span>88</span></div>
+                    <div class="bar-track"><div class="bar-fill fliki" style="width:88%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>CP 值</span><span>88</span></div>
+                    <div class="bar-track"><div class="bar-fill fliki" style="width:88%"></div></div>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-label">Pictory AI</div>
+                <div class="price-tag">$19-99/月</div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>長影片轉 Shorts</span><span>95</span></div>
+                    <div class="bar-track"><div class="bar-fill pictory" style="width:95%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>字幕自動生成</span><span>90</span></div>
+                    <div class="bar-track"><div class="bar-fill pictory" style="width:90%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>Blog 轉影片</span><span>92</span></div>
+                    <div class="bar-track"><div class="bar-fill pictory" style="width:92%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>中文支援</span><span>65</span></div>
+                    <div class="bar-track"><div class="bar-fill pictory" style="width:65%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>CP 值</span><span>78</span></div>
+                    <div class="bar-track"><div class="bar-fill pictory" style="width:78%"></div></div>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-label">CapCut AI</div>
+                <div class="price-tag">免費 / $14.99/月</div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>手機剪輯</span><span>98</span></div>
+                    <div class="bar-track"><div class="bar-fill capcut" style="width:98%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>特效/濾鏡</span><span>95</span></div>
+                    <div class="bar-track"><div class="bar-fill capcut" style="width:95%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>TikTok 整合</span><span>97</span></div>
+                    <div class="bar-track"><div class="bar-fill capcut" style="width:97%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>中文支援</span><span>95</span></div>
+                    <div class="bar-track"><div class="bar-fill capcut" style="width:95%"></div></div>
+                </div>
+                <div class="score-bar">
+                    <div class="bar-label"><span>CP 值</span><span>95</span></div>
+                    <div class="bar-track"><div class="bar-fill capcut" style="width:95%"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full comparison table -->
+    <h2 class="section-title">📋 完整功能比較表</h2>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>功能</th>
+                    <th>InVideo AI</th>
+                    <th>Fliki AI</th>
+                    <th>Pictory AI</th>
+                    <th>CapCut AI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>月費（最低方案）</td>
+                    <td>$25/月</td>
+                    <td>$29/月</td>
+                    <td>$19/月</td>
+                    <td>免費 / $14.99</td>
+                </tr>
+                <tr>
+                    <td>年費折扣</td>
+                    <td>約 30-40% off</td>
+                    <td>約 30% off</td>
+                    <td>約 40% off</td>
+                    <td>約 25% off</td>
+                </tr>
+                <tr>
+                    <td>免費方案</td>
+                    <td><span class="badge yellow">有限制</span></td>
+                    <td><span class="badge yellow">有限制</span></td>
+                    <td><span class="badge yellow">有限制</span></td>
+                    <td><span class="badge green">完整免費版</span></td>
+                </tr>
+                <tr>
+                    <td>AI 腳本自動生成</td>
+                    <td><span class="badge green">✓ 最強</span></td>
+                    <td><span class="badge green">✓ 良好</span></td>
+                    <td><span class="badge yellow">✓ 基本</span></td>
+                    <td><span class="badge yellow">✓ 基本</span></td>
+                </tr>
+                <tr>
+                    <td>AI 語音合成</td>
+                    <td><span class="badge green">✓ 多語言</span></td>
+                    <td><span class="badge green">✓ 最強（1000+ 聲音）</span></td>
+                    <td><span class="badge yellow">✓ 基本</span></td>
+                    <td><span class="badge green">✓ 良好</span></td>
+                </tr>
+                <tr>
+                    <td>繁體中文 TTS</td>
+                    <td><span class="badge yellow">部分支援</span></td>
+                    <td><span class="badge green">✓ 原生支援</span></td>
+                    <td><span class="badge red">有限</span></td>
+                    <td><span class="badge green">✓ 原生支援</span></td>
+                </tr>
+                <tr>
+                    <td>模板數量</td>
+                    <td>5,000+</td>
+                    <td>900+</td>
+                    <td>200+</td>
+                    <td>1,000,000+</td>
+                </tr>
+                <tr>
+                    <td>長影片→短片剪輯</td>
+                    <td><span class="badge green">✓</span></td>
+                    <td><span class="badge yellow">部分</span></td>
+                    <td><span class="badge green">✓ 最強</span></td>
+                    <td><span class="badge green">✓</span></td>
+                </tr>
+                <tr>
+                    <td>Blog/文章→影片</td>
+                    <td><span class="badge green">✓</span></td>
+                    <td><span class="badge green">✓</span></td>
+                    <td><span class="badge green">✓ 最強</span></td>
+                    <td><span class="badge red">✗</span></td>
+                </tr>
+                <tr>
+                    <td>Stock 素材庫</td>
+                    <td>iStock + Getty</td>
+                    <td>Shutterstock</td>
+                    <td>Getty + Storyblocks</td>
+                    <td>CapCut 自有庫</td>
+                </tr>
+                <tr>
+                    <td>匯出解析度</td>
+                    <td>最高 4K</td>
+                    <td>最高 1080p</td>
+                    <td>最高 4K</td>
+                    <td>最高 4K</td>
+                </tr>
+                <tr>
+                    <td>社群排程發布</td>
+                    <td><span class="badge green">✓</span></td>
+                    <td><span class="badge yellow">有限</span></td>
+                    <td><span class="badge yellow">有限</span></td>
+                    <td><span class="badge green">✓</span></td>
+                </tr>
+                <tr>
+                    <td>台灣 IP 使用</td>
+                    <td><span class="badge green">✓ 正常</span></td>
+                    <td><span class="badge green">✓ 正常</span></td>
+                    <td><span class="badge green">✓ 正常</span></td>
+                    <td><span class="badge yellow">部分功能限制</span></td>
+                </tr>
+                <tr>
+                    <td>Affiliate 佣金</td>
+                    <td><span class="badge green">50%/月（最高）</span></td>
+                    <td><span class="badge green">30% LIFETIME</span></td>
+                    <td>未公開</td>
+                    <td>無 affiliate</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Use case recommendations -->
+    <h2 class="section-title">🎯 依使用場景推薦</h2>
+    <div class="usecase-grid">
+        <div class="usecase-card">
+            <div class="uc-title">YouTube / IG 社群影片</div>
+            <div class="uc-tool">✅ InVideo AI 首選</div>
+            <div class="uc-desc">5,000+ 社群模板，AI 腳本一鍵生成，適合行銷人和 YouTuber</div>
+        </div>
+        <div class="usecase-card">
+            <div class="uc-title">文字轉語音 / Podcast</div>
+            <div class="uc-tool">✅ Fliki AI 首選</div>
+            <div class="uc-desc">1,000+ 聲音庫，繁體中文原生支援，適合有聲書、語音內容</div>
+        </div>
+        <div class="usecase-card">
+            <div class="uc-title">Blog 文章轉影片</div>
+            <div class="uc-tool">✅ Pictory AI 首選</div>
+            <div class="uc-desc">貼上 Blog URL 自動生成影片，SEO 內容再利用最佳工具</div>
+        </div>
+        <div class="usecase-card">
+            <div class="uc-title">TikTok / Reels 短影片</div>
+            <div class="uc-tool">✅ CapCut AI 首選</div>
+            <div class="uc-desc">百萬模板，中文支援最好，免費就可用，與 TikTok 深度整合</div>
+        </div>
+        <div class="usecase-card">
+            <div class="uc-title">教育培訓影片</div>
+            <div class="uc-tool">✅ InVideo AI + Fliki AI</div>
+            <div class="uc-desc">InVideo 做影片架構，Fliki 做語音旁白，組合使用效果最佳</div>
+        </div>
+        <div class="usecase-card">
+            <div class="uc-title">電商廣告影片</div>
+            <div class="uc-tool">✅ InVideo AI 首選</div>
+            <div class="uc-desc">品牌模板豐富，iStock Getty 素材直接使用，廣告投放優化強</div>
+        </div>
+    </div>
+
+    <!-- Pricing detail -->
+    <h2 class="section-title">💰 費用詳細試算（月計費）</h2>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>工具</th>
+                    <th>免費方案</th>
+                    <th>入門方案</th>
+                    <th>進階方案</th>
+                    <th>台幣約（入門）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>InVideo AI</strong></td>
+                    <td>有浮水印限制</td>
+                    <td>$25/月</td>
+                    <td>$49/月</td>
+                    <td>≈ NT$800</td>
+                </tr>
+                <tr>
+                    <td><strong>Fliki AI</strong></td>
+                    <td>5 分鐘/月</td>
+                    <td>$29/月</td>
+                    <td>$88/月</td>
+                    <td>≈ NT$930</td>
+                </tr>
+                <tr>
+                    <td><strong>Pictory AI</strong></td>
+                    <td>3 個影片試用</td>
+                    <td>$19/月</td>
+                    <td>$49/月</td>
+                    <td>≈ NT$610</td>
+                </tr>
+                <tr>
+                    <td><strong>CapCut AI</strong></td>
+                    <td class="badge green">完整免費版</td>
+                    <td>$14.99/月</td>
+                    <td>$29.99/月</td>
+                    <td>≈ NT$480</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- CTA 1 -->
+    <div class="cta-section">
+        <h2>🎬 開始用 AI 製作影片</h2>
+        <p>InVideo AI（50% affiliate）和 Fliki AI（30% LIFETIME）都有免費試用期，現在就能開始。</p>
+        <div class="cta-buttons">
+            <a href="https://invideo.io/make/affiliate-program" target="_blank" rel="noopener" class="cta-btn purple">🎬 試用 InVideo AI</a>
+            <a href="https://fliki.ai" target="_blank" rel="noopener" class="cta-btn blue">🎤 試用 Fliki AI</a>
+            <a href="https://pictory.ai" target="_blank" rel="noopener" class="cta-btn teal">🎥 試用 Pictory</a>
+        </div>
+    </div>
+
+    <!-- Cloud CTA -->
+    <div class="cta-section">
+        <h2>💡 想要架設 AI 影片工作流的後端？</h2>
+        <p>用 DigitalOcean 部署你的 AI API 服務，搭配 Gemini / Claude 自動腳本生成，讓 InVideo/Fliki 完全自動化。</p>
+        <div class="cta-buttons">
+            <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="cta-btn do">🌊 DigitalOcean — 免費 $200 試用</a>
+            <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener" class="cta-btn dc">📊 DataCamp — 學 AI 影片 API</a>
+        </div>
+    </div>
+
+    <!-- Final notes -->
+    <h2 class="section-title">📌 總結推薦</h2>
+    <ul style="margin-left:1.5rem; color:#c8c8d8;">
+        <li style="margin-bottom:0.7rem"><strong>預算有限 + TikTok 主力 →</strong> CapCut AI（免費）</li>
+        <li style="margin-bottom:0.7rem"><strong>社群行銷 + 需要 AI 腳本 →</strong> InVideo AI（$25/月起）</li>
+        <li style="margin-bottom:0.7rem"><strong>Podcast / 語音內容 / 繁中 TTS →</strong> Fliki AI（$29/月起）</li>
+        <li style="margin-bottom:0.7rem"><strong>Blog 文章再利用 / YouTube 頻道擴展 →</strong> Pictory AI（$19/月起）</li>
+        <li style="margin-bottom:0.7rem"><strong>最強組合（行銷人）→</strong> InVideo AI + Fliki AI（腳本 + 語音雙效）</li>
+    </ul>
+
+    <p style="margin-top:1.5rem; color:#888; font-size:0.9rem;">本工具最後更新：2026-09-02 | 價格以各官網為準，可能因促銷活動異動</p>
+
+</div>
+
+<footer>
+    <p>© 2026 AutoDev AI · <a href="/tools/">工具總覽</a> · <a href="/blog/">Blog</a> · <a href="/sitemap.xml">Sitemap</a></p>
+    <p style="margin-top:0.5rem; font-size:0.8rem;">本頁部分連結為聯盟連結，點擊後可能使我們獲得佣金，不影響評測客觀性。</p>
+</footer>
+
+<script>
+// Recommendation engine
+const recommendations = {
+    social: {
+        low: { name: 'CapCut AI', reason: '免費版功能強大，TikTok 整合最好，社群模板百萬級，繁體中文支援優秀。', url: 'https://www.capcut.com/' },
+        mid: { name: 'InVideo AI', reason: '5,000+ 社群模板，AI 腳本自動生成，$25/月性價比高，適合行銷人和 YouTuber。', url: 'https://invideo.io/' },
+        high: { name: 'InVideo AI Pro', reason: '進階方案 $49/月，4K 匯出，無限影片，AI 助理最強，適合商業級社群行銷。', url: 'https://invideo.io/' },
+        free: { name: 'CapCut AI', reason: '完整免費版，TikTok 整合最好，繁體中文原生支援，零成本開始。', url: 'https://www.capcut.com/' }
+    },
+    tts: {
+        low: { name: 'Fliki AI', reason: '1,000+ AI 語音，繁體中文原生支援，$29/月起，Podcast 和語音內容首選。', url: 'https://fliki.ai/' },
+        mid: { name: 'Fliki AI', reason: 'Fliki AI 是語音合成最強的選擇，繁中語音自然，$29/月性價比最高。', url: 'https://fliki.ai/' },
+        high: { name: 'Fliki AI Pro', reason: 'Fliki $88/月進階版，無限生成，品牌聲音克隆，企業語音內容最佳方案。', url: 'https://fliki.ai/' },
+        free: { name: 'Fliki AI 試用', reason: 'Fliki 提供 5 分鐘免費試用，可先體驗繁中語音品質再決定是否訂閱。', url: 'https://fliki.ai/' }
+    },
+    marketing: {
+        low: { name: 'CapCut AI', reason: '免費版已足夠做廣告素材，百萬模板，中文字幕自動生成，行銷新手首選。', url: 'https://www.capcut.com/' },
+        mid: { name: 'InVideo AI', reason: 'AI 腳本 + iStock Getty 素材 + 廣告模板，$25/月行銷人最完整解決方案。', url: 'https://invideo.io/' },
+        high: { name: 'InVideo AI', reason: 'InVideo Pro $49/月，無限影片，4K，品牌套件，廣告代理商和品牌行銷最佳選擇。', url: 'https://invideo.io/' },
+        free: { name: 'CapCut AI', reason: '免費行銷影片首選，IG/FB 廣告模板，繁中支援，零成本開始。', url: 'https://www.capcut.com/' }
+    },
+    edu: {
+        low: { name: 'Fliki AI', reason: '文字→影片 + 語音旁白一站搞定，繁中語音自然，$29/月教育影片性價比最高。', url: 'https://fliki.ai/' },
+        mid: { name: 'InVideo AI + Fliki AI', reason: 'InVideo 做教學影片結構，Fliki 做語音旁白，$50-60/月組合是教育創作者最佳搭配。', url: 'https://invideo.io/' },
+        high: { name: 'InVideo AI Pro', reason: 'Pro 版 $49/月，教育培訓模板豐富，品牌套件，適合企業培訓和線上課程機構。', url: 'https://invideo.io/' },
+        free: { name: 'Fliki AI 試用', reason: '先試用 Fliki 的文字轉語音功能，教育影片最需要的語音品質先確認再訂閱。', url: 'https://fliki.ai/' }
+    },
+    template: {
+        low: { name: 'CapCut AI', reason: '百萬免費模板，手機就能操作，零學習曲線，繁中介面，免費新手首選。', url: 'https://www.capcut.com/' },
+        mid: { name: 'InVideo AI', reason: '5,000+ 精選商業模板，AI 一鍵套用，$25/月比 CapCut Pro 更適合商業內容。', url: 'https://invideo.io/' },
+        high: { name: 'Pictory AI', reason: 'Blog 轉影片模板最強，長影片→短片自動剪輯，$49/月適合需要大量內容再利用的創作者。', url: 'https://pictory.ai/' },
+        free: { name: 'CapCut AI', reason: '百萬免費模板，完整功能，繁中支援，零成本開始最佳選擇。', url: 'https://www.capcut.com/' }
+    }
+};
+
+function updateRecommendation() {
+    const usecase = document.getElementById('sel-usecase').value;
+    const budget = document.getElementById('sel-budget').value;
+    const card = document.getElementById('result-card');
+    
+    if (!usecase || !budget) {
+        card.classList.remove('show');
+        return;
+    }
+
+    const budgetKey = budget === 'free' ? 'free' : budget === 'low' ? 'low' : budget === 'mid' ? 'mid' : 'high';
+    const rec = (recommendations[usecase] && recommendations[usecase][budgetKey]) || null;
+    
+    if (rec) {
+        document.getElementById('result-tool').textContent = '推薦：' + rec.name;
+        document.getElementById('result-reason').textContent = rec.reason;
+        document.getElementById('result-cta').href = rec.url;
+        card.classList.add('show');
+    }
+}
+
+['sel-usecase', 'sel-budget', 'sel-skill', 'sel-lang'].forEach(id => {
+    document.getElementById(id).addEventListener('change', updateRecommendation);
+});
+</script>
+
+</body>
+</html>

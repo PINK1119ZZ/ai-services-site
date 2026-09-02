@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Fable 5.1 完整評測 2026：Cache 讀取降 75%，Agentic 省 45%，升級是否值得？繁中首發</title>
+    <meta name="description" content="Claude Fable 5.1 完整繁中評測 2026。Cache reads $0.25/M（降 75%）、典型工作省 25%、agentic 省 45%、API claude-fable-5-1 接入指南、與 Fable 5 完整比較表。台灣開發者必讀。">
+    <meta name="keywords" content="claude fable 5.1 評測, fable 5.1 2026, fable 5.1 cache price, claude 最新模型 2026, fable 5.1 vs fable 5, anthropic fable 5.1, claude fable 5.1 繁中, fable 5.1 agentic">
+    <meta property="og:title" content="Claude Fable 5.1 完整評測 2026：Cache 讀取降 75%，Agentic 省 45%，升級是否值得？">
+    <meta property="og:description" content="Anthropic 2026-09-01 正式發布 Claude Fable 5.1。Cache reads $0.25/M 降 75%，agentic 工作流最高省 45%。完整繁中評測、費用試算、API 接入指南。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/claude-fable-5-1-review-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <link rel="canonical" href="https://autodev-ai.com/blog/claude-fable-5-1-review-2026.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/claude-fable-5-1-review-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Claude Fable 5.1 完整評測 2026：Cache 讀取降 75%，Agentic 省 45%，升級是否值得？繁中首發",
+      "datePublished": "2026-09-02",
+      "dateModified": "2026-09-02",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "Claude Fable 5.1 完整繁中評測。Cache reads $0.25/M 降 75%，agentic 省 45%，台灣開發者 API 接入指南與費用試算。",
+      "url": "https://autodev-ai.com/blog/claude-fable-5-1-review-2026.html",
+      "image": "https://autodev-ai.com/autodev-logo2.png"
+    }
+    </script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans TC', 'Inter', sans-serif; line-height: 1.85; color: #1F2421; background: #F6F1E8; padding: 20px; }
+        .container { max-width: 820px; margin: 0 auto; background: #FFFFFF; padding: 48px 44px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+        h1 { font-family: 'DM Serif Display', 'Noto Serif TC', serif; font-size: 2.1em; font-weight: 700; line-height: 1.3; margin-bottom: 20px; color: #1F2421; }
+        h1 em { color: #C8853F; font-style: italic; }
+        h2 { font-family: 'Noto Serif TC', serif; font-size: 1.6em; font-weight: 600; margin-top: 44px; margin-bottom: 16px; color: #2A2723; border-left: 4px solid #C8853F; padding-left: 12px; }
+        h3 { font-size: 1.2em; font-weight: 700; margin-top: 28px; margin-bottom: 12px; color: #2A2723; }
+        p { margin-bottom: 16px; color: #1F2421; }
+        ul, ol { margin-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        a { color: #C8853F; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { background: #F0EDE8; padding: 2px 6px; border-radius: 4px; font-size: 0.88em; font-family: 'Fira Code', monospace; }
+        pre { background: #1F2421; color: #F6F1E8; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; font-size: 0.88em; line-height: 1.6; }
+        .meta { color: #666; font-size: 0.88em; margin-bottom: 28px; }
+        .summary-box { background: #FFF8F0; border: 1px solid rgba(200,133,63,0.3); border-radius: 10px; padding: 24px 28px; margin: 28px 0; }
+        .summary-box h3 { margin-top: 0; color: #C8853F; }
+        .stat-row { display: flex; gap: 16px; margin: 24px 0; flex-wrap: wrap; }
+        .stat-card { flex: 1; min-width: 130px; background: #F6F1E8; border-radius: 10px; padding: 18px 16px; text-align: center; }
+        .stat-card .num { font-size: 1.7em; font-weight: 900; color: #C8853F; }
+        .stat-card .label { font-size: 0.78em; color: #666; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.93em; }
+        th { background: #1F2421; color: #F5C97A; padding: 12px 14px; text-align: left; }
+        td { padding: 11px 14px; border-bottom: 1px solid #EAE6DF; }
+        tr:nth-child(even) td { background: #FAF8F5; }
+        .highlight-row td { background: #FFF8F0 !important; font-weight: 700; }
+        .badge { display: inline-block; padding: 2px 9px; border-radius: 20px; font-size: 0.78em; font-weight: 700; margin-left: 6px; }
+        .badge-new { background: #D4EDDA; color: #155724; }
+        .badge-hot { background: #F8D7DA; color: #721C24; }
+        .badge-same { background: #E2E3E5; color: #383D41; }
+        .alert-box { background: #FEF3CD; border: 1px solid #F5C97A; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+        .alert-box strong { color: #8B6000; }
+        .win-box { background: #D4EDDA; border: 1px solid #C3E6CB; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+        .win-box strong { color: #155724; }
+        .cta-box { background: linear-gradient(135deg, #1F2421 0%, #2C3530 100%); border-radius: 12px; padding: 28px 32px; margin: 36px 0; text-align: center; }
+        .cta-box h3 { color: #F5C97A; margin-top: 0; font-size: 1.15em; }
+        .cta-box p { color: #CCC5B9; margin-bottom: 0; font-size: 0.93em; }
+        .cta-btn { display: inline-block; background: linear-gradient(135deg, #C8853F 0%, #E5A050 100%); color: #fff; padding: 14px 28px; border-radius: 8px; font-weight: 700; margin-top: 16px; font-size: 0.97em; text-decoration: none; transition: opacity 0.2s; }
+        .cta-btn:hover { opacity: 0.88; text-decoration: none; }
+        .cta-btn.secondary { background: linear-gradient(135deg, #2A6496 0%, #3A85BE 100%); margin-left: 12px; }
+        .faq-item { border-bottom: 1px solid #EAE6DF; padding: 18px 0; }
+        .faq-q { font-weight: 700; color: #1F2421; margin-bottom: 8px; }
+        .faq-a { color: #444; }
+        .cost-calc { background: #F6F1E8; border-radius: 10px; padding: 20px 24px; margin: 20px 0; }
+        .cost-calc h4 { margin-bottom: 12px; color: #1F2421; font-size: 1em; }
+        .cost-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #E0D8CE; font-size: 0.92em; }
+        .cost-row:last-child { border-bottom: none; font-weight: 700; color: #C8853F; }
+        nav.breadcrumb { font-size: 0.84em; color: #888; margin-bottom: 24px; }
+        nav.breadcrumb a { color: #C8853F; }
+        @media (max-width: 600px) {
+            .container { padding: 28px 18px; }
+            h1 { font-size: 1.55em; }
+            h2 { font-size: 1.3em; }
+            .stat-row { gap: 10px; }
+            .cta-btn.secondary { margin-left: 0; margin-top: 10px; display: block; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="/">AutoDev AI</a> › <a href="/blog/">Blog</a> › Claude Fable 5.1 完整評測 2026
+    </nav>
+
+    <h1>Claude Fable 5.1 完整評測 2026：<em>Cache 讀取降 75%</em>，Agentic 省 45%，升級是否值得？</h1>
+
+    <p class="meta">
+        發布日期：2026-09-02 ‧ 繁中首發 ‧ 字數約 2,400 字 ‧ 作者：AutoDev AI Team
+        <br>標籤：Claude Fable 5.1、Anthropic、Cache 優化、Agentic Coding、API 接入
+    </p>
+
+    <div class="summary-box">
+        <h3>⚡ 三分鐘看懂 Fable 5.1</h3>
+        <ul>
+            <li><strong>發布時間：</strong>2026 年 9 月 1 日正式 GA（General Availability），API model ID：<code>claude-fable-5-1</code></li>
+            <li><strong>定價不變：</strong>輸入 $10/MTok、輸出 $50/MTok（與 Fable 5 完全相同）</li>
+            <li><strong>最大亮點：</strong>Cache reads 降至 <strong>$0.25/MTok</strong>，比 Fable 5 的 $1/MTok 便宜 <strong>75%</strong></li>
+            <li><strong>實際節省：</strong>典型工作負載省 <strong>25%</strong>；agentic / 長任務鏈最高省 <strong>45%</strong></li>
+            <li><strong>定位：</strong>最強 coding + knowledge work + research「早期預覽」版本，Mythos 5.1 企業安全版同步更新</li>
+            <li><strong>誰應該升：</strong>有大量重複 context（系統提示 + 長文件）的 agentic 應用，效果最顯著</li>
+        </ul>
+    </div>
+
+    <div class="stat-row" role="list">
+        <div class="stat-card" role="listitem">
+            <div class="num">$0.25</div>
+            <div class="label">Cache reads /MTok（新）</div>
+        </div>
+        <div class="stat-card" role="listitem">
+            <div class="num">75%</div>
+            <div class="label">Cache 讀取降幅</div>
+        </div>
+        <div class="stat-card" role="listitem">
+            <div class="num">45%</div>
+            <div class="label">Agentic 工作最高省費</div>
+        </div>
+        <div class="stat-card" role="listitem">
+            <div class="num">25%</div>
+            <div class="label">典型工作負載省費</div>
+        </div>
+    </div>
+
+    <h2>Fable 5.1 是什麼？發布背景與定位</h2>
+
+    <p>2026 年 9 月 1 日，Anthropic 在官方頁面 <code>anthropic.com/claude/fable</code> 正式發布 Claude Fable 5.1，同步更新企業版 Mythos 5.1。這是繼 Fable 5（2026 年 6 月 9 日 GA，三天後遭 US Commerce Dept 強制下架，6 月中旬重新上線）之後，Anthropic 最快的主力模型迭代。</p>
+
+    <p>值得注意的是，<strong>Fable 5.1 不是全新架構</strong>——它是在 Fable 5 的基礎上進行的「效率工程迭代」，核心參數、訓練資料、基礎能力與 Fable 5 高度一致。Anthropic 的重點在於讓開發者和企業在實際部署時省更多錢，同時引入了幾項 API 層面的改進。官方描述 Fable 5.1 為「research capabilities 早期預覽」，意味著後續還有更多能力更新會以 point release 形式滾動推出。</p>
+
+    <div class="win-box">
+        <strong>✅ 為什麼 Fable 5.1 值得重視：</strong>對於已在用 Fable 5 的 agentic 應用來說，<strong>零代碼改動（只換 model ID）就能立刻省 25–45% 費用</strong>。這不是小事——如果你每月 Claude API 費用是 $500，切換後可能直接省 $125–$225/月。
+    </div>
+
+    <h2>Cache 革命：75% 降幅背後的技術邏輯</h2>
+
+    <p>要理解 Fable 5.1 最核心的升級，必須先了解 Anthropic 的 <strong>Prompt Caching</strong> 機制。當你的 API 請求包含重複的 context（例如固定的系統提示、長篇文件、工具定義），Anthropic 的基礎設施會把這段 context 快取在 KV（Key-Value）cache 中。下一次請求如果 prefix 相同，就直接從 cache 讀取，省去重新 tokenize + prefill 的計算成本。</p>
+
+    <p>在 Fable 5 時代，cache 讀取的費率是 $1/MTok——比輸入的 $10/MTok 便宜，但對於大量 cache hit 的 agentic 應用來說仍然是顯著成本。<strong>Fable 5.1 把 cache reads 直接降到 $0.25/MTok，降幅 75%。</strong></p>
+
+    <h3>哪些應用受益最大？</h3>
+
+    <p>Cache 節省效果取決於你的應用中「重複 context」佔總 token 的比例。以下幾類應用最受益：</p>
+
+    <ul>
+        <li><strong>Agentic coding 工作流：</strong>每個 agent loop 都攜帶相同的工具定義、CLAUDE.md 內容、專案結構 context。重複 prefix 比例通常 60–80%，節省最顯著。</li>
+        <li><strong>長文件問答 / RAG 應用：</strong>相同文件多次查詢，每次都包含完整文件作為 context。cache 讓第 2 次起的成本大幅下降。</li>
+        <li><strong>客服 / 聊天機器人：</strong>固定的系統提示（角色設定、知識庫）每次請求都重複，cache 效益明顯。</li>
+        <li><strong>批次處理：</strong>對大量短輸入做相同分析（如：分類 1,000 則評論），系統提示佔大部分 token。</li>
+    </ul>
+
+    <p>相反地，如果你的應用每次請求的 context 都完全不同（例如純粹的一次性翻譯任務），Fable 5.1 和 Fable 5 的費用差距就很小——輸入輸出定價完全相同。</p>
+
+    <h2>Fable 5.1 vs Fable 5：完整規格比較</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>規格項目</th>
+                <th>Claude Fable 5</th>
+                <th>Claude Fable 5.1</th>
+                <th>變化</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>API Model ID</td>
+                <td><code>claude-fable-5</code></td>
+                <td><code>claude-fable-5-1</code></td>
+                <td><span class="badge badge-new">更新</span></td>
+            </tr>
+            <tr>
+                <td>輸入定價</td>
+                <td>$10 / MTok</td>
+                <td>$10 / MTok</td>
+                <td><span class="badge badge-same">不變</span></td>
+            </tr>
+            <tr>
+                <td>輸出定價</td>
+                <td>$50 / MTok</td>
+                <td>$50 / MTok</td>
+                <td><span class="badge badge-same">不變</span></td>
+            </tr>
+            <tr class="highlight-row">
+                <td><strong>Cache Reads 定價</strong></td>
+                <td>$1.00 / MTok</td>
+                <td><strong>$0.25 / MTok</strong></td>
+                <td><span class="badge badge-hot">降 75% 🔥</span></td>
+            </tr>
+            <tr>
+                <td>Context Window</td>
+                <td>1M tokens</td>
+                <td>1M tokens</td>
+                <td><span class="badge badge-same">不變</span></td>
+            </tr>
+            <tr>
+                <td>Agentic 能力</td>
+                <td>工具呼叫、長任務鏈</td>
+                <td>同上 + 效率優化</td>
+                <td><span class="badge badge-new">強化</span></td>
+            </tr>
+            <tr>
+                <td>Research 能力</td>
+                <td>一般</td>
+                <td>早期預覽強化</td>
+                <td><span class="badge badge-new">強化</span></td>
+            </tr>
+            <tr>
+                <td>企業版</td>
+                <td>Mythos 5</td>
+                <td>Mythos 5.1（同步更新）</td>
+                <td><span class="badge badge-new">更新</span></td>
+            </tr>
+            <tr>
+                <td>與 Grok 4.7 競爭</td>
+                <td>對標 Grok 4.6</td>
+                <td>xAI 工程師確認以 Fable 5.1 為競爭目標</td>
+                <td><span class="badge badge-new">新動態</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>實際省多少？費用場景試算</h2>
+
+    <p>光說「省 45%」很抽象，讓我們用幾個台灣開發者常見的場景來算具體數字。</p>
+
+    <div class="cost-calc">
+        <h4>場景 A：agentic coding 工作流（每月中量使用）</h4>
+        <p style="font-size:0.88em;color:#666;margin-bottom:12px;">假設：每月 500 個 agent 任務，每任務平均 50K input tokens（其中 35K 為重複 context / cache hit），10K output tokens</p>
+        <div class="cost-row"><span>Input tokens（15K × 500 = 7.5M tokens）</span><span>$75.00</span></div>
+        <div class="cost-row"><span>Cache reads（35K × 500 = 17.5M tokens）</span><span>Fable 5：$17.50 → Fable 5.1：<strong>$4.38</strong></span></div>
+        <div class="cost-row"><span>Output tokens（10K × 500 = 5M tokens）</span><span>$250.00</span></div>
+        <div class="cost-row"><span>每月總費用</span><span>Fable 5：$342.50 → Fable 5.1：<strong>$329.38（省 $13 / 3.8%）</strong></span></div>
+    </div>
+
+    <div class="cost-calc">
+        <h4>場景 B：RAG 文件問答（高 cache hit 率）</h4>
+        <p style="font-size:0.88em;color:#666;margin-bottom:12px;">假設：每月 1,000 次查詢，每次 80K input tokens（其中 75K 為相同文件 context），500 output tokens</p>
+        <div class="cost-row"><span>Input tokens（5K × 1,000 = 5M tokens）</span><span>$50.00</span></div>
+        <div class="cost-row"><span>Cache reads（75K × 1,000 = 75M tokens）</span><span>Fable 5：$75.00 → Fable 5.1：<strong>$18.75</strong></span></div>
+        <div class="cost-row"><span>Output tokens（0.5K × 1,000 = 0.5M tokens）</span><span>$25.00</span></div>
+        <div class="cost-row"><span>每月總費用</span><span>Fable 5：$150.00 → Fable 5.1：<strong>$93.75（省 $56.25 / 37.5%）</strong></span></div>
+    </div>
+
+    <div class="cost-calc">
+        <h4>場景 C：客服 Bot（固定系統提示 + 短對話）</h4>
+        <p style="font-size:0.88em;color:#666;margin-bottom:12px;">假設：每月 5,000 次對話，每次系統提示 30K tokens（cache hit）+ 1K user input + 500 output</p>
+        <div class="cost-row"><span>Input tokens（1K × 5,000 = 5M tokens）</span><span>$50.00</span></div>
+        <div class="cost-row"><span>Cache reads（30K × 5,000 = 150M tokens）</span><span>Fable 5：$150.00 → Fable 5.1：<strong>$37.50</strong></span></div>
+        <div class="cost-row"><span>Output tokens（0.5K × 5,000 = 2.5M tokens）</span><span>$125.00</span></div>
+        <div class="cost-row"><span>每月總費用</span><span>Fable 5：$325.00 → Fable 5.1：<strong>$212.50（省 $112.50 / 34.6%）</strong></span></div>
+    </div>
+
+    <div class="alert-box">
+        <strong>📌 結論：</strong> Cache hit 比例越高，節省越顯著。對於 RAG 和客服 Bot 這類應用，切換 Fable 5.1 後節省幅度輕鬆超過 30%。Agentic coding 場景因為 output token 佔費用比例大，整體節省比例稍低，但絕對金額仍相當可觀。
+    </div>
+
+    <!-- CTA 1：DigitalOcean -->
+    <div class="cta-box">
+        <h3>🚀 在 DigitalOcean 部署 Fable 5.1 應用</h3>
+        <p>透過 DigitalOcean GPU Droplets 或 AI/ML Platform，台灣信用卡直接付款，最低 $6/月起即可開始。支援 Claude API proxy 部署，讓 cache 優化效果最大化。</p>
+        <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener sponsored">查看 DigitalOcean 方案</a>
+    </div>
+
+    <h2>Fable 5.1 vs 競爭對手：2026 年 9 月戰局</h2>
+
+    <p>Fable 5.1 的發布時間點頗有策略意味。根據 xAI 工程師在社群媒體的確認，Grok 4.7（2.1T 參數，SpaceX 工程資料融入訓練）正處於 9 月 2–9 日的發布窗口，雙方直接競爭。Fable 5.1 等於搶先一步確立了「cache 效率標竿」。</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>模型</th>
+                <th>輸入定價</th>
+                <th>Cache Reads</th>
+                <th>Context</th>
+                <th>狀態</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="highlight-row">
+                <td><strong>Claude Fable 5.1</strong></td>
+                <td>$10/MTok</td>
+                <td><strong>$0.25/MTok 🔥</strong></td>
+                <td>1M tokens</td>
+                <td>✅ GA（9/1）</td>
+            </tr>
+            <tr>
+                <td>Claude Fable 5</td>
+                <td>$10/MTok</td>
+                <td>$1.00/MTok</td>
+                <td>1M tokens</td>
+                <td>✅ GA（6/9，二次發布）</td>
+            </tr>
+            <tr>
+                <td>GPT-5.4（OpenAI）</td>
+                <td>$4/MTok（降價後）</td>
+                <td>~$0.50/MTok（推測）</td>
+                <td>128K tokens</td>
+                <td>✅ GA</td>
+            </tr>
+            <tr>
+                <td>Grok 4.7（xAI）</td>
+                <td>TBD（2.1T 參數）</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>⏳ Sep 2–9 窗口</td>
+            </tr>
+            <tr>
+                <td>DeepSeek V4 Pro</td>
+                <td>$0.435/MTok</td>
+                <td>~$0.05/MTok（推測）</td>
+                <td>1M tokens</td>
+                <td>✅ GA，MIT 開源</td>
+            </tr>
+            <tr>
+                <td>Gemini 3.7 Flash</td>
+                <td>~$0.075/MTok</td>
+                <td>更低</td>
+                <td>1M tokens</td>
+                <td>✅ GA（8/13）</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>從純粹費用角度看，DeepSeek V4 Pro 和 Gemini 3.7 Flash 在絕對費率上仍遠低於 Fable 5.1。但 Fable 5.1 的優勢在於 <strong>能力品質上限</strong>——對於需要複雜推理、長文件處理、精確指令遵循的任務，Fable 5 系列的輸出品質仍是業界頂尖。Cache 降價讓這個「品質溢價」變得更合算。</p>
+
+    <h2>台灣開發者實戰接入指南</h2>
+
+    <p>切換到 Fable 5.1 非常簡單，只需要更改 model ID。以下是完整的接入示例：</p>
+
+    <h3>Python SDK（推薦）</h3>
+    <pre><code>import anthropic
+
+client = anthropic.Anthropic()
+
+# 使用 Prompt Caching 的 Fable 5.1 請求
+message = client.messages.create(
+    model="claude-fable-5-1",  # ← 只改這裡
+    max_tokens=4096,
+    system=[
+        {
+            "type": "text",
+            "text": "你是一個專業的程式碼審查助手...",
+            # 啟用 cache（重複的系統提示 / 長文件使用）
+            "cache_control": {"type": "ephemeral"}
+        }
+    ],
+    messages=[
+        {
+            "role": "user",
+            "content": "請審查以下程式碼：\n\n```python\n..."
+        }
+    ]
+)
+
+print(message.content[0].text)
+print(f"Cache reads: {message.usage.cache_read_input_tokens} tokens")</code></pre>
+
+    <h3>從 Fable 5 遷移的重點提醒</h3>
+
+    <ul>
+        <li><strong>API 格式完全相容：</strong>Fable 5.1 和 Fable 5 使用相同的 Messages API 格式，代碼只需改 model string。</li>
+        <li><strong>Cache 要手動啟用：</strong>Prompt Caching 不是預設開啟——你需要在想要 cache 的 content block 加上 <code>"cache_control": {"type": "ephemeral"}</code>，否則仍按全額輸入定價計算。</li>
+        <li><strong>Cache 有效期：</strong>Anthropic 的 ephemeral cache 預設 5 分鐘有效，適合同一批次的連續請求。如果你的使用模式是單次獨立請求，cache 效益有限。</li>
+        <li><strong>費用追蹤：</strong>API 回應中的 <code>usage.cache_read_input_tokens</code> 和 <code>usage.cache_creation_input_tokens</code> 可以讓你精確追蹤實際 cache 節省。</li>
+    </ul>
+
+    <div class="alert-box">
+        <strong>💡 最大化 Cache 節省的技巧：</strong> 把最長、最穩定的 context（系統提示、知識庫、工具定義）放在 prompt 的最前面，並加上 cache_control。變動的部分（用戶輸入）放最後。這樣 cache prefix match 成功率最高。
+    </div>
+
+    <!-- CTA 2：DataCamp -->
+    <div class="cta-box">
+        <h3>📚 系統學習 LLM API 工程最佳實踐</h3>
+        <p>DataCamp 提供從 Prompt Engineering 到 Production LLM Apps 的完整學習路徑，包含 Anthropic Claude API、cost optimization、caching 策略實戰課程。台灣信用卡支援，月付方案彈性入門。</p>
+        <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener sponsored">探索 DataCamp AI 課程</a>
+    </div>
+
+    <h2>升級決策指南：誰應該現在升？誰可以等？</h2>
+
+    <h3>✅ 建議立刻升級到 Fable 5.1</h3>
+    <ul>
+        <li><strong>已在用 Fable 5 的 agentic 應用：</strong>零代碼改動即省 25–45%，沒有理由不升。</li>
+        <li><strong>RAG / 長文件問答系統：</strong>高 cache hit 率代表直接的成本節省，效益立竿見影。</li>
+        <li><strong>客服 Bot / 固定系統提示應用：</strong>同上，cache 節省效果顯著。</li>
+        <li><strong>正在評估是否從 GPT-5.4 切換的開發者：</strong>Fable 5.1 的 cache 優化讓切換的 ROI 更好計算。</li>
+    </ul>
+
+    <h3>⏸️ 可以等等看的情況</h3>
+    <ul>
+        <li><strong>純粹一次性請求應用：</strong>如果你的用例沒有重複 context，Fable 5 和 5.1 成本完全相同，不急著升。</li>
+        <li><strong>正在等 Grok 4.7 的開發者：</strong>Grok 4.7 在 Sep 2–9 窗口，等評測出來再比較也來得及（Fable 5.1 隨時可切換）。</li>
+        <li><strong>成本敏感、已在用 DeepSeek V4 Pro 的開發者：</strong>DeepSeek 的絕對費率仍遠低於 Fable 5.1，能力需求不到頂尖的任務沒必要升。</li>
+    </ul>
+
+    <h3>Fable 5.1 vs Fable 5：升級的唯一理由</h3>
+    <p>坦白說，如果你目前的應用沒有啟用 Prompt Caching，Fable 5.1 帶來的差異幾乎是零——能力相同，非 cache 定價相同。<strong>Fable 5.1 的核心價值就是 cache 降價。</strong>如果你的應用有大量重複 context 且已啟用 cache，升級毫無疑問值得；如果沒有，先評估是否啟用 cache 比換版本更重要。</p>
+
+    <!-- CTA 3：Gumroad -->
+    <div class="cta-box">
+        <h3>🛠️ Claude Code 技能包：Fable 5.1 Agentic 工作流模板</h3>
+        <p>《AutoDev AI 技能包》包含針對 Fable 5.1 優化的 agentic 工作流模板、Prompt Caching 實戰配置、API 費用最佳化指南。直接套用，立省 45%。</p>
+        <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn" target="_blank" rel="noopener sponsored">查看技能包內容</a>
+    </div>
+
+    <h2>常見問題 FAQ</h2>
+
+    <div class="faq-item">
+        <div class="faq-q">Q1. Fable 5.1 的「早期預覽」是什麼意思？</div>
+        <div class="faq-a">Anthropic 標記 Fable 5.1 為「research capabilities 早期預覽」，代表某些進階的 research 和 deep analysis 能力仍在持續優化中，後續可能透過 point release（如 5.1.1）滾動更新，無需更換 model ID。這和「Beta」類似，但不影響一般 coding 和 knowledge work 的穩定性。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q2. Fable 5.1 和 Mythos 5.1 有什麼差異？</div>
+        <div class="faq-a">Mythos 5.1 是 Fable 5.1 的企業安全版本，主要差異在於：(1) 部署在 Anthropic 的 Claude Security 平台；(2) 提供更嚴格的輸出過濾和合規記錄；(3) 適用 0xDAF $3,500 萬 Defender Fund 授權。對一般 API 開發者而言，直接使用 Fable 5.1 即可；企業安全需求可聯繫 Anthropic 取得 Mythos 5.1 存取。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q3. 從 Fable 5 切換到 5.1，會不會影響輸出品質？</div>
+        <div class="faq-a">根據 Anthropic 官方說明，Fable 5.1 的基礎能力與 Fable 5 高度一致，不應出現明顯的輸出品質退步。但由於是「早期預覽」，在極少數邊緣案例中可能有細微差異。建議切換後用你的標準測試案例跑一輪比對，確認輸出符合預期。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q4. Prompt Caching 的 $0.25/MTok 需要額外申請嗎？</div>
+        <div class="faq-a">不需要。只要你的帳號能存取 <code>claude-fable-5-1</code>，Prompt Caching 的降價費率自動適用。唯一需要做的是在你的 API 請求中明確加入 <code>cache_control</code> 標記——Anthropic 不會自動 cache 任何內容。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q5. Fable 5.1 和即將發布的 Grok 4.7 誰更值得選？</div>
+        <div class="faq-a">Grok 4.7（2.1T 參數，SpaceX 工程資料）預計在 Sep 2–9 發布，目前沒有官方定價。如果你的應用偏向 agentic coding 和工程推理，值得等 Grok 4.7 評測出來再比較。如果你已在 Anthropic 生態，Fable 5.1 的 cache 降價是立即可用的實質節省，不需要等。兩者定位上會有差異，不一定非此即彼。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q6. OpenAI Astra（GPT-6）何時發布？Fable 5.1 能撐到那時嗎？</div>
+        <div class="faq-a">Astra 因達到 Preparedness Framework Critical 等級（自主建構零日漏洞能力）而暫緩發布，Kalshi 市場預測 9 月發布機率 77%，但無官方確認日期。對台灣開發者來說，Fable 5.1 現在是最高品質的可用選項之一，而且 cache 降價讓使用成本更低。等 Astra 的同時先把 Fable 5.1 工作流優化好，是最務實的策略。詳見：<a href="/blog/openai-astra-gpt6-critical-delay-2026.html">OpenAI Astra 完整解析</a>。</div>
+    </div>
+
+    <h2>總結：值得升級的理由只有一個，但它很夠</h2>
+
+    <p>Claude Fable 5.1 不是一次革命性的模型更新——它是一次精準的工程調整，把最讓 agentic 開發者痛的成本節點（重複 context 的 cache 費用）直接砍了 75%。</p>
+
+    <p>如果你的應用有大量重複 context，<strong>現在就換 model ID</strong>，開始節省。如果你的應用沒有重複 context，先評估是否可以重構成 cache 友好的架構，然後再換。無論如何，Fable 5.1 的門檻很低——不需要重寫代碼，不需要重新測試整個系統，只是一個字串的改動。</p>
+
+    <p>Grok 4.7 即將到來，Astra 的發布窗口也在本月。9 月是 AI 模型競爭最激烈的一個月，我們會持續追蹤並第一時間更新繁中評測。</p>
+
+    <p>相關閱讀：
+        <a href="/blog/claude-fable-5-review-2026.html">Claude Fable 5 完整評測：史上最強又被政府喊停的 AI</a> ‧
+        <a href="/blog/openai-astra-gpt6-critical-delay-2026.html">OpenAI Astra 完整解析：史上第一個 Critical AI</a> ‧
+        <a href="/blog/grok-4-6-review-2026.html">Grok 4.6 完整評測：agentic coding 新標竿</a>
+    </p>
+
+</div>
+</body>
+</html>
