@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opencodex 完整教學 2026：13K★ LLM Proxy，讓 Claude Code 和 Codex 使用任何 AI 模型</title>
+    <meta name="description" content="opencodex 繁中首發完整教學 2026。13K★ MIT 開源，兩行指令讓 Codex CLI、Claude Code 使用 Claude、Gemini、Grok、DeepSeek、Ollama 等 40+ 供應商。含安裝、Provider 設定、ChatGPT 帳號池、實戰場景。">
+    <meta name="keywords" content="opencodex 教學, opencodex llm proxy, opencodex claude code, codex 使用其他模型, claude code 換模型, llm proxy 繁中, opencodex gemini, opencodex deepseek, opencodex ollama">
+    <meta property="og:title" content="opencodex 完整教學 2026：13K★ LLM Proxy，讓 Claude Code 和 Codex 使用任何 AI 模型">
+    <meta property="og:description" content="opencodex 繁中首發完整教學。兩行指令讓 Codex CLI、Claude Code 接入 40+ LLM 供應商。含 Provider 設定、Ollama 本機部署、ChatGPT 帳號池實戰教學。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/opencodex-llm-proxy-tutorial-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <link rel="canonical" href="https://autodev-ai.com/blog/opencodex-llm-proxy-tutorial-2026.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/opencodex-llm-proxy-tutorial-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "opencodex 完整教學 2026：13K★ LLM Proxy，讓 Claude Code 和 Codex 使用任何 AI 模型",
+      "datePublished": "2026-09-03",
+      "dateModified": "2026-09-03",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "opencodex 繁中首發完整教學，13K★ LLM Proxy，兩行指令讓 Codex CLI 和 Claude Code 使用 40+ LLM 供應商。",
+      "url": "https://autodev-ai.com/blog/opencodex-llm-proxy-tutorial-2026.html",
+      "image": "https://autodev-ai.com/autodev-logo2.png"
+    }
+    </script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans TC', 'Inter', sans-serif; line-height: 1.85; color: #1F2421; background: #F6F1E8; padding: 20px; }
+        .container { max-width: 820px; margin: 0 auto; background: #FFFFFF; padding: 48px 44px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+        h1 { font-family: 'DM Serif Display', 'Noto Serif TC', serif; font-size: 2.1em; font-weight: 700; line-height: 1.3; margin-bottom: 20px; color: #1F2421; }
+        h1 em { color: #C8853F; font-style: italic; }
+        h2 { font-family: 'Noto Serif TC', serif; font-size: 1.6em; font-weight: 600; margin-top: 44px; margin-bottom: 16px; color: #2A2723; border-left: 4px solid #C8853F; padding-left: 12px; }
+        h3 { font-size: 1.2em; font-weight: 700; margin-top: 28px; margin-bottom: 12px; color: #2A2723; }
+        p { margin-bottom: 16px; color: #1F2421; }
+        ul, ol { margin-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        a { color: #C8853F; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { background: #F0EDE8; padding: 2px 6px; border-radius: 4px; font-size: 0.88em; font-family: 'Fira Code', monospace; }
+        pre { background: #1F2421; color: #F6F1E8; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; font-size: 0.88em; line-height: 1.6; }
+        pre code { background: none; padding: 0; font-size: inherit; }
+        .meta { color: #666; font-size: 0.88em; margin-bottom: 28px; }
+        .summary-box { background: #FFF8F0; border: 1px solid rgba(200,133,63,0.3); border-radius: 10px; padding: 24px 28px; margin: 28px 0; }
+        .summary-box h3 { margin-top: 0; color: #C8853F; }
+        .stat-row { display: flex; gap: 16px; margin: 24px 0; flex-wrap: wrap; }
+        .stat-card { flex: 1; min-width: 140px; background: #F6F1E8; border-radius: 10px; padding: 18px 20px; text-align: center; }
+        .stat-card .num { font-size: 1.7em; font-weight: 900; color: #C8853F; }
+        .stat-card .label { font-size: 0.8em; color: #666; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.93em; }
+        th { background: #1F2421; color: #F5C97A; padding: 12px 14px; text-align: left; }
+        td { padding: 11px 14px; border-bottom: 1px solid #EAE6DF; }
+        tr:nth-child(even) td { background: #FAF8F5; }
+        .step-box { background: #F6F1E8; border-radius: 10px; padding: 20px 24px; margin: 16px 0; border-left: 4px solid #C8853F; }
+        .step-box .step-num { font-size: 0.8em; font-weight: 700; color: #C8853F; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+        .step-box h4 { font-size: 1.05em; font-weight: 700; margin-bottom: 8px; color: #1F2421; }
+        .cta-box { background: linear-gradient(135deg, #1F2421 0%, #2C3530 100%); border-radius: 12px; padding: 28px 32px; margin: 36px 0; text-align: center; }
+        .cta-box h3 { color: #F5C97A; margin-top: 0; font-size: 1.15em; }
+        .cta-box p { color: #CCC5B9; margin-bottom: 0; font-size: 0.93em; }
+        .cta-btn { display: inline-block; background: #C8853F; color: #fff; padding: 14px 28px; border-radius: 8px; font-weight: 700; margin-top: 16px; font-size: 0.97em; text-decoration: none; transition: background 0.2s; }
+        .cta-btn:hover { background: #A86E30; text-decoration: none; }
+        .cta-btn.secondary { background: transparent; border: 2px solid #F5C97A; color: #F5C97A; margin-left: 12px; }
+        .cta-btn.secondary:hover { background: rgba(245,201,122,0.1); }
+        .faq-item { border-bottom: 1px solid #EAE6DF; padding: 18px 0; }
+        .faq-q { font-weight: 700; color: #1F2421; margin-bottom: 8px; }
+        .faq-a { color: #444; }
+        .nav-links { font-size: 0.88em; margin-bottom: 32px; color: #888; }
+        .nav-links a { color: #C8853F; }
+        .badge { display: inline-block; background: #C8853F; color: #fff; font-size: 0.75em; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-left: 8px; vertical-align: middle; }
+        .badge.green { background: #2E7D32; }
+        .badge.blue { background: #1565C0; }
+        .provider-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin: 20px 0; }
+        .provider-chip { background: #F0EDE8; border-radius: 8px; padding: 10px 14px; text-align: center; font-size: 0.88em; font-weight: 600; color: #2A2723; }
+        .tip-box { background: #E8F5E9; border: 1px solid #C8E6C9; border-radius: 10px; padding: 16px 20px; margin: 20px 0; }
+        .tip-box strong { color: #2E7D32; }
+        .warn-box { background: #FFF8E1; border: 1px solid #FFE082; border-radius: 10px; padding: 16px 20px; margin: 20px 0; }
+        .warn-box strong { color: #E65100; }
+        @media (max-width: 600px) { .container { padding: 28px 18px; } h1 { font-size: 1.6em; } .cta-btn.secondary { margin-left: 0; margin-top: 10px; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav-links">
+        <a href="/">AutoDev AI</a> › <a href="/blog/">Blog</a> › opencodex 完整教學 2026
+    </div>
+
+    <h1>opencodex 完整教學 2026：<em>13K★ LLM Proxy</em>，讓 Claude Code 和 Codex 使用任何 AI 模型</h1>
+    <p class="meta">2026-09-03 ｜ AutoDev AI｜繁中首發｜開發者工具 / LLM Proxy / agentic coding</p>
+
+    <div class="summary-box">
+        <h3>🔑 三分鐘讀懂</h3>
+        <ul>
+            <li><strong>opencodex 是什麼：</strong>MIT 開源的輕量本機 proxy，讓 Codex CLI、Claude Code、Claude Desktop、Grok Build 使用任意 LLM（Claude、Gemini、Grok、DeepSeek、Ollama 等 40+ 供應商）</li>
+            <li><strong>解決什麼問題：</strong>原生 Codex CLI 只支援 OpenAI 模型，opencodex 把 API 翻譯成各供應商格式，兩行指令搞定</li>
+            <li><strong>有多熱門：</strong>GitHub 13K★、960 forks、GitHub llm-proxy topic 排行第一</li>
+            <li><strong>適合誰：</strong>想省 API 費的台灣開發者、想切換到 DeepSeek/Gemini/Ollama 本機推理的 agentic coding 用戶</li>
+            <li><strong>需要什麼：</strong>Node.js 18+、npm、目標 LLM 的 API key（或本機 Ollama）</li>
+        </ul>
+    </div>
+
+    <div class="stat-row">
+        <div class="stat-card"><div class="num">13K</div><div class="label">GitHub ★</div></div>
+        <div class="stat-card"><div class="num">40+</div><div class="label">支援供應商</div></div>
+        <div class="stat-card"><div class="num">960</div><div class="label">Forks</div></div>
+        <div class="stat-card"><div class="num">#1</div><div class="label">llm-proxy topic</div></div>
+    </div>
+
+    <h2>為什麼開發者趨之若鶩？opencodex 解決的核心痛點</h2>
+    <p>你用 Codex CLI 或 Claude Code 已經習慣了，但有個問題：<strong>它們被鎖死在特定模型上</strong>。OpenAI Codex CLI 預設只能打 OpenAI API，Claude Code 只走 Anthropic API。想用更便宜的 DeepSeek V4 Pro？或者想在沒網路的環境跑 Ollama 本機推理？對不起，官方不支援。</p>
+
+    <p>opencodex 用「proxy 翻譯層」解決這個問題：它在本機 <code>localhost:10100</code> 起一個服務，攔截 Codex Responses API 的請求，即時翻譯成目標供應商的格式（streaming、tool calls、reasoning tokens、images 雙向支援），然後把回應再翻回來。對 Codex CLI 或 Claude Code 來說，它完全感知不到自己其實在跟 DeepSeek 或 Gemini 說話。</p>
+
+    <p>這個架構有幾個實際好處：</p>
+    <ul>
+        <li><strong>費用控制：</strong>DeepSeek V4 Pro 的 API 比 GPT-5.4 便宜 70-80%，直接省成本</li>
+        <li><strong>本機推理：</strong>接 Ollama，完全不需要上雲，隱私100%、適合 Air-gapped 環境</li>
+        <li><strong>ChatGPT 帳號池：</strong>可以管理多個 ChatGPT Free 帳號，自動輪切分配，等於用 Codex 免費跑</li>
+        <li><strong>多工具通吃：</strong>同一個 proxy，Codex CLI、Claude Code、Claude Desktop、Grok Build 都能用</li>
+    </ul>
+
+    <!-- CTA #1 -->
+    <div class="cta-box">
+        <h3>💡 雲端跑 AI 工作流程，用 DigitalOcean 最划算</h3>
+        <p>opencodex + DeepSeek 或 Ollama 本機推理，搭配 DigitalOcean VPS 跑 24/7 自動化任務，月費從 $6 起。</p>
+        <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">立即領 $200 免費額度 →</a>
+    </div>
+
+    <h2>支援哪些 LLM 供應商？</h2>
+    <p>opencodex 開箱即用支援 40+ 供應商，涵蓋主流商業 API 和本機推理方案：</p>
+
+    <div class="provider-grid">
+        <div class="provider-chip">🤖 Claude</div>
+        <div class="provider-chip">✨ Gemini</div>
+        <div class="provider-chip">⚡ Grok</div>
+        <div class="provider-chip">🔵 DeepSeek</div>
+        <div class="provider-chip">🦙 Ollama</div>
+        <div class="provider-chip">🌙 Kimi</div>
+        <div class="provider-chip">🟠 Qwen</div>
+        <div class="provider-chip">🖤 GLM</div>
+        <div class="provider-chip">🌐 OpenRouter</div>
+        <div class="provider-chip">🔶 Together AI</div>
+        <div class="provider-chip">🟣 Fireworks</div>
+        <div class="provider-chip">🏠 LM Studio</div>
+    </div>
+
+    <p>完整清單見 <a href="https://github.com/lidge-jun/opencodex" target="_blank" rel="noopener">GitHub README</a>。只要支援 OpenAI-compatible API 的供應商，理論上都能接。</p>
+
+    <h2>安裝教學（5 步驟，10 分鐘搞定）</h2>
+
+    <div class="tip-box">
+        <strong>💡 前置需求：</strong>Node.js 18+（建議 22+）、npm 或 npx。如果你已經裝過 Claude Code 或 Codex CLI，Node.js 應該已經 OK 了。
+    </div>
+
+    <div class="step-box">
+        <div class="step-num">步驟 1</div>
+        <h4>安裝 opencodex</h4>
+        <pre><code># 方式 A：npm 全域安裝（推薦）
+npm install -g @bitkyc08/opencodex
+
+# 方式 B：npx 無需安裝，直接執行
+npx @bitkyc08/opencodex start
+
+# 方式 C：從 GitHub clone（開發者 / 想改 source）
+git clone https://github.com/lidge-jun/opencodex.git
+cd opencodex
+npm install &amp;&amp; npm run build</code></pre>
+        <p style="margin-top:10px; color:#555; font-size:0.9em;">安裝後確認版本：<code>opencodex --version</code>，成功顯示版本號即完成。</p>
+    </div>
+
+    <div class="step-box">
+        <div class="step-num">步驟 2</div>
+        <h4>啟動 proxy 服務</h4>
+        <pre><code># 啟動 proxy + dashboard（預設 localhost:10100）
+opencodex start
+
+# 或指定 port
+opencodex start --port 10101</code></pre>
+        <p style="margin-top:10px; color:#555; font-size:0.9em;">服務啟動後，開瀏覽器打開 <code>http://localhost:10100</code>，你會看到控制台介面，可以在這裡設定 Provider、查看流量日誌。</p>
+    </div>
+
+    <div class="step-box">
+        <div class="step-num">步驟 3</div>
+        <h4>設定目標 LLM Provider</h4>
+        <p>在控制台介面（或直接編輯 <code>~/.opencodex/config.json</code>）加入你的 Provider 設定：</p>
+        <pre><code>// 範例：使用 Claude（Anthropic）
+{
+  "provider": "anthropic",
+  "model": "claude-fable-5-1",
+  "apiKey": "sk-ant-xxxxxx"
+}
+
+// 範例：使用 Gemini 3.7 Flash
+{
+  "provider": "google",
+  "model": "gemini-3.7-flash",
+  "apiKey": "AIzaxxxxxxxxxx"
+}
+
+// 範例：使用 DeepSeek V4 Pro
+{
+  "provider": "deepseek",
+  "model": "deepseek-v4-pro",
+  "apiKey": "sk-xxxxxxxxxx"
+}
+
+// 範例：使用本機 Ollama（完全免費，無需 API key）
+{
+  "provider": "ollama",
+  "model": "qwen3.8:27b",
+  "baseUrl": "http://localhost:11434"
+}</code></pre>
+    </div>
+
+    <div class="step-box">
+        <div class="step-num">步驟 4A</div>
+        <h4>接入 Codex CLI</h4>
+        <pre><code># 設定環境變數，讓 Codex CLI 指向 opencodex proxy
+export OPENAI_API_KEY="opencodex"
+export OPENAI_BASE_URL="http://localhost:10100/v1"
+
+# 啟動 Codex CLI（正常使用，它不知道背後換了模型）
+codex "幫我重構這個函式，提高可讀性"</code></pre>
+        <p style="margin-top:10px; color:#555; font-size:0.9em;">也可以寫進 <code>.bashrc</code> / <code>.zshrc</code> 永久生效。</p>
+    </div>
+
+    <div class="step-box">
+        <div class="step-num">步驟 4B</div>
+        <h4>接入 Claude Code</h4>
+        <pre><code># 在 Claude Code 的環境設定中加入 proxy endpoint
+export ANTHROPIC_BASE_URL="http://localhost:10100"
+# 或編輯 ~/.claude/settings.json：
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://localhost:10100"
+  }
+}</code></pre>
+        <p style="margin-top:10px; color:#555; font-size:0.9em;">設定後，Claude Code 的 API 呼叫會經由 opencodex proxy 轉發，你在 Provider 設定哪個模型，它就跑哪個。</p>
+    </div>
+
+    <div class="step-box">
+        <div class="step-num">步驟 5（可選）</div>
+        <h4>ChatGPT 帳號池設定</h4>
+        <p>opencodex 的殺手功能之一：管理多個 ChatGPT 帳號，讓 Codex CLI 自動輪切，等效於「免費用 Codex」。</p>
+        <pre><code># 在控制台介面（localhost:10100）→ 帳號池管理
+# 或用 CLI：
+opencodex accounts add --email you@example.com --password yourpass
+opencodex accounts add --email you2@example.com --password yourpass2
+
+# 查看帳號狀態（quota、健康度）
+opencodex accounts list
+
+# 啟用帳號池模式（自動路由到最低使用率的健康帳號）
+opencodex start --pool</code></pre>
+        <div class="warn-box" style="margin-top:12px;">
+            <strong>⚠️ 注意：</strong>帳號池功能請確認符合 OpenAI 使用條款。建議只用於個人開發測試，不要用於商業生產環境。
+        </div>
+    </div>
+
+    <h2>供應商費用比較：同樣的 Claude Code 任務，換模型省多少？</h2>
+    <p>以一個中型任務（輸入 50K tokens、輸出 10K tokens）為例，不同供應商的費用差異：</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>模型</th>
+                <th>Input (/1M)</th>
+                <th>Output (/1M)</th>
+                <th>單次任務估計</th>
+                <th>月 200 次估計</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Claude Fable 5.1</strong></td>
+                <td>$10.00</td>
+                <td>$50.00</td>
+                <td>$1.00</td>
+                <td>$200</td>
+            </tr>
+            <tr>
+                <td><strong>GPT-5.4 Luna</strong></td>
+                <td>$0.20</td>
+                <td>$1.20</td>
+                <td>$0.02</td>
+                <td>$4</td>
+            </tr>
+            <tr>
+                <td><strong>Gemini 3.7 Flash</strong></td>
+                <td>$0.075</td>
+                <td>$0.30</td>
+                <td>$0.007</td>
+                <td>$1.4</td>
+            </tr>
+            <tr>
+                <td><strong>DeepSeek V4 Pro</strong></td>
+                <td>$0.27</td>
+                <td>$1.10</td>
+                <td>$0.025</td>
+                <td>$5</td>
+            </tr>
+            <tr>
+                <td><strong>Qwen3.8-27B (Ollama)</strong></td>
+                <td>$0（本機）</td>
+                <td>$0（本機）</td>
+                <td>$0（只耗電）</td>
+                <td>~$0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>結論：<strong>把 Claude Code 的「重複性任務」（單元測試生成、文件翻譯、代碼格式化）切換到 Gemini 3.7 Flash 或 DeepSeek V4 Pro</strong>，只留複雜推理任務給 Claude Fable 5.1，每月可以省下 60-90% 的 API 費用。</p>
+
+    <h2>四個台灣開發者實戰場景</h2>
+
+    <h3>場景 1：省錢路由策略 — 依任務複雜度切換模型</h3>
+    <p>建立兩個不同的 opencodex 設定檔，在不同任務類型切換：</p>
+    <pre><code># ~/.opencodex/configs/cheap.json（日常代碼任務）
+{
+  "provider": "google",
+  "model": "gemini-3.7-flash",
+  "apiKey": "AIzaxxxxxx"
+}
+
+# ~/.opencodex/configs/smart.json（複雜架構設計）
+{
+  "provider": "anthropic",
+  "model": "claude-fable-5-1",
+  "apiKey": "sk-ant-xxxxxx"
+}
+
+# 切換設定
+opencodex use cheap   # 切到 Gemini（省錢模式）
+opencodex use smart   # 切到 Claude（高品質模式）</code></pre>
+
+    <h3>場景 2：完全離線開發 — Ollama 本機推理</h3>
+    <p>適合資安要求高的企業環境，或沒有穩定網路的情況：</p>
+    <pre><code># 先安裝 Ollama 並下載模型（一次性）
+brew install ollama  # macOS
+ollama pull qwen3.8:27b  # 或 llama4.1:8b
+
+# 啟動 Ollama 服務
+ollama serve
+
+# opencodex 設定接本機 Ollama
+opencodex config set provider ollama
+opencodex config set model qwen3.8:27b
+opencodex config set baseUrl http://localhost:11434
+
+# 啟動 proxy 並測試
+opencodex start
+codex "分析這段代碼的安全性問題"  # 完全離線執行</code></pre>
+
+    <div class="tip-box">
+        <strong>💡 硬體建議：</strong>Qwen3.8-27B 約需 16GB RAM（可用 4-bit 量化降至 8GB），Llama 4.1 8B 只需 8GB RAM。M2 MacBook Air 16GB 可流暢跑 27B 模型。
+    </div>
+
+    <h3>場景 3：CI/CD 自動化測試 — 低成本批次任務</h3>
+    <p>在 GitHub Actions 裡用 opencodex 跑代碼審查，全程走 DeepSeek API（比 Claude 便宜 90%）：</p>
+    <pre><code"># .github/workflows/ai-review.yml
+- name: Start opencodex proxy
+  run: |
+    npm install -g @bitkyc08/opencodex
+    opencodex start --daemon
+  env:
+    OPENCODEX_PROVIDER: deepseek
+    OPENCODEX_MODEL: deepseek-v4-pro
+    OPENCODEX_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+
+- name: Run AI code review
+  run: |
+    export OPENAI_BASE_URL="http://localhost:10100/v1"
+    export OPENAI_API_KEY="opencodex"
+    codex "審查這個 PR 的安全性和代碼品質" --non-interactive</code></pre>
+
+    <h3>場景 4：多模型 A/B 測試 — 找最適合你的模型</h3>
+    <p>同一個任務跑多個模型，比較輸出品質和速度：</p>
+    <pre><code"># 快速切換測試不同模型
+for provider in anthropic google deepseek; do
+  echo "=== Testing $provider ==="
+  opencodex config set provider $provider
+  time codex "重構這個函式為非同步版本" --file utils.js
+done</code></pre>
+
+    <!-- CTA #2 -->
+    <div class="cta-box">
+        <h3>📊 想學 AI 工具的系統化應用？</h3>
+        <p>DataCamp 提供完整的 AI 開發者課程，從 LLM 到 agentic coding 工作流程，台灣開發者認可度最高的線上平台。</p>
+        <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">免費試用 DataCamp →</a>
+        <a href="https://m.do.co/c/6121a295f624" class="cta-btn secondary" target="_blank" rel="noopener">DigitalOcean $200 Credit</a>
+    </div>
+
+    <h2>opencodex vs 其他 LLM Proxy 方案比較</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>功能 / 工具</th>
+                <th>opencodex</th>
+                <th>LiteLLM</th>
+                <th>OpenRouter</th>
+                <th>Ollama 原生</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Codex CLI 整合</strong></td>
+                <td>✅ 原生</td>
+                <td>⚠️ 需手動設定</td>
+                <td>✅ OpenAI-compatible</td>
+                <td>⚠️ 需橋接</td>
+            </tr>
+            <tr>
+                <td><strong>Claude Code 整合</strong></td>
+                <td>✅ 原生</td>
+                <td>⚠️ 需手動設定</td>
+                <td>❌ 不支援 Anthropic API</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td><strong>ChatGPT 帳號池</strong></td>
+                <td>✅ 內建</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td><strong>本機 UI Dashboard</strong></td>
+                <td>✅ localhost:10100</td>
+                <td>✅ 有</td>
+                <td>❌（雲端）</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td><strong>安裝複雜度</strong></td>
+                <td>🟢 低（npm 一行）</td>
+                <td>🟡 中（pip + 設定）</td>
+                <td>🟢 低（雲端，不需安裝）</td>
+                <td>🟢 低</td>
+            </tr>
+            <tr>
+                <td><strong>完全離線</strong></td>
+                <td>✅ 接 Ollama</td>
+                <td>✅ 接 Ollama</td>
+                <td>❌（需連網）</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td><strong>支援供應商數</strong></td>
+                <td>40+</td>
+                <td>100+</td>
+                <td>200+</td>
+                <td>本機模型只</td>
+            </tr>
+            <tr>
+                <td><strong>GitHub ★</strong></td>
+                <td>13K</td>
+                <td>15K+</td>
+                <td>（雲端服務）</td>
+                <td>90K+</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>選 opencodex 的理由：</strong>你主要用 Codex CLI 或 Claude Code，同時又想接不同 LLM，opencodex 是最簡單的方案。LiteLLM 功能更完整但設定更複雜，適合企業級部署。</p>
+
+    <h2>常見問題（FAQ）</h2>
+
+    <div class="faq-item">
+        <div class="faq-q">Q1：opencodex 是免費的嗎？</div>
+        <div class="faq-a">是的，opencodex 本身是 MIT 開源免費。你只需要支付目標 LLM 供應商的 API 費用。如果你接 Ollama 本機跑開源模型，那整套完全免費（只有電費）。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q2：opencodex 安全嗎？我的 API key 會外洩嗎？</div>
+        <div class="faq-a">opencodex 是純本機 proxy，跑在你的電腦上，不需要連到第三方服務。你的 API key 儲存在本機 <code>~/.opencodex/config.json</code>，網路請求是從你的 IP 直接打到 LLM 供應商，opencodex 不會中繼或記錄你的 key。不過要注意 localhost:10100 dashboard 預設無需認證，如果是多人共用伺服器記得設 auth。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q3：可以同時跑多個 Provider，根據模型能力動態路由嗎？</div>
+        <div class="faq-a">opencodex 目前是單一 Provider 設定，要切換需要手動改設定或使用 config 檔案切換。更進階的動態路由（如「代碼任務用 DeepSeek，複雜推理用 Claude」的自動決策），目前建議配合 LiteLLM 或自己寫路由邏輯。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q4：Windows 可以用嗎？</div>
+        <div class="faq-a">理論上可以，Node.js 18+ 是跨平台的，npm install 應該能成功。但社群主要在 macOS/Linux 上測試，Windows 上建議透過 WSL2（Ubuntu）執行以避免路徑問題。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q5：opencodex 和 Claude Code 的 MCP 整合衝突嗎？</div>
+        <div class="faq-a">不衝突。opencodex 只攔截 API 呼叫層，MCP 整合是在應用層運作，兩個可以同時使用。你可以用 opencodex 讓 Claude Code 跑 Gemini 模型，同時保留 MCP 的工具呼叫（如 Composio 整合 Slack/Notion）。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q6：ChatGPT 帳號池合法嗎？</div>
+        <div class="faq-a">這需要你自行判斷。OpenAI 的使用條款禁止帳號共享和自動化繞過限制，帳號池功能如果用於規避速率限制，可能違反條款。建議只在個人學習測試環境使用，不要用於商業用途或高頻生產請求。</div>
+    </div>
+
+    <!-- CTA #3 Gumroad -->
+    <div class="cta-box">
+        <h3>🎯 你的 AI Agent 技能包來了</h3>
+        <p>包含 50+ Claude Code 實戰 prompt 模板、完整 agentic coding 工作流程設定，台灣開發者首選資源包。</p>
+        <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn" target="_blank" rel="noopener">取得 AI Agent 技能包 →</a>
+    </div>
+
+    <h2>適合誰 / 不適合誰</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>✅ 適合你，如果...</th>
+                <th>❌ 不適合你，如果...</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>你主要用 Codex CLI 或 Claude Code 做 agentic coding</td>
+                <td>你不用 Codex 或 Claude Code，只用 web UI</td>
+            </tr>
+            <tr>
+                <td>你想省 API 費，換用更便宜的模型</td>
+                <td>你只需要接一個固定 Provider，沒有切換需求</td>
+            </tr>
+            <tr>
+                <td>你在資安要求高的環境，想用 Ollama 完全離線</td>
+                <td>你不想碰命令列，只想要 GUI 解決方案</td>
+            </tr>
+            <tr>
+                <td>你想同時在不同機器/項目使用不同 LLM</td>
+                <td>你需要企業級 multi-tenant 路由，建議直接用 LiteLLM</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>小結：opencodex 是 agentic coding 工具鏈的隱形補丁</h2>
+    <p>13K★ 的背後是一個簡單但精準的需求：<strong>讓開發者不被單一廠商鎖死</strong>。Codex CLI 和 Claude Code 都是優秀的 agentic coding 工具，但它們的 API 設計其實已經是業界標準格式，opencodex 利用這一點，用最小的 footprint（本機 proxy + npm 安裝）解鎖了 40+ 供應商。</p>
+
+    <p>對台灣開發者來說，最直接的收益是<strong>成本控制</strong>：把日常代碼任務路由到 Gemini 3.7 Flash（$0.075/1M input）或 DeepSeek V4 Pro，只留複雜推理給昂貴的 flagship 模型。加上本機 Ollama 的選項，月費幾乎可以控制在幾美元以內。</p>
+
+    <p>目前繁中幾乎沒有完整教學（我們確認過），如果你是 Codex CLI 或 Claude Code 用戶，現在是嘗試的最好時機——趁競品還不知道這個工具的時候，先掌握。</p>
+
+    <h3>延伸閱讀</h3>
+    <ul>
+        <li><a href="/blog/composio-claude-code-skills-tutorial-2026.html">Composio Claude Code 教學 2026：73K★ 一個指令直連 Slack/Notion/GitHub</a></li>
+        <li><a href="/blog/claude-fable-5-review-2026.html">Claude Fable 5 完整評測 2026：史上最強又被政府喊停的 AI</a></li>
+        <li><a href="/blog/gemini-37-flash-review-2026.html">Gemini 3.7 Flash 完整評測 2026：Google AI 策略大轉向</a></li>
+        <li><a href="/blog/deepseek-v4-pro-review-2026.html">DeepSeek V4 Pro 完整評測 2026：繁中首發，最強開源 Coder</a></li>
+    </ul>
+</div>
+</body>
+</html>
