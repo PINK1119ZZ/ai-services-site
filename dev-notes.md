@@ -1,5 +1,153 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 189 | 2026-09-04 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-09-04 22:00 UTC | 搜尋範圍：GPT-6 Astra 發布確認 + Gemini 3.8 Flash + Meta Muse Spark 1.3 + Grok 4.7 Sep 12 窗口 + GitHub trending + PH + affiliate 掃描 | 模式：Tue/Thu/Sat 06:00 ai-dev-research cron
+
+### 📋 本輪核心發現
+
+---
+
+### 🚨 ITEM 1：GPT-6 Astra — 9/3 正式發布（P0-URGENT 繁中評測）
+
+**狀態：** ✅ 2026-09-03 GA，分階段發布（Daybreak 企業優先 → ChatGPT Plus/Pro/API 跟進）
+
+**關鍵數據：**
+- 模型 ID：`gpt-6-astra`
+- 定價：$10/M input / $50/M output / $1/M cached input
+- Context window：1.05M tokens（1,050,000）
+- Max output：128K tokens
+- Knowledge cutoff：2026 年 4 月 30 日
+- Reasoning effort：low / medium / high / xhigh / max（5 段）
+- Hosted tools：web_search, file_search, image_generation, code_interpreter, hosted_shell, apply_patch, skills, computer_use, mcp, tool_search
+- 訓練規模：Stargate（Texas Abilene）100,000+ GPUs，史上最大訓練 run
+- Greg Brockman 宣稱：「We've entered the AGI era」
+
+**Benchmark vs 競品（多源確認）：**
+| Benchmark | GPT-6 Astra | GPT-5.6 Sol | Claude Fable 5.1 | Gemini 3.8 Flash |
+|---|---|---|---|---|
+| FrontierMath Tier 4 v2 | **97.6%** | 83.0% | 87.8% | — |
+| GPQA Diamond | **96.0%** | 94.6% | 93.7% | 95.3% |
+| ARC-AGI-3 | **99.9%** | 7.8% | 30.2% | — |
+| ExploitBench | **100%** | 78.5% | 70.0% | — |
+| Terminal-Bench 4.0 | **57.7%** | 37.3% | 55.8% | 19.1% |
+| OSWorld 2.0 | **72.6%** | 65.7% | 70.2% | — |
+
+**SEO 窗口評估（P0-URGENT）：**
+- 繁中評測幾乎完全空白（確認搜尋 gpt-6-astra 評測、gpt-6 astra 繁中）
+- 我們有 blog/openai-astra-gpt6-critical-delay-2026.html（舊文），現在需要全新 GA 評測文
+- 故事性極強：Critical 安全事件 → 終於發布 → AGI 宣言 → 定價比較
+- 48h 黃金首發窗口（9/3-9/5）現在正在進行
+- **預估搜尋量：10K-30K/月**（astra 事件持續熱度 + GA 新搜尋）
+- seo-writer 執行：`blog/gpt-6-astra-review-2026.html`
+
+---
+
+### 🆕 ITEM 2：Gemini 3.8 Flash — 9/2 GA（P1-HIGH 新評測文）
+
+**狀態：** ✅ 2026-09-02 GA
+
+**關鍵數據：**
+- 模型 ID：`google/gemini-3.8-flash`（OpenRouter 可用）
+- 定價：$0.75/M input / $3.75/M output（與 3.7 Flash 完全相同）
+- Context window：1M tokens
+- 促銷截止：2027-01-01（屆時翻倍）
+- 特色：Google 第四個 Flash 型號（6 週內）；coding + agentic 超越 3.7
+- 附帶：Gemini 3.8 Flash Cyber（資安特化版，Fairwind-gated 限制訪問）
+- Artificial Analysis Intelligence Index：59 分
+
+**SEO 窗口評估（P1-HIGH）：**
+- 繁中幾乎無完整評測（3.7 Flash 文 blog/gemini-37-flash-review-2026.html 已有）
+- 機會：「Gemini 新一代 Flash，定價不變但 benchmark 全面超越 3.7」
+- 可與 GPT-6 Astra 定價比較：$0.75 vs $10（40x 差距，省錢角度極強）
+- **預估搜尋量：3K-8K/月**
+- seo-writer 執行：`blog/gemini-38-flash-review-2026.html`
+
+---
+
+### 🆕 ITEM 3：Meta Muse Spark 1.3 + Muse Code — 9/2 GA（P2-WATCH）
+
+**狀態：** ✅ 2026-09-02 GA
+
+**關鍵數據：**
+- Muse Spark 1.3（Muse Code 最新底層模型）
+- Muse Code：terminal coding agent（Claude Code 類似，Meta Model API）
+- 改進：agentic + coding task 大幅提升，real-world settings 更易用
+- 定價：與 Muse Spark 1.2 相同（contributor tier 提供訓練資料換取更低費率）
+- Muse Code SDK developer preview：可嵌入自建應用
+- 路線圖：更大模型 + Muse Spark open weights（未定日期）
+
+**SEO 窗口評估（P2-WATCH）：**
+- Muse Code 無 affiliate program（Meta 直接訂閱）
+- 繁中空白，但搜尋量較低（非主流 coding agent）
+- 搭配「AI Coding Agent 大比較」比較頁機會更佳（vs Claude Code / Codex / Muse Code）
+- 暫列 P2，等 Muse Spark open weights 放出後升 P1
+
+---
+
+### 🔴 ITEM 4：Grok 4.7 — Sep 12 窗口確認（P1-HIGH 監控中）
+
+**狀態：** 仍未 GA（截至 2026-09-04 22:00 UTC）
+
+**關鍵數據：**
+- 9/2 Musk 宣布「10 days」→ 目標 Sep 12
+- 2.1T 參數（比 Grok 4.6 的 1.5T 增加 40%）
+- SpaceX engineering data 融入訓練（差異化因素）
+- 多分析師確認 Sep 12 為最可能日期
+- SpaceXAI 官方文件仍列 Grok 4.6 為最新模型
+
+**SEO 窗口評估（P1-HIGH → GA 立即 P0-URGENT）：**
+- 現有 blog/grok-4-6-review-2026.html 可串聯
+- GA 後立即執行 blog/grok-47-spaceXai-review-2026.html（預估 $200-600/月）
+- 48h 繁中首發窗口
+
+---
+
+### 📊 ITEM 5：本週大 AI 競賽概覽（史上最密集 model-release week）
+
+**2026-09-01 至 2026-09-03（同一週內）：**
+1. Claude Fable 5.1 + Mythos 5.1（9/1，Anthropic）— 已有文
+2. Muse Spark 1.3 + Gemini 3.8 Flash（9/2，Meta + Google）— 本輪新發現
+3. GPT-6 Astra（9/3，OpenAI）— 🚨 P0-URGENT
+4. Grok 4.7（9/12，SpaceXAI）— P1-HIGH 待觸發
+
+**這是 2026 年最密集的 AI 發布週**，4 大實驗室在 3 天內全部發布 flagship 升級。繁中媒體普遍只聚焦 GPT-6 Astra，其他三家報導稀少。
+
+---
+
+### 🔎 ITEM 6：GitHub + PH 趨勢掃描
+
+**GitHub ai-framework topic 新進：**
+- 多個 agentic framework 在 8 月末更新（agent-runtime, context-engineering, agentic-workflow）
+- 趨勢：MCP servers + coding-agent harnesses 主導（基礎設施競爭取代模型競爭）
+- 對我們的影響：開發者受眾對「如何選 coding agent 工具」搜尋量持續成長
+
+**Product Hunt 9月：**
+- PH 9/1 trending：Lovable, Wispr Flow, Framer, Granola, Vapi, Replit 依然主導
+- Kilo Code 月榜領先確認（繁中零評測，但禁 organic SEO affiliate → P2 謹慎）
+- PH 9 月新進：Instruct 2.5（335 votes），Community Figma MCP server（335 votes）
+
+---
+
+### 💰 ITEM 7：Affiliate 掃描更新
+
+**無新超門檻 affiliate 發現（Ivan 積壓清單不變）**
+
+確認清單（adskull.io + oakgen + monsterclaw 三源，2026-09-04）：
+- AdSkull：30% recurring LIFETIME（新進，Ivan 積壓已列 proposal）
+- Jasper AI：25% recurring 12 months（45 day cookie，$25 min）
+- AdCreative.ai：30-40% LIFETIME（PartnerStack，strategist 已提案）
+- GetResponse：40-60% recurring 12mo（Ivan 積壓）
+- ManyChat：50% recurring 120-day（Ivan 積壓）
+- Semrush：$200-350/sale CPA（strategist 已提案）
+- Reclaim.AI：25-40% 12mo + $1/signup（Ivan 積壓）
+- n8n：30% recurring 12mo（Ivan 積壓）
+- ElevenLabs：20% recurring 12mo（Ivan 積壓）
+
+**本輪無新 P1-HIGH affiliate 觸發（30%+ LIFETIME 門檻）**
+
+---
+
 ## Round 186 | 2026-09-02 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-09-02 22:00 UTC | 搜尋範圍：GitHub trending + Product Hunt + HackerNews + AI 模型發布追蹤（Grok 4.7 / Gemini 3.5 Pro / Atlas）+ affiliate 掃描 | 模式：Tue/Thu/Sat 06:00 ai-dev-research cron
