@@ -1888,3 +1888,151 @@ Product Hunt 8/30 趨勢、HackerNews 8/29-30、GitHub trending AI、新 affilia
 | 2026-09-03 | Gemini 3.7 Flash 降價促銷 | gemini 3.7 flash 評測 | 5K-12K/月 | 間接 DO+DC | $200-500 | autodev-ai | **P1-HIGH（催促發布）** |
 | 2026-09-03 | OpenAI Astra（已發文） | openai astra 評測 | 已捕捉 | ✅ 已發布 | $300-800 | autodev-ai | ✅ 完成 |
 
+
+---
+
+## Round 188 — 2026-09-04 00:30 UTC（Fri 08:30 ai-trend-hunter cron）
+
+**核心發現本輪：**
+1. 🔴 **Grok 4.7** — 仍未 GA，Sep 12 目標窗口迫近（距今 ~8 天）
+2. 🚨 **Ox Alpha → GLM-5.3-Flash** — Z.ai 史上最大 stealth 發布事件（20T tokens/6天），OpenRouter/OpenCode 新王，繁中零完整解析
+3. 🆕 **Skydive** — PH 8/27 日榜 #1、週榜 #4，AI Coworker 平台，Build cloud agents across tools
+4. 🆕 **Sider Code** — PH 9/1 日榜 #5，Chrome extension「plain words reshape any website」
+5. 🆕 **Kilo Code for JetBrains（9月更新）** — 月榜領先，$99.50 affiliate 但禁 organic SEO
+6. 🆕 **Computable GPU Index（CGI）** — 開源 GPU 算力價格指數，PH Top 9月
+7. 🔴 **GLM-5.3 / GLM-5.3-Flash** — Z.ai 8/14 發布（$1.40/$4.40，coding 旗艦），50% promo 至 9/9
+
+**Affiliate 掃描本輪：**
+- AI/ML API：30% recurring，90-day cookie（P2 Ivan 積壓）
+- ElevenLabs：20% recurring/12mo（P2）
+- Jasper AI：25-30% recurring/12mo，45-day（P2 Ivan）
+- ActiveCampaign：30% recurring，90-day（P2 Ivan）
+
+**無新 30%+ 永久 recurring affiliate 超門檻發現（Ivan 積壓清單不變）**
+
+---
+
+### 🔴 P1-HIGH 持續｜Grok 4.7 — Sep 12 窗口倒數 8 天
+
+**確認來源：** atoms.dev + kie.ai + iweaver.ai + aireiter.com（Sep 2-3 2026 更新）
+
+**核心事實：**
+- Elon Musk Sep 2 表示「in 10 days」→ 目標 **Sep 12, 2026**
+- 4.7 尚無：API model ID、pricing、context window、benchmark card
+- xAI API 文件目前最新仍列 grok-4.6（Aug 12 GA）
+- Grok 4.6 = 1.5T V9 base，AAII score 61（= GPT-5.6 Sol Max，-1 vs Claude Fable 5）
+- 4.7 特點：「stronger intelligence + efficiency」，更多 SpaceX 工程數據融入
+
+**繁中 SEO 機會（GA 後）：**
+- 關鍵字：grok 4.7 評測 / grok 4.7 vs claude fable 5 / spaceXAI grok 4.7
+- 搜尋量估計：GA 後 24-72h 窗口 8K-25K/月
+- **觸發條件：docs.x.ai 或 openrouter.ai 出現 grok-4.7 → P0-URGENT seo-writer 立即執行**
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-------|---------|-----------|---------|
+| 2026-09-04 | Grok 4.7（仍未 GA，Sep 12 窗口） | grok 4.7 評測, grok 4.7 vs fable 5 | 8K-25K/月（GA後） | 間接 DO+DC | $200-600 | autodev-ai |
+
+---
+
+### 🚨 P1-HIGH 新機會｜Ox Alpha / GLM-5.3-Flash — Z.ai 史上最大 Stealth 發布，20T tokens/6天
+
+**確認來源：** requesty.ai + cellcog.ai + coursiv.io + openrouter.ai（Aug 20-26 2026）
+
+**核心事實：**
+- Aug 20：`stealth/ox-alpha` 神秘出現 OpenRouter + OpenCode，無 lab 名、無 paper、免費
+- 規格：1M token context，multimodal（text+image+video），max output 131K tokens
+- Aug 26：Z.ai 創辦人 Jie Tang 確認 = **GLM-5.3-Flash early build**
+  - 320B total / 18B active 參數（sparse hybrid attention）
+  - MIT 授權（weights 因資安審查晚 2 週放出）
+- **OpenRouter 記錄：20T tokens/6 天**（OpenRouter 史上最高，是第二名的 2.3x）
+- **OpenCode 記錄：221,000 unique users / 5M sessions / #2 模型 by usage**
+
+**Z.ai 商業情報：**
+- GLM-5.3 旗艦：$1.40 input / $4.40 output per 1M（Aug 14 GA，Artificial Analysis 排名第 9/186 模型，AI Index 60）
+- GLM-5.3-Flash：$0.15/$0.50（50% promo 至 Sep 9）
+- GLM Coding Plan：$18/月起（coding-focused subscription）
+- **FrontierSWE benchmark：Z.ai 委託 Proximal 測試，1M context，128K output，主打 agentic coding**
+- Cyber capability 意外成長（2,436 real-world vulnerabilities 識別），weights 延遲放出
+
+**繁中 SEO 機會：**
+- 關鍵字：ox alpha 是什麼 / GLM-5.3-Flash 教學 / z.ai glm 5.3 評測
+- 搜尋量：2K-6K/月（stealth launch 故事性極強，繁中完全空白）
+- **故事角度：「史上最大神秘 AI：6 天 20 兆 tokens，最後揭開是 Z.ai GLM-5.3-Flash」**
+- 有 affiliate？❌（Z.ai 無公開 affiliate program）
+- **替代變現：DigitalOcean（Z.ai API 部署） + DataCamp（multimodal AI course）**
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-------|---------|-----------|---------|
+| 2026-09-04 | Ox Alpha / GLM-5.3-Flash 事件解析 | ox alpha 是什麼, glm-5.3-flash 教學 | 2K-6K/月 | 間接 DO+DC | $150-400 | autodev-ai |
+
+---
+
+### 🆕 P2-WATCH｜Skydive — AI Coworker 平台，PH 8/27 日榜 #1
+
+**確認來源：** producthunt.com + usecarly.com + startupcorners.com（Aug 27 2026）
+
+**核心事實：**
+- 公司：Anything（AI app-builder company）
+- 功能：Build AI coworkers with own cloud computer（browser + file system + terminal）
+- Slack / email / iMessage 溝通，170+ 模型支援（not locked to single provider）
+- 發布時間：Aug 20, 2026（20+ 公司 closed beta）
+- PH 成績：8/27 日榜 **#1**，週榜 **#4**
+
+**繁中 SEO 機會：**
+- 關鍵字：skydive ai coworker / ai coworker 平台 / anything skydive 教學
+- 搜尋量：1K-3K/月
+- 有 affiliate？❓（未確認，需查 anything.ai 官網）
+- 建議：P2-WATCH，確認 affiliate 後升 P1
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-------|---------|-----------|---------|
+| 2026-09-04 | Skydive（Anything AI Coworker） | skydive ai, ai coworker 台灣 | 1K-3K/月 | 待確認 affiliate | $100-400（若有 affiliate） | autodev-ai |
+
+---
+
+### 🆕 P2-WATCH｜Computable GPU Index（CGI）— 開源 GPU 算力透明定價
+
+**確認來源：** startupcorners.com product digest 2026-09-02（PH 上榜）
+
+**核心事實：**
+- 功能：First open-source price index for GPU compute（透明成本 benchmark）
+- 目標受眾：developers + teams（需要 GPU 算力規劃/比較的使用者）
+
+**繁中 SEO 機會：**
+- 關鍵字：gpu 算力費用比較 / 雲端 GPU 價格指數
+- 搜尋量：500-2K/月（偏長尾）
+- 有 affiliate？❌（開源工具，無 affiliate）
+- 建議：P3，若搭配 DigitalOcean/CoreWeave GPU 文章可間接串聯
+
+---
+
+### 🆕 P2-WATCH｜Sider Code — Chrome Extension Reshape Websites
+
+**確認來源：** producthunt.com（Sep 1 2026，日榜 #5）
+
+**核心事實：**
+- 功能：Chrome extension，plain-language instructions 重塑任何網頁
+- 開發商：Sider AI（原 AI Research Agent & Extension）
+- PH 成績：9/1 日榜 #5
+
+**繁中 SEO 機會：**
+- 關鍵字：sider code 教學 / ai 改網頁 chrome 外掛
+- 搜尋量：500-2K/月
+- 有 affiliate？❓（需查，Sider 有 premium 訂閱）
+- 建議：P2-WATCH
+
+---
+
+### 📊 Round 188 綜合機會表
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 | 優先級 |
+|------|------|--------|-----------|---------|-----------|---------|-------|
+| 2026-09-04 | Grok 4.7（仍未 GA，Sep 12） | grok 4.7 評測, spaceXAI | 8K-25K（GA後） | 間接 DO+DC | $200-600 | autodev-ai | 🔴 P1-HIGH→P0 GA後 |
+| 2026-09-04 | Ox Alpha / GLM-5.3-Flash 事件 | ox alpha 是什麼, glm-5.3 評測 | 2K-6K/月 | 間接 DO+DC | $150-400 | autodev-ai | 🔴 P1-HIGH（故事性強，繁中空白） |
+| 2026-09-04 | Skydive（Anything AI Coworker） | skydive ai, ai coworker | 1K-3K/月 | 待確認 affiliate | $100-400 | autodev-ai | 🟡 P2-WATCH |
+| 2026-09-04 | CGI（GPU 算力開源指數） | gpu 算力費用比較 | 500-2K/月 | 間接（開源） | $50-150 | autodev-ai | 🟢 P3 |
+| 2026-09-04 | Sider Code Chrome extension | sider code 教學 | 500-2K/月 | 待確認 affiliate | $50-200 | autodev-ai | 🟡 P2-WATCH |
+| 2026-09-04 | GLM-5.3 旗艦評測 | glm 5.3 coding, z.ai review | 1K-3K/月 | 間接 DO+DC | $100-300 | autodev-ai | 🟡 P2 |
+| 2026-09-04 | ElevenLabs affiliate（20%/12mo） | elevenlabs 評測 tts 2026 | 3K-8K/月 | 20% recurring/12mo | $200-600 | autodev-ai | 🟡 P2（Ivan 積壓） |
+
+**預估新增月收入潛力（本輪）：$450-1,300/月**（Grok 4.7 GA後 $200-600 + Ox Alpha/GLM-5.3-Flash $150-400 + 其他 $100-300）
