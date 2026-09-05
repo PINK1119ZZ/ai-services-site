@@ -2036,3 +2036,185 @@ Product Hunt 8/30 趨勢、HackerNews 8/29-30、GitHub trending AI、新 affilia
 | 2026-09-04 | ElevenLabs affiliate（20%/12mo） | elevenlabs 評測 tts 2026 | 3K-8K/月 | 20% recurring/12mo | $200-600 | autodev-ai | 🟡 P2（Ivan 積壓） |
 
 **預估新增月收入潛力（本輪）：$450-1,300/月**（Grok 4.7 GA後 $200-600 + Ox Alpha/GLM-5.3-Flash $150-400 + 其他 $100-300）
+
+---
+
+## Round 190 — 2026-09-05（Sat 00:30 UTC，ai-trend-hunter cron）
+
+### 🎯 本輪核心任務
+Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 Flash P1-HIGH 指令。
+本輪工作：確認 Grok 4.7 狀態（Sep 12 倒數 7 天）、掃描新 Product Hunt / GitHub 機會、更新 affiliate 雷達。
+
+---
+
+### ✅ 確認狀態：Grok 4.7 仍未 GA（Sep 12 窗口倒數 7 天）
+
+**確認來源：** iweaver.ai + kie.ai + biggo.com finance + x.ai/news（2026-09-05）
+
+**核心事實：**
+- xAI API 文件仍列 `grok-4.6` 為最新模型（截至 Sep 5 00:30 UTC）
+- x.ai/news 最新條目：Aug 14「Introducing Grok 4.6」，無新條目
+- Sep 12 窗口：Musk 9/2「10 days」= 目標 9/12，仍未公告確切時間
+- 2.1T 參數（vs Grok 4.6 的 1.5T，+40%），SpaceX 工程資料差異化
+- 發布節奏加速：Grok 4.5（Jul）→ 4.6（Aug 12）→ 4.7（Sep 12 目標）= 2 代/2 個月
+
+**繁中 SEO 機會：**
+- 關鍵字：「Grok 4.7 評測」「grok 4.7 spaceXAI」「grok 4.7 2.1 兆參數」「xAI grok 最新」
+- 搜尋量：GA 後 8K-25K/月（繁中空白完全確認）
+- 窗口：GA 後 48h P0-URGENT
+
+**watchlist 狀態維持：🔴 P1-HIGH MONITORING → GA 後升 P0-URGENT**
+
+---
+
+### 🆕 P1-HIGH｜Higgsfield Genjutsu — AI 影片動作轉換工具（有 affiliate，creator 受眾）
+
+**確認來源：** higgsfield.ai + higgsfield.ai/blog/higgsfield-affiliate-program-2026 + adskull.io affiliate review（Sep 2026）
+
+**核心事實：**
+- 產品：AI 影片動作轉換工具（Motion Transfer + Object Swap）
+- 核心功能：上傳影片 → 轉換動作/角色/場景，保留動作一致性（lip sync + camera movement + VFX）
+- 定價：15 sec 480p = 40 credits（$2），720p = 104 credits（$5.20），1080p = 144 credits（$7.20）
+- 競爭定位：與 Kling / Runway / Seedance 不同切角（動作轉換特化，非純生成）
+- PH 出現：Product Hunt September 2026 trending 清單有「Higgsfield Genjutsu」出現
+
+**Affiliate 評估：✅**
+- Higgsfield 有 affiliate program（affiliate@higgsfield.ai 直接申請）
+- 佣金：未在公開資料明確標注百分比（adskull.io 指出「terms differ by program surface」）
+- 替代選項：adskull.io 建議自家 30% LIFETIME（但 Higgsfield 本身有 creator monetization 路徑）
+- 最高轉換格式：YouTube 比較影片（X vs Y）+ 評測文
+
+**繁中 SEO 機會：**
+- 關鍵字：「higgsfield genjutsu 教學」「ai 影片動作轉換」「higgsfield 評測 2026」「motion transfer ai 繁中」
+- 搜尋量估計：1K-3K/月（工具特殊性，轉換率高）
+- 有 affiliate？⚠️（有申請路徑，佣金結構未完全公開）
+- 建議：P1-HIGH（申請確認佣金後直接執行評測 + 教學文）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-------|---------|-----------|---------|
+| 2026-09-05 | Higgsfield Genjutsu | higgsfield genjutsu 教學, motion transfer ai | 1K-3K/月 | Higgsfield affiliate（需確認佣金）+ DigitalOcean | $100-400 | autodev-ai |
+
+---
+
+### 🆕 P1-HIGH｜Monid — "OpenRouter for Agent Tools"（Product Hunt September 月榜 #3）
+
+**確認來源：** producthunt.com/products/monid（2026 Sep 月榜第 3）+ Product Hunt discussion
+
+**核心事實：**
+- 功能：讓 AI Agent 一個 API key 連接 1,800+ 個外部 API（無訂閱，按用量計費）
+- 覆蓋範疇：SEO / lead gen / video+music generation / social media / stocks / market trends / on-chain data / competitor tracking / sentiment analysis
+- 定位：「OpenRouter for agent tools」（路由工具 API，非 LLM 路由）
+- PH 成績：Sep 月榜 #3（2.1K Followers）
+- 發展版本：Monid 2.0（本月主要版本）
+
+**Affiliate 評估：❓**
+- 未確認 Monid 有公開 affiliate program（需查 monid.io 官網）
+- 商業模式：按 API 用量計費（非訂閱），affiliate 架構不確定
+- 但有 SEO 機會：開發者受眾，「agent tools routing」是新興搜尋詞
+
+**繁中 SEO 機會：**
+- 關鍵字：「monid 教學」「ai agent api 整合」「1800個 api agent 工具」「openrouter agent tools 比較」
+- 搜尋量估計：500-2K/月（新工具，但定義新類別）
+- 有 affiliate？❓（需確認）
+- 建議：P1-HIGH 教學文（開發者受眾完美吻合，用量計費無 affiliate 問題 → 用 DigitalOcean CTA）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-------|---------|-----------|---------|
+| 2026-09-05 | Monid 2.0 | monid 教學, ai agent api 工具, 1800 api agent | 500-2K/月 | 間接 DO + DataCamp | $80-300 | autodev-ai |
+
+---
+
+### 🆕 P1-HIGH｜Kilo Code — 開源 Agentic Engineering Platform（Sep 月榜 #1，6K Followers）
+
+**確認來源：** producthunt.com Sep 月榜（#1，6K Followers）
+
+**核心事實：**
+- 功能：開源 agentic engineering platform（coding agent 完整平台）
+- Sep 月榜第 1，6K Followers（極高社群熱度）
+- 開源定位（vs 閉源 Cursor / Claude Code）
+
+**Affiliate 評估：⚠️ 謹慎**
+- 已知：R187 確認 Kilo Code affiliate $99.50 one-time，**但禁止 organic SEO 流量**（重大限制）
+- 策略：可寫評測文 → 但不嵌 affiliate link（改用 DigitalOcean + DataCamp 佔位）
+- 或寫「Kilo Code vs Claude Code vs Cursor 比較文」→ 夾帶 Cursor / Claude Code 相關 affiliate
+
+**繁中 SEO 機會：**
+- 關鍵字：「kilo code 教學」「kilo code vs cursor 2026」「開源 coding agent 平台」「kilo code 繁中」
+- 搜尋量估計：1K-3K/月（月榜 #1，開源 buzz）
+- 建議：P1-HIGH 評測 + 比較文（不用 Kilo Code affiliate，改夾帶 Cursor 相關佔位）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-------|---------|-----------|---------|
+| 2026-09-05 | Kilo Code | kilo code 評測, kilo code vs cursor | 1K-3K/月 | 間接 DO + DataCamp（禁 affiliate organic SEO） | $80-300 | autodev-ai |
+
+---
+
+### 🆕 P2-WATCH｜Aglyn — "Visual Builder with Real Platform Underneath"（Sep 月榜 #2）
+
+**確認來源：** producthunt.com Sep 月榜 #2（僅 1 Follower，早期）
+
+**核心事實：**
+- 功能：Visual builder with a real platform underneath（視覺化 builder + 真實後端平台）
+- 目標對象：no-code 創業者 / vibe builders
+- Sep 月榜 #2 但只有 1 Follower（可能是 PH 月榜前期算法異常）
+
+**Affiliate 評估：❓**
+- 新產品，affiliate 結構未確認
+- 建議：P2-WATCH，待確認 Followers 數量是否是異常
+
+---
+
+### 🆕 P2-WATCH｜Grok Build（xAI 開源）— GitHub Trending，AI Coding Agent CLI
+
+**確認來源：** analyticsvidhya.com July 2026 trending repos + x.ai/news（Jul 15）
+
+**核心事實：**
+- Apache 2.0 授權，Rust 語言，12K★（July 2026）
+- xAI 官方開源 coding agent CLI（Grok 背後的 agent loop）
+- 支援：MCP integration / context handling / tool execution / plugins / skills
+- xAI 不接受外部貢獻，但可 study / compile / run locally
+
+**繁中 SEO 機會：**
+- 關鍵字：「grok build 教學」「xai coding agent 開源」「grok build vs claude code」
+- 搜尋量估計：500-2K/月
+- 有 affiliate？❌（開源工具）
+- 建議：P2-WATCH，與 Grok 4.7 GA 評測文一起打包（「Grok 4.7 + Grok Build 生態系完整解析」）
+
+---
+
+### 💰 Affiliate 雷達更新（Round 190）
+
+**新確認：Fliki AI（30% LIFETIME）**
+- 已在 Ivan 積壓清單（R182 首次確認）
+- adskull.io June 2026 更新：Fliki 30% recurring lifetime，30-day cookie，Rewardful auto-approve，$29-88/月
+- 狀態：Ivan 積壓，未申請
+
+**新確認：ElevenLabs（22%/12mo，90-day cookie）**
+- adskull.io 確認：22% recurring/12mo，90-day cookie，$5 min payout
+- 適合：TTS / voice cloning 文章
+- 狀態：Ivan 積壓，建議補入清單
+
+**Higgsfield affiliate 確認待辦：**
+- affiliate@higgsfield.ai 直接申請
+- 轉換格式最佳：YouTube 比較 + 評測文
+- **建議 Ivan 申請確認佣金結構**（無公開百分比）
+
+**無新 30%+ LIFETIME 超門檻發現**（積壓清單不變）
+
+---
+
+### 📊 Round 190 綜合機會表
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 | 優先級 |
+|------|------|--------|-----------|---------|-----------|---------|-------|
+| 2026-09-05 | Grok 4.7（倒數 7 天）| grok 4.7 評測, spaceXAI 2.1T | 8K-25K（GA後） | 間接 DO+DC | $200-600 | autodev-ai | 🔴 P1-HIGH→P0 GA後 |
+| 2026-09-05 | Higgsfield Genjutsu | higgsfield genjutsu 教學, motion transfer ai | 1K-3K/月 | Higgsfield affiliate（待確認）| $100-400 | autodev-ai | 🔴 P1-HIGH |
+| 2026-09-05 | Monid 2.0 | monid 教學, ai agent 1800 api | 500-2K/月 | 間接 DO+DC | $80-300 | autodev-ai | 🔴 P1-HIGH |
+| 2026-09-05 | Kilo Code | kilo code vs cursor, 開源 coding agent | 1K-3K/月 | 間接（禁 affiliate） | $80-300 | autodev-ai | 🔴 P1-HIGH |
+| 2026-09-05 | Grok Build 開源 | grok build 教學, xai coding cli | 500-2K/月 | 間接 DO+DC | $50-200 | autodev-ai | 🟡 P2-WATCH |
+| 2026-09-05 | Aglyn | aglyn visual builder | 200-500/月 | 待確認 affiliate | $30-100 | autodev-ai | 🟢 P2-WATCH |
+| 2026-09-05 | Higgsfield affiliate 確認 | — | — | 30%+ LIFETIME 待核 | $200-800 複利 | — | ⚠️ Ivan 待辦 |
+| 2026-09-05 | ElevenLabs affiliate | elevenlabs 評測 tts | 3K-8K/月 | 22%/12mo，90-day | $100-400 | autodev-ai | ⚠️ Ivan 積壓 |
+
+**本輪預估新增月收入潛力：$350-1,200/月**（Grok 4.7 GA $200-600 + Higgsfield $100-400 + Monid/Kilo Code $80-300 各）
+
