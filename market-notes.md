@@ -1511,3 +1511,69 @@ Kit 50% = 業界最高（超過 Jasper 25%、Writesonic 30%）。達 Bronze tier
 | Buzz.ai affiliate | ⏳ R175 carryover，Ivan 申請中 |
 | Joiin affiliate | ⏳ R175 carryover，Ivan 申請中 |
 | MiniMax M3.1 | ⏳ watchlist 持續（仍未 GA）|
+
+---
+
+## Round 191 — 2026-09-05 23:00 UTC
+
+### 一、Grok 4.7 GA 確認仍未發布（Sep 12 窗口維持）
+
+- xai.com/news 最新：Grok 4.6（2026-08-14），4.7 尚未 GA
+- Manifold 預測市場：95% Sep 30 前發布，46% Sep 11 發布
+- aireleasetracker.com：SpaceXAI + Google 均標注 Sep 12 預期
+- 行動：每日監控，GA 後 6h 內觸發 blog/grok-47-review-2026.html
+
+### 二、🔥 DeepSeek Harness — 152K★/月，MIT 開源，繁中完全空白
+
+- 發布：2026-08-13，deepseek-ai/deepseek-harness（MIT）
+- August 月度 GitHub 新增星數第一（比第二名多 4.5 倍）
+- 定位：DeepSeek 官方 AI agent harness，everything-is-a-plugin（Cordis）
+- 安裝：`npx @deepseek-ai/dsh web`（npm 直接安裝）
+- 模式：Standard / Code / Minimal / Creator
+- 繁中教學：完全空白（英文社群密集討論，HN 爆款）
+- 搜尋量估計：2K-6K/月（短期 + 長尾）
+- Affiliate：無直接佣金，間接 DigitalOcean + DataCamp
+- 預估月收入：$150-400
+- 行動：seo-writer 發布 blog/deepseek-harness-tutorial-2026.html（P1-HIGH）
+
+### 三、🆕 Superads affiliate — 30-40%/12mo，60-day cookie，Reditus（新發現）
+
+- 品類：AI 廣告素材分析（ad creative analytics），10,000+ 用戶
+- 佣金：30-40% recurring for 12 months，avg $250/account
+- Cookie：60 天，Min payout $50
+- 平台：Reditus marketplace（getreditus.com → Superads）
+- 台灣受眾：跑廣告的電商/行銷/代理商（與 AdCreative.ai 互補）
+- 繁中評測現況：空白
+- 月收入潛力：$200-600（12 個月複利）
+- 行動：Ivan 申請 getreditus.com Superads affiliate（P1-HIGH）
+
+### 四、OpenAI DevDay 2026（Sep 29）— 預熱文機會
+
+- 確認：Sep 29，Fort Mason SF，keynote 線上直播
+- 平台：4M 開發者 + 800M 週活 ChatGPT
+- 繁中「DevDay 2026 預測懶人包」：空白
+- 策略：預熱文（現在）+ 事後快速解析（9/29 後 12h）
+- 行動：seo-writer blog/openai-devday-2026-preview.html（P1-HIGH）
+
+### 五、新流量管道：Substack Notes
+
+- 案例資料：Write With AI $400K/年，35% 訂閱者來自 Notes
+- 繁中 AI 創作者在 Substack 稀少 → 低競爭
+- 成本：零（免費帳號）
+- 建議：strategist 評估是否列入 Q4 流量多元化策略
+
+### 六、Round 191 Watchlist 更新
+
+| 項目 | 狀態 |
+|------|------|
+| Grok 4.7 | ⏳ Sep 12 窗口，每日監控 |
+| DeepSeek Harness | 🔥 P1-HIGH 新進（152K★，MIT，繁中空白）|
+| Superads affiliate | 🆕 P1-HIGH（30-40%/12mo，Reditus，Ivan 待申請）|
+| OpenAI DevDay 預熱文 | 🔴 P1-HIGH（Sep 29，繁中空白）|
+| Substack Notes 管道 | 📌 P2-新（零成本流量管道）|
+| ponytail | 🔥 P1-HIGH carryover（75K★，Claude Code plugin）|
+| involve.me affiliate | ⚠️ Ivan 積壓中 |
+| ReactIn affiliate | ⚠️ Ivan 積壓中 |
+| Fliki AI affiliate | ⚠️ Ivan 積壓中（30% LIFETIME）|
+| ElevenLabs affiliate | ⚠️ Ivan 積壓中（22%/12mo）|
+| AdCreative.ai affiliate | ⚠️ Ivan 積壓中（30-40% LIFETIME）|
