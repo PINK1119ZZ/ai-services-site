@@ -1,8 +1,49 @@
 {
-  "lastRun": "2026-09-06T03:06:00Z",
+  "lastRun": "2026-09-06T10:30:00Z",
   "lastResearchRound": 193,
   "lastStrategistRun": "2026-09-06T02:05:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-09-06T10:30:00Z",
+      "agent": "affiliate-monitor",
+      "task": "affiliate-link-check",
+      "status": "completed",
+      "summary": "聯盟連結週檢（Sun 10:30 UTC，2026-09-06）。掃描 131 篇文章（繁中 107 + 英文 24）+ 22 個聯盟連結。核心發現：(1) Gumroad 5 個 404 持續（claude-code-prompt-pack-2026 第22週、n8n-tw-templates、n8n-claude-templates-v1、claude-code-skills-pack-v2、ai-agent-cybersecurity-skills-v1）—全部 Ivan P0-URGENT；(2) 主要核心連結全數正常：DigitalOcean 301→200✓、Gumroad kknad 200✓、DataCamp 403防爬✓、Systeme.io 200✓、Hostinger 200✓、Warp.dev 200✓；(3) wisprflow.ai、shortspro.co、blym.co、hermes-agent.ai、adcreative.ai 全部重定向至 200 正常✓；(4) 新發現 2 篇英文頁無聯盟連結（en/blog/hahow-ai-courses-2026.html、en/blog/how-to-write-ai-prompts.html）→ P2 directive 給 content-refresher；(5) 5 篇前次無聯盟連結英文頁已於 2026-08-30 content-refresher 補完，現全數正常✓；(6) 繁中 107 篇全部含聯盟連結✓。新增 10 篇文章（R189-193 及 seo-writer）全部正確含聯盟連結✓。",
+      "changes": [
+        "掃描 131 篇 HTML 文章（blog/ 107 篇 + en/blog/ 24 篇），較上次增加 10 篇",
+        "檢查 22 個聯盟連結：17 個正常（200/301/403 防爬），5 個 Gumroad 404",
+        "新發現 2 篇英文頁無聯盟連結（hahow-ai-courses-2026.html + how-to-write-ai-prompts.html）",
+        "確認 5 篇前次英文頁（deerflow/geo/line-bot/n8n-automation/n8n-hitl）已補完聯盟連結 ✓",
+        "確認 10 篇新文章（seo-writer R189-193 系列）全部含聯盟連結 ✓",
+        "創建 directives/affiliate-monitor-to-content-refresher-2026-09-06.md（2 篇英文頁補聯盟連結）",
+        "更新 agent-state.json affiliateLinks + lastChecked + agentLog"
+      ],
+      "criticalIssues": [
+        "Gumroad claude-code-prompt-pack-2026 → 404（第22週，Ivan P0-URGENT，估計損失 $500-700/月）",
+        "Gumroad n8n-claude-templates-v1 → 404（builder 完成，Ivan 需上架，估計損失 $500-1,000/月）",
+        "Gumroad claude-code-skills-pack-v2 → 404（builder 完成，Ivan 需上架）",
+        "Gumroad ai-agent-cybersecurity-skills-v1 → 404（Ivan 需上架）",
+        "Gumroad n8n-tw-templates → 404（持續，Ivan 需確認是否下架）"
+      ],
+      "articlesNoAffiliate": [
+        "en/blog/hahow-ai-courses-2026.html → P2（英文，新發現，需補 DO+DC CTA）",
+        "en/blog/how-to-write-ai-prompts.html → P2（英文，新發現，需補 DO+DC CTA）"
+      ],
+      "goodNews": [
+        "繁中 blog/ 全部 107 篇均含聯盟連結 ✓",
+        "DigitalOcean / kknad / DataCamp / Systeme.io / Hostinger 核心連結全數正常 ✓",
+        "wisprflow.ai / shortspro.co / blym.co / hermes-agent.ai / adcreative.ai 全部正常 ✓",
+        "10 篇新文章（seo-writer R189-193）全部正確含三個聯盟連結 ✓",
+        "上次 5 篇英文頁缺失已由 content-refresher 2026-08-30 修復完畢 ✓"
+      ],
+      "needsIvan": [
+        "P0-URGENT（第22週）：上架 claude-code-prompt-pack-2026 → xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026",
+        "P0-URGENT：上架 n8n-claude-templates-v1 → xiaofan8.gumroad.com/l/n8n-claude-templates-v1（$39）",
+        "P0-URGENT：上架 claude-code-skills-pack-v2 → xiaofan8.gumroad.com/l/claude-code-skills-pack-v2（$29）",
+        "P0-URGENT：上架 ai-agent-cybersecurity-skills-v1 → xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1（$29）",
+        "P1：確認 n8n-tw-templates 是否需要下架或補上內容"
+      ]
+    },
     {
       "timestamp": "2026-09-06T03:00:00Z",
       "agent": "seo-writer",
@@ -3721,11 +3762,11 @@
     ]
   },
   "affiliateLinks": {
-    "lastChecked": "2026-08-30T10:30:00Z",
+    "lastChecked": "2026-09-06T10:30:00Z",
     "results": {
       "DigitalOcean (m.do.co)": {
-        "status": 200,
-        "note": "正常",
+        "status": 301,
+        "note": "正常重定向（200 final）",
         "ok": true
       },
       "DataCamp (afflink.one/s/aavAC)": {
@@ -3745,7 +3786,7 @@
       },
       "Gumroad claude-code-prompt-pack-2026": {
         "status": 404,
-        "note": "P0-URGENT: 需 Ivan 上架（第19週）",
+        "note": "P0-URGENT: 需 Ivan 上架（第22週，持續）",
         "ok": false
       },
       "Gumroad n8n-tw-templates": {
@@ -3790,7 +3831,7 @@
       },
       "wisprflow.ai": {
         "status": 200,
-        "note": "正常",
+        "note": "正常（103 early hints → 200）",
         "ok": true
       },
       "llmclicks.ai": {
@@ -3799,8 +3840,8 @@
         "ok": true
       },
       "shortspro.co": {
-        "status": 200,
-        "note": "正常",
+        "status": 308,
+        "note": "308→200 正常重定向",
         "ok": true
       },
       "hermes-agent.ai": {
@@ -3814,39 +3855,36 @@
         "ok": true
       },
       "adcreative.ai": {
-        "status": 200,
-        "note": "正常",
+        "status": 301,
+        "note": "301→200 正常重定向",
         "ok": true
       },
       "blym.co": {
-        "status": 200,
-        "note": "正常",
+        "status": 301,
+        "note": "301→200 正常重定向",
         "ok": true
       },
       "onelink.one/s/7WSzC": {
         "status": 403,
-        "note": "防爬機制-用戶點擊正常（8篇文章使用）",
+        "note": "防爬機制-用戶點擊正常",
         "ok": true
       }
     },
     "brokenLinks": [
-      "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026 → 404（第19週，Ivan P0-URGENT）",
+      "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026 → 404（第22週，Ivan P0-URGENT）",
       "xiaofan8.gumroad.com/l/n8n-tw-templates → 404（持續，Ivan 需確認是否下架）",
       "xiaofan8.gumroad.com/l/n8n-claude-templates-v1 → 404（builder 完成，Ivan 需上架）",
       "xiaofan8.gumroad.com/l/claude-code-skills-pack-v2 → 404（builder 完成，Ivan 需上架）",
-      "xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1 → 404（本週新確認，Ivan 需上架）"
+      "xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1 → 404（Ivan 需上架）"
     ],
     "articlesNoAffiliate": [
-      "en/blog/deerflow-vs-dify-vs-n8n-2026.html → P2（英文）",
-      "en/blog/geo-generative-engine-optimization-taiwan-2026.html → P2（英文）",
-      "en/blog/line-bot-complete-guide-2026.html → P2（英文）",
-      "en/blog/n8n-automation-tutorial-2026.html → P2（英文）",
-      "en/blog/n8n-hitl-tutorial-2026.html → P2（英文）"
+      "en/blog/hahow-ai-courses-2026.html → P2（英文，新發現，需補 DO+DC CTA）",
+      "en/blog/how-to-write-ai-prompts.html → P2（英文，新發現，需補 DO+DC CTA）"
     ],
-    "totalArticlesScanned": 121,
-    "articlesWithAffiliate": 116,
-    "articlesWithNoAffiliate": 5,
-    "note": "繁中 blog/ 97 篇全部含聯盟連結 ✓。5 篇無連結均為 en/blog/ 英文頁（P2）。NordVPN 追蹤 URL 失效但無文章直接嵌入，影響為零。"
+    "totalArticlesScanned": 131,
+    "articlesWithAffiliate": 129,
+    "articlesWithNoAffiliate": 2,
+    "note": "繁中 blog/ 107 篇全部含聯盟連結 ✓。2 篇無連結均為 en/blog/ 英文頁（P2，本週新發現）。5 篇前次發現的英文頁（deerflow、geo、line-bot、n8n-automation、n8n-hitl）已於 2026-08-30 content-refresher 補完聯盟連結。NordVPN 追蹤 URL 失效但無文章嵌入，影響零。"
   },
   "researcherRound": 191
 }
