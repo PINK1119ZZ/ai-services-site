@@ -1,8 +1,60 @@
 {
-  "lastRun": "2026-09-06T13:00:00Z",
+  "lastRun": "2026-09-06T14:30:00Z",
   "lastResearchRound": 193,
   "lastStrategistRun": "2026-09-06T02:05:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-09-06T14:30:00Z",
+      "agent": "content-ops",
+      "task": "content-refresher",
+      "status": "completed",
+      "summary": "Sun 14:30 UTC content-refresher cron — 找出 sitemap.xml 最舊的 3 篇英文文章（lastmod 2026-05-06）並執行更新。(1) en/blog/hahow-ai-courses-2026.html：dateModified 2026-05-03 → 2026-09-06，更新日期標注，補加 DigitalOcean + DataCamp 聯盟連結段落（Ready to Build What You’ve Learned?）；(2) en/blog/hostinger-vps-review-2026.html：dateModified 2026-05-03 → 2026-09-06，補加 DigitalOcean + DataCamp 聯盟連結段落（Our Recommended Cloud Platforms）；(3) en/blog/small-business-automation.html：dateModified 2026-04-05 → 2026-09-06，在現有 DigitalOcean + Hahow 聯盟連結區塊補加 DataCamp 聯盟連結。sitemap.xml 六個 URL（zh + en 各 3）lastmod 更新為 2026-09-06。git commit dbbe1cf + push origin main。",
+      "changes": [
+        "en/blog/hahow-ai-courses-2026.html：dateModified 2026-05-03 → 2026-09-06，更新 meta 日期顯示，補加 DigitalOcean（m.do.co/c/6121a295f624）+ DataCamp（afflink.one/s/aavAC）聯盟連結段落",
+        "en/blog/hostinger-vps-review-2026.html：dateModified 2026-05-03 → 2026-09-06，補加 DigitalOcean + DataCamp 聯盟連結段落（Our Recommended Cloud Platforms）",
+        "en/blog/small-business-automation.html：dateModified 2026-04-05 → 2026-09-06，補加 DataCamp（afflink.one/s/aavAC）聯盟連結（與現有 DO + Hahow 並列）",
+        "sitemap.xml：6 個 URL lastmod 更新為 2026-09-06（zh + en 各 3 篇）",
+        "git commit dbbe1cf + push origin main"
+      ],
+      "articlesRefreshed": [
+        {
+          "file": "en/blog/hahow-ai-courses-2026.html",
+          "changes": [
+            "dateModified → 2026-09-06",
+            "補加 DigitalOcean + DataCamp 聯盟連結段落",
+            "更新顯示日期 + 閱讀時間"
+          ],
+          "previousLastmod": "2026-05-06",
+          "affiliateLinksAdded": [
+            "DigitalOcean m.do.co/c/6121a295f624",
+            "DataCamp afflink.one/s/aavAC"
+          ]
+        },
+        {
+          "file": "en/blog/hostinger-vps-review-2026.html",
+          "changes": [
+            "dateModified → 2026-09-06",
+            "補加 DigitalOcean + DataCamp 聯盟連結段落（Our Recommended Cloud Platforms）"
+          ],
+          "previousLastmod": "2026-05-06",
+          "affiliateLinksAdded": [
+            "DigitalOcean m.do.co/c/6121a295f624",
+            "DataCamp afflink.one/s/aavAC"
+          ]
+        },
+        {
+          "file": "en/blog/small-business-automation.html",
+          "changes": [
+            "dateModified → 2026-09-06",
+            "補加 DataCamp 聯盟連結（現有 DO + Hahow 保留）"
+          ],
+          "previousLastmod": "2026-05-06",
+          "affiliateLinksAdded": [
+            "DataCamp afflink.one/s/aavAC"
+          ]
+        }
+      ]
+    },
     {
       "timestamp": "2026-09-06T10:30:00Z",
       "agent": "affiliate-monitor",
