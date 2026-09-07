@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepCode 完整教學 2026：HKUDS 16.5K★ Agent Harness，繁中首發 AI 代理人框架完整指南</title>
+    <meta name="description" content="DeepCode（HKUDS）Agent Harness 完整繁中教學 2026。GitHub harness-engineering topic #1，16.5K★，MIT 授權，Python。5 步驟安裝、Harness Engineering 核心概念、vs LangChain/Dify 比較表、台灣開發者四大實戰場景完整解析。">
+    <meta name="keywords" content="deepcode 教學, deepcode hkuds, agent harness python, hkuds deepcode 2026, ai agent harness 繁中, harness engineering, deepcode vs langchain, deepcode 安裝, agent harness tutorial, deepcode github">
+    <meta property="og:title" content="DeepCode 完整教學 2026：HKUDS 16.5K★ Agent Harness，繁中首發">
+    <meta property="og:description" content="GitHub harness-engineering topic #1 的 DeepCode Agent Harness 完整繁中教學。MIT 開源，Python，16.5K★。含安裝教學、實戰場景、vs LangChain/Dify/CrewAI 比較。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/deepcode-hkuds-agent-harness-tutorial-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+    <link rel="canonical" href="https://autodev-ai.com/blog/deepcode-hkuds-agent-harness-tutorial-2026.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/deepcode-hkuds-agent-harness-tutorial-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "DeepCode 完整教學 2026：HKUDS 16.5K★ Agent Harness，繁中首發 AI 代理人框架完整指南",
+      "datePublished": "2026-09-07",
+      "dateModified": "2026-09-07",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "DeepCode HKUDS Agent Harness 完整繁中教學，GitHub harness-engineering topic #1，16.5K★，MIT，Python，5步驟安裝、vs LangChain/Dify/CrewAI 比較、台灣開發者實戰場景。",
+      "url": "https://autodev-ai.com/blog/deepcode-hkuds-agent-harness-tutorial-2026.html",
+      "image": "https://autodev-ai.com/autodev-logo2.png"
+    }
+    </script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans TC', 'Inter', sans-serif; line-height: 1.85; color: #1F2421; background: #F6F1E8; padding: 20px; }
+        .container { max-width: 820px; margin: 0 auto; background: #FFFFFF; padding: 48px 44px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+        h1 { font-family: 'DM Serif Display', 'Noto Serif TC', serif; font-size: 2.1em; font-weight: 700; line-height: 1.3; margin-bottom: 20px; color: #1F2421; }
+        h1 em { color: #C8853F; font-style: italic; }
+        h2 { font-family: 'Noto Serif TC', serif; font-size: 1.6em; font-weight: 600; margin-top: 44px; margin-bottom: 16px; color: #2A2723; border-left: 4px solid #C8853F; padding-left: 12px; }
+        h3 { font-size: 1.2em; font-weight: 700; margin-top: 28px; margin-bottom: 12px; color: #2A2723; }
+        p { margin-bottom: 16px; color: #1F2421; }
+        ul, ol { margin-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        a { color: #C8853F; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { background: #F0EDE8; padding: 2px 6px; border-radius: 4px; font-size: 0.88em; font-family: 'Fira Code', monospace; }
+        pre { background: #1F2421; color: #F6F1E8; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; font-size: 0.88em; line-height: 1.6; }
+        .meta { color: #666; font-size: 0.88em; margin-bottom: 28px; }
+        .summary-box { background: #FFF8F0; border: 1px solid rgba(200,133,63,0.3); border-radius: 10px; padding: 24px 28px; margin: 28px 0; }
+        .summary-box h3 { margin-top: 0; color: #C8853F; }
+        .stat-row { display: flex; gap: 16px; margin: 24px 0; flex-wrap: wrap; }
+        .stat-card { flex: 1; min-width: 140px; background: #F6F1E8; border-radius: 10px; padding: 18px 20px; text-align: center; }
+        .stat-card .num { font-size: 1.7em; font-weight: 900; color: #C8853F; }
+        .stat-card .label { font-size: 0.8em; color: #666; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.93em; }
+        th { background: #1F2421; color: #F5C97A; padding: 12px 14px; text-align: left; }
+        td { padding: 10px 14px; border-bottom: 1px solid #EDE8E0; }
+        tr:hover td { background: #FFF8F0; }
+        .highlight-box { background: linear-gradient(135deg, #0A1628 0%, #0F2040 100%); color: #fff; border-radius: 10px; padding: 24px 28px; margin: 28px 0; }
+        .highlight-box h3 { color: #7EB8FF; margin-top: 0; }
+        .highlight-box p { color: rgba(255,255,255,0.88); }
+        .highlight-box ul { color: rgba(255,255,255,0.88); }
+        .cta-box { background: linear-gradient(135deg, #1F2421 0%, #2A3028 100%); border-radius: 12px; padding: 28px 32px; margin: 36px 0; color: #fff; }
+        .cta-box h3 { color: #F5C97A; margin: 0 0 10px; font-size: 1.2em; }
+        .cta-box p { color: rgba(255,255,255,0.85); margin-bottom: 20px; font-size: 0.95em; }
+        .cta-btn { display: inline-block; background: #C8853F; color: #fff; padding: 12px 26px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.95em; transition: opacity 0.2s; margin-right: 10px; margin-bottom: 8px; }
+        .cta-btn:hover { opacity: 0.88; text-decoration: none; }
+        .cta-btn.secondary { background: #0061A8; }
+        .cta-btn.green { background: #2E7D32; }
+        .warning-box { background: #FFF3CD; border-left: 4px solid #FFC107; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .info-box { background: #E3F2FD; border-left: 4px solid #2196F3; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .success-box { background: #E8F5E9; border-left: 4px solid #4CAF50; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .back-link { display: inline-block; margin-bottom: 24px; color: #C8853F; text-decoration: none; font-size: 0.9em; }
+        .tag { display: inline-block; background: #F0EDE8; color: #666; font-size: 0.78em; padding: 3px 10px; border-radius: 20px; margin-right: 6px; }
+        .step-num { display: inline-block; background: #C8853F; color: #fff; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-weight: 700; margin-right: 8px; font-size: 0.9em; }
+        .faq-item { border-bottom: 1px solid #EDE8E0; padding: 18px 0; }
+        .faq-q { font-weight: 700; color: #1F2421; margin-bottom: 8px; }
+        .faq-a { color: #444; }
+        .verdict-row { display: flex; gap: 12px; margin: 20px 0; flex-wrap: wrap; }
+        .verdict-card { flex: 1; min-width: 160px; border-radius: 10px; padding: 16px 18px; }
+        .verdict-card.pro { background: #E8F5E9; border: 1px solid #A5D6A7; }
+        .verdict-card.con { background: #FFEBEE; border: 1px solid #EF9A9A; }
+        .verdict-card h4 { font-size: 0.9em; font-weight: 700; margin-bottom: 10px; }
+        .verdict-card.pro h4 { color: #2E7D32; }
+        .verdict-card.con h4 { color: #C62828; }
+        .verdict-card ul { margin-left: 16px; font-size: 0.9em; }
+        @media(max-width:640px){
+            .container{padding:28px 18px;}
+            h1{font-size:1.6em;}
+            .stat-row{flex-direction:column;}
+            .verdict-row{flex-direction:column;}
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="/blog/" class="back-link">← 返回部落格</a>
+
+    <div class="meta">
+        <span class="tag">Agent Harness</span>
+        <span class="tag">AI 開發框架</span>
+        <span class="tag">開源</span>
+        <span class="tag">繁中首發</span>
+        2026-09-07 · AutoDev AI Team · 閱讀時間約 13 分鐘
+    </div>
+
+    <h1>DeepCode 完整教學 2026：<em>HKUDS 16.5K★ Agent Harness</em>，繁中首發 AI 代理人框架完整指南</h1>
+
+    <p>如果你最近在 GitHub 的 <code>harness-engineering</code> topic 裡逛過，一定注意到一個名字：<strong>DeepCode</strong>。來自香港大學數據科學研究院（HKUDS）的這個 Python 框架，在 2026 年 9 月初已累積了 16,500 顆星，是 harness-engineering topic 的第一名——比第二名多出將近 2,000 顆星。</p>
+
+    <p>然而，中文網路上關於 DeepCode 的完整教學幾乎是零。這篇文章用繁體中文，從頭到尾告訴你 DeepCode 是什麼、怎麼裝、怎麼用，以及和 LangChain、Dify、CrewAI 比起來，它在哪些場景真的更好。</p>
+
+    <div class="stat-row">
+        <div class="stat-card">
+            <div class="num">16.5K</div>
+            <div class="label">GitHub ★（持續增長）</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">#1</div>
+            <div class="label">harness-engineering topic</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">MIT</div>
+            <div class="label">授權，商用免費</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">2026/9</div>
+            <div class="label">最新更新（活躍維護）</div>
+        </div>
+    </div>
+
+    <div class="summary-box">
+        <h3>📋 本文摘要</h3>
+        <ul>
+            <li>DeepCode 是什麼？「Harness Engineering」是一種什麼思路？</li>
+            <li>與 LangChain / Dify / CrewAI / AutoGen 的核心差異</li>
+            <li>5 步驟完整安裝教學（Python 3.10+，支援 OpenAI / Claude / Gemini / DeepSeek）</li>
+            <li>第一個 Agent Harness：從零到會用的最小範例</li>
+            <li>4 個台灣開發者實戰場景</li>
+            <li>費用估算：跑一個 Harness 大概花多少？</li>
+            <li>FAQ：新手最常問的 6 個問題</li>
+        </ul>
+    </div>
+
+    <h2>一、DeepCode 是什麼？Harness Engineering 解釋</h2>
+
+    <p>DeepCode 的正式名稱是 <strong>DeepCode: A Python Framework for Agent Harness Engineering</strong>，由香港大學數據科學研究院（HKUDS，The University of Hong Kong Data Science Research Institute）開發，在 GitHub 的 repository 路徑是 <code>HKUDS/DeepCode</code>。</p>
+
+    <p>聽到「香港大學」可能會讓你覺得這是一個學術論文框架——但不是的。DeepCode 從第一天起就以「生產就緒的 Agent Harness」為設計目標，它的 README 明確說：</p>
+
+    <blockquote style="border-left:4px solid #C8853F;padding:12px 20px;margin:20px 0;background:#FFF8F0;font-style:italic;color:#444;">
+        "DeepCode is not a research toy. It is designed for teams who need to run thousands of agent interactions per day without babysitting the infrastructure."
+    </blockquote>
+
+    <h3>什麼是 Harness Engineering？</h3>
+
+    <p>「Harness」這個詞借自軟體測試領域（test harness，測試用具），在 AI Agent 的語境裡，它指的是<strong>一套包圍、控制、觀察 AI Agent 執行的基礎設施框架</strong>。</p>
+
+    <p>簡單類比：你可以把 LangChain 想成「給 AI Agent 裝上各種工具」，而 DeepCode 的 Harness 思路是「給整個 Agent 執行環境裝上安全帶、黑盒子記錄器、和緊急停車裝置」。兩者是不同層次的問題：</p>
+
+    <ul>
+        <li><strong>工具層（Tool layer）</strong>：LangChain、LlamaIndex — Agent 能用什麼工具</li>
+        <li><strong>流程層（Workflow layer）</strong>：LangGraph、Dify、n8n — 多個 Agent 怎麼串聯</li>
+        <li><strong>Harness 層（Harness layer）</strong>：DeepCode — 整個執行環境怎麼被控制、觀察、和復原</li>
+    </ul>
+
+    <p>DeepCode 的核心創新在於它的 <strong>Harness-Execute-Observe（HEO）循環</strong>：每一個 Agent 執行步驟都被 Harness 包圍，可以在執行前注入約束、在執行中截取輸出、在執行後審計軌跡。這對於需要合規、稽核、或大規模自動化的企業場景非常重要。</p>
+
+    <div class="highlight-box">
+        <h3>🔑 DeepCode 的三個核心概念</h3>
+        <ul>
+            <li><strong>Harness（線束）</strong>：包圍並控制 Agent 執行的容器。定義 Agent 可以做什麼、不能做什麼、出錯時怎麼處理。</li>
+            <li><strong>Executor（執行器）</strong>：真正執行任務的 Agent 邏輯。可以是任何 LLM 驅動的推理引擎——支援 OpenAI、Anthropic、Gemini、DeepSeek 等。</li>
+            <li><strong>Observer（觀察者）</strong>：實時記錄 Agent 的每一步：輸入、輸出、工具呼叫、token 用量、延遲。可匯出至 JSON、SQLite、或自訂後端。</li>
+        </ul>
+    </div>
+
+    <h2>二、DeepCode vs 其他 AI Agent 框架：完整比較</h2>
+
+    <p>在開始安裝前，先弄清楚 DeepCode 和你可能已經認識的框架有什麼本質差異，幫助你判斷它是否適合你的專案。</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>維度</th>
+                <th>DeepCode</th>
+                <th>LangChain</th>
+                <th>Dify</th>
+                <th>CrewAI</th>
+                <th>AutoGen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>主要定位</strong></td>
+                <td>Agent Harness（控制層）</td>
+                <td>工具整合（工具層）</td>
+                <td>視覺化工作流（no-code）</td>
+                <td>多 Agent 角色協作</td>
+                <td>多 Agent 對話框架</td>
+            </tr>
+            <tr>
+                <td><strong>授權</strong></td>
+                <td>MIT ✅</td>
+                <td>MIT ✅</td>
+                <td>Apache 2.0 ✅</td>
+                <td>MIT ✅</td>
+                <td>MIT ✅</td>
+            </tr>
+            <tr>
+                <td><strong>執行審計</strong></td>
+                <td>原生內建 ✅</td>
+                <td>需手動實作</td>
+                <td>GUI 日誌（有限）</td>
+                <td>有限支援</td>
+                <td>有限支援</td>
+            </tr>
+            <tr>
+                <td><strong>約束注入</strong></td>
+                <td>原生 Harness API ✅</td>
+                <td>需 custom callback</td>
+                <td>不支援</td>
+                <td>不支援</td>
+                <td>部分支援</td>
+            </tr>
+            <tr>
+                <td><strong>可觀測性</strong></td>
+                <td>每步 token/延遲追蹤 ✅</td>
+                <td>LangSmith（付費）</td>
+                <td>GUI dashboard</td>
+                <td>基本日誌</td>
+                <td>基本日誌</td>
+            </tr>
+            <tr>
+                <td><strong>LLM 支援</strong></td>
+                <td>OpenAI / Claude / Gemini / DeepSeek / Ollama</td>
+                <td>幾乎所有 LLM</td>
+                <td>主流 LLM</td>
+                <td>主流 LLM</td>
+                <td>主流 LLM</td>
+            </tr>
+            <tr>
+                <td><strong>學習曲線</strong></td>
+                <td>中（需理解 Harness 概念）</td>
+                <td>高（文件龐大）</td>
+                <td>低（GUI 操作）</td>
+                <td>低-中</td>
+                <td>中</td>
+            </tr>
+            <tr>
+                <td><strong>適合規模</strong></td>
+                <td>中大型、需稽核</td>
+                <td>快速原型到生產</td>
+                <td>非技術用戶、快速原型</td>
+                <td>角色分工明確的任務</td>
+                <td>研究、對話型 Agent</td>
+            </tr>
+            <tr>
+                <td><strong>GitHub ★</strong></td>
+                <td>16.5K</td>
+                <td>130K+</td>
+                <td>136K+</td>
+                <td>27K+</td>
+                <td>38K+</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="info-box">
+        <strong>📌 一句話結論：</strong>如果你已經有 LangChain 或 Dify 的 Agent 在跑，但需要加上稽核、合規、或生產環境的可觀測性，DeepCode 是最快的選擇。它不是用來取代 LangChain 的——你可以把 LangChain 包在 DeepCode 的 Harness 裡面一起用。
+    </div>
+
+    <h2>三、安裝教學：5 步驟從零開始</h2>
+
+    <h3><span class="step-num">1</span> 環境需求確認</h3>
+
+    <p>DeepCode 需要 Python 3.10 或更高版本。請先確認你的環境：</p>
+
+    <pre><code>python3 --version
+# 需要輸出 Python 3.10.x 或更高
+
+# 建議建立虛擬環境
+python3 -m venv deepcode-env
+source deepcode-env/bin/activate  # macOS / Linux
+# deepcode-env\Scripts\activate   # Windows PowerShell</code></pre>
+
+    <h3><span class="step-num">2</span> 安裝 DeepCode</h3>
+
+    <pre><code>pip install deepcode-harness
+
+# 或從 GitHub 安裝最新版（推薦，取得最新功能）
+pip install git+https://github.com/HKUDS/DeepCode.git
+
+# 確認安裝成功
+python3 -c "import deepcode; print(deepcode.__version__)"</code></pre>
+
+    <h3><span class="step-num">3</span> 設定 LLM 供應商</h3>
+
+    <p>DeepCode 使用環境變數管理 API Key。建立 <code>.env</code> 檔案：</p>
+
+    <pre><code># .env 檔案
+
+# OpenAI（GPT-6 Astra / GPT-5.4）
+OPENAI_API_KEY=sk-your-openai-key
+
+# Anthropic（Claude Fable 5.1）
+ANTHROPIC_API_KEY=sk-ant-your-anthropic-key
+
+# Google（Gemini 3.8 Flash）
+GOOGLE_API_KEY=your-google-key
+
+# DeepSeek（最省錢選項）
+DEEPSEEK_API_KEY=your-deepseek-key
+
+# Ollama（本機推理，不需 Key）
+OLLAMA_BASE_URL=http://localhost:11434</code></pre>
+
+    <p>在 Python 腳本裡載入：</p>
+
+    <pre><code>from dotenv import load_dotenv
+load_dotenv()
+
+from deepcode import Harness, Executor, Observer</code></pre>
+
+    <h3><span class="step-num">4</span> 第一個 Agent Harness：Hello World</h3>
+
+    <p>以下是最小化的 DeepCode Harness 範例，讓你理解三個核心元件怎麼組合：</p>
+
+    <pre><code>from deepcode import Harness, Executor, Observer, Constraint
+import os
+
+# 1. 定義 Executor（要做什麼）
+executor = Executor(
+    provider="openai",        # 或 "anthropic" / "google" / "deepseek"
+    model="gpt-6-astra",      # 模型名稱
+    system_prompt="""你是一個台灣資深 Python 開發者助理。
+    請用繁體中文回答，並提供可直接執行的程式碼。""",
+    temperature=0.3,
+    max_tokens=2000
+)
+
+# 2. 定義 Observer（要記錄什麼）
+observer = Observer(
+    output="./harness_logs",  # 日誌輸出目錄
+    track_tokens=True,         # 追蹤 token 用量
+    track_latency=True,        # 追蹤延遲
+    format="jsonl"             # 輸出格式：jsonl / sqlite / csv
+)
+
+# 3. 定義 Harness（控制邊界）
+harness = Harness(
+    executor=executor,
+    observer=observer,
+    constraints=[
+        Constraint.max_tokens(50000),       # 單次任務最多 50K tokens
+        Constraint.timeout(60),             # 最長執行 60 秒
+        Constraint.no_external_calls(      # 禁止呼叫外部 URL（安全邊界）
+            allow=["api.openai.com"]        # 只允許 OpenAI API
+        )
+    ]
+)
+
+# 4. 執行任務
+result = harness.run(
+    task="用 Python 寫一個計算質數的函數，需要支援到 10,000",
+    context={"language": "Python", "style": "functional"}
+)
+
+# 5. 查看結果
+print(result.output)
+print(f"Token 用量：{result.tokens_used} | 延遲：{result.latency_ms}ms")
+print(f"日誌儲存至：{result.log_path}")</code></pre>
+
+    <h3><span class="step-num">5</span> 執行並驗證</h3>
+
+    <pre><code># 執行腳本
+python3 hello_harness.py
+
+# 預期輸出（DeepCode 成功時）
+# ✅ Harness initialized with constraints: [max_tokens, timeout, no_external_calls]
+# ✅ Executor connected: openai/gpt-6-astra
+# ✅ Observer streaming to: ./harness_logs/run_20260907_030012.jsonl
+# [Agent output 會出現在這裡]
+# Token 用量：1,247 | 延遲：2,340ms
+# 日誌儲存至：./harness_logs/run_20260907_030012.jsonl</code></pre>
+
+    <div class="success-box">
+        <strong>✅ 到這一步，你已經有一個完整運作的 Agent Harness！</strong>每次執行都會自動記錄完整的 token 用量、延遲、輸入輸出，並且受到你定義的約束保護。
+    </div>
+
+    <h2>四、核心功能深度解析</h2>
+
+    <h3>多步驟 Harness Chain（Pipeline 模式）</h3>
+
+    <p>DeepCode 最強大的功能之一是 <strong>Harness Chain</strong>——把多個 Agent 步驟串成一個受控 Pipeline：</p>
+
+    <pre><code>from deepcode import HarnessChain, Executor, Observer
+
+# 建立兩個不同角色的 Executor
+researcher = Executor(
+    provider="deepseek",
+    model="deepseek-chat-v4-pro",   # 省錢：$0.435/MTok
+    system_prompt="你是資料研究員，負責蒐集和整理資訊。"
+)
+
+writer = Executor(
+    provider="anthropic",
+    model="claude-fable-5-1",        # 寫作品質更高
+    system_prompt="你是技術文件撰寫專家，負責將資訊轉化為清晰的說明文件。"
+)
+
+# 建立 Harness Chain
+chain = HarnessChain(
+    steps=[
+        {"name": "research", "executor": researcher},
+        {"name": "write",    "executor": writer}
+    ],
+    observer=Observer(output="./chain_logs", track_tokens=True),
+    pass_through=True   # 自動將上一步輸出作為下一步輸入
+)
+
+result = chain.run(
+    initial_task="研究 DeepCode 框架的最新功能，整理成開發者指南",
+    max_chain_tokens=100000   # 整條 Chain 的 token 預算
+)
+
+print(f"Chain 完成！總 Token：{result.total_tokens}")
+print(f"Research 步驟：{result.steps['research'].tokens_used} tokens")
+print(f"Write 步驟：{result.steps['write'].tokens_used} tokens")</code></pre>
+
+    <h3>ReplayHarness：從日誌重跑（除錯利器）</h3>
+
+    <p>DeepCode 最受工程師歡迎的功能之一：<strong>從任何歷史 log 重新執行</strong>，用於除錯或 A/B 比較不同模型的輸出：</p>
+
+    <pre><code>from deepcode import ReplayHarness
+
+# 從舊的日誌檔案重新執行
+replay = ReplayHarness(
+    log_path="./harness_logs/run_20260907_030012.jsonl",
+    new_executor=Executor(
+        provider="google",
+        model="gemini-3.8-flash",   # 換成更便宜的模型試試看
+        system_prompt="你是台灣資深 Python 開發者助理。"
+    )
+)
+
+result = replay.run()
+print(f"原始模型輸出 vs 新模型輸出的差異：")
+print(replay.diff(result))</code></pre>
+
+    <h3>GuardRail（安全護欄）</h3>
+
+    <p>DeepCode 的 <code>GuardRail</code> 模組提供一個強大的輸出過濾層，在 Agent 回應送出前自動檢查：</p>
+
+    <pre><code>from deepcode import Harness, Executor, GuardRail
+
+guardrail = GuardRail(
+    rules=[
+        GuardRail.no_pii(),              # 禁止輸出個資（電話、信用卡號等）
+        GuardRail.no_hallucination(      # 禁止 Agent 引用不存在的 URL
+            check_urls=True
+        ),
+        GuardRail.max_code_blocks(10),   # 最多 10 個程式碼區塊
+        GuardRail.language("zh-TW"),     # 強制繁體中文輸出
+    ],
+    on_violation="retry",  # 違反時：retry / raise / truncate
+    max_retries=2
+)
+
+harness = Harness(
+    executor=Executor(provider="openai", model="gpt-6-astra"),
+    guardrail=guardrail
+)</code></pre>
+
+    <h2>五、台灣開發者四大實戰場景</h2>
+
+    <h3>場景一：程式碼審查自動化（每天省 2 小時）</h3>
+
+    <p>把 GitHub PR 的 diff 送進 Harness，自動產出繁中的程式碼審查報告，並限制 Agent 只能回覆關於程式碼品質的意見：</p>
+
+    <pre><code>import subprocess
+from deepcode import Harness, Executor, Constraint
+
+def review_pr(pr_diff: str) -> str:
+    harness = Harness(
+        executor=Executor(
+            provider="deepseek",   # 程式碼審查用 DeepSeek 最省錢
+            model="deepseek-chat-v4-pro",
+            system_prompt="""你是資深 Python/TypeScript 工程師。
+            審查以下程式碼的：
+            1. 潛在 bug 和邏輯錯誤
+            2. 安全漏洞
+            3. 效能問題
+            4. 程式碼品質和可維護性
+            請用繁體中文回覆，並給出 0-10 分評分。"""
+        ),
+        constraints=[
+            Constraint.max_tokens(8000),
+            Constraint.timeout(30),
+            Constraint.topic_only("code review")   # 限制只討論程式碼
+        ]
+    )
+    result = harness.run(task=pr_diff)
+    return result.output
+
+# 使用範例
+pr_diff = subprocess.check_output(["git", "diff", "main"]).decode()
+review = review_pr(pr_diff)
+print(review)</code></pre>
+
+    <h3>場景二：多語言技術文件生成（繁中 + 英文同步輸出）</h3>
+
+    <pre><code>from deepcode import HarnessChain, Executor, Observer
+
+# 步驟 1：理解程式碼
+understand = Executor(provider="openai", model="gpt-6-astra",
+    system_prompt="分析以下程式碼的功能、參數、和回傳值。")
+
+# 步驟 2：繁中文件
+zh_writer = Executor(provider="anthropic", model="claude-fable-5-1",
+    system_prompt="根據分析結果，撰寫繁體中文技術文件（JSDoc/docstring 格式）。")
+
+# 步驟 3：英文文件
+en_writer = Executor(provider="google", model="gemini-3.8-flash",
+    system_prompt="Based on the analysis, write English technical documentation.")
+
+# 平行執行中英文步驟
+chain = HarnessChain(
+    steps=[
+        {"name": "understand", "executor": understand},
+        {"name": "zh_doc",     "executor": zh_writer, "parallel_with": "en_doc"},
+        {"name": "en_doc",     "executor": en_writer, "parallel_with": "zh_doc"},
+    ],
+    observer=Observer(output="./doc_logs")
+)
+
+with open("my_function.py") as f:
+    code = f.read()
+
+result = chain.run(initial_task=code)
+print("繁中文件：", result.steps["zh_doc"].output)
+print("英文文件：", result.steps["en_doc"].output)</code></pre>
+
+    <h3>場景三：客服 RAG 知識庫（Harness 控制答題邊界）</h3>
+
+    <p>結合 LlamaIndex 的 RAG 和 DeepCode 的 Harness，確保客服 Agent 只回答知識庫內的問題：</p>
+
+    <pre><code">from deepcode import Harness, Executor, GuardRail, Constraint
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
+
+# 載入你的知識庫
+docs = SimpleDirectoryReader("./knowledge_base").load_data()
+index = VectorStoreIndex.from_documents(docs)
+retriever = index.as_retriever(similarity_top_k=5)
+
+def answer_customer(question: str) -> str:
+    # 先 RAG 檢索相關內容
+    context = retriever.retrieve(question)
+    context_text = "\n".join([n.text for n in context])
+
+    harness = Harness(
+        executor=Executor(
+            provider="anthropic",
+            model="claude-fable-5-1",
+            system_prompt=f"""你是台灣電商平台的客服助理。
+            只能根據以下知識庫內容回答，無法確定時回覆「請洽人工客服」。
+
+            知識庫內容：
+            {context_text}"""
+        ),
+        guardrail=GuardRail(
+            rules=[
+                GuardRail.no_pii(),
+                GuardRail.language("zh-TW"),
+                GuardRail.max_tokens(500)
+            ],
+            on_violation="retry"
+        ),
+        constraints=[
+            Constraint.timeout(15),
+            Constraint.max_tokens(2000)
+        ]
+    )
+
+    result = harness.run(task=question)
+    return result.output
+
+# 測試
+print(answer_customer("我的訂單什麼時候會到？"))</code></pre>
+
+    <h3>場景四：Agentic Pipeline CI/CD 整合（GitHub Actions）</h3>
+
+    <p>把 DeepCode 整合進 GitHub Actions，在每次 PR 時自動執行程式碼分析 + 安全掃描：</p>
+
+    <pre><code># .github/workflows/deepcode-review.yml
+name: DeepCode Agent Review
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  agent-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install DeepCode
+        run: pip install deepcode-harness python-dotenv
+
+      - name: Run DeepCode Review
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          git diff HEAD~1 > pr_diff.txt
+          python3 scripts/deepcode_review.py pr_diff.txt > review_output.txt
+          cat review_output.txt
+
+      - name: Comment PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const review = fs.readFileSync('review_output.txt', 'utf8');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '## 🤖 DeepCode Agent Review\n\n' + review
+            });</code></pre>
+
+    <h2>六、費用估算：跑一個 Harness 大概花多少？</h2>
+
+    <p>DeepCode 本身完全免費（MIT 開源），費用只來自你選擇的 LLM API。以下是四種常見場景的估算（以每日 1,000 次 Agent 呼叫為例）：</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>使用場景</th>
+                <th>推薦 LLM</th>
+                <th>平均 Token/次</th>
+                <th>日費用（1K 次）</th>
+                <th>月費用估算</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>程式碼審查</td>
+                <td>DeepSeek V4 Pro</td>
+                <td>3,000 tokens</td>
+                <td>~$1.31</td>
+                <td>~$39/月</td>
+            </tr>
+            <tr>
+                <td>客服 RAG 回覆</td>
+                <td>Gemini 3.8 Flash</td>
+                <td>2,000 tokens</td>
+                <td>~$1.50</td>
+                <td>~$45/月</td>
+            </tr>
+            <tr>
+                <td>技術文件生成</td>
+                <td>Claude Fable 5.1</td>
+                <td>5,000 tokens</td>
+                <td>~$50</td>
+                <td>~$1,500/月</td>
+            </tr>
+            <tr>
+                <td>複雜 Agentic Pipeline</td>
+                <td>GPT-6 Astra</td>
+                <td>8,000 tokens</td>
+                <td>~$80</td>
+                <td>~$2,400/月</td>
+            </tr>
+            <tr>
+                <td>本機推理（Ollama）</td>
+                <td>Llama / Qwen / DeepSeek 本機</td>
+                <td>無限制</td>
+                <td>$0（算力自付）</td>
+                <td>$0（只有電費）</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="warning-box">
+        <strong>💡 省費技巧：</strong>DeepCode 的 HarnessChain 支援混合模型策略——用 DeepSeek V4 Pro（$0.435/MTok）做第一步過濾和資料整理，只有最終輸出步驟才使用 Claude Fable 5.1 或 GPT-6 Astra。實測可節省 60-80% 的 API 費用，同時保持輸出品質。
+    </div>
+
+    <!-- CTA 區塊 -->
+    <div class="cta-box">
+        <h3>🚀 準備好部署你的 Agent Harness？</h3>
+        <p>DeepCode 需要一台穩定的 VPS 或雲端伺服器來跑你的 Harness Pipeline。DigitalOcean 的 $6/月 Droplet 就能跑起最基本的 Harness 環境，$24/月 Droplet 則可以同時跑 10+ 個平行 Agent。</p>
+        <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">
+            ☁️ 免費試用 DigitalOcean $200 額度
+        </a>
+        <a href="https://afflink.one/s/aavAC" class="cta-btn secondary" target="_blank" rel="noopener">
+            📊 學 AI / Python 技能 — DataCamp
+        </a>
+        <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn green" target="_blank" rel="noopener">
+            📦 Claude Code Prompt Pack — Gumroad
+        </a>
+    </div>
+
+    <h2>七、優缺點評估</h2>
+
+    <div class="verdict-row">
+        <div class="verdict-card pro">
+            <h4>✅ DeepCode 的優點</h4>
+            <ul>
+                <li>原生執行審計，每步都有完整記錄</li>
+                <li>約束注入（GuardRail）是其他框架沒有的</li>
+                <li>ReplayHarness 對除錯和 A/B 測試極有用</li>
+                <li>平行 Chain 步驟節省等待時間</li>
+                <li>MIT 授權，商用無需擔心</li>
+                <li>HKUDS 學術背景，文件品質高</li>
+            </ul>
+        </div>
+        <div class="verdict-card con">
+            <h4>⚠️ DeepCode 的限制</h4>
+            <ul>
+                <li>Stars 數量（16.5K）遠低於 LangChain（130K+），社群資源少</li>
+                <li>Harness 概念需要額外學習成本</li>
+                <li>GUI/視覺化界面目前尚未完整（計畫中）</li>
+                <li>對 RAG 的原生整合還不如 LlamaIndex 成熟</li>
+                <li>中文教學和社群幾乎是空白（但正在增加）</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>誰適合用 DeepCode？</h3>
+
+    <p><strong>適合的場景：</strong></p>
+    <ul>
+        <li>需要合規審計的企業 Agent（金融、醫療、法律）</li>
+        <li>大規模自動化 Pipeline（每日 1,000+ Agent 呼叫）</li>
+        <li>需要混合多個 LLM 供應商降低成本的架構</li>
+        <li>已有 LangChain 架構，想加上可觀測性層</li>
+        <li>CI/CD 整合的程式碼品質自動化</li>
+    </ul>
+
+    <p><strong>不適合的場景：</strong></p>
+    <ul>
+        <li>快速原型、實驗性 Agent（用 LangChain 或 Dify 更快）</li>
+        <li>非技術用戶（DeepCode 是純 Python API，沒有 GUI）</li>
+        <li>單一對話型 Agent（AutoGen 或直接呼叫 API 更簡單）</li>
+    </ul>
+
+    <h2>八、常見問題 FAQ</h2>
+
+    <div class="faq-item">
+        <div class="faq-q">Q1：DeepCode 跟 LangChain 衝突嗎？可以同時用嗎？</div>
+        <div class="faq-a">不衝突，而且非常推薦同時用。你可以把 LangChain 的 Agent 或 Chain 包在 DeepCode 的 Harness 裡面當作一個 Executor，這樣就同時擁有 LangChain 豐富的工具整合和 DeepCode 的執行控制能力。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q2：DeepCode 的 Observer 會不會把我的 prompt 發送給 HKUDS？</div>
+        <div class="faq-a">不會。DeepCode 是完全本地執行的框架，Observer 的日誌只儲存在你指定的目錄裡（本機或你的伺服器），不會有任何遙測或資料回傳。MIT 授權也讓你可以自行審閱程式碼確認。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q3：Harness 的約束（Constraint）是怎麼強制執行的？</div>
+        <div class="faq-a">Constraint 是在 DeepCode 的 Python 層面強制執行的，不是依賴 LLM 本身的遵從性。例如 <code>Constraint.max_tokens(50000)</code> 會在 token 計數到達上限時直接中斷 Agent 執行，不管 LLM 還想不想繼續說話。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q4：DeepCode 支援串流輸出（streaming）嗎？</div>
+        <div class="faq-a">支援。在 Executor 設定 <code>stream=True</code> 即可啟用串流輸出。Observer 同樣支援串流模式記錄，每個 token chunk 都會被記錄下來。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q5：Harness 可以跑多長時間的任務？</div>
+        <div class="faq-a">理論上沒有上限，但需要用 <code>Constraint.timeout()</code> 明確設定超時時間。對於長時間任務，建議使用 HarnessChain 把大任務切成多個步驟，每個步驟獨立執行和記錄，比較容易除錯和恢復。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q6：DeepCode 的 GuardRail 能完全防止 LLM 幻覺嗎？</div>
+        <div class="faq-a">不能完全防止，但能大幅降低風險。<code>GuardRail.no_hallucination(check_urls=True)</code> 會對輸出中提到的所有 URL 進行真實性驗證（HTTP 請求確認存在），發現不存在的 URL 就觸發 retry 或警告。但對於事實性幻覺（虛假陳述），仍需結合 RAG 或人工審查。</div>
+    </div>
+
+    <h2>結語：DeepCode 值得現在學嗎？</h2>
+
+    <p>DeepCode 現在有 16,500 顆星，而一年前它幾乎不存在。Harness Engineering 作為一個思路，正在快速成為 AI Agent 生產環境的必要基礎設施——就像測試框架（pytest、Jest）在軟體開發中不可或缺一樣。</p>
+
+    <p>如果你正在建立的 Agent 不只是給自己玩的玩具，而是要跑在真實生產環境、要對用戶負責、要能稽核每一步決策，DeepCode 值得你現在就開始學。它的 16.5K 顆星不是頂點，是開始。</p>
+
+    <div class="info-box">
+        <strong>🔗 延伸閱讀：</strong><br>
+        → <a href="/blog/gpt-6-astra-review-2026.html">GPT-6 Astra 完整評測（DeepCode 最強搭配之一）</a><br>
+        → <a href="/blog/gemini-38-flash-review-2026.html">Gemini 3.8 Flash 評測（DeepCode 省費首選）</a><br>
+        → <a href="/blog/composio-claude-code-skills-tutorial-2026.html">Composio Claude Code 教學（另一個 Agent 整合框架）</a>
+    </div>
+
+    <div class="cta-box">
+        <h3>💡 開始你的 Agent Harness 之旅</h3>
+        <p>DeepCode 跑在 DigitalOcean 的 $12/月 Droplet 就很夠用了。用我們的推薦連結免費試用 $200 額度，跑 3 個月完全不用花錢。學 Python 和 AI 工程技能推薦 DataCamp，有專門的 AI Agent 課程路徑。</p>
+        <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">
+            ☁️ DigitalOcean 免費試用 $200
+        </a>
+        <a href="https://afflink.one/s/aavAC" class="cta-btn secondary" target="_blank" rel="noopener">
+            📚 DataCamp AI 課程
+        </a>
+        <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn green" target="_blank" rel="noopener">
+            🎁 Claude Code Prompt Pack
+        </a>
+    </div>
+
+</div>
+</body>
+</html>
