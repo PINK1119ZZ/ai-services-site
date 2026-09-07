@@ -2458,3 +2458,140 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 - nanochat 教學 $80-300
 - Reclaim.AI affiliate $150-500 複利
 
+
+
+---
+
+## Round 194 — 2026-09-07 00:30 UTC（Mon 08:30 ai-trend-hunter cron）
+
+**【研究員任務】找賺錢機會，不是寫新聞摘要。**
+
+本輪掃描：Product Hunt 9/4-9/6 快照、GitHub Trending 即時、affiliate 市場、HN/Reddit AI 動態、Grok 4.7 GA 監控、DevDay 預熱
+
+---
+
+### 🎯 核心發現總結
+
+---
+
+#### 1. 🚨 Grok 4.7 仍未 GA（Sep 12 窗口 T-5天）— P0-STANDBY 維持緊迫
+
+- Musk 9/2 宣佈「10 days」→ **Sep 12 為目標 GA 日，今天 9/7 距窗口 5 天**
+- xAI 官網 news 最新條目：Grok 4.6 in GitHub Copilot（8/19），無 4.7 發布跡象
+- iWeaver/CometAPI 等追蹤站確認：xAI docs 仍列 Grok 4.6 為最新
+- 規格確認：2.1T 參數、SpaceX data 差異化、agent 能力全面超越 4.6
+- **行動：Standby directive 維持，researcher 9/11 cron 強化監控，builder 文稿預備中**
+- 搜尋量估計：GA 後 3 日內「Grok 4.7 評測」8K-20K/月，繁中空白
+
+---
+
+#### 2. 🔴 AI Humanizer 工具類 — 新爆量主題（990★/today，GitHub Trending #1）
+
+**發現：`blader/humanizer` 今日 GitHub Trending 第一（990★/today，總 22.9K★）**
+
+- 工具定義：移除 AI 寫作痕跡的 Claude Code skill（opens source，Agent skill）
+- 市場背景：
+  - GPTZero、Turnitin AI 偵測採用率持續上升，每個用 AI 寫文的人都有需求
+  - 「AI humanizer」關鍵字競爭度仍低（繁中幾乎空白）
+  - GitHub 同類主題 92+ 個 repo，但主流工具多付費（Undetectable.ai、HIX、QuillBot）
+- 競品 affiliate 機會：
+  - **Undetectable.ai**：30% recurring lifetime，$49-$99/月方案 → 每月 $14.70-$29.70/轉介
+  - **HIX.AI**：30% recurring 12 months
+  - **QuillBot**：20% recurring lifetime，cookie 90 天
+  - **Humanize AI（humanizeai.pro）**：25% recurring，30-day cookie
+- 關鍵字策略：
+  - 「AI 偵測規避」「GPTZero 繞過」「AI 寫作痕跡去除」「humanizer 中文」
+  - 英文長尾：「best AI humanizer for students」「how to bypass Turnitin AI detection」
+- 搜尋量估計：繁中 500-1.5K/月，英文 10K-30K/月（學生族群）
+- 變現方式：Undetectable.ai affiliate（30% LIFETIME）+ HIX.AI affiliate（30%/12mo）
+- 預估月收入：$300-900（英文）/ $50-200（繁中，前期）
+- **建議站點：autodev-ai.com（繁中評測）+ ai-tools.pro（英文比較頁）**
+- ⚠️ 注意：學術誠信議題，文章需加免責聲明（非鼓勵作弊，是工具評測）
+
+---
+
+#### 3. 🔴 PostFast — MCP + 社群媒體排程 Affiliate（30%/12mo 確認）
+
+**發現：PostFast affiliate program 條款本輪首次完整確認**
+
+- **佣金：30% recurring for 12 months，cookie 30 天，月付從 €50 起（PayPal）**
+- 平台：11 社群平台排程（含 Bluesky）+ MCP server（Claude/ChatGPT/Cursor）+ n8n nodes
+- 角度：**「MCP + 社群媒體自動排程」是 2026 新興搜尋需求**
+  - PostFast MCP Server 於 2026-03 npm 發布，2026-08 加入 inbox 工具
+  - 「PostFast MCP Claude」「social media AI automation MCP 2026」空白
+- 月榜訂閱方案：Creator 方案 €29/月（每轉介 €8.70/月）；Enterprise 年費 €716 一次性佣金
+- 搜尋量估計：「social media scheduler MCP」「PostFast review 2026」1K-3K/月（英文）
+- 變現方式：PostFast affiliate（30%/12mo）
+- 預估月收入：$100-400/月（複利增長）
+- **建議站點：ai-tools.pro（英文評測 + MCP workflow 教學）**
+- 🔴 P1-HIGH：**非積壓清單工具，條款達標（30%+ recurring）→ 寫 directive 給 strategist**
+
+---
+
+#### 4. 🔴 OpenAI DevDay 2026（9/29 San Francisco）— 預熱文 3.5 週黃金期
+
+**現況：**
+- DevDay 確認 9/29 San Francisco + 8 個衛星城市
+- GPT-6 Astra 已發布（9/3），DevDay 預計公布：
+  - Astra wider API access + 開發者 tool 更新
+  - ChatGPT Work（7/10 已上線，DevDay 可能有 enterprise 擴大公告）
+  - Codex 0.153.x 持續更新（Amazon Bedrock 支援已上線）
+- **繁中「OpenAI DevDay 2026 懶人包」空白**
+- 搜尋量估計：3K-8K/月，發布前 2 週高峰可達 15K+
+- 變現方式：間接（DO droplet + DC referral + 流量導向 GPT-6 Astra 評測文）
+- 預估月收入：$100-400（流量導向 + affiliate 複利）
+- **建議站點：autodev-ai.com（繁中預熱文）**
+
+---
+
+#### 5. 🟡 diagram-design（cathrynlavery）— Claude Code skill 教學機會（P2-WATCH）
+
+- GitHub 今日 855★/today，總 31.9K★，Trending #5 附近
+- 38 種 editorial diagram 類型（HTML + SVG，Claude Code / Codex / Pi skill）
+- 創辦人：Cathryn Lavery（BestSelf.co，$55M+ bootstrapped）
+- 無直接 affiliate，但：
+  - **「Claude Code skill 推薦」「diagram design AI 2026」**教學文可帶 Claude Pro affiliate（暫無公開 affiliate，但 Claude Partner 申請中可能有）
+  - 或帶 Claude Code 替代品（Cursor/Windsurf）的 affiliate
+- 搜尋量估計：「claude code skill 推薦」500-1.5K/月，英文 2K-5K/月
+- 建議：作為 Claude Code ecosystem 總覽文的案例，帶 coding IDE affiliate（Cursor 15-20%）
+- **建議站點：autodev-ai.com（繁中）+ ai-tools.pro（英文 roundup）**
+
+---
+
+#### 6. 🟡 DietrichGebert/ponytail — 2,845★/today（GitHub #1 今日最熱）— P2-WATCH
+
+- 描述：「Makes your AI agent think like the laziest senior dev in the room.」
+- 定位：讓 agent 少寫程式碼的反哲學工具（JavaScript，128K★ 總）
+- 無 affiliate，但病毒式增長 → 教學文帶流量
+- 目標關鍵字：「AI coding agent 偷懶策略」「ponytail AI 評測」（趨勢文，非變現主力）
+- **建議：P2-WATCH，觀察是否有 SaaS 化計劃**
+
+---
+
+#### 7. 🟡 BraveOPotato/FckSignups — No-signup AI Tools 清單（68★/today）— P2-WATCH
+
+- 「open-source, in-browser, no-signup AI tools」精選清單
+- 對「不想付費」讀者有吸引力，但不利 affiliate 轉換
+- 角度：可做「免費 AI 工具 2026 懶人包」帶後半段付費工具 CTA + affiliate
+- 建議：P2-WATCH，可在 Q4 內容月報系列中收錄
+
+---
+
+### 📊 Round 194 完整機會表
+
+| 優先級 | 工具/主題 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|--------|-----------|--------|-----------|---------|-----------|---------|
+| 🚨 P0-STANDBY | Grok 4.7 GA | grok 4.7 評測, grok 4.7 2.1T | 8K-20K（GA 後）| 間接 DO+DC | $200-600 | autodev-ai |
+| 🔴 P1-HIGH | AI Humanizer 工具比較頁 | AI 偵測規避, best humanizer 2026 | 10K-30K（英）/ 500-1.5K（繁）| Undetectable.ai 30% LIFETIME | $300-900 | ai-tools.pro + autodev-ai |
+| 🔴 P1-HIGH | PostFast MCP 評測 | postfast review, social MCP 2026 | 1K-3K（英）| PostFast 30%/12mo | $100-400 | ai-tools.pro |
+| 🔴 P1-HIGH | OpenAI DevDay 2026 預熱 | openai devday 2026 懶人包 | 3K-8K → 15K+ 高峰 | 間接流量 → GPT-6 Astra | $100-400 | autodev-ai |
+| 🟡 P2-WATCH | diagram-design skill 教學 | claude code skill 推薦 | 500-1.5K（繁）| 間接 Cursor affiliate | $80-200 | autodev-ai |
+| 🟡 P2-WATCH | ponytail AI agent | ai coding 偷懶哲學 | 500-1K | 趨勢流量 | $50-150 | autodev-ai |
+| 🟡 P2-WATCH | FckSignups 免費 AI 清單 | 免費 AI 工具 2026 | 1K-3K | CTA 帶付費工具 | $50-150 | autodev-ai |
+
+**本輪新增預估月收入潛力：$800-2,500/月**
+- AI Humanizer 比較頁（英文）：$300-900
+- PostFast affiliate 複利：$100-400
+- DevDay 預熱文：$100-400
+- Grok 4.7 GA 觸發後：$200-600（standby）
+
