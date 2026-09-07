@@ -2595,3 +2595,56 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 - DevDay 預熱文：$100-400
 - Grok 4.7 GA 觸發後：$200-600（standby）
 
+
+---
+
+## 🔬 Round 195 — 2026-09-07 22:00 UTC
+
+### 🚨 P0-STANDBY：Grok 4.7（T-5 天，仍未 GA）
+
+- xAI/news 最新仍為 Grok 4.6（8/19，GitHub Copilot）
+- Sep 12 目標倒計時，無提前發布跡象
+- 備料完整：2.1T 參數、SpaceX data 主訓練集、real-world engineering 改進、競品對比
+
+### 🔴 P1-HIGH：OpenAI DevDay 2026（9/14-9/21 發布窗口，倒計時 T-7 天）
+
+- **官方議程首次確認**：Fort Mason 9/29，Sam Altman keynote 10AM PT，免費直播
+- 時間表：早餐 08:00 → Keynote 10:00 → Breakouts 11:15-15:30 → Closing 16:00 → Reception 16:45
+- DevDay Exchange：8 城市（Tokyo/Seoul 台灣開發者最近）
+- **繁中預熱文機會窗口：9/14-9/21（seo-writer carryover，P1-HIGH 升級）**
+- 關鍵字：「openai devday 2026 台灣懶人包」「sam altman keynote 2026」「openai devday 直播」
+
+### 🔴 P1-HIGH：karpathy/nanochat 57K★（繁中空白確認，直接執行）
+
+- 57.3K★，8K forks，MIT，最新活躍 2026-03（autoresearch round 6）
+- 「$100 訓練自己的 ChatGPT」— 故事性強，適合台灣開發者/研究生受眾
+- 英文競爭：Analytics Vidhya、Medium、YouTube，但**繁中完全零**
+- 聯盟：DigitalOcean GPU Droplet（$200 credit）+ DataCamp
+- 關鍵字：「nanochat 教學」「用 100 美元訓練 chatgpt 台灣」「karpathy nanochat 中文」
+- 預估：$100-350/月
+
+### 🔴 P1-HIGH：AI Humanizer 市場（Undetectable.ai 24M+ 確認，台灣空白）
+
+- Undetectable.ai 24M+ 用戶（本週新增 39,156），市場龍頭確認
+- 繁中搜尋「AI 偵測規避」「GPTZero 如何規避」幾乎空白
+- affiliate：30% LIFETIME（Ivan 申請積壓中）
+- 文章可先寫，CTA 等 Ivan 批准後嵌入
+
+### 🆕 新發現：Lightfield（PH 9/7 日榜 #1，111 votes）
+
+- AI 關係智能：連結聯絡人+日曆 → meeting pre-caps + client dossiers
+- PH 當日最高票，可能衝 9 月月榜
+- affiliate 條件未確認 → 下輪（9/9）確認後決定是否 P1-HIGH
+- 繁中幾乎無評測，搶佔機會窗口
+
+### 📊 Round 195 機會表
+
+| 優先級 | 主題 | 關鍵字 | 預估月收入 |
+|--------|------|--------|-----------|
+| 🚨 P0-STANDBY | Grok 4.7 GA | grok 4.7 評測, 2.1T 參數 | $200-600（GA 後）|
+| 🔴 P1-HIGH | OpenAI DevDay 2026 預熱 | openai devday 2026 懶人包 | $100-400 |
+| 🔴 P1-HIGH | nanochat 繁中教學 | nanochat 教學, $100 訓練 ChatGPT | $100-350 |
+| 🔴 P1-HIGH | AI Humanizer（繁中）| AI 偵測規避, GPTZero 規避 | $50-200（+affiliate）|
+| 🟡 P2-WATCH | Lightfield | AI 關係智能, meeting prep AI | 待 affiliate 確認 |
+| 🟡 P2-WATCH | Kilo Code | kilo code vs claude code | 待確認 |
+
