@@ -2648,3 +2648,102 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 | 🟡 P2-WATCH | Lightfield | AI 關係智能, meeting prep AI | 待 affiliate 確認 |
 | 🟡 P2-WATCH | Kilo Code | kilo code vs claude code | 待確認 |
 
+
+---
+
+## 🔬 Round 196 — 2026-09-08 00:30 UTC
+
+### 🚨 P0-STANDBY 維持：Grok 4.7（T-4 天，Sep 12 目標，仍未 GA）
+
+- xAI/SpaceXAI 官方最新仍 Grok 4.6（8/19），無 Grok 4.7 API / model card
+- Grok Bot Enterprise 9/3 GA（$120-300/seat/mo）是本週最大發布，非 Grok 4.7 本身
+- 備料：2.1T 參數、SpaceX 主訓練集、real-world engineering focus、vs Claude Fable 5.1 / GPT-6 Astra
+- Standby 不變，GA 後 6h 觸發 seo-writer
+
+### 🔴 P1-HIGH 新確認：Kilo Code for JetBrains（PH 9/1 日榜 #1，繁中機會確認）
+
+**發現背景：**
+- Product Hunt 9/1/2026 日榜 #1（489 upvotes）、9 月月榜持續爬升
+- 3M+ 用戶，30 trillion tokens processed，Meta/Amazon/Airbnb 使用
+- 支援：VS Code + JetBrains + CLI + Slack + Cloud；500+ 模型，零 markup
+- 定價：免費 BYOK + Kilo Pass $19/月 inference（9/1 起 5% 信用卡手續費）
+- 開源（MIT），Apache/Anaconda 背書
+
+**搜尋量評估：**
+- 「kilo code 評測」「kilo code vs claude code」「kilo code jetbrains 教學」→ 繁中搜尋近零（全英文）
+- 英文競品：computertech.co、vibecoding.app、vellum.ai 已有評測
+- **繁中完全空白，autodev-ai 開發者受眾完美匹配**
+
+**Affiliate 評估：**
+- Kilo Code 目前無明確 affiliate program（開源策略，無直接佣金）
+- 但：文章可串聯 DigitalOcean GPU（跑 500+ 模型）+ DataCamp（AI 開發者學習）
+- 間接月收入估計：$100-350
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|----------|---------|
+| 2026-09-08 | Kilo Code JetBrains | kilo code 評測 2026, kilo code vs cursor 繁中 | 低/成長中 | DO+DC 間接 | $100-350 | autodev-ai.com |
+
+### 🔴 P1-HIGH 升級：Grok Bot Enterprise（xAI 8/26-9/3 正式 GA，高搜尋量確認）
+
+**發現背景：**
+- xAI（SpaceXAI）2026/8/26 Grok Bot + X 整合；2026/9/3 Grok Bot for Enterprise 正式上線
+- 定價：$120/seat/月（Cursor Premium Teams）/ $300/月（SuperGrok Heavy）
+- 特性：persistent AI agents，each with own cloud VM，sign into SaaS tools like a human
+- 無 billing cap（vs 所有競品）→ 企業風險角度
+- Beta 仍早期：無完整 audit log、compliance 功能尚未與 OpenAI / Anthropic 齊平
+
+**搜尋量評估：**
+- aitoolsreview.co.uk, marblism.com, beam.ai 已有英文覆蓋
+- 繁中：「grok bot 是什麼」「grok bot 企業版」「xai grok bot 評測」→ **幾乎零繁中**
+- 受眾：台灣企業 IT 決策者、開發者、AI 工具比較受眾
+
+**Affiliate 評估：**
+- xAI/Grok 目前無直接 affiliate program（企業訂閱走銷售流）
+- 比較頁機會：Grok Bot vs OpenAI Operator vs Anthropic Computer Use vs Google AgentSpace
+  → 可植入 DigitalOcean + DataCamp + Kilo Code CTA
+- 月收入估計：$150-500（比較頁長尾流量）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|----------|---------|
+| 2026-09-08 | Grok Bot Enterprise | grok bot 評測, grok bot 台灣, xai enterprise agent | 低/爆炸成長中 | DO+DC 間接, 比較頁 | $150-500 | autodev-ai.com |
+
+### 🟡 P2-WATCH → P1-HIGH 評估：Lightfield（PH 9/7 日榜 #1 + Kilo Code JetBrains 合作夥伴）
+
+**新情報（超越 R195）：**
+- Lightfield 出現在 Kilo Code JetBrains PH 頁面的「Built With」標籤 → 有產品整合關係
+- 定位更清晰：AI-native CRM，connects contacts + calendar → meeting pre-caps + client dossiers
+- PH Sep 月榜：Kilo Code #1 / Lightfield 持續爬升
+- **affiliate 仍待確認**（下輪 9/9-9/10 優先確認）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|----------|---------|
+| 2026-09-08 | Lightfield | lightfield ai 評測, AI CRM 台灣 2026 | 極低/新品 | 待確認 affiliate | $50-300（af 確認後） | autodev-ai.com |
+
+### 💰 高佣金 Affiliate 再確認（Ivan 積壓強化清單）
+
+| Affiliate | 佣金 | Cookie | 申請 URL | 優先級 |
+|-----------|------|--------|----------|--------|
+| GetResponse | **40-60% recurring/12mo** | 90天 | getresponse.com/affiliate-programs | 🔴 P1-HIGH（反覆積壓） |
+| ManyChat | **50% recurring** | 120天 | manychat.com/affiliate | 🔴 P1-HIGH |
+| AdCreative.ai | **30-40% LIFETIME** | 90天 | adcreative.ai/affiliate（PartnerStack） | 🔴 P1-HIGH（proposals 已在，Ivan 積壓） |
+| AI/ML API | **30% LIFETIME** | 90天 | aimlapi.com/affiliates | 🔴 P1-HIGH（proposals 已在） |
+| Reclaim.AI | **40%/12mo** | 60天 | reclaim.ai/affiliate | 🔴 P1-HIGH（多輪積壓） |
+| Fliki | **30% LIFETIME** | 30天 | fliki.ai/affiliates | 🔴 P1-HIGH（auto-approve） |
+| InVideo | **50% monthly** | 120天 | invideo.io/affiliate | 🔴 P1-HIGH（Ivan 申請中） |
+
+**注意：ManyChat 50% recurring 本輪首次加入緊急清單。GetResponse 40-60% 超過任何已確認 affiliate。兩者合計潛力 $900-2,200/月，Ivan 申請停滯已成最大機會成本。**
+
+### 📊 Round 196 完整機會表
+
+| 優先級 | 主題 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|--------|------|--------|--------|---------|----------|---------|
+| 🚨 P0-STANDBY | Grok 4.7 GA 評測 | grok 4.7 評測, grok 4.7 2026 繁中 | 預期爆量 | DO+DC 間接 | $200-600 | autodev-ai.com |
+| 🔴 P1-HIGH | Kilo Code JetBrains 評測 | kilo code 評測, kilo code vs cursor | 低/成長 | DO+DC 間接 | $100-350 | autodev-ai.com |
+| 🔴 P1-HIGH | Grok Bot Enterprise 評測+比較 | grok bot 評測, grok bot 台灣, xai enterprise | 成長爆發 | DO+DC 比較頁 | $150-500 | autodev-ai.com |
+| 🔴 P1-HIGH | OpenAI DevDay 2026 預熱 | openai devday 2026 懶人包 | 預期高量 | DO+DC 串聯 | $100-400 | autodev-ai.com |
+| 🔴 P1-HIGH | nanochat 繁中教學（carryover） | nanochat 教學, $100 訓練 ChatGPT | 低/成長 | DO GPU $200 | $100-350 | autodev-ai.com |
+| 🔴 P1-HIGH | AI Humanizer 繁中（carryover） | AI 偵測規避, undetectable ai 評測 | 中/500-1.5K | 30% LIFETIME（Ivan 申請） | $50-200 | autodev-ai.com |
+| 🟡 P2-WATCH | Lightfield AI CRM | lightfield ai, AI CRM 2026 | 極低/新品 | affiliate 待確認 | $50-300 | autodev-ai.com |
+| 💰 AFFILIATE | GetResponse | email 行銷工具 2026 | 已有搜尋量 | **40-60% recurring/12mo** | $400-1,200 | Ivan 申請 |
+| 💰 AFFILIATE | ManyChat | manychat 評測, chatbot 台灣 | 中等 | **50% recurring** | $500-1,200 | Ivan 申請 |
+| 💰 AFFILIATE | AdCreative.ai | AI 廣告生成工具 | 低/成長 | **30-40% LIFETIME** | $150-500 | Ivan 申請 |
