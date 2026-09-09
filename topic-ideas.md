@@ -2747,3 +2747,43 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 | 💰 AFFILIATE | GetResponse | email 行銷工具 2026 | 已有搜尋量 | **40-60% recurring/12mo** | $400-1,200 | Ivan 申請 |
 | 💰 AFFILIATE | ManyChat | manychat 評測, chatbot 台灣 | 中等 | **50% recurring** | $500-1,200 | Ivan 申請 |
 | 💰 AFFILIATE | AdCreative.ai | AI 廣告生成工具 | 低/成長 | **30-40% LIFETIME** | $150-500 | Ivan 申請 |
+
+---
+
+## Round 197 — 2026-09-09 00:30 UTC（Wed 08:30 ai-trend-hunter cron）
+
+### 🎯 核心發現：GPT-6 Astra 已 GA + 模型大爆炸週 + HyperFrames 教學機會
+
+**重大更新**：GPT-6 Astra 已於 **9/3 正式 GA**（之前 R196 仍顯示 P0-STANDBY）。這週前三天（9/1-9/3）是 2026 年最密集的前沿模型 48 小時：Claude Fable 5.1 + Mythos 5.1（9/1）、Gemini 3.8 Flash + Gemini 3.8 Flash Cyber（9/2）、GPT-6 Astra（9/3）同週連發。繁中評測競爭格局大幅改變。
+
+| 優先級 | 工具/主題 | 目標關鍵字 | 搜尋量預估 | 變現方式 | 預估月收入 | 建議站點 |
+|--------|-----------|------------|------------|----------|------------|---------|
+| 🔴 P0-URGENT | **GPT-6 Astra 完整評測**（9/3 GA confirmed） | gpt-6 astra 評測, gpt 6 astra 繁中, openai astra 2026 | 高/爆量 | 間接 DigitalOcean + DataCamp（OpenAI 無 affiliate） | $300-1,000 | autodev-ai.com |
+| 🔴 P0-URGENT | **Gemini 3.8 Flash 評測**（9/2 GA，$0.75/MTok） | gemini 3.8 flash 評測, gemini 3.8 2026, gemini flash 費用 | 高 | 間接（Google 無直接 affiliate） | $200-600 | autodev-ai.com |
+| 🔴 P1-HIGH | **Claude Fable 5.1 評測**（9/1 GA，cache -75%） | claude fable 5.1, fable 5.1 評測, claude cache 費用 | 高 | 間接 DigitalOcean + DataCamp | $200-500 | autodev-ai.com |
+| 🔴 P1-HIGH | **HyperFrames（HeyGen）教學**（9/8 GitHub #1，44K★） | hyperframes 教學, heygen hyperframes claude code, html 生成影片 | 中高/新品爆發 | **HeyGen affiliate 20-30%/12mo**（60-day cookie，$29-149/mo） | $300-900 | autodev-ai.com |
+| 🔴 P1-HIGH | **Framer 3.0 AI Agents 評測**（9/1 PH月榜，6/16 GA） | framer 3.0 評測, framer ai agents 2026, framer vs webflow 2026 | 中高 | **Framer affiliate 50%/12mo**（carryover，Ivan 積壓） | $400-1,000 | autodev-ai.com |
+| 🔴 P1-HIGH | **GPT-6 vs Claude Fable 5.1 vs Gemini 3.8 比較頁** | gpt-6 vs claude 2026, ai 模型比較 2026, frontier ai 費用 | 高/長尾 | 間接 + DataCamp + DO | $200-500 | autodev-ai.com |
+| 🔴 P1-HIGH | **OpenAI DevDay 9/29 預熱文**（T-20天，最佳窗口） | openai devday 2026, openai devday 9月, openai 發表會 | 中高/時效 | 間接（DevDay 內容帶流量） | $100-300 | autodev-ai.com |
+| 🟡 P2-WATCH | Kimi K3.1/K3.5（預測 T-0~T-4，尚未 GA） | kimi k3.1, kimi k3.5 2026 | 待觀察 | 間接 | $100-300 | autodev-ai.com |
+| 🟡 P2-WATCH | Qwen 3.9（預測 T-11，尚未 GA） | qwen 3.9 評測 | 待觀察 | 間接 | $100-300 | autodev-ai.com |
+| 💰 AFFILIATE | **HeyGen（新確認 20-30%/12mo）** | heygen 評測 2026, heygen 繁中 | 中等 | **30% recurring/12mo，60-day cookie** | $300-900 | Ivan 申請（heygen.getrewardful.com） |
+| 💰 AFFILIATE | ManyChat 50% recurring（carryover） | manychat 評測, chatbot 台灣 | 中等 | 50% recurring | $500-1,200 | Ivan 申請積壓 |
+| 💰 AFFILIATE | Framer 50%/12mo（carryover） | framer 評測 2026 | 中等 | 50% recurring/12mo | $400-1,000 | Ivan 申請積壓 |
+
+### 📊 模型週（9/1-9/3）完整時間軸
+- **9/1** Claude Fable 5.1 + Mythos 5.1 GA（$10/$50，cache reads -75% → $0.25/MTok，1M context）
+- **9/2** Gemini 3.8 Flash GA（$0.75/$3.75，intro price 至 2027-01-01，Cyber variant for security）+ Meta Muse Spark 1.3
+- **9/3** GPT-6 Astra GA（$10/$50，ARC-AGI-3 62.7%，計算機/瀏覽器使用 SOTA，"AGI era"）
+- **9/1** PH September 月榜：Kilo Code、Monid、OpenAI、Framer AI Agents、Computable GPU Index
+- **9/8** GitHub #1：HyperFrames（HeyGen，44K★，寫 HTML → 生成影片，Claude Code/Cursor 原生）
+
+### 🔍 Affiliate 確認結果
+- **HeyGen**：20-30% recurring/12mo，60-day cookie，Rewardful（heygen.getrewardful.com）— 已有 proposal 但 Ivan 申請狀態待確認，HyperFrames 爆紅後緊迫性大升
+- **Framer**：50%/12mo carryover（多輪積壓），Framer 3.0 PH 月榜加持，立即申請
+- **ManyChat**：50% recurring carryover（tapfiliate）
+
+### ⚠️ Grok 4.7 狀態更新
+- 原 P0-STANDBY 預測 Sep 12 GA 需要修正：目前來源僅見 "Cursor Grok 4.7 in 9 days"（from Sep 3 post = Sep 12），但這是 **Cursor 整合 Grok 4.7**，非 xAI 新模型 GA
+- 暫定 P2-WATCH：若 9/12 Cursor 整合確認 → 可做 blog/cursor-grok-47-integration-2026.html
+
