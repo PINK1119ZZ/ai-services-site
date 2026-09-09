@@ -1,8 +1,54 @@
 {
-  "lastRun": "2026-09-09T07:00:00Z",
-  "lastResearchRound": 196,
+  "lastRun": "2026-09-09T22:00:00Z",
+  "lastResearchRound": 197,
   "lastStrategistRun": "2026-09-07T01:30:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-09-09T22:00:00Z",
+      "agent": "researcher",
+      "task": "ai-dev-research",
+      "round": 197,
+      "status": "completed",
+      "summary": "Round 197（Wed 22:00 UTC，ai-dev-research cron）— 核心發現：(1) Grok 4.7 P0-STANDBY T-3天（Sep 12 目標，2.1T 參數，SpaceX data，Manifold 95%/9月底 46%/9/11，xAI 文檔仍列 4.6 為 current，雙待命維持）；(2) Claude Fable 5.1（9/1 GA）文章已存在，新補：OSWorld 2.0 77.9% 嚴格 + Zero data retention 企業賣點（content-ops 補充建議）；(3) 🔴 P1-HIGH 新機會：Meta Muse Spark 1.3（9/2 GA，25% fewer tokens + 20% fewer tool calls，.25/M input，繁中零評測，直接執行 blog/muse-spark-1-3-review-2026.html）；(4) OpenAI DevDay 9/29 Fort Mason 確認（10:00 AM PT Keynote，文章已有，9/30 全紀錄更新）；(5) nanochat 57.3K★ carryover（繁中零教學，DGX Spark homelab discussion #710 熱，常青 P1-HIGH 排隊）；(6) Lovable 2.0 P2-WATCH（2B 估值，9/9 訓練數據政策，affiliate 待確認）；(7) PH September 初期：dif.sh + CGI 新入，待深度評估；(8) Affiliate 無新超門檻發現，AdCreative 30-40% LIFETIME 積壓最高。",
+      "changes": [
+        "搜尋 Grok 4.7 xAI release date September 2026 → 確認仍未 GA；xAI/SpaceXAI 文檔 4.6 為 current；Manifold 95% 9月底；iweaver.ai 確認 Sep 12 目標；2.1T 參數（Musk 非官方）；SpaceX 飛行遙測訓練數據",
+        "搜尋 Claude Fable 5.1 Mythos 5.1 release September 2026 → 確認 9/1 GA；OSWorld 2.0（8/26 task）77.9%/41.7%；Zero data retention 新企業賣點；定價 0/0 不變；文章 claude-fable-5-1-review-2026.html 已存在",
+        "搜尋 Meta Muse Spark 1.3 release September 2026 → 確認 9/2 GA；25% fewer tokens + 20% fewer tool calls vs 1.2；DeepSWE 75.4%；Terminal-Bench 88.8%；MRCR 98.5%；.25/M input / .25/M output；繁中零評測確認；Muse Code full GA 9/1",
+        "搜尋 OpenAI DevDay 2026 agenda announcements → 確認 9/29 Fort Mason；10:00 AM PT Keynote（Sam Altman）；08:00 breakfast；全球直播；blog/openai-devday-2026-preview.html 已存在，9/30 更新為全紀錄",
+        "搜尋 karpathy nanochat GitHub stars 2026 → 確認 57.3K★ 8K forks；Run 6 3/14（1.65h GPT-2 record）；discussion #710 DGX Spark homelab 教學熱；Trelis Substack 英文教學存在，繁中零競品確認",
+        "搜尋 Lovable 2.0 vibe coding release September 2026 → 確認 Lovable 2.0 發布；9/9 起 Free/Pro 數據默認訓練政策啟動；2B 估值路線；vibe coding tools Lovable vs Cursor vs Bolt 比較需求持續",
+        "搜尋 Product Hunt trending September 2026 → 確認 PH September 月榜：Kilo Code / Monid / Browzer / AI Toolbox / Computable GPU Index / Articos / Tadata / dif.sh / Nex 早期出現",
+        "搜尋 new AI affiliate program 40% recurring → 確認 adskull.io 2026 更新：AdCreative.ai 30-40% LIFETIME #1；Fliki 30% LIFETIME；Jasper 25%/12mo；Reclaim.ai 40%；無新超門檻發現",
+        "創建 directives/researcher-to-strategist-2026-09-09-round197.md（Muse Spark 1.3 P1-HIGH + nanochat P1-HIGH carryover + Grok 4.7 P0-STANDBY）",
+        "更新 dev-notes.md：Round 197 完整段落",
+        "更新 agent-state.json：lastRun + lastResearchRound + agentLog + watchlistStatus"
+      ],
+      "topFindings": [
+        "Meta Muse Spark 1.3（9/2 GA，25% fewer tokens，.25/M，繁中零評測，P1-HIGH 直接執行）",
+        "Grok 4.7 P0-STANDBY T-3天（Sep 12 目標，2.1T 參數，xAI 文檔仍 4.6，雙待命維持）",
+        "Claude Fable 5.1 Zero data retention 企業賣點補充（content-ops 建議）",
+        "OpenAI DevDay 9/29 Fort Mason 確認（9/30 文章更新為全紀錄）",
+        "nanochat 57.3K★ 繁中零教學確認（常青 P1-HIGH 持續排隊）",
+        "Lovable 2.0 P2-WATCH（2B 估值，9/9 訓練數據政策）",
+        "PH September 初期：dif.sh + CGI 新入待評估",
+        "Affiliate 積壓：AdCreative 30-40% LIFETIME 最高優先，Ivan 繼續催促"
+      ],
+      "watchlistStatus": {
+        "grok47": "⏳ P0-STANDBY T-3天（Sep 12 目標，xAI 文檔 4.6 為 current，Manifold 95%/9月底 46%/9/11，雙待命）",
+        "claudeFable51": "✅ 文章已存在（9/1 GA，claude-fable-5-1-review-2026.html），content-ops 補 zero-data-retention 段建議",
+        "museSpark13": "🔴 P1-HIGH 新（9/2 GA，25% fewer tokens，.25/M，繁中零評測，直接執行）",
+        "openaiDevDay": "📅 9/29 Fort Mason 確認（文章已有，9/30 更新全紀錄）",
+        "nanochat57k": "🔴 P1-HIGH carryover（57.3K★，繁中零教學，常青）",
+        "lovable20": "🟡 P2-WATCH（2B 估值，9/9 數據政策，affiliate 待確認）",
+        "difSh": "🟡 P2 新（PH September 月榜，code diff，開發者受眾）",
+        "cgi": "🟡 P2 新（Computable GPU Index，GPU 算力，DataCamp/DO 導流）",
+        "adcreativeAi": "🔴 P1-HIGH Ivan 積壓最高（30-40% LIFETIME，PartnerStack）",
+        "undetectableAi": "🔴 P1-HIGH Ivan 積壓（30% LIFETIME，文章籌備中）",
+        "semrush": "🔴 P1-HIGH Ivan 積壓（00-350 CPA，Impact Radius）",
+        "manychat": "🟡 P1 carryover（50%/12mo，Ivan 積壓）"
+      },
+      "estimatedNewRevenue": "50-1,750/月（Muse Spark 1.3 評測 00-350 + nanochat 教學 00-400 + Grok 4.7 GA 後 00-800 + DevDay 更新 0-200）"
+    },
     {
       "timestamp": "2026-09-09T07:00:00Z",
       "agent": "internal-linker",
@@ -447,115 +493,6 @@
         "seo-writer（Ivan 批准後）：blog/framer-ai-agents-tutorial-2026.html（R177 P1-HIGH，50%/12mo）",
         "seo-writer（Ivan 批准後）：blog/answrr-ai-voice-smb-review-2026.html（R177 P1-HIGH，30% LIFETIME）"
       ]
-    },
-    {
-      "timestamp": "2026-08-31T01:30:00Z",
-      "agent": "strategist",
-      "task": "seo-weekly-report",
-      "status": "completed",
-      "summary": "Mon 01:30 UTC 週報（2026-08-31）。GSC：104 clicks / 1,812 impressions / CTR 5.7% / pos 8.7（clicks +17%↑，impressions +25%↑，流量上升但集中度警告持續：opencode-zen-vs-go 54%）。本週完成：crush 教學發布（R178+ P1-HIGH）、content-refresher 3 篇 en/blog/ 補聯盟連結、fb-weekly-review 確認中午主貼唯一有效格式、affiliate-monitor 121 篇掃描（5 個 Gumroad 404）、researcher R181+R182（InVideo 50% + Fliki 30% LIFETIME + Fable 5 事件 + Composio 73K★）。重大決策：(1) seo-writer 下週 P1-HIGH = Claude Fable 5 事件評測（直接執行，繁中幾乎空白，估 3K-8K/月流量）；(2) seo-writer P1-HIGH = Composio Claude Code 教學（直接執行，73.4K★，繁中零教學）；(3) builder P1-HIGH = AI 影片比較工具頁（InVideo+Fliki+Pictory 三 affiliate 共用頁，最高 ROI）；(4) Ivan ai-tools.tw DNS 升為 URGENT（52+ 天無動作，需決策放棄或修復）；(5) InVideo + Fliki affiliate 是本週最高優先申請（50% monthly + 30% LIFETIME，合計潛力 $700-2,400/月）。Ivan 積壓估計 $5,000-12,000+/月。創建 directives/strategist-weekly-2026-08-31.md。",
-      "changes": [
-        "創建 directives/strategist-weekly-2026-08-31.md",
-        "更新 agent-state.json：lastRun + lastStrategistRun + agentLog"
-      ],
-      "weeklyStats": {
-        "gscClicks": 104,
-        "gscImpressions": 1812,
-        "avgCTR": 5.7,
-        "avgPosition": 8.7,
-        "topPage": "opencode-zen-vs-go-pricing-2026.html（56 clicks，54% 全站）",
-        "newArticlesThisWeek": 1,
-        "ivanBacklogMonthlyLoss": "$5,000-12,000+"
-      },
-      "directiveSummary": {
-        "seoWriter": [
-          "P1-HIGH（直接執行）：blog/claude-fable-5-review-2026.html（~2,500字，事件 + 評測，繁中幾乎空白）",
-          "P1-HIGH（直接執行）：blog/composio-claude-code-skills-tutorial-2026.html（~2,300字，73K★，繁中零教學）",
-          "P1-HIGH（Ivan 後）：blog/invideo-ai-review-2026.html（50% monthly，R181）",
-          "P1-HIGH（Ivan 後）：blog/fliki-ai-review-2026.html（30% LIFETIME，R182）",
-          "P1 carryover：framer / answrr / clickup 評測文（Ivan 批准後）"
-        ],
-        "builder": [
-          "P1-HIGH：tools/ai-video-tool-comparison-2026.html（InVideo+Fliki+Pictory 三 affiliate 互動比較頁）",
-          "P1-URGENT：ai-tools.tw DNS 決策（Ivan 確認放棄或修復，52+ 天）"
-        ],
-        "researcher": [
-          "P1-WATCH：Claude Fable 5.x 後續、TML-Large 8% Manifold、Gemini 3.6 Pro/Ultra",
-          "P1：確認 Reclaim.AI / Fliki / InVideo affiliate 批准狀態",
-          "P2：Lenz PH #4、Catch The Signal、AI 安全主題 9 月動態"
-        ],
-        "contentOps": [
-          "P1：完成 en/blog/line-bot-complete-guide-2026.html + n8n-hitl-tutorial-2026.html 補聯盟連結",
-          "P1：FB 格式 — 04:00 外鏈貼確認廢除，僅保留 12:00 中午原生貼",
-          "P2：gemma 4 12b（pos 14）+ systeme.io（pos 17.7）SEO 優化"
-        ],
-        "ivan": [
-          "P0-URGENT（第19週）：上架 claude-code-prompt-pack-2026",
-          "P0-URGENT：上架 n8n-claude-templates-v1（$39）",
-          "P0-URGENT：上架 claude-code-skills-pack-v2（$29）",
-          "P0-URGENT：上架 ai-agent-cybersecurity-skills-v1（$29）",
-          "P1-HIGH：申請 Reclaim.AI（40%/12mo，最高優先）",
-          "P1-HIGH：申請 InVideo（50% monthly，120-day）",
-          "P1-HIGH：申請 Fliki（30% LIFETIME，auto-approve，最快）",
-          "P1-HIGH：決策 ai-tools.tw（放棄或修復，52+ 天 DNS FAIL）"
-        ]
-      }
-    },
-    {
-      "timestamp": "2026-08-31T00:30:00Z",
-      "agent": "researcher",
-      "task": "ai-trend-hunter",
-      "round": 182,
-      "status": "completed",
-      "summary": "Round 182（Mon 00:30 UTC，ai-trend-hunter cron）— 核心發現：(1) Fliki AI 30% LIFETIME affiliate（fliki.ai/affiliates，Rewardful auto-approve，30-day cookie，AI 影片+TTS，$29-88/月，繁中零評測，P1-HIGH，月潛力 $300-900）；(2) Claude Fable 5 完整故事 + 下架事件（6/9 GA，3 天後 US Commerce Dept 強制下架，anthropic.com/news/redeploying-fable-5，繁中幾乎無完整評測，P1-HIGH seo-writer 直接執行）；(3) Composio 73.4K★ Claude Code Skills（firecrawl.dev 確認，78 SaaS automations，繁中零完整教學，P1-HIGH seo-writer 直接執行）；(4) PH August 月榜最終確認：Hey Noah #1、Clipto #2、AdAnt AI #3、Lenz #4（新確認）、Astute #5、Dograh #6、Wispr Flow #7、Grok #8、Meridian #9、Coldtea #10、x1 #11；(5) 模型 watchlist 9 月：Qwen3.8-27B 8/14 仍最新 frontier（aireleasetracker），Gemini 3.6 Pro/Ultra unconfirmed，Llama 4 follow-up Q3-Q4，TML-Large 8% Manifold 新進；(6) GitHub agent tooling 主導：Composio 73.4K★（#1 Claude Code skills）、Langflow 146K★、Dify 136K★；(7) HN/安全：AI Developer Tools 安全風險（THN 8/17）、AI Agent Containment Failures（CSIS 8/24）、AI agents hacked companies（WEF 8/27）延伸資安主題；(8) Reclaim.AI + GetResponse affiliate 再確認（Ivan 多輪積壓）。預估新增月收入潛力 $800-2,400。",
-      "changes": [
-        "搜尋 Product Hunt trending September 1 2026 → PH August 最終月榜確認：Hey Noah #1、Clipto #2、AdAnt AI #3、Lenz #4（新確認進月榜）、Astute #5、Dograh #6、Wispr Flow #7、Grok #8、Meridian #9、Coldtea #10、x1 #11；Catch The Signal 9/1 PH 衝 #1（AI opportunity timing 工具）",
-        "搜尋 new AI model release September 2026 announcement → aireleasetracker.com 確認：最新 frontier Qwen3.8-27B（8/14）；aitoolsrecap.com 確認：Gemini 3.6 Pro/Ultra unconfirmed（Flash 7/21 GA）、Llama 4 follow-up Q3-Q4；9/1 無新 P0 模型 GA",
-        "搜尋 new AI SaaS affiliate 40% recurring September 2026 → adskull.io 確認：Fliki 30% LIFETIME（Rewardful auto-approve，30-day）；oakgen.ai + partnerstack.com 確認：Reclaim.AI 40%/12mo（最高優先）、GetResponse 40-60%/12mo；無新超 30% 未發現 affiliate",
-        "搜尋 HackerNews AI news August 31 September 1 2026 → THN（8/17）AI Developer Tools 安全風險；CSIS（8/24）AI Agent Containment Failures；WEF（8/27）AI agents hacked companies；AI 安全主題持續升溫，P2 content-refresher 訊號",
-        "搜尋 Claude Fable 5 release date September 2026 → cloudzero.com + simonwillison.net 確認：6/9 GA（$10/$50，1M context）；reddit.com/r/singularity 確認下架事件（6/9-6/12，US Commerce Dept）；anthropic.com/news/redeploying-fable-5 確認重新上線政策",
-        "搜尋 GitHub trending AI September 2026 → firecrawl.dev 確認：Composio 73.4K★（Claude Code skills，78 SaaS automations，May 2026）；fungies.io 確認：Langflow 146K★、Dify 136K★（視覺化 builder 主導）；analyticsvidhya July 2026：codebase-memory-mcp ~32K★ 再確認",
-        "寫入 topic-ideas.md Round 182 完整段落",
-        "創建 directives/researcher-to-strategist-2026-08-31-round182.md（Fliki P1-HIGH + Fable 5 評測 P1-HIGH + Composio 教學 P1-HIGH）",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
-      ],
-      "topFindings": [
-        "Fliki AI 30% LIFETIME affiliate（fliki.ai/affiliates，Rewardful auto-approve，AI 影片+TTS，繁中零評測，P1-HIGH）",
-        "Claude Fable 5 下架事件（6/9 GA → 3天 US Commerce Dept 強制下架，繁中幾乎無完整評測，P1-HIGH seo-writer）",
-        "Composio 73.4K★ Claude Code Skills（78 SaaS automations，繁中零教學，P1-HIGH seo-writer）",
-        "PH August 月榜最終：Lenz #4 新確認（R181 未收錄）",
-        "9 月模型 watchlist：Qwen3.8-27B 8/14 最新、Gemini 3.6 Pro/Ultra unconfirmed、Llama 4 follow-up Q3-Q4、TML-Large 8%",
-        "GitHub agent tooling 主導：Composio 73.4K★ > Langflow 146K★ > Dify 136K★",
-        "AI 安全主題升溫（THN + CSIS + WEF，8/17-8/27），P2 content-refresher",
-        "Reclaim.AI 40%/12mo + GetResponse 40-60%/12mo 再確認（Ivan 積壓）"
-      ],
-      "watchlistStatus": {
-        "claudeFable5x": "⚠️ 下架事件（6/9 GA，6/12 US Commerce Dept 強制下架，重新上線中）— P1-HIGH 繁中評測機會",
-        "tmlLarge": "⏳ 8% Manifold（9 月新進 watchlist）",
-        "gemini36ProUltra": "⏳ unconfirmed（Flash 7/21 GA，Pro/Ultra 跟進中）",
-        "llama4FollowUp": "⏳ Q3-Q4 2026（70B/405B equiv，3-6mo 跟進模式）",
-        "composio": "🔥 P1-HIGH seo-writer（73.4K★，78 SaaS，繁中零教學）",
-        "reclaimAI": "🔥 P1-HIGH 最高優先（40%/12mo，Ivan 本週必申請）",
-        "inVideoAffiliate": "⏳ P1-HIGH carryover（R181，Ivan 申請中）",
-        "fliki": "🆕 P1-HIGH（30% LIFETIME，auto-approve，R182 新發現）",
-        "superads": "⏳ P1-HIGH carryover（R180，Ivan 申請中）",
-        "lenz": "🆕 P2 watchlist（PH August #4 新確認，待確認功能）",
-        "catchTheSignal": "📌 P2 watch（9/1 PH 衝榜，AI opportunity timing）"
-      },
-      "newAffiliatesFound": [
-        {
-          "name": "Fliki AI",
-          "commission": "30% recurring LIFETIME",
-          "cookie": "30 天",
-          "platform": "Rewardful（auto-approve）",
-          "pricing": "AI 影片 + TTS 生成，$29-88/月方案",
-          "url": "fliki.ai/affiliates",
-          "priority": "P1-HIGH（30% LIFETIME 觸發門檻，Rewardful auto-approve，繁中零評測，內容創作者受眾）",
-          "monthlyEst": "$300-900",
-          "note": "Round 182 ai-trend-hunter 新發現，adskull.io June 2026 更新確認，與 InVideo 互補可做 AI 影片工具雙 affiliate 比較頁"
-        }
-      ],
-      "estimatedNewRevenue": "$800-2,400/月（Fliki 評測+比較頁 $500-1,500 + Fable 5 評測 $150-500 + Composio 教學 $150-400）"
     }
   ],
   "gscData": {
@@ -581,7 +518,7 @@
             "keyword": "lm studio bionic 教學",
             "clicks": 4,
             "impressions": 10,
-            "ctr": 40.0,
+            "ctr": 40,
             "position": 2.4
           },
           {
@@ -595,7 +532,7 @@
             "keyword": "opencode go和zen的区别",
             "clicks": 2,
             "impressions": 5,
-            "ctr": 40.0,
+            "ctr": 40,
             "position": 3.4
           },
           {
@@ -616,7 +553,7 @@
             "keyword": "\"ruflo\"",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 7
           },
           {
@@ -644,21 +581,21 @@
             "keyword": "gemma 4 12b",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 25.5
           },
           {
             "keyword": "lm studio bionic 中文",
             "clicks": 1,
             "impressions": 5,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 5.4
           },
           {
             "keyword": "opencode go vs zen",
             "clicks": 1,
             "impressions": 5,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 2
           },
           {
@@ -686,14 +623,14 @@
             "keyword": "opencode zen和go的区别",
             "clicks": 1,
             "impressions": 5,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 3.2
           },
           {
             "keyword": "opencode 优惠码",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 11.5
           },
           {
@@ -772,7 +709,7 @@
             "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
             "clicks": 7,
             "impressions": 70,
-            "ctr": 10.0,
+            "ctr": 10,
             "position": 9.9
           },
           {
@@ -786,7 +723,7 @@
             "page": "//blog/tencentdb-agent-memory-tutorial-2026.html",
             "clicks": 7,
             "impressions": 100,
-            "ctr": 7.0,
+            "ctr": 7,
             "position": 7.2
           },
           {
@@ -829,7 +766,7 @@
             "clicks": 2,
             "impressions": 147,
             "ctr": 1.4,
-            "position": 10.0
+            "position": 10
           },
           {
             "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
@@ -843,7 +780,7 @@
             "clicks": 2,
             "impressions": 26,
             "ctr": 7.7,
-            "position": 8.0
+            "position": 8
           },
           {
             "page": "//blog/ai-agent-cybersecurity-skills-claude-code-2026.html",
@@ -870,7 +807,7 @@
             "page": "//blog/gpt-56-sol-terra-luna-review-2026.html",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 5
           },
           {
@@ -891,7 +828,7 @@
             "page": "//blog/mojo-programming-language-tutorial-2026.html",
             "clicks": 1,
             "impressions": 20,
-            "ctr": 5.0,
+            "ctr": 5,
             "position": 4.3
           },
           {
