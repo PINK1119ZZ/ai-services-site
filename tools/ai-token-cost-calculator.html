@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Token 費用計算器 2026｜GPT-6 Astra vs Claude Fable 5.1 vs Gemini 3.8 Flash vs DeepSeek，每千字要多少錢？</title>
-<meta name="description" content="輸入每月寫作字數，立即試算 GPT-6 Astra（$10/$50）、Claude Fable 5.1（$10/$50）、Gemini 3.8 Flash（$0.75/$3.75）、DeepSeek V4 Pro 等 16+ 模型的 API Token 費用。含台幣換算、AGI 時代定價比較、最省方案推薦。免費使用。">
+<meta name="description" content="輸入每月寫作字數，立即試算 GPT-6 Astra（$10/$50）、Claude Fable 5.1、Gemini 3.8 Flash、Grok 4.7（Cursor）、DeepSeek V4 Pro 等 17+ 模型的 API Token 費用。含台幣換算、AGI 時代定價比較、最省方案推薦。免費使用。">
 <link rel="canonical" href="https://autodev-ai.com/tools/ai-token-cost-calculator.html">
 <meta property="og:title" content="AI Token 費用計算器 2026｜GPT-6 Astra vs Claude Fable 5.1 vs Gemini 3.8 Flash">
 <meta property="og:description" content="輸入字數，立即比較 GPT-6 Astra、Claude Fable 5.1、Gemini 3.8 Flash、DeepSeek 等 16+ 模型的 API token 月費，含台幣換算、AGI 時代定價比較與最省方案推薦。">
@@ -215,7 +215,7 @@
     </div>
   </div>
 
-  <p class="disclaimer">本工具所有 Token 定價來自各模型官方 API 定價頁，以 2026 年 9 月為準。GPT-6 Astra（9/3）、Claude Fable 5.1（9/1）、Gemini 3.8 Flash（9/2，促銷至 2027-01-01）為最新加入模型。費用估算僅供參考，實際帳單依 API 日誌為準。部分連結為聯盟推廣連結，您點擊後不需額外付費，佣金幫助我們維持本站免費服務。</p>
+  <p class="disclaimer">本工具所有 Token 定價來自各模型官方 API 定價頁，以 2026 年 9 月為準。GPT-6 Astra（9/3）、Claude Fable 5.1（9/1）、Gemini 3.8 Flash（9/2，促銷至 2027-01-01）、Grok 4.7（9/12 Cursor 整合，預估定價）為最新加入模型。費用估算僅供參考，實際帳單依 API 日誌為準。部分連結為聯盟推廣連結，您點擊後不需額外付費，佣金幫助我們維持本站免費服務。</p>
 
 </main>
 
@@ -378,9 +378,19 @@ const MODELS = [
     inputPrice: 2,
     outputPrice: 6,
     note: '現行',
-    feature: 'xAI SpaceXAI，500K context，agentic coding 強（Grok 4.7 預計 9/12）',
+    feature: 'xAI SpaceXAI，500K context，agentic coding 強。Grok 4.7 = Cursor 整合版（9/12），非新模型 GA',
     badge: null,
     badgeText: null
+  },
+  {
+    id: 'grok47cursor',
+    name: 'Grok 4.7（Cursor 整合）',
+    inputPrice: 2.5,
+    outputPrice: 8,
+    note: '9/12 Cursor 整合',
+    feature: 'Cursor IDE 原生 Grok 4.7 整合，agentic coding 最佳化，SpaceX 飛行數據微調，預估定價待官方確認',
+    badge: 'new',
+    badgeText: '⚡ Cursor 新'
   },
   {
     id: 'qwen3827b',

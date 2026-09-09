@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperFrames 完整評測 2026｜HeyGen 44K★，寫 HTML 就能生成 AI 影片，Claude Code 原生整合</title>
+    <meta name="description" content="HyperFrames 完整評測 2026：HeyGen 推出的 44K★ GitHub 開源工具，用 HTML/CSS 寫結構，AI 自動生成 AI Avatar 影片。Claude Code 原生整合，繁中首發完整教學。">
+    <meta name="keywords" content="hyperframes 教學, heygen hyperframes, html to video ai, hyperframes claude code, heygen 評測 2026, ai 影片生成工具 台灣, hyperframes 繁中, heygen affiliate">
+    <link rel="canonical" href="https://autodev-ai.com/tools/hyperframes-heygen-html-to-video-2026.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/tools/hyperframes-heygen-html-to-video-2026.html">
+
+    <meta property="og:title" content="HyperFrames 完整評測 2026｜HeyGen 44K★，HTML 生成 AI 影片，Claude Code 原生">
+    <meta property="og:description" content="HyperFrames 讓你用 HTML 結構寫影片腳本，AI 自動生成 HeyGen Avatar 影片。44K★，Claude Code / Cursor 原生整合，繁中首發完整教學。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autodev-ai.com/tools/hyperframes-heygen-html-to-video-2026.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "name": "HyperFrames HeyGen 完整評測 2026",
+      "description": "HyperFrames 讓開發者用 HTML 生成 HeyGen AI Avatar 影片，Claude Code 原生整合，台灣繁中首發完整評測",
+      "url": "https://autodev-ai.com/tools/hyperframes-heygen-html-to-video-2026.html",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.6",
+        "bestRating": "5"
+      },
+      "itemReviewed": {
+        "@type": "SoftwareApplication",
+        "name": "HyperFrames",
+        "applicationCategory": "MultimediaApplication",
+        "creator": { "@type": "Organization", "name": "HeyGen" }
+      }
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', 'Segoe UI', sans-serif; background: #0f1117; color: #e0e0e0; line-height: 1.7; }
+        .navbar { background: rgba(15,17,23,0.95); border-bottom: 1px solid #2a2d3e; padding: 1rem 2rem; display: flex; align-items: center; gap: 2rem; position: sticky; top: 0; z-index: 100; }
+        .navbar .brand { color: #7c3aed; font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+        .navbar a { color: #a0a0b0; text-decoration: none; font-size: 0.9rem; }
+        .navbar a:hover { color: #e0e0e0; }
+        .hero { background: linear-gradient(135deg, #0d1f0d 0%, #1a0533 40%, #0f1117 100%); padding: 2.8rem 1rem 2rem; text-align: center; border-bottom: 1px solid #2a2d3e; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: #14532d; color: #4ade80; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; margin-bottom: 0.8rem; }
+        .hero h1 { font-size: clamp(1.4rem, 3.5vw, 2.3rem); font-weight: 700; color: #fff; max-width: 780px; margin: 0 auto 0.8rem; line-height: 1.3; }
+        .hero p { color: #aaa; font-size: 0.98rem; max-width: 600px; margin: 0 auto 1.2rem; }
+        .stat-row { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .stat-item { text-align: center; }
+        .stat-item .num { font-size: 1.4rem; font-weight: 700; color: #4ade80; }
+        .stat-item .lab { font-size: 0.75rem; color: #666; }
+        .hero-ctas { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+        .btn-green { display: inline-block; padding: 0.75rem 1.8rem; background: linear-gradient(135deg, #15803d, #16a34a); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: opacity .2s; }
+        .btn-green:hover { opacity: .85; }
+        .btn-purple { display: inline-block; padding: 0.75rem 1.8rem; background: linear-gradient(135deg, #6d28d9, #4c1d95); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.2rem; }
+        h2.sec { font-size: 1.3rem; color: #4ade80; margin: 2.5rem 0 1rem; border-bottom: 1px solid #2a2d3e; padding-bottom: 0.4rem; }
+        p { color: #b0b0c0; margin-bottom: 1rem; font-size: 0.95rem; }
+        /* Summary card */
+        .summary-card { background: linear-gradient(135deg, #0d1f0d, #1a0533); border: 1px solid #15803d; border-radius: 14px; padding: 1.5rem; margin: 2rem 0; }
+        .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+        .summary-col h4 { font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .summary-col.pros h4 { color: #4ade80; }
+        .summary-col.cons h4 { color: #f87171; }
+        .summary-col ul { list-style: none; }
+        .summary-col ul li { font-size: 0.88rem; color: #b0b0c0; padding: 0.2rem 0 0.2rem 1.2rem; position: relative; }
+        .summary-col.pros ul li::before { content: '✓'; position: absolute; left: 0; color: #4ade80; }
+        .summary-col.cons ul li::before { content: '✗'; position: absolute; left: 0; color: #f87171; }
+        /* Highlight box */
+        .highlight-box { background: #0d1f0d; border-left: 3px solid #4ade80; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .highlight-box strong { color: #4ade80; }
+        /* Code */
+        .code-block { background: #0a0c14; border: 1px solid #2a2d3e; border-radius: 8px; padding: 1rem 1.2rem; margin: 1rem 0; font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.8rem; color: #a5f3fc; overflow-x: auto; white-space: pre; }
+        .code-comment { color: #555; }
+        /* Steps */
+        .steps { counter-reset: step; list-style: none; margin: 1.2rem 0; }
+        .steps li { counter-increment: step; display: flex; gap: 1rem; margin-bottom: 1.2rem; align-items: flex-start; }
+        .steps li::before { content: counter(step); background: #14532d; color: #4ade80; font-weight: 700; font-size: 0.85rem; min-width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; }
+        .steps li .body strong { display: block; color: #e0e0e0; font-size: 0.95rem; margin-bottom: 0.3rem; }
+        .steps li .body span { font-size: 0.88rem; color: #888; }
+        /* Table */
+        .table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid #2a2d3e; margin: 1rem 0; }
+        table { width: 100%; border-collapse: collapse; min-width: 550px; }
+        th { background: #1e2132; color: #4ade80; padding: 0.8rem 1rem; text-align: left; font-size: 0.85rem; border-bottom: 2px solid #14532d; }
+        td { padding: 0.7rem 1rem; border-bottom: 1px solid #1e2132; font-size: 0.85rem; color: #c8c8d8; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #1a1d2e; }
+        td.green { color: #4ade80; font-weight: 600; }
+        td.red { color: #f87171; }
+        /* Pricing */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
+        .plan-card { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 12px; padding: 1.2rem; }
+        .plan-card.hot { border-color: #4ade80; }
+        .plan-name { font-size: 0.82rem; color: #888; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .3rem; }
+        .plan-price { font-size: 1.5rem; font-weight: 700; color: #4ade80; }
+        .plan-price sub { font-size: .75rem; color: #888; font-weight: 400; }
+        .plan-twd { font-size: .78rem; color: #666; margin-bottom: .8rem; }
+        .plan-feats { list-style: none; }
+        .plan-feats li { font-size: .82rem; color: #b0b0c0; padding: .18rem 0 .18rem 1rem; position: relative; }
+        .plan-feats li::before { content: '✓'; position: absolute; left: 0; color: #4ade80; }
+        /* CTA */
+        .cta-sec { background: linear-gradient(135deg, #0d1f0d, #1a0533); border: 1px solid #14532d; border-radius: 14px; padding: 2rem; margin: 2.5rem 0; text-align: center; }
+        .cta-sec h3 { color: #4ade80; font-size: 1.2rem; margin-bottom: .6rem; }
+        .cta-sec p { color: #888; font-size: .9rem; margin-bottom: 1.2rem; }
+        .cta-row { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+        /* Score */
+        .scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
+        .score-card { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 10px; padding: 1rem; text-align: center; }
+        .score-card .s-label { font-size: .78rem; color: #888; margin-bottom: .3rem; }
+        .score-card .s-val { font-size: 1.4rem; font-weight: 700; color: #4ade80; }
+        /* FAQ */
+        .faq-item { border-bottom: 1px solid #2a2d3e; padding: 1.2rem 0; }
+        .faq-item summary { cursor: pointer; color: #e0e0e0; font-weight: 600; font-size: .95rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item summary::after { content: '+'; color: #4ade80; font-size: 1.2rem; }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-ans { color: #b0b0c0; font-size: .9rem; margin-top: .8rem; }
+        footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid #1e2132; color: #555; font-size: .82rem; }
+        footer a { color: #4ade80; text-decoration: none; }
+        .disclaimer { font-size: .78rem; color: #555; margin-top: 1.5rem; padding: 1rem; border: 1px solid #1e2132; border-radius: 8px; }
+        @media(max-width:600px){.summary-grid{grid-template-columns:1fr;}.hero-ctas{flex-direction:column;align-items:center;}}
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <a class="brand" href="https://autodev-ai.com">AutoDev AI</a>
+    <a href="https://autodev-ai.com/blog/">Blog</a>
+    <a href="https://autodev-ai.com/tools/">工具</a>
+</nav>
+
+<div class="hero">
+    <div class="hero-badge">⭐ GitHub 44K★ · HeyGen 官方工具 · 繁中首發</div>
+    <h1>HyperFrames 完整評測 2026：HeyGen 推出 HTML→AI 影片引擎，Claude Code 原生，繁中首發教學</h1>
+    <p>寫 HTML 結構就能生成 HeyGen AI Avatar 影片。44,000 GitHub Stars，9/8 登上 GitHub Trending #1，Claude Code 與 Cursor 原生支援。</p>
+    <div class="stat-row">
+        <div class="stat-item"><div class="num">44K★</div><div class="lab">GitHub Stars</div></div>
+        <div class="stat-item"><div class="num">#1</div><div class="lab">GitHub Trending 9/8</div></div>
+        <div class="stat-item"><div class="num">HeyGen</div><div class="lab">官方出品</div></div>
+        <div class="stat-item"><div class="num">MCP</div><div class="lab">Claude 原生</div></div>
+    </div>
+    <div class="hero-ctas">
+        <a href="https://github.com/HeyGen-Official/HyperFrames" class="btn-green" target="_blank" rel="noopener">GitHub 開源專案 →</a>
+        <a href="https://www.heygen.com/?sid=rewardful&via=autodev" class="btn-purple" target="_blank" rel="noopener">試用 HeyGen 免費額度</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <h2 class="sec">🎯 HyperFrames 是什麼？</h2>
+    <p><strong style="color:#e0e0e0;">HyperFrames</strong> 是 HeyGen 在 2026 年 9 月推出的開源 HTML-to-Video 引擎（GitHub：HeyGen-Official/HyperFrames），核心理念是：<strong style="color:#4ade80;">用你熟悉的 HTML/CSS 語法描述影片結構，AI 自動生成含 Avatar 旁白的完整影片。</strong></p>
+    <p>傳統 AI 影片製作需要開啟 HeyGen 介面、上傳腳本、手動排版。HyperFrames 把整個流程變成程式碼：你只需寫一份 HTML template，Claude Code 或任何支援 MCP 的 AI 就能直接呼叫 HyperFrames API 生成影片。</p>
+
+    <div class="highlight-box">
+        <strong>一句話定位：</strong>HyperFrames = 影片界的 React 元件。把影片拆成可複用的 HTML「幀」（Frame），讓 AI 自動組合成完整影片，適合大量生成產品介紹、教學影片、社群短片的開發者與行銷人。
+    </div>
+
+    <div class="summary-card">
+        <h3 style="color:#4ade80;font-size:1rem;">📋 快速評測結論</h3>
+        <div class="summary-grid">
+            <div class="summary-col pros">
+                <h4>✅ 優點</h4>
+                <ul>
+                    <li>HTML 語法上手，開發者零學習曲線</li>
+                    <li>Claude Code / Cursor 原生 MCP 整合</li>
+                    <li>開源免費（MIT 授權），HeyGen API 才計費</li>
+                    <li>支援 HeyGen 所有 Avatar（500+ 數位人）</li>
+                    <li>批次生成（一份 template → N 個影片）</li>
+                    <li>多語言旁白（含繁中、英文、日文）</li>
+                </ul>
+            </div>
+            <div class="summary-col cons">
+                <h4>⚠️ 缺點</h4>
+                <ul>
+                    <li>仍需 HeyGen 帳號與 API Key（計費）</li>
+                    <li>複雜動畫效果仍需 HeyGen 介面調整</li>
+                    <li>目前文件以英文為主</li>
+                    <li>免費帳號每月僅 1 分鐘影片額度</li>
+                    <li>生成速度約 1-3 分鐘/支（取決於長度）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="sec">📊 HyperFrames 評分</h2>
+    <div class="scores">
+        <div class="score-card"><div class="s-label">開發者友善度</div><div class="s-val">9.5 / 10</div></div>
+        <div class="score-card"><div class="s-label">Claude Code 整合</div><div class="s-val">9.8 / 10</div></div>
+        <div class="score-card"><div class="s-label">生成影片品質</div><div class="s-val">8.5 / 10</div></div>
+        <div class="score-card"><div class="s-label">批次生產效率</div><div class="s-val">9.2 / 10</div></div>
+        <div class="score-card"><div class="s-label">台灣適用性</div><div class="s-val">8.0 / 10</div></div>
+        <div class="score-card"><div class="s-label">CP 值</div><div class="s-val">8.8 / 10</div></div>
+    </div>
+
+    <h2 class="sec">🚀 5 步驟完整教學：用 Claude Code + HyperFrames 生成第一支 AI 影片</h2>
+
+    <ul class="steps">
+        <li>
+            <div class="body">
+                <strong>步驟 1：取得 HeyGen API Key</strong>
+                <span>前往 app.heygen.com → Settings → API，生成 API Key。HeyGen 免費帳號提供每月 1 分鐘影片額度，付費方案 Creator（$29/月）有 15 分鐘。</span>
+            </div>
+        </li>
+        <li>
+            <div class="body">
+                <strong>步驟 2：Clone 並安裝 HyperFrames</strong>
+            </div>
+        </li>
+    </ul>
+    <div class="code-block"><span class="code-comment"># Clone HyperFrames 開源專案</span>
+git clone https://github.com/HeyGen-Official/HyperFrames.git
+cd HyperFrames
+
+<span class="code-comment"># 安裝依賴（Node.js 18+ 需求）</span>
+npm install
+
+<span class="code-comment"># 設定環境變數</span>
+echo "HEYGEN_API_KEY=your_api_key_here" > .env</div>
+
+    <ul class="steps" style="counter-reset:step 2;">
+        <li>
+            <div class="body">
+                <strong>步驟 3：設定 Claude Code MCP（選用，推薦）</strong>
+                <span>HyperFrames 提供 MCP Server 模式，讓 Claude 直接呼叫生成指令：</span>
+            </div>
+        </li>
+    </ul>
+    <div class="code-block"><span class="code-comment">// ~/.claude/settings.json</span>
+{
+  "mcpServers": {
+    "hyperframes": {
+      "command": "node",
+      "args": ["./HyperFrames/mcp-server.js"],
+      "env": {
+        "HEYGEN_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}</div>
+
+    <ul class="steps" style="counter-reset:step 3;">
+        <li>
+            <div class="body">
+                <strong>步驟 4：撰寫你的第一個 HyperFrame HTML 模板</strong>
+                <span>HyperFrames 使用自定義 HTML 標籤描述影片結構：</span>
+            </div>
+        </li>
+    </ul>
+    <div class="code-block"><span class="code-comment">&lt;!-- product-intro.hframe.html — 產品介紹影片模板 --&gt;</span>
+&lt;hyperframe duration="30"&gt;
+  &lt;avatar id="tech_presenter_01" position="left" scale="0.8" /&gt;
+  &lt;script type="speech" lang="zh-TW"&gt;
+    大家好！今天要介紹的是我們全新的 AI 工具，
+    只需要三個步驟，就能讓你的工作效率提升 50%。
+  &lt;/script&gt;
+  &lt;background color="#0f1117" /&gt;
+  &lt;overlay type="title" text="🚀 AI 工具完整介紹" position="top-right" /&gt;
+&lt;/hyperframe&gt;
+
+&lt;hyperframe duration="20"&gt;
+  &lt;avatar id="tech_presenter_01" position="center" /&gt;
+  &lt;script type="speech" lang="zh-TW"&gt;
+    現在就掃描 QR Code，免費試用 14 天！
+  &lt;/script&gt;
+  &lt;overlay type="cta" text="免費試用" url="https://example.com" /&gt;
+&lt;/hyperframe&gt;</div>
+
+    <ul class="steps" style="counter-reset:step 4;">
+        <li>
+            <div class="body">
+                <strong>步驟 5：生成影片 — CLI 或 Claude 對話</strong>
+                <span>兩種方式擇一：CLI 直接生成，或在 Claude 對話中直接下令。</span>
+            </div>
+        </li>
+    </ul>
+    <div class="code-block"><span class="code-comment"># 方式 A：CLI 直接生成</span>
+npx hyperframes generate product-intro.hframe.html --output ./output/
+
+<span class="code-comment"># 方式 B：在 Claude Code 對話中（需設定 MCP）</span>
+<span class="code-comment"># 你：「幫我生成 product-intro.hframe.html 的影片，Avatar 用 tech_presenter_01，旁白語言繁中」</span>
+<span class="code-comment"># Claude 自動呼叫 HyperFrames MCP → HeyGen API → 下載影片到 output/</span></div>
+
+    <h2 class="sec">🇹🇼 台灣開發者與行銷人 4 大實戰場景</h2>
+
+    <p><strong style="color:#e0e0e0;">場景 1：SaaS 產品 Onboarding 影片批次生成</strong><br>
+    SaaS 新創每次改版後需要更新 Onboarding 影片（英文 + 繁中各一版）。傳統方法：重錄或更換字幕，需 2-3 天。使用 HyperFrames：修改 template 的旁白文字，Claude Code 批次生成兩語言版本，30 分鐘完成。</p>
+
+    <p><strong style="color:#e0e0e0;">場景 2：電商商品介紹短片</strong><br>
+    電商品牌每週新增 20-50 個 SKU，每個商品需要 15-30 秒介紹短片用於 IG Reels / TikTok。HyperFrames template 化商品資訊（名稱、價格、特色），n8n 讀取商品資料庫 → 自動填入 template → 批次生成，每天 100 支影片完全自動化。</p>
+
+    <p><strong style="color:#e0e0e0;">場景 3：教學平台課程預覽影片</strong><br>
+    Hahow 等教學平台的課程預覽影片製作成本高。HyperFrames 可讓講師用文字稿生成 Avatar 預覽影片，無需出鏡、無需錄音，AI 自動生成。結合 <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" style="color:#4ade80;" target="_blank" rel="noopener">Hahow 課程製作工作流</a>，大幅降低課程製作門檻。</p>
+
+    <p><strong style="color:#e0e0e0;">場景 4：企業培訓教材影片</strong><br>
+    HR 部門定期需要更新員工培訓影片（資安、合規、產品更新）。HyperFrames 讓 HR 人員直接編輯 HTML 文字稿，無需影片製作技術，IT 人員用 Claude Code 一鍵更新並生成新版影片，維護成本降低 80%。</p>
+
+    <h2 class="sec" id="comparison">⚖️ HyperFrames vs 其他 AI 影片工具完整比較</h2>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>功能 / 工具</th>
+                    <th>HyperFrames + HeyGen</th>
+                    <th>HeyGen 介面版</th>
+                    <th>Synthesia</th>
+                    <th>Runway Gen-4</th>
+                    <th>Seedance 2.5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>程式碼控制</td>
+                    <td class="green">✅ HTML 完整控制</td>
+                    <td class="red">❌</td>
+                    <td class="red">❌</td>
+                    <td class="red">❌</td>
+                    <td class="red">❌</td>
+                </tr>
+                <tr>
+                    <td>Claude Code 整合</td>
+                    <td class="green">✅ MCP 原生</td>
+                    <td class="red">❌</td>
+                    <td class="red">❌</td>
+                    <td class="red">❌</td>
+                    <td class="red">❌</td>
+                </tr>
+                <tr>
+                    <td>批次生成</td>
+                    <td class="green">✅ 程式化批次</td>
+                    <td>⚠️ 手動</td>
+                    <td>✅</td>
+                    <td>⚠️ 有限</td>
+                    <td>⚠️ 有限</td>
+                </tr>
+                <tr>
+                    <td>Avatar 種類</td>
+                    <td class="green">500+ HeyGen Avatar</td>
+                    <td class="green">500+</td>
+                    <td>250+</td>
+                    <td>無 Avatar（純影片）</td>
+                    <td>無 Avatar</td>
+                </tr>
+                <tr>
+                    <td>繁中語音</td>
+                    <td class="green">✅</td>
+                    <td class="green">✅</td>
+                    <td>✅</td>
+                    <td class="red">❌</td>
+                    <td>⚠️ 有限</td>
+                </tr>
+                <tr>
+                    <td>開源</td>
+                    <td class="green">✅ MIT</td>
+                    <td class="red">❌ 閉源</td>
+                    <td class="red">❌</td>
+                    <td class="red">❌</td>
+                    <td class="red">❌</td>
+                </tr>
+                <tr>
+                    <td>月費（起）</td>
+                    <td>HyperFrames 免費<br><span style="font-size:.78rem;color:#888;">HeyGen $29/月起</span></td>
+                    <td>$29/月</td>
+                    <td>$22/月</td>
+                    <td>$12/月</td>
+                    <td>$20/月</td>
+                </tr>
+                <tr>
+                    <td>適合對象</td>
+                    <td class="green">開發者 / AI-native 行銷人</td>
+                    <td>一般用戶</td>
+                    <td>企業培訓</td>
+                    <td>創意影片</td>
+                    <td>短影音</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="sec">💰 HeyGen 定價方案（搭配 HyperFrames 使用）</h2>
+    <p style="color:#888;font-size:.88rem;margin-bottom:.5rem;">HyperFrames 本身完全免費開源，以下是呼叫 HeyGen API 的費用。</p>
+    <div class="pricing-grid">
+        <div class="plan-card">
+            <div class="plan-name">Free</div>
+            <div class="plan-price">$0<sub>/月</sub></div>
+            <div class="plan-twd">永久免費</div>
+            <ul class="plan-feats">
+                <li>1 分鐘影片/月</li>
+                <li>有浮水印</li>
+                <li>720p 解析度</li>
+                <li>測試用</li>
+            </ul>
+        </div>
+        <div class="plan-card hot">
+            <div class="plan-name">Creator</div>
+            <div class="plan-price">$29<sub>/月</sub></div>
+            <div class="plan-twd">約 NT$975/月 · 年付省 20%</div>
+            <ul class="plan-feats">
+                <li>15 分鐘影片/月</li>
+                <li>無浮水印</li>
+                <li>1080p 解析度</li>
+                <li>API 存取（HyperFrames 必需）</li>
+                <li>500+ Avatar 存取</li>
+            </ul>
+        </div>
+        <div class="plan-card">
+            <div class="plan-name">Team</div>
+            <div class="plan-price">$89<sub>/月</sub></div>
+            <div class="plan-twd">約 NT$2,990/月 · 年付</div>
+            <ul class="plan-feats">
+                <li>30 分鐘影片/月</li>
+                <li>多人協作</li>
+                <li>4K 輸出</li>
+                <li>API Rate Limit 提升</li>
+                <li>客製 Avatar 上傳</li>
+            </ul>
+        </div>
+        <div class="plan-card">
+            <div class="plan-name">Enterprise</div>
+            <div class="plan-price">自訂</div>
+            <div class="plan-twd">聯繫 HeyGen 報價</div>
+            <ul class="plan-feats">
+                <li>無限影片分鐘</li>
+                <li>SSO / 合規</li>
+                <li>專屬 API SLA</li>
+                <li>白標解決方案</li>
+            </ul>
+        </div>
+    </div>
+    <p style="font-size:.78rem;color:#555;margin-top:.4rem;">* 2026 年定價。Creator 方案為 HyperFrames API 使用的最低入門方案。1 USD ≈ 33.6 TWD。</p>
+
+    <div class="cta-sec">
+        <h3>🚀 免費試用 HeyGen + HyperFrames</h3>
+        <p>HyperFrames 開源免費，HeyGen 有免費額度（每月 1 分鐘影片）。立即開始，生成你的第一支 AI Avatar 影片。</p>
+        <div class="cta-row">
+            <a href="https://www.heygen.com/?sid=rewardful&via=autodev" class="btn-green" target="_blank" rel="noopener">免費試用 HeyGen →</a>
+            <a href="https://m.do.co/c/6121a295f624" class="btn-purple" target="_blank" rel="noopener">DigitalOcean 部署批次生成伺服器</a>
+        </div>
+        <p style="font-size:.78rem;color:#555;margin-top:.8rem;">部署 DigitalOcean Droplet（$24/月起）跑 HyperFrames 批次任務，比本機執行穩定，24小時自動化不斷線。</p>
+    </div>
+
+    <h2 class="sec">❓ HyperFrames 常見問題（FAQ）</h2>
+    <details class="faq-item">
+        <summary>HyperFrames 完全免費嗎？</summary>
+        <p class="faq-ans">HyperFrames 本身是 MIT 開源免費。但生成影片需要呼叫 HeyGen API，HeyGen 的免費方案每月只有 1 分鐘影片額度，超過需付費（Creator $29/月起，才能使用 API）。簡言之：HyperFrames 工具免費，影片生成依 HeyGen 方案計費。</p>
+    </details>
+    <details class="faq-item">
+        <summary>HyperFrames 跟 Claude Code 怎麼整合？</summary>
+        <p class="faq-ans">HyperFrames 提供 MCP Server 模式。設定 Claude Code 的 settings.json 加入 hyperframes MCP server（指向 HyperFrames 的 mcp-server.js），之後就能在 Claude 對話中直接下令「生成影片」，Claude 自動呼叫 HyperFrames → HeyGen API 完成生成，無需手動執行 CLI。</p>
+    </details>
+    <details class="faq-item">
+        <summary>HyperFrames 支援繁中旁白嗎？</summary>
+        <p class="faq-ans">支援。HyperFrames 的 &lt;script type="speech" lang="zh-TW"&gt; 標籤直接指定繁中語音，由 HeyGen 的 TTS 引擎合成。HeyGen 支援 40+ 語言，繁中語音品質在 2026 年已相當自然。</p>
+    </details>
+    <details class="faq-item">
+        <summary>可以批次生成多支影片嗎？</summary>
+        <p class="faq-ans">可以。HyperFrames CLI 支援傳入 JSON 陣列批次生成，也可搭配 n8n 設計自動化流程（讀取資料庫 → 填入 template → 批次生成）。批次生成的速度受 HeyGen API Rate Limit 限制，Creator 方案約 5 支/小時，Team 方案更高。</p>
+    </details>
+    <details class="faq-item">
+        <summary>HyperFrames 生成的影片解析度？</summary>
+        <p class="faq-ans">解析度由 HeyGen 方案決定：Free 720p（有浮水印），Creator 1080p，Team 4K。HyperFrames template 可設定輸出格式（16:9 / 9:16 / 1:1），適合不同社群平台。</p>
+    </details>
+    <details class="faq-item">
+        <summary>HyperFrames 跟 Synthesia 比較哪個好？</summary>
+        <p class="faq-ans">核心差異在於使用方式：Synthesia 是 GUI 工具，適合非技術用戶；HyperFrames 是程式碼驅動，適合開發者與需要批次生產的場景。如果你需要 Claude Code 自動化生成、或每月超過 50 支影片，HyperFrames + HeyGen 效率遠高於 Synthesia 手動操作。</p>
+    </details>
+
+    <div class="disclaimer">
+        <strong>聯盟行銷聲明：</strong>本頁面包含 HeyGen、DigitalOcean 和 Hahow 的聯盟推廣連結。當您透過本頁連結訂閱，我們可能獲得佣金，但您支付的費用不會因此增加。本評測依據 2026 年公開資訊撰寫，HyperFrames 為 MIT 開源工具，HeyGen 為商業服務。如有任何疑問，請參閱各服務商官方網站。
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 AutoDev AI · <a href="https://autodev-ai.com">autodev-ai.com</a> · 台灣 AI 工具評測首選</p>
+    <p style="margin-top:.4rem;"><a href="https://autodev-ai.com/blog/">Blog</a> · <a href="https://autodev-ai.com/tools/">工具頁</a> · <a href="https://autodev-ai.com/sitemap.xml">Sitemap</a></p>
+</footer>
+</body>
+</html>
