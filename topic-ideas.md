@@ -2787,3 +2787,79 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 - 原 P0-STANDBY 預測 Sep 12 GA 需要修正：目前來源僅見 "Cursor Grok 4.7 in 9 days"（from Sep 3 post = Sep 12），但這是 **Cursor 整合 Grok 4.7**，非 xAI 新模型 GA
 - 暫定 P2-WATCH：若 9/12 Cursor 整合確認 → 可做 blog/cursor-grok-47-integration-2026.html
 
+
+---
+
+## Round 198 — 2026-09-10 00:30 UTC（Thu 08:30 JST ai-trend-hunter cron）
+
+### 🎯 本輪核心掃描：Grok 4.7 GA 確認狀態 + OpenAI DevDay T-19天 + 高佣金 Affiliate 追蹤
+
+---
+
+### 發現 1：Grok 4.7 — Sep 12 目標仍未 GA（P0-STANDBY 維持）
+- xAI Musk 確認「10 days」= Sep 12（2026-09-02 發文）
+- 當前最新 xAI/SpaceXAI flagship = Grok 4.6（2026-08-12 GA，$2/M input，$6/M output）
+- 2.1T 參數（Musk 非官方），SpaceX 飛行遙測加入訓練
+- Cursor 已整合 Grok 4.7 的**測試版**，但 API 正式 GA 仍未開放
+- **行動：待命，Sep 12 GA 後 24h 內執行 blog/grok-47-complete-review-2026.html**
+
+### 發現 2：DeepSeek Harness — 188K★ 爆紅 coding agent framework（P1-HIGH）
+- 2026-08-13 開源，177K★ 8天（比 Claude Code/LangChain 更快達到同等星數）
+- 插件式 coding agent：可把 Claude Code/Codex 當子 agent 跑
+- 價格爭議：開源免費 → 8天後 API 漲價 1,100%（爆紅後收費轉型）
+- 繁中評測：幾乎空白（GitHub Discussion 英文為主）
+- **關鍵字：deepseek harness 教學, deepseek harness vs claude code, coding agent 比較 2026**
+- Affiliate：無直接 affiliate，但可導流 DO/DataCamp（開發者受眾）
+- **預估月收入：$150-450（間接）**
+- **建議站點：autodev-ai.com（開發者受眾完美吻合）**
+
+### 發現 3：Obscura — Rust 輕量 headless browser for AI agents（P2）
+- 2026-04-13 開源，26.5K★（V0.2.1，2026-08-23）
+- 34MB 記憶體（vs headless Chrome 200+MB），V8 JS，CDP 相容
+- Cloudflare Kitesurf browser 啟發來源（8/7 發布為催化劑）
+- Puppeteer/Playwright drop-in 替代，Apache 2.0
+- **關鍵字：obscura headless browser ai agent, rust headless browser 教學 2026**
+- 適合做：工具介紹頁 + 教學文（scraping + agent automation 受眾）
+- **預估月收入：$100-300（間接 DO/DataCamp）**
+
+### 發現 4：OpenAI DevDay 2026 — T-19天，文章已存在（content-ops 補充建議）
+- 2026-09-29 Fort Mason，10:00 AM PT Keynote（Sam Altman）
+- 最佳流量窗口：**今天起到 Sep 25**（T-19～T-4）
+- blog/openai-devday-2026-preview.html **已存在**（R197 seo-writer 已執行）
+- **建議：在 DevDay 前 1 週（Sep 22）更新文章加入更多預測/新情報**
+- **DevDay 後 48h（Sep 30-Oct 1）改版為「全紀錄 + 最重要公告分析」**
+
+### 發現 5：Grok 4.7 + Cursor 深度整合（P1-HIGH 前哨）
+- Cursor 3.0 已整合 Grok 4.5（7/8-16），Grok 4.7 Cursor 整合 T-2天
+- xAI SpaceXAI 架構：Tesla AI（Grok in car）+ Cursor 合作訓練數據
+- Grok 4.7 spec：~2.1T 參數，SpaceX 飛行遙測，比 Grok 4.6 Artificial Analysis 61→預估 70+
+- **建議：Grok 4.7 GA 後，可做 blog/cursor-vs-grok47-integration-guide-2026.html（Cursor 深度整合）**
+
+### 發現 6：Systeme.io 60% LIFETIME — 更新確認（高價值 Affiliate 重申）
+- 官方確認 **60% LIFETIME recurring**（2026-04 更新）
+- 歸因機制：永久 attribution（非 cookie-based）
+- 月付最低 $17，$17 × 60% = $10.20/月/user
+- autodev-ai 已有文章 blog/systeme-io-review-2026.html（14 clicks / 2 weeks，GSC 確認）
+- Systeme.io keyword「systeme.io」在 autodev-ai GSC position 17.7（待優化）
+- **建議：SEO 優化現有文章，或做 tools/systeme-io-vs-clickfunnels-2026.html 比較頁**
+
+### 發現 7：Skool 40% LIFETIME Recurring — 未充分利用（P1-HIGH Affiliate）
+- 官方 40% LIFETIME recurring，60-day cookie，$99/month platform
+- 每引薦 1 用戶 = $39.6/月持續（課程社群市場爆發）
+- 台灣繁中 Skool 評測：幾乎空白（英文競品多，繁中零）
+- **關鍵字：skool 評測 2026, skool affiliate, skool vs kajabi 繁中**
+- **預估月收入：$400-1,000（40% × $99，10-25 轉換/月）**
+- **狀態：Ivan 申請積壓清單，需提醒**
+
+### 格式化報告
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|---------|--------|---------|-----------|---------|
+| 2026-09-10 | DeepSeek Harness（188K★） | deepseek harness 教學, deepseek harness vs claude code | 中-高 | 間接（DO/DataCamp 評測文） | $150-450 | autodev-ai.com |
+| 2026-09-10 | Grok 4.7（T-2天待命） | grok 4.7 評測, grok 4.7 price, xai grok 4.7 2026 | 高（GA後爆發） | 間接（評測文+比較頁） | $200-800（GA後） | autodev-ai.com |
+| 2026-09-10 | Obscura Rust headless browser | obscura headless browser, rust ai agent browser | 低-中 | 間接（DO） | $100-300 | autodev-ai.com |
+| 2026-09-10 | Systeme.io 60% LIFETIME | systeme.io 評測, systeme.io vs clickfunnels | 中 | Affiliate 60% LIFETIME | $200-600 | autodev-ai.com |
+| 2026-09-10 | 💰 AFFILIATE | **Skool 40% LIFETIME** | skool 評測, skool 繁中, skool vs kajabi | 中 | **40% LIFETIME recurring，60-day** | $400-1,000 | Ivan 申請（skool.com/affiliates） |
+| 2026-09-10 | 💰 AFFILIATE | **Systeme.io 60% LIFETIME（已有文章）** | systeme.io, systeme.io review | 中 | **60% LIFETIME，永久 attribution** | $200-600（現有文章優化） | autodev-ai.com |
+| 2026-09-10 | OpenAI DevDay 2026 T-19 | openai devday 2026, devday 懶人包 | 高（Sep 25-Oct 1） | 間接（文章流量高峰） | $100-400（流量高峰） | autodev-ai.com（文章已有） |
+
