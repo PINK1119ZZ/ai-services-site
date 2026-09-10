@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeepSeek Harness 完整教學 2026：188K★ Coding Agent Framework，把 Claude Code 當子工具跑，繁中首發</title>
+<meta name="description" content="DeepSeek Harness 2026 完整繁中教學。188K★ 史上最速開源 coding agent framework，插件式架構可把 Claude Code/Codex 當 sub-agent。含安裝教學、vs LangChain/Dify 比較表、台灣開發者四大實戰場景、1,100% 漲價事件完整解析。">
+<meta name="keywords" content="deepseek harness 教學,deepseek harness vs claude code,coding agent framework 比較 2026,deepseek harness 安裝教學,agent harness python,hkuds deepcode,ai agent framework 繁中,deepseek harness self-host">
+<link rel="canonical" href="https://autodev-ai.com/blog/deepseek-harness-complete-guide-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/deepseek-harness-complete-guide-2026.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/deepseek-harness-complete-guide-2026.html">
+<meta property="og:title" content="DeepSeek Harness 完整教學 2026：188K★，把 Claude Code 當子工具跑的 Coding Agent Framework">
+<meta property="og:description" content="DeepSeek Harness 繁中首發：188K★ 史上最速開源，插件式架構，可把 Claude Code 當 sub-agent。含安裝教學、比較表、漲價事件解析。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/deepseek-harness-complete-guide-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta property="article:published_time" content="2026-09-10">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DeepSeek Harness 教學 2026：188K★ Coding Agent Framework 繁中首發">
+<meta name="twitter:description" content="把 Claude Code 當子工具跑。188K★ 史上最速開源 coding agent framework，插件式架構完整繁中教學。">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="author" content="AutoDev AI">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+<style>
+.article-hero{background:linear-gradient(135deg,#0d1b2a 0%,#1b263b 50%,#415a77 100%);padding:4rem 2rem 3rem;text-align:center;}
+.article-hero h1{font-family:'DM Serif Display','Noto Serif TC',serif;font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;max-width:880px;margin:0 auto 1rem;line-height:1.25;}
+.article-hero .subtitle{color:rgba(255,255,255,0.75);font-size:1.05rem;max-width:720px;margin:0 auto 1.5rem;}
+.article-meta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;color:rgba(255,255,255,0.6);font-size:0.9rem;}
+.article-body{max-width:820px;margin:0 auto;padding:3rem 2rem;}
+.article-body h2{font-family:'DM Serif Display','Noto Serif TC',serif;font-size:1.6rem;color:var(--text,#1a1a1a);margin:2.5rem 0 1rem;border-left:4px solid #415a77;padding-left:1rem;}
+.article-body h3{font-size:1.15rem;font-weight:700;color:var(--text,#1a1a1a);margin:1.8rem 0 0.6rem;}
+.article-body p{line-height:1.8;margin-bottom:1.2rem;color:var(--text-muted,#444);}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.2rem;}
+.article-body li{line-height:1.8;margin-bottom:0.4rem;color:var(--text-muted,#444);}
+.highlight-box{background:linear-gradient(135deg,#e8f4fd,#dbeafe);border:1px solid #93c5fd;border-radius:8px;padding:1.5rem;margin:2rem 0;}
+.highlight-box strong{color:#1e40af;}
+.warning-box{background:linear-gradient(135deg,#fef9e7,#fef3c7);border:1px solid #f59e0b;border-radius:8px;padding:1.5rem;margin:2rem 0;}
+.warning-box strong{color:#92400e;}
+.success-box{background:linear-gradient(135deg,#ecfdf5,#d1fae5);border:1px solid #6ee7b7;border-radius:8px;padding:1.5rem;margin:2rem 0;}
+.success-box strong{color:#065f46;}
+.comparison-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:0.92rem;}
+.comparison-table th{background:#1b263b;color:#fff;padding:0.85rem 1rem;text-align:left;}
+.comparison-table td{padding:0.75rem 1rem;border-bottom:1px solid #e5e7eb;vertical-align:top;}
+.comparison-table tr:hover td{background:#f8fafc;}
+.comparison-table .winner{color:#059669;font-weight:700;}
+.comparison-table .loser{color:#dc2626;}
+.step-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1.5rem;margin:1.5rem 0;}
+.step-box h4{color:#1b263b;font-weight:700;margin:0 0 0.75rem;}
+.code-block{background:#1e1e2e;color:#cdd6f4;border-radius:6px;padding:1.25rem;font-family:'Courier New',monospace;font-size:0.88rem;line-height:1.7;overflow-x:auto;margin:1rem 0;}
+.code-block .comment{color:#6c7086;}
+.tag{display:inline-block;background:#1b263b;color:#fff;border-radius:20px;padding:0.2rem 0.75rem;font-size:0.8rem;margin:0.2rem;}
+.event-timeline{border-left:3px solid #415a77;margin:1.5rem 0;padding-left:1.5rem;}
+.event-timeline .event{margin-bottom:1.25rem;position:relative;}
+.event-timeline .event::before{content:'';position:absolute;left:-1.85rem;top:0.3rem;width:10px;height:10px;border-radius:50%;background:#415a77;}
+.event-timeline .event-date{font-weight:700;color:#1b263b;font-size:0.9rem;}
+.event-timeline .event-desc{color:#444;font-size:0.95rem;margin-top:0.2rem;}
+.arch-box{background:#1e1e2e;border-radius:8px;padding:1.5rem;margin:1.5rem 0;color:#cdd6f4;font-family:'Courier New',monospace;font-size:0.9rem;line-height:1.8;}
+.arch-box .arch-title{color:#89dceb;font-weight:700;margin-bottom:0.75rem;}
+.cta-section{background:linear-gradient(135deg,#1b263b 0%,#0d1b2a 100%);border-radius:12px;padding:2.5rem;margin:2.5rem 0;text-align:center;color:#fff;}
+.cta-section h3{font-family:'DM Serif Display',serif;font-size:1.5rem;margin-bottom:0.75rem;}
+.cta-section p{color:rgba(255,255,255,0.8);margin-bottom:1.5rem;}
+.cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.cta-btn{display:inline-block;padding:0.85rem 2rem;border-radius:50px;font-weight:700;text-decoration:none;transition:all 0.3s;}
+.cta-btn-primary{background:linear-gradient(135deg,#38bdf8,#0ea5e9);color:#fff;}
+.cta-btn-secondary{background:linear-gradient(135deg,#34d399,#10b981);color:#fff;}
+.cta-btn-tertiary{background:linear-gradient(135deg,#a78bfa,#7c3aed);color:#fff;}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2);}
+.price-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.92rem;}
+.price-table th{background:#1e293b;color:#fff;padding:0.8rem 1rem;text-align:center;}
+.price-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;text-align:center;}
+.price-table .best{background:#ecfdf5;color:#059669;font-weight:700;}
+.faq-item{border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem;margin:1rem 0;}
+.faq-item h4{color:#1b263b;font-weight:700;margin-bottom:0.5rem;}
+.scenario-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1.5rem;margin:1.25rem 0;}
+.scenario-card h4{color:#1b263b;font-weight:700;margin:0 0 0.5rem;}
+.badge{display:inline-block;border-radius:4px;padding:0.15rem 0.5rem;font-size:0.78rem;font-weight:700;margin-right:0.4rem;}
+.badge-green{background:#d1fae5;color:#065f46;}
+.badge-blue{background:#dbeafe;color:#1e40af;}
+.badge-yellow{background:#fef3c7;color:#92400e;}
+.badge-red{background:#fee2e2;color:#991b1b;}
+@media(max-width:640px){.article-body{padding:2rem 1rem;}.comparison-table,.price-table{font-size:0.8rem;}}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <a href="/" class="navbar-brand"><img src="/autodev-logo2.png" alt="AutoDev AI" height="36" style="vertical-align:middle;margin-right:8px;">AutoDev AI</a>
+  <ul class="navbar-menu">
+    <li><a href="/blog/">部落格</a></li>
+    <li><a href="/tools/">工具</a></li>
+    <li><a href="/#contact">聯絡</a></li>
+  </ul>
+</nav>
+
+<div class="article-hero">
+  <div style="margin-bottom:1rem;">
+    <span class="tag">⭐ 188K Stars</span>
+    <span class="tag">🚀 繁中首發</span>
+    <span class="tag">🔌 插件式架構</span>
+    <span class="tag">🤖 Sub-Agent 支援</span>
+  </div>
+  <h1>DeepSeek Harness 完整教學 2026：188K★ 史上最速開源，把 Claude Code 當子工具跑的 Coding Agent Framework</h1>
+  <p class="subtitle">8 天衝破 178K Stars，比 Claude Code 和 LangChain 都快。插件式架構讓你把任何 AI 工具當 sub-agent，開源後漲價 1,100% 的背後故事，繁中零競品完整解析。</p>
+  <div class="article-meta">
+    <span>📅 2026年9月10日</span>
+    <span>✍️ AutoDev AI</span>
+    <span>⏱️ 閱讀約 15 分鐘</span>
+    <span>🔖 DeepSeek · Agent Framework · Coding Agent · Open Source</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+<div class="highlight-box">
+<strong>📌 重點速覽（30秒版）</strong>
+<ul>
+<li><strong>DeepSeek Harness</strong>：2026-08-13 開源，8 天達 178K★，目前 188K★，超越 Claude Code（142K★）和 LangChain（144K★）</li>
+<li><strong>插件式架構</strong>：不只是 coding agent，是讓你把 Claude Code、Codex、任何 AI 工具當 sub-agent 嵌入的框架</li>
+<li><strong>Self-host 免費</strong>：帶自己的 API key 跑，DigitalOcean Droplet $6/月起就能部署，完全掌控資料</li>
+<li><strong>漲價 1,100% 事件</strong>：開源 3 天後 DeepSeek 雲端 API 費率暴漲，但 self-host 路徑不受影響</li>
+<li><strong>繁中完全空白</strong>：GitHub 188K★ 工具，目前幾乎沒有中文完整教學</li>
+</ul>
+</div>
+
+<h2>DeepSeek Harness 是什麼？為何在開發者社群爆炸？</h2>
+
+<p>如果你最近在 GitHub Trending 或 Hacker News 上看到「DeepSeek Harness」這個名字，你不孤單。2026 年 8 月 13 日，DeepSeek 悄悄把這個內部 coding agent framework 開源，接下來 8 天發生的事情讓整個 AI 開發者社群瞠目結舌：178,000 Stars。</p>
+
+<p>相比之下，Claude Code 從公開測試到現在累積了 142K Stars，LangChain 花了兩年多才到 144K。DeepSeek Harness 用不到兩週打破了所有 AI 開源工具的增速紀錄。</p>
+
+<p>但爆紅原因不只是 DeepSeek 的品牌效應。開發者真正興奮的是它的<strong>架構設計理念</strong>：</p>
+
+<ul>
+<li>不是另一個 monolithic coding assistant</li>
+<li>而是讓你把任何 AI 工具（包括 Claude Code、OpenAI Codex、Gemini）插入進來當 sub-agent 的<strong>編排框架</strong></li>
+<li>相當於「AI agent 的 Linux」——核心輕量，擴展性由插件決定</li>
+</ul>
+
+<div class="warning-box">
+<strong>⚠️ 1,100% 漲價事件（你必須知道）</strong><br>
+DeepSeek Harness 開源後第三天，DeepSeek 雲端 API 悄悄調整了定價，部分端點費率上漲超過 1,100%。這導致許多直接使用 DeepSeek 雲端 API 的用戶帳單暴增。<strong>但 self-host 路徑完全不受影響</strong>——框架本身開源，你帶自己的模型 API（包括其他供應商）就不受 DeepSeek 定價控制。本教學的安裝步驟會教你設定多 provider 支援，規避單一 API 風險。
+</div>
+
+<h2>DeepSeek Harness 架構解析：為什麼它和 LangChain、Dify 不一樣</h2>
+
+<p>要理解 DeepSeek Harness 的價值，先看它的核心架構思路：</p>
+
+<div class="arch-box">
+<div class="arch-title">DeepSeek Harness 架構圖（概念）</div>
+┌─────────────────────────────────────────────┐<br>
+│           Harness Orchestrator              │<br>
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  │<br>
+│  │ Plugin A │  │ Plugin B │  │ Plugin C │  │<br>
+│  │(Claude   │  │(DeepSeek │  │(Custom   │  │<br>
+│  │ Code)    │  │ V4 Pro)  │  │ Tool)    │  │<br>
+│  └──────────┘  └──────────┘  └──────────┘  │<br>
+│        ↑              ↑             ↑       │<br>
+│        └──────── Task Router ───────┘       │<br>
+│                      ↑                      │<br>
+│              User Prompt / CI               │<br>
+└─────────────────────────────────────────────┘
+</div>
+
+<p>核心概念是 <strong>Task Router</strong>：你定義一組任務規則（哪種任務用哪個 agent），Harness 自動把任務分發到最適合的 sub-agent 執行，結果統一回收整合。</p>
+
+<h3>vs LangChain：為什麼開發者說「終於有人做對了」</h3>
+
+<table class="comparison-table">
+<thead>
+<tr>
+<th>面向</th>
+<th>DeepSeek Harness</th>
+<th>LangChain</th>
+<th>Dify</th>
+<th>Claude Code（單機）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>設計理念</td>
+<td class="winner">Agent orchestration framework</td>
+<td>LLM chain 串接</td>
+<td>低代碼 workflow</td>
+<td>單一 AI coding assistant</td>
+</tr>
+<tr>
+<td>Sub-agent 支援</td>
+<td class="winner">原生支援，任何工具可嵌入</td>
+<td>有但設定複雜</td>
+<td>有（Flow 模式）</td>
+<td class="loser">無（單一 agent）</td>
+</tr>
+<tr>
+<td>Coding 任務優化</td>
+<td class="winner">原生設計為 coding 場景</td>
+<td>通用，需額外設定</td>
+<td>通用，不擅長 coding</td>
+<td class="winner">原生 coding 優化</td>
+</tr>
+<tr>
+<td>插件/擴展機制</td>
+<td class="winner">官方插件系統，Python 定義</td>
+<td>Tool API（較複雜）</td>
+<td>GUI 拖拉</td>
+<td class="loser">封閉</td>
+</tr>
+<tr>
+<td>Self-host</td>
+<td class="winner">完全支援，MIT 授權</td>
+<td class="winner">支援</td>
+<td>支援（Docker）</td>
+<td class="loser">不支援</td>
+</tr>
+<tr>
+<td>GitHub Stars</td>
+<td><strong>188K★</strong>（2026-09）</td>
+<td>144K★</td>
+<td>89K★</td>
+<td>142K★</td>
+</tr>
+<tr>
+<td>學習曲線</td>
+<td>中等（需理解 YAML config）</td>
+<td>陡峭（抽象層多）</td>
+<td>低（但彈性差）</td>
+<td>低（開箱即用）</td>
+</tr>
+<tr>
+<td>適合場景</td>
+<td class="winner">多 agent 協作 coding pipeline</td>
+<td>RAG、資料處理 pipeline</td>
+<td>企業知識庫</td>
+<td>個人 coding 助理</td>
+</tr>
+</tbody>
+</table>
+
+<p>簡單說：如果你的工作流程只需要一個 AI 幫你寫程式，Claude Code 或 Cursor 已經夠用。但如果你需要<strong>多個 AI 工具協作</strong>——比如用 DeepSeek 做初稿、Claude Code 做 review、再用 Codex 跑測試——DeepSeek Harness 是目前最乾淨的解法。</p>
+
+<h2>安裝教學：5 步驟從零到跑起來</h2>
+
+<p>以下教學在 Ubuntu 22.04 LTS（DigitalOcean Droplet $12/月）上測試，macOS 同樣適用。</p>
+
+<div class="step-box">
+<h4>Step 1：安裝 Python 環境與基本依賴</h4>
+<p>DeepSeek Harness 需要 Python 3.10+。建議用 <code>pyenv</code> 管理版本：</p>
+<div class="code-block">
+<span class="comment"># 確認 Python 版本</span><br>
+python3 --version  <span class="comment"># 需要 3.10+</span><br>
+<br>
+<span class="comment"># 建立虛擬環境（強烈建議）</span><br>
+python3 -m venv harness-env<br>
+source harness-env/bin/activate  <span class="comment"># Windows: harness-env\Scripts\activate</span><br>
+<br>
+<span class="comment"># 升級 pip</span><br>
+pip install --upgrade pip
+</div>
+</div>
+
+<div class="step-box">
+<h4>Step 2：安裝 DeepSeek Harness</h4>
+<div class="code-block">
+<span class="comment"># 從 PyPI 安裝（推薦）</span><br>
+pip install deepseek-harness<br>
+<br>
+<span class="comment"># 或從 GitHub 安裝最新開發版</span><br>
+pip install git+https://github.com/deepseek-ai/deepseek-harness.git<br>
+<br>
+<span class="comment"># 確認安裝成功</span><br>
+harness --version
+</div>
+</div>
+
+<div class="step-box">
+<h4>Step 3：設定 API Key（支援多 Provider）</h4>
+<p>這是關鍵步驟。DeepSeek Harness 支援多個 API provider，建議至少設定兩個以避免單點失敗：</p>
+<div class="code-block">
+<span class="comment"># 建立環境變數檔</span><br>
+cp .env.example .env<br>
+<br>
+<span class="comment"># 編輯 .env，填入你的 API keys</span><br>
+DEEPSEEK_API_KEY=sk-xxxxxxxx          <span class="comment"># DeepSeek API（可選）</span><br>
+ANTHROPIC_API_KEY=sk-ant-xxxxxxxx     <span class="comment"># Claude Code sub-agent 用</span><br>
+OPENAI_API_KEY=sk-xxxxxxxx            <span class="comment"># OpenAI Codex sub-agent 用</span><br>
+GEMINI_API_KEY=xxxxxxxx               <span class="comment"># Gemini sub-agent 用（可選）</span><br>
+<br>
+<span class="comment"># 讀取環境變數</span><br>
+source .env
+</div>
+<div class="warning-box">
+<strong>⚠️ 漲價事件教訓：</strong>不要只填 <code>DEEPSEEK_API_KEY</code>。建議至少設定一個備用 provider。DeepSeek 雲端 API 漲價 1,100% 事件發生時，有備用 provider 設定的用戶幾乎沒有受到影響。
+</div>
+</div>
+
+<div class="step-box">
+<h4>Step 4：建立 Harness 設定檔（harness.yaml）</h4>
+<p>這是 DeepSeek Harness 最核心的設定：定義你的 agents 和 task routing 規則。</p>
+<div class="code-block">
+<span class="comment"># harness.yaml 範例設定</span><br>
+version: "1.0"<br>
+<br>
+agents:<br>
+  <span class="comment"># 主要 coding agent：使用 DeepSeek V4 Pro</span><br>
+  - name: code-generator<br>
+    provider: deepseek<br>
+    model: deepseek-v4-pro<br>
+    role: "Generate initial code drafts and implementations"<br>
+    max_tokens: 8192<br>
+<br>
+  <span class="comment"># 代碼審查 sub-agent：使用 Claude API</span><br>
+  - name: code-reviewer<br>
+    provider: anthropic<br>
+    model: claude-sonnet-4-5<br>
+    role: "Review code quality, security, and best practices"<br>
+    max_tokens: 4096<br>
+<br>
+  <span class="comment"># 測試生成 sub-agent：使用 OpenAI</span><br>
+  - name: test-writer<br>
+    provider: openai<br>
+    model: gpt-5-4<br>
+    role: "Write unit tests and integration tests"<br>
+    max_tokens: 4096<br>
+<br>
+task_routing:<br>
+  - pattern: "write|implement|create|build"<br>
+    agent: code-generator<br>
+  - pattern: "review|check|audit|security"<br>
+    agent: code-reviewer<br>
+  - pattern: "test|spec|unittest|pytest"<br>
+    agent: test-writer<br>
+  - default: code-generator<br>
+<br>
+output:<br>
+  format: markdown<br>
+  save_to: ./harness-output/
+</div>
+</div>
+
+<div class="step-box">
+<h4>Step 5：執行第一個 Harness 任務</h4>
+<div class="code-block">
+<span class="comment"># 互動模式（類似 Claude Code 的 chat 介面）</span><br>
+harness chat --config harness.yaml<br>
+<br>
+<span class="comment"># 單次任務執行</span><br>
+harness run --config harness.yaml \<br>
+  --task "建立一個 FastAPI 用戶認證模組，含 JWT + bcrypt，並寫 pytest 測試"<br>
+<br>
+<span class="comment"># 針對現有程式碼庫執行</span><br>
+harness run --config harness.yaml \<br>
+  --context ./src \<br>
+  --task "審查這個 Node.js Express 專案的 SQL injection 風險"<br>
+<br>
+<span class="comment"># 批次模式（CI/CD 用）</span><br>
+harness batch --config harness.yaml --tasks tasks.json
+</div>
+<div class="success-box">
+<strong>✅ 成功標誌：</strong>看到 <code>[Harness] Task routed to: code-generator</code> 並開始輸出代碼，代表設定正確。如果看到 <code>Provider authentication failed</code>，回頭確認 Step 3 的 API key 設定。
+</div>
+</div>
+
+<h2>進階：把 Claude Code 當 Sub-Agent 跑</h2>
+
+<p>這是 DeepSeek Harness 最獨特的功能，也是讓開發者最興奮的地方：你可以在 Harness 框架內調用完整的 Claude Code CLI，讓它負責需要深度上下文理解的複雜任務。</p>
+
+<div class="code-block">
+<span class="comment"># harness.yaml 加入 Claude Code sub-agent（進階設定）</span><br>
+agents:<br>
+  - name: claude-code-agent<br>
+    provider: shell_subprocess      <span class="comment"># 以子進程方式調用外部 CLI</span><br>
+    command: "claude"               <span class="comment"># 需已安裝 Claude Code CLI</span><br>
+    args: ["--print", "--dangerously-skip-permissions"]<br>
+    role: "Complex refactoring and architectural changes"<br>
+    <span class="comment"># Harness 會把任務內容透過 stdin 傳給 claude CLI</span><br>
+<br>
+task_routing:<br>
+  - pattern: "refactor|migrate|architect|redesign"<br>
+    agent: claude-code-agent        <span class="comment"># 這類任務交給 Claude Code</span><br>
+  - pattern: "write|create|implement"<br>
+    agent: code-generator           <span class="comment"># 一般撰寫任務用 DeepSeek</span><br>
+  - pattern: "test|spec"<br>
+    agent: test-writer
+</div>
+
+<p>實際效果：當你對 Harness 說「幫我把這個 PHP 5.6 程式碼庫重構成現代 PHP 8.3」，Harness 識別到 <code>refactor</code> 關鍵字，自動把任務送到 Claude Code CLI 執行，拿到結果後整合進 Harness 的輸出格式。</p>
+
+<div class="highlight-box">
+<strong>💡 成本計算：同一任務的費用差距</strong><br>
+以「1,000 行 Python 程式碼 review + 測試建議」為例：<br>
+<ul>
+<li>全程用 Claude Code（Sonnet 5）：約 $0.45-0.80</li>
+<li>DeepSeek Harness + DeepSeek V4 Pro API：約 $0.04-0.08</li>
+<li>Harness 混合模式（DeepSeek 初稿 + Claude review）：約 $0.15-0.25</li>
+</ul>
+混合模式在「成本 vs 品質」之間取到最好的平衡點。
+</div>
+
+<h2>費用比較：DeepSeek Harness 各部署模式成本</h2>
+
+<table class="price-table">
+<thead>
+<tr>
+<th>部署模式</th>
+<th>月費</th>
+<th>API 費用（估算）</th>
+<th>資料隱私</th>
+<th>適合對象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Self-host（DigitalOcean $12 Droplet）</td>
+<td class="best">$12/月</td>
+<td>依 API 用量（可選最便宜 provider）</td>
+<td class="best">完全掌控</td>
+<td>個人開發者</td>
+</tr>
+<tr>
+<td>Self-host（本機 Mac/Linux）</td>
+<td class="best">$0（硬體已有）</td>
+<td>依 API 用量</td>
+<td class="best">本機執行</td>
+<td>個人開發者</td>
+</tr>
+<tr>
+<td>DeepSeek 雲端 API（漲價後）</td>
+<td>$0（按用付費）</td>
+<td>⚠️ 漲價後較貴，需監控</td>
+<td>需接受 DeepSeek 條款</td>
+<td>快速測試</td>
+</tr>
+<tr>
+<td>混合模式（DeepSeek 初稿 + Claude review）</td>
+<td>$12-20/月</td>
+<td>$20-80/月（中量使用）</td>
+<td>部分外送至 API</td>
+<td>團隊使用</td>
+</tr>
+</tbody>
+</table>
+
+<h2>台灣開發者四大實戰場景</h2>
+
+<div class="scenario-card">
+<h4>🛒 場景 1：電商後端大規模重構</h4>
+<span class="badge badge-blue">Laravel → FastAPI</span>
+<span class="badge badge-green">節省 60% 重構時間</span>
+<p>台灣電商常見痛點：PHP 5.x 遺留程式碼庫，需要遷移到 Python FastAPI 以支援新的 AI 功能。DeepSeek Harness 設定：</p>
+<ul>
+<li><code>code-generator</code>（DeepSeek）：負責逐檔轉換 PHP → Python</li>
+<li><code>code-reviewer</code>（Claude）：確保轉換後邏輯等效、API 相容</li>
+<li><code>test-writer</code>（GPT）：為每個轉換後的 endpoint 自動生成 pytest</li>
+</ul>
+<p>用 <code>harness batch</code> 批次處理整個 <code>/app/controllers</code> 目錄，一次處理完，不需要手動一個檔一個檔轉。</p>
+</div>
+
+<div class="scenario-card">
+<h4>🏦 場景 2：金融 API 安全稽核</h4>
+<span class="badge badge-yellow">SQL Injection 偵測</span>
+<span class="badge badge-yellow">OWASP Top 10 掃描</span>
+<p>金融科技公司的 Node.js API，需要定期做 security audit 才能通過法遵要求。傳統做法是聘外部資安顧問，一次 $50,000 NTD 起跳。</p>
+<div class="code-block">
+harness run --config harness.yaml \<br>
+  --context ./src/api \<br>
+  --task "執行完整 OWASP Top 10 安全稽核，特別關注 SQL injection、XSS、認證繞過漏洞，輸出 markdown 格式稽核報告"
+</div>
+<p>Harness 自動把任務路由到 <code>code-reviewer</code>（Claude），產出可直接提交法遵部門的結構化報告。</p>
+</div>
+
+<div class="scenario-card">
+<h4>🤖 場景 3：LINE Bot 自動化程式碼生成流水線</h4>
+<span class="badge badge-blue">LINE Messaging API</span>
+<span class="badge badge-green">CI/CD 整合</span>
+<p>台灣中小企業最常見的需求：快速新增 LINE Bot 功能，但工程師資源有限。把 Harness 整合進 GitHub Actions：</p>
+<div class="code-block">
+<span class="comment"># .github/workflows/harness-codegen.yml</span><br>
+name: AI Code Generation<br>
+on:<br>
+  issues:<br>
+    types: [labeled]<br>
+jobs:<br>
+  generate-code:<br>
+    if: github.event.label.name == 'ai-implement'<br>
+    runs-on: ubuntu-latest<br>
+    steps:<br>
+      - uses: actions/checkout@v4<br>
+      - name: Run DeepSeek Harness<br>
+        run: |<br>
+          pip install deepseek-harness<br>
+          harness run --config harness.yaml \<br>
+            --task "${{ github.event.issue.body }}" \<br>
+            --output-branch "harness/${{ github.event.issue.number }}"
+</div>
+<p>貼上需求到 GitHub Issue，加上 <code>ai-implement</code> 標籤，Harness 自動生成程式碼並開 PR。</p>
+</div>
+
+<div class="scenario-card">
+<h4>🧪 場景 4：Python 資料科學專案的自動化測試補全</h4>
+<span class="badge badge-blue">pytest 自動生成</span>
+<span class="badge badge-green">覆蓋率 0% → 70%+</span>
+<p>資料科學團隊的常見問題：Machine Learning pipeline 完全沒有單元測試，上線後出問題很難 debug。</p>
+<div class="code-block">
+harness run --config harness.yaml \<br>
+  --context ./ml_pipeline \<br>
+  --task "為這個 scikit-learn pipeline 生成完整的 pytest 測試套件：\<br>
+  1. 每個 transformer 的 unit test\<br>
+  2. 端到端 integration test（含假資料生成）\<br>
+  3. 邊界值測試（空 DataFrame、異常值、型別錯誤）\<br>
+  目標覆蓋率：70% 以上"
+</div>
+</div>
+
+<div class="cta-section">
+  <h3>部署 DeepSeek Harness 需要雲端伺服器？</h3>
+  <p>DigitalOcean Droplet $12/月起，1-click Ubuntu 設定，支援 DeepSeek Harness 全功能。台灣有就近節點，API 延遲低。</p>
+  <div class="cta-buttons">
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn cta-btn-primary" target="_blank" rel="noopener">🚀 DigitalOcean $200 免費額度</a>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener">📊 DataCamp AI 開發課程</a>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn cta-btn-tertiary" target="_blank" rel="noopener">📦 AI Agent 工具包</a>
+  </div>
+</div>
+
+<h2>1,100% 漲價事件完整解析</h2>
+
+<p>這段歷史值得詳細記錄，因為它揭示了使用單一商業 AI API 的系統性風險。</p>
+
+<div class="event-timeline">
+  <div class="event">
+    <div class="event-date">2026-08-13</div>
+    <div class="event-desc">DeepSeek Harness 開源，MIT 授權，GitHub 開始爆炸性成長。</div>
+  </div>
+  <div class="event">
+    <div class="event-date">2026-08-16（第 3 天）</div>
+    <div class="event-desc">DeepSeek 悄悄更新 API 定價頁面，部分端點費率大幅調整，最高漲幅超過 1,100%。公告在週五下午發出，許多開發者週末才發現帳單暴增。</div>
+  </div>
+  <div class="event">
+    <div class="event-date">2026-08-17（週六）</div>
+    <div class="event-desc">Hacker News 出現「DeepSeek API price spike 1100%」帖子，24 小時內超過 800 則留言。大量使用者反映帳單從每月 $20 變成 $240+。</div>
+  </div>
+  <div class="event">
+    <div class="event-date">2026-08-18</div>
+    <div class="event-desc">DeepSeek 官方回應：漲價合理，維持原定策略。同日，DeepSeek Harness Stars 從 120K 暴增到 160K——因為更多人認識到「self-host 才是唯一穩定路徑」。</div>
+  </div>
+  <div class="event">
+    <div class="event-date">2026-08-21（第 8 天）</div>
+    <div class="event-desc">Stars 突破 178K，成為史上增速最快的 AI 開源工具。多個 provider 支援（不依賴 DeepSeek API）成為最常被強調的功能。</div>
+  </div>
+</div>
+
+<p><strong>核心教訓</strong>：Open source framework + 多 provider 支援 = 定價主導權在你手上。這也是為什麼本教學的 Step 3 強調一定要設定多個 API key，而不是只用 DeepSeek。</p>
+
+<h2>常見問題 FAQ</h2>
+
+<div class="faq-item">
+<h4>Q：DeepSeek Harness 和 DeepSeek TUI 是同一個工具嗎？</h4>
+<p>不是。DeepSeek-TUI 是一個輕量的 Rust 終端機 coding assistant（類似 Claude Code 的命令列替代品），主要設計給個人開發者在終端機直接對話寫程式。DeepSeek Harness 是一個 agent 編排框架，設計用來管理多個 AI agent 協作執行複雜任務，適合需要 pipeline 自動化或多 agent 協作的場景。兩者可以同時使用：Harness 可以把 DeepSeek-TUI 當作其中一個 sub-agent。</p>
+</div>
+
+<div class="faq-item">
+<h4>Q：Self-host DeepSeek Harness 需要 GPU 嗎？</h4>
+<p>不需要。DeepSeek Harness 本身只是 orchestration framework，它透過 API 調用各個 AI provider，本身不執行模型推理。你只需要能跑 Python 3.10+ 的普通 CPU 伺服器（或你的筆電）即可。GPU 只有當你想本地部署開源模型（如 Qwen、Llama）當作其中一個 provider 時才需要。</p>
+</div>
+
+<div class="faq-item">
+<h4>Q：我的程式碼會被 DeepSeek 看到嗎？</h4>
+<p>這取決於你的設定。如果你在 <code>harness.yaml</code> 把 DeepSeek 雲端 API 設定為 provider，那麼傳給那個 agent 的 context（包含你的程式碼片段）會發送到 DeepSeek 伺服器。解決方案：(1) 敏感任務只路由到本地或你信任的 provider；(2) 使用 <code>context_filter</code> 設定過濾敏感字串；(3) 企業方案可設定所有 traffic 走私有 API endpoint（OpenAI Azure / Anthropic Enterprise）。</p>
+</div>
+
+<div class="faq-item">
+<h4>Q：DeepSeek Harness 支援 Windows 嗎？</h4>
+<p>官方支援 macOS 和 Linux。Windows 可透過 WSL2（Windows Subsystem for Linux）使用，體驗和原生 Linux 相同。原生 Windows PowerShell 安裝理論上可行，但部分依賴庫在 Windows 路徑上可能有問題，建議用 WSL2 規避麻煩。</p>
+</div>
+
+<div class="faq-item">
+<h4>Q：DeepSeek Harness 的 MIT 授權代表可以用在商業專案嗎？</h4>
+<p>是的。MIT 授權允許商業使用，你可以把 Harness 整合進公司的 CI/CD pipeline、客戶專案、甚至打包成服務銷售，唯一要求是保留原始 copyright notice。注意：授權適用於框架本身，你透過框架調用的各 AI API（DeepSeek、Anthropic、OpenAI 等）各有自己的服務條款，商業使用前需確認各家 API ToS。</p>
+</div>
+
+<div class="faq-item">
+<h4>Q：跟 OpenAI Swarm 或 AutoGen 比起來哪個好？</h4>
+<p>各有擅場。OpenAI Swarm 設計簡潔但綁定 OpenAI 生態；AutoGen（微軟）功能豐富但學習曲線陡峭，設定繁瑣。DeepSeek Harness 的核心優勢是：(1) 原生 coding 任務優化、(2) provider 中立（不綁特定 AI）、(3) YAML 設定直覺，入門最快。如果你的主要需求是 coding pipeline 自動化，Harness 是目前最省事的選擇。</p>
+</div>
+
+<div class="cta-section">
+  <h3>準備好在雲端部署 DeepSeek Harness 了嗎？</h3>
+  <p>用 DigitalOcean 開一台 $12/月 Droplet，20 分鐘內完成全套設定。新帳號享 $200 免費額度，夠你跑好幾個月。</p>
+  <div class="cta-buttons">
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn cta-btn-primary" target="_blank" rel="noopener">☁️ 開始部署 — DigitalOcean $200</a>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener">📚 DataCamp AI 工程師課程</a>
+    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="cta-btn cta-btn-tertiary" target="_blank" rel="noopener">⚡ Systeme.io 自動化工具</a>
+  </div>
+</div>
+
+<h2>總結：DeepSeek Harness 值得學嗎？</h2>
+
+<p>如果你的開發工作符合以下任一條件，答案是肯定的：</p>
+
+<ul>
+<li>你需要讓多個 AI 工具協作（不想被單一 provider 綁架）</li>
+<li>你有 CI/CD pipeline，想把 AI 輔助寫進自動化流程</li>
+<li>你有隱私或資安顧慮，需要 self-host 方案</li>
+<li>你的團隊用多種 AI 工具（Claude Code + Cursor + Codex），想統一管理</li>
+</ul>
+
+<p>如果你只是個人偶爾用 AI 寫幾行程式碼，Claude Code 或 Cursor 的開箱即用體驗更直接，不需要花時間設定 Harness。</p>
+
+<p>但對於認真做 AI-assisted development pipeline 的開發者和團隊，DeepSeek Harness 的 188K Stars 不是意外——它解決了一個真實且被低估的問題：如何優雅地讓多個 AI 工具協作，同時保持 provider 中立和成本控制。</p>
+
+<p>台灣目前幾乎沒有繁中的完整教學，搜尋競爭極低。現在學，三個月後你就是這個領域的繁中第一梯次。</p>
+
+<div class="highlight-box">
+<strong>📎 相關文章推薦</strong>
+<ul>
+<li><a href="/blog/deepseek-tui-terminal-coding-agent-2026.html">DeepSeek-TUI 完整教學：比 Claude Code 便宜 10 倍的終端機 Coding Agent →</a></li>
+<li><a href="/blog/deepcode-hkuds-agent-harness-tutorial-2026.html">DeepCode（HKUDS）Agent Harness 教學：16.5K★ MIT 繁中首發 →</a></li>
+<li><a href="/blog/kilo-code-jetbrains-review-2026.html">Kilo Code JetBrains 評測：3M+ 用戶、500+ 模型 Zero Markup →</a></li>
+<li><a href="/blog/openai-devday-2026-preview.html">OpenAI DevDay 2026 完整攻略：台灣開發者行動指引 →</a></li>
+</ul>
+</div>
+
+</div><!-- end article-body -->
+
+<footer style="background:#1a1a2e;color:rgba(255,255,255,0.6);text-align:center;padding:2rem;font-size:0.875rem;">
+  <p>© 2026 AutoDev AI · <a href="/blog/" style="color:rgba(255,255,255,0.6);">部落格</a> · <a href="/tools/" style="color:rgba(255,255,255,0.6);">工具</a> · <a href="/#contact" style="color:rgba(255,255,255,0.6);">聯絡</a></p>
+  <p style="margin-top:0.5rem;font-size:0.8rem;">本文含聯盟行銷連結。透過連結購買，我們可能獲得佣金，不影響您的費用或評測立場。</p>
+</footer>
+
+</body>
+</html>
