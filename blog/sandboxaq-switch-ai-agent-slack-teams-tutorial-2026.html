@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SandboxAQ Switch 完整教學 2026：10 分鐘讓 Claude Code 住進 Slack／Teams，繁中首發</title>
+<meta name="description" content="SandboxAQ Switch 2026-08-26 開源，PH 日榜 #1，Apache 2.0。任何 AI Agent（Claude Code / LangChain / Google ADK）10 分鐘部署進 Slack / Teams / Discord / Telegram。繁中首發完整教學 + 台灣企業場景。">
+<link rel="canonical" href="https://autodev-ai.com/blog/sandboxaq-switch-ai-agent-slack-teams-tutorial-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/sandboxaq-switch-ai-agent-slack-teams-tutorial-2026.html">
+<meta property="og:title" content="SandboxAQ Switch 完整教學 2026：10 分鐘讓 Claude Code 住進 Slack／Teams">
+<meta property="og:description" content="SandboxAQ Switch PH 日榜 #1，Apache 2.0，AI Agent 10 分鐘進駐 Slack/Teams/Discord。繁中首發完整教學。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/sandboxaq-switch-ai-agent-slack-teams-tutorial-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SandboxAQ Switch 完整教學：10 分鐘讓 AI Agent 住進 Slack/Teams">
+<meta name="twitter:description" content="PH 日榜 #1，Apache 2.0，繁中首發。Claude Code、LangChain、Google ADK 全支援。">
+<meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="author" content="AutoDev AI">
+<meta name="robots" content="index, follow">
+<meta property="article:published_time" content="2026-09-11T03:00:00+00:00">
+<meta property="article:modified_time" content="2026-09-11T03:00:00+00:00">
+<meta property="article:author" content="AutoDev AI">
+<meta property="article:tag" content="SandboxAQ Switch">
+<meta property="article:tag" content="AI Agent Slack">
+<meta property="article:tag" content="Claude Code Slack">
+<meta property="article:tag" content="Teams AI Bot">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+<style>
+.article-hero{background:linear-gradient(135deg,#0d1117 0%,#0f1a2e 50%,#131d2b 100%);padding:4rem 2rem 3rem;text-align:center;border-bottom:1px solid rgba(100,160,240,0.2);}
+.article-hero .badge{display:inline-block;background:linear-gradient(90deg,#4a9fd4,#7bb8e8);color:#0d1117;font-size:0.75rem;font-weight:700;padding:0.3rem 0.9rem;border-radius:20px;margin-bottom:1.2rem;letter-spacing:0.05em;}
+.article-hero h1{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:900;line-height:1.25;color:#e8f0f8;max-width:860px;margin:0 auto 1.2rem;}
+.article-hero .meta{font-size:0.85rem;color:#7a9ab0;display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;}
+.article-body{max-width:820px;margin:0 auto;padding:3rem 2rem 5rem;color:#c8d0e0;line-height:1.85;font-size:1.05rem;}
+.article-body h2{font-size:1.5rem;font-weight:800;color:#e8f0f8;margin:2.8rem 0 1rem;padding-bottom:0.5rem;border-bottom:2px solid rgba(100,160,240,0.3);}
+.article-body h3{font-size:1.2rem;font-weight:700;color:#d0ddf0;margin:2rem 0 0.75rem;}
+.article-body p{margin:0 0 1.2rem;}
+.article-body ul,.article-body ol{padding-left:1.6rem;margin:0 0 1.2rem;}
+.article-body li{margin-bottom:0.6rem;}
+.article-body strong{color:#e8f0f8;font-weight:700;}
+.article-body a{color:#4a9fd4;text-decoration:underline;}
+.article-body a:hover{color:#7bb8e8;}
+.article-body code{background:#1e2433;color:#79c0ff;padding:0.15em 0.4em;border-radius:4px;font-size:0.9em;font-family:monospace;}
+.article-body pre{background:#0d1117;border:1px solid rgba(100,160,240,0.2);border-radius:8px;padding:1.4rem;overflow-x:auto;margin:1.5rem 0;}
+.article-body pre code{background:none;color:#c9d1d9;padding:0;font-size:0.88rem;line-height:1.6;}
+.stats-bar{background:linear-gradient(135deg,#161b22,#1a2233);border:1px solid rgba(100,160,240,0.25);border-radius:8px;padding:1.5rem;margin:2rem 0;display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;}
+.stat-item{text-align:center;min-width:100px;}
+.stat-num{font-size:1.8rem;font-weight:900;color:#4a9fd4;display:block;}
+.stat-label{font-size:0.75rem;color:#7a9ab0;text-transform:uppercase;letter-spacing:0.08em;}
+.compare-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.92rem;}
+.compare-table th{background:#1e2433;color:#7bb8e8;padding:0.75rem 1rem;text-align:left;border:1px solid rgba(100,160,240,0.2);}
+.compare-table td{padding:0.7rem 1rem;border:1px solid rgba(100,160,240,0.15);vertical-align:top;}
+.compare-table tr:nth-child(even) td{background:rgba(30,36,51,0.4);}
+.compare-table .highlight td{background:rgba(74,159,212,0.08)!important;border-left:3px solid #4a9fd4;}
+.highlight-box{background:linear-gradient(135deg,rgba(74,159,212,0.08),rgba(123,184,232,0.05));border:1px solid rgba(100,160,240,0.3);border-left:4px solid #4a9fd4;border-radius:8px;padding:1.4rem 1.6rem;margin:1.8rem 0;}
+.highlight-box h4{font-size:1rem;font-weight:700;color:#7bb8e8;margin:0 0 0.6rem;}
+.warning-box{background:rgba(255,149,0,0.06);border:1px solid rgba(255,149,0,0.25);border-left:4px solid #ff9500;border-radius:8px;padding:1.2rem 1.5rem;margin:1.5rem 0;}
+.warning-box h4{color:#ffb340;margin:0 0 0.5rem;font-size:0.95rem;}
+.cta-block{background:linear-gradient(135deg,#0f1a2e,#0a1528);border:1px solid rgba(100,160,240,0.3);border-radius:12px;padding:2.5rem;text-align:center;margin:3rem 0;}
+.cta-block h3{font-size:1.3rem;font-weight:800;color:#e8f0f8;margin:0 0 0.75rem;}
+.cta-block p{color:#7a9ab0;margin:0 0 1.5rem;}
+.cta-btn{display:inline-block;padding:0.85rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;transition:all 0.3s;margin:0.4rem;}
+.cta-primary{background:linear-gradient(90deg,#4a9fd4,#7bb8e8);color:#0d1117;}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(74,159,212,0.4);color:#0d1117;}
+.cta-secondary{background:transparent;color:#4a9fd4;border:2px solid #4a9fd4;}
+.cta-secondary:hover{background:rgba(74,159,212,0.1);transform:translateY(-2px);}
+.cta-third{background:transparent;color:#b8946a;border:2px solid #b8946a;}
+.cta-third:hover{background:rgba(184,148,106,0.1);transform:translateY(-2px);}
+.step-box{background:#1a2233;border:1px solid rgba(100,160,240,0.2);border-radius:8px;padding:1.4rem 1.6rem;margin:1.2rem 0;}
+.step-box .step-num{font-size:0.8rem;font-weight:700;color:#4a9fd4;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.4rem;}
+.step-box h4{font-size:1rem;font-weight:700;color:#e8f0f8;margin:0 0 0.6rem;}
+.toc{background:#161b22;border:1px solid rgba(100,160,240,0.2);border-radius:8px;padding:1.5rem 1.8rem;margin:2rem 0;}
+.toc h4{color:#7bb8e8;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 0.8rem;}
+.toc ol{margin:0;padding-left:1.4rem;}
+.toc li{margin-bottom:0.35rem;font-size:0.9rem;}
+.toc a{color:#4a9fd4;text-decoration:none;}
+.toc a:hover{color:#7bb8e8;}
+.faq-item{border-bottom:1px solid rgba(100,160,240,0.15);padding:1.2rem 0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-weight:700;color:#e8f0f8;margin-bottom:0.5rem;}
+.faq-a{color:#7a9ab0;font-size:0.95rem;}
+.platform-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:1.5rem 0;}
+.platform-card{background:#1e2433;border:1px solid rgba(100,160,240,0.2);border-radius:8px;padding:1.2rem;text-align:center;}
+.platform-card .icon{font-size:2rem;display:block;margin-bottom:0.5rem;}
+.platform-card .name{font-weight:700;color:#e8f0f8;font-size:0.9rem;}
+.platform-card .status{font-size:0.75rem;color:#4caf50;margin-top:0.25rem;}
+</style>
+</head>
+<body>
+<nav class="navbar">
+ <a href="/" class="nav-logo">AutoDev AI</a>
+ <div class="nav-links">
+  <a href="/blog/">部落格</a>
+  <a href="/tools/">工具</a>
+  <a href="/#contact">聯絡</a>
+ </div>
+</nav>
+
+<div class="article-hero">
+ <div class="badge">繁中首發 ✦ PH 日榜 #1 ✦ 2026-09-11</div>
+ <h1>SandboxAQ Switch 完整教學 2026：10 分鐘讓 Claude Code 住進 Slack／Teams，AI Agent 常駐辦公室</h1>
+ <div class="meta">
+  <span>📅 2026年9月11日</span>
+  <span>⏱ 閱讀時間約 12 分鐘</span>
+  <span>🏷 繁中首發</span>
+  <span>👤 AutoDev AI 編輯部</span>
+ </div>
+</div>
+
+<div class="article-body">
+
+<div class="toc">
+ <h4>📋 本文目錄</h4>
+ <ol>
+  <li><a href="#what">SandboxAQ Switch 是什麼？</a></li>
+  <li><a href="#who">SandboxAQ 是誰？（Google/Alphabet 旗下）</a></li>
+  <li><a href="#platforms">支援平台一覽</a></li>
+  <li><a href="#compare">vs 原生 Bot / vs n8n 整合的差別</a></li>
+  <li><a href="#install">完整安裝教學（Slack 範例）</a></li>
+  <li><a href="#teams">Microsoft Teams 部署教學</a></li>
+  <li><a href="#claude">讓 Claude Code Agent 常駐 Slack 頻道</a></li>
+  <li><a href="#scenarios">台灣企業四大實戰場景</a></li>
+  <li><a href="#license">Apache 2.0 + Commons Clause 授權說明</a></li>
+  <li><a href="#faq">常見問題 FAQ</a></li>
+ </ol>
+</div>
+
+<h2 id="what">SandboxAQ Switch 是什麼？</h2>
+
+<p>想像一下：你的開發團隊在 Slack 上討論 Bug，然後直接 <code>@claude</code> 叫 AI 把問題分析結果貼到同一個頻道——<strong>不需要開瀏覽器、不需要切換工具、不需要複製貼上</strong>。這就是 SandboxAQ Switch 解決的核心痛點。</p>
+
+<p><strong>SandboxAQ Switch</strong> 是一個開源的 <strong>AI Agent 協作平台適配器</strong>，讓任何 AI Agent（Claude Code、LangChain Agent、Google ADK、OpenAI Assistants API）在 10 分鐘內部署進 Slack、Microsoft Teams、Discord 或 Telegram，以原生 Bot 的形式與團隊互動。</p>
+
+<div class="stats-bar">
+ <div class="stat-item"><span class="stat-num">2026-08-26</span><span class="stat-label">開源日期</span></div>
+ <div class="stat-item"><span class="stat-num">PH #1</span><span class="stat-label">Product Hunt 日榜</span></div>
+ <div class="stat-item"><span class="stat-num">Apache 2.0</span><span class="stat-label">授權（部分條款）</span></div>
+ <div class="stat-item"><span class="stat-num">10 分鐘</span><span class="stat-label">部署時間</span></div>
+ <div class="stat-item"><span class="stat-num">4 平台</span><span class="stat-label">Slack/Teams/Discord/TG</span></div>
+</div>
+
+<div class="highlight-box">
+ <h4>💡 一句話理解 Switch</h4>
+ <p>Switch 是 AI Agent 的 <strong>「插座適配器」</strong>——你的 AI Agent 插上去，自動適配 Slack / Teams / Discord / Telegram 的溝通協議，團隊成員直接在慣用的通訊工具裡跟 AI 互動。</p>
+</div>
+
+<h2 id="who">SandboxAQ 是誰？這個背景很重要</h2>
+
+<p>SandboxAQ 成立於 2022 年，由 Google / Alphabet 內部孵化獨立，主要專注於量子計算與 AI 安全應用。開發 Switch 的是其旗下的 <strong>Flint AI 部門</strong>，專注於企業 AI 部署加速。</p>
+
+<p>這個背景意味著：Switch 不是小型創業公司的實驗性工具，背後有 Google 工程文化加持，企業級可靠性相對有保障。PR Newswire 官方公告確認這不是社群 fork 而是 SandboxAQ 的正式開源產品。</p>
+
+<h2 id="platforms">支援平台一覽</h2>
+
+<div class="platform-grid">
+ <div class="platform-card"><span class="icon">🟢</span><span class="name">Slack</span><span class="status">✅ 完整支援</span></div>
+ <div class="platform-card"><span class="icon">🔵</span><span class="name">Microsoft Teams</span><span class="status">✅ 完整支援</span></div>
+ <div class="platform-card"><span class="icon">🟣</span><span class="name">Discord</span><span class="status">✅ 完整支援</span></div>
+ <div class="platform-card"><span class="icon">📱</span><span class="name">Telegram</span><span class="status">✅ 完整支援</span></div>
+ <div class="platform-card"><span class="icon">💼</span><span class="name">LINE Works</span><span class="status">🔄 Roadmap</span></div>
+ <div class="platform-card"><span class="icon">📞</span><span class="name">Google Chat</span><span class="status">🔄 Roadmap</span></div>
+</div>
+
+<p>對台灣企業特別注意：<strong>LINE 個人版</strong>目前不在支援清單（LINE Messaging API 架構不同），但 <strong>LINE Works</strong>（企業版 LINE）在 Roadmap 中。如果你的公司使用 LINE Works，值得持續追蹤。</p>
+
+<h2 id="compare">vs 原生 Bot / vs n8n 整合：到底差在哪？</h2>
+
+<table class="compare-table">
+ <thead>
+  <tr><th>維度</th><th>SandboxAQ Switch</th><th>原生 Slack Bot API</th><th>n8n + Webhook 整合</th></tr>
+ </thead>
+ <tbody>
+  <tr class="highlight"><td><strong>AI Agent 接入方式</strong></td><td>直接掛載（Claude Code / LangChain / ADK）</td><td>需自己寫 AI 呼叫邏輯</td><td>需在 n8n 設計工作流程</td></tr>
+  <tr><td><strong>設定複雜度</strong></td><td>低（YAML + 環境變數）</td><td>高（需寫 Bot 後端）</td><td>中（GUI 設計）</td></tr>
+  <tr><td><strong>對話上下文管理</strong></td><td>✅ 自動管理 session</td><td>❌ 需自己實作</td><td>⚠️ 有限</td></tr>
+  <tr><td><strong>多平台一致性</strong></td><td>✅ 同一份 Agent，多平台部署</td><td>❌ 每個平台單獨開發</td><td>⚠️ n8n 要設計多條工作流</td></tr>
+  <tr><td><strong>Agent 能力保留</strong></td><td>✅ 完整（包含工具調用）</td><td>⚠️ 依實作而定</td><td>⚠️ 依設計而定</td></tr>
+  <tr><td><strong>費用</strong></td><td>免費（只付 AI API 費用）</td><td>免費（只付 AI API 費用）</td><td>n8n cloud 需付費，或 self-host</td></tr>
+  <tr><td><strong>適合誰</strong></td><td>有現成 Agent，想快速上 Slack/Teams</td><td>有後端工程師願意從頭建</td><td>非技術用戶 / 視覺化工作流</td></tr>
+ </tbody>
+</table>
+
+<p><strong>一句話總結</strong>：如果你已經有一個可以用 Python / TypeScript 調用的 AI Agent，Switch 是最快把它放進 Slack 的方式，不需要再寫 Bot 後端邏輯。</p>
+
+<h2 id="install">完整安裝教學：Slack 範例（Step by Step）</h2>
+
+<div class="step-box">
+ <div class="step-num">前置需求</div>
+ <h4>環境確認</h4>
+ <ul>
+  <li>Python 3.10+ 或 Node.js 20+（Switch 同時支援兩種語言）</li>
+  <li>Slack Workspace 管理員權限（建立 App 需要）</li>
+  <li>AI Agent API Key（Anthropic / OpenAI / Google 等）</li>
+  <li>可公開訪問的 HTTPS 端點（或使用 ngrok 測試）</li>
+ </ul>
+</div>
+
+<div class="step-box">
+ <div class="step-num">Step 1</div>
+ <h4>Clone 並安裝 Switch</h4>
+ <pre><code>git clone https://github.com/sandboxaq/switch
+cd switch
+pip install -r requirements.txt   # Python 版本
+# 或
+npm install                       # TypeScript 版本</code></pre>
+</div>
+
+<div class="step-box">
+ <div class="step-num">Step 2</div>
+ <h4>在 Slack 建立 Bot App</h4>
+ <p>前往 <a href="https://api.slack.com/apps" target="_blank" rel="noopener">api.slack.com/apps</a>，點選「Create New App」→「From Manifest」，貼上 Switch 提供的 manifest 範本：</p>
+ <pre><code># switch/templates/slack-manifest.yaml
+display_information:
+  name: "Switch AI Agent"
+  description: "AI Agent powered by SandboxAQ Switch"
+features:
+  app_home:
+    home_tab_enabled: false
+  bot_user:
+    display_name: "AI Assistant"
+    always_online: true
+oauth_config:
+  scopes:
+    bot:
+      - channels:history
+      - channels:read
+      - chat:write
+      - im:history
+      - im:write
+      - app_mentions:read
+settings:
+  event_subscriptions:
+    bot_events:
+      - app_mention
+      - message.im
+  interactivity:
+    is_enabled: false
+  org_deploy_enabled: false</code></pre>
+ <p>建立後取得：<strong>Bot Token（xoxb-...）</strong> 和 <strong>Signing Secret</strong>。</p>
+</div>
+
+<div class="step-box">
+ <div class="step-num">Step 3</div>
+ <h4>設定環境變數（.env）</h4>
+ <pre><code># .env
+SWITCH_PLATFORM=slack
+SLACK_BOT_TOKEN=xoxb-xxxxxxxxxxxx
+SLACK_SIGNING_SECRET=xxxxxxxxxxxx
+
+# AI Agent 設定（以 Claude 為例）
+AGENT_TYPE=claude
+ANTHROPIC_API_KEY=sk-ant-xxxxxxxxx
+AGENT_MODEL=claude-sonnet-4-5
+
+# 可選：自訂 system prompt
+AGENT_SYSTEM_PROMPT="你是一個 AI 開發助手，協助台灣工程師解決技術問題。請用繁體中文回答。"</code></pre>
+</div>
+
+<div class="step-box">
+ <div class="step-num">Step 4</div>
+ <h4>啟動 Switch 服務</h4>
+ <pre><code># 本機測試（使用 ngrok 建立公開 HTTPS）
+ngrok http 3000  # 在另一個終端機執行
+
+# 啟動 Switch
+python main.py  # 或 npm start
+
+# 輸出應看到：
+# ✅ Switch running on port 3000
+# ✅ Slack platform adapter loaded
+# ✅ Claude agent initialized</code></pre>
+ <p>把 ngrok 給你的 HTTPS URL + <code>/slack/events</code> 填入 Slack App 的 Event Subscriptions → Request URL 欄位。</p>
+</div>
+
+<div class="step-box">
+ <div class="step-num">Step 5</div>
+ <h4>安裝 App 到 Workspace 並測試</h4>
+ <p>在 Slack App 管理頁面點「Install to Workspace」，確認授權後，在任意頻道 <code>@Switch AI Agent</code>：</p>
+ <pre><code>@Switch AI Agent 請分析以下 Python code 有什麼問題：
+def get_user(id):
+    return db.query(f"SELECT * FROM users WHERE id={id}")</code></pre>
+ <p>如果設定正確，Bot 會在 30 秒內回應 SQL Injection 風險分析。</p>
+</div>
+
+<h2 id="teams">Microsoft Teams 部署教學</h2>
+
+<p>Teams 的設定流程類似，主要差異在使用 Azure Bot Service：</p>
+
+<pre><code># .env（Teams 版本）
+SWITCH_PLATFORM=teams
+MICROSOFT_APP_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+MICROSOFT_APP_PASSWORD=xxxxxxxxxxxxxxxxxxxx
+
+# AI Agent（同 Slack，可用同一個 .env 切換 SWITCH_PLATFORM）
+AGENT_TYPE=claude
+ANTHROPIC_API_KEY=sk-ant-xxxxxxxxx</code></pre>
+
+<div class="highlight-box">
+ <h4>🏢 台灣企業 Teams 使用者注意</h4>
+ <p>許多台灣企業（金融、製造、政府）已採用 Microsoft 365，Teams 是主要溝通平台。Switch + Teams 的組合可以讓 Claude Code Agent 常駐公司頻道，處理 PR Review 通知、文件問答、技術規格確認，而且不需要員工安裝任何新工具。</p>
+</div>
+
+<h2 id="claude">讓 Claude Code Agent 常駐 Slack 頻道：進階設定</h2>
+
+<p>Switch 支援 Claude Code 的工具調用（Tool Use）功能，讓它在 Slack 頻道裡也能執行完整的 agent 任務。以下是一個讓 Claude Code 處理 GitHub PR Review 的設定：</p>
+
+<pre><code># switch.config.yaml（進階設定）
+agent:
+  type: claude
+  model: claude-sonnet-4-5
+  system_prompt: |
+    你是 AutoDev 團隊的 AI 開發助手。
+    當收到 PR Review 請求時，分析程式碼品質、安全性和效能。
+    用繁體中文回覆，格式化輸出包含：
+    1. 問題摘要（1-3 個重點）
+    2. 具體建議（附 code snippet）
+    3. 嚴重程度（Critical / Major / Minor）
+
+  tools:
+    - file_read        # 讀取檔案
+    - web_search       # 搜尋技術文檔
+    - github_pr_fetch  # 取得 PR 差異
+
+slack:
+  allowed_channels:
+    - "#engineering"
+    - "#code-review"
+  mention_required: true    # 需要 @mention 才觸發
+  thread_replies: true      # 回覆在 thread 而非頻道主流
+
+rate_limiting:
+  requests_per_user_per_hour: 20
+  max_tokens_per_response: 2000</code></pre>
+
+<div class="cta-block">
+ <h3>🚀 在 DigitalOcean 部署 Switch 生產環境</h3>
+ <p>本機 ngrok 測試沒問題後，把 Switch 部署到 VPS 才能 24/7 運行。DigitalOcean App Platform 支援 Docker Compose 一鍵部署，從 $4/月起，新用戶享 $200 免費額度，是台灣開發者最常選擇的雲端平台。</p>
+ <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-btn cta-primary">🌊 DigitalOcean 免費試用 →</a>
+ <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" class="cta-btn cta-secondary">📚 DataCamp 學 AI 部署</a>
+</div>
+
+<h2 id="scenarios">台灣企業四大實戰場景</h2>
+
+<h3>場景 1：工程團隊 Slack — Claude Code 常駐 PR Review</h3>
+<p>在 <code>#code-review</code> 頻道設定 Switch，讓 Claude Code 自動回應 PR Review 請求。開發者只需貼上 GitHub PR 連結並 <code>@AI Review</code>，10 秒內收到中文分析報告。</p>
+<p><strong>省時估算</strong>：5 人工程團隊，每週 20 個 PR，每個節省 5 分鐘 = 每週省 100 分鐘人力。</p>
+
+<h3>場景 2：電商公司 Teams — 庫存與訂單問答</h3>
+<p>將 LangChain Agent（已連接公司 ERP API）透過 Switch 部署進 Teams。業務人員直接在 Teams 問：「今天庫存還有幾件 SKU-123？」——不用進 ERP 後台，也不需要 IT 人員協助。</p>
+
+<h3>場景 3：新創公司 Discord — 全棧技術問答機器人</h3>
+<p>Discord 是台灣工程師社群常用平台。將 Google ADK Agent（連接技術文檔向量資料庫）透過 Switch 掛到 <code>#dev-help</code> 頻道，Junior 工程師可以直接在 Discord 問框架問題，不佔用 Senior 時間。</p>
+
+<h3>場景 4：遠端工作 Telegram 群組 — 多語言工作助手</h3>
+<p>台灣公司與海外合作夥伴常用 Telegram。Switch 可以讓 Claude 以多語言 Agent 身份在 Telegram 群組中運作，自動翻譯會議摘要、回答規格問題，讓台灣端與海外合作夥伴溝通更順暢。</p>
+
+<h2 id="license">Apache 2.0 + Commons Clause 授權說明</h2>
+
+<p>Switch 採用 <strong>Apache 2.0 + Commons Clause</strong> 雙重授權，這是近年來開源工具常用的「開源但不可商業競爭」模式：</p>
+
+<ul>
+ <li>✅ <strong>可以</strong>：用於自家公司內部部署（商業使用，但是自用）</li>
+ <li>✅ <strong>可以</strong>：修改源碼、整合進自家產品</li>
+ <li>✅ <strong>可以</strong>：為客戶部署（顧問/SI 廠商）</li>
+ <li>❌ <strong>不可以</strong>：把 Switch 包裝後以服務形式販售（即不能做「Switch as a Service」直接賺錢）</li>
+</ul>
+
+<div class="warning-box">
+ <h4>⚠️ 對台灣 SI 廠商的注意</h4>
+ <p>如果你的公司是系統整合商（SI），幫客戶「部署 Switch 並收服務費」<strong>通常是允許的</strong>（Commons Clause 主要限制的是直接銷售 Switch 本身的使用授權）。但建議在大型合約前諮詢法律意見，因為「Commons Clause」的邊界在法律上仍有討論空間。</p>
+</div>
+
+<h2 id="faq">常見問題 FAQ</h2>
+
+<div class="faq-item">
+ <div class="faq-q">Q：Switch 和 Botpress / ManyChat 有什麼不同？</div>
+ <div class="faq-a">A：Botpress / ManyChat 是 <strong>聊天機器人平台</strong>，你要在平台上設計對話流程。Switch 是 <strong>AI Agent 適配器</strong>，你帶著已有的 AI Agent（Claude Code / LangChain Agent），Switch 負責讓它和 Slack/Teams 溝通。前者適合「設計對話流程」，後者適合「把現成 AI Agent 放進通訊工具」。</div>
+</div>
+
+<div class="faq-item">
+ <div class="faq-q">Q：部署在 DigitalOcean 上安全嗎？對話內容會被看到嗎？</div>
+ <div class="faq-a">A：Switch 本身不存儲對話內容（除非你額外設定記憶體插件）。訊息路徑是：Slack → Switch（你的 VPS）→ Claude API。Switch VPS 是你自己的機器，資安責任在你；Claude API 的對話則依 Anthropic 隱私政策處理。Enterprise 使用者可開啟 Zero Data Retention（不保留對話紀錄）。</div>
+</div>
+
+<div class="faq-item">
+ <div class="faq-q">Q：10 分鐘真的夠部署好嗎？</div>
+ <div class="faq-a">A：本機測試 + ngrok 的話確實 10 分鐘可以看到第一個回應。但是「生產就緒」部署（VPS + HTTPS 正式域名 + 監控 + rate limiting）大概需要 1-2 小時。對有 Docker 和 Linux 經驗的工程師來說，本文的 5 步驟完全可行。</div>
+</div>
+
+<div class="faq-item">
+ <div class="faq-q">Q：哪些 AI Agent 類型最適合用 Switch？</div>
+ <div class="faq-a">A：最適合的是「<strong>有工具調用能力的對話式 Agent</strong>」——例如 Claude Code（可讀檔案）、LangChain Agent（可查資料庫）、Google ADK Agent（可搜尋網路）。純文字 LLM 也可以接，但沒有工具調用就少了大部分實用性。</div>
+</div>
+
+<div class="faq-item">
+ <div class="faq-q">Q：LINE 個人版何時支援？</div>
+ <div class="faq-a">A：根據 GitHub Issues 討論，LINE Messaging API 的 Webhook 架構和 Slack/Teams 不同，需要獨立開發適配器。目前優先順序是 LINE Works（企業版）而非個人版 LINE。如果你有強烈需求可以到 GitHub 提 Issue 投票。</div>
+</div>
+
+<div class="faq-item">
+ <div class="faq-q">Q：Systeme.io 可以和 Switch 整合嗎？</div>
+ <div class="faq-a">A：Systeme.io 是行銷漏斗 / 課程平台，目前 Switch 不提供直接整合。但你可以用 Webhook 把 Systeme.io 的新用戶事件傳到 Switch，讓 AI Agent 在 Slack/Teams 收到通知並自動處理後續任務（例如發送歡迎郵件的指令）。</div>
+</div>
+
+<div class="cta-block">
+ <h3>🎓 從零學習 AI Agent 開發</h3>
+ <p>想把 Switch 用到極致，需要理解 AI Agent 框架基礎。DataCamp 有 AI Engineer 路徑課程，從 Python 到 LangChain、到部署 Claude Tool Use，適合台灣工程師自學。Systeme.io 則是如果你想把 AI 知識變成線上課程、建立被動收入的最低成本平台。</p>
+ <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" class="cta-btn cta-primary">📚 DataCamp AI 工程師路徑 →</a>
+ <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" target="_blank" rel="noopener sponsored" class="cta-btn cta-secondary">💼 Systeme.io 建立線上課程</a>
+ <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-btn cta-third">🌊 DigitalOcean 部署 Switch</a>
+</div>
+
+<h2>延伸閱讀</h2>
+<ul>
+ <li><a href="/blog/deepseek-harness-complete-guide-2026.html">DeepSeek Harness 完整教學：165K★ 插件式 Coding Agent 框架</a></li>
+ <li><a href="/blog/n8n-automation-tutorial-2026.html">n8n 工作流程自動化教學 2026</a></li>
+ <li><a href="/blog/claude-code-complete-guide-2026.html">Claude Code 完整教學 2026</a></li>
+ <li><a href="/blog/telegram-bot-business-guide.html">Telegram Bot 商業應用完整指南</a></li>
+ <li><a href="/blog/openai-devday-2026-preview.html">OpenAI DevDay 2026 完整攻略：9/29 Fort Mason</a></li>
+</ul>
+
+<p style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(100,160,240,0.2);font-size:0.85rem;color:#6a7280;">
+ <em>本文部分連結為聯盟行銷連結，你點擊後若購買相關服務，AutoDev AI 可能獲得佣金，不影響你的費用，也不影響本文的客觀性。所有費用數字以官方頁面為準，AI API 定價可能隨時調整。</em>
+</p>
+
+</div><!-- /article-body -->
+
+<footer class="footer">
+ <div class="footer-content">
+  <p>© 2026 AutoDev AI — 台灣開發者的 AI 工具知識庫</p>
+  <p><a href="/blog/">部落格</a> · <a href="/tools/">工具</a> · <a href="/#contact">聯絡我們</a></p>
+ </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "SandboxAQ Switch 完整教學 2026：10 分鐘讓 Claude Code 住進 Slack／Teams，繁中首發",
+ "description": "SandboxAQ Switch 2026-08-26 開源，PH 日榜 #1，Apache 2.0。任何 AI Agent 10 分鐘部署進 Slack/Teams/Discord/Telegram。繁中首發完整教學 + 台灣企業場景。",
+ "author": {"@type": "Organization", "name": "AutoDev AI"},
+ "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+ "datePublished": "2026-09-11",
+ "dateModified": "2026-09-11",
+ "url": "https://autodev-ai.com/blog/sandboxaq-switch-ai-agent-slack-teams-tutorial-2026.html",
+ "mainEntityOfPage": "https://autodev-ai.com/blog/sandboxaq-switch-ai-agent-slack-teams-tutorial-2026.html"
+}
+</script>
+
+</body>
+</html>
