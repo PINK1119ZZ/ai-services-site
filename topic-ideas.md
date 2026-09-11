@@ -2863,3 +2863,162 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 | 2026-09-10 | 💰 AFFILIATE | **Systeme.io 60% LIFETIME（已有文章）** | systeme.io, systeme.io review | 中 | **60% LIFETIME，永久 attribution** | $200-600（現有文章優化） | autodev-ai.com |
 | 2026-09-10 | OpenAI DevDay 2026 T-19 | openai devday 2026, devday 懶人包 | 高（Sep 25-Oct 1） | 間接（文章流量高峰） | $100-400（流量高峰） | autodev-ai.com（文章已有） |
 
+
+---
+
+## Round 199 — 2026-09-11 00:30 UTC（ai-trend-hunter cron）
+
+### 🔴 發現 1：DeepSeek Harness + Reasonix 雙雄評估（P1-HIGH 進展更新）
+
+**DeepSeek Harness**：
+- 上輪（R198）188K★ → 本輪確認已超過 165K★（flowtivity.ai 9/11 數據）+ mindstudio 來源顯示 165,000 stars in a week 已成新關鍵字
+- 開源（MIT）TypeScript，Cordis 框架，一切皆插件（model adapter / tool registry / session log / sandbox / agent loop）
+- 可把 Claude Code 或 Codex 當 sub-agent 在 dsh 框架下運行
+- 繁中評測：仍幾乎空白（R198 已確認，R199 再確認）→ **直接執行機會**
+
+**DeepSeek Reasonix（新競品發現）**：
+- 獨立開發者作品，非 DeepSeek 官方
+- 34,600★，25 次 releases，圍繞 DeepSeek prompt caching 優化
+- 核心定位：讓長 coding session 大幅降費（vs Harness 的通用框架）
+- 潛力：**DeepSeek Harness vs Reasonix 比較文章**（雙關鍵字覆蓋）
+- 關鍵字：`deepseek reasonix vs harness`, `deepseek coding agent cheapest 2026`
+
+**內容策略建議**：
+1. `blog/deepseek-harness-complete-guide-2026.html`（R198 P1-HIGH 已有指令，立即執行）
+2. `blog/deepseek-harness-vs-reasonix-comparison-2026.html`（雙工具比較，覆蓋第二波搜尋）
+3. 預估月收入：$200-600（間接 DO/DataCamp + 長尾比較流量）
+
+---
+
+### 🔴 發現 2：SandboxAQ Switch — AI Agents into Slack/Teams/Discord（P1-HIGH 新發現）
+
+**來源**：Product Hunt 日榜 #1（8/26）+ PR Newswire 官方公告 + TechZine、HPCWire 報導
+**工具**：Switch（github.com/sandboxaq/switch），由 SandboxAQ（Google/Alphabet 旗下）的 Flint AI 部門開源
+
+**核心功能**：
+- 任何 AI agent（Claude Code / Google ADK / LangChain / OpenAI）一鍵部署進 Slack、Teams、Discord、Telegram
+- 10 分鐘完成第一個 agent 部署
+- 共享 room 上下文，agent 能持續追蹤對話歷史
+- Apache 2.0 + Commons Clause（注意：非真正 OSI open source，不能拿去賣）
+
+**流量評估**：
+- PH 日榜 #1（8/26），繁中報導幾乎為零
+- 搜尋關鍵字機會：`switch sandboxaq 教學`、`ai agent slack teams 整合 2026`、`sandboxaq switch discord`
+
+**變現方式**：
+- 無直接 affiliate（開源免費工具）
+- 間接：DigitalOcean（self-host 部署）+ DataCamp（AI agent 學習）
+- 比較文：Switch vs OpenClaw（當前台灣讀者可能用的類似工具）→ 導流 DO
+
+**執行建議**：
+- `blog/sandboxaq-switch-ai-agent-slack-teams-tutorial-2026.html`（~2,200字，繁中首發）
+- 角度：「10分鐘讓 Claude Code 住進你的 Slack 頻道：Switch 完整教學」
+- P1 等級（教學文，DO 間接，繁中空白）
+- 預估月收入：$100-300（間接 DO/DataCamp）
+
+---
+
+### ⏳ 發現 3：Grok 4.7 — T-1天，仍未 GA（P0-STANDBY 維持升溫）
+
+**現況（2026-09-11 00:30）**：
+- Musk Sep 2 貼文「Grok 4.7 comes out in 10 days」= Sep 12 目標
+- cellcog.ai Sep 8 確認：xAI 文檔 / model directory / API release notes 仍無 Grok 4.7
+- Grok 4.5（7/16）→ Grok 4.6（8/12）周期 = 27 天 → Sep 12（30天）符合節奏
+- 預估定價：$2.60-3.00/M input，$8-10/M output（Grok 4.6 2.00/6.00 基礎上漲）
+
+**P0 觸發待命**：今天（Sep 12 UTC）是最可能觸發日
+
+**觸發後立即執行**（24h 內）：
+- `blog/grok-47-complete-review-2026.html`（繁中首發，~2,800字）
+- `tools/ai-token-cost-calculator.html` 加入真實定價
+- `blog/grok-47-vs-claude-fable-51-comparison-2026.html`（比較文）
+
+---
+
+### 🔴 發現 4：Claude Opus 4.7 — 關鍵字競爭機會（P1 SEO 機會）
+
+**背景**：
+- Claude Opus 4.7（2026-04，Anthropic）已是舊模型，但仍有搜尋需求
+- 搜尋 `gpt 5.5 vs claude opus 4.7` 在 YouTube 有 32K views（Sep 2026）
+- 目前最新 frontier：Claude Opus 5（July 2026）> Claude Opus 4.8（May）> Claude Opus 4.7（April）
+- autodev-ai 現有文章：`blog/claude-opus-5-review-2026.html`（9 clicks 14 days）
+
+**機會**：
+- Claude 模型版本比較長尾關鍵字（opus 4.7 vs 4.8 vs 5 差別）
+- `blog/claude-opus-5-vs-opus-4-8-vs-4-7-comparison-2026.html`（版本進化比較）
+- 常青內容（每次 Anthropic 出新模型舊版搜尋量都會留存）
+- 預估月收入：$100-250（間接，長尾常青）
+
+---
+
+### 🟡 發現 5：Leadpages 50% Tier Affiliate — 尚未提案過（P1 Affiliate）
+
+**發現來源**：本輪搜尋高佣金 affiliate 時確認
+
+**佣金結構**：
+- 基礎：$400 upfront + 10% recurring LIFETIME
+- 中層（月銷 $49-$2,999）：40% recurring LIFETIME
+- 頂層（月銷 $3,000+）：50% recurring LIFETIME
+- 30-day cookie，月付 $50 min payout，PayPal/直接匯款
+- 方案：$37-99/月
+
+**為何現在提**：
+- 多輪搜尋從未正式提案給 Ivan
+- 40-50% LIFETIME 是業界頂級（vs Skool 40% LIFETIME）
+- 著陸頁工具：台灣電商 / 行銷受眾，與 autodev-ai 側邊受眾有交叉
+- 可做 `blog/leadpages-review-2026.html` + `tools/landing-page-tools-comparison-2026.html`
+
+**Ivan 行動**：申請 `leadpages.com/affiliates`（需是 Leadpages 用戶或有流量，審核制）
+**預估月收入**：$300-800（40% 層 × $49-99/月方案）
+
+---
+
+### 🟡 發現 6：OpenAI DevDay T-18天 — 執行節奏確認
+
+**現況**：`blog/openai-devday-2026-preview.html` 已存在（R197 seo-writer 09/09）
+**下個行動時間點**：
+- **Sep 22（T-7天）**：researcher 確認最新消息（Astra GA？新 Codex 功能？）→ 通知 content-ops 更新文章
+- **Sep 29 Live**：researcher 監看 Keynote
+- **Sep 30（DevDay+1）**：文章從「預測」改版為「完整紀錄」
+
+**無需新建文章，維持待命**。
+
+---
+
+### 💰 Affiliate 積壓清單本輪更新（提醒 Ivan）
+
+**新增本輪**：
+
+| 工具 | 佣金 | 預估月收 | 首次提案輪 |
+|------|------|---------|-----------|
+| 🆕 Leadpages | 40-50% LIFETIME | $300-800 | R199（本輪新提案） |
+
+**既有積壓（仍未批准）**：
+
+| 工具 | 佣金 | 預估月收 | 申請連結 |
+|------|------|---------|---------|
+| Skool | 40% LIFETIME | $400-1,000 | skool.com/affiliates |
+| AdCreative.ai | 30-40% LIFETIME | $150-500 | PartnerStack |
+| ManyChat | 50% recurring 120天 | $500-1,200 | manychat.com/affiliate |
+| Semrush | $200-350/sale | $200-600 | Impact Radius |
+| Undetectable.ai | 30% LIFETIME | $300-700 | undetectableai.com |
+| Leadpages（新） | 40-50% LIFETIME | $300-800 | leadpages.com/affiliates |
+| Framer | 50%/12mo | $400-1,000 | framer.com/affiliates |
+| HeyGen | 20-30%/12mo | $300-900 | heygen.getrewardful.com |
+| GetResponse | 40-60%/12mo | $400-1,200 | PartnerStack |
+| Notion | 50%/12mo | $400-1,200 | notion.so/affiliates |
+
+**積壓月損失估算（全部批准後）**：$3,400-9,100/月
+
+---
+
+### 格式化報告
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|---------|--------|---------|-----------|---------|
+| 2026-09-11 | DeepSeek Harness 165K★ + Reasonix 34.6K★ | deepseek harness 教學, deepseek reasonix vs harness, coding agent framework 比較 | 中-高 | 間接（DO/DataCamp）+ 雙工具比較文 | $200-600 | autodev-ai.com |
+| 2026-09-11 | SandboxAQ Switch（PH #1，8/26） | sandboxaq switch 教學, ai agent slack teams discord 整合 2026 | 中 | 間接（DO/DataCamp）+ DigitalOcean deploy CTA | $100-300 | autodev-ai.com |
+| 2026-09-11 | Grok 4.7（T-1天待命） | grok 4.7 評測, grok 4.7 price, xai grok 4.7 api 2026 | 高（GA後爆發） | 間接（評測+比較頁） | $200-800（GA後） | autodev-ai.com |
+| 2026-09-11 | Claude Opus 版本比較（長尾） | claude opus 4.7 vs 4.8 vs 5 差別, opus 版本比較 2026 | 中（長尾常青） | 間接（評測導流） | $100-250 | autodev-ai.com |
+| 2026-09-11 | 💰 AFFILIATE Leadpages 40-50% LIFETIME | leadpages 評測 2026, leadpages vs clickfunnels 繁中 | 中 | 40-50% LIFETIME recurring，月付 | $300-800 | Ivan 申請（leadpages.com/affiliates） |
+| 2026-09-11 | OpenAI DevDay T-18天 | openai devday 2026 | 高（流量高峰 Sep 25-Oct 1） | 間接（現有文章流量高峰） | $100-400 | autodev-ai.com（文章已存在） |
