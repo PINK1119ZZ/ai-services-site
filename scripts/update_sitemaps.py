@@ -45,6 +45,12 @@ def update_autodev():
         if os.path.basename(f) != 'index.html'
     ])
 
+    # Collect tool pages
+    tool_files = sorted([
+        f for f in glob.glob(f'{root}/tools/*.html')
+        if os.path.basename(f) != 'index.html'
+    ])
+
     urls = []
 
     # ZH main pages
@@ -161,6 +167,19 @@ def update_autodev():
         tag += '  </url>'
         urls.append(tag)
 
+    # Tool pages
+    for fpath in tool_files:
+        fname = os.path.basename(fpath)
+        loc = f'{base}/tools/{fname}'
+        mtime = get_mtime(fpath)
+        tag = '  <url>\n'
+        tag += f'    <loc>{loc}</loc>\n'
+        tag += f'    <lastmod>{mtime}</lastmod>\n'
+        tag += '    <changefreq>monthly</changefreq>\n'
+        tag += '    <priority>0.8</priority>\n'
+        tag += '  </url>'
+        urls.append(tag)
+
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
     xml += '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n\n'
@@ -171,10 +190,11 @@ def update_autodev():
     with open(out, 'w') as f:
         f.write(xml)
 
-    total = len(main_pages) + 1 + len(zh_blog_files) + len(en_main_pages) + 1 + len(en_blog_files)
+    total = len(main_pages) + 1 + len(zh_blog_files) + len(en_main_pages) + 1 + len(en_blog_files) + len(tool_files)
     print(f'[autodev-ai.com] {total} URLs written to {out}')
     print(f'  ZH blog articles: {len(zh_blog_files)}')
     print(f'  EN blog articles: {len(en_blog_files)}')
+    print(f'  Tool pages: {len(tool_files)}')
 
 
 # ─────────────────────────────────────────────────────────────
