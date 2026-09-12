@@ -477,6 +477,22 @@
         "P1-HIGH（Ivan 批准後）：blog/invideo-ai-review-2026.html（50% monthly）",
         "P1-HIGH（Ivan 批准後）：blog/manychat-line-bot-review-2026.html（50% recurring，LINE Bot 系列天然導流）"
       ]
+    },
+    {
+      "timestamp": "2026-09-12T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Sat 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 首頁 200✓、sitemap.xml 301→sitemap_index.xml→200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；兩個 GitHub Pages fallback 200✓。本輪無站內內容錯誤可修，新增 builder follow-up directive 要求對 .tw 網域做最終修復/棄用決策。",
+      "changes": [
+        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
+        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml redirected to sitemap_index.xml with final HTTP 200",
+        "Reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution",
+        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
+        "Added directives/content-ops-to-builder-2026-09-12-ai-tools-dns-followup.md requesting final restore-vs-deprecate decision",
+        "Updated agent-state.json siteHealth + issues + lastSiteHealthCheck + lastSiteHealthSummary + agentLog"
+      ],
+      "watchlistStatus": {}
     }
   ],
   "gscData": {
@@ -1070,7 +1086,8 @@
     "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-09-07 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active.",
     "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-09-08 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active.",
     "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-09-09 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active.",
-    "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-09-10 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active."
+    "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-09-10 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active.",
+    "ai-tools.tw and en.ai-tools.tw still fail DNS resolution; builder needs final restore-vs-deprecate decision (fallback GitHub Pages remain healthy)."
   ],
   "fbReplied": [
     "122127161732778539_2160547217861921",
@@ -3126,42 +3143,42 @@
     "autodev-ai.com": {
       "url": "https://autodev-ai.com/",
       "status": "200 OK",
-      "lastChecked": "2026-09-11T00:00:30Z"
+      "lastChecked": "2026-09-12T00:00:00Z"
     },
     "autodev-ai.com/sitemap.xml": {
       "url": "https://autodev-ai.com/sitemap.xml",
       "status": "200 OK",
-      "lastChecked": "2026-09-11T00:00:30Z"
+      "lastChecked": "2026-09-12T00:00:00Z"
     },
     "ai-tools.pro": {
       "url": "https://ai-tools.pro/",
       "status": "200 OK",
-      "lastChecked": "2026-09-11T00:00:30Z"
+      "lastChecked": "2026-09-12T00:00:00Z"
     },
     "ai-tools.pro/sitemap.xml": {
       "url": "https://ai-tools.pro/sitemap.xml",
       "status": "200 OK (final: sitemap_index.xml)",
-      "lastChecked": "2026-09-11T00:00:30Z"
+      "lastChecked": "2026-09-12T00:00:00Z"
     },
     "ai-tools.tw": {
       "url": "https://ai-tools.tw/",
       "status": "DNS FAIL",
-      "lastChecked": "2026-09-11T00:00:30Z"
+      "lastChecked": "2026-09-12T00:00:00Z"
     },
     "en.ai-tools.tw": {
       "url": "https://en.ai-tools.tw/",
       "status": "DNS FAIL",
-      "lastChecked": "2026-09-11T00:00:30Z"
+      "lastChecked": "2026-09-12T00:00:00Z"
     },
     "ai-tools-tw-fallback": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
       "status": "200 OK",
-      "lastChecked": "2026-09-11T00:00:30Z"
+      "lastChecked": "2026-09-12T00:00:00Z"
     },
     "ai-tools-en-fallback": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
       "status": "200 OK",
-      "lastChecked": "2026-09-11T00:00:30Z"
+      "lastChecked": "2026-09-12T00:00:00Z"
     }
   },
   "agents": {
@@ -3171,27 +3188,8 @@
       "status": "completed"
     }
   },
-  "lastSiteHealthCheck": "2026-09-11T00:00:30Z",
-  "lastSiteHealthSummary": {
-    "healthy": [
-      "autodev-ai.com",
-      "autodev-ai.com/sitemap.xml",
-      "ai-tools.pro",
-      "ai-tools.pro/sitemap.xml",
-      "ai-tools-tw-fallback",
-      "ai-tools-en-fallback"
-    ],
-    "issues": [
-      {
-        "site": "ai-tools.tw",
-        "status": "DNS FAIL"
-      },
-      {
-        "site": "en.ai-tools.tw",
-        "status": "DNS FAIL"
-      }
-    ]
-  },
+  "lastSiteHealthCheck": "2026-09-12T00:00:00Z",
+  "lastSiteHealthSummary": "Sat 00:00 UTC site-health — autodev-ai.com and sitemap 200✓; ai-tools.pro homepage 200✓ and sitemap 301→sitemap_index.xml→200✓; ai-tools.tw / en.ai-tools.tw still DNS FAIL; GitHub Pages fallbacks 200✓; added builder follow-up directive requesting final DNS/deprecation decision.",
   "affiliateLinks": {
     "lastChecked": "2026-09-06T10:30:00Z",
     "results": {
