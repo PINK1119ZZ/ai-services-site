@@ -1577,3 +1577,150 @@ Kit 50% = 業界最高（超過 Jasper 25%、Writesonic 30%）。達 Bronze tier
 | Fliki AI affiliate | ⚠️ Ivan 積壓中（30% LIFETIME）|
 | ElevenLabs affiliate | ⚠️ Ivan 積壓中（22%/12mo）|
 | AdCreative.ai affiliate | ⚠️ Ivan 積壓中（30-40% LIFETIME）|
+
+---
+
+## 2026-09-13（市場研究 Round 202 — Sun 07:00 UTC market-research cron）
+
+### 🔥 本輪重點：Beehiiv 50-60% 新聯盟發現 + AWeber 30-50% 再確認 + MoneyPrinterTurbo AI 影片工具浪潮 + Watermark-Remover 21.7K★ 隱私需求 + OpenAI DevDay T-17天 + LINE AI Chatbot 台灣商業落差 + 新流量管道分析
+
+---
+
+### 一、新 Affiliate 機會
+
+#### 1. Beehiiv Partner Program — 🔴 P1-HIGH（首次精確分析）
+- **佣金**：50%/12mo（Scale plan 起），60%/12mo（Scale Max tier，50+ referrals/月）
+- **Cookie**：60 天（first-touch 歸因）
+- **客單**：$43/月（Scale plan）→ 50% = $21.5/月/人，12 個月 = $258/人
+- **高端案例**：$249/月（Scale 100K subs）→ 60% = $149.4/月/人；12 個月 = $1,793/人
+- **平台**：自有 Partner Dashboard（beehiiv.com/partner-program）
+- **適用受眾**：台灣內容創作者、電商 newsletter 操作者、自媒體、課程銷售者
+- **繁中評測**：**近乎零**（YouTube 主要英文，繁中切入低競爭）
+- **月潛力**：$300–900/月（5-15 次轉換，Scale plan 換算）
+- **申請**：beehiiv.com/partner-program（免費申請，7 天審核）
+- **優先**：**P1-HIGH**（50% 業界最高 newsletter 平台聯盟，台灣創作者紅利正在竄起）
+- **角度**：「台灣創作者怎麼用 beehiiv 賺錢？內建廣告 + Boosts + 訂閱三管齊下」
+
+#### 2. AWeber Advocate Program — 🟡 P1 carryover 重要細節補充
+- **佣金**：30%（0–99 referrals/年）→ 40%（100–499/年）→ 50%（500+/年）
+- **Cookie**：365 天（業界最長之一！）
+- **起付**：$30（US）/ $50（非 US）via PayPal
+- **客單**：$12.50+/月（Pro plan）
+- **適用**：email marketing 受眾、台灣中小企業
+- **申請**：aweber.com/advocates.htm（手動審核 3-5 天，需 W-9 for US）
+- **月潛力**：$150–500/月
+- **注意**：365 天 cookie 是關鍵優勢，特別適合長尾 SEO 文章（讀者可能幾個月後才轉換）
+
+---
+
+### 二、Gumroad / Lemon Squeezy 暢銷 AI 產品分析
+
+#### MoneyPrinterTurbo — 台灣教學極度空白機會
+- **GitHub Stars**：17.1K（2026-08 月增）；累計 120K+★ 母 repo
+- **工具本質**：輸入關鍵字 → AI 自動生成 TikTok/Reels/YouTube Shorts 短影音（劇本+配音+字幕+剪輯）
+- **台灣機會**：
+  - 中文受眾基礎（原本是中國開發者）→ 繁中教學幾乎空白
+  - 影片自動化市場龐大（YouTuber/電商賣家最需要）
+  - MiniMax H3 API 整合（$0.09–0.15/秒影片，含音訊）
+  - **Kimi API bonus**：新用戶前 10% top-up 加碼（至 Sep 30）
+- **文章角度**：「台灣人怎麼用 MoneyPrinterTurbo 自動做 AI 短影音？繁中零教學首發」
+- **導流**：DigitalOcean（部署伺服器）+ DataCamp（Python 基礎）
+- **優先**：**P1-HIGH**（120K★ 工具，繁中教學幾乎為零，有清晰的 CTA 角度）
+
+#### watermarks-remover（21.7K★）— AI 隱私敘事高需求
+- **工具本質**：移除 AI 產生內容的隱藏浮水印（Anthropic C2PA、ChatGPT、Gemini Sparkle）
+- **Stars**：21.7K★（2.5K forks）
+- **需求背景**：Anthropic 強制浮水印政策引發反彈 → 開發者馬上做工具 → 持續熱搜
+- **文章角度**：「AI 內容浮水印是什麼？2026 年各家政策解析 + 你的合法選擇」（中立教學）
+- **台灣需求**：AI 寫手、自由業者、電商文案 → 隱私顧慮真實
+- **優先**：**P2**（教育文型，需謹慎定位以免觸動平台政策；導流 DataCamp）
+
+---
+
+### 三、台灣數位產品需求缺口（新發現）
+
+#### LINE AI Chatbot 商業化缺口
+- **數據**：台灣 LINE 活躍用戶 2,100 萬（超過 90% 人口每天使用）
+- **現況**：
+  - LINE 官方帳號 AI 聊天機器人（β）：NT$100/月「聊天進階方案」加購，但**只能做 FAQ**，有消息量限制（建議 25,000 好友以下）
+  - 第三方工具（BotBonnie/Omnichat/Chatisfy）：一次性設定費 NT$30,000+，月費 NT$800–5,000
+  - **關鍵缺口**：LINE + Claude Code 完整整合教學（繁中幾乎空白）
+  - **Mastra + LINE Harness**（Sep 1 GA）：技術可行，繁中教學零競品
+- **導流機會**：
+  - 評測文：「LINE AI 機器人工具 2026：官方 vs BotBonnie vs Omnichat 誰更值？」
+  - 教學文：「用 Mastra 15 分鐘建 LINE AI 客服機器人（完整教學）」（+ DigitalOcean 部署 CTA）
+- **月潛力**：$150–400（導流 DO 主機 + DataCamp CRM 課程）
+- **優先**：**P1**（台灣在地流量，電商/餐廳/診所受眾明確）
+
+#### AI 浮水印教育內容缺口
+- 台灣內容創作者對 AI 生成內容的浮水印政策知識嚴重不足
+- 英文市場已有 The Next Web、Business Insider 等大媒體報導
+- 繁中空白：可做「Anthropic/Google/OpenAI 浮水印政策懶人包」常青教育文
+
+---
+
+### 四、新流量管道分析（新發現）
+
+#### Bluesky AT Protocol — 快速成長管道
+- **現況**：2026 年 Q3 日活用戶增速加快（Meta/X 廣告品牌安全疑慮驅動出走）
+- **特性**：開放演算法（用戶可選擇 Feed Algorithm）→ 技術受眾最理想
+- **策略**：
+  - 發 @autodev-ai.com 官方帳號（AT Protocol 原生）
+  - 每篇新文章發 Bluesky 摘要貼（繁中，先 Bluesky，5 分鐘後同步 Facebook）
+  - 台灣 AI/開發者社群在 Bluesky 目前競爭低
+- **成本**：零（免費帳號，5 分鐘/篇設定）
+- **預估月流量**：300–1,200 新訪客（3–6 個月養成）
+- **優先**：**P1**（Ivan 申請帳號，strategist 評估加入常規排程）
+
+#### AI 浮水印 SEO 長尾流量
+- 「anthropic ai 浮水印」、「chatgpt 浮水印怎麼辨識」、「ai 生成內容 2026 辨別方法」
+- 目前繁中搜尋幾乎無優質內容
+- 可與 autodev-ai 現有 Claude Code / AI 工具受眾完美對齊
+
+---
+
+### 五、OpenAI DevDay 2026 倒計時 T-17 天
+
+- **日期**：2026-09-29（週二），Fort Mason，San Francisco
+- **模式**：邀請制（$650/人），Keynote 免費全球直播（10:00 AM PT = 凌晨 1:00 台灣時間）
+- **DevDay Exchange 後續**：Bengaluru / Tokyo / Seoul / Paris / Berlin / London / Sao Paulo / Mexico City（亞太含東京、首爾）
+- **台灣機會**：
+  - Sep 22（T-7 天）更新現有 blog/openai-devday-2026-preview.html（加入已確認功能：Codex Slack、GPT-Realtime-Mini 70% cheaper、ChatGPT Apps API）
+  - Sep 29–30：即時更新（Keynote 直播筆記）→ 48 小時內改版文章
+  - 台灣 DevDay Exchange：目前無官方確認日期（Tokyo/Seoul 有，台北未見）
+- **優先**：**content-ops 執行**，researcher 不重複啟動新文
+
+---
+
+### 六、GitHub 趨勢洞察（上週 Top 10 節選）
+
+| 工具 | Stars 增速 | 分類 | 台灣機會 |
+|------|------------|------|---------|
+| MoneyPrinterTurbo | +17.1K/月 | AI 影片自動化 | P1-HIGH（繁中空白）|
+| watermarks-remover | +17.2K/月 | AI 隱私工具 | P2（中立教學）|
+| OmniRoute | 45K★ | AI Gateway | P1（carryover，R201 已提案）|
+| DSH Desktop | 持續熱 | Agent Harness | P2（watchlist）|
+| Archify | 新進 | Agent Skills 框架 | P2（watchlist）|
+| Diagram Design | 新進 | AI 視覺設計 | P2（watchlist）|
+| OpenClaw | GitHub 2026 年度最快成長 | Agent 平台 | ✅ 自用（我們就在跑）|
+
+---
+
+### 七、Round 202 Watchlist 更新
+
+| 項目 | 狀態 |
+|------|------|
+| Grok 4.7 | 🔴 T+1 天過期（Sep 12 已過，Sep 13 監控中，再無公告需降級 STANDBY）|
+| Beehiiv Partner | 🔴 P1-HIGH 新（50-60%/12mo，360天 cookie，繁中空白，Ivan 申請）|
+| AWeber Advocate | 🟡 P1（365天 cookie！30-50%，Ivan 確認申請狀態）|
+| MoneyPrinterTurbo | 🔴 P1-HIGH 新（17.1K月增，120K★，繁中教學空白，seo-writer 執行）|
+| LINE AI Chatbot | 🟡 P1（台灣落差教學，Mastra + LINE Harness 角度）|
+| Bluesky 管道 | 🟡 P1（Ivan 申請帳號，strategist 評估）|
+| AI 浮水印教育 | 🟡 P1（watermarks-remover 21.7K★，常青教育文，繁中空白）|
+| OpenAI DevDay T-17天 | 📅 Sep 22 更新文章，Sep 29-30 即時改版（content-ops）|
+| OmniRoute 45K★ | 🟡 P1 carryover（R201 提案，未執行）|
+| nanochat 57.3K★ | 🔴 P1-HIGH carryover（繁中空白，常青）|
+| Grok Bot Enterprise | 🔴 P1-HIGH carryover（Sep 3 GA，企業 AI 代理）|
+
+---
+
