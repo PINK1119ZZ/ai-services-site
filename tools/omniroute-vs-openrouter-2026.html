@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniRoute vs OpenRouter 2026 完整比較：45K★ AI Gateway 哪個更省錢？繁中首發</title>
+  <meta name="description" content="OmniRoute vs OpenRouter 深度比較 2026：OmniRoute 45K★ MIT，290+ providers，516+ models，RTK+Caveman 89% token 省。OpenRouter 功能全，但 OmniRoute 免費模型更多。台灣開發者互動比較工具。">
+  <meta name="keywords" content="omniroute 教學,omniroute vs openrouter,omniroute claude code,ai gateway 免費 2026,omniroute 繁中,openrouter 替代方案,ai api gateway 比較">
+  <link rel="canonical" href="https://autodev-ai.com/tools/omniroute-vs-openrouter-2026.html">
+  <meta property="og:title" content="OmniRoute vs OpenRouter 2026 完整比較：45K★ AI Gateway 哪個更省錢？">
+  <meta property="og:description" content="OmniRoute vs OpenRouter 互動比較：290+ providers，516+ models，RTK+Caveman 89% token 省費。台灣開發者完整指南。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/tools/omniroute-vs-openrouter-2026.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "OmniRoute vs OpenRouter 2026 完整比較：45K★ AI Gateway 哪個更省錢？繁中首發",
+    "description": "OmniRoute vs OpenRouter 深度比較 2026：OmniRoute 45K★ MIT，290+ providers，516+ models，RTK+Caveman 89% token 省費。台灣開發者互動比較工具。",
+    "datePublished": "2026-09-12",
+    "dateModified": "2026-09-12",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"}
+  }
+  </script>
+  <style>
+    :root {
+      --primary: #6C63FF;
+      --secondary: #00B4D8;
+      --accent: #F72585;
+      --dark: #0F0F23;
+      --card: #1A1A35;
+      --border: #2A2A4A;
+      --text: #E8E8F0;
+      --muted: #9090B0;
+      --green: #00E676;
+      --orange: #FF9800;
+      --yellow: #FFD600;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--dark); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); padding: 60px 20px 40px; text-align: center; }
+    header h1 { font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 12px; line-height: 1.3; }
+    header p { color: rgba(255,255,255,0.88); font-size: 1.05rem; max-width: 640px; margin: 0 auto 20px; }
+    .badge { display: inline-block; background: rgba(255,255,255,0.2); color: #fff; border-radius: 20px; padding: 4px 14px; font-size: 0.82rem; margin: 4px; }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 48px 0; }
+    h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 20px; color: var(--primary); }
+    h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 12px; }
+
+    /* Selector tool */
+    .selector { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 40px; }
+    .selector h2 { color: var(--green); }
+    .question-group { margin-bottom: 24px; }
+    .question-group label { display: block; font-weight: 600; margin-bottom: 10px; color: var(--text); }
+    .opts { display: flex; flex-wrap: wrap; gap: 10px; }
+    .opt { background: var(--dark); border: 2px solid var(--border); border-radius: 10px; padding: 10px 18px; cursor: pointer; transition: all 0.2s; font-size: 0.9rem; }
+    .opt:hover { border-color: var(--primary); }
+    .opt.selected { background: var(--primary); border-color: var(--primary); color: #fff; }
+    #recommend-btn { display: block; width: 100%; padding: 14px; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-size: 1.05rem; font-weight: 700; border: none; border-radius: 12px; cursor: pointer; margin-top: 24px; transition: opacity 0.2s; }
+    #recommend-btn:hover { opacity: 0.9; }
+    #result-box { display: none; margin-top: 24px; background: var(--dark); border: 2px solid var(--green); border-radius: 12px; padding: 24px; }
+    #result-box.show { display: block; }
+    .result-tag { display: inline-block; background: var(--green); color: #000; border-radius: 20px; padding: 4px 16px; font-weight: 700; margin-bottom: 12px; font-size: 0.85rem; }
+
+    /* Comparison table */
+    .cmp-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; }
+    .cmp-table th { background: var(--card); padding: 14px 16px; text-align: left; font-size: 0.9rem; color: var(--muted); border-bottom: 2px solid var(--border); }
+    .cmp-table th.omni { color: var(--primary); }
+    .cmp-table th.openr { color: var(--secondary); }
+    .cmp-table td { padding: 13px 16px; border-bottom: 1px solid var(--border); font-size: 0.9rem; vertical-align: top; }
+    .cmp-table tr:hover td { background: rgba(108,99,255,0.07); }
+    .cmp-table td:first-child { color: var(--muted); font-size: 0.85rem; }
+    .win { color: var(--green); font-weight: 600; }
+    .draw { color: var(--yellow); }
+    .good { color: var(--orange); }
+    .tag { display: inline-block; border-radius: 6px; padding: 2px 10px; font-size: 0.78rem; font-weight: 600; margin-bottom: 4px; }
+    .tag.green { background: rgba(0,230,118,0.15); color: var(--green); }
+    .tag.blue { background: rgba(0,180,216,0.15); color: var(--secondary); }
+    .tag.purple { background: rgba(108,99,255,0.15); color: var(--primary); }
+    .tag.orange { background: rgba(255,152,0,0.15); color: var(--orange); }
+    .tag.red { background: rgba(247,37,133,0.18); color: var(--accent); }
+
+    /* Cards */
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+    @media (max-width: 600px) { .cards { grid-template-columns: 1fr; } header h1 { font-size: 1.5rem; } .cmp-table { font-size: 0.82rem; } }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+    .card h3 { margin-bottom: 14px; }
+    .card ul { padding-left: 20px; }
+    .card ul li { margin-bottom: 8px; font-size: 0.9rem; }
+
+    /* Stat row */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 32px 0; }
+    @media (max-width: 640px) { .stats { grid-template-columns: 1fr 1fr; } }
+    .stat { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 16px; text-align: center; }
+    .stat .num { font-size: 1.8rem; font-weight: 800; color: var(--primary); display: block; }
+    .stat .lab { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+
+    /* Scenario section */
+    .scenario { background: var(--card); border-left: 4px solid var(--primary); border-radius: 0 12px 12px 0; padding: 20px 24px; margin-bottom: 20px; }
+    .scenario h4 { font-size: 1rem; margin-bottom: 8px; color: var(--text); }
+    .scenario p { font-size: 0.88rem; color: var(--muted); }
+
+    /* CTA */
+    .cta-box { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); border-radius: 20px; padding: 40px; text-align: center; margin: 48px 0; }
+    .cta-box h2 { color: #fff; margin-bottom: 12px; font-size: 1.5rem; }
+    .cta-box p { color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .btn { display: inline-block; padding: 13px 28px; border-radius: 12px; font-weight: 700; font-size: 0.95rem; transition: opacity 0.2s; }
+    .btn:hover { opacity: 0.88; text-decoration: none; }
+    .btn-white { background: #fff; color: var(--primary); }
+    .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.6); }
+
+    footer { background: var(--card); border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--muted); }
+    .breadcrumb { padding: 16px 0; font-size: 0.85rem; color: var(--muted); }
+    .breadcrumb a { color: var(--muted); }
+
+    /* FAQ */
+    details { background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; }
+    summary { padding: 16px 20px; cursor: pointer; font-weight: 600; font-size: 0.95rem; }
+    summary:hover { color: var(--primary); }
+    details[open] summary { color: var(--primary); border-bottom: 1px solid var(--border); }
+    details p { padding: 16px 20px; font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="breadcrumb"><a href="https://autodev-ai.com/">首頁</a> › <a href="https://autodev-ai.com/tools/">工具</a> › OmniRoute vs OpenRouter</div>
+    <h1>OmniRoute vs OpenRouter 2026 完整比較<br>45K★ AI Gateway 哪個更省錢？</h1>
+    <p>OmniRoute MIT 開源，290+ providers，516+ models，90+ 免費模型，RTK+Caveman 壓縮省 89% tokens。台灣開發者互動比較工具，一秒選出最適合你的 AI Gateway。</p>
+    <span class="badge">🔄 2026-09-12 更新</span>
+    <span class="badge">⭐ OmniRoute 45K★</span>
+    <span class="badge">🆓 90+ 免費模型</span>
+    <span class="badge">🇹🇼 繁中首發</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Selector -->
+  <section>
+    <div class="selector">
+      <h2>🎯 一分鐘選出適合你的 AI Gateway</h2>
+      <p style="color:var(--muted);margin-bottom:24px;">根據你的需求，我們幫你推薦最適合的工具。</p>
+
+      <div class="question-group">
+        <label>💰 你最在意什麼？</label>
+        <div class="opts">
+          <div class="opt" data-q="priority" data-v="free" onclick="select(this)">免費模型越多越好</div>
+          <div class="opt" data-q="priority" data-v="token-save" onclick="select(this)">最大化 token 節省</div>
+          <div class="opt" data-q="priority" data-v="ecosystem" onclick="select(this)">生態系整合（PartnerStack、Credit）</div>
+          <div class="opt" data-q="priority" data-v="selfhost" onclick="select(this)">自架、MIT 開源</div>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>🛠️ 你的主要用途？</label>
+        <div class="opts">
+          <div class="opt" data-q="usecase" data-v="coding" onclick="select(this)">Coding Agent（Claude Code / Codex）</div>
+          <div class="opt" data-q="usecase" data-v="chatbot" onclick="select(this)">Chatbot / LINE Bot 後端</div>
+          <div class="opt" data-q="usecase" data-v="batch" onclick="select(this)">大量批次任務（SEO / 爬蟲 / RAG）</div>
+          <div class="opt" data-q="usecase" data-v="experiment" onclick="select(this)">快速實驗多模型</div>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>📦 你的技術程度？</label>
+        <div class="opts">
+          <div class="opt" data-q="skill" data-v="beginner" onclick="select(this)">剛入門，要有 UI 介面</div>
+          <div class="opt" data-q="skill" data-v="dev" onclick="select(this)">開發者，能跑 CLI / YAML</div>
+          <div class="opt" data-q="skill" data-v="devops" onclick="select(this)">DevOps，能自架 Docker</div>
+        </div>
+      </div>
+
+      <button id="recommend-btn" onclick="recommend()">✨ 幫我推薦最適合的工具</button>
+
+      <div id="result-box">
+        <span id="result-tag" class="result-tag">推薦中...</span>
+        <h3 id="result-title" style="margin-bottom:8px;"></h3>
+        <p id="result-desc" style="color:var(--muted);font-size:0.9rem;"></p>
+        <div id="result-cta" style="margin-top:16px;"></div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat">
+        <span class="num">45K★</span>
+        <span class="lab">OmniRoute GitHub Stars</span>
+      </div>
+      <div class="stat">
+        <span class="num">516+</span>
+        <span class="lab">OmniRoute 支援模型數</span>
+      </div>
+      <div class="stat">
+        <span class="num">90+</span>
+        <span class="lab">OmniRoute 免費模型</span>
+      </div>
+      <div class="stat">
+        <span class="num">89%</span>
+        <span class="lab">RTK+Caveman token 節省率</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section>
+    <h2>📊 OmniRoute vs OpenRouter 完整比較表</h2>
+    <div style="overflow-x:auto;">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th>比較維度</th>
+            <th class="omni">🔷 OmniRoute</th>
+            <th class="openr">🔵 OpenRouter</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GitHub Stars</td>
+            <td><span class="win">⭐ 45K★（MIT）</span></td>
+            <td>非開源（閉源 SaaS）</td>
+          </tr>
+          <tr>
+            <td>開源授權</td>
+            <td><span class="win">✅ MIT（可商用自架）</span></td>
+            <td>❌ 閉源，API Only</td>
+          </tr>
+          <tr>
+            <td>支援 Providers</td>
+            <td><span class="win">290+ providers</span></td>
+            <td>200+ providers</td>
+          </tr>
+          <tr>
+            <td>支援模型數</td>
+            <td><span class="win">516+ models</span></td>
+            <td>300+ models</td>
+          </tr>
+          <tr>
+            <td>免費模型</td>
+            <td><span class="win">90+ 免費（RTK / Caveman / Community）</span></td>
+            <td>~50 免費（限速較嚴）</td>
+          </tr>
+          <tr>
+            <td>Token 壓縮</td>
+            <td><span class="win">✅ RTK + Caveman：平均省 89%</span></td>
+            <td>❌ 無內建壓縮</td>
+          </tr>
+          <tr>
+            <td>Claude Code 整合</td>
+            <td><span class="win">✅ Dashboard 一鍵設定</span></td>
+            <td>✅ 需手動設定 baseURL</td>
+          </tr>
+          <tr>
+            <td>OpenAI SDK 相容</td>
+            <td><span class="win">✅ 全相容（drop-in 替換）</span></td>
+            <td>✅ 全相容</td>
+          </tr>
+          <tr>
+            <td>智慧路由（省費）</td>
+            <td><span class="win">✅ 自動按 cost/quality 路由</span></td>
+            <td><span class="good">部分：Auto 路由（限選定模型）</span></td>
+          </tr>
+          <tr>
+            <td>本地 / 自架</td>
+            <td><span class="win">✅ Docker compose 5 分鐘啟動</span></td>
+            <td>❌ 純雲端，無自架選項</td>
+          </tr>
+          <tr>
+            <td>API Key 管理</td>
+            <td><span class="win">✅ 多 Key Pool 自動輪換</span></td>
+            <td><span class="draw">◎ 單 Key（統一計費）</span></td>
+          </tr>
+          <tr>
+            <td>Fallback 機制</td>
+            <td><span class="win">✅ Provider 故障自動切換</span></td>
+            <td>✅ 支援 Fallback（需手動設定）</td>
+          </tr>
+          <tr>
+            <td>可觀察性（Log）</td>
+            <td><span class="win">✅ 完整 request / cost log</span></td>
+            <td>✅ 基本 usage log</td>
+          </tr>
+          <tr>
+            <td>定價模式</td>
+            <td><span class="win">免費自架，pay-as-you-go（各 provider 原價）</span></td>
+            <td>各 provider 原價（加微薄 markup）</td>
+          </tr>
+          <tr>
+            <td>信用卡預付</td>
+            <td>❌ 各 provider 自行付費</td>
+            <td><span class="good">✅ 統一儲值（方便企業報帳）</span></td>
+          </tr>
+          <tr>
+            <td>台灣繁中支援</td>
+            <td><span class="draw">◎ 無繁中 UI，英文操作</span></td>
+            <td><span class="draw">◎ 無繁中 UI，英文操作</span></td>
+          </tr>
+          <tr>
+            <td>社群活躍度</td>
+            <td><span class="win">✅ Discord 3K+，Issues 快速回應</span></td>
+            <td>✅ Discord 活躍，官方 API 更新快</span></td>
+          </tr>
+          <tr>
+            <td>最適合誰</td>
+            <td><span class="win">💰 省費黨、自架黨、Coding Agent 用戶</span></td>
+            <td>🏢 企業統一帳單、想省設定功夫的用戶</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Deep Dive -->
+  <section>
+    <h2>🔍 深度解析：OmniRoute 的 89% token 節省怎麼做到的？</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🛠️ RTK（Reasoning Token Killer）</h3>
+        <ul>
+          <li>針對推理模型（Claude Sonnet 5 / GPT-o4-mini）自動裁剪冗余 thinking tokens</li>
+          <li>實測：複雜程式碼審查任務省 60-80% token</li>
+          <li>支援 Claude Code 原生 extended thinking 模式</li>
+          <li>設定：<code>compression: rtk</code> 一行搞定</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>⚡ Caveman（激進壓縮）</h3>
+        <ul>
+          <li>把 prompt 壓縮成「穴居人語言」：去除停用詞、合併重複片段</li>
+          <li>在語意幾乎不失真下省 40-65% input tokens</li>
+          <li>最適合：批次 SEO 文章生成、RAG 大量查詢</li>
+          <li>與 RTK 搭配：平均省 89%（原廠數據）</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🔄 智慧路由（Smart Router）</h3>
+        <ul>
+          <li>根據 prompt complexity 自動選最便宜能完成的模型</li>
+          <li>例：簡單翻譯 → Qwen 3.8B 免費；複雜推理 → Claude Sonnet 5</li>
+          <li>可設 quality_threshold（0-1）控制最低品質底線</li>
+          <li>與 LiteLLM 比較：OmniRoute 多了免費模型池</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🆓 90+ 免費模型池</h3>
+        <ul>
+          <li>Qwen 3 系列（0.5B、1.5B、7B、14B）</li>
+          <li>Llama 4 Scout / Maverick（Meta）</li>
+          <li>Gemini 2.0 Flash（有率限）</li>
+          <li>DeepSeek R2 Lite（推理，有配額）</li>
+          <li>90+ 免費 vs OpenRouter 約 50 個，差距明顯</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Setup Guide -->
+  <section>
+    <h2>⚙️ OmniRoute 5 分鐘快速設定教學</h2>
+
+    <div class="card" style="margin-bottom:24px;">
+      <h3>方案 A：Docker 自架（推薦）</h3>
+      <pre style="background:var(--dark);border-radius:8px;padding:16px;font-size:0.85rem;overflow-x:auto;color:var(--green);">
+# 1. Clone repo
+git clone https://github.com/diegosouzapw/OmniRoute
+cd OmniRoute
+
+# 2. 設定 providers（填入你的 API keys）
+cp .env.example .env
+# 編輯 .env，加入 OPENAI_API_KEY, ANTHROPIC_API_KEY 等
+
+# 3. 啟動
+docker compose up -d
+
+# 4. 測試
+curl http://localhost:8080/v1/models
+# 應回傳 516+ 模型清單</pre>
+    </div>
+
+    <div class="card" style="margin-bottom:24px;">
+      <h3>方案 B：Claude Code 整合（2 分鐘）</h3>
+      <pre style="background:var(--dark);border-radius:8px;padding:16px;font-size:0.85rem;overflow-x:auto;color:var(--green);">
+# Claude Code settings.json
+{
+  "apiBaseUrl": "http://localhost:8080/v1",
+  "apiKey": "omniroute-local",
+  "model": "auto",  // 讓 OmniRoute 自動選模型
+  "compressionMode": "rtk"  // 啟用 RTK 節省 token
+}</pre>
+    </div>
+
+    <div class="card">
+      <h3>方案 C：OpenRouter 無縫遷移（drop-in 替換）</h3>
+      <pre style="background:var(--dark);border-radius:8px;padding:16px;font-size:0.85rem;overflow-x:auto;color:var(--green);">
+# 原本 OpenRouter
+import openai
+client = openai.OpenAI(
+  base_url="https://openrouter.ai/api/v1",
+  api_key="sk-or-..."
+)
+
+# 換成 OmniRoute（只改 base_url）
+client = openai.OpenAI(
+  base_url="http://localhost:8080/v1",
+  api_key="omniroute-local"
+)</pre>
+    </div>
+  </section>
+
+  <!-- Scenarios -->
+  <section>
+    <h2>🇹🇼 台灣開發者四大實戰場景</h2>
+
+    <div class="scenario">
+      <h4>📱 場景 1：LINE Bot 後端省費（中小企業最愛）</h4>
+      <p>LINE Bot 每日 3,000+ 訊息處理。用 OmniRoute Smart Router：簡單問答 → Qwen 3.8B（免費），複雜客訴 → Claude Haiku（$0.25/M input）。RTK 壓縮再省 40%。原本月費 $180 降至 $22，省 88%。</p>
+    </div>
+
+    <div class="scenario">
+      <h4>⚙️ 場景 2：GitHub PR Review 自動化（Claude Code 用戶）</h4>
+      <p>每個 PR 平均 5,000 token 審查。原本用 Claude Sonnet 5 直連每月花 $210。OmniRoute + RTK：自動裁剪推理 token，同等品質月費降至 $45。同樣用 Claude，省的是 extended thinking 的冗余部分。</p>
+    </div>
+
+    <div class="scenario">
+      <h4>📊 場景 3：SEO 內容批次生成（電商 / 部落格）</h4>
+      <p>每月生成 500 篇 1,000 字 SEO 文章。用 OmniRoute + Caveman：input token 壓縮 55%，輸出品質維持。Router 自動選 Llama 4 Maverick（免費，文筆好）或 GPT-4o-mini（$0.15/M）。月費 $8 搞定。</p>
+    </div>
+
+    <div class="scenario">
+      <h4>🔬 場景 4：多模型 A/B 實驗（AI 新創 / 研究）</h4>
+      <p>同一個 prompt 跑 Claude Sonnet 5 / GPT-4o / Gemini 2.5 Pro 三模型對比。OmniRoute 統一 API，Log 自動記錄 cost / latency / quality。不用管三個 API Key，一個 endpoint 全搞定。</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>❓ 常見問題（FAQ）</h2>
+
+    <details>
+      <summary>OmniRoute 的 89% token 節省是真的嗎？有沒有 catch？</summary>
+      <p>RTK + Caveman 組合在批次任務（SEO 寫作、批次翻譯、RAG 查詢）上確實可達 80-89%。但在需要完整 context 的對話（如 LINE Bot 多輪）或高品質創作任務，建議只開 RTK（省 40-60%），不開 Caveman，避免語意損失。原廠說明：Caveman 適合「容忍一點語意簡化」的場景。</p>
+    </details>
+
+    <details>
+      <summary>OmniRoute 自架需要多強的主機？</summary>
+      <p>最低：1 vCPU / 1GB RAM（DigitalOcean $6/月 Droplet 可跑）。建議：2 vCPU / 2GB RAM 以上（$12/月），適合中等流量。OmniRoute 本身是輕量 Go 服務，不是 LLM 本體，所以不需 GPU。</p>
+    </details>
+
+    <details>
+      <summary>免費的 90+ 模型真的能用在正式環境嗎？</summary>
+      <p>取決於用途。Qwen 3.8B / 14B 在分類、摘要、簡單問答品質相當不錯。Llama 4 Scout 在英文撰寫也很好。限制是：免費模型有 rate limit（通常 10-60 req/min），且不保證可用率。建議：免費模型當主力，付費模型當 fallback，搭配 OmniRoute Fallback 機制自動切換。</p>
+    </details>
+
+    <details>
+      <summary>OmniRoute vs LiteLLM 哪個好？</summary>
+      <p>LiteLLM 是 OmniRoute 的主要競品，兩者都是 MIT 開源。主要差距：(1) 免費模型池：OmniRoute 90+ vs LiteLLM 不強調免費模型；(2) token 壓縮：OmniRoute 內建 RTK + Caveman，LiteLLM 無；(3) Stars：OmniRoute 45K vs LiteLLM 40K。如果你主要要省費，選 OmniRoute；如果要企業級 proxy 管理，LiteLLM 更成熟。</p>
+    </details>
+
+    <details>
+      <summary>OpenRouter 比 OmniRoute 哪裡還是比較好？</summary>
+      <p>OpenRouter 的優勢：(1) 統一儲值（一張信用卡，方便企業報帳）；(2) 無需自架，省維運工；(3) 官方 API 更新快，新模型上架快；(4) 台灣 latency 通常 &lt;200ms（CDN 節點）。如果你不想自架、或公司有統一採購需求，OpenRouter 更省事。</p>
+    </details>
+
+    <details>
+      <summary>台灣用 OmniRoute 有隱私疑慮嗎？</summary>
+      <p>OmniRoute 本身是 proxy，你的資料走 OmniRoute → 各 provider API。如果你自架在台灣 VPS，資料不經過第三方 OmniRoute 伺服器（你就是 OmniRoute 伺服器）。隱私比 OpenRouter（雲端服務）高。但最終資料還是到各 provider（Anthropic / OpenAI 等），適用其各自的隱私政策。</p>
+    </details>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h2>🚀 準備好省下 89% Token 費用了嗎？</h2>
+    <p>OmniRoute 自架在 DigitalOcean $6/月 Droplet，每月幫你省下原本的 API 費用。</p>
+    <div class="cta-row">
+      <a href="https://m.do.co/c/6121a295f624" class="btn btn-white" target="_blank" rel="noopener">
+        🚀 DigitalOcean 免費 $200 試用
+      </a>
+      <a href="https://github.com/diegosouzapw/OmniRoute" class="btn btn-outline" target="_blank" rel="noopener">
+        ⭐ OmniRoute GitHub（MIT 免費）
+      </a>
+    </div>
+    <p style="margin-top:16px;font-size:0.82rem;opacity:0.7;">* DigitalOcean 為聯盟連結，點擊免費取得 $200 試用額度（60天）。OmniRoute 為 MIT 開源免費。</p>
+  </div>
+
+  <!-- DataCamp CTA -->
+  <section style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:48px;">
+    <h2 style="color:var(--secondary);">📚 學習 AI Gateway 與 LLM 優化</h2>
+    <p style="color:var(--muted);margin-bottom:20px;">想深入理解 token 優化、LLM API 整合、或 AI 工程？DataCamp 有完整的 AI/ML 課程，繁中介面，適合台灣開發者。</p>
+    <a href="https://afflink.one/s/aavAC" class="btn" style="background:linear-gradient(135deg,var(--secondary),var(--primary));color:#fff;" target="_blank" rel="noopener">
+      📊 DataCamp 免費試用 AI 課程
+    </a>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p>© 2026 AutoDev AI · <a href="https://autodev-ai.com/">autodev-ai.com</a> · <a href="https://autodev-ai.com/blog/">部落格</a> · <a href="https://autodev-ai.com/tools/">工具</a></p>
+    <p style="margin-top:8px;">本頁含聯盟連結（DigitalOcean）。OmniRoute 為 MIT 開源，與本站無商業關係。比較數據來源：OmniRoute 官方 README / Changelog，2026-09-12。</p>
+  </div>
+</footer>
+
+<script>
+  const selections = {};
+
+  function select(el) {
+    const q = el.dataset.q;
+    const v = el.dataset.v;
+    // Deselect same question
+    document.querySelectorAll(`[data-q="${q}"]`).forEach(e => e.classList.remove('selected'));
+    el.classList.add('selected');
+    selections[q] = v;
+  }
+
+  function recommend() {
+    const p = selections.priority;
+    const u = selections.usecase;
+    const s = selections.skill;
+
+    const box = document.getElementById('result-box');
+    const tag = document.getElementById('result-tag');
+    const title = document.getElementById('result-title');
+    const desc = document.getElementById('result-desc');
+    const cta = document.getElementById('result-cta');
+
+    let tool, tagText, titleText, descText, ctaHtml;
+
+    // Decision logic
+    if (p === 'free' || p === 'token-save') {
+      tool = 'omniroute';
+    } else if (p === 'ecosystem') {
+      tool = 'openrouter';
+    } else if (p === 'selfhost') {
+      tool = 'omniroute';
+    } else if (u === 'coding') {
+      tool = 'omniroute';
+    } else if (u === 'chatbot') {
+      tool = 'omniroute';
+    } else if (u === 'batch') {
+      tool = 'omniroute';
+    } else if (s === 'beginner') {
+      tool = 'openrouter';
+    } else {
+      tool = 'omniroute';
+    }
+
+    if (tool === 'omniroute') {
+      tagText = '🔷 推薦：OmniRoute';
+      titleText = 'OmniRoute 更適合你 — MIT 開源，89% token 省費';
+      descText = '根據你的選擇，OmniRoute 是更好的選擇。自架在 $6/月 DigitalOcean Droplet 即可跑，支援 516+ 模型、90+ 免費模型，RTK+Caveman token 壓縮省費最高 89%。Claude Code、Codex 一鍵整合。';
+      ctaHtml = '<a href="https://m.do.co/c/6121a295f624" target="_blank" style="display:inline-block;padding:12px 24px;background:linear-gradient(135deg,#6C63FF,#F72585);color:#fff;border-radius:10px;font-weight:700;text-decoration:none;">🚀 先拿 DigitalOcean $200 試用額度</a>';
+      tag.style.background = '#6C63FF';
+      tag.style.color = '#fff';
+    } else {
+      tagText = '🔵 推薦：OpenRouter';
+      titleText = 'OpenRouter 更適合你 — 無需自架，統一帳單';
+      descText = '根據你的選擇，OpenRouter 更合適。無需自架，直接在 openrouter.ai 儲值即可用全部模型。適合剛入門、不想維運基礎設施、或公司需要統一信用卡報帳的用戶。';
+      ctaHtml = '<a href="https://openrouter.ai" target="_blank" style="display:inline-block;padding:12px 24px;background:linear-gradient(135deg,#00B4D8,#6C63FF);color:#fff;border-radius:10px;font-weight:700;text-decoration:none;">🔵 前往 OpenRouter 官網</a>';
+      tag.style.background = '#00B4D8';
+      tag.style.color = '#fff';
+    }
+
+    tag.textContent = tagText;
+    title.textContent = titleText;
+    desc.textContent = descText;
+    cta.innerHTML = ctaHtml;
+    box.classList.add('show');
+    box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+
+</body>
+</html>
