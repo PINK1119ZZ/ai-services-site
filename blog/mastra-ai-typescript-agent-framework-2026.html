@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastra 完整教學 2026：27.9K★ TypeScript AI Agent Framework，30 分鐘從零到部署 | autodev-ai.com</title>
+  <meta name="description" content="Mastra 繁中首發完整教學。TypeScript-first AI Agent Framework，Gatsby 團隊出品，YC W25，300K+ npm 週下載。5步驟建立第一個 Agent，Mastra vs LangChain vs Agno 深度比較，台灣開發者實戰場景。">
+  <meta name="keywords" content="Mastra 教學, Mastra TypeScript agent, Mastra 繁中, TypeScript AI agent framework, Mastra vs LangChain, Mastra 安裝, Mastra Cloud 部署, Mastra 2026, AI agent framework 台灣">
+  <meta property="og:title" content="Mastra 完整教學 2026：TypeScript 開發者的第一個 AI Agent">
+  <meta property="og:description" content="27.9K★ TypeScript-first AI Agent Framework，繁中首發。5步驟建立、Mastra Memory、Cloud 部署、台灣實戰場景全收錄。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/mastra-ai-typescript-agent-framework-2026.html">
+  <link rel="canonical" href="https://autodev-ai.com/blog/mastra-ai-typescript-agent-framework-2026.html">
+  <link rel="stylesheet" href="/style.css?v=20260505">
+  <style>
+    .article-hero{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#a855f7 100%);color:#fff;padding:3rem 1.5rem;text-align:center;border-radius:12px;margin-bottom:2rem}
+    .article-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:1rem;line-height:1.3}
+    .article-hero .meta{opacity:.85;font-size:.9rem}
+    .article-body{max-width:860px;margin:0 auto;padding:0 1rem}
+    .article-body h2{color:#4f46e5;border-left:4px solid #6366f1;padding-left:.75rem;margin-top:2.5rem}
+    .article-body h3{color:#374151;margin-top:1.8rem}
+    .cta-box{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border-radius:12px;padding:2rem;margin:2.5rem 0;text-align:center}
+    .cta-box h3{color:#fff;margin:0 0 .5rem}
+    .cta-box p{margin:.5rem 0 1.25rem;opacity:.9}
+    .cta-btn{display:inline-block;background:#fff;color:#6366f1;font-weight:700;padding:.75rem 1.75rem;border-radius:8px;text-decoration:none;margin:.4rem;transition:transform .2s}
+    .cta-btn:hover{transform:translateY(-2px)}
+    .cta-btn.secondary{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4)}
+    .highlight-box{background:#f0fdf4;border-left:4px solid #22c55e;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0}
+    .warning-box{background:#fef3c7;border-left:4px solid #f59e0b;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0}
+    .tip-box{background:#eff6ff;border-left:4px solid #3b82f6;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0}
+    pre{background:#1e1e2e;color:#cdd6f4;padding:1.25rem;border-radius:8px;overflow-x:auto;font-size:.9rem;margin:1rem 0}
+    code{background:#f3f4f6;padding:.15rem .35rem;border-radius:4px;font-family:monospace;font-size:.88rem}
+    pre code{background:none;padding:0;color:inherit}
+    table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem}
+    th{background:#6366f1;color:#fff;padding:.75rem 1rem;text-align:left}
+    td{padding:.7rem 1rem;border-bottom:1px solid #e5e7eb}
+    tr:nth-child(even) td{background:#f9fafb}
+    .badge{display:inline-block;background:#ddd6fe;color:#4c1d95;padding:.2rem .6rem;border-radius:20px;font-size:.8rem;font-weight:600;margin:.15rem}
+    .toc{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .toc h3{margin:0 0 .75rem;color:#4f46e5;font-size:1rem}
+    .toc ol{margin:0;padding-left:1.25rem}
+    .toc li{margin:.35rem 0}
+    .toc a{color:#6366f1;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .star-badge{background:#fbbf24;color:#92400e;padding:.2rem .7rem;border-radius:20px;font-size:.85rem;font-weight:700}
+    .comparison-winner{background:#d1fae5;color:#065f46;padding:.15rem .5rem;border-radius:4px;font-weight:700;font-size:.85rem}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Mastra 完整教學 2026：27.9K★ TypeScript AI Agent Framework，30 分鐘從零到部署",
+    "description": "Mastra 繁中首發完整教學。TypeScript-first AI Agent Framework，5步驟建立 Agent，Mastra vs LangChain 比較，台灣開發者實戰場景。",
+    "datePublished": "2026-09-12",
+    "dateModified": "2026-09-12",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "autodev-ai.com"}
+  }
+  </script>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">🤖 AutoDev AI</a>
+    <button id="mobileMenuBtn" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="/blog/">文章</a>
+      <a href="/tools/">工具</a>
+      <a href="/en/">English</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<div class="article-hero">
+  <div class="article-body">
+    <span class="star-badge">⭐ 27,900+ Stars</span>
+    <h1>Mastra 完整教學 2026：TypeScript 開發者的第一個 AI Agent<br>繁中首發，30 分鐘從零到部署</h1>
+    <div class="meta">📅 2026-09-12 ｜ 分類：AI Framework ｜ 閱讀時間：約 15 分鐘</div>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <div class="toc">
+    <h3>📋 本文目錄</h3>
+    <ol>
+      <li><a href="#what-is-mastra">Mastra 是什麼？為什麼 TypeScript 開發者需要它</a></li>
+      <li><a href="#mastra-vs-langchain">Mastra vs LangChain vs Agno vs OpenAI SDK 深度比較</a></li>
+      <li><a href="#install">5 步驟安裝與建立第一個 Mastra Agent</a></li>
+      <li><a href="#typed-tools">TypeScript Typed Tools 實作教學</a></li>
+      <li><a href="#memory">Mastra Memory Gateway：讓 Agent 記住一切</a></li>
+      <li><a href="#deploy">Mastra Cloud 免費部署教學</a></li>
+      <li><a href="#taiwan-cases">台灣開發者三大實戰場景</a></li>
+      <li><a href="#faq">FAQ 常見問題</a></li>
+    </ol>
+  </div>
+
+  <div class="highlight-box">
+    <strong>🎯 本文重點</strong><br>
+    Mastra 是 2026 年 TypeScript 生態中成長最快的 AI Agent Framework，GitHub 27.9K★，YC W25 投資，300K+ npm 週下載。如果你是 React / Next.js / TypeScript 開發者，Mastra 是比 Python LangChain 更自然的選擇。本文繁中首發完整教學。
+  </div>
+
+  <h2 id="what-is-mastra">一、Mastra 是什麼？為什麼 TypeScript 開發者需要它</h2>
+
+  <p>2026 年的 AI Agent 生態已經不缺框架——LangChain、CrewAI、AutoGen、Agno……但幾乎所有主流框架都是 Python 優先。對於台灣大多數前端、全端開發者來說，切換到 Python 生態系意味著：重新學習套件管理、放棄熟悉的 TypeScript 型別系統、拋開現有的 Next.js/Express 基礎設施。</p>
+
+  <p><strong>Mastra 就是為了解決這個問題而生的。</strong></p>
+
+  <h3>Mastra 核心背景</h3>
+  <ul>
+    <li>🏢 <strong>出品方</strong>：Gatsby 原班人馬（Kyle Mathews 等），TypeScript/Web 基因深植</li>
+    <li>💰 <strong>融資</strong>：YC W25，$13M 種子輪，Andreessen Horowitz 跟投</li>
+    <li>📦 <strong>版本</strong>：v1.0（2026 年 1 月 GA），目前最新 v1.14.x</li>
+    <li>⭐ <strong>GitHub</strong>：27,902 stars，2,756 forks（2026-09-11）</li>
+    <li>📥 <strong>npm</strong>：300,000+ 週下載，PH September 2026 月榜 Top 3</li>
+    <li>📡 <strong>Sep 1 新功能</strong>：Harness Channels GA（Slack/iMessage/WhatsApp/Discord 多人 agent）</li>
+  </ul>
+
+  <h3>Mastra 四大核心模組</h3>
+  <p>Mastra 的架構圍繞四個模組設計，每個模組都有完整的 TypeScript 型別定義：</p>
+
+  <table>
+    <tr><th>模組</th><th>功能</th><th>對應 LangChain</th></tr>
+    <tr><td><strong>Agents</strong></td><td>定義 LLM 行為、工具、指令</td><td>Agent / Chain</td></tr>
+    <tr><td><strong>Tools</strong></td><td>Zod schema 型別化的工具呼叫</td><td>Tools / Functions</td></tr>
+    <tr><td><strong>Memory</strong></td><td>向量記憶體、對話歷史、語義搜尋</td><td>Memory / VectorStore</td></tr>
+    <tr><td><strong>Workflows</strong></td><td>有向無環圖（DAG）工作流，條件分支</td><td>Chains / Graphs</td></tr>
+  </table>
+
+  <div class="tip-box">
+    <strong>💡 為什麼 TypeScript 原生很重要？</strong><br>
+    Mastra 的工具定義使用 Zod schema，這意味著你在 IDE 中可以獲得完整的自動補全和型別檢查。當 LLM 的 function call 回傳資料時，TypeScript 編譯器就能在執行前幫你抓到型別錯誤——這是 Python LangChain 無法提供的開發體驗。
+  </div>
+
+  <h2 id="mastra-vs-langchain">二、Mastra vs LangChain vs Agno vs OpenAI SDK 深度比較</h2>
+
+  <p>選框架前，先看清楚各方的定位差異：</p>
+
+  <table>
+    <tr>
+      <th>特性</th>
+      <th>Mastra <span class="comparison-winner">✓ 推薦</span></th>
+      <th>LangChain</th>
+      <th>Agno</th>
+      <th>OpenAI Agents SDK</th>
+    </tr>
+    <tr>
+      <td>主要語言</td>
+      <td><strong>TypeScript</strong></td>
+      <td>Python（JS 版功能少）</td>
+      <td>Python</td>
+      <td>Python</td>
+    </tr>
+    <tr>
+      <td>型別系統</td>
+      <td><strong>Zod schema，完整型別</strong></td>
+      <td>Pydantic（Python），JS 版弱</td>
+      <td>Pydantic</td>
+      <td>Pydantic</td>
+    </tr>
+    <tr>
+      <td>記憶體</td>
+      <td>內建（向量 + 對話 + 語義）</td>
+      <td>需手動配置</td>
+      <td>需手動配置</td>
+      <td>基本記憶體</td>
+    </tr>
+    <tr>
+      <td>工作流引擎</td>
+      <td>內建 DAG Workflows</td>
+      <td>LangGraph（額外學習）</td>
+      <td>有</td>
+      <td>無</td>
+    </tr>
+    <tr>
+      <td>Observability</td>
+      <td>內建 OTel tracing</td>
+      <td>LangSmith（付費）</td>
+      <td>第三方</td>
+      <td>無內建</td>
+    </tr>
+    <tr>
+      <td>部署方式</td>
+      <td>Mastra Cloud / Docker / Vercel</td>
+      <td>LangChain Cloud / 自架</td>
+      <td>自架</td>
+      <td>自架</td>
+    </tr>
+    <tr>
+      <td>GitHub Stars</td>
+      <td>27.9K★</td>
+      <td>91K★</td>
+      <td>22K★</td>
+      <td>12K★</td>
+    </tr>
+    <tr>
+      <td>適合受眾</td>
+      <td><strong>TypeScript/React/Next.js 開發者</strong></td>
+      <td>Python ML 工程師</td>
+      <td>Python 開發者</td>
+      <td>OpenAI 深度用戶</td>
+    </tr>
+  </table>
+
+  <div class="highlight-box">
+    <strong>🏆 結論</strong>：如果你的技術棧是 TypeScript/Node.js，Mastra 是 2026 年最成熟的選擇。如果你的團隊是 Python 優先，LangChain + LangGraph 仍是主流。不要強迫自己跨語言——選對工具比選「最熱門」工具更重要。
+  </div>
+
+  <h2 id="install">三、5 步驟安裝與建立第一個 Mastra Agent</h2>
+
+  <h3>前置需求</h3>
+  <ul>
+    <li>Node.js 18+ 或 20+（推薦 20 LTS）</li>
+    <li>npm / pnpm / yarn（推薦 pnpm）</li>
+    <li>Anthropic API Key 或 OpenAI API Key</li>
+  </ul>
+
+  <h3>Step 1：建立新專案</h3>
+  <pre><code># 使用 Mastra CLI 初始化（推薦）
+npx create-mastra@latest my-agent
+cd my-agent
+
+# 或在現有 Next.js / Express 專案中安裝
+npm install @mastra/core @mastra/cli</code></pre>
+
+  <h3>Step 2：設定環境變數</h3>
+  <pre><code># .env.local
+ANTHROPIC_API_KEY=sk-ant-xxxxx
+# 或使用 OpenAI
+# OPENAI_API_KEY=sk-xxxxx
+
+# 可選：Mastra Cloud 部署
+MASTRA_CLOUD_API_KEY=mstr-xxxxx</code></pre>
+
+  <h3>Step 3：定義你的第一個 Agent</h3>
+  <pre><code>// src/agents/my-first-agent.ts
+import { Agent } from "@mastra/core/agent";
+import { anthropic } from "@ai-sdk/anthropic";
+
+export const myFirstAgent = new Agent({
+  name: "My First Agent",
+  instructions: `你是一個專業的台灣科技新聞分析師。
+    用繁體中文回答，語氣簡潔專業。
+    分析新聞時要點出：商業影響、技術意義、台灣市場觀點。`,
+  model: anthropic("claude-sonnet-4-5"),
+});</code></pre>
+
+  <h3>Step 4：建立 Mastra 實例並註冊 Agent</h3>
+  <pre><code">// src/mastra/index.ts
+import { Mastra } from "@mastra/core";
+import { myFirstAgent } from "../agents/my-first-agent";
+
+export const mastra = new Mastra({
+  agents: { myFirstAgent },
+});</code></pre>
+
+  <h3>Step 5：執行你的第一次對話</h3>
+  <pre><code>// src/index.ts
+import { mastra } from "./mastra";
+
+async function main() {
+  const agent = mastra.getAgent("myFirstAgent");
+  
+  const response = await agent.generate(
+    "分析 Mastra 框架對台灣 TypeScript 開發者的影響"
+  );
+  
+  console.log(response.text);
+}
+
+main();</code></pre>
+
+  <div class="highlight-box">
+    <strong>✅ 完成！</strong> 執行 <code>npx ts-node src/index.ts</code>，你的第一個 Mastra Agent 就跑起來了。接下來讓我們加入真正有用的工具。
+  </div>
+
+  <h2 id="typed-tools">四、TypeScript Typed Tools 實作教學</h2>
+
+  <p>Mastra 的 Tools 系統是它最大的亮點——使用 Zod schema 定義工具參數，完全型別安全。</p>
+
+  <h3>建立一個搜尋股票資料的工具</h3>
+  <pre><code>// src/tools/stock-tool.ts
+import { createTool } from "@mastra/core/tools";
+import { z } from "zod";
+
+export const stockTool = createTool({
+  id: "get-stock-price",
+  description: "查詢台灣股票即時資訊（台灣證交所）",
+  
+  // 完整型別定義，IDE 自動補全
+  inputSchema: z.object({
+    ticker: z.string().describe("股票代號，例如：2330 (台積電)"),
+    date: z.string().optional().describe("查詢日期，格式 YYYY-MM-DD"),
+  }),
+  
+  outputSchema: z.object({
+    price: z.number(),
+    change: z.number(),
+    changePercent: z.string(),
+    volume: z.number(),
+  }),
+  
+  // 執行函數——TypeScript 完整型別推斷
+  execute: async ({ context }) => {
+    const { ticker, date } = context;
+    
+    // 呼叫台灣證交所 API
+    const response = await fetch(
+      `https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_${ticker}.tw`
+    );
+    const data = await response.json();
+    
+    return {
+      price: parseFloat(data.msgArray?.[0]?.z || "0"),
+      change: parseFloat(data.msgArray?.[0]?.ud || "0"),
+      changePercent: data.msgArray?.[0]?.pz || "0%",
+      volume: parseInt(data.msgArray?.[0]?.v || "0"),
+    };
+  },
+});</code></pre>
+
+  <h3>將工具掛載到 Agent</h3>
+  <pre><code>// src/agents/stock-agent.ts
+import { Agent } from "@mastra/core/agent";
+import { anthropic } from "@ai-sdk/anthropic";
+import { stockTool } from "../tools/stock-tool";
+
+export const stockAgent = new Agent({
+  name: "Taiwan Stock Analyst",
+  instructions: "你是台灣股票分析師，使用繁體中文提供股票資訊和分析。",
+  model: anthropic("claude-sonnet-4-5"),
+  tools: { stockTool },  // 工具掛載，完整型別
+});</code></pre>
+
+  <h2 id="memory">五、Mastra Memory Gateway：讓 Agent 記住一切</h2>
+
+  <p>Mastra 內建三層記憶體系統，無需額外配置向量資料庫：</p>
+
+  <table>
+    <tr><th>記憶體類型</th><th>用途</th><th>儲存位置</th></tr>
+    <tr><td><strong>Working Memory</strong></td><td>當前對話上下文</td><td>記憶體（自動）</td></tr>
+    <tr><td><strong>Semantic Memory</strong></td><td>語義搜尋相關對話片段</td><td>Mastra Cloud 或本地向量庫</td></tr>
+    <tr><td><strong>Entity Memory</strong></td><td>使用者偏好、重要資訊</td><td>持久化儲存</td></tr>
+  </table>
+
+  <h3>配置持久記憶體</h3>
+  <pre><code">// src/mastra/index.ts
+import { Mastra } from "@mastra/core";
+import { Memory } from "@mastra/memory";
+import { LibSQLStore } from "@mastra/memory/stores/libsql";
+
+const memory = new Memory({
+  storage: new LibSQLStore({
+    url: "file:./mastra.db",  // 本地 SQLite，生產可用 Turso
+  }),
+  vector: {
+    provider: "fastembed",   // 免費，無需 API key
+  },
+  options: {
+    lastMessages: 20,        // 保留最近 20 則對話
+    semanticRecall: {
+      topK: 5,               // 語義搜尋返回最相關 5 則
+      threshold: 0.7,        // 相似度門檻
+    },
+  },
+});
+
+export const mastra = new Mastra({
+  agents: { myFirstAgent },
+  memory,                    // 掛載記憶體系統
+});</code></pre>
+
+  <h3>在 Agent 中使用記憶體</h3>
+  <pre><code>const agent = mastra.getAgent("myFirstAgent");
+
+// 使用 threadId 維持跨對話的記憶
+const response = await agent.generate(
+  "我喜歡台積電的投資分析",
+  {
+    threadId: "user-123-thread-1",  // 用戶識別
+    resourceId: "user-123",          // 實體識別
+  }
+);
+
+// 下次對話自動記住
+const response2 = await agent.generate(
+  "上次我問的那支股票怎麼樣了？",
+  {
+    threadId: "user-123-thread-1",
+    resourceId: "user-123",
+  }
+);</code></pre>
+
+  <div class="cta-box">
+    <h3>🚀 需要雲端主機運行你的 Mastra Agent？</h3>
+    <p>DigitalOcean Droplet 每月 $4 起，支援 Node.js / Docker 部署，台灣開發者常用選擇。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">
+      🌊 DigitalOcean 免費 $200 試用額度
+    </a>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn secondary" target="_blank" rel="noopener">
+      📊 DataCamp：TypeScript + LLM 完整課程
+    </a>
+  </div>
+
+  <h2 id="deploy">六、Mastra Cloud 免費部署教學</h2>
+
+  <h3>方式一：Mastra Cloud（最簡單）</h3>
+  <pre><code># 安裝 Mastra CLI
+npm install -g @mastra/cli
+
+# 登入 Mastra Cloud
+mastra login
+
+# 部署
+mastra deploy
+
+# 部署完成後取得 HTTPS endpoint
+# https://your-app.mastra.cloud/api/agents/myFirstAgent/generate</code></pre>
+
+  <div class="warning-box">
+    <strong>⚠️ Mastra Cloud 費用說明（2026-09）</strong><br>
+    免費方案：每月 10,000 次 agent 呼叫，1GB 記憶體儲存。付費方案從 $29/月起。如果你的 agent 使用量大，建議自架到 DigitalOcean（$4-12/月 Droplet，無呼叫限制）。
+  </div>
+
+  <h3>方式二：Docker 自架（推薦生產環境）</h3>
+  <pre><code"># Dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --omit=dev
+COPY . .
+RUN npm run build
+EXPOSE 4111
+CMD ["node", "dist/index.js"]
+
+# 部署到 DigitalOcean Droplet
+docker build -t my-mastra-agent .
+docker run -d -p 4111:4111 \
+  -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY \
+  my-mastra-agent</code></pre>
+
+  <h3>方式三：Vercel Edge Functions</h3>
+  <pre><code">// pages/api/agent.ts (Next.js)
+import { mastra } from "@/src/mastra";
+
+export const config = { runtime: "edge" };
+
+export default async function handler(req: Request) {
+  const { message } = await req.json();
+  const agent = mastra.getAgent("myFirstAgent");
+  const response = await agent.generate(message);
+  
+  return Response.json({ text: response.text });
+}</code></pre>
+
+  <h2 id="taiwan-cases">七、台灣開發者三大實戰場景</h2>
+
+  <h3>場景一：LINE Bot 客服 Agent（Mastra Harness Channels）</h3>
+  <p>使用 Sep 1 新功能 Harness Channels，讓 Mastra Agent 直接整合 LINE 官方帳號：</p>
+
+  <pre><code">// src/channels/line-harness.ts
+import { Mastra } from "@mastra/core";
+import { LineHarness } from "@mastra/harness-line";  // Sep 1 GA
+
+export const mastra = new Mastra({
+  agents: { customerServiceAgent },
+  harnesses: {
+    line: new LineHarness({
+      channelAccessToken: process.env.LINE_CHANNEL_ACCESS_TOKEN!,
+      channelSecret: process.env.LINE_CHANNEL_SECRET!,
+    }),
+  },
+});
+
+// 自動處理 LINE webhook，Agent 回覆繁體中文
+// 無需手動建立 webhook server</code></pre>
+
+  <div class="tip-box">
+    <strong>💡 台灣企業場景一：電商客服</strong><br>
+    一個 Mastra 客服 Agent 可以：同時處理 LINE + WhatsApp + 網站聊天室的客服問題，查詢訂單狀態（Tool 呼叫 ERP），回答商品問題（Semantic Memory 查詢產品知識庫），自動轉接人工（Workflow 條件分支）。
+  </div>
+
+  <h3>場景二：E-Commerce 庫存查詢 Agent</h3>
+  <pre><code">// src/agents/inventory-agent.ts
+export const inventoryAgent = new Agent({
+  name: "Inventory Assistant",
+  instructions: "你是倉庫管理 AI 助手，協助查詢庫存和建立補貨建議。",
+  model: anthropic("claude-haiku-4-5"),  // 輕量模型，省成本
+  tools: {
+    checkInventory,    // 查詢庫存 API
+    createPurchaseOrder,  // 建立採購單
+    checkSupplierPrice,   // 查詢供應商報價
+  },
+  memory,  // 記住歷史補貨模式
+});
+
+// 使用 Workflow 建立自動補貨流程
+const restockWorkflow = new Workflow({
+  name: "Auto Restock",
+  steps: [
+    { id: "check", action: checkInventoryStep },
+    { 
+      id: "decide", 
+      action: decideRestockStep,
+      when: { inventory: { lt: 100 } }  // 庫存 < 100 才觸發
+    },
+    { id: "order", action: createOrderStep },
+  ],
+});</code></pre>
+
+  <h3>場景三：GitHub PR Review Agent</h3>
+  <pre><code">// 整合 GitHub Actions，自動 Code Review
+export const prReviewAgent = new Agent({
+  name: "PR Reviewer",
+  instructions: `你是資深 TypeScript 開發者，負責 code review。
+    重點檢查：型別安全、效能問題、安全漏洞、最佳實踐。
+    用繁體中文寫評論，語氣友善但直接。`,
+  model: anthropic("claude-sonnet-4-5"),
+  tools: {
+    getFileDiff,     // 獲取 PR diff
+    postComment,     // 在 GitHub 貼評論
+    requestChanges,  // 請求修改
+    approvePR,       // 批准 PR
+  },
+});
+
+// GitHub Actions 呼叫此 Agent
+// 每次 PR 自動觸發 Review</code></pre>
+
+  <h2 id="faq">八、FAQ 常見問題</h2>
+
+  <details>
+    <summary><strong>Q1：Mastra 和 LangChain.js 有什麼實質差別？</strong></summary>
+    <p>LangChain.js 是 Python LangChain 的 JavaScript 移植，功能完整但文件品質和 TypeScript 型別支援不如 Mastra 原生。Mastra 從一開始就為 TypeScript 設計，Zod schema 工具定義、完整 IDE 支援、內建 Memory 都是 LangChain.js 目前追不上的。如果你的專案是 TypeScript 優先，Mastra 幾乎在所有方面都更順手。</p>
+  </details>
+
+  <details>
+    <summary><strong>Q2：Mastra 支援哪些 LLM？</strong></summary>
+    <p>Mastra 使用 Vercel AI SDK 作為底層，支援所有主流 LLM：Anthropic Claude（Sonnet/Haiku/Opus）、OpenAI GPT 系列、Google Gemini、Groq、Mistral、Ollama（本地模型）。切換模型只需修改一行程式碼。</p>
+  </details>
+
+  <details>
+    <summary><strong>Q3：Mastra Cloud 和自架哪個比較划算？</strong></summary>
+    <p>月呼叫 &lt;10,000 次：Mastra Cloud 免費方案即可。月呼叫 10,000-100,000 次：Mastra Cloud $29/月 vs DigitalOcean Droplet $6-12/月——自架更划算。月呼叫 &gt;100,000 次：一定自架，並考慮用 Redis 快取常見查詢。</p>
+  </details>
+
+  <details>
+    <summary><strong>Q4：在 Next.js 專案中使用 Mastra 有什麼注意事項？</strong></summary>
+    <p>Mastra 完全支援 Next.js App Router 和 Pages Router。Edge Runtime 有限制：不支援 LibSQL 本地檔案儲存（改用 Turso 雲端版本）、不支援 fastembed（改用 OpenAI Embeddings）。在 Node.js Runtime（預設）則無限制。</p>
+  </details>
+
+  <details>
+    <summary><strong>Q5：Mastra 的 Harness Channels 需要額外付費嗎？</strong></summary>
+    <p>Harness Channels（LINE/Slack/WhatsApp/Discord/iMessage）本身是 Mastra 開源功能，免費使用。費用來自各平台的 API 費用（LINE 官方帳號訊息費）和你選擇的 LLM API 費用（Anthropic/OpenAI），以及如果使用 Mastra Cloud 的部署費用。</p>
+  </details>
+
+  <details>
+    <summary><strong>Q6：Mastra Workflows 適合用來做什麼？</strong></summary>
+    <p>Mastra Workflows 是有向無環圖（DAG），最適合需要條件分支、並行執行或重試邏輯的複雜 Agent 任務。例如：自動化內容發布流程（撰寫→審核→發布→追蹤）、電商訂單處理（庫存查詢→付款→出貨→通知）、資料處理 pipeline（擷取→清理→分析→報告）。</p>
+  </details>
+
+  <div class="cta-box">
+    <h3>🎓 想系統學習 TypeScript + AI Agent 開發？</h3>
+    <p>DataCamp 提供完整的 TypeScript、LLM API 整合、AI Agent 開發課程，支援中文介面，適合從基礎到進階。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">
+      📊 DataCamp 免費試用 7 天
+    </a>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn secondary" target="_blank" rel="noopener">
+      🌊 DigitalOcean 部署 Mastra（$200 試用額度）
+    </a>
+    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="cta-btn secondary" target="_blank" rel="noopener">
+      🤖 Systeme.io：AI 驅動的業務自動化平台
+    </a>
+  </div>
+
+  <h2>總結：Mastra 值得投資嗎？</h2>
+
+  <p>如果你是 TypeScript 開發者，2026 年評估 AI Agent Framework 的答案很明確：<strong>Mastra 是 TypeScript 生態最成熟的選擇</strong>，沒有之一。</p>
+
+  <p>它不是「最多功能」的框架（LangChain 生態更廣），也不是「最輕量」的框架（直接呼叫 Anthropic SDK 更簡單）。但如果你需要的是在 TypeScript 專案中建立生產級 AI Agent——有型別、有記憶、有工作流、能部署——Mastra 提供了最順滑的開發體驗。</p>
+
+  <ul>
+    <li>✅ TypeScript/React/Next.js 開發者 → <strong>立即嘗試</strong></li>
+    <li>✅ 需要 LINE Bot / WhatsApp Agent → <strong>Harness Channels 直接支援</strong></li>
+    <li>✅ 需要 Agent 記憶持久化 → <strong>內建 Memory Gateway</strong></li>
+    <li>⚠️ Python 優先團隊 → 繼續用 LangChain 更省轉換成本</li>
+    <li>⚠️ 超簡單一次性腳本 → 直接呼叫 API 即可，不需要框架</li>
+  </ul>
+
+  <div class="highlight-box">
+    <strong>📌 延伸閱讀</strong><br>
+    ➤ <a href="/blog/deepseek-harness-complete-guide-2026.html">DeepSeek Harness 完整教學：165K★ 插件式 Coding Agent</a><br>
+    ➤ <a href="/blog/sandboxaq-switch-ai-agent-slack-teams-tutorial-2026.html">SandboxAQ Switch：10 分鐘讓 AI Agent 進駐 Slack</a><br>
+    ➤ <a href="/blog/claude-code-complete-guide-2026.html">Claude Code 完整教學 2026</a>
+  </div>
+
+  <p style="font-size:.85rem;color:#6b7280;margin-top:2rem;">
+    本文發布日期：2026-09-12 | 資訊以 2026-09-12 為準，框架持續更新，建議查閱 <a href="https://mastra.ai/docs" target="_blank" rel="noopener">官方文件</a> 確認最新狀態。
+  </p>
+
+</div>
+</main>
+
+<footer style="background:#1e293b;color:#94a3b8;padding:2rem;text-align:center;margin-top:3rem">
+  <p>© 2026 AutoDev AI · <a href="/" style="color:#60a5fa">首頁</a> · <a href="/blog/" style="color:#60a5fa">文章</a> · <a href="/tools/" style="color:#60a5fa">工具</a></p>
+  <p style="font-size:.8rem;margin-top:.5rem">本站部分連結為聯盟行銷連結，點擊可能使本站獲得佣金，不影響您的購買價格。</p>
+</footer>
+
+<script src="/lang.js?v=20260505" defer></script>
+<script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;var H='☰',X='✕';function set(o){l.classList.toggle('show',o);b.innerHTML=o?X:H;b.setAttribute('aria-label',o?'關閉選單':'開啟選單');b.setAttribute('aria-expanded',o?'true':'false');}b.addEventListener('click',function(e){e.stopPropagation();set(!l.classList.contains('show'));});document.addEventListener('click',function(e){if(l.classList.contains('show')&&!l.contains(e.target)&&!b.contains(e.target))set(false);});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
+</body>
+</html>
