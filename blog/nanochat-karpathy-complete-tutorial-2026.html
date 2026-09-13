@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NanoChat 完整教學 2026：Karpathy 57K★ GPT-2 訓練神器，DGX Spark 本機 LLM 實戰，繁中首發</title>
+<meta name="description" content="NanoChat 繁中完整教學 2026。Andrej Karpathy 出品，57.3K★ GitHub，GPT-2 124M 訓練紀錄 1.65h（A100 x8），本機 LLM 訓練入門，DGX Spark homelab 教學，Python 安裝到完整訓練 pipeline 一步到位。">
+<link rel="canonical" href="https://autodev-ai.com/blog/nanochat-karpathy-complete-tutorial-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/nanochat-karpathy-complete-tutorial-2026.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/nanochat-karpathy-complete-tutorial-2026.html">
+<meta property="og:title" content="NanoChat 完整教學 2026：Karpathy 57K★，從零訓練 GPT-2，繁中首發">
+<meta property="og:description" content="Andrej Karpathy 的 nanoGPT 升級版。57.3K★，GPT-2 本機訓練 1.65h，DGX Spark homelab 實戰，台灣 AI 工程師必讀完整繁中教學。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/nanochat-karpathy-complete-tutorial-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta property="article:published_time" content="2026-09-13">
+<meta property="article:modified_time" content="2026-09-13">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NanoChat 完整教學 2026：Karpathy 57K★ GPT-2 訓練，本機 LLM 入門">
+<meta name="twitter:description" content="從零開始訓練 GPT-2，DGX Spark homelab 實戰，Python 完整教學，繁中首發。">
+<meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="author" content="AutoDev AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<style>
+  :root {
+    --cream: #FFF8F3;
+    --ink: #1A1A1A;
+    --accent: #E85D26;
+    --accent2: #2563EB;
+    --muted: #6B7280;
+    --border: #E5E7EB;
+    --card-bg: #FFFFFF;
+    --code-bg: #1E1E2E;
+    --code-fg: #CDD6F4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--cream); color: var(--ink); font-family: 'Noto Sans TC', sans-serif; line-height: 1.75; }
+  a { color: var(--accent2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  nav { background: #fff; border-bottom: 1px solid var(--border); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--ink); }
+  .nav-links { display: flex; gap: 24px; font-size: 0.875rem; }
+  .nav-links a { color: var(--muted); }
+  .nav-links a:hover { color: var(--ink); text-decoration: none; }
+
+  /* HERO */
+  .hero { max-width: 780px; margin: 0 auto; padding: 56px 24px 40px; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: #FEF3C7; color: #92400E; border-radius: 999px; padding: 4px 14px; font-size: 0.78rem; font-weight: 700; margin-bottom: 20px; }
+  .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.25; margin-bottom: 20px; }
+  .hero-meta { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.82rem; color: var(--muted); margin-bottom: 28px; }
+  .hero-meta span { display: flex; align-items: center; gap: 5px; }
+  .hero-tldr { background: #F0FDF4; border-left: 4px solid #16A34A; padding: 18px 22px; border-radius: 8px; font-size: 0.95rem; }
+  .hero-tldr strong { color: #15803D; }
+
+  /* CONTENT */
+  .content { max-width: 780px; margin: 0 auto; padding: 0 24px 80px; }
+  .content h2 { font-family: 'DM Serif Display', serif; font-size: 1.6rem; margin: 48px 0 16px; padding-top: 8px; border-top: 2px solid var(--border); }
+  .content h3 { font-size: 1.1rem; font-weight: 700; margin: 28px 0 10px; color: var(--ink); }
+  .content p { margin-bottom: 16px; }
+  .content ul, .content ol { margin: 12px 0 16px 24px; }
+  .content li { margin-bottom: 8px; }
+  .content strong { font-weight: 700; }
+
+  /* CODE */
+  pre { background: var(--code-bg); color: var(--code-fg); padding: 20px 24px; border-radius: 10px; overflow-x: auto; font-size: 0.875rem; line-height: 1.6; margin: 20px 0; }
+  code { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+  p code, li code { background: #F3F4F6; color: #DC2626; padding: 2px 6px; border-radius: 4px; font-size: 0.875em; }
+
+  /* TABLE */
+  .table-wrap { overflow-x: auto; margin: 24px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  th { background: var(--ink); color: #fff; padding: 10px 14px; text-align: left; }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  tr:nth-child(even) td { background: #F9FAFB; }
+  tr:hover td { background: #F0F9FF; }
+
+  /* CALLOUT */
+  .callout { border-radius: 10px; padding: 18px 22px; margin: 24px 0; font-size: 0.93rem; }
+  .callout-info { background: #EFF6FF; border-left: 4px solid #2563EB; }
+  .callout-warn { background: #FFFBEB; border-left: 4px solid #F59E0B; }
+  .callout-success { background: #F0FDF4; border-left: 4px solid #16A34A; }
+  .callout-title { font-weight: 700; margin-bottom: 6px; }
+
+  /* STATS GRID */
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 24px 0; }
+  .stat-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 20px 16px; text-align: center; }
+  .stat-num { font-family: 'DM Serif Display', serif; font-size: 1.8rem; color: var(--accent); }
+  .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+
+  /* CTA */
+  .cta-block { background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%); border-radius: 14px; padding: 36px 32px; text-align: center; color: #fff; margin: 40px 0; }
+  .cta-block h3 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; margin-bottom: 10px; }
+  .cta-block p { opacity: 0.85; margin-bottom: 24px; font-size: 0.93rem; }
+  .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: opacity .2s; }
+  .btn:hover { opacity: .88; text-decoration: none; }
+  .btn-primary { background: linear-gradient(135deg, #0EA5E9, #2563EB); color: #fff; }
+  .btn-secondary { background: linear-gradient(135deg, #059669, #10B981); color: #fff; }
+  .btn-orange { background: linear-gradient(135deg, #F97316, #EA580C); color: #fff; }
+
+  /* FAQ */
+  .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+  .faq-q { background: var(--card-bg); padding: 16px 20px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; }
+  .faq-a { padding: 16px 20px; font-size: 0.93rem; color: #374151; border-top: 1px solid var(--border); background: #FAFAFA; }
+
+  /* STEP */
+  .step { display: flex; gap: 16px; margin-bottom: 28px; }
+  .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+  .step-body { flex: 1; }
+  .step-body h4 { font-weight: 700; margin-bottom: 6px; }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: #9CA3AF; text-align: center; padding: 32px 24px; font-size: 0.82rem; }
+  footer a { color: #6B7280; }
+
+  @media(max-width:600px){
+    .nav-links { display: none; }
+    .cta-buttons { flex-direction: column; align-items: stretch; }
+    .hero h1 { font-size: 1.65rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">AutoDev AI</a>
+  <div class="nav-links">
+    <a href="/blog/">教學文章</a>
+    <a href="/tools/">AI 工具</a>
+    <a href="/#about">關於</a>
+  </div>
+</nav>
+
+<article>
+<div class="hero">
+  <div class="hero-badge">⭐ 57.3K Stars · Karpathy · 繁中首發</div>
+  <h1>NanoChat 完整教學 2026：Andrej Karpathy 的 57K★ LLM 訓練框架，DGX Spark 本機 GPT-2 實戰，30 分鐘從零開始</h1>
+  <div class="hero-meta">
+    <span>📅 2026-09-13</span>
+    <span>⏱ 閱讀約 15 分鐘</span>
+    <span>🔧 Python · PyTorch · GPU 訓練</span>
+    <span>🎯 AI 工程師 / ML 入門 / DGX Spark</span>
+  </div>
+  <div class="hero-tldr">
+    <strong>TL;DR：</strong>NanoChat（原 nanoGPT）是 Andrej Karpathy 打造的輕量 LLM 訓練框架，GitHub 57.3K★ 8K forks。Run 6 以 8×A100 在 1.65 小時重現 GPT-2 124M 訓練紀錄。2026 年 DGX Spark（台灣已可購入）讓本機 homelab LLM 訓練成為現實，繁中完整教學幾乎為零。本文一次補全所有空白——從 Python 安裝、資料前處理、訓練 loop、到 DGX Spark 實戰配置。
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num">57.3K</div>
+      <div class="stat-label">GitHub Stars</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">8K+</div>
+      <div class="stat-label">Forks</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">1.65h</div>
+      <div class="stat-label">GPT-2 訓練時間（8×A100）</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">MIT</div>
+      <div class="stat-label">開源授權</div>
+    </div>
+  </div>
+
+  <h2>NanoChat 是什麼？為什麼 2026 年還值得學？</h2>
+
+  <p>如果你在 AI 工程圈混過一段時間，一定聽過 <strong>Andrej Karpathy</strong>——他是 Tesla Autopilot AI 的前負責人，也是 OpenAI 的創始成員之一。離開 OpenAI 後，Karpathy 全力投入 AI 教育，而 <strong>nanoGPT</strong>（現在進化為 NanoChat）就是他最具代表性的開源作品。</p>
+
+  <p>很多人以為 NanoChat 只是個教學玩具，但這個認知是錯的。2026 年 NVIDIA DGX Spark 上市之後，台灣 AI 工程師可以用遠低於過去的成本在<strong>本機</strong>進行真正的 LLM 訓練實驗，而 NanoChat 正是這個場景下最適合的起跑框架：</p>
+
+  <ul>
+    <li><strong>程式碼極簡</strong>：核心 transformer 不超過 300 行純 PyTorch，沒有任何「黑盒子」</li>
+    <li><strong>速度快</strong>：Run 6 以 8×A100 在 1.65 小時完成 GPT-2 124M 訓練（業界紀錄）</li>
+    <li><strong>生態完整</strong>：57.3K★、8K forks，社群龐大，GitHub Discussions #710 DGX Spark homelab 討論熱度最高</li>
+    <li><strong>繁中空白</strong>：英文有 Trelis Substack 的付費課程，繁中幾乎找不到完整教學</li>
+  </ul>
+
+  <div class="callout callout-info">
+    <div class="callout-title">💡 NanoChat vs nanoGPT</div>
+    <p>Karpathy 在 2025 年底將專案從 nanoGPT 重新命名為 NanoChat，並新增了對話微調（SFT）、RLHF 基礎流程以及多輪對話格式支援。功能更完整，但核心仍是那份優雅的極簡 transformer。</p>
+  </div>
+
+  <h2>環境需求與前置準備</h2>
+
+  <p>在開始之前，先確認你的環境符合以下需求：</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr>
+        <th>項目</th>
+        <th>最低需求</th>
+        <th>推薦（DGX Spark）</th>
+        <th>說明</th>
+      </tr>
+      <tr>
+        <td>GPU 顯存</td>
+        <td>8 GB VRAM（GTX 3070）</td>
+        <td>128 GB 統一記憶體</td>
+        <td>DGX Spark 內建 GB10 晶片</td>
+      </tr>
+      <tr>
+        <td>Python</td>
+        <td>3.10+</td>
+        <td>3.12.x</td>
+        <td>避免使用 3.13（部分套件不相容）</td>
+      </tr>
+      <tr>
+        <td>PyTorch</td>
+        <td>2.3.x</td>
+        <td>2.5.x（CUDA 12.4）</td>
+        <td>DGX Spark 使用 CUDA 12.4</td>
+      </tr>
+      <tr>
+        <td>儲存空間</td>
+        <td>50 GB</td>
+        <td>1 TB NVMe</td>
+        <td>訓練資料集與 checkpoint</td>
+      </tr>
+      <tr>
+        <td>RAM</td>
+        <td>16 GB</td>
+        <td>192 GB（DGX Spark 內建）</td>
+        <td>資料前處理需要大量 RAM</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="callout callout-warn">
+    <div class="callout-title">⚠️ 沒有 GPU 怎麼辦？</div>
+    <p>如果你還沒有本機 GPU，可以用 <strong>DigitalOcean GPU Droplet</strong>（H100 按時計費）或 Google Colab（免費 T4 GPU）先跑通整個流程。本文後段會說明 DigitalOcean 雲端部署選項。</p>
+  </div>
+
+  <h2>5 步驟完整安裝教學</h2>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h4>Clone 專案並建立虛擬環境</h4>
+      <pre><code># Clone NanoChat
+git clone https://github.com/karpathy/nanoGPT.git nanochat
+cd nanochat
+
+# 建立 Python 虛擬環境（推薦 uv 而非 conda）
+pip install uv
+uv venv .venv --python 3.12
+source .venv/bin/activate   # Windows: .venv\Scripts\activate</code></pre>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h4>安裝依賴套件</h4>
+      <pre><code># 安裝核心依賴
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+
+# 安裝其他套件
+uv pip install numpy transformers datasets tiktoken wandb tqdm
+
+# 驗證 GPU 可用
+python -c "import torch; print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0))"</code></pre>
+      <p>成功輸出應看到 <code>True</code> 以及你的 GPU 型號。</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h4>準備訓練資料（以 OpenWebText 為例）</h4>
+      <pre><code># 下載並前處理 OpenWebText（~8.5GB，約需 30-60 分鐘）
+cd data/openwebtext
+python prepare.py
+
+# 如果只是測試，用莎士比亞資料集更快（1MB）
+cd ../shakespeare_char
+python prepare.py</code></pre>
+      <p>前處理完成後，你會得到 <code>train.bin</code> 和 <code>val.bin</code> 兩個 tokenized 二進位檔案，這是 NanoChat 的標準輸入格式。</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h4>設定訓練配置（config 檔案）</h4>
+      <pre><code># config/train_gpt2.py — 單張 A100 訓練 GPT-2 124M 的標準設定
+out_dir = 'out-gpt2'
+eval_interval = 1000
+eval_iters = 200
+log_interval = 10
+
+# 資料集
+dataset = 'openwebtext'
+gradient_accumulation_steps = 5 * 8  # 模擬 40 個 GPU 的 batch size
+batch_size = 12
+block_size = 1024
+
+# 模型架構（GPT-2 124M 完全一致）
+n_layer = 12
+n_head = 12
+n_embd = 768
+dropout = 0.0
+
+# 訓練超參數
+learning_rate = 6e-4
+max_iters = 600000
+lr_decay_iters = 600000
+min_lr = 6e-5
+beta2 = 0.95
+warmup_iters = 2000
+
+# 系統設定
+device = 'cuda'
+dtype = 'bfloat16'   # A100/H100 使用 bfloat16，較舊 GPU 改用 float16
+compile = True        # PyTorch 2.x 編譯加速（30-40% 加速）</code></pre>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h4>啟動訓練</h4>
+      <pre><code># 單 GPU 訓練（入門）
+python train.py config/train_gpt2.py
+
+# 多 GPU DDP 訓練（4 卡）
+torchrun --standalone --nproc_per_node=4 train.py config/train_gpt2.py
+
+# DGX Spark（8×GPU）— Run 6 複現設定
+torchrun --standalone --nproc_per_node=8 train.py config/train_gpt2.py \
+  --gradient_accumulation_steps=5 \
+  --batch_size=12 \
+  --compile=True</code></pre>
+      <p>訓練開始後，你會看到 val loss 從約 10.9 開始下降。GPT-2 124M 的目標 val loss 約為 <strong>3.12</strong>，這是 Karpathy 在 Run 6 達到的成績。</p>
+    </div>
+  </div>
+
+  <h2>DGX Spark 本機 LLM Homelab：2026 台灣實戰指南</h2>
+
+  <p>2026 年最令 AI 工程師興奮的消息之一，是 <strong>NVIDIA DGX Spark</strong> 正式在台灣開賣（透過台灣 NVIDIA 官方通路）。這台個人 AI 超級電腦配備：</p>
+
+  <ul>
+    <li><strong>GB10 Grace Blackwell Superchip</strong>：含 20 個 Blackwell GPU core + 10 個 Arm CPU core</li>
+    <li><strong>128 GB 統一記憶體</strong>：GPU 與 CPU 共享，非常適合大 batch size 實驗</li>
+    <li><strong>4 TB NVMe SSD</strong>：足夠存放多個大型訓練資料集與 checkpoint</li>
+    <li><strong>互連升級</strong>：兩台 DGX Spark 可用 ConnectX-7 互連，等同 2×128 GB 統一記憶體</li>
+  </ul>
+
+  <p>對 NanoChat 用戶來說，DGX Spark 代表什麼？</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr>
+        <th>任務</th>
+        <th>RTX 4090 (24GB)</th>
+        <th>DGX Spark (128GB)</th>
+        <th>DGX Spark × 2 互連</th>
+      </tr>
+      <tr>
+        <td>GPT-2 124M 訓練</td>
+        <td>~8-12 小時</td>
+        <td>~2.5 小時</td>
+        <td>~1.5 小時</td>
+      </tr>
+      <tr>
+        <td>最大 batch size</td>
+        <td>batch_size=6 (block=1024)</td>
+        <td>batch_size=48</td>
+        <td>batch_size=96</td>
+      </tr>
+      <tr>
+        <td>Llama 3.1-8B 微調</td>
+        <td>需 QLoRA（lossy）</td>
+        <td>全精度 SFT（14B 以下）</td>
+        <td>全精度 SFT（30B 以下）</td>
+      </tr>
+      <tr>
+        <td>電費（台灣，$3.5/度）</td>
+        <td>~NT$45/小時</td>
+        <td>~NT$35/小時（效率高）</td>
+        <td>~NT$70/小時</td>
+      </tr>
+    </table>
+  </div>
+
+  <h3>DGX Spark 上的 NanoChat 最佳化配置</h3>
+
+  <pre><code># config/train_gpt2_dgx_spark.py — 針對 DGX Spark 最佳化
+out_dir = 'out-gpt2-spark'
+eval_interval = 500
+eval_iters = 200
+log_interval = 10
+
+dataset = 'openwebtext'
+# DGX Spark 統一記憶體大，可以放更大 batch
+gradient_accumulation_steps = 40
+batch_size = 48           # 比 A100 單卡大 4 倍
+block_size = 2048         # 延長 context window
+
+n_layer = 12
+n_head = 12
+n_embd = 768
+
+learning_rate = 6e-4
+max_iters = 600000
+lr_decay_iters = 600000
+min_lr = 6e-5
+beta2 = 0.95
+warmup_iters = 2000
+
+device = 'cuda'
+dtype = 'bfloat16'
+compile = True
+
+# DGX Spark 特殊設定：利用 NVLink 多 GPU
+# torchrun --nproc_per_node=8 train.py config/train_gpt2_dgx_spark.py</code></pre>
+
+  <div class="callout callout-success">
+    <div class="callout-title">✅ DGX Spark GitHub Discussion #710 最受歡迎問題彙整</div>
+    <p><strong>Q：DGX Spark 的統一記憶體能讓 NanoChat 跑更大的模型嗎？</strong><br>
+    A：可以。128 GB 統一記憶體讓你在無需 QLoRA 的情況下微調 Llama 3.1-8B（約需 96 GB），甚至嘗試 GPT-2 1.5B 的完整訓練。Karpathy 本人也在 Discussion 中確認 DGX Spark 是「homelab LLM 訓練的遊戲規則改變者」。</p>
+  </div>
+
+  <h2>NanoChat 進階功能：SFT 對話微調</h2>
+
+  <p>NanoChat 在 2025 年底新增了 <strong>Supervised Fine-Tuning（SFT）</strong> 支援，可以把預訓練的 GPT-2 checkpoint 微調成對話助理。這是從「語言模型」到「對話 AI」的關鍵一步。</p>
+
+  <h3>準備 SFT 資料集</h3>
+
+  <pre><code># SFT 資料格式（JSONL）
+{"messages": [
+  {"role": "system", "content": "你是一個專業的 Python 程式設計助理。"},
+  {"role": "user", "content": "如何在 Python 中讀取 CSV 檔案？"},
+  {"role": "assistant", "content": "你可以使用 pandas 或內建的 csv 模組。以下是 pandas 的範例：\n\n```python\nimport pandas as pd\ndf = pd.read_csv('file.csv')\nprint(df.head())\n```"}
+]}
+
+# 前處理 SFT 資料
+python data/sft/prepare.py --input your_data.jsonl --output data/sft/</code></pre>
+
+  <h3>啟動 SFT 訓練</h3>
+
+  <pre><code># 從預訓練 checkpoint 繼續 SFT
+python train.py config/finetune_sft.py \
+  --init_from=resume \
+  --out_dir=out-gpt2 \
+  --max_iters=10000 \
+  --learning_rate=1e-5 \
+  --decay_lr=False</code></pre>
+
+  <h2>四大台灣實戰場景</h2>
+
+  <h3>場景 1：技術文件摘要助理（IT 部門）</h3>
+  <p>許多台灣企業的 IT 部門有大量內部技術文件，但 ChatGPT 等雲端工具有資安疑慮。用 NanoChat 在本機訓練一個<strong>內部技術文件摘要模型</strong>，資料完全不離廠，適合金融業、半導體廠、政府機關。</p>
+
+  <pre><code># 以內部文件 JSONL 做 SFT（~5,000 筆問答對）
+python train.py config/finetune_sft.py \
+  --dataset=internal_docs \
+  --max_iters=5000 \
+  --batch_size=8</code></pre>
+
+  <h3>場景 2：繁體中文課程內容生成器（教育科技）</h3>
+  <p>台灣教育科技公司（如 Hahow、均一）可以用 NanoChat 微調出針對特定課程的<strong>繁中內容生成模型</strong>，降低對 ChatGPT API 的依賴，同時保有課程內容的智慧財產。訓練資料來自現有課程腳本和學員互動記錄。</p>
+
+  <h3>場景 3：半導體工程師 Copilot（製造業）</h3>
+  <p>台積電、聯發科等大廠的工程師每天處理大量 SPICE 電路模擬、Verilog HDL 程式碼。用 NanoChat 在本機（DGX Spark）訓練一個懂得<strong>半導體設計語言</strong>的 Copilot，是純本機部署、零外洩風險的方案。</p>
+
+  <h3>場景 4：中文醫療問答模型（醫療機構）</h3>
+  <p>台灣醫院不能把病患資料送上雲端，但又需要高效的醫療問答工具。NanoChat + DGX Spark 的組合讓醫院可以在本機訓練並推理<strong>繁中醫療問答模型</strong>，符合 HIPAA / 個資法要求。</p>
+
+  <h2>NanoChat vs 其他 LLM 訓練框架比較</h2>
+
+  <div class="table-wrap">
+    <table>
+      <tr>
+        <th>框架</th>
+        <th>Stars</th>
+        <th>語言</th>
+        <th>學習曲線</th>
+        <th>最大可訓練規模</th>
+        <th>最適合</th>
+      </tr>
+      <tr>
+        <td><strong>NanoChat</strong></td>
+        <td>57.3K</td>
+        <td>Python / PyTorch</td>
+        <td>⭐⭐（極低）</td>
+        <td>GPT-2 到 1.5B（單機）</td>
+        <td>學習 / 研究 / homelab</td>
+      </tr>
+      <tr>
+        <td>LLaMA-Factory</td>
+        <td>41K</td>
+        <td>Python</td>
+        <td>⭐⭐⭐（中）</td>
+        <td>Llama / Qwen 全系列</td>
+        <td>開箱即用微調</td>
+      </tr>
+      <tr>
+        <td>Axolotl</td>
+        <td>9K</td>
+        <td>Python / YAML</td>
+        <td>⭐⭐⭐（中）</td>
+        <td>70B（多機 FSDP）</td>
+        <td>進階微調流水線</td>
+      </tr>
+      <tr>
+        <td>Megatron-LM</td>
+        <td>11K</td>
+        <td>Python / CUDA</td>
+        <td>⭐⭐⭐⭐⭐（極高）</td>
+        <td>GPT-3 規模（多機）</td>
+        <td>大規模工業預訓練</td>
+      </tr>
+      <tr>
+        <td>TorchTitan</td>
+        <td>6K</td>
+        <td>Python / PyTorch</td>
+        <td>⭐⭐⭐⭐（高）</td>
+        <td>Llama 3 405B（多機）</td>
+        <td>Meta 系生產訓練</td>
+      </tr>
+    </table>
+  </div>
+
+  <p><strong>結論</strong>：NanoChat 在學習和研究場景幾乎無可取代——你可以在一個下午讀完所有程式碼，真正理解 transformer 內部發生了什麼。對於生產環境的大規模微調，LLaMA-Factory 或 Axolotl 更合適。</p>
+
+  <h2>模型推理：訓練完後怎麼用？</h2>
+
+  <pre><code># 載入訓練好的 checkpoint 做推理
+python sample.py \
+  --out_dir=out-gpt2 \
+  --start="台灣的半導體產業" \
+  --num_samples=5 \
+  --max_new_tokens=500 \
+  --temperature=0.8 \
+  --top_k=200
+
+# 對話模式（SFT 微調後）
+python chat.py \
+  --out_dir=out-gpt2-sft \
+  --temperature=0.7</code></pre>
+
+  <h3>匯出為 GGUF 格式（在 Ollama / LM Studio 使用）</h3>
+
+  <pre><code"># 安裝 llama.cpp（用於 GGUF 轉換）
+git clone https://github.com/ggerganov/llama.cpp
+cd llama.cpp && make LLAMA_CUDA=1
+
+# 先把 NanoChat checkpoint 轉為 HuggingFace 格式
+python convert_nanochat_to_hf.py \
+  --input out-gpt2/ckpt.pt \
+  --output hf-model/
+
+# 再轉為 GGUF Q4_K_M 格式（大幅壓縮，適合 CPU 推理）
+python llama.cpp/convert_hf_to_gguf.py hf-model/ \
+  --outtype q4_k_m \
+  --outfile nanochat-gpt2-q4km.gguf
+
+# 在 Ollama 使用
+ollama serve
+ollama run nanochat-gpt2-q4km.gguf</code></pre>
+
+  <div class="callout callout-info">
+    <div class="callout-title">💡 用 DigitalOcean GPU Droplet 加速訓練</div>
+    <p>如果你沒有本機 GPU 或正在等 DGX Spark 到貨，DigitalOcean 的 GPU Droplet（H100 SXM5）可以按時計費，以大約 $2.99/小時的成本跑 GPT-2 124M 訓練，整個 Run 6 大約花費 $5 美元。完成後立即停止計費，非常划算。</p>
+  </div>
+
+  <!-- CTA 1 -->
+  <div class="cta-block">
+    <h3>🚀 用雲端 GPU 跑 NanoChat 訓練，成本最低化</h3>
+    <p>DigitalOcean GPU Droplet（H100 SXM5）按時計費，跑完即停。GPT-2 124M 訓練全程不超過 $10 美元。新用戶享 $200 免費額度，足夠跑 20+ 次完整訓練實驗。</p>
+    <div class="cta-buttons">
+      <a class="btn btn-primary" href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener">
+        💧 DigitalOcean — 領 $200 免費額度，立即跑 NanoChat
+      </a>
+      <a class="btn btn-secondary" href="https://afflink.one/s/aavAC" target="_blank" rel="noopener">
+        📊 DataCamp — 系統學習 LLM 訓練與深度學習
+      </a>
+    </div>
+  </div>
+
+  <h2>常見問題 FAQ</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Q1：NanoChat 和 nanoGPT 是同一個東西嗎？</div>
+    <div class="faq-a">是的，NanoChat 是 nanoGPT 的延伸版本。Karpathy 在 2025 年底將專案重命名，並新增 SFT 微調、多輪對話格式、以及更完整的實驗配置系統。GitHub 上的專案 URL（karpathy/nanoGPT）保持不變，向下相容。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q2：沒有 GPU，只有 CPU 可以跑嗎？</div>
+    <div class="faq-a">可以訓練，但速度會非常慢。GPT-2 124M 在單顆 CPU 上可能需要數週才能訓練完成。建議先用莎士比亞角色資料集（1MB）做快速測試，或租用 DigitalOcean GPU Droplet。在 config 中設 <code>device = 'cpu'</code> 和 <code>dtype = 'float32'</code> 即可。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q3：NanoChat 訓練出來的模型效果如何？</div>
+    <div class="faq-a">GPT-2 124M 是 2019 年的模型，生成能力遠不及現在的 Claude 或 GPT-5.4。但 NanoChat 的價值不在生成效果，而在於「學習訓練」——你可以親眼看到 transformer 是如何從隨機初始化一步步學習語言規律的。完整訓練後，英文文本生成非常流暢，繁中效果取決於訓練語料。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q4：DGX Spark 台灣哪裡買？大概多少錢？</div>
+    <div class="faq-a">2026 年 DGX Spark 已透過台灣 NVIDIA 官方通路和部分代理商（如神達、緯穎）開賣。官方定價約 3,999 美元（約 NT$129,000）。相比租用雲端 GPU 一年的成本，長期使用 homelab 是合理的投資。部分大學和研究機構有學術優惠。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q5：訓練資料的著作權問題怎麼處理？</div>
+    <div class="faq-a">NanoChat 官方使用的 OpenWebText 是從 Reddit 收集的開放網頁資料，法律上尚有爭議，但學術研究用途通常被接受。如果你要做商業部署，建議使用授權明確的資料集（如 CC-BY 授權的維基百科、已購買授權的書籍語料等）。台灣繁中語料推薦：國家教育研究院語料庫、中研院平衡語料庫。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q6：NanoChat 的下一步：學完之後該怎麼進階？</div>
+    <div class="faq-a">建議路線：(1) 用 NanoChat 完全理解 transformer → (2) 轉到 LLaMA-Factory 做 Llama 3.1-8B 微調 → (3) 學習 RLHF / DPO / GRPO 對齊方法 → (4) 研究 MoE 架構（DeepSeek V4 Pro 採用）。DataCamp 有完整的 LLM 工程師學習路線，涵蓋上述所有步驟。</div>
+  </div>
+
+  <!-- CTA 2 -->
+  <div class="cta-block" style="background: linear-gradient(135deg, #065F46 0%, #047857 100%);">
+    <h3>🎓 從 NanoChat 出發，成為 LLM 工程師</h3>
+    <p>DataCamp 的「Machine Learning Engineer」職涯學習路線涵蓋 PyTorch 基礎、Transformer 架構、LLM 微調，以及 MLOps 部署，是 NanoChat 之後最自然的進階路徑。支援繁中介面，台灣開發者適用。</p>
+    <div class="cta-buttons">
+      <a class="btn btn-secondary" href="https://afflink.one/s/aavAC" target="_blank" rel="noopener">
+        📊 DataCamp — 開始 LLM 工程師學習路線（折扣連結）
+      </a>
+      <a class="btn btn-primary" href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener">
+        💧 DigitalOcean — GPU Droplet 按時計費，跑 NanoChat 訓練
+      </a>
+    </div>
+  </div>
+
+  <h2>總結：NanoChat 是 2026 年最值得學的 LLM 入門框架</h2>
+
+  <p>在各種「一鍵部署」、「零程式碼 AI」工具氾濫的 2026 年，NanoChat 代表的是完全相反的哲學：<strong>徹底理解，而非黑盒使用</strong>。</p>
+
+  <p>Karpathy 在設計 NanoChat 時有一個很明確的原則：「如果你不能在一天之內讀完所有程式碼，這個框架就太複雜了。」這種哲學讓 NanoChat 成為全世界最多 AI 工程師用來建立 transformer 心智模型的工具。</p>
+
+  <p>加上 DGX Spark 在台灣正式開賣，2026 年是<strong>本機 LLM 訓練實驗最平民化</strong>的一年。現在正是學習 NanoChat 的最好時機。</p>
+
+  <div class="callout callout-success">
+    <div class="callout-title">🎯 行動清單</div>
+    <ul>
+      <li>✅ <a href="https://github.com/karpathy/nanoGPT" target="_blank">Clone NanoChat</a> 並用莎士比亞資料集跑第一次訓練（30 分鐘）</li>
+      <li>✅ 閱讀 <code>model.py</code>（300 行），理解 MultiHeadAttention + MLP 的結構</li>
+      <li>✅ 試試 OpenWebText 全量訓練（需 GPU，或用 DigitalOcean Droplet）</li>
+      <li>✅ 加入 <a href="https://github.com/karpathy/nanoGPT/discussions/710" target="_blank">Discussion #710</a>，看 DGX Spark homelab 用戶的實戰經驗</li>
+      <li>✅ 完成第一次 SFT 微調（用自己準備的 100 筆問答對）</li>
+    </ul>
+  </div>
+
+  <!-- CTA 3 -->
+  <div class="cta-block" style="background: linear-gradient(135deg, #7C2D12 0%, #B45309 100%);">
+    <h3>🔗 延伸閱讀：搭配 NanoChat 的最佳工具</h3>
+    <p>學完 NanoChat 後，這些工具能讓你的 LLM 工程能力更完整。</p>
+    <div class="cta-buttons">
+      <a class="btn btn-orange" href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" target="_blank" rel="noopener">
+        🛠 Systeme.io — 把 AI 技能變成線上課程收入（免費開始）
+      </a>
+      <a class="btn btn-primary" href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener">
+        📦 AI 開發者資源包 — Gumroad 下載（Claude Code Skills + Prompts）
+      </a>
+    </div>
+  </div>
+
+</div>
+</article>
+
+<footer>
+  <p>© 2026 AutoDev AI · <a href="/blog/">所有教學文章</a> · <a href="/">首頁</a></p>
+  <p style="margin-top:8px; font-size:0.75rem;">本文包含聯盟行銷連結，點擊後購買我們可能獲得佣金，不影響您的價格。</p>
+</footer>
+
+</body>
+</html>
