@@ -3186,3 +3186,54 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 | 2026-09-13 | 🔴 humanizer skill 43K★（英文站機會） | best ai humanizer tools 2026, ai humanizer skill github, undetectable ai humanizer | 高（英文，5K-20K/月） | 直接：Undetectable.ai 30% LIFETIME + Originality 20% | $300-700 | ai-tools.pro（英文站） |
 | 2026-09-13 | 💰 AFFILIATE GetResponse 40-60% recurring（首次提案） | getresponse 評測 2026, getresponse vs mailchimp 台灣, ai email marketing 自動化 | 中 | 40-60% recurring/12mo，PartnerStack | $400-1,200 | Ivan 申請（getresponse.com/affiliates） |
 
+
+## Round 203 — 2026-09-13（Sun 11:00 UTC，competitor-watch cron）
+
+**【競品變現深度分析】本輪聚焦：對手靠什麼賺錢？台灣 affiliate 套利機會。**
+
+### 🔍 核心發現
+
+1. **🔴 P1-HIGH GoHighLevel 繁中零評測 + 40% LIFETIME affiliate**
+   - 業界最高佣金之一：$97/月 → $38.80/月/referral；$297/月 → $118.80/月/referral，**永久遞歸**
+   - Tier 2：5%（推薦其他 affiliate 的收益）
+   - 90天cookie，FirstPromoter，$50 min payout
+   - 繁中市場掃描結果：**完全沒有任何深度評測**（marketer.com.tw 行銷自動化文章提到 HubSpot/ActiveCampaign，GoHighLevel 完全沒出現）
+   - Ivan 申請：`affiliate.gohighlevel.com/join`（需完成付費試用才能發布評測）
+
+2. **🔴 P1-HIGH Descript PartnerStack affiliate（條款已更新）**
+   - 佣金從 15%/12mo 改為 **$25 一次性/new subscriber**（2026 最新官方條款）
+   - 舊 affiliate 保留既有 referrals 12 個月 15% 遞歸，新 referrals 全改 $25
+   - Cookie：90 天（FindAffiliates 確認）
+   - 平台遷移至 PartnerStack（需重新申請）
+   - 繁中評測：空白
+   - 台灣 Podcast 市場 2026 Spotify TW 聽眾 +23%
+
+3. **🟡 P1 ElevenLabs affiliate 積壓確認（22%/12mo，$5 min，90天cookie）**
+   - 最新條款確認（June 2026）：22% recurring/12mo，PartnerStack，$5 min payout
+   - Cookie 90天（業界頂級）
+   - 台灣 AI 語音/音頻市場受眾：YouTuber、Podcaster、課程創作者
+   - Ivan 積壓多輪，需立即確認申請狀態
+
+4. **英文市場競爭格局分析：Top 5 AI affiliate 組合**
+   - 英文 affiliate 創作者推廣五元組：GoHighLevel + ElevenLabs + Descript + QuillBot + HeyGen
+   - 我們缺：GoHighLevel（最高優先）、Descript（新條款，繁中空白）、ElevenLabs（積壓）
+   - QuillBot 佣金率偏低（10-20%，非遞歸），列為 P2
+
+5. **台灣直接競品確認：autodev-ai.com 仍是唯一深度評測站**
+   - marketer.com.tw：行銷自動化文章（Monday.com + HubSpot affiliate，**無 GoHighLevel**）
+   - autolab.cloud（黃敬峰）：教學導向，無 affiliate
+   - ibest.com.tw：清單頁，無深度評測
+   - shareuhack.com：英文站（已推廣 GoHighLevel，但繁中零競品）
+
+### 📊 R203 機會表
+
+| 日期 | 工具/主題 | 關鍵字 | 優先級 | 變現方式 | 預估月收入 | 站點 |
+|------|-----------|--------|--------|---------|-----------|------|
+| 2026-09-13 | 🔴 GoHighLevel 評測（40% LIFETIME affiliate） | gohighlevel 評測 繁中, gohighlevel 台灣 crm, gohighlevel vs hubspot 比較 | **P1-HIGH** | 40% LIFETIME，FirstPromoter | $400-1,500/月 | autodev-ai.com |
+| 2026-09-13 | 🔴 Descript AI 影音剪輯評測（$25/sale PartnerStack） | descript ai 評測 2026, descript 繁中教學, ai podcast 剪輯工具 台灣 | P1-HIGH | $25/sale flat，90天cookie | $100-300/月 | autodev-ai.com |
+| 2026-09-13 | 🟡 ElevenLabs 聲音克隆評測（22%/12mo，積壓確認） | elevenlabs 評測 繁中, elevenlabs 語音克隆 台灣, ai 語音生成 2026 | P1 | 22%/12mo，PartnerStack，$5 min | $150-500/月 | autodev-ai.com |
+| 2026-09-13 | 🟡 GoHighLevel vs HubSpot 比較頁 | gohighlevel vs hubspot 繁中, crm 行銷自動化比較 2026, hubspot 替代方案 | P1（GoHighLevel 批准後） | GoHighLevel 40% LIFETIME + HubSpot | $200-600/月 | autodev-ai.com |
+| 2026-09-13 | 🟡 marketer.com.tw 競品分析 | 行銷自動化工具, email 行銷平台比較 2026 | P2（情報確認） | 差異化定位 | 流量加成 | autodev-ai.com |
+
+**本輪預估新增月收入潛力：$850-2,900/月**（GoHighLevel $400-1,500 + ElevenLabs $150-500 + Descript $100-300 + HeyGen carryover $200-600）
+
