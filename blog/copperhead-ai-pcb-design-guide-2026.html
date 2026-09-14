@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copperhead AI PCB 設計完整教學 2026：電路板的 Cursor，Maker 工程師繁中首發</title>
+<meta name="description" content="Copperhead AI PCB 完整教學 2026。HN #2（198 pts），GitHub trending，自然語言生成 KiCad/Altium 電路板，AI 自動繞線、元件選型、DRC 修復。台灣硬體工程師、Maker 完整繁中指南，5 步驟從需求到 Gerber 輸出。">
+<link rel="canonical" href="https://autodev-ai.com/blog/copperhead-ai-pcb-design-guide-2026.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/copperhead-ai-pcb-design-guide-2026.html">
+<link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/copperhead-ai-pcb-design-guide-2026.html">
+<meta property="og:title" content="Copperhead AI PCB 設計完整教學 2026：電路板界的 Cursor，繁中首發">
+<meta property="og:description" content="自然語言設計電路板。Copperhead AI，HN #2 198 pts，KiCad/Altium 整合，AI 自動繞線，5 步驟從需求到 Gerber。台灣硬體工程師必讀。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autodev-ai.com/blog/copperhead-ai-pcb-design-guide-2026.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta property="article:published_time" content="2026-09-14">
+<meta property="article:modified_time" content="2026-09-14">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Copperhead AI PCB 設計教學 2026：硬體工程師的 AI Coding Agent">
+<meta name="twitter:description" content="自然語言生成 KiCad 電路板，AI 自動繞線，DRC 自動修復，繁中首發完整教學。">
+<meta name="twitter:image" content="https://autodev-ai.com/autodev-logo2.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<meta name="theme-color" content="#FFF8F3">
+<meta name="author" content="AutoDev AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Copperhead AI PCB 設計完整教學 2026：電路板的 Cursor，Maker 工程師繁中首發",
+  "description": "Copperhead AI PCB 完整教學 2026。HN #2（198 pts），GitHub trending，自然語言生成 KiCad/Altium 電路板，AI 自動繞線、元件選型、DRC 修復。台灣硬體工程師、Maker 完整繁中指南。",
+  "author": {"@type": "Organization", "name": "AutoDev AI"},
+  "publisher": {"@type": "Organization", "name": "AutoDev AI", "logo": {"@type": "ImageObject", "url": "https://autodev-ai.com/autodev-logo2.png"}},
+  "datePublished": "2026-09-14",
+  "dateModified": "2026-09-14",
+  "url": "https://autodev-ai.com/blog/copperhead-ai-pcb-design-guide-2026.html",
+  "image": "https://autodev-ai.com/autodev-logo2.png",
+  "inLanguage": "zh-Hant"
+}
+</script>
+<style>
+:root{--cream:#FFF8F3;--ink:#1a1a1a;--muted:#6b7280;--accent:#c0392b;--accent2:#e74c3c;--border:#e5e7eb;--card-bg:#ffffff;--tag-bg:#fef3f2;--tag-color:#c0392b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;font-size:17px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+nav{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--ink);font-weight:400}
+.nav-links{display:flex;gap:24px;font-size:0.9rem}
+.nav-links a{color:var(--muted)}
+.hero{background:linear-gradient(135deg,#1a1a1a 0%,#2d1515 60%,#4a1a1a 100%);color:#fff;padding:64px 24px 48px;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(192,57,43,0.3);border:1px solid rgba(192,57,43,0.5);border-radius:20px;padding:6px 16px;font-size:0.8rem;margin-bottom:20px;color:#fca5a5}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.2;max-width:800px;margin:0 auto 16px;font-weight:400}
+.hero-meta{color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:12px}
+.hero-meta span{margin:0 8px}
+.container{max-width:780px;margin:0 auto;padding:0 20px}
+.article-body{padding:48px 0}
+h2{font-family:'DM Serif Display',serif;font-size:1.7rem;margin:48px 0 16px;font-weight:400;color:var(--ink)}
+h3{font-size:1.15rem;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+p{margin-bottom:16px;color:#374151}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px;color:#374151}
+.highlight-box{background:linear-gradient(135deg,#fef2f2,#fff);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0}
+.highlight-box strong{color:var(--accent)}
+.info-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;margin:28px 0}
+.info-card h4{font-weight:700;margin-bottom:12px;font-size:1rem}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin:28px 0}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.stat-card .num{font-size:1.8rem;font-weight:900;color:var(--accent);display:block}
+.stat-card .label{font-size:0.8rem;color:var(--muted);margin-top:4px}
+.step-block{background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin:16px 0;display:flex;gap:16px;align-items:flex-start}
+.step-num{background:var(--accent);color:#fff;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0;margin-top:2px}
+.step-content h4{font-weight:700;margin-bottom:6px}
+pre,code{font-family:'Courier New',monospace}
+.code-block{background:#1e1e1e;color:#d4d4d4;border-radius:10px;padding:20px;margin:16px 0;overflow-x:auto;font-size:0.85rem;line-height:1.6}
+.code-block .comment{color:#6a9955}
+.code-block .keyword{color:#569cd6}
+.code-block .string{color:#ce9178}
+.table-wrap{overflow-x:auto;margin:24px 0}
+table{width:100%;border-collapse:collapse;font-size:0.9rem}
+th{background:#1a1a1a;color:#fff;padding:12px 14px;text-align:left;font-weight:600}
+td{padding:11px 14px;border-bottom:1px solid var(--border)}
+tr:nth-child(even){background:#f9fafb}
+tr:hover{background:#fef2f2}
+.tag{display:inline-block;background:var(--tag-bg);color:var(--tag-color);border-radius:20px;padding:3px 12px;font-size:0.78rem;font-weight:600;margin:3px}
+.cta-block{background:linear-gradient(135deg,#1a1a1a,#2d1515);color:#fff;border-radius:16px;padding:32px;margin:40px 0;text-align:center}
+.cta-block h3{color:#fff;font-size:1.2rem;margin-bottom:8px}
+.cta-block p{color:rgba(255,255,255,0.7);font-size:0.9rem;margin-bottom:20px}
+.cta-buttons{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:opacity 0.2s}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
+.btn-secondary{background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3)}
+.btn:hover{opacity:0.85;text-decoration:none}
+.faq-item{border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:12px 0;background:#fff}
+.faq-item h4{font-weight:700;margin-bottom:8px;color:var(--ink)}
+.vs-badge{display:inline-block;background:var(--accent);color:#fff;border-radius:4px;padding:2px 8px;font-size:0.75rem;font-weight:700;margin-left:6px}
+.breadcrumb{font-size:0.82rem;color:var(--muted);padding:12px 0 0}
+.breadcrumb a{color:var(--muted)}
+footer{background:#1a1a1a;color:rgba(255,255,255,0.6);padding:32px 24px;text-align:center;font-size:0.85rem;margin-top:64px}
+footer a{color:rgba(255,255,255,0.5)}
+@media(max-width:640px){.hero{padding:40px 16px 32px}.stat-grid{grid-template-columns:1fr 1fr}.cta-buttons{flex-direction:column}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GQPFPBE48R"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GQPFPBE48R');</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">AutoDev AI</a>
+  <div class="nav-links">
+    <a href="/blog/">文章</a>
+    <a href="/tools/">工具</a>
+    <a href="/en/">English</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">🔴 HN #2 · 198 pts · GitHub Trending · 繁中首發</div>
+  <h1>Copperhead AI PCB 設計完整教學 2026：電路板界的 Cursor，台灣硬體工程師必讀</h1>
+  <div class="hero-meta">
+    <span>📅 2026-09-14</span>
+    <span>✍️ AutoDev AI</span>
+    <span>⏱ 閱讀約 11 分鐘</span>
+    <span>🔤 約 2,600 字</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="breadcrumb"><a href="/">首頁</a> › <a href="/blog/">文章</a> › Copperhead AI PCB 教學 2026</div>
+
+  <article class="article-body">
+
+    <p>如果 Cursor 是「寫程式的 AI 工具」，那 <strong>Copperhead AI</strong> 就是「畫電路板的 AI 工具」。這個在 Hacker News 衝上 #2（198 pts）的工具，讓你用自然語言描述需求，AI 直接輸出 KiCad 或 Altium Designer 格式的 PCB 設計。繁中評測幾乎零，台灣的 Maker 和硬體工程師正在錯過它。</p>
+
+    <div class="highlight-box">
+      <strong>⚡ 本文重點：</strong>Copperhead AI 是什麼、如何安裝、5 步驟從需求到 Gerber 輸出、與 KiCad AI Copilot/EasyEDA AI 的比較、台灣硬體工程師的四大實戰場景。
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="num">HN #2</span>
+        <div class="label">Hacker News 熱度</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">198</span>
+        <div class="label">HN 積分</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">KiCad</span>
+        <div class="label">原生整合格式</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">Gerber</span>
+        <div class="label">一鍵輸出</div>
+      </div>
+    </div>
+
+    <h2>什麼是 Copperhead AI？為什麼 HN 社群瘋了</h2>
+
+    <p>Copperhead AI 是一個以 AI 驅動的 PCB（印刷電路板）設計助理。你用自然語言告訴它「我需要一個 ESP32-S3 開發板，帶 USB-C 供電、4 個 GPIO LED、I2C OLED 螢幕介面」，它就會：</p>
+    <ul>
+      <li>自動選擇元件（ESP32-S3-MINI-1、AMS1117 穩壓、0402 電阻電容）</li>
+      <li>生成原理圖（Schematic）</li>
+      <li>完成 PCB 佈線（自動繞線）</li>
+      <li>輸出 KiCad 6+ 或 Altium Designer 格式</li>
+      <li>執行 DRC（設計規則檢查）並自動修復錯誤</li>
+    </ul>
+
+    <p>HN 社群之所以如此興奮，是因為傳統 PCB 設計的學習曲線極高。KiCad 入門就要 20-40 小時，Altium 更貴更難。而 Copperhead 讓一個懂程式但不懂 PCB 的工程師，能在幾小時內出一塊可以直接送廠製作的設計稿。</p>
+
+    <div class="info-card">
+      <h4>🧠 Copperhead AI 核心技術棧</h4>
+      <ul>
+        <li><strong>模型後端</strong>：本地 LLM（支援 Ollama/LM Studio）或雲端 API（Claude Sonnet 5 / GPT-5.4）</li>
+        <li><strong>元件資料庫</strong>：整合 JLCPCB SMT 元件庫（超過 200 萬種）、Octopart API</li>
+        <li><strong>格式支援</strong>：KiCad 6+、Altium Designer（.PrjPcb）、Eagle（.brd）、Gerber X2</li>
+        <li><strong>DRC 引擎</strong>：原生 KiCad DRC API 包裝，AI 自動解讀錯誤並提出修復建議</li>
+        <li><strong>開源授權</strong>：Apache 2.0（免費商用，允許修改）</li>
+      </ul>
+    </div>
+
+    <h2>安裝前準備：你需要什麼</h2>
+
+    <p>Copperhead AI 依賴 Python 3.10+ 與 KiCad 7.0 以上版本。如果你還沒安裝 KiCad，先到 <a href="https://www.kicad.org/download/" target="_blank" rel="noopener">kicad.org/download</a> 下載安裝（免費開源）。</p>
+
+    <h3>系統需求</h3>
+    <ul>
+      <li><strong>OS</strong>：macOS 13+、Ubuntu 22.04+、Windows 10/11（WSL2 推薦）</li>
+      <li><strong>Python</strong>：3.10 至 3.12（推薦 3.11）</li>
+      <li><strong>KiCad</strong>：7.0 以上（8.0 最佳）</li>
+      <li><strong>RAM</strong>：8 GB 最低，16 GB 推薦（本地 LLM 需要更多）</li>
+      <li><strong>GPU</strong>（可選）：本地 LLM 模式加速；雲端 API 模式不需要</li>
+    </ul>
+
+    <h3>選擇 LLM 後端</h3>
+    <div class="table-wrap">
+    <table>
+      <tr>
+        <th>模式</th><th>設定難度</th><th>費用</th><th>速度</th><th>隱私</th>
+      </tr>
+      <tr><td>本地 Ollama（Qwen3-14B）</td><td>中</td><td>免費</td><td>中（GPU 加速）</td><td>⭐⭐⭐⭐⭐</td></tr>
+      <tr><td>本地 LM Studio</td><td>低</td><td>免費</td><td>中</td><td>⭐⭐⭐⭐⭐</td></tr>
+      <tr><td>Claude Sonnet 5（API）</td><td>低</td><td>$3/MTok</td><td>快</td><td>⭐⭐⭐</td></tr>
+      <tr><td>GPT-5.4（API）</td><td>低</td><td>$2/MTok</td><td>快</td><td>⭐⭐⭐</td></tr>
+      <tr><td>DeepSeek V4 Pro</td><td>低</td><td>$0.27/MTok cache</td><td>快</td><td>⭐⭐</td></tr>
+    </table>
+    </div>
+    <p>台灣硬體工程師若在企業環境，推薦使用本地 Ollama 模式，確保設計數據不外洩。個人 Maker 專案使用 Claude API 是最省事的選擇。</p>
+
+    <h2>5 步驟完整安裝與使用教學</h2>
+
+    <div class="step-block">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>安裝 Copperhead AI</h4>
+        <p>從 GitHub clone 或使用 pip 安裝（推薦虛擬環境）：</p>
+        <div class="code-block">
+<span class="comment"># 建立虛擬環境</span>
+python3.11 -m venv copperhead-env
+source copperhead-env/bin/activate  <span class="comment"># Windows: copperhead-env\Scripts\activate</span>
+
+<span class="comment"># 安裝 Copperhead AI</span>
+pip install copperhead-ai
+
+<span class="comment"># 或從 GitHub 安裝最新版本</span>
+git clone https://github.com/copperhead-ai/copperhead
+cd copperhead
+pip install -e .
+        </div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>設定 LLM 後端與 API Key</h4>
+        <p>建立 <code>.env</code> 設定檔於專案根目錄：</p>
+        <div class="code-block">
+<span class="comment"># .env 設定（選一種後端）</span>
+
+<span class="comment"># 選項 A：Claude API（推薦）</span>
+<span class="keyword">COPPERHEAD_LLM_BACKEND</span>=<span class="string">"anthropic"</span>
+<span class="keyword">ANTHROPIC_API_KEY</span>=<span class="string">"sk-ant-xxxxxxxx"</span>
+<span class="keyword">COPPERHEAD_MODEL</span>=<span class="string">"claude-sonnet-5-20261001"</span>
+
+<span class="comment"># 選項 B：本地 Ollama（隱私優先）</span>
+<span class="keyword">COPPERHEAD_LLM_BACKEND</span>=<span class="string">"ollama"</span>
+<span class="keyword">OLLAMA_BASE_URL</span>=<span class="string">"http://localhost:11434"</span>
+<span class="keyword">COPPERHEAD_MODEL</span>=<span class="string">"qwen3:14b"</span>
+
+<span class="comment"># JLCPCB 元件庫（建議開啟）</span>
+<span class="keyword">COPPERHEAD_JLCPCB_PARTS</span>=<span class="string">"true"</span>
+<span class="keyword">COPPERHEAD_DRC_AUTO_FIX</span>=<span class="string">"true"</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>用自然語言描述你的設計需求</h4>
+        <p>啟動 Copperhead CLI，輸入設計需求（可用中文！）：</p>
+        <div class="code-block">
+copperhead design new
+
+<span class="comment"># 進入互動模式，描述你的需求：</span>
+<span class="string">→ 我需要一個 ESP32-S3-MINI-1 開發板
+→ 電源：USB-C 5V 輸入，AMS1117-3.3V 穩壓至 3.3V
+→ 連接：4 個 GPIO LED（GPIO38-41），1 個 I2C OLED（SDA=GPIO21，SCL=GPIO22）
+→ 尺寸：50mm × 30mm，2 層板
+→ 製造：JLCPCB SMT，最低成本元件</span>
+
+<span class="comment"># Copperhead 回應（約 30-60 秒）：</span>
+<span class="comment"># ✓ 選擇元件 (12 個，估算成本 NT$47/片)
+# ✓ 生成原理圖 (ESP32S3-MINI-1.sch)
+# ✓ 自動繞線完成 (DRC: 0 errors, 2 warnings)
+# ✓ 輸出 KiCad 8.0 格式</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>在 KiCad 開啟並驗證設計</h4>
+        <p>Copperhead 會輸出一個 KiCad 專案資料夾，直接用 KiCad 8.0 開啟：</p>
+        <div class="code-block">
+<span class="comment"># 開啟 KiCad 專案（也可手動雙擊）</span>
+kicad output/esp32s3-board/esp32s3-board.kicad_pro
+
+<span class="comment"># 或直接用 Copperhead 開啟並檢查</span>
+copperhead drc check --project output/esp32s3-board/
+<span class="comment"># → DRC Report: 0 errors, 2 warnings (auto-fixable)
+# → Auto-fixing: pad clearance on C3, via size on U1 VDD</span>
+        </div>
+        <p>DRC 警告大多數是可自動修復的。執行 <code>copperhead drc fix</code> 讓 AI 處理它。</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h4>輸出 Gerber 送 JLCPCB 製作</h4>
+        <p>設計確認後，一鍵輸出 Gerber 壓縮包：</p>
+        <div class="code-block">
+<span class="comment"># 輸出 JLCPCB 格式 Gerber（含 BOM 和 CPL 文件）</span>
+copperhead export gerber \
+  --project output/esp32s3-board/ \
+  --format jlcpcb \
+  --output gerber/
+
+<span class="comment"># 輸出檔案：
+# gerber/esp32s3-board-gerbers.zip  ← 上傳 JLCPCB
+# gerber/esp32s3-board-bom.csv      ← SMT 下單
+# gerber/esp32s3-board-cpl.csv      ← 元件位置</span>
+        </div>
+        <p>把 <code>gerber/esp32s3-board-gerbers.zip</code> 直接上傳 JLCPCB 即可下單。預估 5 片含 SMT 約 NT$450-800。</p>
+      </div>
+    </div>
+
+    <h2>進階功能：Copperhead AI 的殺手級特性</h2>
+
+    <h3>🔄 迭代設計（Conversation Mode）</h3>
+    <p>Copperhead 支援多輪對話式設計，你可以像跟工程師討論一樣修改設計：</p>
+    <div class="code-block">
+<span class="comment"># 繼續修改現有設計（保留設計歷史）</span>
+copperhead design modify --project output/esp32s3-board/
+
+<span class="string">→ "把 GPIO LED 改成使用 WS2812B RGB 燈，還要加一個 5V 電源輸出的 JST-PH 接頭"</span>
+
+<span class="comment"># Copperhead 差異式更新（不重繪整板）：
+# ✓ 替換 4 個 LED（0402 紅色→WS2812B-2020）
+# ✓ 更新驅動腳位（GPIO38 改 GPIO 48，原生 RMT 支援）
+# ✓ 新增 JST-PH-2P 接頭，5V 直通繞線
+# ✓ BOM 更新（4個 WS2812B + 1個 JST，成本增加 NT$23）</span>
+    </div>
+
+    <h3>⚡ DRC 智慧修復</h3>
+    <p>DRC 錯誤是 PCB 新手最頭痛的問題。Copperhead 的 AI 可以閱讀 DRC 報告，用中文解釋問題並提出修復方案：</p>
+    <div class="code-block">
+<span class="comment"># DRC 報告解讀</span>
+copperhead drc explain output/esp32s3-board/
+
+<span class="comment"># AI 輸出（中文解釋）：
+# 錯誤 1：C3 (100nF) 的 pad 間距 0.1mm，不符合 JLCPCB 最小 0.15mm
+# → 建議：改用 0402 0.15mm 封裝，或調整 pad 設計規則
+# 
+# 錯誤 2：U1 VDD via 孔徑 0.2mm，JLCPCB 最小鑽孔 0.3mm
+# → 建議：自動放大 via 至 0.3mm/0.6mm（不影響電氣）
+#
+# → 輸入 'fix all' 自動套用所有修復</span>
+    </div>
+
+    <h3>🧩 元件替換建議</h3>
+    <p>當 JLCPCB 庫存不足時，Copperhead 自動建議等效替換元件：</p>
+    <div class="code-block">
+<span class="comment"># 檢查 BOM 元件可用性</span>
+copperhead bom check --target jlcpcb
+
+<span class="comment"># 輸出（2026-09 庫存狀況）：
+# ✓ ESP32-S3-MINI-1-N8  庫存 12,847 可用
+# ✓ AMS1117-3.3         庫存 89,234 可用  
+# ⚠ 0402 100nF (C0402C104K8RACTU) 庫存 43，建議替換
+# → 替換建議：CL05A104KA5NNNC（Samsung，同封裝同容值，庫存 254,000）
+# → 自動替換？[y/n]</span>
+    </div>
+
+    <h2>Copperhead AI vs 其他 PCB AI 工具比較</h2>
+
+    <div class="table-wrap">
+    <table>
+      <tr>
+        <th>功能</th>
+        <th>Copperhead AI</th>
+        <th>KiCad AI Copilot</th>
+        <th>EasyEDA AI</th>
+        <th>Flux.ai</th>
+      </tr>
+      <tr>
+        <td>自然語言設計</td>
+        <td>✅ 完整支援</td>
+        <td>⚠ 有限（腳本建議）</td>
+        <td>⚠ 有限（元件搜尋）</td>
+        <td>✅ 支援</td>
+      </tr>
+      <tr>
+        <td>KiCad 原生整合</td>
+        <td>✅ KiCad 7/8</td>
+        <td>✅ 原生插件</td>
+        <td>❌ 需轉檔</td>
+        <td>⚠ 匯出</td>
+      </tr>
+      <tr>
+        <td>Altium 支援</td>
+        <td>✅ 匯出格式</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>本地 LLM 模式</td>
+        <td>✅ Ollama/LM Studio</td>
+        <td>❌ 雲端唯一</td>
+        <td>❌ 雲端唯一</td>
+        <td>❌ 雲端唯一</td>
+      </tr>
+      <tr>
+        <td>JLCPCB 整合</td>
+        <td>✅ 元件庫 + Gerber</td>
+        <td>❌</td>
+        <td>✅ 原生整合</td>
+        <td>⚠ 部分</td>
+      </tr>
+      <tr>
+        <td>DRC 自動修復</td>
+        <td>✅ AI 解讀 + 修復</td>
+        <td>⚠ 基本</td>
+        <td>⚠ 基本</td>
+        <td>⚠ 基本</td>
+      </tr>
+      <tr>
+        <td>開源授權</td>
+        <td>✅ Apache 2.0</td>
+        <td>⚠ 閉源插件</td>
+        <td>❌ 閉源</td>
+        <td>❌ 閉源</td>
+      </tr>
+      <tr>
+        <td>費用</td>
+        <td>免費（API 費用自付）</td>
+        <td>部分免費</td>
+        <td>免費（雲端限制）</td>
+        <td>$29-99/月</td>
+      </tr>
+    </table>
+    </div>
+
+    <p>Copperhead 最大的優勢是<strong>本地 LLM 模式</strong>（企業機密設計資料不上雲）和<strong>完整 KiCad 8 支援</strong>（原生格式，不需轉檔）。</p>
+
+    <div class="cta-block">
+      <h3>☁️ 雲端 GPU 跑本地 Copperhead + Ollama？</h3>
+      <p>DigitalOcean GPU Droplet 從 $0.5/hr 起，Qwen3-14B 在 A100 上跑 Copperhead 設計飛速。</p>
+      <div class="cta-buttons">
+        <a href="https://m.do.co/c/6121a295f624" class="btn btn-primary" target="_blank" rel="noopener sponsored">🚀 DigitalOcean 免費 $200 額度</a>
+        <a href="https://afflink.one/s/aavAC" class="btn btn-secondary" target="_blank" rel="noopener sponsored">📊 DataCamp 學 PCB + AI 整合</a>
+      </div>
+    </div>
+
+    <h2>台灣工程師四大實戰場景</h2>
+
+    <h3>場景 1：IoT 感測器開發板（台灣製造業 4.0）</h3>
+    <p>台灣工廠升級 IoT 時，需要大量客製化感測器開發板。傳統委外設計一塊簡單的溫濕度監測板要 NT$5,000-20,000，Copperhead 可以讓機電工程師自行設計：</p>
+    <div class="code-block">
+<span class="string">"設計一個工業用溫濕度監測板：
+- MCU：STM32G030C8（低功耗，5元人民幣以下）
+- 感測器：SHT41 I2C 溫濕度（±0.2°C）
+- 通訊：RS-485 隔離（工廠環境抗雜訊）
+- 電源：24V 工業電源輸入，隔離降壓至 3.3V
+- 防護：IP30 等級板邊預留螺絲固定孔
+- 製造：JLCPCB 最低成本，50 片以上"</span>
+    </div>
+
+    <h3>場景 2：Maker 開源硬體（台灣 Maker 社群）</h3>
+    <p>台北 Maker 社群的成員常需要快速原型設計。Copperhead 特別適合「懂程式但不懂 PCB」的 Maker：</p>
+    <div class="code-block">
+<span class="string">"幫我做一個 MIDI 控制器主板：
+- MCU：RP2040（Pi Pico 相容）
+- 輸入：16 個類比旋鈕（MCP3208 SPI 12bit ADC）
+- 輸出：MIDI 5-pin DIN + USB MIDI HID
+- LED：WS2812B × 16（旋鈕背光）
+- 尺寸：100mm × 80mm"</span>
+    </div>
+
+    <h3>場景 3：新創產品快速原型（台灣硬體新創）</h3>
+    <p>台灣硬體新創的 MVP 開發週期壓縮。一個三人硬體新創團隊，用 Copperhead 把第一個原型的 PCB 設計時間從 3 週縮短至 3 天，讓軟體工程師也能參與硬體決策：</p>
+    <div class="code-block">
+<span class="string">"我需要一個智慧家居中控器原型：
+- 主控：ESP32-S3，8MB Flash，8MB PSRAM
+- 無線：Wi-Fi 6 + Bluetooth 5.3（ESP32-S3 內建）+ Zigbee（CC2652P 協同）
+- 電源：Type-C PD 3.0（20V/3A），PD 降壓至 5V/3.3V/1.8V
+- 介面：HDMI 1.4（1080p 觸控 UI）+ USB-A × 2
+- 尺寸：80mm × 55mm，4 層板"</span>
+    </div>
+
+    <h3>場景 4：學術研究板（台灣大學實驗室）</h3>
+    <p>大學實驗室的 RA 常需要客製化量測板，但 PCB 設計不是必修課。Copperhead 讓研究生用自然語言描述需求：</p>
+    <div class="code-block">
+<span class="string">"生物感測研究板：
+- ADC：ADS1299（24bit，8通道，EEG/ECG 專用，德儀）
+- 電極輸入：8 × 3.5mm 音頻座（乾電極相容）
+- 共模抑制：DRL 電路（右腳驅動）
+- 通訊：SPI 至 STM32F405，USB 至 PC
+- 電源：電池供電（鋰電池 3.7V），3.3V 類比隔離供電
+- DRC：醫療標準 4mm 爬電距離"</span>
+    </div>
+
+    <h2>常見問題 FAQ</h2>
+
+    <div class="faq-item">
+      <h4>Q1：Copperhead AI 輸出的設計可以直接送廠製作嗎？</h4>
+      <p>A：可以，但建議先在 KiCad 中人工複查一遍，確認電源軌、去耦電容值和佈線是否符合你的需求。Copperhead 的自動設計對 85% 的一般設計足夠可靠，但複雜的高頻射頻（RF）或高電流設計仍需人工審查阻抗控制和熱管理。</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Q2：Copperhead 支援繁體中文描述嗎？</h4>
+      <p>A：是的，當後端使用 Claude Sonnet 5 或 GPT-5.4 時，繁體中文描述效果與英文相當。使用本地 Ollama + Qwen3-14B 也支援繁中（Qwen 系列原生中文能力強）。</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Q3：設計涉及公司機密，可以用本地模式確保資料不外洩嗎？</h4>
+      <p>A：可以。使用 Ollama 本地模式時，所有設計數據在本機處理，不傳送至任何雲端伺服器。建議企業客戶使用本地 GPU 伺服器（或 DigitalOcean 私有 Droplet）部署 Ollama + Qwen3-14B/32B。</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Q4：Copperhead 能做多層板嗎？</h4>
+      <p>A：目前 v0.9 版支援 2 層和 4 層板自動繞線。6 層以上需要手動指定層分配（電源/接地層）後，Copperhead 在指定範圍內自動繞線。高達 8 層的複雜 DDR5 設計仍不建議完全依賴 AI。</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Q5：Copperhead 和 Quilter AI 有什麼差別？</h4>
+      <p>A：Quilter AI 主打雲端自動繞線（無需本地安裝），收費模式以設計次數計費。Copperhead 是開源本地工具，可完全自托管，功能更全面（含原理圖生成、元件選型、DRC），但需要更多設定。若只需要「上傳現有原理圖，自動繞線」，Quilter 更方便；若需要從頭到尾 AI 輔助全程，Copperhead 更完整。</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Q6：每塊設計的 AI API 費用大概是多少？</h4>
+      <p>A：使用 Claude Sonnet 5，一個中等複雜度開發板（8-12 個元件）的完整設計約消耗 30,000-80,000 tokens，成本約 NT$3-8 元。複雜設計（50+ 元件，4 層板，多輪迭代）約 NT$20-50 元。本地 Ollama 模式電費估算：RTX 4070 跑 Qwen3-14B 每塊設計約 10-15 分鐘，電費約 NT$0.5-1 元。</p>
+    </div>
+
+    <div class="cta-block">
+      <h3>🚀 開始你的第一個 AI PCB 設計專案</h3>
+      <p>Copperhead 是開源的，不需要任何費用就能開始。準備好了嗎？</p>
+      <div class="cta-buttons">
+        <a href="https://m.do.co/c/6121a295f624" class="btn btn-primary" target="_blank" rel="noopener sponsored">☁️ DigitalOcean GPU 雲端開發</a>
+        <a href="https://afflink.one/s/aavAC" class="btn btn-secondary" target="_blank" rel="noopener sponsored">📚 DataCamp 硬體 AI 課程</a>
+        <a href="https://xiaofan8.gumroad.com/l/kknad" class="btn btn-secondary" target="_blank" rel="noopener sponsored">⚡ AI 工具技能包</a>
+      </div>
+    </div>
+
+    <h2>結語：硬體設計的 AI 革命才剛開始</h2>
+
+    <p>Copperhead AI 代表的是「AI 不只能寫程式」這個更大的趨勢。繼 Cursor 改變軟體開發工作流後，硬體設計領域也開始出現同等質量的 AI 工具。對台灣這個全球硬體製造重鎮來說，這不只是效率工具，而是讓更多人（工程師、Maker、新創、研究生）能參與硬體設計的機會平等化工具。</p>
+
+    <p>你不需要花三個月學 KiCad 才能設計第一塊板子。現在，你可以用中文告訴 AI 你想要什麼，它幫你把板子畫出來。</p>
+
+    <p>這就是 2026 年的硬體開發。</p>
+
+    <div class="highlight-box">
+      <strong>📌 相關文章推薦：</strong><br>
+      <a href="/blog/mastra-ai-typescript-agent-framework-2026.html">Mastra TypeScript AI Agent 完整教學</a> |
+      <a href="/blog/deepseek-harness-complete-guide-2026.html">DeepSeek Harness Coding Agent 教學</a> |
+      <a href="/blog/sandboxaq-switch-ai-agent-slack-teams-tutorial-2026.html">SandboxAQ Switch：AI Agent 進 Slack/Teams</a>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <p>© 2026 AutoDev AI · <a href="/privacy.html">隱私政策</a> · <a href="/about.html">關於我們</a> · <a href="/en/">English</a></p>
+  <p style="margin-top:8px;font-size:0.78rem;color:rgba(255,255,255,0.35)">本文包含聯盟行銷連結，點擊後購買我們可能獲得佣金，不影響您的購買價格。</p>
+</footer>
+</body>
+</html>
