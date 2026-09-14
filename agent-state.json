@@ -970,6 +970,22 @@
         "Updated fbStrategy.performance.lastWeeklyRaw / weeklyReviews",
         "Appended new FB win/fail patterns and postRules reflecting midday-native dominance and 04:00 link-post failure"
       ]
+    },
+    {
+      "timestamp": "2026-09-14T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Mon 00:00 UTC site-health — autodev-ai.com and sitemap 200✓; ai-tools.pro homepage 200✓ and sitemap.xml 301→sitemap_index.xml→200✓; ai-tools.tw / en.ai-tools.tw still DNS FAIL; GitHub Pages fallbacks 200✓; no new on-site issues fixable by content-ops, existing builder DNS/deprecation directive remains active.",
+      "changes": [
+        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
+        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml redirected to sitemap_index.xml with final HTTP 200",
+        "Reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution",
+        "Verified GitHub Pages fallback URLs for ai-tools-tw and ai-tools-en returned HTTP 200",
+        "No new site issues found; existing builder DNS/deprecation directive remains active",
+        "Updated agent-state.json siteHealth + issues + lastSiteHealthCheck + lastSiteHealthSummary + agentLog"
+      ],
+      "watchlistStatus": {}
     }
   ],
   "gscData": {
@@ -995,14 +1011,14 @@
             "keyword": "opencode zen 費用",
             "clicks": 4,
             "impressions": 25,
-            "ctr": 16.0,
+            "ctr": 16,
             "position": 3.5
           },
           {
             "keyword": "autodev ai",
             "clicks": 2,
             "impressions": 4,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 1
           },
           {
@@ -1023,14 +1039,14 @@
             "keyword": "\"ruflo\"",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 7
           },
           {
             "keyword": "buzz 教學",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 6.5
           },
           {
@@ -1128,7 +1144,7 @@
             "keyword": "opencode zen go 区别",
             "clicks": 1,
             "impressions": 2,
-            "ctr": 50.0,
+            "ctr": 50,
             "position": 2
           },
           {
@@ -1156,7 +1172,7 @@
             "keyword": "opencode 訂閱",
             "clicks": 1,
             "impressions": 10,
-            "ctr": 10.0,
+            "ctr": 10,
             "position": 9.3
           }
         ],
@@ -1180,21 +1196,21 @@
             "clicks": 28,
             "impressions": 208,
             "ctr": 13.5,
-            "position": 5.0
+            "position": 5
           },
           {
             "page": "//blog/mojo-programming-language-tutorial-2026.html",
             "clicks": 7,
             "impressions": 68,
             "ctr": 10.3,
-            "position": 5.0
+            "position": 5
           },
           {
             "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
             "clicks": 6,
             "impressions": 75,
-            "ctr": 8.0,
-            "position": 9.0
+            "ctr": 8,
+            "position": 9
           },
           {
             "page": "//blog/buzz-jack-dorsey-guide-2026.html",
@@ -1207,7 +1223,7 @@
             "page": "//blog/markitdown-microsoft-tutorial-2026.html",
             "clicks": 5,
             "impressions": 25,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 4.8
           },
           {
@@ -1250,7 +1266,7 @@
             "clicks": 4,
             "impressions": 42,
             "ctr": 9.5,
-            "position": 7.0
+            "position": 7
           },
           {
             "page": "//blog/ai-agent-cybersecurity-skills-claude-code-2026.html",
@@ -1264,7 +1280,7 @@
             "clicks": 2,
             "impressions": 47,
             "ctr": 4.3,
-            "position": 7.0
+            "position": 7
           },
           {
             "page": "//en/",
@@ -1319,7 +1335,7 @@
             "page": "//blog/rtk-rust-token-killer-review-2026.html",
             "clicks": 1,
             "impressions": 5,
-            "ctr": 20.0,
+            "ctr": 20,
             "position": 4.6
           },
           {
@@ -1488,7 +1504,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-09-13T10:30:00Z",
+  "lastChecked": "2026-09-14T00:00:00Z",
   "issues": [
     "2026-09-01 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution; autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
@@ -1567,7 +1583,8 @@
     "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-09-09 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active.",
     "ai-tools.tw / en.ai-tools.tw still fail DNS resolution as of 2026-09-10 daily health check; existing directive content-ops-to-builder-2026-07-10-ai-tools-dns.md remains active.",
     "ai-tools.tw and en.ai-tools.tw still fail DNS resolution; builder needs final restore-vs-deprecate decision (fallback GitHub Pages remain healthy).",
-    "ai-tools.tw and en.ai-tools.tw still fail DNS resolution as of 2026-09-13 daily health check; existing builder DNS/deprecation directive remains active."
+    "ai-tools.tw and en.ai-tools.tw still fail DNS resolution as of 2026-09-13 daily health check; existing builder DNS/deprecation directive remains active.",
+    "ai-tools.tw and en.ai-tools.tw still fail DNS resolution as of 2026-09-14 daily health check; existing builder DNS/deprecation directive remains active."
   ],
   "fbReplied": [
     "122125951124778539_2231569710908774",
@@ -3743,42 +3760,42 @@
     "autodev-ai.com": {
       "url": "https://autodev-ai.com/",
       "status": "200 OK",
-      "lastChecked": "2026-09-13T00:00:00Z"
+      "lastChecked": "2026-09-14T00:00:00Z"
     },
     "autodev-ai.com/sitemap.xml": {
       "url": "https://autodev-ai.com/sitemap.xml",
       "status": "200 OK",
-      "lastChecked": "2026-09-13T00:00:00Z"
+      "lastChecked": "2026-09-14T00:00:00Z"
     },
     "ai-tools.pro": {
       "url": "https://ai-tools.pro/",
       "status": "200 OK",
-      "lastChecked": "2026-09-13T00:00:00Z"
+      "lastChecked": "2026-09-14T00:00:00Z"
     },
     "ai-tools.pro/sitemap.xml": {
       "url": "https://ai-tools.pro/sitemap.xml",
       "status": "200 OK (final: sitemap_index.xml)",
-      "lastChecked": "2026-09-13T00:00:00Z"
+      "lastChecked": "2026-09-14T00:00:00Z"
     },
     "ai-tools.tw": {
       "url": "https://ai-tools.tw/",
       "status": "DNS FAIL",
-      "lastChecked": "2026-09-13T00:00:00Z"
+      "lastChecked": "2026-09-14T00:00:00Z"
     },
     "en.ai-tools.tw": {
       "url": "https://en.ai-tools.tw/",
       "status": "DNS FAIL",
-      "lastChecked": "2026-09-13T00:00:00Z"
+      "lastChecked": "2026-09-14T00:00:00Z"
     },
     "ai-tools-tw-fallback": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
       "status": "200 OK",
-      "lastChecked": "2026-09-13T00:00:00Z"
+      "lastChecked": "2026-09-14T00:00:00Z"
     },
     "ai-tools-en-fallback": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
       "status": "200 OK",
-      "lastChecked": "2026-09-13T00:00:00Z"
+      "lastChecked": "2026-09-14T00:00:00Z"
     }
   },
   "agents": {
@@ -3788,8 +3805,8 @@
       "status": "completed"
     }
   },
-  "lastSiteHealthCheck": "2026-09-13T00:00:00Z",
-  "lastSiteHealthSummary": "Sun 00:00 UTC site-health — autodev-ai.com and sitemap 200✓; ai-tools.pro homepage 200✓ and sitemap.xml 301→sitemap_index.xml→200✓; ai-tools.tw / en.ai-tools.tw still DNS FAIL; GitHub Pages fallbacks 200✓; no new on-site issues fixable by content-ops, existing builder DNS/deprecation directive remains active.",
+  "lastSiteHealthCheck": "2026-09-14T00:00:00Z",
+  "lastSiteHealthSummary": "Mon 00:00 UTC site-health — autodev-ai.com and sitemap 200✓; ai-tools.pro homepage 200✓ and sitemap.xml 301→sitemap_index.xml→200✓; ai-tools.tw / en.ai-tools.tw still DNS FAIL; GitHub Pages fallbacks 200✓; no new on-site issues fixable by content-ops, existing builder DNS/deprecation directive remains active.",
   "affiliateLinks": {
     "lastChecked": "2026-09-13T10:30:00Z",
     "totalArticlesScanned": 117,
