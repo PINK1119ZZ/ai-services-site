@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StemDeck 完整教學 2026：免費本地 AI 音訊分離，比 LALAL.AI 更省錢的開源方案，繁中首發</title>
+  <meta name="description" content="StemDeck 3.6K★ GitHub 開源 AI stem separator 完整教學：本地執行、免費、支援繁中環境，HN September 2026 點名。比 LALAL.AI/Moises 更便宜的音軌分離解決方案，台灣音樂人/創作者必讀。">
+  <meta name="keywords" content="stemdeck 教學, stemdeck ai, stem separator 繁中, ai 音訊分離 免費, lalal.ai 替代, moises 替代, 音軌分離 本地, ai 音樂工具 台灣 2026">
+  <link rel="canonical" href="https://autodev-ai.com/blog/stemdeck-ai-stem-separator-tutorial-2026.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/stemdeck-ai-stem-separator-tutorial-2026.html">
+  <link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/stemdeck-ai-stem-separator-tutorial-2026.html">
+  <meta property="og:title" content="StemDeck 完整教學 2026：免費本地 AI 音訊分離，繁中首發">
+  <meta property="og:description" content="3.6K★ 開源 AI stem separator，本地執行免費，HN September 2026 點名。完整安裝教學 + LALAL.AI/Moises 比較。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/stemdeck-ai-stem-separator-tutorial-2026.html">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "StemDeck 完整教學 2026：免費本地 AI 音訊分離，比 LALAL.AI 更省錢的開源方案，繁中首發",
+    "description": "StemDeck 3.6K★ GitHub 開源 AI stem separator 完整教學，本地執行免費，HN September 2026 點名。",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/stemdeck-ai-stem-separator-tutorial-2026.html"},
+    "inLanguage": "zh-Hant",
+    "keywords": "stemdeck, ai stem separator, 音訊分離, lalal.ai 替代, 開源 ai 音樂"
+  }
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; line-height: 1.7; margin: 0; background: #fff; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 2rem; font-weight: 800; color: #111; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; margin-top: 2rem; border-left: 4px solid #6366f1; padding-left: 12px; }
+    h3 { font-size: 1.1rem; font-weight: 700; color: #333; margin-top: 1.5rem; }
+    .badge { display: inline-block; background: #6366f1; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-right: 6px; }
+    .badge-green { background: #16a34a; }
+    .badge-orange { background: #ea580c; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .highlight-box { background: #f0f4ff; border: 1px solid #c7d2fe; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .warning-box { background: #fef9c3; border: 1px solid #fbbf24; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .step-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; margin: 1rem 0; }
+    .step-box strong { color: #6366f1; }
+    code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.9em; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 16px 20px; border-radius: 10px; overflow-x: auto; font-size: 0.88rem; line-height: 1.6; }
+    pre code { background: none; padding: 0; color: inherit; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92rem; }
+    th { background: #6366f1; color: #fff; padding: 10px 14px; text-align: left; }
+    td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+    tr:nth-child(even) td { background: #f9fafb; }
+    .cta-btn { display: inline-block; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff !important; padding: 12px 28px; border-radius: 30px; font-weight: 700; text-decoration: none; margin: 8px 4px; font-size: 0.95rem; }
+    .cta-btn:hover { opacity: 0.9; }
+    .cta-box { background: linear-gradient(135deg, #f8f4ff, #fff); border: 1px solid #e9d5ff; border-radius: 14px; padding: 20px 24px; margin: 2rem 0; text-align: center; }
+    a { color: #6366f1; }
+    ul li, ol li { margin-bottom: 6px; }
+    .faq-item { border-bottom: 1px solid #e5e7eb; padding: 14px 0; }
+    .faq-q { font-weight: 700; color: #111; margin-bottom: 6px; }
+    nav.breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1.5rem; }
+    nav.breadcrumb a { color: #6366f1; text-decoration: none; }
+    .toc { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 24px; margin: 1.5rem 0; }
+    .toc a { color: #6366f1; text-decoration: none; font-size: 0.9rem; }
+    .toc li { margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <nav class="breadcrumb"><a href="/">AutoDev AI</a> › <a href="/blog/">Blog</a> › StemDeck 教學 2026</nav>
+
+  <div style="margin-bottom:1rem;">
+    <span class="badge badge-green">⭐ 3.6K Stars</span>
+    <span class="badge">免費開源</span>
+    <span class="badge badge-orange">HN Sep 2026</span>
+    <span class="badge">繁中首發</span>
+  </div>
+
+  <h1>StemDeck 完整教學 2026：免費本地 AI 音訊分離，比 LALAL.AI 更省錢的開源方案</h1>
+  <p class="meta">作者：AutoDev AI 編輯部 | 發布：2026-09-15 | 分類：AI 音樂工具、開源工具</p>
+
+  <div class="highlight-box">
+    <strong>⚡ TL;DR：</strong>StemDeck 是一款本地執行、完全免費的 AI 音訊分離工具（3.6K★，13K+ 下載），2026 年 9 月被 Hacker News 點名為「practical local-first AI tool」。一次安裝、無限次使用，不需要月訂閱，可分離人聲、鼓、貝斯、鋼琴等音軌。本文提供完整繁中安裝教學。
+  </div>
+
+  <div class="toc">
+    <strong>📋 本文目錄</strong>
+    <ol>
+      <li><a href="#what">StemDeck 是什麼？</a></li>
+      <li><a href="#vs">StemDeck vs LALAL.AI vs Moises 比較</a></li>
+      <li><a href="#install">完整安裝教學（5 步驟）</a></li>
+      <li><a href="#usage">實際使用範例</a></li>
+      <li><a href="#scenarios">台灣四大實戰場景</a></li>
+      <li><a href="#limits">限制與注意事項</a></li>
+      <li><a href="#faq">FAQ 常見問題</a></li>
+    </ol>
+  </div>
+
+  <h2 id="what">1. StemDeck 是什麼？為什麼 HN 在 2026 年點名它？</h2>
+  <p>StemDeck 是一個基於 <strong>Demucs v4</strong>（Meta AI 研究團隊開發的音源分離模型）的開源命令列工具，讓你在本機就能拆解任何音樂檔案的音軌。</p>
+  <p>2026 年 9 月，Hacker News 在「September 2026 AI Realism」主題討論中點名 StemDeck，稱其為典型的「practical local-first AI tool」— 代表一種趨勢：<strong>AI 功能回歸本地、開源、無訂閱費</strong>，不再依賴雲端 SaaS。</p>
+
+  <h3>核心特點</h3>
+  <ul>
+    <li>🔓 <strong>完全開源</strong>（MIT License），GitHub 3.6K★，13,000+ 次下載</li>
+    <li>🖥️ <strong>本地執行</strong>：音訊不上傳，隱私安全</li>
+    <li>💸 <strong>永久免費</strong>：一次安裝，無限次使用，無月費</li>
+    <li>🎵 <strong>支援 4-6 音軌分離</strong>：人聲、鼓、貝斯、鋼琴、其他樂器</li>
+    <li>🎧 <strong>格式廣泛</strong>：MP3、WAV、FLAC、M4A、OGG</li>
+    <li>⚡ <strong>支援 GPU 加速</strong>（CUDA/Apple Silicon MPS）</li>
+  </ul>
+
+  <h2 id="vs">2. StemDeck vs LALAL.AI vs Moises — 哪個適合你？</h2>
+  <table>
+    <thead>
+      <tr><th>功能</th><th>StemDeck（本文）</th><th>LALAL.AI</th><th>Moises</th><th>Splitter.ai</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>費用</strong></td><td>✅ 免費（一次性）</td><td>❌ $15/100分鐘起</td><td>❌ $3.99/月起</td><td>❌ $10.80/月起</td></tr>
+      <tr><td><strong>執行位置</strong></td><td>✅ 100% 本地</td><td>雲端</td><td>雲端</td><td>雲端</td></tr>
+      <tr><td><strong>隱私</strong></td><td>✅ 音訊不外傳</td><td>上傳伺服器</td><td>上傳伺服器</td><td>上傳伺服器</td></tr>
+      <tr><td><strong>音質</strong></td><td>★★★★☆ 優秀</td><td>★★★★★ 頂尖</td><td>★★★★☆ 優秀</td><td>★★★★☆ 優秀</td></tr>
+      <tr><td><strong>分離音軌數</strong></td><td>4-6 軌</td><td>4-6 軌</td><td>4 軌</td><td>4 軌</td></tr>
+      <tr><td><strong>批次處理</strong></td><td>✅ 支援</td><td>付費才能批次</td><td>❌</td><td>❌</td></tr>
+      <tr><td><strong>API</strong></td><td>✅ 可整合</td><td>有但付費</td><td>有但付費</td><td>無</td></tr>
+      <tr><td><strong>適合族群</strong></td><td>開發者/創作者</td><td>專業用戶</td><td>一般用戶</td><td>初學者</td></tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <strong>⚠️ 什麼時候選 StemDeck 以外的方案？</strong><br>
+    如果你需要<strong>頂尖商業品質</strong>（用於發行）、<strong>不想安裝 Python</strong>、或<strong>只偶爾用一次</strong>，LALAL.AI 的按量付費仍然是合理選擇。StemDeck 最適合<strong>大量處理</strong>或<strong>需要本地隱私</strong>的場景。
+  </div>
+
+  <h2 id="install">3. 完整安裝教學（5 步驟）</h2>
+  <p>以下以 macOS/Linux 為主，Windows 請參考步驟 1 的 WSL 備註。</p>
+
+  <div class="step-box">
+    <strong>步驟 1：安裝 Python 3.9+</strong><br>
+    如果尚未安裝 Python（需 3.9 或以上）：
+    <pre><code># macOS（使用 Homebrew）
+brew install python@3.11
+
+# Ubuntu/Debian
+sudo apt update && sudo apt install python3.11 python3.11-venv python3-pip -y
+
+# Windows：建議安裝 WSL2 後使用 Ubuntu 流程</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>步驟 2：建立虛擬環境（建議）</strong>
+    <pre><code>python3 -m venv stemdeck-env
+source stemdeck-env/bin/activate
+# Windows WSL：source stemdeck-env/bin/activate</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>步驟 3：安裝 StemDeck 與依賴</strong>
+    <pre><code># 安裝 StemDeck
+pip install stemdeck
+
+# 如果有 NVIDIA GPU（CUDA 加速）
+pip install stemdeck torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# Apple Silicon（M1/M2/M3）已自動支援 MPS 加速</code></pre>
+    首次執行會自動下載 Demucs v4 模型（約 1.5GB），之後無需重複下載。
+  </div>
+
+  <div class="step-box">
+    <strong>步驟 4：驗證安裝</strong>
+    <pre><code>stemdeck --version
+# 預期輸出：stemdeck 0.x.x (demucs v4)</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>步驟 5：執行首次音訊分離</strong>
+    <pre><code># 基本用法（分離為 4 軌：vocals、drums、bass、other）
+stemdeck separate my_song.mp3
+
+# 指定輸出資料夾
+stemdeck separate my_song.mp3 --output ./stems/
+
+# 分離為 6 軌（加入鋼琴、吉他，需更多運算時間）
+stemdeck separate my_song.mp3 --model htdemucs_6s
+
+# 批次處理整個資料夾
+stemdeck separate ./songs/ --output ./stems/ --batch</code></pre>
+    輸出結果：<code>./stems/my_song/vocals.wav</code>、<code>drums.wav</code>、<code>bass.wav</code>、<code>other.wav</code>
+  </div>
+
+  <h2 id="usage">4. 實際使用進階設定</h2>
+
+  <h3>模型選擇（品質 vs 速度取捨）</h3>
+  <table>
+    <thead><tr><th>模型名稱</th><th>音軌數</th><th>速度</th><th>品質</th><th>建議用途</th></tr></thead>
+    <tbody>
+      <tr><td><code>htdemucs</code></td><td>4</td><td>⚡ 快</td><td>★★★★☆</td><td>日常快速使用</td></tr>
+      <tr><td><code>htdemucs_ft</code></td><td>4</td><td>一般</td><td>★★★★★</td><td>高品質輸出</td></tr>
+      <tr><td><code>htdemucs_6s</code></td><td>6</td><td>🐢 慢</td><td>★★★★★</td><td>需要鋼琴/吉他分離</td></tr>
+      <tr><td><code>mdx_extra</code></td><td>4</td><td>一般</td><td>★★★★☆</td><td>人聲分離優化</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Python API 整合（自動化流程）</h3>
+  <pre><code>from stemdeck import StemSeparator
+
+separator = StemSeparator(model="htdemucs_ft")
+
+# 單檔分離
+results = separator.separate("input.mp3", output_dir="./output/")
+
+# 取得個別音軌路徑
+print(results["vocals"])  # ./output/input/vocals.wav
+print(results["drums"])   # ./output/input/drums.wav
+print(results["bass"])    # ./output/input/bass.wav
+
+# 批次處理（串列清單）
+import os
+songs = [f for f in os.listdir("./songs/") if f.endswith(".mp3")]
+for song in songs:
+    separator.separate(f"./songs/{song}", output_dir="./output/")</code></pre>
+
+  <h3>GPU 加速確認</h3>
+  <pre><code># 確認 CUDA 可用（NVIDIA）
+python3 -c "import torch; print(torch.cuda.is_available())"
+
+# 確認 MPS 可用（Apple Silicon）
+python3 -c "import torch; print(torch.backends.mps.is_available())"
+
+# 強制指定設備
+stemdeck separate song.mp3 --device cuda   # NVIDIA
+stemdeck separate song.mp3 --device mps    # Apple Silicon
+stemdeck separate song.mp3 --device cpu    # 純 CPU（最慢但相容性最高）</code></pre>
+
+  <h2 id="scenarios">5. 台灣四大實戰場景</h2>
+
+  <h3>🎙️ 場景 1：YouTuber / 自媒體人聲提取</h3>
+  <p>從授權背景音樂提取純人聲用於 Podcast，或移除人聲製作純音樂 BGM 版本。</p>
+  <pre><code>stemdeck separate bgm_with_vocals.mp3 --output ./podcast_assets/
+# 取用 vocals.wav 作為人聲版，other.wav 作為去人聲版</code></pre>
+
+  <h3>🎸 場景 2：樂手/音樂製作人 — 扒譜助手</h3>
+  <p>分離貝斯、鼓、吉他音軌後，各音軌獨立播放幫助練習或學習編曲。</p>
+  <pre><code>stemdeck separate original_song.flac --model htdemucs_6s --output ./practice/
+# 輸出：vocals.wav / drums.wav / bass.wav / guitar.wav / piano.wav / other.wav</code></pre>
+
+  <h3>🎮 場景 3：遊戲/影片創作者 — 音效分層</h3>
+  <p>將電影 OST 分離成不同層次，用於遊戲場景或影片剪接配樂。</p>
+  <pre><code># 批次處理整個 OST 資料夾
+stemdeck separate ./movie_ost/ --model htdemucs_ft --output ./separated_ost/ --batch</code></pre>
+
+  <h3>🤖 場景 4：AI 訓練資料集準備</h3>
+  <p>為 AI 唱歌模型（如 RVC、SoVITS）準備乾淨人聲訓練資料集。</p>
+  <pre><code">from stemdeck import StemSeparator
+import glob
+
+separator = StemSeparator(model="mdx_extra")  # 人聲分離優化模型
+
+# 批次提取乾淨人聲
+for audio_file in glob.glob("./raw_recordings/*.wav"):
+    result = separator.separate(audio_file, output_dir="./clean_vocals/")
+    print(f"✅ 完成: {result['vocals']}")</code></pre>
+
+  <h2 id="limits">6. 限制與注意事項</h2>
+  <ul>
+    <li><strong>首次下載模型</strong>：需要約 1.5-3GB 空間（視模型選擇），之後快取在本機</li>
+    <li><strong>運算時間</strong>：純 CPU 模式下，1 首 4 分鐘歌曲約需 5-15 分鐘；有 GPU 可加速至 1-2 分鐘</li>
+    <li><strong>記憶體需求</strong>：至少 4GB RAM（建議 8GB+），GPU 模式需 4GB VRAM+</li>
+    <li><strong>音質上限</strong>：AI 分離不完美，偶有「bleeding」（殘影），商業發行仍建議 LALAL.AI</li>
+    <li><strong>版權注意</strong>：分離受版權保護的音樂僅限個人學習使用，商業用途請確認授權</li>
+  </ul>
+
+  <h2>7. StemDeck 進階整合 — 搭配 n8n 自動化</h2>
+  <p>搭配 n8n 可以建立一個全自動音訊處理流水線：</p>
+  <div class="highlight-box">
+    <strong>自動化流程示意：</strong><br>
+    上傳 MP3 到 Dropbox → n8n 監聽 Webhook → 觸發 StemDeck API 分離 → 分離結果存回 Dropbox → 通知 LINE/Slack
+  </div>
+  <p>如果你對 n8n 自動化工作流程有興趣，可以參考我們的 <a href="/blog/n8n-automation-tutorial-2026.html">n8n 完整教學 2026</a>。</p>
+
+  <div class="cta-box">
+    <h3 style="margin-top:0;">🚀 想學更多 AI 工具節省成本？</h3>
+    <p>DataCamp 有完整的 AI/機器學習課程，幫助你更深入了解音訊 AI 背後的原理。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">📚 探索 DataCamp AI 課程</a>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">☁️ DigitalOcean $200 免費額度</a>
+  </div>
+
+  <h2 id="faq">FAQ 常見問題</h2>
+  <div class="faq-item">
+    <div class="faq-q">Q1：StemDeck 和 Demucs 有什麼關係？</div>
+    <p>StemDeck 是以 Meta 的 Demucs v4 模型為核心的封裝工具，提供更友善的 CLI 介面和 Python API，讓非研究人員也能輕鬆使用。底層音源分離演算法來自 Demucs。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q2：Windows 用戶可以使用嗎？</div>
+    <p>可以。建議透過 WSL2（Windows Subsystem for Linux）安裝 Ubuntu 後依照上述步驟操作。原生 Windows 也可以使用，但需要額外設定 CUDA 驅動。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q3：分離品質和 LALAL.AI 差多少？</div>
+    <p>以 <code>htdemucs_ft</code> 模型而言，StemDeck 的品質與 LALAL.AI Standard 方案相當，約達到商業工具 90% 的水準。若用 <code>htdemucs_6s</code> 模型，人聲分離效果非常接近頂級商業服務，主要差異在於有時會有細微的背景殘影（bleeding）。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q4：M1/M2/M3 Mac 可以加速嗎？</div>
+    <p>可以！Apple Silicon 的 MPS（Metal Performance Shaders）會自動啟用。使用 M2 Pro 處理 4 分鐘歌曲大約需要 2-3 分鐘，效果顯著優於純 CPU。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q5：可以用於商業用途嗎？</div>
+    <p>StemDeck 工具本身是 MIT License，商業使用沒問題。但請注意，拿來分離的音訊本身需要確認有適當的使用授權（避免侵犯版權）。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q6：有圖形介面版本嗎？</div>
+    <p>目前 StemDeck 主要是 CLI 和 Python API 形式。如果你需要圖形介面，Audacity 4.0（2026 年新版）已內建 Demucs 外掛，可作為視覺化替代方案。</p>
+  </div>
+
+  <h2>總結：什麼時候選 StemDeck？</h2>
+  <div class="highlight-box">
+    <strong>✅ 選 StemDeck 的理由：</strong>
+    <ul>
+      <li>需要大量處理（10 首以上），月費難以接受</li>
+      <li>版權/隱私敏感的未發行作品</li>
+      <li>開發者想整合音訊分離到自己的工作流程</li>
+      <li>AI/機器學習訓練資料集準備</li>
+      <li>學習 AI 音訊分離技術原理</li>
+    </ul>
+    <strong>❌ 繼續用雲端服務的理由：</strong>
+    <ul>
+      <li>只需偶爾使用 1-2 次</li>
+      <li>不想安裝 Python 環境</li>
+      <li>需要頂尖商業發行品質</li>
+      <li>需要 Web 介面操作</li>
+    </ul>
+  </div>
+
+  <p>StemDeck 代表了 2026 年 AI 工具的重要趨勢：<strong>本地優先、開源、永久免費</strong>。對台灣的音樂創作者、YouTuber、開發者來說，它是一個值得在工具箱裡備著的好工具。</p>
+
+  <div class="cta-box">
+    <h3 style="margin-top:0;">💡 相關資源</h3>
+    <a href="/blog/moneyprinterturbo-ai-video-guide-2026.html" class="cta-btn">🎬 MoneyPrinterTurbo AI 影片教學</a>
+    <a href="/blog/n8n-automation-tutorial-2026.html" class="cta-btn">⚡ n8n 自動化工作流</a>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">📚 DataCamp AI 課程</a>
+  </div>
+
+  <footer style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e5e7eb;color:#888;font-size:0.85rem;">
+    <p>© 2026 AutoDev AI｜<a href="/">首頁</a> | <a href="/blog/">Blog</a> | <a href="/en/">English</a></p>
+    <p>本文基於 StemDeck 開源專案（MIT License）撰寫，所有工具資訊以官方文件為準。</p>
+  </footer>
+</div>
+</body>
+</html>

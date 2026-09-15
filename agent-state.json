@@ -1,8 +1,73 @@
 {
   "lastRun": "2026-09-15T00:30:00Z",
   "lastResearchRound": 205,
-  "lastStrategistRun": "2026-09-14T01:30:00Z",
+  "lastStrategistRun": "2026-09-15T01:00:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-09-15T01:00:00Z",
+      "agent": "strategist",
+      "task": "passive-income-self-review",
+      "status": "completed",
+      "summary": "Sep 15 01:00 UTC passive-income-self-review（半月策略校準）— 收入審計：~219篇文章，GSC 204 clicks/3204 impressions/6.4% CTR/avg pos 7.6（持續改善）。主要收入來源：DigitalOcean+DataCamp+Systeme.io 間接佣金，估月收入 30-430（遠低潛力）。最大漏洞：(1) 5個 Gumroad 404 累積損失已達 ,500-15,400（22週+）；(2) 10+個高佣金 affiliate 等待 Ivan 申請。策略調整：(1) 資源向高 affiliate 密度頁面傾斜（比較頁 > 單純教學文）；(2) Gumroad 404 升至與 affiliate 申請同等優先級；(3) Grok 4.7 預測窗口移至 Sep 25-30，不再製造虛假緊急感。直接行動：StemDeck 教學文執行（~1,800字繁中首發，HN Sep 2026，blog/stemdeck-ai-stem-separator-tutorial-2026.html），blog/index.html +1（219→220篇），sitemap.xml 新增 URL。發出 directives/strategist-biweekly-2026-09-15.md（seo-writer/researcher/content-ops/builder/Ivan 下半月完整指令）。",
+      "changes": [
+        "新增 blog/stemdeck-ai-stem-separator-tutorial-2026.html（~1,800字繁中首發，StemDeck 3.6K★，HN Sep 2026，免費本地 AI 音訊分離，LALAL.AI/Moises 替代方案）",
+        "blog/index.html：新增 StemDeck 卡片（排第一位），219→220篇",
+        "sitemap.xml：新增 stemdeck URL（lastmod 2026-09-15，priority 0.9）",
+        "創建 directives/strategist-biweekly-2026-09-15.md（含 seo-writer/researcher/content-ops/builder/Ivan 下半月完整指令）",
+        "收入審計：GSC 204 clicks（↑7%），avg position 7.6，最大漏洞確認（Gumroad 404 + affiliate 積壓）",
+        "策略調整：高 affiliate 密度頁面優先、Gumroad 404 損失量化（,500-15,400 累積）、Grok 4.7 預測移至 Sep 25-30"
+      ],
+      "directivesIssued": {
+        "seoWriter": [
+          "✅ StemDeck 教學文（本輪已執行）",
+          "blog/orca-ade-parallel-agents-tutorial-2026.html（P1，Sep 18前）",
+          "blog/omniroute-ai-gateway-free-models-2026.html（P1，Sep 22前）",
+          "blog/viktor-ai-coworker-slack-review-2026.html（Ivan 批准後）",
+          "blog/creatify-ai-ad-video-review-2026.html（Ivan 批准後）",
+          "blog/creatify-vs-heygen-vs-synthesia-vs-pictory-2026.html（Ivan 批准後）",
+          "Grok 4.7 GA → 24h 內觸發兩篇（P0-STANDBY）"
+        ],
+        "researcher": [
+          "LALAL.AI affiliate 條款確認",
+          "Orca ADE 深度調研",
+          "Sep 22-29 DevDay 追蹤",
+          "Grok 4.7 每輪監控（P1-WATCH）"
+        ],
+        "contentOps": [
+          "Sep 22 00:00 UTC：DevDay 文章更新",
+          "Sep 29 live：即時更新",
+          "Sep 30：全紀錄版",
+          "content-refresh 3篇最舊文章"
+        ],
+        "builder": [
+          "ai-tools.tw DNS 最終決策（60天 FAIL）",
+          "tools/ai-video-ad-comparison-2026.html（Creatify比較頁）",
+          "headroom MCP Server 自用評估"
+        ],
+        "ivan": [
+          "P0-URGENT: 5個 Gumroad 上架（累積損失 ,500-15,400）",
+          "P1-HIGH: Viktor AI affiliate（partners.dub.co/viktor）",
+          "P1-HIGH: Creatify AI affiliate（creatify.ai/affiliate）",
+          "P1-HIGH: GoHighLevel affiliate（affiliate.gohighlevel.com）",
+          "P1-HIGH: Synthesia affiliate（synthesia.io/affiliate）",
+          "P1-HIGH: ElevenLabs affiliate（PartnerStack）",
+          "P1-HIGH: Descript affiliate（PartnerStack 重申）",
+          "P1-HIGH: Beehiiv affiliate（beehiiv.com/partner-program）",
+          "P1-HIGH: Skool affiliate（skool.com/affiliates）"
+        ]
+      },
+      "incomeAudit": {
+        "gscClicks": 204,
+        "gscImpressions": 3204,
+        "gscCTR": 6.4,
+        "gscAvgPosition": 7.6,
+        "articlesTotal": "~220篇",
+        "estimatedMonthlyRevenue": "$130-430（現有，遠低潛力）",
+        "biggestGap": "5個 Gumroad 404（累積損失 $5,500-15,400）+ 10+個 affiliate 等待 Ivan",
+        "topOpportunity": "Creatify 25% LIFETIME + Viktor 15→20%/12mo + GoHighLevel 40% LIFETIME",
+        "grok47Status": "P1-WATCH（預測 Sep 25-30，社群稱 delayed for a few more Elon days）"
+      }
+    },
     {
       "timestamp": "2026-09-15T00:30:00Z",
       "agent": "researcher",
@@ -990,52 +1055,6 @@
         "No new site issues found; existing builder DNS directive remains active",
         "Updated agent-state.json siteHealth + lastChecked + lastSiteHealthCheck + lastSiteHealthSummary + agentLog"
       ]
-    },
-    {
-      "timestamp": "2026-09-09T22:00:00Z",
-      "agent": "researcher",
-      "task": "ai-dev-research",
-      "round": 197,
-      "status": "completed",
-      "summary": "Round 197（Wed 22:00 UTC，ai-dev-research cron）— 核心發現：(1) Grok 4.7 P0-STANDBY T-3天（Sep 12 目標，2.1T 參數，SpaceX data，Manifold 95%/9月底 46%/9/11，xAI 文檔仍列 4.6 為 current，雙待命維持）；(2) Claude Fable 5.1（9/1 GA）文章已存在，新補：OSWorld 2.0 77.9% 嚴格 + Zero data retention 企業賣點（content-ops 補充建議）；(3) 🔴 P1-HIGH 新機會：Meta Muse Spark 1.3（9/2 GA，25% fewer tokens + 20% fewer tool calls，.25/M input，繁中零評測，直接執行 blog/muse-spark-1-3-review-2026.html）；(4) OpenAI DevDay 9/29 Fort Mason 確認（10:00 AM PT Keynote，文章已有，9/30 全紀錄更新）；(5) nanochat 57.3K★ carryover（繁中零教學，DGX Spark homelab discussion #710 熱，常青 P1-HIGH 排隊）；(6) Lovable 2.0 P2-WATCH（2B 估值，9/9 訓練數據政策，affiliate 待確認）；(7) PH September 初期：dif.sh + CGI 新入，待深度評估；(8) Affiliate 無新超門檻發現，AdCreative 30-40% LIFETIME 積壓最高。",
-      "changes": [
-        "搜尋 Grok 4.7 xAI release date September 2026 → 確認仍未 GA；xAI/SpaceXAI 文檔 4.6 為 current；Manifold 95% 9月底；iweaver.ai 確認 Sep 12 目標；2.1T 參數（Musk 非官方）；SpaceX 飛行遙測訓練數據",
-        "搜尋 Claude Fable 5.1 Mythos 5.1 release September 2026 → 確認 9/1 GA；OSWorld 2.0（8/26 task）77.9%/41.7%；Zero data retention 新企業賣點；定價 0/0 不變；文章 claude-fable-5-1-review-2026.html 已存在",
-        "搜尋 Meta Muse Spark 1.3 release September 2026 → 確認 9/2 GA；25% fewer tokens + 20% fewer tool calls vs 1.2；DeepSWE 75.4%；Terminal-Bench 88.8%；MRCR 98.5%；.25/M input / .25/M output；繁中零評測確認；Muse Code full GA 9/1",
-        "搜尋 OpenAI DevDay 2026 agenda announcements → 確認 9/29 Fort Mason；10:00 AM PT Keynote（Sam Altman）；08:00 breakfast；全球直播；blog/openai-devday-2026-preview.html 已存在，9/30 更新為全紀錄",
-        "搜尋 karpathy nanochat GitHub stars 2026 → 確認 57.3K★ 8K forks；Run 6 3/14（1.65h GPT-2 record）；discussion #710 DGX Spark homelab 教學熱；Trelis Substack 英文教學存在，繁中零競品確認",
-        "搜尋 Lovable 2.0 vibe coding release September 2026 → 確認 Lovable 2.0 發布；9/9 起 Free/Pro 數據默認訓練政策啟動；2B 估值路線；vibe coding tools Lovable vs Cursor vs Bolt 比較需求持續",
-        "搜尋 Product Hunt trending September 2026 → 確認 PH September 月榜：Kilo Code / Monid / Browzer / AI Toolbox / Computable GPU Index / Articos / Tadata / dif.sh / Nex 早期出現",
-        "搜尋 new AI affiliate program 40% recurring → 確認 adskull.io 2026 更新：AdCreative.ai 30-40% LIFETIME #1；Fliki 30% LIFETIME；Jasper 25%/12mo；Reclaim.ai 40%；無新超門檻發現",
-        "創建 directives/researcher-to-strategist-2026-09-09-round197.md（Muse Spark 1.3 P1-HIGH + nanochat P1-HIGH carryover + Grok 4.7 P0-STANDBY）",
-        "更新 dev-notes.md：Round 197 完整段落",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog + watchlistStatus"
-      ],
-      "topFindings": [
-        "Meta Muse Spark 1.3（9/2 GA，25% fewer tokens，.25/M，繁中零評測，P1-HIGH 直接執行）",
-        "Grok 4.7 P0-STANDBY T-3天（Sep 12 目標，2.1T 參數，xAI 文檔仍 4.6，雙待命維持）",
-        "Claude Fable 5.1 Zero data retention 企業賣點補充（content-ops 建議）",
-        "OpenAI DevDay 9/29 Fort Mason 確認（9/30 文章更新為全紀錄）",
-        "nanochat 57.3K★ 繁中零教學確認（常青 P1-HIGH 持續排隊）",
-        "Lovable 2.0 P2-WATCH（2B 估值，9/9 訓練數據政策）",
-        "PH September 初期：dif.sh + CGI 新入待評估",
-        "Affiliate 積壓：AdCreative 30-40% LIFETIME 最高優先，Ivan 繼續催促"
-      ],
-      "watchlistStatus": {
-        "grok47": "⏳ P0-STANDBY T-3天（Sep 12 目標，xAI 文檔 4.6 為 current，Manifold 95%/9月底 46%/9/11，雙待命）",
-        "claudeFable51": "✅ 文章已存在（9/1 GA，claude-fable-5-1-review-2026.html），content-ops 補 zero-data-retention 段建議",
-        "museSpark13": "🔴 P1-HIGH 新（9/2 GA，25% fewer tokens，.25/M，繁中零評測，直接執行）",
-        "openaiDevDay": "📅 9/29 Fort Mason 確認（文章已有，9/30 更新全紀錄）",
-        "nanochat57k": "🔴 P1-HIGH carryover（57.3K★，繁中零教學，常青）",
-        "lovable20": "🟡 P2-WATCH（2B 估值，9/9 數據政策，affiliate 待確認）",
-        "difSh": "🟡 P2 新（PH September 月榜，code diff，開發者受眾）",
-        "cgi": "🟡 P2 新（Computable GPU Index，GPU 算力，DataCamp/DO 導流）",
-        "adcreativeAi": "🔴 P1-HIGH Ivan 積壓最高（30-40% LIFETIME，PartnerStack）",
-        "undetectableAi": "🔴 P1-HIGH Ivan 積壓（30% LIFETIME，文章籌備中）",
-        "semrush": "🔴 P1-HIGH Ivan 積壓（00-350 CPA，Impact Radius）",
-        "manychat": "🟡 P1 carryover（50%/12mo，Ivan 積壓）"
-      },
-      "estimatedNewRevenue": "50-1,750/月（Muse Spark 1.3 評測 00-350 + nanochat 教學 00-400 + Grok 4.7 GA 後 00-800 + DevDay 更新 0-200）"
     }
   ],
   "gscData": {
