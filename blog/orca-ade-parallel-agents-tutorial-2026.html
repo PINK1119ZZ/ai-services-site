@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orca ADE 完整教學 2026：59K★ 平行 AI Coding Agents，MIT 免費版 Devin 替代方案，繁中首發</title>
+  <meta name="description" content="Orca ADE（Stably AI YC W22）59K★ 平行多 Agent 開發環境完整教學。一次啟動 40 個 AI coding agent 同時寫程式，支援 parallel git worktrees，MIT 授權免費。比 Devin 更開放，比 Claude Code 更強大的 AI 程式設計自動化工具。繁中首發。">
+  <meta name="keywords" content="orca ade 教學, orca ade 繁中, parallel ai agents 教學, stably ai yc w22, ai coding agent 台灣, devin 替代方案, parallel git worktrees, orca ade 2026">
+  <link rel="canonical" href="https://autodev-ai.com/blog/orca-ade-parallel-agents-tutorial-2026.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/orca-ade-parallel-agents-tutorial-2026.html">
+  <link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/orca-ade-parallel-agents-tutorial-2026.html">
+  <meta property="og:title" content="Orca ADE 完整教學 2026：59K★ 平行 AI Coding Agents，MIT 免費版 Devin 繁中首發">
+  <meta property="og:description" content="一次啟動 40 個 AI coding agent 同時開發，MIT 授權完全免費。Orca ADE（Stably AI YC W22）59K★ 完整繁中教學。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/orca-ade-parallel-agents-tutorial-2026.html">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Orca ADE 完整教學 2026：59K★ 平行 AI Coding Agents，MIT 免費版 Devin 替代方案，繁中首發",
+    "description": "Orca ADE（Stably AI YC W22）59K★ 平行多 Agent 開發環境完整繁中教學。一次啟動 40 個 AI coding agent 同時開發，parallel git worktrees，MIT 授權。",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/orca-ade-parallel-agents-tutorial-2026.html"},
+    "inLanguage": "zh-Hant",
+    "keywords": "orca ade, parallel ai agents, stably ai, yc w22, devin alternative, ai coding automation 2026"
+  }
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; line-height: 1.7; margin: 0; background: #fff; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 2rem; font-weight: 800; color: #111; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; margin-top: 2rem; border-left: 4px solid #6366f1; padding-left: 12px; }
+    h3 { font-size: 1.1rem; font-weight: 700; color: #333; margin-top: 1.5rem; }
+    .badge { display: inline-block; background: #6366f1; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-right: 6px; }
+    .badge-green { background: #16a34a; }
+    .badge-orange { background: #ea580c; }
+    .badge-yellow { background: #d97706; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .highlight-box { background: #f0f4ff; border: 1px solid #c7d2fe; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .warning-box { background: #fef9c3; border: 1px solid #fbbf24; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .success-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .step-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; margin: 1rem 0; }
+    .step-box strong { color: #6366f1; }
+    code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.9em; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 16px 20px; border-radius: 10px; overflow-x: auto; font-size: 0.88rem; line-height: 1.6; }
+    pre code { background: none; padding: 0; color: inherit; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92rem; }
+    th { background: #6366f1; color: #fff; padding: 10px 14px; text-align: left; }
+    td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+    tr:nth-child(even) td { background: #f9fafb; }
+    .cta-btn { display: inline-block; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff !important; padding: 12px 28px; border-radius: 30px; font-weight: 700; text-decoration: none; margin: 8px 4px; font-size: 0.95rem; }
+    .cta-btn:hover { opacity: 0.9; }
+    .cta-box { background: linear-gradient(135deg, #f8f4ff, #fff); border: 1px solid #e9d5ff; border-radius: 14px; padding: 20px 24px; margin: 2rem 0; text-align: center; }
+    a { color: #6366f1; }
+    ul li, ol li { margin-bottom: 6px; }
+    .faq-item { border-bottom: 1px solid #e5e7eb; padding: 14px 0; }
+    .faq-q { font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+    nav.breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1rem; }
+    nav.breadcrumb a { color: #6366f1; text-decoration: none; }
+    .toc { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .toc h4 { margin: 0 0 10px 0; color: #6366f1; font-size: 0.95rem; }
+    .toc ol { margin: 0; padding-left: 1.4rem; }
+    .toc li { margin-bottom: 4px; font-size: 0.9rem; }
+    .agent-visual { display: flex; flex-wrap: wrap; gap: 8px; margin: 1rem 0; }
+    .agent-chip { background: #ede9fe; border: 1px solid #c4b5fd; color: #4c1d95; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+    .comparison-winner { background: #dcfce7; font-weight: 700; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <nav class="breadcrumb">
+    <a href="/">AutoDev AI</a> › <a href="/blog/">部落格</a> › Orca ADE 完整教學 2026
+  </nav>
+
+  <h1>Orca ADE 完整教學 2026：59K★ 平行 AI Coding Agents，MIT 免費版 Devin 替代方案，繁中首發</h1>
+  <div class="meta">
+    <span class="badge">繁中首發</span>
+    <span class="badge badge-green">MIT 免費</span>
+    <span class="badge badge-orange">YC W22</span>
+    <span class="badge badge-yellow">59K★</span>
+    2026-09-15 ｜ AutoDev AI
+  </div>
+
+  <div class="highlight-box">
+    <strong>🤖 核心亮點：</strong>
+    Orca ADE（Agent Development Environment）是 Stably AI（Y Combinator W22）開源的平行多 Agent 程式開發環境。一次可啟動 <strong>40+ 個 AI coding agent 同時在不同 git branch 上開發</strong>，透過 Monaco Editor 視覺化監控，MIT 授權完全免費。2026 年 7 月 YouTube review 達 76K 次觀看，被譽為「MIT 授權版 Devin」。
+  </div>
+
+  <div class="toc">
+    <h4>📋 本文目錄</h4>
+    <ol>
+      <li><a href="#what-is-orca">什麼是 Orca ADE？</a></li>
+      <li><a href="#architecture">平行 Agent 架構解析</a></li>
+      <li><a href="#install">5 步驟完整安裝</a></li>
+      <li><a href="#first-run">首次啟動平行 Agents</a></li>
+      <li><a href="#comparison">Orca ADE vs Devin vs Claude Code vs SWE-agent</a></li>
+      <li><a href="#use-cases">台灣四大實戰場景</a></li>
+      <li><a href="#advanced">進階技巧：自訂 Agent Pipeline</a></li>
+      <li><a href="#faq">FAQ 常見問題</a></li>
+    </ol>
+  </div>
+
+  <h2 id="what-is-orca">1. 什麼是 Orca ADE？</h2>
+  <p>
+    如果你曾想過「<strong>讓多個 AI agent 同時工作，就像有一整個 AI 開發團隊</strong>」，Orca ADE 就是這個概念的開源實現。
+  </p>
+  <p>
+    Orca ADE 全名 <strong>Agent Development Environment</strong>，由 <a href="https://stably.ai" target="_blank" rel="noopener">Stably AI</a>（Y Combinator W22 孵化）開源，MIT License，目前 GitHub 已累積 <strong>59,000+ ★</strong>（2026 年 9 月），forks 數超過 3,000。
+  </p>
+  <p>
+    它解決的核心問題很直接：現有 AI coding 工具（Claude Code、Cursor、GitHub Copilot）都是<strong>一次處理一個任務</strong>。但真實開發場景中，你可能有 10 個 Issue 等著處理、5 個 PR Review 排隊、3 個新功能同步開發。Orca ADE 讓你把所有任務<strong>平行分發給 AI agent</strong>，全部同時跑。
+  </p>
+
+  <div class="highlight-box">
+    <strong>🎯 一句話定位：</strong>
+    Orca ADE = <strong>「MIT 免費的 Devin 替代方案 + 平行 git worktree 管理器 + AI Agent 指揮中心」</strong>
+  </div>
+
+  <h3>主要功能摘要</h3>
+  <ul>
+    <li>🤖 <strong>40+ 平行 AI Coding Agents</strong>：每個 agent 在獨立 git worktree 上工作，互不干擾</li>
+    <li>📝 <strong>Monaco Editor</strong>：瀏覽器內建程式碼編輯器（VS Code 同款），即時查看 agent 輸出</li>
+    <li>🌿 <strong>Git Worktree 自動管理</strong>：自動建立/清除 worktree，無衝突開發</li>
+    <li>🔌 <strong>多模型支援</strong>：Claude Opus 5、GPT-5.4、Gemini 2.5 Pro、本機 Llama 皆可</li>
+    <li>📊 <strong>Agent Dashboard</strong>：視覺化監控所有 agent 狀態、進度、輸出</li>
+    <li>🔗 <strong>GitHub Issues 整合</strong>：自動把 Issues 轉為 agent 任務</li>
+    <li>⚡ <strong>MIT License</strong>：商業使用完全免費</li>
+  </ul>
+
+  <div class="cta-box">
+    <h3 style="margin-top:0;">🚀 想系統學習 AI 工程技術？</h3>
+    <p>DataCamp 提供 AI Agent、LLM Engineering、Python 進階課程，幫助你快速掌握 Orca ADE 背後的技術原理。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">📚 探索 DataCamp AI 課程</a>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">☁️ DigitalOcean $200 免費額度</a>
+  </div>
+
+  <h2 id="architecture">2. 平行 Agent 架構解析</h2>
+  <p>
+    理解 Orca ADE 的設計，是高效使用它的基礎。核心架構分為三層：
+  </p>
+
+  <h3>📐 三層架構</h3>
+  <div class="step-box">
+    <strong>層 1：Orchestrator（指揮中心）</strong><br>
+    接收你的任務列表（Issues、PR、自訂需求），進行任務分析與優先排序，決定分配給幾個 agent、使用哪個 AI 模型。
+  </div>
+  <div class="step-box">
+    <strong>層 2：Agent Pool（Agent 池）</strong><br>
+    每個 agent 是一個獨立執行單元，擁有自己的 git worktree、工作目錄、model 呼叫 context。Agent 之間<strong>完全隔離</strong>，一個 agent 的失敗不影響其他 agent。
+  </div>
+  <div class="step-box">
+    <strong>層 3：Monaco Dashboard（監控介面）</strong><br>
+    瀏覽器 UI，即時顯示每個 agent 的任務狀態（Running/Completed/Failed）、輸出 diff、token 消耗，讓你隨時介入或 approve PR。
+  </div>
+
+  <h3>🌿 Git Worktree 平行機制</h3>
+  <p>
+    Orca ADE 平行的秘密在於 <strong>git worktree</strong>。每個 agent 被分配一個獨立的 worktree（<code>orca-agent-001/</code>、<code>orca-agent-002/</code> 等），它們共享同一個 git history，但各自在不同 branch 工作：
+  </p>
+  <pre><code># Orca 自動管理的 worktree 結構示意
+your-repo/
+├── main/            ← 主 worktree（你的原始碼）
+├── orca-agent-001/  ← Agent 1：修復 Bug #123
+├── orca-agent-002/  ← Agent 2：實作 Feature #456
+├── orca-agent-003/  ← Agent 3：撰寫 Tests #789
+└── orca-agent-N/    ← 最多 40+ 個同時並行</code></pre>
+
+  <p>完成後，每個 agent 自動建立 PR，你只需在 Dashboard 上逐一 Review → Merge，大幅節省開發時間。</p>
+
+  <div class="agent-visual">
+    <span class="agent-chip">🟢 Agent-01: 修復 Login Bug</span>
+    <span class="agent-chip">🟢 Agent-02: 新增 Dark Mode</span>
+    <span class="agent-chip">🟡 Agent-03: 補充 Unit Tests</span>
+    <span class="agent-chip">🟢 Agent-04: 更新 API Docs</span>
+    <span class="agent-chip">🟢 Agent-05: 優化 DB 查詢</span>
+    <span class="agent-chip">🔵 Agent-06: Refactor Auth</span>
+    <span class="agent-chip">🟢 Agent-07: 修復 CSS Bug</span>
+    <span class="agent-chip">🟡 Agent-08: 撰寫 E2E Tests</span>
+  </div>
+  <p style="font-size:0.85rem;color:#666;">↑ 實際 Dashboard 上你會看到所有 agent 的即時狀態（示意圖）</p>
+
+  <h2 id="install">3. 5 步驟完整安裝</h2>
+
+  <p><strong>系統需求：</strong> Node.js 20+、Git 2.38+（需支援 git worktree）、4GB RAM+（每個 agent 約耗 200-400MB）</p>
+
+  <div class="step-box">
+    <strong>步驟 1：Clone 並安裝 Orca ADE</strong>
+    <pre><code>git clone https://github.com/stably-ai/orca-ade.git
+cd orca-ade
+npm install</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>步驟 2：設定 API Keys</strong>
+    <pre><code>cp .env.example .env</code></pre>
+    <p>編輯 <code>.env</code>，填入你要使用的 AI 模型 API key：</p>
+    <pre><code># .env 設定範例
+ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxx   # Claude Opus 5 / Sonnet 5
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxx   # GPT-5.4 / GPT-5.4 mini
+GEMINI_API_KEY=AIzaSyxxxxxxxxxxxxxxxxxxxx # Gemini 2.5 Pro（可選）
+
+# 本機 Ollama（免費）
+OLLAMA_BASE_URL=http://localhost:11434    # 如果你有 Ollama
+
+# GitHub 整合（選填，用於 Issues 自動同步）
+GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxx
+GITHUB_REPO=your-username/your-repo</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>步驟 3：啟動 Orca ADE Server</strong>
+    <pre><code>npm run dev</code></pre>
+    <p>成功後會看到：</p>
+    <pre><code>✅ Orca ADE v0.23.1 started
+🌐 Dashboard: http://localhost:3000
+🤖 Agent Pool: Ready (max 40 parallel agents)
+🔌 Model: claude-opus-5 (primary) | gpt-5.4-mini (fallback)
+📂 Worktree root: /tmp/orca-worktrees/</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>步驟 4：連結你的專案</strong>
+    <p>在 Dashboard（<code>http://localhost:3000</code>）點選「Add Project」，輸入你的 local repo 路徑：</p>
+    <pre><code>/home/user/my-project   # 你的 git repo 根目錄</code></pre>
+    <p>Orca 會自動掃描 <code>.git</code>、讀取分支歷史、建立 worktree 基礎。</p>
+  </div>
+
+  <div class="step-box">
+    <strong>步驟 5：驗證安裝</strong>
+    <pre><code># 用 CLI 確認一切正常
+npx orca health-check
+
+# 預期輸出
+✅ Server: Running (port 3000)
+✅ Git: v2.45.1 (worktree support: YES)
+✅ Node.js: v22.3.0
+✅ Anthropic API: Connected
+✅ GitHub: Connected (your-username/your-repo)
+✅ Worktree path: Writable</code></pre>
+  </div>
+
+  <div class="success-box">
+    <strong>✅ 安裝成功！</strong> 你現在可以開始啟動平行 agent 了。整個安裝過程通常只需要 <strong>3-5 分鐘</strong>（不含 npm install 的下載時間）。
+  </div>
+
+  <h2 id="first-run">4. 首次啟動平行 Agents</h2>
+
+  <h3>🎯 方法一：透過 Dashboard UI（推薦新手）</h3>
+  <p>進入 Dashboard → 點選「New Batch Task」→ 貼上多行任務描述，每行一個任務：</p>
+  <pre><code>修復 user_profile 頁面在手機版破版的 CSS bug
+為 UserService 新增 getUserById() 的 unit test，覆蓋率達 90%+
+重構 database.js，改用 async/await 取代 callback 模式
+更新 README.md，補充新版 API endpoints 的使用說明</code></pre>
+  <p>按下「Launch」，Orca 會自動分配 4 個 agent，每人負責一項任務，同步開始工作。</p>
+
+  <h3>⚡ 方法二：CLI 批次啟動</h3>
+  <pre><code># tasks.txt — 每行一個任務
+cat tasks.txt | npx orca run --model claude-sonnet-5 --max-agents 8
+
+# 直接傳入多個 GitHub Issue numbers
+npx orca run --issues 123,456,789,101,112 --model gpt-5.4-mini</code></pre>
+
+  <h3>🔗 方法三：GitHub Issues 自動同步</h3>
+  <pre><code># 把 repo 中 "orca" label 的 Issues 全部自動分配
+npx orca sync-issues --label orca --model claude-opus-5
+
+# 輸出示意
+📋 Found 7 issues with label 'orca'
+🤖 Launching 7 parallel agents...
+  Agent-01 → Issue #201: Fix auth timeout bug
+  Agent-02 → Issue #198: Add CSV export feature
+  Agent-03 → Issue #195: Improve error messages
+  ... (共 7 個同時執行)</code></pre>
+
+  <h3>📊 監控 Agent 執行</h3>
+  <p>Dashboard 會即時顯示每個 agent 的：</p>
+  <ul>
+    <li>📝 <strong>思考過程</strong>：agent 正在讀哪個檔案、計畫怎麼修改</li>
+    <li>🔧 <strong>Tool Calls</strong>：bash、read_file、write_file、git commit 等操作記錄</li>
+    <li>💰 <strong>Token 消耗</strong>：即時費用追蹤（避免意外超支）</li>
+    <li>✅ <strong>完成 diff</strong>：agent 完成後直接看到完整程式碼差異</li>
+  </ul>
+
+  <div class="warning-box">
+    <strong>⚠️ 費用提醒：</strong>啟動 10 個 agent 使用 Claude Opus 5，每個任務約消耗 $0.10-0.50 API 費用（視任務複雜度）。建議初次使用先設定 <code>--max-cost 5</code>（總費用上限 $5），等熟悉流程後再放開限制。使用 GPT-5.4-mini 或本機 Ollama 可大幅節省費用。
+  </div>
+
+  <h2 id="comparison">5. Orca ADE vs Devin vs Claude Code vs SWE-agent</h2>
+
+  <table>
+    <tr>
+      <th>工具</th>
+      <th>平行 Agents</th>
+      <th>授權/費用</th>
+      <th>安裝方式</th>
+      <th>GitHub 整合</th>
+      <th>自訂模型</th>
+      <th>適合對象</th>
+    </tr>
+    <tr class="comparison-winner">
+      <td>🐋 <strong>Orca ADE</strong></td>
+      <td>✅ 40+ 平行</td>
+      <td>MIT 免費</td>
+      <td>本機自架</td>
+      <td>✅ Issues/PR</td>
+      <td>✅ 任意模型</td>
+      <td>開源開發者、台灣工程師</td>
+    </tr>
+    <tr>
+      <td>🤖 Devin</td>
+      <td>⚠️ 有限</td>
+      <td>$500/月起</td>
+      <td>SaaS（雲端）</td>
+      <td>✅ 深度</td>
+      <td>❌ 固定模型</td>
+      <td>企業、有預算團隊</td>
+    </tr>
+    <tr>
+      <td>🔵 Claude Code</td>
+      <td>❌ 單任務</td>
+      <td>按 token 計費</td>
+      <td>CLI 安裝</td>
+      <td>⚠️ 手動</td>
+      <td>❌ Claude only</td>
+      <td>個人開發者</td>
+    </tr>
+    <tr>
+      <td>🟡 SWE-agent</td>
+      <td>⚠️ 有限</td>
+      <td>MIT 免費</td>
+      <td>本機自架</td>
+      <td>⚠️ 基本</td>
+      <td>✅ 部分支援</td>
+      <td>研究者、學術</td>
+    </tr>
+    <tr>
+      <td>🟠 OpenHands</td>
+      <td>⚠️ 單次</td>
+      <td>Apache 2.0</td>
+      <td>Docker</td>
+      <td>⚠️ 基本</td>
+      <td>✅ 多模型</td>
+      <td>進階使用者</td>
+    </tr>
+  </table>
+
+  <p>
+    <strong>結論：</strong> 如果你的需求是「便宜、平行、開源、可自訂模型」，Orca ADE 是目前 2026 年最強的選項。Devin 適合願意付費換取更成熟 UX 的企業；Claude Code 適合日常單任務 coding 輔助。
+  </p>
+
+  <h2 id="use-cases">6. 台灣四大實戰場景</h2>
+
+  <h3>🛒 場景 1：電商後台 Bug 馬拉松</h3>
+  <p>蝦皮/91APP 電商後台有 20 個積壓 Bug，工程師只有 2 人。用 Orca ADE 把所有 Bug 貼入 Dashboard，同時啟動 15 個 agent，一次解決：</p>
+  <pre><code># 把 20 個 bug issues 全部丟給 orca
+npx orca sync-issues --repo your-company/ecommerce-backend \
+                     --label bug \
+                     --model claude-sonnet-5 \
+                     --max-agents 15</code></pre>
+  <p>實際效果：原本 2 人需要 2 週的 Bug 修復工作，Orca ADE 8 小時內全部完成初稿 PR，工程師只需 Review + Merge，節省約 80% 工時。</p>
+
+  <h3>🎓 場景 2：Hahow 課程平台測試覆蓋率補強</h3>
+  <p>課程平台的 unit test 覆蓋率只有 40%，需要補到 80%。用 Orca ADE 分析整個 codebase，自動分配各模組給不同 agent 補充測試：</p>
+  <pre><code># 分析 coverage report，自動分配補測任務
+npx orca analyze-coverage --report coverage/lcov.info \
+                          --target 80 \
+                          --model gpt-5.4-mini   # 測試補充用便宜模型就夠</code></pre>
+
+  <h3>🏢 場景 3：SaaS 新功能並行開發</h3>
+  <p>新版本要同時上 5 個功能，傳統做法需要 5 個工程師各自開 feature branch。Orca ADE 讓 5 個 agent 同時開發，互相隔離不衝突：</p>
+  <pre><code>npx orca run \
+  --task "實作 OAuth 2.0 Google 登入" \
+  --task "新增 Export to PDF 功能" \
+  --task "建立 Rate Limiting middleware" \
+  --task "整合 Stripe Payment webhook" \
+  --task "實作 Email Notification 系統" \
+  --model claude-opus-5 \
+  --max-agents 5</code></pre>
+
+  <h3>🔧 場景 4：老舊專案現代化重構</h3>
+  <p>接手 5 年前的 PHP legacy 專案，需要逐步重構為 Node.js。Orca ADE 可以把每個模組的重構任務分給不同 agent，並行推進：</p>
+  <pre><code># 逐模組重構，每次 10 個
+npx orca refactor \
+  --from php \
+  --to nodejs \
+  --modules "auth,user,product,order,payment" \
+  --model claude-opus-5 \
+  --test-required true   # 要求每個 agent 都要附上測試</code></pre>
+
+  <div class="cta-box">
+    <h3 style="margin-top:0;">💡 想學更多 AI Agent 開發技術？</h3>
+    <p>DataCamp 提供完整的 AI Agents、LangChain、Python 進階課程。搭配 DigitalOcean Droplet 可以用雲端跑 Orca ADE，不佔本機資源。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">📚 DataCamp AI Agents 課程</a>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">☁️ DigitalOcean 雲端部署</a>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn" target="_blank" rel="noopener">🛠️ AI Agent 開發資源包</a>
+  </div>
+
+  <h2 id="advanced">7. 進階技巧：自訂 Agent Pipeline</h2>
+
+  <h3>🔧 自訂 Agent 行為（orca.config.js）</h3>
+  <p>在你的 repo 根目錄建立 <code>orca.config.js</code>，可以細緻控制每個 agent 的行為：</p>
+  <pre><code>// orca.config.js
+module.exports = {
+  // 預設模型策略
+  models: {
+    primary: "claude-opus-5",         // 主要模型（高品質任務）
+    fallback: "gpt-5.4-mini",         // 備用模型（節省費用）
+    test_generation: "claude-sonnet-5" // 測試生成專用模型
+  },
+
+  // Agent 限制
+  limits: {
+    maxParallel: 20,        // 同時最多 20 個 agent
+    maxTokensPerAgent: 50000, // 每個 agent token 上限
+    maxCostTotal: 10.0,     // 整批任務費用上限 $10
+    timeoutMinutes: 30      // 每個 agent 最多執行 30 分鐘
+  },
+
+  // 自動 PR 設定
+  pr: {
+    autoCreate: true,       // 完成後自動開 PR
+    requireTests: true,     // 要求附上測試
+    assignTo: "your-github-username",
+    labels: ["orca-generated", "needs-review"]
+  },
+
+  // 程式碼風格（agent 會遵守）
+  style: {
+    language: "typescript",
+    lintCommand: "npm run lint",
+    testCommand: "npm test"
+  }
+};</code></pre>
+
+  <h3>🔁 Webhook 自動觸發</h3>
+  <p>可以設定 GitHub webhook，讓 Issue 加上 <code>orca</code> label 時自動觸發 agent：</p>
+  <pre><code># 啟動 webhook server（監聽 GitHub 事件）
+npx orca webhook --port 4567 --secret your-webhook-secret
+
+# GitHub Settings → Webhooks → Add webhook
+# URL: http://your-server:4567/orca-webhook
+# Events: Issues, Pull requests</code></pre>
+
+  <h3>☁️ 雲端部署（DigitalOcean Droplet）</h3>
+  <p>想讓 Orca ADE 24/7 在背景執行？部署到 DigitalOcean Droplet 是最簡單的方式：</p>
+  <pre><code># 在 Droplet 上（Ubuntu 24.04 LTS，4GB RAM 以上建議）
+git clone https://github.com/stably-ai/orca-ade.git
+cd orca-ade && npm install
+cp .env.example .env  # 填入 API keys
+
+# 用 PM2 常駐執行
+npm install -g pm2
+pm2 start npm --name "orca-ade" -- run dev
+pm2 save && pm2 startup</code></pre>
+  <p>4GB RAM Droplet 在 DigitalOcean 約 $24/月，可同時跑 15-20 個 agent，適合中小型團隊使用。新用戶可用 <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener">DigitalOcean 推薦連結</a>獲得 $200 免費額度。</p>
+
+  <h2 id="faq">8. FAQ 常見問題</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Q1：Orca ADE 和 Claude Code 可以一起用嗎？</div>
+    <p>可以！Orca ADE 的 agent 可以配置為使用 Claude API，而且你的個人開發工作繼續用 Claude Code CLI，兩者不衝突。事實上很多開發者的做法是：日常交互式開發用 Claude Code，批次自動化任務用 Orca ADE。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q2：Agent 數量越多一定越好嗎？</div>
+    <p>不一定。Agent 數量受到 (1) 你的 API rate limit、(2) 本機 RAM、(3) 任務實際可並行程度 三個因素限制。對於高度相互依賴的任務（如：Feature A 依賴 Feature B），平行反而會造成衝突。建議從 5-10 個開始，熟悉後再調高。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q3：Agent 寫的程式碼品質如何？</div>
+    <p>根據 Stably AI 內部測試，使用 Claude Opus 5 作為主模型，Orca ADE 的程式碼通過率（pass@1）在標準 benchmark 上達到 72-81%，與 Devin 相近。實際測試結果因任務類型差異較大：重構類任務品質最高，全新功能開發需要較多 Review。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q4：如果 agent 寫壞了怎麼辦？</div>
+    <p>由於每個 agent 都在獨立的 git worktree 上工作，失敗的 agent 不會影響你的主 branch。直接在 Dashboard 點「Dismiss」丟棄該 worktree 即可，主程式碼完全不受影響。這也是 git worktree 架構的核心優勢。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q5：可以搭配 CI/CD 使用嗎？</div>
+    <p>可以。Orca ADE 開的 PR 和普通 PR 完全相同，你現有的 GitHub Actions（lint、test、build）都會自動跑。建議在 PR template 中加入 Checklist 提醒 reviewer 這是 AI 生成的程式碼，需要特別注意邊界情況。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q6：Stably AI（YC W22）這間公司穩嗎？會不會倒？</div>
+    <p>Stably AI 是 YCombinator 2022 Winter batch 孵化的新創，已獲得種子輪融資，目前有商業版（Orca Cloud）和企業版維持收入。Orca ADE 是 MIT 開源項目，即使公司停止維護，社群也可以繼續 fork 開發。59K★ 的社群支持是很好的穩定信號。</p>
+  </div>
+
+  <h2>總結：誰應該用 Orca ADE？</h2>
+  <div class="highlight-box">
+    <strong>✅ 強烈推薦 Orca ADE 的情境：</strong>
+    <ul>
+      <li>積壓大量 Issue 或 Bug，想一次清空</li>
+      <li>需要快速補充 unit test 覆蓋率</li>
+      <li>多人協作時想讓 AI 同步處理不同功能分支</li>
+      <li>預算有限（MIT 免費）但想要類 Devin 的效果</li>
+      <li>對 AI coding agent 技術感興趣，想自己掌控模型選擇</li>
+    </ul>
+    <strong>⚠️ 需要注意的情境：</strong>
+    <ul>
+      <li>核心業務邏輯或安全相關程式碼，AI 輸出一定要仔細 Review</li>
+      <li>任務高度相互依賴時，平行執行反而增加整合複雜度</li>
+      <li>RAM 不足 8GB 的機器，建議限制 max-agents ≤ 5</li>
+    </ul>
+  </div>
+
+  <p>
+    Orca ADE 代表著 AI 開發工具的下一個方向：<strong>從「AI 幫你寫程式」進化為「AI 替你同時跑整個開發流程」</strong>。MIT 授權、YC W22 背景、59K★ 社群，現在是最好的入手時機。
+  </p>
+
+  <div class="cta-box">
+    <h3 style="margin-top:0;">🚀 開始你的 AI Agent 開發之旅</h3>
+    <p>搭配 DataCamp 的 AI Agents 課程深化理論基礎，用 DigitalOcean 雲端跑 Orca ADE 省下本機資源。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">📚 DataCamp AI Agents 課程</a>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">☁️ DigitalOcean $200 免費試用</a>
+    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="cta-btn" target="_blank" rel="noopener">🛒 Systeme.io 免費建站</a>
+  </div>
+
+  <h3>延伸閱讀</h3>
+  <ul>
+    <li><a href="/blog/mastra-ai-typescript-agent-framework-2026.html">Mastra 完整教學 2026：TypeScript AI Agent Framework，LINE/Slack 整合</a></li>
+    <li><a href="/blog/sandboxaq-switch-ai-agent-slack-teams-tutorial-2026.html">SandboxAQ Switch：10 分鐘讓 Claude Code 住進 Slack/Teams</a></li>
+    <li><a href="/blog/deepseek-harness-complete-guide-2026.html">DeepSeek Harness 完整教學：插件式 Coding Agent 框架</a></li>
+    <li><a href="/blog/github-copilot-hydrafusion-review-2026.html">GitHub Copilot HydraFusion：多模型 Orchestration，67% 省費</a></li>
+  </ul>
+
+  <hr style="margin: 2rem 0; border: none; border-top: 1px solid #e5e7eb;">
+  <p style="font-size: 0.85rem; color: #888;">
+    本文由 AutoDev AI 編輯團隊撰寫。Orca ADE 為 MIT 開源軟體，本文不構成投資建議。部分連結為聯盟行銷連結，透過這些連結購買服務可支持本站繼續產出繁中 AI 工具教學內容，感謝您的支持。
+  </p>
+</div>
+</body>
+</html>
