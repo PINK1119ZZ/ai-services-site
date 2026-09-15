@@ -3237,3 +3237,76 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 
 **本輪預估新增月收入潛力：$850-2,900/月**（GoHighLevel $400-1,500 + ElevenLabs $150-500 + Descript $100-300 + HeyGen carryover $200-600）
 
+
+---
+
+## Round 205 — 2026-09-15 (Tue 00:30 UTC) | ai-trend-hunter
+
+### 🔍 本輪核心發現
+
+**1. 🔴 P1-HIGH：Viktor AI Coworker — 15% 遞歸 affiliate，自動升 20%，$250 referral 獎金**
+- viktor.com（前 getviktor.com）是企業 Slack/Teams AI 助理，最近完成 $75M Accel 融資
+- Affiliate program（Dub Partners）：15% recurring/12mo → 自動升至 20%（達 15 次轉換）
+- 每次轉換：referral 獲 $50 折扣，referral 升級時你的 15% 遞歸
+- Creator Program：額外最高 $10,000/post（LinkedIn）基於 impressions + $250 partner 推薦獎金
+- 繁中零評測：唯一深度評測為英文站
+- 目標關鍵字：viktor ai 評測、viktor slack ai coworker、ai 工作助理 slack 台灣
+- 預估月收入：$300-900（15% × $97-197/月 plan × 15-30 referrals）
+- **→ Ivan 立即申請 partners.dub.co/viktor**
+
+**2. 🔴 P1-HIGH：Creatify AI 廣告影片 — 25% LIFETIME recurring (+5% at $5K/月)**
+- Creatify = AI 廣告影片生成（HeyGen 競品，但專注 ad performance）
+- 25% recurring LIFETIME（非 12月限）→ 月銷 >$5,000 升至 30%
+- 平均方案 $33-67/月，目標 20 referrals = $165-400/月 複利無限期
+- 英文 YouTube 評測人已拿「$7,280 Bonuses + Discounts」流量
+- 繁中市場：無深度評測（裸奔機會）
+- 目標關鍵字：creatify ai 評測、creatify vs heygen 比較、ai 廣告影片生成 台灣
+- **比較頁機會：Creatify vs HeyGen vs Synthesia vs Pictory — 四欄，高 affiliate 密度**
+- 預估月收入：$200-600（LIFETIME 複利 6 個月後顯著）
+- **→ Ivan 申請 creatify.ai/affiliate（已確認 Dub Partners 平台，快審）**
+
+**3. 🟡 P1-WATCH：Grok 4.7 — 仍無 xAI 官方 GA（Sep 15 00:30 UTC 確認）**
+- 最新情報：Sep 2 Musk「10天」倒計時 → 指向 Sep 12，但 Sep 12 已過無 GA
+- xAI 官方 model card / API identifier / pricing 仍未出現
+- Threads 用戶：「delayed for a few more Elon days」
+- Meta/OpenAI 在 Sep 下旬有重大公告（Meta Connect + OpenAI DevDay），Grok 4.7 需先發制人
+- **R204 降至 P1-WATCH 維持；預測窗口移至 Sep 25-30**
+- 策略：每輪快速掃描，GA 後 24h 內觸發評測文
+
+**4. 🔴 P1-HIGH：StemDeck 開源 AI 音訊分離 — 工具頁 + Lalalai/Moises 比較頁**
+- StemDeck（GitHub stemdeckapp/stemdeck）：**3.6K★，13K+ 下載，免費本地 stem splitter**
+- HN September 2026 Trends 點名（「practical local-first AI tools」熱潮）
+- 競品矩陣（有 affiliate）：
+  - LALAL.AI：API 計畫，partner program 待確認
+  - Moises：有推薦計畫（%佣金待確認）
+  - Soundverse.ai：API affiliate 待挖
+- 內容機會（無需等 affiliate）：教學文 + 開源工具評測（DataCamp/DO CTA）
+- 目標關鍵字：stemdeck 教學、ai stem splitter 比較 2026、ai 音樂分離 免費工具
+- 預估月收入：$50-200（無 affiliate 間接 CTA）→ 若掛上 LALAL.AI affiliate 可達 $200-500
+- **→ researcher 下輪確認 LALAL.AI / Moises affiliate 條款**
+
+**5. 📅 P0 content-ops：OpenAI DevDay T-14天（Sep 29，更新準備進入衝刺窗口）**
+- Sep 22 = T-7天：blog/openai-devday-2026-preview.html 補最新確認功能段
+- 已確認功能：Codex Slack 整合、GPT-Realtime-Mini 70% cheaper
+- 建議 content-ops Sep 22 00:00 UTC 自動觸發更新
+
+**6. 🟡 P1：AI/ML API 30% LIFETIME + HN 2026 「AI realism month」趨勢**
+- HN September 2026 分析顯示：技術社群往「AI realism」移動（可信度 > 速度）
+- 本地優先、開源工具、自主部署 → StemDeck / OmniRoute / headroom 全在這條主軸
+- AI/ML API（aimlapi.com）30% LIFETIME，90-day cookie：carryover 積壓（Ivan 申請）
+- 內容角度：「AI realism 2026 工具棧：開源 + 本地 + 省費三位一體」
+
+### 📊 R205 機會表
+
+| 日期 | 工具/主題 | 關鍵字 | 搜尋量(估) | 變現方式 | 預估月收入 | 站點 | 優先級 |
+|------|-----------|--------|-----------|---------|-----------|------|--------|
+| 2026-09-15 | Viktor AI Slack Coworker（$75M Accel，15%→20% recurring） | viktor ai 評測、viktor slack ai coworker 台灣 | 500-1,500/月 | 15-20% recurring/12mo + $250 referral 獎金 | $300-900 | autodev-ai.com | 🔴 P1-HIGH |
+| 2026-09-15 | Creatify AI 廣告影片（25% LIFETIME affiliate） | creatify ai 評測, creatify vs heygen 繁中 | 800-2,500/月 | 25-30% LIFETIME recurring | $200-600 | autodev-ai.com | 🔴 P1-HIGH |
+| 2026-09-15 | Creatify vs HeyGen vs Synthesia vs Pictory 比較頁 | ai 廣告影片比較 2026, heygen 替代方案 | 1,500-4,000/月 | 多affiliate: Synthesia 25% + HeyGen 25% + Creatify 25% LIFETIME | $300-900 | autodev-ai.com | 🔴 P1-HIGH |
+| 2026-09-15 | StemDeck 教學（本地 AI 音訊分離，3.6K★） | stemdeck 教學, ai stem splitter 免費, 音樂去人聲 2026 | 1,000-3,000/月 | 間接 DataCamp/DO；LALAL.AI affiliate 待確認 | $50-400 | autodev-ai.com | 🟡 P1 |
+| 2026-09-15 | Grok 4.7 P1-WATCH（預測 Sep 25-30 GA） | grok 4.7 評測, grok 4.7 vs claude fable 5.1 | 3,000-8,000/月（GA後高峰） | 間接 DO/DataCamp + GoHighLevel比較段 | $300-900 | autodev-ai.com | 🟡 P1-WATCH |
+| 2026-09-15 | HN AI Realism趨勢：本地+開源AI工具棧 2026 | 本地 ai 工具 2026, ai realism tools, open source ai 台灣 | 600-1,500/月 | AI/ML API 30% LIFETIME + 其他間接 | $100-400 | autodev-ai.com | 🟡 P1 |
+
+**本輪新增潛力月收入：$950-3,100**
+（Viktor ivan後 $300-900 + Creatify ivan後 $200-600 + 比較頁 $300-900 + StemDeck $50-400 + 間接/常青 $100-300）
+
