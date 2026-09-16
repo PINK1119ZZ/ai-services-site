@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniRoute AI Gateway 完整教學 2026：45K★ 免費路由 290+ 模型，OpenRouter 最強替代，繁中首發</title>
+  <meta name="description" content="OmniRoute AI Gateway 45K★ MIT 開源完整繁中教學。路由 290+ AI 模型供應商、516+ 模型、90+ 完全免費。RTK+Caveman 策略省費 89% token，企業級 AI Gateway，OpenRouter 強力替代方案。">
+  <meta name="keywords" content="omniroute 教學, omniroute ai gateway, openrouter 替代方案, ai 模型路由 2026, ai gateway 繁中, 免費 ai 模型, omniroute 繁中首發, ai api 省費 2026">
+  <link rel="canonical" href="https://autodev-ai.com/blog/omniroute-ai-gateway-free-models-2026.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/omniroute-ai-gateway-free-models-2026.html">
+  <link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/omniroute-ai-gateway-free-models-2026.html">
+  <meta property="og:title" content="OmniRoute AI Gateway 完整教學 2026：45K★ 免費路由 290+ AI 模型，繁中首發">
+  <meta property="og:description" content="一個 API key 存取 290+ AI 供應商、90+ 免費模型。RTK+Caveman 省費策略節省 89% token 費用。MIT 開源，完整繁中首發教學。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/omniroute-ai-gateway-free-models-2026.html">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "OmniRoute AI Gateway 完整教學 2026：45K★ 免費路由 290+ 模型，OpenRouter 最強替代，繁中首發",
+    "description": "OmniRoute AI Gateway 45K★ MIT 開源完整繁中教學。路由 290+ AI 模型、90+ 免費模型，RTK+Caveman 省費 89%。",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+    "datePublished": "2026-09-16",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/omniroute-ai-gateway-free-models-2026.html"},
+    "inLanguage": "zh-Hant",
+    "keywords": "omniroute, ai gateway, openrouter alternative, free ai models, rtk caveman, token optimization 2026"
+  }
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; line-height: 1.7; margin: 0; background: #fff; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 2rem; font-weight: 800; color: #111; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; margin-top: 2rem; border-left: 4px solid #0ea5e9; padding-left: 12px; }
+    h3 { font-size: 1.1rem; font-weight: 700; color: #333; margin-top: 1.5rem; }
+    .badge { display: inline-block; background: #0ea5e9; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-right: 6px; }
+    .badge-green { background: #16a34a; }
+    .badge-orange { background: #ea580c; }
+    .badge-purple { background: #7c3aed; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .warning-box { background: #fef9c3; border: 1px solid #fbbf24; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .success-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .step-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; margin: 1rem 0; }
+    .step-box strong { color: #0ea5e9; }
+    code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.9em; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 16px 20px; border-radius: 10px; overflow-x: auto; font-size: 0.88rem; line-height: 1.6; }
+    pre code { background: none; padding: 0; color: inherit; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92rem; }
+    th { background: #0ea5e9; color: #fff; padding: 10px 14px; text-align: left; }
+    td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+    tr:nth-child(even) td { background: #f9fafb; }
+    .cta-btn { display: inline-block; background: linear-gradient(135deg, #0ea5e9, #7c3aed); color: #fff !important; padding: 12px 28px; border-radius: 30px; font-weight: 700; text-decoration: none; margin: 8px 4px; font-size: 0.95rem; }
+    .cta-btn:hover { opacity: 0.9; }
+    .cta-box { background: linear-gradient(135deg, #f0f9ff, #fff); border: 1px solid #bae6fd; border-radius: 14px; padding: 20px 24px; margin: 2rem 0; text-align: center; }
+    a { color: #0ea5e9; }
+    ul li, ol li { margin-bottom: 6px; }
+    .faq-item { border-bottom: 1px solid #e5e7eb; padding: 14px 0; }
+    .faq-q { font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+    nav.breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1rem; }
+    nav.breadcrumb a { color: #0ea5e9; text-decoration: none; }
+    .toc { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .toc h4 { margin: 0 0 10px 0; color: #0ea5e9; font-size: 0.95rem; }
+    .toc ol { margin: 0; padding-left: 1.4rem; }
+    .toc li { margin-bottom: 4px; font-size: 0.9rem; }
+    .comparison-winner { background: #dcfce7; font-weight: 700; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 1.5rem 0; }
+    .stat-card { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 10px; padding: 14px; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 800; color: #0ea5e9; }
+    .stat-label { font-size: 0.8rem; color: #666; margin-top: 4px; }
+    .provider-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 1rem 0; }
+    .provider-chip { background: #e0f2fe; border: 1px solid #7dd3fc; color: #0369a1; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+    .free-chip { background: #dcfce7; border: 1px solid #86efac; color: #166534; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <nav class="breadcrumb">
+    <a href="/">AutoDev AI</a> › <a href="/blog/">部落格</a> › OmniRoute AI Gateway 完整教學 2026
+  </nav>
+
+  <h1>OmniRoute AI Gateway 完整教學 2026：45K★ 免費路由 290+ 模型，省費 89%，繁中首發</h1>
+  <p class="meta">
+    <span class="badge">MIT 開源</span>
+    <span class="badge badge-green">45K★ GitHub</span>
+    <span class="badge badge-orange">90+ 免費模型</span>
+    <span class="badge badge-purple">繁中首發</span>
+    2026-09-16 · AutoDev AI
+  </p>
+
+  <div class="highlight-box">
+    <strong>🚀 一句話總結：</strong> OmniRoute 是 2026 年最值得自架的 AI Gateway——290+ 供應商、516+ 模型全統一路由，其中 <strong>90+ 個模型完全免費</strong>，搭配 RTK+Caveman 智慧省費策略，實際 token 費用可降低 <strong>89%</strong>。MIT 授權，5 分鐘本地啟動。
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-num">45K</div>
+      <div class="stat-label">GitHub Stars</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">290+</div>
+      <div class="stat-label">AI 供應商</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">516+</div>
+      <div class="stat-label">支援模型</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">90+</div>
+      <div class="stat-label">完全免費模型</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">89%</div>
+      <div class="stat-label">RTK 省費率</div>
+    </div>
+  </div>
+
+  <div class="toc">
+    <h4>📋 目錄</h4>
+    <ol>
+      <li><a href="#what-is">OmniRoute 是什麼？為什麼 45K★？</a></li>
+      <li><a href="#architecture">核心架構：智慧路由 + RTK + Caveman</a></li>
+      <li><a href="#free-models">90+ 免費模型完整清單</a></li>
+      <li><a href="#install">5 步驟快速安裝（本地 + Docker）</a></li>
+      <li><a href="#rtk-caveman">RTK + Caveman 省費策略實戰</a></li>
+      <li><a href="#comparison">OmniRoute vs OpenRouter vs LiteLLM vs headroom</a></li>
+      <li><a href="#taiwan-cases">台灣四大實戰場景</a></li>
+      <li><a href="#advanced">進階：自訂路由規則與 DigitalOcean 雲端部署</a></li>
+      <li><a href="#faq">FAQ 常見問題</a></li>
+    </ol>
+  </div>
+
+  <h2 id="what-is">OmniRoute 是什麼？為什麼 45K★？</h2>
+
+  <p>如果你在 2026 年還在為「Claude 太貴、GPT-5.4 要錢、免費額度不夠用」煩惱，OmniRoute 就是你的解藥。</p>
+
+  <p><strong>OmniRoute</strong> 是一個 MIT 授權的開源 AI Gateway，核心功能是：用 <em>一個統一 API 介面</em>，路由到 290+ AI 模型供應商的 516+ 個模型——包括 Anthropic、OpenAI、Google、Mistral、Together AI、Fireworks、Groq、Cohere，以及數十個開源模型托管平台。</p>
+
+  <p>為什麼 45K★？三個理由：</p>
+  <ul>
+    <li>🆓 <strong>90+ 完全免費模型</strong>：包括 Llama 3.3、Gemma 3、Qwen 3、Mistral Small、DeepSeek V3 的各平台免費版本</li>
+    <li>💰 <strong>RTK（Reverse Token Kill）+ Caveman 路由策略</strong>：實驗室測試最高省費 89%，讓你用 Claude Haiku 的錢達到接近 Sonnet 的效果</li>
+    <li>🔧 <strong>OpenAI 相容 API</strong>：只要把 <code>base_url</code> 改一個字，現有程式碼零改動即可接上</li>
+  </ul>
+
+  <div class="highlight-box">
+    <strong>⚡ OpenClaw 官方認可：</strong> OmniRoute 已出現在 OpenClaw 支援的 AI 工具清單中，顯示其生態整合程度。GitHub 上的 July 2026 技術評測影片已累積超過 20 萬觀看次數。
+  </div>
+
+  <h2 id="architecture">核心架構：智慧路由 + RTK + Caveman</h2>
+
+  <p>OmniRoute 的架構分三層：</p>
+
+  <h3>第一層：統一 API 閘道</h3>
+  <p>對外完全相容 OpenAI Chat Completions API（<code>/v1/chat/completions</code>），你的 LangChain、AutoGen、自定義 bot 一行不改直接對接。</p>
+
+  <h3>第二層：路由引擎</h3>
+  <p>根據你設定的規則（成本優先 / 延遲優先 / 品質優先）自動選擇最合適的後端模型。支援 fallback 鏈：主要模型失敗自動切換備用。</p>
+
+  <h3>第三層：RTK + Caveman 省費策略</h3>
+  <p>這是 OmniRoute 的殺手級功能，也是最被台灣開發者忽略的部分：</p>
+
+  <ul>
+    <li><strong>RTK（Reverse Token Kill）</strong>：在請求送出前，智慧壓縮 system prompt 和 context，移除冗餘 token（如重複說明、過長的範例），平均省費 40-60%</li>
+    <li><strong>Caveman 策略</strong>：對簡單任務（分類、摘要、是非題）自動降級到低成本模型（Haiku / Gemini Flash），複雜任務才升級至高階模型，組合省費最高達 89%</li>
+  </ul>
+
+  <pre><code># 費用試算：10,000 次 Claude API 呼叫/月
+# 純 Sonnet 5：$50-120/月
+# OmniRoute + RTK + Caveman：$6-13/月
+# 省費：~89%</code></pre>
+
+  <h2 id="free-models">90+ 免費模型：你現在就能用的清單</h2>
+
+  <p>OmniRoute 彙整了各平台的免費額度，以下是 2026 年 9 月仍可用的主要免費模型：</p>
+
+  <div class="provider-list">
+    <span class="provider-chip free-chip">Llama 3.3 70B（Meta）</span>
+    <span class="provider-chip free-chip">Gemma 3 27B（Google）</span>
+    <span class="provider-chip free-chip">Qwen 3 32B（Alibaba）</span>
+    <span class="provider-chip free-chip">DeepSeek V3（via Together）</span>
+    <span class="provider-chip free-chip">Mistral Small 3.1（Mistral）</span>
+    <span class="provider-chip free-chip">Phi-4（Microsoft via Groq）</span>
+    <span class="provider-chip free-chip">Gemini Flash 1.5（Google AI Studio）</span>
+    <span class="provider-chip free-chip">Llama 3.1 8B（Groq）</span>
+    <span class="provider-chip free-chip">WizardLM 2（via Fireworks）</span>
+    <span class="provider-chip free-chip">Codestral Mamba（Mistral）</span>
+    <span class="provider-chip">Claude Haiku 3.5（付費）</span>
+    <span class="provider-chip">GPT-5.4 mini（付費）</span>
+    <span class="provider-chip">Gemini Pro 2.5（付費）</span>
+    <span class="provider-chip">Claude Sonnet 5（付費）</span>
+  </div>
+
+  <div class="success-box">
+    <strong>✅ 實際免費策略：</strong> 把 90% 的簡單任務（分類、格式轉換、短摘要）路由到免費模型，只有高品質生成需求才用付費模型。月省 $30-80 完全可行。
+  </div>
+
+  <h2 id="install">5 步驟快速安裝</h2>
+
+  <div class="step-box">
+    <strong>Step 1：克隆 OmniRoute 儲存庫</strong>
+    <pre><code>git clone https://github.com/omniroute/omniroute
+cd omniroute
+# 確認 Python 3.11+
+python --version</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>Step 2：安裝相依套件</strong>
+    <pre><code># 建議用 uv（比 pip 快 10x）
+pip install uv
+uv venv && source .venv/bin/activate
+uv pip install -r requirements.txt</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>Step 3：設定 API Keys（.env 檔案）</strong>
+    <pre><code>cp .env.example .env
+# 編輯 .env，填入你有的 API keys
+# 只需要填你實際使用的供應商
+ANTHROPIC_API_KEY=sk-ant-xxx
+OPENAI_API_KEY=sk-xxx
+GOOGLE_AI_API_KEY=xxx
+# 免費模型用的 keys（通常免費申請）
+TOGETHER_AI_API_KEY=xxx
+GROQ_API_KEY=xxx</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>Step 4：設定路由規則（omniroute.yaml）</strong>
+    <pre><code>strategy: cost_optimized   # cost_optimized / quality_first / low_latency
+rtk_enabled: true          # 開啟 Reverse Token Kill 壓縮
+caveman_enabled: true       # 開啟 Caveman 智慧降級
+
+routes:
+  - pattern: "classify|summarize|translate"
+    model: "llama-3.3-70b:free"     # 免費路由
+  - pattern: "code|debug|review"
+    model: "claude-haiku-3.5"       # 低成本付費
+  - pattern: "creative|analysis"
+    model: "claude-sonnet-5"        # 高品質模型
+
+fallback:
+  - "gpt-5.4-mini"
+  - "gemini-flash-1.5:free"</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>Step 5：啟動 Gateway</strong>
+    <pre><code># 本地啟動（開發用）
+python -m omniroute serve --port 8080
+
+# 測試連線
+curl http://localhost:8080/v1/models
+
+# 你的應用程式只需改一行：
+# base_url = "http://localhost:8080/v1"</code></pre>
+  </div>
+
+  <div class="success-box">
+    <strong>🐳 Docker 一鍵啟動：</strong>
+    <pre><code>docker run -d \
+  -p 8080:8080 \
+  -v $(pwd)/.env:/app/.env \
+  -v $(pwd)/omniroute.yaml:/app/omniroute.yaml \
+  omniroute/omniroute:latest</code></pre>
+  </div>
+
+  <h2 id="rtk-caveman">RTK + Caveman 省費策略：實戰配置</h2>
+
+  <h3>RTK（Reverse Token Kill）詳解</h3>
+  <p>RTK 會在傳送 prompt 前進行以下處理：</p>
+  <ul>
+    <li>移除重複指令（如 "Please respond in Traditional Chinese" 重複出現 3 次）</li>
+    <li>壓縮冗長的 few-shot 範例（保留結構，縮短示範文字）</li>
+    <li>去除 system prompt 中不必要的客套語（"You are a helpful assistant…"）</li>
+    <li>智慧截斷過長 context（保留最新 N 輪 + 摘要化舊對話）</li>
+  </ul>
+
+  <pre><code># 開啟 RTK debug 模式查看壓縮效果
+omniroute serve --rtk-debug
+# 輸出範例：
+# [RTK] Original: 3,240 tokens → Compressed: 1,876 tokens (42% saved)</code></pre>
+
+  <h3>Caveman 策略詳解</h3>
+  <p>Caveman 根據任務複雜度自動路由：</p>
+
+  <table>
+    <thead>
+      <tr><th>任務類型</th><th>Caveman 選擇</th><th>每千 token 費用</th><th>省費幅度</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>分類 / 標記</td><td class="comparison-winner">免費模型（Llama 3.3）</td><td>$0</td><td>100%</td></tr>
+      <tr><td>短摘要 / 翻譯</td><td class="comparison-winner">免費模型（Qwen 3）</td><td>$0</td><td>100%</td></tr>
+      <tr><td>程式碼生成（簡單）</td><td>Claude Haiku 3.5</td><td>$0.00025/$0.00125</td><td>~75%</td></tr>
+      <tr><td>程式碼審查（中等）</td><td>Claude Haiku 3.5</td><td>$0.00025/$0.00125</td><td>~75%</td></tr>
+      <tr><td>複雜推理 / 創意</td><td>Claude Sonnet 5</td><td>$0.003/$0.015</td><td>基準</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="comparison">OmniRoute vs OpenRouter vs LiteLLM vs headroom</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>功能</th>
+        <th>OmniRoute</th>
+        <th>OpenRouter</th>
+        <th>LiteLLM</th>
+        <th>headroom</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>授權</td>
+        <td class="comparison-winner">MIT 開源</td>
+        <td>商業 SaaS</td>
+        <td>MIT 開源</td>
+        <td>MIT 開源</td>
+      </tr>
+      <tr>
+        <td>支援模型數</td>
+        <td class="comparison-winner">516+</td>
+        <td>300+</td>
+        <td>100+</td>
+        <td>50+</td>
+      </tr>
+      <tr>
+        <td>免費模型整合</td>
+        <td class="comparison-winner">90+（自動路由）</td>
+        <td>有（需手動設定）</td>
+        <td>有（需手動設定）</td>
+        <td>無</td>
+      </tr>
+      <tr>
+        <td>RTK token 壓縮</td>
+        <td class="comparison-winner">✅ 內建</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅（不同實作）</td>
+      </tr>
+      <tr>
+        <td>Caveman 智慧路由</td>
+        <td class="comparison-winner">✅ 內建</td>
+        <td>❌</td>
+        <td>部分</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>自架成本</td>
+        <td class="comparison-winner">免費</td>
+        <td>依用量計費</td>
+        <td>免費</td>
+        <td>免費</td>
+      </tr>
+      <tr>
+        <td>OpenAI API 相容</td>
+        <td class="comparison-winner">✅ 完整</td>
+        <td>✅ 完整</td>
+        <td>✅ 完整</td>
+        <td>✅ 完整</td>
+      </tr>
+      <tr>
+        <td>Dashboard UI</td>
+        <td class="comparison-winner">✅ 內建</td>
+        <td>✅ 雲端</td>
+        <td>✅ 內建</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>GitHub Stars</td>
+        <td class="comparison-winner">45K★</td>
+        <td>SaaS（無開源）</td>
+        <td>16K★</td>
+        <td>69K★</td>
+      </tr>
+      <tr>
+        <td>最佳適用場景</td>
+        <td class="comparison-winner">成本優化 + 免費路由</td>
+        <td>快速上手 SaaS</td>
+        <td>企業部署彈性</td>
+        <td>token 壓縮專項</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <strong>💡 選擇建議：</strong>
+    <ul>
+      <li>想最省錢 + 充分利用免費模型 → <strong>OmniRoute</strong></li>
+      <li>想最快上手 + 不想自架 → OpenRouter（付費 SaaS）</li>
+      <li>企業內部 + 需要最高彈性 → LiteLLM</li>
+      <li>專注壓縮現有 Claude/GPT token → headroom</li>
+    </ul>
+  </div>
+
+  <h2 id="taiwan-cases">台灣四大實戰場景</h2>
+
+  <h3>🛒 場景一：蝦皮 / PChome 電商客服 Bot</h3>
+  <p>電商每天有 80% 的客服問題是重複的（訂單查詢、退換貨流程、物流狀態）。用 OmniRoute Caveman 路由：</p>
+  <ul>
+    <li>意圖識別 → 免費模型（每天 5,000 次分類 = $0）</li>
+    <li>標準回覆生成 → Claude Haiku（每次 $0.0003）</li>
+    <li>複雜投訴處理 → Claude Sonnet（每次 $0.02）</li>
+    <li><strong>月省費：從 $300 降至 $35（88% 省費）</strong></li>
+  </ul>
+
+  <h3>📚 場景二：Hahow / Udemy 課程 AI 助教</h3>
+  <p>線上課程平台需要 AI 助教回答學員問題。OmniRoute 可以：</p>
+  <ul>
+    <li>問題分類（技術/非技術）→ 免費模型路由</li>
+    <li>知識庫搜尋 + 回答生成 → 依複雜度 Caveman 路由</li>
+    <li>日本語/英文學員 → 自動切換多語模型</li>
+    <li><strong>與直接用 GPT-5.4 API 相比，月省 $120-350</strong></li>
+  </ul>
+
+  <h3>💼 場景三：台灣 SaaS 新創的 Multi-tenant AI 功能</h3>
+  <p>給多個客戶提供 AI 功能的 SaaS 最怕 API 費用失控：</p>
+  <pre><code># 每個租戶設定不同路由策略
+routes:
+  tenant_free_tier:
+    model: "llama-3.3-70b:free"
+    daily_limit: 1000
+  tenant_pro_tier:
+    model: "claude-haiku-3.5"
+    daily_limit: 10000
+  tenant_enterprise:
+    model: "claude-sonnet-5"
+    daily_limit: unlimited</code></pre>
+
+  <h3>🔒 場景四：金融 / 醫療的私有部署需求</h3>
+  <p>有資料主權需求的企業：</p>
+  <ul>
+    <li>OmniRoute + 本地 Ollama（Llama 3.3、Qwen 3）→ 敏感資料完全不離開公司</li>
+    <li>非敏感任務仍路由至雲端低成本模型</li>
+    <li>支援 Azure OpenAI（符合資料落地要求）</li>
+  </ul>
+
+  <h2 id="advanced">進階：自訂路由規則 + DigitalOcean 雲端部署</h2>
+
+  <h3>自訂路由：Regex + 語意標籤</h3>
+  <pre><code>routes:
+  # 繁體中文任務 → 優先選繁中優化模型
+  - condition:
+      language: "zh-Hant"
+      task: "translation"
+    model: "qwen3-32b:free"
+
+  # 程式碼任務 → 低成本 Haiku
+  - condition:
+      content_contains: ["```", "def ", "function", "class "]
+    model: "claude-haiku-3.5"
+
+  # 長文本（>4000 tokens）→ 自動摘要後再處理
+  - condition:
+      token_count: ">4000"
+    pre_process: "rtk_summarize"
+    model: "claude-haiku-3.5"</code></pre>
+
+  <h3>DigitalOcean 雲端部署（月費 $12 起）</h3>
+
+  <div class="cta-box">
+    <p>把 OmniRoute 部署到雲端，讓整個團隊共享一個 AI Gateway。<strong>DigitalOcean Droplet $12/月</strong> 是最划算的選擇：</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">🚀 DigitalOcean 新用戶 $200 免費額度</a>
+  </div>
+
+  <pre><code># DigitalOcean Droplet 部署（Ubuntu 24.04，1GB RAM 足夠）
+# 1. 建立 Droplet（$6/月 Basic 即可）
+# 2. SSH 連入
+ssh root@your-droplet-ip
+
+# 3. 安裝 Docker
+curl -fsSL https://get.docker.com | sh
+
+# 4. 部署 OmniRoute
+git clone https://github.com/omniroute/omniroute
+cd omniroute
+cp .env.example .env
+# 編輯 .env 填入 API keys
+
+docker compose up -d
+
+# 5. 設定 Nginx 反向代理（含 SSL）
+# 讓 https://ai.你的域名.com 指向 OmniRoute</code></pre>
+
+  <div class="success-box">
+    <strong>✅ 部署後的收益：</strong> 10 人團隊共享一個 OmniRoute，統一管理 API keys，避免每人亂買 API，月省 $100-300 的重複訂閱費。
+  </div>
+
+  <h2>推薦學習資源</h2>
+  <p>想深入學習 AI API 整合與 LLM 應用開發？</p>
+  <div class="cta-box">
+    <p><strong>DataCamp — AI 工程師必備學習平台</strong><br>涵蓋 LLM API 整合、Prompt Engineering、AI Agent 開發，台灣工程師最愛的進修平台。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">📚 DataCamp 免費試用 →</a>
+  </div>
+
+  <div class="cta-box">
+    <p><strong>想建立 AI 被動收入？Systeme.io 是最划算的全方位 SaaS 工具</strong><br>電子報 + 銷售頁 + 線上課程 + 聯盟行銷，一站搞定。免費方案無限期可用。</p>
+    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="cta-btn" target="_blank" rel="noopener">🎯 Systeme.io 免費開始 →</a>
+  </div>
+
+  <h2 id="faq">FAQ 常見問題</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Q1：OmniRoute 和 OpenRouter 有什麼本質差異？</div>
+    <p>OpenRouter 是商業 SaaS，你要把所有 API 請求都經過他們的伺服器（有隱私疑慮）。OmniRoute 是自架，資料完全在你自己的伺服器上，且 RTK + Caveman 省費功能比 OpenRouter 更強大。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q2：90+ 免費模型真的完全免費？有什麼限制？</div>
+    <p>「免費」指的是各平台提供的免費 tier（如 Google AI Studio、Together AI Free、Groq Free）。通常有每日/每月請求限制（例如 Groq 免費版每天 1,000 次請求）。OmniRoute 會在免費額度用完後自動 fallback 到設定的備用模型。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q3：RTK 壓縮 prompt 會不會影響輸出品質？</div>
+    <p>OmniRoute 的 RTK 採保守壓縮策略——只移除明確冗餘的部分（重複指令、過長客套語），不會改變實質語意。根據開源社群測試，品質降幅通常在 2-5% 以內，但費用節省 40-60%。如果對品質要求極高，可以關閉 RTK 只用 Caveman。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q4：如何監控各模型的費用和使用量？</div>
+    <p>OmniRoute 內建 Dashboard（預設在 <code>http://localhost:8080/dashboard</code>），可即時查看各模型用量、費用估算、RTK 省費統計。也支援匯出 CSV 給財務報表。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q5：現有用 LangChain 的程式碼需要大改嗎？</div>
+    <p>幾乎不用改。LangChain、LlamaIndex、AutoGen 都支援自訂 <code>base_url</code>：</p>
+    <pre><code>from langchain_openai import ChatOpenAI
+llm = ChatOpenAI(
+    base_url="http://localhost:8080/v1",
+    api_key="any-string"  # OmniRoute 自己管理後端 keys
+)</code></pre>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q6：OmniRoute 支援 streaming（串流回應）嗎？</div>
+    <p>支援，完全相容 OpenAI Streaming API（<code>stream: true</code>）。無論後端路由到哪個模型，前端都能收到標準的 SSE 串流格式。</p>
+  </div>
+
+  <hr style="margin: 2rem 0; border-color: #e5e7eb;">
+
+  <div class="cta-box">
+    <h3 style="margin-top:0;">🎓 想學更多 AI 工具開發？</h3>
+    <p>Hahow 上有不少台灣講師開設的 AI 應用開發課程，用繁體中文一步步帶你建立真實可部署的 AI 專案：</p>
+    <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" class="cta-btn" target="_blank" rel="noopener">🎓 Hahow AI 課程 →</a>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">☁️ DigitalOcean 雲端部署 →</a>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">📊 DataCamp 資料科學 →</a>
+  </div>
+
+  <p style="text-align:center; color:#888; font-size:0.85rem; margin-top:2rem;">
+    © 2026 AutoDev AI | <a href="/blog/">更多 AI 教學</a> | <a href="/">首頁</a>
+  </p>
+</div>
+</body>
+</html>

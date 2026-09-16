@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archify 完整教學 2026：47K★ MIT AI 架構圖 Agent Skill，一行指令自動生成系統架構圖，繁中首發</title>
+  <meta name="description" content="Archify 47K★ MIT 開源 AI 架構圖 Agent Skill 完整繁中教學。一行指令自動掃描程式碼庫、生成 Mermaid / PlantUML / draw.io 架構圖。TechyTacos 66K views 驗證，Claude Code、Cursor、GitHub Copilot 全支援。繁中首發。">
+  <meta name="keywords" content="archify 教學, archify agent skill, ai 架構圖生成, mermaid 架構圖 ai, archify 繁中, archify 2026, claude code 架構圖, 系統架構圖自動生成">
+  <link rel="canonical" href="https://autodev-ai.com/blog/archify-agent-skill-architecture-diagram-tutorial-2026.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/archify-agent-skill-architecture-diagram-tutorial-2026.html">
+  <link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/blog/archify-agent-skill-architecture-diagram-tutorial-2026.html">
+  <meta property="og:title" content="Archify 完整教學 2026：47K★ MIT AI 架構圖 Agent Skill，繁中首發">
+  <meta property="og:description" content="丟給 AI，自動幫你畫架構圖。Archify 47K★ 完整繁中教學：Claude Code、Cursor、Copilot 皆可用，支援 Mermaid / PlantUML / draw.io 匯出。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/archify-agent-skill-architecture-diagram-tutorial-2026.html">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Archify 完整教學 2026：47K★ MIT AI 架構圖 Agent Skill，一行指令自動生成系統架構圖，繁中首發",
+    "description": "Archify 47K★ MIT 開源 AI 架構圖 Agent Skill 完整繁中教學。掃描程式碼庫自動生成 Mermaid / PlantUML / draw.io 架構圖，Claude Code 全支援。",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+    "datePublished": "2026-09-16",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/archify-agent-skill-architecture-diagram-tutorial-2026.html"},
+    "inLanguage": "zh-Hant",
+    "keywords": "archify, ai architecture diagram, mermaid generator, agent skill, claude code, system design automation 2026"
+  }
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; line-height: 1.7; margin: 0; background: #fff; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 2rem; font-weight: 800; color: #111; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; font-weight: 700; color: #1a1a1a; margin-top: 2rem; border-left: 4px solid #10b981; padding-left: 12px; }
+    h3 { font-size: 1.1rem; font-weight: 700; color: #333; margin-top: 1.5rem; }
+    .badge { display: inline-block; background: #10b981; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-right: 6px; }
+    .badge-blue { background: #3b82f6; }
+    .badge-orange { background: #f59e0b; }
+    .badge-purple { background: #8b5cf6; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .highlight-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .warning-box { background: #fef9c3; border: 1px solid #fbbf24; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .info-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .step-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; margin: 1rem 0; }
+    .step-box strong { color: #10b981; }
+    code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.9em; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 16px 20px; border-radius: 10px; overflow-x: auto; font-size: 0.88rem; line-height: 1.6; }
+    pre code { background: none; padding: 0; color: inherit; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92rem; }
+    th { background: #10b981; color: #fff; padding: 10px 14px; text-align: left; }
+    td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+    tr:nth-child(even) td { background: #f9fafb; }
+    .cta-btn { display: inline-block; background: linear-gradient(135deg, #10b981, #3b82f6); color: #fff !important; padding: 12px 28px; border-radius: 30px; font-weight: 700; text-decoration: none; margin: 8px 4px; font-size: 0.95rem; }
+    .cta-btn:hover { opacity: 0.9; }
+    .cta-box { background: linear-gradient(135deg, #f0fdf4, #fff); border: 1px solid #86efac; border-radius: 14px; padding: 20px 24px; margin: 2rem 0; text-align: center; }
+    a { color: #10b981; }
+    ul li, ol li { margin-bottom: 6px; }
+    .faq-item { border-bottom: 1px solid #e5e7eb; padding: 14px 0; }
+    .faq-q { font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+    nav.breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1rem; }
+    nav.breadcrumb a { color: #10b981; text-decoration: none; }
+    .toc { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; margin: 1.5rem 0; }
+    .toc h4 { margin: 0 0 10px 0; color: #10b981; font-size: 0.95rem; }
+    .toc ol { margin: 0; padding-left: 1.4rem; }
+    .toc li { margin-bottom: 4px; font-size: 0.9rem; }
+    .comparison-winner { background: #dcfce7; font-weight: 700; }
+    .diagram-preview { background: #0f172a; color: #10b981; padding: 16px 20px; border-radius: 10px; margin: 1rem 0; font-family: monospace; font-size: 0.85rem; line-height: 1.8; }
+    .use-case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 1.5rem 0; }
+    .use-case-card { background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; padding: 14px; text-align: center; }
+    .use-case-icon { font-size: 1.8rem; }
+    .use-case-title { font-size: 0.85rem; font-weight: 700; margin-top: 6px; color: #065f46; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <nav class="breadcrumb">
+    <a href="/">AutoDev AI</a> › <a href="/blog/">部落格</a> › Archify AI 架構圖教學 2026
+  </nav>
+
+  <h1>Archify 完整教學 2026：47K★ MIT AI 架構圖 Agent Skill，一行指令自動生成系統架構圖，繁中首發</h1>
+  <p class="meta">
+    <span class="badge">MIT 開源</span>
+    <span class="badge badge-blue">47K★ GitHub</span>
+    <span class="badge badge-orange">Claude Code 支援</span>
+    <span class="badge badge-purple">繁中首發</span>
+    2026-09-16 · AutoDev AI
+  </p>
+
+  <div class="highlight-box">
+    <strong>🗺️ 一句話總結：</strong> Archify 讓你不用再手動畫架構圖——把它裝成 Agent Skill，叫 Claude Code / Cursor / Copilot 「幫我生成這個專案的架構圖」，30 秒後你拿到的是可以直接放進 Confluence 的 Mermaid 或 PlantUML 圖。TechyTacos 評測已累積 <strong>66,000 次觀看</strong>，是 2026 年 9 月最值得裝的 MIT 工具之一。
+  </div>
+
+  <div class="toc">
+    <h4>📋 目錄</h4>
+    <ol>
+      <li><a href="#what-is">Archify 是什麼？解決什麼問題？</a></li>
+      <li><a href="#how-it-works">原理：從程式碼到架構圖的全流程</a></li>
+      <li><a href="#install">4 步驟安裝（Claude Code / Cursor / 命令列）</a></li>
+      <li><a href="#diagram-types">支援的架構圖類型與輸出格式</a></li>
+      <li><a href="#real-examples">實際範例：5 種真實程式庫生成展示</a></li>
+      <li><a href="#comparison">Archify vs 手動 vs Mermaid Chat vs C4 AI</a></li>
+      <li><a href="#taiwan-cases">台灣四大實戰場景</a></li>
+      <li><a href="#advanced">進階：自訂 Archify Prompt + CI/CD 整合</a></li>
+      <li><a href="#faq">FAQ 常見問題</a></li>
+    </ol>
+  </div>
+
+  <h2 id="what-is">Archify 是什麼？解決什麼痛點？</h2>
+
+  <p>工程師最不喜歡做的三件事：寫文件、更新文件、畫架構圖。</p>
+
+  <p>Archify 直接幫你解決第三個問題——而且連帶解決第一和第二個。</p>
+
+  <p><strong>Archify</strong>（GitHub: <code>tt-a1i/archify</code>）是一個 MIT 授權的 Agent Skill，設計用來被 AI coding agent（Claude Code、Cursor、GitHub Copilot Agent Mode）呼叫。它的功能很單純但極其有用：</p>
+
+  <ol>
+    <li>掃描你的整個程式碼庫（或指定目錄）</li>
+    <li>理解各模組之間的相依關係、API 呼叫流程、資料流</li>
+    <li>輸出多種格式的架構圖：Mermaid、PlantUML、draw.io XML、JSON Schema</li>
+  </ol>
+
+  <div class="info-box">
+    <strong>📊 Archify 數據（2026-09-16）</strong>
+    <ul>
+      <li>⭐ GitHub Stars：47,200（v2.11.0，2026-09-04 最後更新）</li>
+      <li>🎬 TechyTacos YouTube 評測：66,000 次觀看（2026-09-01 發布）</li>
+      <li>📦 支援語言：Python、TypeScript/JavaScript、Go、Rust、Java、PHP、Ruby</li>
+      <li>🔌 整合支援：Claude Code Agent Skills、Cursor Rules、GitHub Copilot MCP、Ponytail</li>
+      <li>📄 授權：MIT（完全免費，商業使用無限制）</li>
+    </ul>
+  </div>
+
+  <h3>為什麼不直接叫 ChatGPT 幫你畫？</h3>
+  <p>你當然可以把程式碼貼給 ChatGPT 說「幫我畫架構圖」，但問題在於：</p>
+  <ul>
+    <li>Context 限制：一個真實專案動輒 50,000+ 行，塞不進去</li>
+    <li>無法遞迴理解相依：ChatGPT 看不到 <code>import</code> 後面的實際邏輯</li>
+    <li>輸出不標準：生成的 Mermaid 語法常常有錯，Confluence 貼上後爆版</li>
+    <li>無法持續更新：每次程式碼改動，你得重新貼一遍</li>
+  </ul>
+
+  <p>Archify 作為 Agent Skill 解決了這些問題——它在 agent 的執行環境裡直接讀取檔案系統，遞迴分析相依關係，輸出經過驗證的標準 Mermaid/PlantUML 語法。</p>
+
+  <h2 id="how-it-works">原理：從程式碼到架構圖的全流程</h2>
+
+  <p>Archify 的執行流程分四個階段：</p>
+
+  <h3>Phase 1：靜態分析（AST 解析）</h3>
+  <p>對各語言使用對應的 AST 解析器，提取：模組結構、import/require 關係、類別繼承、函式呼叫鏈、API 端點定義（Express、FastAPI、Gin 等）</p>
+
+  <h3>Phase 2：關係圖建構</h3>
+  <p>把靜態分析的結果建成有向圖（Directed Graph），節點是模組/類別/函式，邊是呼叫關係和資料流向。</p>
+
+  <h3>Phase 3：AI 語意增強</h3>
+  <p>呼叫 LLM（預設用你的 agent 當前模型）對圖結構進行語意標注：「這個模組負責什麼？」「這個資料流是同步還是非同步？」</p>
+
+  <h3>Phase 4：圖表渲染輸出</h3>
+  <p>根據你指定的格式（Mermaid / PlantUML / draw.io / JSON）輸出可直接使用的圖表代碼。</p>
+
+  <div class="diagram-preview">
+# Archify 輸出範例（Mermaid flowchart）
+graph TD
+    A[client/app.ts] -->|API Request| B[server/routes/api.ts]
+    B -->|validate| C[middleware/auth.ts]
+    B -->|query| D[services/userService.ts]
+    D -->|ORM| E[models/User.ts]
+    E -->|PostgreSQL| F[(Database)]
+    D -->|cache| G[lib/redis.ts]
+    B -->|event| H[queue/worker.ts]
+    H -->|email| I[services/emailService.ts]
+  </div>
+
+  <h2 id="install">4 步驟安裝 Archify</h2>
+
+  <h3>方式一：作為 Claude Code Agent Skill 安裝（推薦）</h3>
+
+  <div class="step-box">
+    <strong>Step 1：克隆 Archify 到 Skills 目錄</strong>
+    <pre><code># Claude Code 的 Agent Skills 預設目錄
+mkdir -p ~/.claude/skills
+git clone https://github.com/tt-a1i/archify ~/.claude/skills/archify</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>Step 2：設定 Archify（config.yaml）</strong>
+    <pre><code>cd ~/.claude/skills/archify
+cp config.example.yaml config.yaml
+
+# 編輯 config.yaml
+output_format: mermaid       # mermaid / plantuml / drawio / json
+max_depth: 3                 # 遞迴分析深度
+include_external: false      # 是否包含 node_modules / vendor
+language_hints:
+  - typescript
+  - python
+exclude_patterns:
+  - "**/*.test.ts"
+  - "**/migrations/**"
+  - "**/__pycache__/**"</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>Step 3：安裝相依套件</strong>
+    <pre><code>cd ~/.claude/skills/archify
+# Node.js 版（TypeScript/JavaScript 專案用）
+npm install
+
+# Python 版（Python 專案分析用）
+pip install archify-py</code></pre>
+  </div>
+
+  <div class="step-box">
+    <strong>Step 4：在 Claude Code 中呼叫</strong>
+    <pre><code># 在 Claude Code 聊天框直接輸入：
+"幫我用 Archify 生成這個專案的架構圖"
+"請分析 src/ 目錄並輸出 Mermaid 流程圖"
+"生成 API 端點到資料庫的完整資料流圖"</code></pre>
+  </div>
+
+  <h3>方式二：命令列直接使用</h3>
+  <pre><code># 安裝
+npm install -g archify
+
+# 在專案根目錄執行
+archify generate --format mermaid --depth 3
+archify generate --format plantuml --target src/services/
+archify generate --format drawio --output architecture.xml
+
+# 輸出 Mermaid 到剪貼板（直接貼進 Confluence）
+archify generate --format mermaid | pbcopy</code></pre>
+
+  <h3>方式三：Cursor Rules 整合</h3>
+  <pre><code># 在 .cursorrules 新增：
+When asked to generate architecture diagrams or system design documents,
+use the Archify tool located at ~/.claude/skills/archify.
+Always output in Mermaid format unless specified otherwise.
+Focus on: API routes, service dependencies, database models, and async queues.</code></pre>
+
+  <h2 id="diagram-types">支援的架構圖類型</h2>
+
+  <table>
+    <thead>
+      <tr><th>圖類型</th><th>使用情境</th><th>輸出格式</th><th>最適合</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Flowchart</td>
+        <td>API 呼叫流程、函式呼叫鏈</td>
+        <td>Mermaid flowchart</td>
+        <td class="comparison-winner">GitHub README / Confluence</td>
+      </tr>
+      <tr>
+        <td>Sequence Diagram</td>
+        <td>前後端互動、微服務通訊</td>
+        <td>Mermaid sequenceDiagram</td>
+        <td class="comparison-winner">技術規格文件</td>
+      </tr>
+      <tr>
+        <td>Entity Relationship</td>
+        <td>資料庫 Schema 視覺化</td>
+        <td>Mermaid erDiagram</td>
+        <td class="comparison-winner">資料庫設計文件</td>
+      </tr>
+      <tr>
+        <td>Class Diagram</td>
+        <td>OOP 繼承關係</td>
+        <td>PlantUML / Mermaid</td>
+        <td>後端架構設計</td>
+      </tr>
+      <tr>
+        <td>C4 Context</td>
+        <td>系統邊界與外部整合</td>
+        <td>PlantUML C4</td>
+        <td>系統架構審查</td>
+      </tr>
+      <tr>
+        <td>Infrastructure</td>
+        <td>雲端資源關係（AWS / GCP / DO）</td>
+        <td>draw.io XML</td>
+        <td>DevOps / SRE</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="real-examples">實際範例：5 種真實程式庫</h2>
+
+  <h3>範例 1：Express.js REST API（Node.js）</h3>
+  <pre><code>$ archify generate --format mermaid
+
+# 輸出：
+graph TD
+    A[routes/users.ts] -->|GET /users| B[controllers/UserController.ts]
+    A -->|POST /users| B
+    B -->|validates| C[middleware/validator.ts]
+    B -->|calls| D[services/UserService.ts]
+    D -->|Prisma ORM| E[models/User.ts]
+    D -->|JWT| F[lib/auth.ts]
+    E -->|PostgreSQL| G[(users table)]</code></pre>
+
+  <h3>範例 2：FastAPI Python 後端</h3>
+  <pre><code>$ archify generate --format mermaid --target app/
+
+# 自動偵測到 FastAPI 路由裝飾器
+graph LR
+    A[main.py] --> B[routers/items.py]
+    A --> C[routers/users.py]
+    B -->|Depends| D[dependencies.py]
+    B -->|CRUD| E[crud/items.py]
+    E -->|SQLAlchemy| F[(MySQL)]
+    C -->|OAuth2| G[core/security.py]</code></pre>
+
+  <h3>範例 3：微服務架構（多 Repo）</h3>
+  <pre><code># 支援多目錄掃描
+archify generate --dirs ./user-service,./order-service,./payment-service \
+  --format mermaid --type sequence
+
+# 自動生成跨服務的 Sequence Diagram
+sequenceDiagram
+    Client->>UserService: POST /checkout
+    UserService->>OrderService: createOrder(items)
+    OrderService->>PaymentService: processPayment(orderId)
+    PaymentService-->>OrderService: paymentConfirmed
+    OrderService-->>UserService: orderCreated
+    UserService-->>Client: 201 Created</code></pre>
+
+  <h2 id="comparison">Archify vs 手動畫圖 vs 其他工具</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>工具</th>
+        <th>生成速度</th>
+        <th>準確度</th>
+        <th>保持同步</th>
+        <th>費用</th>
+        <th>整合性</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="comparison-winner">Archify</td>
+        <td class="comparison-winner">30 秒</td>
+        <td class="comparison-winner">自動（AST）</td>
+        <td class="comparison-winner">指令重新生成</td>
+        <td class="comparison-winner">免費（MIT）</td>
+        <td class="comparison-winner">Claude Code / Cursor</td>
+      </tr>
+      <tr>
+        <td>手動（draw.io）</td>
+        <td>2-8 小時</td>
+        <td>依人工</td>
+        <td>❌（常過期）</td>
+        <td>免費</td>
+        <td>無</td>
+      </tr>
+      <tr>
+        <td>Mermaid Chat</td>
+        <td>5 分鐘</td>
+        <td>需手動描述</td>
+        <td>❌</td>
+        <td>部分免費</td>
+        <td>有限</td>
+      </tr>
+      <tr>
+        <td>Structurizr</td>
+        <td>需要手寫 DSL</td>
+        <td>高（手動）</td>
+        <td>手動維護</td>
+        <td>$9-18/月</td>
+        <td>有限</td>
+      </tr>
+      <tr>
+        <td>ChatGPT 直接貼碼</td>
+        <td>3-10 分鐘</td>
+        <td>中（Context 限制）</td>
+        <td>❌</td>
+        <td>消耗 token</td>
+        <td>無</td>
+      </tr>
+      <tr>
+        <td>GitHub Copilot（內建）</td>
+        <td>5-10 分鐘</td>
+        <td>中</td>
+        <td>❌</td>
+        <td>需訂閱</td>
+        <td>Copilot 限定</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="taiwan-cases">台灣四大實戰場景</h2>
+
+  <h3>🏭 場景一：Legacy 系統文件化（台灣製造業 IT）</h3>
+  <p>台灣製造業充滿 10-20 年的舊系統，沒有任何文件。新人入職第一個月通常就是在「讀 code 猜架構」。</p>
+  <ul>
+    <li>Archify 掃描 Legacy PHP / Java 程式庫，自動生成模組關係圖</li>
+    <li>輸出 PlantUML 貼進 Confluence，原本 3 週的文件工作 → 1 天完成</li>
+    <li>CIO 報告用的「系統架構圖」不再是工程師的惡夢</li>
+  </ul>
+
+  <h3>🎓 場景二：Hahow 課程素材（技術教學內容創作）</h3>
+  <p>技術課程講師最需要清晰的架構圖來解說複雜概念：</p>
+  <ul>
+    <li>把範例程式碼丟給 Archify，自動生成對應的 Sequence Diagram</li>
+    <li>Mermaid 格式直接嵌入 Notion / HackMD 課程講義</li>
+    <li>每次修改範例程式碼，重跑 Archify 自動更新圖表</li>
+  </ul>
+
+  <div class="cta-box">
+    <p>想在 Hahow 開設技術課程？先把架構圖做好，學員更容易理解你的教學。</p>
+    <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" class="cta-btn" target="_blank" rel="noopener">🎓 Hahow 課程平台 →</a>
+  </div>
+
+  <h3>🚀 場景三：SaaS 新創的技術審查（Due Diligence）</h3>
+  <p>台灣 SaaS 新創在融資或被收購時，投資方常要求提供系統架構文件：</p>
+  <ul>
+    <li>Archify 在 1 小時內生成完整技術架構圖</li>
+    <li>支援輸出 C4 Context 模型（系統邊界、外部相依、用戶流程）</li>
+    <li>draw.io 格式可直接插入投資人簡報的技術附件</li>
+  </ul>
+
+  <h3>🔄 場景四：CI/CD 自動更新架構文件</h3>
+  <p>把 Archify 加進 GitHub Actions，每次 merge to main 自動重新生成架構圖並更新 README：</p>
+
+  <pre><code># .github/workflows/update-architecture.yml
+name: Update Architecture Diagram
+
+on:
+  push:
+    branches: [main]
+    paths: ['src/**', 'app/**']
+
+jobs:
+  archify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Archify
+        run: npm install -g archify
+      - name: Generate Architecture Diagram
+        run: |
+          archify generate --format mermaid --depth 3 > /tmp/arch.md
+          # 更新 README.md 的架構圖區塊
+          python scripts/update_readme_diagram.py
+      - name: Commit updated diagram
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: auto-update architecture diagram"</code></pre>
+
+  <h2 id="advanced">進階：自訂 Archify Prompt + 最佳實踐</h2>
+
+  <h3>自訂分析深度與範圍</h3>
+  <pre><code># 只分析特定服務層
+archify generate \
+  --target src/services/ \
+  --exclude "**/*.spec.ts,**/mocks/**" \
+  --depth 2 \
+  --focus "database,external-api" \
+  --format mermaid</code></pre>
+
+  <h3>在 Claude Code 中的最佳 Prompt</h3>
+  <pre><code>// 在 Claude Code 中呼叫 Archify 的推薦方式：
+
+"請用 Archify 分析 src/api/ 目錄，生成：
+1. API 路由到 Service 的流程圖（flowchart）
+2. 主要 Service 之間的依賴關係圖
+3. 資料庫模型的 ER 圖
+全部用 Mermaid 格式，輸出到 docs/architecture/ 目錄"</code></pre>
+
+  <div class="cta-box">
+    <h3 style="margin-top:0;">☁️ 把架構文件部署到雲端？</h3>
+    <p>用 DigitalOcean 建立內部技術文件網站（$6/月起），搭配 Archify 自動更新的 Mermaid 圖，讓全團隊隨時看到最新架構。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">🚀 DigitalOcean 新用戶 $200 免費額度 →</a>
+  </div>
+
+  <h2>提升 AI 工具開發能力</h2>
+  <div class="cta-box">
+    <p><strong>DataCamp — 學 AI Agent 開發、Prompt Engineering、LLM 整合</strong><br>Archify 是 Agent Skill 生態的一部分，想深入開發自己的 AI Skills，DataCamp 是最好的繁英雙語學習平台。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">📚 DataCamp 免費試用 →</a>
+  </div>
+
+  <div class="cta-box">
+    <p><strong>想把 AI 工具變成被動收入？</strong><br>Systeme.io 幫你建立課程銷售頁、電子報和聯盟行銷管道，免費方案就夠用。</p>
+    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="cta-btn" target="_blank" rel="noopener">🎯 Systeme.io 免費開始 →</a>
+  </div>
+
+  <h2 id="faq">FAQ 常見問題</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Q1：Archify 支援哪些程式語言？</div>
+    <p>v2.11.0 支援：Python、TypeScript、JavaScript、Go、Rust、Java、Kotlin、PHP、Ruby、C#。對 Terraform 和 Kubernetes YAML 也有基本支援（基礎設施圖）。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q2：大型專案（10萬行以上）能跑嗎？會很慢嗎？</div>
+    <p>可以，但建議用 <code>--target</code> 指定特定子目錄而非全局掃描。Archify 對 10 萬行的 TypeScript 專案（指定 <code>src/api/</code>）通常 30-60 秒內完成。超大型 Monorepo 建議分層分析（先分析 API 層，再分析 Service 層）。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q3：輸出的 Mermaid 語法能直接貼進 GitHub README 嗎？</div>
+    <p>可以。Archify 輸出的 Mermaid 是標準語法，GitHub 原生渲染支援。格式包在 <code>```mermaid</code> 代碼塊裡直接貼即可。Confluence 需要安裝 Mermaid Plugin（免費）。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q4：Archify 會傳送我的程式碼到外部伺服器嗎？</div>
+    <p>不會。Archify 的靜態分析（AST 解析、關係圖建構）完全在本地執行。只有「AI 語意增強」階段會呼叫 LLM API（你的 Claude Code / Cursor 使用的模型），但傳送的只是結構摘要，不是原始程式碼全文。如需完全離線，可以關閉語意增強：<code>--no-ai-enhance</code>。</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q5：如何讓 Archify 在每次 git commit 後自動更新架構圖？</div>
+    <p>可以設定 git hook：</p>
+    <pre><code># .git/hooks/post-commit
+#!/bin/bash
+archify generate --format mermaid --quiet > docs/architecture.md
+git add docs/architecture.md
+git commit --amend --no-edit --no-verify</code></pre>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q6：Archify 和 GitHub Copilot 的內建架構圖功能有什麼差異？</div>
+    <p>GitHub Copilot（Workspace 功能）的架構圖是即席生成，無法自動化。Archify 的優勢是：可作為 Script 執行、可進 CI/CD、支援更多圖類型（ER、C4、Sequence）、且輸出格式更標準（真正可渲染的 Mermaid，不是描述文字）。</p>
+  </div>
+
+  <hr style="margin: 2rem 0; border-color: #e5e7eb;">
+
+  <div class="cta-box">
+    <h3 style="margin-top:0;">🗺️ 相關文章推薦</h3>
+    <p>如果你在用 Claude Code 開發，這些文章也值得一讀：</p>
+    <ul style="text-align:left; display:inline-block;">
+      <li><a href="/blog/orca-ade-parallel-agents-tutorial-2026.html">Orca ADE 完整教學：40 個 AI Agent 平行寫程式</a></li>
+      <li><a href="/blog/mastra-ai-typescript-agent-framework-2026.html">Mastra TypeScript AI Agent Framework 教學</a></li>
+      <li><a href="/blog/omniroute-ai-gateway-free-models-2026.html">OmniRoute AI Gateway：路由 290+ 模型省費 89%</a></li>
+    </ul>
+    <br>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" target="_blank" rel="noopener">📚 DataCamp AI 學習 →</a>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">☁️ DigitalOcean 雲端部署 →</a>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn" target="_blank" rel="noopener">🎁 AI 工具資源包 →</a>
+  </div>
+
+  <p style="text-align:center; color:#888; font-size:0.85rem; margin-top:2rem;">
+    © 2026 AutoDev AI | <a href="/blog/">更多 AI 教學</a> | <a href="/">首頁</a>
+  </p>
+</div>
+</body>
+</html>
