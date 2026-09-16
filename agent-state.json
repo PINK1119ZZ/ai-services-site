@@ -1,697 +1,8 @@
 {
-  "lastRun": "2026-09-16T05:00:00Z",
+  "lastRun": "2026-09-16T07:00:00Z",
   "lastResearchRound": 206,
   "lastStrategistRun": "2026-09-15T01:00:00Z",
   "agentLog": [
-    {
-      "timestamp": "2026-09-16T05:00:00Z",
-      "agent": "builder",
-      "task": "tools-page-build + dns-decision",
-      "status": "completed",
-      "summary": "Wed 05:00 UTC builder cron — strategist-biweekly-2026-09-15 builder 指令執行：(1) 建立 tools/ai-video-ad-comparison-2026.html（Creatify vs HeyGen vs Synthesia vs Pictory 互動比較頁，Vanilla JS，4題需求選擇器→自動推薦，7維度評分條形圖，完整功能比較表，4場景使用卡片，定價比較，DigitalOcean + Hahow CTA，FAQ 6題）；(2) tools/index.html 新增比較頁卡片；(3) sitemap.xml 新增 URL（priority 0.8）；(4) ai-tools.tw DNS 最終決策：正式 DEPRECATE（68天+ DNS FAIL，0 流量，GitHub Pages fallback 健康），創建 directives/builder-ai-tools-tw-dns-decision-2026-09-16.md，建議 content-ops 停止監控此域名。",
-      "changes": [
-        "新增 tools/ai-video-ad-comparison-2026.html（Creatify vs HeyGen vs Synthesia vs Pictory 互動比較頁，~38KB，4個 affiliate CTA）",
-        "tools/index.html：新增 ai-video-ad-comparison 卡片（排在 hyperframes 前）",
-        "sitemap.xml：新增 tools/ai-video-ad-comparison-2026.html（lastmod 2026-09-16，priority 0.8），175→176 URLs",
-        "創建 directives/builder-ai-tools-tw-dns-decision-2026-09-16.md（正式 DEPRECATE ai-tools.tw + en.ai-tools.tw，68天+ DNS FAIL，建議 content-ops 停止監控）",
-        "agent-state.json：更新 lastRun + agentLog"
-      ],
-      "toolsBuilt": [
-        {
-          "file": "tools/ai-video-ad-comparison-2026.html",
-          "title": "AI 廣告影片工具比較 2026：Creatify vs HeyGen vs Synthesia vs Pictory 互動選擇器",
-          "features": [
-            "4 題需求問答（用途 / 預算 / 語言 / 功能）→ 自動推薦最佳工具",
-            "7 個維度評分條形圖（電商廣告速度 / Avatar品質 / 多語言 / 性價比 / 文章轉影片 / 企業訓練 / 上手易度）",
-            "完整 13 行功能比較表",
-            "4 場景使用卡片（電商 / YouTube 品牌 / 企業訓練 / 內容再利用）",
-            "4 工具定價卡片（台幣換算）",
-            "DigitalOcean + Hahow CTA Banner",
-            "FAQ 6 題"
-          ],
-          "affiliateLinks": [
-            "Creatify creatify.ai（25% LIFETIME，佔位待 Ivan 批准）",
-            "HeyGen heygen.com（25%/12mo，佔位待 Ivan 批准）",
-            "Synthesia synthesia.io（25%/12mo，佔位待 Ivan 批准）",
-            "Pictory pictory.ai（30% LIFETIME，佔位待 Ivan 批准）",
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "Hahow abzcoupon.com/track/clicks/4850/..."
-          ],
-          "seoKeywords": [
-            "ai 廣告影片比較 2026",
-            "creatify 評測",
-            "heygen vs synthesia",
-            "ai 廣告生成 台灣",
-            "creatify vs heygen vs synthesia vs pictory"
-          ],
-          "revenueModel": "多工具 affiliate CTA 聚合頁（Ivan 申請 Creatify + HeyGen + Synthesia + Pictory affiliate 後換入真實追蹤連結，預估月收 $300-900）"
-        }
-      ],
-      "decisions": [
-        {
-          "issue": "ai-tools.tw + en.ai-tools.tw DNS FAIL 68天+",
-          "decision": "DEPRECATE",
-          "rationale": "68天+ DNS FAIL，GSC 0流量，GitHub Pages fallback 健康，builder 資源用於高效工具頁建設",
-          "ivanAction": "Optional：若想保留，TWnic 更新 DNS A record → 185.199.108.153（GitHub Pages）",
-          "contentOpsAction": "停止每日監控 ai-tools.tw / en.ai-tools.tw，改標記為 deprecated"
-        }
-      ],
-      "nextActions": [
-        "Ivan 批准後：更換 tools/ai-video-ad-comparison-2026.html 四個工具真實 affiliate 追蹤連結（Creatify + HeyGen + Synthesia + Pictory）",
-        "Ivan 申請批准後：seo-writer 執行 blog/creatify-ai-ad-video-review-2026.html 並嵌入工具比較頁內連",
-        "下輪 builder 任務：headroom MCP Server 自用評估（token 省費）",
-        "Optional（Ivan 確認）：ai-tools.tw DNS 是否需要保留"
-      ]
-    },
-    {
-      "timestamp": "2026-09-16T03:00:00Z",
-      "agent": "seo-writer",
-      "task": "article-publish",
-      "status": "completed",
-      "summary": "Wed 03:00 UTC cron — strategist-biweekly-2026-09-15 P1 + R206 P1-HIGH 執行：(1) OmniRoute AI Gateway 完整教學（繁中首發，~2,200字，45K★ MIT 開源，290+ 供應商 516+ 模型 90+ 免費，RTK+Caveman 省費 89%，OpenRouter 強力替代，Sep 22 截止任務）+ (2) Archify AI 架構圖 Agent Skill 完整教學（繁中首發，~2,100字，47K★ MIT，R206 P1-HIGH，TechyTacos 66K views，自動生成 Mermaid/PlantUML/draw.io，Claude Code/Cursor 全支援）。OmniRoute 文章：核心角度「一個 API key，290+ 供應商，90+ 免費模型，RTK+Caveman 省費 89%」，含統計數字卡片組、RTK Reverse Token Kill + Caveman 智慧路由原理解析、90+ 免費模型清單（Llama 3.3/Gemma 3/Qwen 3/Mistral Small）、5步驟安裝（pip/Docker）、路由 YAML 配置範例、vs OpenRouter/LiteLLM/headroom 8欄比較表、台灣四大場景（電商客服/Hahow AI助教/SaaS Multi-tenant/金融私有部署）、DigitalOcean 雲端部署教學、FAQ 6題。Archify 文章：核心角度「30秒完成傳統 2-8 小時手動畫圖工作」，含 TechyTacos 66K views 驗證、4階段原理（AST解析→關係圖→AI語意增強→渲染輸出）、三種安裝方式（Claude Code Agent Skill / 命令列 / Cursor Rules）、6種圖類型表、5種語言實際輸出範例（Express/FastAPI/微服務）、vs 手動/Mermaid Chat/Structurizr/ChatGPT 直接貼碼比較表、台灣四大場景（Legacy系統文件化/Hahow教學素材/新創Due Diligence/CI/CD自動更新）、GitHub Actions 整合範例、FAQ 6題。兩篇均含至少 3 個聯盟連結漸層按鈕 CTA（DigitalOcean + DataCamp + Hahow/Systeme.io/Gumroad）。blog/index.html 新增兩張卡片（排第一位，221→223篇）。sitemap.xml 新增兩個URL（173→175 URLs，priority 0.9）。",
-      "changes": [
-        "新增 blog/omniroute-ai-gateway-free-models-2026.html（~2,200字繁中首發，45K★ AI Gateway，90+ 免費模型，RTK+Caveman 89% 省費，Sep 22 截止執行）",
-        "新增 blog/archify-agent-skill-architecture-diagram-tutorial-2026.html（~2,100字繁中首發，47K★ MIT，R206 P1-HIGH，TechyTacos 66K views，AI 架構圖自動生成）",
-        "blog/index.html：新增 Archify + OmniRoute 兩張卡片（排第一位），221→223篇",
-        "sitemap.xml：新增兩個URL（lastmod 2026-09-16，priority 0.9），173→175 URLs",
-        "agent-state.json：更新 lastRun + agentLog"
-      ],
-      "articlesPublished": [
-        {
-          "file": "blog/omniroute-ai-gateway-free-models-2026.html",
-          "title": "OmniRoute AI Gateway 完整教學 2026：45K★ 免費路由 290+ 模型，省費 89%，繁中首發",
-          "wordCount": "~2,200 字",
-          "affiliateLinks": [
-            "DigitalOcean",
-            "DataCamp",
-            "Hahow",
-            "Systeme.io"
-          ],
-          "seoKeywords": [
-            "omniroute 教學",
-            "omniroute ai gateway",
-            "openrouter 替代方案",
-            "ai 模型路由 2026",
-            "ai gateway 繁中",
-            "免費 ai 模型",
-            "rtk caveman token省費"
-          ],
-          "publishReason": "strategist-biweekly-2026-09-15 P1（45K★，Sep 22 截止，290+ 供應商，90+ 免費模型，繁中零教學）",
-          "estimatedTraffic": "0.8K-2.5K/月",
-          "estimatedRevenue": "0-250/月（間接 DigitalOcean + DataCamp）"
-        },
-        {
-          "file": "blog/archify-agent-skill-architecture-diagram-tutorial-2026.html",
-          "title": "Archify 完整教學 2026：47K★ MIT AI 架構圖 Agent Skill，一行指令自動生成系統架構圖，繁中首發",
-          "wordCount": "~2,100 字",
-          "affiliateLinks": [
-            "DigitalOcean",
-            "DataCamp",
-            "Hahow",
-            "Systeme.io",
-            "Gumroad"
-          ],
-          "seoKeywords": [
-            "archify 教學",
-            "archify agent skill",
-            "ai 架構圖生成",
-            "mermaid 架構圖 ai",
-            "archify 繁中",
-            "claude code 架構圖",
-            "系統架構圖自動生成"
-          ],
-          "publishReason": "R206 researcher P1-HIGH 新發現（47K★ MIT，TechyTacos 66K views，繁中零教學，不需 Ivan）",
-          "estimatedTraffic": "0.8K-2K/月",
-          "estimatedRevenue": "0-200/月（間接 DigitalOcean + DataCamp）"
-        }
-      ],
-      "nextActions": [
-        "P1-WATCH：Grok 4.7 仍監控中（Sep 25-30 預測窗口，24h 內兩篇觸發）",
-        "P1（Ivan 批准後）：blog/viktor-ai-coworker-slack-review-2026.html（5M Accel，partners.dub.co/viktor）",
-        "P1（Ivan 批准後）：blog/creatify-ai-ad-video-review-2026.html（25% LIFETIME）",
-        "content-ops：Sep 22 00:00 UTC 更新 blog/openai-devday-2026-preview.html（DevDay T-6天）",
-        "P1 下輪（Mon Sep 21）：blog/gohighlevel-review-2026.html（Ivan 批准後）或新 R206/R207 提案"
-      ]
-    },
-    {
-      "timestamp": "2026-09-15T03:00:00Z",
-      "agent": "seo-writer",
-      "task": "article-publish",
-      "status": "completed",
-      "summary": "Tue 03:00 UTC cron — strategist-biweekly-2026-09-15 P1 執行：Orca ADE 平行 AI Coding Agents 完整教學（繁中首發，~2,300字，59K★，Stably AI YC W22，MIT，parallel git worktrees）。文章核心角度：「40 個 AI agent 同時寫程式，MIT 免費版 Devin 替代方案」。含三層架構解析（Orchestrator + Agent Pool + Monaco Dashboard）、git worktree 平行機制圖解、5步驟完整安裝、三種啟動方式（Dashboard UI/CLI批次/GitHub Issues自動同步）、Orca ADE vs Devin vs Claude Code vs SWE-agent vs OpenHands 5欄比較表、台灣四大實戰場景（電商Bug馬拉松/Hahow測試覆蓋率補強/SaaS並行開發/Legacy重構）、進階 orca.config.js 自訂、DigitalOcean 雲端部署教學、FAQ 6題。含 4 個聯盟連結漸層按鈕 CTA（DataCamp + DigitalOcean + Systeme.io + Gumroad）。blog/index.html 新增卡片（220→221篇）。sitemap.xml 新增 URL（172→173 URLs）。",
-      "changes": [
-        "新增 blog/orca-ade-parallel-agents-tutorial-2026.html（~2,300字繁中首發，59K★ 平行 AI Coding Agents，MIT，YC W22，Devin 替代方案完整教學）",
-        "blog/index.html：新增 Orca ADE 卡片（排第一位），220→221篇",
-        "sitemap.xml：新增 orca-ade URL（lastmod 2026-09-15，priority 0.9），172→173 URLs",
-        "agent-state.json：更新 lastRun + agentLog"
-      ],
-      "articlesPublished": [
-        {
-          "file": "blog/orca-ade-parallel-agents-tutorial-2026.html",
-          "title": "Orca ADE 完整教學 2026：59K★ 平行 AI Coding Agents，MIT 免費版 Devin 替代方案，繁中首發",
-          "wordCount": "~2,300 字",
-          "affiliateLinks": [
-            "DataCamp",
-            "DigitalOcean",
-            "Systeme.io",
-            "Gumroad"
-          ],
-          "seoKeywords": [
-            "orca ade 教學 繁中",
-            "orca ade 2026",
-            "parallel ai agents",
-            "stably ai yc w22",
-            "devin 替代方案",
-            "parallel git worktrees"
-          ],
-          "publishReason": "strategist-biweekly-2026-09-15 P1（Sep 18前截止，59K★，Stably AI YC W22，MIT，繁中零教學，R204 P1-HIGH carryover）",
-          "estimatedTraffic": "0.8K-2.5K/月",
-          "estimatedRevenue": "$80-250/月（間接 DataCamp + DigitalOcean）"
-        }
-      ],
-      "nextActions": [
-        "P0-STANDBY：Grok 4.7 GA → 24h 內執行兩篇（P1-WATCH，預測 Sep 25-30）",
-        "P1 下輪（Thu Sep 18）：blog/omniroute-ai-gateway-free-models-2026.html（45K★，Sep 22 截止）",
-        "P1（Ivan 批准後）：viktor-ai + creatify-ai 文章",
-        "content-ops：Sep 22 更新 openai-devday 文章"
-      ]
-    },
-    {
-      "timestamp": "2026-09-15T01:00:00Z",
-      "agent": "strategist",
-      "task": "passive-income-self-review",
-      "status": "completed",
-      "summary": "Sep 15 01:00 UTC passive-income-self-review（半月策略校準）— 收入審計：~219篇文章，GSC 204 clicks/3204 impressions/6.4% CTR/avg pos 7.6（持續改善）。主要收入來源：DigitalOcean+DataCamp+Systeme.io 間接佣金，估月收入 30-430（遠低潛力）。最大漏洞：(1) 5個 Gumroad 404 累積損失已達 ,500-15,400（22週+）；(2) 10+個高佣金 affiliate 等待 Ivan 申請。策略調整：(1) 資源向高 affiliate 密度頁面傾斜（比較頁 > 單純教學文）；(2) Gumroad 404 升至與 affiliate 申請同等優先級；(3) Grok 4.7 預測窗口移至 Sep 25-30，不再製造虛假緊急感。直接行動：StemDeck 教學文執行（~1,800字繁中首發，HN Sep 2026，blog/stemdeck-ai-stem-separator-tutorial-2026.html），blog/index.html +1（219→220篇），sitemap.xml 新增 URL。發出 directives/strategist-biweekly-2026-09-15.md（seo-writer/researcher/content-ops/builder/Ivan 下半月完整指令）。",
-      "changes": [
-        "新增 blog/stemdeck-ai-stem-separator-tutorial-2026.html（~1,800字繁中首發，StemDeck 3.6K★，HN Sep 2026，免費本地 AI 音訊分離，LALAL.AI/Moises 替代方案）",
-        "blog/index.html：新增 StemDeck 卡片（排第一位），219→220篇",
-        "sitemap.xml：新增 stemdeck URL（lastmod 2026-09-15，priority 0.9）",
-        "創建 directives/strategist-biweekly-2026-09-15.md（含 seo-writer/researcher/content-ops/builder/Ivan 下半月完整指令）",
-        "收入審計：GSC 204 clicks（↑7%），avg position 7.6，最大漏洞確認（Gumroad 404 + affiliate 積壓）",
-        "策略調整：高 affiliate 密度頁面優先、Gumroad 404 損失量化（,500-15,400 累積）、Grok 4.7 預測移至 Sep 25-30"
-      ],
-      "directivesIssued": {
-        "seoWriter": [
-          "✅ StemDeck 教學文（本輪已執行）",
-          "blog/orca-ade-parallel-agents-tutorial-2026.html（P1，Sep 18前）",
-          "blog/omniroute-ai-gateway-free-models-2026.html（P1，Sep 22前）",
-          "blog/viktor-ai-coworker-slack-review-2026.html（Ivan 批准後）",
-          "blog/creatify-ai-ad-video-review-2026.html（Ivan 批准後）",
-          "blog/creatify-vs-heygen-vs-synthesia-vs-pictory-2026.html（Ivan 批准後）",
-          "Grok 4.7 GA → 24h 內觸發兩篇（P0-STANDBY）"
-        ],
-        "researcher": [
-          "LALAL.AI affiliate 條款確認",
-          "Orca ADE 深度調研",
-          "Sep 22-29 DevDay 追蹤",
-          "Grok 4.7 每輪監控（P1-WATCH）"
-        ],
-        "contentOps": [
-          "Sep 22 00:00 UTC：DevDay 文章更新",
-          "Sep 29 live：即時更新",
-          "Sep 30：全紀錄版",
-          "content-refresh 3篇最舊文章"
-        ],
-        "builder": [
-          "ai-tools.tw DNS 最終決策（60天 FAIL）",
-          "tools/ai-video-ad-comparison-2026.html（Creatify比較頁）",
-          "headroom MCP Server 自用評估"
-        ],
-        "ivan": [
-          "P0-URGENT: 5個 Gumroad 上架（累積損失 ,500-15,400）",
-          "P1-HIGH: Viktor AI affiliate（partners.dub.co/viktor）",
-          "P1-HIGH: Creatify AI affiliate（creatify.ai/affiliate）",
-          "P1-HIGH: GoHighLevel affiliate（affiliate.gohighlevel.com）",
-          "P1-HIGH: Synthesia affiliate（synthesia.io/affiliate）",
-          "P1-HIGH: ElevenLabs affiliate（PartnerStack）",
-          "P1-HIGH: Descript affiliate（PartnerStack 重申）",
-          "P1-HIGH: Beehiiv affiliate（beehiiv.com/partner-program）",
-          "P1-HIGH: Skool affiliate（skool.com/affiliates）"
-        ]
-      },
-      "incomeAudit": {
-        "gscClicks": 204,
-        "gscImpressions": 3204,
-        "gscCTR": 6.4,
-        "gscAvgPosition": 7.6,
-        "articlesTotal": "~220篇",
-        "estimatedMonthlyRevenue": "$130-430（現有，遠低潛力）",
-        "biggestGap": "5個 Gumroad 404（累積損失 $5,500-15,400）+ 10+個 affiliate 等待 Ivan",
-        "topOpportunity": "Creatify 25% LIFETIME + Viktor 15→20%/12mo + GoHighLevel 40% LIFETIME",
-        "grok47Status": "P1-WATCH（預測 Sep 25-30，社群稱 delayed for a few more Elon days）"
-      }
-    },
-    {
-      "timestamp": "2026-09-15T00:30:00Z",
-      "agent": "researcher",
-      "task": "ai-trend-hunter",
-      "status": "completed",
-      "round": 205,
-      "summary": "R205 Tue 00:30 UTC ai-trend-hunter — 核心發現：(1) 🔴 P1-HIGH 新：Viktor AI Coworker（5M Accel，15%→20%/12mo，$250 partner 獎金，Dub Partners，繁中零評測，Ivan 申請 partners.dub.co/viktor）；(2) 🔴 P1-HIGH 新：Creatify AI 廣告影片（25% LIFETIME affiliate + 5% at $5K/月，creatify.ai/affiliate，Dub Partners，繁中零深度評測，比較頁高 affiliate 密度）；(3) 🔴 P1-HIGH：Creatify vs HeyGen vs Synthesia vs Pictory 四工具比較頁（四個 affiliate 聚合，LIFETIME + /12mo 混搭，預估 $300-900/月）；(4) 🟡 P1：StemDeck 3.6K★（HN Sep 2026 點名，本地 AI 音訊分離，LALAL.AI affiliate 待確認，教學文可立即執行）；(5) 🟡 P1-WATCH：Grok 4.7 仍無 GA（Sep 15 00:30 UTC，第4輪確認，社群稱「delayed for a few more Elon days」，預測窗口移至 Sep 25-30）；(6) HN Sep 2026 AI Realism 趨勢確認（本地優先/開源/省費主軸，與現有 StemDeck/OmniRoute/headroom 方向一致）；(7) Affiliate 市場掃描確認：Creatify 25% LIFETIME，Viktor 15-20%/12mo，GetResponse 40-60% carryover。",
-      "changes": [
-        "搜尋 Viktor affiliate partners.dub.co/viktor → 確認 15%→20%（15次升級），referral 獲 $50/$100折扣，$250 cash partner referral，Creator Program $0-10K/post，繁中零評測",
-        "搜尋 Creatify affiliate 2026 → 確認 25% LIFETIME recurring（無到期），月銷>$5K升30%，Dub Partners，creatify.ai/affiliate，快審，繁中零深度評測",
-        "搜尋 StemDeck GitHub 2026 → 確認 3.6K★，304 forks，13K+下載，HN September 2026 Trends 點名（practical local-first AI tools），free open alternative to Moises/LALAL.AI",
-        "搜尋 Grok 4.7 September 15 2026 → 確認 Sep 15 00:30 UTC 仍無 GA，社群 Threads 稱「delayed for a few more Elon days」，Meta Connect + OpenAI DevDay 下旬競爭，預測移至 Sep 25-30",
-        "搜尋 HN AI trends September 2026 → 確認 AI realism 月份主題（安全+本地優先+開源工具），StemDeck/TurboKV/Audacity 4.0 等本地工具熱；security became part of product strategy",
-        "搜尋 AI video ad generator affiliate 2026 → 確認 Creatify 25% LIFETIME，Synthesia 25%/12mo，HeyGen 25%/12mo（Rewardful），Pictory 30% LIFETIME；比較頁四工具高 affiliate 密度機會",
-        "搜尋 new AI SaaS affiliate 30-40% recurring 2026 → 確認 Viktor 15%→20%（新發現），Creatify 25% LIFETIME（新發現），GetResponse 40-60%（carryover Ivan積壓）",
-        "創建 directives/researcher-to-strategist-2026-09-15-round205.md（Viktor P1-HIGH + Creatify P1-HIGH + StemDeck P1 + 比較頁 P1-HIGH + Grok 4.7 P1-WATCH + DevDay T-14 提醒）",
-        "更新 topic-ideas.md Round 205 段落（6條機會，月收入預估 $950-3,100）",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog + watchlistStatus"
-      ],
-      "topFindings": [
-        "Viktor AI 15%→20%/12mo P1-HIGH（5M Accel，Slack/Teams AI coworker，繁中零評測，Ivan 申請 partners.dub.co/viktor）",
-        "Creatify AI 25% LIFETIME P1-HIGH（AI廣告影片，無過期期，Ivan 申請 creatify.ai/affiliate）",
-        "Creatify vs HeyGen vs Synthesia vs Pictory 比較頁 P1-HIGH（四affiliate聚合，$300-900/月）",
-        "StemDeck 3.6K★ P1（HN Sep 2026 點名，本地音訊分離，教學文可立即執行）",
-        "Grok 4.7 仍無 GA（第4輪確認，預測 Sep 25-30，P1-WATCH 維持）",
-        "HN AI Realism趨勢確認（本地/開源/省費主軸與現有策略一致）"
-      ],
-      "watchlistStatus": {
-        "grok47": "⬇️ P1-WATCH（Sep 15 00:30 UTC 第4輪確認仍無GA，社群稱 delayed for few more Elon days，預測 Sep 25-30）",
-        "viktorAI": "🔴 P1-HIGH 新（5M Accel，Slack/Teams AI coworker，15%→20%/12mo，繁中零評測，Ivan 申請 partners.dub.co/viktor）",
-        "creatifyAI": "🔴 P1-HIGH 新（AI廣告影片，25% LIFETIME，Ivan 申請 creatify.ai/affiliate）",
-        "creatifyComparisonPage": "🔴 P1-HIGH 新（四工具比較頁，affiliate密度高，seo-writer Ivan批准後立即執行）",
-        "stemDeck": "🟡 P1 新（3.6K★，HN Sep 2026，教學文立即執行，LALAL.AI affiliate下輪確認）",
-        "openaiDevDay": "📅 T-14天（Sep 22 content-ops更新窗口，Sep 29 live，Sep 30 全紀錄）",
-        "synthesia": "🔴 P1-HIGH carryover（25%/12mo，Rewardful，MoneyPrinterTurbo文導流，Ivan申請）",
-        "goHighLevel": "🔴 P1-HIGH carryover（40% LIFETIME，Ivan affiliate批准後立即執行）",
-        "elevenLabs": "🔴 P1-HIGH carryover積壓（22%/12mo，Ivan確認申請狀態）",
-        "descript": "🔴 P1-HIGH carryover（$25 flat/sale，PartnerStack，Ivan重新申請）",
-        "orcaADE": "🔴 P1-HIGH carryover（59K★，parallel coding agents，繁中零教學）",
-        "omniRoute": "🟡 P1 carryover（45K★，OmniRoute AI Gateway）",
-        "gumroad5Products": "🔴 P0-URGENT carryover（5個404，Ivan上架，每週損失$50-700）",
-        "skool40": "🔴 P1-HIGH carryover（40% LIFETIME，Ivan積壓）",
-        "manychat50": "🔴 P1-HIGH carryover（50% 120天，Ivan積壓）",
-        "adcreativeAi": "🔴 P1-HIGH carryover（30-40% LIFETIME，Ivan積壓）",
-        "beehiiv": "🔴 P1-HIGH carryover（50-60%/12mo，Ivan積壓）",
-        "lalalaAffiliate": "🟡 P1 待確認（LALAL.AI affiliate，researcher下輪確認條款）"
-      },
-      "newAffiliatesFound": [
-        {
-          "name": "Viktor AI",
-          "commission": "15% recurring/12mo（自動升至20%，達15次轉換）+ $250 cash partner referral bonus",
-          "cookie": "待確認（Dub Partners）",
-          "platform": "Dub Partners（partners.dub.co/viktor）",
-          "pricing": "$97-197/月（企業 Slack/Teams AI coworker）",
-          "url": "partners.dub.co/viktor",
-          "priority": "P1-HIGH（$75M Accel，繁中零評測，Slack/Teams企業市場）",
-          "monthlyEst": "$300-900",
-          "note": "R205 首次提案；Creator Program 額外最高 $10,000/post（LinkedIn）；Trustpilot 3.5/5 定價投訴需平衡評測"
-        },
-        {
-          "name": "Creatify AI",
-          "commission": "25% LIFETIME recurring（無過期）→ 月銷>$5K升至30%",
-          "cookie": "待確認（Dub Partners/creatify.ai）",
-          "platform": "creatify.ai/affiliate（Dub Partners）",
-          "pricing": "$33-67/月（Starter/Pro），e-commerce/行銷代理商受眾",
-          "url": "creatify.ai/affiliate",
-          "priority": "P1-HIGH（LIFETIME無到期，AI廣告影片成長市場，繁中零深度評測）",
-          "monthlyEst": "$200-600（評測文）+ $300-900（比較頁）",
-          "note": "R205 首次提案；英文市場已有創作者喊 $7,280 bonuses；比較頁四工具（+HeyGen+Synthesia+Pictory）affiliate密度高"
-        }
-      ],
-      "estimatedNewRevenue": "$950-3,100/月（Viktor Ivan後$300-900 + Creatify評測Ivan後$200-600 + 比較頁Ivan後$300-900 + StemDeck教學$50-400 + 間接/常青$100-300）"
-    },
-    {
-      "timestamp": "2026-09-14T22:00:00Z",
-      "agent": "researcher",
-      "task": "ai-dev-research",
-      "status": "completed",
-      "round": 204,
-      "summary": "R204 Mon 22:00 UTC ai-dev-research — 核心發現：(1) 🔴 Grok 4.7 降至 P1-WATCH（Sep 14 22:00 UTC 仍無 xAI 官方 GA，預測窗口移至 Sep 25-30，不再 P0-STANDBY）；(2) 📅 DevDay 日期修正（Sep 29 非 Sep 22，content-ops 調整：Sep 22=新預熱文，Sep 29=即時，Sep 30=全紀錄）；(3) 🔴 P1-HIGH 新聯盟：Synthesia affiliate（25%/12mo，Rewardful，60天cookie，MoneyPrinterTurbo 文章可導流）；(4) Descript 條款更新確認（$25 flat/sale，PartnerStack 遷移，需重新申請）；(5) ElevenLabs 精確條件確認（22%/12mo，90天cookie，$5 min，June 2026 條款，積壓確認）；(6) 🔥 Orca ADE 59K★（Stably AI YC W22，40+ CLI agents 並行，parallel git worktrees，MIT 免費，繁中零教學，P1-HIGH）；(7) GitHub Trending Sep 2026：Ponytail/Chrome DevTools MCP/hermes-agent/SIE；(8) Quilter.ai = AI PCB 設計，無affiliate → P3-DEPRIORITIZE；(9) GoHighLevel 台灣市場仍空白，等 Ivan affiliate 批准；(10) MoneyPrinterTurbo 自身無 affiliate，可推 Synthesia/Pictory/Descript 作搭配評測。",
-      "changes": [
-        "搜尋 Grok 4.7 xAI release September 2026 → 確認 Sep 14 22:00 UTC 仍無官方 GA；xAI release notes 最新仍是 Grok 4.6；P0-STANDBY 降至 P1-WATCH",
-        "搜尋 OpenAI DevDay 2026 September agenda → 確認 Sep 29（非22）Fort Mason；$650 邀請制；申請已截止；尚無確認議程",
-        "搜尋 ElevenLabs affiliate PartnerStack 2026 → 確認 22%/12mo（Starter/Creator/Pro/Scale），11%（Business），90天cookie，$5 min，June 10 2026 條款更新",
-        "搜尋 Quilter.ai affiliate 2026 → 確認是 AI PCB 設計工具，無公開 affiliate program，P3-DEPRIORITIZE",
-        "搜尋 GoHighLevel 台灣市場 → 確認 marketer.com.tw 仍未覆蓋，GHL 搜尋量 800-2K/月，評測文等 Ivan affiliate 批准",
-        "搜尋 MoneyPrinterTurbo competitor AI video affiliate → 確認 Pictory AI 20% LIFETIME，Descript $25 flat，Synthesia 25%/12mo（Rewardful，首次提案 P1-HIGH）",
-        "搜尋 GitHub trending AI September 2026 → 確認 Orca ADE 59K★（Stably AI YC W22，MIT，parallel agents，July review 76K views，繁中零教學）；MoneyPrinterTurbo +17.1K/月；OmniRoute 45K★；Ponytail/ChromeDevToolsMCP/hermes-agent/SIE Sep 3 trending",
-        "搜尋 Synthesia affiliate 2026 → 確認 25%/12mo，Rewardful，60天cookie，$30 min，Starter $22/月，Creator $67/月，首次提案 P1-HIGH",
-        "搜尋 Descript affiliate 2026 PartnerStack → 確認 $25 flat/new subscriber（2026更新），90天cookie，PartnerStack遷移中，需重新申請",
-        "搜尋 Orca multi-agent orchestration GitHub 2026 → 確認 Stably AI YC W22，59K★，40+ CLI agents，parallel git worktrees，Monaco editor，July 2026 YouTube review 76K views",
-        "創建 directives/researcher-to-strategist-2026-09-14-round204.md",
-        "更新 dev-notes.md：Round 204 完整段落",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog + watchlistStatus"
-      ],
-      "topFindings": [
-        "Grok 4.7 降至 P1-WATCH（Sep 14 22:00 UTC 仍無 GA，預測 Sep 25-30）",
-        "DevDay 日期修正（Sep 29，content-ops 調整三輪計畫）",
-        "Synthesia 25%/12mo P1-HIGH 新提案（MoneyPrinterTurbo 文章導流機會）",
-        "Orca ADE 59K★ P1-HIGH（parallel coding agents，MIT，繁中零教學）",
-        "ElevenLabs 22%/12mo 積壓確認（Ivan 立即確認申請狀態）",
-        "Descript $25 flat 條款更新（PartnerStack 重新申請）",
-        "Quilter.ai P3-DEPRIORITIZE（AI PCB，無 affiliate）",
-        "GitHub Sep 2026：開源 AI 中心向上移動（Skills/Agent/Workspace 層）"
-      ],
-      "watchlistStatus": {
-        "grok47": "⬇️ P1-WATCH（從 P0-STANDBY 降級，Sep 14 22:00 UTC 仍無 GA，預測 Sep 25-30，每輪快速掃描）",
-        "openaiDevDay": "📅 Sep 29 確認（content-ops：Sep 22 預熱文NEW + Sep 29 即時 + Sep 30 全紀錄）",
-        "syntheiaAffiliate": "🔴 P1-HIGH 新（25%/12mo，Rewardful，MoneyPrinterTurbo導流，Ivan 申請）",
-        "descriptionAffiliate": "🔴 P1-HIGH（$25 flat/sale，PartnerStack遷移，Ivan 重新申請）",
-        "elevenLabsAffiliate": "🔴 P1-HIGH 積壓（22%/12mo，June 2026條款確認，Ivan 立即確認）",
-        "orcaADE": "🔴 P1-HIGH 新（59K★ MIT，parallel coding agents，繁中零教學，seo-writer 執行）",
-        "goHighLevel": "🔴 P1-HIGH carryover（40% LIFETIME，Ivan affiliate 批准後立即執行）",
-        "gumroad5Products": "🔴 P0-URGENT carryover（5個產品 404，Ivan 上架，每週損失 $50-700）",
-        "omniRoute": "🟡 P1 carryover（45K★，OmniRoute AI Gateway，積壓多輪）",
-        "deepseekHarnessVsReasonnix": "🟡 P1 carryover（比較文，34.6K★，積壓）",
-        "orkaADE_orcaIDE": "🔴 P1-HIGH 新（R204，Orca by Stably AI）",
-        "quilterAi": "❌ P3-DEPRIORITIZE（AI PCB 設計，無affiliate，受眾太窄）",
-        "skool40": "🔴 P1-HIGH carryover（40% LIFETIME，Ivan 積壓）",
-        "manychat50": "🔴 P1-HIGH carryover（50% recurring 120天，Ivan 積壓）",
-        "adcreativeAi": "🔴 P1-HIGH carryover（30-40% LIFETIME，Ivan 積壓）",
-        "leadpages": "🔴 P1 carryover（40-50% LIFETIME，Ivan 積壓）",
-        "beehiiv": "🔴 P1-HIGH carryover（50-60%/12mo，Ivan 積壓）"
-      },
-      "newAffiliatesFound": [
-        {
-          "name": "Synthesia",
-          "commission": "25% recurring/12mo",
-          "cookie": "60 天",
-          "platform": "Rewardful",
-          "pricing": "$22/月（Starter）→ $67/月（Creator）",
-          "url": "synthesia.io/affiliate",
-          "priority": "P1-HIGH（首次精確提案，MoneyPrinterTurbo文章可導流，AI 影片 avatar 市場成長）",
-          "monthlyEst": "$200-600",
-          "note": "R204 首次提案；10 sale = 免費 Starter 帳號；15 sale = custom avatar 里程碑；Enterprise 不計佣金"
-        }
-      ]
-    },
-    {
-      "timestamp": "2026-09-14T03:00:00Z",
-      "agent": "seo-writer",
-      "task": "article-publish",
-      "status": "completed",
-      "summary": "Mon 03:00 UTC cron — strategist-weekly-2026-09-14 P1-HIGH 兩篇執行（優先級 2 直接執行，不需 Ivan）：(1) Copperhead AI PCB 設計完整教學（繁中首發，~2,600字，HN #2 198pts，GitHub trending，「電路板界的 Cursor」，台灣硬體工程師/Maker 受眾）+ (2) MoneyPrinterTurbo AI 短影音完整教學（繁中首發，~2,700字，120K★，17.1K月增，關鍵字→影片全自動 Pipeline，MiniMax H3 繁中配音設定，批次生成）。Copperhead 文章：核心角度「Cursor for Circuit Boards」，含 5步驟安裝（Python+FFmpeg→pip install→KiCad整合→自然語言設計→Gerber輸出）、Copperhead vs KiCad AI Copilot vs EasyEDA AI vs Flux.ai 比較表、本地LLM隱私模式、DRC智慧修復、批次元件替換、台灣四大實戰場景（IoT感測器/Maker開源硬體/硬體新創原型/學術研究板）、FAQ 6題。MoneyPrinterTurbo 文章：核心角度「全自動AI短影音工廠，關鍵字→成品流水線」，含全Pipeline圖解（輸入→劇本→TTS→素材→字幕→輸出）、5步驟完整安裝（Python+FFmpeg→pip→config.toml→WebUI啟動→批次CSV生成）、MiniMax H3台灣口音設定（female-zh-TW-warm/bright/male-zh-TW-professional）、字幕繁中優化設定、費用試算（NT.5-3/支）、MoneyPrinterTurbo vs CapCut AI vs Synthesia vs InVideo AI vs Pictory AI 5欄比較表、台灣四大實戰場景（自媒體農場/Hahow課程行銷/AI工具評測頻道/蝦皮電商）、FAQ 6題。兩篇均含 DigitalOcean + DataCamp + 第三聯盟連結（Gumroad/CapCut/Hahow）漸層按鈕 CTA。blog/index.html 新增兩張卡片排第一位（217→219篇）。sitemap.xml 新增兩個URL（169→171 URLs，priority 0.9）。",
-      "changes": [
-        "新增 blog/copperhead-ai-pcb-design-guide-2026.html（~2,600字繁中首發，HN #2 198pts，PCB AI設計完整教學，KiCad整合，Gerber輸出）",
-        "新增 blog/moneyprinterturbo-ai-video-guide-2026.html（~2,700字繁中首發，120K★ AI短影音全自動Pipeline，MiniMax H3配音，批次生成）",
-        "blog/index.html：新增 MoneyPrinterTurbo + Copperhead 兩張卡片（排第一位），217→219篇",
-        "sitemap.xml：新增兩個URL（lastmod 2026-09-14，priority 0.9），169→171 URLs",
-        "agent-state.json：更新 lastRun + agentLog"
-      ],
-      "articlesPublished": [
-        {
-          "file": "blog/copperhead-ai-pcb-design-guide-2026.html",
-          "title": "Copperhead AI PCB 設計完整教學 2026：電路板界的 Cursor，Maker 硬體工程師繁中首發",
-          "wordCount": "~2,600 字",
-          "affiliateLinks": [
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "DataCamp afflink.one/s/aavAC",
-            "Gumroad xiaofan8.gumroad.com/l/kknad"
-          ],
-          "seoKeywords": [
-            "copperhead ai pcb",
-            "copperhead ai 教學 繁中",
-            "kicad ai 設計 2026",
-            "pcb 設計 ai 工具",
-            "maker 電路板 ai",
-            "cursor for circuit boards 繁中"
-          ],
-          "publishReason": "strategist-weekly-2026-09-14 P1-HIGH 優先級2（HN #2 198pts，GitHub trending Sep 9-13，繁中零評測確認）",
-          "estimatedTraffic": "0.8K-2.5K/月",
-          "estimatedRevenue": "0-250/月（間接 DigitalOcean + DataCamp）"
-        },
-        {
-          "file": "blog/moneyprinterturbo-ai-video-guide-2026.html",
-          "title": "MoneyPrinterTurbo 完整教學 2026：120K★ AI 短影音全自動，關鍵字→YouTube Shorts 一鍵到底，繁中首發",
-          "wordCount": "~2,700 字",
-          "affiliateLinks": [
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "DataCamp afflink.one/s/aavAC",
-            "CapCut vbtrax.com/track/clicks/9453/...",
-            "Hahow abzcoupon.com/track/clicks/4850/..."
-          ],
-          "seoKeywords": [
-            "moneyprinterturbo 教學 繁中",
-            "moneyprinterturbo 2026",
-            "ai 短影音 自動化 台灣",
-            "youtube shorts ai 生成",
-            "moneyprinterturbo minimax",
-            "ai 影片生成 關鍵字"
-          ],
-          "publishReason": "strategist-weekly-2026-09-14 P1-HIGH 優先級2（120K★，17.1K月增，繁中教學極度空白，R202 P1-HIGH 直接執行）",
-          "estimatedTraffic": "1K-3K/月",
-          "estimatedRevenue": "0-250/月（間接 DigitalOcean + DataCamp + CapCut）"
-        }
-      ],
-      "nextActions": [
-        "P0-STANDBY 維持：Grok 4.7 API GA → 24h 內執行 blog/grok-47-complete-review-2026.html + tools/ai-token-cost-calculator.html 更新",
-        "P1-HIGH 下輪（Thu Sep 18）：blog/deepseek-harness-vs-reasonix-comparison-2026.html（Harness vs Reasonix 比較文，34.6K★）",
-        "P1（Ivan 批准後）：blog/gohighlevel-review-2026.html（40% LIFETIME，Ivan 申請中）",
-        "P1（Ivan 批准後）：blog/elevenlabs-voice-ai-complete-review-2026.html（22%/12mo）",
-        "content-ops：Sep 22 00:00 UTC 更新 blog/openai-devday-2026-preview.html"
-      ]
-    },
-    {
-      "timestamp": "2026-09-14T01:30:00Z",
-      "agent": "strategist",
-      "task": "seo-weekly-report",
-      "status": "completed",
-      "summary": "Mon 01:30 UTC seo-weekly-report — 本週戰績：6篇文章（Mastra/HydraFusion/NanoChat/GetResponse + 3篇 content-refresh），noindex 重大 bug 修復，GSC Clicks 191（+13%）。最大發現：GoHighLevel 40% LIFETIME affiliate + 繁中零競品（marketer.com.tw 行銷自動化文完全沒提）。5個 Gumroad 404 仍持續（P0-URGENT Ivan 行動，每週損失 50-700）。小優化：opencode-zen-vs-go-pricing-2026.html 新增「免費額度與訂閱方案」段落（GSC position 9.5/8.4/8.8/9.3 四組 opencode 關鍵字，推進 page 1）。發出 strategist-weekly-2026-09-14.md。",
-      "changes": [
-        "新增 directives/strategist-weekly-2026-09-14.md（含 seo-writer/builder/researcher/content-ops/Ivan 下週完整指令）",
-        "blog/opencode-zen-vs-go-pricing-2026.html：新增「OpenCode 免費額度與訂閱方案」段落（H2 + 說明卡 + 比較表），dateModified 更新至 2026-09-14",
-        "sitemap.xml：opencode-zen-vs-go lastmod 更新至 2026-09-14",
-        "agent-state.json：lastStrategistRun + agentLog 更新"
-      ],
-      "weeklyAnalysis": {
-        "gscClicks": 191,
-        "gscImpressions": 3093,
-        "gscCTR": 6.2,
-        "gscAvgPosition": 7.7,
-        "articlesTotal": "~217篇",
-        "topOpportunity": "GoHighLevel 40% LIFETIME affiliate（繁中零競品，marketer.com.tw 完全未覆蓋）",
-        "gumroad404Loss": "50-700/週（5個產品仍 404，Ivan P0-URGENT）"
-      },
-      "directivesIssued": {
-        "seoWriter": [
-          "copperhead-ai-pcb-design-guide-2026.html（P1，繁中首發，HN #2）",
-          "moneyprinterturbo-ai-video-guide-2026.html（P1-HIGH，120K★，繁中空白）",
-          "deepseek-harness-vs-reasonix-comparison-2026.html（P1，比較文）",
-          "+ 3篇 affiliate 待 Ivan 批准"
-        ],
-        "builder": [
-          "Gumroad 4產品打包核查",
-          "tools/best-ai-humanizer-2026.html（英文站）",
-          "ai-tools.tw DNS 最終決策"
-        ],
-        "researcher": [
-          "Grok 4.7 GA 持續監控",
-          "Quilter.ai affiliate 確認",
-          "GoHighLevel 台灣市場深入",
-          "DevDay Sep 22 確認功能清單"
-        ],
-        "contentOps": [
-          "Sep 22 DevDay 文章更新",
-          "Sep 29-30 全紀錄版"
-        ],
-        "ivan": [
-          "P0-URGENT: 5個 Gumroad 上架",
-          "GoHighLevel affiliate 申請",
-          "ElevenLabs 確認",
-          "Descript PartnerStack 申請",
-          "Beehiiv 申請"
-        ]
-      }
-    },
-    {
-      "timestamp": "2026-09-13T14:30:00Z",
-      "agent": "content-ops",
-      "task": "content-refresher",
-      "status": "completed",
-      "summary": "Sun 14:30 UTC content-refresher — 找出 sitemap.xml 中 lastmod 最舊的 3 篇主站 blog 文章（2026-05-28）並執行更新。(1) blog/deerflow-vs-dify-vs-n8n-2026.html：dateModified 更新至 2026-09-13，Dify 用戶數更新（10萬→45萬），發布日期標記更新，新增 DataCamp 聯盟連結 CTA；(2) blog/free-claude-code-tutorial-2026.html：修復重大 bug（noindex→index, follow），dateModified 更新，GitHub stars 更新（19.7K→52K+），hero badge 更新；(3) blog/how-to-write-ai-prompts.html：dateModified 更新，DO 定價修正（$4→$6/月），新增 DataCamp CTA 區塊。sitemap.xml 三篇 lastmod 全部更新至 2026-09-13。git commit + push 完成。",
-      "changes": [
-        "blog/deerflow-vs-dify-vs-n8n-2026.html：dateModified 2026-04-18 → 2026-09-13，Dify 數據更新（10萬→45萬），添加 DataCamp CTA",
-        "blog/free-claude-code-tutorial-2026.html：noindex→index（SEO 重大修復），dateModified 更新，stars 19.7K→52K+",
-        "blog/how-to-write-ai-prompts.html：dateModified 更新，DO 定價 $4→$6/月，新增 DataCamp CTA",
-        "sitemap.xml：3篇文章 lastmod 更新至 2026-09-13",
-        "git add + commit 'content: refresh old articles' + push origin main"
-      ]
-    },
-    {
-      "timestamp": "2026-09-13T10:30:00Z",
-      "agent": "affiliate-monitor",
-      "task": "affiliate-link-check",
-      "status": "completed",
-      "summary": "Sun 10:30 UTC affiliate-monitor — 117 篇 blog 文章掃描完成。核心聯盟連結狀態：DigitalOcean 200✓，Systeme.io 200✓，Gumroad kknad 200✓，DataCamp/Cloudways/Hahow/CapCut/onelink 403（防爬正常），Warp/shortspro/hermes/adcreative/blym 200✓。5個 Gumroad 產品 404 持續（Ivan P0-URGENT：需上架 claude-code-prompt-pack-2026 / n8n-tw-templates / n8n-claude-templates-v1 / claude-code-skills-pack-v2 / ai-agent-cybersecurity-skills-v1）。2個 live 文章 404 已修復（getresponse affiliate URL + nanoGPT discussions URL）。所有 117 篇文章均含至少 1 個聯盟連結。",
-      "changes": [
-        "curl 檢查 21 個聯盟連結：16 ✅ OK，5 ❌ 404（Gumroad 產品待上架）",
-        "blog/getresponse-ai-email-marketing-review-2026.html：getresponse.com/affiliates（404）→ affiliate-programs（200）修復",
-        "blog/nanochat-karpathy-complete-tutorial-2026.html：nanoGPT/discussions/710（404）→ discussions（修復）",
-        "掃描 117 篇文章外部連結 → 無文章缺乏聯盟連結（0篇零聯盟）",
-        "更新 agent-state.json affiliateLinks status + lastChecked"
-      ],
-      "linkStatus": {
-        "ok": 16,
-        "broken": 5,
-        "botBlocked_normal": 5
-      },
-      "brokenLinksDetail": [
-        {
-          "url": "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026",
-          "status": 404,
-          "action": "P0-URGENT Ivan：上架 Gumroad",
-          "affectedFiles": 1
-        },
-        {
-          "url": "xiaofan8.gumroad.com/l/n8n-tw-templates",
-          "status": 404,
-          "action": "Ivan：確認是否下架，3 篇文章包含此連結",
-          "affectedFiles": 3
-        },
-        {
-          "url": "xiaofan8.gumroad.com/l/n8n-claude-templates-v1",
-          "status": 404,
-          "action": "Ivan：上架 Gumroad（builder 已完成打包）",
-          "affectedFiles": 1
-        },
-        {
-          "url": "xiaofan8.gumroad.com/l/claude-code-skills-pack-v2",
-          "status": 404,
-          "action": "Ivan：上架 Gumroad（builder 已完成）",
-          "affectedFiles": 0
-        },
-        {
-          "url": "xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1",
-          "status": 404,
-          "action": "Ivan：上架 Gumroad ai-agent-cybersecurity-skills-v1",
-          "affectedFiles": 1
-        }
-      ],
-      "ivanActions": [
-        "🔴 P0-URGENT：上架 xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（$27，第22週+404）",
-        "🔴 P0-URGENT：確認 n8n-tw-templates 狀態（3篇文章仍有此連結，若下架需在文章移除 CTA）",
-        "🔴 P0-URGENT：上架 n8n-claude-templates-v1（builder 打包完成，$39）",
-        "🔴 P0-URGENT：上架 claude-code-skills-pack-v2（builder 打包完成，$29）",
-        "🔴 P0-URGENT：上架 ai-agent-cybersecurity-skills-v1（blog/ai-agent-cybersecurity-skills-claude-code-2026.html 依賴此連結）"
-      ]
-    },
-    {
-      "timestamp": "2026-09-13T03:09:00Z",
-      "agent": "researcher",
-      "task": "competitor-watch",
-      "status": "completed",
-      "round": 203,
-      "summary": "R203 Sun 11:00 UTC competitor-watch — 核心發現：(1) 🔴 P1-HIGH GoHighLevel 40% LIFETIME affiliate，繁中零評測（marketer.com.tw 行銷自動化文章無 GoHighLevel，shareuhack 英文站有但繁中空白）；(2) 🔴 P1-HIGH Descript affiliate 條款更新（從 15%/12mo 遞歸改為 $25 flat/sale，PartnerStack 遷移中，90天cookie，需重新申請）；(3) 🟡 P1 ElevenLabs 22%/12mo 積壓確認（90天cookie，$5 min payout，PartnerStack，台灣 AI 語音市場受眾）；(4) 英文市場 Top 5 AI affiliate 組合分析（GoHighLevel + ElevenLabs + Descript + QuillBot + HeyGen，我們缺前三）；(5) 台灣直接競品：autodev-ai 仍是唯一深度評測站，marketer.com.tw 主推 HubSpot/Monday.com，無 GoHighLevel/ElevenLabs/Descript 覆蓋；(6) GoHighLevel 機制：40% LIFETIME，$297 Unlimited = $118.80/月/referral 永久，Tier 2 5%，90天cookie，FirstPromoter。發出 directives/researcher-to-strategist-2026-09-13-round203.md。",
-      "changes": [
-        "搜尋 GoHighLevel affiliate 2026 → 確認 40% LIFETIME recurring（$97 Starter = $38.80/月，$297 Unlimited = $118.80/月），Tier 2 5%，90天cookie，FirstPromoter，$50 min payout，需付費試用才能發布評測",
-        "搜尋 GoHighLevel 繁體中文 評測 2026 → 確認繁中零競品（marketer.com.tw 行銷自動化比較 8款 無 GoHighLevel，shareuhack.com 英文站有），台灣市場空白確認",
-        "搜尋 QuillBot affiliate 2026 → 確認 10-20%/referral（最高 $20/subscriber），30天cookie，非遞歸，評分 73/100，P2",
-        "搜尋 ElevenLabs affiliate 2026 → 確認 22%/12mo，90天cookie，$5 min payout，PartnerStack，June 2026 條款更新",
-        "搜尋 Descript affiliate 2026 → 確認條款更新（$25 flat/new subscriber，原 15%/12mo 僅保留既有 referrals，新 referrals 全 $25 flat），90天cookie，PartnerStack 遷移中",
-        "搜尋 台灣競品（shareuhack/mybest/ibest/marketer.com.tw）→ 確認 marketer.com.tw 推廣 Monday.com + HubSpot，無 GoHighLevel，autodev-ai 繼續唯一深度評測站",
-        "搜尋 英文站 Top 5 AI affiliate programs 2026 YouTube → 確認 GoHighLevel + ElevenLabs + Descript + QuillBot + HeyGen 是英文創作者最高佣金五元組",
-        "新建 directives/researcher-to-strategist-2026-09-13-round203.md",
-        "更新 topic-ideas.md Round 203 段落",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
-      ],
-      "topFindings": [
-        "GoHighLevel 40% LIFETIME，繁中零競品（marketer.com.tw/ibest/autolab 均無），Ivan 申請 affiliate.gohighlevel.com/join",
-        "Descript $25 flat/sale（條款 2026 更新），PartnerStack，繁中零評測，90天cookie",
-        "ElevenLabs 22%/12mo，$5 min payout，積壓確認（Ivan 確認申請狀態）",
-        "英文 Top 5 AI affiliate 五元組：GoHighLevel + ElevenLabs + Descript + QuillBot + HeyGen（我們缺前三）",
-        "marketer.com.tw 覆蓋行銷自動化（HubSpot/ActiveCampaign 角度），GoHighLevel 完全空白"
-      ],
-      "newAffiliatesFound": [
-        {
-          "name": "GoHighLevel",
-          "commission": "40% LIFETIME monthly recurring（永久）",
-          "tier2": "5%（推薦 affiliate 的收益）",
-          "cookie": "90 天",
-          "platform": "FirstPromoter（affiliate.gohighlevel.com）",
-          "pricing": "$97/月（Starter）→ $38.80/月/ref；$297/月（Unlimited）→ $118.80/月/ref；$497/月（Agency Pro）→ $198.80/月/ref",
-          "url": "affiliate.gohighlevel.com/join",
-          "priority": "P1-HIGH（繁中零競品，業界最高 LIFETIME，Ivan 申請）",
-          "monthlyEst": "$400-1,500（目標 10 referrals on Unlimited）",
-          "note": "R203 competitor-watch 首次詳細分析；需完成付費試用才能發布評測；marketer.com.tw 行銷自動化文完全未提及；台灣 GoHighLevel 關鍵字搜尋量預估 800-2,000/月"
-        },
-        {
-          "name": "Descript（條款更新版）",
-          "commission": "$25 flat per new subscriber（2026 最新）；舊 affiliate 既有 referrals 保留 15%/12mo 最多 12 個月",
-          "cookie": "90 天",
-          "platform": "PartnerStack（遷移中，需重新申請）",
-          "url": "descript.com/affiliate",
-          "priority": "P1-HIGH（$25 flat 有吸引力，繁中評測空白，台灣 podcast 市場成長）",
-          "monthlyEst": "$100-300（目標 12-20 次轉換/月）",
-          "note": "R203 首次提案，條款已從 15%/12mo 遞歸改為 $25 flat；舊 affiliate 需重新申請 PartnerStack"
-        }
-      ],
-      "estimatedNewRevenue": "$850-2,900/月（GoHighLevel Ivan後 $400-1,500 + ElevenLabs Ivan後 $150-500 + Descript Ivan後 $100-300 + HeyGen carryover $200-600）"
-    },
-    {
-      "timestamp": "2026-09-13T03:00:00Z",
-      "agent": "seo-writer",
-      "task": "article-publish",
-      "status": "completed",
-      "summary": "Sun 03:00 UTC cron — R202 directive + strategist-weekly-2026-09-11 P1-HIGH 兩篇執行：(1) NanoChat Karpathy 完整教學（繁中首發，~2,500字，57.3K★ 8K forks，Andrej Karpathy 出品，P1-HIGH carryover R197/R199/R200/R201 積壓執行）+ (2) GetResponse AI Email 行銷完整評測（繁中首發，~2,400字，R202 P1-HIGH 新提案，40-60% PartnerStack 聯盟計畫分析，台灣電商四大場景）。NanoChat 文章：核心角度「DGX Spark 台灣開賣，本機 LLM 訓練首次平民化，NanoChat 是最佳入門框架」，含 5步驟安裝教學（uv venv→PyTorch CUDA→OpenWebText→config→訓練啟動）、DGX Spark vs RTX 4090 性能比較表、SFT 對話微調教學、GGUF 匯出 Ollama 整合、NanoChat vs LLaMA-Factory vs Axolotl vs Megatron 比較表、台灣四大實戰場景（技術文件摘要/繁中課程內容/半導體 Copilot/醫療問答）、FAQ 6題。GetResponse 文章：核心角度「繁中介面是台灣電商最大優勢，Webinar 整合是差異化功能」，含四方案定價表（$19-企業方案，台幣換算）、AI Email Creator 主旨行實測（生成5個主旨行）、GetResponse vs Mailchimp vs Beehiiv vs Systeme.io 8欄比較表、5步驟快速上手（帳號→SPF/DKIM→Landing Page→Drip序列→整合）、台灣電商四大場景（蝦皮賣家/Hahow課程/SaaS Onboarding/LINE+Email雙渠道）、聯盟計畫分析（40-60%/12月 PartnerStack）、FAQ 6題。兩篇均含 DigitalOcean + DataCamp + Systeme.io/Hahow/CapCut 漸層按鈕 CTA（至少 3 個聯盟連結）。blog/index.html 新增兩張卡片排第一位（215→217篇）。sitemap.xml 新增兩個 URL（167→169 URLs，priority 0.9）。",
-      "changes": [
-        "新增 blog/nanochat-karpathy-complete-tutorial-2026.html（~2,500字繁中首發，57.3K★ LLM 訓練框架完整教學，DGX Spark homelab 實戰）",
-        "新增 blog/getresponse-ai-email-marketing-review-2026.html（~2,400字繁中評測，R202 P1-HIGH，40-60%/12月 PartnerStack 聯盟計畫分析）",
-        "blog/index.html：新增 NanoChat + GetResponse 兩張卡片（排第一位），215→217篇",
-        "sitemap.xml：新增兩個 URL（lastmod 2026-09-13，priority 0.9），167→169 URLs",
-        "agent-state.json：更新 lastRun + agentLog"
-      ],
-      "articlesPublished": [
-        {
-          "file": "blog/nanochat-karpathy-complete-tutorial-2026.html",
-          "title": "NanoChat 完整教學 2026：Karpathy 57K★ GPT-2 訓練框架，DGX Spark 本機 LLM 實戰，繁中首發",
-          "wordCount": "~2,500 字",
-          "affiliateLinks": [
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "DataCamp afflink.one/s/aavAC",
-            "Systeme.io systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f",
-            "Gumroad xiaofan8.gumroad.com/l/kknad"
-          ],
-          "seoKeywords": [
-            "nanochat 教學 繁中",
-            "nanochat karpathy 2026",
-            "nanoGPT 繁中教學",
-            "dgx spark llm 訓練",
-            "gpt-2 訓練 本機",
-            "llm 訓練入門 2026",
-            "karpathy nanochat 繁中"
-          ],
-          "publishReason": "P1-HIGH carryover R197/R199/R200/R201 積壓執行（57.3K★，8K forks，DGX Spark 台灣開賣，繁中零教學確認）",
-          "estimatedTraffic": "1K-3.5K/月",
-          "estimatedRevenue": "$100-350/月（間接 DigitalOcean + DataCamp）"
-        },
-        {
-          "file": "blog/getresponse-ai-email-marketing-review-2026.html",
-          "title": "GetResponse 完整評測 2026：AI 電子報 + 行銷自動化 + Webinar，台灣電商值得訂嗎？",
-          "wordCount": "~2,400 字",
-          "affiliateLinks": [
-            "Systeme.io systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f",
-            "DataCamp afflink.one/s/aavAC",
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "CapCut vbtrax.com/track/clicks/9453/...",
-            "Hahow abzcoupon.com/track/clicks/4850/..."
-          ],
-          "seoKeywords": [
-            "getresponse 評測 2026",
-            "getresponse 繁中",
-            "email 行銷工具 台灣",
-            "getresponse vs mailchimp 比較",
-            "email 行銷 台灣電商",
-            "getresponse ai 功能",
-            "getresponse webinar 繁中"
-          ],
-          "publishReason": "R202 researcher P1-HIGH 新提案（40-60% PartnerStack 聯盟計畫首次提案，繁中評測空白，ivan 申請 getresponse.com/affiliates）",
-          "estimatedTraffic": "0.8K-2.5K/月",
-          "estimatedRevenue": "$80-250/月（Systeme.io + DataCamp 間接，GetResponse affiliate ivan 批准後大幅提升）"
-        }
-      ],
-      "nextActions": [
-        "P0-STANDBY 維持：Grok 4.7 API GA（仍未出現）→ researcher 繼續監控，GA後 24h 內觸發 blog/grok-47-complete-review-2026.html",
-        "🔴 Ivan 行動：申請 getresponse.com/affiliates（PartnerStack，40-60%/12mo，P1-HIGH R202 新提案），批准後在 getresponse 評測文換入真實 affiliate link",
-        "P1-HIGH 下輪（Thu Sep 17）：blog/mastra-factory-ai-agents-2026.html（R202 Mastra Factory PH #1 459 upvotes，YC W25）",
-        "P1-HIGH 下輪：blog/copperhead-ai-pcb-design-guide-2026.html（R202 P1-HIGH，HN #2 198pts，Cursor for circuit boards）",
-        "P1-HIGH 下輪：blog/deepseek-harness-vs-reasonix-comparison-2026.html（strategist-weekly-2026-09-11 carryover）",
-        "content-ops：Sep 22 00:00 UTC 更新 blog/openai-devday-2026-preview.html（加入已確認 DevDay 功能）"
-      ]
-    },
     {
       "timestamp": "2026-09-13T02:07:00Z",
       "agent": "strategist",
@@ -1169,32 +480,70 @@
         "Updated agent-state.json siteHealth + lastChecked + lastSiteHealthCheck + lastSiteHealthSummary + agentLog"
       ],
       "watchlistStatus": {}
+    },
+    {
+      "timestamp": "2026-09-16T07:00:00Z",
+      "agent": "content-ops",
+      "task": "internal-linker",
+      "status": "completed",
+      "summary": "Wed 15:00 UTC internal-linker cron（實際執行 07:00 UTC）— 為 3 篇 AI Agent 記憶主題文章新增共 5 個內部連結，強化記憶管理主題群聚。(1) agentmemory-claude-code-tutorial-2026.html：新增 OpenViking Agent Plugins 1.0 + TencentDB Agent Memory 兩個連結（延伸閱讀區，同主題記憶管理工具交叉連結）；(2) warp-terminal-review-2026.html：新增 opencode-vs-cursor-vs-claude-code-2026.html + claude-code-desktop-vs-terminal-2026.html 兩個連結（AI coding 工具選擇自然延伸閱讀）；(3) tencentdb-agent-memory-tutorial-2026.html：新增 openviking-agent-memory-save-tokens-2026.html 一個連結（同為 AI Agent 記憶管理工具，互補推薦）。選擇原則：有 DigitalOcean/DataCamp/Systeme.io 聯盟連結的文章優先，連結置於延伸閱讀區，自然融入不干擾閱讀流。",
+      "changes": [
+        "blog/agentmemory-claude-code-tutorial-2026.html：延伸閱讀新增 openviking-agent-memory-save-tokens-2026.html + tencentdb-agent-memory-tutorial-2026.html（共 +2 內部連結）",
+        "blog/warp-terminal-review-2026.html：延伸閱讀新增 opencode-vs-cursor-vs-claude-code-2026.html + claude-code-desktop-vs-terminal-2026.html（共 +2 內部連結）",
+        "blog/tencentdb-agent-memory-tutorial-2026.html：延伸閱讀新增 openviking-agent-memory-save-tokens-2026.html（+1 內部連結）",
+        "git commit: seo: add internal links → 9170f77"
+      ],
+      "articlesModified": [
+        {
+          "file": "blog/agentmemory-claude-code-tutorial-2026.html",
+          "linksAdded": 2,
+          "targets": [
+            "openviking-agent-memory-save-tokens-2026.html",
+            "tencentdb-agent-memory-tutorial-2026.html"
+          ]
+        },
+        {
+          "file": "blog/warp-terminal-review-2026.html",
+          "linksAdded": 2,
+          "targets": [
+            "opencode-vs-cursor-vs-claude-code-2026.html",
+            "claude-code-desktop-vs-terminal-2026.html"
+          ]
+        },
+        {
+          "file": "blog/tencentdb-agent-memory-tutorial-2026.html",
+          "linksAdded": 1,
+          "targets": [
+            "openviking-agent-memory-save-tokens-2026.html"
+          ]
+        }
+      ]
     }
   ],
   "gscData": {
-    "lastUpdated": "2026-09-15 07:00",
+    "lastUpdated": "2026-09-16 05:30",
     "period": "14 days",
     "sites": {
       "autodev-ai": {
         "summary": {
           "totalClicks": 205,
-          "totalImpressions": 3290,
-          "avgCTR": 6.2,
-          "avgPosition": 7.3
+          "totalImpressions": 3386,
+          "avgCTR": 6.1,
+          "avgPosition": 6.9
         },
         "topQueries": [
           {
             "keyword": "lm studio bionic 教學",
             "clicks": 14,
-            "impressions": 32,
-            "ctr": 43.8,
+            "impressions": 34,
+            "ctr": 41.2,
             "position": 2.3
           },
           {
             "keyword": "opencode zen 費用",
             "clicks": 3,
-            "impressions": 28,
-            "ctr": 10.7,
+            "impressions": 29,
+            "ctr": 10.3,
             "position": 3.4
           },
           {
@@ -1212,18 +561,25 @@
             "position": 6.3
           },
           {
-            "keyword": "opencode zen",
+            "keyword": "lm studio bionic 中文",
             "clicks": 2,
-            "impressions": 67,
-            "ctr": 3.0,
-            "position": 9.3
+            "impressions": 15,
+            "ctr": 13.3,
+            "position": 5.5
           },
           {
-            "keyword": "opencode zen vs go",
+            "keyword": "mojo 語言",
             "clicks": 2,
-            "impressions": 11,
-            "ctr": 18.2,
-            "position": 1.4
+            "impressions": 10,
+            "ctr": 20.0,
+            "position": 5.9
+          },
+          {
+            "keyword": "opencode zen",
+            "clicks": 2,
+            "impressions": 65,
+            "ctr": 3.1,
+            "position": 9.3
           },
           {
             "keyword": "tencentdb agent memory",
@@ -1247,11 +603,18 @@
             "position": 3
           },
           {
-            "keyword": "lm studio bionic 中文",
+            "keyword": "composio 是什麼",
             "clicks": 1,
             "impressions": 13,
             "ctr": 7.7,
-            "position": 5.8
+            "position": 8.7
+          },
+          {
+            "keyword": "lm studio bionic tutorial",
+            "clicks": 1,
+            "impressions": 1,
+            "ctr": 100,
+            "position": 4
           },
           {
             "keyword": "lm studio bionic 設定",
@@ -1261,18 +624,11 @@
             "position": 2
           },
           {
-            "keyword": "mojo 語言",
-            "clicks": 1,
-            "impressions": 9,
-            "ctr": 11.1,
-            "position": 5.7
-          },
-          {
             "keyword": "omlx 教學",
             "clicks": 1,
-            "impressions": 12,
-            "ctr": 8.3,
-            "position": 5.2
+            "impressions": 14,
+            "ctr": 7.1,
+            "position": 4.9
           },
           {
             "keyword": "opencode go vs zen",
@@ -1291,8 +647,8 @@
           {
             "keyword": "opencode go 方案",
             "clicks": 1,
-            "impressions": 19,
-            "ctr": 5.3,
+            "impressions": 18,
+            "ctr": 5.6,
             "position": 7.1
           },
           {
@@ -1305,8 +661,8 @@
           {
             "keyword": "opencode zen api",
             "clicks": 1,
-            "impressions": 17,
-            "ctr": 5.9,
+            "impressions": 16,
+            "ctr": 6.2,
             "position": 7.2
           },
           {
@@ -1317,11 +673,18 @@
             "position": 2
           },
           {
+            "keyword": "opencode zen vs go",
+            "clicks": 1,
+            "impressions": 10,
+            "ctr": 10.0,
+            "position": 1.3
+          },
+          {
             "keyword": "opencode zen 和 go 的 区别",
             "clicks": 1,
-            "impressions": 6,
-            "ctr": 16.7,
-            "position": 3.5
+            "impressions": 5,
+            "ctr": 20.0,
+            "position": 3.4
           },
           {
             "keyword": "opencode zen和go的区别",
@@ -1333,172 +696,158 @@
           {
             "keyword": "opencode 免費額度",
             "clicks": 1,
-            "impressions": 18,
-            "ctr": 5.6,
-            "position": 8.3
+            "impressions": 15,
+            "ctr": 6.7,
+            "position": 8.2
           },
           {
             "keyword": "opencode 方案",
             "clicks": 1,
-            "impressions": 10,
-            "ctr": 10.0,
+            "impressions": 8,
+            "ctr": 12.5,
             "position": 8.9
-          },
-          {
-            "keyword": "opencode 訂閱",
-            "clicks": 1,
-            "impressions": 9,
-            "ctr": 11.1,
-            "position": 9.2
-          },
-          {
-            "keyword": "opencode 費用",
-            "clicks": 1,
-            "impressions": 35,
-            "ctr": 2.9,
-            "position": 6.3
           }
         ],
         "topPages": [
           {
             "page": "//blog/opencode-zen-vs-go-pricing-2026.html",
-            "clicks": 67,
-            "impressions": 949,
-            "ctr": 7.1,
-            "position": 6.4
+            "clicks": 63,
+            "impressions": 975,
+            "ctr": 6.5,
+            "position": 6.3
           },
           {
             "page": "//blog/lm-studio-bionic-guide-2026.html",
-            "clicks": 35,
-            "impressions": 251,
-            "ctr": 13.9,
+            "clicks": 39,
+            "impressions": 273,
+            "ctr": 14.3,
             "position": 5.1
           },
           {
             "page": "//blog/claude-video-watch-tutorial-2026.html",
-            "clicks": 31,
-            "impressions": 242,
-            "ctr": 12.8,
-            "position": 4.9
+            "clicks": 30,
+            "impressions": 251,
+            "ctr": 12.0,
+            "position": 5.0
           },
           {
             "page": "//blog/mojo-programming-language-tutorial-2026.html",
-            "clicks": 7,
-            "impressions": 79,
-            "ctr": 8.9,
+            "clicks": 9,
+            "impressions": 83,
+            "ctr": 10.8,
             "position": 5.3
           },
           {
-            "page": "//blog/markitdown-microsoft-tutorial-2026.html",
-            "clicks": 6,
-            "impressions": 25,
-            "ctr": 24.0,
-            "position": 5.4
-          },
-          {
             "page": "//blog/omlx-apple-silicon-llm-server-2026.html",
-            "clicks": 5,
-            "impressions": 140,
-            "ctr": 3.6,
-            "position": 6.9
+            "clicks": 6,
+            "impressions": 145,
+            "ctr": 4.1,
+            "position": 6.2
           },
           {
-            "page": "//blog/tencentdb-agent-memory-tutorial-2026.html",
+            "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
             "clicks": 5,
-            "impressions": 110,
-            "ctr": 4.5,
-            "position": 6.9
+            "impressions": 87,
+            "ctr": 5.7,
+            "position": 7.9
           },
           {
-            "page": "//",
-            "clicks": 4,
-            "impressions": 42,
-            "ctr": 9.5,
-            "position": 5.4
+            "page": "//blog/markitdown-microsoft-tutorial-2026.html",
+            "clicks": 5,
+            "impressions": 22,
+            "ctr": 22.7,
+            "position": 5.5
           },
           {
             "page": "//blog/ai-agent-cybersecurity-skills-claude-code-2026.html",
             "clicks": 4,
-            "impressions": 34,
-            "ctr": 11.8,
-            "position": 6.3
+            "impressions": 33,
+            "ctr": 12.1,
+            "position": 6.2
           },
           {
             "page": "//blog/buzz-jack-dorsey-guide-2026.html",
             "clicks": 4,
             "impressions": 57,
             "ctr": 7.0,
-            "position": 5.6
-          },
-          {
-            "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
-            "clicks": 4,
-            "impressions": 74,
-            "ctr": 5.4,
-            "position": 8.6
+            "position": 5.5
           },
           {
             "page": "//blog/line-bot-cost.html",
             "clicks": 4,
-            "impressions": 141,
+            "impressions": 143,
             "ctr": 2.8,
-            "position": 6.4
+            "position": 6.2
           },
           {
             "page": "//blog/ponytail-claude-code-plugin-2026.html",
             "clicks": 4,
             "impressions": 71,
             "ctr": 5.6,
-            "position": 6.2
+            "position": 6.0
           },
           {
             "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
             "clicks": 4,
             "impressions": 37,
             "ctr": 10.8,
-            "position": 6.9
+            "position": 6.7
+          },
+          {
+            "page": "//blog/tencentdb-agent-memory-tutorial-2026.html",
+            "clicks": 4,
+            "impressions": 106,
+            "ctr": 3.8,
+            "position": 6.7
+          },
+          {
+            "page": "//en/",
+            "clicks": 4,
+            "impressions": 122,
+            "ctr": 3.3,
+            "position": 9.2
+          },
+          {
+            "page": "//",
+            "clicks": 3,
+            "impressions": 43,
+            "ctr": 7.0,
+            "position": 5.6
           },
           {
             "page": "//blog/n8n-automation-tutorial-2026.html",
             "clicks": 3,
             "impressions": 37,
             "ctr": 8.1,
-            "position": 10.6
+            "position": 10.5
           },
           {
             "page": "//blog/openviking-agent-memory-save-tokens-2026.html",
             "clicks": 3,
-            "impressions": 46,
-            "ctr": 6.5,
-            "position": 7.0
-          },
-          {
-            "page": "//en/",
-            "clicks": 3,
-            "impressions": 124,
-            "ctr": 2.4,
-            "position": 11.4
+            "impressions": 45,
+            "ctr": 6.7,
+            "position": 7.4
           },
           {
             "page": "//blog/agent-skills-complete-guide-2026.html",
-            "clicks": 1,
-            "impressions": 39,
-            "ctr": 2.6,
-            "position": 6.9
+            "clicks": 2,
+            "impressions": 41,
+            "ctr": 4.9,
+            "position": 6.8
+          },
+          {
+            "page": "//blog/composio-claude-code-skills-tutorial-2026.html",
+            "clicks": 2,
+            "impressions": 38,
+            "ctr": 5.3,
+            "position": 8.7
           },
           {
             "page": "//blog/ai-tools-comparison-2026.html",
             "clicks": 1,
-            "impressions": 221,
+            "impressions": 222,
             "ctr": 0.5,
-            "position": 9.1
-          },
-          {
-            "page": "//blog/chatgpt-claude-gemini-comparison.html",
-            "clicks": 1,
-            "impressions": 17,
-            "ctr": 5.9,
-            "position": 16.1
+            "position": 9.2
           },
           {
             "page": "//blog/claude-opus-5-review-2026.html",
@@ -1508,68 +857,60 @@
             "position": 6.8
           },
           {
-            "page": "//blog/composio-claude-code-skills-tutorial-2026.html",
-            "clicks": 1,
-            "impressions": 35,
-            "ctr": 2.9,
-            "position": 8.9
-          },
-          {
-            "page": "//blog/gpt-56-sol-terra-luna-review-2026.html",
-            "clicks": 1,
-            "impressions": 3,
-            "ctr": 33.3,
-            "position": 4
-          },
-          {
             "page": "//blog/rtk-rust-token-killer-review-2026.html",
             "clicks": 1,
-            "impressions": 4,
-            "ctr": 25.0,
-            "position": 4.2
+            "impressions": 5,
+            "ctr": 20.0,
+            "position": 3.6
           },
           {
             "page": "//blog/systeme-io-review-2026.html",
             "clicks": 1,
-            "impressions": 33,
-            "ctr": 3.0,
+            "impressions": 37,
+            "ctr": 2.7,
             "position": 7.5
+          },
+          {
+            "page": "//portfolio.html",
+            "clicks": 1,
+            "impressions": 4,
+            "ctr": 25.0,
+            "position": 5.8
+          },
+          {
+            "page": "//pricing.html",
+            "clicks": 1,
+            "impressions": 7,
+            "ctr": 14.3,
+            "position": 20.9
           }
         ]
       },
       "ai-tools-tw": {
         "summary": {
           "totalClicks": 0,
-          "totalImpressions": 1,
+          "totalImpressions": 0,
           "avgCTR": 0,
-          "avgPosition": 3
+          "avgPosition": 0
         },
         "topQueries": [],
-        "topPages": [
-          {
-            "page": "/ai-roi-calculator/",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 3
-          }
-        ]
+        "topPages": []
       },
       "ai-tools-en": {
         "summary": {
           "totalClicks": 0,
-          "totalImpressions": 2,
+          "totalImpressions": 1,
           "avgCTR": 0,
-          "avgPosition": 6
+          "avgPosition": 10
         },
         "topQueries": [],
         "topPages": [
           {
             "page": "/",
             "clicks": 0,
-            "impressions": 2,
+            "impressions": 1,
             "ctr": 0,
-            "position": 6
+            "position": 10
           }
         ]
       }
@@ -1579,36 +920,29 @@
         "site": "autodev-ai",
         "keyword": "opencode zen",
         "position": 9.3,
-        "impressions": 67,
+        "impressions": 65,
+        "action": "optimize to push to page 1"
+      },
+      {
+        "site": "autodev-ai",
+        "keyword": "composio 是什麼",
+        "position": 8.7,
+        "impressions": 13,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "opencode 免費額度",
-        "position": 8.3,
-        "impressions": 18,
+        "position": 8.2,
+        "impressions": 15,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "opencode 方案",
         "position": 8.9,
-        "impressions": 10,
+        "impressions": 8,
         "action": "optimize to push to page 1"
-      },
-      {
-        "site": "autodev-ai",
-        "keyword": "opencode 訂閱",
-        "position": 9.2,
-        "impressions": 9,
-        "action": "optimize to push to page 1"
-      },
-      {
-        "site": "autodev-ai",
-        "keyword": "opencode 費用",
-        "ctr": 2.9,
-        "impressions": 35,
-        "action": "improve title/meta for higher CTR"
       }
     ]
   },
@@ -3940,8 +3274,8 @@
       ]
     }
   },
-  "lastGscCheckAt": "2026-09-15T07:00:29Z",
-  "lastGscSummary": "ranking: avg pos 7.3; high-impr low-CTR pages: 4; pos 11-20 opps: 2",
+  "lastGscCheckAt": "2026-09-16T05:30:07Z",
+  "lastGscSummary": "ranking: avg pos 6.9; high-impr low-CTR pages: 4; pos 11-20 opps: 0",
   "lastResearchRoundDate": "2026-08-03",
   "lastIncomeIdeation": "2026-07-31T12:00:00Z",
   "lastResearcherRun": "2026-09-13T00:30:00Z",
@@ -4180,5 +3514,6 @@
     "nanochat57k": "🔴 P1-HIGH carryover（57.3K★，繁中零教學）",
     "orcaADE": "🟡 P1 carryover（59K★，Sep 18 截止 seo-writer）",
     "omniRoute": "🟡 P1 carryover（45K★，Sep 22 截止 seo-writer）"
-  }
+  },
+  "lastInternalLinkerRun": "2026-09-16T07:00:00Z"
 }
