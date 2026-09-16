@@ -3310,3 +3310,95 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 **本輪新增潛力月收入：$950-3,100**
 （Viktor ivan後 $300-900 + Creatify ivan後 $200-600 + 比較頁 $300-900 + StemDeck $50-400 + 間接/常青 $100-300）
 
+
+---
+
+## Round 206 — 2026-09-16 (Wed 00:30 UTC) | ai-trend-hunter
+
+### 🔍 本輪核心發現
+
+**1. 🔴 P0-STANDBY 已關閉 → P1-HIGH：Grok 4.7 仍未 GA（Sep 16 確認，窗口 Sep 25-30）**
+- Sep 12 目標已過無 GA（多輪確認）
+- 最新信號（Sep 12，juliangoldie.com）：「Musk said 'a few more days' of RL work needed」
+- 已確認：至少 4 次延期窗口（7月、8月、9月初、9月12日全過）
+- xAI 現行旗艦仍為 Grok 4.6（1.5T params，Aug 12 GA，500K context，$2/$6 per M）
+- Grok 4.7 規格（已洩）：2.1T params（比 4.6 大 40%），SpaceX 飛行數據訓練加入
+- **策略維持：每輪快速掃描，GA 後 24h 觸發評測文 + vs Claude Opus 5 比較文；Sep 25-30 窗口**
+- 評測文機會仍為 P1-HIGH（無人先做繁中深度評測）
+
+**2. 🔴 P1-HIGH（新）：Archify AI 架構圖 Agent Skill — 47.2K★，繁中零教學**
+- GitHub：tt-a1i/archify（MIT，v2.11.0）
+- 47,200+ ★，last push Sep 4, 2026（活躍）
+- 功能：AI agent skill，一句話→完整互動架構圖（HTML/SVG，5種圖表類型，暗/亮主題）
+- 支援平台：Cursor、Claude Code、Codex CLI、OpenCode、Raven（手動安裝）、DeepSeek Harness
+- August 2026 GitHub star ranking：agent workspace/skills 類別月度趨勢龍頭（ZimaSpace 評選）
+- YouTube 教學 YouTube 頻道 TechyTacos 534 likes，66,877 views → 旺盛需求
+- **繁中狀態：零教學，Coddykit 英文評測已存在（20,400★ 時寫，現 47.2K★）**
+- 角度：「一句話生成互動架構圖，Claude Code + Cursor 都支援的 MIT 免費 Agent Skill」
+- affiliate 機會：無直接 affiliate（MIT 開源），但教學文可掛 DataCamp（架構設計課）+ DO（伺服器架構圖 CTA）
+- 目標關鍵字：archify 教學 繁中、archify agent skill 使用、ai 架構圖生成 免費 2026
+- 預估月收入：$80-300（間接 DataCamp/DO affiliate + 高流量帶動全站 SEO）
+- **→ 直接執行，不需 Ivan，seo-writer 可立即開始**
+
+**3. 🔴 P1-HIGH（新）：Monid — "OpenRouter for Agent Tools"，20% 6個月 affiliate**
+- 2.2K PH followers；2026-09-02 PH 日榜 #1、週榜 #2
+- 功能：1,300+ agent tools（social scrapers、search API、ecommerce data、lead gen）統一計費
+- 融資：$2.1M Pre-seed（Sep 1, 2026；投資方：1984 Ventures、Llama Ventures）
+- Affiliate：monid.ai/affiliates → 20% revenue share × 6個月，每月現金，無上限，快速審核
+- 目標受眾：AI agent 開發者、no-code 自動化創作者
+- 繁中狀態：零評測（2.2K PH followers = 英文社群為主，繁中未跟進）
+- 目標關鍵字：monid ai 評測、agent tools marketplace 比較、openrouter 替代方案 agent tools
+- 比較文機會：Monid vs OmniRoute vs RapidAPI（我們已有 OmniRoute 文章計畫）
+- 預估月收入：$150-500（20% × 6個月 × metered spend → 高端開發者受眾高消費）
+- **→ Ivan 申請 monid.ai/affiliates（快速審核，無流量門檻）**
+
+**4. ✅ P1 完成確認：LALAL.AI affiliate 條款 confirmed（R205 biweekly 指令）**
+- LALAL.AI affiliate：**30% commission，180天 cookie，月付 PayPal，$150 min payout**
+- 平台：FirstPromoter（lalal.ai/affiliate-program）
+- 平均方案：$15/月起（專業版 $25-50/月）
+- 試算：30 referrals × $25/月 × 30% = $225/月（低門檻入門）
+- 注意：非 recurring！**一次性 30%**（aiaffiliateprograms.ai：「No - one-time commissions only」）
+- 補充：StemDeck 文章應加入 LALAL.AI affiliate 連結（付費升級版作為比較 CTA）
+- **→ 通知 seo-writer：StemDeck 文章 CTA 策略調整：免費版 StemDeck + 付費升級 CTA → LALAL.AI（一次性 30%，30 referrals 可月入 $225）**
+
+**5. 🔴 P1-HIGH（新）：Pictory AI — 最高 50% LIFETIME recurring affiliate（繁中空白）**
+- Pictory（pictory.ai）：AI 影片生成，9,999天 cookie（業界最長）
+- 佣金結構：起步 20% → 50 referrals 後升至 VIP 30% → 頂層 50%（全 LIFETIME recurring）
+- 獎勵：$1,000 cash bonus（VIP 條件）+ 免費終身 Pictory Premium 帳號
+- 平台：PartnerStack，月付，最低 $10
+- 繁中狀態：零深度評測（英文市場 AdSkull 等已深度評測）
+- 對比已知 affiliate：比 HeyGen（25%/12mo）長期價值更高，雖然初期門檻較高
+- 目標關鍵字：pictory ai 評測 繁中、ai 影片生成工具 2026、pictory vs invideo 比較
+- 角度：「免費先試，50% 終身回饋：Pictory AI 完整評測 + 推薦人計畫解析」
+- 預估月收入（長期）：$300-1,500/月（LIFETIME × 佣金成長路徑）
+- **→ Ivan 申請 pictory.ai/partnernow → PartnerStack**
+
+**6. 🟡 P1：InVideo AI — 50%/月 + 25%/年 affiliate，120天 cookie（補入比較頁）**
+- InVideo AI：50% on monthly plans，25% on annual，120天 cookie
+- 平台：invideo.io/make/affiliate-program，$30 最低提款
+- 適合補入「AI 廣告影片比較頁」（Creatify vs HeyGen vs Synthesia vs Pictory vs InVideo）
+- 特點：試用轉換算（120天內升級全算佣金），195國用戶
+- 繁中機會：中文 YouTube 有少量推廣，但無深度評測文（autodev-ai 可搶先）
+- 預估月收入：$200-600（50% monthly × $25-50/月 plan × 20 referrals）
+- **→ Ivan 申請 invideo.io/make/affiliate-program（開放申請，快速）**
+
+**7. 📅 P0 維持：OpenAI DevDay T-13天（Sep 29；Sep 22 更新窗口倒數 6 天）**
+- 最新確認：GPT-5.6 Sol/Terra/Luna 三層；Codex Slack 整合；GPT-Realtime-Mini 70% cheaper
+- Sep 22 00:00 UTC：content-ops 執行 openai-devday-2026-preview.html 更新（T-7天衝刺）
+- Sep 29 Live：即時更新，Sam Altman Keynote 摘要
+- 競爭情報：Meta Connect（Sep 23-24）同期衝突，OpenAI DevDay 搜尋峰值應在 Sep 25-Oct 3
+
+### 📊 R206 機會表
+
+| 日期 | 工具/主題 | 關鍵字 | 搜尋量(估) | 變現方式 | 預估月收入 | 站點 | 優先級 |
+|------|-----------|--------|-----------|---------|-----------|------|--------|
+| 2026-09-16 | Archify AI 架構圖 Agent Skill（47.2K★，MIT） | archify 教學繁中, archify agent skill, ai 架構圖生成 免費 | 800-2,500/月 | DataCamp + DO 間接 CTA | $80-300 | autodev-ai.com | 🔴 P1-HIGH（立即執行） |
+| 2026-09-16 | Monid — OpenRouter for Agent Tools（PH #1，$2.1M seed） | monid ai 評測, agent tools marketplace, openrouter 替代 agent | 500-1,500/月 | 20%/6mo affiliate（Ivan申請） | $150-500 | autodev-ai.com | 🔴 P1-HIGH（Ivan申請） |
+| 2026-09-16 | Pictory AI 評測（50% LIFETIME，9999天cookie） | pictory ai 評測 繁中, ai 影片生成 2026, pictory vs invideo | 1,000-3,000/月 | 50% LIFETIME RECURRING（PartnerStack） | $300-1,500 | autodev-ai.com | 🔴 P1-HIGH（Ivan申請） |
+| 2026-09-16 | InVideo AI 評測/比較（50%/月，120天cookie） | invideo ai 評測, ai 影片工具比較 2026, invideo vs pictory | 800-2,000/月 | 50%monthly/25%annual（Ivan申請） | $200-600 | autodev-ai.com | 🔴 P1-HIGH（Ivan申請） |
+| 2026-09-16 | LALAL.AI affiliate 確認 + StemDeck CTA更新 | stemdeck 教學, lalal.ai 比較, ai 音樂分離 免費 | 1,000-3,000/月 | LALAL.AI 30%（一次性）+ DO/DC CTA | $80-300 | autodev-ai.com | ✅ 執行確認 |
+| 2026-09-16 | Grok 4.7 P1-WATCH（Sep 25-30 預測窗口） | grok 4.7 評測 繁中, grok 4.7 vs claude opus 5 | 3,000-8,000/月（GA後） | DO + DataCamp 間接 | $300-900 | autodev-ai.com | 🟡 P1-WATCH |
+| 2026-09-16 | OpenAI DevDay T-13天（Sep 22 更新衝刺） | openai devday 2026, chatgpt 新功能 9月 | 5,000-15,000/月（峰值） | 間接全站帶量 | $500-1,500（峰值） | autodev-ai.com | 📅 P0 維持 |
+
+**本輪新增潛力月收入：$1,610-5,600（保守-樂觀）**
+（Archify 教學 $80-300 + Monid $150-500 + Pictory LIFETIME $300-1,500 + InVideo $200-600 + LALAL.AI 加成 $80-300 + Grok 4.7 GA後 $300-900 + DevDay 峰值 $500-1,500）
