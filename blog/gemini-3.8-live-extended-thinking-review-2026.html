@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini 3.8 Live Extended Thinking 評測 2026：語音推理 AI 新標準，繁中首發 | autodev-ai.com</title>
+  <meta name="description" content="Gemini 3.8 Live Extended Thinking 繁中首發完整評測。Sep 15 正式 GA，語音+深度推理同步模型，Artificial Analysis Speech-to-Speech #1。與 Gemini 3.8 Flash 差異、OpenAI Realtime API 比較、台灣開發者應用場景完整指南。">
+  <meta name="keywords" content="Gemini 3.8 Live Extended Thinking, Gemini 3.8 Live, 語音推理 AI, gemini-3.8-live-extended-thinking, Google AI 語音, Gemini 3.8 Flash 差異, Realtime API 比較, AI 語音助理 2026, 繁中首發">
+  <meta property="og:title" content="Gemini 3.8 Live Extended Thinking 評測 2026：語音推理 AI 新標準，繁中首發">
+  <meta property="og:description" content="Sep 15 GA，語音+深度推理同步，Speech-to-Speech #1。與 Flash 完全不同的產品定位，台灣開發者完整應用指南。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/gemini-3.8-live-extended-thinking-review-2026.html">
+  <link rel="canonical" href="https://autodev-ai.com/blog/gemini-3.8-live-extended-thinking-review-2026.html">
+  <link rel="stylesheet" href="/style.css?v=20260505">
+  <style>
+    .article-hero{background:linear-gradient(135deg,#065f46 0%,#059669 50%,#34d399 100%);color:#fff;padding:3rem 1.5rem;text-align:center;border-radius:12px;margin-bottom:2rem}
+    .article-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:1rem;line-height:1.3}
+    .article-hero .meta{opacity:.85;font-size:.9rem}
+    .article-body{max-width:860px;margin:0 auto;padding:0 1rem}
+    .article-body h2{color:#065f46;border-left:4px solid #059669;padding-left:.75rem;margin-top:2.5rem}
+    .article-body h3{color:#374151;margin-top:1.8rem}
+    .cta-box{background:linear-gradient(135deg,#065f46,#059669);color:#fff;border-radius:12px;padding:2rem;margin:2.5rem 0;text-align:center}
+    .cta-box h3{color:#fff;margin:0 0 .5rem}
+    .cta-box p{margin:.5rem 0 1.25rem;opacity:.9}
+    .cta-btn{display:inline-block;background:#fff;color:#065f46;font-weight:700;padding:.75rem 1.75rem;border-radius:8px;text-decoration:none;margin:.4rem;transition:transform .2s}
+    .cta-btn:hover{transform:translateY(-2px)}
+    .cta-btn.secondary{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4)}
+    .highlight-box{background:#f0fdf4;border-left:4px solid #22c55e;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0}
+    .warning-box{background:#fef3c7;border-left:4px solid #f59e0b;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0}
+    .tip-box{background:#eff6ff;border-left:4px solid #3b82f6;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0}
+    pre{background:#0f2318;color:#d4edda;padding:1.25rem;border-radius:8px;overflow-x:auto;font-size:.9rem;margin:1rem 0}
+    code{background:#f3f4f6;padding:.15rem .35rem;border-radius:4px;font-family:monospace;font-size:.88rem}
+    pre code{background:none;padding:0;color:inherit}
+    table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem}
+    th{background:#065f46;color:#fff;padding:.75rem 1rem;text-align:left}
+    td{padding:.7rem 1rem;border-bottom:1px solid #e5e7eb}
+    tr:nth-child(even) td{background:#f9fafb}
+    .badge{display:inline-block;background:#d1fae5;color:#065f46;padding:.2rem .6rem;border-radius:20px;font-size:.8rem;font-weight:600;margin:.15rem}
+    .toc{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .toc h3{margin:0 0 .75rem;color:#065f46;font-size:1rem}
+    .toc ol{margin:0;padding-left:1.25rem}
+    .toc li{margin:.35rem 0}
+    .toc a{color:#059669;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .rank-badge{background:#fbbf24;color:#92400e;padding:.2rem .7rem;border-radius:20px;font-size:.85rem;font-weight:700}
+    .comparison-winner{background:#d1fae5;color:#065f46;padding:.15rem .5rem;border-radius:4px;font-weight:700;font-size:.85rem}
+    .new-badge{background:#fee2e2;color:#991b1b;padding:.2rem .6rem;border-radius:20px;font-size:.8rem;font-weight:700}
+    .vs-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem;margin:.75rem 0}
+    .vs-card h4{margin:0 0 .5rem;color:#065f46}
+    .model-spec{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "headline": "Gemini 3.8 Live Extended Thinking 評測 2026：語音推理 AI 新標準，繁中首發",
+    "description": "Gemini 3.8 Live Extended Thinking 完整評測。Sep 15 GA，語音+深度推理同步，Speech-to-Speech 評測 #1，台灣開發者應用指南。",
+    "datePublished": "2026-09-17",
+    "dateModified": "2026-09-17",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "autodev-ai.com"},
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "Gemini 3.8 Live Extended Thinking",
+      "applicationCategory": "AI",
+      "operatingSystem": "Cloud API"
+    }
+  }
+  </script>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">🤖 AutoDev AI</a>
+    <button id="mobileMenuBtn" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="/blog/">文章</a>
+      <a href="/tools/">工具</a>
+      <a href="/en/">English</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<div class="article-hero">
+  <div class="article-body">
+    <span class="rank-badge">🏆 Speech-to-Speech 全球 #1</span>
+    <h1>Gemini 3.8 Live Extended Thinking 評測 2026<br>語音推理 AI 新標準，繁中首發完整指南</h1>
+    <div class="meta">📅 2026-09-17 ｜ 分類：AI 語音模型 ｜ 閱讀時間：約 13 分鐘</div>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <div class="toc">
+    <h3>📋 本文目錄</h3>
+    <ol>
+      <li><a href="#what-is">Gemini 3.8 Live Extended Thinking 是什麼？</a></li>
+      <li><a href="#vs-flash">與 Gemini 3.8 Flash 的關鍵差異（不是同一個模型）</a></li>
+      <li><a href="#vs-openai">vs OpenAI Realtime API：旗鼓相當還是碾壓？</a></li>
+      <li><a href="#quickstart">API 快速上手：5 步驟建立語音推理 Agent</a></li>
+      <li><a href="#taiwan-cases">台灣開發者三大應用場景</a></li>
+      <li><a href="#pricing">定價與配額：2026 年 9 月最新</a></li>
+      <li><a href="#limitations">已知限制與注意事項</a></li>
+      <li><a href="#faq">FAQ 常見問題</a></li>
+    </ol>
+  </div>
+
+  <div class="highlight-box">
+    <strong>🎯 本文重點</strong><br>
+    Gemini 3.8 Live Extended Thinking 是 Google DeepMind 於 2026 年 9 月 15 日正式 GA 的語音+深度推理同步模型，Artificial Analysis Speech-to-Speech 評測全球第一。它和 Gemini 3.8 Flash 是<strong>完全不同的產品</strong>——Flash 做文字多模態，Live Extended Thinking 做即時語音+複雜推理。繁中評測幾乎為零，本文首發完整指南。
+  </div>
+
+  <h2 id="what-is">一、Gemini 3.8 Live Extended Thinking 是什麼？</h2>
+
+  <p>2026 年的 AI 語音競賽正在加速白熱化。OpenAI 有 Realtime API、ElevenLabs 有 Conversational AI、Anthropic 即將推出語音版 Claude——而 Google 的答案是 <strong>Gemini 3.8 Live Extended Thinking</strong>。</p>
+
+  <p>這個模型做到了一件以前沒有人做到的事：<strong>「邊思考邊說話」</strong>（Think-while-speak）。</p>
+
+  <p>傳統的語音 AI 流程是：聽→靜止思考→說。過程中有明顯的停頓，讓對話感覺生硬。Gemini 3.8 Live Extended Thinking 的突破在於：</p>
+
+  <ul>
+    <li>🎙️ <strong>語音輸入即時處理</strong>：不需要等到你說完整句話</li>
+    <li>🧠 <strong>推理過程可以聲音化</strong>：「讓我想一下……」「好，首先……」是真實的中間推理</li>
+    <li>🔊 <strong>語音輸出同步推理</strong>：說話和思考同步進行，延遲大幅降低</li>
+    <li>📋 <strong>複雜多步驟任務</strong>：可以邊說話邊執行長任務（查資料、計算、比較）</li>
+  </ul>
+
+  <div class="model-spec">
+    <strong>📋 模型規格卡（2026-09-15 GA）</strong><br><br>
+    <strong>Model ID：</strong><code>gemini-3.8-live-extended-thinking</code><br>
+    <strong>GA 日期：</strong>2026 年 9 月 15 日（stable）<br>
+    <strong>輸入模態：</strong>語音（即時串流）+ 文字 + 圖片<br>
+    <strong>輸出模態：</strong>語音（即時串流）+ 文字<br>
+    <strong>延遲：</strong>首字節語音輸出 &lt;800ms（Artificial Analysis 測試）<br>
+    <strong>語言支援：</strong>40+ 語言，含繁體中文<br>
+    <strong>評測排名：</strong>Artificial Analysis Speech-to-Speech #1（2026-09-16）<br>
+    <strong>Context Window：</strong>1M tokens<br>
+    <strong>API 平台：</strong>Google AI Studio + Vertex AI
+  </div>
+
+  <h2 id="vs-flash">二、與 Gemini 3.8 Flash 的關鍵差異（不是同一個模型）</h2>
+
+  <div class="warning-box">
+    <strong>⚠️ 重要澄清</strong><br>
+    很多人看到「Gemini 3.8」就以為是同一個系列的升級版。<strong>不對</strong>——Gemini 3.8 Flash（Sep 2 GA）和 Gemini 3.8 Live Extended Thinking（Sep 15 GA）是完全不同的產品線，針對不同場景設計。
+  </div>
+
+  <table>
+    <tr>
+      <th>比較維度</th>
+      <th>Gemini 3.8 Flash</th>
+      <th>Gemini 3.8 Live Extended Thinking <span class="comparison-winner">本文主角</span></th>
+    </tr>
+    <tr>
+      <td><strong>GA 日期</strong></td>
+      <td>2026-09-02</td>
+      <td>2026-09-15</td>
+    </tr>
+    <tr>
+      <td><strong>Model ID</strong></td>
+      <td><code>gemini-3.8-flash</code></td>
+      <td><code>gemini-3.8-live-extended-thinking</code></td>
+    </tr>
+    <tr>
+      <td><strong>主要模態</strong></td>
+      <td>文字 + 圖片 + 影片（非即時）</td>
+      <td>語音（即時串流）+ 推理同步輸出</td>
+    </tr>
+    <tr>
+      <td><strong>推理深度</strong></td>
+      <td>三段 effort 調控（low/medium/high）</td>
+      <td>Extended Thinking（長鏈推理，邊說邊思考）</td>
+    </tr>
+    <tr>
+      <td><strong>延遲特性</strong></td>
+      <td>低延遲文字輸出</td>
+      <td>語音串流，首字節 &lt;800ms</td>
+    </tr>
+    <tr>
+      <td><strong>使用場景</strong></td>
+      <td>批次任務、文件摘要、圖片分析</td>
+      <td>即時語音對話、語音 Agent、語音客服</td>
+    </tr>
+    <tr>
+      <td><strong>定價策略</strong></td>
+      <td>維持 3.7 Flash intro rate（低）</td>
+      <td>競爭性定價（介於 Flash 和 Pro 之間）</td>
+    </tr>
+    <tr>
+      <td><strong>評測亮點</strong></td>
+      <td>文字生成品質/速度佳</td>
+      <td>Artificial Analysis Speech-to-Speech #1</td>
+    </tr>
+  </table>
+
+  <p><strong>選擇原則：</strong>你的任務需要即時語音對話 → 用 Live Extended Thinking；批次處理、文字生成、圖片分析 → 用 Flash。兩者配合使用效果最好。</p>
+
+  <div class="cta-box">
+    <h3>📊 想深度掌握 Gemini 3.8 系列？</h3>
+    <p>DataCamp 有 Google AI 官方認證課程，含 Gemini API 完整教學、語音 AI 開發實戰，繁中字幕支援。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" rel="sponsored">📊 免費試用 DataCamp</a>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn secondary" rel="sponsored">🌊 DigitalOcean 部署</a>
+  </div>
+
+  <h2 id="vs-openai">三、vs OpenAI Realtime API：旗鼓相當還是碾壓？</h2>
+
+  <p>目前語音 AI API 市場的主要競爭格局：</p>
+
+  <div class="vs-card">
+    <h4>🟢 Gemini 3.8 Live Extended Thinking（Google）</h4>
+    <p><strong>優勢：</strong>Speech-to-Speech 延遲最低（#1）、擴展推理邊說邊思考、1M context、Google Cloud 生態深度整合<br>
+    <strong>限制：</strong>Extended Thinking 模式下 token 消耗較高、部分複雜多步驟任務仍在優化中<br>
+    <strong>定價：</strong>競爭性（具體費率見 Google AI Studio）</p>
+  </div>
+
+  <div class="vs-card">
+    <h4>🔵 OpenAI Realtime API（OpenAI）</h4>
+    <p><strong>優勢：</strong>GPT-5.4 底層、企業信任度高、Function Calling 語音版成熟<br>
+    <strong>限制：</strong>延遲稍高（Artificial Analysis 評測 #3）、定價較貴（$0.06/min 輸入，$0.24/min 輸出）<br>
+    <strong>定價：</strong>GPT-4o Realtime：$0.06/$0.24 per minute in/out</p>
+  </div>
+
+  <div class="vs-card">
+    <h4>🟡 ElevenLabs Conversational AI</h4>
+    <p><strong>優勢：</strong>語音品質最自然（情感豐富、角色扮演）、最多語音選項<br>
+    <strong>限制：</strong>推理能力弱（語音包裝，底層是 GPT/Claude）、不支援複雜多步驟任務<br>
+    <strong>定價：</strong>按字元計費 + Conversational AI 分鐘計費</p>
+  </div>
+
+  <table>
+    <tr>
+      <th>比較維度</th>
+      <th>Gemini 3.8 Live ET <span class="comparison-winner">推薦</span></th>
+      <th>OpenAI Realtime</th>
+      <th>ElevenLabs Conv. AI</th>
+    </tr>
+    <tr>
+      <td>延遲（首字節）</td>
+      <td><strong>&lt;800ms（#1）</strong></td>
+      <td>~1,200ms（#3）</td>
+      <td>~950ms（#2）</td>
+    </tr>
+    <tr>
+      <td>推理深度</td>
+      <td><strong>Extended Thinking，複雜推理</strong></td>
+      <td>GPT-5.4，推理強</td>
+      <td>弱（底層 LLM 依賴）</td>
+    </tr>
+    <tr>
+      <td>語音自然度</td>
+      <td>自然（Neural TTS）</td>
+      <td>自然</td>
+      <td><strong>最自然（情感豐富）</strong></td>
+    </tr>
+    <tr>
+      <td>多語言</td>
+      <td><strong>40+ 語言，繁中優</strong></td>
+      <td>50+ 語言</td>
+      <td>29 語言</td>
+    </tr>
+    <tr>
+      <td>邊思考邊說話</td>
+      <td><strong>✅ 核心功能</strong></td>
+      <td>❌ 無</td>
+      <td>❌ 無</td>
+    </tr>
+    <tr>
+      <td>定價（估算）</td>
+      <td><strong>中（Flash 和 Pro 之間）</strong></td>
+      <td>高（$0.06-0.24/min）</td>
+      <td>中低</td>
+    </tr>
+    <tr>
+      <td>企業支援</td>
+      <td>Vertex AI 企業版</td>
+      <td>OpenAI Enterprise</td>
+      <td>企業方案</td>
+    </tr>
+  </table>
+
+  <p><strong>結論：</strong>如果你需要語音 + 複雜推理（客服 FAQ 查詢、即時語音分析、語音代理任務執行），Gemini 3.8 Live Extended Thinking 是目前最佳選擇。如果你更看重 GPT-5.4 的推理品質且預算充足，OpenAI Realtime 仍是好選項。純語音品質/角色扮演選 ElevenLabs。</p>
+
+  <h2 id="quickstart">四、API 快速上手：5 步驟建立語音推理 Agent</h2>
+
+  <h3>前置需求</h3>
+  <ul>
+    <li>Google AI Studio 帳號（<a href="https://aistudio.google.com" target="_blank" rel="noopener">aistudio.google.com</a>）</li>
+    <li>Python 3.10+ 或 Node.js 18+</li>
+    <li>麥克風/音訊輸入設備（本機測試）</li>
+  </ul>
+
+  <h3>步驟一：取得 API Key 並安裝 SDK</h3>
+  <pre><code># Python
+pip install google-genai pyaudio
+
+# 或 Node.js
+npm install @google/genai</code></pre>
+
+  <h3>步驟二：建立基本語音串流連線（Python）</h3>
+  <pre><code>import asyncio
+from google import genai
+from google.genai import types
+
+client = genai.Client(api_key="YOUR_API_KEY")
+
+# 使用 Live Extended Thinking 模型
+MODEL = "gemini-3.8-live-extended-thinking"
+
+async def voice_agent():
+    config = types.LiveConnectConfig(
+        response_modalities=["AUDIO"],
+        # 啟用 Extended Thinking（邊說邊思考）
+        thinking_config=types.ThinkingConfig(
+            include_thoughts=True,  # 在語音中包含思考過程
+            thinking_budget=8192    # 最大思考 token 數
+        ),
+        speech_config=types.SpeechConfig(
+            voice_config=types.VoiceConfig(
+                prebuilt_voice_config=types.PrebuiltVoiceConfig(
+                    voice_name="Aoede"  # 或 Charon, Fenrir, Kore, Puck
+                )
+            )
+        )
+    )
+    
+    async with client.aio.live.connect(model=MODEL, config=config) as session:
+        # 發送文字查詢（也可以發送音訊串流）
+        await session.send(
+            input="請用中文說明 Agentic Commerce 是什麼，並給出台灣開發者的實際建議",
+            end_of_turn=True
+        )
+        
+        # 接收語音回應
+        async for response in session.receive():
+            if response.data:  # 音訊資料
+                # 播放音訊（這裡簡化為儲存檔案）
+                with open("response.pcm", "ab") as f:
+                    f.write(response.data)
+            if response.text:  # 文字轉錄
+                print(f"AI 說：{response.text}")
+
+asyncio.run(voice_agent())</code></pre>
+
+  <div class="tip-box">
+    <strong>💡 thinking_config 說明</strong><br>
+    <code>include_thoughts=True</code> 讓模型的推理過程也透過語音輸出（你會聽到「嗯，讓我想想……」這類自然停頓）。<code>thinking_budget</code> 控制最大思考量——設越高，推理越深但延遲越長。建議從 4096 開始調整。
+  </div>
+
+  <h3>步驟三：整合即時麥克風輸入</h3>
+  <pre><code>import pyaudio
+import asyncio
+from google import genai
+from google.genai import types
+
+# 音訊設定
+SEND_SAMPLE_RATE = 16000
+RECEIVE_SAMPLE_RATE = 24000
+CHUNK_SIZE = 1024
+
+async def live_voice_chat():
+    client = genai.Client(api_key="YOUR_API_KEY")
+    pya = pyaudio.PyAudio()
+    
+    config = types.LiveConnectConfig(
+        response_modalities=["AUDIO"],
+        thinking_config=types.ThinkingConfig(
+            include_thoughts=True,
+            thinking_budget=4096
+        )
+    )
+    
+    async with client.aio.live.connect(
+        model="gemini-3.8-live-extended-thinking",
+        config=config
+    ) as session:
+        
+        # 開麥錄音串流
+        mic_stream = pya.open(
+            format=pyaudio.paInt16,
+            channels=1,
+            rate=SEND_SAMPLE_RATE,
+            input=True,
+            frames_per_buffer=CHUNK_SIZE
+        )
+        
+        # 開喇叭輸出串流
+        speaker_stream = pya.open(
+            format=pyaudio.paInt16,
+            channels=1,
+            rate=RECEIVE_SAMPLE_RATE,
+            output=True
+        )
+        
+        async def send_audio():
+            while True:
+                data = mic_stream.read(CHUNK_SIZE, exception_on_overflow=False)
+                await session.send(input={"data": data, "mime_type": "audio/pcm"})
+                await asyncio.sleep(0)
+        
+        async def receive_audio():
+            async for response in session.receive():
+                if response.data:
+                    speaker_stream.write(response.data)
+        
+        # 同時發送和接收
+        await asyncio.gather(send_audio(), receive_audio())
+
+asyncio.run(live_voice_chat())</code></pre>
+
+  <h3>步驟四：加上 Function Calling（讓語音 Agent 執行任務）</h3>
+  <pre><code>tools = [
+    types.Tool(function_declarations=[
+        types.FunctionDeclaration(
+            name="search_taiwan_products",
+            description="搜尋台灣市場產品資訊",
+            parameters={
+                "type": "object",
+                "properties": {
+                    "query": {"type": "string", "description": "搜尋關鍵字"},
+                    "category": {"type": "string", "description": "產品類別"}
+                },
+                "required": ["query"]
+            }
+        )
+    ])
+]
+
+config = types.LiveConnectConfig(
+    response_modalities=["AUDIO", "TEXT"],
+    thinking_config=types.ThinkingConfig(include_thoughts=True),
+    tools=tools
+)</code></pre>
+
+  <h3>步驟五：部署到 Cloud（DigitalOcean App Platform）</h3>
+  <pre><code># Dockerfile（簡化版）
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install google-genai fastapi uvicorn websockets
+COPY . .
+EXPOSE 8080
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]</code></pre>
+
+  <div class="cta-box">
+    <h3>🌊 語音 AI 服務部署推薦</h3>
+    <p>DigitalOcean Droplets 或 App Platform 非常適合部署 Gemini Live 語音服務——低延遲、全球節點、簡單計費，新用戶享 $200 免費額度。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" rel="sponsored">🌊 立即試用 DigitalOcean</a>
+    <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" class="cta-btn secondary" rel="sponsored">☁️ Cloudways 托管主機</a>
+  </div>
+
+  <h2 id="taiwan-cases">五、台灣開發者三大應用場景</h2>
+
+  <h3>場景一：台灣企業語音客服 Agent（邊查資料邊回答）</h3>
+  <p>傳統語音客服 IVR 系統遇到複雜問題只會說「請轉接人工」。Gemini 3.8 Live Extended Thinking 的 Extended Thinking 功能讓語音 Agent 可以：</p>
+  <ul>
+    <li>客戶問：「我的訂單 #12345 現在到哪了？運費怎麼算的？」</li>
+    <li>Agent 邊說「讓我幫你查一下……」邊呼叫訂單 API</li>
+    <li>取得資料後無縫回答：「你的訂單已到台中轉運站，預計明日送達。運費是因為……」</li>
+  </ul>
+  <p><strong>技術亮點：</strong>Function Calling + Live Extended Thinking 組合，讓真實的後端查詢和語音回應無縫整合。台灣有 LINE 客服、網路購物等大量客服需求，繁體中文語音品質也已達商業可用等級。</p>
+
+  <h3>場景二：即時語音會議 AI 助理（邊聽邊摘要）</h3>
+  <p>Google Meet 等視訊會議常需要即時摘要或行動項目整理。Gemini 3.8 Live Extended Thinking 可以：</p>
+  <ul>
+    <li>即時聽取會議語音串流</li>
+    <li>Extended Thinking 深度理解討論內容（不只關鍵字，理解脈絡）</li>
+    <li>在會議中主動語音介入：「剛才 A 提到的預算問題，我有一些相關資料……」</li>
+    <li>會議結束後立即提供結構化摘要和行動項目</li>
+  </ul>
+  <p><strong>台灣商機：</strong>台灣企業會議文化重，繁中語音 AI 助理市場競品極少，Gemini 的繁中語音品質是決定性優勢。</p>
+
+  <h3>場景三：語音驅動的 AI 代理（說話即操作）</h3>
+  <p>結合 ZeroClick / MCP 等工具，Gemini 3.8 Live Extended Thinking 可以成為真正的語音驅動 AI 代理：</p>
+  <ul>
+    <li>「幫我把這份 PDF 摘要成三點，然後寄給 John」</li>
+    <li>Agent 邊說「好，我先分析 PDF……」邊執行 PDF 摘要工具</li>
+    <li>「已摘要完成：第一點是……第二點是……要我直接寄嗎？」</li>
+    <li>「好，已寄出。」（執行郵件 API）</li>
+  </ul>
+  <p><strong>競爭優勢：</strong>Extended Thinking 讓 Agent 在語音對話中也能執行複雜多步驟任務，不只是簡單問答。這是 OpenAI Realtime API 目前還不支援的能力。</p>
+
+  <h2 id="pricing">六、定價與配額：2026 年 9 月最新</h2>
+
+  <p>Google 的正式定價以 Google AI Studio 頁面為準，以下是目前已知資訊：</p>
+
+  <table>
+    <tr><th>使用層級</th><th>內容</th><th>費率</th></tr>
+    <tr><td><strong>免費層</strong>（AI Studio）</td><td>有限配額，適合測試</td><td>$0（有速率限制）</td></tr>
+    <tr><td><strong>Pay-as-you-go</strong></td><td>音訊輸入 + 音訊輸出計費</td><td>競爭性定價（介 Flash 和 Pro 之間）</td></tr>
+    <tr><td><strong>Vertex AI</strong></td><td>企業合規、SLA、私有部署</td><td>企業合約，聯絡 Google 銷售</td></tr>
+  </table>
+
+  <div class="tip-box">
+    <strong>💡 定價建議</strong><br>
+    Extended Thinking 模式下 token 消耗較高（thinking tokens 也計費）。建議從低 thinking_budget（2048-4096）開始測試，找到品質和成本的平衡點。對於簡單問答場景，可以動態關閉 Extended Thinking 以節省費用。
+  </div>
+
+  <h2 id="limitations">七、已知限制與注意事項</h2>
+
+  <div class="warning-box">
+    <strong>⚠️ 使用前請注意以下限制（2026-09-17 資訊）</strong>
+    <ul>
+      <li><strong>Thinking tokens 計費</strong>：Extended Thinking 的推理 tokens 也計入費用，複雜任務成本會高於 Flash</li>
+      <li><strong>長對話穩定性</strong>：超過 30 分鐘的連續語音對話偶有串流中斷，需實作重連機制</li>
+      <li><strong>台語/閩南語</strong>：繁體中文（國語）品質優秀，台語/閩南語尚未完整支援</li>
+      <li><strong>噪音環境</strong>：高噪音環境下語音識別準確率下降，建議加入 VAD（聲音活動偵測）前處理</li>
+      <li><strong>函式呼叫延遲</strong>：Function Calling 在 Extended Thinking 模式下有額外延遲（推理後才決定呼叫）</li>
+      <li><strong>Context Window</strong>：雖有 1M tokens，但長時間語音對話的 context 管理需要應用層自行處理</li>
+    </ul>
+  </div>
+
+  <h2 id="faq">八、FAQ 常見問題</h2>
+
+  <h3>Q1：Gemini 3.8 Live Extended Thinking 的「Extended Thinking」和一般版有什麼差？</h3>
+  <p>一般的 Gemini Live 模型直接語音→回應，沒有深度推理步驟。Extended Thinking 版在回應前會進行類似「心理對話」的多步驟推理——特別適合需要分析、比較、計算的複雜問題。你在語音對話中可以聽到 AI 的思考過程（「讓我評估一下…」「有兩個可能性…」）。</p>
+
+  <h3>Q2：跟 Gemini 3.8 Flash 哪個便宜？</h3>
+  <p>Gemini 3.8 Flash 的文字定價維持 3.7 Flash intro rate（非常低）。Live Extended Thinking 的語音 API 定價不直接可比，因為計費單位不同（音訊分鐘 vs. 文字 tokens）。對於語音場景，兩者根本是不同用途，不存在直接比較。</p>
+
+  <h3>Q3：可以用在 LINE Bot 嗎？</h3>
+  <p>可以，但需要中間層。LINE Bot 目前不支援真正的即時語音串流，你需要：接收語音訊息 → 轉換為 PCM 格式 → 發送給 Gemini Live API → 接收語音回應 → 轉換回 m4a/mp3 → 透過 LINE Reply API 發送。這個流程比較複雜，延遲也會增加。建議用 LINE Voice Call Webhook（需 LINE Partner 資格）才能達到真正低延遲。</p>
+
+  <h3>Q4：「Speech-to-Speech 全球 #1」是怎麼評測的？</h3>
+  <p>Artificial Analysis（artificialanalysis.ai）是獨立的 AI 模型評測機構，他們的 Speech-to-Speech 評測包含：首字節延遲、語音品質（MOS 評分）、語音理解準確率、多語言能力等維度。Gemini 3.8 Live Extended Thinking 在 2026-09-16 的最新排名中综合得分第一。</p>
+
+  <h3>Q5：和 Claude 的語音版相比如何？</h3>
+  <p>Anthropic 的語音版 Claude 尚未正式 GA（2026-09 時點仍是 Preview）。目前語音 AI 市場的正式 GA 版本中，Gemini 3.8 Live Extended Thinking 是 Extended Thinking + 語音組合的唯一選項。Claude 語音版 GA 後會是強力競爭者，值得持續關注。</p>
+
+  <h3>Q6：API Key 在哪申請？免費額度多少？</h3>
+  <p>前往 <a href="https://aistudio.google.com" target="_blank" rel="noopener">Google AI Studio</a> 申請免費 API Key，不需要信用卡。免費層有每分鐘請求限制（RPM）和每天使用量上限，適合開發測試。正式上線建議切換到 Pay-as-you-go 以解除限制。</p>
+
+  <div class="tip-box">
+    <strong>💡 延伸閱讀推薦</strong><br>
+    ・<a href="/blog/zeroclick-agentic-commerce-guide-2026.html">ZeroClick 完整教學：讓 AI Agent 幫你賣東西</a><br>
+    ・<a href="/blog/mastra-ai-typescript-agent-framework-2026.html">Mastra 完整教學：TypeScript AI Agent Framework</a><br>
+    ・<a href="/blog/github-copilot-hydrafusion-review-2026.html">GitHub Copilot HydraFusion：多模型 Orchestration 省費 67%</a>
+  </div>
+
+  <h3>結語：語音 AI 正在重新定義人機互動</h3>
+
+  <p>Gemini 3.8 Live Extended Thinking 代表的不只是一個新模型——而是語音 AI 從「語音輸入輸出介面」進化為「語音推理 Agent」的關鍵里程碑。</p>
+
+  <p>「邊思考邊說話」打破了傳統語音 AI 的停頓感，讓對話更自然；Speech-to-Speech #1 的評測排名代表真實的技術領先；1M context window 支持複雜長任務。對台灣開發者來說，繁體中文語音品質已達商業可用，現在就是建立語音 AI 產品的最佳時機。</p>
+
+  <p>從客服 Agent、會議助理到語音驅動 AI 代理——未來兩年，語音會成為 AI 最主流的互動模式。Gemini 3.8 Live Extended Thinking，是你的起點。</p>
+
+  <div class="cta-box">
+    <h3>🚀 開始建立你的語音 AI 應用</h3>
+    <p>從 Gemini API 到雲端部署，完整技術棧一步到位。DigitalOcean $200 免費額度 + DataCamp AI 課程，台灣開發者最佳組合。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" rel="sponsored">🌊 DigitalOcean $200 免費額度</a>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" rel="sponsored">📊 DataCamp AI 課程</a>
+    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="cta-btn secondary" rel="sponsored">⚡ Systeme.io 自動化銷售</a>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <p>© 2026 AutoDev AI｜<a href="/privacy.html">隱私政策</a>｜<a href="/about.html">關於我們</a></p>
+    <p style="font-size:.85rem;opacity:.7;margin-top:.5rem">本文部分連結為聯盟行銷連結，點擊購買可支持本站持續創作，不影響您的定價。</p>
+  </div>
+</footer>
+<script>
+  const btn = document.getElementById('mobileMenuBtn');
+  const links = document.getElementById('navLinks');
+  if(btn) btn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+</script>
+</body>
+</html>
