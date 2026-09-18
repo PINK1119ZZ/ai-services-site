@@ -1,8 +1,76 @@
 {
-  "lastRun": "2026-09-18T00:30:00Z",
+  "lastRun": "2026-09-18T03:00:00Z",
   "lastResearchRound": 209,
   "lastStrategistRun": "2026-09-15T01:00:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-09-18T03:00:00Z",
+      "agent": "seo-writer",
+      "task": "article-publish",
+      "status": "completed",
+      "summary": "Fri 03:00 UTC cron — R209 directive P0-URGENT + P1-HIGH 兩篇執行：(1) Sora API 9/24 終止完整遷移指南（繁中首發，~2,400字，6天倒計時，6大替代方案比較，Higgsfield CTA 主力，Sep 22 截止）+ (2) Higgsfield API 完整評測（繁中首發，~2,800字，PH Sep 17 #24，50+ generative media models 統一 async API，25%/12mo affiliate，Sora 遷移首選）。Sora 遷移文章：核心角度「距離關閉 6 天，繁中首發遷移指南」，含 Sora 終止時間軸（3月宣告→4月app下線→9/24 API硬切）、掃描 codebase 排查指令、Higgsfield/Kling/Veo/Seedance/PixVerse/Runway 6欄比較表、5步驟遷移教學（Python adapter pattern + webhook）、台灣電商/行銷自動化/AI Agent 三大場景、FAQ 5題。Higgsfield 評測：核心角度「50+ 模型統一 API，Sora 架構最相容替代品」，含 async job 架構解析（含序列圖）、50+ 模型分類（Video/Image/Audio 三大類）、Python 生產就緒客戶端（含重試/Webhook/dataclass）、Node.js ESM 版本（含 Express Webhook）、vs Kling 3.0 vs Runway vs Seedance 4欄比較表、台灣三大場景（創作者工作流/SaaS嵌入/電商行銷）、定價估算、25%/12mo affiliate 說明、FAQ 6題。兩篇均含 DigitalOcean + DataCamp 漸層 CTA（Sora 遷移文另加 Cloudways，Higgsfield 評測主力 Higgsfield + Cloudways）。blog/index.html 新增兩張卡片排第一位（217→219篇）。sitemap.xml 新增兩個 URL（346→350 URLs，priority 0.9）。",
+      "changes": [
+        "新增 blog/sora-api-shutdown-migration-guide-2026.html（~2,400字繁中首發，Sora API 9/24 終止完整遷移指南，6大替代方案比較）",
+        "新增 blog/higgsfield-api-review-2026.html（~2,800字繁中首發，PH Sep 17 #24，50+ generative media models 統一 async API 完整評測）",
+        "blog/index.html：新增 Higgsfield 評測 + Sora 遷移兩張卡片（排第一位），217→219篇",
+        "sitemap.xml：新增兩個 URL（lastmod 2026-09-18，priority 0.9），346→350 URLs",
+        "agent-state.json：更新 lastRun + agentLog"
+      ],
+      "articlesPublished": [
+        {
+          "file": "blog/sora-api-shutdown-migration-guide-2026.html",
+          "title": "Sora API 9/24 永久關閉：台灣開發者完整遷移指南（6 替代方案深度比較）2026",
+          "wordCount": "~2,400 字",
+          "affiliateLinks": [
+            "DigitalOcean m.do.co/c/6121a295f624",
+            "DataCamp afflink.one/s/aavAC",
+            "Cloudways vbtrax.com/track/clicks/9532/...",
+            "Higgsfield higgsfield.ai（主力推薦）"
+          ],
+          "seoKeywords": [
+            "sora api 停止 2026",
+            "sora api 替代方案 繁中",
+            "sora api shutdown 台灣",
+            "ai video api 比較 2026",
+            "higgsfield api 教學",
+            "sora api 遷移"
+          ],
+          "publishReason": "R209 P0-URGENT（Sep 24 硬切，6天倒計時，繁中零遷移指南，Sep 22 截止）",
+          "estimatedTraffic": "1K-4K/月（時效性高峰 + 長尾）",
+          "estimatedRevenue": "00-500/月（Higgsfield + DigitalOcean + DataCamp）"
+        },
+        {
+          "file": "blog/higgsfield-api-review-2026.html",
+          "title": "Higgsfield API 完整評測 2026：一個 Key，50+ 影片模型，Sora 遷移首選，繁中首發",
+          "wordCount": "~2,800 字",
+          "affiliateLinks": [
+            "Higgsfield higgsfield.ai（25%/12mo）",
+            "DigitalOcean m.do.co/c/6121a295f624",
+            "DataCamp afflink.one/s/aavAC",
+            "Cloudways vbtrax.com/track/clicks/9532/..."
+          ],
+          "seoKeywords": [
+            "higgsfield api 教學",
+            "higgsfield api 評測 繁中",
+            "ai video api 比較",
+            "sora 替代方案",
+            "generative media api",
+            "higgsfield affiliate"
+          ],
+          "publishReason": "R209 P1-HIGH（PH Sep 17 #24，50+ models，25%/12mo affiliate，Sora 遷移首選，Sep 22 截止）",
+          "estimatedTraffic": "0.8K-2.5K/月",
+          "estimatedRevenue": "00-500/月（Higgsfield 25%/12mo affiliate 主力）"
+        }
+      ],
+      "nextActions": [
+        "P0-STANDBY Grok 4.8（Musk Sep 13 宣布跳過 4.7，直接 Grok 4.8，Manifold 80% Sep 21前 GA，R210 確認後立即執行）",
+        "📅 content-ops Sep 22：更新 blog/openai-devday-2026-preview.html（T-7天窗口）",
+        "P1-HIGH carryover：blog/gemini-3.8-flash-review-2026.html（Sep 2 GA，截止 Sep 20 已過，降 P1 繼續）",
+        "P1-HIGH carryover：blog/github-copilot-teams-newrelic-amplitude-integration-2026.html（截止 Sep 21）",
+        "P1 carryover：blog/deepseek-v4-1-flash-routing-guide-2026.html（Sep 14 靜默路由，教學文）",
+        "P2 排隊：CREEM 2.0 / NovaSynth / Replay QA（Ivan 確認 affiliate 後執行）"
+      ]
+    },
     {
       "timestamp": "2026-09-18T00:30:00Z",
       "agent": "researcher",
