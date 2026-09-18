@@ -3481,3 +3481,151 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 **本輪新增潛力月收入：$840-3,650（保守-樂觀）**
 （ZeroClick 教學 $80-300 + Gemini 3.8 Live $80-250 + Agentic Commerce 比較 $100-400 + DevDay 峰值 $500-1,500 + Grok 4.7 GA後 $300-900 + Chrome DevTools MCP $80-200 + 常青長尾加成）
 
+
+---
+
+## Round 209 — 2026-09-18 00:30 UTC（Fri 08:30 ai-trend-hunter cron）
+
+### 🎯 核心發現總結
+
+#### 🔴 P0-URGENT（6天倒計時）：Sora API 終止遷移潮
+- **Sora API 終止日期：Sep 24, 2026**（距今僅 6 天！）
+- OpenAI 3月24日宣布，4月26日 app 停服，9月24日 API 硬切（410 Gone）
+- 搜尋量爆炸：「sora api shutdown migration」「sora alternatives 2026」「sora api alternatives developers」
+- 競爭者已在刷「Sora 遷移指南」：miraflow.ai、spheron.network、opus.pro、pixo.video 英文版已出
+- **繁中零遷移指南** — 台灣開發者接下來 6 天高度搜尋
+- 主要替代品：Veo 3.1、Kling 3.0、Seedance 2.0、PixVerse V6、Runway Gen-4.5
+- **Higgsfield API**（Sep 17 PH 上線，#24）= 「50+ generative media models 統一 async API」= 直接 Sora 遷移方案
+- 預估月收入：**$300-800/月**（Higgsfield affiliate 25%/12mo + Kling affiliate + DigitalOcean hosting CTA）
+- 截止：**Sep 22 前發布**（API 下線前 48h 流量最大）
+
+---
+
+### 🔴 P1-HIGH 新發現
+
+#### 1. Higgsfield API（PH Sep 17 #24，50+ 模型統一 API）
+- **Product Hunt Sep 17, 2026 #24**
+- 功能：One async API for 50+ generative media models（video/image/audio 統一入口）
+- Sora 遷移角度：不需要分別整合 5 個 API，Higgsfield 一個 key 搞定
+- Affiliate：**25%/12mo**（higgsfield.ai/affiliate，已確認），最高月估 $19,500（100 referrals × $100/月）
+- 目標關鍵字：「higgsfield api 教學」「sora api 替代 2026」「ai video api 比較 2026」
+- 繁中空白確認：英文教學已開始出，繁中零教學
+- 截止：Sep 22 前（Sora 下線前流量最大）
+- 建議站點：autodev-ai.com
+- 預估月收入：$200-500/月
+
+#### 2. Grok 4.7 已死，Grok 4.8 升級（2.5T 參數，重大轉折）
+- **Grok 4.7 正式放棄**：Sep 11 原定發布，未如期；Musk 9月13日直接宣布 Grok 4.8（2.5T 參數）
+- Manifold Markets 預測：Before 2026-09-21 發布機率 80%
+- 目前最新：Grok 4.6（Aug 12，500K context，$2/$6 per M tokens）
+- 搜尋機會：「grok 4.7 cancelled」「grok 4.8 release date」「grok 4.8 vs claude 2026」
+- 這是新文章角度：「Grok 4.7 跳票後，Grok 4.8（2.5T 參數）何時出？」
+- 當 Grok 4.8 GA → P0-URGENT 立即執行 blog/grok-4.8-complete-review-2026.html
+- 狀態更新：**P0-STANDBY 升級重命名** — 從「等 4.7」改為「等 4.8」
+
+#### 3. CREEM 2.0（PH Sep 17 #5，AI 賣東西平台）
+- PH Sep 17 #5：「Build with AI. Sell and Grow with CREEM.」
+- 定位：Stripe + Gumroad alternative for AI builders
+- 角度：「AI 開發者賣東西的新方式」+ 比較 Gumroad vs Lemon Squeezy vs CREEM 2.0
+- 目標關鍵字：「creem 評測 2026」「ai product selling platform」「gumroad 替代方案 2026」
+- 繁中空白確認：零評測
+- 建議：先確認 affiliate program（常有 25-30% 此類平台），可先草稿
+- 預估月收入：$100-300/月
+
+#### 4. NovaSynth by Noveum（PH Sep 17 #1，AI Voice Agent 壓力測試）
+- PH Sep 17 **#1 今日榜**：「Test your voice agent on the callers you can't stage」
+- 功能：合成逼真電話來電，對 voice agent 做壓力測試（angry callers、confused elderly、fast talkers）
+- 受眾：AI 語音 agent 開發者、呼叫中心 QA 工程師
+- 目標關鍵字：「novasynth 教學」「voice agent testing 2026」「ai call testing tool」
+- 繁中空白：完全空白
+- affiliate program 待確認
+- 預估月收入：$80-200/月
+
+#### 5. Text Agent Store（PH Sep 17 #4，AI Agent 短訊市場）
+- PH Sep 17 #4：「A marketplace for AI agents you can text」
+- 概念：可以用 SMS/WhatsApp 文字叫 AI agent 幫你完成任務的市場
+- 類似 Gumroad 但是 agent 版
+- 目標關鍵字：「text agent store 評測」「ai agent marketplace 2026」
+- 繁中空白確認
+- 預估月收入：$60-150/月（教學文）
+
+#### 6. MCPJam（PH Sep 17 #27，MCP Server 測試評估平台）
+- PH Sep 17 #27：「The testing & evaluations platform for MCP servers」
+- 功能：MCP server 的測試 + 評估 + 基準平台
+- 受眾：Claude Code / MCP 開發者
+- 目標關鍵字：「mcpjam 教學」「mcp server testing 2026」「mcp evaluation platform」
+- 繁中空白確認
+- 預估月收入：$60-150/月
+
+---
+
+### 🟡 P1 背景觀察
+
+#### 7. OpenAI DevDay T-11天（Sep 22 T-7 更新確認）
+- **2026-09-29 Fort Mason SF**，keynote 全球直播
+- content-ops 需在 **Sep 22 更新** blog/openai-devday-2026-preview.html（T-7 天窗口）
+- 加入最新確認議程：Agents API 已 GA（Sep 10），DevDay Exchanges 8城確認
+- Sep 30 全紀錄大改版繼續計劃
+
+#### 8. Kling 3.0 + Sora 遷移大機會（視頻生成比較頁）
+- Kling 3.0 已於 **2026年2月上線**，是 Sora 遷移的最佳替代選項之一（character motion #1）
+- Kling 有 **affiliate program**（kling.ai 確認有 Affiliate Program + Talent Network）
+- 搜尋量正在爆發：「kling 3.0 vs sora 2026」「sora alternatives best 2026」
+- 建議：強化 Sora 遷移文中的 Kling + Runway + Higgsfield 三角比較
+- 預估月收入：$200-600/月（Kling affiliate 待確認佣金率 + Higgsfield）
+
+#### 9. Replay QA（PH Sep 月榜 Top，AI 自動化測試）
+- Replay 持續衝 PH 月榜（Sep 8 QA Security Scan + Sep 月榜 Top 93 upvotes）
+- 功能：AI 自動測試 → Bug 報告，swarm 式測試，localhost URL 支援
+- Sep 8 新功能：**QA Security Scan**（自動滲透測試 for AI-Built Apps）—— 特別吻合當前 vibe coding 趨勢
+- 目標關鍵字：「replay qa 教學 2026」「ai 自動化測試工具 2026」「ai built app security testing」
+- 繁中空白確認，但需確認 affiliate program
+- 預估月收入：$80-250/月
+
+#### 10. S-Roll（PH Sep 17 #3，AI 長視頻剪輯代理）
+- PH Sep 17 #3：「An agentic harness that turns long videos into clips」
+- 和 Sora 遷移結合：AI 影片製作 pipeline 完整化（生成→剪輯→分發）
+- Higgsfield API + S-Roll = 完整 AI 影片 workflow 教學文機會
+- 目標關鍵字：「s-roll 教學 2026」「ai 影片剪輯 agent」「long video to clips ai」
+- 預估月收入：$60-150/月
+
+---
+
+### 💰 新 Affiliate 發現
+
+| 工具 | 佣金 | Cookie | 月潛力 | 備注 |
+|------|------|--------|--------|------|
+| Higgsfield | 25%/12mo | — | $200-500 | Sep 17 PH，Sora 遷移首選 |
+| Kling 3.0 | 待確認 | — | $200-600 | Sora 遷移受益者，有 affiliate page |
+| CREEM 2.0 | 待確認 | — | $100-300 | PH Sep 17 #5，AI 賣東西平台 |
+
+---
+
+### 📅 日期格式總表（Round 209）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|----------|---------|-----------|---------|
+| 2026-09-18 | Sora API Shutdown 遷移指南 | sora api 替代 2026, sora alternatives 繁中 | 急升（Sep 24前高峰） | Higgsfield 25%/12mo + Kling affiliate + DO CTA | $300-800/月 | autodev-ai.com |
+| 2026-09-18 | Higgsfield API | higgsfield api 教學 繁中, 50 models video api | 上升中 | Higgsfield 25%/12mo（已確認） | $200-500/月 | autodev-ai.com |
+| 2026-09-18 | Grok 4.8（從 4.7 跳票升級） | grok 4.8 發布 2026, grok 4.7 canceled | 高（Musk 宣布後搜尋爆發中） | 廣告間接 + DataCamp CTA | $150-400/月 | autodev-ai.com |
+| 2026-09-18 | CREEM 2.0 | creem 評測 2026, gumroad 替代 ai builders | 中 | CREEM affiliate（待確認） | $100-300/月 | autodev-ai.com |
+| 2026-09-18 | NovaSynth | voice agent testing 2026 | 低中 | 間接 DO CTA | $80-200/月 | autodev-ai.com |
+| 2026-09-18 | Replay QA Security Scan | ai app security testing, replay qa 教學 | 上升 | 間接（需確認 affiliate） | $80-250/月 | autodev-ai.com |
+| 2026-09-18 | MCPJam | mcp server testing, mcpjam 2026 | 低 | 間接 | $60-150/月 | autodev-ai.com |
+
+---
+
+### 🔄 Watchlist 狀態更新（Round 209）
+
+- **Grok 4.7**：⚠️ **CANCELLED** — Musk 放棄 4.7，直接跳 **Grok 4.8（2.5T 參數）**；P0-STANDBY 更名為「等 Grok 4.8」；Manifold 80% 在 Sep 21 前發布
+- **Sora API 遷移**：🔴 **P0-URGENT 6天窗口**（Sep 24 終止）— 繁中遷移指南 Sep 22 前必須發布
+- **Higgsfield**：🔴 **P1-HIGH 新**（Sep 17 PH #24，25%/12mo affiliate，Sora 遷移首選，Sep 22 前發布）
+- **OpenAI DevDay**：📅 T-11天（Sep 22 T-7 更新，Sep 29 Live，Sep 30 全紀錄）
+- **Gemini 3.8 Flash**：🔴 P1-HIGH carryover（seo-writer 截止 Sep 20，今日任務）
+- **Copilot Teams/NR/Amp**：🔴 P1-HIGH carryover（seo-writer 截止 Sep 21）
+- **DeepSeek V4.1 Flash**：🟡 P1 carryover（Sep 14 靜默路由，教學文 Sep 22）
+- **Grok 4.8**：⏳ P0-STANDBY NEW（Musk 宣布，Manifold 80% Sep 21前，R210 確認後立即執行 blog/grok-4.8-complete-review-2026.html）
+
+### 預估新增月收入
+**$930-2,550/月**（Sora遷移+Higgsfield $300-800 + Higgsfield評測 $200-500 + Grok 4.8 GA後 $150-400 + CREEM $100-300 + Replay QA $80-250 + NovaSynth $80-200 + MCPJam $60-150）
+
