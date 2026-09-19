@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-18T12:00:00Z",
+  "lastRun": "2026-09-19T00:00:00Z",
   "lastResearchRound": 210,
   "lastStrategistRun": "2026-09-18T12:00:00Z",
   "agentLog": [
@@ -883,6 +883,23 @@
         "copilotTeamsIntegration": "🔴 P1-HIGH carryover（R207 發指令，確認執行中）"
       },
       "estimatedNewRevenue": "$200-650/月（M9R $60-150 + Harden $50-150 + tiun $80-250 + DevDay $80-150）"
+    },
+    {
+      "timestamp": "2026-09-19T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Sat 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap_index chain 200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；正確 GitHub Pages fallback（pink1119zz.github.io）TW/EN 皆 200✓。本輪無新站點故障、無需站內修復，沿用既有 builder DNS/deprecation directive。",
+      "changes": [
+        "Verified autodev-ai.com homepage and sitemap.xml returned HTTP 200",
+        "Verified ai-tools.pro homepage returned HTTP 200 and sitemap.xml resolved to sitemap_index.xml with final HTTP 200",
+        "Reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution",
+        "Verified correct GitHub Pages fallback URLs (pink1119zz.github.io/ai-tools-tw and /ai-tools-en) returned HTTP 200",
+        "Corrected check baseline: ivanusa.github.io fallback is not canonical and returns 404; pink1119zz.github.io remains the valid fallback",
+        "No new site issues found; existing builder DNS/deprecation directive remains active",
+        "Updated agent-state.json siteHealth + lastChecked + lastSiteHealthCheck + lastSiteHealthSummary + agentLog"
+      ],
+      "watchlistStatus": {}
     }
   ],
   "gscData": {
@@ -1376,7 +1393,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-09-18T00:00:00Z",
+  "lastChecked": "2026-09-19T00:00:00Z",
   "issues": [
     "2026-09-01 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution; autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
@@ -3769,7 +3786,13 @@
       "status": 200,
       "ok": true,
       "lastChecked": "2026-09-18T00:00:00Z"
-    }
+    },
+    "lastChecked": "2026-09-19T00:00:00Z",
+    "lastSiteHealthCheck": "2026-09-19T00:00:00Z",
+    "lastSiteHealthSummary": "Sat 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap_index chain 200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；正確 GitHub Pages fallback（pink1119zz.github.io）TW/EN 皆 200✓。本輪無新站點故障、無需站內修復，沿用既有 builder DNS/deprecation directive。",
+    "issues": [
+      "ai-tools.tw and en.ai-tools.tw still fail DNS resolution; keep existing builder/infra directive active until canonical domain decision or DNS restoration."
+    ]
   },
   "agents": {
     "researcher": {
