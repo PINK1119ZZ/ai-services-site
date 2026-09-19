@@ -4,6 +4,60 @@
 
 ---
 
+## 2026-09-20（市場研究 Round 212 — Sun 07:00 UTC market-research cron）
+
+### 🔥 本輪重點：Systeme.io 60% LIFETIME 未充分利用 + 三大新 affiliate 催促 + Bolt Forge PH #5 + GEO 市場爆發 + 台灣數位需求缺口分析
+
+---
+
+#### 🏆 最高優先：Systeme.io 60% LIFETIME — 低垂果實
+
+我們已放置 Systeme.io CTA 於多篇文章，但**從未建立獨立深度評測頁**。
+
+- 佣金：60% LIFETIME（業界最高，永久歸因 email-based）
+- 定價：$27（Startup）→ $47（Webinar）→ $97（Unlimited）/月
+- 每轉換月收：$16.20 - $58.20（持續終身）
+- 繁中深度評測：**零競品**
+- 行動：seo-writer 立即執行 blog/systeme-io-review-2026.html（不需等 Ivan）
+- 月潛力：$300-900（成長後 $1,500+）
+
+#### 🆕 新 Affiliate 首次提案：Kajabi 30%/12mo
+
+- 佣金：30%/12mo，60天cookie，PartnerStack
+- 定價：$119-319/月（Enterprise），每人月收 $35.70-95.70
+- 受眾：線上課程創作者、教練、membership 業者
+- 申請：kajabi.com/partners
+- 繁中評測：零競品
+- 月潛力：$300-900（Ivan申請後）
+- 優先：P1-HIGH（首次提案，台灣創業教育受眾高度吻合）
+
+#### 📊 PH Sep 19-20 觀察
+
+- **Bolt Forge**（PH Sep 19 #5）：Bolt.new 開源模型 agent，GLM 5.3 + Kimi K3 + DeepSeek v4 Pro，50X 使用量 for Pro 用戶（到 Oct 14），**無 affiliate**，但教學文機會（繁中零）
+- **ChinaMarketing.AI GEO Workspace**（PH Sep 19 #20）：中國市場 AI 搜尋可見度工具，GEO 市場正式爆發信號
+- **GPT-6 Astra Challenge** 進行中（PH Sep 18-19）：834個產品參賽，OpenAI API credits 獎勵，生態系擴張訊號
+
+#### 🇹🇼 台灣數位市場缺口（新發現）
+
+1. **傳統中文 AI 訓練資料稀缺** → TAIDE 2.0 是台灣官方 LLM（8B+70B），128K context，機會：TAIDE vs 其他繁中 LLM 比較教學
+2. **台灣數位行銷工具市場 CAGR 11.6%**（2026-2033）→ 企業採購決策型內容需求高
+3. **LINE 行銷自動化** → 2,100萬用戶，企業 LINE 行銷工具繁中教學幾乎空白
+4. **AI 行銷工具評測**（台幣定價）→ GoHighLevel/GetResponse 繁中評測競爭極低
+
+#### 📡 GitHub 趨勢（Sep 2026）
+
+- Hermes Agent（NousResearch）：240K★，自我成長 AI agent，OpenClaw 官方支援，P1 教學機會
+- VoiceStudio（debpalash）：本機語音合成，GitHub trending Sep 3 Top 4，繁中教學空白
+- TimesFM（google-research）：時間序列預測，金融/供應鏈應用場景，繁中空白
+
+#### 📡 流量管道新洞察
+
+- **Shorts/Reels 佔主導**：YouTube Shorts 觀看時間超過 50%，繁中 AI 工具 60 秒教學幾乎無競爭
+- **GEO 是 2026 最新 SEO**：讓品牌出現在 ChatGPT/Gemini 答案中，繁中幾乎無完整指南
+- **Bluesky 台灣技術社群** → 低競爭，Ivan 5分鐘可申請 @autodev-ai.bsky.social
+
+---
+
 ## 2026-08-30（市場研究 Round 180 — Sun 07:00 UTC market-research cron）
 
 ### 🔥 本輪重點：Superads 30-40%/12mo 新發現 + Reclaim.AI 40% 再確認 + PH 8/29 Viktor/Context.dev 持續強勢 + Gumroad AI 腳本路線確認 + 台灣「超級個體」受眾洞察
