@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-19T23:00:00Z",
+  "lastRun": "2026-09-20T00:00:00Z",
   "lastResearchRound": 212,
   "lastStrategistRun": "2026-09-18T12:00:00Z",
   "agentLog": [
@@ -907,6 +907,36 @@
         "P1-HIGH 下輪：blog/openai-devday-2026-preview.html Sep 22 更新（T-7天加入最新議程資訊）",
         "P1（Ivan 批准後）：leadpages-review-2026.html（40-50% LIFETIME，R199 新提案）",
         "P1（Ivan 批准後）：blog/ai-humanizer-review-2026.html（Undetectable.ai 30% LIFETIME）"
+      ]
+    },
+    {
+      "timestamp": "2026-09-20T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Sun 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；兩個 GitHub Pages fallback 200✓。本輪無新站點故障、無需站內修復，延續既有 builder DNS/deprecation directive。",
+      "changes": [
+        "重新檢查 8 個站點/URL：autodev-ai.com、autodev-ai.com/sitemap.xml、ai-tools.pro、ai-tools.pro/sitemap.xml、ai-tools.tw、en.ai-tools.tw、兩個 GitHub Pages fallback",
+        "更新 agent-state.json 的 siteHealth 各站 lastChecked/status/issue 與全域 lastSiteHealthSummary",
+        "確認無新故障；ai-tools.tw / en.ai-tools.tw 仍為既有 DNS 問題，無可在 repo 內直接修復的內容"
+      ],
+      "results": {
+        "ok": [
+          "autodev-ai.com",
+          "autodev-ai.com/sitemap.xml",
+          "ai-tools.pro",
+          "ai-tools.pro/sitemap.xml",
+          "pink1119zz.github.io/ai-tools-tw",
+          "pink1119zz.github.io/ai-tools-en"
+        ],
+        "failed": [
+          "ai-tools.tw (DNS resolution failed)",
+          "en.ai-tools.tw (DNS resolution failed)"
+        ]
+      },
+      "nextActions": [
+        "持續觀察 ai-tools.tw / en.ai-tools.tw DNS 狀態",
+        "若 canonical domain 決策完成或 DNS 恢復，再移除 GitHub Pages fallback 依賴/相關 directive"
       ]
     }
   ],
@@ -3751,55 +3781,55 @@
       "url": "https://autodev-ai.com/",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-09-18T00:00:00Z"
+      "lastChecked": "2026-09-20T00:00:00Z"
     },
     "autodev-ai.com/sitemap.xml": {
       "url": "https://autodev-ai.com/sitemap.xml",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-09-18T00:00:00Z"
+      "lastChecked": "2026-09-20T00:00:00Z"
     },
     "ai-tools.pro": {
       "url": "https://ai-tools.pro/",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-09-18T00:00:00Z"
+      "lastChecked": "2026-09-20T00:00:00Z"
     },
     "ai-tools.pro/sitemap.xml": {
       "url": "https://ai-tools.pro/sitemap.xml",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-09-18T00:00:00Z"
+      "lastChecked": "2026-09-20T00:00:00Z"
     },
     "ai-tools.tw": {
       "url": "https://ai-tools.tw/",
       "status": 0,
       "ok": false,
       "issue": "DNS resolution failed",
-      "lastChecked": "2026-09-18T00:00:00Z"
+      "lastChecked": "2026-09-20T00:00:00Z"
     },
     "en.ai-tools.tw": {
       "url": "https://en.ai-tools.tw/",
       "status": 0,
       "ok": false,
       "issue": "DNS resolution failed",
-      "lastChecked": "2026-09-18T00:00:00Z"
+      "lastChecked": "2026-09-20T00:00:00Z"
     },
     "pink1119zz.github.io/ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-09-18T00:00:00Z"
+      "lastChecked": "2026-09-20T00:00:00Z"
     },
     "pink1119zz.github.io/ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-09-18T00:00:00Z"
+      "lastChecked": "2026-09-20T00:00:00Z"
     },
-    "lastChecked": "2026-09-19T00:00:00Z",
-    "lastSiteHealthCheck": "2026-09-19T00:00:00Z",
-    "lastSiteHealthSummary": "Sat 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap_index chain 200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；正確 GitHub Pages fallback（pink1119zz.github.io）TW/EN 皆 200✓。本輪無新站點故障、無需站內修復，沿用既有 builder DNS/deprecation directive。",
+    "lastChecked": "2026-09-20T00:00:00Z",
+    "lastSiteHealthCheck": "2026-09-20T00:00:00Z",
+    "lastSiteHealthSummary": "Sun 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；兩個 GitHub Pages fallback 200✓。本輪無新站點故障、無需站內修復，延續既有 builder DNS/deprecation directive。",
     "issues": [
       "ai-tools.tw and en.ai-tools.tw still fail DNS resolution; keep existing builder/infra directive active until canonical domain decision or DNS restoration."
     ]
@@ -3811,8 +3841,8 @@
       "status": "completed"
     }
   },
-  "lastSiteHealthCheck": "2026-09-18T00:00:00Z",
-  "lastSiteHealthSummary": "Fri 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；兩個 GitHub Pages fallback 200✓。本輪無新站點故障、無需站內修復，沿用既有 builder DNS/deprecation directive。",
+  "lastSiteHealthCheck": "2026-09-20T00:00:00Z",
+  "lastSiteHealthSummary": "Sun 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；兩個 GitHub Pages fallback 200✓。本輪無新站點故障、無需站內修復，延續既有 builder DNS/deprecation directive。",
   "affiliateLinks": {
     "lastChecked": "2026-09-13T10:30:00Z",
     "totalArticlesScanned": 117,
