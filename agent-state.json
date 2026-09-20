@@ -1,8 +1,46 @@
 {
-  "lastRun": "2026-09-20T03:05:00Z",
+  "lastRun": "2026-09-20T10:30:00Z",
   "lastResearchRound": 214,
   "lastStrategistRun": "2026-09-20T02:06:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-09-20T10:30:00Z",
+      "agent": "affiliate-monitor",
+      "task": "affiliate-link-check",
+      "status": "completed",
+      "summary": "Sun 10:30 UTC affiliate-monitor cron — 全站聯盟連結掃描完成。掃描 149 個 HTML 檔案（131 blog + 18 tools）。主要連結狀態：DigitalOcean ✅ 200、DataCamp ✅ 403防爬正常、Systeme.io ✅ 200、Higgsfield ✅ 200（新確認）、Cloudways ✅ 403防爬正常、NordVPN ✅ 403防爬正常。❌ 壞連結（5個持續）：全為 Gumroad 404（待 Ivan 上架）。無聯盟連結文章（2個）：tools/vps-compare.html（VPS 比價器，缺 DigitalOcean CTA）、tools/index.html（索引頁，正常）。記錄 directive 給 content-refresher：vps-compare.html 需加 DigitalOcean affiliate CTA。",
+      "changes": [
+        "掃描 149 個 HTML 檔案（131 blog + 18 tools）",
+        "確認主要聯盟連結健康狀態：DigitalOcean/DataCamp/Systeme.io/Cloudways/NordVPN/Higgsfield",
+        "確認 5 個持續 Gumroad 404（全為 Ivan 未上架產品）",
+        "確認 6 篇文章含 404 Gumroad 連結",
+        "發現 tools/vps-compare.html 無聯盟連結 → directive 給 content-refresher",
+        "更新 agent-state.json affiliateLinks status 和 lastChecked"
+      ],
+      "linkStats": {
+        "totalChecked": 23,
+        "healthy": 18,
+        "broken404": 5,
+        "brokenLinks": [
+          "Gumroad claude-code-prompt-pack-2026",
+          "Gumroad n8n-tw-templates",
+          "Gumroad n8n-claude-templates-v1",
+          "Gumroad claude-code-skills-pack-v2",
+          "Gumroad ai-agent-cybersecurity-skills-v1"
+        ]
+      },
+      "articlesNoAffiliate": [
+        "tools/vps-compare.html (VPS 比價器 - 應加 DigitalOcean CTA)",
+        "tools/index.html (索引頁 - 正常，無需 affiliate)"
+      ],
+      "ivanActions": [
+        "🔴 P0-URGENT：上架 xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（第22週積壓）",
+        "🔴 P0：上架 xiaofan8.gumroad.com/l/n8n-claude-templates-v1（3篇文章受影響）",
+        "🔴 P0：確認 xiaofan8.gumroad.com/l/n8n-tw-templates（是否下架或上架）",
+        "🔴 P0：上架 xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1",
+        "🔴 P0：上架 xiaofan8.gumroad.com/l/claude-code-skills-pack-v2"
+      ]
+    },
     {
       "timestamp": "2026-09-20T03:05:00Z",
       "agent": "researcher",
@@ -1652,7 +1690,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-09-19T00:00:00Z",
+  "lastChecked": "2026-09-20T10:30:00Z",
   "issues": [
     "2026-09-01 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution; autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
@@ -4065,25 +4103,28 @@
   "lastSiteHealthCheck": "2026-09-20T00:00:00Z",
   "lastSiteHealthSummary": "Sun 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；兩個 GitHub Pages fallback 200✓。本輪無新站點故障、無需站內修復，延續既有 builder DNS/deprecation directive。",
   "affiliateLinks": {
-    "lastChecked": "2026-09-13T10:30:00Z",
-    "totalArticlesScanned": 117,
-    "articlesWithAffiliate": 117,
-    "articlesWithNoAffiliate": 0,
+    "lastChecked": "2026-09-20T10:30:00Z",
+    "totalArticlesScanned": 149,
+    "articlesWithAffiliate": 147,
+    "articlesWithNoAffiliate": 2,
     "results": {
       "DigitalOcean (m.do.co/c/6121a295f624)": {
         "status": 200,
-        "note": "✅ 正常（301→200 final）",
-        "ok": true
+        "note": "✅ 正常（301→200）",
+        "ok": true,
+        "checkedAt": "2026-09-20T10:30:00Z"
       },
       "DataCamp (afflink.one/s/aavAC)": {
         "status": 403,
         "note": "✅ 防爬機制-用戶點擊正常",
-        "ok": true
+        "ok": true,
+        "checkedAt": "2026-09-20T10:30:00Z"
       },
       "Systeme.io (systeme.io/?sa=...)": {
         "status": 200,
         "note": "✅ 正常",
-        "ok": true
+        "ok": true,
+        "checkedAt": "2026-09-20T10:30:00Z"
       },
       "Systeme.io ZH (systeme.io/zh?sa=...)": {
         "status": 200,
@@ -4104,14 +4145,16 @@
         "status": 404,
         "note": "❌ 404 持續（第22週+，Ivan P0-URGENT：需上架）",
         "ok": false,
+        "checkedAt": "2026-09-20T10:30:00Z",
         "affectedArticles": [
           "blog/claude-code-prompt-pack-guide-2026.html"
         ]
       },
       "Gumroad n8n-tw-templates": {
         "status": 404,
-        "note": "❌ 404 持續（Ivan 確認是否已下架，3 篇文章受影響）",
+        "note": "❌ 404 持續（Ivan 確認是否已下架）",
         "ok": false,
+        "checkedAt": "2026-09-20T10:30:00Z",
         "affectedArticles": [
           "blog/line-bot-tutorial-2026.html",
           "blog/n8n-automation-tutorial-2026.html",
@@ -4122,20 +4165,23 @@
         "status": 404,
         "note": "❌ 404（builder 完成，Ivan 需上架）",
         "ok": false,
+        "checkedAt": "2026-09-20T10:30:00Z",
         "affectedArticles": [
           "blog/n8n-claude-code-workflow-templates-2026.html"
         ]
       },
       "Gumroad claude-code-skills-pack-v2": {
         "status": 404,
-        "note": "❌ 404（builder 完成，Ivan 需上架）",
+        "note": "❌ 404（Ivan 需上架）",
         "ok": false,
+        "checkedAt": "2026-09-20T10:30:00Z",
         "affectedArticles": []
       },
       "Gumroad ai-agent-cybersecurity-skills-v1": {
         "status": 404,
-        "note": "❌ 404（Ivan 需上架 ai-agent-cybersecurity-skills-claude-code-2026.html）",
+        "note": "❌ 404（Ivan 需上架 ai-agent-cybersecurity-skills-v1）",
         "ok": false,
+        "checkedAt": "2026-09-20T10:30:00Z",
         "affectedArticles": [
           "blog/ai-agent-cybersecurity-skills-claude-code-2026.html"
         ]
@@ -4189,21 +4235,38 @@
         "status": 403,
         "note": "✅ 防爬機制-用戶點擊正常",
         "ok": true
+      },
+      "Higgsfield (higgsfield.ai)": {
+        "status": 200,
+        "note": "✅ 正常（新連結確認）",
+        "ok": true,
+        "checkedAt": "2026-09-20T10:30:00Z"
+      },
+      "NordVPN (onelink.one/s/7WSzC)": {
+        "status": 403,
+        "note": "✅ 防爬機制-用戶點擊正常",
+        "ok": true,
+        "checkedAt": "2026-09-20T10:30:00Z"
       }
     },
     "brokenLinks": [
-      "xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026 → 404（第22週+，Ivan P0-URGENT）",
-      "xiaofan8.gumroad.com/l/n8n-tw-templates → 404（持續，3篇文章受影響，Ivan 確認狀態）",
-      "xiaofan8.gumroad.com/l/n8n-claude-templates-v1 → 404（builder 完成，Ivan 需上架）",
-      "xiaofan8.gumroad.com/l/claude-code-skills-pack-v2 → 404（builder 完成，Ivan 需上架）",
-      "xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1 → 404（Ivan 需上架）"
+      "Gumroad claude-code-prompt-pack-2026",
+      "Gumroad n8n-tw-templates",
+      "Gumroad n8n-claude-templates-v1",
+      "Gumroad claude-code-skills-pack-v2",
+      "Gumroad ai-agent-cybersecurity-skills-v1"
     ],
     "linksFix2026-09-13": [
       "getresponse-ai-email-marketing-review-2026.html: getresponse.com/affiliates → affiliate-programs（href 已修復）",
       "nanochat-karpathy-complete-tutorial-2026.html: nanoGPT/discussions/710（404）→ nanoGPT/discussions（已修復）"
     ],
     "articlesNoAffiliate": [],
-    "note": "2026-09-13 affiliate-monitor run: 117 blog articles scanned, ALL have ≥1 affiliate link. 5 Gumroad links remain 404 (Ivan action required). 2 live article 404-link fixes applied."
+    "note": "2026-09-13 affiliate-monitor run: 117 blog articles scanned, ALL have ≥1 affiliate link. 5 Gumroad links remain 404 (Ivan action required). 2 live article 404-link fixes applied.",
+    "articlesNoAffiliateList": [
+      "tools/vps-compare.html",
+      "tools/index.html"
+    ],
+    "brokenCount": 5
   },
   "researcherRound": 196,
   "lastResearchTimestamp": "2026-09-08T00:30:00Z",
