@@ -3751,3 +3751,143 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 
 ### 預估新增月收入
 **$1,340-2,850/月**（Webflow affiliate Ivan後 $400-1,200 + DevDay 峰值 $300-800 + LM-Kit One $80-200 + Text Agent $60-150 + Figo $100-300 + Grok 4.8 Q4後 $300-800）
+
+---
+
+## Round 213 — 2026-09-20 00:30 UTC（Sun 08:30 ai-trend-hunter cron）
+
+### 🔴 P0-HIGH BREAKOUT：Grok 4.7 隱形現身（Manifold Sep前96%！）
+
+#### 1. ⚡ Grok 4.7 — 即將 GA（Manifold Sep 21前96%）
+- Manifold 最新市場：Sep 21前 **96%**（從 95% 升至 96%），Sep前 99%
+- xAI changelog 截至本輪（Sep 20 00:30 UTC）仍無正式 GA
+- 但「Grok 4.7+ 」市場 95-96% 意味市場極度相信本週內觸發（Musk 9/13 說 4.7 需要多幾天）
+- 注意：Manifold「4.7+」條款包含 Grok 4.8 GA（若 xAI 跳過 4.7 直出 4.8 亦計入）
+- ⚡ **立即準備草稿** blog/grok-47-complete-review-2026.html + blog/grok-47-vs-claude-fable-51-comparison-2026.html
+- 目標關鍵字：「grok 4.7 評測 繁中」「grok 4.7 release date 台灣」「grok 4.7 vs claude 2026」
+- 搜尋量：爆發中（模型發布前後 72h 峰值）
+- **預估月收入**：$300-900/月（DataCamp + DO 間接，模型發布帶動流量）
+
+---
+
+### 🔴 P1-HIGH 新工具發現
+
+#### 2. Colibri（JustVugg）— 31.4K★ GitHub Trending #1 本地 MoE
+- GitHub：github.com/JustVugg/colibri
+- 31.4K★（+3.5K/週），Jul 2026 上線，Sep 13 GitHub 全語言 **#1**（連續 3 天）
+- **定位**：「Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk」
+- 核心賣點：Pure C 實作，零依賴，專家層從硬碟串流（低 RAM 跑 MoE），樹莓派等小機器可跑 frontier 模型
+- 無 affiliate program（MIT/Apache-2.0 開源），但**教學文機會極佳**：
+  - 「筆電跑 MoE！Colibri 教學：macOS M3/Windows RTX，零依賴裝好就跑」
+  - 繁中零教學（Instagram reel 9/13 才出現）
+  - 競品：llama.cpp（無 MoE 串流）、ollama（需 GGUF）、Colibri 填補低端硬體 MoE 缺口
+- 目標關鍵字：「colibri ai 教學 繁中」「justvugg colibri 安裝」「moe model 本機 跑法 2026」「local ai mac m3 2026」
+- 搜尋量：低中（急速上升，3.5K 新星/週）
+- **變現方式**：間接 DigitalOcean + DataCamp CTA（教學文）
+- **預估月收入**：$100-300/月
+
+#### 3. OpenResearch CLI（alphaXiv）— 713★ Rust，Research Agent Harness
+- GitHub：github.com/alphaXiv/OpenResearch
+- Rust 撰寫，v0.2.4（Sep 17 發布），MIT 授權
+- **定位**：「Turn your coding agents into research agents — run parallel research agents with any model」
+- 核心功能：將 Claude Code/Codex/OpenCode 等 coding agents 當 research workers，並行 literature review、自動 experiment setup、Git-backed research graph
+- alphaxiv.org 整合（16K+ papers 可直接 autoresearch）
+- 9/16-17 alphaxiv.org 上出現多篇引用（arXiv paper → runnable agent project）
+- 無 affiliate，但教學文路線：
+  - 「用 Claude Code 跑 AI 論文：OpenResearch 15 分鐘設定完整教學（繁中首發）」
+  - 目標受眾：台灣研究生 / AI 研究社群（繁中幾乎零討論）
+- 目標關鍵字：「openresearch cli 教學」「alphaxiv openresearch 繁中」「ai 文獻回顧 自動化 2026」「claude code 研究助理 教學」
+- 搜尋量：低（但高度精準受眾）
+- **變現方式**：間接 DataCamp + DO CTA
+- **預估月收入**：$60-180/月
+
+#### 4. Voiskey（PH Sep 月榜 #9）— AI 語音輸入 SaaS
+- PH Sep 月榜 #9（1.1K followers），AI Voice Typing 跨 App 使用
+- 定位：「AI voice typing that sounds right in every app」（macOS 系統層語音輸入）
+- 競品：Whisper Flow、Mac 原生聽寫、Superwhisper
+- 有 affiliate 機會需確認（voiskey.com affiliate page）
+- 搜尋量：低中
+- 目標關鍵字：「voiskey 評測 2026」「ai 語音輸入 mac 繁中」「voice typing ai 台灣」
+- **預估月收入**：$80-200/月（若有 affiliate）
+
+#### 5. Naoma AI Demo Agent（PH Sep 月榜 #8，2.8K followers）— 對話式產品 Demo AI
+- PH September 月榜 #8，2,800 followers
+- 定位：「The first video agent that runs conversational product demos」
+- 核心：AI 自動執行 SaaS 產品互動 demo video，取代 Loom/人工錄製
+- 目標受眾：SaaS founders、行銷人（台灣 SaaS 創業社群有潛力）
+- affiliate 狀況待確認
+- 目標關鍵字：「naoma ai demo 評測」「ai product demo 自動化 2026」「saas demo video ai 台灣」
+- **預估月收入**：$80-250/月
+
+#### 6. Proto-Mind（PH Sep 19 #14）— Mac 浮動 AI 工作區
+- PH Sep 19 #14：「A floating AI workspace for your Mac」
+- macOS 系統層 AI Panel，不需切換 App
+- 競品：Raycast AI、Alfred、Cursor sidebar
+- 搜尋量：低中（Mac 開發者受眾）
+- 目標關鍵字：「proto-mind mac ai 評測」「mac floating ai workspace 2026 繁中」
+- **預估月收入**：$60-150/月（間接）
+
+---
+
+### 📅 P0-CALENDAR 確認：OpenAI DevDay T-9天
+
+- **Sep 29 Fort Mason SF**，Keynote 10:00 AM PT 全球直播
+- 確認預期功能：Managed Agents API、AgentKit 2.0、GPT-5 Pro API（可能）、Codex 正式穩定版、GPT-Realtime-Mini（-70% cost 已 GA）、Sora 2 Video API
+- GSC：blog/openai-devday-2026-preview.html — 3 clicks, 169 impressions, position 5.8
+- **📝 Sep 22（T-7天）：content-ops 更新文章**（加入 AgentKit/Sora 2/DevDay Exchanges 亞太資訊）
+- Sep 29-30：researcher + seo-writer 即時改版
+
+---
+
+### ⏳ P0-STANDBY 更新
+
+#### 7. Grok 4.8（2.5T，C++ Stack，RL 進行中）
+- Sep 14 cellcog.ai 確認：xAI changelog 仍無 4.8，newest = 4.6（Aug 12）
+- Manifold：Oct前20%，Nov前45%，Dec前75%
+- 本輪不急，Q4 第一波觸發（Oct 初預期），R216+ 再確認
+- **注意**：若 Grok 4.7 先 GA（96% 本週），應分開追蹤 4.7 vs 4.8
+
+---
+
+### 💰 新 Affiliate 深度確認（Round 213）
+
+| 工具 | 佣金 | Cookie | 月潛力 | 狀態 |
+|------|------|--------|--------|------|
+| **Kajabi Partners** | **30%/12mo（tiered，20% starter）** | **60天** | **$300-900** | **R212 積壓，Ivan 仍未申請** |
+| **Systeme.io** | **60% LIFETIME** | **永久 email** | **$400-1,000** | **R212 P0-HIGH，Ivan 必須申請** |
+| Webflow | 50%/12mo | 90天 | $400-1,200 | R211 積壓，Ivan 申請中 |
+| Voiskey | 待確認 | 待確認 | $80-200 | 本輪新發現，待 Ivan 確認 |
+
+---
+
+### 📊 日期格式總表（Round 213）
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|---------|-----------|---------|
+| 2026-09-20 | Grok 4.7 評測（草稿待命） | grok 4.7 評測 繁中 | 爆發中（72h 峰值） | DataCamp + DO | $300-900/月 | autodev-ai.com |
+| 2026-09-20 | Colibri 本地 MoE 教學 | colibri ai 繁中, moe 本機 mac | 低中（急升） | DO + DataCamp | $100-300/月 | autodev-ai.com |
+| 2026-09-20 | OpenResearch CLI 教學 | openresearch cli 教學, ai 論文自動化 | 低（精準） | DataCamp + DO | $60-180/月 | autodev-ai.com |
+| 2026-09-20 | Voiskey AI 語音輸入 | voiskey 評測, ai voice typing mac | 低中 | affiliate 待確認 | $80-200/月 | autodev-ai.com |
+| 2026-09-20 | Naoma AI Demo Agent | naoma ai demo, ai product demo 台灣 | 低 | affiliate 待確認 | $80-250/月 | autodev-ai.com |
+| 2026-09-22 | OpenAI DevDay T-7更新 | openai devday 2026 preview | 中高（T-7峰值前） | DO + DataCamp | $300-800/月峰值 | autodev-ai.com |
+
+---
+
+### 🔄 Watchlist 狀態更新（Round 213）
+
+- **Grok 4.7**：🔴 P0-STANDBY 升溫（Manifold Sep 21前96%，本週 GA 機率極高，seo-writer 立即準備草稿）
+- **Grok 4.8**：⏳ P0-STANDBY Q4（Oct前20%，Dec前75%，R216+ 再確認）
+- **OpenAI DevDay**：📅 P0-CALENDAR T-9天（Sep 22 T-7 文章更新，Sep 29 Live keynote）
+- **Colibri MoE**：🔴 P1-HIGH 新（31.4K★，Sep 13 GitHub #1，純 C 本機 MoE，繁中零教學）
+- **OpenResearch CLI**：🟡 P1 新（713★ Rust，alphaXiv harness，繁中零教學）
+- **Voiskey**：🟡 P1 新（PH Sep 月榜 #9，affiliate 待確認）
+- **Naoma AI Demo**：🟡 P1 新（PH Sep 月榜 #8，affiliate 待確認）
+- **Proto-Mind**：🟡 P2（PH Sep 19 #14，Mac floating AI，間接）
+- **Harden AIF**：🔴 P1-HIGH carryover（R210，PH Sep 9 #2，Sep 23 截止，Ivan 申請中）
+- **tiun. Billing**：🔴 P1-HIGH carryover（R210，PH Sep 月榜 #4，Sep 25 截止）
+- **Systeme.io 60% LIFETIME**：🏆 P0-HIGH（R212 積壓，Ivan 立即申請 systeme.io/affiliates）
+- **Kajabi 30%/12mo**：🔴 P1-HIGH（R212 積壓，Ivan 申請 kajabi.com/partners）
+- **Webflow 50%/12mo**：🔴 P1-HIGH（R211 積壓，Ivan 申請中 webflow.com/solutions/affiliates）
+
+### 預估新增月收入
+**$1,200-3,100/月**（Grok 4.7 GA後 $300-900 + Colibri 教學 $100-300 + OpenResearch $60-180 + Voiskey affiliate後 $80-200 + Naoma affiliate後 $80-250 + DevDay 峰值 $300-800 + OpenResearch精準受眾 $60-180 + Proto-Mind $60-150 + Systeme.io Ivan後 $400-1,000）
