@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LM Studio Bionic 完整教學 2026：本地 AI Agent、Code Projects、Voxtral 語音全解析</title>
-    <meta name="description" content="LM Studio Bionic 完整教學：Code Projects、Work Projects、Voxtral 語音輸入、ZDR 安全雲，在自己電腦上跑 AI Agent 的最佳方案。2026 繁中首發。">
-    <meta name="keywords" content="LM Studio Bionic 教學, LM Studio 2026, 本地 AI Agent, 開源模型部署, LM Studio Code Projects, Voxtral 語音, 離線 AI 工具">
-    <meta property="og:title" content="LM Studio Bionic 完整教學 2026：本地 AI Agent 全攻略">
-    <meta property="og:description" content="LM Studio 最大版本更新！Code Projects、Work Projects、Voxtral 語音輸入、ZDR 安全雲全解析，在本地跑媲美 Cursor 的 AI Agent 體驗。">
+    <title>LM Studio Bionic 入門教學：本地、雲端模型與第一個專案</title>
+    <meta name="description" content="LM Studio Bionic 入門：依官方文件說明 Project 建立、Local、Cloud、Remote 模型、費用、Allow coding 權限與人工檢查；本文非產品性能實測。">
+    <meta name="keywords" content="LM Studio Bionic 入門, LM Studio Project, Local Cloud Remote 模型, Allow coding">
+    <meta property="og:title" content="LM Studio Bionic 入門教學：本地、雲端模型與第一個專案">
+    <meta property="og:description" content="依官方文件說明 Bionic Project、Local、Cloud、Remote 模型、費用與 Allow coding 權限；本文非產品性能實測。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://autodev-ai.com/blog/lm-studio-bionic-guide-2026.html">
     <link rel="canonical" href="https://autodev-ai.com/blog/lm-studio-bionic-guide-2026.html">
     <meta name="author" content="AutoDev AI Team">
     <meta name="datePublished" content="2026-07-21">
-    <meta name="dateModified" content="2026-08-18">
+    <meta name="dateModified" content="2026-09-21">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "LM Studio Bionic 完整教學 2026：本地 AI Agent、Code Projects、Voxtral 語音全解析",
+      "headline": "LM Studio Bionic 入門教學：本地、雲端模型與第一個專案",
       "datePublished": "2026-07-21",
-      "dateModified": "2026-08-18",
+      "dateModified": "2026-09-21",
       "author": {"@type": "Organization", "name": "AutoDev AI"},
       "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
-      "description": "LM Studio Bionic 完整教學：Code Projects、Work Projects、Voxtral 語音輸入、ZDR 安全雲，在自己電腦上跑 AI Agent 的最佳方案。"
+      "description": "LM Studio Bionic 入門：依官方文件說明 Project 建立、Local、Cloud、Remote 模型、費用、Allow coding 權限與人工檢查；本文非產品性能實測。"
     }
     </script>
     <style>
@@ -232,7 +232,7 @@
     <div class="breadcrumb">
         <a href="/">AutoDev AI</a> &rsaquo;
         <a href="/blog/">部落格</a> &rsaquo;
-        LM Studio Bionic 教學 2026
+        LM Studio Bionic 入門教學
     </div>
     <div class="nav-bar">
         <a href="/blog/">← 所有文章</a>
@@ -242,46 +242,96 @@
     </div>
 
     <div class="meta">
-        <span class="tag hot">🔥 本地 AI</span>
-        <span class="tag">開源模型</span>
-        <span class="tag">AI Agent</span>
-        <span class="tag">隱私優先</span>
+        <span class="tag hot">LM Studio Bionic</span>
+        <span class="tag">Project</span>
+        <span class="tag">Local / Cloud / Remote</span>
         <br><br>
-        發布：2026-07-21 ｜ 更新：2026-08-18 ｜ 作者：AutoDev AI Team ｜ 閱讀時間：約 12 分鐘
+        發布：2026-07-21 ｜ 更新：2026-09-21 ｜ 作者：AutoDev AI Team
     </div>
 
-    <h1>LM Studio Bionic 完整教學 2026：<em>本地 AI Agent</em>、Code Projects、Voxtral 語音全解析</h1>
+    <h1>LM Studio Bionic 入門教學：本地、雲端模型與第一個專案</h1>
 
     <div class="highlight-box">
-        <strong>三句話說重點：</strong> LM Studio Bionic 是 2026 年本地 AI 工具的最大版本躍升。Code Projects 讓你在自己電腦上跑媲美 Cursor 的 AI 程式助理；Voxtral 帶來媲美 GPT-4o 的本地語音輸入；ZDR 安全雲讓企業用戶放心把代碼上傳分析。<strong>完全免費、完全離線、完全不用擔心資料外洩。</strong>
+        <strong>使用前說明：</strong>本文依據 LM Studio 官方文件整理，未進行產品性能實測；核對日期：2026-09-21。介面、方案與計費可能更新，操作前請再查看官方頁面。
     </div>
 
-    <div class="stat-grid">
-        <div class="stat-card">
-            <div class="number">100%</div>
-            <div class="label">免費 / 開源</div>
-        </div>
-        <div class="stat-card">
-            <div class="number">0 元</div>
-            <div class="label">API 費用</div>
-        </div>
-        <div class="stat-card">
-            <div class="number">200+</div>
-            <div class="label">支援模型數量</div>
-        </div>
-        <div class="stat-card">
-            <div class="number">Win/Mac/Linux</div>
-            <div class="label">全平台支援</div>
-        </div>
+    <p>LM Studio Bionic 是用來讓模型協助處理程式碼與文件的獨立應用程式。它不保證輸入一句話就自動完成整個專案；結果仍取決於模型、專案範圍、工具權限與人工檢查。產品定位可先看 <a href="https://lmstudio.ai/docs/bionic" target="_blank" rel="noopener">Bionic 官方概覽</a>。</p>
+
+    <div class="toc">
+        <h4>本文內容</h4>
+        <ol>
+            <li><a href="#project-setup">第一次建立 Project</a></li>
+            <li><a href="#model-modes">Local、Cloud 與 Remote</a></li>
+            <li><a href="#costs">費用怎麼理解</a></li>
+            <li><a href="#permissions-review">權限與人工檢查</a></li>
+            <li><a href="#fit">適合與不適合的情況</a></li>
+            <li><a href="#faq">三個常見問題</a></li>
+        </ol>
     </div>
 
+    <section id="project-setup">
+        <h2>第一次建立 Project</h2>
+        <p>依照 <a href="https://lmstudio.ai/docs/bionic/quick-start" target="_blank" rel="noopener">官方 Quick Start</a>，可以先建立 Project，再決定是否開放程式碼操作能力。</p>
+        <ol>
+            <li>開啟 Bionic，新增一個 Project。</li>
+            <li>決定是否啟用 <strong>Allow coding</strong>。若不啟用 <strong>Allow coding</strong>，一般 Project 不需要選擇程式碼根目錄。</li>
+            <li>若要讓模型操作程式碼，再指定可操作的程式碼根目錄。</li>
+            <li>選擇已準備好的模型，輸入一項範圍清楚、可以驗收的任務。</li>
+        </ol>
+        <p>第一次使用可從可還原的測試專案開始，例如請它先解釋一個模組，或針對已知錯誤列出修改計畫。說明不可修改的檔案與驗收條件，再觀察它讀取和變更的內容。</p>
+    </section>
+
+    <section id="model-modes">
+        <h2>Local、Cloud 與 Remote 怎麼選</h2>
+        <p><a href="https://lmstudio.ai/docs/bionic/models" target="_blank" rel="noopener">Bionic Models 官方文件</a>將模型來源分成 Local、Cloud 與 Remote。選擇時應一起考慮設備、網路、用量與資料流向。</p>
+        <table class="feature-table">
+            <thead><tr><th>模式</th><th>運作方式</th><th>使用前要確認</th></tr></thead>
+            <tbody>
+                <tr><td>Local</td><td>使用已下載到目前設備的模型</td><td>模型能否載入，以及在實際硬體上的速度與品質</td></tr>
+                <tr><td>Cloud</td><td>登入後透過網路使用雲端模型</td><td>billing、credits、資料政策與組織規範</td></tr>
+                <tr><td>Remote</td><td>透過 LM Link 使用另一台機器的資源</td><td>遠端主機、連線權限與資料流向</td></tr>
+            </tbody>
+        </table>
+        <p>Cloud 文件提到的 ZDR 是資料處理政策，不等於離線，也不代表請求沒有離開電腦。官方文件沒有提供一套適用所有 Local 模型的共同硬體門檻，因此載入能力與效能仍要按設備和模型個別驗證。</p>
+    </section>
+
+    <section id="costs">
+        <h2>費用不是一句「零成本」</h2>
+        <p>官方把本地使用、付費方案與額外 usage credits 分開呈現。本地方案即使標示 Free，也仍可能有硬體、電力、儲存與維護成本；Cloud 則有外部連線和用量邊界。方案與 credits 規則可能調整，實際使用前請查看 <a href="https://lmstudio.ai/pricing" target="_blank" rel="noopener">LM Studio 官方定價頁</a>。</p>
+    </section>
+
+    <section id="permissions-review">
+        <h2>開放權限後，仍要逐步檢查</h2>
+        <div class="warning-box">啟用 Allow coding 後，Bionic 可以編輯檔案、操作 Git 與執行 shell 命令。這些動作會改變工作區，重要專案應先有版本控制、備份與明確的權限邊界。</div>
+        <ol>
+            <li>先把任務拆小，限制可修改的目錄與檔案。</li>
+            <li>閱讀模型執行的命令與輸出，不把介面顯示的「完成」當成驗收。</li>
+            <li>逐項檢查 diff，確認沒有多改設定、憑據或不相關內容。</li>
+            <li>自行執行對應測試；部署、憑據管理和不可逆資料變更另做獨立審查。</li>
+        </ol>
+    </section>
+
+    <section id="fit">
+        <h2>適合與不適合的情況</h2>
+        <p><strong>較適合：</strong>理解陌生程式碼、整理文件、產生小範圍修改候選，以及在人工審查下執行可驗證任務。團隊若能限制目錄、保留版本控制並有測試，會較容易判斷輸出是否可靠。</p>
+        <p><strong>不適合直接交付：</strong>缺少備份、測試或權限邊界的重要專案；尚未確認資料政策的敏感程式碼；以及高風險部署、憑據管理或不可逆資料變更。</p>
+    </section>
+
+    <section id="faq">
+        <h2>三個常見問題</h2>
+        <h3>Bionic 只能處理程式碼嗎？</h3>
+        <p>不是。官方將它定位為可處理 code 與 docs 的獨立應用程式。</p>
+        <h3>一定要使用 Cloud 嗎？</h3>
+        <p>不一定。可選 Local、Cloud，或透過 LM Link 使用 Remote；可用選項取決於已準備的模型與環境。</p>
+        <h3>開啟 Allow coding 後，可以讓它自行交付嗎？</h3>
+        <p>不建議。權限會擴大可執行的動作，使用者仍須檢查 diff、命令輸出與測試結果。</p>
+    </section>
 
     <div class="cta-box">
-        <h3>想把本地 AI Agent 真正用進工作流？</h3>
-        <p>LM Studio 適合離線、本地、隱私優先場景；如果你還想補上雲端部署、資料處理教學與可直接套用的 Agent 工作流，下面這三個資源最實用。</p>
-        <a class="cta-btn" href="https://afflink.one/s/aavAC" target="_blank" rel="sponsored noopener">學 DataCamp AI / Python 實戰</a>
-        <a class="cta-btn" href="https://m.do.co/c/6121a295f624" target="_blank" rel="sponsored noopener">領 DigitalOcean 雲端額度</a>
-        <a class="cta-btn secondary" href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="sponsored noopener">拿 Claude Code 技能包</a>
+        <h3>需要把單次任務整理成可交接流程？</h3>
+        <p>當需求涉及權限、通知、部署或多人交接，可以先整理範圍與驗收方式，再評估自動化流程。</p>
+        <a class="cta-btn" href="/services.html">查看服務方式</a>
+        <a class="cta-btn secondary" href="https://chat.autodev-ai.com/form">提出需求</a>
     </div>
 
 </div>

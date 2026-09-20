@@ -1,6 +1,5 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { createHash } from "node:crypto";
 import { readdir, readFile, stat } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -131,7 +130,7 @@ test("known static references resolve to real sections and the shared navigation
 });
 
 
-test("legacy articles use one scoped stylesheet and LM Studio drops only its dead TOC", async () => {
+test("legacy articles use one scoped stylesheet", async () => {
   const legacyPages = [
     "blog/agent-skills-complete-guide-2026.html", "blog/agentmemory-claude-code-tutorial-2026.html",
     "blog/claude-video-watch-tutorial-2026.html", "blog/geo-blym-seo-ai-search-optimization-2026.html",
@@ -156,12 +155,42 @@ test("legacy articles use one scoped stylesheet and LM Studio drops only its dea
   for (const group of selectorGroups) {
     for (const selector of group.replace(/:is\([^)]*\)/g, ":is()").split(",")) assert.match(selector.trim(), /^body\.legacy-article(?:\b|\s|:)/);
   }
+});
 
-  const lmPath = join(root, "blog/lm-studio-bionic-guide-2026.html");
-  const lmHtml = await readFile(lmPath, "utf8");
-  const withoutToc = lmHtml.replace(/\n\s*<div class=["']toc["']>[\s\S]*?<\/div>\n/, "\n");
-  assert.equal(lmHtml, withoutToc);
-  assert.equal(createHash("sha256").update(withoutToc).digest("hex"), "138995edc2767802ae10c07c8928023606fc275b558bb8c7bc40c81e57132450");
+
+test("LM Studio guide publishes sourced setup guidance without retired claims", async () => {
+  const html = await readFile(join(root, "blog/lm-studio-bionic-guide-2026.html"), "utf8");
+  const title = "LM Studio Bionic 入門教學：本地、雲端模型與第一個專案";
+  assert.ok(html.includes(`<title>${title}</title>`));
+  assert.ok(html.includes(`<meta property="og:title" content="${title}">`));
+  assert.ok(html.includes(`<h1>${title}</h1>`));
+  assert.match(html, /<link rel="canonical" href="https:\/\/autodev-ai\.com\/blog\/lm-studio-bionic-guide-2026\.html">/);
+  assert.match(html, /依據 LM Studio 官方文件整理，未進行產品性能實測；核對日期：2026-09-21/);
+  assert.match(html, /若不啟用 <strong>Allow coding<\/strong>[^。]*不需要選擇程式碼根目錄/);
+
+  for (const id of ["project-setup", "model-modes", "costs", "permissions-review", "fit", "faq"]) {
+    assert.match(html, new RegExp(`id=["']${id}["']`));
+    assert.match(html, new RegExp(`href=["']#${id}["']`));
+  }
+  for (const href of [
+    "https://lmstudio.ai/docs/bionic", "https://lmstudio.ai/docs/bionic/quick-start",
+    "https://lmstudio.ai/docs/bionic/models", "https://lmstudio.ai/pricing",
+  ]) assert.ok(html.includes(`href="${href}"`), `missing official source: ${href}`);
+
+  const blocks = jsonLdBlocks(html);
+  const article = blocks.find((block) => block["@type"] === "Article");
+  assert.equal(article.headline, title);
+  assert.equal(article.datePublished, "2026-07-21");
+  assert.equal(article.dateModified, "2026-09-21");
+  assert.equal(article.author.name, "AutoDev AI");
+  assert.ok(!blocks.some((block) => block["@type"] === "FAQPage"));
+  const visibleText = html.replace(/<style[\s\S]*?<\/style>/gi, "").replace(/<script[\s\S]*?<\/script>/gi, "").replace(/<[^>]+>/g, " ");
+  for (const retired of ["完整教學", "最佳方案", "最大版本更新", "媲美 Cursor", "媲美 GPT-4o", "完全免費", "完全離線", "完全不用擔心資料外洩", "100%", "0 元", "200+", "Win/Mac/Linux", "約 12 分鐘", "哪些舊說法應替換", "編輯註記"]) {
+    assert.ok(!visibleText.includes(retired), `retired claim remains: ${retired}`);
+  }
+  for (const retiredDomain of ["afflink.one", "m.do.co", "gumroad.com"]) assert.ok(!html.includes(retiredDomain));
+  assert.match(html, /href="\/services\.html"/);
+  assert.match(html, /href="https:\/\/chat\.autodev-ai\.com\/form"/);
 });
 
 for (const page of costPages) {

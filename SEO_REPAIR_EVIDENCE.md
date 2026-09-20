@@ -85,3 +85,38 @@
 - Browser control remained with the user. Seven-page desktop/mobile layout, contrast, focus appearance, full-page horizontal overflow, and Lighthouse behavior have not been visually verified and are not claimed as passed.
 
 主控独立验收：SEO7/7、static8/8通过。对CSS做4行局部修正：移除body全页overflow裁切以避免隐藏实际溢出；焦点使用更深的accent，CTA与按钮明确前景/背景。视觉/手机实际验收仍未执行，上述旧hash仅对应agent初稿。
+
+
+## LM Studio sourced content repair
+
+### Input snapshot and boundaries
+
+- Baseline `HEAD`: `1cfe13a37847e19076f444f4daded400203c25fb`.
+- The implementation follows `LM_STUDIO_IMPLEMENTATION_CONTRACT.md` and the locally supplied `LM_STUDIO_CONTENT_CANDIDATE.md`, whose four official sources were verified by the controller on 2026-09-21. This slice did not browse or independently re-fetch them.
+- Scope is limited to the existing LM Studio URL, its focused SEO regression, and this evidence file. The canonical URL, Open Graph URL, original publication date, and Organization author remain unchanged.
+- The previous byte-preservation assertion was intentionally retired because this contract authorizes a factual body rewrite. Unrelated legacy-article style coverage remains intact.
+
+### Red-green and build evidence
+
+- Red: `npm run test:seo` produced 7 passes and 1 failure at the new LM Studio test because the old title remained and the promised sections did not exist. All unrelated checks stayed green.
+- Green: `npm run test:seo` produced 8/8 passes. It retained exactly 208 HTML paths and valid JSON-LD, then verified title/schema synchronization, canonical URL, original publication date, updated date, Organization author, six real sections and matching TOC links, four official source links, the non-performance-test disclosure, the no-coding-directory Quick Start nuance, removal of retired claims, and replacement of unrelated affiliate CTAs.
+- `npm run test:static` produced 8/8 passes.
+- Fresh build: `python3 scripts/build_static.py --output /private/tmp/autodev-static-lm-studio-content-20260921` built 255 files with 0 source-existing warnings.
+- `git diff --check` passed. The generated Python test cache was removed, leaving only the three contracted files changed.
+
+### Local candidate behavior
+
+- Synchronized the document title, H1, Open Graph title, and Article headline to `LM Studio Bionic 入門教學：本地、雲端模型與第一個專案`.
+- Replaced the descriptions with an accurate overview of Project setup, Local/Cloud/Remote models, costs, Allow coding permissions, and manual review. `dateModified` and the visible update date are `2026-09-21`; `datePublished` remains `2026-07-21`.
+- Added a normal reader-facing disclosure that the article is based on official documents and is not a product performance test, with a `2026-09-21` verification date.
+- Added practical sections for first Project setup, model modes, cost boundaries, permissions/review, fit, and three reader FAQs. The Quick Start text explicitly says a code root is not required when Allow coding is disabled.
+- Linked the official Bionic overview, Quick Start, model modes, and pricing pages near the relevant guidance. No FAQ schema was added.
+- Removed unsupported superlatives, platform/model-count guarantees, zero-cost/offline/risk-free claims, the stale reading-time claim, and the DataCamp, DigitalOcean, and Gumroad CTAs.
+- Replaced those CTAs with one related workflow block linking to `/services.html` and the verified `https://chat.autodev-ai.com/form` entry point.
+
+### Remaining limitations
+
+- The article is an official-document-based introduction, not an AutoDev hands-on test, benchmark, or customer case. Interface, model availability, plans, and billing can change; readers are directed to current official pages.
+- Browser and Lighthouse checks were not run because browser control remains with the user. No visual, responsive, contrast, or runtime claim is made for this slice.
+
+主控独立验收（2026-09-21）：完整3文件diff复核，SEO8/8、static8/8通过；新制品255文件、0warnings，gitleaks扫描约19.26MB无命中。浏览器与两Contact依赖仍未解除；此候选未公开。
