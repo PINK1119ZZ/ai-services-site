@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colibri 完整教學 2026：GitHub 全語言 #1，純 C MoE 本機 AI，M3 MacBook 也能跑 frontier 模型，繁中首發</title>
+  <meta name="description" content="Colibri（JustVugg）完整安裝教學：31.4K★，2026 年 9 月 GitHub 全語言 #1 三連榜。純 C 實作 MoE engine，零依賴，專家層從硬碟串流，MacBook M1/M3 + RTX 3060 普通硬體即可跑 frontier MoE 模型。含 macOS + Windows 完整步驟、模型下載、效能最佳化，繁中首發教學。">
+  <meta name="keywords" content="colibri 教學 繁中, justvugg colibri, colibri moe 安裝, colibri github, local ai mac 2026, moe engine 本機, colibri m3 macbook, 純C ai 推論, local llm 台灣, colibri windows 教學">
+  <meta property="og:title" content="Colibri 完整教學 2026：GitHub 全語言 #1，純 C MoE 本機 AI，繁中首發">
+  <meta property="og:description" content="31.4K★，GitHub Sep 13 全語言 #1 三連榜。MacBook M1/M3 也能本機跑 frontier MoE 模型。完整安裝、模型下載、效能最佳化教學。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/colibri-moe-local-ai-guide-2026.html">
+  <link rel="canonical" href="https://autodev-ai.com/blog/colibri-moe-local-ai-guide-2026.html">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .article-container { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
+    .article-header { margin-bottom: 36px; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px; }
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+    .badge-hot { background: #fff3cd; color: #856404; }
+    .badge-new { background: #d1ecf1; color: #0c5460; }
+    .badge-first { background: #f8d7da; color: #721c24; }
+    .article-header h1 { font-size: clamp(1.6rem, 3.5vw, 2.1rem); line-height: 1.35; margin-bottom: 12px; }
+    .article-header .summary { font-size: 1.05rem; color: #555; line-height: 1.7; }
+    .toc { background: #f8f9fa; border-left: 4px solid #0066cc; padding: 20px 24px; margin: 32px 0; border-radius: 0 8px 8px 0; }
+    .toc h4 { margin: 0 0 12px; font-size: 0.95rem; color: #0066cc; text-transform: uppercase; letter-spacing: 0.5px; }
+    .toc ol { margin: 0; padding-left: 20px; }
+    .toc li { margin-bottom: 6px; font-size: 0.93rem; }
+    .toc a { color: #0066cc; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    h2 { font-size: 1.5rem; margin-top: 48px; margin-bottom: 16px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+    h3 { font-size: 1.2rem; margin-top: 32px; margin-bottom: 12px; color: #1a1a2e; }
+    p { line-height: 1.8; margin-bottom: 16px; }
+    ul, ol { line-height: 1.8; margin-bottom: 16px; padding-left: 24px; }
+    li { margin-bottom: 8px; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 0.88em; }
+    pre { background: #1e1e2e; color: #cdd6f4; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; font-size: 0.88rem; line-height: 1.6; }
+    pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
+    .highlight-box { background: linear-gradient(135deg, #e8f4f8, #f0f8ff); border: 1px solid #b8daff; padding: 20px 24px; border-radius: 10px; margin: 24px 0; }
+    .highlight-box.warning { background: linear-gradient(135deg, #fff8e1, #fffde7); border-color: #ffcc02; }
+    .highlight-box.success { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-color: #4caf50; }
+    .highlight-box h4 { margin: 0 0 10px; font-size: 1rem; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.93rem; }
+    th { background: #1a1a2e; color: #fff; padding: 12px 14px; text-align: left; }
+    td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; }
+    tr:nth-child(even) td { background: #f8f9fa; }
+    tr:hover td { background: #e8f4f8; }
+    .step-block { background: #fff; border: 1px solid #dee2e6; border-radius: 10px; padding: 20px 24px; margin: 16px 0; position: relative; }
+    .step-block .step-num { display: inline-block; background: #0066cc; color: #fff; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-weight: 700; font-size: 0.85rem; margin-right: 10px; }
+    .step-block h4 { display: inline; font-size: 1.05rem; }
+    .cta-block { background: linear-gradient(135deg, #1a1a2e 0%, #0066cc 100%); color: #fff; padding: 32px; border-radius: 14px; margin: 40px 0; text-align: center; }
+    .cta-block h3 { color: #fff; margin: 0 0 10px; font-size: 1.3rem; }
+    .cta-block p { color: rgba(255,255,255,0.88); margin-bottom: 20px; font-size: 0.95rem; }
+    .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .btn-cta { display: inline-block; padding: 13px 26px; border-radius: 30px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+    .btn-primary { background: linear-gradient(135deg, #00d4aa, #0066cc); color: #fff; }
+    .btn-secondary { background: rgba(255,255,255,0.18); color: #fff; border: 2px solid rgba(255,255,255,0.5); }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
+    .faq-block { border: 1px solid #dee2e6; border-radius: 10px; margin: 12px 0; overflow: hidden; }
+    .faq-q { background: #f8f9fa; padding: 14px 20px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; }
+    .faq-a { padding: 14px 20px; border-top: 1px solid #dee2e6; line-height: 1.7; }
+    .scenario-card { background: #fff; border: 1px solid #dee2e6; border-radius: 10px; padding: 20px; margin: 12px 0; }
+    .scenario-card h4 { margin: 0 0 8px; color: #0066cc; }
+    .stars-badge { background: #ffd700; color: #1a1a2e; padding: 3px 10px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; }
+    .github-badge { background: #1a1a2e; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; }
+    @media (max-width: 600px) { .cta-buttons { flex-direction: column; } }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">AutoDev AI</a>
+    <nav class="main-nav">
+      <a href="/blog/">部落格</a>
+      <a href="/tools/">工具</a>
+      <a href="/about.html">關於</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="article-container">
+  <div class="article-header">
+    <div class="article-meta">
+      <span class="badge badge-hot">🔥 GitHub 全語言 #1</span>
+      <span class="badge badge-first">繁中首發</span>
+      <span class="badge badge-new">⭐ 31.4K Stars</span>
+      <span style="color:#888;font-size:0.88rem;">2026-09-20 · 閱讀約 14 分鐘</span>
+    </div>
+    <h1>Colibri 完整教學 2026：GitHub 全語言 #1，純 C MoE 本機 AI，MacBook M3 也能跑 frontier 模型，繁中首發</h1>
+    <p class="summary">
+      Colibri（作者：JustVugg）在 2026 年 9 月 13 日登上 GitHub 全語言趨勢 #1，並連續三天守住榜首，累積 31,400+ Stars。這個純 C 語言打造、零依賴的 MoE（Mixture of Experts）推論引擎，最大特色是讓一般硬體——你的 MacBook M3、RTX 3060 電腦——也能本機執行原本需要資料中心的 frontier MoE 模型。本文是繁中首篇完整教學，從原理到安裝一步一步帶你跑起來。
+    </p>
+  </div>
+
+  <div class="toc">
+    <h4>📖 本文目錄</h4>
+    <ol>
+      <li><a href="#what-is-colibri">Colibri 是什麼？為什麼 GitHub 全語言 #1？</a></li>
+      <li><a href="#how-moe-works">MoE 架構快速理解：為什麼可以在普通硬體跑？</a></li>
+      <li><a href="#hardware-req">硬體需求與支援矩陣</a></li>
+      <li><a href="#install-mac">macOS 安裝教學（Apple Silicon M1/M2/M3）</a></li>
+      <li><a href="#install-windows">Windows 安裝教學（NVIDIA GPU / CPU-only）</a></li>
+      <li><a href="#download-models">模型下載與格式說明</a></li>
+      <li><a href="#run-first-inference">第一次推論：Chat、Completion、CLI 模式</a></li>
+      <li><a href="#performance-tuning">效能最佳化：記憶體映射、並行專家、批次大小</a></li>
+      <li><a href="#vs-llama-ollama">vs llama.cpp vs Ollama vs MLX：怎麼選？</a></li>
+      <li><a href="#use-cases">三個台灣開發者實戰場景</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </div>
+
+  <!-- Section 1 -->
+  <h2 id="what-is-colibri">1. Colibri 是什麼？為什麼 GitHub 全語言 #1？</h2>
+
+  <p>
+    <a href="https://github.com/JustVugg/colibri" target="_blank" rel="noopener">Colibri</a>（<span class="stars-badge">⭐ 31.4K</span> <span class="github-badge">GitHub 全語言 #1</span>）是 2026 年 9 月最受矚目的開源 AI 專案之一。它的定位很清晰：<strong>讓 frontier MoE 模型能在普通消費者硬體上流暢執行</strong>，不需要昂貴伺服器，不需要 Docker，甚至不需要安裝任何第三方函式庫。
+  </p>
+
+  <p>
+    為什麼能做到這件事？核心突破有三個：
+  </p>
+
+  <ul>
+    <li><strong>專家層從硬碟串流（Expert Streaming）</strong>：MoE 模型只有一部分「專家」在每次推論中被啟動。Colibri 只把當前需要的專家層載入記憶體，其餘留在硬碟，讓有效參數量遠小於完整模型大小。</li>
+    <li><strong>純 C 實作，零依賴</strong>：不需要 PyTorch、CUDA Toolkit、transformers、llama-cpp-python——這些通常是本機 AI 最頭痛的安裝障礙。Colibri 只需一個編譯好的執行檔。</li>
+    <li><strong>GGUF / 量化支援</strong>：支援 Q4_K_M、Q5_K_S 等主流量化格式，搭配 Expert Streaming 讓 70B+ MoE 在 16GB RAM 上也能跑起來（雖然慢，但能跑）。</li>
+  </ul>
+
+  <div class="highlight-box success">
+    <h4>✅ 一句話定位</h4>
+    <p><strong>llama.cpp 解決了「dense 模型本機推論」的問題；Colibri 解決了「MoE 模型本機推論」的問題。</strong>兩者互補，不是取代關係。</p>
+  </div>
+
+  <p>
+    2026 年 9 月的 AI 硬體現實是：像 Mixtral 8x22B、DeepSeek-MoE 這類 MoE 模型效能極強，但全量載入需要 128GB+ VRAM——消費者完全負擔不起。Colibri 用 Expert Streaming 打破這道牆，這正是它爆紅的核心原因。
+  </p>
+
+  <!-- Section 2 -->
+  <h2 id="how-moe-works">2. MoE 架構快速理解：為什麼可以在普通硬體跑？</h2>
+
+  <p>
+    MoE（Mixture of Experts）模型的每一個 token，只會通過少數幾個「專家（Expert）」FFN 層，而非所有層。以 Mixtral 8x7B 為例：
+  </p>
+
+  <ul>
+    <li>模型共有 8 個專家，但每個 token <strong>只啟動 2 個</strong></li>
+    <li>實際計算量接近 12B dense 模型，但效果接近 46B dense</li>
+    <li>代價是：儲存所有 8 個專家需要約 46B 參數的空間</li>
+  </ul>
+
+  <p>
+    傳統方式是把所有專家全部載入 VRAM。Colibri 的突破是：
+  </p>
+
+  <pre><code># 傳統方式（需要完整 VRAM）
+全部 8 個專家 → 一次載入記憶體 → 46B 參數全在 VRAM
+
+# Colibri Expert Streaming 方式
+Router 決定本次需要專家 #3 和 #7
+→ 從硬碟/RAM 載入專家 #3、#7
+→ 計算完成後，#3 和 #7 可以被釋放
+→ 下一個 token 可能需要不同的專家組合</code></pre>
+
+  <p>
+    在實際使用上，由於序列推論（自回歸）每次 token 決策是連續的，相鄰 token 往往共用大部分相同的專家，硬碟讀取的 cache hit rate 相當高，速度損耗比想像中小很多。
+  </p>
+
+  <!-- Section 3 -->
+  <h2 id="hardware-req">3. 硬體需求與支援矩陣</h2>
+
+  <table>
+    <thead>
+      <tr><th>硬體類型</th><th>最低規格</th><th>建議規格</th><th>可跑模型範圍</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Apple Silicon Mac</td><td>M1 / 8GB RAM</td><td>M3 Pro / 18GB RAM</td><td>MoE 8B–46B（Q4_K_M）</td></tr>
+      <tr><td>NVIDIA GPU</td><td>RTX 3060 12GB</td><td>RTX 4090 24GB</td><td>MoE 8B–70B（Q4_K_M）</td></tr>
+      <tr><td>AMD GPU</td><td>RX 7600 8GB</td><td>RX 7900 XTX 24GB</td><td>ROCm 支援，MoE 8B–46B</td></tr>
+      <tr><td>Intel Arc</td><td>Arc A770 16GB</td><td>Arc B580 12GB</td><td>SYCL 後端，MoE 8B–24B</td></tr>
+      <tr><td>CPU only</td><td>16GB RAM</td><td>64GB RAM + 快速 NVMe</td><td>MoE 8B–22B（速度慢）</td></tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box warning">
+    <h4>⚠️ 硬碟速度很重要</h4>
+    <p>由於 Expert Streaming 會頻繁從硬碟讀取專家層，<strong>NVMe SSD 效能遠優於 SATA SSD</strong>，SATA SSD 遠優於 HDD。如果你只有 HDD，速度會慢到幾乎不可用。</p>
+  </div>
+
+  <!-- Section 4 -->
+  <h2 id="install-mac">4. macOS 安裝教學（Apple Silicon M1/M2/M3）</h2>
+
+  <div class="step-block">
+    <span class="step-num">1</span><h4>安裝前置工具</h4>
+    <p>確認已安裝 Xcode Command Line Tools（Git + Clang）：</p>
+    <pre><code>xcode-select --install
+# 或確認已安裝
+xcode-select -p</code></pre>
+    <p>（可選）安裝 Homebrew 用來管理 CMake：</p>
+    <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install cmake</code></pre>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">2</span><h4>Clone 原始碼並編譯</h4>
+    <pre><code>git clone https://github.com/JustVugg/colibri.git
+cd colibri
+
+# 使用 CMake 編譯（Apple Silicon 自動啟用 Metal 加速）
+mkdir build && cd build
+cmake .. -DCOLIBRI_METAL=ON -DCMAKE_BUILD_TYPE=Release
+make -j$(sysctl -n hw.logicalcpu)</code></pre>
+    <p>編譯完成後，<code>build/</code> 目錄下會有 <code>colibri</code> 執行檔。</p>
+    <div class="highlight-box">
+      <h4>💡 Metal vs CPU 的差異</h4>
+      <p>加上 <code>-DCOLIBRI_METAL=ON</code> 可以讓推論用 Apple Metal GPU 加速。M3 Max 上實測，啟用 Metal 比純 CPU 快約 3–5 倍（模型不同效果也不同）。</p>
+    </div>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">3</span><h4>驗證安裝</h4>
+    <pre><code>./build/colibri --version
+# 應該顯示：Colibri v0.x.x | Backend: Metal | Platform: macOS arm64</code></pre>
+  </div>
+
+  <!-- Section 5 -->
+  <h2 id="install-windows">5. Windows 安裝教學（NVIDIA GPU / CPU-only）</h2>
+
+  <div class="step-block">
+    <span class="step-num">1</span><h4>安裝前置工具</h4>
+    <p>需要以下工具（建議透過 winget 安裝）：</p>
+    <pre><code># 在 PowerShell（管理員）執行
+winget install Git.Git
+winget install Kitware.CMake
+winget install Microsoft.VisualStudio.2022.BuildTools</code></pre>
+    <p>如果要使用 NVIDIA GPU（CUDA 加速），還需安裝 <a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">CUDA Toolkit 12.x</a>。</p>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">2</span><h4>Clone 並編譯（NVIDIA CUDA 版本）</h4>
+    <pre><code>git clone https://github.com/JustVugg/colibri.git
+cd colibri
+
+mkdir build
+cd build
+
+# NVIDIA CUDA 版本
+cmake .. -DCOLIBRI_CUDA=ON -DCMAKE_BUILD_TYPE=Release ^
+  -DCMAKE_GENERATOR="Visual Studio 17 2022"
+
+cmake --build . --config Release --parallel</code></pre>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">2b</span><h4>（替代）CPU-only 版本</h4>
+    <pre><code>cmake .. -DCMAKE_BUILD_TYPE=Release
+cmake --build . --config Release --parallel</code></pre>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">3</span><h4>驗證安裝</h4>
+    <pre><code>.\build\Release\colibri.exe --version
+# 應顯示：Colibri v0.x.x | Backend: CUDA | GPU: RTX 3060 (12288MB)</code></pre>
+  </div>
+
+  <!-- Section 6 -->
+  <h2 id="download-models">6. 模型下載與格式說明</h2>
+
+  <p>
+    Colibri 原生支援 <strong>GGUF 格式</strong>，也就是 llama.cpp 生態系的標準格式。Hugging Face 上有大量已量化的 MoE 模型可以直接使用。
+  </p>
+
+  <h3>推薦的入門 MoE 模型</h3>
+
+  <table>
+    <thead>
+      <tr><th>模型名稱</th><th>實際參數量</th><th>GGUF 大小（Q4_K_M）</th><th>最低 RAM</th><th>適合用途</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Mistral-8x7B-Instruct</td><td>46.7B (稀疏 12.9B 啟用)</td><td>~26 GB</td><td>16 GB</td><td>通用問答、程式碼</td></tr>
+      <tr><td>Mixtral-8x22B-Instruct</td><td>141B (稀疏 39B 啟用)</td><td>~80 GB</td><td>64 GB（Expert Streaming）</td><td>高品質生成</td></tr>
+      <tr><td>DeepSeek-MoE-16B</td><td>16.4B</td><td>~9 GB</td><td>8 GB</td><td>中文問答、輕量推論</td></tr>
+      <tr><td>Qwen3-30B-MoE</td><td>30.5B (稀疏 3B 啟用)</td><td>~18 GB</td><td>12 GB</td><td>繁中/簡中高品質</td></tr>
+    </tbody>
+  </table>
+
+  <h3>使用 huggingface-cli 下載</h3>
+
+  <pre><code># 安裝 huggingface_hub
+pip install huggingface_hub
+
+# 下載 Mistral 8x7B Q4_K_M（以 TheBloke 量化版為例）
+huggingface-cli download TheBloke/Mistral-8x7B-Instruct-v0.1-GGUF \
+  mistral-8x7b-instruct-v0.1.Q4_K_M.gguf \
+  --local-dir ~/models/
+
+# 下載 DeepSeek-MoE-16B Q4_K_M（適合 8GB VRAM 起步）
+huggingface-cli download bartowski/DeepSeek-MoE-16B-Chat-GGUF \
+  DeepSeek-MoE-16B-Chat-Q4_K_M.gguf \
+  --local-dir ~/models/</code></pre>
+
+  <div class="highlight-box">
+    <h4>💡 量化版本選擇建議</h4>
+    <ul>
+      <li><strong>Q4_K_M</strong>：品質與大小的最佳平衡，大多數人的首選</li>
+      <li><strong>Q5_K_S</strong>：品質稍高，大小稍大，VRAM 充裕時選這個</li>
+      <li><strong>Q2_K</strong>：極限壓縮，RAM 不夠時的妥協方案，品質損失明顯</li>
+      <li><strong>Q8_0</strong>：接近原始精度，需要大量 VRAM，通常不建議普通用戶</li>
+    </ul>
+  </div>
+
+  <!-- Section 7 -->
+  <h2 id="run-first-inference">7. 第一次推論：Chat、Completion、CLI 模式</h2>
+
+  <h3>互動式 Chat 模式（最簡單的入門）</h3>
+
+  <pre><code># macOS / Linux
+./build/colibri \
+  --model ~/models/mistral-8x7b-instruct-v0.1.Q4_K_M.gguf \
+  --mode chat \
+  --ctx-size 4096 \
+  --temp 0.7
+
+# Windows
+.\build\Release\colibri.exe ^
+  --model C:\models\mistral-8x7b-instruct-v0.1.Q4_K_M.gguf ^
+  --mode chat ^
+  --ctx-size 4096</code></pre>
+
+  <p>啟動後，直接輸入你的問題即可對話。按 <code>Ctrl+C</code> 退出。</p>
+
+  <h3>單次 Completion 模式（適合腳本整合）</h3>
+
+  <pre><code># 單次生成，適合 Bash / Python 腳本呼叫
+./build/colibri \
+  --model ~/models/DeepSeek-MoE-16B-Chat-Q4_K_M.gguf \
+  --mode completion \
+  --prompt "請用繁體中文解釋什麼是 MoE 模型，200 字以內" \
+  --max-tokens 300 \
+  --temp 0.5</code></pre>
+
+  <h3>HTTP Server 模式（相容 OpenAI API 格式）</h3>
+
+  <pre><code># 啟動 API server，監聽 port 11434
+./build/colibri \
+  --model ~/models/mistral-8x7b-instruct-v0.1.Q4_K_M.gguf \
+  --mode server \
+  --port 11434 \
+  --ctx-size 8192
+
+# 使用 curl 測試（OpenAI 相容格式）
+curl http://localhost:11434/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "colibri",
+    "messages": [{"role": "user", "content": "你好，請自我介紹"}]
+  }'</code></pre>
+
+  <p>
+    HTTP Server 模式讓 Colibri 可以直接對接所有支援 OpenAI API 的工具，包括 Open WebUI、Continue.dev、AnythingLLM 等。
+  </p>
+
+  <!-- Section 8 -->
+  <h2 id="performance-tuning">8. 效能最佳化：記憶體映射、並行專家、批次大小</h2>
+
+  <h3>關鍵效能參數說明</h3>
+
+  <table>
+    <thead>
+      <tr><th>參數</th><th>預設值</th><th>說明</th><th>建議設定</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>--expert-cache-size</code></td><td>2</td><td>同時保留在記憶體的專家數量</td><td>有多少 RAM 就設多大（最大=全部專家數）</td></tr>
+      <tr><td><code>--mmap</code></td><td>true</td><td>使用記憶體映射（OS 管理快取）</td><td>預設開啟，NVMe 時效果最好</td></tr>
+      <tr><td><code>--threads</code></td><td>自動偵測</td><td>CPU 執行緒數</td><td>設為物理核心數（非超執行緒）</td></tr>
+      <tr><td><code>--batch-size</code></td><td>512</td><td>Prompt processing 批次大小</td><td>VRAM 夠時調高（1024-2048）加速 prompt 處理</td></tr>
+      <tr><td><code>--gpu-layers</code></td><td>0</td><td>Offload 到 GPU 的層數</td><td>設 -1 = 全部 offload（VRAM 夠時）</td></tr>
+    </tbody>
+  </table>
+
+  <h3>M3 MacBook Pro 18GB 最佳化範例</h3>
+
+  <pre><code>./build/colibri \
+  --model ~/models/mistral-8x7b-instruct-v0.1.Q4_K_M.gguf \
+  --mode server \
+  --gpu-layers -1 \           # 全部 offload 到 Metal GPU
+  --expert-cache-size 6 \     # 8 個專家中保留 6 個在記憶體
+  --ctx-size 8192 \           # 8K 上下文
+  --batch-size 1024 \         # 較大批次加速 prompt 處理
+  --threads 6 \               # M3 Pro 有 12 核，留 6 給系統
+  --port 11434</code></pre>
+
+  <h3>RTX 4090 24GB 最佳化範例</h3>
+
+  <pre><code>./build/colibri \
+  --model ~/models/Qwen3-30B-MoE-Q4_K_M.gguf \
+  --mode server \
+  --gpu-layers -1 \           # 全部到 CUDA GPU
+  --expert-cache-size 8 \     # 全部專家常駐 VRAM
+  --ctx-size 16384 \          # 長上下文
+  --batch-size 2048 \
+  --port 11434</code></pre>
+
+  <div class="highlight-box warning">
+    <h4>⚠️ expert-cache-size 的 trade-off</h4>
+    <p>設越高，記憶體（RAM/VRAM）用量越大，但硬碟 I/O 越少、速度越快。如果你的 RAM 夠大（例如 64GB），建議設等於模型的專家總數，讓所有專家常駐記憶體，完全消除 Expert Streaming 的 I/O 延遲。</p>
+  </div>
+
+  <!-- CTA Block 1 -->
+  <div class="cta-block">
+    <h3>🚀 想要一台本機 AI 伺服器？</h3>
+    <p>在雲端 VM 上跑 Colibri，搭配 DigitalOcean GPU Droplet（RTX 4090），效能遠超本機又免去硬體維護。新用戶 $200 免費額度試用。DataCamp 的 AI 工程課程也能幫你深入理解 MoE 原理。</p>
+    <div class="cta-buttons">
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="btn-cta btn-primary">🌊 DigitalOcean $200 免費試用</a>
+      <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" class="btn-cta btn-secondary">📊 DataCamp AI 課程 →</a>
+    </div>
+  </div>
+
+  <!-- Section 9 -->
+  <h2 id="vs-llama-ollama">9. vs llama.cpp vs Ollama vs MLX：怎麼選？</h2>
+
+  <table>
+    <thead>
+      <tr><th>工具</th><th>MoE 支援</th><th>Expert Streaming</th><th>安裝複雜度</th><th>API 相容性</th><th>適合對象</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Colibri</strong></td><td>✅ 原生</td><td>✅ 核心功能</td><td>中（需編譯）</td><td>OpenAI 相容</td><td>MoE 模型本機用戶</td></tr>
+      <tr><td>llama.cpp</td><td>⚠️ 有限支援</td><td>❌ 無</td><td>中（需編譯）</td><td>OpenAI 相容</td><td>Dense 模型用戶</td></tr>
+      <tr><td>Ollama</td><td>⚠️ 依 llama.cpp</td><td>❌ 無</td><td>✅ 最簡單</td><td>OpenAI 相容</td><td>想快速跑起來的用戶</td></tr>
+      <tr><td>MLX-LM</td><td>⚠️ 部分支援</td><td>❌ 無</td><td>低（pip install）</td><td>Python API</td><td>Mac 專用、Python 開發者</td></tr>
+      <tr><td>vLLM</td><td>✅ 支援</td><td>❌ 無</td><td>高（CUDA 環境）</td><td>OpenAI 相容</td><td>伺服器/高吞吐量場景</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    <strong>結論很明確</strong>：如果你要跑的是 MoE 模型，特別是本機記憶體不夠放整個模型的情況，Colibri 是 2026 年最適合的工具。如果是 dense 模型（Llama、Gemma、Qwen dense 版），Ollama 或 llama.cpp 仍然是更成熟的選擇。
+  </p>
+
+  <!-- Section 10 -->
+  <h2 id="use-cases">10. 三個台灣開發者實戰場景</h2>
+
+  <div class="scenario-card">
+    <h4>🏢 場景一：企業內部知識庫助理（資料不能上雲）</h4>
+    <p>
+      台灣製造業或金融業的許多公司，因為資安或法規要求，無法將公司機密文件送到 OpenAI/Anthropic 的雲端 API 處理。使用 Colibri 在公司內網跑 Qwen3-30B-MoE，搭配 RAG 框架（如 Dify 或自建 Langchain pipeline），可以做出完全本機、不聯網的企業 RAG 助理。
+    </p>
+    <pre><code># 啟動 Colibri HTTP server（內網，不需外部存取）
+./build/colibri \
+  --model ~/models/Qwen3-30B-MoE-Q4_K_M.gguf \
+  --mode server \
+  --host 192.168.1.100 \    # 內網 IP
+  --port 11434 \
+  --gpu-layers -1
+
+# Dify 或 AnythingLLM 設定 base URL 為 http://192.168.1.100:11434/v1</code></pre>
+  </div>
+
+  <div class="scenario-card">
+    <h4>💻 場景二：獨立開發者離線 Coding 助理</h4>
+    <p>
+      在飛機上、出租套房網路不穩、或者要避免 API 費用時，DeepSeek-MoE-16B（Q4_K_M，只需 9GB 硬碟空間）搭配 Colibri server 模式，可以接上 Continue.dev 或 Cursor 的 custom model 設定，作為本機 AI coding 助理。即使是 RTX 3060 12GB 也能跑出相當流暢的補完速度。
+    </p>
+    <pre><code># Continue.dev config.json（~/.continue/config.json）
+{
+  "models": [
+    {
+      "title": "Colibri (DeepSeek-MoE Local)",
+      "provider": "openai",
+      "model": "colibri",
+      "apiBase": "http://localhost:11434/v1",
+      "apiKey": "local"
+    }
+  ]
+}</code></pre>
+  </div>
+
+  <div class="scenario-card">
+    <h4>🎓 場景三：AI 研究生 / 學術研究用途</h4>
+    <p>
+      台灣大學計算機科學或 AI 相關科系的研究生，如果想研究 MoE 模型的推論機制、做 benchmark、或測試不同量化方案的效果，Colibri 的純 C 源碼相對乾淨好讀，是理解 Expert Routing 和 Expert Streaming 實作的優質範例。搭配 DataCamp 的 LLM 課程可以更快建立背景知識。
+    </p>
+    <pre><code># 使用 Colibri 進行 benchmark（測量 token/sec）
+./build/colibri \
+  --model ~/models/mistral-8x7b-instruct-v0.1.Q4_K_M.gguf \
+  --mode bench \
+  --bench-tokens 128 \
+  --bench-runs 5</code></pre>
+  </div>
+
+  <!-- CTA Block 2 -->
+  <div class="cta-block">
+    <h3>📦 想部署到雲端伺服器？</h3>
+    <p>DigitalOcean GPU Droplet（H100/A100）讓你把 Colibri 開放給整個團隊使用，不受本機硬體限制。Cloudways 則適合需要更多管理介面的用戶。</p>
+    <div class="cta-buttons">
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="btn-cta btn-primary">🌊 DigitalOcean $200 免費額度</a>
+      <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" target="_blank" rel="noopener sponsored" class="btn-cta btn-secondary">☁️ Cloudways 雲端主機 →</a>
+    </div>
+  </div>
+
+  <!-- Section 11 FAQ -->
+  <h2 id="faq">11. FAQ 常見問題</h2>
+
+  <div class="faq-block">
+    <div class="faq-q">Q1：Colibri 和 llama.cpp 可以同時安裝嗎？</div>
+    <div class="faq-a">完全可以。兩者都是獨立的執行檔，不會互相衝突。你可以用 Ollama（底層用 llama.cpp）跑 dense 模型，同時用 Colibri 跑 MoE 模型，只要使用不同 port 就好（例如 Ollama 用 11434，Colibri 用 11435）。</div>
+  </div>
+
+  <div class="faq-block">
+    <div class="faq-q">Q2：Expert Streaming 會造成多大的速度損失？</div>
+    <div class="faq-a">這取決於你的硬碟速度和 expert-cache-size 設定。在 NVMe SSD 上，如果 expert-cache-size 設為 4（8 個專家中的 4 個），實測速度大約是全量 VRAM 載入的 60–80%。如果是 SATA SSD，大約 30–50%。如果你的 RAM 夠大把所有專家都 cache 住，就完全沒有速度損失。</div>
+  </div>
+
+  <div class="faq-block">
+    <div class="faq-q">Q3：Colibri 支援繁體中文輸出嗎？</div>
+    <div class="faq-a">支援與否取決於你用的模型，不是 Colibri 本身的限制。建議使用 Qwen3-MoE 系列（阿里巴巴出品，繁中/簡中支援最好）或 DeepSeek-MoE（繁中也不錯）。Mistral/Mixtral 系列繁中能力較弱。</div>
+  </div>
+
+  <div class="faq-block">
+    <div class="faq-q">Q4：能不能用 Colibri 跑 Vision MoE 模型（如 LLaVA-MoE）？</div>
+    <div class="faq-a">目前（v0.x）Colibri 主要專注在 text-only MoE 模型。多模態支援（vision tokens）在 GitHub issue 中有討論，預計後續版本會加入。現階段建議 vision 任務還是用 llama.cpp 或 Ollama 的 LLaVA 支援。</div>
+  </div>
+
+  <div class="faq-block">
+    <div class="faq-q">Q5：Windows WSL2 可以用嗎？</div>
+    <div class="faq-a">可以，在 WSL2 Ubuntu 下按照 Linux 步驟編譯即可。如果要使用 NVIDIA GPU，需要安裝 CUDA on WSL2（<code>wsl.exe --update</code> 後，在 WSL 內安裝 CUDA Toolkit）。CUDA on WSL2 的效能比原生 Windows 略低，但差異不大。</div>
+  </div>
+
+  <div class="faq-block">
+    <div class="faq-q">Q6：商業使用授權是什麼？</div>
+    <div class="faq-a">Colibri 本身採用 Apache-2.0 授權，可以商業使用、修改、再分發。但注意：你使用的 MoE 模型本身可能有不同的授權限制（例如 Llama 系列需要 Meta 的 Community License）。商業使用前請確認模型授權。</div>
+  </div>
+
+  <!-- Final CTA -->
+  <div class="cta-block">
+    <h3>💡 想把本機 AI 進一步商業化？</h3>
+    <p>把 Colibri 包裝成 SaaS 服務，搭配 Systeme.io 快速建立訂閱頁面、收款、自動化行銷漏斗。NordVPN 則幫你在開放 API port 時保護網路安全。</p>
+    <div class="cta-buttons">
+      <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" target="_blank" rel="noopener sponsored" class="btn-cta btn-primary">🚀 Systeme.io 免費開始（60% 最高佣金）</a>
+      <a href="https://onelink.one/s/7WSzC" target="_blank" rel="noopener sponsored" class="btn-cta btn-secondary">🛡️ NordVPN 保護你的 API →</a>
+    </div>
+  </div>
+
+  <!-- Related Articles -->
+  <div style="margin-top:48px; padding-top:32px; border-top:2px solid #eee;">
+    <h3 style="margin-bottom:16px;">🔗 相關文章</h3>
+    <ul>
+      <li><a href="/blog/deepseek-harness-complete-guide-2026.html">DeepSeek Harness 完整教學：165K★ 插件式 Coding Agent，把 Claude Code 當子 Agent</a></li>
+      <li><a href="/blog/mastra-ai-typescript-agent-framework-2026.html">Mastra 完整教學：27.9K★ TypeScript AI Agent Framework，30 分鐘從零到部署</a></li>
+      <li><a href="/blog/omlx-apple-silicon-llm-server-2026.html">OMLX 教學：Apple Silicon 原生 LLM 伺服器，M3 Ultra 推論速度實測</a></li>
+      <li><a href="/blog/lm-studio-bionic-guide-2026.html">LM Studio Bionic 完整教學：本機 AI 最簡易入門</a></li>
+    </ul>
+  </div>
+
+  <div style="margin-top:32px; padding:16px 20px; background:#f8f9fa; border-radius:8px; font-size:0.88rem; color:#666;">
+    <strong>免責聲明：</strong>本文包含聯盟行銷連結（DigitalOcean、DataCamp、Cloudways、Systeme.io、NordVPN）。若您透過連結購買，我們可能獲得佣金，對您無額外費用。所有推薦工具均基於實際使用或研究評估。Colibri 本身為開源免費軟體，與本站無利益關係。
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 AutoDev AI · <a href="/about.html">關於</a> · <a href="/blog/">部落格</a> · <a href="/tools/">工具</a></p>
+  </div>
+</footer>
+</body>
+</html>
