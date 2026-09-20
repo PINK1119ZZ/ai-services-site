@@ -100,6 +100,35 @@ test("obsolete /blog.html navigation is absent", async () => {
   }
 });
 
+
+test("known static references resolve to real sections and the shared navigation helper", async () => {
+  for (const [page, sectionClass] of [["ai-model.html", "editorial-series"], ["en/ai-model.html", "scenes-section"]]) {
+    const html = await readFile(join(root, page), "utf8");
+    assert.match(html, new RegExp(`<section\\b[^>]*class=["']${sectionClass}["'][^>]*id=["']editorial-series["']`));
+  }
+
+  const governmentArticle = await readFile(join(root, "blog/openai-government-stake-ai-nationalization-2026.html"), "utf8");
+  assert.doesNotMatch(governmentArticle, /href=["']\.\.\/styles\.css["']/);
+  const geoArticle = await readFile(join(root, "blog/best-geo-tools-comparison-2026.html"), "utf8");
+  assert.doesNotMatch(geoArticle, /src=["']\/script\.js["']/);
+  assert.match(geoArticle, /getElementById\(["']mobileMenuBtn["']\)/);
+
+  for (const page of [
+    "blog/claude-code-prompt-pack-guide-2026.html",
+    "tools/ai-coding-cost-calculator.html",
+    "tools/ai-subscription-calculator.html",
+  ]) {
+    const html = await readFile(join(root, page), "utf8");
+    const toggle = html.match(/<button\b[^>]*id=["']mobileMenuBtn["'][^>]*>/)?.[0] ?? "";
+    assert.match(html, /<div\b[^>]*id=["']navLinks["'][^>]*data-nav-links[^>]*>/);
+    for (const attribute of [/data-nav-toggle/, /aria-controls=["']navLinks["']/, /aria-expanded=["']false["']/, /data-open-label=["']開啟選單["']/, /data-close-label=["']關閉選單["']/]) {
+      assert.match(toggle, attribute);
+    }
+    assert.match(html, /<script\b[^>]*src=["']\/assets\/autodev-v2\.js["'][^>]*><\/script>/);
+    assert.doesNotMatch(html, /src=["']\/nav\.js["']/);
+  }
+});
+
 for (const page of costPages) {
   test(`${page.path} keeps integrations and publishes scoped pricing`, async () => {
     const html = await readFile(join(root, page.path), "utf8");
