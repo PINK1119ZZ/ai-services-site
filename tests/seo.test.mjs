@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readdir, readFile, stat } from "node:fs/promises";
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -127,6 +128,40 @@ test("known static references resolve to real sections and the shared navigation
     assert.match(html, /<script\b[^>]*src=["']\/assets\/autodev-v2\.js["'][^>]*><\/script>/);
     assert.doesNotMatch(html, /src=["']\/nav\.js["']/);
   }
+});
+
+
+test("legacy articles use one scoped stylesheet and LM Studio drops only its dead TOC", async () => {
+  const legacyPages = [
+    "blog/agent-skills-complete-guide-2026.html", "blog/agentmemory-claude-code-tutorial-2026.html",
+    "blog/claude-video-watch-tutorial-2026.html", "blog/geo-blym-seo-ai-search-optimization-2026.html",
+    "blog/officecli-mcp-claude-code-tutorial-2026.html", "blog/tencentdb-agent-memory-tutorial-2026.html",
+    "blog/warp-terminal-review-2026.html",
+  ];
+  const linkedPages = [];
+  for (const file of await walkHtml()) {
+    const html = await readFile(file, "utf8");
+    if (html.includes("assets/legacy-article.css")) linkedPages.push(relative(root, file));
+  }
+  assert.deepEqual(linkedPages.sort(), legacyPages.sort());
+  for (const page of legacyPages) {
+    const html = await readFile(join(root, page), "utf8");
+    assert.match(html, /<body class=["']legacy-article["']>/);
+    assert.match(html, /href=["']\.\.\/assets\/legacy-article\.css["']/);
+    assert.doesNotMatch(html, /href=["']\.\.\/styles\.css["']/);
+  }
+  const css = await readFile(join(root, "assets/legacy-article.css"), "utf8");
+  const selectorGroups = [...css.matchAll(/(?:^|[{}])\s*([^{}]+)\{/gm)].map((match) => match[1].trim()).filter((group) => !group.startsWith("@"));
+  assert.ok(selectorGroups.length > 10);
+  for (const group of selectorGroups) {
+    for (const selector of group.replace(/:is\([^)]*\)/g, ":is()").split(",")) assert.match(selector.trim(), /^body\.legacy-article(?:\b|\s|:)/);
+  }
+
+  const lmPath = join(root, "blog/lm-studio-bionic-guide-2026.html");
+  const lmHtml = await readFile(lmPath, "utf8");
+  const withoutToc = lmHtml.replace(/\n\s*<div class=["']toc["']>[\s\S]*?<\/div>\n/, "\n");
+  assert.equal(lmHtml, withoutToc);
+  assert.equal(createHash("sha256").update(withoutToc).digest("hex"), "138995edc2767802ae10c07c8928023606fc275b558bb8c7bc40c81e57132450");
 });
 
 for (const page of costPages) {

@@ -52,3 +52,36 @@
 - The 9 LM Studio anchors require real article content or deliberate TOC removal; repository history cannot supply the missing body.
 - The 7 article stylesheet warnings require a separately approved design decision: implement the required template rules or migrate each article to a proven existing template.
 - No browser visual check was performed because the browser remains user-controlled for this slice.
+
+
+## Legacy article readability repair
+
+### Input snapshot and acceptance
+
+- Baseline `HEAD`: `23c9e10ef68d0809a5754296c699954939cc968a`.
+- Seven named legacy articles must reference one real stylesheet and opt into a page-specific body namespace; no other HTML page may load the asset.
+- Every stylesheet selector must remain under `body.legacy-article`; the implementation must cover the articles' existing nav, content, code, table, media, card, CTA, and footer structures without changing article facts or links.
+- The LM Studio article must lose only the TOC that points to nine absent sections. Its remaining bytes are protected by a pre-change SHA-256 snapshot after subtracting that TOC.
+- Browser, network, production, global styles, helpers, Contact, and deployment remain outside this slice.
+
+### Red-green and static evidence
+
+- Red: the new SEO contract produced 6 passes and 1 failure because zero pages referenced `assets/legacy-article.css`; all prior SEO checks stayed green.
+- Green: `npm run test:seo` produced 7/7 passes. The suite confirmed exactly 208 HTML paths, exact use by the seven named pages, their body namespace and asset replacement, stylesheet selector scoping, removal of the LM TOC, and the preserved-file hash `138995edc2767802ae10c07c8928023606fc275b558bb8c7bc40c81e57132450`.
+- `npm run test:static` produced 8/8 passes.
+- Fresh build: `python3 scripts/build_static.py --output /private/tmp/autodev-static-legacy-article-repair-20260921` built 255 files with 0 source-existing warnings. Its manifest contains 255 file records, including `assets/legacy-article.css`, and an empty warning list.
+- `git diff --check` passed.
+
+### Implemented behavior
+
+- Added a 123-line, dependency-free `assets/legacy-article.css`. It uses the existing warm neutral palette direction and system Traditional Chinese font fallbacks, caps the reading column near 800px, keeps nav links visible and wrapping, and constrains code, tables, grids, media, CTA blocks, and footer content.
+- Added explicit keyboard focus treatment and a `prefers-reduced-motion` override. No animations, fonts, JavaScript, images, packages, or global selectors were introduced.
+- Replaced the missing `../styles.css` reference with `../assets/legacy-article.css` and added `class="legacy-article"` on exactly the seven contracted pages.
+- Removed the LM Studio TOC block containing the nine dead anchors. No replacement body was invented; the title, metadata, introduction, stat cards, CTA, outbound links, and all other file bytes remain unchanged.
+
+### Remaining limitations
+
+- The LM Studio article still lacks the substantive body promised by its title and metadata. Warning removal means its dead navigation is gone; it does not mean the content is complete. A rewrite requires current official sources and separate approval for network research.
+- Browser control remained with the user. Seven-page desktop/mobile layout, contrast, focus appearance, full-page horizontal overflow, and Lighthouse behavior have not been visually verified and are not claimed as passed.
+
+主控独立验收：SEO7/7、static8/8通过。对CSS做4行局部修正：移除body全页overflow裁切以避免隐藏实际溢出；焦点使用更深的accent，CTA与按钮明确前景/背景。视觉/手机实际验收仍未执行，上述旧hash仅对应agent初稿。

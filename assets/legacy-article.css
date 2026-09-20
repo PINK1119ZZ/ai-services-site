@@ -1,0 +1,123 @@
+body.legacy-article {
+  --legacy-bg: #f7f4ee; --legacy-surface: #fffdf9; --legacy-text: #272522;
+  --legacy-muted: #6f6961; --legacy-line: #ded8cf; --legacy-accent: #9b6538;
+  margin: 0; min-width: 0; overflow-wrap: anywhere;
+  background: var(--legacy-bg); color: var(--legacy-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+  font-size: 16px; line-height: 1.78; text-rendering: optimizeLegibility;
+}
+body.legacy-article *,
+body.legacy-article *::before,
+body.legacy-article *::after { box-sizing: border-box; min-width: 0; }
+body.legacy-article a {
+  color: var(--legacy-accent); text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em; overflow-wrap: anywhere;
+}
+body.legacy-article a:hover { color: #714522; }
+body.legacy-article a:focus-visible,
+body.legacy-article button:focus-visible { outline: 3px solid #9b6538; outline-offset: 3px; }
+body.legacy-article > nav,
+body.legacy-article nav.navbar,
+body.legacy-article nav.main-nav,
+body.legacy-article header > nav {
+  display: block; width: 100%; background: rgba(255, 253, 249, 0.97);
+  border-bottom: 1px solid var(--legacy-line);
+}
+body.legacy-article nav :is(.container, .nav-container),
+body.legacy-article > .container,
+body.legacy-article footer :is(.container, .footer-container) {
+  width: min(calc(100% - 2rem), 70rem); margin-inline: auto;
+}
+body.legacy-article nav :is(.container, .nav-container) {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding-block: 0.85rem;
+}
+body.legacy-article nav .nav-links {
+  display: flex !important; flex-wrap: wrap; align-items: center;
+  justify-content: flex-end; gap: 0.45rem 1rem;
+}
+body.legacy-article nav .nav-links a,
+body.legacy-article nav .logo { color: var(--legacy-text); font-weight: 650; text-decoration: none; }
+body.legacy-article :is(.blog-post, .article-container) {
+  width: min(calc(100% - 2rem), 50rem); margin: clamp(1.5rem, 5vw, 4rem) auto;
+}
+body.legacy-article :is(.post-header, .article-header) {
+  padding: clamp(1.35rem, 4vw, 2.5rem); background: var(--legacy-surface);
+  border: 1px solid var(--legacy-line); border-radius: 1.25rem;
+}
+body.legacy-article :is(.post-content, article > section, .intro-section) { margin-top: 2rem; }
+body.legacy-article h1,
+body.legacy-article h2,
+body.legacy-article h3,
+body.legacy-article h4 {
+  color: #201e1b; font-family: ui-serif, "Noto Serif TC", Georgia, serif;
+  line-height: 1.25; text-wrap: balance;
+}
+body.legacy-article h1 { font-size: clamp(2rem, 6vw, 3.7rem); margin: 0 0 1rem; }
+body.legacy-article h2 { font-size: clamp(1.5rem, 4vw, 2.15rem); margin: 2.7rem 0 1rem; }
+body.legacy-article h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); margin: 2rem 0 0.75rem; }
+body.legacy-article :is(p, ul, ol, blockquote) { margin-block: 0 1.15rem; }
+body.legacy-article :is(ul, ol) { padding-left: 1.4rem; }
+body.legacy-article li + li { margin-top: 0.45rem; }
+body.legacy-article :is(.lead, .post-intro) { color: #45403a; font-size: 1.12rem; }
+body.legacy-article :is(.post-meta, .article-meta, .reading-time, .date) { color: var(--legacy-muted); }
+body.legacy-article :is(.toc, .highlight-box, .info-box, .tip-box, .warning-box, .success-box, .summary-box, .conclusion) {
+  margin-block: 1.5rem; padding: 1.1rem 1.25rem; background: var(--legacy-surface);
+  border: 1px solid var(--legacy-line); border-left: 4px solid #c28a58; border-radius: 0.75rem;
+}
+body.legacy-article :is(pre, .code-example) {
+  max-width: 100%; overflow-x: auto; padding: 1rem;
+  background: #25221f; color: #f7f4ee; border-radius: 0.75rem;
+  line-height: 1.55; tab-size: 2;
+}
+body.legacy-article :not(pre) > code {
+  padding: 0.15em 0.4em; background: #ece6dc;
+  border-radius: 0.3rem; overflow-wrap: anywhere;
+}
+body.legacy-article :is(table, .comparison-table, .pricing-table) {
+  display: block; width: 100%; max-width: 100%; margin-block: 1.5rem;
+  overflow-x: auto; border-collapse: collapse; overscroll-behavior-inline: contain;
+}
+body.legacy-article :is(th, td) {
+  min-width: 8rem; padding: 0.75rem; border: 1px solid var(--legacy-line);
+  text-align: left; vertical-align: top;
+}
+body.legacy-article th { background: #eee8de; }
+body.legacy-article img,
+body.legacy-article video,
+body.legacy-article svg { display: block; max-width: 100%; height: auto; }
+body.legacy-article :is(.stat-cards, .comparison-grid, .resource-grid, .article-grid, .pricing-grid, .pros-cons, .cta-grid) {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 1rem; margin-block: 1.5rem;
+}
+body.legacy-article :is(.stat-card, .comparison-card, .resource-card, .article-card, .pricing-card, .pros, .cons, .cta-item, .cta-item-full) {
+  padding: 1.1rem; background: var(--legacy-surface);
+  border: 1px solid var(--legacy-line); border-radius: 0.85rem;
+}
+body.legacy-article :is(.cta-box, .cta-block, .affiliate-cta, .cta-section, .final-cta) {
+  max-width: 100%; margin-block: 2rem; padding: clamp(1.25rem, 4vw, 2rem);
+  border-radius: 1rem; background: var(--legacy-surface); color: var(--legacy-text);
+}
+body.legacy-article :is(.cta-button, .cta-btn) {
+  display: inline-block; max-width: 100%; margin: 0.35rem; padding: 0.75rem 1rem;
+  border-radius: 999px; font-weight: 700; text-align: center; background: #272522; color: #fffdf9;
+}
+body.legacy-article footer {
+  margin-top: 4rem; padding-block: 2rem; color: var(--legacy-muted);
+  background: #eee8de; border-top: 1px solid var(--legacy-line);
+}
+@media (max-width: 44rem) {
+  body.legacy-article { font-size: 15.5px; }
+  body.legacy-article nav :is(.container, .nav-container) { align-items: flex-start; flex-direction: column; }
+  body.legacy-article nav .nav-links { width: 100%; justify-content: flex-start; }
+  body.legacy-article :is(.blog-post, .article-container) { width: min(calc(100% - 1.25rem), 50rem); }
+  body.legacy-article :is(.post-header, .article-header) { padding: 1.1rem; border-radius: 0.85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.legacy-article *,
+  body.legacy-article *::before,
+  body.legacy-article *::after {
+    scroll-behavior: auto !important; animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important; transition-duration: 0.01ms !important;
+  }
+}
