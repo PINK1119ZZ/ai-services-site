@@ -1,0 +1,78 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import test from 'node:test';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+const root = new URL('../', import.meta.url);
+const routes = [
+  ['index.html', 'https://autodev-ai.com/', 'https://autodev-ai.com/en/'],
+  ['services.html', 'https://autodev-ai.com/services.html', 'https://autodev-ai.com/en/services.html'],
+  ['portfolio.html', 'https://autodev-ai.com/portfolio.html', 'https://autodev-ai.com/en/portfolio.html'],
+  ['about.html', 'https://autodev-ai.com/about.html', 'https://autodev-ai.com/en/about.html'],
+  ['contact.html', 'https://autodev-ai.com/contact.html', 'https://autodev-ai.com/en/contact.html'],
+  ['pricing.html', 'https://autodev-ai.com/pricing.html', 'https://autodev-ai.com/en/pricing.html'],
+];
+
+const load = (path) => readFileSync(new URL(path, root), 'utf8');
+const attr = (html, rel, key = 'href') => {
+  const tag = html.match(new RegExp(`<link[^>]*rel=["']${rel}["'][^>]*>`, 'i'))?.[0];
+  return tag?.match(new RegExp(`${key}=["']([^"']+)`))?.[1];
+};
+
+test('all commercial routes have paired metadata, one h1 and parseable JSON-LD', () => {
+  for (const [zhPath, zhUrl, enUrl] of routes) {
+    for (const [path, canonical] of [[zhPath, zhUrl], [`en/${zhPath}`, enUrl]]) {
+      const html = load(path);
+      assert.equal((html.match(/<h1\b/gi) || []).length, 1, `${path} h1`);
+      assert.equal(attr(html, 'canonical'), canonical, `${path} canonical`);
+      assert.match(html, new RegExp(`hreflang=["']zh-Hant["'][^>]*href=["']${zhUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']|href=["']${zhUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["'][^>]*hreflang=["']zh-Hant["']`));
+      assert.match(html, new RegExp(`hreflang=["']en["'][^>]*href=["']${enUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']|href=["']${enUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["'][^>]*hreflang=["']en["']`));
+      const blocks = [...html.matchAll(/<script type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi)];
+      assert.ok(blocks.length, `${path} JSON-LD`);
+      blocks.forEach((block) => JSON.parse(block[1]));
+      assert.match(html, /assets\/autodev-v2\.js/);
+    }
+  }
+});
+
+test('commercial copy keeps the agreed truth and price boundaries', () => {
+  const html = routes.flatMap(([path]) => [load(path), load(`en/${path}`)]).join('\n');
+  for (const claim of ['10x', '1,300', '1300', '25+ Projects', '2 週完成', '兩週完成', '不滿意不收費']) {
+    assert.doesNotMatch(html, new RegExp(claim, 'i'), claim);
+  }
+  assert.match(load('portfolio.html'), /AutoDev 自用系統/);
+  assert.match(load('portfolio.html'), /流程示意/);
+  assert.match(load('pricing.html'), /NT\$50,000/);
+  assert.match(load('pricing.html'), /NT\$100,000/);
+  assert.match(load('pricing.html'), /NT\$200,000/);
+  assert.match(load('contact.html'), /action=["']https:\/\/formsubmit\.co\//);
+  assert.match(load('contact.html'), /href=["']\/form["']/);
+});
+
+test('shared navigation synchronizes aria state and closes with Escape', () => {
+  const { initNavigation } = require('../assets/autodev-v2.js');
+  const listeners = {};
+  const buttonListeners = {};
+  const classes = new Set();
+  const button = {
+    setAttribute(name, value) { this[name] = value; },
+    addEventListener(name, fn) { buttonListeners[name] = fn; },
+    contains() { return false; },
+  };
+  const menu = {
+    classList: { toggle(name, on) { on ? classes.add(name) : classes.delete(name); }, contains(name) { return classes.has(name); } },
+    querySelectorAll() { return []; },
+    contains() { return false; },
+  };
+  const doc = {
+    querySelector(selector) { return selector === '[data-nav-toggle]' ? button : menu; },
+    addEventListener(name, fn) { listeners[name] = fn; },
+  };
+  initNavigation(doc);
+  buttonListeners.click({ stopPropagation() {} });
+  assert.equal(button['aria-expanded'], 'true');
+  listeners.keydown({ key: 'Escape' });
+  assert.equal(button['aria-expanded'], 'false');
+  assert.equal(classes.has('show'), false);
+});
