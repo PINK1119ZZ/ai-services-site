@@ -1,8 +1,54 @@
 {
-  "lastRun": "2026-09-20T13:00:00Z",
+  "lastRun": "2026-09-20T14:30:00Z",
   "lastResearchRound": 214,
   "lastStrategistRun": "2026-09-20T02:06:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-09-20T14:30:00Z",
+      "agent": "content-refresher",
+      "task": "refresh-old-articles",
+      "status": "completed",
+      "summary": "Sun 14:00 UTC content-refresher cron — 找出 sitemap.xml 中 lastmod 最舊的 3 篇文章並完成更新。(1) blog/mempalace-review-ai-memory-2026.html（lastmod 2026-05-28）：更新 JSON-LD dateModified 2026-04-25→2026-09-20，文末新增「2026年9月更新」標示；(2) blog/ai-video-tools-comparison-2026.html（lastmod 2026-05-30）：更新 meta 日期 2026-05-03→2026-09-20，修正 Pixelle-Video 過時 GitHub Stars 數字（9K→12K+），補充 DigitalOcean 00 免費點數 CTA + DataCamp AI 課程 CTA（原本缺少這兩個聯盟連結）；(3) blog/opencode-vs-cursor-vs-claude-code-2026.html（lastmod 2026-05-30）：更新 JSON-LD dateModified→2026-09-20，更新 OpenCode Stars 數字（157K→178K），文章日期加「2026年9月資料更新」標示，更新 Claude Sonnet 4.5→Sonnet 5，更新比較表星數描述。sitemap.xml 3 個 URL lastmod 更新為 2026-09-20。git commit + push 完成。",
+      "changes": [
+        "blog/mempalace-review-ai-memory-2026.html：JSON-LD dateModified 更新，meta 日期補「2026年9月更新」",
+        "blog/ai-video-tools-comparison-2026.html：meta 日期更新，Pixelle-Video stars 修正（9K→12K+），補 DigitalOcean + DataCamp CTA",
+        "blog/opencode-vs-cursor-vs-claude-code-2026.html：JSON-LD dateModified 更新，OpenCode stars 更新（157K→178K），Claude Sonnet 版本更新（4.5→5），日期標示更新",
+        "sitemap.xml：3 篇文章 lastmod 更新為 2026-09-20",
+        "git commit -m \"content: refresh old articles\" && git push origin main"
+      ],
+      "articlesRefreshed": [
+        {
+          "file": "blog/mempalace-review-ai-memory-2026.html",
+          "oldLastmod": "2026-05-28",
+          "newLastmod": "2026-09-20",
+          "changes": [
+            "dateModified 更新",
+            "日期標示加「2026年9月更新」"
+          ]
+        },
+        {
+          "file": "blog/ai-video-tools-comparison-2026.html",
+          "oldLastmod": "2026-05-30",
+          "newLastmod": "2026-09-20",
+          "changes": [
+            "meta 日期更新 2026-05-03→2026-09-20",
+            "Pixelle-Video stars 修正",
+            "新增 DigitalOcean + DataCamp 聯盟 CTA"
+          ]
+        },
+        {
+          "file": "blog/opencode-vs-cursor-vs-claude-code-2026.html",
+          "oldLastmod": "2026-05-30",
+          "newLastmod": "2026-09-20",
+          "changes": [
+            "dateModified 更新",
+            "OpenCode stars 157K→178K",
+            "Claude Sonnet 4.5→5",
+            "日期標示更新"
+          ]
+        }
+      ]
+    },
     {
       "timestamp": "2026-09-20T10:30:00Z",
       "agent": "affiliate-monitor",
