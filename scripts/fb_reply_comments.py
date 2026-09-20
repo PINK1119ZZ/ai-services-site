@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 CONFIG_FILE = "/root/.openclaw/fb-config.json"
 STATE_FILE = "/root/ai-services-site/agent-state.json"
-GPTPROTO_KEY = "sk-657cebc220fb4d8bb1f8f91b97359451"
+GPTPROTO_KEY = os.environ["AUTODEV_FB_MODEL_API_KEY"]
 
 with open(CONFIG_FILE) as f:
     config = json.load(f)

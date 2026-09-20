@@ -21,7 +21,7 @@ TG_CHAT_ID      = "908696841"
 
 # Bot token: dedicated for AutoDev AI reports (separated from 小知)
 def get_tg_token():
-    return "8744414064:AAE6xRVIINOauKqypvm5rf2AtDPmNPpczFI"
+    return os.environ["AUTODEV_REPORT_TG_TOKEN"]
 
 YESTERDAY = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
 YESTERDAY_DISPLAY = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
