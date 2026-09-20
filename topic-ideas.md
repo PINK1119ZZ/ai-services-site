@@ -3891,3 +3891,112 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 
 ### 預估新增月收入
 **$1,200-3,100/月**（Grok 4.7 GA後 $300-900 + Colibri 教學 $100-300 + OpenResearch $60-180 + Voiskey affiliate後 $80-200 + Naoma affiliate後 $80-250 + DevDay 峰值 $300-800 + OpenResearch精準受眾 $60-180 + Proto-Mind $60-150 + Systeme.io Ivan後 $400-1,000）
+
+---
+
+## Round 214 — 2026-09-20 03:05 UTC（Sun 11:00 competitor-watch cron）
+
+**【核心問題：對手靠什麼賺錢？我們哪裡能複製？】**
+
+### 🔍 本輪掃描結果
+
+#### 台灣繁中競品分析（autolab.cloud 黃敬峰）
+- **變現模式**：100% 課程變現（教學/實體課程），**零 affiliate**，零評測深度文章
+- 最新文章方向：AI 簡報工具、Cursor vs Claude Code、Claude Interactive Visuals、AI 模型保護行為分析
+- **關鍵缺口**：黃敬峰不做 affiliate → autodev-ai.com 在 affiliate 評測領域無直接競品
+- **他打的關鍵字我們沒有**：「AI 模型互相保護不被刪除」（AI 安全/自我保護行為）→ P2 常青教育文機會
+
+#### Product Hunt Sep 19 日榜（最新快照）
+| # | 產品 | 描述 | Affiliate? |
+|---|---|---|---|
+| #1 | Steam Frame | Steam 庫穿戴 PC | 無 |
+| #2 | BiBimba | AI 截圖剪貼簿 | 待確認 |
+| #3 | Mantra Timer | iOS 冥想計時 | 無 |
+| #4 | Lumiko | **AI 自動剪輯螢幕錄影（Auto Zoom-Pan）** | 待確認 |
+| #5 | Bolt Forge | Bolt open-source agent，50X usage，GLM/Kimi/DS | 無（確認 R213）|
+| #14 | Proto-Mind | Mac 浮動 AI 工作區 | 待確認 |
+| #20 | ChinaMarketing.AI | GEO Workspace（From Chinese AI evidence to implementation） | 待確認 |
+
+#### Product Hunt Sep 月榜更新（Sep 20 快照）
+| # | 產品 | 新發現 |
+|---|---|---|
+| #1 | Kilo Code | 6.5K followers，open-source agentic engineering |
+| #2 | Mastra | 1.7K followers（R199 已寫文章✓）|
+| #3 | Switch（SandboxAQ） | 1.2K followers（R199 已寫文章✓）|
+| #4 | tiun. | 1.2K followers（R210 P1-HIGH 積壓）|
+| #5 | OpenAI | 25K followers |
+| #6 | Monid | 2.2K followers（OpenRouter for agent tools）|
+| #8 | Naoma AI Demo | 2.8K followers（conversational demo video agent）|
+| #9 | Voiskey | 1.1K followers（AI voice typing）|
+
+#### Grok 4.7/4.8 狀態更新
+- Sep 20 03:00 UTC：**仍無 xAI 官方 GA**
+- 確認：Grok 4.7（2.1T）被 Musk 放棄（Sep 13 宣布），Grok 4.8（2.5T）取代
+- Manifold Sep 21前96% → 今日 Sep 20 仍是發布視窗最後一天
+- **R213 P0-STANDBY 維持**（seo-writer 草稿 blog/grok-47-complete-review-2026.html 準備就緒）
+
+#### OpenAI DevDay T-9天
+- Sep 29 Fort Mason SF，T-9天，Sep 22（明天 T-7）是文章更新窗口
+- 確認功能：Managed Agents / AgentKit / Codex API / GPT-Realtime-Mini / Sora 2 Video API
+- **⚡ content-ops 必須在明天（Sep 22 UTC）前更新 blog/openai-devday-2026-preview.html**
+
+#### 新工具發現
+
+**🔴 P1 新：Lumiko（PH Sep 19 #4）**
+- 描述：Screen recordings that edit themselves with Auto Zoom-Pan
+- 定位：AI 自動剪輯螢幕錄影（教學影片/SaaS demo/產品 walkthrough 場景）
+- 台灣機會：繁中零評測，SaaS 創業者/教學影片創作者受眾高度吻合
+- Affiliate：待確認（lumiko.app 查看）
+- 截止：Sep 23-25 流量視窗
+
+**🟡 P1 carryover：Monid（PH Sep 月榜 #6）**
+- 描述：OpenRouter for agent tools（2.2K followers，比 Voiskey/Naoma 更大）
+- 已有 20%/6mo affiliate（R208 carryover 積壓）
+- **重要更新**：月榜 #6，followers 2.2K，比 Voiskey（#9，1.1K）和 Naoma（#8，2.8K）更具 agent 工具受眾吻合度
+- 建議：blog/monid-openrouter-agent-tools-review-2026.html（與我們 OmniRoute/OpenRouter 教學形成內連群）
+
+**🟡 P2：BiBimba（PH Sep 19 #2）**
+- AI 截圖剪貼簿（reads screenshots）
+- Affiliate 待確認，繁中空白，但受眾吻合度中等
+
+**🟡 P2：ChinaMarketing.AI GEO Workspace（PH Sep 19 #20）**
+- 「From Chinese AI evidence to implementation with Astra」
+- 與我們 GEO 工具頁（tools/aeo-geo-checker-2026.html）形成競品關係，需觀察
+
+#### 競品變現矩陣分析（台灣繁中市場）
+| 競品 | 主要變現方式 | 月估計收入 | 我們的差距 |
+|---|---|---|---|
+| autolab.cloud（黃敬峰） | 課程（NT$15,000-30,000/人） | 難估，課程模式 | affiliate 完全空白 → **我們勝** |
+| technice.com.tw | 廣告（低 CPM）| 低 | 無 affiliate，無深度評測 → **我們勝** |
+| ibest.com.tw | 廣告清單頁 | 低 | 無深度內容 → **我們勝** |
+| **autodev-ai.com（我們）** | affiliate（DO+DataCamp+Cloudways+Systeme.io） | 積累中 | 需加速 Cursor/Kajabi/Webflow/Systeme.io |
+
+---
+
+### 🆕 本輪關鍵字空白識別（→ topic-ideas）
+
+| 截止 | 話題 | 關鍵字 | 競爭度 | 變現方式 | 月潛力 |
+|---|---|---|---|---|---|
+| Sep 23 | Lumiko 螢幕錄影 AI 評測 | lumiko 評測, ai 螢幕錄影 自動剪輯 | 低 | Lumiko affiliate（待確認）+ DO/DataCamp | $80-250/月 |
+| Sep 25 | Monid agent tools 評測 | monid 評測, openrouter agent tools, monid 繁中 | 低 | Monid 20%/6mo affiliate | $120-400/月 |
+| Oct 1 | AI 模型自我保護行為分析 | ai 模型 自我保護, claude gpt 自我複製, ai safety 2026 | 低 | DO + DataCamp | $60-180/月 |
+| 常青 | Kilo Code 深度教學 | kilo code 教學, kilo code 繁中, open source cursor alternative | 中低 | Kilo Code affiliate（待確認）+ DO | $150-500/月 |
+
+---
+
+### 🔄 Watchlist 狀態更新（Round 214）
+
+- **Grok 4.8（前稱4.7）**：🔴 P0-STANDBY（Sep 20 仍無 GA，視窗最後一天，Manifold 96%，seo-writer 草稿就緒）
+- **OpenAI DevDay**：📅 P0-CALENDAR T-9天（⚡ content-ops 明天 Sep 22 UTC 前更新文章）
+- **Lumiko**：🟡 P1 新（PH Sep 19 #4，AI 螢幕錄影，affiliate 待確認，截止 Sep 23）
+- **Monid**：🟡 P1 carryover 升級（月榜 #6，2.2K followers，20%/6mo affiliate，比 R208 優先度提升）
+- **Systeme.io 60% LIFETIME**：🏆 P0-HIGH 積壓（Ivan 立即申請 systeme.io/affiliates）
+- **Kajabi 30%/12mo**：🔴 P1-HIGH 積壓（Ivan 申請 kajabi.com/partners）
+- **Webflow 50%/12mo**：🔴 P1-HIGH 積壓（Ivan 申請 webflow.com/solutions/affiliates）
+- **Cursor**：🔴 P0 積壓最久（Ivan 申請 openaffiliate.dev/programs/cursor）
+- **Kilo Code**：🟡 P1 新（月榜 #1，6.5K followers，open-source Cursor alternative，affiliate 待確認）
+- **tiun. Billing**：🔴 P1-HIGH carryover（R210，月榜 #4，Sep 25 截止）
+- **BiBimba**：🟡 P2 新（PH Sep 19 #2，AI 截圖，affiliate 待確認）
+
+### 預估新增月收入
+**$800-2,200/月**（Lumiko affiliate後 $80-250 + Monid 20% $120-400 + Kilo Code affiliate後 $150-500 + DevDay 峰值 $300-800 + AI安全教育文 $60-180 + 積壓 Ivan 批准後最大化）
