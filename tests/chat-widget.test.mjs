@@ -174,6 +174,7 @@ test('bot replies render hostile markup as text and create only safe URL links',
   await settle();
 
   const botReply = document.getElementById('chatMessages').querySelectorAll('.bot').at(-1);
+  assert.equal(botReply.getAttribute('role'), 'article');
   assert.match(botReply.textContent, /<img src=x onerror=/);
   assert.equal(botReply.querySelector('img'), null);
   const links = botReply.querySelectorAll('a');

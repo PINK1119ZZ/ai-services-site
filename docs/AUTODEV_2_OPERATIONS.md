@@ -35,7 +35,8 @@ npm run build:static -- --output /absolute/path/to/new-empty-directory
 
 - 12个中英文商业页已在375、390、430、768、1024、1280、1440七种屏宽完成84组真实浏览器检查：无水平溢出、每页一个H1；另已验证菜单Escape与减弱动画。
 - Lighthouse 尚未运行。
-- Ego控制权已获用户交还。真实手机聊天已验证恶意HTML按文字显示、userinfo链接不启用、重复发送只产生一次请求、Escape回焦；外部API由假的fetch替代。Lighthouse工具当前不可用，不能把上述检查称为Lighthouse分数或完整WCAG认证。
+- 先前真实手机聊天已验证恶意HTML按文字显示、userinfo链接不启用、重复发送只产生一次请求、Escape回焦；外部API由假的fetch替代。随后Ego报告用户接管结束TaskSpace，当前浏览器验证暂停，未擅自恢复控制。Lighthouse工具当前不可用，不能把既有检查称为Lighthouse分数或完整WCAG认证。
+- 独立审阅后消息容器补为可命名的article，Contact两语言加入缺失引用阻断集合；主控重跑9/9、SEO8/8、static8/8通过。新article语义尚未用真实辅助技术验收。
 - GitHub Pages 候选发布、生产 API 验证、source 到 target 的切流与回滚演练均未完成。
 
 ## 凭据与生产配置

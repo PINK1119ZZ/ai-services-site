@@ -168,13 +168,21 @@ class StaticBuildTests(unittest.TestCase):
 
     def test_missing_reference_on_redesigned_page_fails_before_copy(self):
         builder = load_builder()
-        self.make_public_fixture()
-        self.write("index.html", '<img src="/missing-new.png">')
-        output = self.base / "dist"
-
-        with self.assertRaises(builder.BuildError):
-            builder.build_static(self.source, output)
-        self.assertFalse(output.exists())
+        cases = {
+            "resource": '<img src="/missing-new.png">',
+            "anchor": '<a href="/blog/page.html#missing-new">Missing</a>',
+        }
+        for page in ("index.html", "contact.html", "en/contact.html"):
+            for kind, html in cases.items():
+                with self.subTest(page=page, kind=kind):
+                    self.source = self.base / f"source-{page.replace('/', '-')}-{kind}"
+                    self.source.mkdir()
+                    self.make_public_fixture()
+                    self.write(page, html)
+                    output = self.base / f"dist-{page.replace('/', '-')}-{kind}"
+                    with self.assertRaises(builder.BuildError):
+                        builder.build_static(self.source, output)
+                    self.assertFalse(output.exists())
 
     def test_traversal_reference_is_rejected(self):
         builder = load_builder()

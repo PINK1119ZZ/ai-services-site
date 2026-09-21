@@ -28,8 +28,8 @@ PUBLIC_EXTENSIONS = {
 }
 PUBLIC_TREES = ("blog", "en", "tools", "assets")
 REDESIGNED_PAGES = {
-    "index.html", "services.html", "portfolio.html", "about.html", "pricing.html",
-    "en/index.html", "en/services.html", "en/portfolio.html", "en/about.html", "en/pricing.html",
+    "index.html", "services.html", "portfolio.html", "about.html", "pricing.html", "contact.html",
+    "en/index.html", "en/services.html", "en/portfolio.html", "en/about.html", "en/pricing.html", "en/contact.html",
 }
 EXACT_NESTED = {
     "downloads/index.html", "downloads/ai-tools-guide-2026.html",

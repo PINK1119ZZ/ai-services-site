@@ -207,6 +207,7 @@
   function addMsg(text, type) {
     const div = document.createElement('div');
     div.className = 'chat-msg ' + type;
+    div.setAttribute('role', 'article');
     div.setAttribute('aria-label', type === 'bot' ? copy.bot : copy.user);
     if (type === 'bot') {
       appendReply(div, text);
