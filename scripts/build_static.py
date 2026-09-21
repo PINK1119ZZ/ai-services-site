@@ -58,7 +58,9 @@ class PageParser(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         values = dict(attrs)
-        self.anchors.update(value for key, value in attrs if key in {"id", "name"} and value)
+        self.anchors.update(value for key, value in attrs if key == "id" and value)
+        if tag == "a" and values.get("name"):
+            self.anchors.add(values["name"])
         if tag == "a" and values.get("href"):
             self.references.append(("link", values["href"]))
         elif tag == "link" and values.get("href"):

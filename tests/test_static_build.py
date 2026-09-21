@@ -184,6 +184,37 @@ class StaticBuildTests(unittest.TestCase):
                         builder.build_static(self.source, output)
                     self.assertFalse(output.exists())
 
+    def test_fragment_anchor_rejects_name_on_non_anchor_before_copy(self):
+        builder = load_builder()
+        for tag in ("input", "meta", "form"):
+            with self.subTest(tag=tag):
+                self.source = self.base / f"source-name-{tag}"
+                self.source.mkdir()
+                self.make_public_fixture()
+                self.write("blog/page.html", f'<{tag} name="answer">')
+                output = self.base / f"dist-name-{tag}"
+
+                with self.assertRaisesRegex(builder.BuildError, "missing anchor"):
+                    builder.build_static(self.source, output)
+                self.assertFalse(output.exists())
+
+    def test_fragment_anchor_accepts_any_id_and_anchor_name(self):
+        builder = load_builder()
+        cases = {
+            "tag-id": '<section id="answer">Target</section>',
+            "anchor-name": '<a name="answer">Target</a>',
+        }
+        for case, html in cases.items():
+            with self.subTest(case=case):
+                self.source = self.base / f"source-{case}"
+                self.source.mkdir()
+                self.make_public_fixture()
+                self.write("blog/page.html", html)
+                output = self.base / f"dist-{case}"
+
+                builder.build_static(self.source, output)
+                self.assertTrue((output / "static-manifest.json").is_file())
+
     def test_traversal_reference_is_rejected(self):
         builder = load_builder()
         self.make_public_fixture()

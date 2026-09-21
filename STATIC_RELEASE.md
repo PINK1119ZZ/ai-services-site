@@ -24,6 +24,14 @@ Every selected entry must be a regular file. Symlinks in any existing source, ou
 
 Each selected file is read once; that byte snapshot is used for both its SHA-256 and output, so a source change during the build cannot produce a manifest/copy mismatch. `static-manifest.json` contains the sorted file list, byte size, SHA-256, and deterministic warnings.
 
-The ten redesigned commercial pages have a strict link boundary: a missing local target or anchor stops the build. Outside that changed-page set, a target already absent from the source is recorded as `source-existing-missing`, and a missing anchor as `source-existing-anchor`. A reference to a file that exists in source but is excluded is always a release error, because the build would introduce a broken resource.
+The twelve redesigned commercial pages, including `contact.html` and `en/contact.html`, have a strict link boundary: a missing local target or anchor stops the build before copying. Outside that changed-page set, a target already absent from the source is recorded as `source-existing-missing`, and a missing anchor as `source-existing-anchor`. A reference to a file that exists in source but is excluded is always a release error, because the build would introduce a broken resource.
 
 Serve only the generated output directory during preview. Do not run an HTTP directory server from the repository root.
+
+## Manual GitHub Pages workflow candidate
+
+- `.github/workflows/pages.yml` uses only manual `workflow_dispatch`. It requires a 40-character `approved_sha`, dispatch on `refs/heads/main`, and exact equality between that immutable approved SHA and the dispatched commit.
+- The workflow runs the commercial, SEO, and static contract suites, builds into `${{ runner.temp }}/autodev-public`, and uploads only that allowlisted runner-temporary directory. It never uploads the repository root.
+- Entering `approved_sha` is a technical guard, not permission to publish. Changing the GitHub Actions file, Pages source, or environment protection, and performing a real dispatch all require explicit approval for the concrete release.
+- The remote site still uses the legacy `main` / repository-root Pages source. This local workflow candidate has not been pushed, dispatched, or proven in GitHub Actions.
+- Controller verification on 2026-09-21 passed 18/18 Node, 8/8 SEO and 10/10 static tests. A fresh allowlisted build produced 255 files with zero warnings; gitleaks found zero matches. Local YAML/permissions/artifact checks, shellcheck and five valid/invalid guard cases passed. GitHub-hosted execution and current browser checks remain unverified.

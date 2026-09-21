@@ -152,3 +152,33 @@
 - The main controller owns the fresh allowlisted build, independent review, Git, deployment, and publication decisions. Nothing was published.
 
 Main acceptance: independently read the complete change and ran 17/17 Node, SEO 8/8, and static 8/8. Corrected the test's network counter to retain a live reference across interactions. Scoped tool text/control colors now use the existing dark text/background tokens rather than pale legacy gold on the light page. Browser/AT remain unverified; no external requests or publication.
+
+## Bilingual Bot requirements tool and entry-point repair — 2026-09-21
+
+### Input snapshot and acceptance
+
+- Baseline `HEAD`: `015d992f3a48bc8c771fbe8456ce7d4c49e16f47`.
+- Scope follows the final section of `LEGACY_REVIEW_REPAIR_CONTRACT.md`: pair the existing English tool with the accepted Chinese requirements checklist, correct both directory cards and the Chinese cost-article CTA, add the missing Chinese-to-English hreflang, and extend the existing public behavior test.
+- The seven-file allowlist and zero-dependency limit were kept. The five implementation HTML files add 53 lines in the diff, below the 100-line implementation budget.
+
+### Red-green evidence
+
+- RED `npm test`: 14/18 passed and 4 failed. The failures directly identified the absent English `bot-scope-script`, missing English NT$ budget positioning, and stale calculator/instant-estimate wording in the entry cards and article CTA.
+- GREEN `npm test`: 18/18 passed. The shared `node:vm` DOM fixture now verifies both languages: Telegram defaults, 12 feature choices, channel change, clear-all, text-only output, exact local routes, paired hreflang, and a live zero-network-call counter.
+- `npm run test:seo`: 8/8 passed, including retention of all 208 original HTML paths and parseable JSON-LD.
+- `npm run test:static`: 8/8 passed. `git diff --check` passed.
+
+### Implemented behavior
+
+- Replaced the English fixed-price calculator with the same local Bot requirements workflow as the Chinese page. It defaults to Telegram, offers LINE and Messenger, preserves 12 English feature topics, and presents NT$50,000 / NT$100,000 / NT$200,000+ only as project-scale positions.
+- Preserved the English canonical URL, complete hreflang set, GA4 loader/config, navigation, menu helper, language helper, footer, Bot Cloud entry, and language-matched Contact route `/en/contact.html?from=calculator`.
+- Removed the page's unsupported USD price arithmetic, automatic estimate, Taiwan-market claim, monthly totals, and Free 30-Min promise. The replacement uses created list nodes and `textContent`; it has no network, storage, submission, or dependency.
+- Added the missing English alternate URL to the Chinese tool. Updated only the two directory cards and the Chinese article's tool CTA to describe requirements, scope, and budget preparation without instant-price claims.
+- Reused the controller's readable dark tokens and 44px minimum interactive control height. The public test retains the controller's mutable `networkCalls` object so post-interaction calls remain observable.
+
+### Remaining limitations
+
+- Browser, real keyboard, assistive-technology, Lighthouse, real network, form, and production checks did not run. No visual or AT result is claimed.
+- This slice did not create the fresh allowlisted build; the main controller owns that build, independent review, Git, deployment, and publication decisions. Nothing was published.
+
+Controller integration: preserved the original English tool CTA analytics event and the existing 50% claim regression check. Independently passed 18/18 Node, 8/8 SEO and 10/10 static after the fragment-anchor repair, then built 255 files with 0 warnings and scanned 19,253,118 bytes with 0 findings. The four social/icon assets are present in the artifact; shared chat/v2 scripts contain no removed Ads-helper caller. Current browser/AT remain unverified.

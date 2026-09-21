@@ -1,6 +1,8 @@
-# Maintainability repair evidence
+# Historical maintainability repair evidence
 
 Date: 2026-09-21 (Asia/Taipei)
+
+> Historical scope: this record covers `ba7980a12de0fdb2c010362a4a81ae05eefab487` → `2e3fd2b2fa07d52c438834ed2574abd165d7767d`. Its 1-pass/2-Contact-fail commercial result, 5-test SEO result, and other counts below belong to that snapshot and are not current-candidate claims. See [`docs/AUTODEV_2_OPERATIONS.md`](docs/AUTODEV_2_OPERATIONS.md) for current status and remaining release work.
 
 ## Input snapshot and scope
 
