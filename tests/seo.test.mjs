@@ -31,6 +31,7 @@ const costPages = [
     path: "blog/line-bot-cost.html",
     canonical: "https://autodev-ai.com/blog/line-bot-cost.html",
     tgLink: "/services.html#telegram",
+    tableLabel: "LINE Bot 費用範圍比較表",
     budget: ["NT$50,000", "NT$100,000", "NT$200,000+"],
     banned: ["NT$8,000", "NT$12,000", "NT$15,000", "5-10 倍", "免費維護", "全額退款"],
   },
@@ -38,6 +39,7 @@ const costPages = [
     path: "en/blog/line-bot-cost.html",
     canonical: "https://autodev-ai.com/en/blog/line-bot-cost.html",
     tgLink: "/en/services.html#telegram",
+    tableLabel: "LINE Bot cost comparison table",
     budget: ["NT$50,000", "NT$100,000", "NT$200,000+"],
     banned: ["$250", "$400", "$500", "5-10x", "free maintenance", "full refund", "50-70%"],
   },
@@ -208,7 +210,17 @@ for (const page of costPages) {
     assert.match(html, /src=["']\/lang\.js\?v=20260505["']/);
     assert.doesNotMatch(html, /body\s*\{[^}]*min-width\s*:/i);
     assert.match(html, /\.table-scroll\s*\{[^}]*overflow-x\s*:\s*auto/i);
-    assert.match(html, /<div class="table-scroll">\s*<table class="price-table">/);
+    const tableRegion = html.match(/<div\b[^>]*class=["'][^"']*\btable-scroll\b[^"']*["'][^>]*>/i)?.[0] ?? "";
+    assert.match(tableRegion, /tabindex=["']0["']/i);
+    assert.match(tableRegion, /role=["']region["']/i);
+    assert.ok(tableRegion.includes(`aria-label="${page.tableLabel}"`));
+    assert.match(html, /<div\b[^>]*class=["'][^"']*\btable-scroll\b[^"']*["'][^>]*>\s*<table class="price-table">/i);
+    for (const kind of ["og:image", "twitter:image"]) {
+      const key = kind === "og:image" ? "property" : "name";
+      const tag = [...html.matchAll(/<meta\b[^>]*>/gi)].map((match) => match[0])
+        .find((candidate) => candidate.includes(`${key}="${kind}"`)) ?? "";
+      assert.match(tag, /content=["']https:\/\/autodev-ai\.com\/autodev-logo2\.png["']/);
+    }
 
     const blocks = jsonLdBlocks(html);
     const article = blocks.find((block) => block["@type"] === "Article");

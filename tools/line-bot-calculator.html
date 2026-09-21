@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LINE Bot 費用計算器 2026｜即時估算開發成本 + 月維護費 | AutoDev AI</title>
-<meta name="description" content="免費 LINE Bot 費用計算器，輸入你要的功能（自動回覆、AI 客服、預約表單、Rich Menu）即時算出開發成本 NT$ + 月維護費。對比自建 vs 外包 vs 雲託管。">
+<title>Bot 需求與預算準備工具｜AutoDev</title>
+<meta name="description" content="整理 Bot 專案的渠道與功能需求，帶著清單進入需求諮詢。預算依 NT$50,000、NT$100,000、NT$200,000+ 定位規模，最終按範圍確認。">
 <link rel="canonical" href="https://autodev-ai.com/tools/line-bot-calculator.html">
 <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/tools/line-bot-calculator.html">
 <link rel="alternate" hreflang="x-default" href="https://autodev-ai.com/tools/line-bot-calculator.html">
-<meta property="og:title" content="LINE Bot 費用計算器 2026｜即時估算開發成本">
-<meta property="og:description" content="勾選功能即時估算 LINE Bot 開發成本 + 月維護費。自建 vs 外包 vs 雲託管對比。">
+<meta property="og:title" content="Bot 需求與預算準備工具｜AutoDev">
+<meta property="og:description" content="在本機整理渠道、功能與專案規模，不推算固定價格，也不傳送需求資料。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://autodev-ai.com/tools/line-bot-calculator.html">
 <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
@@ -18,222 +18,49 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"LINE Bot 費用計算器","url":"https://autodev-ai.com/tools/line-bot-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"TWD"}}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Bot 需求與預算準備工具","url":"https://autodev-ai.com/tools/line-bot-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","description":"在瀏覽器本機整理 Bot 渠道與功能需求，不計算固定報價。"}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
 <style>
-.calc-wrap{max-width:900px;margin:0 auto;padding:7rem 1.5rem 4rem;}
-.calc-header{text-align:center;margin-bottom:3rem;}
-.calc-header h1{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.8rem;font-weight:900;}
-.calc-header p{color:var(--gray);font-size:1.05rem;}
-.calc-grid{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:start;}
-@media(max-width:900px){.calc-grid{grid-template-columns:1fr;}}
-.calc-panel{background:var(--dark-2);border:1px solid rgba(184,148,106,.2);border-radius:16px;padding:1.5rem;}
-.feature-group{margin-bottom:1.5rem;}
-.feature-group h3{font-size:.95rem;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:.8rem;}
-.feature-item{display:flex;align-items:flex-start;gap:.75rem;padding:.8rem .9rem;border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:.5rem;cursor:pointer;transition:all .2s;background:var(--dark);}
-.feature-item:hover{border-color:rgba(184,148,106,.4);}
-.feature-item.selected{border-color:var(--primary);background:rgba(184,148,106,.1);box-shadow:inset 0 0 0 1px rgba(184,148,106,.3);}
-.feature-item input{margin-top:3px;width:18px;height:18px;cursor:pointer;accent-color:var(--primary);}
-.feature-item .name{font-weight:600;color:var(--light);font-size:.95rem;display:block;}
-.feature-item .desc{color:var(--gray);font-size:.8rem;margin-top:.15rem;line-height:1.45;}
-.feature-item .price{color:var(--accent);font-weight:700;font-size:.85rem;white-space:nowrap;margin-left:auto;}
-.platform-tabs{display:flex;gap:.5rem;margin-bottom:1rem;background:var(--dark);padding:.3rem;border-radius:10px;}
-.platform-tab{flex:1;padding:.6rem;text-align:center;border:none;background:transparent;color:var(--gray);cursor:pointer;border-radius:8px;font-weight:600;font-size:.9rem;}
-.platform-tab.active{background:var(--gradient-1);color:#fff;}
-.result-panel{position:sticky;top:100px;}
-.result-box{background:linear-gradient(135deg,rgba(184,148,106,.1),rgba(196,165,123,.05));border:1px solid rgba(184,148,106,.3);border-radius:16px;padding:1.5rem;}
-.result-box h3{font-size:.9rem;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:.5rem;}
-.result-price{font-size:2.5rem;font-weight:900;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;}
-.result-label{color:var(--gray);font-size:.85rem;margin-top:.25rem;}
-.result-divider{height:1px;background:rgba(255,255,255,.08);margin:1rem 0;}
-.result-row{display:flex;justify-content:space-between;padding:.35rem 0;font-size:.9rem;}
-.result-row .label{color:var(--gray);}
-.result-row .val{color:var(--light);font-weight:600;}
-.result-row.total{padding-top:.6rem;border-top:1px dashed rgba(255,255,255,.1);margin-top:.4rem;}
-.result-row.total .val{color:var(--accent);font-size:1.1rem;}
-.compare-box{background:var(--dark-2);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:1rem;margin-top:1rem;}
-.compare-box h4{font-size:.85rem;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.6rem;}
-.compare-row{display:flex;justify-content:space-between;font-size:.85rem;padding:.2rem 0;color:var(--light);}
-.compare-row.cheap{color:var(--accent);font-weight:600;}
-.compare-row .way{color:var(--gray);}
-.cta-btn{display:block;text-align:center;padding:.9rem;border-radius:10px;background:var(--gradient-1);color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;margin-top:1rem;}
-.cta-btn.secondary{background:transparent;border:1px solid rgba(184,148,106,.4);color:var(--primary-light);margin-top:.5rem;}
-.disclaimer{color:var(--gray);font-size:.75rem;margin-top:1rem;line-height:1.5;}
-.info-box{background:rgba(196,165,123,.05);border:1px solid rgba(196,165,123,.2);border-radius:10px;padding:.8rem 1rem;margin-top:1rem;font-size:.85rem;color:#C5C5D5;line-height:1.6;}
+.scope-wrap{max-width:1080px;margin:0 auto;padding:7rem 1.5rem 4rem}.scope-head{max-width:760px;margin:0 auto 2.5rem;text-align:center}.scope-head h1{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:.8rem}.scope-head p,.scope-note{color:var(--gray);line-height:1.7}.scope-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:1.5rem;align-items:start}.scope-panel,.scope-result{padding:1.5rem;border:1px solid rgba(184,148,106,.25);border-radius:16px;background:var(--dark-2)}.scope-result{position:sticky;top:100px}.channel-tabs{display:flex;gap:.5rem;margin-bottom:1.5rem}.channel-tab{flex:1;padding:.7rem;border:1px solid rgba(184,148,106,.25);border-radius:9px;background:var(--dark);color:var(--light);cursor:pointer}.channel-tab.active{border-color:var(--primary);background:rgba(184,148,106,.16)}.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}.feature-item{display:flex;gap:.7rem;padding:.85rem;border:1px solid rgba(255,255,255,.08);border-radius:10px;background:var(--dark);cursor:pointer}.feature-item.selected{border-color:var(--primary);background:rgba(184,148,106,.1)}.feature-item input{width:18px;height:18px;accent-color:var(--primary)}.feature-item span{color:var(--light);font-weight:600}.scope-result h2,.budget-section h2{margin-bottom:.8rem}.scope-summary{margin:1rem 0;padding:1rem;border-radius:10px;background:var(--dark)}.scope-summary p{margin:.25rem 0}.scope-summary ul{margin:.7rem 0 0;padding-left:1.25rem;color:var(--light)}.clear-btn{border:0;background:transparent;color:var(--primary-light);cursor:pointer;text-decoration:underline}.budget-section{margin-top:2rem}.budget-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}.budget-card{padding:1rem;border:1px solid rgba(184,148,106,.2);border-radius:12px;background:var(--dark)}.budget-card strong{display:block;color:var(--accent);font-size:1.2rem}.cta-btn{display:block;margin-top:1rem;padding:.9rem;border-radius:10px;background:var(--gradient-1);color:#fff;text-align:center;text-decoration:none;font-weight:700}.cta-btn.secondary{background:transparent;border:1px solid rgba(184,148,106,.4);color:var(--primary-light)}@media(max-width:850px){.scope-grid{grid-template-columns:1fr}.scope-result{position:static}}@media(max-width:600px){.feature-grid,.budget-grid{grid-template-columns:1fr}.channel-tabs{flex-direction:column}}
+.scope-note,.scope-head p{color:var(--text-muted)}
+.clear-btn,.cta-btn.secondary,.budget-card strong{color:var(--text)}
+.cta-btn{background:var(--bg-deep);color:#fff}
+.clear-btn,.channel-tab{min-height:44px}
 </style>
 <meta name="theme-color" content="#FFF8F3">
 </head>
 <body>
-
-<nav class="nav" id="nav">
-<div class="nav-inner">
-<a href="/" class="nav-logo">AutoDev AI</a>
-<div class="nav-links" id="navLinks">
-<a href="/services.html">服務</a>
-<a href="/bot-cloud.html">雲託管</a>
-<a href="/ai-model.html">AI 模特</a>
-<a class="active" href="/tools/">工具</a>
-<a href="/pricing.html">方案</a>
-<a href="/blog/">Blog</a>
-<a href="/about.html">關於</a>
-<a class="nav-cta" href="/contact.html">免費諮詢</a>
+<nav class="nav" id="nav"><div class="nav-inner"><a href="/" class="nav-logo">AutoDev AI</a><div class="nav-links" id="navLinks"><a href="/services.html">服務</a><a href="/bot-cloud.html">雲託管</a><a href="/ai-model.html">AI 模特</a><a class="active" href="/tools/">工具</a><a href="/pricing.html">方案</a><a href="/blog/">Blog</a><a href="/about.html">關於</a><a class="nav-cta" href="/contact.html">需求諮詢</a></div><button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="開啟選單">&#9776;</button></div></nav>
+<main class="scope-wrap">
+<header class="scope-head"><p>Bot project brief</p><h1>Bot 需求與預算準備工具</h1><p>先整理渠道與需要的能力，再帶著清單進入需求諮詢。所有選擇只留在目前頁面，不會送出或儲存。</p></header>
+<div class="scope-grid">
+<section class="scope-panel" aria-labelledby="scope-options-title"><h2 id="scope-options-title">1. 選擇主要渠道</h2><p class="scope-note">Telegram 是預設建議入口；LINE 與 Messenger 可依受眾和既有流程選擇。</p>
+<div class="channel-tabs" aria-label="主要渠道"><button type="button" class="channel-tab active" data-channel="Telegram" aria-pressed="true">Telegram</button><button type="button" class="channel-tab" data-channel="LINE" aria-pressed="false">LINE</button><button type="button" class="channel-tab" data-channel="Messenger" aria-pressed="false">Messenger</button></div>
+<h2>2. 勾選需要討論的功能</h2><div class="feature-grid">
+<label class="feature-item"><input type="checkbox" data-feature="關鍵字自動回覆"><span>關鍵字自動回覆</span></label>
+<label class="feature-item"><input type="checkbox" data-feature="圖文訊息／選單"><span>圖文訊息／選單</span></label>
+<label class="feature-item"><input type="checkbox" data-feature="Rich Menu 圖文選單"><span>Rich Menu 圖文選單</span></label>
+<label class="feature-item"><input type="checkbox" data-feature="AI 客服"><span>AI 客服</span></label>
+<label class="feature-item"><input type="checkbox" data-feature="客製知識庫"><span>客製知識庫</span></label>
+<label class="feature-item"><input type="checkbox" data-feature="多語言支援"><span>多語言支援</span></label>
+<label class="feature-item"><input type="checkbox" data-feature="預約／報名流程"><span>預約／報名流程</span></label>
+<label class="feature-item"><input type="checkbox" data-feature="金流整合"><span>金流整合</span></label>
+<label class="feature-item"><input type="checkbox" data-feature="會員等級／點數"><span>會員等級／點數</span></label>
+<label class="feature-item"><input type="checkbox" data-feature="訂單通知"><span>訂單通知</span></label>
+<label class="feature-item"><input type="checkbox" data-feature="GA4／流程分析"><span>GA4／流程分析</span></label>
+<label class="feature-item"><input type="checkbox" data-feature="客戶管理後台"><span>客戶管理後台</span></label>
+</div></section>
+<aside class="scope-result" aria-labelledby="scope-result-title"><h2 id="scope-result-title">需求清單</h2><div class="scope-summary" aria-live="polite"><p>主要渠道：<strong id="selectedChannel">Telegram</strong></p><p>已選功能：<strong id="featureCount">0 項</strong></p><ul id="selectedFeatures"><li>尚未選擇功能</li></ul></div><button type="button" class="clear-btn" id="clearFeatures">清除全部功能</button><a href="/contact.html?from=calculator" class="cta-btn">需求諮詢</a><a href="/bot-cloud.html" class="cta-btn secondary">查看 Bot Cloud</a></aside>
 </div>
-<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="開啟選單">&#9776;</button>
-</div>
-</nav>
-
-<div class="calc-wrap">
-<div class="calc-header">
-<h1>LINE Bot 費用計算器 2026</h1>
-<p>勾選需要的功能，即時算出開發成本 + 月維護費。完全免費、不留 Email。</p>
-</div>
-
-<div class="calc-grid">
-
-<div>
-<div class="platform-tabs">
-<button class="platform-tab active" data-platform="line">LINE Bot</button>
-<button class="platform-tab" data-platform="tg">Telegram Bot</button>
-<button class="platform-tab" data-platform="fb">Facebook Messenger</button>
-</div>
-
-<div class="calc-panel">
-
-<div class="feature-group">
-<h3>基礎功能（必選一項）</h3>
-<label class="feature-item selected">
-<input type="checkbox" data-cost="3000" data-maintain="500" checked>
-<div><span class="name">關鍵字自動回覆</span><span class="desc">預設 FAQ、產品資訊、業務時間回覆</span></div>
-<span class="price">NT$3,000</span>
-</label>
-<label class="feature-item">
-<input type="checkbox" data-cost="6000" data-maintain="800">
-<div><span class="name">圖文訊息 / 選單</span><span class="desc">Flex Message、卡片輪播、按鈕互動</span></div>
-<span class="price">NT$6,000</span>
-</label>
-<label class="feature-item">
-<input type="checkbox" data-cost="4500" data-maintain="600">
-<div><span class="name">Rich Menu 圖文選單</span><span class="desc">6 格固定選單 + 對應動作</span></div>
-<span class="price">NT$4,500</span>
-</label>
-</div>
-
-<div class="feature-group">
-<h3>AI 智慧功能</h3>
-<label class="feature-item">
-<input type="checkbox" data-cost="8000" data-maintain="1500">
-<div><span class="name">AI 客服（GPT-4o-mini）</span><span class="desc">自然語言問答，24 小時接手一般問題</span></div>
-<span class="price">NT$8,000</span>
-</label>
-<label class="feature-item">
-<input type="checkbox" data-cost="12000" data-maintain="2000">
-<div><span class="name">客製知識庫訓練</span><span class="desc">上傳公司資料、AI 吃你家內容回答</span></div>
-<span class="price">NT$12,000</span>
-</label>
-<label class="feature-item">
-<input type="checkbox" data-cost="6000" data-maintain="800">
-<div><span class="name">多語言自動翻譯</span><span class="desc">中英日繁簡自動辨識 + 翻譯</span></div>
-<span class="price">NT$6,000</span>
-</label>
-</div>
-
-<div class="feature-group">
-<h3>商務整合</h3>
-<label class="feature-item">
-<input type="checkbox" data-cost="8000" data-maintain="500">
-<div><span class="name">預約 / 報名系統</span><span class="desc">LIFF 表單 + 自動寫入 Google Sheet</span></div>
-<span class="price">NT$8,000</span>
-</label>
-<label class="feature-item">
-<input type="checkbox" data-cost="10000" data-maintain="800">
-<div><span class="name">金流收款整合</span><span class="desc">LINE Pay / 綠界 / Stripe 自動扣款</span></div>
-<span class="price">NT$10,000</span>
-</label>
-<label class="feature-item">
-<input type="checkbox" data-cost="6000" data-maintain="500">
-<div><span class="name">會員等級 / 點數</span><span class="desc">儲值、紅利、VIP 判斷自動發放</span></div>
-<span class="price">NT$6,000</span>
-</label>
-<label class="feature-item">
-<input type="checkbox" data-cost="5000" data-maintain="300">
-<div><span class="name">訂單通知推送</span><span class="desc">下單 / 出貨 / 到貨 自動通知客戶</span></div>
-<span class="price">NT$5,000</span>
-</label>
-</div>
-
-<div class="feature-group">
-<h3>數據 / 報表</h3>
-<label class="feature-item">
-<input type="checkbox" data-cost="5000" data-maintain="400">
-<div><span class="name">GA4 + 流量分析</span><span class="desc">訊息點擊、轉換漏斗、User Journey</span></div>
-<span class="price">NT$5,000</span>
-</label>
-<label class="feature-item">
-<input type="checkbox" data-cost="7000" data-maintain="600">
-<div><span class="name">客戶管理後台</span><span class="desc">老闆自己看誰來問過什麼、標籤分群</span></div>
-<span class="price">NT$7,000</span>
-</label>
-</div>
-
-<div class="info-box">
- <strong>提示：</strong>上述費用是台灣市場 2026 年中位值，實際報價會依客戶複雜度、資料整合難度、視覺設計需求略有差異。AutoDev AI 的基礎方案為 NT$8,000 起。
-</div>
-</div>
-</div>
-
-<div class="result-panel">
-<div class="result-box">
-<h3>估算結果</h3>
-<div class="result-price" id="totalCost">NT$ 3,000</div>
-<div class="result-label">一次性開發費</div>
-
-<div class="result-divider"></div>
-
-<div class="result-row"><span class="label">月維護費</span><span class="val" id="monthlyMaintain">NT$ 500</span></div>
-<div class="result-row"><span class="label">已選功能</span><span class="val" id="featureCount">1 項</span></div>
-<div class="result-row total"><span class="label">首年總成本</span><span class="val" id="firstYear">NT$ 9,000</span></div>
-</div>
-
-<div class="compare-box">
-<h4>同樣功能不同做法比一下</h4>
-<div class="compare-row"><span class="way">自己寫 / 委外開發</span><span id="cmpDIY">NT$ 9,000</span></div>
-<div class="compare-row"><span class="way">找接案工程師</span><span id="cmpFreelance">NT$ 13,500</span></div>
-<div class="compare-row cheap"><span class="way">AutoDev AI 雲託管</span><span id="cmpSaaS">NT$ 18,000</span></div>
-</div>
-
-<a href="/contact.html?from=calculator" class="cta-btn">免費諮詢報價</a>
-<a href="/bot-cloud.html" class="cta-btn secondary">直接看雲託管方案</a>
-
-<div style="background:rgba(184,148,106,.07);border:1px solid rgba(184,148,106,.25);border-radius:12px;padding:1rem;margin-top:1rem;">
-<div style="font-size:.8rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem;">🤖 想自動化 LINE Bot 流程？</div>
-<p style="font-size:.85rem;color:var(--gray);margin-bottom:.7rem;line-height:1.5;">用 n8n 自己串接 LINE Bot，省下 50% 開發費。現成 5 大場景 workflow 模板，下載即用。</p>
-<a href="https://xiaofan8.gumroad.com/l/n8n-tw-templates" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;padding:.7rem;border-radius:8px;background:var(--gradient-1);color:#fff;text-decoration:none;font-weight:700;font-size:.85rem;">取得 n8n LINE Bot 模板包 →</a>
-</div>
-
-<div style="background:rgba(100,180,255,.05);border:1px solid rgba(100,180,255,.2);border-radius:12px;padding:1rem;margin-top:.75rem;">
-<div style="font-size:.8rem;color:#7eb8f7;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem;">☁️ 需要穩定的 VPS 主機？</div>
-<p style="font-size:.85rem;color:var(--gray);margin-bottom:.7rem;line-height:1.5;">DigitalOcean 最低 $6/月，一鍵部署 n8n + LINE Bot，台灣延遲低、穩定度高。</p>
-<a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;padding:.7rem;border-radius:8px;border:1px solid rgba(100,180,255,.4);color:#7eb8f7;text-decoration:none;font-weight:700;font-size:.85rem;">DigitalOcean 免費試用 $200 →</a>
-</div>
-
-<div class="disclaimer">
-* 此計算器提供參考報價，不具合約效力。實際費用以雙方確認後的報價單為準。月維護費含託管費、LINE Token 更新、AI 額度、一般 bug 修復；不含新功能開發。
-</div>
-</div>
-</div>
-
-</div>
-
-<footer>
-<p>© 2026 AutoDev AI. Built with AI.</p>
-<p style="margin-top:0.5rem; font-size:0.85rem;">姊妹站：<a href="https://pink1119zz.github.io/ai-tools-tw/" rel="noopener" target="_blank">AI Tools TW</a>（繁中工具評測） · <a href="https://pink1119zz.github.io/ai-tools-en/" rel="noopener" target="_blank">AI Tools EN</a>（English Reviews）</p>
-<p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/privacy.html">隱私權政策</a>· <a href="/terms.html">使用條款</a>· <a href="/disclaimer.html">免責聲明</a></p>
-</footer>
-
-
+<section class="budget-section" aria-labelledby="budget-title"><h2 id="budget-title">3. 用預算定位專案規模</h2><p class="scope-note">以下數字只用來對齊規模，不依功能數量自動計價。最終報價會在流程、資料、整合、權限與驗收範圍確認後提出。</p><div class="budget-grid"><article class="budget-card"><strong>NT$50,000</strong><span>聚焦單一 Bot 或通知流程</span></article><article class="budget-card"><strong>NT$100,000</strong><span>串接多個工具與管理動作</span></article><article class="budget-card"><strong>NT$200,000+</strong><span>多角色客製系統或核心流程</span></article></div></section>
+</main>
+<footer><p>© 2026 AutoDev AI. Built with AI.</p><p style="margin-top:0.5rem;font-size:0.85rem;">姊妹站：<a href="https://pink1119zz.github.io/ai-tools-tw/" rel="noopener" target="_blank">AI Tools TW</a>（繁中工具評測） · <a href="https://pink1119zz.github.io/ai-tools-en/" rel="noopener" target="_blank">AI Tools EN</a>（English Reviews）</p><p style="margin-top:0.5rem;font-size:0.85rem;"><a href="/privacy.html">隱私權政策</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></p></footer>
+<script id="bot-scope-script">(function(){
+var channels=Array.from(document.querySelectorAll('[data-channel]')),features=Array.from(document.querySelectorAll('input[data-feature]')),selectedChannel=document.getElementById('selectedChannel'),featureCount=document.getElementById('featureCount'),selectedFeatures=document.getElementById('selectedFeatures'),clearFeatures=document.getElementById('clearFeatures'),channel='Telegram';
+function render(){var selected=features.filter(function(input){return input.checked;});channels.forEach(function(button){var active=button.dataset.channel===channel;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});features.forEach(function(input){input.closest('.feature-item').classList.toggle('selected',input.checked);});selectedChannel.textContent=channel;featureCount.textContent=selected.length+' 項';var items=selected.map(function(input){var item=document.createElement('li');item.textContent=input.dataset.feature;return item;});if(!items.length){var empty=document.createElement('li');empty.textContent='尚未選擇功能';items.push(empty);}selectedFeatures.replaceChildren(...items);}
+channels.forEach(function(button){button.addEventListener('click',function(){channel=button.dataset.channel;render();});});features.forEach(function(input){input.addEventListener('change',render);});clearFeatures.addEventListener('click',function(){features.forEach(function(input){input.checked=false;});render();});render();
+})();</script>
 <script defer src="/lang.js?v=20260505"></script>
 <script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;var H='☰',X='✕';function set(o){l.classList.toggle('show',o);b.innerHTML=o?X:H;b.setAttribute('aria-label',o?'關閉選單':'開啟選單');b.setAttribute('aria-expanded',o?'true':'false');}b.addEventListener('click',function(e){e.stopPropagation();set(!l.classList.contains('show'));});document.addEventListener('click',function(e){if(l.classList.contains('show')&&!l.contains(e.target)&&!b.contains(e.target))set(false);});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 </body>

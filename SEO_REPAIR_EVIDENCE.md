@@ -120,3 +120,35 @@
 - Browser and Lighthouse checks were not run because browser control remains with the user. No visual, responsive, contrast, or runtime claim is made for this slice.
 
 主控独立验收（2026-09-21）：完整3文件diff复核，SEO8/8、static8/8通过；新制品255文件、0warnings，gitleaks扫描约19.26MB无命中。浏览器与两Contact依赖仍未解除；此候选未公开。
+
+## Legacy cost article and Bot scope repair — 2026-09-21
+
+### Input snapshot and acceptance
+
+- Baseline `HEAD`: `a46a47994ad4e2f60e500f76b82cfbc69f139b48`.
+- Scope follows `LEGACY_REVIEW_REPAIR_CONTRACT.md`: the two LINE Bot cost articles, scoped legacy CSS, existing calculator URL, focused SEO/DOM behavior tests, package test entry, and this evidence section.
+- The calculator keeps its canonical URL, GA4, navigation, language helper, Contact route, and Bot Cloud entry. It does not introduce a pricing, financial-estimate, storage, submission, or backend service.
+
+### Red-green evidence
+
+- RED `npm test`: 14/17 passed. All three new Bot-scope tests failed because the old page had no behavior script, no agreed budget guidance, and still exposed pseudo-cost content.
+- RED `npm run test:seo`: 6/8 passed. Both cost-article checks failed because their horizontal table wrappers were not keyboard-focusable regions.
+- GREEN `npm test`: 17/17 passed. The `node:vm` DOM fixture verifies default Telegram selection, feature and channel changes, clearing all features, text-only list rendering, zero fake network calls, and absence of cost attributes/retired affiliate claims.
+- GREEN `npm run test:seo`: 8/8 passed, including all 208 original HTML paths, JSON-LD parsing, exact shared image metadata, and bilingual table-region labels.
+- `npm run test:static`: 8/8 passed. `git diff --check` passed.
+
+### Implemented behavior
+
+- Chinese cost article social images now use the existing `autodev-logo2.png`; the old SVG and URL remain untouched. Both language articles expose their existing horizontally scrolling comparison table as `tabindex="0"`, `role="region"`, with a language-matched accessible name.
+- The legacy article accent is `#8a5830`, which computes to 5.436:1 against `#f7f4ee`. The scoped navigation list now resets bullets and left padding. No layout, global selector, or `!important` rule was added.
+- The existing calculator URL is now a local Bot requirements and budget preparation tool. Telegram is the default channel, with LINE and Messenger alternatives. It retains all 12 functional topics in concise form and displays only the selected channel, selected feature names, and count.
+- The page never derives a price from feature count. It presents NT$50,000 / NT$100,000 / NT$200,000+ only as project-scale positioning and states that final scope determines the quote.
+- Its new inline behavior uses `textContent` and created list nodes, with no `innerHTML`, `fetch`, storage, dependency, prefilled customer message, or submitted data. The old unsupported market median, NT$8,000 entry claim, fixed maintenance inclusions, pseudo totals/comparisons, and two price/return affiliate promotions were removed.
+
+### Remaining limitations
+
+- No browser, real keyboard, assistive-technology, Lighthouse, real network, form, provider, or production test ran in this slice. A focusable labelled region is source- and contract-tested; actual scrolling behavior is not claimed as manually verified.
+- Static contrast was calculated from declared colors and is not a browser computed-style result.
+- The main controller owns the fresh allowlisted build, independent review, Git, deployment, and publication decisions. Nothing was published.
+
+Main acceptance: independently read the complete change and ran 17/17 Node, SEO 8/8, and static 8/8. Corrected the test's network counter to retain a live reference across interactions. Scoped tool text/control colors now use the existing dark text/background tokens rather than pale legacy gold on the light page. Browser/AT remain unverified; no external requests or publication.
