@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kilo Code 完整評測 2026：Product Hunt 月榜 #1，開源 AI Coding Agent 完整評測，繁中首發</title>
+  <meta name="description" content="Kilo Code 完整評測 2026 — PH 月榜 #1、5M+ 使用者、VS Code + JetBrains 全覆蓋。與 Cursor、Claude Code、Windsurf、Copilot 深度比較，含定價、Orchestrator 模式、BYOK 設置、台灣三大場景。">
+  <meta name="keywords" content="kilo code 評測, kilo code 繁中, kilo code vs cursor, kilo code vs claude code, kilo code 2026, kilo.ai 教學, ai coding agent 台灣, open source coding agent">
+  <link rel="canonical" href="https://autodev-ai.com/blog/kilo-code-review-vs-cursor-claude-code-2026.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kilo Code 完整評測 2026：PH 月榜 #1 開源 AI Coding Agent，BYOK 零加成費用，繁中首發">
+  <meta property="og:description" content="Kilo Code 深度評測 — 5M+ 使用者、VS Code + JetBrains 全覆蓋、500+ 模型支援、Teams 方案 $15/人。比 Cursor 便宜一半，AI 工程師最值得試的開源選擇。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/kilo-code-review-vs-cursor-claude-code-2026.html">
+  <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Kilo Code 完整評測 2026：Product Hunt 月榜 #1，開源 AI Coding Agent，繁中首發",
+    "description": "Kilo Code 深度評測 — 5M+ 使用者、VS Code + JetBrains 全覆蓋、500+ 模型支援。與 Cursor、Claude Code 完整比較，含 BYOK 設定、Orchestrator 模式、台灣三大場景。",
+    "image": "https://autodev-ai.com/autodev-logo2.png",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "logo": {"@type": "ImageObject", "url": "https://autodev-ai.com/autodev-logo2.png"}},
+    "datePublished": "2026-09-21",
+    "dateModified": "2026-09-21",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://autodev-ai.com/blog/kilo-code-review-vs-cursor-claude-code-2026.html"}
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif; color: #1a1a2e; background: #f8f9fa; margin: 0; padding: 0; }
+    .site-header { background: #1a1a2e; padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { color: #00d4aa; font-weight: 700; font-size: 1.3rem; text-decoration: none; }
+    .main-nav a { color: rgba(255,255,255,0.8); text-decoration: none; margin-left: 20px; font-size: 0.95rem; }
+    .main-nav a:hover { color: #00d4aa; }
+    .article-wrap { max-width: 860px; margin: 0 auto; padding: 20px 20px 60px; }
+    .breadcrumb { font-size: 0.83rem; color: #888; margin-bottom: 16px; }
+    .breadcrumb a { color: #0066cc; text-decoration: none; }
+    h1 { font-size: 2rem; line-height: 1.3; margin-bottom: 12px; color: #1a1a2e; }
+    .meta-row { display: flex; gap: 12px; flex-wrap: wrap; font-size: 0.83rem; color: #777; margin-bottom: 24px; align-items: center; }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 700; }
+    .badge-ph { background: #ff6154; color: #fff; }
+    .badge-open { background: #28a745; color: #fff; }
+    .badge-new { background: #0066cc; color: #fff; }
+    h2 { font-size: 1.5rem; margin-top: 48px; margin-bottom: 16px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+    h3 { font-size: 1.2rem; margin-top: 32px; margin-bottom: 12px; color: #1a1a2e; }
+    p { line-height: 1.8; margin-bottom: 16px; }
+    ul, ol { line-height: 1.8; margin-bottom: 16px; padding-left: 24px; }
+    li { margin-bottom: 8px; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 0.88em; }
+    pre { background: #1e1e2e; color: #cdd6f4; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; font-size: 0.88rem; line-height: 1.6; }
+    pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
+    .highlight-box { background: linear-gradient(135deg, #e8f4f8, #f0f8ff); border: 1px solid #b8daff; padding: 20px 24px; border-radius: 10px; margin: 24px 0; }
+    .highlight-box.warning { background: linear-gradient(135deg, #fff8e1, #fffde7); border-color: #ffcc02; }
+    .highlight-box.success { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-color: #4caf50; }
+    .highlight-box h4 { margin: 0 0 10px; font-size: 1rem; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.93rem; }
+    th { background: #1a1a2e; color: #fff; padding: 12px 14px; text-align: left; }
+    td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; }
+    tr:nth-child(even) td { background: #f8f9fa; }
+    tr:hover td { background: #e8f4f8; }
+    .step-block { background: #fff; border: 1px solid #dee2e6; border-radius: 10px; padding: 20px 24px; margin: 16px 0; position: relative; }
+    .step-block .step-num { display: inline-block; background: #0066cc; color: #fff; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-weight: 700; font-size: 0.85rem; margin-right: 10px; }
+    .step-block h4 { display: inline; font-size: 1.05rem; }
+    .cta-block { background: linear-gradient(135deg, #1a1a2e 0%, #0066cc 100%); color: #fff; padding: 32px; border-radius: 14px; margin: 40px 0; text-align: center; }
+    .cta-block h3 { color: #fff; margin: 0 0 10px; font-size: 1.3rem; }
+    .cta-block p { color: rgba(255,255,255,0.88); margin-bottom: 20px; font-size: 0.95rem; }
+    .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .btn-cta { display: inline-block; padding: 13px 26px; border-radius: 30px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+    .btn-primary { background: linear-gradient(135deg, #00d4aa, #0066cc); color: #fff; }
+    .btn-secondary { background: rgba(255,255,255,0.18); color: #fff; border: 2px solid rgba(255,255,255,0.5); }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
+    .faq-block { border: 1px solid #dee2e6; border-radius: 10px; margin: 12px 0; overflow: hidden; }
+    .faq-q { background: #f8f9fa; padding: 14px 20px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; }
+    .faq-a { padding: 14px 20px; border-top: 1px solid #dee2e6; line-height: 1.7; }
+    .scenario-card { background: #fff; border: 1px solid #dee2e6; border-radius: 10px; padding: 20px; margin: 12px 0; }
+    .scenario-card h4 { margin: 0 0 8px; color: #0066cc; }
+    .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .verdict-card { background: #fff; border: 2px solid #dee2e6; border-radius: 10px; padding: 18px; }
+    .verdict-card.pros { border-color: #28a745; }
+    .verdict-card.cons { border-color: #dc3545; }
+    .verdict-card h4 { margin: 0 0 10px; font-size: 1rem; }
+    .verdict-card.pros h4 { color: #28a745; }
+    .verdict-card.cons h4 { color: #dc3545; }
+    .score-row { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+    .score-label { min-width: 120px; font-size: 0.9rem; }
+    .score-bar { flex: 1; background: #eee; border-radius: 4px; height: 8px; }
+    .score-fill { height: 8px; border-radius: 4px; background: linear-gradient(90deg, #00d4aa, #0066cc); }
+    @media (max-width: 600px) { .cta-buttons { flex-direction: column; } .verdict-grid { grid-template-columns: 1fr; } h1 { font-size: 1.55rem; } }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">AutoDev AI</a>
+    <nav class="main-nav">
+      <a href="/blog/">部落格</a>
+      <a href="/tools/">工具</a>
+      <a href="/about.html">關於</a>
+    </nav>
+  </div>
+</header>
+
+<main class="article-wrap">
+  <div class="breadcrumb">
+    <a href="/">首頁</a> &rsaquo; <a href="/blog/">部落格</a> &rsaquo; Kilo Code 完整評測 2026
+  </div>
+
+  <h1>Kilo Code 完整評測 2026：Product Hunt 月榜 #1，5M+ 使用者，開源 AI Coding Agent，繁中首發</h1>
+  <div class="meta-row">
+    <span>2026 年 9 月 21 日</span>
+    <span class="badge badge-ph">🏆 PH 月榜 #1</span>
+    <span class="badge badge-open">開源 MIT</span>
+    <span class="badge badge-new">繁中首發</span>
+    <span>⏱ 約 10 分鐘閱讀</span>
+  </div>
+
+  <div class="highlight-box success">
+    <h4>📌 本文重點摘要</h4>
+    <ul style="margin:0">
+      <li><strong>Kilo Code</strong>：開源 AI Coding Agent，VS Code + JetBrains + CLI + Cloud 全覆蓋</li>
+      <li>500+ 模型支援，BYOK 零加成費用，個人版完全免費</li>
+      <li>Orchestrator 模式可同時跑多個子 Agent，並行加速大型專案</li>
+      <li>Teams 方案 $15/人/月，比 Cursor Teams $40/人/月 便宜 62%</li>
+      <li>PH 連四次 #1，5M+ 使用者，GitLab 已取得優先購買權（公司穩定性確認）</li>
+    </ul>
+  </div>
+
+  <p>如果你最近在研究 AI Coding 工具，一定聽過 Kilo Code。這個在 Product Hunt 上連四次奪得月榜第一、累計超過 5 百萬名使用者的開源 AI Coding Agent，正在悄悄取代很多開發者原本用的 Cursor 或 GitHub Copilot。</p>
+
+  <p>本文是目前網路上最完整的 <strong>Kilo Code 繁體中文評測</strong>。我會帶你從核心架構、模式設計、實際安裝流程，一路到與 Cursor、Claude Code、Windsurf 的逐項比較，讓你弄清楚：<strong>Kilo Code 到底適不適合台灣開發者？</strong></p>
+
+  <h2>🔍 Kilo Code 是什麼？</h2>
+
+  <p>Kilo Code（官網：<code>kilo.ai</code>）是一個以 MIT 授權開源的 AI Coding Agent，核心定位是「<strong>一個 Agent，跑在你所有的開發環境裡</strong>」。它支援 VS Code、JetBrains（IntelliJ / WebStorm / PyCharm 等）、CLI 和雲端 Agent，背後透過統一引擎運行，讓你的上下文不會在切換環境時斷掉。</p>
+
+  <p>Kilo Code 在 2026 年的幾個重要里程碑：</p>
+  <ul>
+    <li><strong>5M+ 使用者</strong>：目前已是開源 AI Coding Agent 中使用者最多的工具之一</li>
+    <li><strong>PH 月榜 #1 四連冠</strong>：每次大版本更新都在 Product Hunt 登頂</li>
+    <li><strong>10 兆+ tokens / 月</strong>：實際使用量驚人，背後有完整的推論基礎設施支撐</li>
+    <li><strong>GitLab ROFR 確認</strong>：GitLab 已取得優先收購權（Right of First Refusal），公司穩定性獲背書</li>
+    <li><strong>JetBrains 原生插件</strong>（Sep 1, 2026 GA）：不再是移植版，是從頭為 JetBrains 原生開發</li>
+  </ul>
+
+  <div class="highlight-box warning">
+    <h4>⚠️ Kilo Code 不是 Cursor 的「便宜複製品」</h4>
+    <p style="margin:0">許多人第一眼以為 Kilo Code 只是便宜版 Cursor。實際上，它的架構設計思路完全不同：Kilo Code 不鎖定自家推論雲，讓你帶自己的 API key（BYOK），零加成費用。開放程度更接近 Cline，但多出了 Orchestrator、Agent Manager、KiloClaw 雲端 Agent 等進階功能。</p>
+  </div>
+
+  <h2>⚙️ 核心架構：三大定價維度</h2>
+
+  <p>Kilo Code 的定價設計和其他工具完全不一樣，分成三個獨立部分，搞清楚這個才不會有帳單驚喜：</p>
+
+  <table>
+    <thead>
+      <tr><th>維度</th><th>說明</th><th>費用</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>平台方案</strong></td><td>個人用免費；Teams 加協作與管理功能；Enterprise 加 SSO/SAML/審計</td><td>個人 $0 / Teams $15/人/月 / Enterprise 洽詢</td></tr>
+      <tr><td><strong>AI 推論費</strong></td><td>BYOK（帶自己的 API Key）或 Kilo Pass（Kilo 代收費用，加 5% 手續費）</td><td>依實際 API 用量，Kilo Pass 僅加 5% 無隱藏費</td></tr>
+      <tr><td><strong>雲端運算</strong></td><td>KiloClaw、Code Review、Cloud Agent 等雲端任務按秒計費</td><td>Code Review $0.33/hr；Cloud Agent $0.60-$1.20/hr</td></tr>
+    </tbody>
+  </table>
+
+  <p>對於大多數個人開發者而言，Kilo Code 的真實成本是：<strong>平台 $0 + 你自己的 API 費用</strong>。如果你已經有 Anthropic/OpenAI/Gemini API Key，基本上 Kilo Code 本身是免費的。</p>
+
+  <h3>Kilo Pass：不想管 API Key 的懶人選項</h3>
+  <p>Kilo Pass 是給不想自己管 API Key 的使用者設計的付費方案：</p>
+  <ul>
+    <li><strong>Starter</strong>：$19/月，含固定額度 credits（未使用不過期一年內）</li>
+    <li><strong>Pro</strong>：$49/月，更高 bonus credits，適合日常重度使用者</li>
+    <li><strong>Expert</strong>（Expert/Max）：$199/月，最高 bonus credits，大量雲端 Agent 任務</li>
+  </ul>
+  <p>Kilo Pass 推論費加成只有 5%，比 Cursor 的封閉定價透明很多。</p>
+
+  <h2>🎯 Kilo Code 的五大核心模式</h2>
+
+  <p>Kilo Code 把不同的 AI Coding 情境拆成五個可切換的模式，這是它最被低估的設計之一：</p>
+
+  <div class="step-block">
+    <span class="step-num">1</span><h4>Code Mode — 主力日常 Coding</h4>
+    <p style="margin-top:10px">寫新功能、修 Bug、重構既有程式碼。理解整個 codebase 上下文，一次可以跨多個檔案修改。這是 90% 使用者最常用的模式。</p>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">2</span><h4>Architect Mode — 先規劃再動手</h4>
+    <p style="margin-top:10px">在開始寫程式之前，先讓 Kilo Code 幫你規劃功能架構、梳理依賴關係、討論技術選型。避免先寫再重寫的悲劇。</p>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">3</span><h4>Ask Mode — 快速問答，不動程式碼</h4>
+    <p style="margin-top:10px">只想問問題，不想讓 AI 直接改檔案？Ask Mode 進入純對話模式，適合理解程式碼邏輯、查文件、快速 Debug 思路。</p>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">4</span><h4>Orchestrator Mode — 多 Agent 並行執行（⭐ 殺手功能）</h4>
+    <p style="margin-top:10px">這是 Kilo Code 2026 年最強的新功能。Orchestrator 可以把一個大任務拆成多個子任務，同時派給多個子 Agent 執行。舉例：「重構整個 API 層」這種任務，Orchestrator 會同時讓多個子 Agent 分別處理不同的 API 模組，最後合併結果。速度大幅提升。</p>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">5</span><h4>Debug Mode — 聚焦 Bug 修復</h4>
+    <p style="margin-top:10px">專門為 Debug 優化的模式。自動讀取錯誤日誌、堆疊追蹤，縮小問題範圍，比在 Code Mode 裡手動貼 error message 有效率多了。</p>
+  </div>
+
+  <!-- 中段 CTA -->
+  <div class="cta-block">
+    <h3>🚀 想架設自己的 AI 開發伺服器？</h3>
+    <p>Kilo Code BYOK 用量大時，自建推論端點能省一大筆 API 費用。DigitalOcean GPU Droplet 快速起步，$200 免費點數讓你先測試再決定。</p>
+    <div class="cta-buttons">
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="btn-cta btn-primary">🌊 DigitalOcean $200 免費點數</a>
+      <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener" class="btn-cta btn-secondary">📊 DataCamp AI 課程</a>
+    </div>
+  </div>
+
+  <h2>⚡ 安裝 Kilo Code：5 分鐘完整設置</h2>
+
+  <h3>VS Code 安裝（最多人用）</h3>
+  <div class="step-block">
+    <span class="step-num">1</span><h4>從 VS Code Marketplace 安裝</h4>
+    <p style="margin-top:10px">在 VS Code 的 Extensions 面板搜尋 <code>Kilo Code</code>，或直接執行：</p>
+    <pre><code>ext install kilocode.kilo-code</code></pre>
+    <p>如果你用的是 Cursor、Windsurf 等 VS Code fork，可以從 Open VSX 安裝。</p>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">2</span><h4>設定 API Provider</h4>
+    <p style="margin-top:10px">點開側邊欄的 Kilo Code 圖示，進入 Settings → API Provider。選擇你的模型供應商並貼上 API Key：</p>
+    <pre><code># Anthropic（Claude 系列）
+ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
+
+# OpenAI（GPT 系列）
+OPENAI_API_KEY=sk-proj-xxxxxxxx
+
+# 或選擇 OpenRouter（統一入口，500+ 模型）
+OPENROUTER_API_KEY=sk-or-xxxxxxxx</code></pre>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">3</span><h4>選擇預設模型</h4>
+    <p style="margin-top:10px">建議初學者從 <code>claude-sonnet-4-5</code> 或 <code>gpt-5.4</code> 開始。進階使用者可以設定 Auto Efficient 路由，讓 Kilo Code 自動根據任務複雜度選模型，節省費用。</p>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">4</span><h4>開啟第一個 Coding 任務</h4>
+    <p style="margin-top:10px">按下 <kbd>Cmd/Ctrl + Shift + P</kbd>，輸入 <code>Kilo Code: Open Panel</code>，或直接點側邊欄圖示。在 Chat 框輸入你的需求，Kilo Code 會分析你的 codebase 並開始作業。</p>
+  </div>
+
+  <div class="step-block">
+    <span class="step-num">5</span><h4>（進階）設定 Orchestrator</h4>
+    <p style="margin-top:10px">在 Kilo Code 設定中啟用 Orchestrator Mode，設定子 Agent 數量上限（建議 2-4 個，避免 API 費用暴增）。適合大型 PR 或跨模組重構任務。</p>
+  </div>
+
+  <h3>JetBrains 安裝</h3>
+  <p>前往 <code>Settings → Plugins → Marketplace</code>，搜尋 <code>Kilo Code</code>。Sep 1, 2026 GA 的版本是完全原生重寫，非移植版，支援 IntelliJ IDEA、WebStorm、PyCharm、GoLand 等全系列。</p>
+
+  <h2>📊 Kilo Code vs Cursor vs Claude Code vs Windsurf vs Copilot：完整比較表</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>維度</th>
+        <th>Kilo Code</th>
+        <th>Cursor</th>
+        <th>Claude Code</th>
+        <th>Windsurf</th>
+        <th>GitHub Copilot</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>開放原始碼</strong></td>
+        <td>✅ MIT</td>
+        <td>❌ 閉源</td>
+        <td>❌ 閉源</td>
+        <td>❌ 閉源</td>
+        <td>❌ 閉源</td>
+      </tr>
+      <tr>
+        <td><strong>個人方案</strong></td>
+        <td>$0（完全免費）</td>
+        <td>$20/月（Pro）</td>
+        <td>$20/月（Pro）</td>
+        <td>$20/月（Pro）</td>
+        <td>$10/月（Pro）</td>
+      </tr>
+      <tr>
+        <td><strong>Teams 方案</strong></td>
+        <td><strong>$15/人/月</strong></td>
+        <td>$40/人/月</td>
+        <td>$100/人/月</td>
+        <td>$40/人/月</td>
+        <td>$19/人/月</td>
+      </tr>
+      <tr>
+        <td><strong>BYOK（自帶 Key）</strong></td>
+        <td>✅ 零加成</td>
+        <td>✅（部分功能限制）</td>
+        <td>✅ API 使用</td>
+        <td>⚠️ 有限</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td><strong>模型支援</strong></td>
+        <td>500+ 模型</td>
+        <td>~50 主流模型</td>
+        <td>Claude 系列為主</td>
+        <td>~30 模型</td>
+        <td>GitHub 指定</td>
+      </tr>
+      <tr>
+        <td><strong>IDE 覆蓋</strong></td>
+        <td>VS Code + JetBrains + CLI + Cloud</td>
+        <td>自家 IDE（VS Code fork）</td>
+        <td>終端機 CLI</td>
+        <td>自家 IDE（VS Code fork）</td>
+        <td>VS Code + JetBrains + CLI</td>
+      </tr>
+      <tr>
+        <td><strong>多 Agent（Orchestrator）</strong></td>
+        <td>✅ 並行子 Agent</td>
+        <td>⚠️ 有限</td>
+        <td>✅ 進階 Agent 模式</td>
+        <td>❌</td>
+        <td>⚠️ Copilot Workspace</td>
+      </tr>
+      <tr>
+        <td><strong>本機模型支援</strong></td>
+        <td>✅ Ollama/LM Studio</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td><strong>程式碼可視性</strong></td>
+        <td>✅ 完全透明，可審計 prompt</td>
+        <td>❌ 黑盒</td>
+        <td>⚠️ 部分透明</td>
+        <td>❌ 黑盒</td>
+        <td>❌ 黑盒</td>
+      </tr>
+      <tr>
+        <td><strong>Checkpoint（版本快照）</strong></td>
+        <td>✅ 內建</td>
+        <td>⚠️ 有限</td>
+        <td>✅ 支援 Git</td>
+        <td>❌</td>
+        <td>❌</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>✅ 優缺點分析</h2>
+
+  <div class="verdict-grid">
+    <div class="verdict-card pros">
+      <h4>✅ Kilo Code 優點</h4>
+      <ul>
+        <li>個人版完全免費，BYOK 零額外費用</li>
+        <li>Teams 方案 $15 是業界最低，比 Cursor 省 62%</li>
+        <li>500+ 模型支援，不被單一供應商鎖定</li>
+        <li>完全開源，prompt 透明，適合有安全需求的企業</li>
+        <li>Orchestrator 多 Agent 並行是大型專案神器</li>
+        <li>VS Code + JetBrains 雙覆蓋，不需換 IDE</li>
+        <li>支援本機模型（Ollama/LM Studio），適合離線場景</li>
+        <li>GitLab ROFR 背書，公司穩定性高</li>
+      </ul>
+    </div>
+    <div class="verdict-card cons">
+      <h4>⚠️ Kilo Code 缺點</h4>
+      <ul>
+        <li>Auth 設定反饋較粗糙（PH 評論有提）</li>
+        <li>自訂模型路由需要一點設定成本</li>
+        <li>KiloClaw 雲端 Agent 目前功能比 Claude Code Max 弱</li>
+        <li>JetBrains 版本推出較晚（Sep 1, 2026），部分功能仍追趕中</li>
+        <li>「零加成」前提是你選 BYOK，若選 Kilo Pass 還是有 5% 手續費</li>
+        <li>中文文件仍以英文為主，新手入門有一點門檻</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>🇹🇼 台灣三大使用場景</h2>
+
+  <div class="scenario-card">
+    <h4>🏢 場景一：新創公司 / 小團隊（Teams 方案最划算）</h4>
+    <p>5 人工程師團隊，目前付 Cursor Teams $40/人/月 = $200/月。換 Kilo Code Teams $15/人/月 = $75/月。<strong>每月省 $125（約台幣 4,000 元）</strong>，又不需要換 IDE（JetBrains 使用者直接裝插件），遷移成本極低。</p>
+    <p>Orchestrator Mode 讓各工程師可以把大型 PR 的子任務並行給 Agent 跑，節省等待時間。</p>
+  </div>
+
+  <div class="scenario-card">
+    <h4>💻 場景二：個人開發者 / 自由工作者（BYOK 零成本）</h4>
+    <p>已有 Anthropic API Key 的開發者：安裝 Kilo Code，設定 API Key，完全免費使用。不用再付 Claude Code $20/月 或 Cursor $20/月 的訂閱費。如果每月 API 用量在 $10-20 之間，整體成本只有 Cursor 的一半。</p>
+    <p>本機模型支援（Ollama/LM Studio）讓你在沒有 API 預算時也能繼續開發。</p>
+  </div>
+
+  <div class="scenario-card">
+    <h4>🏦 場景三：金融 / 醫療等資料敏感產業（開源透明 + 本機部署）</h4>
+    <p>完全開源讓企業資安團隊可以審計所有 prompt 和上下文邏輯，沒有黑盒疑慮。搭配本機 LLM（Ollama + Llama 3.3 / Qwen 2.5），程式碼永遠不離開公司網路。</p>
+    <p>台灣的金融科技公司、醫療 SaaS 廠商面對 FSC / HIPAA 等規範時，這個特性格外重要。</p>
+  </div>
+
+  <!-- 主 CTA -->
+  <div class="cta-block">
+    <h3>🔥 Kilo Code 值得一試！先從免費版開始</h3>
+    <p>個人版完全免費，5 分鐘安裝，帶入自己的 API Key 即可使用。若要跑大型 Coding 任務，DigitalOcean 雲端伺服器搭配 Kilo Cloud Agent 是最快的選擇。</p>
+    <div class="cta-buttons">
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="btn-cta btn-primary">🌊 DigitalOcean $200 免費點數</a>
+      <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener" class="btn-cta btn-secondary">📊 DataCamp AI 工程師課程</a>
+      <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" target="_blank" rel="noopener" class="btn-cta btn-secondary">⚡ Systeme.io 線上課程平台</a>
+    </div>
+  </div>
+
+  <h2>📊 Kilo Code 評分總結</h2>
+
+  <div class="score-row"><span class="score-label">💰 性價比</span><div class="score-bar"><div class="score-fill" style="width:96%"></div></div><span>9.6/10</span></div>
+  <div class="score-row"><span class="score-label">🔧 功能完整度</span><div class="score-bar"><div class="score-fill" style="width:88%"></div></div><span>8.8/10</span></div>
+  <div class="score-row"><span class="score-label">🚀 使用體驗</span><div class="score-bar"><div class="score-fill" style="width:84%"></div></div><span>8.4/10</span></div>
+  <div class="score-row"><span class="score-label">🔒 安全透明度</span><div class="score-bar"><div class="score-fill" style="width:95%"></div></div><span>9.5/10</span></div>
+  <div class="score-row"><span class="score-label">🌏 台灣適配性</span><div class="score-bar"><div class="score-fill" style="width:82%"></div></div><span>8.2/10</span></div>
+  <p style="margin-top:8px;color:#777;font-size:0.9rem">綜合評分：<strong>8.9 / 10</strong> ⭐⭐⭐⭐⭐（強烈推薦）</p>
+
+  <h2>❓ Kilo Code 常見問題 FAQ</h2>
+
+  <div class="faq-block">
+    <div class="faq-q">Q：Kilo Code 真的完全免費嗎？有什麼隱藏費用？</div>
+    <div class="faq-a">個人版（Individual plan）是免費的，平台本身不收費。你只需要支付你自己使用的 AI 推論費用（API Key）。如果你選用 Kilo Pass 而非 BYOK，Kilo Code 會在 API 費用上加 5% 手續費作為服務費。Teams 方案 $15/人/月，Enterprise 洽詢報價。</div>
+  </div>
+
+  <div class="faq-block">
+    <div class="faq-q">Q：Kilo Code 和 Cline 有什麼不一樣？</div>
+    <div class="faq-a">兩者都是開源的 VS Code AI Coding Agent，架構上有相似之處。主要差異：Kilo Code 多了 JetBrains 原生支援、Orchestrator 多 Agent 模式、KiloClaw 雲端 Agent、Agent Manager 可視化管理，以及 Teams/Enterprise 商業方案。Cline 則更輕量，對新手較友善。Kilo Code Teams $15/月 也比 Cline Teams $20/月 便宜。</div>
+  </div>
+
+  <div class="faq-block">
+    <div class="faq-q">Q：Orchestrator Mode 適合什麼情況使用？</div>
+    <div class="faq-a">適合大型任務：大範圍重構（如把 Express 換成 Fastify）、跨模組新功能開發、大量 test 生成、程式碼文件化等。Orchestrator 會把主任務拆成子任務並同時跑多個子 Agent，整體速度比單一 Agent 快很多。建議子 Agent 上限設 2-4 個，太多會讓 API 費用暴增。</div>
+  </div>
+
+  <div class="faq-block">
+    <div class="faq-q">Q：Kilo Code 的程式碼資料安全嗎？</div>
+    <div class="faq-a">Kilo Code 完全開源，你可以審計所有 prompt 邏輯，沒有黑盒疑慮。使用 BYOK 時，你的程式碼直接透過你自己的 API Key 送到模型供應商（Anthropic/OpenAI 等），Kilo Code 不會在中間留存。若完全不想資料出公司，可以搭配 Ollama 等本機模型。</div>
+  </div>
+
+  <div class="faq-block">
+    <div class="faq-q">Q：JetBrains 版本成熟嗎？還是建議用 VS Code 版本？</div>
+    <div class="faq-a">JetBrains 版本在 2026 年 9 月 1 日才 GA，是從頭原生開發的（不是移植），整體穩定性高。但部分進階功能仍在追趕 VS Code 版本。如果你原本就用 IntelliJ / WebStorm，直接安裝 JetBrains 版本即可，不需要強制換到 VS Code。</div>
+  </div>
+
+  <div class="faq-block">
+    <div class="faq-q">Q：如何用 OpenRouter 連接到 500+ 模型？</div>
+    <div class="faq-a">在 Kilo Code Settings → API Provider 選擇 OpenRouter，貼上你的 OpenRouter API Key（去 openrouter.ai 免費申請）。OpenRouter 聚合了 Anthropic、OpenAI、Google、Meta、Mistral 等所有主流模型，你在 Kilo Code 裡選模型時就能看到完整清單。費用按 OpenRouter 的 Provider 費率計算，不額外加成。</div>
+  </div>
+
+  <h2>🏁 結論：Kilo Code 值得換嗎？</h2>
+
+  <p>如果你現在用的是 Cursor 或 Claude Code，Kilo Code 是<strong>值得認真考慮的替代選項</strong>，尤其是以下幾種情況：</p>
+  <ul>
+    <li>你用 JetBrains 系 IDE，不想換到 VS Code 系的 Cursor 或 Windsurf</li>
+    <li>你有小團隊（2-10 人），Teams $15 vs Cursor Teams $40 差距很大</li>
+    <li>你的公司有程式碼資安合規需求，需要開源透明的工具</li>
+    <li>你已有 API Key，不想再付固定月費，BYOK 零成本更划算</li>
+    <li>你需要 Orchestrator 多 Agent 並行處理大型任務</li>
+  </ul>
+
+  <p>如果你是終端機重度使用者、需要最深的多輪重構能力，Claude Code Max 可能仍是更強的選擇。但從<strong>性價比和開放性</strong>綜合來看，Kilo Code 在 2026 年是最值得試試的開源 AI Coding Agent。</p>
+
+  <!-- 底部 CTA -->
+  <div class="cta-block" style="background: linear-gradient(135deg, #0a0a23 0%, #1a5276 100%);">
+    <h3>🛠️ 加速你的 AI 開發工作流</h3>
+    <p>Kilo Code 免費，但好的雲端基礎設施讓 Agent 任務跑得更快。DigitalOcean 新帳戶 $200 免費點數，DataCamp 補齊 AI 工程技能。</p>
+    <div class="cta-buttons">
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="btn-cta btn-primary">🌊 DigitalOcean $200 免費點數</a>
+      <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener" class="btn-cta btn-secondary">📊 DataCamp AI 課程</a>
+      <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" target="_blank" rel="noopener" class="btn-cta btn-secondary">☁️ Cloudways 託管方案</a>
+    </div>
+  </div>
+
+  <p style="font-size:0.85rem;color:#999;margin-top:32px">本文含聯盟行銷連結，點擊後購買可能讓本站獲得少許佣金，不影響您的費用，也不影響評測公正性。所有評測均基於公開資訊與實測。</p>
+</main>
+
+<footer style="background:#1a1a2e;color:rgba(255,255,255,0.6);padding:24px 20px;text-align:center;font-size:0.85rem;margin-top:60px">
+  <p>© 2026 AutoDev AI · <a href="/about.html" style="color:#00d4aa;text-decoration:none">關於我們</a> · <a href="/blog/" style="color:#00d4aa;text-decoration:none">部落格</a> · <a href="/tools/" style="color:#00d4aa;text-decoration:none">工具</a></p>
+</footer>
+</body>
+</html>
