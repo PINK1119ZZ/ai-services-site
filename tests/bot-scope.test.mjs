@@ -116,11 +116,16 @@ test('paired Bot scope pages keep guidance, routes and hreflang without pseudo-c
     assert.ok(page.html.includes(`href="${page.contact}"`));
     assert.ok(page.html.includes(`href="${page.cloud}"`));
     assert.match(page.html, /aria-live="polite"/);
+    assert.match(page.html, /<div class="channel-tabs"[^>]*role="group"/);
     assert.equal((page.html.match(/type="checkbox"/g) || []).length, 12);
     assert.doesNotMatch(page.html, /data-cost|data-maintain|50%|NT\$8,000|\$400|Free 30-Min|台灣市場.*中位值|Taiwan market|月維護費|Monthly maintenance|首年總成本|Estimated Cost|gumroad\.com|m\.do\.co/i);
   }
   assert.match(pages[0].html, /hreflang="en" href="https:\/\/autodev-ai\.com\/en\/tools\/line-bot-calculator\.html"/);
   assert.match(pages[1].html, /hreflang="zh-Hant" href="https:\/\/autodev-ai\.com\/tools\/line-bot-calculator\.html"/);
+  assert.match(pages[0].html, /你的勾選[^。]*不會送出或儲存/);
+  assert.match(pages[1].html, /Your selections[^.]*not sent or stored/);
+  assert.doesNotMatch(pages[1].html, />Free Quote<\/a>/);
+  assert.match(pages[1].html, />Discuss a project<\/a>/);
 });
 
 test('tool directories and Chinese cost article describe a scope checklist', () => {
@@ -135,4 +140,12 @@ test('tool directories and Chinese cost article describe a scope checklist', () 
   assert.match(articleCta, /需求清單/);
   assert.doesNotMatch(`${zhCard}\n${articleCta}`, /即時|估價|費用計算器/);
   assert.doesNotMatch(enCard, /estimate|cost calculator|instant/i);
+  assert.match(articleCta, /background:#16213e/);
+  assert.match(articleCta, /color:#cbd5e1/);
+  assert.match(articleCta, /href="\/tools\/line-bot-calculator\.html"[^>]*background:#334155[^>]*color:#fff/);
+  const og = load('blog/og/line-bot-cost.svg');
+  assert.match(og, /<svg width="1200" height="630"/);
+  assert.match(og, />LINE Bot 開發費用<\/text>/);
+  assert.match(og, />需求範圍與專案預算指南<\/text>/);
+  assert.doesNotMatch(og, /NT\$8,000|8,000 起/);
 });

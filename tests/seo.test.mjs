@@ -152,6 +152,7 @@ test("legacy articles use one scoped stylesheet", async () => {
     assert.doesNotMatch(html, /href=["']\.\.\/styles\.css["']/);
   }
   const css = await readFile(join(root, "assets/legacy-article.css"), "utf8");
+  assert.match(css, /body\.legacy-article nav \.nav-links\s*\{[^}]*margin:\s*0/);
   const selectorGroups = [...css.matchAll(/(?:^|[{}])\s*([^{}]+)\{/gm)].map((match) => match[1].trim()).filter((group) => !group.startsWith("@"));
   assert.ok(selectorGroups.length > 10);
   for (const group of selectorGroups) {
