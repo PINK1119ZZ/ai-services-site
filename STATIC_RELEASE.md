@@ -30,11 +30,11 @@ Serve only the generated output directory during preview. Do not run an HTTP dir
 
 ## Manual GitHub Pages workflow candidate
 
-- `.github/workflows/pages.yml` uses only manual `workflow_dispatch`. It requires a 40-character `approved_sha`, dispatch on `refs/heads/main`, and exact equality between that immutable approved SHA and the dispatched commit.
+- `.github/workflows/pages.yml` uses only manual `workflow_dispatch`. It requires a 40-character lowercase hexadecimal `approved_sha`, dispatch on `refs/heads/main`, and exact equality between that immutable approved SHA and the dispatched commit.
 - The build and deploy jobs have 15-minute and 10-minute timeouts. One `pages` concurrency group serializes releases without cancelling a release already in progress.
 - The workflow runs the commercial, SEO, and static contract suites, builds into `${{ runner.temp }}/autodev-public`, and uploads only that allowlisted runner-temporary directory. It never uploads the repository root.
 - The repository has no npm dependencies, so the workflow does not run `npm ci`; its test and build commands use only checked-in scripts and the pinned runner runtimes.
 - Entering `approved_sha` is a technical guard, not permission to publish. Changing the GitHub Actions file, Pages source, or environment protection, and performing a real dispatch all require explicit approval for the concrete release.
 - Before the first real dispatch, verify that the `github-pages` environment requires reviewers and is limited to the `main` branch. These remote protections have not been verified or changed by this candidate.
 - The remote site still uses the legacy `main` / repository-root Pages source. This local workflow candidate has not been pushed, dispatched, or proven in GitHub Actions.
-- Controller verification on 2026-09-21 passed 19/19 Node, 8/8 SEO and 10/10 static tests. A fresh allowlisted build produced 255 files with zero warnings; gitleaks found zero matches. Local YAML/permissions/artifact checks, shellcheck and five valid/invalid guard cases passed. GitHub-hosted execution and current browser checks remain unverified.
+- Controller verification on 2026-09-21 passed 19/19 Node, 8/8 SEO and 10/10 static tests. A fresh allowlisted build produced 255 files with zero warnings; gitleaks found zero matches. Local YAML/permissions/artifact checks, shellcheck and five valid/invalid guard cases passed. The 10 affected pages passed 70 width checks in a real browser with external ads and production APIs blocked; GitHub-hosted execution, assistive technology and Lighthouse remain unverified.
