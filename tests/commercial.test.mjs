@@ -16,7 +16,7 @@ const routes = [
 const logo = 'https://autodev-ai.com/autodev-logo2.png';
 
 const load = (path) => readFileSync(new URL(path, root), 'utf8');
-const tagAttr = (tag, key) => tag?.match(new RegExp(`${key}=["']([^"']+)`, 'i'))?.[1];
+const tagAttr = (tag, key) => tag?.match(new RegExp(`${key}=(["'])([\\s\\S]*?)\\1`, 'i'))?.[2];
 const attr = (html, rel, key = 'href') => {
   const tag = [...html.matchAll(/<link\b[^>]*>/gi)]
     .map((match) => match[0])
@@ -57,6 +57,11 @@ test('all commercial routes keep paired metadata, icons, one h1 and parseable JS
   }
   for (const path of ['index.html', 'en/index.html']) assert.match(load(path), /type=["']application\/rss\+xml["'][^>]*href=["']\/feed\.xml["']/i, `${path} RSS`);
   assert.equal(meta(load('pricing.html'), 'theme-color'), '#f7f4ee');
+});
+
+test('metadata values preserve the other quote character', () => {
+  assert.equal(tagAttr(`<meta content="AutoDev's full description">`, 'content'), "AutoDev's full description");
+  assert.equal(tagAttr(`<meta content='A "quoted" workflow'>`, 'content'), 'A "quoted" workflow');
 });
 
 test('Google Ads stays on the two base pages while GA4 stays on every commercial route', () => {

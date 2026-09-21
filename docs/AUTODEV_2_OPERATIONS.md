@@ -14,7 +14,7 @@
 - `scripts/build_static.py` 生成显式白名单制品；`.github/workflows/pages.yml` 是只接受手动 `workflow_dispatch` 的发布候选。
 - workflow 要求输入已批准的 40 位 commit SHA，并同时满足 `refs/heads/main` 与当前 dispatch commit 完全相同；构建只上传 `${{ runner.temp }}/autodev-public` 白名单目录。
 - 输入 `approved_sha` 只是 fail-closed 技术闸，不代表发布授权。Push、Pages source 变更、GitHub environment protection 变更及真实 dispatch 都需要针对具体发布包的单独批准。
-- 主控已在当前集成快照独立运行 `npm test` 18/18、`npm run test:seo` 8/8、`npm run test:static` 10/10；新白名单制品 255 文件、0 warnings，制品 gitleaks 0 命中。手动 workflow 的本地 YAML/权限/制品路径检查、shellcheck 和五项 guard 正反例通过；不是远端 Actions 验收。
+- 主控已在当前集成快照独立运行 `npm test` 19/19、`npm run test:seo` 8/8、`npm run test:static` 10/10；新白名单制品 255 文件、0 warnings，制品 gitleaks 0 命中。手动 workflow 的本地 YAML/权限/制品路径检查、shellcheck 和五项 guard 正反例通过；不是远端 Actions 验收。
 - 禁止从 repository root 启动 HTTP directory server。预览只能服务白名单构建后的专用输出目录。
 
 ## 本地验证命令

@@ -182,3 +182,5 @@ Main acceptance: independently read the complete change and ran 17/17 Node, SEO 
 - This slice did not create the fresh allowlisted build; the main controller owns that build, independent review, Git, deployment, and publication decisions. Nothing was published.
 
 Controller integration: preserved the original English tool CTA analytics event and the existing 50% claim regression check. Independently passed 18/18 Node, 8/8 SEO and 10/10 static after the fragment-anchor repair, then built 255 files with 0 warnings and scanned 19,253,118 bytes with 0 findings. The four social/icon assets are present in the artifact; shared chat/v2 scripts contain no removed Ads-helper caller. Current browser/AT remain unverified.
+
+Metadata-test follow-up: a reviewer identified that a quoted attribute containing an apostrophe was truncated by tagAttr. Main reproduced the failure (AutoDev instead of the complete value), changed only the quote-delimited capture, and independently passed all 19 Node tests. Both mixed-quote cases now pass; page/build inputs did not change, so the previous 255-file artifact remains the same candidate bytes.
