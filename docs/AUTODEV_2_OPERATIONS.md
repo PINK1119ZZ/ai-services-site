@@ -26,7 +26,7 @@ npm run test:static
 npm run build:static -- --output /absolute/path/to/new-empty-directory
 ```
 
-- `npm test` 当前主控已运行 9/9 通过：包含12个商业页合同、菜单与聊天DOM行为；两Contact已按用户新批准的自有Bot入口契约修复。旧1/2失败是历史状态，不再适用。
+- `npm test` 当前候选已由主控独立运行 14/14 通过：包含12个商业页合同、菜单与聊天DOM行为，以及审阅修复后的元数据、Ads范围、定价结构化资料、兼容锚点、Contact来源标签与暗色样式合同；修复后的真实浏览器验收仍未执行。
 - `npm run test:seo` 检查 208 个原有 HTML 路径、JSON-LD、修复后的内链，以及中英文费用页契约。
 - `npm run test:static` 检查 allowlist、hash、一致性、symlink、路径穿越与引用边界。
 - 实际构建必须指定一个不存在或为空的输出目录；构建完成后读取 `static-manifest.json`，分别记录制品文件数与 source-existing warnings。
@@ -45,3 +45,9 @@ npm run build:static -- --output /absolute/path/to/new-empty-directory
 - 本地删除 literal 只修复当前候选源码，不会撤销已经暴露的凭据，也不会清理 Git 历史。
 - 旧凭据仍需由拥有者在对应平台撤销或轮换；生产环境变量也尚未由本次本地修改更新。
 - 验证不得打印秘密值、导入会触发网络的脚本，或运行脚本 `main`。
+
+## 商业页追踪与入口边界
+
+- Google Ads配置与转换helper只保留在可信基线已有的中文首页和中文Contact；其余10个商业页仅保留GA4。本候选没有新增转换触发或同意机制。
+- 两个Contact页到自有表单的链接分别固定使用`src=website_zh_contact`与`src=website_en_contact`。该参数只表示页面入口，不是可信身份、成交或成功提交证据，也不触发GA lead事件。
+- 共享深色样式只调整kicker、pill和newsletter按钮；未改变原有链接继承色、布局、动画或reduced-motion行为。
