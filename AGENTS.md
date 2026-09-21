@@ -49,7 +49,7 @@ npm run test:static
 npm run build:static -- --output /absolute/path/to/new-empty-directory
 ```
 
-- `npm test` 当前保留两项已知 Contact 失败；报告时须如实列出。
+- `npm test` 已按用户批准的自有表单契约修复 Contact，并包含聊天 DOM 行为测试；报告实际结果，不沿用旧失败状态。
 - `test:seo` 检查 208 个 HTML 路径、JSON-LD、既有 URL 与费用页契约。
 - `test:static` 检查白名单、symlink、hash、引用与输出安全。
 - 实际构建输出必须是新的空目录；检查 manifest 中的旧站 warning，不得把 warning 当成功发布。

@@ -26,16 +26,16 @@ npm run test:static
 npm run build:static -- --output /absolute/path/to/new-empty-directory
 ```
 
-- `npm test` 当前预期为 1 pass / 2 fail。两项失败都属于尚未纳入本候选修改的 Contact：旧页缺少 `/assets/autodev-v2.js`，且仍有 `不满意不收费` 文案。不得弱化断言来制造全绿。
+- `npm test` 当前主控已运行 9/9 通过：包含12个商业页合同、菜单与聊天DOM行为；两Contact已按用户新批准的自有Bot入口契约修复。旧1/2失败是历史状态，不再适用。
 - `npm run test:seo` 检查 208 个原有 HTML 路径、JSON-LD、修复后的内链，以及中英文费用页契约。
 - `npm run test:static` 检查 allowlist、hash、一致性、symlink、路径穿越与引用边界。
 - 实际构建必须指定一个不存在或为空的输出目录；构建完成后读取 `static-manifest.json`，分别记录制品文件数与 source-existing warnings。
 
 ## 尚未完成的验证
 
-- 375、390、430、768、1024、1280、1440 七种屏宽的真实浏览器检查尚未完成。
+- 12个中英文商业页已在375、390、430、768、1024、1280、1440七种屏宽完成84组真实浏览器检查：无水平溢出、每页一个H1；另已验证菜单Escape与减弱动画。
 - Lighthouse 尚未运行。
-- 浏览器控制权仍由用户掌握；在取得当次授权与真实结果前，不得宣称响应式或 Lighthouse 已通过。
+- Ego控制权已获用户交还。真实手机聊天已验证恶意HTML按文字显示、userinfo链接不启用、重复发送只产生一次请求、Escape回焦；外部API由假的fetch替代。Lighthouse工具当前不可用，不能把上述检查称为Lighthouse分数或完整WCAG认证。
 - GitHub Pages 候选发布、生产 API 验证、source 到 target 的切流与回滚演练均未完成。
 
 ## 凭据与生产配置

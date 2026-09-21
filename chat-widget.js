@@ -7,6 +7,26 @@
     'https://line-bot.76.13.219.163.nip.io/api/chat',
   ];
   const SESSION_ID = 'web_' + Math.random().toString(36).substr(2, 9);
+  const isEnglish = /^\/en(?:\/|$)/.test(location.pathname);
+  const copy = isEnglish ? {
+    open: 'Open project chat', close: 'Close project chat', panel: 'AutoDev project chat',
+    title: 'AutoDev project assistant', status: 'AI-assisted. Confirm important details with the founder.',
+    placeholder: 'Type your question...', input: 'Your question', send: 'Send question',
+    typing: 'AI assistant is preparing a reply', user: 'Your message', bot: 'AI-assisted reply',
+    welcome: 'Hello. Ask about Telegram Bot services, project scope, budget positioning, or how to start an enquiry. AI-assisted answers are for initial guidance; the founder confirms important details.',
+    slow: 'The service is taking longer to respond. Please try again, message us on Telegram: https://t.me/AUTO_DEV_AI_BOT, or open the project enquiry: https://chat.autodev-ai.com/form',
+    unavailable: 'The connection is temporarily unavailable. Please try again, message us on Telegram: https://t.me/AUTO_DEV_AI_BOT, or open the project enquiry: https://chat.autodev-ai.com/form',
+    quick: [['Services', 'What services does AutoDev offer?'], ['Budget', 'How are project budgets positioned?'], ['Scope', 'How do you clarify project scope?'], ['Enquiry', 'How can I start a project enquiry?']],
+  } : {
+    open: '開啟專案諮詢', close: '關閉專案諮詢', panel: 'AutoDev 專案諮詢',
+    title: 'AutoDev 專案助理', status: 'AI 輔助回覆，重要細節由創辦人確認。',
+    placeholder: '輸入你的問題…', input: '你的問題', send: '送出問題',
+    typing: 'AI 助理正在準備回覆', user: '你的訊息', bot: 'AI 輔助回覆',
+    welcome: '你好。你可以詢問 Telegram Bot 服務、專案範圍、預算定位或如何開始諮詢。AI 輔助內容供初步參考，重要細節由創辦人確認。',
+    slow: '目前回覆較慢。請稍後再試、使用 Telegram 聯繫：https://t.me/AUTO_DEV_AI_BOT，或開啟需求諮詢：https://chat.autodev-ai.com/form',
+    unavailable: '目前連線不穩。請稍後再試、使用 Telegram 聯繫：https://t.me/AUTO_DEV_AI_BOT，或開啟需求諮詢：https://chat.autodev-ai.com/form',
+    quick: [['服務', 'AutoDev 提供哪些服務？'], ['預算', '專案預算如何定位？'], ['範圍', '你們如何澄清專案範圍？'], ['諮詢', '如何開始需求諮詢？']],
+  };
 
   // Inject styles
   const style = document.createElement('style');
@@ -14,7 +34,7 @@
     #chat-widget-btn {
       position: fixed; bottom: 24px; right: 24px; z-index: 9999;
       width: 60px; height: 60px; border-radius: 50%;
-      background: linear-gradient(135deg, #B8946A, #C4A57B);
+      background: #2D2620;
       border: none; cursor: pointer; box-shadow: 0 4px 20px rgba(184,148,106,0.4);
       display: flex; align-items: center; justify-content: center;
       transition: transform 0.3s, box-shadow 0.3s;
@@ -25,7 +45,7 @@
       0%, 100% { box-shadow: 0 4px 20px rgba(184,148,106,0.4); }
       50% { box-shadow: 0 4px 30px rgba(184,148,106,0.7); }
     }
-    #chat-widget-btn svg { width: 28px; height: 28px; fill: white; }
+    #chat-widget-btn svg { width: 28px; height: 28px; fill: #FFF8F3; }
     #chat-widget-btn .close-icon { display: none; }
     #chat-widget-btn.open .chat-icon { display: none; }
     #chat-widget-btn.open .close-icon { display: block; }
@@ -45,7 +65,7 @@
     #chat-widget-box.open { display: flex; }
 
     .chat-header {
-      background: linear-gradient(135deg, #B8946A, #C4A57B);
+      background: #2D2620;
       padding: 16px 20px; display: flex; align-items: center; gap: 12px;
     }
     .chat-header-avatar {
@@ -63,10 +83,10 @@
     .chat-messages::-webkit-scrollbar { width: 4px; }
     .chat-messages::-webkit-scrollbar-thumb { background: #F5EDE3; border-radius: 4px; }
 
-    .chat-msg { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: 14px; line-height: 1.6; word-break: break-word; }
+    .chat-msg { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: 14px; line-height: 1.6; word-break: break-word; white-space: pre-wrap; }
     .chat-msg.bot { background: #F5EDE3; color: #2D2620; align-self: flex-start; border-bottom-left-radius: 4px; }
-    .chat-msg.user { background: #B8946A; color: white; align-self: flex-end; border-bottom-right-radius: 4px; }
-    .chat-msg.bot a { color: #C4A57B; text-decoration: none; }
+    .chat-msg.user { background: #2D2620; color: #FFF8F3; align-self: flex-end; border-bottom-right-radius: 4px; }
+    .chat-msg.bot a { color: #634628; text-decoration: underline; }
     .chat-msg.bot a:hover { text-decoration: underline; }
 
     .chat-typing { align-self: flex-start; padding: 10px 14px; background: #F5EDE3; border-radius: 12px; border-bottom-left-radius: 4px; }
@@ -86,21 +106,26 @@
     .chat-input:focus { border-color: #B8946A; }
     .chat-input::placeholder { color: #555; }
     .chat-send {
-      background: #B8946A; border: none; border-radius: 8px; padding: 10px 14px;
+      background: #2D2620; border: none; border-radius: 8px; padding: 10px 14px;
       cursor: pointer; display: flex; align-items: center; justify-content: center;
       transition: background 0.3s;
     }
-    .chat-send:hover { background: #9C7B57; }
-    .chat-send:disabled { background: #333; cursor: not-allowed; }
-    .chat-send svg { width: 18px; height: 18px; fill: white; }
+    .chat-send:hover { background: #4A4038; }
+    .chat-send:disabled { background: #6B625C; cursor: not-allowed; }
+    .chat-send svg { width: 18px; height: 18px; fill: #FFF8F3; }
 
     .chat-quick-btns { padding: 0 16px 12px; display: flex; gap: 6px; flex-wrap: wrap; }
     .chat-quick-btn {
       background: rgba(184,148,106,0.15); border: 1px solid rgba(184,148,106,0.3);
-      color: #9C7B57; border-radius: 16px; padding: 5px 12px; font-size: 12px;
+      color: #4D3522; border-radius: 16px; padding: 5px 12px; font-size: 12px;
       cursor: pointer; transition: all 0.3s; font-family: 'Noto Sans TC', sans-serif;
     }
-    .chat-quick-btn:hover { background: rgba(184,148,106,0.3); color: white; }
+    .chat-quick-btn:hover { background: #EADCCA; color: #2D2620; }
+
+    @media (prefers-reduced-motion: reduce) {
+      #chat-widget-btn, .chat-typing span { animation: none; transition: none; }
+      #chat-widget-btn:hover { transform: none; }
+    }
 
     @media (max-width: 480px) {
       #chat-widget-box { right: 12px; bottom: 88px; }
@@ -112,6 +137,10 @@
   // Create button
   const btn = document.createElement('button');
   btn.id = 'chat-widget-btn';
+  btn.type = 'button';
+  btn.setAttribute('aria-label', copy.open);
+  btn.setAttribute('aria-expanded', 'false');
+  btn.setAttribute('aria-controls', 'chat-widget-box');
   btn.innerHTML = `
     <svg class="chat-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
     <svg class="close-icon" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
@@ -121,25 +150,25 @@
   // Create chat box
   const box = document.createElement('div');
   box.id = 'chat-widget-box';
+  box.setAttribute('role', 'region');
+  box.setAttribute('aria-label', copy.panel);
+  box.setAttribute('aria-busy', 'false');
   box.innerHTML = `
     <div class="chat-header">
       <div class="chat-header-avatar"></div>
       <div class="chat-header-info">
-        <h4>AutoDev AI 客服</h4>
-        <p>通常在幾秒內回覆</p>
+        <h4>${copy.title}</h4>
+        <p>${copy.status}</p>
       </div>
       <div class="chat-header-dot"></div>
     </div>
-    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-relevant="additions"></div>
     <div class="chat-quick-btns" id="chatQuickBtns">
-      <button class="chat-quick-btn" data-msg="你們有什麼服務？">服務介紹</button>
-      <button class="chat-quick-btn" data-msg="LINE Bot 開發多少錢？">報價詢問</button>
-      <button class="chat-quick-btn" data-msg="開發要多久？">交付時間</button>
-      <button class="chat-quick-btn" data-msg="可以免費諮詢嗎？">免費諮詢</button>
+      ${copy.quick.map(([label, message]) => `<button type="button" class="chat-quick-btn" data-msg="${message}">${label}</button>`).join('')}
     </div>
     <div class="chat-input-area">
-      <input class="chat-input" id="chatInput" placeholder="輸入你的問題..." maxlength="500" />
-      <button class="chat-send" id="chatSend">
+      <input class="chat-input" id="chatInput" aria-label="${copy.input}" placeholder="${copy.placeholder}" maxlength="500" />
+      <button type="button" class="chat-send" id="chatSend" aria-label="${copy.send}">
         <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
       </button>
     </div>
@@ -151,15 +180,36 @@
   const sendBtn = document.getElementById('chatSend');
   const quickBtns = document.getElementById('chatQuickBtns');
   let isOpen = false;
+  let isSending = false;
+
+  function appendReply(parent, text) {
+    let cursor = 0;
+    for (const match of text.matchAll(/https?:\/\/[A-Za-z0-9\-._~:/?#\[\]@!$&*+=%,;]+/g)) {
+      parent.appendChild(document.createTextNode(text.slice(cursor, match.index)));
+      const href = match[0].replace(/[.,]+$/, '');
+      let parsed = null;
+      try { parsed = new URL(href); } catch (_) {}
+      if (parsed && ['http:', 'https:'].includes(parsed.protocol) && !parsed.username && !parsed.password) {
+        const link = document.createElement('a');
+        link.href = href;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = href;
+        parent.appendChild(link);
+      } else {
+        parent.appendChild(document.createTextNode(href));
+      }
+      cursor = match.index + href.length;
+    }
+    parent.appendChild(document.createTextNode(text.slice(cursor)));
+  }
 
   function addMsg(text, type) {
     const div = document.createElement('div');
     div.className = 'chat-msg ' + type;
-    // Convert URLs to links for bot messages
+    div.setAttribute('aria-label', type === 'bot' ? copy.bot : copy.user);
     if (type === 'bot') {
-      text = text.replace(/(https?:\/\/[^\s）\)]+)/g, '<a href="$1" target="_blank">$1</a>');
-      text = text.replace(/\n/g, '<br>');
-      div.innerHTML = text;
+      appendReply(div, text);
     } else {
       div.textContent = text;
     }
@@ -171,6 +221,8 @@
     const div = document.createElement('div');
     div.className = 'chat-typing';
     div.id = 'chatTyping';
+    div.setAttribute('role', 'status');
+    div.setAttribute('aria-label', copy.typing);
     div.innerHTML = '<span></span><span></span><span></span>';
     messages.appendChild(div);
     messages.scrollTop = messages.scrollHeight;
@@ -211,7 +263,9 @@
   }
 
   async function sendMessage(text) {
-    if (!text.trim()) return;
+    if (isSending || !text.trim()) return;
+    isSending = true;
+    box.setAttribute('aria-busy', 'true');
     addMsg(text, 'user');
     input.value = '';
     sendBtn.disabled = true;
@@ -238,31 +292,40 @@
       addMsg(reply, 'bot');
     } else {
       const isAbort = lastErr && (lastErr.name === 'AbortError' || String(lastErr).includes('abort'));
-      const msg = isAbort
-        ? '伺服器回應有點慢，可能是首次喚醒。請再試一次，或加 LINE 諮詢：<a href="https://line.me/R/ti/p/@882vhisc" target="_blank" rel="noopener">@882vhisc</a>'
-        : '連線暫時不穩，請稍後再試，或加 LINE：<a href="https://line.me/R/ti/p/@882vhisc" target="_blank" rel="noopener">@882vhisc</a>';
-      addMsg(msg, 'bot');
+      addMsg(isAbort ? copy.slow : copy.unavailable, 'bot');
     }
+    isSending = false;
+    box.setAttribute('aria-busy', 'false');
     sendBtn.disabled = false;
-    input.focus();
+    if (isOpen) input.focus();
   }
 
-  // Toggle
-  btn.addEventListener('click', () => {
-    isOpen = !isOpen;
+  function setOpen(nextOpen) {
+    isOpen = nextOpen;
     box.classList.toggle('open', isOpen);
     btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+    btn.setAttribute('aria-label', isOpen ? copy.close : copy.open);
     if (isOpen && messages.children.length === 0) {
       setTimeout(() => {
-        addMsg('你好！ 我是 AutoDev AI 的智慧助手。\n\n有什麼我可以幫你的嗎？可以問我關於 LINE Bot 開發、AI 客服、報價等任何問題！', 'bot');
+        addMsg(copy.welcome, 'bot');
       }, 500);
     }
     if (isOpen) input.focus();
+  }
+
+  // Toggle
+  btn.addEventListener('click', () => setOpen(!isOpen));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && isOpen) {
+      setOpen(false);
+      btn.focus();
+    }
   });
 
   // Send
   sendBtn.addEventListener('click', () => sendMessage(input.value));
-  input.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.isComposing) sendMessage(input.value); });
+  input.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); sendMessage(input.value); } });
 
   // Quick buttons
   quickBtns.querySelectorAll('.chat-quick-btn').forEach(b => {

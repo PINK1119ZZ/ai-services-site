@@ -38,7 +38,7 @@ test('all commercial routes have paired metadata, one h1 and parseable JSON-LD',
 
 test('commercial copy keeps the agreed truth and price boundaries', () => {
   const html = routes.flatMap(([path]) => [load(path), load(`en/${path}`)]).join('\n');
-  for (const claim of ['10x', '1,300', '1300', '25+ Projects', '2 週完成', '兩週完成', '不滿意不收費']) {
+  for (const claim of ['10x', '1,300', '1300', '25+ Projects', '2 週完成', '兩週完成', '不滿意不收費', 'no satisfaction, no charge', 'full refund', 'free maintenance', 'free consultation', 'within hours', '30-min', 'NT$8,000', '$250', '14-30 days']) {
     assert.doesNotMatch(html, new RegExp(claim, 'i'), claim);
   }
   assert.match(load('portfolio.html'), /AutoDev 自用系統/);
@@ -46,8 +46,38 @@ test('commercial copy keeps the agreed truth and price boundaries', () => {
   assert.match(load('pricing.html'), /NT\$50,000/);
   assert.match(load('pricing.html'), /NT\$100,000/);
   assert.match(load('pricing.html'), /NT\$200,000/);
-  assert.match(load('contact.html'), /action=["']https:\/\/formsubmit\.co\//);
-  assert.match(load('contact.html'), /href=["']\/form["']/);
+  for (const page of ['contact.html', 'en/contact.html']) {
+    const contact = load(page);
+    for (const budget of ['NT$50K', 'NT$100K', 'NT$200K+']) assert.ok(contact.includes(budget), `${page} ${budget}`);
+  }
+});
+
+test('contact routes enquiries to the owned bot without fake submission signals', () => {
+  const pages = [
+    ['contact.html', 'https://autodev-ai.com/contact.html', ['提出問題', '澄清範圍', '確認方案']],
+    ['en/contact.html', 'https://autodev-ai.com/en/contact.html', ['Describe the problem', 'Clarify the scope', 'Confirm the proposal']],
+  ];
+  for (const [page, canonical, steps] of pages) {
+    const html = load(page);
+    const primary = [...html.matchAll(/<a\b[^>]*href=["']https:\/\/chat\.autodev-ai\.com\/form["'][^>]*>/gi)]
+      .map((match) => match[0])
+      .find((tag) => /class=["'][^"']*v2-button[^"']*["']/.test(tag)) || '';
+    assert.match(primary, /class=["'][^"']*v2-button[^"']*["']/);
+    assert.match(primary, /data-analytics=["']contact_owned_bot["']/);
+    assert.doesNotMatch(primary, /onclick=/i);
+    assert.doesNotMatch(html, /<form\b|<textarea\b|type=["'](?:email|submit)["']|action=["']|formsubmit\.co|[?&]sent=1|history\.replaceState|createElement\(["']div["']\)/i);
+    assert.doesNotMatch(html, /href=["']\/form["']/);
+    assert.doesNotMatch(html, /user_data|customer_email|customer_phone|generate_lead|form_submit|form_start/i);
+    assert.match(html, /G-4ZWDT650BM/);
+    assert.match(html, /AW-18066037819/);
+    assert.match(html, /chat-widget\.js\?v=20260502e/);
+    assert.match(html, /lang\.js\?v=20260505/);
+    for (const step of steps) assert.ok(html.includes(step), `${page} ${step}`);
+    const blocks = [...html.matchAll(/<script type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi)].map((match) => JSON.parse(match[1]));
+    const contactPage = blocks.find((block) => block['@type'] === 'ContactPage');
+    assert.equal(contactPage.url, canonical);
+    assert.equal(JSON.stringify(contactPage).toLowerCase().includes('email'), false);
+  }
 });
 
 test('shared navigation synchronizes aria state and closes with Escape', () => {
