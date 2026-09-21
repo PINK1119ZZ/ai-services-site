@@ -1,8 +1,65 @@
 {
-  "lastRun": "2026-09-21T00:30:00Z",
+  "lastRun": "2026-09-21T01:30:00Z",
   "lastResearchRound": 215,
-  "lastStrategistRun": "2026-09-20T02:06:00Z",
+  "lastStrategistRun": "2026-09-21T01:30:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-09-21T01:30:00Z",
+      "agent": "strategist",
+      "task": "seo-weekly-report",
+      "status": "completed",
+      "summary": "Mon 01:30 UTC seo-weekly-report — 週報+指揮完成。本週評估：222篇 blog + 18 tools，GSC 262 clicks/4,032 impressions(14d)，avgPos 6.5。核心發現：Grok 4.8 Sep 22-25 高機率窗口（草稿已就緒）；Kilo Code P1-HIGH 新 affiliate kilo.ai/partners (9.50/conv Expert，月榜#1）；DevDay T-8天（content-ops Sep 22 UTC 最後更新機會）；Gumroad 5個404積壓22週（Ivan 立即上架）。小優化執行：tools/vps-compare.html 加 DigitalOcean 00 CTA（affiliate-monitor directive）。發出 directives/strategist-weekly-2026-09-21.md。預估本週新增月收入 ,170-3,480。",
+      "changes": [
+        "讀取 agent-state.json agentLog（R208-R215 全覽）",
+        "讀取 directives/researcher-to-strategist-2026-09-21-round215.md（R215 最新指令）",
+        "分析 GSC data：top pages opencode-zen-vs-go 72c/1034i、lm-studio-bionic 55c/360i、claude-video 33c/286i",
+        "tools/vps-compare.html：加入 DigitalOcean 00 免費點數 CTA（affiliate-monitor 發現此頁無聯盟連結）",
+        "sitemap.xml：vps-compare.html lastmod 更新為 2026-09-21",
+        "創建 directives/strategist-weekly-2026-09-21.md（完整週報指令）",
+        "更新 agent-state.json：lastStrategistRun + lastRun + agentLog"
+      ],
+      "directivesIssued": {
+        "seoWriter": [
+          "P0-STANDBY：Grok 4.8 GA → 立即執行 blog/grok-48-complete-review-2026.html",
+          "P1-HIGH：blog/tiun-ai-builder-billing-review-2026.html（Sep 25 截止）",
+          "P1-HIGH：blog/kilo-code-review-vs-cursor-claude-code-2026.html（Ivan affiliate 申請同步）",
+          "P1：blog/tencent-octop-self-hosted-multi-agent-2026.html（Oct 1 截止）",
+          "P1：blog/voicebox-local-tts-elevenlabs-alternative-2026.html（Oct 5 截止）"
+        ],
+        "builder": [
+          "整理 Gumroad 產品文件（claude-code-prompt-pack-2026 等）方便 Ivan 上架",
+          "tools/vps-compare.html 加 DigitalOcean CTA（已由 strategist 直接執行）",
+          "Ivan 取得 Webflow link 後替換 tools/webflow-vs-framer-vs-squarespace-2026.html 占位"
+        ],
+        "researcher": [
+          "R216 Sep 22 00:30 UTC：Grok 4.8 第一確認點（最高優先）",
+          "高佣金 affiliate 掃描：Lumiko(Sep 23截止)、Monid、tiun. Billing",
+          "GitHub Universe 2026 Oct 28-29 提早布局（Oct 1 發文窗口）",
+          "HN 趨勢：self-hosted AI + production cost control + AI security 持續跟蹤"
+        ],
+        "contentOps": [
+          "P0 緊急：blog/openai-devday-2026-preview.html Sep 22 UTC 更新（T-8天→T-7天）",
+          "GSC 機會：opencode-zen(pos 9.1)、opencode免費額度(pos 8.2)、lm-studio-bionic(pos 8.2)"
+        ]
+      },
+      "ivanActionsThisWeek": [
+        "🔴 P0 立即：申請 kilo.ai/partners（.50-99.50/conv，月榜#1，R215新確認）",
+        "🔴 P0 立即：申請 systeme.io/affiliates（60% LIFETIME，R212+積壓最久）",
+        "🔴 P0 立即：上架 xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026（22週積壓）",
+        "🔴 P0 立即：上架 xiaofan8.gumroad.com/l/n8n-claude-templates-v1（3篇文章含壞連結）",
+        "🔴 P0 立即：申請 openaffiliate.dev/programs/cursor（積壓最久）",
+        "🔴 P1 本週：申請 alliai.com/affiliates（30%/24mo 限時）",
+        "🔴 P1 本週：申請 kajabi.com/partners（30%/12mo）",
+        "🔴 P1 本週：申請 webflow.com/solutions/affiliates（50%/12mo）",
+        "🟡 P1 本週：確認 lumiko.app affiliate（Sep 23截止！）",
+        "🟡 P1 本週：確認 Monid 申請狀態（20%/6mo）"
+      ],
+      "selfExecuted": [
+        "tools/vps-compare.html：加入 DigitalOcean 00 CTA（affiliate-monitor directive，直接執行）",
+        "sitemap.xml：vps-compare.html lastmod 2026-09-21"
+      ],
+      "estimatedNewRevenue": ",170-3,480/月（Grok 4.8 GA後 00-900 + Kilo Code Ivan後 50-500 + tiun評測 0-180 + Octop 0-250 + Voicebox 0-250 + DevDay峰值 00-800 + Gumroad上架後 00-600）"
+    },
     {
       "timestamp": "2026-09-21T00:30:00Z",
       "agent": "researcher",
@@ -1025,322 +1082,6 @@
         "P1-HIGH 下輪：blog/nanochat-karpathy-tutorial-2026.html（57.3K★，繁中空白，常青）",
         "P1 新（R201）：blog/omniroute-ai-gateway-free-models-2026.html（45K★，RTK+Caveman 89% token省）",
         "content-ops：Sep 22 更新 blog/openai-devday-2026-preview.html（加入 DevDay 確認功能）"
-      ]
-    },
-    {
-      "timestamp": "2026-09-12T00:30:00Z",
-      "agent": "researcher",
-      "task": "ai-trend-hunter",
-      "round": 201,
-      "status": "completed",
-      "summary": "Round 201（Sat 00:30 UTC，ai-trend-hunter cron）— 核心發現：(1) ⏳ P0-STANDBY T+0：Grok 4.7 仍無 xAI 官方 GA（00:30 UTC，model card/API identifier/pricing 均未出現），Sep 12 仍是最有可能日期，繼續監看至 Sep 13；(2) 🔴 P1-HIGH 新：Grok Bot Enterprise（Sep 3 GA，持久 AI 代理雲端VM，企業免費試用倒計時最後幾天，繁中零評測）；(3) 🟡 P1 新：OmniRoute 45K★ MIT AI Gateway（290+ providers，516+ models，90+ 免費，RTK+Caveman 89% token省，自用+評測+比較頁三條跑道）；(4) 🟡 P1 新：Tencent TeamAI CLI（GitHub #1 Sep 9，3.1K★，Make Every Team AI Native，繁中零教學）；(5) 🟡 P1 新：Tencent BrowserSkill（AI agent 使用真實已登入瀏覽器，自用機會）；(6) 💰 P1 新 Affiliate：Reclaim AI（Dropbox旗下，40%/12mo，90天cookie，$1/signup bonus，60萬+用戶，從未提案）；(7) 💰 P2 新 Affiliate：Castmagic（FlexOffers，100K+ creators，AI podcast轉文章，繁中空白）。預估新增月收入 $1,050-2,950。",
-      "changes": [
-        "搜尋 Grok 4.7 launch September 12 2026 → 確認 Sep 12 00:30 UTC 仍無 xAI 官方 model card/API ID/pricing；P0-STANDBY 維持，Sep 13 早輪繼續監看",
-        "搜尋 Grok Bot enterprise xAI cloud agents → 確認 Sep 3 GA；持久雲端VM架構；企業免費試用兩週（最後幾天）；繁中零評測確認；P1-HIGH 新提案",
-        "搜尋 OmniRoute AI gateway → 確認 45K★ stars（YouTube 影片顯示）；290+ providers；516+ models；90+ 免費；RTK+Caveman 89% token省；OpenClaw 已在支援清單；自用+評測+vs OpenRouter 比較頁三機會確認",
-        "搜尋 Tencent TeamAI CLI GitHub → 確認 GitHub Trending #1 Sep 9，3,097★，v0.23.1，MIT TypeScript，Tencent 官方出品；繁中零教學（Sep 10 YouTube 4 views）確認",
-        "搜尋 Tencent BrowserSkill → 確認 GitHub tencent/BrowserSkill；AI agent 使用真實已登入瀏覽器；CLI + 擴充套件；自用機會確認",
-        "搜尋 Reclaim AI affiliate → 確認 40%/12mo（工作信箱）+ $1/signup bonus；90天cookie；PartnerStack；Dropbox旗下 $40.2M 收購；60萬+用戶；從未提案；P1 Ivan 申請",
-        "搜尋 Castmagic affiliate → 確認 FlexOffers；100K+ creators；AI podcast/錄音→blog/newsletter；繁中空白；佣金待申請確認；P2 Ivan 申請",
-        "搜尋 new AI SaaS affiliate 40-50% recurring → 確認 Reclaim 40%/12mo（Dropbox旗下穩定）；Castmagic FlexOffers（佣金待確認）；Systeme.io 60% LIFETIME 仍最高",
-        "搜尋 Grok Bot review xAI enterprise → 確認 beam.ai + aitoolsreview.co.uk 英文評測存在；繁中零評測機會；$120/seat Cursor Teams 捆綁切入角度",
-        "寫入 topic-ideas.md Round 201 完整段落（9條機會）",
-        "創建 directives/researcher-to-strategist-2026-09-12-round201.md（Grok 4.7 P0-STANDBY + Grok Bot P1-HIGH + OmniRoute + TeamAI + Reclaim + Castmagic）",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog + watchlistStatus"
-      ],
-      "topFindings": [
-        "Grok 4.7 P0-STANDBY T+0（Sep 12 00:30 UTC，xAI 仍無官方 GA，今日繼續監看）",
-        "Grok Bot Enterprise P1-HIGH（Sep 3 GA，持久雲端VM AI 代理，企業免費試用最後幾天，繁中零評測）",
-        "OmniRoute 45K★ P1（自用省費89% token + 評測文 + vs OpenRouter 比較頁，MIT AI Gateway）",
-        "Tencent TeamAI CLI P1（GitHub #1 Sep 9，3.1K★，繁中零教學，MIT TypeScript）",
-        "Reclaim AI P1 新 Affiliate（Dropbox旗下，40%/12mo，從未提案，Ivan 申請）",
-        "Castmagic P2 新 Affiliate（FlexOffers，100K+ creators，繁中空白）",
-        "Tencent BrowserSkill P1（AI agent 真實瀏覽器控制，自用機會）"
-      ],
-      "watchlistStatus": {
-        "grok47": "⏳ P0-STANDBY T+0（Sep 12 00:30 UTC，xAI 仍無官方 GA，繼續監看至 Sep 13 早輪）",
-        "grokBotEnterprise": "🔴 P1-HIGH 新（Sep 3 GA，企業免費試用最後幾天，繁中零評測，blog/grok-bot-enterprise-ai-agent-review-2026.html 下輪執行）",
-        "omniRoute": "🟡 P1 新（45K★ MIT AI Gateway，RTK+Caveman 89% token省，自用+評測+vs OpenRouter 比較頁三機會）",
-        "teamaiCli": "🟡 P1 新（GitHub #1 Sep 9，3.1K★，Tencent，繁中零教學，MIT TypeScript）",
-        "browserSkill": "🟡 P1 新（Tencent/BrowserSkill，AI agent 真實瀏覽器，自用機會）",
-        "reclaimAi": "🔴 P1 新 Affiliate（Dropbox旗下，40%/12mo，$1/signup bonus，90天cookie，從未提案，Ivan申請 reclaim.ai/affiliate-program）",
-        "castmagic": "🟡 P2 新 Affiliate（FlexOffers，100K+ creators，佣金待確認，Ivan申請）",
-        "hydraFusion": "🔴 P1-HIGH carryover（R200 已發指令，seo-writer 待執行）",
-        "headroom": "🔴 P1-HIGH carryover（69K★ MCP Server，現有文章更新）",
-        "mastraTypescript": "🔴 P1-HIGH carryover（R199/R200 積壓，27.9K★，seo-writer 待執行）",
-        "openaiDevDay": "📅 T-17天（文章已有，Sep 22 更新，Sep 29 Live，Sep 30 改版）",
-        "githubUniverse": "🟡 P1 排隊（Oct 28-29 SF，T-46天，Oct 1 發文窗口）",
-        "adCasaOs": "🔴 P1 carryover（$400/sale + $80/月 LIFETIME，Ivan 申請 adcasa.io/partner）",
-        "joiinAffiliate": "🔴 P1 carryover（40-50%/12mo，Ivan 申請 joiin.co/affiliate）",
-        "skool40": "🔴 P1-HIGH affiliate carryover（40% LIFETIME，Ivan 積壓）",
-        "manychat50": "🔴 P1-HIGH affiliate carryover（50% recurring 120天，Ivan 積壓）",
-        "adcreativeAi": "🔴 P1-HIGH affiliate carryover（30-40% LIFETIME，Ivan 積壓）",
-        "museSpark13": "🔴 P1-HIGH carryover（9/2 GA，繁中零評測）",
-        "nanochat57k": "🔴 P1-HIGH carryover（57.3K★，繁中零教學，常青）"
-      },
-      "newAffiliatesFound": [
-        {
-          "name": "Reclaim AI（Dropbox旗下）",
-          "commission": "40% recurring/12mo（工作信箱） + $1/signup bonus；25%（個人信箱）",
-          "cookie": "90 天",
-          "platform": "PartnerStack",
-          "pricing": "免費 ～ 企業版（具體定價 reclaim.ai/pricing）",
-          "url": "reclaim.ai/affiliate-program",
-          "priority": "P1（首次提案，Dropbox 旗下穩定，60萬+用戶基礎）",
-          "monthlyEst": "$200-600",
-          "note": "Round 201 新提案，從未提案給 Ivan，Dropbox 旗下（$40.2M 收購），G2 4.8/5，繁中評測空白"
-        },
-        {
-          "name": "Castmagic",
-          "commission": "待確認（FlexOffers 申請後查看）",
-          "cookie": "待確認",
-          "platform": "FlexOffers",
-          "pricing": "待確認",
-          "url": "flexoffers.com/social/castmagic-affiliate-program",
-          "priority": "P2（首次提案，佣金率待確認後再決定優先級）",
-          "monthlyEst": "$150-400",
-          "note": "Round 201 新提案，100K+ creators，AI podcast/錄音→文章，繁中市場空白"
-        }
-      ],
-      "estimatedNewRevenue": "$1,050-2,950/月（Grok 4.7 GA後 $300-900 + Grok Bot 評測 $150-400 + OmniRoute $150-400 + TeamAI $100-250 + Reclaim Ivan後 $200-600 + Castmagic 待確認 $150-400）"
-    },
-    {
-      "timestamp": "2026-09-11T22:00:00Z",
-      "agent": "researcher",
-      "task": "ai-dev-research",
-      "round": 200,
-      "status": "completed",
-      "summary": "Round 200 MILESTONE（Sat 22:00 UTC，ai-dev-research cron）— 核心發現：(1) 🔴 P1-HIGH 新：GitHub HydraFusion（Sep 4 研究預覽，多模型 orchestration，Cascade 67% 省費，繁中零評測，直接執行 blog/github-copilot-hydrafusion-review-2026.html）；(2) ⬆️ P1-HIGH 更新：headroomlabs-ai/headroom（69K★ 升級，MCP Server 新模式，20-95% token 節省，現有文章更新 + 自用機會）；(3) 🔴 P1-HIGH 催促：Mastra Harness Channels（Sep 1 GA，LINE/Slack/Discord/WhatsApp，Token Limiting，R199 指令延誤催促）；(4) Grok 4.7 P0-STANDBY T+0（Sep 12 22:00 UTC 仍無官方 GA，繼續監看）；(5) Token 優化市場矩陣（4條跑道：AI Gateway/智慧路由/觀測快取/端點優化，headroom MCP 自用機會）；(6) 🟡 P1 排隊：GitHub Universe 2026（Oct 28-29 SF，T-47天，Oct 1 發文窗口）；(7) GPT-6 Astra Sep 3-4 GA 補充確認（Preparedness Framework Critical 分類）。里程碑：Round 200 累積 213+ 篇文章，4站點，multi-agent 系統持續運行。",
-      "changes": [
-        "搜尋 GitHub trending AI September 2026 → 確認 PH September Top 月榜：Mastra/Kilo Code/Browzer/AI Toolbox/CGI/Widgo/Articos；new wave of AI agent tools early September 2026 報導確認",
-        "搜尋 GitHub HydraFusion multi-model orchestration → 確認 Sep 4 GA；三種執行模式（Single/Cascade/Critique）；67% 省費（相當 Opus 5 品質）；Copilot CLI 研究預覽；YouTube 15,750 views；繁中零評測確認",
-        "搜尋 headroom token optimization 2026 → 確認 69K★（+20K from R195）；v0.27.0；MCP Server 新增（直接 Claude Code 整合）；20% coding agents / 60-95% JSON；自用機會確認",
-        "搜尋 Mastra TypeScript agent September 2026 → 確認 Sep 1 Harness Channels GA（Slack/iMessage/WhatsApp/Discord）；Aug 28 Token Cost Control + Token Limiting；Aug 25 Lazy Skills Loading；27.9K★ 確認",
-        "搜尋 Grok 4.7 September 12 2026 → 確認 Sep 12 22:00 UTC 仍無 xAI 官方 GA 公告；model directory 仍 4.6；P0-STANDBY 維持升溫",
-        "搜尋 new AI token optimization tool September 2026 → 確認 2026 token 優化市場四跑道分析（pointfive.co top-10 + neuraltrust.ai guide + redis.io）；TokenShift 12-21%；MTRouter 58.7%（ACL 2026）；headroom 建議自用",
-        "搜尋 OpenAI DevDay 2026 → 確認 Codex Slack + GPT-Realtime-Mini 70% cheaper 已 GA；DevDay T-18天 Sep 29 Fort Mason 維持；現有文章 Sep 22 更新計畫",
-        "搜尋 GitHub Universe 2026 → 確認 Oct 28-29 San Francisco；flagship developer event；繁中攻略空白；Oct 1 最佳發文窗口",
-        "確認 GPT-6 Astra Sep 3-4 GA（Pro/Enterprise 先行）；Preparedness Framework Critical 分類；DevDay 文章 Sep 22 補充段確認",
-        "創建 directives/researcher-to-strategist-2026-09-11-round200.md（HydraFusion P1-HIGH + headroom 更新 + Mastra 催促 + GitHub Universe 排隊 + token 矩陣自用建議）",
-        "更新 dev-notes.md：Round 200 完整段落",
-        "更新 agent-state.json：lastRun + lastResearchRound + agentLog + watchlistStatus"
-      ],
-      "topFindings": [
-        "GitHub HydraFusion（Sep 4，多模型 orchestration，67% 省費，繁中零評測，P1-HIGH 直接執行）",
-        "headroom 69K★ MCP Server 模式新增（20-95% token 節省，自用機會，現有文章更新）",
-        "Mastra Harness Channels Sep 1 GA（LINE/Slack/Discord，Token Limiting，R199 carryover 催促）",
-        "Grok 4.7 P0-STANDBY T+0（Sep 12 22:00 UTC 仍無 GA，繼續監看）",
-        "Token 優化市場 2026 矩陣（四跑道分析，headroom MCP 自用建議）",
-        "GitHub Universe 2026 Oct 28-29 SF（T-47天，Oct 1 發文窗口，類 DevDay 機會）",
-        "GPT-6 Astra Sep 3-4 GA 補充確認（Preparedness Critical 分類）",
-        "Round 200 里程碑：213+ 篇文章，4 站點，multi-agent 持續運行"
-      ],
-      "watchlistStatus": {
-        "grok47": "⏳ P0-STANDBY T+0（Sep 12 22:00 UTC，仍無官方 GA，Sep 13 繼續監看）",
-        "hydraFusion": "🔴 P1-HIGH 新（Sep 4 研究預覽，多模型 orchestration，67% 省費，繁中零評測，立即執行）",
-        "headroom": "🔴 P1-HIGH 更新（69K★ → MCP Server 新增，20-95% token 節省，現有文章更新 + 自用機會）",
-        "mastraHarness": "🔴 P1-HIGH 催促（Sep 1 Harness Channels，Token Limiting，R199 carryover 延誤）",
-        "githubUniverse": "🟡 P1 排隊（Oct 28-29 SF，T-47天，Oct 1 發文，繁中攻略空白）",
-        "openaiDevDay": "📅 T-18天（文章已有，Sep 22 更新，Sep 29 Live，Sep 30 改版全紀錄）",
-        "tokenOptimization": "🟡 P1 自用（headroom MCP + prompt caching 組合，builder 評估導入）",
-        "deepseekReasonnix": "🟡 P1 carryover（34.6K★，Harness vs Reasonix 比較機會）",
-        "museSpark13": "🔴 P1-HIGH carryover（9/2 GA，25% fewer tokens，繁中零評測）",
-        "nanochat57k": "🔴 P1-HIGH carryover（57.3K★，繁中零教學，常青）",
-        "claudeOpusVersionComparison": "🟡 P2 常青",
-        "adcreativeAi": "🔴 P1-HIGH affiliate carryover（30-40% LIFETIME，Ivan 積壓）",
-        "skool40": "🔴 P1-HIGH affiliate carryover（40% LIFETIME，Ivan 積壓）",
-        "manychat50": "🔴 P1-HIGH affiliate carryover（50% recurring，Ivan 積壓）",
-        "claudeFable51": "✅ 文章已存在（claude-fable-5-1-review-2026.html）",
-        "gptAstra": "📍 Sep 3-4 GA 確認（Preparedness Critical，DevDay 文章 Sep 22 補充）"
-      },
-      "milestone": {
-        "round": 200,
-        "summary": "Round 200 達到！累積 213+ 篇文章，4 站點，multi-agent 自主運維持續。下一目標 Round 250（約 7 週後），月收入目標 $2,000+"
-      },
-      "estimatedNewRevenue": "$150-700/月（HydraFusion 評測 $80-250 + Mastra 教學 $100-300 + headroom 更新 $50-200 + GitHub Universe 排隊 $80-200）"
-    },
-    {
-      "timestamp": "2026-09-11T12:00:00Z",
-      "agent": "strategist",
-      "task": "income-ideation",
-      "status": "completed",
-      "summary": "Fri 12:00 UTC income-ideation weekly cron — 執行本輪新提案腦暴。研究發現：(1) Mastra 27.9K★ TypeScript Agent Framework（Sep 10 最新更新，PH September Top，Harness Channels 9/1 GA，繁中零教學，立即執行）；(2) adCasa OS 聯盟（業界最高 CPA：00/sale + 0/月 lifetime compute，database-locked 永久歸因，無 cookie 過期，Ivan 申請）；(3) Joiin 財務合併 AI affiliate（40-50%/12mo，Joiin Intelligence 4/1/2026 GA，繁中完全空白，Ivan 申請）；(4) Logome.ai 聯盟（50% one-time，PartnerStack 快審，嵌入現有設計工具比較頁）；(5) OpenAI DevDay T-18天具體計畫（Codex Slack 整合 + GPT-Realtime-Mini 70% 更便宜已確認，Sep 22 更新 + Sep 30 全紀錄改版）。發出 strategist-weekly-2026-09-11.md 指令。預估本輪新增月收入 ,550-4,100（含 Grok 4.7 GA + Mastra 教學 + adCasa/Joiin Ivan 批准後）。",
-      "changes": [
-        "搜尋 Mastra TypeScript Agent Framework 2026 → 確認 27.9K★（Sep 10 最新），Harness Channels 9/1 GA，300K+ npm/週，PH September Top，繁中零教學，直接列為 P1-HIGH seo-writer 執行",
-        "搜尋 AI SaaS affiliate 40% 50% recurring September 2026 → 新發現 adCasa OS（00/sale + 0/mo lifetime compute，database-locked，Stripe 每週付，業界已知最高 CPA）",
-        "搜尋 adCasa OS affiliate → 確認 adcasa.io/partner；50% upfront + 10% lifetime compute；00+avg per sale；Zero cookie expiration；P1 新提案給 Ivan",
-        "搜尋 Joiin financial reporting affiliate 2026 → 確認 40-50%/12mo；50 avg account；90-day cookie；joiin.co/affiliate；Joiin Intelligence 4/1/2026 AI 報表代理 GA；繁中零評測",
-        "搜尋 Logome.ai affiliate 50% → 確認 PartnerStack 50% one-time；30-day cookie；manual review 1-5天；快審適合補提案",
-        "搜尋 OpenAI DevDay September 2026 announcements → 確認 Codex Slack 整合 GA；GPT-Realtime-Mini 70% cheaper；ChatGPT 內建 Apps API；Sep 29 Fort Mason；現有文章 Sep 22 + Sep 30 兩輪更新計畫制定",
-        "搜尋 Product Hunt trending September 2026 → 確認 Mastra PH September Top；Monid/Browzer/AI Toolbox/CGI 也在榜（已有或下輪處理）",
-        "確認 GPT-6 Astra Sep 3-4 已 GA（Pro/Enterprise 先行）→ 現有文章需在 DevDay 前補 Astra 對 GPT-6 影響分析段",
-        "創建 directives/strategist-weekly-2026-09-11.md（新提案 A/B/C + 全積壓清單更新 + 下週任務指令）",
-        "更新 agent-state.json：lastStrategistRun + agentLog + newAssetProposals（R199-A Mastra + R199-B adCasa + R199-C Joiin）"
-      ],
-      "topFindings": [
-        "Mastra 27.9K★ TypeScript Agent Framework（繁中零教學，P1-HIGH 立即執行，不需 Ivan）",
-        "adCasa OS 業界最高 CPA affiliate（00/sale + 0/月 lifetime，P1 Ivan 申請）",
-        "Joiin 40-50%/12mo 財務合併 AI affiliate（繁中空白，P1 Ivan 申請）",
-        "Logome.ai 50% one-time PartnerStack 快審（P2 補提案）",
-        "OpenAI DevDay 已確認功能：Codex Slack + GPT-Realtime-Mini + ChatGPT Apps API（T-18天）",
-        "GPT-6 Astra Sep 3 GA（Pro/Enterprise），DevDay 文章需更新確認功能段"
-      ],
-      "newProposals": [
-        "R199-A: Mastra TypeScript教學",
-        "R199-B: adCasa OS聯盟",
-        "R199-C: Joiin聯盟"
-      ],
-      "estimatedNewRevenue": ",550-4,100/月（Mastra 教學 50-500 + adCasa Ivan後 00-1,600 + Joiin Ivan後 00-500 + Logome 00-300 + DevDay高峰 00-400 + Grok 4.7 GA 00-800）"
-    },
-    {
-      "timestamp": "2026-09-11T03:00:00Z",
-      "agent": "seo-writer",
-      "task": "article-publish",
-      "status": "completed",
-      "summary": "Fri 03:00 UTC cron — R199 directive P1-HIGH 兩篇執行：(1) DeepSeek Harness 完整教學（繁中首發，~2,600字，R198+R199 carryover P1-HIGH，165K★ MIT TypeScript 插件框架）+ (2) SandboxAQ Switch AI Agent 教學（繁中首發，~2,500字，R199 P1-HIGH，PH 8/26 日榜 #1，10 分鐘部署 Claude Code 進 Slack/Teams）。DeepSeek Harness 文章：核心角度「插件式 Coding Agent 框架，把 Claude Code 當 sub-agent，多模型路由省 60-75% API 費用」，含 Cordis 架構解析、5步驟安裝、Claude Code sub-agent 路由配置、vs LangChain/Dify/CrewAI 5欄比較表、台灣四大實戰場景（Laravel 安全稽核/Node.js N+1優化/Python ETL重構/Go 測試覆蓋率）、費用計算表、FAQ 6題。SandboxAQ Switch 文章：核心角度「10 分鐘讓 AI Agent 常駐 Slack/Teams，不需寫 Bot 後端」，含 SandboxAQ 背景（Google/Alphabet 旗下）、4 平台支援說明、vs 原生 Bot/n8n 比較、Slack 5步驟完整教學、Teams 部署、Claude Code PR Review 進階設定、台灣企業四大場景（PR Review 自動化/Teams ERP 問答/Discord 技術問答/Telegram 多語言）、Apache 2.0 + Commons Clause 授權說明、FAQ 6題。兩篇均含 DigitalOcean + DataCamp 漸層按鈕 CTA（Switch 文另加 Systeme.io）。blog/index.html 新增兩張卡片排第一位（211→213篇）。sitemap.xml 新增兩個 URL（priority 0.9）。",
-      "changes": [
-        "新增 blog/deepseek-harness-complete-guide-2026.html（~2,600字繁中首發，165K★ TypeScript Coding Agent 框架完整教學）",
-        "新增 blog/sandboxaq-switch-ai-agent-slack-teams-tutorial-2026.html（~2,500字繁中首發，PH 8/26 #1 AI Agent Slack/Teams 部署教學）",
-        "blog/index.html：新增 SandboxAQ Switch + DeepSeek Harness 兩張卡片（排第一位），211→213篇",
-        "sitemap.xml：新增兩個 URL（lastmod 2026-09-11，priority 0.9）",
-        "agent-state.json：更新 lastRun + agentLog"
-      ],
-      "articlesPublished": [
-        {
-          "file": "blog/deepseek-harness-complete-guide-2026.html",
-          "title": "DeepSeek Harness 完整教學 2026：165K★ 插件式 Coding Agent，把 Claude Code 當子 Agent，繁中首發",
-          "wordCount": "~2,600 字",
-          "affiliateLinks": [
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "DataCamp afflink.one/s/aavAC"
-          ],
-          "seoKeywords": [
-            "deepseek harness 教學",
-            "deepseek harness 繁中",
-            "coding agent framework 2026",
-            "claude code sub-agent",
-            "deepseek harness vs langchain",
-            "cordis deepseek agent",
-            "harness engineering python"
-          ],
-          "publishReason": "R198+R199 P1-HIGH 兩輪積壓執行（165K★，8天超越 LangChain 歷史累積，MIT TypeScript，繁中零教學）",
-          "estimatedTraffic": "1K-3.5K/月",
-          "estimatedRevenue": "$100-350/月（間接 DigitalOcean + DataCamp）"
-        },
-        {
-          "file": "blog/sandboxaq-switch-ai-agent-slack-teams-tutorial-2026.html",
-          "title": "SandboxAQ Switch 完整教學 2026：10 分鐘讓 Claude Code 住進 Slack／Teams，繁中首發",
-          "wordCount": "~2,500 字",
-          "affiliateLinks": [
-            "DigitalOcean m.do.co/c/6121a295f624",
-            "DataCamp afflink.one/s/aavAC",
-            "Systeme.io systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f"
-          ],
-          "seoKeywords": [
-            "sandboxaq switch 教學",
-            "ai agent slack 整合 2026",
-            "switch ai agent teams discord",
-            "claude code slack bot 教學",
-            "sandboxaq switch 繁中",
-            "ai agent slack 台灣"
-          ],
-          "publishReason": "R199 P1-HIGH 新（PH 8/26 日榜 #1，Google/Alphabet SandboxAQ，繁中報導幾乎為零，Claude Code/LangChain/ADK 全支援）",
-          "estimatedTraffic": "0.8K-2.5K/月",
-          "estimatedRevenue": "$80-300/月（間接 DigitalOcean + DataCamp + Systeme.io）"
-        }
-      ],
-      "nextActions": [
-        "P0-STANDBY 維持：Grok 4.7 API GA（今日 Sep 12 可能觸發）→ researcher 確認後立即觸發 blog/grok-47-complete-review-2026.html + blog/grok-47-vs-claude-fable-51-comparison-2026.html",
-        "P1-HIGH 下輪：blog/deepseek-harness-vs-reasonix-comparison-2026.html（Harness vs Reasonix 比較文，34.6K★，prompt caching 角度）",
-        "P1-HIGH 下輪：blog/openai-devday-2026-preview.html Sep 22 更新（T-7天加入最新議程資訊）",
-        "P1（Ivan 批准後）：leadpages-review-2026.html（40-50% LIFETIME，R199 新提案）",
-        "P1（Ivan 批准後）：blog/ai-humanizer-review-2026.html（Undetectable.ai 30% LIFETIME）"
-      ]
-    },
-    {
-      "timestamp": "2026-09-20T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "summary": "Sun 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；兩個 GitHub Pages fallback 200✓。本輪無新站點故障、無需站內修復，延續既有 builder DNS/deprecation directive。",
-      "changes": [
-        "重新檢查 8 個站點/URL：autodev-ai.com、autodev-ai.com/sitemap.xml、ai-tools.pro、ai-tools.pro/sitemap.xml、ai-tools.tw、en.ai-tools.tw、兩個 GitHub Pages fallback",
-        "更新 agent-state.json 的 siteHealth 各站 lastChecked/status/issue 與全域 lastSiteHealthSummary",
-        "確認無新故障；ai-tools.tw / en.ai-tools.tw 仍為既有 DNS 問題，無可在 repo 內直接修復的內容"
-      ],
-      "results": {
-        "ok": [
-          "autodev-ai.com",
-          "autodev-ai.com/sitemap.xml",
-          "ai-tools.pro",
-          "ai-tools.pro/sitemap.xml",
-          "pink1119zz.github.io/ai-tools-tw",
-          "pink1119zz.github.io/ai-tools-en"
-        ],
-        "failed": [
-          "ai-tools.tw (DNS resolution failed)",
-          "en.ai-tools.tw (DNS resolution failed)"
-        ]
-      },
-      "nextActions": [
-        "持續觀察 ai-tools.tw / en.ai-tools.tw DNS 狀態",
-        "若 canonical domain 決策完成或 DNS 恢復，再移除 GitHub Pages fallback 依賴/相關 directive"
-      ]
-    },
-    {
-      "timestamp": "2026-09-20T13:00:00Z",
-      "agent": "content-ops",
-      "task": "fb-weekly-review",
-      "status": "completed",
-      "summary": "Sun 13:00 UTC fb-weekly-review — 依任務嘗試用 Graph API 拉本週 post insights，但 v23.0 + 現有 page token 仍直接回 (#100) valid insights metric；followers_count / fan_count 也持續為 0，因此官方觸及、互動、點擊依舊不可用。本週改沿用公開互動 fallback：40 則貼文中，12:00 原生摘要主貼 8/8 全有留言，04:00 外鏈貼 32/32 全 0 互動。已更新 fbStrategy.performance.lastWeeklyRaw / weeklyReviews / winPatterns / failPatterns / autoDevAIStrategy.postRules，將『12:00 UTC 原生摘要主貼』進一步固化為唯一常規 SOP。",
-      "changes": [
-        "嘗試 Graph API /{page_id}/posts?fields=...insights.metric(post_impressions,post_engaged_users,post_clicks) → 仍回 (#100) valid insights metric",
-        "抓取本週 2026-09-13~2026-09-20 所有貼文公開訊號（likes/comments/shares）作 fallback 分析",
-        "更新 fbStrategy.performance.lastWeeklyRaw（40 posts）",
-        "新增 weeklyReviews 週報：2026-09-13_to_2026-09-20",
-        "新增 winPatterns / failPatterns / autoDevAIStrategy.postRules 各 1-2 條",
-        "追加 issues 記錄本週 Graph API 失敗與 32/32 清晨外鏈貼全滅"
-      ],
-      "results": {
-        "postsTotal": 40,
-        "middayNative": 8,
-        "middayNativeWithComments": 8,
-        "link0400": 32,
-        "link0400WithComments": 0,
-        "graphApiInsights": "failed_code_100",
-        "followersCount": 0,
-        "fanCount": 0
-      },
-      "telegramSummary": "請推送到本 Telegram 對話：本週 FB 週報完成。Graph API insights 仍失敗（#100），故改用公開互動 fallback；12:00 原生摘要主貼 8/8 有留言，04:00 外鏈貼 32/32 全 0，已正式固化為唯一常規 SOP。"
-    },
-    {
-      "timestamp": "2026-09-21T00:00:00Z",
-      "agent": "content-ops",
-      "task": "site-health",
-      "status": "completed",
-      "summary": "Mon 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓；ai-tools.tw / en.ai-tools.tw 仍 DNS FAIL；兩個 GitHub Pages fallback 200✓。本輪無新站點故障、無需站內修復，延續既有 builder DNS/deprecation directive。",
-      "changes": [
-        "重新檢查 8 個站點/URL：autodev-ai.com、autodev-ai.com/sitemap.xml、ai-tools.pro、ai-tools.pro/sitemap.xml、ai-tools.tw、en.ai-tools.tw、兩個 GitHub Pages fallback",
-        "更新 agent-state.json 的 siteHealth 各站 lastChecked/status/issue 與全域 lastSiteHealthSummary",
-        "確認無新故障；ai-tools.tw / en.ai-tools.tw 仍為既有 DNS 問題，無可在 repo 內直接修復的內容"
-      ],
-      "results": {
-        "ok": [
-          "autodev-ai.com",
-          "autodev-ai.com/sitemap.xml",
-          "ai-tools.pro",
-          "ai-tools.pro/sitemap.xml",
-          "pink1119zz.github.io/ai-tools-tw",
-          "pink1119zz.github.io/ai-tools-en"
-        ],
-        "failed": [
-          "ai-tools.tw (DNS resolution failed)",
-          "en.ai-tools.tw (DNS resolution failed)"
-        ]
-      },
-      "nextActions": [
-        "持續觀察 ai-tools.tw / en.ai-tools.tw DNS 狀態",
-        "若 canonical domain 決策完成或 DNS 恢復，再移除 GitHub Pages fallback 依賴/相關 directive"
       ]
     }
   ],
