@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grok 4.7 完整評測 2026：2.1T 參數、Intelligence Index #4，xAI 最強模型繁中首發</title>
+  <meta name="description" content="Grok 4.7 完整繁中評測 2026。xAI 2026-09-21 正式發布，2.1T 參數（+40% vs 4.6），$2/$6 per MTok，Intelligence Index #4 全球（46分），電工/法律 benchmark 第一，500K context，與 Claude Fable 5.1、GPT-6 Astra 完整比較 + API 接入教學。">
+  <meta name="keywords" content="grok 4.7 評測, grok 4.7 繁中, xai grok 4.7, grok 4.7 api, grok 4.7 benchmark, grok 4.7 vs claude, grok 4.7 2026, grok intelligence index, xai 2026">
+  <meta name="author" content="AutoDev AI">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://autodev-ai.com/blog/grok-47-complete-review-2026.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Grok 4.7 完整評測 2026：2.1T 參數、Intelligence Index #4，繁中首發">
+  <meta property="og:description" content="xAI Grok 4.7 完整繁中評測。2.1T 參數，Intelligence #4 全球（超越 GPT-5.6 Sol），電工/法律 benchmark 第一，$2/$6 per MTok 定價完整解析。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/grok-47-complete-review-2026.html">
+  <meta property="og:site_name" content="AutoDev AI">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grok 4.7 完整評測 2026：2.1T 參數、Intelligence Index #4，繁中首發">
+  <meta name="twitter:description" content="xAI Grok 4.7 完整繁中評測。2.1T 參數，$2/$6 per MTok，500K context，電工/法律 benchmark 第一。">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Grok 4.7 完整評測 2026：2.1T 參數、Intelligence Index #4，xAI 最強模型繁中首發",
+    "description": "Grok 4.7 完整繁中評測，xAI 9/21 發布，2.1T 參數，Intelligence Index #4 全球，$2/$6 per MTok，與 Claude Fable 5.1、GPT-6 Astra 完整比較。",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+    "datePublished": "2026-09-22",
+    "dateModified": "2026-09-22",
+    "mainEntityOfPage": "https://autodev-ai.com/blog/grok-47-complete-review-2026.html",
+    "keywords": ["grok 4.7", "xai", "grok 評測", "ai 模型比較", "grok api 教學"]
+  }
+  </script>
+
+  <!-- FAQ JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Grok 4.7 和 Grok 4.6 有什麼差別？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grok 4.7 參數量從 Grok 4.6 提升 40% 至 2.1T，Intelligence Index 從 #6 躍升至 #4 全球，在電工與法律 benchmark 奪得第一名，推理能力大幅提升，且保持相同的 $2/$6 per MTok 定價。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Grok 4.7 的定價是多少？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grok 4.7 輸入 $2/MTok（快取 $0.50/MTok）、輸出 $6/MTok，與 Grok 4.6 相同定價，500K context window，性價比顯著提升。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Grok 4.7 和 Claude Fable 5.1 哪個更好？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "整體而言 Claude Fable 5.1 和 GPT-6 Astra 並列 #1-2，Grok 4.7 居 #4。但在電工（Electrical Engineering）和法律（Legal）benchmark，Grok 4.7 是全球第一。若你的任務偏向工程/法律推理，Grok 4.7 是目前最強選項。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Grok 4.7 API 如何接入？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grok 4.7 使用 xAI API，模型 ID 為 grok-4.7，base URL 為 https://api.x.ai/v1，完全兼容 OpenAI SDK，只需更換 API key 和 base_url 即可使用。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Grok 4.7 有哪些限制？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grok 4.7 的主要弱項在純程式碼（Pure Coding）benchmark，被 Claude Fable 5.1 和 GPT-6 Astra 明顯超越。此外目前 Grok Voice Transcribe 2.0 雖然同日發布，但語音整合需要分開 API 呼叫。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "台灣開發者可以直接使用 Grok 4.7 API 嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "是的，xAI API 支援台灣地區，透過 api.x.ai 直接申請 API key，支援信用卡付款，無需 VPN，接入方式與 OpenAI API 幾乎相同。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #0a0e1a; color: #e2e8f0; line-height: 1.7; }
+    a { color: #60a5fa; text-decoration: none; }
+    a:hover { color: #93c5fd; text-decoration: underline; }
+
+    /* NAV */
+    nav { background: rgba(10,14,26,0.95); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+    .nav-logo { font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: #94a3b8; font-size: 0.9rem; }
+    .nav-links a:hover { color: #e2e8f0; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #0a0e1a 0%, #1a0a2e 40%, #0d1b3e 100%); padding: 3rem 2rem 2rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .hero-badge { display: inline-block; background: rgba(239,68,68,0.2); border: 1px solid rgba(239,68,68,0.4); color: #fca5a5; border-radius: 20px; padding: 0.3rem 1rem; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: 0.05em; }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; line-height: 1.3; max-width: 900px; margin: 0 auto 1rem; }
+    .hero h1 span { background: linear-gradient(135deg, #f59e0b, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-meta { color: #64748b; font-size: 0.85rem; margin-top: 1rem; }
+    .hero-meta span { margin: 0 0.5rem; }
+
+    /* TLDR */
+    .tldr { background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(245,158,11,0.08)); border: 1px solid rgba(239,68,68,0.3); border-radius: 12px; padding: 1.5rem; max-width: 900px; margin: 2rem auto; }
+    .tldr h3 { color: #fca5a5; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .tldr ul { padding-left: 1.2rem; }
+    .tldr li { color: #e2e8f0; margin-bottom: 0.4rem; font-size: 0.95rem; }
+
+    /* MAIN */
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+    h2 { font-size: 1.5rem; font-weight: 700; color: #f1f5f9; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(96,165,250,0.3); }
+    h3 { font-size: 1.15rem; font-weight: 600; color: #cbd5e1; margin: 1.5rem 0 0.75rem; }
+    p { margin-bottom: 1rem; color: #cbd5e1; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; color: #cbd5e1; }
+    strong { color: #f1f5f9; }
+
+    /* SPEC CARDS */
+    .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .spec-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1rem; text-align: center; }
+    .spec-card .label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+    .spec-card .value { font-size: 1.3rem; font-weight: 700; color: #f59e0b; }
+    .spec-card .note { font-size: 0.75rem; color: #94a3b8; margin-top: 0.3rem; }
+
+    /* HIGHLIGHT BOX */
+    .highlight { background: rgba(245,158,11,0.08); border-left: 4px solid #f59e0b; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+    .highlight p { margin: 0; color: #fde68a; }
+    .info-box { background: rgba(96,165,250,0.08); border-left: 4px solid #60a5fa; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+    .info-box p { margin: 0; color: #bfdbfe; }
+    .warning-box { background: rgba(239,68,68,0.08); border-left: 4px solid #ef4444; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+    .warning-box p { margin: 0; color: #fca5a5; }
+
+    /* TABLE */
+    .table-wrap { overflow-x: auto; margin: 1.5rem 0; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); }
+    table { width: 100%; border-collapse: collapse; min-width: 600px; }
+    thead { background: rgba(255,255,255,0.06); }
+    th { padding: 0.85rem 1rem; text-align: left; font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    td { padding: 0.85rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    tr:last-child td { border-bottom: none; }
+    .winner { color: #4ade80; font-weight: 600; }
+    .second { color: #60a5fa; }
+    .third { color: #f59e0b; }
+
+    /* CODE */
+    pre { background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.25rem; overflow-x: auto; margin: 1.5rem 0; font-size: 0.85rem; line-height: 1.6; }
+    code { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+    .code-label { display: inline-block; background: rgba(96,165,250,0.2); color: #93c5fd; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.5rem; }
+
+    /* RANKING */
+    .ranking-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; margin: 0.75rem 0; display: flex; align-items: center; gap: 1rem; }
+    .rank-badge { min-width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; }
+    .rank-1 { background: linear-gradient(135deg, #ffd700, #f59e0b); color: #1a1a1a; }
+    .rank-2 { background: linear-gradient(135deg, #e2e8f0, #94a3b8); color: #1a1a1a; }
+    .rank-3 { background: linear-gradient(135deg, #cd7f32, #92400e); color: #fff; }
+    .rank-4 { background: linear-gradient(135deg, #ef4444, #b91c1c); color: #fff; }
+    .rank-info h4 { color: #f1f5f9; font-size: 1rem; margin-bottom: 0.2rem; }
+    .rank-info p { color: #64748b; font-size: 0.85rem; margin: 0; }
+
+    /* SCENARIO CARDS */
+    .scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .scenario-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; }
+    .scenario-card .icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .scenario-card h4 { color: #e2e8f0; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .scenario-card p { font-size: 0.85rem; color: #94a3b8; margin: 0; }
+
+    /* CTA */
+    .cta-box { background: linear-gradient(135deg, rgba(96,165,250,0.12), rgba(167,139,250,0.08)); border: 1px solid rgba(96,165,250,0.3); border-radius: 16px; padding: 2rem; text-align: center; margin: 2.5rem 0; }
+    .cta-box h3 { color: #f1f5f9; font-size: 1.2rem; margin-bottom: 0.75rem; }
+    .cta-box p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.25rem; }
+    .btn { display: inline-block; padding: 0.75rem 2rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; transition: all 0.2s; margin: 0.4rem; }
+    .btn-primary { background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; box-shadow: 0 4px 14px rgba(59,130,246,0.35); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59,130,246,0.5); color: white; text-decoration: none; }
+    .btn-secondary { background: rgba(255,255,255,0.07); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.15); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.12); color: #e2e8f0; text-decoration: none; }
+    .btn-green { background: linear-gradient(135deg, #059669, #047857); color: white; box-shadow: 0 4px 14px rgba(5,150,105,0.35); }
+    .btn-green:hover { transform: translateY(-2px); color: white; text-decoration: none; }
+    .btn-orange { background: linear-gradient(135deg, #f59e0b, #d97706); color: #1a1a1a; box-shadow: 0 4px 14px rgba(245,158,11,0.35); }
+    .btn-orange:hover { transform: translateY(-2px); color: #1a1a1a; text-decoration: none; }
+
+    /* FAQ */
+    .faq-item { border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; margin-bottom: 0.75rem; overflow: hidden; }
+    .faq-q { background: rgba(255,255,255,0.04); padding: 1rem 1.25rem; font-weight: 600; color: #e2e8f0; cursor: pointer; font-size: 0.95rem; }
+    .faq-a { padding: 1rem 1.25rem; color: #94a3b8; font-size: 0.9rem; background: rgba(0,0,0,0.2); }
+
+    /* BREADCRUMB */
+    .breadcrumb { font-size: 0.8rem; color: #64748b; padding: 0.75rem 0; }
+    .breadcrumb a { color: #64748b; }
+    .breadcrumb span { margin: 0 0.4rem; }
+
+    /* FOOTER */
+    footer { background: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.07); padding: 2rem; text-align: center; color: #475569; font-size: 0.85rem; margin-top: 4rem; }
+    footer a { color: #64748b; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero { padding: 2rem 1rem 1.5rem; }
+      .container { padding: 1rem; }
+      h2 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">🤖 AutoDev AI</a>
+  <div class="nav-links">
+    <a href="/blog/">部落格</a>
+    <a href="/tools/">工具</a>
+    <a href="/#affiliate">聯盟計畫</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">🚨 繁中首發 · 2026-09-22 最新</div>
+  <h1>Grok 4.7 完整評測 2026：<span>2.1T 參數、Intelligence Index #4</span>，xAI 再度改寫 AI 版圖</h1>
+  <div class="hero-meta">
+    <span>📅 2026-09-22</span>
+    <span>·</span>
+    <span>⏱ 閱讀約 10 分鐘</span>
+    <span>·</span>
+    <span>🔥 xAI 剛正式 GA</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">首頁</a><span>›</span>
+    <a href="/blog/">部落格</a><span>›</span>
+    Grok 4.7 完整評測 2026
+  </div>
+
+  <div class="tldr">
+    <h3>⚡ 30 秒 TL;DR</h3>
+    <ul>
+      <li><strong>Grok 4.7 於 2026-09-21 正式 GA</strong>，參數量 2.1T（+40% vs 4.6），全球智慧排行 #4</li>
+      <li><strong>電工 & 法律 benchmark 全球第一</strong>，3/7 個 benchmark 奪冠（Intelligence Index 46分）</li>
+      <li><strong>定價不變</strong>：$2 輸入 / $6 輸出（per MTok），快取版 $0.50/MTok，同日 Grok Voice Transcribe 2.0 發布</li>
+      <li><strong>弱項</strong>：純程式碼（Pure Coding）落後 Claude Fable 5.1 & GPT-6 Astra</li>
+      <li><strong>台灣開發者可直接使用</strong>，API 完全兼容 OpenAI SDK，10 分鐘接入</li>
+    </ul>
+  </div>
+
+  <!-- SPEC CARDS -->
+  <div class="spec-grid">
+    <div class="spec-card">
+      <div class="label">參數量</div>
+      <div class="value">2.1T</div>
+      <div class="note">+40% vs Grok 4.6</div>
+    </div>
+    <div class="spec-card">
+      <div class="label">Intelligence Index</div>
+      <div class="value">#4 全球</div>
+      <div class="note">46 分（Artificial Analysis）</div>
+    </div>
+    <div class="spec-card">
+      <div class="label">輸入定價</div>
+      <div class="value">$2/MTok</div>
+      <div class="note">快取 $0.50/MTok</div>
+    </div>
+    <div class="spec-card">
+      <div class="label">輸出定價</div>
+      <div class="value">$6/MTok</div>
+      <div class="note">與 Grok 4.6 相同</div>
+    </div>
+    <div class="spec-card">
+      <div class="label">Context Window</div>
+      <div class="value">500K</div>
+      <div class="note">業界最大之一</div>
+    </div>
+    <div class="spec-card">
+      <div class="label">發布日期</div>
+      <div class="value">2026-09-21</div>
+      <div class="note">xAI 官方 GA</div>
+    </div>
+  </div>
+
+  <h2>Grok 4.7 是什麼？為什麼重要？</h2>
+
+  <p>2026 年 9 月 21 日，xAI 正式發布 Grok 4.7，這是繼 Grok 4.6（2026 年 8 月）之後最快的一次大版本跳躍。相比 Grok 4.6 的 1.5T 參數，Grok 4.7 直接跳升至 <strong>2.1T 參數（+40%）</strong>，在 Artificial Analysis 的 Intelligence Index 達到 46 分，全球排名 <strong>#4</strong>，超越了 GPT-5.6 Sol，僅次於 Claude Fable 5.1、GPT-6 Astra 和 DeepSeek V4 Ultra。</p>
+
+  <div class="highlight">
+    <p>💡 <strong>重要背景</strong>：xAI 最初規劃的 Grok 4.7 是「Grok 4.8 的過渡版本」，但實際測試結果遠超預期——三個 benchmark 奪下全球第一，特別是在電工和法律推理領域，Grok 4.7 已經超越了所有現有競爭對手。</p>
+  </div>
+
+  <p>對台灣開發者來說，Grok 4.7 的最大意義在於：<strong>如果你的應用場景涉及工程計算、法律文件分析、技術規格解讀，Grok 4.7 現在是性價比最高的選擇</strong>——相同的 $2/$6 定價，但推理能力大幅提升。</p>
+
+  <h2>全球 AI 模型排行榜（2026年9月）</h2>
+
+  <div class="ranking-card">
+    <div class="rank-badge rank-1">1</div>
+    <div class="rank-info">
+      <h4>Claude Fable 5.1（Anthropic）</h4>
+      <p>綜合推理 #1，程式碼/創意/分析全面強勁，業界最廣泛使用</p>
+    </div>
+  </div>
+  <div class="ranking-card">
+    <div class="rank-badge rank-2">2</div>
+    <div class="rank-info">
+      <h4>GPT-6 Astra（OpenAI）</h4>
+      <p>Claude Fable 5.1 同等智慧，但成本低 40%，Sep 9 GA，性價比新王</p>
+    </div>
+  </div>
+  <div class="ranking-card">
+    <div class="rank-badge rank-3">3</div>
+    <div class="rank-info">
+      <h4>DeepSeek V4 Ultra（DeepSeek）</h4>
+      <p>開源陣營最強，中文理解頂尖，STEM benchmark 維持 #2-3</p>
+    </div>
+  </div>
+  <div class="ranking-card">
+    <div class="rank-badge rank-4">4</div>
+    <div class="rank-info">
+      <h4>🔴 Grok 4.7（xAI）— 今日新上榜</h4>
+      <p>電工/法律 benchmark #1，2.1T 參數，$2/$6 定價，Sep 21 GA</p>
+    </div>
+  </div>
+
+  <h2>Benchmark 深度解析：Grok 4.7 在哪裡贏？</h2>
+
+  <p>根據 Artificial Analysis（2026-09-21 最新數據），Grok 4.7 在 7 個核心 benchmark 中奪得 3 個全球第一：</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Benchmark</th>
+          <th>Grok 4.7</th>
+          <th>Claude Fable 5.1</th>
+          <th>GPT-6 Astra</th>
+          <th>備註</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Intelligence Index</strong></td>
+          <td class="third">46分（#4）</td>
+          <td class="winner">53分（#1）</td>
+          <td class="second">51分（#2）</td>
+          <td>綜合排名</td>
+        </tr>
+        <tr>
+          <td><strong>⚡ Electrical Engineering</strong></td>
+          <td class="winner">92.4%（#1 🏆）</td>
+          <td class="second">89.1%</td>
+          <td class="third">87.6%</td>
+          <td>Grok 全球第一</td>
+        </tr>
+        <tr>
+          <td><strong>⚖️ Legal Reasoning</strong></td>
+          <td class="winner">88.7%（#1 🏆）</td>
+          <td class="second">85.2%</td>
+          <td class="third">83.9%</td>
+          <td>Grok 全球第一</td>
+        </tr>
+        <tr>
+          <td><strong>🔬 GPQA Diamond</strong></td>
+          <td class="winner">79.3%（#1 🏆）</td>
+          <td class="second">78.8%</td>
+          <td class="third">77.2%</td>
+          <td>Grok 全球第一（微差）</td>
+        </tr>
+        <tr>
+          <td><strong>💻 Coding Agent Index</strong></td>
+          <td>61.4%</td>
+          <td class="winner">72.3%（#1）</td>
+          <td class="second">70.1%</td>
+          <td>Grok 弱項</td>
+        </tr>
+        <tr>
+          <td><strong>🧮 Math AIME</strong></td>
+          <td class="second">84.1%</td>
+          <td class="winner">86.7%（#1）</td>
+          <td class="third">83.8%</td>
+          <td>Grok 表現不錯</td>
+        </tr>
+        <tr>
+          <td><strong>✍️ Creative Writing</strong></td>
+          <td>74.2%</td>
+          <td class="winner">81.5%（#1）</td>
+          <td class="second">79.8%</td>
+          <td>Grok 偏弱</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="warning-box">
+    <p>⚠️ <strong>誠實說</strong>：如果你的主要需求是「寫程式」，Grok 4.7 不是最佳選擇。Coding Agent Index 落後 Claude Fable 5.1 超過 10 個百分點。但電工、法律、科學推理這三個領域，Grok 4.7 目前是全球最強。</p>
+  </div>
+
+  <h2>規格與定價詳解</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>規格</th>
+          <th>Grok 4.7</th>
+          <th>Grok 4.6</th>
+          <th>Claude Fable 5.1</th>
+          <th>GPT-6 Astra</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>發布日期</strong></td>
+          <td>2026-09-21</td>
+          <td>2026-08-12</td>
+          <td>2026-07-28</td>
+          <td>2026-09-09</td>
+        </tr>
+        <tr>
+          <td><strong>參數量</strong></td>
+          <td class="winner">2.1T</td>
+          <td>1.5T</td>
+          <td>未公開</td>
+          <td>未公開</td>
+        </tr>
+        <tr>
+          <td><strong>Context Window</strong></td>
+          <td>500K</td>
+          <td>500K</td>
+          <td>400K</td>
+          <td>512K</td>
+        </tr>
+        <tr>
+          <td><strong>輸入定價</strong></td>
+          <td class="winner">$2/MTok</td>
+          <td>$2/MTok</td>
+          <td>$3/MTok</td>
+          <td>$1.25/MTok</td>
+        </tr>
+        <tr>
+          <td><strong>輸出定價</strong></td>
+          <td>$6/MTok</td>
+          <td>$6/MTok</td>
+          <td>$15/MTok</td>
+          <td>$5/MTok</td>
+        </tr>
+        <tr>
+          <td><strong>快取折扣</strong></td>
+          <td>75%（$0.50）</td>
+          <td>75%</td>
+          <td>80%（$0.60）</td>
+          <td>50%</td>
+        </tr>
+        <tr>
+          <td><strong>Intelligence Rank</strong></td>
+          <td class="third">#4</td>
+          <td>#6</td>
+          <td class="winner">#1</td>
+          <td class="second">#2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info-box">
+    <p>💡 <strong>定價亮點</strong>：GPT-6 Astra 的輸入 $1.25/MTok 比 Grok 4.7 便宜 60%，但 Grok 4.7 的輸出 $6/MTok 比 Claude Fable 5.1 的 $15/MTok 便宜 2.5倍。若你的應用是<strong>長輸入、短輸出型</strong>（如文件分析、法律審查），Claude 更貴很多；若是<strong>推理型長輸出</strong>，Grok 4.7 比 Claude 省 60%。</p>
+  </div>
+
+  <h2>Grok 4.7 API 接入教學（10 分鐘上手）</h2>
+
+  <p>Grok 4.7 使用 xAI API，完全兼容 OpenAI SDK，幾乎零遷移成本。</p>
+
+  <h3>步驟一：申請 xAI API Key</h3>
+  <p>前往 <a href="https://console.x.ai/" target="_blank" rel="noopener">console.x.ai</a> 註冊帳號，支援信用卡付款，台灣可直接使用。新用戶通常有免費額度可試用。</p>
+
+  <h3>步驟二：Python 快速整合</h3>
+
+  <div class="code-label">Python（使用 OpenAI SDK）</div>
+  <pre><code>pip install openai</code></pre>
+
+  <pre><code>from openai import OpenAI
+
+# 只需更換 base_url 和 api_key，其他完全相同
+client = OpenAI(
+    api_key="xai-你的-API-KEY",
+    base_url="https://api.x.ai/v1"
+)
+
+response = client.chat.completions.create(
+    model="grok-4.7",
+    messages=[
+        {
+            "role": "system",
+            "content": "你是一位專業的工程顧問，精通電氣工程與法律分析。"
+        },
+        {
+            "role": "user",
+            "content": "請分析以下電路設計的安全合規問題..."
+        }
+    ],
+    max_tokens=2000,
+    temperature=0.1  # 技術分析建議低溫度
+)
+
+print(response.choices[0].message.content)</code></pre>
+
+  <h3>步驟三：Node.js 版本</h3>
+
+  <div class="code-label">Node.js / TypeScript</div>
+  <pre><code>import OpenAI from 'openai';
+
+const client = new OpenAI({
+  apiKey: process.env.XAI_API_KEY,
+  baseURL: 'https://api.x.ai/v1',
+});
+
+async function analyzeDocument(documentText: string) {
+  const response = await client.chat.completions.create({
+    model: 'grok-4.7',
+    messages: [
+      {
+        role: 'system',
+        content: '你是一位台灣法律文件分析專家，請用繁體中文回答。'
+      },
+      {
+        role: 'user',
+        content: `請分析以下合約條款的法律風險：\n\n${documentText}`
+      }
+    ],
+    max_tokens: 3000,
+    temperature: 0.05,
+  });
+
+  return response.choices[0].message.content;
+}
+
+// 使用範例
+const result = await analyzeDocument(contractText);
+console.log(result);</code></pre>
+
+  <h3>步驟四：串流（Streaming）模式</h3>
+
+  <div class="code-label">Python 串流模式（適合長輸出）</div>
+  <pre><code>stream = client.chat.completions.create(
+    model="grok-4.7",
+    messages=[
+        {"role": "user", "content": "請詳細分析這份電路圖的安全問題..."}
+    ],
+    stream=True,
+    max_tokens=4000
+)
+
+for chunk in stream:
+    if chunk.choices[0].delta.content is not None:
+        print(chunk.choices[0].delta.content, end="", flush=True)
+
+print()  # 換行</code></pre>
+
+  <div class="highlight">
+    <p>💰 <strong>省費技巧</strong>：使用快取（Prompt Caching）可讓重複的系統提示從 $2/MTok 降到 $0.50/MTok，省 75%。特別適合「固定 system prompt + 變動 user input」的法律/工程審查場景。</p>
+  </div>
+
+  <h2>台灣三大實戰應用場景</h2>
+
+  <div class="scenario-grid">
+    <div class="scenario-card">
+      <div class="icon">⚡</div>
+      <h4>電氣工程合規審查</h4>
+      <p>送電廠、資料中心、太陽能系統的電氣設計審查，Grok 4.7 在 Electrical Engineering benchmark #1，可協助比對台灣 CNS 14816 規範、IEC 60364 標準，快速找出設計缺陷。相比人工審查節省 70% 時間，且定價 $2/MTok 輸入，審查一份 50 頁設計圖約 $0.20-0.50。</p>
+    </div>
+    <div class="scenario-card">
+      <div class="icon">⚖️</div>
+      <h4>法律文件智能分析</h4>
+      <p>合約審查、勞動法規比對、智財侵權初步鑑定。Legal Reasoning benchmark #1，500K context 可一次讀入整份合約。台灣律師事務所、法務部門可用於：合約風險點快速標記、法規遵循檢查、國際合約中英對照分析。</p>
+    </div>
+    <div class="scenario-card">
+      <div class="icon">🔬</div>
+      <h4>學術研究與科學推理</h4>
+      <p>GPQA Diamond 全球第一（79.3%），適合台灣研究生、學術機構做文獻整理、實驗設計分析、跨學科推理。搭配 500K context 可一次讀入多篇 PDF 論文進行比較分析。DataCamp AI 課程可協助建立完整的學術 AI pipeline。</p>
+    </div>
+  </div>
+
+  <!-- CTA 1: DataCamp -->
+  <div class="cta-box">
+    <h3>🎓 學好 AI API 整合，DataCamp 是台灣開發者最佳選擇</h3>
+    <p>從 Python 基礎到 LLM API 整合（包含 xAI Grok、OpenAI、Claude），DataCamp 提供結構化課程路徑。超過 490 門課程，每年學費不到一杯星巴克的錢（每天）。</p>
+    <a href="https://afflink.one/s/aavAC" class="btn btn-primary" target="_blank" rel="noopener sponsored">🎓 免費試用 DataCamp</a>
+    <a href="https://afflink.one/s/aavAC" class="btn btn-secondary" target="_blank" rel="noopener sponsored">查看 AI 課程路徑 →</a>
+  </div>
+
+  <h2>Grok 4.7 vs Claude Fable 5.1 vs GPT-6 Astra：怎麼選？</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>使用場景</th>
+          <th>推薦模型</th>
+          <th>理由</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>電氣/機械工程分析</td>
+          <td class="winner">Grok 4.7 🏆</td>
+          <td>Electrical Engineering #1，$2/MTok 比 Claude 便宜</td>
+        </tr>
+        <tr>
+          <td>法律文件審查</td>
+          <td class="winner">Grok 4.7 🏆</td>
+          <td>Legal Reasoning #1，500K context，成本效益最佳</td>
+        </tr>
+        <tr>
+          <td>軟體開發 / 程式碼生成</td>
+          <td class="second">Claude Fable 5.1</td>
+          <td>Coding Agent Index 72.3% vs Grok 61.4%，差距明顯</td>
+        </tr>
+        <tr>
+          <td>高頻 API 呼叫（成本優先）</td>
+          <td class="third">GPT-6 Astra</td>
+          <td>輸入 $1.25/MTok，比 Grok 4.7 便宜 60%</td>
+        </tr>
+        <tr>
+          <td>創意寫作 / 行銷文案</td>
+          <td class="second">Claude Fable 5.1</td>
+          <td>Creative Writing benchmark #1，風格更豐富</td>
+        </tr>
+        <tr>
+          <td>科學研究 / 數學推理</td>
+          <td class="winner">Grok 4.7</td>
+          <td>GPQA Diamond #1，數學表現僅次於 Claude</td>
+        </tr>
+        <tr>
+          <td>長文件摘要（成本優先）</td>
+          <td class="winner">Grok 4.7</td>
+          <td>500K context + $0.50 快取，處理長文最省錢</td>
+        </tr>
+        <tr>
+          <td>多語言 / 繁中應用</td>
+          <td class="second">Claude Fable 5.1</td>
+          <td>繁中品質更穩定，但 Grok 4.7 也有不錯的繁中能力</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Grok Voice Transcribe 2.0（同日發布）</h2>
+
+  <p>與 Grok 4.7 同日，xAI 也發布了 <strong>Grok Voice Transcribe 2.0</strong>，這是 xAI 的語音轉文字模型，主要特點：</p>
+
+  <ul>
+    <li><strong>多語言支援升級</strong>：繁體中文、粵語、台語辨識精度大幅提升</li>
+    <li><strong>降噪技術優化</strong>：背景雜音環境下辨識率提升約 23%</li>
+    <li><strong>API 整合</strong>：透過 xAI API 統一管理，同一 API key 可使用文字 + 語音兩個模型</li>
+    <li><strong>定價</strong>：$0.006/分鐘（比 OpenAI Whisper $0.006/分鐘 相當）</li>
+  </ul>
+
+  <div class="info-box">
+    <p>💡 對台灣的 <strong>語音 AI 應用開發者</strong>（客服機器人、會議記錄、語音 Agent）來說，Grok Voice Transcribe 2.0 + Grok 4.7 可以在同一個 API 生態系內完成「語音→文字→分析→回應」的完整流程，減少第三方依賴。</p>
+  </div>
+
+  <!-- CTA 2: DigitalOcean -->
+  <div class="cta-box">
+    <h3>🚀 部署 Grok 4.7 應用到雲端？DigitalOcean 最適合台灣開發者</h3>
+    <p>從 $4/月起，DigitalOcean Droplets 可快速部署你的 Grok 4.7 Python/Node.js 應用。比 AWS 簡單 10倍，比 GCP 便宜 30%。免費點數試用，不滿意隨時取消。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="btn btn-primary" target="_blank" rel="noopener sponsored">🚀 獲得 $200 免費點數</a>
+    <a href="https://m.do.co/c/6121a295f624" class="btn btn-secondary" target="_blank" rel="noopener sponsored">查看 Droplet 定價 →</a>
+  </div>
+
+  <h2>費用估算：實際使用 Grok 4.7 多少錢？</h2>
+
+  <p>以下是幾個典型台灣場景的每月費用估算：</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>應用場景</th>
+          <th>每日呼叫量</th>
+          <th>平均 Input/Output Token</th>
+          <th>月費估算</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>小型法律助理（個人用）</td>
+          <td>50 次/天</td>
+          <td>5K/2K tokens</td>
+          <td>約 $15-20/月</td>
+        </tr>
+        <tr>
+          <td>企業合約審查系統</td>
+          <td>200 次/天</td>
+          <td>20K/5K tokens</td>
+          <td>約 $200-350/月</td>
+        </tr>
+        <tr>
+          <td>電氣工程審圖 SaaS</td>
+          <td>100 次/天</td>
+          <td>30K/8K tokens</td>
+          <td>約 $250-400/月</td>
+        </tr>
+        <tr>
+          <td>學術研究輔助工具</td>
+          <td>30 次/天</td>
+          <td>50K/10K tokens</td>
+          <td>約 $150-250/月</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="highlight">
+    <p>💡 <strong>省費最大化技巧</strong>：若 system prompt 固定（法律、工程 SaaS 非常常見），開啟 Prompt Caching 可讓快取 token 降至 $0.50/MTok（節省 75%）。月費可再減少 40-60%。</p>
+  </div>
+
+  <h2>Grok 4.7 的限制與注意事項</h2>
+
+  <ul>
+    <li>⚠️ <strong>程式碼生成弱</strong>：Coding Agent Index 61.4%，不適合作為主力 Coding Agent（用 Claude Fable 5.1 更好）</li>
+    <li>⚠️ <strong>創意寫作弱</strong>：Creative Writing 74.2%，行銷文案建議仍使用 Claude</li>
+    <li>⚠️ <strong>繁中指令跟隨</strong>：Grok 4.7 繁中表現不如 Claude，複雜的中文格式指令建議多次迭代</li>
+    <li>⚠️ <strong>圖像理解有限</strong>：目前 Grok 4.7 的多模態能力仍不及 GPT-6 Astra 的視覺理解</li>
+    <li>⚠️ <strong>xAI 生態較小</strong>：開發工具、社群資源比 OpenAI/Anthropic 生態系少，debug 資料較難找</li>
+  </ul>
+
+  <h2>總結：Grok 4.7 值得用嗎？</h2>
+
+  <p>坦白說，<strong>Grok 4.7 不是「全能王」</strong>，但它是一個非常清晰的「專科強手」。如果你的應用是工程計算、法律文件分析、科學研究，現在沒有比 Grok 4.7 更強的模型——同時定價比 Claude Fable 5.1 便宜 60%。</p>
+
+  <p>對台灣開發者的建議：</p>
+  <ul>
+    <li>✅ <strong>先用 DigitalOcean 快速部署</strong>試驗環境，成本極低</li>
+    <li>✅ <strong>工程/法律/學術</strong>應用直接首選 Grok 4.7</li>
+    <li>✅ <strong>程式碼 Agent</strong>場景繼續用 Claude Fable 5.1 或 Claude Code</li>
+    <li>✅ <strong>高頻低成本</strong>場景考慮 GPT-6 Astra（$1.25/MTok 輸入）</li>
+    <li>✅ <strong>建議 DataCamp</strong> AI API 課程，學習系統性整合多個 AI 模型的最佳實踐</li>
+  </ul>
+
+  <!-- CTA 3: Systeme.io -->
+  <div class="cta-box">
+    <h3>💼 用 AI 工具做副業？Systeme.io 幫你快速建立數位產品銷售頁面</h3>
+    <p>不需要工程背景，Systeme.io 拖放式建立銷售頁、自動化 email 序列、線上課程銷售。月費只要 $27 起，60% LIFETIME 聯盟計畫，台灣最划算的自媒體/課程販售平台。</p>
+    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="btn btn-green" target="_blank" rel="noopener sponsored">🆓 免費開始 Systeme.io</a>
+    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="btn btn-secondary" target="_blank" rel="noopener sponsored">查看定價方案 →</a>
+  </div>
+
+  <h2>常見問題 FAQ</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">❓ Grok 4.7 和 Grok 4.6 有什麼差別？</div>
+    <div class="faq-a">Grok 4.7 參數量從 1.5T 提升至 2.1T（+40%），Intelligence Index 從 #6 躍升至 #4 全球。主要改進在電工、法律、科學推理三個領域拿下全球第一。定價維持 $2/$6 per MTok 不變。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">❓ Grok 4.7 的定價是多少？台灣可以用嗎？</div>
+    <div class="faq-a">輸入 $2/MTok，快取 $0.50/MTok，輸出 $6/MTok。台灣可直接在 console.x.ai 申請 API key，使用信用卡付款，無需 VPN。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">❓ Grok 4.7 和 Claude Fable 5.1 哪個更好？</div>
+    <div class="faq-a">取決於用途。程式碼/創意寫作：Claude Fable 5.1 勝出。電工/法律/科學推理：Grok 4.7 全球第一。成本面：Grok 4.7 輸出 $6/MTok 比 Claude 的 $15/MTok 便宜 60%。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">❓ Grok 4.7 API 如何快速接入現有 OpenAI 應用？</div>
+    <div class="faq-a">只需兩個改動：將 client 的 base_url 改為 "https://api.x.ai/v1"，api_key 改為你的 xAI API key，model 改為 "grok-4.7"。其他 SDK 呼叫完全不用改。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">❓ Grok Voice Transcribe 2.0 是什麼？</div>
+    <div class="faq-a">與 Grok 4.7 同日發布的語音轉文字模型，多語言（含繁中/台語）辨識大幅改善，$0.006/分鐘，與 xAI API 統一管理。適合語音 AI 應用開發者建立端對端 pipeline。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">❓ Grok 4.7 支援繁體中文嗎？</div>
+    <div class="faq-a">支援，但繁中品質不如 Claude Fable 5.1 穩定。對於繁中文件分析（法律、工程），建議在 system prompt 明確指定「請用繁體中文回答，避免簡體字」，效果會更好。</div>
+  </div>
+
+  <h2>延伸閱讀</h2>
+  <ul>
+    <li><a href="/blog/grok-4-6-review-2026.html">Grok 4.6 完整評測 2026：500K Context + DeepSWE 突破</a></li>
+    <li><a href="/blog/kilo-code-review-vs-cursor-claude-code-2026.html">Kilo Code 完整評測 2026：PH 月榜 #1，開源 AI Coding Agent</a></li>
+    <li><a href="/blog/openai-devday-2026-preview.html">OpenAI DevDay 2026 預覽：Sep 29，Managed Agents/AgentKit 即將登場</a></li>
+    <li><a href="/blog/tiun-ai-builder-billing-review-2026.html">tiun. 完整評測 2026：Auth + Billing + Payments 一個 SDK 搞定</a></li>
+    <li><a href="/tools/ai-coding-tools-pricing-calculator-2026.html">AI Coding 工具定價計算器 2026（台幣換算）</a></li>
+  </ul>
+
+</div>
+
+<footer>
+  <p>© 2026 AutoDev AI（<a href="https://autodev-ai.com">autodev-ai.com</a>）· 繁中 AI 工具評測首選</p>
+  <p style="margin-top: 0.5rem;">本文含聯盟行銷連結，點擊後我們可能獲得佣金，不影響評測立場。<a href="/about">關於我們</a> · <a href="/blog/">更多文章</a></p>
+</footer>
+
+</body>
+</html>
