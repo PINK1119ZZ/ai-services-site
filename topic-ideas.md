@@ -4188,3 +4188,124 @@ GitHub trending Sep 21 2026、HN Sep 2026 趨勢、Product Hunt Sep 月榜更新
 ### 預估新增月收入
 **$950-2,650/月**（Grok 4.8 GA後 $300-900 + Kilo Code Ivan後 $150-500 + Octop教學 $80-250 + Voicebox教學 $80-250 + DevDay峰值 $300-800 + UTCP/OpenResearch $120-330）
 
+
+---
+
+## Round 217 — 2026-09-22 (Tue 00:30 UTC)
+
+### 🔍 本輪核心發現
+
+**1. 🚨 Grok 4.7 P0-EXECUTE 確認 — seo-writer 立即行動**
+- R216（Mon 22:00 UTC）已確認 Grok 4.7 Sep 21 GA（API 上線）
+- 規格：2.1T 參數，$2/$0.50(cached)/$6 per 1M，500K context，Intelligence Index #4（46分）
+- seo-writer 草稿早已就緒 → blog/grok-47-complete-review-2026.html 立即執行
+- 繁中首發競爭窗口：現在至 Sep 23 UTC（48h）
+
+**2. 🤖 Sai — 自主電腦艦隊 (Product Hunt Sep 21 熱榜)**
+- 定位：「robosecretary」，雲端電腦艦隊 → 幫你操作螢幕（非 API 工具）
+- 73% OSWorld 評分（人類基準 72.4%，全球第一 computer use agent）
+- 並行 5 台電腦同時跑不同任務（古老 desktop app 也能自動化）
+- **affiliate 狀況**：無官方 affiliate 頁面（尚未確認），高票 PH 產品
+- **內容機會**：「電腦自己操作自己」主題教學，vs Anthropic Computer Use vs OpenAI Operator 比較頁
+- 預估月收入：$80-200（間接 DO/DataCamp），affiliate 待確認後升級
+- 建議站點：autodev-ai.com
+
+**3. 🌿 Mycel — AI 交付物草稿機器 (PH Sep 20 日榜 #1)**
+- 定位：記住你的客戶交付物格式，未來每次自動照格式草稿
+- 定價：$299/mo 或自托管免費（有機服務事業理想工具）
+- **affiliate 狀況**：無公開 affiliate 頁面（待 Ivan 確認 mycel.ai）
+- **關鍵字機會**：「mycel ai 評測 繁中」搜尋量低但高轉換意圖（B2B 顧問用戶）
+- 預估月收入：$100-300（Ivan 批准後，$299/mo × 30% 假設）
+- 建議站點：autodev-ai.com
+
+**4. 🔍 NiubiGEO — 開源 GEO 可視度工具 (Product Hunt 最新上線)**
+- Apache-2.0 開源，自托管，Sep 3 上線，462★ in 3 天
+- 功能：測試 ChatGPT/Gemini/Perplexity 怎麼介紹你的品牌，找出你哪裡落後
+- 搭配平台收費服務（API/hosting/human AI testing）
+- **affiliate 狀況**：免費開源 → 平台服務有收費但無已知 affiliate
+- **內容機會**：與 GEO/AEO 教學文搭配（tools/aeo-geo-checker-2026.html 的配套教學）
+- 預估月收入：$60-150（間接 DO/DataCamp 流量積累型）
+- 建議站點：autodev-ai.com
+
+**5. 🎨 gr.Workflow (Gradio/Hugging Face) — 視覺化 AI Pipeline 建構器**
+- Aug 25 2026 公告，Gradio 6.25.0 內建，拖放式節點連接 HF 模型/Space/dataset/Python
+- 每個 Workflow = 可執行 app + REST API + 一鍵部署 HF Space
+- **affiliate 狀況**：Hugging Face 無 affiliate（開源），教學文路線
+- **關鍵字**：「gradio workflow 教學 繁中」/ 「ai pipeline 視覺化 2026」
+- 預估月收入：$80-200（間接 DataCamp/DO，開發者高轉換族群）
+- 建議站點：autodev-ai.com
+
+**6. 💰 新高佣金 Affiliate 確認（本輪三方確認）**
+- **MeetGeek**：30% recurring per conversion（meeting intelligence platform，AI meeting summary）
+  - 確認來源：PartnerStack 2026 列表，推薦文：「MeetGeek vs Otter vs Fathom」比較文機會
+  - 月潛力：$150-400（$0/mo→$19.99/mo 方案，30%/月 × 引薦數）
+- **Reclaim.AI**：40%/12mo workplace email signups + 25% personal（Dropbox 旗下）
+  - R201 積壓已久！Ivan 必須立刻申請 reclaim.ai/affiliate-program
+  - 月潛力：$200-600（企業用戶高 LTV）
+- **GetResponse**：40-60% recurring/12mo（再確認，R199+ 積壓再催）
+  - 月潛力：$300-900（行銷自動化工具，台灣受眾高度吻合）
+
+**7. 📅 OpenAI DevDay T-7 今天 (Sep 22 UTC)**
+- DevDay 2026 = Sep 29 Fort Mason SF（T-7 = 今天！）
+- GPT-6 Astra Sep 3 已 GA（computer use + coding + research + document）
+- content-ops 更新 blog/openai-devday-2026-preview.html 今日 UTC 截止 ✅（已由 Sep 22 00:00 UTC 執行完成）
+- DevDay 重要看點：Astra 更廣泛 release + 完整評測套件 + platform announcements
+- **收入機會**：DevDay 當天（Sep 29）流量峰值仍有效，blog/openai-devday-2026-preview.html position 5.7
+
+**8. 📊 GEO/AI Visibility 市場信號加速**
+- AI 搜尋轉換率 4x Google（多個來源確認）
+- 2026年底：主動管理 AI 可視度的品牌 vs 沒管理的品牌出現顯著差距
+- **繁中 GEO 工具比較頁仍空白**（tools/aeo-geo-checker-2026.html 已建，blog 教學待產出）
+- 台灣數位行銷 CAGR 11.6%（確認），Morsa Signals PH Sep 21 #14（GTM + AI visibility）
+- **Morsa Signals**：developer tools GTM + AI visibility workflows，無公開 affiliate 但比較頁機會
+
+---
+
+### 📋 Topic Ideas 表格
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 | 優先級 |
+|------|------|--------|-----------|----------|-----------|---------|--------|
+| 2026-09-22 | Grok 4.7（xAI） | grok 4.7 評測 繁中 / grok 4.7 vs claude fable / grok 4.7 api 教學 | 高（GA後爆發 3K+/月） | 評測文（間接 DO/DataCamp/Cloudways）| $300-900/月 | autodev-ai.com | 🚨 P0-EXECUTE |
+| 2026-09-22 | Sai robosecretary | sai 電腦代理 / autonomous computer fleet / computer use agent 比較 | 中（1K-3K/月） | 評測文（間接 DO/DataCamp），affiliate 待確認 | $80-300/月 | autodev-ai.com | 🔴 P1 |
+| 2026-09-22 | Mycel AI | mycel ai 評測 繁中 / ai 交付物草稿 / mycel vs n8n | 低中（0.5K-2K/月） | 評測文（Ivan 確認 mycel.ai affiliate） | $100-300/月 | autodev-ai.com | 🟡 P1 |
+| 2026-09-22 | NiubiGEO | niubigeo 教學 / geo 品牌可視度 / ai 搜尋 品牌分析 | 低中（0.5K-1.5K/月） | 教學文（工具頁配套，間接 DO/DataCamp） | $60-150/月 | autodev-ai.com | 🟡 P2（搭配 GEO 教學） |
+| 2026-09-22 | gr.Workflow Gradio | gradio workflow 教學 繁中 / ai pipeline 視覺化 / hugging face workflow | 低中（0.8K-2K/月） | 教學文（間接 DataCamp HF courses CTA） | $80-200/月 | autodev-ai.com | 🟡 P1 |
+| 2026-09-22 | MeetGeek | meetgeek 評測 繁中 / otter vs fathom vs meetgeek / ai 會議記錄比較 | 中（1K-3K/月） | 評測文（MeetGeek 30% recurring affiliate） | $150-400/月 | autodev-ai.com | 🔴 P1 |
+| 2026-09-22 | Reclaim.AI | reclaim ai 評測 繁中 / 日曆 ai 助理 / reclaim vs clockwise 2026 | 中（1K-2K/月） | 評測文（Reclaim 40%/12mo，Ivan 申請積壓） | $200-600/月 | autodev-ai.com | 🔴 P1-HIGH積壓 |
+
+---
+
+### 💰 新 Affiliate 發現詳情
+
+| 工具 | 佣金 | 類型 | URL | 優先級 | 月潛力 | 備注 |
+|------|------|------|-----|--------|--------|------|
+| MeetGeek | 30% recurring/conversion | PartnerStack | meetgeek.ai | P1 | $150-400 | AI 會議記錄，PartnerStack 2026 確認；比較文「MeetGeek vs Otter vs Fathom vs Fireflies」 |
+| Reclaim.AI | 40%/12mo（workplace email）/ 25%（personal） | 自有 | reclaim.ai/affiliate-program | P1-HIGH積壓 | $200-600 | R201+ 積壓超久！Dropbox 旗下，企業日曆 AI，Ivan 立刻申請 |
+| GetResponse | 40-60% recurring/12mo | PartnerStack | getresponse.com/affiliates | P1積壓 | $300-900 | R199+ 積壓，本輪再催，行銷自動化台灣受眾吻合 |
+
+---
+
+### 🔎 Watchlist 狀態更新（R217）
+
+- **Grok 4.7**：🚨 P0-EXECUTE（Sep 21 GA 確認，2.1T，$2/$6，Intelligence #4，seo-writer 24h 內立即執行）
+- **OpenAI DevDay**：📅 T-7 今天（content-ops Sep 22 UTC 更新已完成 ✅）
+- **Sai robosecretary**：🔴 P1 新（PH Sep 21 熱榜，OSWorld 73%，affiliate 待確認）
+- **Mycel**：🟡 P1 新（PH Sep 20 #1，$299/mo，affiliate 待確認，Ivan 查詢 mycel.ai）
+- **NiubiGEO**：🟡 P2 新（Sep 3 GA，462★，開源 GEO 工具，搭配 AEO/GEO 教學文）
+- **gr.Workflow**：🟡 P1 新（Aug 25 HF 公告，視覺化 AI pipeline，繁中空白）
+- **MeetGeek**：🔴 P1 新確認（30% recurring，PartnerStack，Ivan 申請）
+- **Reclaim.AI**：🔴 P1-HIGH 積壓（40%/12mo，R201+ 積壓，Ivan 立刻申請！）
+- **GetResponse**：🔴 P1 積壓（40-60%/12mo，R199+ 積壓再催）
+- **Kilo Code**：🔴 P1-HIGH carryover（月榜 #1，$99.50/conv，Ivan 申請積壓）
+- **Tencent Octop**：🟡 P1 carryover（Oct 1 截止，繁中空白）
+- **Voicebox**：🟡 P1 carryover（54.8K★，ElevenLabs 替代，繁中空白）
+- **GitHub Universe Oct 28-29**：📅 P1（Oct 1 預熱文窗口）
+- **GEO/AI Visibility 市場**：📈 加速（台灣 CAGR 11.6%，NiubiGEO+Morsa Signals 雙重信號）
+
+---
+
+### 預估新增月收入
+**$1,130-3,250/月**（Grok 4.7 GA後 $300-900 + MeetGeek affiliate後 $150-400 + Reclaim.AI Ivan後 $200-600 + GetResponse Ivan後 $300-900 + Sai/Mycel教學 $180-500 + gr.Workflow教學 $80-200 + NiubiGEO搭配 $60-150）
+
+---
+
