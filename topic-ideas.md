@@ -4309,3 +4309,74 @@ GitHub trending Sep 21 2026、HN Sep 2026 趨勢、Product Hunt Sep 月榜更新
 
 ---
 
+
+---
+
+## Round 218 — 2026-09-23 00:30 UTC（Wed 00:30 ai-trend-hunter cron）
+
+### 🔴 P1-HIGH 高價值新工具
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|----------|-----------|---------|
+| 2026-09-23 | **Jev（TypeSafe AI System One）** | `jev typesafe 評測`, `system one model 是什麼`, `AI 決策模型 繁中`, `typesafe jev vs chatgpt 速度` | 🔺 爬升中（Sep 15 EA，$40M Seed，DataCamp博文） | 評測文 + 教學 → DataCamp/DigitalOcean CTA | $80-250/月 | autodev-ai |
+| 2026-09-23 | **Contextberg** | `contextberg 評測`, `AI agent 本機記憶 MCP 教學`, `contextberg vs scritty vs lorekit`, `coding agent 記憶 繁中` | 🔺 高（PH Sep 22 #6，MCP support，Claude Code/Cursor/OpenClaw 整合） | 評測文 → DigitalOcean/DataCamp；未來 contextberg 如有affiliate直接換 | $100-300/月 | autodev-ai |
+| 2026-09-23 | **Superset Mobile** | `superset mobile 評測`, `coding agent 手機管理`, `superset 2.0 教學 繁中`, `ai coding agent 並行` | 中（PH Sep 21 日榜 #1，YC，$12M Series B，2K followers） | 教學文 → DigitalOcean+DataCamp；Superset 如開 affiliate 首選 | $100-300/月 | autodev-ai |
+| 2026-09-23 | **Valori（AI 確定性記憶層）** | `valori ai memory 評測`, `deterministic memory layer AI`, `AI agent 確定性記憶 繁中`, `valori vs contextberg` | 🔺 新興（PH Sep 22 #12，確定性記憶層，區別於 RAG） | 評測+比較頁 → DataCamp/DigitalOcean CTA | $80-200/月 | autodev-ai |
+| 2026-09-23 | **Agent Memory 工具比較頁（Contextberg/scritty/LoreKit/ContextPool/Valori）** | `ai agent memory 工具比較 2026`, `coding agent 記憶層比較`, `contextberg vs lorekit 繁中`, `best ai memory tools` | 🔺高（agent memory 成2026 Q4 顯學）| **比較頁**（5工具），長尾流量 + DigitalOcean CTA | $150-450/月（常青） | autodev-ai |
+
+### 🟡 P2 趨勢觀察
+
+| 日期 | 工具 | 描述 | 機會 | 預估 |
+|------|------|------|------|------|
+| 2026-09-23 | **Shootsolo 2.0** | PH Sep 22 #26，語音控制相機+提詞機，solo creator工具 | 評測文（無明確affiliate，DataCamp/DO間接） | $60-150/月 |
+| 2026-09-23 | **FeedsBar** | PH Sep 22 #7，Mac桌面安靜新聞跑馬燈，生產力工具 | P3 觀察，搜尋量低 | $20-60/月 |
+| 2026-09-23 | **Xem** | PH Sep 22 #13，開源 email marketing + managed SMTP，Resend 競品 | 比較文（Xem vs Resend vs Mailchimp），DataCamp CTA | $80-200/月 |
+| 2026-09-23 | **WZRD** | PH Sep 22 #21，AI-native docs/slides/forms/sheets，Notion AI競品 | 等 affiliate 確認後評測 | $100-300/月 |
+| 2026-09-23 | **WeWeb MCP** | PH Sep 22 #19，AI agent 建 no-code app + 保留控制，vibe coding工具 | P2（無 affiliate 資訊，教學文 DataCamp CTA） | $80-200/月 |
+
+### 🏆 高價值 Affiliate 發現（本輪新）
+
+**AI Agent Memory 賽道爆發 — 賺錢角度：**
+- **Contextberg** — 本地記憶 MCP，免費版 + Pro tier（定價待公開），目前無明確 affiliate 計畫，但 PH Sep 22 #6 且 OpenClaw 官方整合確認（autodev-ai 工具文脈高度吻合），先做繁中首發教學佔位，affiliate 上線後立即替換
+- **scritty** — PH 已有評測（5,000 memories free，付費未披露），affiliate 狀態待確認
+- **ContextPool** — $7.99/月 Team sync，affiliate 狀態待確認
+- **Valori** — PH Sep 22 #12，確定性記憶層，pricing 未公開，affiliate 待確認
+
+**本輪重大新工具 — Jev（TypeSafe AI）：**
+- 類別：System One Model（機器決策 AI，非語言模型）
+- 定價：$0.042/1M input tokens（比 GPT-5.6 便宜 238×），output 免費
+- 速度：70ms-500ms（vs GPT-5.6 8.5秒）
+- 融資：$40M Seed，Sep 15 早期訪問
+- Affiliate：❌ 無（早期 waitlist 階段）
+- 機會：教學文（`blog/jev-typesafe-system-one-model-guide-2026.html`），DataCamp CTA
+- 關鍵詞：jev typesafe 評測、system one model、AI 決策模型 不是 LLM
+
+### 📅 日曆/截止事項
+
+- **OpenAI DevDay T-6天（Sep 29）**：blog/openai-devday-2026-preview.html 需 T-6 最後更新（GSC 7 clicks 258 impressions position 5.8，content-ops 今天執行最後更新）
+- **Grok 4.7 GA 已確認（R216 P0-EXECUTE FIRED）**：Grok 4.7 評測文應已由 seo-writer 執行或進行中，本輪不重複
+- **GitHub Universe Oct 預期**：Copilot 功能更新，T-30天開始準備比較頁
+
+### 💡 市場洞察
+
+1. **AI Agent Memory 成 2026 Q4 最熱賽道**：同一週 PH 出現 Contextberg #6、scritty、Valori #12、ContextPool，加上 GitHub 上 LoreKit、Agentmemory 138K★，市場在快速收斂到「agent 記憶持久化」這個問題。繁中比較頁空白，適合做 5-way 比較頁（常青高流量）
+2. **Superset Mobile PH Sep 21 日榜 #1**：parallel coding agents 進入手機端，工具延伸性強，教學文（Superset Mobile 繁中）空白確認
+3. **Jev / TypeSafe System One Models**：非 LLM 的 AI 決策層，新範疇，HN/DataCamp 已有覆蓋但繁中零，技術受眾高度吻合
+4. **「Harness」類生態系擴展**：OpenClaw 在 Contextberg 官網直接列為首批支援工具，是利用自身平台背書的 SEO 角度（autodev-ai 受眾完美吻合）
+
+### 積壓提醒（本輪 carryover 高優先）
+
+| 工具 | 狀態 | 行動方 |
+|------|------|--------|
+| Webflow 50%/12mo | 🔴 R211 首次提案，Ivan 必須申請 webflow.com/solutions/affiliates | Ivan |
+| Alli AI 30%/24mo 限時 | 🔴 限時前50位，Ivan 立即申請 alliai.com/affiliates | Ivan |
+| Cursor affiliate | 🔴 積壓最久（6+輪），Ivan 申請 openaffiliate.dev/programs/cursor | Ivan |
+| GoHighLevel 40% LIFETIME | 🔴 P1，Ivan 申請 gohighlevel.com/affiliate | Ivan |
+| Kajabi 30%/12mo | 🔴 P1-HIGH R212 首次提案，Ivan 申請 kajabi.com/partners | Ivan |
+| Tiun AI Billing | 🔴 P1-HIGH carryover（PH Sep 月榜 #1，Sep 25 截止） | seo-writer |
+| Harden AIF | 🔴 P1-HIGH carryover（PH Sep 9 #2，截止已過，繼續執行） | seo-writer |
+
+### 預估新增月收入
+**$610-1,700/月**（Contextberg 教學文 $100-300 + Agent Memory 比較頁 $150-450 + Jev 教學文 $80-250 + Superset Mobile 教學 $100-300 + Valori 評測 $80-200 + Xem 比較文 $80-200 + WZRD affiliate後 $100-300 carryover倍增）
+
+---
