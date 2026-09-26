@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="/style.css"><meta name="theme-color" content="#f7f4ee">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"AutoDev project enquiry","url":"https://autodev-ai.com/en/contact.html","description":"Describe the problem, clarify the scope, and confirm a proposal for a Telegram-first automation project.","inLanguage":"en","mainEntity":{"@type":"ProfessionalService","name":"AutoDev","url":"https://autodev-ai.com/","description":"A founder-led studio for Telegram Bots, operations automation, and custom business systems.","areaServed":"TW","serviceType":["Telegram Bot","Workflow Automation","Custom Business Systems"]}}</script>
 <script>
- function autodevLoadGtag(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM';s.async=true;document.head.appendChild(s);}
- window.addEventListener('load',function(){if('requestIdleCallback' in window){requestIdleCallback(autodevLoadGtag);}else{setTimeout(autodevLoadGtag,0);}});
+ function autodevLoadGtag(){if(window.autodevGtagRequested)return;window.autodevGtagRequested=true;var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM';s.async=true;document.head.appendChild(s);}
+ window.addEventListener('load',function(){if('requestIdleCallback' in window){requestIdleCallback(autodevLoadGtag,{timeout:3000});}else{setTimeout(autodevLoadGtag,0);}});
  </script>
 <script>
  window.dataLayer=window.dataLayer||[];

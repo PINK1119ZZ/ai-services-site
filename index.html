@@ -8,8 +8,8 @@
 <link rel="alternate" type="application/rss+xml" title="AutoDev Blog RSS Feed" href="/feed.xml"><link rel="stylesheet" href="/style.css"><meta name="theme-color" content="#f7f4ee">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"AutoDev","url":"https://autodev-ai.com/","description":"AutoDev 由創辦人直接負責，專注 Telegram Bot、營運自動化與客製業務系統，把分散的日常工作整理成清楚可靠的流程。","areaServed":"TW","sameAs":["https://t.me/AUTO_DEV_AI_BOT"],"knowsAbout":["Telegram Bot","LINE Bot","Workflow Automation","Business Systems"]}</script>
 <script>
- function autodevLoadGtag(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM';s.async=true;document.head.appendChild(s);}
- window.addEventListener('load',function(){if('requestIdleCallback' in window){requestIdleCallback(autodevLoadGtag);}else{setTimeout(autodevLoadGtag,0);}});
+ function autodevLoadGtag(){if(window.autodevGtagRequested)return;window.autodevGtagRequested=true;var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM';s.async=true;document.head.appendChild(s);}
+ window.addEventListener('load',function(){if('requestIdleCallback' in window){requestIdleCallback(autodevLoadGtag,{timeout:3000});}else{setTimeout(autodevLoadGtag,0);}});
  </script>
 <script>
  window.dataLayer=window.dataLayer||[];
