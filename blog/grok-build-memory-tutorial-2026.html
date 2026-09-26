@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grok Build 記憶功能完整教學 2026：v1.0.34 跨會話記憶，比 Claude Code 更智慧的 xAI Coding Agent？</title>
+  <meta name="description" content="Grok Build v1.0.34 記憶功能完整繁中教學 2026。xAI 2026-09-16 正式 GA 跨會話記憶，markdown 格式儲存，/memory 指令查閱，project scope + global scope 雙層記憶，與 Claude Code 完整比較。台灣開發者必讀繁中首發。">
+  <meta name="keywords" content="grok build 教學, grok build 記憶, grok build memory, grok build v1.0.34, xai grok build, grok build vs claude code, grok build 繁中, xai coding agent 2026, grok build 跨會話記憶, grok build /memory">
+  <meta name="author" content="AutoDev AI">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://autodev-ai.com/blog/grok-build-memory-tutorial-2026.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Grok Build 記憶功能完整教學 2026：跨會話記憶，繁中首發">
+  <meta property="og:description" content="Grok Build v1.0.34 正式支援跨會話記憶！markdown 格式儲存偏好、/dream 整合觀察、/memory 查閱，project + global 雙層記憶架構，比較 Claude Code 記憶管理完整分析。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autodev-ai.com/blog/grok-build-memory-tutorial-2026.html">
+  <meta property="og:site_name" content="AutoDev AI">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grok Build 記憶功能完整教學 2026：跨會話記憶，繁中首發">
+  <meta name="twitter:description" content="Grok Build v1.0.34 跨會話記憶：markdown 儲存、/memory 指令、project + global scope，與 Claude Code 完整比較。">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Grok Build 記憶功能完整教學 2026：v1.0.34 跨會話記憶，比 Claude Code 更智慧的 xAI Coding Agent？",
+    "description": "Grok Build v1.0.34 記憶功能完整繁中教學，xAI 2026-09-16 正式 GA，跨會話記憶 markdown 儲存，/memory 查閱，project + global scope，與 Claude Code 完整比較。",
+    "author": {"@type": "Organization", "name": "AutoDev AI"},
+    "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+    "datePublished": "2026-09-26",
+    "dateModified": "2026-09-26",
+    "mainEntityOfPage": "https://autodev-ai.com/blog/grok-build-memory-tutorial-2026.html",
+    "keywords": ["grok build", "grok build memory", "xai coding agent", "跨會話記憶", "claude code 比較", "grok build 教學"]
+  }
+  </script>
+
+  <!-- FAQ JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Grok Build 記憶功能是什麼？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grok Build v1.0.34（2026-09-16 GA）新增跨會話記憶功能，Agent 會自動將你的編碼偏好、常用架構、個人習慣儲存為 markdown 格式檔案，下次開啟新會話時自動載入，不再需要每次重新解釋你的專案背景。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Grok Build /memory 指令怎麼用？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "在 Grok Build 對話框輸入 /memory 即可查看目前儲存的所有記憶條目，包含 global scope（跨所有專案）和 project scope（當前專案專屬）的記憶清單，可手動編輯或刪除不需要的條目。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Grok Build vs Claude Code 記憶管理哪個更好？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "兩者各有優勢：Grok Build 記憶是自動化的，Agent 會主動觀察並儲存偏好；Claude Code 則使用 CLAUDE.md 檔案，由用戶手動維護，彈性更高但需要主動管理。Grok Build 適合希望零配置的用戶，Claude Code 適合對記憶內容有精確控制需求的開發者。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Grok Build 免費版有記憶功能嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "是的，Grok Build 記憶功能在免費版也可使用，v1.0.34 更新後所有用戶均可存取跨會話記憶，包含 project scope 和 global scope 的 markdown 記憶儲存。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Grok Build /dream 指令和記憶有什麼關聯？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "/dream 是 Grok Build 的觀察整合指令，Agent 會在 /dream 觸發時自動整理當前會話中學到的新偏好，並決定是否合併至長期記憶中。這讓記憶更新更有組織，避免重複或矛盾的記憶條目累積。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Grok Build 記憶存在哪裡？安全嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grok Build 記憶以 markdown 格式儲存在 xAI 雲端伺服器，與你的 xAI 帳號綁定。記憶資料受 xAI 隱私政策保護，你可以隨時透過 /memory 查看、編輯或完全清除所有記憶條目。建議避免在記憶中儲存 API 密鑰或敏感認證資訊。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+  <meta name="theme-color" content="#FFF8F3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <style>
+    :root {
+      --primary: #7C3AED;
+      --primary-dark: #5B21B6;
+      --accent: #F59E0B;
+      --bg: #FFF8F3;
+      --surface: #FFFFFF;
+      --text: #1C1917;
+      --text-muted: #78716C;
+      --border: #E7E5E4;
+      --success: #059669;
+      --warning: #D97706;
+      --danger: #DC2626;
+      --info: #2563EB;
+      --radius: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans TC', 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; height: auto; }
+
+    /* NAV */
+    nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 1.5rem; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .nav-logo { font-weight: 900; font-size: 1.1rem; color: var(--primary); letter-spacing: -0.02em; }
+    .nav-links { display: flex; gap: 1.5rem; font-size: 0.9rem; }
+    .nav-links a { color: var(--text-muted); font-weight: 500; }
+    .nav-links a:hover { color: var(--primary); text-decoration: none; }
+
+    /* ARTICLE LAYOUT */
+    .article-wrap { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 1.25rem; }
+    .tag { display: inline-block; padding: 0.2rem 0.65rem; border-radius: 99px; font-size: 0.75rem; font-weight: 600; }
+    .tag-new { background: #FEF3C7; color: #92400E; }
+    .tag-scoop { background: #EDE9FE; color: #5B21B6; }
+    .tag-xai { background: #FEE2E2; color: #991B1B; }
+    .tag-coding { background: #D1FAE5; color: #065F46; }
+    .article-title { font-family: 'Noto Serif TC', serif; font-size: clamp(1.5rem, 3.5vw, 2rem); font-weight: 600; line-height: 1.35; margin-bottom: 0.75rem; color: var(--text); }
+    .article-desc { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 1.5rem; border-left: 3px solid var(--primary); padding-left: 1rem; }
+    .article-info { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* CONTENT */
+    .article-body h2 { font-family: 'Noto Serif TC', serif; font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--border); color: var(--text); }
+    .article-body h3 { font-size: 1.1rem; font-weight: 700; margin: 1.75rem 0 0.65rem; color: var(--primary-dark); }
+    .article-body p { margin-bottom: 1.1rem; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.1rem; }
+    .article-body li { margin-bottom: 0.4rem; }
+    .article-body strong { color: var(--text); font-weight: 700; }
+    .article-body code { background: #F3F4F6; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.88rem; font-family: 'Courier New', monospace; color: #BE185D; }
+    .article-body pre { background: #1E1B4B; color: #E2E8F0; padding: 1.25rem 1.5rem; border-radius: var(--radius); overflow-x: auto; margin-bottom: 1.5rem; font-size: 0.88rem; line-height: 1.65; }
+    .article-body pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
+    .article-body blockquote { border-left: 4px solid var(--primary); padding: 0.75rem 1rem; background: #F5F3FF; border-radius: 0 8px 8px 0; margin: 1.5rem 0; color: var(--text-muted); font-style: italic; }
+
+    /* TABLE */
+    .table-wrap { overflow-x: auto; margin: 1.75rem 0; border-radius: var(--radius); box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    thead { background: var(--primary); color: #fff; }
+    thead th { padding: 0.75rem 1rem; text-align: left; font-weight: 600; white-space: nowrap; }
+    tbody tr:nth-child(even) { background: #F9F7FF; }
+    tbody td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+
+    /* INFO BOX */
+    .info-box { border-radius: var(--radius); padding: 1.1rem 1.25rem; margin: 1.75rem 0; }
+    .info-box.blue { background: #EFF6FF; border-left: 4px solid #3B82F6; }
+    .info-box.green { background: #ECFDF5; border-left: 4px solid #10B981; }
+    .info-box.yellow { background: #FFFBEB; border-left: 4px solid #F59E0B; }
+    .info-box.red { background: #FEF2F2; border-left: 4px solid #EF4444; }
+    .info-box.purple { background: #F5F3FF; border-left: 4px solid var(--primary); }
+    .info-box-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.4rem; }
+
+    /* CTA BUTTON */
+    .cta-wrap { text-align: center; margin: 2.25rem 0; }
+    .cta-btn { display: inline-block; padding: 0.85rem 2rem; border-radius: 99px; font-weight: 700; font-size: 0.97rem; text-decoration: none; transition: opacity 0.18s, transform 0.18s; }
+    .cta-btn:hover { opacity: 0.9; transform: translateY(-2px); text-decoration: none; }
+    .cta-primary { background: linear-gradient(135deg, #7C3AED, #4F46E5); color: #fff; }
+    .cta-orange { background: linear-gradient(135deg, #F59E0B, #EF4444); color: #fff; }
+    .cta-green { background: linear-gradient(135deg, #059669, #0891B2); color: #fff; }
+    .cta-sub { display: block; font-size: 0.78rem; font-weight: 400; margin-top: 0.3rem; opacity: 0.85; }
+
+    /* BREADCRUMB */
+    .breadcrumb { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--text-muted); }
+    .breadcrumb span { margin: 0 0.35rem; }
+
+    /* FOOTER */
+    footer { background: #1C1917; color: #A8A29E; padding: 2.5rem 1.5rem; text-align: center; font-size: 0.85rem; margin-top: 4rem; }
+    footer a { color: #D6D3D1; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .article-body pre { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">AutoDev AI</a>
+    <div class="nav-links">
+      <a href="/blog/">部落格</a>
+      <a href="/tools/">工具</a>
+      <a href="/pricing.html">定價</a>
+      <a href="/services.html">服務</a>
+    </div>
+  </div>
+</nav>
+
+<main class="article-wrap">
+  <nav class="breadcrumb">
+    <a href="/">首頁</a><span>›</span>
+    <a href="/blog/">部落格</a><span>›</span>
+    Grok Build 記憶功能教學 2026
+  </nav>
+
+  <div class="article-meta">
+    <span class="tag tag-scoop">🚀 繁中首發</span>
+    <span class="tag tag-xai">xAI</span>
+    <span class="tag tag-new">🔥 v1.0.34 GA</span>
+    <span class="tag tag-coding">Coding Agent</span>
+  </div>
+
+  <h1 class="article-title">Grok Build 記憶功能完整教學 2026：v1.0.34 跨會話記憶，比 Claude Code 更智慧的 xAI Coding Agent？</h1>
+
+  <p class="article-desc">xAI 在 2026 年 9 月 16 日悄悄推出 Grok Build v1.0.34，帶來了 Coding Agent 界最被期待的功能之一——<strong>跨會話記憶（Cross-session Memory）</strong>。從此，你的 Agent 不再每次都忘記你喜歡用 TypeScript、慣用 pnpm 還是 yarn，甚至你的 coding style 和常見的資料庫偏好也能被記住。繁中首發完整教學在這裡。</p>
+
+  <div class="article-info">
+    <span>📅 2026 年 9 月 26 日</span>
+    <span>✍️ AutoDev AI</span>
+    <span>⏱ 閱讀時間約 9 分鐘</span>
+    <span>🔄 v1.0.34 最新版</span>
+  </div>
+
+  <div class="article-body">
+
+    <div class="info-box blue">
+      <div class="info-box-title">📌 本文重點速覽</div>
+      <ul>
+        <li>Grok Build v1.0.34 跨會話記憶：是什麼、怎麼運作</li>
+        <li>/memory 與 /dream 指令完整教學</li>
+        <li>Project Scope vs Global Scope 雙層記憶架構</li>
+        <li>Grok Build vs Claude Code 記憶管理完整比較</li>
+        <li>實際使用情境：台灣 AI 開發者怎麼用</li>
+        <li>注意事項：隱私、安全、記憶清理</li>
+      </ul>
+    </div>
+
+    <h2>為什麼 Grok Build 記憶功能是大事？</h2>
+
+    <p>對於每天使用 AI Coding Agent 的開發者，最大的摩擦之一就是「每次開新對話，都要重新介紹自己」。你用 Next.js 14，你喜歡 functional components，你的資料庫是 Postgres，你不喜歡 Lodash——這些設定每次都要重新說，不只浪費 token，更打斷心流。</p>
+
+    <p>Claude Code 用戶對此的解法是維護 <code>CLAUDE.md</code> 檔案，手動撰寫專案背景給 Agent 讀取。這個方法有效，但需要開發者主動維護，本質上是「人在管 AI 的記憶」。</p>
+
+    <p>Grok Build v1.0.34 做了一件不同的事：<strong>讓 Agent 自己管自己的記憶</strong>。Agent 會在對話過程中主動觀察、自動整理、以 markdown 格式儲存你的偏好，並在下次對話時自動載入。這種「Agent 驅動的記憶管理」是一個概念上的跳躍。</p>
+
+    <div class="info-box green">
+      <div class="info-box-title">✅ Grok Build v1.0.34 記憶功能核心亮點</div>
+      <ul>
+        <li><strong>自動觀察與儲存</strong>：Agent 主動記住你的偏好，無需手動設定</li>
+        <li><strong>Markdown 格式</strong>：記憶以可讀的 .md 格式儲存，人類可直接閱讀和理解</li>
+        <li><strong>雙層作用域</strong>：Project Scope（專案專屬）+ Global Scope（跨所有專案）</li>
+        <li><strong>/memory 指令</strong>：隨時查看、編輯、刪除記憶條目</li>
+        <li><strong>/dream 指令</strong>：觸發記憶整合，整理當前會話的新學習</li>
+        <li><strong>免費版可用</strong>：v1.0.34 更新後所有 Grok Build 用戶均可使用</li>
+      </ul>
+    </div>
+
+    <h2>快速上手：5 分鐘啟動 Grok Build 記憶</h2>
+
+    <h3>步驟一：確認版本</h3>
+    <p>在 <a href="https://build.x.ai" target="_blank" rel="noopener">build.x.ai</a> 登入後，確認版本號為 v1.0.34 或更新。目前 xAI 會自動更新，但如果你看到記憶相關功能不存在，可以嘗試清除快取後重新登入。</p>
+
+    <h3>步驟二：第一次使用記憶功能</h3>
+    <p>記憶功能是自動啟動的——只要你開始和 Grok Build 正常對話，Agent 就會開始觀察。以下是建議的第一次對話設定方式：</p>
+
+    <pre><code>我是台灣的全端開發者，主要使用：
+- 框架：Next.js 14（App Router）
+- 語言：TypeScript（strict mode）
+- 套件管理：pnpm
+- 資料庫：PostgreSQL + Prisma ORM
+- 部署：Vercel（前端）+ DigitalOcean（後端/worker）
+- 測試：Vitest + Testing Library
+- 程式風格：functional，避免 class，喜歡 early return
+
+請記住這些偏好，之後的回答都請依照這個技術棧。</code></pre>
+
+    <p>Grok Build 會自動將這些資訊整合至 Global Scope 記憶中。</p>
+
+    <h3>步驟三：使用 /memory 查看記憶</h3>
+    <p>在對話框輸入 <code>/memory</code>，Agent 會顯示目前儲存的所有記憶條目，格式類似：</p>
+
+    <pre><code>## 🧠 你的 Grok Build 記憶
+
+### Global Scope（跨所有專案）
+- **開發語言**：TypeScript（strict mode）
+- **套件管理器**：pnpm
+- **程式風格**：functional，early return，避免 class
+- **測試框架**：Vitest + Testing Library
+- **偏好資料庫**：PostgreSQL + Prisma ORM
+
+### Project Scope（當前專案：my-saas-app）
+- **框架**：Next.js 14 App Router
+- **部署**：Vercel（前端）+ DigitalOcean（後端）
+- **目前進度**：正在實作使用者認證模組</code></pre>
+
+    <h3>步驟四：使用 /dream 整合記憶</h3>
+    <p><code>/dream</code> 是 Grok Build 特有的記憶整合指令。當你完成一個較長的工作階段後，輸入 <code>/dream</code>，Agent 會：</p>
+    <ol>
+      <li>回顧當前會話中發現的新偏好或習慣</li>
+      <li>與現有記憶進行比對，避免重複或矛盾</li>
+      <li>整合後更新記憶檔案</li>
+    </ol>
+    <p>建議在每次長工作階段結束前執行一次 <code>/dream</code>，讓記憶保持最新狀態。</p>
+
+    <div class="cta-wrap">
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-btn cta-primary">
+        🚀 DigitalOcean 免費獲得 $200 點數
+        <span class="cta-sub">部署 AI Agent 後端、Postgres 資料庫，60 天試用期</span>
+      </a>
+    </div>
+
+    <h2>雙層記憶架構詳解：Project Scope vs Global Scope</h2>
+
+    <p>Grok Build 的記憶系統設計了兩個層級，這個設計很有智慧：</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>維度</th>
+            <th>Global Scope（全局記憶）</th>
+            <th>Project Scope（專案記憶）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>適用範圍</strong></td>
+            <td>所有專案、所有對話</td>
+            <td>僅限當前開啟的專案</td>
+          </tr>
+          <tr>
+            <td><strong>儲存內容</strong></td>
+            <td>個人偏好、語言習慣、工具偏好、溝通風格</td>
+            <td>專案架構、當前進度、特定技術決策、TODO</td>
+          </tr>
+          <tr>
+            <td><strong>典型範例</strong></td>
+            <td>「我偏好 TypeScript、pnpm、early return」</td>
+            <td>「此專案使用 Tailwind v4、Drizzle ORM、部署在 Cloudways」</td>
+          </tr>
+          <tr>
+            <td><strong>載入時機</strong></td>
+            <td>每次開啟 Grok Build 自動載入</td>
+            <td>開啟對應專案目錄時載入</td>
+          </tr>
+          <tr>
+            <td><strong>更新方式</strong></td>
+            <td>Agent 自動更新 + /dream 整合</td>
+            <td>Agent 自動更新 + /dream 整合</td>
+          </tr>
+          <tr>
+            <td><strong>儲存格式</strong></td>
+            <td>Markdown（.md）</td>
+            <td>Markdown（.md）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>對於在多個客戶專案間切換的自由工作者，或在公司同時維護多個 repo 的工程師來說，這個雙層設計非常實用——你的個人偏好永遠在，但每個專案的脈絡也分開管理，不會互相污染。</p>
+
+    <h2>Grok Build vs Claude Code：記憶管理完整比較</h2>
+
+    <p>目前市場上 Coding Agent 的記憶管理主要有三種流派：Grok Build 的「Agent 主動管理」、Claude Code 的「開發者手動維護 CLAUDE.md」，以及 Cursor 的「Rules 靜態設定」。讓我們做個全面比較：</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>功能</th>
+            <th>Grok Build v1.0.34</th>
+            <th>Claude Code</th>
+            <th>Cursor（Rules）</th>
+            <th>GitHub Copilot</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>記憶機制</strong></td>
+            <td>Agent 自動觀察儲存</td>
+            <td>CLAUDE.md 手動維護</td>
+            <td>.cursorrules 靜態文件</td>
+            <td>無跨會話記憶</td>
+          </tr>
+          <tr>
+            <td><strong>跨會話持久化</strong></td>
+            <td>✅ 是（雲端儲存）</td>
+            <td>✅ 是（本地檔案）</td>
+            <td>✅ 是（本地檔案）</td>
+            <td>❌ 否</td>
+          </tr>
+          <tr>
+            <td><strong>設定難度</strong></td>
+            <td>🟢 零配置（自動）</td>
+            <td>🟡 中（需手動撰寫）</td>
+            <td>🟡 中（需手動撰寫）</td>
+            <td>🟢 無需設定</td>
+          </tr>
+          <tr>
+            <td><strong>靈活性</strong></td>
+            <td>🟡 中（AI 決定）</td>
+            <td>🟢 高（完全自定義）</td>
+            <td>🟢 高（完全自定義）</td>
+            <td>🔴 低</td>
+          </tr>
+          <tr>
+            <td><strong>記憶查看</strong></td>
+            <td>/memory 指令</td>
+            <td>直接讀取 CLAUDE.md</td>
+            <td>直接讀取 .cursorrules</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td><strong>記憶更新</strong></td>
+            <td>Agent 自動 + /dream</td>
+            <td>手動編輯檔案</td>
+            <td>手動編輯檔案</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td><strong>隱私</strong></td>
+            <td>🟡 xAI 雲端</td>
+            <td>🟢 本地（更安全）</td>
+            <td>🟢 本地（更安全）</td>
+            <td>🟡 GitHub 雲端</td>
+          </tr>
+          <tr>
+            <td><strong>多專案管理</strong></td>
+            <td>✅ 雙層 scope</td>
+            <td>✅ 每個 repo 一份</td>
+            <td>✅ 每個 repo 一份</td>
+            <td>❌ 無</td>
+          </tr>
+          <tr>
+            <td><strong>免費版可用</strong></td>
+            <td>✅ 是</td>
+            <td>需付費 Claude.ai</td>
+            <td>免費版有限制</td>
+            <td>個人免費版</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>哪個更適合你？</h3>
+    <ul>
+      <li><strong>選 Grok Build</strong>：你想要零設定、讓 AI 自動幫你管理偏好、不想花時間維護 markdown 檔案</li>
+      <li><strong>選 Claude Code</strong>：你對記憶內容需要精確控制、有敏感的專案資訊、或已建立成熟的 CLAUDE.md 工作流程</li>
+      <li><strong>選 Cursor Rules</strong>：你主要在 IDE 內工作、偏好靜態規則、不需要動態更新</li>
+    </ul>
+
+    <div class="cta-wrap">
+      <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" class="cta-btn cta-orange">
+        📚 DataCamp AI 課程 — 掌握 LLM 與 AI Agent 實戰技術
+        <span class="cta-sub">從 Python 到 Agent 架構，系統性學習 AI 開發技能</span>
+      </a>
+    </div>
+
+    <h2>Grok Build 記憶功能進階技巧</h2>
+
+    <h3>技巧一：建立分層記憶策略</h3>
+    <p>不要把所有事情都扔給 Global Scope。建議的分層策略：</p>
+    <ul>
+      <li><strong>Global（個人身份層）</strong>：程式語言偏好、套件管理器、測試框架、溝通語言（繁中或英文）</li>
+      <li><strong>Project（專案脈絡層）</strong>：當前 sprint 目標、已完成的功能、待解決的 bug、特定的技術決策理由</li>
+    </ul>
+    <p>明確告訴 Grok Build 哪些資訊屬於哪個層級，可以讓記憶更有組織：</p>
+    <pre><code>【Global 偏好更新】我從今天開始改用 Bun 替代 Node.js，請記在全局記憶中。
+【Project 脈絡更新】這個專案決定不使用 tRPC，改用 REST API，原因是客戶端是 React Native。</code></pre>
+
+    <h3>技巧二：定期清理記憶</h3>
+    <p>隨著時間推移，記憶可能累積過時資訊。建議每個月執行一次記憶審查：</p>
+    <pre><code>/memory
+# 查看後，針對過時條目：
+請刪除關於「使用 Webpack」的記憶，我現在全面改用 Vite 了。</code></pre>
+
+    <h3>技巧三：用 /dream 建立工作結束儀式</h3>
+    <p>每次完成一個功能或修完一批 bug 後，輸入 <code>/dream</code> 讓 Agent 整理今天學到的內容。這是一個很有價值的工作儀式，類似寫工作日誌，但完全自動化。</p>
+
+    <h3>技巧四：在新專案開始時主動灌輸脈絡</h3>
+    <p>每次開啟新專案，花 2 分鐘給 Grok Build 一份專案簡介：</p>
+    <pre><code>新專案開始。請為這個專案建立 Project Scope 記憶：
+
+專案名稱：TaipeiDelivery API
+技術棧：Fastify + TypeScript + Prisma + PostgreSQL
+部署環境：DigitalOcean Droplet（Ubuntu 22.04）
+目前進度：剛建立 repo，開始架構設計
+特殊限制：需要支援台灣中文地址格式，時區 Asia/Taipei
+合作者：我一個人負責後端，前端由另一名工程師負責</code></pre>
+
+    <h2>台灣開發者的三大使用場景</h2>
+
+    <h3>場景一：自由工作者多客戶管理</h3>
+    <p>台灣有大量在接案的自由工作者，同時維護 3-5 個客戶專案。每個客戶有不同的技術棧、不同的溝通方式、不同的進度。Grok Build 的 Project Scope 記憶讓你切換專案時，Agent 立刻掌握正確脈絡，不需要每次都解釋「這個客戶用的是 Laravel 不是 Django」。</p>
+
+    <h3>場景二：AI 產品開發者節省 Token</h3>
+    <p>開發 AI 產品的工程師通常需要大量使用 Coding Agent，Token 成本是重要考量。Grok Build 的記憶功能讓你不需要在每次對話的 system prompt 裡重複貼上大量背景資訊——這直接省下每次對話 500-2,000 個 token，累積起來相當可觀。搭配 <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" target="_blank" rel="noopener sponsored">Cloudways</a> 部署後端，成本管控更輕鬆。</p>
+
+    <h3>場景三：企業內部開發團隊統一規範</h3>
+    <p>在企業場景中，Grok Build 的 Global Scope 記憶可以作為個人編碼規範的「自動強制執行層」。每位工程師設定好自己的偏好後，整個 team 的 Grok Build 輸出會更符合公司風格，Code Review 的摩擦大幅減少。</p>
+
+    <div class="cta-wrap">
+      <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" target="_blank" rel="noopener sponsored" class="cta-btn cta-green">
+        🏗️ Systeme.io — 免費建立 AI 工具課程或 SaaS 銷售漏斗
+        <span class="cta-sub">免費方案含無限頁面、電子郵件行銷、課程功能，無需信用卡</span>
+      </a>
+    </div>
+
+    <h2>隱私與安全：你需要知道的事</h2>
+
+    <div class="info-box yellow">
+      <div class="info-box-title">⚠️ 記憶功能使用注意事項</div>
+      <ul>
+        <li><strong>絕對不要</strong>在記憶中儲存 API 密鑰、資料庫連線字串、或任何機敏認證資訊</li>
+        <li>Grok Build 記憶儲存在 xAI 雲端，受 xAI 隱私政策約束</li>
+        <li>如果你的專案有 NDA 或保密協議，評估是否適合讓 AI 儲存專案細節</li>
+        <li>定期使用 <code>/memory</code> 審查記憶內容，刪除不必要的資訊</li>
+        <li>離職或專案結束後，記得清除相關的 Project Scope 記憶</li>
+      </ul>
+    </div>
+
+    <p>相較之下，Claude Code 的 <code>CLAUDE.md</code> 是本地檔案，對隱私敏感的專案（金融、醫療、政府）可能更適合 Claude Code 的本地記憶方案。這是 Grok Build 目前相對 Claude Code 的主要劣勢。</p>
+
+    <p>如果你需要 VPN 保護開發環境或在公共場所使用 Grok Build，可以考慮搭配 <a href="https://onelink.one/s/7WSzC" target="_blank" rel="noopener sponsored">NordVPN</a> 保護你的網路連線，避免中間人攻擊竊取 API 請求。</p>
+
+    <h2>Grok Build 記憶功能的限制與未來展望</h2>
+
+    <h3>目前的限制</h3>
+    <ul>
+      <li><strong>記憶容量限制</strong>：目前尚未公開記憶的最大容量，但 xAI 文件建議保持每個 scope 在 1,000 行以內</li>
+      <li><strong>雲端依賴</strong>：記憶儲存在雲端，離線時無法存取，也增加了隱私風險</li>
+      <li><strong>AI 決策不透明</strong>：Agent 自行決定哪些內容值得記憶，有時可能記了不必要的東西，或漏掉重要偏好</li>
+      <li><strong>無法跨帳號分享</strong>：團隊協作時，每個人的記憶是獨立的，無法共享 team-level 的記憶設定</li>
+      <li><strong>語言偏好需明確設定</strong>：預設情況下 Grok Build 可能用英文回覆，台灣用戶需要在 Global Scope 明確設定「請用繁體中文回覆」</li>
+    </ul>
+
+    <h3>未來可期的功能</h3>
+    <p>根據 xAI 的 roadmap 和社群討論，以下功能可能在後續版本出現：</p>
+    <ul>
+      <li>Team Scope（團隊共享記憶）：讓整個工程團隊共享專案脈絡</li>
+      <li>記憶匯出/匯入：支援將記憶備份或在不同帳號間遷移</li>
+      <li>記憶版本控制：類似 git 的記憶歷史，可以回溯到特定時間點</li>
+      <li>與本地檔案系統整合：可能提供類似 CLAUDE.md 的本地儲存選項</li>
+    </ul>
+
+    <div class="info-box purple">
+      <div class="info-box-title">🆚 結論：Grok Build 記憶功能值得試用嗎？</div>
+      <p>如果你目前是 Claude Code 或 Cursor 的用戶，但苦於每次都要手動維護記憶設定，Grok Build v1.0.34 的自動記憶功能絕對值得一試——特別是現在免費版就能用。</p>
+      <p style="margin-top:0.5rem;">如果你對隱私有嚴格要求，或需要精確控制 Agent 記住的每一個細節，Claude Code 的 CLAUDE.md 方案仍然是更好的選擇。</p>
+      <p style="margin-top:0.5rem;">兩個工具並非互斥——很多台灣開發者會根據專案性質選擇合適的工具。開放程度高、個人側專案用 Grok Build；客戶專案、機密度高的用 Claude Code。</p>
+    </div>
+
+    <h2>常見問題 FAQ</h2>
+
+    <h3>Q：Grok Build 和 Grok Chat 是一樣的嗎？</h3>
+    <p>不一樣。Grok Chat 是一般對話介面（grok.x.ai），Grok Build 是專門針對 Coding 任務的 Agentic 環境（build.x.ai），有檔案讀取、程式碼執行、記憶管理等進階功能，更接近 Claude Code 的定位。</p>
+
+    <h3>Q：/memory 和 /dream 指令在哪裡輸入？</h3>
+    <p>這兩個指令都在 Grok Build 的對話輸入框輸入，就像一般訊息一樣發送，不需要任何特殊設定。</p>
+
+    <h3>Q：記憶功能會佔用 context window 嗎？</h3>
+    <p>是的，記憶在每次會話開始時會被載入至 context window。但由於 Grok Build 有 500K context window（來自 Grok 4.7 API），即使記憶檔案達到幾千行，仍有充裕的空間給實際的對話內容。</p>
+
+    <h3>Q：如何完全清除所有記憶？</h3>
+    <p>在對話框輸入以下指令：</p>
+    <pre><code>請清除我的所有 Global Scope 記憶和當前 Project Scope 記憶。</code></pre>
+    <p>Agent 會確認後執行清除。如需更細粒度的控制，可以先用 <code>/memory</code> 查看再逐一刪除。</p>
+
+    <h3>Q：Grok Build 記憶會影響 xAI 的 AI 訓練嗎？</h3>
+    <p>根據 xAI 隱私政策，如果你是付費用戶，可以選擇退出資料用於訓練。免費用戶的對話資料（包含記憶）可能會被用於改善模型。建議前往 xAI 帳號設定確認並調整你的隱私偏好。</p>
+
+    <div class="cta-wrap">
+      <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" target="_blank" rel="noopener sponsored" class="cta-btn cta-primary">
+        ☁️ Cloudways 雲端主機 — 部署 AI Agent 後端最佳選擇
+        <span class="cta-sub">管理型雲端主機，支援 DigitalOcean / AWS / GCP，免費試用 3 天</span>
+      </a>
+    </div>
+
+    <h2>快速上手清單</h2>
+    <p>整理一份可以直接複製貼上的快速設定流程：</p>
+    <ol>
+      <li>前往 <a href="https://build.x.ai" target="_blank" rel="noopener">build.x.ai</a> 確認版本 v1.0.34+</li>
+      <li>開啟新對話，用中文告訴 Grok Build 你的技術偏好（語言、框架、工具）</li>
+      <li>輸入 <code>/memory</code> 確認記憶已正確儲存</li>
+      <li>開啟新的獨立對話，測試 Agent 是否記得你的偏好</li>
+      <li>工作階段結束前輸入 <code>/dream</code> 整合記憶</li>
+      <li>每個月審查一次記憶，刪除過時或不必要的條目</li>
+    </ol>
+
+    <div class="info-box blue">
+      <div class="info-box-title">📚 延伸閱讀</div>
+      <ul>
+        <li><a href="/blog/grok-47-complete-review-2026.html">Grok 4.7 完整評測 2026：Intelligence Index #4，繁中首發 →</a></li>
+        <li><a href="/blog/kilo-code-review-vs-cursor-claude-code-2026.html">Kilo Code vs Cursor vs Claude Code 完整比較 2026 →</a></li>
+        <li><a href="/blog/openai-devday-2026-preview.html">OpenAI DevDay 2026 完整預覽：Sep 29 重點功能整理 →</a></li>
+        <li><a href="/blog/ai-agent-memory-tools-comparison-2026.html">AI Agent 記憶工具 2026 五方評測：Contextberg vs scritty vs LoreKit →</a></li>
+        <li><a href="/blog/deepseek-harness-complete-guide-2026.html">DeepSeek Harness 完整教學 2026：本機部署 + API 接入 →</a></li>
+      </ul>
+    </div>
+
+  </div><!-- .article-body -->
+
+  <div style="border-top:2px solid var(--border);margin-top:3rem;padding-top:2rem;text-align:center;">
+    <p style="font-size:0.85rem;color:var(--text-muted);">本文部分連結為聯盟行銷連結，點擊後購買可能讓 AutoDev AI 獲得少量佣金，不影響你的購買費用。我們只推薦真正使用過且認為有價值的工具。</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 AutoDev AI — 台灣 AI 工具評測與教學 | <a href="/privacy.html">隱私政策</a> | <a href="/sitemap.xml">Sitemap</a></p>
+  <p style="margin-top:0.5rem;font-size:0.8rem;">autodev-ai.com — 繁中 AI 開發者社群首選資源</p>
+</footer>
+
+</body>
+</html>
