@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agent 記憶工具比較 2026：Contextberg vs scritty vs LoreKit vs ContextPool vs Valori | AutoDev AI</title>
+  <meta name="description" content="2026 年最完整 AI Agent 記憶持久化工具互動比較頁。Contextberg、scritty、LoreKit、ContextPool、Valori 五大工具，MCP 支援、本機 vs 雲端、免費 tier、定價一覽。繁中首發。">
+  <meta name="keywords" content="ai agent 記憶工具比較, contextberg 評測, scritty 評測, lorekit 教學, contextpool 評測, coding agent 記憶層 比較, mcp 記憶 繁中, ai agent memory 2026">
+  <link rel="canonical" href="https://autodev-ai.com/tools/ai-agent-memory-tools-comparison-2026.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Agent 記憶工具比較 2026：Contextberg vs scritty vs LoreKit vs ContextPool vs Valori">
+  <meta property="og:description" content="2026 年 AI Agent 記憶持久化工具完整互動比較。五大工具一次看清楚。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://autodev-ai.com/tools/ai-agent-memory-tools-comparison-2026.html">
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "AI Agent 記憶工具比較 2026",
+    "description": "Contextberg vs scritty vs LoreKit vs ContextPool vs Valori 互動比較頁，涵蓋 MCP 支援、本機/雲端、免費 tier、定價與使用場景。",
+    "url": "https://autodev-ai.com/tools/ai-agent-memory-tools-comparison-2026.html",
+    "datePublished": "2026-09-23",
+    "dateModified": "2026-09-23",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AutoDev AI",
+      "url": "https://autodev-ai.com"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --primary: #6C63FF;
+      --primary-dark: #5548E0;
+      --secondary: #00D4AA;
+      --bg: #0F0F1A;
+      --card: #1A1A2E;
+      --card2: #16213E;
+      --text: #E8E8F0;
+      --muted: #888899;
+      --border: #2A2A45;
+      --green: #22C55E;
+      --yellow: #EAB308;
+      --red: #EF4444;
+      --blue: #3B82F6;
+      --purple: #A855F7;
+      --orange: #F97316;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { color: var(--secondary); text-decoration: underline; }
+    
+    /* Header */
+    .site-header { background: var(--card); border-bottom: 1px solid var(--border); padding: 14px 0; }
+    .site-header .inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+    .site-logo { font-size: 1.2rem; font-weight: 700; color: var(--text); }
+    .site-logo span { color: var(--primary); }
+    .nav-links { display: flex; gap: 20px; font-size: 0.9rem; }
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #1A1A35 0%, #0F0F1A 60%); padding: 60px 20px 40px; text-align: center; border-bottom: 1px solid var(--border); }
+    .hero-badge { display: inline-block; background: rgba(108,99,255,0.15); color: var(--primary); border: 1px solid rgba(108,99,255,0.35); border-radius: 20px; padding: 5px 14px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; margin-bottom: 18px; }
+    .hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); font-weight: 800; line-height: 1.3; max-width: 780px; margin: 0 auto 16px; }
+    .hero h1 span { color: var(--primary); }
+    .hero .subtitle { color: var(--muted); font-size: 1rem; max-width: 600px; margin: 0 auto 24px; }
+    .hero-meta { display: flex; align-items: center; justify-content: center; gap: 20px; font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+    .hero-meta span { display: flex; align-items: center; gap: 5px; }
+
+    /* Main content */
+    .main { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    
+    /* Filter Section */
+    .filter-section { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px; margin-bottom: 36px; }
+    .filter-section h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 18px; color: var(--text); }
+    .filter-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+    .filter-group label { font-size: 0.82rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px; }
+    .filter-group select { width: 100%; background: var(--card2); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; font-size: 0.9rem; cursor: pointer; }
+    .filter-group select:focus { outline: none; border-color: var(--primary); }
+    .filter-actions { display: flex; gap: 10px; margin-top: 16px; }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border: none; border-radius: 8px; padding: 10px 20px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.9; }
+    .btn-reset { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 8px; padding: 10px 16px; font-size: 0.9rem; cursor: pointer; transition: color 0.2s, border-color 0.2s; }
+    .btn-reset:hover { color: var(--text); border-color: var(--muted); }
+
+    /* Result banner */
+    .result-banner { background: rgba(108,99,255,0.1); border: 1px solid rgba(108,99,255,0.3); border-radius: 10px; padding: 14px 18px; margin-bottom: 28px; font-size: 0.9rem; color: var(--text); display: none; }
+    .result-banner strong { color: var(--primary); }
+    .result-banner.show { display: block; }
+    
+    /* Section heading */
+    .section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+    .section-heading h2 { font-size: 1.3rem; font-weight: 700; }
+    .view-toggle { display: flex; gap: 6px; }
+    .view-btn { background: var(--card2); border: 1px solid var(--border); color: var(--muted); border-radius: 7px; padding: 6px 12px; font-size: 0.82rem; cursor: pointer; transition: all 0.2s; }
+    .view-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+    /* Cards Grid */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-bottom: 48px; }
+    .tool-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; transition: border-color 0.25s, transform 0.2s; position: relative; overflow: hidden; }
+    .tool-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+    .tool-card.recommended { border-color: var(--secondary); }
+    .tool-card.recommended::before { content: '⭐ 推薦'; position: absolute; top: 12px; right: 12px; background: var(--secondary); color: #000; font-size: 0.72rem; font-weight: 700; padding: 3px 9px; border-radius: 10px; }
+    .tool-card.hidden { display: none; }
+    
+    .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .card-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+    .card-title { font-size: 1.1rem; font-weight: 700; }
+    .card-tagline { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+    
+    .card-score { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+    .score-pill { display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.06); border-radius: 6px; padding: 4px 10px; font-size: 0.78rem; }
+    .score-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .dot-green { background: var(--green); }
+    .dot-yellow { background: var(--yellow); }
+    .dot-red { background: var(--red); }
+    .dot-blue { background: var(--blue); }
+
+    .card-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .badge { font-size: 0.74rem; font-weight: 600; padding: 3px 9px; border-radius: 6px; }
+    .badge-blue { background: rgba(59,130,246,0.15); color: #93C5FD; }
+    .badge-green { background: rgba(34,197,94,0.15); color: #86EFAC; }
+    .badge-purple { background: rgba(168,85,247,0.15); color: #D8B4FE; }
+    .badge-yellow { background: rgba(234,179,8,0.15); color: #FDE047; }
+    .badge-orange { background: rgba(249,115,22,0.15); color: #FDBA74; }
+    .badge-gray { background: rgba(255,255,255,0.08); color: var(--muted); }
+
+    .card-features { margin-bottom: 14px; }
+    .feature-row { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--muted); margin-bottom: 5px; }
+    .feature-row .icon { font-size: 0.9rem; width: 16px; text-align: center; flex-shrink: 0; }
+    .feature-row .val { color: var(--text); }
+    
+    .card-pricing { background: rgba(255,255,255,0.04); border-radius: 8px; padding: 10px 12px; margin-bottom: 14px; }
+    .pricing-free { font-size: 0.82rem; color: var(--green); font-weight: 600; }
+    .pricing-paid { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
+
+    .card-cta { display: block; text-align: center; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border-radius: 8px; padding: 10px; font-size: 0.88rem; font-weight: 600; transition: opacity 0.2s; }
+    .card-cta:hover { opacity: 0.88; text-decoration: none; color: white; }
+    .card-cta-secondary { display: block; text-align: center; background: transparent; color: var(--primary); border: 1px solid var(--primary); border-radius: 8px; padding: 9px; font-size: 0.88rem; font-weight: 600; margin-top: 8px; transition: background 0.2s; }
+    .card-cta-secondary:hover { background: rgba(108,99,255,0.1); text-decoration: none; }
+
+    /* Table view */
+    .table-wrapper { overflow-x: auto; margin-bottom: 48px; border-radius: 14px; border: 1px solid var(--border); }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .compare-table th { background: var(--card); padding: 14px 16px; text-align: left; font-weight: 700; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .compare-table th:first-child { position: sticky; left: 0; background: var(--card); z-index: 2; }
+    .compare-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    .compare-table td:first-child { position: sticky; left: 0; background: var(--card2); font-weight: 600; z-index: 1; white-space: nowrap; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:hover td { background: rgba(108,99,255,0.05); }
+    .compare-table tr:hover td:first-child { background: rgba(108,99,255,0.1); }
+    .tbl-yes { color: var(--green); font-weight: 700; }
+    .tbl-no { color: var(--red); }
+    .tbl-partial { color: var(--yellow); }
+    .tbl-tag { display: inline-block; background: rgba(108,99,255,0.15); color: #B3ADFF; border-radius: 5px; padding: 2px 7px; font-size: 0.78rem; margin: 2px; }
+    .tbl-rec { background: rgba(0,212,170,0.15); color: var(--secondary); border-radius: 20px; padding: 2px 10px; font-size: 0.78rem; font-weight: 700; }
+
+    /* Recommender */
+    .recommender { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 48px; }
+    .recommender h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
+    .q-group { margin-bottom: 20px; }
+    .q-group label { font-size: 0.9rem; font-weight: 600; margin-bottom: 10px; display: block; }
+    .q-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .q-opt { padding: 7px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; user-select: none; }
+    .q-opt:hover { border-color: var(--primary); color: var(--primary); }
+    .q-opt.selected { background: var(--primary); border-color: var(--primary); color: white; }
+    .recommend-result { background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.3); border-radius: 10px; padding: 18px 20px; margin-top: 20px; display: none; }
+    .recommend-result.show { display: block; }
+    .rec-tool-name { font-size: 1.1rem; font-weight: 800; color: var(--secondary); margin-bottom: 6px; }
+    .rec-reason { font-size: 0.9rem; color: var(--text); line-height: 1.6; }
+    
+    /* Score bars */
+    .scores-section { margin-bottom: 48px; }
+    .scores-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 24px; }
+    .score-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 14px; }
+    .score-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+    .score-card-header .name { font-weight: 700; font-size: 1rem; }
+    .score-card-header .total { font-size: 1.2rem; font-weight: 800; color: var(--primary); }
+    .score-bar-group { display: grid; grid-template-columns: 120px 1fr 36px; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 0.83rem; }
+    .score-label { color: var(--muted); }
+    .score-bar-track { background: rgba(255,255,255,0.07); border-radius: 4px; height: 8px; overflow: hidden; }
+    .score-bar-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+    .score-val { color: var(--text); font-weight: 600; text-align: right; }
+
+    /* CTA Banner */
+    .cta-banner { background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,212,170,0.08)); border: 1px solid rgba(108,99,255,0.3); border-radius: 14px; padding: 32px; text-align: center; margin-bottom: 48px; }
+    .cta-banner h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+    .cta-banner p { color: var(--muted); font-size: 0.95rem; margin-bottom: 22px; }
+    .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-btn { display: inline-block; padding: 12px 24px; border-radius: 10px; font-weight: 700; font-size: 0.95rem; transition: opacity 0.2s; }
+    .cta-btn-main { background: linear-gradient(135deg, #5865F2, #7289DA); color: white; }
+    .cta-btn-main:hover { opacity: 0.9; text-decoration: none; color: white; }
+    .cta-btn-sec { background: linear-gradient(135deg, var(--secondary), #00B89A); color: #000; }
+    .cta-btn-sec:hover { opacity: 0.9; text-decoration: none; color: #000; }
+    
+    /* FAQ */
+    .faq-section { margin-bottom: 48px; }
+    .faq-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 16px 18px; cursor: pointer; font-weight: 600; font-size: 0.92rem; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+    .faq-q:hover { background: rgba(255,255,255,0.04); }
+    .faq-q .arrow { transition: transform 0.25s; color: var(--muted); font-size: 1.1rem; }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+    .faq-a.open { padding: 0 18px 16px; max-height: 300px; }
+    
+    /* Related */
+    .related-articles { margin-bottom: 48px; }
+    .related-articles h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; transition: border-color 0.2s; }
+    .related-card:hover { border-color: var(--primary); }
+    .related-card .rtag { font-size: 0.74rem; color: var(--primary); font-weight: 600; margin-bottom: 6px; }
+    .related-card .rtitle { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+    .related-card .rtitle:hover { color: var(--primary); }
+
+    /* Footer */
+    footer { background: var(--card); border-top: 1px solid var(--border); padding: 28px 20px; text-align: center; font-size: 0.82rem; color: var(--muted); }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--text); }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.5rem; }
+      .filter-grid { grid-template-columns: 1fr 1fr; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="inner">
+    <a href="https://autodev-ai.com" class="site-logo">Auto<span>Dev AI</span></a>
+    <nav class="nav-links">
+      <a href="https://autodev-ai.com/blog/">文章</a>
+      <a href="https://autodev-ai.com/tools/">工具</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">🧠 AI Agent Memory — 2026 賽道爆發</div>
+  <h1>AI Agent <span>記憶工具</span>比較 2026<br>Contextberg、scritty、LoreKit、ContextPool、Valori</h1>
+  <p class="subtitle">五大 AI Agent 記憶持久化工具完整互動比較。省下 34–61% token，讓你的 Coding Agent 記住一切。</p>
+  <div class="hero-meta">
+    <span>📅 2026-09-23 更新</span>
+    <span>🔍 5 工具深度比較</span>
+    <span>💬 繁中首發</span>
+    <span>🤖 OpenClaw / MCP 相容</span>
+  </div>
+</section>
+
+<!-- Main -->
+<main class="main">
+
+  <!-- Filter -->
+  <div class="filter-section">
+    <h2>🔍 篩選工具</h2>
+    <div class="filter-grid">
+      <div class="filter-group">
+        <label>部署方式</label>
+        <select id="filter-deploy">
+          <option value="all">全部</option>
+          <option value="local">本機優先</option>
+          <option value="cloud">雲端</option>
+          <option value="selfhost">自架</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>MCP 支援</label>
+        <select id="filter-mcp">
+          <option value="all">全部</option>
+          <option value="yes">有 MCP</option>
+          <option value="no">無 MCP</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>免費方案</label>
+        <select id="filter-free">
+          <option value="all">全部</option>
+          <option value="yes">有免費 tier</option>
+          <option value="no">僅付費</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>加密儲存</label>
+        <select id="filter-encrypt">
+          <option value="all">全部</option>
+          <option value="yes">有加密</option>
+          <option value="no">無加密</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter-actions">
+      <button class="btn-primary" onclick="applyFilters()">套用篩選</button>
+      <button class="btn-reset" onclick="resetFilters()">重設</button>
+    </div>
+  </div>
+
+  <div id="result-banner" class="result-banner"></div>
+
+  <!-- Cards -->
+  <div class="section-heading">
+    <h2>🃏 工具卡片</h2>
+    <div class="view-toggle">
+      <button class="view-btn active" id="btn-card" onclick="setView('card')">卡片</button>
+      <button class="view-btn" id="btn-table" onclick="setView('table')">表格</button>
+    </div>
+  </div>
+
+  <div class="cards-grid" id="cards-view">
+
+    <!-- Contextberg -->
+    <div class="tool-card recommended"
+         data-deploy="local" data-mcp="yes" data-free="yes" data-encrypt="no">
+      <div class="card-header">
+        <div class="card-icon" style="background:rgba(108,99,255,0.18)">🧠</div>
+        <div>
+          <div class="card-title">Contextberg</div>
+          <div class="card-tagline">OpenClaw 官方整合 · 三層記憶</div>
+        </div>
+      </div>
+      <div class="card-badges">
+        <span class="badge badge-purple">MCP ✓</span>
+        <span class="badge badge-green">本機優先</span>
+        <span class="badge badge-blue">OpenClaw 官方</span>
+        <span class="badge badge-yellow">PH Sep 22 #6</span>
+      </div>
+      <div class="card-features">
+        <div class="feature-row"><span class="icon">💾</span><span>記憶架構：</span><span class="val">活動 / 日 / 長期 三層</span></div>
+        <div class="feature-row"><span class="icon">🔌</span><span>MCP 支援：</span><span class="val">✅ 原生 MCP server</span></div>
+        <div class="feature-row"><span class="icon">🖥️</span><span>平台：</span><span class="val">macOS · Windows</span></div>
+        <div class="feature-row"><span class="icon">🔒</span><span>隱私：</span><span class="val">本機儲存，不上雲</span></div>
+        <div class="feature-row"><span class="icon">⚡</span><span>省 token：</span><span class="val">~40–61%（長期記憶）</span></div>
+      </div>
+      <div class="card-pricing">
+        <div class="pricing-free">🆓 免費 tier（基礎記憶）</div>
+        <div class="pricing-paid">💎 Pro：待公開</div>
+      </div>
+      <a class="card-cta" href="https://contextberg.com" target="_blank" rel="noopener">🔗 查看 Contextberg</a>
+      <a class="card-cta-secondary" href="https://autodev-ai.com/blog/ai-agent-memory-tools-comparison-2026.html">閱讀完整評測 →</a>
+    </div>
+
+    <!-- scritty -->
+    <div class="tool-card"
+         data-deploy="cloud" data-mcp="yes" data-free="yes" data-encrypt="yes">
+      <div class="card-header">
+        <div class="card-icon" style="background:rgba(59,130,246,0.18)">📝</div>
+        <div>
+          <div class="card-title">scritty</div>
+          <div class="card-tagline">5,000 次免費記憶 · AES-256 加密</div>
+        </div>
+      </div>
+      <div class="card-badges">
+        <span class="badge badge-purple">MCP ✓</span>
+        <span class="badge badge-blue">雲端</span>
+        <span class="badge badge-green">AES-256</span>
+        <span class="badge badge-green">5K 免費</span>
+      </div>
+      <div class="card-features">
+        <div class="feature-row"><span class="icon">💾</span><span>記憶數：</span><span class="val">5,000 次（免費）</span></div>
+        <div class="feature-row"><span class="icon">🔌</span><span>MCP 支援：</span><span class="val">✅ 雲端 MCP</span></div>
+        <div class="feature-row"><span class="icon">🔒</span><span>加密：</span><span class="val">AES-256 端對端</span></div>
+        <div class="feature-row"><span class="icon">🌐</span><span>存取：</span><span class="val">任何設備（雲端同步）</span></div>
+        <div class="feature-row"><span class="icon">⚡</span><span>省 token：</span><span class="val">~34–50%</span></div>
+      </div>
+      <div class="card-pricing">
+        <div class="pricing-free">🆓 免費：5,000 次記憶</div>
+        <div class="pricing-paid">💎 付費：$4.99/月（無限）</div>
+      </div>
+      <a class="card-cta" href="https://scritty.com" target="_blank" rel="noopener">🔗 查看 scritty</a>
+      <a class="card-cta-secondary" href="https://autodev-ai.com/blog/ai-agent-memory-tools-comparison-2026.html">閱讀完整評測 →</a>
+    </div>
+
+    <!-- LoreKit -->
+    <div class="tool-card"
+         data-deploy="selfhost" data-mcp="yes" data-free="yes" data-encrypt="no">
+      <div class="card-header">
+        <div class="card-icon" style="background:rgba(34,197,94,0.18)">📚</div>
+        <div>
+          <div class="card-title">LoreKit</div>
+          <div class="card-tagline">MIT 開源 · hosted Postgres backend</div>
+        </div>
+      </div>
+      <div class="card-badges">
+        <span class="badge badge-purple">MCP ✓</span>
+        <span class="badge badge-green">MIT 開源</span>
+        <span class="badge badge-orange">自架 / 雲端</span>
+        <span class="badge badge-green">5K 免費</span>
+      </div>
+      <div class="card-features">
+        <div class="feature-row"><span class="icon">💾</span><span>記憶數：</span><span class="val">5,000 次（free hosted）</span></div>
+        <div class="feature-row"><span class="icon">🔌</span><span>MCP 支援：</span><span class="val">✅ MCP + REST API</span></div>
+        <div class="feature-row"><span class="icon">🗄️</span><span>後端：</span><span class="val">hosted Postgres（可自架）</span></div>
+        <div class="feature-row"><span class="icon">📖</span><span>授權：</span><span class="val">MIT（完全開源）</span></div>
+        <div class="feature-row"><span class="icon">⚡</span><span>省 token：</span><span class="val">~35–55%</span></div>
+      </div>
+      <div class="card-pricing">
+        <div class="pricing-free">🆓 免費：5,000 次（hosted）</div>
+        <div class="pricing-paid">🏗️ 自架：免費無限（需 Postgres）</div>
+      </div>
+      <a class="card-cta" href="https://github.com/lorekit" target="_blank" rel="noopener">🔗 查看 LoreKit</a>
+      <a class="card-cta-secondary" href="https://autodev-ai.com/blog/ai-agent-memory-tools-comparison-2026.html">閱讀完整評測 →</a>
+    </div>
+
+    <!-- ContextPool -->
+    <div class="tool-card"
+         data-deploy="cloud" data-mcp="yes" data-free="no" data-encrypt="yes">
+      <div class="card-header">
+        <div class="card-icon" style="background:rgba(249,115,22,0.18)">🏊</div>
+        <div>
+          <div class="card-title">ContextPool</div>
+          <div class="card-tagline">$7.99/月 · 團隊記憶同步</div>
+        </div>
+      </div>
+      <div class="card-badges">
+        <span class="badge badge-purple">MCP ✓</span>
+        <span class="badge badge-blue">雲端</span>
+        <span class="badge badge-orange">Team Sync</span>
+        <span class="badge badge-green">加密 ✓</span>
+      </div>
+      <div class="card-features">
+        <div class="feature-row"><span class="icon">👥</span><span>特色：</span><span class="val">多人共享記憶池</span></div>
+        <div class="feature-row"><span class="icon">🔌</span><span>MCP 支援：</span><span class="val">✅ 雲端 MCP</span></div>
+        <div class="feature-row"><span class="icon">🔒</span><span>加密：</span><span class="val">傳輸 + 靜態加密</span></div>
+        <div class="feature-row"><span class="icon">🏢</span><span>適合：</span><span class="val">團隊 / 企業</span></div>
+        <div class="feature-row"><span class="icon">⚡</span><span>省 token：</span><span class="val">~40–55%</span></div>
+      </div>
+      <div class="card-pricing">
+        <div class="pricing-free" style="color:var(--yellow)">⚠️ 無免費 tier</div>
+        <div class="pricing-paid">💎 $7.99/月（個人）/ 團隊方案另報</div>
+      </div>
+      <a class="card-cta" href="https://contextpool.com" target="_blank" rel="noopener">🔗 查看 ContextPool</a>
+      <a class="card-cta-secondary" href="https://autodev-ai.com/blog/ai-agent-memory-tools-comparison-2026.html">閱讀完整評測 →</a>
+    </div>
+
+    <!-- Valori -->
+    <div class="tool-card"
+         data-deploy="cloud" data-mcp="no" data-free="yes" data-encrypt="yes">
+      <div class="card-header">
+        <div class="card-icon" style="background:rgba(168,85,247,0.18)">🎯</div>
+        <div>
+          <div class="card-title">Valori</div>
+          <div class="card-tagline">確定性記憶層 · PH Sep 22 #12</div>
+        </div>
+      </div>
+      <div class="card-badges">
+        <span class="badge badge-gray">MCP 待確認</span>
+        <span class="badge badge-blue">雲端</span>
+        <span class="badge badge-purple">確定性 AI</span>
+        <span class="badge badge-yellow">PH Sep 22 #12</span>
+      </div>
+      <div class="card-features">
+        <div class="feature-row"><span class="icon">💡</span><span>特色：</span><span class="val">確定性記憶層（無幻覺）</span></div>
+        <div class="feature-row"><span class="icon">🔌</span><span>MCP 支援：</span><span class="val">⏳ 待確認</span></div>
+        <div class="feature-row"><span class="icon">🔒</span><span>加密：</span><span class="val">傳輸加密</span></div>
+        <div class="feature-row"><span class="icon">📊</span><span>定位：</span><span class="val">企業 / 高可靠性場景</span></div>
+        <div class="feature-row"><span class="icon">⚡</span><span>省 token：</span><span class="val">~30–45%</span></div>
+      </div>
+      <div class="card-pricing">
+        <div class="pricing-free">🆓 免費 beta（限時）</div>
+        <div class="pricing-paid">💎 定價待公告</div>
+      </div>
+      <a class="card-cta" href="https://valori.ai" target="_blank" rel="noopener">🔗 查看 Valori</a>
+      <a class="card-cta-secondary" href="https://autodev-ai.com/blog/ai-agent-memory-tools-comparison-2026.html">閱讀完整評測 →</a>
+    </div>
+
+  </div><!-- /cards-grid -->
+
+  <!-- Table View (hidden by default) -->
+  <div class="table-wrapper" id="table-view" style="display:none">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>工具</th>
+          <th>部署方式</th>
+          <th>MCP 支援</th>
+          <th>免費 tier</th>
+          <th>加密</th>
+          <th>省 token</th>
+          <th>定價</th>
+          <th>最適合</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🧠 Contextberg <span class="tbl-rec">推薦</span></td>
+          <td><span class="tbl-tag">本機優先</span></td>
+          <td><span class="tbl-yes">✅ 原生</span></td>
+          <td><span class="tbl-yes">✅ 有</span></td>
+          <td><span class="tbl-partial">🔒 本機不出雲</span></td>
+          <td>40–61%</td>
+          <td>免費 + Pro 待定</td>
+          <td>個人開發者 · OpenClaw 用戶</td>
+        </tr>
+        <tr>
+          <td>📝 scritty</td>
+          <td><span class="tbl-tag">雲端</span></td>
+          <td><span class="tbl-yes">✅ 雲端 MCP</span></td>
+          <td><span class="tbl-yes">✅ 5,000 次</span></td>
+          <td><span class="tbl-yes">✅ AES-256</span></td>
+          <td>34–50%</td>
+          <td>免費 / $4.99/月</td>
+          <td>隱私要求高 · 多設備</td>
+        </tr>
+        <tr>
+          <td>📚 LoreKit</td>
+          <td><span class="tbl-tag">自架/雲端</span></td>
+          <td><span class="tbl-yes">✅ MCP+API</span></td>
+          <td><span class="tbl-yes">✅ 5,000 次</span></td>
+          <td><span class="tbl-partial">⚠️ 自架自管</span></td>
+          <td>35–55%</td>
+          <td>免費（自架無限）</td>
+          <td>開源愛好者 · 自架控</td>
+        </tr>
+        <tr>
+          <td>🏊 ContextPool</td>
+          <td><span class="tbl-tag">雲端</span></td>
+          <td><span class="tbl-yes">✅ 雲端 MCP</span></td>
+          <td><span class="tbl-no">❌ 無</span></td>
+          <td><span class="tbl-yes">✅ 傳輸+靜態</span></td>
+          <td>40–55%</td>
+          <td>$7.99/月起</td>
+          <td>團隊協作 · 多人共享</td>
+        </tr>
+        <tr>
+          <td>🎯 Valori</td>
+          <td><span class="tbl-tag">雲端</span></td>
+          <td><span class="tbl-partial">⏳ 待確認</span></td>
+          <td><span class="tbl-yes">✅ beta</span></td>
+          <td><span class="tbl-partial">⚠️ 傳輸加密</span></td>
+          <td>30–45%</td>
+          <td>beta 免費，待定</td>
+          <td>企業 · 高可靠性</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Recommender -->
+  <div class="recommender">
+    <h2>🤔 哪個工具最適合你？</h2>
+    <div class="q-group">
+      <label>你的使用場景是？</label>
+      <div class="q-options">
+        <span class="q-opt" data-q="scenario" data-v="personal" onclick="selectOpt(this)">個人開發者</span>
+        <span class="q-opt" data-q="scenario" data-v="team" onclick="selectOpt(this)">小團隊（2–10人）</span>
+        <span class="q-opt" data-q="scenario" data-v="enterprise" onclick="selectOpt(this)">企業 / 高可靠</span>
+        <span class="q-opt" data-q="scenario" data-v="opensource" onclick="selectOpt(this)">開源愛好者</span>
+      </div>
+    </div>
+    <div class="q-group">
+      <label>你最重視什麼？</label>
+      <div class="q-options">
+        <span class="q-opt" data-q="priority" data-v="privacy" onclick="selectOpt(this)">🔒 隱私 / 本機</span>
+        <span class="q-opt" data-q="priority" data-v="cost" onclick="selectOpt(this)">💰 成本（越便宜越好）</span>
+        <span class="q-opt" data-q="priority" data-v="encryption" onclick="selectOpt(this)">🛡️ 加密安全</span>
+        <span class="q-opt" data-q="priority" data-v="reliability" onclick="selectOpt(this)">⚙️ 穩定可靠</span>
+      </div>
+    </div>
+    <div class="q-group">
+      <label>你用哪個 AI Agent 環境？</label>
+      <div class="q-options">
+        <span class="q-opt" data-q="env" data-v="openclaw" onclick="selectOpt(this)">OpenClaw / Claude</span>
+        <span class="q-opt" data-q="env" data-v="cursor" onclick="selectOpt(this)">Cursor / Windsurf</span>
+        <span class="q-opt" data-q="env" data-v="custom" onclick="selectOpt(this)">自製 MCP Agent</span>
+        <span class="q-opt" data-q="env" data-v="any" onclick="selectOpt(this)">不確定</span>
+      </div>
+    </div>
+    <button class="btn-primary" onclick="getRecommendation()">取得推薦 →</button>
+    <div id="rec-result" class="recommend-result">
+      <div id="rec-tool" class="rec-tool-name"></div>
+      <div id="rec-reason" class="rec-reason"></div>
+    </div>
+  </div>
+
+  <!-- Score Bars -->
+  <div class="scores-section">
+    <h2>📊 綜合評分（滿分 10）</h2>
+
+    <div class="score-card">
+      <div class="score-card-header"><span class="name">🧠 Contextberg</span><span class="total">9.1 / 10</span></div>
+      <div class="score-bar-group"><span class="score-label">MCP 整合</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--green)"></div></div><span class="score-val">10</span></div>
+      <div class="score-bar-group"><span class="score-label">隱私保護</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--green)"></div></div><span class="score-val">10</span></div>
+      <div class="score-bar-group"><span class="score-label">省 token 效果</span><div class="score-bar-track"><div class="score-bar-fill" style="width:92%;background:var(--primary)"></div></div><span class="score-val">9.2</span></div>
+      <div class="score-bar-group"><span class="score-label">上手難度</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%;background:var(--blue)"></div></div><span class="score-val">8.5</span></div>
+      <div class="score-bar-group"><span class="score-label">定價透明</span><div class="score-bar-track"><div class="score-bar-fill" style="width:75%;background:var(--yellow)"></div></div><span class="score-val">7.5</span></div>
+    </div>
+
+    <div class="score-card">
+      <div class="score-card-header"><span class="name">📝 scritty</span><span class="total">8.6 / 10</span></div>
+      <div class="score-bar-group"><span class="score-label">MCP 整合</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--green)"></div></div><span class="score-val">10</span></div>
+      <div class="score-bar-group"><span class="score-label">加密安全</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--green)"></div></div><span class="score-val">10</span></div>
+      <div class="score-bar-group"><span class="score-label">省 token 效果</span><div class="score-bar-track"><div class="score-bar-fill" style="width:80%;background:var(--primary)"></div></div><span class="score-val">8.0</span></div>
+      <div class="score-bar-group"><span class="score-label">上手難度</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%;background:var(--blue)"></div></div><span class="score-val">9.0</span></div>
+      <div class="score-bar-group"><span class="score-label">定價透明</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--green)"></div></div><span class="score-val">10</span></div>
+    </div>
+
+    <div class="score-card">
+      <div class="score-card-header"><span class="name">📚 LoreKit</span><span class="total">8.2 / 10</span></div>
+      <div class="score-bar-group"><span class="score-label">MCP 整合</span><div class="score-bar-track"><div class="score-bar-fill" style="width:95%;background:var(--green)"></div></div><span class="score-val">9.5</span></div>
+      <div class="score-bar-group"><span class="score-label">自架彈性</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--green)"></div></div><span class="score-val">10</span></div>
+      <div class="score-bar-group"><span class="score-label">省 token 效果</span><div class="score-bar-track"><div class="score-bar-fill" style="width:82%;background:var(--primary)"></div></div><span class="score-val">8.2</span></div>
+      <div class="score-bar-group"><span class="score-label">上手難度</span><div class="score-bar-track"><div class="score-bar-fill" style="width:65%;background:var(--yellow)"></div></div><span class="score-val">6.5</span></div>
+      <div class="score-bar-group"><span class="score-label">定價透明</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--green)"></div></div><span class="score-val">10</span></div>
+    </div>
+
+    <div class="score-card">
+      <div class="score-card-header"><span class="name">🏊 ContextPool</span><span class="total">7.8 / 10</span></div>
+      <div class="score-bar-group"><span class="score-label">MCP 整合</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--green)"></div></div><span class="score-val">10</span></div>
+      <div class="score-bar-group"><span class="score-label">團隊功能</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--green)"></div></div><span class="score-val">10</span></div>
+      <div class="score-bar-group"><span class="score-label">省 token 效果</span><div class="score-bar-track"><div class="score-bar-fill" style="width:85%;background:var(--primary)"></div></div><span class="score-val">8.5</span></div>
+      <div class="score-bar-group"><span class="score-label">上手難度</span><div class="score-bar-track"><div class="score-bar-fill" style="width:80%;background:var(--blue)"></div></div><span class="score-val">8.0</span></div>
+      <div class="score-bar-group"><span class="score-label">免費 tier</span><div class="score-bar-track"><div class="score-bar-fill" style="width:20%;background:var(--red)"></div></div><span class="score-val">2.0</span></div>
+    </div>
+
+    <div class="score-card">
+      <div class="score-card-header"><span class="name">🎯 Valori</span><span class="total">7.4 / 10</span></div>
+      <div class="score-bar-group"><span class="score-label">確定性準確率</span><div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--green)"></div></div><span class="score-val">10</span></div>
+      <div class="score-bar-group"><span class="score-label">企業穩定性</span><div class="score-bar-track"><div class="score-bar-fill" style="width:90%;background:var(--blue)"></div></div><span class="score-val">9.0</span></div>
+      <div class="score-bar-group"><span class="score-label">省 token 效果</span><div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:var(--yellow)"></div></div><span class="score-val">7.0</span></div>
+      <div class="score-bar-group"><span class="score-label">MCP 整合</span><div class="score-bar-track"><div class="score-bar-fill" style="width:50%;background:var(--yellow)"></div></div><span class="score-val">5.0</span></div>
+      <div class="score-bar-group"><span class="score-label">定價透明</span><div class="score-bar-track"><div class="score-bar-fill" style="width:50%;background:var(--yellow)"></div></div><span class="score-val">5.0</span></div>
+    </div>
+  </div>
+
+  <!-- Affiliate CTA Banner -->
+  <div class="cta-banner">
+    <h2>🚀 想學 AI Agent 開發？</h2>
+    <p>從入門到部署，DataCamp 和 DigitalOcean 是開發者最常搭配使用的學習 + 雲端組合。</p>
+    <div class="cta-buttons">
+      <a class="cta-btn cta-btn-main" href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored">📚 DataCamp AI 課程 — 限時優惠</a>
+      <a class="cta-btn cta-btn-sec" href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored">☁️ DigitalOcean — 新戶 $200 免費點數</a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2>❓ 常見問題</h2>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>AI Agent 記憶工具是什麼？和直接用 context window 有什麼差別？</span><span class="arrow">▼</span></div>
+      <div class="faq-a">AI Agent 記憶工具負責把跨對話、跨 session 的重要資訊持久化儲存，讓下次 agent 啟動時可以快速讀取，而不是每次都把全部背景塞入 context window。這樣一來可以省下 34–61% 的 token 費用，二來可以突破 context 長度限制，讓 agent「記得」你幾週前做過什麼。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>Contextberg 和 OpenClaw 怎麼整合？</span><span class="arrow">▼</span></div>
+      <div class="faq-a">Contextberg 在官方網站直接列出 OpenClaw 為原生支援平台。安裝 Contextberg 後，它會自動啟動本機 MCP server，OpenClaw 即可透過 MCP protocol 讀寫記憶。整合只需幾分鐘，無需 API key，資料完全留在本機。詳細教學請參考 <a href="https://autodev-ai.com/blog/ai-agent-memory-tools-comparison-2026.html">完整評測文章</a>。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>這些工具的記憶資料安全嗎？</span><span class="arrow">▼</span></div>
+      <div class="faq-a">各工具的隱私保護方式不同：Contextberg 採本機儲存不上雲，隱私最高；scritty 使用 AES-256 端對端加密；LoreKit 自架時可自管資料；ContextPool 和 Valori 為雲端服務，採傳輸加密。如果你的工作涉及機密程式碼或客戶資料，建議優先選擇 Contextberg（本機）或 LoreKit（自架）。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>AI Agent 記憶工具真的可以省 token 費用嗎？</span><span class="arrow">▼</span></div>
+      <div class="faq-a">是的。根據各工具官方和社群回報，使用記憶工具後，平均可省下 34–61% 的 input token 費用。省下比例取決於你的工作模式——長期持續性專案（如程式碼庫維護、文件撰寫）受益最大；短期一次性任務效果相對較小。以 Claude Sonnet 5 為例，每百萬 token $3，一天 100 次對話，每次平均 2,000 tokens，月節省可達 $36–73。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>哪個工具對 Cursor / Windsurf / Kilo Code 用戶最友善？</span><span class="arrow">▼</span></div>
+      <div class="faq-a">scritty 和 ContextPool 透過雲端 MCP server 提供跨 IDE 支援，理論上可配合任何支援 MCP 的 coding agent（包括 Cursor、Windsurf、Kilo Code）。LoreKit 透過 REST API 也可整合。Contextberg 目前著重桌面 app + OpenClaw，但 macOS 用戶也可嘗試用 MCP 接入。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)"><span>完全免費的選項有哪些？</span><span class="arrow">▼</span></div>
+      <div class="faq-a">LoreKit 自架版完全免費且無記憶數量限制（需要自架 Postgres）；scritty 和 LoreKit 的 hosted free tier 各提供 5,000 次免費記憶；Contextberg 有免費方案（Pro tier 待公告）；Valori 目前在 beta 期間免費。ContextPool 目前沒有免費 tier。</div>
+    </div>
+  </div>
+
+  <!-- Related Articles -->
+  <div class="related-articles">
+    <h2>📖 相關文章</h2>
+    <div class="related-grid">
+      <div class="related-card">
+        <div class="rtag">AI Agent 記憶</div>
+        <a class="rtitle" href="https://autodev-ai.com/blog/ai-agent-memory-tools-comparison-2026.html">AI Agent 記憶工具完整評測 2026：五方深度比較（繁中首發）</a>
+      </div>
+      <div class="related-card">
+        <div class="rtag">Coding Agent</div>
+        <a class="rtitle" href="https://autodev-ai.com/blog/kilo-code-review-vs-cursor-claude-code-2026.html">Kilo Code 完整評測 2026：PH 月榜 #1，繁中首發</a>
+      </div>
+      <div class="related-card">
+        <div class="rtag">AI 工具</div>
+        <a class="rtitle" href="https://autodev-ai.com/blog/grok-47-complete-review-2026.html">Grok 4.7 完整評測 2026：Intelligence Index #4，繁中首發</a>
+      </div>
+      <div class="related-card">
+        <div class="rtag">省成本</div>
+        <a class="rtitle" href="https://autodev-ai.com/tools/ai-coding-tools-pricing-calculator-2026.html">AI Coding 工具定價計算器 2026</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 AutoDev AI — <a href="https://autodev-ai.com">autodev-ai.com</a> | <a href="https://autodev-ai.com/blog/">文章列表</a> | <a href="https://autodev-ai.com/tools/">工具列表</a></p>
+  <p style="margin-top:8px; font-size:0.78rem;">本頁含聯盟連結。透過本頁連結購買，我們可能獲得佣金，不影響您的售價或評測公正性。</p>
+</footer>
+
+<script>
+// ---- Filter Logic ----
+function applyFilters() {
+  const deploy = document.getElementById('filter-deploy').value;
+  const mcp    = document.getElementById('filter-mcp').value;
+  const free   = document.getElementById('filter-free').value;
+  const enc    = document.getElementById('filter-encrypt').value;
+  let visible = 0;
+  document.querySelectorAll('.tool-card').forEach(card => {
+    const ok = (deploy === 'all' || card.dataset.deploy === deploy)
+            && (mcp   === 'all' || card.dataset.mcp   === mcp)
+            && (free  === 'all' || card.dataset.free  === free)
+            && (enc   === 'all' || card.dataset.encrypt === enc);
+    card.classList.toggle('hidden', !ok);
+    if (ok) visible++;
+  });
+  const banner = document.getElementById('result-banner');
+  if (visible < 5) {
+    banner.innerHTML = `篩選結果：找到 <strong>${visible}</strong> 個符合條件的工具`;
+    banner.classList.add('show');
+  } else {
+    banner.classList.remove('show');
+  }
+}
+function resetFilters() {
+  ['filter-deploy','filter-mcp','filter-free','filter-encrypt'].forEach(id => {
+    document.getElementById(id).value = 'all';
+  });
+  document.querySelectorAll('.tool-card').forEach(c => c.classList.remove('hidden'));
+  document.getElementById('result-banner').classList.remove('show');
+}
+
+// ---- View Toggle ----
+function setView(v) {
+  document.getElementById('cards-view').style.display = v === 'card' ? '' : 'none';
+  document.getElementById('table-view').style.display = v === 'table' ? '' : 'none';
+  document.getElementById('btn-card').classList.toggle('active', v === 'card');
+  document.getElementById('btn-table').classList.toggle('active', v === 'table');
+}
+
+// ---- Recommender ----
+var answers = {};
+function selectOpt(el) {
+  const q = el.dataset.q;
+  document.querySelectorAll('[data-q="'+q+'"]').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  answers[q] = el.dataset.v;
+}
+function getRecommendation() {
+  const s = answers.scenario || '';
+  const p = answers.priority || '';
+  const e = answers.env     || '';
+  let tool = '', reason = '';
+  if (e === 'openclaw' || p === 'privacy' || s === 'personal' && p !== 'encryption') {
+    tool = '🧠 Contextberg';
+    reason = 'OpenClaw 官方整合、三層記憶架構、資料完全本機儲存，是個人開發者和 OpenClaw 用戶的首選。省 token 效果最強（40–61%），無需付費即可開始使用。';
+  } else if (p === 'encryption' || p === 'cost') {
+    tool = '📝 scritty';
+    reason = '提供 AES-256 端對端加密，且有 5,000 次免費記憶。定價透明（$4.99/月無限），適合重視資料安全又預算有限的個人用戶。';
+  } else if (s === 'opensource' || p === 'cost' && s !== 'enterprise') {
+    tool = '📚 LoreKit';
+    reason = 'MIT 開源授權，自架後完全免費且無記憶數量限制。適合喜歡自己掌控資料的開發者，只需要一台有 Postgres 的 VPS 即可部署。';
+  } else if (s === 'team') {
+    tool = '🏊 ContextPool';
+    reason = '專為多人協作設計，支援共享記憶池。團隊成員可以共享同一個記憶庫，非常適合 2–10 人的小型 AI 開發團隊。';
+  } else if (s === 'enterprise' || p === 'reliability') {
+    tool = '🎯 Valori';
+    reason = '以「確定性記憶層」為核心差異點，適合需要高可靠性、零幻覺記憶輸出的企業場景。目前 beta 免費，可提前試用評估。';
+  } else {
+    tool = '🧠 Contextberg';
+    reason = '綜合評分最高（9.1/10），OpenClaw 官方整合，隱私優先，免費可用。是大多數個人開發者的最佳起點。';
+  }
+  document.getElementById('rec-tool').textContent = '推薦：' + tool;
+  document.getElementById('rec-reason').textContent = reason;
+  document.getElementById('rec-result').classList.add('show');
+}
+
+// ---- FAQ ----
+function toggleFaq(el) {
+  const ans = el.nextElementSibling;
+  el.classList.toggle('open');
+  ans.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

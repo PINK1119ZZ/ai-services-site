@@ -1,3 +1,57 @@
+## Round 216 — 2026-09-21 22:00 UTC（Mon 22:00 ai-dev-research cron）
+
+### 🚨 P0-EXECUTE FIRED（最高優先）
+
+**Grok 4.7 GA 2026-09-21**
+- URL: `blog/grok-47-complete-review-2026.html`
+- 觸發條件：xAI release notes 今日直接確認 `grok-4.7` API 上線
+- 規格：2.1T 參數，$2/$6 per 1M tokens，500K context，4 reasoning tiers，xhigh 為最高
+- Benchmark：Artificial Analysis Intelligence Index 46分（#4 全球），超越 GPT-5.6 Sol on Coding Agent
+- 強項：電工（Electrical Engineering）、法律（Legal）；弱項：純 coding
+- 同日：Grok Voice Transcribe 2.0 發布，grok-imagine-image-quality Nov 2 退役
+- 競品對比：Claude Fable 5.1 #1 / GPT-6 Astra #2（同等 Intelligence，成本 40%）/ Grok 4.7 #4
+- SEO keywords: `grok 4.7 評測`, `grok 4.7 繁中`, `grok 4.7 vs claude fable 5.1`, `xai api 2026`, `grok 4.7 price`
+- Affiliate: DigitalOcean + DataCamp + Cloudways
+- 預估: 2K-6K/月流量，$200-700/月收入
+
+### 🔴 P1 本週
+
+**Grok 4.7 vs Claude Fable 5.1 vs GPT-6 Astra 三方比較**
+- URL: `blog/grok-47-vs-claude-fable-51-gpt6-astra-comparison-2026.html`
+- 角度：成本效益視角 — 什麼工作該用哪個模型？
+- 核心洞見：Astra = Fable 5.1 同等智能但成本 40%；Grok 4.7 在電工/法律碾壓
+- 預估: $100-350/月
+
+### 📅 P1 中期（Oct 15-20 前）
+
+**GitHub Copilot Proficiency Model 新功能**
+- URL: `blog/github-copilot-proficiency-model-guide-2026.html`
+- 新角度：不用考試，靠真實使用 telemetry 驗證技能（5 等級 Beginner→Expert）
+- 搭配：DataCamp GH-300 認證課程（affiliate 機會，高流量組合）
+- Insiders List 現在開放報名
+- 截止：Oct 20（Universe 前一週）
+
+**GitHub Universe 2026 預熱文**
+- URL: `blog/github-universe-2026-preview-what-to-expect.html`
+- Oct 28-29 Fort Mason SF，線上線下並行
+- 新功能預覽：Copilot Proficiency Model、multi-model harness、MCP fine-grained auth
+- 截止：Oct 20
+
+### 🟡 P2 新
+
+**Ruby UTCP（MCP 替代協議）**
+- PH Sep 21 #16，scalable + secure tool calling alternative to MCP
+- JSON manifest，直接 API 調用，無 JSON-RPC overhead
+- 技術文機會，developer 受眾
+- 截止：Oct 1（趁熱打）
+
+**Mycel（AI 交付物自動草稿）**
+- PH Sep 21 #3
+- 「Bring one past deliverable. Mycel drafts every future one.」
+- affiliate 待確認
+
+---
+
 [Previous content preserved - appending Round 166]
 
 ---
@@ -4000,3 +4054,518 @@ Round 189 已由 strategist directive 發出 GPT-6 Astra P0-URGENT + Gemini 3.8 
 
 ### 預估新增月收入
 **$800-2,200/月**（Lumiko affiliate後 $80-250 + Monid 20% $120-400 + Kilo Code affiliate後 $150-500 + DevDay 峰值 $300-800 + AI安全教育文 $60-180 + 積壓 Ivan 批准後最大化）
+
+---
+
+## Round 215 — 2026-09-21 00:30 UTC（Mon 08:30 ai-trend-hunter cron）
+
+**任務核心：不是摘要新聞，是找賺錢機會。**
+
+### 🔍 本輪掃描範圍
+GitHub trending Sep 21 2026、HN Sep 2026 趨勢、Product Hunt Sep 月榜更新、Grok 4.8 狀態確認、新 affiliate 挖掘
+
+---
+
+### 🎯 核心發現總結
+
+**1. 🚨 P0-STANDBY 升級：Grok 4.8 GA 窗口正式開啟**
+- Sep 21 00:30 UTC：Manifold 4.7+ 市場「Sep 21前96%」窗口今日截止
+- xAI docs 至今（Sep 21 00:30 UTC）仍無 grok-4.8 model card / API ID / 定價
+- Musk Sep 13 宣布：2.5T 參數，C++ stack，RL 週期通常 1-2 週
+- **P0-STANDBY 升級：本週最可能觸發，Sep 22-25 為高機率窗口**
+- seo-writer 草稿就緒 blog/grok-48-complete-review-2026.html（P0 待命）
+- 預估 GA 後 48h 流量窗口：3K-8K 訪客，$300-900/月後續收入
+
+**2. ⭐ HIGH VALUE NEW 發現：Kilo Code affiliate 確認（flat CPA，最高 $99.50/conversion）**
+- Kilo Code = GitHub PH 月榜 #1（6.5K followers），open-source Cursor/Claude Code alternative
+- **Affiliate：kilo.ai/partners，一次性 flat commission**
+  - Expert plan $199/mo → $99.50/conversion
+  - Pro plan $49/mo → $24.50/conversion
+  - Starter plan $19/mo → $9.50/conversion
+- 月結算，Bank Transfer，$100 最低起付
+- **評估：非 recurring，一次性 CPA。仍有價值（高轉換率工具頁），但非 30%+ recurring 門檻**
+- 建議：工具評測文（不需等 Ivan）+ 比較頁（vs Cursor vs Claude Code）
+- 預估月收入：$80-300（工具頁間接）+ Ivan 批准後 $150-500（flat CPA）
+
+**3. 🚀 GitHub Trending Sep 21 TOP PICKS（高商業化潛力）**
+
+**Colibri MoE（JustVugg/colibri）- 35.5K★，+872★/天**
+- 純 C，零依賴，Expert Streaming，本機跑 frontier MoE 模型
+- R213-R214：已有 blog/colibri-moe-local-ai-guide-2026.html ✅（已完成，無需重複）
+
+**Tencent Octop（TencentCloud/Octop）- 3.3K★，+386★/天**
+- MIT Python，GA 2026-09-14，自托管多人多 agent AI 助理
+- 功能：web dashboard + CLI + IM channels（Feishu/DingTalk/QQ/Discord/WeCom）+ cron + 知識庫
+- **affiliate 狀況：MIT open-source，無官方 affiliate program**
+- **變現路線：教學文（間接 DO/DataCamp）+ 自托管 VPS 部署教學**
+- 關鍵字：octop 教學 繁中 / tencent octop ai / 自托管 ai 助理 台灣
+- 繁中競品：幾乎零（英文 wavect.io 評測存在，繁中空白）
+- 截止：Oct 1（熱度下滑前發布）
+- 預估月收入：$80-250（間接 DO + DataCamp CTA）
+
+**TencentCloud BrowserSkill（1.4K★ 今日）**
+- AI agent 使用真實已登入瀏覽器，不打斷用戶工作
+- TypeScript，CLI + 擴充套件，R201 首次發現
+- **變現：教學文（間接）+ 自動化工具比較頁（Playwright/Puppeteer vs BrowserSkill）**
+- 預估月收入：$60-180
+
+**alphaXiv/OpenResearch（4.96K★，+940★/天）**
+- Rust，本地優先研究 agent workspace，MIT
+- 把 coding agent 變成 research agent，auto-literature review + 實驗執行
+- R213 首次提案（P1），仍無 affiliate
+- 變現：教學文（間接）+ alphaXiv.org 研究平台比較頁
+- 截止：Sep 30
+- 預估月收入：$60-180
+
+**jamiepine/Voicebox（54.8K★ 累計，+665★/天）**
+- 本地 AI 語音 studio，ElevenLabs + WisprFlow 替代品
+- 7 種 TTS 引擎，23 語言，全域熱鍵語音輸入，MCP agent 整合
+- **affiliate 狀況：MIT open-source，無官方 affiliate program**
+- 變現：「ElevenLabs 免費替代」評測文（帶 ElevenLabs 比較 + DataCamp CTA）
+- 搜尋量估計：「voicebox ai 繁中」「voicebox elevenlabs 替代」—缺乏競品
+- 預估月收入：$80-250（間接 ElevenLabs/DataCamp）
+
+**4. 🔴 HN Sep 2026 趨勢信號（內容機會）**
+- HN Sep 2026 主題：AI workflow realism、production cost control、open-source self-hosted back ends、cybersecurity AI exposure
+- **內容機會：「AI Coding 工具成本控制 2026」常青文（已有工具頁 + 可補評測文）**
+- **內容機會：self-hosted AI assistant 繁中空白（Octop 教學切入）**
+- **內容機會：AI agent security audit 教學（繁中空白，HN 高討論度）**
+
+**5. 📊 UTCP（Universal Tool Calling Protocol）Product Hunt 新進**
+- Product Hunt：4 launches，4.8 評分，434 followers
+- 定位：MCP 替代品，更輕量，消除 wrapper tax，直接 JSON manifest
+- Ruby UTCP = 最新 launch（本週）
+- **affiliate 狀況：open standard，無 affiliate program**
+- 變現：比較頁「UTCP vs MCP 哪個更好？」（開發者技術教學，間接流量）
+- 預估月收入：$60-150（流量積累型）
+
+**6. 📅 DevDay T-8天（Sep 29 Fort Mason SF）**
+- blog/openai-devday-2026-preview.html：GSC position 5.8，169 impressions
+- **⚡ content-ops Sep 22 更新窗口到期（T-7天）—今天是最後 48h 準備**
+- 本輪再催：content-ops 必須明天（Sep 22 UTC）前更新文章加入最新確認功能（Managed Agents/AgentKit/GPT-Realtime-Mini）
+
+---
+
+### 📋 Topic Ideas 表格
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 | 優先級 |
+|------|------|--------|-----------|----------|-----------|---------|--------|
+| 2026-09-21 | Grok 4.8（xAI） | grok 4.8 評測 繁中 / grok 4.8 vs claude / grok 4.8 api | 高（GA後爆發 3K+/月） | 評測文（間接 DO/DataCamp/Cloudways），GA後立即執行 | $300-900/月 | autodev-ai.com | 🚨 P0-STANDBY |
+| 2026-09-21 | Kilo Code（kilo.ai） | kilo code 評測 / kilo code vs cursor / kilo code 教學 繁中 | 中（1K-3K/月） | 評測文（Kilo CPA $9.50-99.50/conv + 間接 DO/DataCamp） | $150-500/月 | autodev-ai.com | 🔴 P1-HIGH |
+| 2026-09-21 | Tencent Octop | octop ai 教學 / tencent octop 繁中 / 自托管 ai 助理 2026 | 中（0.8K-2K/月） | 教學文（間接 DO/DataCamp VPS 部署 CTA） | $80-250/月 | autodev-ai.com | 🟡 P1 |
+| 2026-09-21 | Voicebox（jamiepine） | voicebox ai 教學 / elevenlabs 免費替代 / 語音克隆 本機 | 中（1K-3K/月） | 評測文（ElevenLabs 比較 + DataCamp CTA） | $80-250/月 | autodev-ai.com | 🟡 P1 |
+| 2026-09-21 | alphaXiv OpenResearch | alphaxiv openresearch 教學 / 研究 agent 工具 / openresearch cli | 低中（0.5K-1.5K/月） | 教學文（間接 DataCamp + DO CTA） | $60-180/月 | autodev-ai.com | 🟡 P1 carryover |
+| 2026-09-21 | UTCP vs MCP | utcp vs mcp 比較 / universal tool calling / mcp 替代方案 | 低中（0.5K-2K/月） | 技術比較頁（開發者流量 → DO/DataCamp） | $60-150/月 | autodev-ai.com | 🟡 P2 |
+| 2026-09-21 | Tencent BrowserSkill | browser skill ai / ai agent 瀏覽器控制 / browserskill 教學 | 低中（0.5K-1.5K/月） | 教學文（Playwright 比較 + DO CTA） | $60-180/月 | autodev-ai.com | 🟡 P2 |
+
+---
+
+### 💰 新 Affiliate 發現詳情
+
+| 工具 | 佣金 | 類型 | URL | 優先級 | 月潛力 | 備注 |
+|------|------|------|-----|--------|--------|------|
+| Kilo Code | $9.50-$99.50/conv（flat CPA，一次性） | 自有，Bank Transfer | kilo.ai/partners | P1（Ivan 申請） | $150-500 | Expert plan $99.50/conv，非 recurring，但轉換率高（工具頁）；GitLab ROFR 協議（R214 已知）|
+
+---
+
+### 🔎 Watchlist 狀態更新（R215）
+
+- **Grok 4.8**：🚨 P0-STANDBY 升級（Manifold Sep 21 前96% 窗口今日截止，Sep 22-25 最高機率 GA，seo-writer 草稿就緒）
+- **OpenAI DevDay**：📅 T-8天（⚡ content-ops Sep 22 UTC 更新最後機會）
+- **Kilo Code**：🔴 P1-HIGH 新確認（kilo.ai/partners CPA $9.50-99.50，月榜 #1，Ivan 申請）
+- **Tencent Octop**：🟡 P1 新（Sep 14 GA，3.3K★，MIT，自托管多 agent，繁中空白，Oct 1 截止）
+- **Voicebox**：🟡 P1 新（54.8K★，ElevenLabs 替代，繁中空白，無 affiliate 但搜尋量佳）
+- **OpenResearch**：🟡 P1 carryover（R213，Sep 17 v0.2.4，無 affiliate，繁中空白）
+- **UTCP**：🟡 P2 新（Ruby UTCP Product Hunt 本週，MCP alternative，developer 技術文）
+- **BrowserSkill**：🟡 P2 carryover（R201，Tencent，GitHub trending）
+- **HN Self-Hosted AI 趨勢**：🟡 P2（Octop 教學可搭配 HN 趨勢信號）
+- **Lumiko**：🟡 P1 carryover（R214 Sep 19 PH #4，affiliate 待 Ivan 確認，Sep 23 截止）
+- **Monid**：🟡 P1 升級 carryover（月榜 #6，20%/6mo，Ivan 申請積壓 R208+）
+- **tiun. Billing**：🔴 P1-HIGH carryover（月榜 #4，Sep 25 截止）
+
+---
+
+### 預估新增月收入
+**$950-2,650/月**（Grok 4.8 GA後 $300-900 + Kilo Code Ivan後 $150-500 + Octop教學 $80-250 + Voicebox教學 $80-250 + DevDay峰值 $300-800 + UTCP/OpenResearch $120-330）
+
+
+---
+
+## Round 217 — 2026-09-22 (Tue 00:30 UTC)
+
+### 🔍 本輪核心發現
+
+**1. 🚨 Grok 4.7 P0-EXECUTE 確認 — seo-writer 立即行動**
+- R216（Mon 22:00 UTC）已確認 Grok 4.7 Sep 21 GA（API 上線）
+- 規格：2.1T 參數，$2/$0.50(cached)/$6 per 1M，500K context，Intelligence Index #4（46分）
+- seo-writer 草稿早已就緒 → blog/grok-47-complete-review-2026.html 立即執行
+- 繁中首發競爭窗口：現在至 Sep 23 UTC（48h）
+
+**2. 🤖 Sai — 自主電腦艦隊 (Product Hunt Sep 21 熱榜)**
+- 定位：「robosecretary」，雲端電腦艦隊 → 幫你操作螢幕（非 API 工具）
+- 73% OSWorld 評分（人類基準 72.4%，全球第一 computer use agent）
+- 並行 5 台電腦同時跑不同任務（古老 desktop app 也能自動化）
+- **affiliate 狀況**：無官方 affiliate 頁面（尚未確認），高票 PH 產品
+- **內容機會**：「電腦自己操作自己」主題教學，vs Anthropic Computer Use vs OpenAI Operator 比較頁
+- 預估月收入：$80-200（間接 DO/DataCamp），affiliate 待確認後升級
+- 建議站點：autodev-ai.com
+
+**3. 🌿 Mycel — AI 交付物草稿機器 (PH Sep 20 日榜 #1)**
+- 定位：記住你的客戶交付物格式，未來每次自動照格式草稿
+- 定價：$299/mo 或自托管免費（有機服務事業理想工具）
+- **affiliate 狀況**：無公開 affiliate 頁面（待 Ivan 確認 mycel.ai）
+- **關鍵字機會**：「mycel ai 評測 繁中」搜尋量低但高轉換意圖（B2B 顧問用戶）
+- 預估月收入：$100-300（Ivan 批准後，$299/mo × 30% 假設）
+- 建議站點：autodev-ai.com
+
+**4. 🔍 NiubiGEO — 開源 GEO 可視度工具 (Product Hunt 最新上線)**
+- Apache-2.0 開源，自托管，Sep 3 上線，462★ in 3 天
+- 功能：測試 ChatGPT/Gemini/Perplexity 怎麼介紹你的品牌，找出你哪裡落後
+- 搭配平台收費服務（API/hosting/human AI testing）
+- **affiliate 狀況**：免費開源 → 平台服務有收費但無已知 affiliate
+- **內容機會**：與 GEO/AEO 教學文搭配（tools/aeo-geo-checker-2026.html 的配套教學）
+- 預估月收入：$60-150（間接 DO/DataCamp 流量積累型）
+- 建議站點：autodev-ai.com
+
+**5. 🎨 gr.Workflow (Gradio/Hugging Face) — 視覺化 AI Pipeline 建構器**
+- Aug 25 2026 公告，Gradio 6.25.0 內建，拖放式節點連接 HF 模型/Space/dataset/Python
+- 每個 Workflow = 可執行 app + REST API + 一鍵部署 HF Space
+- **affiliate 狀況**：Hugging Face 無 affiliate（開源），教學文路線
+- **關鍵字**：「gradio workflow 教學 繁中」/ 「ai pipeline 視覺化 2026」
+- 預估月收入：$80-200（間接 DataCamp/DO，開發者高轉換族群）
+- 建議站點：autodev-ai.com
+
+**6. 💰 新高佣金 Affiliate 確認（本輪三方確認）**
+- **MeetGeek**：30% recurring per conversion（meeting intelligence platform，AI meeting summary）
+  - 確認來源：PartnerStack 2026 列表，推薦文：「MeetGeek vs Otter vs Fathom」比較文機會
+  - 月潛力：$150-400（$0/mo→$19.99/mo 方案，30%/月 × 引薦數）
+- **Reclaim.AI**：40%/12mo workplace email signups + 25% personal（Dropbox 旗下）
+  - R201 積壓已久！Ivan 必須立刻申請 reclaim.ai/affiliate-program
+  - 月潛力：$200-600（企業用戶高 LTV）
+- **GetResponse**：40-60% recurring/12mo（再確認，R199+ 積壓再催）
+  - 月潛力：$300-900（行銷自動化工具，台灣受眾高度吻合）
+
+**7. 📅 OpenAI DevDay T-7 今天 (Sep 22 UTC)**
+- DevDay 2026 = Sep 29 Fort Mason SF（T-7 = 今天！）
+- GPT-6 Astra Sep 3 已 GA（computer use + coding + research + document）
+- content-ops 更新 blog/openai-devday-2026-preview.html 今日 UTC 截止 ✅（已由 Sep 22 00:00 UTC 執行完成）
+- DevDay 重要看點：Astra 更廣泛 release + 完整評測套件 + platform announcements
+- **收入機會**：DevDay 當天（Sep 29）流量峰值仍有效，blog/openai-devday-2026-preview.html position 5.7
+
+**8. 📊 GEO/AI Visibility 市場信號加速**
+- AI 搜尋轉換率 4x Google（多個來源確認）
+- 2026年底：主動管理 AI 可視度的品牌 vs 沒管理的品牌出現顯著差距
+- **繁中 GEO 工具比較頁仍空白**（tools/aeo-geo-checker-2026.html 已建，blog 教學待產出）
+- 台灣數位行銷 CAGR 11.6%（確認），Morsa Signals PH Sep 21 #14（GTM + AI visibility）
+- **Morsa Signals**：developer tools GTM + AI visibility workflows，無公開 affiliate 但比較頁機會
+
+---
+
+### 📋 Topic Ideas 表格
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 | 優先級 |
+|------|------|--------|-----------|----------|-----------|---------|--------|
+| 2026-09-22 | Grok 4.7（xAI） | grok 4.7 評測 繁中 / grok 4.7 vs claude fable / grok 4.7 api 教學 | 高（GA後爆發 3K+/月） | 評測文（間接 DO/DataCamp/Cloudways）| $300-900/月 | autodev-ai.com | 🚨 P0-EXECUTE |
+| 2026-09-22 | Sai robosecretary | sai 電腦代理 / autonomous computer fleet / computer use agent 比較 | 中（1K-3K/月） | 評測文（間接 DO/DataCamp），affiliate 待確認 | $80-300/月 | autodev-ai.com | 🔴 P1 |
+| 2026-09-22 | Mycel AI | mycel ai 評測 繁中 / ai 交付物草稿 / mycel vs n8n | 低中（0.5K-2K/月） | 評測文（Ivan 確認 mycel.ai affiliate） | $100-300/月 | autodev-ai.com | 🟡 P1 |
+| 2026-09-22 | NiubiGEO | niubigeo 教學 / geo 品牌可視度 / ai 搜尋 品牌分析 | 低中（0.5K-1.5K/月） | 教學文（工具頁配套，間接 DO/DataCamp） | $60-150/月 | autodev-ai.com | 🟡 P2（搭配 GEO 教學） |
+| 2026-09-22 | gr.Workflow Gradio | gradio workflow 教學 繁中 / ai pipeline 視覺化 / hugging face workflow | 低中（0.8K-2K/月） | 教學文（間接 DataCamp HF courses CTA） | $80-200/月 | autodev-ai.com | 🟡 P1 |
+| 2026-09-22 | MeetGeek | meetgeek 評測 繁中 / otter vs fathom vs meetgeek / ai 會議記錄比較 | 中（1K-3K/月） | 評測文（MeetGeek 30% recurring affiliate） | $150-400/月 | autodev-ai.com | 🔴 P1 |
+| 2026-09-22 | Reclaim.AI | reclaim ai 評測 繁中 / 日曆 ai 助理 / reclaim vs clockwise 2026 | 中（1K-2K/月） | 評測文（Reclaim 40%/12mo，Ivan 申請積壓） | $200-600/月 | autodev-ai.com | 🔴 P1-HIGH積壓 |
+
+---
+
+### 💰 新 Affiliate 發現詳情
+
+| 工具 | 佣金 | 類型 | URL | 優先級 | 月潛力 | 備注 |
+|------|------|------|-----|--------|--------|------|
+| MeetGeek | 30% recurring/conversion | PartnerStack | meetgeek.ai | P1 | $150-400 | AI 會議記錄，PartnerStack 2026 確認；比較文「MeetGeek vs Otter vs Fathom vs Fireflies」 |
+| Reclaim.AI | 40%/12mo（workplace email）/ 25%（personal） | 自有 | reclaim.ai/affiliate-program | P1-HIGH積壓 | $200-600 | R201+ 積壓超久！Dropbox 旗下，企業日曆 AI，Ivan 立刻申請 |
+| GetResponse | 40-60% recurring/12mo | PartnerStack | getresponse.com/affiliates | P1積壓 | $300-900 | R199+ 積壓，本輪再催，行銷自動化台灣受眾吻合 |
+
+---
+
+### 🔎 Watchlist 狀態更新（R217）
+
+- **Grok 4.7**：🚨 P0-EXECUTE（Sep 21 GA 確認，2.1T，$2/$6，Intelligence #4，seo-writer 24h 內立即執行）
+- **OpenAI DevDay**：📅 T-7 今天（content-ops Sep 22 UTC 更新已完成 ✅）
+- **Sai robosecretary**：🔴 P1 新（PH Sep 21 熱榜，OSWorld 73%，affiliate 待確認）
+- **Mycel**：🟡 P1 新（PH Sep 20 #1，$299/mo，affiliate 待確認，Ivan 查詢 mycel.ai）
+- **NiubiGEO**：🟡 P2 新（Sep 3 GA，462★，開源 GEO 工具，搭配 AEO/GEO 教學文）
+- **gr.Workflow**：🟡 P1 新（Aug 25 HF 公告，視覺化 AI pipeline，繁中空白）
+- **MeetGeek**：🔴 P1 新確認（30% recurring，PartnerStack，Ivan 申請）
+- **Reclaim.AI**：🔴 P1-HIGH 積壓（40%/12mo，R201+ 積壓，Ivan 立刻申請！）
+- **GetResponse**：🔴 P1 積壓（40-60%/12mo，R199+ 積壓再催）
+- **Kilo Code**：🔴 P1-HIGH carryover（月榜 #1，$99.50/conv，Ivan 申請積壓）
+- **Tencent Octop**：🟡 P1 carryover（Oct 1 截止，繁中空白）
+- **Voicebox**：🟡 P1 carryover（54.8K★，ElevenLabs 替代，繁中空白）
+- **GitHub Universe Oct 28-29**：📅 P1（Oct 1 預熱文窗口）
+- **GEO/AI Visibility 市場**：📈 加速（台灣 CAGR 11.6%，NiubiGEO+Morsa Signals 雙重信號）
+
+---
+
+### 預估新增月收入
+**$1,130-3,250/月**（Grok 4.7 GA後 $300-900 + MeetGeek affiliate後 $150-400 + Reclaim.AI Ivan後 $200-600 + GetResponse Ivan後 $300-900 + Sai/Mycel教學 $180-500 + gr.Workflow教學 $80-200 + NiubiGEO搭配 $60-150）
+
+---
+
+
+---
+
+## Round 218 — 2026-09-23 00:30 UTC（Wed 00:30 ai-trend-hunter cron）
+
+### 🔴 P1-HIGH 高價值新工具
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|----------|-----------|---------|
+| 2026-09-23 | **Jev（TypeSafe AI System One）** | `jev typesafe 評測`, `system one model 是什麼`, `AI 決策模型 繁中`, `typesafe jev vs chatgpt 速度` | 🔺 爬升中（Sep 15 EA，$40M Seed，DataCamp博文） | 評測文 + 教學 → DataCamp/DigitalOcean CTA | $80-250/月 | autodev-ai |
+| 2026-09-23 | **Contextberg** | `contextberg 評測`, `AI agent 本機記憶 MCP 教學`, `contextberg vs scritty vs lorekit`, `coding agent 記憶 繁中` | 🔺 高（PH Sep 22 #6，MCP support，Claude Code/Cursor/OpenClaw 整合） | 評測文 → DigitalOcean/DataCamp；未來 contextberg 如有affiliate直接換 | $100-300/月 | autodev-ai |
+| 2026-09-23 | **Superset Mobile** | `superset mobile 評測`, `coding agent 手機管理`, `superset 2.0 教學 繁中`, `ai coding agent 並行` | 中（PH Sep 21 日榜 #1，YC，$12M Series B，2K followers） | 教學文 → DigitalOcean+DataCamp；Superset 如開 affiliate 首選 | $100-300/月 | autodev-ai |
+| 2026-09-23 | **Valori（AI 確定性記憶層）** | `valori ai memory 評測`, `deterministic memory layer AI`, `AI agent 確定性記憶 繁中`, `valori vs contextberg` | 🔺 新興（PH Sep 22 #12，確定性記憶層，區別於 RAG） | 評測+比較頁 → DataCamp/DigitalOcean CTA | $80-200/月 | autodev-ai |
+| 2026-09-23 | **Agent Memory 工具比較頁（Contextberg/scritty/LoreKit/ContextPool/Valori）** | `ai agent memory 工具比較 2026`, `coding agent 記憶層比較`, `contextberg vs lorekit 繁中`, `best ai memory tools` | 🔺高（agent memory 成2026 Q4 顯學）| **比較頁**（5工具），長尾流量 + DigitalOcean CTA | $150-450/月（常青） | autodev-ai |
+
+### 🟡 P2 趨勢觀察
+
+| 日期 | 工具 | 描述 | 機會 | 預估 |
+|------|------|------|------|------|
+| 2026-09-23 | **Shootsolo 2.0** | PH Sep 22 #26，語音控制相機+提詞機，solo creator工具 | 評測文（無明確affiliate，DataCamp/DO間接） | $60-150/月 |
+| 2026-09-23 | **FeedsBar** | PH Sep 22 #7，Mac桌面安靜新聞跑馬燈，生產力工具 | P3 觀察，搜尋量低 | $20-60/月 |
+| 2026-09-23 | **Xem** | PH Sep 22 #13，開源 email marketing + managed SMTP，Resend 競品 | 比較文（Xem vs Resend vs Mailchimp），DataCamp CTA | $80-200/月 |
+| 2026-09-23 | **WZRD** | PH Sep 22 #21，AI-native docs/slides/forms/sheets，Notion AI競品 | 等 affiliate 確認後評測 | $100-300/月 |
+| 2026-09-23 | **WeWeb MCP** | PH Sep 22 #19，AI agent 建 no-code app + 保留控制，vibe coding工具 | P2（無 affiliate 資訊，教學文 DataCamp CTA） | $80-200/月 |
+
+### 🏆 高價值 Affiliate 發現（本輪新）
+
+**AI Agent Memory 賽道爆發 — 賺錢角度：**
+- **Contextberg** — 本地記憶 MCP，免費版 + Pro tier（定價待公開），目前無明確 affiliate 計畫，但 PH Sep 22 #6 且 OpenClaw 官方整合確認（autodev-ai 工具文脈高度吻合），先做繁中首發教學佔位，affiliate 上線後立即替換
+- **scritty** — PH 已有評測（5,000 memories free，付費未披露），affiliate 狀態待確認
+- **ContextPool** — $7.99/月 Team sync，affiliate 狀態待確認
+- **Valori** — PH Sep 22 #12，確定性記憶層，pricing 未公開，affiliate 待確認
+
+**本輪重大新工具 — Jev（TypeSafe AI）：**
+- 類別：System One Model（機器決策 AI，非語言模型）
+- 定價：$0.042/1M input tokens（比 GPT-5.6 便宜 238×），output 免費
+- 速度：70ms-500ms（vs GPT-5.6 8.5秒）
+- 融資：$40M Seed，Sep 15 早期訪問
+- Affiliate：❌ 無（早期 waitlist 階段）
+- 機會：教學文（`blog/jev-typesafe-system-one-model-guide-2026.html`），DataCamp CTA
+- 關鍵詞：jev typesafe 評測、system one model、AI 決策模型 不是 LLM
+
+### 📅 日曆/截止事項
+
+- **OpenAI DevDay T-6天（Sep 29）**：blog/openai-devday-2026-preview.html 需 T-6 最後更新（GSC 7 clicks 258 impressions position 5.8，content-ops 今天執行最後更新）
+- **Grok 4.7 GA 已確認（R216 P0-EXECUTE FIRED）**：Grok 4.7 評測文應已由 seo-writer 執行或進行中，本輪不重複
+- **GitHub Universe Oct 預期**：Copilot 功能更新，T-30天開始準備比較頁
+
+### 💡 市場洞察
+
+1. **AI Agent Memory 成 2026 Q4 最熱賽道**：同一週 PH 出現 Contextberg #6、scritty、Valori #12、ContextPool，加上 GitHub 上 LoreKit、Agentmemory 138K★，市場在快速收斂到「agent 記憶持久化」這個問題。繁中比較頁空白，適合做 5-way 比較頁（常青高流量）
+2. **Superset Mobile PH Sep 21 日榜 #1**：parallel coding agents 進入手機端，工具延伸性強，教學文（Superset Mobile 繁中）空白確認
+3. **Jev / TypeSafe System One Models**：非 LLM 的 AI 決策層，新範疇，HN/DataCamp 已有覆蓋但繁中零，技術受眾高度吻合
+4. **「Harness」類生態系擴展**：OpenClaw 在 Contextberg 官網直接列為首批支援工具，是利用自身平台背書的 SEO 角度（autodev-ai 受眾完美吻合）
+
+### 積壓提醒（本輪 carryover 高優先）
+
+| 工具 | 狀態 | 行動方 |
+|------|------|--------|
+| Webflow 50%/12mo | 🔴 R211 首次提案，Ivan 必須申請 webflow.com/solutions/affiliates | Ivan |
+| Alli AI 30%/24mo 限時 | 🔴 限時前50位，Ivan 立即申請 alliai.com/affiliates | Ivan |
+| Cursor affiliate | 🔴 積壓最久（6+輪），Ivan 申請 openaffiliate.dev/programs/cursor | Ivan |
+| GoHighLevel 40% LIFETIME | 🔴 P1，Ivan 申請 gohighlevel.com/affiliate | Ivan |
+| Kajabi 30%/12mo | 🔴 P1-HIGH R212 首次提案，Ivan 申請 kajabi.com/partners | Ivan |
+| Tiun AI Billing | 🔴 P1-HIGH carryover（PH Sep 月榜 #1，Sep 25 截止） | seo-writer |
+| Harden AIF | 🔴 P1-HIGH carryover（PH Sep 9 #2，截止已過，繼續執行） | seo-writer |
+
+### 預估新增月收入
+**$610-1,700/月**（Contextberg 教學文 $100-300 + Agent Memory 比較頁 $150-450 + Jev 教學文 $80-250 + Superset Mobile 教學 $100-300 + Valori 評測 $80-200 + Xem 比較文 $80-200 + WZRD affiliate後 $100-300 carryover倍增）
+
+---
+
+---
+
+## Round 219 — 2026-09-24 00:30 UTC（Thu 00:30 ai-trend-hunter cron）
+
+### 🔴 P0-URGENT 高價值新發現
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|----------|-----------|---------|
+| 2026-09-24 | **Firecrawl Alexandria** | `firecrawl alexandria 評測 2026`, `firecrawl affiliate 申請`, `AI agent 知識庫 繁中`, `alexandria vs perplexity api`, `firecrawl 教學 繁中 2026` | 🔺爆炸（Sep 22 $75M Series B，PH #12，1.5M開發者用戶，Shopify/Apple/Canva客戶，已有確認 affiliate）| **CONFIRMED affiliate 25%/12mo → 15%/ongoing**（via partners.dub.co/firecrawl）; 評測文 + 教學文（MCP整合角度，繁中首發） | **$200-700/月**（Standard $83/mo × 25% = $20.75/月/引薦；Growth $333/mo × 25% = $83.25/月/引薦）| autodev-ai |
+| 2026-09-24 | **OpenAI DevDay 2026 T-5天直播指南** | `openai devday 2026 直播`, `openai devday 九月 2026 台灣時間`, `devday 2026 新功能預測`, `gpt-6 devday announcements` | 🔺極高（Sep 29 Fort Mason，livestream 免費，1,500+ 出席，5天後爆量搜尋）| 時效文（DevDay recap預測 + 直播連結）→ 尖峰流量 + DevDay後快速更新追流量，間接 DO + DataCamp CTA | **$300-1,200/月**（時效峰值後長尾） | autodev-ai |
+| 2026-09-24 | **GPT-6 Astra 完整評測** | `gpt-6 astra 評測 繁中`, `gpt-6 astra api 使用教學`, `gpt-6 astra vs claude fable 5.1`, `gpt-6 價格 2026`, `gpt-6 astra terminal-bench` | 🔺極高（Sep 3 GA，1.05M token，$10/$50 pricing，Terminal-Bench 57.9%，繁中評測缺口）| 評測文 + API 教學 → DataCamp + DigitalOcean CTA（高流量保證）| **$400-1,500/月**（常青 + 大流量關鍵字） | autodev-ai |
+
+### 🟡 P1-HIGH 高佣金工具
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|----------|-----------|---------|
+| 2026-09-24 | **AgentScore by Latitude** | `agentscore 評測 2026`, `ai agent 監控工具 繁中`, `latitude agentscore 教學`, `ai agent 效能追蹤`, `agentscore vs langfuse` | 中（PH Sep 23 #14，Latitude 生產追蹤，PH 歷史多次 #2，agent observability 賽道）| 評測文（比較頁：AgentScore vs Langfuse vs Helicone）→ DataCamp/DO CTA；Latitude affiliate 待確認（PartnerStack 歷史有計畫）| $80-250/月 | autodev-ai |
+| 2026-09-24 | **ToneBird AI Reply Assistant** | `tonebird 評測 繁中`, `ai reply assistant 2026`, `ai 記住關係 email reply`, `tonebird vs superhuman ai` | 中（PH Sep 23 #13，記住關係語氣的 AI 回覆助手，生產力工具）| 評測文 → DataCamp CTA；affiliate 未確認，先佔位繁中首發 | $60-180/月 | autodev-ai |
+
+### 🟢 P2 趨勢觀察（PH Sep 23 其他發現）
+
+| 日期 | 工具 | 描述 | 機會 | 預估 |
+|------|------|------|------|------|
+| 2026-09-24 | **friggin-ez（Jev + Laya 毒性過濾）** | PH Sep 23，基於 Jev TypeSafe API 的毒性/褻瀆過濾 API，開發者工具，R218 已有 Jev 教學提案 | 搭配 Jev 教學文提及，無單獨文章必要 | $0-30/月（延伸流量） |
+| 2026-09-24 | **Grok 4.7 持續監控** | PH Sep 23 #30，SpaceXAI 品牌（即 xAI Grok 4.7），PH 出現說明仍在推廣 | R216 P0 已執行，seo-writer 應已完成，不重複 | 已處理 |
+
+### 🏆 Firecrawl Alexandria — P0-URGENT 詳細分析
+
+**為什麼這是本輪最重要發現：**
+- **融資規模**：$75M Series B（2026-09-22），YC + Smash Capital + Nexus，用戶 1.5M 開發者
+- **Alexandria 是什麼**：88個官方資料提供商 + 5.04億種能力 + 1.13億筆索引資源（學術論文、README、issue、文件），讓 AI agent 透過單一介面取得「結構化知識」
+- **Affiliate 已確認**：25%/12個月 → 15% ongoing（partners.dub.co/firecrawl），一般申請 24-48h 批准
+- **定價換算佣金**：
+  - Hobby $16/mo → $4/mo/引薦
+  - Standard $83/mo → $20.75/mo/引薦
+  - Growth $333/mo → $83.25/mo/引薦
+- **目標受眾完美吻合**：autodev-ai 讀者（AI 開發者、agent 工程師）= Firecrawl 核心客群
+- **繁中空白確認**：Alexandria 教學文、Firecrawl MCP 完整教學目前繁中零完整教學
+- **SEO 時機**：Series B 宣布後 48h，繁中首發教學可吃早期流量
+- **行動**：Ivan 立即申請 partners.dub.co/firecrawl，seo-writer 同步準備教學草稿
+
+**GPT-6 Astra — 重大遺漏確認：**
+- **GA日期**：2026-09-03（已上線 23 天！繁中竟然沒有完整評測）
+- **規格**：1.05M token context、128K max output、$10/$50 per M tokens
+- **Terminal-Bench 4.0**：57.9%（vs Claude Fable 5.1 55.8%）
+- **已列為 ChatGPT Plus/Pro/Business/Enterprise「GPT-6 Pro」**
+- **問題**：R216-R218 均無確認 GPT-6 Astra 繁中評測存在，疑似重大空白
+- **行動**：seo-writer P0 執行 GPT-6 Astra 完整評測（1.05M context + Terminal-Bench + DevDay前捕捉流量）
+
+### 📅 重要時程
+
+- **OpenAI DevDay T-5天（Sep 29 19:00 PST = Sep 30 03:00 UTC）**：DevDay 直播預覽文今天更新，recap 模板準備
+- **Firecrawl affiliate 申請**：Ivan 今天申請 partners.dub.co/firecrawl（24-48h 批准）
+- **GPT-6 Astra 評測**：seo-writer P0，DevDay 前完成（DevDay 可能升級 API → 評測文加流量）
+
+### 💡 市場洞察（R219）
+
+1. **GPT-6 Astra 繁中缺口確認**：Sep 3 GA 已 23 天，1.05M context 是台灣 AI 工程師最想知道的功能，Terminal-Bench 全球 SOTA，繁中完整評測竟然空白 → P0 執行
+2. **Firecrawl 成為 AI Agent Data 標配**：Alexandria Series B + 1.5M 開發者 + MCP 整合 + confirmed affiliate 25%/12mo = 今年最佳 affiliate 機會之一，Ivan 今天申請
+3. **OpenAI DevDay 5天後爆量**：所有「GPT-6 API 怎麼用」「DevDay 宣布了什麼」搜尋將在 Sep 29-30 爆量，預覆蓋文章今天更新 → 捕捉流量
+4. **Agent observability 賽道成形**：AgentScore + Langfuse + Helicone + Latitude 多工具，比較頁長尾機會
+5. **積壓清單警告**：Ivan 積壓 affiliate 清單已達 10+ 項（Cursor/Systeme.io/Alli AI/Kajabi/Webflow/GoHighLevel/MeetGeek/Reclaim.AI/GetResponse/Kilo Code）→ 每週未申請 = 每週損失潛在收入 $500-2,000
+
+### 積壓狀態（carryover 高優先）
+
+| 工具 | 狀態 | 行動方 | 截止 |
+|------|------|--------|------|
+| **Firecrawl Alexandria** | 🔴 R219 新確認（25%/12mo→15%，$75M Series B，TODAY）| Ivan 今天申請 partners.dub.co/firecrawl | 今天 |
+| GPT-6 Astra 評測 | 🚨 P0 遺漏（Sep 3 GA 23天，繁中空白）| seo-writer 立即執行 | DevDay前(Sep 28) |
+| DevDay 預覽文更新 | 🔴 T-5天 | content-ops 今天最後更新 | 今天 |
+| tiun. Billing | 🔴 P1-HIGH（月榜 #1，Sep 25 截止）| seo-writer | Sep 25 |
+| Cursor affiliate | 🔴 積壓最久 | Ivan 申請 openaffiliate.dev/programs/cursor | 今天 |
+| Systeme.io 60% LIFETIME | 🏆 P0-URGENT | Ivan 申請 systeme.io/affiliates | 今天 |
+| Kilo Code $99.50/conv | 🔴 P1-HIGH | Ivan 申請 kilo.ai/partners | 本週 |
+| Webflow 50%/12mo | 🔴 P1-HIGH | Ivan 申請 webflow.com/solutions/affiliates | 本週 |
+| MeetGeek 30% recurring | 🔴 P1 | Ivan 申請 PartnerStack | 本週 |
+| Reclaim.AI 40%/12mo | 🔴 P1-HIGH | Ivan 申請 reclaim.ai/affiliate-program | 本週 |
+
+### 預估新增月收入
+**$1,200-3,800/月**（GPT-6 Astra 評測 $400-1,500 + Firecrawl affiliate後 $200-700 + DevDay峰值 $300-1,200 + AgentScore 教學 $80-250 + ToneBird評測 $60-180 + tiun. 截止衝刺 $150-400 carryover）
+
+---
+
+## Round 221 — 2026-09-26 00:30 UTC（Sat 00:30 ai-trend-hunter cron）
+
+### 🚨 P0 緊急觀察
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|----------|-----------|---------|
+| 2026-09-26 | **OpenAI DevDay 2026 T-3天** | `openai devday 2026 recap`, `devday 2026 announcements`, `openai agentkit 教學`, `gpt-5 pro api 使用`, `openai devday 九月 2026 台灣時間` | 🔺極高（Sep 29 Fort Mason，T-3天，年度最高 SEO 時效窗口，recap 文章必須 Sep 29 當天 24h 內發布）| recap 文章 → DataCamp + DigitalOcean CTA，時效峰值 5,000-15,000 UV | **$400-1,500/月**（峰值 + 長尾） | autodev-ai |
+| 2026-09-26 | **Grok Build 跨會話記憶（v1.0.34）** | `grok build 記憶 教學`, `grok build vs claude code 記憶`, `grok build cross-session memory`, `grok build 繁中 2026` | 🔺高（Sep 16 GA，x.ai/news/grok-build-memory，記憶寫入 markdown，與 OpenClaw Agent 生態強相關，繁中零評測）| 評測教學文（角度：Grok Build 記憶 vs Claude Code + OpenViking vs Orca ADE）→ DO + DataCamp CTA | **$100-350/月** | autodev-ai |
+| 2026-09-26 | **Howseen AI（PH Sep 25 日榜 #2）** | `howseen ai 評測 繁中`, `ai 品牌追蹤 chatgpt 提及`, `geo 品牌監控工具`, `howseen vs profound vs peec`, `ai 搜尋品牌曝光 2026` | 🔺高（PH Sep 25 #2，Track how AI recommends your brand，GEO/AEO 賽道爆發，繁中零評測）| 評測文 + 比較頁（Howseen vs Profound vs Peec vs Airefs）→ 若有 affiliate 則直接轉化，無則間接 DO + DataCamp | **$80-300/月**（affiliate 待確認，加成後 $200-600/月）| autodev-ai |
+
+### 🔴 P1-HIGH 新發現
+
+| 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|--------|----------|-----------|---------|
+| 2026-09-26 | **Quiver GTM（PH Sep 25 日榜 #1）** | `quiver gtm 評測 繁中`, `developer marketing tool 2026`, `quiver gtm vs clay`, `agentic gtm 教學`, `devtool 行銷自動化` | 中（PH Sep 25 #1，agentic developer marketing system，MIT 版 + 付費托管版，MCP 支援，TypeScript，技術創辦人受眾）| 評測文（角度：開發者創辦人的 GTM 自動化系統）→ 若付費版有 affiliate 則轉化；先行 DO + DataCamp CTA | **$60-200/月**（先行間接；affiliate 待確認） | autodev-ai |
+| 2026-09-26 | **Kairn（PH Sep 25 日榜 #3）** | `kairn 評測 繁中`, `kairn ai 會議記錄`, `ai 會議 actionables follow-up`, `kairn vs otter vs fathom 2026` | 中（PH Sep 25 #3，iOS，Turn any recorded convo into actionables and follow ups，MeetGeek 類競品）| 評測文 + 比較頁（Kairn vs Otter vs Fireflies vs MeetGeek），MeetGeek 有 affiliate 30% recurring → 比較文直接轉化 | **$80-250/月**（MeetGeek affiliate 間接；若 Kairn 有 affiliate 則加成）| autodev-ai |
+| 2026-09-26 | **Grok Build 教學系列** | `grok build 教學 繁中`, `grok build 安裝`, `grok build vs claude code 比較`, `xai 編程 agent 繁中` | 中高（Sep 3 GA，Sep 16 記憶 GA，繁中系統性教學缺口，OpenClaw 讀者高度相關）| 教學文系列（入門 + 記憶功能 + MCP 整合）→ DO + DataCamp CTA | **$120-400/月** | autodev-ai |
+| 2026-09-26 | **AEO/GEO 品牌監控工具比較頁** | `aeo geo 工具比較 2026`, `ai 搜尋品牌曝光監控`, `profound vs peec vs howseen vs airefs`, `brand visibility ai 繁中` | 中高（HN Sep 2026 趨勢：GEO/AEO 已成主流行銷話題；Howseen PH Sep 25 登榜加速；Airefs 30% LIFETIME affiliate）| 比較頁（工具頁）+ 評測文，Airefs 30% LIFETIME + Writesonic 30% recurring affiliate 嵌入 | **$150-500/月**（Airefs affiliate 30% LIFETIME $29-199/mo；Writesonic 30%）| autodev-ai |
+
+### 🟡 P2 觀察
+
+| 日期 | 工具 | 描述 | 機會 | 預估 |
+|------|------|------|------|------|
+| 2026-09-26 | **Meta VR Glasses（PH Sep 25 日榜 #5）** | 100g 輕量 VR，Cinema/Courtside/Workspace | 科技評測文；無直接 affiliate，間接 DigitalOcean 關聯弱，P2 觀察 | $30-80/月 |
+| 2026-09-26 | **FRCTL（PH Sep 25 日榜 #4）** | Mind-Bending Media and Live Visuals，創意工具 | 小眾，繁中受眾有限，P2 | $20-60/月 |
+| 2026-09-26 | **HN Sep 2026 趨勢：AI 控制/信任/安全** | HN Sep 主題：AI moved from wow-factor to work tool，control/trust/security 成核心；practical workflows | 「你的 AI agent 安全嗎？台灣企業 AI 資安指南」常青文 P1 carryover（R220 已提） | carryover |
+
+### 🏆 本輪最高價值：OpenAI DevDay 2026 T-3天 + Grok Build 教學缺口
+
+#### OpenAI DevDay T-3天 窗口分析
+- **日期**：Sep 29 (Tue) Fort Mason，10 AM Pacific = Sep 29 17:00 UTC
+- **keynote 免費直播**：所有人可看
+- **已確認功能預期**（Agents API + AgentKit + GPT-Realtime-Mini + ChatGPT Apps + Sora 2 API）
+- **SEO 衝刺策略**：
+  1. Sep 29 keynote 結束後立即（17:00-18:00 UTC）→ 開始寫 recap
+  2. Sep 29 23:59 UTC 前發布 blog/openai-devday-2026-recap.html
+  3. 已有 preview 文 GSC 10 clicks/367 impressions pos 6.0 → recap 文可吃現有流量 + 搜尋爆發
+- **繁中窗口**：英文 recap 會在 1-2 小時內滿坑，繁中 6-12 小時內仍是首發
+
+#### Grok Build 記憶功能 — 被低估的賺錢機會
+- **xAI 官方確認**：v1.0.34 Sep 16 GA，x.ai/news/grok-build-memory
+- **功能亮點**：記憶寫成 markdown 檔，/dream 合併觀察，/memory 顯示所有記憶，project scope + global scope
+- **與我們生態完美吻合**：OpenClaw 讀者（agent 開發者）= Grok Build 目標用戶
+- **繁中缺口**：Grok Build 本身繁中評測稀少，記憶功能繁中評測幾乎為零
+- **文章策略**：
+  1. blog/grok-build-memory-tutorial-2026.html（記憶功能完整教學）
+  2. blog/grok-build-vs-claude-code-2026.html（比較頁，對接現有 claude-code 流量）
+
+#### Howseen AI — GEO/AEO 賽道新工具
+- **產品定位**：Track how AI recommends your brand, and get cited
+- **市場背景**：Conductor 2026 AEO Benchmarks 報告指出 AI referral traffic 爆發，87.4% 來自 ChatGPT
+- **同賽道工具**：Profound / Peec / Airefs（Airefs 已確認 30% LIFETIME affiliate）
+- **內容機會**：比較頁「GEO 品牌監控工具比較 2026：Howseen vs Profound vs Peec vs Airefs」
+- **affiliate 機會**：Howseen 本身待確認；Airefs 30% LIFETIME 可作比較頁主推
+
+### 💡 市場洞察（R221）
+
+1. **OpenAI DevDay T-3天是年度最高 SEO 時效窗口**：seo-writer 必須 Sep 29 當天執行，任何延誤都損失不可回復的流量峰值
+
+2. **GEO/AEO 品牌監控已成主流 2026Q4 行銷話題**：
+   - Howseen AI PH Sep 25 #2 登榜
+   - Conductor 2026 AEO/GEO Benchmarks 報告發布
+   - PR Newswire 推出 AEO & GEO Brand Report 工具
+   - Airefs 30% LIFETIME affiliate 仍開放
+   - 我們的 R220 AEO/GEO 工具指南提案（proposal-aeo-geo-tools-guide-2026-09-18）尚未執行 → **加速！**
+
+3. **Grok Build 生態快速成熟**：Sep 3 GA → Sep 16 記憶 GA → 持續更新，但繁中教學缺口仍存在
+
+4. **HN Sep 2026 趨勢確認 AI 賽道轉移**：從「AI 很厲害」→「AI 能在生產環境安全地做什麼」，R220 AI agent security 趨勢判斷正確，持續跟蹤
+
+5. **Quiver GTM = Clay 的開發者版本**：Clay 本月 Series D $115M @$7.1B，GTM engineer 賽道爆發；Quiver 是 MIT 開源版本，切入開發者市場，內容機會 + 比較頁機會
+
+### 📅 重要時程更新（R221）
+
+| 日期 | 事件 | 行動 |
+|------|------|------|
+| **Sep 29** | **OpenAI DevDay keynote 17:00 UTC** | seo-writer recap 當天 23:59 UTC 前發布 |
+| Sep 28 | DevDay 前最後 preview 更新 | content-ops 已完成（R220 指令） |
+| Oct 1 | Tencent Octop 截止 | seo-writer P1 carryover |
+| Oct 5 | Voicebox 截止 | seo-writer P1 carryover |
+| Oct 28-29 | GitHub Universe 2026 | 預熱文 Oct 15-20 |
+
+### 積壓狀態（本輪確認）
+
+| 工具 | 狀態 | 行動方 | 截止 |
+|------|------|--------|------|
+| OpenAI DevDay recap | 🚨 P0-STANDBY（T-3天，seo-writer 待命）| seo-writer | Sep 29 23:59 UTC |
+| Grok 4.8 GA | 🚨 P0-STANDBY（仍無官方 GA）| seo-writer 待命 | 觸發即執行 |
+| Howseen AI affiliate 確認 | 🔴 新（PH Sep 25 #2，GEO brand tracking）| Ivan 確認 affiliate | 本週 |
+| Grok Build 教學 | 🔴 P1-HIGH（Sep 16 記憶 GA，繁中缺口）| seo-writer | Oct 3 截止 |
+| AEO/GEO 工具比較頁 | 🔴 P1-HIGH（Airefs 30% LIFETIME，加速）| builder + seo-writer | Oct 5 截止 |
+| Quiver GTM 評測 | 🟡 P1（PH Sep 25 #1，開發者 GTM）| seo-writer | Oct 5 截止 |
+| Kairn 評測 | 🟡 P1（PH Sep 25 #3，iOS 會議 AI）| seo-writer | Oct 5 截止 |
+| Harness Manager 評測 | 🔴 P1-HIGH carryover（R220，Sep 28 截止）| seo-writer | Sep 28 |
+| GBrain 教學 | 🔴 P1-HIGH carryover（R220，Oct 5 截止）| seo-writer | Oct 5 |
+| Firecrawl affiliate | 🔴 P0 carryover（Ivan 申請 partners.dub.co/firecrawl）| Ivan | 今天 |
+| Cursor affiliate | 🔴 積壓最久 | Ivan | 今天 |
+| Systeme.io 60% LIFETIME | 🏆 積壓最久 | Ivan | 今天 |
+| Kilo Code $99.50/conv | 🔴 P1-HIGH | Ivan | 本週 |
+| Gumroad 5 個產品上架 | 🔴 P0-URGENT（壞連結損傷排名）| Ivan | 今天 |
+
+### 預估新增月收入
+**$860-2,950/月**（DevDay recap $400-1,500 + Grok Build 教學 $120-400 + Howseen AI + AEO比較頁 $230-800 + Quiver GTM + Kairn評測 $140-450 + Harness Manager/GBrain carryover $140-450）
+
+---
