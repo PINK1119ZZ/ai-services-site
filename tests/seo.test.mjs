@@ -72,7 +72,10 @@ const affectedLinkSources = [
 
 test("all 208 original HTML documents retain paths and parse every JSON-LD block", async () => {
   const files = await walkHtml();
-  assert.equal(files.length, 208);
+  const present = new Set(files.map((file) => relative(root, file)));
+  const original = (await readFile(join(root, "tests/fixtures/original-html-paths.txt"), "utf8")).trim().split("\n");
+  assert.equal(original.length, 208);
+  assert.deepEqual(original.filter((path) => !present.has(path)), []);
   const failures = [];
   for (const file of files) {
     const html = await readFile(file, "utf8");
