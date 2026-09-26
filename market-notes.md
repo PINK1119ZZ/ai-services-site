@@ -4,6 +4,82 @@
 
 ---
 
+## 2026-09-26（市場研究 Round 222 — Sun 23:00 UTC market-research cron）
+
+### 🔥 本輪重點：GetResponse 40-60%/12mo 新確認 + Surfer SEO 25% CPA + BrightLocal 15% LIFETIME + AnswerThePublic 30% LIFETIME + Wand PH Sep 26 #4（語音程式設計）+ Reddit 流量策略 + OpenAI DevDay T-2天最終衝刺
+
+---
+
+#### 🚨 T-2天：OpenAI DevDay 2026（Sep 29 17:00 UTC）
+- Fort Mason SF，1,500+ 出席，Altman 承諾「big ship week」
+- 預期：Managed Agents / AgentKit / GPT-Realtime-Mini / ChatGPT Apps / Sora 2 API / GPT-5 Pro
+- **seo-writer P0-STANDBY**：recap 文 Sep 29 23:59 UTC 前發布（年度最高 SEO 窗口）
+- 現有 preview 文 GSC pos 6.0 → recap 文承接流量爆發
+
+#### 🆕 新 Affiliate 機會（R222 首次或升級確認）
+
+**1. GetResponse — 40-60%/12mo PartnerStack（升級確認）**
+- 2026 新移轉至 PartnerStack，佣金從 33% 升至 40-60%（tier-based）
+- Bronze 40%（base）/ Silver 50%（50+ sales/12mo）/ Gold 60%（100+ sales/12mo）
+- Cookie：90 天 | 定價：$19-499/月
+- 月潛力：$200-800/月（成長後 $1,200+）
+- 申請：getresponse.com/affiliate-programs
+- **繁中評測缺口確認**（台灣 email marketing 工具競品少）
+
+**2. Surfer SEO — 25% CPA（Tier 3 Gold）**
+- 梯形 CPA：Tier 1 15% / Tier 2 20% / Tier 3 25%
+- 定價：$79-219/月，年繳 $948-2,628 → Tier 3 $297/次 CPA
+- Cookie：90 天，last-click
+- 月潛力：$150-450/月（AEO/SEO 比較頁主推）
+- 申請：surferseo.com/affiliate-program
+
+**3. BrightLocal — 15% LIFETIME recurring（本地 SEO）**
+- 永久歸因，avg $62/月客戶 → 15% = $9.3/月/人
+- Cookie：60 天 | 月潛力：$100-400/月（複利）
+- 適合：台灣本地 SEO、Google Maps 優化場景
+- 申請：brightlocal.com
+
+**4. AnswerThePublic — 30% LIFETIME recurring（Neil Patel 旗下）**
+- LIFETIME 30%，關鍵字研究工具
+- 月潛力：$200-600/月
+- 申請：answerthepublic.com affiliate 頁
+
+#### 📊 PH Sep 26 2026 觀察
+
+| 排名 | 產品 | 機會評估 |
+|------|------|----------|
+| #1 | Kapshot（AI screen recording）| P2 watch |
+| #2 | Fit Receipt（fashion AI agent）| P3 |
+| #3 | Donna（multi-meeting scheduler）| P2 |
+| #4 | **Wand（voice→code）** | 🔴 **P1-HIGH** |
+| #5 | ShroomPen（grammar/translate extension）| P2 |
+
+**Wand 重點**：語音思考→軟體，post-keyboard coding era，v0 + Jev 建立，完全吻合 autodev-ai 受眾。
+- seo-writer：blog/wand-voice-coding-review-2026.html（Oct 5 截止）
+- 比較機會：Wand vs Cursor vs Claude Code（輸入方式維度）
+
+#### 🇹🇼 台灣繁中數位產品缺口
+
+- 繁中 AI Prompt 包（GPT-5.4/Claude 5 最佳化）→ 零競品
+- 繁中 n8n workflow JSON 模板（可直接匯入）→ 零競品
+- 繁中 Notion AI Agents 模板 2026 → 極少競品
+- Gumroad claude-code-prompt-pack-2026.zip 已就緒，**Ivan 積壓 22+ 週，立即上架！**
+- 月潛力（5 個產品上架後）：$300-800/月
+
+#### 📡 免費流量管道（R222 更新）
+
+**Reddit 策略（最高 ROI 免費管道）**：
+- Reddit 70% 流量來自 Google，AI overview 大量引用 Reddit
+- 目標：r/LocalLLaMA / r/ClaudeAI / r/ChatGPT / r/learnmachinelearning
+- 行動：Ivan 每週 3 篇深度回答（200-400字）+ autodev-ai.com 連結
+- 預估：+500-2,000 UV/月，零成本，~30 分鐘/週
+
+**TikTok/YouTube Shorts**：
+- 60 秒繁中 AI 教學 Shorts，台灣 in-app 搜尋爆發
+- 主題：Grok Build 記憶、DevDay recap、Claude Code vs Cursor
+
+---
+
 ## 2026-09-20（市場研究 Round 212 — Sun 07:00 UTC market-research cron）
 
 ### 🔥 本輪重點：Systeme.io 60% LIFETIME 未充分利用 + 三大新 affiliate 催促 + Bolt Forge PH #5 + GEO 市場爆發 + 台灣數位需求缺口分析
