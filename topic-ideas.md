@@ -1,3 +1,139 @@
+## Round 223 — 2026-09-27 00:30 UTC（Sun 08:30 ai-trend-hunter cron）
+
+### 🚨 P0-TODAY（今天執行）
+
+**OpenAI DevDay 2026 — T-2天最終布局**
+- Sep 29 17:00 UTC 正式 keynote（Fort Mason SF，免費直播）
+- Altman 確認「big ship week」，seo-writer P0-STANDBY 已維持多輪
+- 目前 GSC：blog/openai-devday-2026-preview.html 已有 10c / 405i / pos 6.0
+- 行動：DevDay 29日開始後，seo-writer 立即在 23:59 UTC 前發布 recap 文章
+- 關鍵字機會：`openai devday 2026 recap`, `openai devday 2026 發布`, `openai agents api 2026`
+- 預估峰值：$400-1,500/月（首週流量最高）
+
+**Grok 4.8 — 仍 P0-STANDBY（RL 進行中）**
+- Sep 27 00:30 UTC 仍無 GA，已確認仍在 RL（reinforcement learning）訓練中
+- Musk Sep 14 確認：4.8 = 2.5T 參數，新 C++ 軟體堆疊訓練完成，已進入 RL
+- Grok 4.7 仍是現行最新 GA（Sep 21）
+- P0-STANDBY 草稿維持就緒狀態（R222 已確認）
+
+---
+
+### 🔴 P1-HIGH 新發現（截止日期優先順序）
+
+**Hemory（hemory.com）— PH Sep 26 #10**
+- 功能：手機/Apple Watch 錄音 → AI 記憶 → 可搜尋 → MCP 接入 Claude/Codex/Cursor
+- 關鍵詞：Hear + Memory，不是開會錄音，是「你的一天變成 AI 的記憶」
+- 市場：AI agent memory 爆發期，繁中零評測
+- Affiliate：未確認官方計畫，需 Ivan 查詢（hemory.com），早期 SaaS 有高佣金機率
+- SEO keywords: `hemory 評測`, `ai agent memory mcp`, `apple watch ai 記憶`, `claude mcp memory 繁中`
+- 截止：Oct 6（PH 登榜後 10 天窗口）
+- 預估：$80-250/月（間接 + affiliate 若有）
+
+**Eclatira（eclatira.com）— PH Sep 26 #7**
+- 功能：Conversational Video Agent，即時語音+視訊 AI，可看 webcam/螢幕分享，接任何 API/MCP/3000+ apps
+- 亮點：見到客戶拿的物件、護照驗證、螢幕共享引導 — 同一個 agent
+- 市場：企業前台自動化（旅宿 booking + 診所 intake + 零售 RMA），繁中零評測
+- 定位：B2B 高 ACV（enterprise pricing），比較頁機會 vs Bland AI / Vapi / Retell AI
+- Affiliate：需確認 eclatira.com（加拿大 startup，All-In 2025 exhibit），可能有 partner program
+- SEO keywords: `eclatira 評測`, `conversational video agent 2026`, `ai 視訊客服 台灣`, `vapi vs eclatira`
+- 截止：Oct 6
+- 預估：$150-450/月（B2B 高轉換潛力）
+
+**Lisen（listenapp.com）— PH Sep 26 #1**
+- 功能：Free Read Aloud with Cartesia Voices，任何 app 都能用 Cartesia TTS 朗讀文字
+- 亮點：Cartesia Sonic-3.6 sub-90ms，40+ 語言，支援全平台
+- 市場：TTS/accessibility 工具，學習效率受眾
+- 評測機會：Lisen vs ElevenLabs Reader vs NaturalReader 比較頁
+- Affiliate：Lisen 本身可能無，但 Cartesia 有 API affiliate 機會（cartesia.ai，$191M Series A）
+- SEO keywords: `lisen app 評測`, `cartesia tts 繁中`, `ai 朗讀工具 2026`, `read aloud app mac`
+- 截止：Oct 6
+- 預估：$60-180/月（流量型，Cartesia API 導流）
+
+---
+
+### 💰 Affiliate 機會彙整（本輪新確認/升級）
+
+#### 🏆 最高優先（30%+ recurring，有評測機會）
+
+| 工具 | 佣金 | 類型 | 預估月收入 | 申請URL | 備注 |
+|------|------|------|----------|---------|------|
+| Jasper AI | 25%（100 conv→30%） | 12個月 recurring | $180-540/月 | jasper.ai/partners（Impact，$25 min） | 已多輪積壓 — Ivan 立刻申請 |
+| Writesonic | 30% | 12個月 recurring | $150-450/月 | affiliates.writesonic.com | 已多輪積壓 |
+| Copy.ai | 45% | 12個月 recurring | $200-600/月 | copy.ai affiliate | 高佣金最高，比 Jasper 還好 |
+| Surfer SEO | 25%（Tier3） | CPA 年繳 | $150-450/月 | surferseo.com/affiliate-program | R222 確認 CPA 結構 |
+| ReactIn | 30% LIFETIME | 永久遞歸 | $300-900/月 | reactin.io affiliate | LinkedIn/B2B 受眾，$69+/mo |
+| involve.me | 30% LIFETIME | 永久遞歸 | $150-500/月 | via Reditus | Quiz funnel 工具，$99 avg |
+| AnswerThePublic | 30% LIFETIME | 永久遞歸 | $200-600/月 | answerthepublic.com affiliate | Neil Patel 品牌力，R222確認 |
+| Buzz.ai | 30%/12mo | 月遞歸 | $300-900/月 | via Reditus | B2B sales，$500 avg ACV |
+| BrightLocal | 15% LIFETIME | 永久遞歸 | $100-400/月 | brightlocal.com | 本地SEO，R222 確認 |
+
+#### 已積壓最久（每輪都提，Ivan 仍未執行）
+- Systeme.io 60% LIFETIME → **立即申請！超出分析 20+ 輪積壓**
+- Cursor（openaffiliate.dev/programs/cursor）→ 積壓最久
+- Firecrawl（partners.dub.co/firecrawl）→ $75M Series B，Ivan 申請中
+- GetResponse 40-60%/12mo PartnerStack → R222 升級確認
+
+---
+
+### 📅 Watchlist 狀態（Sep 27 00:30 UTC）
+
+| 項目 | 狀態 | 截止 |
+|------|------|------|
+| OpenAI DevDay recap | 🚨 P0-TODAY（Sep 29 23:59 UTC） | Sep 29 |
+| Grok 4.8 GA | 🚨 P0-STANDBY（RL進行中，無GA） | 立即 |
+| Hemory PH #10 | 🔴 P1-HIGH 新（MCP記憶，繁中空白） | Oct 6 |
+| Eclatira PH #7 | 🔴 P1-HIGH 新（視訊AI agent，B2B） | Oct 6 |
+| Lisen PH #1 | 🟡 P1 新（Cartesia TTS，朗讀工具） | Oct 6 |
+| Howseen AI | 🔴 P1-HIGH carryover（PH Sep 25 #2） | Oct 3 |
+| Harness Manager | 🔴 P1-HIGH carryover（PH Sep 25 #3） | Sep 28 |
+| Wand | 🔴 P1-HIGH carryover（PH Sep 26 #4） | Oct 5 |
+| Jasper affiliate | 🔴 P1-HIGH（Ivan 申請 jasper.ai/partners） | 立即 |
+| Copy.ai affiliate | 🔴 P1-HIGH（Ivan 申請，45% 最高）| 立即 |
+| Systeme.io 60% | 🏆 P0-URGENT（20+輪積壓） | 立即 |
+| Gumroad 5 products | 🔴 P0-URGENT 積壓 | 立即 |
+| Firecrawl Alexandria | 🔴 P0（partners.dub.co/firecrawl） | Ivan申請中 |
+
+---
+
+### 📊 市場脈絡（本輪 HN/Reddit 訊號）
+
+**HN Sep 2026 主題：AI 從「哇」到「工具」，security/control 為主調**
+- 本地優先 (local-first)、open-source、self-hosted 持續強勢
+- AI agent security（Anthropic 9月威脅報告確認）= 新內容賽道
+- PH Sep 26 日榜整體訊號：工具化 > 新奇，MCP/memory integration 受歡迎
+
+**PH Sep 26 日榜完整解讀（本輪發現）**
+1. Lisen — TTS/accessibility（P1）
+2. SOUND — Mac per-app EQ（工具，低商業化）
+3. Chit — Claude Code printed receipt（開發者工具）
+4. MakerMap — maker directory（社群，低商業化）
+5. Kleanly — Mac notch keyboard lock
+7. Eclatira — 視訊 AI agent（P1-HIGH，最佳商業化）
+10. Hemory — AI agent memory（P1-HIGH，MCP 整合）
+11. GoodSocials — LinkedIn AI 社群媒體管理（P1 潛力）
+12. Decktly — HTML presentation editor（工具頁機會）
+
+**GoodSocials（PH Sep 26 #11）— 補充**
+- LinkedIn AI content manager，authentic only（無垃圾訊息）
+- 市場：AI 社群媒體管理，台灣中小企業受眾
+- 評測機會：GoodSocials vs Buffer AI vs Taplio 比較頁
+- Affiliate：待確認
+- 截止：Oct 6
+
+---
+
+### 💡 本輪策略洞察
+
+1. **AI agent memory 是 Sep-Oct 2026 最熱基建賽道** — Hemory（PH Sep 26）、OpenHuman（PH May）、Spellar 3.0、GBrain 都在解這個問題。繁中教學完全空白，writer agent 可批量佔位。
+
+2. **Conversational Video AI 是 2026 Q4 B2B 爆發品類** — Eclatira（PH Sep 26）、Kaltura Agentic Avatars（Mar 2026 GA）、Bland AI 都在搶這塊。繁中企業 AI 比較頁機會巨大，高 ACV 意味高轉換收益。
+
+3. **TTS 工具爆發** — Cartesia Sonic-3.6（sub-90ms，8月更新），Lisen 用它做 UX，ElevenLabs 仍是巨頭。「ElevenLabs 替代方案」系列文章機會（Voicebox + Lisen + Cartesia API 教學組合）。
+
+4. **Copy.ai 45%/12mo 是本輪最高發現** — 比 Jasper 25-30% 更高，且 60-day cookie。AI 寫作工具比較頁（Copy.ai vs Jasper vs Writesonic）可以把三個 affiliate 全放進去，一篇文章三個漏斗。
+
+---
+
 ## Round 216 — 2026-09-21 22:00 UTC（Mon 22:00 ai-dev-research cron）
 
 ### 🚨 P0-EXECUTE FIRED（最高優先）
