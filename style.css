@@ -490,3 +490,21 @@ body.v2-site { margin: 0; background: var(--v2-paper); color: var(--v2-ink); fon
   .v2-site *, .v2-site *::before, .v2-site *::after { animation: none!important; transition: none!important; }
   .v2-reveal-ready .v2-site [data-reveal] { opacity: 1; transform: none; }
 }
+
+/* ───── AUTODEV 2.0 BLOG HUB (blog/index.html, en/blog/index.html) ───── */
+.v2-site .v2-post-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.25rem; }
+.v2-site .v2-post-card { display: flex; flex-direction: column; padding: clamp(1.4rem,3vw,2rem); border: 1px solid var(--v2-line); border-radius: var(--v2-radius); background: rgba(255,253,250,.66); text-decoration: none; color: inherit; }
+.v2-site .v2-post-card.featured { border-color: var(--v2-gold); }
+.v2-site .v2-post-card .blog-card-meta, .v2-site .v2-post-card .blog-card-tags { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.v2-site .v2-post-card .blog-card-meta { margin-bottom: .5rem; font-size: .78rem; color: var(--v2-muted); }
+.v2-site .v2-post-card .blog-card-tags { margin-bottom: .6rem; }
+.v2-site .v2-post-card .blog-card-date, .v2-site .v2-post-card .meta { display: block; margin-bottom: .5rem; font-size: .78rem; color: var(--v2-muted); }
+.v2-site .v2-post-card .blog-card-tag { display: inline-block; margin: 0 .35rem .35rem 0; padding: .25rem .6rem; border: 1px solid var(--v2-line); border-radius: 999px; color: var(--v2-gold); font-size: .68rem; }
+.v2-site .v2-post-card h3 { margin: 0 0 .7rem; font-size: clamp(1.05rem,2vw,1.25rem); line-height: 1.35; }
+.v2-site .v2-post-card h3 a { color: var(--v2-ink); text-decoration: none; }
+.v2-site .v2-post-card h3 a:hover { color: var(--v2-gold); }
+.v2-site .v2-post-card p { flex: 1; margin: 0 0 1rem; color: var(--v2-muted); font-size: .88rem; line-height: 1.65; }
+.v2-site .v2-post-card .blog-card-link, .v2-site .v2-post-card .arrow { margin-top: auto; color: var(--v2-gold); font-size: .85rem; font-weight: 700; text-decoration: none; }
+.v2-site .v2-post-card .blog-card-link:hover { text-decoration: underline; }
+@media (max-width:900px) { .v2-site .v2-post-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width:640px) { .v2-site .v2-post-grid { grid-template-columns: 1fr; } }
