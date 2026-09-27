@@ -140,9 +140,15 @@ test('tool directories and Chinese cost article describe a scope checklist', () 
   assert.match(articleCta, /需求清單/);
   assert.doesNotMatch(`${zhCard}\n${articleCta}`, /即時|估價|費用計算器/);
   assert.doesNotMatch(enCard, /estimate|cost calculator|instant/i);
-  assert.match(articleCta, /background:#16213e/);
-  assert.match(articleCta, /color:#cbd5e1/);
-  assert.match(articleCta, /href="\/tools\/line-bot-calculator\.html"[^>]*background:#334155[^>]*color:#fff/);
+  // The banner's own inline style="" was removed by scripts/unify_articles.py
+  // (TASK site-unify-20260927) in favor of assets/v2-chrome.css; what must
+  // still hold is that its heading, both paragraphs, and the working link
+  // to the calculator survive with their original text, in order.
+  assert.match(articleCta, /<h3>用需求清單準備 LINE Bot 範圍<\/h3>/);
+  assert.match(articleCta, /<p>工具協助整理管道與功能清單；正式報價仍以確認後的需求、資料與串接範圍為準。<\/p>/);
+  assert.match(articleCta, /<a href="\/tools\/line-bot-calculator\.html"[^>]*>開啟 Bot 需求準備工具 →<\/a>/);
+  assert.match(articleCta, /<p>在本機整理，不需註冊<\/p>/);
+  assert.equal([...articleCta.matchAll(/<p>/g)].length, 2, 'CTA banner should keep exactly its original two paragraphs');
   const og = load('blog/og/line-bot-cost.svg');
   assert.match(og, /<svg width="1200" height="630"/);
   assert.match(og, />LINE Bot 開發費用<\/text>/);

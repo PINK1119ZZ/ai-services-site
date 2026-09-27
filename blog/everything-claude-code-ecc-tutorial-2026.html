@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+
 <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <meta charset="UTF-8">
@@ -25,9 +25,9 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <meta name="theme-color" content="#FFF8F3">
 <meta name="author" content="AutoDev AI">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
 
@@ -94,255 +94,14 @@
 }
 </script>
 
-<style>
-.article-container {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 2rem 2rem 4rem;
-  color: var(--text);
-}
-.article-hero {
-  background: linear-gradient(135deg, rgba(184,148,106,0.15) 0%, rgba(255,200,100,0.1) 100%);
-  border: 1px solid rgba(184,148,106,0.3);
-  border-radius: 8px;
-  padding: 2.5rem;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-.article-hero .badge {
-  display: inline-block;
-  background: #e63946;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-.article-hero h1 {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-family: 'DM Serif Display', serif;
-  color: var(--gold);
-  margin: 0.5rem 0 1rem;
-  line-height: 1.3;
-}
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
-  margin: 2rem 0;
-}
-.stat-card {
-  background: rgba(184,148,106,0.1);
-  border: 1px solid rgba(184,148,106,0.25);
-  border-radius: 6px;
-  padding: 1.25rem 1rem;
-  text-align: center;
-}
-.stat-card .num {
-  font-size: 1.8rem;
-  font-weight: 900;
-  color: var(--gold);
-  display: block;
-}
-.stat-card .label {
-  font-size: 0.8rem;
-  color: var(--gray);
-  margin-top: 0.25rem;
-}
-.section-title {
-  font-family: 'DM Serif Display', serif;
-  font-size: 1.6rem;
-  color: var(--gold);
-  margin: 3rem 0 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(184,148,106,0.25);
-}
-.article-container h3 {
-  font-size: 1.15rem;
-  color: var(--text);
-  margin: 2rem 0 0.75rem;
-}
-.article-container p, .article-container li {
-  font-size: 1rem;
-  line-height: 1.85;
-  color: rgba(255,255,255,0.85);
-}
-.article-container ul, .article-container ol {
-  margin: 0.75rem 0 1rem 1.5rem;
-}
-.article-container li { margin-bottom: 0.5rem; }
-.code-block {
-  background: #0d1117;
-  border: 1px solid rgba(184,148,106,0.2);
-  border-radius: 6px;
-  padding: 1.25rem 1.5rem;
-  font-family: 'Courier New', monospace;
-  font-size: 0.88rem;
-  color: #e6edf3;
-  margin: 1.25rem 0;
-  overflow-x: auto;
-  line-height: 1.6;
-}
-.code-block .comment { color: #8b949e; }
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: 0.9rem;
-}
-.comparison-table th {
-  background: rgba(184,148,106,0.2);
-  color: var(--gold);
-  padding: 0.75rem 1rem;
-  text-align: left;
-  font-weight: 600;
-}
-.comparison-table td {
-  padding: 0.7rem 1rem;
-  border-bottom: 1px solid rgba(184,148,106,0.1);
-  color: rgba(255,255,255,0.82);
-  vertical-align: top;
-}
-.comparison-table tr:hover td {
-  background: rgba(184,148,106,0.05);
-}
-.highlight-box {
-  background: rgba(184,148,106,0.1);
-  border-left: 3px solid var(--gold);
-  border-radius: 0 6px 6px 0;
-  padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0;
-}
-.highlight-box strong { color: var(--gold); }
-.cta-block {
-  background: linear-gradient(135deg, rgba(184,148,106,0.15) 0%, rgba(255,200,100,0.08) 100%);
-  border: 1px solid rgba(184,148,106,0.3);
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2.5rem 0;
-  text-align: center;
-}
-.cta-block h3 { color: var(--gold); margin-bottom: 0.5rem; }
-.cta-block p { margin-bottom: 1.25rem; font-size: 0.95rem; }
-.cta-btn {
-  display: inline-block;
-  padding: 0.75rem 1.75rem;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: all 0.25s;
-  margin: 0.4rem;
-}
-.cta-btn-primary {
-  background: linear-gradient(135deg, #b8946a, #e8c87a);
-  color: #1a1206;
-}
-.cta-btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
-.cta-btn-secondary {
-  background: transparent;
-  border: 1px solid rgba(184,148,106,0.5);
-  color: var(--gold);
-}
-.cta-btn-secondary:hover { border-color: var(--gold); transform: translateY(-2px); }
-.tag {
-  display: inline-block;
-  background: rgba(184,148,106,0.15);
-  color: var(--gold);
-  font-size: 0.75rem;
-  padding: 0.2rem 0.6rem;
-  border-radius: 20px;
-  margin: 0.2rem;
-  font-weight: 600;
-}
-.agent-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.75rem;
-  margin: 1.25rem 0;
-}
-.agent-card {
-  background: rgba(20,20,30,0.8);
-  border: 1px solid rgba(184,148,106,0.2);
-  border-radius: 6px;
-  padding: 1rem;
-}
-.agent-card .agent-name {
-  color: var(--gold);
-  font-weight: 700;
-  font-size: 0.85rem;
-  margin-bottom: 0.35rem;
-}
-.agent-card .agent-desc {
-  font-size: 0.8rem;
-  color: var(--gray);
-  line-height: 1.5;
-}
-.breadcrumb {
-  font-size: 0.82rem;
-  color: var(--gray);
-  margin-bottom: 2rem;
-}
-.breadcrumb a { color: var(--gold); text-decoration: none; }
-.article-meta {
-  font-size: 0.82rem;
-  color: var(--gray);
-  margin-bottom: 2rem;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-.toc {
-  background: rgba(20,20,30,0.8);
-  border: 1px solid rgba(184,148,106,0.2);
-  border-radius: 6px;
-  padding: 1.5rem 2rem;
-  margin: 2rem 0 3rem;
-}
-.toc h4 {
-  color: var(--gold);
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-.toc ol { margin: 0; padding-left: 1.25rem; }
-.toc li { margin-bottom: 0.4rem; font-size: 0.88rem; }
-.toc a { color: rgba(255,255,255,0.75); text-decoration: none; }
-.toc a:hover { color: var(--gold); }
-.related-articles {
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(184,148,106,0.2);
-}
-.related-articles h3 { color: var(--gold); margin-bottom: 1.25rem; }
-.related-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-.related-card {
-  background: rgba(20,20,30,0.8);
-  border: 1px solid rgba(184,148,106,0.15);
-  border-radius: 6px;
-  padding: 1.25rem;
-  text-decoration: none;
-  transition: all 0.25s;
-}
-.related-card:hover { border-color: rgba(184,148,106,0.4); transform: translateY(-3px); }
-.related-card .rtag { font-size: 0.7rem; color: var(--gold); font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; }
-.related-card h4 { color: rgba(255,255,255,0.9); font-size: 0.88rem; line-height: 1.45; margin: 0; }
-</style>
+
 <link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
 
 
 
-<main>
+<main class="v2c-article">
 <div class="article-container">
 
   <div class="breadcrumb">
@@ -353,8 +112,8 @@
   <div class="article-hero">
     <span class="badge">🚨 P1-CRITICAL 22輪積壓 — 台灣首發繁中完整教學</span>
     <h1>Everything Claude Code（ECC）繁中完整教學 2026：209K Stars，38個Agent + 156個Skills 一次掌握</h1>
-    <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;max-width:600px;margin:0 auto;">GitHub 史上增長最快的 Claude Code 配置框架。一行指令讓你的 Claude Code 從「助理」升級為「完整 AI 工程師組織」。</p>
-    <div class="stats-grid" style="max-width:600px;margin:1.5rem auto 0;">
+    <p>GitHub 史上增長最快的 Claude Code 配置框架。一行指令讓你的 Claude Code 從「助理」升級為「完整 AI 工程師組織」。</p>
+    <div class="stats-grid">
       <div class="stat-card"><span class="num">209K</span><div class="label">GitHub Stars</div></div>
       <div class="stat-card"><span class="num">38</span><div class="label">Agent 角色</div></div>
       <div class="stat-card"><span class="num">156</span><div class="label">Skills 指令</div></div>
@@ -411,7 +170,7 @@
     <h3>🚀 準備在生產環境部署 ECC？</h3>
     <p>DigitalOcean VPS 是跑 Claude Code + ECC 代理工作流程的最佳選擇。$200 免費額度讓你 0 成本試跑完整工程師組織。</p>
     <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-primary">🎁 領取 $200 DigitalOcean 免費額度</a>
-    <p style="font-size:0.78rem;margin-top:0.75rem;color:var(--gray);">* 透過此連結註冊可獲得 $200 免費額度，60天內使用</p>
+    <p>* 透過此連結註冊可獲得 $200 免費額度，60天內使用</p>
   </div>
 
   <!-- Section 2 -->
@@ -777,7 +536,7 @@ ecc --version
   </ul>
 
   <div class="highlight-box">
-    <strong>省費建議：</strong>ECC + headroom（-60-95% token 壓縮）是目前已知最強的組合。headroom 的 context compression 可以抵消 ECC 帶來的額外 token 消耗，讓你享受完整 Agent 組織的能力，同時維持甚至降低費用。詳見我們的 <a href="/blog/headroom-llm-token-compression-2026.html" style="color:var(--gold);">headroom 完整教學</a>。
+    <strong>省費建議：</strong>ECC + headroom（-60-95% token 壓縮）是目前已知最強的組合。headroom 的 context compression 可以抵消 ECC 帶來的額外 token 消耗，讓你享受完整 Agent 組織的能力，同時維持甚至降低費用。詳見我們的 <a href="/blog/headroom-llm-token-compression-2026.html">headroom 完整教學</a>。
   </div>
 
   <table class="comparison-table">
@@ -822,7 +581,7 @@ ecc --version
     <h3>⚡ Claude Code 省費完整工具包</h3>
     <p>已整理好的 Claude Code 省費配置包：headroom 設定、RTK 腳本、token 監控工具、ECC 快速入門模板，一包搞定。</p>
     <a href="https://xiaofan8.gumroad.com/l/kknad" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-primary">🛍️ 取得 Claude Code 省費工具包</a>
-    <p style="font-size:0.78rem;margin-top:0.75rem;color:var(--gray);">包含 ECC 快速入門配置 + headroom 設定教學 + 省費試算表</p>
+    <p>包含 ECC 快速入門配置 + headroom 設定教學 + 省費試算表</p>
   </div>
 
   <!-- Section 9: FAQ -->

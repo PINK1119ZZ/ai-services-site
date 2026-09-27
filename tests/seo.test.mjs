@@ -136,30 +136,33 @@ test("known static references resolve to real sections and the shared navigation
 
 
 test("legacy articles use one scoped stylesheet", async () => {
+  // scripts/unify_articles.py (TASK site-unify-20260927, batch U1) strips
+  // every article's own stylesheet link -- including assets/legacy-article.css
+  // -- in favor of the single shared /assets/v2-chrome.css. These 7 pages
+  // used to be the ones opted into the old legacy-article.css scoping; now
+  // no page anywhere should still reference it, and each of the 7 carries
+  // v2c-page plus exactly one stylesheet link.
   const legacyPages = [
     "blog/agent-skills-complete-guide-2026.html", "blog/agentmemory-claude-code-tutorial-2026.html",
     "blog/claude-video-watch-tutorial-2026.html", "blog/geo-blym-seo-ai-search-optimization-2026.html",
     "blog/officecli-mcp-claude-code-tutorial-2026.html", "blog/tencentdb-agent-memory-tutorial-2026.html",
     "blog/warp-terminal-review-2026.html",
   ];
-  const linkedPages = [];
   for (const file of await walkHtml()) {
     const html = await readFile(file, "utf8");
-    if (html.includes("assets/legacy-article.css")) linkedPages.push(relative(root, file));
+    assert.ok(
+      !html.includes("assets/legacy-article.css"),
+      `${relative(root, file)} should no longer link assets/legacy-article.css`,
+    );
   }
-  assert.deepEqual(linkedPages.sort(), legacyPages.sort());
   for (const page of legacyPages) {
     const html = await readFile(join(root, page), "utf8");
-    assert.match(html, /<body class=["']legacy-article["']>/);
-    assert.match(html, /href=["']\.\.\/assets\/legacy-article\.css["']/);
-    assert.doesNotMatch(html, /href=["']\.\.\/styles\.css["']/);
-  }
-  const css = await readFile(join(root, "assets/legacy-article.css"), "utf8");
-  assert.match(css, /body\.legacy-article nav \.nav-links\s*\{[^}]*margin:\s*0/);
-  const selectorGroups = [...css.matchAll(/(?:^|[{}])\s*([^{}]+)\{/gm)].map((match) => match[1].trim()).filter((group) => !group.startsWith("@"));
-  assert.ok(selectorGroups.length > 10);
-  for (const group of selectorGroups) {
-    for (const selector of group.replace(/:is\([^)]*\)/g, ":is()").split(",")) assert.match(selector.trim(), /^body\.legacy-article(?:\b|\s|:)/);
+    assert.match(html, /<body\b[^>]*\bclass=["'][^"']*\bv2c-page\b[^"']*["']/);
+    const stylesheetHrefs = [...html.matchAll(/<link\b[^>]*>/gi)]
+      .map((m) => m[0])
+      .filter((tag) => /\brel=["']stylesheet["']/i.test(tag))
+      .map((tag) => (/\bhref=["']([^"']*)["']/i.exec(tag) ?? [])[1]);
+    assert.deepEqual(stylesheetHrefs, ["/assets/v2-chrome.css"], `${page} should only link /assets/v2-chrome.css`);
   }
 });
 
@@ -213,7 +216,12 @@ for (const page of costPages) {
     assert.match(html, /src=["']\/chat-widget\.js\?v=20260502e["']/);
     assert.match(html, /src=["']\/lang\.js\?v=20260505["']/);
     assert.doesNotMatch(html, /body\s*\{[^}]*min-width\s*:/i);
-    assert.match(html, /\.table-scroll\s*\{[^}]*overflow-x\s*:\s*auto/i);
+    // The page's own .table-scroll{overflow-x:auto} rule lived in an inline
+    // <style> block that scripts/unify_articles.py removed along with every
+    // other article-owned style; the shared assets/v2-chrome.css now gives
+    // any <table> inside .v2c-article the same horizontal-scroll behavior.
+    const chromeCss = await readFile(join(root, "assets/v2-chrome.css"), "utf8");
+    assert.match(chromeCss, /\.v2c-article\s+table\s*\{[^}]*overflow-x\s*:\s*auto/i);
     const tableRegion = html.match(/<div\b[^>]*class=["'][^"']*\btable-scroll\b[^"']*["'][^>]*>/i)?.[0] ?? "";
     assert.match(tableRegion, /tabindex=["']0["']/i);
     assert.match(tableRegion, /role=["']region["']/i);

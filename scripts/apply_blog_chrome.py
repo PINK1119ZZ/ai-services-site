@@ -229,14 +229,21 @@ LOGO_CLASS_RE = re.compile(r"\b(nav-logo|logo)\b", re.I)
 # Keywords that mark a legacy site-footer sentence as "disclosure-worthy"
 # content that must be preserved rather than silently deleted with the rest
 # of the footer shell. The first five are the affiliate/commission-marketing
-# disclosure terms; the rest catch other article-specific attribution prose
-# (e.g. an open-source license note) that a plain "site footer" signature
-# (copyright + nav links) would otherwise sweep away.
+# disclosure terms; the middle group catches other article-specific
+# attribution prose (e.g. an open-source license note); the last group
+# catches an AI-content disclosure statement that a plain "site footer"
+# signature (copyright + nav links) would otherwise sweep away.
 DISCLOSURE_KEYWORDS_RE = re.compile(
     r"聯盟|联盟|affiliate|佣金|commission"
-    r"|本文|本站文章|本站含|this article|this post|this guide",
+    r"|本文|本站文章|本站含|this article|this post|this guide"
+    r"|AI\s?生成|AI-generated|AI generated",
     re.I,
 )
+
+# A <footer> whose own class carries "kira" (case-insensitive) is a
+# page-specific credits/AI-disclosure block for the Kira aggregator pages,
+# not generic site chrome -- see classify_footer()'s "page_credits" verdict.
+KIRA_FOOTER_CLASS_RE = re.compile(r"\bkira\b", re.I)
 
 
 def tag_attr(tagtext: str, name: str):
@@ -263,12 +270,17 @@ def classify_nav(inner: str, tagtext: str):
     return "content"
 
 
-def classify_footer(inner: str):
+def classify_footer(inner: str, tagtext: str = ""):
     """Return ('site_footer', None) | ('disclosure', matched_keywords) |
-    ('none', None) for a <footer> block found outside <article>. A footer is
+    ('page_credits', None) | ('none', None) for a <footer> block found
+    outside <article>. A <footer class="...kira..."> is always
+    'page_credits' -- a page-specific credits/AI-disclosure block, not site
+    chrome -- checked before the generic gate below. Otherwise, a footer is
     only ever a candidate at all when it looks like site chrome (a copyright
     notice or a link to a known site route); among those, one that also
     carries disclosure-worthy prose is converted rather than deleted."""
+    if tagtext and KIRA_FOOTER_CLASS_RE.search(tag_attr(tagtext, "class")):
+        return "page_credits", None
     hrefs = re.findall(r"href=[\"']([^\"']*)[\"']", inner, re.I)
     has_copyright = "©" in inner or "&copy;" in inner.lower()
     has_route = any(route_key(h) for h in hrefs)
@@ -330,6 +342,44 @@ def build_disclosure_markup(disclosure_text: str, english: bool) -> str:
     )
 
 
+_TAG_FOR_STYLE_STRIP_RE = re.compile(r"<[a-zA-Z][a-zA-Z0-9-]*(?:\s[^<>]*)?/?>", re.S)
+_STYLE_ATTR_FOR_STRIP_RE = re.compile(r'\s+style\s*=\s*("[^"]*"|\'[^\']*\')', re.I)
+
+
+def strip_style_attrs_from_html(html_fragment: str) -> str:
+    """Remove every style="..."/'...' attribute from `html_fragment`,
+    matching only inside a real opening tag's own text (bounded by < and
+    >), never in the plain text between tags -- keeps this safe against a
+    text node that merely contains the substring "style=" without being an
+    actual HTML attribute."""
+    out = []
+    pos = 0
+    for m in _TAG_FOR_STYLE_STRIP_RE.finditer(html_fragment):
+        tag_text = m.group(0)
+        new_tag_text = _STYLE_ATTR_FOR_STRIP_RE.sub("", tag_text)
+        if new_tag_text != tag_text:
+            out.append(html_fragment[pos:m.start()])
+            out.append(new_tag_text)
+            pos = m.end()
+    out.append(html_fragment[pos:])
+    return "".join(out)
+
+
+def build_page_credits_markup(footer_inner: str) -> str:
+    """A <footer class="...kira..."> holds page-specific credits/AI-content
+    disclosure prose (attribution, "this page is AI-generated", a
+    cross-language link, ...) that does not reduce to one extractable
+    sentence the way build_disclosure_markup()'s keyword-matched substring
+    does. Its full inner HTML -- style="" attributes stripped, every other
+    tag/link/text kept verbatim -- is kept in the v2-chrome:disclosure
+    marker's place instead of being summarized or deleted."""
+    kept = strip_style_attrs_from_html(footer_inner)
+    return (
+        f'{MARK_DISCLOSURE_START}<aside class="v2c-disclosure v2c-page-credits" '
+        f'aria-label="頁面說明/Page notes">{kept}</aside>{MARK_DISCLOSURE_END}'
+    )
+
+
 # ---------------------------------------------------------------------------
 # Removal-span computation
 # ---------------------------------------------------------------------------
@@ -343,6 +393,7 @@ class FileReport:
         self.footer_removed = False
         self.footer_disclosure = False
         self.disclosure_text = None
+        self.footer_page_credits = False
         self.no_nav_found = False
         self.no_footer_found = False
         self.duplicate_ids = []  # list of id names still found elsewhere
@@ -385,6 +436,8 @@ def compute_removal_spans(html: str, protect_spans, english: bool):
         "disclosure_text": None,
         "disclosure_source_text": None,
         "disclosure_source_html": None,
+        "footer_page_credits": False,
+        "page_credits_source_html": None,
         "no_nav_found": False,
         "no_footer_found": False,
     }
@@ -435,7 +488,8 @@ def compute_removal_spans(html: str, protect_spans, english: bool):
     for (s, e, is_, ie) in footer_spans:
         footer_found_any = True
         inner = html[is_:ie]
-        verdict, kw = classify_footer(inner)
+        tagtext = html[s:html.find(">", s) + 1]
+        verdict, kw = classify_footer(inner, tagtext)
         if verdict == "site_footer":
             removal_ops.append((s, e, ""))
             info["footer_removed"] = True
@@ -447,6 +501,10 @@ def compute_removal_spans(html: str, protect_spans, english: bool):
             info["disclosure_text"] = disclosure_text
             info["disclosure_source_text"] = source_text
             info["disclosure_source_html"] = inner
+        elif verdict == "page_credits":
+            removal_ops.append((s, e, build_page_credits_markup(inner)))
+            info["footer_page_credits"] = True
+            info["page_credits_source_html"] = inner
         # 'none' -> leave in place silently (not a site-footer signal at all)
     if not footer_found_any:
         info["no_footer_found"] = True
@@ -563,9 +621,15 @@ def has_body_padding_hint(html: str) -> bool:
 # ---------------------------------------------------------------------------
 
 
-def process_html(html: str, english: bool, report: FileReport) -> str:
+def process_html(html: str, english: bool, report: FileReport, is_blog: bool = True) -> str:
     nav_markup = EN_NAV_MARKUP if english else ZH_NAV_MARKUP
     footer_markup = EN_FOOTER_MARKUP if english else ZH_FOOTER_MARKUP
+    if not is_blog:
+        # aria-current="page" on the 洞察/Insights nav link only makes sense
+        # when the current page actually *is* that blog hub/article; pages
+        # outside blog/ and en/blog/ (legal pages, 404, downloads, kira, ...)
+        # get the same nav markup without that one attribute.
+        nav_markup = nav_markup.replace(' aria-current="page"', "")
 
     report.body_padding_hint = has_body_padding_hint(html)
 
@@ -590,6 +654,7 @@ def process_html(html: str, english: bool, report: FileReport) -> str:
         report.footer_removed = info["footer_removed"]
         report.footer_disclosure = info["footer_disclosure"]
         report.disclosure_text = info["disclosure_text"]
+        report.footer_page_credits = info["footer_page_credits"]
         report.no_nav_found = info["no_nav_found"]
         report.no_footer_found = info["no_footer_found"]
 
@@ -744,7 +809,7 @@ def verify_one(path: Path):
     rel = path.relative_to(REPO_ROOT).as_posix()
     baseline = git_show_head(rel)
     current = path.read_text(encoding="utf-8")
-    english = "en/blog" in rel
+    english = rel.startswith("en/")
 
     protect_spans = []  # baseline never has our markers
     removal_ops, info = compute_removal_spans(baseline, protect_spans, english)
@@ -763,11 +828,13 @@ def verify_one(path: Path):
         current_stripped = current_stripped[:s] + current_stripped[e:]
 
     disclosure_expected = info["footer_disclosure"]
+    page_credits_expected = info["footer_page_credits"]
     disclosure_present = MARK_DISCLOSURE_START in current_stripped
-    if disclosure_expected != disclosure_present:
+    if (disclosure_expected or page_credits_expected) != disclosure_present:
         return False, (
             f"disclosure marker presence mismatch (baseline expects "
-            f"disclosure={disclosure_expected}, current has={disclosure_present})"
+            f"disclosure={disclosure_expected}, page_credits={page_credits_expected}, "
+            f"current has={disclosure_present})"
         )
     if disclosure_present:
         s = current_stripped.find(MARK_DISCLOSURE_START)
@@ -778,19 +845,28 @@ def verify_one(path: Path):
         disclosure_block = current_stripped[s:e]
         current_stripped = current_stripped[:s] + current_stripped[e:]
 
-        p_match = re.search(r"<p>(.*?)</p>", disclosure_block, re.S)
-        if not p_match:
-            return False, "disclosure aside missing <p>"
-        p_text_norm = re.sub(r"\s+", " ", html_entities.unescape(p_match.group(1))).strip()
-        if not p_text_norm:
-            return False, "disclosure <p> is empty"
-        source_norm = re.sub(
-            r"\s+", " ", html_entities.unescape(info["disclosure_source_text"] or "")
-        ).strip()
-        if p_text_norm not in source_norm:
-            return False, "disclosure text is not a substring of the baseline footer text"
-        if not disclosure_is_whole_sentence(info["disclosure_source_html"] or "", p_text_norm):
-            return False, "disclosure text does not start and end on a sentence boundary in the baseline footer"
+        if page_credits_expected:
+            expected_block = build_page_credits_markup(info["page_credits_source_html"] or "")
+            if disclosure_block != expected_block:
+                return False, (
+                    "page-credits disclosure block does not match the expected rebuild "
+                    "of the baseline <footer> (text/links must be preserved verbatim, "
+                    "only style=\"\" attributes removed)"
+                )
+        else:
+            p_match = re.search(r"<p>(.*?)</p>", disclosure_block, re.S)
+            if not p_match:
+                return False, "disclosure aside missing <p>"
+            p_text_norm = re.sub(r"\s+", " ", html_entities.unescape(p_match.group(1))).strip()
+            if not p_text_norm:
+                return False, "disclosure <p> is empty"
+            source_norm = re.sub(
+                r"\s+", " ", html_entities.unescape(info["disclosure_source_text"] or "")
+            ).strip()
+            if p_text_norm not in source_norm:
+                return False, "disclosure text is not a substring of the baseline footer text"
+            if not disclosure_is_whole_sentence(info["disclosure_source_html"] or "", p_text_norm):
+                return False, "disclosure text does not start and end on a sentence boundary in the baseline footer"
 
     if CSS_LINK_TAG in current_stripped:
         current_stripped = current_stripped.replace(CSS_LINK_TAG + "\n", "", 1)
@@ -852,6 +928,7 @@ def main(argv):
     header_removed = 0
     footer_removed = 0
     footer_disclosures = []
+    footer_page_credits = []
     no_nav_direct_insert = 0
     duplicate_ids = {}
     body_padding_files = []
@@ -859,10 +936,11 @@ def main(argv):
 
     for path in files:
         rel = path.relative_to(REPO_ROOT).as_posix() if path.is_relative_to(REPO_ROOT) else str(path)
-        english = "en/blog" in rel
+        english = rel.startswith("en/")
+        is_blog = rel.startswith("blog/") or rel.startswith("en/blog/")
         original = path.read_text(encoding="utf-8")
         report = FileReport(rel)
-        new_html = process_html(original, english, report)
+        new_html = process_html(original, english, report, is_blog)
 
         if report.nav_removed:
             nav_removed += 1
@@ -872,6 +950,8 @@ def main(argv):
             footer_removed += 1
         if report.footer_disclosure:
             footer_disclosures.append((rel, report.disclosure_text))
+        if report.footer_page_credits:
+            footer_page_credits.append(rel)
         if report.no_nav_found:
             no_nav_direct_insert += 1
         if report.duplicate_ids:
@@ -890,6 +970,9 @@ def main(argv):
     print(f"Footer converted to v2c-disclosure: {len(footer_disclosures)}")
     for rel, text in footer_disclosures:
         print(f"  - {rel}: {text}")
+    print(f"Footer converted to v2c-page-credits: {len(footer_page_credits)}")
+    for rel in footer_page_credits:
+        print(f"  - {rel}")
     print(f"No site nav found (direct insert): {no_nav_direct_insert}")
     print(f"Duplicate id candidates: {len(duplicate_ids)}")
     for rel, ids in duplicate_ids.items():

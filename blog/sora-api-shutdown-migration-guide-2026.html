@@ -11,60 +11,8 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://autodev-ai.com/blog/sora-api-shutdown-migration-guide-2026.html">
   <link rel="canonical" href="https://autodev-ai.com/blog/sora-api-shutdown-migration-guide-2026.html">
-  <link rel="stylesheet" href="/style.css?v=20260505">
-  <style>
-    .article-hero{background:linear-gradient(135deg,#7f1d1d 0%,#dc2626 50%,#f87171 100%);color:#fff;padding:3rem 1.5rem;text-align:center;border-radius:12px;margin-bottom:2rem}
-    .article-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:1rem;line-height:1.3}
-    .article-hero .meta{opacity:.85;font-size:.9rem}
-    .article-body{max-width:860px;margin:0 auto;padding:0 1rem}
-    .article-body h2{color:#7f1d1d;border-left:4px solid #dc2626;padding-left:.75rem;margin-top:2.5rem}
-    .article-body h3{color:#374151;margin-top:1.8rem}
-    .cta-box{background:linear-gradient(135deg,#1e3a5f,#2563eb);color:#fff;border-radius:12px;padding:2rem;margin:2.5rem 0;text-align:center}
-    .cta-box h3{color:#fff;margin:0 0 .5rem}
-    .cta-box p{margin:.5rem 0 1.25rem;opacity:.9}
-    .cta-btn{display:inline-block;background:#fff;color:#1e3a5f;font-weight:700;padding:.75rem 1.75rem;border-radius:8px;text-decoration:none;margin:.4rem;transition:transform .2s}
-    .cta-btn:hover{transform:translateY(-2px)}
-    .cta-btn.secondary{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4)}
-    .cta-box-higgsfield{background:linear-gradient(135deg,#3730a3,#6d28d9);color:#fff;border-radius:12px;padding:2rem;margin:2.5rem 0;text-align:center}
-    .cta-box-higgsfield h3{color:#fff;margin:0 0 .5rem}
-    .cta-box-higgsfield p{margin:.5rem 0 1.25rem;opacity:.9}
-    .cta-btn-purple{display:inline-block;background:#fff;color:#3730a3;font-weight:700;padding:.75rem 1.75rem;border-radius:8px;text-decoration:none;margin:.4rem;transition:transform .2s}
-    .cta-btn-purple:hover{transform:translateY(-2px)}
-    .highlight-box{background:#fff7ed;border-left:4px solid #f97316;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0}
-    .danger-box{background:#fef2f2;border-left:4px solid #ef4444;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0}
-    .tip-box{background:#eff6ff;border-left:4px solid #3b82f6;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0}
-    .success-box{background:#f0fdf4;border-left:4px solid #22c55e;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0}
-    pre{background:#1a1a2e;color:#e2e8f0;padding:1.25rem;border-radius:8px;overflow-x:auto;font-size:.9rem;margin:1rem 0}
-    code{background:#f3f4f6;padding:.15rem .35rem;border-radius:4px;font-family:monospace;font-size:.88rem}
-    pre code{background:none;padding:0;color:inherit}
-    table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.88rem}
-    th{background:#7f1d1d;color:#fff;padding:.75rem 1rem;text-align:left}
-    td{padding:.7rem 1rem;border-bottom:1px solid #e5e7eb}
-    tr:nth-child(even) td{background:#f9fafb}
-    .badge{display:inline-block;background:#fee2e2;color:#7f1d1d;padding:.2rem .6rem;border-radius:20px;font-size:.8rem;font-weight:600;margin:.15rem}
-    .badge-green{background:#d1fae5;color:#065f46}
-    .badge-blue{background:#dbeafe;color:#1e40af}
-    .badge-purple{background:#ede9fe;color:#4c1d95}
-    .badge-orange{background:#fed7aa;color:#9a3412}
-    .toc{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1.25rem 1.5rem;margin:1.5rem 0}
-    .toc h3{margin:0 0 .75rem;color:#7f1d1d;font-size:1rem}
-    .toc ol{margin:0;padding-left:1.25rem}
-    .toc li{margin:.35rem 0}
-    .toc a{color:#dc2626;text-decoration:none}
-    .toc a:hover{text-decoration:underline}
-    .urgent-banner{background:#dc2626;color:#fff;padding:1rem 1.5rem;border-radius:8px;text-align:center;font-weight:700;font-size:1.1rem;margin:1.5rem 0}
-    .timeline-item{border-left:3px solid #dc2626;padding:.75rem 0 .75rem 1.25rem;margin:.5rem 0}
-    .timeline-item .date{font-weight:700;color:#dc2626;font-size:.9rem}
-    .step-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1.25rem;margin:.75rem 0}
-    .step-box .step-num{background:#dc2626;color:#fff;border-radius:50%;width:2rem;height:2rem;display:inline-flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:.5rem}
-    .alt-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem;margin:.75rem 0}
-    .alt-card h4{margin:0 0 .5rem;color:#1e3a5f}
-    .winner-badge{background:#fbbf24;color:#78350f;padding:.2rem .7rem;border-radius:20px;font-size:.85rem;font-weight:700}
-    .countdown{background:linear-gradient(135deg,#7f1d1d,#dc2626);color:#fff;border-radius:12px;padding:1.5rem;text-align:center;margin:1.5rem 0}
-    .countdown h3{color:#fff;margin:0 0 .5rem;font-size:1.3rem}
-    .countdown .days{font-size:3rem;font-weight:900;line-height:1}
-    .countdown .label{font-size:.9rem;opacity:.85;margin-top:.25rem}
-  </style>
+
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -79,14 +27,14 @@
   </script>
 <link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
 
 
-<main>
+<main class="v2c-article">
 <div class="article-hero">
   <div class="article-body">
-    <span style="background:rgba(255,255,255,.2);padding:.3rem .9rem;border-radius:20px;font-size:.85rem;font-weight:700">🚨 緊急公告：距離關閉僅剩 6 天</span>
-    <h1>Sora API 9/24 永久關閉<br>台灣開發者完整遷移指南<br><small style="font-size:.65em;opacity:.9">6 個替代方案深度實測，繁中首發</small></h1>
+    <span>🚨 緊急公告：距離關閉僅剩 6 天</span>
+    <h1>Sora API 9/24 永久關閉<br>台灣開發者完整遷移指南<br><small>6 個替代方案深度實測，繁中首發</small></h1>
     <div class="meta">📅 2026-09-18 ｜ 分類：AI 影片 API ｜ 閱讀時間：約 12 分鐘</div>
   </div>
 </div>
@@ -369,7 +317,7 @@ app.listen(3000, () => console.log('Webhook 監聽 port 3000'));</code></pre>
     <h3>🚀 Higgsfield API — 開始使用</h3>
     <p>50+ 影片模型統一 API，async 設計與 Sora 高度相容，全球可用<br>現在申請，今天就能完成 Sora 遷移</p>
     <a href="https://higgsfield.ai" class="cta-btn-purple" target="_blank" rel="noopener">🎬 申請 Higgsfield API 存取</a>
-    <a href="https://higgsfield.ai/affiliate" class="cta-btn-purple" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4)" target="_blank" rel="noopener">💰 Affiliate 計畫（25%/12mo）</a>
+    <a href="https://higgsfield.ai/affiliate" class="cta-btn-purple" target="_blank" rel="noopener">💰 Affiliate 計畫（25%/12mo）</a>
   </div>
 
   <h2 id="migration">五、5 步驟完成遷移（含完整程式碼）</h2>
@@ -378,7 +326,7 @@ app.listen(3000, () => console.log('Webhook 監聽 port 3000'));</code></pre>
 
   <div class="step-box">
     <div class="step-num">1</div>
-    <h3 style="margin-top:.5rem">確認受影響的程式碼範圍</h3>
+    <h3>確認受影響的程式碼範圍</h3>
     <pre><code># 一鍵掃描 Sora API 使用位置
 grep -rn "sora\|video/generations\|sora-1.5\|openai.*video" . \
   --include="*.py" --include="*.js" --include="*.ts" \
@@ -390,7 +338,7 @@ grep -rn "sora\|video/generations\|sora-1.5\|openai.*video" . \
 
   <div class="step-box">
     <div class="step-num">2</div>
-    <h3 style="margin-top:.5rem">申請 Higgsfield API Key</h3>
+    <h3>申請 Higgsfield API Key</h3>
     <p>前往 <a href="https://higgsfield.ai" target="_blank">higgsfield.ai</a> 申請 API 存取。申請後可以在 Dashboard 找到你的 API Key。</p>
     <pre><code># 設定環境變數（替換原本的 OPENAI_API_KEY）
 export HIGGSFIELD_API_KEY="hf_your_api_key_here"
@@ -401,7 +349,7 @@ HIGGSFIELD_API_KEY=hf_your_api_key_here</code></pre>
 
   <div class="step-box">
     <div class="step-num">3</div>
-    <h3 style="margin-top:.5rem">建立相容層（Adapter Pattern）</h3>
+    <h3>建立相容層（Adapter Pattern）</h3>
     <p>建議不要直接改所有呼叫點，而是建立一個抽象層，讓未來切換更容易：</p>
     <pre><code># video_provider.py — 統一介面
 import os
@@ -465,7 +413,7 @@ print(f"影片 URL: {video_url}")</code></pre>
 
   <div class="step-box">
     <div class="step-num">4</div>
-    <h3 style="margin-top:.5rem">在測試環境驗證</h3>
+    <h3>在測試環境驗證</h3>
     <pre><code># 測試腳本
 python3 -c "
 from video_provider import VideoProvider
@@ -482,7 +430,7 @@ print(f'測試通過！影片 URL: {url}')
 
   <div class="step-box">
     <div class="step-num">5</div>
-    <h3 style="margin-top:.5rem">上線並移除 Sora 相關程式碼</h3>
+    <h3>上線並移除 Sora 相關程式碼</h3>
     <p>測試通過後，從 codebase 移除所有 Sora API 相關程式碼，並更新環境變數設定：</p>
     <pre><code># 從 requirements.txt 或 package.json 移除不需要的套件
 # Python: openai 仍可保留（用於其他 OpenAI 服務）
@@ -616,7 +564,7 @@ return { job_id: job.id, status: 'pending' };</code></pre>
     <h3>🎬 立即開始 Sora 遷移 — Higgsfield API</h3>
     <p>50+ 影片模型，統一 async API 設計，與 Sora 架構最相容<br>全球可用，台灣開發者無需 VPN</p>
     <a href="https://higgsfield.ai" class="cta-btn-purple" target="_blank" rel="noopener">🚀 申請 Higgsfield API</a>
-    <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" class="cta-btn-purple" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4)" target="_blank" rel="noopener sponsored">🌐 Cloudways — 影片服務最佳雲端主機</a>
+    <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" class="cta-btn-purple" target="_blank" rel="noopener sponsored">🌐 Cloudways — 影片服務最佳雲端主機</a>
   </div>
 
   <!-- 延伸閱讀 -->
