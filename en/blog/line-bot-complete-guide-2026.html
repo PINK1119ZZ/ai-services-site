@@ -46,25 +46,11 @@
 .art-content a:hover { color: var(--primary-dark); }
 .art-content strong { color: var(--text); font-weight: 600; }
 </style>
+<link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body>
+<body><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/en/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/en/services.html">Services</a><a href="/en/portfolio.html">Work</a><a href="/en/blog/" aria-current="page">Insights</a><a href="/en/about.html">About</a><a href="/en/contact.html">Contact</a><a class="v2c-cta" href="/en/contact.html" data-analytics="nav_contact">Discuss a project</a></div><button class="v2c-toggle" id="mobileMenuBtn" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="Open menu" data-open-label="Open menu" data-close-label="Close menu">☰</button></div></header><!-- /v2-chrome:header -->
 
-<nav class="nav" id="nav">
-<div class="nav-inner">
-<a class="nav-logo" href="/en/">AutoDev AI</a>
-<div class="nav-links" id="navLinks">
-<a href="/en/services.html">Services</a>
-<a href="/en/bot-cloud.html">Cloud Hosting</a>
-<a href="/en/ai-model.html">AI Model</a>
-<a href="/en/tools/">Tools</a>
-<a href="/en/pricing.html">Pricing</a>
-<a class="active" href="/en/blog/">Blog</a>
-<a href="/en/about.html">About</a>
-<a class="nav-cta" href="/en/contact.html">Free Quote</a>
-</div>
-<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">&#9776;</button>
-</div>
-</nav>
+
 
 <div style="max-width:760px;margin:5rem auto 0;padding:1rem 2rem 0;font-size:0.85rem;color:var(--text-soft);">
 <a href="/en/" style="color:var(--text-soft);text-decoration:none;">Home</a> ›
@@ -183,11 +169,10 @@
 </ul>
 </section>
 
-<footer style="padding:3rem 2rem 2rem;text-align:center;color:var(--text-muted);font-size:0.85rem;border-top:1px solid var(--border);background:var(--bg);">
-<p>© 2026 AutoDev AI · <a href="/en/about.html" style="color:var(--primary);">About</a> · <a href="/en/contact.html" style="color:var(--primary);">Contact</a> · <a href="https://autodev-ai.com/blog/line-bot-complete-guide-2026.html" style="color:var(--primary);">繁中版</a></p>
-</footer>
+
 
 <script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;var H='☰',X='✕';function set(o){l.classList.toggle('show',o);b.innerHTML=o?X:H;}b.addEventListener('click',function(e){e.stopPropagation();set(!l.classList.contains('show'));});document.addEventListener('click',function(e){if(l.classList.contains('show')&&!l.contains(e.target)&&!b.contains(e.target))set(false);});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 <script defer src="/lang.js?v=20260505"></script>
+<!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>Automation & Digital Systems Studio. Telegram-first systems that turn complex work into clear workflows.</p></div><div><h3>Studio</h3><a href="/en/services.html">Services</a><a href="/en/portfolio.html">Work</a><a href="/en/pricing.html">Project scope</a><a href="/en/contact.html">Discuss a project</a></div><div><h3>Labs & Tools</h3><a href="/en/bot-cloud.html">Bot Cloud</a><a href="/en/ai-model.html">AI Model</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/en/tools/">Tools</a><a href="/en/demo.html">Demo</a></div><div><h3>More</h3><a href="https://chat.autodev-ai.com/form">Existing form</a><a href="/en/blog/">Insights</a><a href="https://liff.line.me/2009694545-LJmZCiEX">Existing LIFF enquiry</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/en/privacy.html">Privacy</a> · <a href="/en/terms.html">Terms</a> · <a href="/en/disclaimer.html">Disclaimer</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>
