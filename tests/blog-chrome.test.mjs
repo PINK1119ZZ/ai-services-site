@@ -124,6 +124,9 @@ test("id nav / navLinks / mobileMenuBtn each appear exactly once, inside the v2 
       assert.equal(occurrences.length, 1, `${path} ${idName} occurrence count`);
       assert.ok(occurrences[0] >= hs && occurrences[0] < he, `${path} ${idName} inside header block`);
     }
+    const header = html.slice(hs, he);
+    assert.match(header, /<button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"><\/button>/, `${path} legacy hook`);
+    assert.doesNotMatch(header, /<button[^>]*data-nav-toggle[^>]*id="mobileMenuBtn"|<button[^>]*id="mobileMenuBtn"[^>]*data-nav-toggle/, `${path} real toggle carries no legacy id`);
   }
 });
 

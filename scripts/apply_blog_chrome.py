@@ -61,9 +61,10 @@ ZH_NAV_MARKUP = (
     '<a href="/contact.html">聯絡</a>'
     '<a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a>'
     '</div>'
-    '<button class="v2c-toggle" id="mobileMenuBtn" type="button" data-nav-toggle '
+    '<button class="v2c-toggle" type="button" data-nav-toggle '
     'aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" '
     'data-open-label="開啟選單" data-close-label="關閉選單">☰</button>'
+    '<button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button>'
     '</div></header>'
 )
 
@@ -78,9 +79,10 @@ EN_NAV_MARKUP = (
     '<a href="/en/contact.html">Contact</a>'
     '<a class="v2c-cta" href="/en/contact.html" data-analytics="nav_contact">Discuss a project</a>'
     '</div>'
-    '<button class="v2c-toggle" id="mobileMenuBtn" type="button" data-nav-toggle '
+    '<button class="v2c-toggle" type="button" data-nav-toggle '
     'aria-controls="navLinks" aria-expanded="false" aria-label="Open menu" '
     'data-open-label="Open menu" data-close-label="Close menu">☰</button>'
+    '<button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button>'
     '</div></header>'
 )
 
@@ -629,9 +631,12 @@ def discover_files():
 # ---------------------------------------------------------------------------
 
 
+VERIFY_BASE = "HEAD"
+
+
 def git_show_head(rel_path: str) -> str:
     result = subprocess.run(
-        ["git", "show", f"HEAD:{rel_path}"],
+        ["git", "show", f"{VERIFY_BASE}:{rel_path}"],
         cwd=REPO_ROOT, capture_output=True, text=True, check=True,
     )
     return result.stdout
@@ -785,8 +790,12 @@ def verify_one(path: Path):
 
 
 def main(argv):
+    global VERIFY_BASE
     verify = "--verify" in argv
-    file_args = [a for a in argv if a != "--verify"]
+    for a in argv:
+        if a.startswith("--base="):
+            VERIFY_BASE = a.split("=", 1)[1]
+    file_args = [a for a in argv if a != "--verify" and not a.startswith("--base=")]
     if file_args:
         files = [Path(a).resolve() for a in file_args]
     else:

@@ -124,7 +124,7 @@ test("known static references resolve to real sections and the shared navigation
     "tools/ai-subscription-calculator.html",
   ]) {
     const html = await readFile(join(root, page), "utf8");
-    const toggle = html.match(/<button\b[^>]*id=["']mobileMenuBtn["'][^>]*>/)?.[0] ?? "";
+    const toggle = html.match(/<button\b[^>]*data-nav-toggle[^>]*>/)?.[0] ?? "";
     assert.match(html, /<div\b[^>]*id=["']navLinks["'][^>]*data-nav-links[^>]*>/);
     for (const attribute of [/data-nav-toggle/, /aria-controls=["']navLinks["']/, /aria-expanded=["']false["']/, /data-open-label=["']開啟選單["']/, /data-close-label=["']關閉選單["']/]) {
       assert.match(toggle, attribute);

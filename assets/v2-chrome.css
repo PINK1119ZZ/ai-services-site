@@ -13,7 +13,7 @@
    that never load style.css.
 
    Isolation strategy: every frame selector is anchored with `html body` and
-   the frame element's own id (#nav / #navLinks / #mobileMenuBtn) or class
+   the frame element's own id (#nav / #navLinks) or class, the toggle via #nav
    (.v2c-footer), and every structural/visual property a legacy inline
    <style> block could plausibly target (display, position, background,
    color, font, spacing, border, shadow, sizing, transform, opacity, z-index,
@@ -225,7 +225,7 @@ html body #navLinks.v2c-links > a.v2c-cta {
   font-weight: 650 !important;
 }
 
-html body #mobileMenuBtn.v2c-toggle {
+html body #nav.v2c-header .v2c-toggle {
   all: revert !important;
   display: none !important;
   position: static !important;
@@ -298,7 +298,7 @@ html body #mobileMenuBtn.v2c-toggle {
     margin-top: .3rem !important;
   }
 
-  html body #mobileMenuBtn.v2c-toggle {
+  html body #nav.v2c-header .v2c-toggle {
     display: flex !important;
   }
 }
@@ -745,4 +745,9 @@ html body .v2c-disclosure p {
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* Hidden hook that keeps legacy inline scripts bound to #mobileMenuBtn away from the real toggle. */
+html body #nav.v2c-header #mobileMenuBtn.v2c-legacy-hook {
+  display: none !important;
 }
