@@ -94,6 +94,45 @@
 
 </div>
 
+<script>
+var providers = [
+ { name: 'DigitalOcean', plan: 'Basic Droplet', ram: 1, cpu: 1, storage: '25 GB SSD', bw: '1 TB', price: 6, url: 'https://m.do.co/c/6121a295f624', affiliate: true },
+ { name: 'DigitalOcean', plan: 'Basic Droplet', ram: 2, cpu: 1, storage: '50 GB SSD', bw: '2 TB', price: 12, url: 'https://m.do.co/c/6121a295f624', affiliate: true },
+ { name: 'DigitalOcean', plan: 'Basic Droplet', ram: 4, cpu: 2, storage: '80 GB SSD', bw: '4 TB', price: 24, url: 'https://m.do.co/c/6121a295f624', affiliate: true },
+ { name: 'Hetzner', plan: 'CX11', ram: 2, cpu: 1, storage: '20 GB SSD', bw: '20 TB', price: 4.59, url: 'https://www.hetzner.com/cloud', affiliate: false },
+ { name: 'Hetzner', plan: 'CX21', ram: 4, cpu: 2, storage: '40 GB SSD', bw: '20 TB', price: 6.49, url: 'https://www.hetzner.com/cloud', affiliate: false },
+ { name: 'Hetzner', plan: 'CX31', ram: 8, cpu: 2, storage: '80 GB SSD', bw: '20 TB', price: 11.49, url: 'https://www.hetzner.com/cloud', affiliate: false },
+ { name: 'Linode', plan: 'Nanode 1GB', ram: 1, cpu: 1, storage: '25 GB SSD', bw: '1 TB', price: 5, url: 'https://www.linode.com/', affiliate: false },
+ { name: 'Linode', plan: 'Linode 2GB', ram: 2, cpu: 1, storage: '50 GB SSD', bw: '2 TB', price: 12, url: 'https://www.linode.com/', affiliate: false },
+ { name: 'Linode', plan: 'Linode 4GB', ram: 4, cpu: 2, storage: '80 GB SSD', bw: '4 TB', price: 24, url: 'https://www.linode.com/', affiliate: false },
+ { name: 'Vultr', plan: 'Cloud Compute 1GB', ram: 1, cpu: 1, storage: '25 GB SSD', bw: '1 TB', price: 6, url: 'https://www.vultr.com/', affiliate: false },
+ { name: 'Vultr', plan: 'Cloud Compute 2GB', ram: 2, cpu: 1, storage: '55 GB SSD', bw: '2 TB', price: 12, url: 'https://www.vultr.com/', affiliate: false },
+ { name: 'Hostinger', plan: 'KVM 2', ram: 8, cpu: 2, storage: '100 GB SSD', bw: '8 TB', price: 7.99, url: 'https://www.hostinger.com/vps-hosting', affiliate: false }
+];
+
+function render(){
+ var minCpu = parseFloat(document.getElementById('cpu').value);
+ var minRam = parseFloat(document.getElementById('ram').value);
+ var minStorage = parseFloat(document.getElementById('storage').value);
+ var sortBy = document.getElementById('sort').value;
+ var filtered = providers.filter(function(p){
+  return p.cpu >= minCpu && p.ram >= minRam && parseInt(p.storage, 10) >= minStorage;
+ });
+ filtered.sort(function(a,b){
+  if (sortBy === 'cpu') return b.cpu - a.cpu;
+  if (sortBy === 'ram') return b.ram - a.ram;
+  return a.price - b.price;
+ });
+ var html = filtered.map(function(p){
+  var star = p.affiliate ? ' ★' : '';
+  return '<article class="vps-card"><div class="vps-brand">' + p.name + '<span class="plan">' + p.plan + '</span></div><div class="vps-specs"><div class="spec"><span class="v">' + p.ram + ' GB</span><span class="l">RAM</span></div><div class="spec"><span class="v">' + p.cpu + '</span><span class="l">vCPU</span></div><div class="spec"><span class="v">' + p.storage + '</span><span class="l">儲存</span></div><div class="spec"><span class="v">' + p.bw + '</span><span class="l">流量</span></div></div><div class="vps-price"><span class="p">$' + p.price + '</span><span class="pm">/月</span><a class="btn" href="' + p.url + '" target="_blank" rel="noopener' + (p.affiliate ? ' sponsored' : '') + '">立即前往' + star + '</a></div></article>';
+ }).join('');
+ document.getElementById('vpsGrid').innerHTML = html || '<p>沒有符合條件的方案，請放寬篩選條件。</p>';
+}
+document.querySelectorAll('select').forEach(function(s){ s.addEventListener('change', render); });
+render();
+</script>
+
 
 
 
