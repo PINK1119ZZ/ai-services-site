@@ -145,3 +145,22 @@ test("every post card has a title and an article link", () => {
     }
   }
 });
+
+test("post grids have balanced div tags so no card is nested in another", () => {
+  for (const file of ["blog/index.html", "en/blog/index.html"]) {
+    const html = readFileSync(new URL(file, root), "utf8");
+    const start = html.indexOf('<div class="v2-post-grid">');
+    const end = html.indexOf("</section>", start);
+    const grid = html.slice(start, end);
+    let depth = 0;
+    let cards = 0;
+    for (const tag of grid.matchAll(/<\/?div\b[^>]*>/g)) {
+      depth += tag[0].startsWith("</") ? -1 : 1;
+      if (/class="v2-post-card/.test(tag[0])) { cards += 1; assert.equal(depth, 2, `${file} post card opened inside another element`); }
+      if (depth === 0) break;
+    }
+    assert.equal(depth, 0, `${file} post grid closes`);
+    assert.equal(cards, (grid.match(/<div\b[^>]*class="v2-post-card/g) || []).length, `${file} every div card sits directly in the grid`);
+  }
+});
+
