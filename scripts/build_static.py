@@ -31,6 +31,8 @@ REDESIGNED_PAGES = {
     "index.html", "services.html", "portfolio.html", "about.html", "pricing.html", "contact.html",
     "en/index.html", "en/services.html", "en/portfolio.html", "en/about.html", "en/pricing.html", "en/contact.html",
     "blog/index.html", "en/blog/index.html",
+    "bot-cloud.html", "ai-model.html", "line-bot-saas.html", "demo.html",
+    "en/bot-cloud.html", "en/ai-model.html", "en/demo.html",
 }
 EXACT_NESTED = {
     "downloads/index.html", "downloads/ai-tools-guide-2026.html",
