@@ -637,12 +637,12 @@ def find_stylesheet_hrefs(html: str):
     return out
 
 
-def verify_one(path: Path, base: str):
+def verify_one(path: Path, base: str, force_keep_functional_css: bool = False):
     rel = path.relative_to(REPO_ROOT).as_posix()
     pristine_baseline = git_show(base, rel)
     baseline = pristine_baseline
     current = path.read_text(encoding="utf-8")
-    keep_functional_css = is_interactive_tool(rel)
+    keep_functional_css = force_keep_functional_css or is_interactive_tool(rel)
     is_tool = is_tool_path(rel)
 
     if MARK_HEADER_START not in baseline:
@@ -831,7 +831,7 @@ def main(argv):
         for path in files:
             rel = path.relative_to(REPO_ROOT).as_posix() if path.is_relative_to(REPO_ROOT) else str(path)
             try:
-                ok, msg, excluded = verify_one(path, base)
+                ok, msg, excluded = verify_one(path, base, force_keep_functional_css)
             except Exception as exc:  # noqa: BLE001
                 ok, msg, excluded = False, f"error: {exc}", []
             print(f"{'PASS' if ok else 'FAIL'} {rel}" + ("" if ok else f" -- {msg}"))
@@ -844,6 +844,7 @@ def main(argv):
         return 1 if fail_count else 0
 
     changed_files = 0
+    error_count = 0
     total_style_elements = 0
     total_stylesheets = 0
     total_style_attrs = 0
@@ -861,6 +862,7 @@ def main(argv):
             new_html = process_html(original, report, keep_functional_css, is_tool)
         except Exception as exc:  # noqa: BLE001
             print(f"ERROR {rel}: {exc}")
+            error_count += 1
             continue
 
         print(
@@ -898,6 +900,9 @@ def main(argv):
     for rel in main_reused_files:
         print(f"  - {rel}")
 
+    if error_count:
+        print(f"Errors: {error_count} file(s) failed to convert")
+        return 1
     return 0
 
 

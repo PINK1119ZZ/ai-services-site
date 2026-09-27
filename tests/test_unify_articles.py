@@ -354,3 +354,11 @@ class KeepFunctionalCssTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class MainExitCodeTests(unittest.TestCase):
+    def test_conversion_error_returns_nonzero(self):
+        from unittest import mock
+        target = next(p for p in unify.discover_files())
+        with mock.patch.object(unify, "process_html", side_effect=RuntimeError("boom")):
+            self.assertEqual(unify.main([str(target)]), 1)
