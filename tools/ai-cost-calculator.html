@@ -15,9 +15,9 @@
 <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
 <script type="application/ld+json">
@@ -34,112 +34,15 @@
 }
 </script>
 <meta name="theme-color" content="#FFF8F3">
-<style>
-/* ===== Layout ===== */
-.calc-wrap{max-width:1100px;margin:0 auto;padding:7rem 1.5rem 4rem;}
-.calc-header{text-align:center;margin-bottom:2.5rem;}
-.calc-header h1{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:.8rem;font-weight:900;line-height:1.2;}
-.calc-header p{color:var(--gray);font-size:1.05rem;max-width:700px;margin:0 auto;}
 
-/* ===== Sticky summary bar ===== */
-.sticky-bar{position:sticky;top:64px;z-index:90;background:rgba(18,18,28,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,165,123,.25);padding:.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
-.sticky-bar .sb-total{font-size:1.8rem;font-weight:900;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.sticky-bar .sb-ntd{font-size:.95rem;color:var(--gray);}
-.sticky-bar .sb-count{font-size:.85rem;color:var(--primary-light);}
-.sticky-bar .sb-reset{padding:.4rem .9rem;border:1px solid rgba(196,165,123,.4);border-radius:8px;background:transparent;color:var(--primary-light);font-size:.8rem;cursor:pointer;transition:all .2s;font-family:inherit;}
-.sticky-bar .sb-reset:hover{background:rgba(196,165,123,.1);}
-
-/* ===== Category sections ===== */
-.cat-section{margin-bottom:2.5rem;}
-.cat-header{font-size:1.35rem;font-weight:900;color:var(--light);margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem;}
-.cat-header span{font-size:1.1rem;}
-.cat-sub{font-size:.85rem;color:var(--gray);margin-bottom:1rem;}
-.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:.9rem;}
-
-/* ===== Tool cards ===== */
-.tool-card{background:var(--dark-2);border:2px solid rgba(255,255,255,.06);border-radius:14px;padding:1.15rem 1.2rem;display:flex;align-items:flex-start;gap:.9rem;cursor:pointer;transition:all .22s;position:relative;}
-.tool-card:hover{border-color:rgba(184,148,106,.4);transform:translateY(-2px);}
-.tool-card.active{border-color:var(--accent);background:rgba(196,165,123,.05);}
-.tc-check{width:22px;height:22px;min-width:22px;border:2px solid rgba(255,255,255,.18);border-radius:6px;margin-top:.15rem;position:relative;transition:all .18s;}
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+<style data-v2c-functional>.tool-card.active{border-color:var(--accent);background:rgba(196,165,123,.05);}
 .tool-card.active .tc-check{background:var(--accent);border-color:var(--accent);}
-.tool-card.active .tc-check::after{content:'✓';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#1a1a2e;font-size:.85rem;font-weight:900;}
-.tc-body{flex:1;min-width:0;}
-.tc-name{font-size:1rem;font-weight:700;color:var(--light);margin-bottom:.2rem;}
-.tc-price-row{display:flex;align-items:baseline;gap:.35rem;margin-bottom:.3rem;}
-.tc-price{font-size:1.25rem;font-weight:900;color:var(--primary-light);}
-.tc-period{font-size:.75rem;color:var(--gray);}
-.tc-plans{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.4rem;}
-.plan-btn{padding:.2rem .6rem;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:transparent;color:var(--gray);font-size:.72rem;cursor:pointer;transition:all .15s;font-family:inherit;}
-.plan-btn:hover{border-color:rgba(196,165,123,.5);color:var(--primary-light);}
-.plan-btn.sel{border-color:var(--accent);color:var(--accent);background:rgba(196,165,123,.08);}
-.tc-desc{font-size:.78rem;color:var(--gray);line-height:1.45;}
-.tc-link{display:inline-block;margin-top:.5rem;font-size:.75rem;color:var(--primary-light);text-decoration:none;border-bottom:1px dotted var(--primary-light);transition:opacity .15s;}
-.tc-link:hover{opacity:.75;}
-.tc-badge{position:absolute;top:.6rem;right:.8rem;font-size:.65rem;font-weight:700;padding:.15rem .45rem;border-radius:20px;background:rgba(255,100,100,.15);color:#ff8080;border:1px solid rgba(255,100,100,.25);}
-.tc-badge.green{background:rgba(100,220,100,.12);color:#7fdd7f;border-color:rgba(100,220,100,.25);}
-
-/* ===== Gumroad fee calculator ===== */
-.gum-calc{background:var(--dark-2);border:2px solid rgba(196,165,123,.2);border-radius:18px;padding:1.8rem;margin-bottom:2.5rem;}
-.gum-calc h2{font-size:1.25rem;font-weight:900;margin-bottom:.25rem;}
-.gum-calc p{font-size:.85rem;color:var(--gray);margin-bottom:1.2rem;}
-.gum-row{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;}
-.gum-row label{font-size:.9rem;color:var(--light);min-width:100px;}
-.gum-input{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:.45rem .8rem;color:var(--light);font-size:1rem;width:130px;font-family:inherit;}
-.gum-input:focus{outline:none;border-color:var(--accent);}
-.gum-result{background:rgba(196,165,123,.05);border:1px solid rgba(196,165,123,.2);border-radius:12px;padding:1rem 1.2rem;margin-top:.5rem;}
-.gum-result-row{display:flex;justify-content:space-between;font-size:.9rem;padding:.2rem 0;color:var(--gray);}
-.gum-result-row.total{font-weight:700;color:var(--light);font-size:1.05rem;border-top:1px solid rgba(255,255,255,.08);margin-top:.4rem;padding-top:.6rem;}
-.gum-result-row span:last-child{color:var(--primary-light);}
-
-/* ===== Summary bottom card ===== */
-.total-card{background:linear-gradient(135deg,rgba(196,165,123,.1),rgba(184,148,106,.04));border:2px solid rgba(196,165,123,.35);border-radius:20px;padding:2.2rem;margin-bottom:2.5rem;text-align:center;}
-.total-card .tc-label{font-size:.9rem;color:var(--gray);margin-bottom:.4rem;}
-.total-card .tc-big{font-size:3.5rem;font-weight:900;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;}
-.total-card .tc-ntd{font-size:1.4rem;color:var(--gray);margin-top:.4rem;}
-.total-card .tc-hint{font-size:.82rem;color:var(--gray);margin-top:.8rem;line-height:1.5;}
-.total-card .tc-selected{color:var(--primary-light);font-size:.9rem;margin-top:.5rem;}
-
-/* ===== Affiliate strip ===== */
-.aff-strip{background:rgba(196,165,123,.05);border:1px solid rgba(196,165,123,.2);border-radius:12px;padding:1.1rem 1.3rem;margin-bottom:1.5rem;font-size:.85rem;color:var(--light);line-height:1.6;}
-.aff-strip strong{color:var(--primary-light);}
-.aff-strip a{color:var(--primary-light);text-decoration:none;border-bottom:1px dotted var(--primary-light);}
-.aff-strip a:hover{border-bottom-style:solid;}
-.aff-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.8rem;margin-top:1rem;}
-.aff-card{background:var(--dark-2);border:1px solid rgba(196,165,123,.2);border-radius:12px;padding:1rem;display:flex;flex-direction:column;gap:.4rem;}
-.aff-card .aff-name{font-weight:700;color:var(--light);}
-.aff-card .aff-desc{font-size:.78rem;color:var(--gray);}
-.aff-card .aff-link{font-size:.8rem;color:var(--accent);text-decoration:none;border:1px solid rgba(196,165,123,.35);border-radius:8px;padding:.3rem .7rem;text-align:center;margin-top:auto;transition:all .2s;}
-.aff-card .aff-link:hover{background:rgba(196,165,123,.1);}
-
-/* ===== Disclaimer ===== */
-.disclaimer{color:var(--gray);font-size:.75rem;margin-top:2rem;text-align:center;line-height:1.6;}
-
-@media(max-width:720px){
-  .tool-grid{grid-template-columns:1fr;}
-  .total-card .tc-big{font-size:2.5rem;}
-  .sticky-bar{top:56px;}
-  .gum-row{flex-direction:column;align-items:flex-start;}
-}
-</style>
+.tool-card.active .tc-check::after{content:'✓';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#1a1a2e;font-size:.85rem;font-weight:900;}</style>
 </head>
-<body>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article v2c-tool">
 
-<nav class="nav" id="nav">
-<div class="nav-inner">
-<a href="/" class="nav-logo">AutoDev AI</a>
-<div class="nav-links" id="navLinks">
-<a href="/services.html">服務</a>
-<a href="/bot-cloud.html">雲託管</a>
-<a href="/ai-model.html">AI 模特</a>
-<a class="active" href="/tools/">工具</a>
-<a href="/pricing.html">方案</a>
-<a href="/blog/">Blog</a>
-<a href="/about.html">關於</a>
-<a class="nav-cta" href="/contact.html">免費諮詢</a>
-</div>
-<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="開啟選單">&#9776;</button>
-</div>
-</nav>
+
 
 <!-- Sticky total bar -->
 <div class="sticky-bar" id="stickyBar" role="status" aria-live="polite" aria-atomic="true">
@@ -222,17 +125,17 @@
     <p>賣數位產品前先算清楚平台抽成。Gumroad 2024 起採固定 10% 抽成（無月費），另加 PayPal / Stripe 金流費。</p>
     <div class="gum-row">
       <label for="gumPrice">產品定價</label>
-      <span style="color:var(--gray);font-size:1.1rem;">$</span>
+      <span>$</span>
       <input class="gum-input" type="number" id="gumPrice" min="0" step="0.01" value="29" aria-label="產品定價（美元）">
-      <label for="gumQty" style="margin-left:.5rem;">每月銷售量</label>
+      <label for="gumQty">每月銷售量</label>
       <input class="gum-input" type="number" id="gumQty" min="0" step="1" value="20" aria-label="每月預計銷售量">
     </div>
     <div class="gum-result" id="gumResult" aria-live="polite"></div>
-    <div style="margin-top:.8rem;font-size:.78rem;color:var(--gray);">想上架數位產品？先看看 <a href="https://xiaofan8.gumroad.com/l/kknad" rel="nofollow" target="_blank" style="color:var(--primary-light);">AutoDev AI 工具包</a> 參考上架格式。</div>
+    <div>想上架數位產品？先看看 <a href="https://xiaofan8.gumroad.com/l/kknad" rel="nofollow" target="_blank">AutoDev AI 工具包</a> 參考上架格式。</div>
   </div>
 
   <!-- Recommended alternatives -->
-  <div style="margin-bottom:2.5rem;">
+  <div>
     <div class="cat-header"><span>💡</span> 省費建議：這些工具有推薦折扣</div>
     <div class="cat-sub">透過以下連結訂閱，部分服務提供額外優惠（費用不會增加）</div>
     <div class="aff-grid">
@@ -258,11 +161,7 @@
 
 </main>
 
-<footer class="footer">
-<div class="footer-inner">
-<p>&copy; 2026 AutoDev AI · <a href="/tools/">工具集</a> · <a href="/blog/">Blog</a> · <a href="/about.html">關於</a></p>
-</div>
-</footer>
+
 
 <script>
 const USD_TO_TWD = 32;
@@ -457,5 +356,6 @@ updateSummary();
 calcGumroad();
 </script>
 
+</main><!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

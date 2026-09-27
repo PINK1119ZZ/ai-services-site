@@ -284,5 +284,73 @@ class PageCreditsFooterTests(unittest.TestCase):
             )
 
 
+TOOL_BASELINE_HTML = """<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>Sample Tool</title>
+<meta name="description" content="A sample tool page for testing.">
+<link rel="canonical" href="https://autodev-ai.com/tools/sample.html">
+<style>
+body { background: #111; color: #eee; }
+.result { display: none; margin-top: 20px; }
+.result.show { display: block; }
+.opt-btn.active { background: #333; }
+.faq-a { max-height: 0; overflow: hidden; }
+</style>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+</head>
+<body><!-- v2-chrome:header --><header class="v2c-header">NAV</header><!-- /v2-chrome:header -->
+<h1>Sample Tool</h1>
+<div id="result" class="result" style="display:none;margin-top:2rem;">Answer: 42</div>
+<button class="opt-btn" style="color:red;" onclick="pick(this)">Pick</button>
+<!-- v2-chrome:footer --><footer class="v2c-footer">FOOTER</footer><!-- /v2-chrome:footer -->
+</body>
+</html>
+"""
+
+
+class KeepFunctionalCssTests(unittest.TestCase):
+    """Regression coverage for TASK site-unify-20260927 batch U3's
+    --keep-functional-css mode, including the idempotency bug where
+    removing and blindly re-inserting the <style data-v2c-functional> block
+    left a fresh blank line behind on every single run."""
+
+    def test_functional_rules_and_inline_style_are_kept(self):
+        report = unify.Report("tools/sample.html")
+        out = unify.process_html(
+            TOOL_BASELINE_HTML, report, keep_functional_css=True, is_tool=True
+        )
+        self.assertIn("<style data-v2c-functional>", out)
+        for rule in (".result", ".opt-btn.active", ".faq-a"):
+            self.assertIn(rule, out)
+        self.assertNotIn("background: #111", out)  # plain body rule dropped
+        self.assertIn('style="display:none;margin-top:2rem;"', out)  # kept: functional
+        self.assertNotIn('style="color:red;"', out)  # dropped: purely visual
+        self.assertIn('class="v2c-article v2c-tool"', out)
+        # .result (display:none), .result.show (selector has .show),
+        # .opt-btn.active (selector has .active), .faq-a (overflow:hidden).
+        self.assertEqual(report.functional_rules_kept, 4)
+
+    def test_rerunning_is_byte_identical(self):
+        report1 = unify.Report("tools/sample.html")
+        first = unify.process_html(
+            TOOL_BASELINE_HTML, report1, keep_functional_css=True, is_tool=True
+        )
+        report2 = unify.Report("tools/sample.html")
+        second = unify.process_html(first, report2, keep_functional_css=True, is_tool=True)
+        self.assertEqual(first, second)
+        third = unify.process_html(
+            second, unify.Report("tools/sample.html"), keep_functional_css=True, is_tool=True
+        )
+        self.assertEqual(second, third)
+
+    def test_functional_css_marker_ignores_decimal_opacity(self):
+        self.assertFalse(unify.FUNCTIONAL_CSS_MARKER_RE.search("opacity:0.85"))
+        self.assertTrue(unify.FUNCTIONAL_CSS_MARKER_RE.search("opacity:0"))
+        self.assertTrue(unify.FUNCTIONAL_CSS_MARKER_RE.search("opacity: 0;"))
+
+
 if __name__ == "__main__":
     unittest.main()

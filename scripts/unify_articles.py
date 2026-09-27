@@ -75,6 +75,132 @@ CSS_LINK_HREF = "/assets/v2-chrome.css"
 FONT_HOST_RE = re.compile(r"fonts\.(?:googleapis|gstatic)\.com", re.I)
 
 
+def is_tool_path(rel: str) -> bool:
+    """tools/*.html and en/tools/*.html get the wider `v2c-tool` main
+    modifier (see assets/v2-chrome.css), whether or not they are also one
+    of the interactive pages below."""
+    return rel.startswith("tools/") or rel.startswith("en/tools/")
+
+
+# TASK site-unify-20260927 batch U3: these 20 tools/*.html + en/tools/*.html
+# pages are script-bound calculators/filters/quizzes whose own <style> block
+# may define the show/hide, active/selected, or tab-switch state their JS
+# relies on (e.g. `.result{display:none}` unhidden by a click handler). The
+# other 4 tools pages (the two hub index.html and two pure review articles)
+# have no such state and are unified exactly like a blog article. Listing
+# the interactive set here -- rather than trusting a CLI flag to be passed
+# consistently every time -- lets both the transform and --verify derive the
+# same "keep functional CSS" decision deterministically from the path alone;
+# --keep-functional-css on the command line still force-enables it for any
+# other path (e.g. a future tool not yet added to this set).
+INTERACTIVE_TOOL_PAGES = {
+    "tools/aeo-geo-checker-2026.html",
+    "tools/ai-agent-memory-tools-comparison-2026.html",
+    "tools/ai-calendar-tools-compare.html",
+    "tools/ai-coding-cost-calculator.html",
+    "tools/ai-coding-tools-pricing-calculator-2026.html",
+    "tools/ai-cost-calculator.html",
+    "tools/ai-subscription-calculator.html",
+    "tools/ai-token-cost-calculator.html",
+    "tools/ai-video-ad-comparison-2026.html",
+    "tools/ai-video-tool-comparison-2026.html",
+    "tools/clickup-vs-notion-ai-2026.html",
+    "tools/geo-aeo-tools-comparison-2026.html",
+    "tools/line-bot-calculator.html",
+    "tools/omniroute-vs-openrouter-2026.html",
+    "tools/token-cost-calculator.html",
+    "tools/vps-compare.html",
+    "tools/webflow-vs-framer-vs-squarespace-2026.html",
+    "en/tools/line-bot-calculator.html",
+    "en/tools/token-cost-calculator.html",
+    "en/tools/vps-compare.html",
+}
+
+
+def is_interactive_tool(rel: str) -> bool:
+    return rel in INTERACTIVE_TOOL_PAGES
+
+
+# A rule (or inline style="" value) is "functional" -- load-bearing for
+# interactive show/hide, active/selected, or checked/expanded state -- if it
+# contains any of these, per TASK site-unify-20260927 batch U3 spec: the
+# first line is selector-side markers, the second is declaration-side ones.
+# `opacity\s*:\s*0(?!\.)` deliberately excludes "opacity:0.85" etc. -- a
+# decorative near-transparent value, not a hidden state.
+FUNCTIONAL_CSS_MARKER_RE = re.compile(
+    r"\.hidden\b|\.active\b|\.show\b|\.open\b|\.selected\b|\.is-|:checked"
+    r"|\[hidden\]|\[aria-selected|\[aria-expanded"
+    r"|display\s*:\s*none|visibility|opacity\s*:\s*0(?!\.)|hidden",
+    re.I,
+)
+
+
+def split_top_level_css_statements(css: str):
+    """Split `css` into its top-level statements: a plain `selector{...}`
+    rule, or a whole `@media(...){...}` (etc.) block kept as one string so a
+    rule that only applies at a breakpoint is never extracted without its
+    condition."""
+    statements = []
+    i, n = 0, len(css)
+    while i < n:
+        while i < n and css[i] in " \t\r\n":
+            i += 1
+        if i >= n:
+            break
+        start = i
+        depth = 0
+        while i < n:
+            ch = css[i]
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    i += 1
+                    break
+            i += 1
+        statements.append(css[start:i])
+    return statements
+
+
+def extract_functional_css(style_text: str) -> str:
+    """From the combined text of a page's own <style> block(s), keep only
+    the top-level statements that match FUNCTIONAL_CSS_MARKER_RE, verbatim
+    and in their original order and text -- never rewritten, never
+    reordered, never split out of an enclosing @media block."""
+    kept = [
+        stmt.strip()
+        for stmt in split_top_level_css_statements(style_text)
+        if FUNCTIONAL_CSS_MARKER_RE.search(stmt)
+    ]
+    return "\n".join(kept)
+
+
+FUNCTIONAL_STYLE_TAG_RE = re.compile(
+    r"<style\b[^>]*data-v2c-functional[^>]*>(.*?)</style>", re.S | re.I
+)
+
+
+def insert_functional_style_block(html: str, functional_css: str) -> str:
+    """Upsert the <style data-v2c-functional> block: if one already sits in
+    `html` (a prior run's output), replace only its inner text in place --
+    same position, same surrounding whitespace -- rather than removing and
+    re-inserting the whole tag, which would leave a fresh blank-line
+    remnant behind every single run (remove_head_noise() correspondingly
+    never removes this tag when it is already present, so this is the only
+    place that ever touches it after the first run)."""
+    existing = FUNCTIONAL_STYLE_TAG_RE.search(html)
+    if existing:
+        return html[: existing.start(1)] + functional_css + html[existing.end(1):]
+    marker = f'<link rel="stylesheet" href="{CSS_LINK_HREF}">'
+    idx = html.find(marker)
+    if idx == -1:
+        raise ValueError("expected the /assets/v2-chrome.css link to already be present")
+    insert_at = idx + len(marker)
+    block = f"\n<style data-v2c-functional>{functional_css}</style>"
+    return html[:insert_at] + block + html[insert_at:]
+
+
 # ---------------------------------------------------------------------------
 # small generic helpers
 # ---------------------------------------------------------------------------
@@ -127,12 +253,21 @@ def find_head_span(html: str):
     return m.end(), idx
 
 
-def remove_head_noise(html: str):
+def remove_head_noise(html: str, keep_functional_css: bool = False):
     start, end = find_head_span(html)
     head = html[start:end]
     ops = []
     style_count = 0
-    for (s, e, _is, _ie) in find_balanced(head, "style"):
+    for (s, e, is_, ie) in find_balanced(head, "style"):
+        if keep_functional_css and "data-v2c-functional" in head[s:is_]:
+            # Leave a pre-existing functional block exactly where it sits;
+            # insert_functional_style_block() below will overwrite only its
+            # inner text in place. Removing and re-inserting it every run
+            # (as any other <style>) would still converge on the same CSS
+            # content, but the surrounding blank-line bookkeeping does not
+            # cancel out byte-for-byte, so idempotency needs this to be a
+            # true no-op on an already-processed head instead.
+            continue
         ops.append((s, e, ""))
         style_count += 1
     link_count = 0
@@ -238,7 +373,7 @@ STYLE_ATTR_RE = re.compile(r'\s+style\s*=\s*("[^"]*"|\'[^\']*\')', re.I)
 TAG_RE = re.compile(r"<[a-zA-Z][a-zA-Z0-9-]*(?:\s[^<>]*)?/?>", re.S)
 
 
-def strip_style_attrs(content: str):
+def strip_style_attrs(content: str, keep_functional_css: bool = False):
     """Remove every style="..."/'...' attribute, but only when it sits
     inside an actual opening tag's own text (matched by TAG_RE, which never
     spans a `<` or `>`). Scanning tag-by-tag -- instead of scanning the raw
@@ -247,7 +382,13 @@ def strip_style_attrs(content: str):
     `const { prompt, style = 'cinematic' } = req.body;`) as an HTML
     attribute: that text sits between two tags, so no TAG_RE match ever
     covers it. <script> elements are skipped outright since their content
-    is never touched."""
+    is never touched.
+
+    When `keep_functional_css` is set (TASK site-unify-20260927 batch U3), a
+    style="" whose value matches FUNCTIONAL_CSS_MARKER_RE -- e.g.
+    style="display:none;margin-top:2rem" hiding a calculator's result box
+    by default -- is left on the tag untouched rather than removed, since
+    stripping it would make the element visible when it should not be."""
     scripts = script_spans(content)
 
     def in_script(pos):
@@ -260,12 +401,16 @@ def strip_style_attrs(content: str):
         if in_script(tm.start()):
             continue
         tag_text = tm.group(0)
-        new_tag_text, n = STYLE_ATTR_RE.subn("", tag_text)
-        if n:
-            out.append(content[pos:tm.start()])
-            out.append(new_tag_text)
-            pos = tm.end()
-            count += n
+        m = STYLE_ATTR_RE.search(tag_text)
+        if not m:
+            continue
+        if keep_functional_css and FUNCTIONAL_CSS_MARKER_RE.search(m.group(1)):
+            continue
+        new_tag_text = tag_text[: m.start()] + tag_text[m.end():]
+        out.append(content[pos:tm.start()])
+        out.append(new_tag_text)
+        pos = tm.end()
+        count += 1
     out.append(content[pos:])
     return "".join(out), count
 
@@ -305,6 +450,17 @@ def wrap_main(content: str):
     return '<main class="v2c-article">' + content + "</main>", True
 
 
+def add_class_to_first_main(content: str, cls: str) -> str:
+    """Add `cls` to the content region's <main> opening tag -- whichever of
+    wrap_main()'s three shapes produced it (reused-balanced, reused-unclosed,
+    or freshly wrapped), it is always the first <main ...> in `content`."""
+    m = MAIN_OPEN_TAG_RE.search(content)
+    if not m:
+        return content
+    new_tag = add_class(m.group(0), cls)
+    return content[: m.start()] + new_tag + content[m.end():]
+
+
 # ---------------------------------------------------------------------------
 # per-file transform
 # ---------------------------------------------------------------------------
@@ -318,6 +474,7 @@ class Report:
         self.style_attrs_removed = 0
         self.stale_headers_removed = []
         self.main_reused = False
+        self.functional_rules_kept = 0
 
 
 def trim_newly_touched_trailing_whitespace(original: str, transformed: str) -> str:
@@ -346,9 +503,22 @@ def trim_newly_touched_trailing_whitespace(original: str, transformed: str) -> s
     return "\n".join(new_lines) if changed else transformed
 
 
-def process_html(html: str, report: Report) -> str:
+def process_html(
+    html: str,
+    report: Report,
+    keep_functional_css: bool = False,
+    is_tool: bool = False,
+) -> str:
     original_html = html
-    html, style_head, links = remove_head_noise(html)
+
+    functional_css = ""
+    if keep_functional_css:
+        style_texts = [html[is_:ie] for (_s, _e, is_, ie) in find_balanced(html, "style")]
+        functional_css = extract_functional_css("\n".join(style_texts))
+        if functional_css:
+            report.functional_rules_kept = len(split_top_level_css_statements(functional_css))
+
+    html, style_head, links = remove_head_noise(html, keep_functional_css)
     report.style_elements_removed += style_head
     report.stylesheet_links_removed += links
 
@@ -361,6 +531,9 @@ def process_html(html: str, report: Report) -> str:
 
     html, style_body = remove_body_stray_styles(html, body_content_start)
     report.style_elements_removed += style_body
+
+    if functional_css:
+        html = insert_functional_style_block(html, functional_css)
 
     hs = html.find(MARK_HEADER_START)
     if hs == -1:
@@ -388,11 +561,14 @@ def process_html(html: str, report: Report) -> str:
         content = apply_removals(content, ops)
         report.stale_headers_removed = stale_info
 
-    content, style_attrs = strip_style_attrs(content)
+    content, style_attrs = strip_style_attrs(content, keep_functional_css)
     report.style_attrs_removed = style_attrs
 
     content, wrapped_new = wrap_main(content)
     report.main_reused = not wrapped_new
+
+    if is_tool:
+        content = add_class_to_first_main(content, "v2c-tool")
 
     final_html = html[:content_start] + content + html[content_end:]
     return trim_newly_touched_trailing_whitespace(original_html, final_html)
@@ -463,8 +639,11 @@ def find_stylesheet_hrefs(html: str):
 
 def verify_one(path: Path, base: str):
     rel = path.relative_to(REPO_ROOT).as_posix()
-    baseline = git_show(base, rel)
+    pristine_baseline = git_show(base, rel)
+    baseline = pristine_baseline
     current = path.read_text(encoding="utf-8")
+    keep_functional_css = is_interactive_tool(rel)
+    is_tool = is_tool_path(rel)
 
     if MARK_HEADER_START not in baseline:
         # `base` predates apply_blog_chrome.py for this path entirely (e.g.
@@ -525,7 +704,42 @@ def verify_one(path: Path, base: str):
     if not body_m or "v2c-page" not in (tag_attr(body_m.group(0), "class") or "").split():
         return False, "body missing v2c-page class", excluded_texts
 
-    if re.search(r"<style\b", current, re.I):
+    style_tags_in_current = re.findall(r"<style\b[^>]*>", current, re.I)
+    expected_functional_css = ""
+    if keep_functional_css:
+        style_texts = [
+            pristine_baseline[is_:ie]
+            for (_s, _e, is_, ie) in find_balanced(pristine_baseline, "style")
+        ]
+        original_style_combined = "\n".join(style_texts)
+        expected_functional_css = extract_functional_css(original_style_combined)
+
+    if expected_functional_css:
+        if len(style_tags_in_current) != 1 or "data-v2c-functional" not in style_tags_in_current[0]:
+            return False, (
+                f"expected exactly one <style data-v2c-functional> element, "
+                f"found {style_tags_in_current}"
+            ), excluded_texts
+        fm = re.search(
+            r"<style\b[^>]*data-v2c-functional[^>]*>(.*?)</style>", current, re.S | re.I
+        )
+        actual_functional_css = fm.group(1) if fm else None
+        if actual_functional_css != expected_functional_css:
+            return False, (
+                "functional CSS block does not match re-extracting "
+                "FUNCTIONAL_CSS_MARKER_RE rules from the original <style>"
+            ), excluded_texts
+        for stmt in split_top_level_css_statements(actual_functional_css):
+            if stmt not in original_style_combined:
+                return False, (
+                    "a kept functional rule is not a verbatim subset of the "
+                    "original <style> content"
+                ), excluded_texts
+    elif style_tags_in_current:
+        # Either a non-functional page, or an interactive one whose own
+        # <style> had nothing FUNCTIONAL_CSS_MARKER_RE-worthy (its show/hide
+        # logic toggles inline style="" instead) -- either way, no <style>
+        # element of any kind should remain.
         return False, "current still contains a <style> element", excluded_texts
 
     stylesheets = find_stylesheet_hrefs(current)
@@ -546,15 +760,25 @@ def verify_one(path: Path, base: str):
     for tm in TAG_RE.finditer(c_content):
         if any(s <= tm.start() < e for (s, e) in scripts):
             continue
-        if STYLE_ATTR_RE.search(tm.group(0)):
-            return False, "content region still has a style= attribute", excluded_texts
+        sm = STYLE_ATTR_RE.search(tm.group(0))
+        if not sm:
+            continue
+        if keep_functional_css and FUNCTIONAL_CSS_MARKER_RE.search(sm.group(1)):
+            continue  # a preserved functional inline style="" is expected
+        return False, "content region still has a style= attribute", excluded_texts
+
+    required_classes = {"v2c-article", "v2c-tool"} if is_tool else {"v2c-article"}
+
+    def has_required_classes(tag_html: str) -> bool:
+        classes = set((tag_attr(tag_html, "class") or "").split())
+        return required_classes.issubset(classes)
 
     main_spans = find_balanced(c_content, "main")
     ok_wrap = False
     for (s, e, _is, _ie) in main_spans:
         if c_content[:s].strip() == "" and c_content[e:].strip() == "":
             tag_close = c_content.find(">", s) + 1
-            if "v2c-article" in (tag_attr(c_content[s:tag_close], "class") or "").split():
+            if has_required_classes(c_content[s:tag_close]):
                 ok_wrap = True
     if not ok_wrap:
         # Same unclosed-<main> shape wrap_main() handles: the region opens
@@ -566,11 +790,13 @@ def verify_one(path: Path, base: str):
         m = MAIN_OPEN_TAG_RE.match(c_content, lead)
         if (
             m and not MAIN_CLOSE_TAG_RE.search(c_content)
-            and "v2c-article" in (tag_attr(c_content[m.start():m.end()], "class") or "").split()
+            and has_required_classes(c_content[m.start():m.end()])
         ):
             ok_wrap = True
     if not ok_wrap:
-        return False, "content region is not wrapped in <main class=\"v2c-article\">", excluded_texts
+        return False, (
+            f"content region is not wrapped in <main class=\"{' '.join(sorted(required_classes))}\">"
+        ), excluded_texts
 
     for start_marker, end_marker, required in (
         (MARK_HEADER_START, MARK_HEADER_END, True),
@@ -589,11 +815,15 @@ def verify_one(path: Path, base: str):
 
 def main(argv):
     verify = "--verify" in argv
+    force_keep_functional_css = "--keep-functional-css" in argv
     base = "HEAD"
     for a in argv:
         if a.startswith("--base="):
             base = a.split("=", 1)[1]
-    file_args = [a for a in argv if a != "--verify" and not a.startswith("--base=")]
+    file_args = [
+        a for a in argv
+        if a not in ("--verify", "--keep-functional-css") and not a.startswith("--base=")
+    ]
     files = [Path(a).resolve() for a in file_args] if file_args else discover_files()
 
     if verify:
@@ -617,6 +847,7 @@ def main(argv):
     total_style_elements = 0
     total_stylesheets = 0
     total_style_attrs = 0
+    total_functional_rules = 0
     stale_header_files = []
     main_reused_files = []
 
@@ -624,8 +855,10 @@ def main(argv):
         rel = path.relative_to(REPO_ROOT).as_posix() if path.is_relative_to(REPO_ROOT) else str(path)
         original = path.read_text(encoding="utf-8")
         report = Report(rel)
+        keep_functional_css = force_keep_functional_css or is_interactive_tool(rel)
+        is_tool = is_tool_path(rel)
         try:
-            new_html = process_html(original, report)
+            new_html = process_html(original, report, keep_functional_css, is_tool)
         except Exception as exc:  # noqa: BLE001
             print(f"ERROR {rel}: {exc}")
             continue
@@ -634,7 +867,8 @@ def main(argv):
             f"{rel}: style_elements_removed={report.style_elements_removed} "
             f"stylesheet_links_removed={report.stylesheet_links_removed} "
             f"style_attrs_removed={report.style_attrs_removed} "
-            f"main_reused={report.main_reused}"
+            f"main_reused={report.main_reused} "
+            f"functional_rules_kept={report.functional_rules_kept}"
         )
         for info in report.stale_headers_removed:
             print(f"    removed stale header: {info['tag']} text={info['text']!r}")
@@ -642,6 +876,7 @@ def main(argv):
         total_style_elements += report.style_elements_removed
         total_stylesheets += report.stylesheet_links_removed
         total_style_attrs += report.style_attrs_removed
+        total_functional_rules += report.functional_rules_kept
         if report.stale_headers_removed:
             stale_header_files.append(rel)
         if report.main_reused:
@@ -655,6 +890,7 @@ def main(argv):
     print(f"Total style elements removed: {total_style_elements}")
     print(f"Total stylesheet/font links removed: {total_stylesheets}")
     print(f"Total style= attributes removed: {total_style_attrs}")
+    print(f"Total functional CSS rules kept: {total_functional_rules}")
     print(f"Files with a residual stale header removed: {len(stale_header_files)}")
     for rel in stale_header_files:
         print(f"  - {rel}")

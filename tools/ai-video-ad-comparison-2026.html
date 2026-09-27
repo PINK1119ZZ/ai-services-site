@@ -38,152 +38,10 @@
     }
     </script>
 
-    <style>
-        :root {
-            --creatify: #7c3aed;
-            --heygen: #0ea5e9;
-            --synthesia: #059669;
-            --pictory: #dc2626;
-            --bg: #0f172a;
-            --card: #1e293b;
-            --border: #334155;
-            --text: #e2e8f0;
-            --muted: #94a3b8;
-            --accent: #6366f1;
-        }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
-            padding: 48px 24px 40px;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-        }
-
-        header .badge {
-            display: inline-block;
-            background: rgba(99,102,241,0.2);
-            color: #818cf8;
-            border: 1px solid rgba(99,102,241,0.4);
-            padding: 4px 14px;
-            border-radius: 20px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-
-        header h1 {
-            font-size: clamp(1.6rem, 4vw, 2.4rem);
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 14px;
-        }
-
-        header h1 span { color: #818cf8; }
-
-        header p {
-            color: var(--muted);
-            max-width: 640px;
-            margin: 0 auto 20px;
-            font-size: 1rem;
-        }
-
-        .tool-pills {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 16px;
-        }
-
-        .pill {
-            padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 0.82rem;
-            font-weight: 600;
-        }
-        .pill.creatify { background: rgba(124,58,237,0.2); color: #c4b5fd; border: 1px solid rgba(124,58,237,0.4); }
-        .pill.heygen { background: rgba(14,165,233,0.2); color: #7dd3fc; border: 1px solid rgba(14,165,233,0.4); }
-        .pill.synthesia { background: rgba(5,150,105,0.2); color: #6ee7b7; border: 1px solid rgba(5,150,105,0.4); }
-        .pill.pictory { background: rgba(220,38,38,0.2); color: #fca5a5; border: 1px solid rgba(220,38,38,0.4); }
-
-        main { max-width: 1080px; margin: 0 auto; padding: 32px 20px 60px; }
-
-        /* === SELECTOR === */
-        .selector-section {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 28px;
-            margin-bottom: 32px;
-        }
-
-        .selector-section h2 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #f1f5f9;
-        }
-
-        .selector-section h2 span {
-            color: #818cf8;
-        }
-
-        .questions { display: flex; flex-direction: column; gap: 22px; }
-
-        .question label.q-label {
-            display: block;
-            font-weight: 600;
-            color: #cbd5e1;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-        }
-
-        .options { display: flex; gap: 8px; flex-wrap: wrap; }
-
-        .opt-btn {
-            padding: 8px 16px;
-            border: 1.5px solid var(--border);
-            border-radius: 8px;
-            background: transparent;
-            color: var(--muted);
-            font-size: 0.88rem;
-            cursor: pointer;
-            transition: all 0.18s;
-            font-weight: 500;
-        }
-
-        .opt-btn:hover { border-color: #6366f1; color: #a5b4fc; }
-        .opt-btn.active { border-color: #6366f1; background: rgba(99,102,241,0.15); color: #c7d2fe; }
-
-        #recommend-btn {
-            display: block;
-            margin: 24px auto 0;
-            padding: 13px 40px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: #fff;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: opacity 0.2s;
-            box-shadow: 0 4px 20px rgba(99,102,241,0.35);
-        }
-
-        #recommend-btn:hover { opacity: 0.88; }
-
-        /* === RESULT === */
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+<style data-v2c-functional>.opt-btn.active { border-color: #6366f1; background: rgba(99,102,241,0.15); color: #c7d2fe; }
+/* === RESULT === */
         #result-box {
             display: none;
             background: var(--card);
@@ -193,179 +51,10 @@
             margin-bottom: 32px;
             animation: fadeIn 0.4s ease;
         }
-
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-
-        #result-box h2 { font-size: 1rem; color: var(--muted); margin-bottom: 10px; }
-        #result-tool-name { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; }
-        #result-reason { color: #cbd5e1; font-size: 0.93rem; line-height: 1.7; margin-bottom: 20px; }
-
-        .result-cta a {
-            display: inline-block;
-            padding: 11px 28px;
-            border-radius: 9px;
-            font-weight: 700;
-            font-size: 0.92rem;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .result-cta a:hover { opacity: 0.85; }
-        .btn-creatify { background: linear-gradient(135deg, #7c3aed, #6d28d9); color: #fff; }
-        .btn-heygen { background: linear-gradient(135deg, #0284c7, #0369a1); color: #fff; }
-        .btn-synthesia { background: linear-gradient(135deg, #059669, #047857); color: #fff; }
-        .btn-pictory { background: linear-gradient(135deg, #dc2626, #b91c1c); color: #fff; }
-
-        /* === COMPARISON TABLE === */
-        .section-title {
-            font-size: 1.25rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .section-title span { color: #818cf8; }
-
-        .table-wrap { overflow-x: auto; margin-bottom: 36px; }
-
-        table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-        th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
-        th { background: #1e293b; font-weight: 700; color: #94a3b8; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
-        tr:hover td { background: rgba(255,255,255,0.02); }
-
-        .tool-head { font-weight: 700; font-size: 0.95rem; }
-        .tool-head.c { color: #c4b5fd; }
-        .tool-head.h { color: #7dd3fc; }
-        .tool-head.s { color: #6ee7b7; }
-        .tool-head.p { color: #fca5a5; }
-
-        .check { color: #4ade80; } .cross { color: #f87171; } .partial { color: #fb923c; }
-
-        .score-bar { display: flex; align-items: center; gap: 8px; }
-        .bar-bg { flex: 1; height: 7px; background: #334155; border-radius: 4px; overflow: hidden; }
-        .bar-fill { height: 100%; border-radius: 4px; }
-        .bar-fill.c { background: linear-gradient(90deg, #7c3aed, #c4b5fd); }
-        .bar-fill.h { background: linear-gradient(90deg, #0ea5e9, #7dd3fc); }
-        .bar-fill.s { background: linear-gradient(90deg, #059669, #6ee7b7); }
-        .bar-fill.p { background: linear-gradient(90deg, #dc2626, #fca5a5); }
-        .bar-num { font-size: 0.78rem; color: var(--muted); width: 28px; text-align: right; }
-
-        /* === USE CASE CARDS === */
-        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 36px; }
-
-        .card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            transition: border-color 0.2s;
-        }
-        .card:hover { border-color: #6366f1; }
-        .card-icon { font-size: 1.6rem; margin-bottom: 10px; }
-        .card-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; color: #f1f5f9; }
-        .card-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
-        .card-winner { font-size: 0.82rem; font-weight: 700; }
-        .card-winner.c { color: #c4b5fd; }
-        .card-winner.h { color: #7dd3fc; }
-        .card-winner.s { color: #6ee7b7; }
-        .card-winner.p { color: #fca5a5; }
-
-        /* === PRICING === */
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 36px; }
-
-        .price-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 22px 18px;
-            text-align: center;
-        }
-        .price-card.highlight { border-color: #6366f1; }
-        .price-card .logo-name { font-weight: 800; font-size: 1.1rem; margin-bottom: 6px; }
-        .price-card .logo-name.c { color: #c4b5fd; }
-        .price-card .logo-name.h { color: #7dd3fc; }
-        .price-card .logo-name.s { color: #6ee7b7; }
-        .price-card .logo-name.p { color: #fca5a5; }
-        .price-card .price-main { font-size: 1.8rem; font-weight: 800; color: #f1f5f9; margin: 10px 0 4px; }
-        .price-card .price-note { font-size: 0.78rem; color: var(--muted); margin-bottom: 14px; }
-        .price-card .affiliate-tag {
-            display: inline-block;
-            background: rgba(74,222,128,0.1);
-            color: #4ade80;
-            border: 1px solid rgba(74,222,128,0.3);
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.74rem;
-            font-weight: 700;
-        }
-        .price-card .cta-link {
-            display: block;
-            margin-top: 14px;
-            padding: 9px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .price-card .cta-link:hover { opacity: 0.85; }
-        .cta-c { background: rgba(124,58,237,0.2); color: #c4b5fd; border: 1px solid rgba(124,58,237,0.4); }
-        .cta-h { background: rgba(14,165,233,0.2); color: #7dd3fc; border: 1px solid rgba(14,165,233,0.4); }
-        .cta-s { background: rgba(5,150,105,0.2); color: #6ee7b7; border: 1px solid rgba(5,150,105,0.4); }
-        .cta-p { background: rgba(220,38,38,0.2); color: #fca5a5; border: 1px solid rgba(220,38,38,0.4); }
-
-        /* === CTA BANNER === */
-        .cta-banner {
-            background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 100%);
-            border: 1px solid rgba(99,102,241,0.4);
-            border-radius: 16px;
-            padding: 32px 28px;
-            text-align: center;
-            margin-top: 8px;
-        }
-        .cta-banner h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 10px; }
-        .cta-banner p { color: var(--muted); font-size: 0.92rem; margin-bottom: 20px; max-width: 540px; margin-left: auto; margin-right: auto; }
-        .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-        .cta-buttons a {
-            padding: 11px 24px;
-            border-radius: 9px;
-            font-weight: 700;
-            font-size: 0.88rem;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .cta-buttons a:hover { opacity: 0.85; }
-        .do-btn { background: linear-gradient(135deg, #1d4ed8, #2563eb); color: #fff; }
-        .dc-btn { background: linear-gradient(135deg, #059669, #047857); color: #fff; }
-
-        /* === FAQ === */
-        .faq { margin-top: 8px; }
-        details { background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; padding: 16px 20px; }
-        details[open] { border-color: #6366f1; }
-        summary { cursor: pointer; font-weight: 600; font-size: 0.93rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-        summary::after { content: '＋'; color: var(--muted); font-size: 1.1rem; transition: transform 0.2s; }
-        details[open] summary::after { content: '－'; }
-        details p { margin-top: 12px; font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
-
-        footer {
-            background: #0f172a;
-            border-top: 1px solid var(--border);
-            padding: 24px;
-            text-align: center;
-            color: var(--muted);
-            font-size: 0.8rem;
-        }
-        footer a { color: #818cf8; text-decoration: none; }
-
-        @media (max-width: 640px) {
-            header { padding: 32px 16px 28px; }
-            main { padding: 24px 14px 48px; }
-            .options { flex-direction: column; }
-            .opt-btn { width: 100%; text-align: left; }
-        }
-    </style>
+@keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.bar-bg { flex: 1; height: 7px; background: #334155; border-radius: 4px; overflow: hidden; }</style>
 </head>
-<body>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article v2c-tool">
 
 <header>
     <div class="badge">🎬 互動比較工具 · 2026 最新</div>
@@ -441,7 +130,7 @@
     <!-- SCORE COMPARISON -->
     <h2 class="section-title">📊 各指標評分比較 <span>（滿分 100）</span></h2>
 
-    <div class="table-wrap" style="margin-bottom:36px;">
+    <div class="table-wrap">
         <table>
             <thead>
                 <tr>
@@ -455,52 +144,52 @@
             <tbody>
                 <tr>
                     <td>🛒 電商廣告速度</td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c" style="width:95%"></div></div><span class="bar-num">95</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h" style="width:72%"></div></div><span class="bar-num">72</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s" style="width:60%"></div></div><span class="bar-num">60</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p" style="width:55%"></div></div><span class="bar-num">55</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c"></div></div><span class="bar-num">95</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h"></div></div><span class="bar-num">72</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s"></div></div><span class="bar-num">60</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p"></div></div><span class="bar-num">55</span></div></td>
                 </tr>
                 <tr>
                     <td>🧑 AI Avatar 品質</td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c" style="width:78%"></div></div><span class="bar-num">78</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h" style="width:95%"></div></div><span class="bar-num">95</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s" style="width:90%"></div></div><span class="bar-num">90</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p" style="width:30%"></div></div><span class="bar-num">30</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c"></div></div><span class="bar-num">78</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h"></div></div><span class="bar-num">95</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s"></div></div><span class="bar-num">90</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p"></div></div><span class="bar-num">30</span></div></td>
                 </tr>
                 <tr>
                     <td>🌐 多語言支援</td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c" style="width:82%"></div></div><span class="bar-num">82</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h" style="width:92%"></div></div><span class="bar-num">92</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s" style="width:95%"></div></div><span class="bar-num">95</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p" style="width:70%"></div></div><span class="bar-num">70</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c"></div></div><span class="bar-num">82</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h"></div></div><span class="bar-num">92</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s"></div></div><span class="bar-num">95</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p"></div></div><span class="bar-num">70</span></div></td>
                 </tr>
                 <tr>
                     <td>💰 性價比</td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c" style="width:90%"></div></div><span class="bar-num">90</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h" style="width:70%"></div></div><span class="bar-num">70</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s" style="width:60%"></div></div><span class="bar-num">60</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p" style="width:85%"></div></div><span class="bar-num">85</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c"></div></div><span class="bar-num">90</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h"></div></div><span class="bar-num">70</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s"></div></div><span class="bar-num">60</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p"></div></div><span class="bar-num">85</span></div></td>
                 </tr>
                 <tr>
                     <td>📝 文章轉影片</td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c" style="width:60%"></div></div><span class="bar-num">60</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h" style="width:65%"></div></div><span class="bar-num">65</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s" style="width:72%"></div></div><span class="bar-num">72</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p" style="width:95%"></div></div><span class="bar-num">95</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c"></div></div><span class="bar-num">60</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h"></div></div><span class="bar-num">65</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s"></div></div><span class="bar-num">72</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p"></div></div><span class="bar-num">95</span></div></td>
                 </tr>
                 <tr>
                     <td>🎓 企業 / 教育訓練</td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c" style="width:55%"></div></div><span class="bar-num">55</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h" style="width:80%"></div></div><span class="bar-num">80</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s" style="width:95%"></div></div><span class="bar-num">95</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p" style="width:65%"></div></div><span class="bar-num">65</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c"></div></div><span class="bar-num">55</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h"></div></div><span class="bar-num">80</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s"></div></div><span class="bar-num">95</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p"></div></div><span class="bar-num">65</span></div></td>
                 </tr>
                 <tr>
                     <td>⚡ 上手容易度</td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c" style="width:92%"></div></div><span class="bar-num">92</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h" style="width:85%"></div></div><span class="bar-num">85</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s" style="width:80%"></div></div><span class="bar-num">80</span></div></td>
-                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p" style="width:88%"></div></div><span class="bar-num">88</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill c"></div></div><span class="bar-num">92</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill h"></div></div><span class="bar-num">85</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill s"></div></div><span class="bar-num">80</span></div></td>
+                    <td><div class="score-bar"><div class="bar-bg"><div class="bar-fill p"></div></div><span class="bar-num">88</span></div></td>
                 </tr>
             </tbody>
         </table>
@@ -695,7 +384,7 @@
     </div>
 
     <!-- FAQ -->
-    <h2 class="section-title" style="margin-top:36px;">❓ 常見問題</h2>
+    <h2 class="section-title">❓ 常見問題</h2>
 
     <div class="faq">
         <details>
@@ -726,14 +415,7 @@
 
 </main>
 
-<footer>
-    <p>© 2026 <a href="https://autodev-ai.com">AutoDev AI</a> · 比較資料定期更新 · 最後更新：2026-09-16</p>
-    <p style="margin-top:8px;">
-        <a href="https://autodev-ai.com/blog/">返回部落格</a> ·
-        <a href="https://autodev-ai.com/tools/">所有工具</a> ·
-        <a href="https://autodev-ai.com/tools/ai-video-tool-comparison-2026.html">AI 影片工具比較</a>
-    </p>
-</footer>
+
 
 <script>
 const selections = { use: null, budget: null, lang: null, feature: null };
@@ -856,5 +538,6 @@ function recommend() {
 }
 </script>
 
+</main><!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

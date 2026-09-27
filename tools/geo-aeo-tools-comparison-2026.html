@@ -22,122 +22,9 @@
     "inLanguage": "zh-TW"
   }
   </script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --primary: #6366f1;
-      --primary-dark: #4f46e5;
-      --secondary: #10b981;
-      --accent: #f59e0b;
-      --bg: #0f0f1a;
-      --bg2: #1a1a2e;
-      --bg3: #252540;
-      --text: #e2e8f0;
-      --text-muted: #94a3b8;
-      --border: #2d2d4e;
-      --card-bg: #1e1e35;
-      --winner: #10b981;
-      --tag-bg: rgba(99,102,241,0.18);
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      min-height: 100vh;
-    }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    /* Header */
-    .hero {
-      background: linear-gradient(135deg, #1a1a35 0%, #0f0f1a 60%, #1a0a2e 100%);
-      padding: 3rem 1.5rem 2.5rem;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-    }
-    .badge {
-      display: inline-block;
-      background: var(--tag-bg);
-      border: 1px solid rgba(99,102,241,0.35);
-      color: #a5b4fc;
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 0.3rem 0.85rem;
-      border-radius: 20px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-    h1 {
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      font-weight: 800;
-      background: linear-gradient(135deg, #a5b4fc 0%, #6ee7b7 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.75rem;
-      line-height: 1.25;
-    }
-    .hero-sub {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      max-width: 660px;
-      margin: 0 auto 1.5rem;
-    }
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-    .hero-stats span strong { color: var(--text); }
-
-    /* Main */
-    .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem; }
-
-    /* Quick filter */
-    .filter-box {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.75rem;
-      margin-bottom: 2rem;
-    }
-    .filter-box h2 { font-size: 1.1rem; margin-bottom: 1.2rem; color: var(--text); }
-    .filter-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    .filter-group label {
-      display: block;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    }
-    .filter-group select {
-      width: 100%;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      color: var(--text);
-      border-radius: 8px;
-      padding: 0.55rem 0.85rem;
-      font-size: 0.9rem;
-      cursor: pointer;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 0.75rem center;
-      padding-right: 2.5rem;
-    }
-    .filter-group select:focus { outline: 2px solid var(--primary); border-color: var(--primary); }
-    .rec-box {
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+<style data-v2c-functional>.rec-box {
       margin-top: 1.25rem;
       padding: 1rem 1.25rem;
       background: rgba(16,185,129,0.1);
@@ -146,77 +33,8 @@
       display: none;
       font-size: 0.95rem;
     }
-    .rec-box.show { display: block; }
-    .rec-box strong { color: var(--secondary); }
-
-    /* Comparison table */
-    .section-title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin-bottom: 1.25rem;
-      color: var(--text);
-    }
-    .table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--border); margin-bottom: 2.5rem; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
-    }
-    thead tr { background: var(--bg3); }
-    th {
-      padding: 1rem 1.1rem;
-      text-align: left;
-      font-weight: 700;
-      color: var(--text);
-      border-bottom: 2px solid var(--border);
-      white-space: nowrap;
-    }
-    th.tool-col {
-      background: linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(16,185,129,0.1) 100%);
-    }
-    tbody tr:nth-child(even) { background: rgba(255,255,255,0.025); }
-    tbody tr:hover { background: rgba(99,102,241,0.07); }
-    td {
-      padding: 0.85rem 1.1rem;
-      border-bottom: 1px solid var(--border);
-      vertical-align: middle;
-    }
-    td:first-child { font-weight: 600; color: var(--text-muted); font-size: 0.85rem; }
-    .check { color: var(--secondary); font-size: 1.1rem; }
-    .cross { color: #f87171; font-size: 1.1rem; }
-    .partial { color: var(--accent); font-size: 1.1rem; }
-    .winner-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--secondary), #059669);
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 0.15rem 0.55rem;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-left: 0.4rem;
-    }
-    .ph-badge {
-      display: inline-block;
-      background: rgba(245,158,11,0.18);
-      border: 1px solid rgba(245,158,11,0.3);
-      color: #fbbf24;
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 0.15rem 0.5rem;
-      border-radius: 20px;
-      margin-left: 0.35rem;
-    }
-
-    /* Tool cards */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.25rem;
-      margin-bottom: 2.5rem;
-    }
-    .tool-card {
+.rec-box.show { display: block; }
+.tool-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 14px;
@@ -225,189 +43,16 @@
       position: relative;
       overflow: hidden;
     }
-    .tool-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      border-radius: 14px 14px 0 0;
-    }
-    .tool-card.card-howseen::before { background: linear-gradient(90deg, #6366f1, #8b5cf6); }
-    .tool-card.card-profound::before { background: linear-gradient(90deg, #10b981, #059669); }
-    .tool-card.card-airefs::before { background: linear-gradient(90deg, #f59e0b, #d97706); }
-    .tool-card.card-peec::before { background: linear-gradient(90deg, #ec4899, #db2777); }
-    .tool-card:hover { border-color: var(--primary); box-shadow: 0 4px 20px rgba(99,102,241,0.15); }
-    .card-header { display: flex; align-items: flex-start; gap: 0.85rem; margin-bottom: 1rem; }
-    .card-icon {
-      width: 42px; height: 42px; border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem; flex-shrink: 0;
-    }
-    .card-howseen .card-icon { background: rgba(99,102,241,0.2); }
-    .card-profound .card-icon { background: rgba(16,185,129,0.2); }
-    .card-airefs .card-icon { background: rgba(245,158,11,0.2); }
-    .card-peec .card-icon { background: rgba(236,72,153,0.2); }
-    .card-name { font-size: 1.1rem; font-weight: 700; }
-    .card-tagline { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.15rem; }
-    .card-price {
-      font-size: 1.15rem; font-weight: 800; margin-bottom: 0.6rem;
-    }
-    .card-price span { font-size: 0.8rem; font-weight: 400; color: var(--text-muted); }
-    .card-features { list-style: none; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.2rem; }
-    .card-features li { padding: 0.2rem 0; }
-    .card-features li::before { content: "✓ "; color: var(--secondary); font-weight: 700; }
-    .card-cta {
-      display: block; text-align: center;
-      padding: 0.6rem 1rem;
-      border-radius: 8px; font-size: 0.88rem; font-weight: 600;
-      border: 1px solid currentColor;
-      transition: background 0.2s, color 0.2s;
-    }
-    .card-cta:hover { text-decoration: none; filter: brightness(1.15); }
-    .card-howseen .card-cta { color: #a5b4fc; border-color: rgba(99,102,241,0.4); }
-    .card-howseen .card-cta:hover { background: rgba(99,102,241,0.15); }
-    .card-profound .card-cta { color: #6ee7b7; border-color: rgba(16,185,129,0.4); }
-    .card-profound .card-cta:hover { background: rgba(16,185,129,0.15); }
-    .card-airefs .card-cta { color: #fcd34d; border-color: rgba(245,158,11,0.4); }
-    .card-airefs .card-cta:hover { background: rgba(245,158,11,0.15); }
-    .card-peec .card-cta { color: #f9a8d4; border-color: rgba(236,72,153,0.4); }
-    .card-peec .card-cta:hover { background: rgba(236,72,153,0.15); }
-
-    /* Score bars */
-    .scores-section {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.75rem;
-      margin-bottom: 2.5rem;
-    }
-    .score-row {
-      margin-bottom: 1.1rem;
-    }
-    .score-label { display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 0.35rem; }
-    .score-label span:first-child { color: var(--text); font-weight: 600; }
-    .score-label span:last-child { color: var(--text-muted); font-size: 0.82rem; }
-    .score-bars { display: flex; flex-direction: column; gap: 0.35rem; }
-    .bar-row { display: flex; align-items: center; gap: 0.65rem; font-size: 0.8rem; }
-    .bar-tool { width: 65px; color: var(--text-muted); text-align: right; flex-shrink: 0; }
-    .bar-track { flex: 1; height: 8px; background: var(--bg3); border-radius: 4px; overflow: hidden; }
-    .bar-fill { height: 100%; border-radius: 4px; transition: width 0.8s ease; }
-    .bar-howseen { background: linear-gradient(90deg, #6366f1, #8b5cf6); }
-    .bar-profound { background: linear-gradient(90deg, #10b981, #059669); }
-    .bar-airefs { background: linear-gradient(90deg, #f59e0b, #d97706); }
-    .bar-peec { background: linear-gradient(90deg, #ec4899, #db2777); }
-    .bar-val { width: 30px; font-size: 0.78rem; color: var(--text-muted); }
-
-    /* Use cases */
-    .usecases-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2.5rem;
-    }
-    .usecase-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.35rem;
-    }
-    .usecase-icon { font-size: 1.7rem; margin-bottom: 0.5rem; }
-    .usecase-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem; }
-    .usecase-rec { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.6rem; }
-    .usecase-pick {
-      font-size: 0.83rem;
-      background: var(--tag-bg);
-      color: #a5b4fc;
-      padding: 0.25rem 0.7rem;
-      border-radius: 6px;
-      display: inline-block;
-      font-weight: 600;
-    }
-
-    /* Affiliate CTA */
-    .affiliate-banner {
-      background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(16,185,129,0.08));
-      border: 1px solid rgba(245,158,11,0.3);
-      border-radius: 14px;
-      padding: 1.75rem;
-      margin-bottom: 2.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .affiliate-banner .aff-text { flex: 1; min-width: 220px; }
-    .affiliate-banner h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; color: #fcd34d; }
-    .affiliate-banner p { font-size: 0.9rem; color: var(--text-muted); }
-    .aff-badge {
-      background: linear-gradient(135deg, #f59e0b, #d97706);
-      color: #fff;
-      font-weight: 800;
-      font-size: 0.95rem;
-      padding: 0.4rem 1rem;
-      border-radius: 8px;
-      white-space: nowrap;
-    }
-
-    /* DO Banner */
-    .do-banner {
-      background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(16,185,129,0.08));
-      border: 1px solid rgba(99,102,241,0.3);
-      border-radius: 14px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-    .do-banner h3 { font-size: 1rem; margin-bottom: 0.5rem; }
-    .do-banner p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem; }
-    .btn-gradient {
-      display: inline-block;
-      background: linear-gradient(135deg, #6366f1, #8b5cf6);
-      color: #fff;
-      font-weight: 700;
-      padding: 0.65rem 1.75rem;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .btn-gradient:hover { opacity: 0.88; text-decoration: none; }
-    .btn-green {
-      display: inline-block;
-      background: linear-gradient(135deg, #10b981, #059669);
-      color: #fff;
-      font-weight: 700;
-      padding: 0.65rem 1.75rem;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: opacity 0.2s;
-      margin-top: 0.5rem;
-    }
-    .btn-green:hover { opacity: 0.88; text-decoration: none; }
-
-    /* FAQ */
-    .faq-section { margin-bottom: 2.5rem; }
-    .faq-item {
+.bar-track { flex: 1; height: 8px; background: var(--bg3); border-radius: 4px; overflow: hidden; }
+.faq-item {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 12px;
       margin-bottom: 0.75rem;
       overflow: hidden;
     }
-    .faq-q {
-      padding: 1.1rem 1.25rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      user-select: none;
-    }
-    .faq-q:hover { background: rgba(99,102,241,0.07); }
-    .faq-arrow { color: var(--text-muted); transition: transform 0.25s; }
-    .faq-item.open .faq-arrow { transform: rotate(180deg); }
-    .faq-a {
+.faq-item.open .faq-arrow { transform: rotate(180deg); }
+.faq-a {
       padding: 0 1.25rem;
       max-height: 0;
       overflow: hidden;
@@ -415,23 +60,9 @@
       color: var(--text-muted);
       font-size: 0.93rem;
     }
-    .faq-item.open .faq-a { max-height: 400px; padding: 0 1.25rem 1.1rem; }
-
-    /* Breadcrumb */
-    .breadcrumb { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.25rem; }
-    .breadcrumb a { color: var(--text-muted); }
-    .breadcrumb a:hover { color: var(--primary); }
-
-    /* Last updated */
-    .last-updated { font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
-
-    @media (max-width: 600px) {
-      .filter-grid { grid-template-columns: 1fr; }
-      .affiliate-banner { flex-direction: column; text-align: center; }
-    }
-  </style>
+.faq-item.open .faq-a { max-height: 400px; padding: 0 1.25rem 1.1rem; }</style>
 </head>
-<body>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article v2c-tool">
 
 <div class="hero">
   <div class="badge">🔍 互動比較工具 · 2026年9月更新</div>
@@ -450,10 +81,10 @@
   </div>
 
   <!-- What is AEO/GEO -->
-  <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-bottom:2rem;">
-    <h2 style="font-size:1.15rem;margin-bottom:0.75rem;">🤔 什麼是 AEO/GEO？為什麼 2026 年品牌必須監控？</h2>
-    <p style="font-size:0.92rem;color:var(--text-muted);margin-bottom:0.7rem;"><strong style="color:var(--text)">AEO（Answer Engine Optimization）</strong> 與 <strong style="color:var(--text)">GEO（Generative Engine Optimization）</strong> 是 2026 年 SEO 的最新進化。當用戶向 ChatGPT、Gemini、Claude、Perplexity 詢問「哪個工具最好？」，AI 的回答直接決定你的品牌是否被推薦。</p>
-    <p style="font-size:0.92rem;color:var(--text-muted);">根據 Conductor 2026 AEO Benchmarks，65% 的用戶在 AI 搜尋得到答案後不再點擊傳統搜尋結果。這意味著你的 <strong style="color:var(--secondary)">「AI 能見度」</strong>比 Google 排名更重要。</p>
+  <div>
+    <h2>🤔 什麼是 AEO/GEO？為什麼 2026 年品牌必須監控？</h2>
+    <p><strong>AEO（Answer Engine Optimization）</strong> 與 <strong>GEO（Generative Engine Optimization）</strong> 是 2026 年 SEO 的最新進化。當用戶向 ChatGPT、Gemini、Claude、Perplexity 詢問「哪個工具最好？」，AI 的回答直接決定你的品牌是否被推薦。</p>
+    <p>根據 Conductor 2026 AEO Benchmarks，65% 的用戶在 AI 搜尋得到答案後不再點擊傳統搜尋結果。這意味著你的 <strong>「AI 能見度」</strong>比 Google 排名更重要。</p>
   </div>
 
   <!-- Filter Box -->
@@ -512,40 +143,40 @@
     <div class="score-row">
       <div class="score-label"><span>AI 搜尋平台覆蓋廣度</span><span>涵蓋 ChatGPT/Gemini/Claude/Perplexity 等平台數量</span></div>
       <div class="score-bars">
-        <div class="bar-row"><span class="bar-tool">Profound</span><div class="bar-track"><div class="bar-fill bar-profound" style="width:95%"></div></div><span class="bar-val">9.5</span></div>
-        <div class="bar-row"><span class="bar-tool">Airefs</span><div class="bar-track"><div class="bar-fill bar-airefs" style="width:88%"></div></div><span class="bar-val">8.8</span></div>
-        <div class="bar-row"><span class="bar-tool">Howseen</span><div class="bar-track"><div class="bar-fill bar-howseen" style="width:82%"></div></div><span class="bar-val">8.2</span></div>
-        <div class="bar-row"><span class="bar-tool">Peec</span><div class="bar-track"><div class="bar-fill bar-peec" style="width:72%"></div></div><span class="bar-val">7.2</span></div>
+        <div class="bar-row"><span class="bar-tool">Profound</span><div class="bar-track"><div class="bar-fill bar-profound"></div></div><span class="bar-val">9.5</span></div>
+        <div class="bar-row"><span class="bar-tool">Airefs</span><div class="bar-track"><div class="bar-fill bar-airefs"></div></div><span class="bar-val">8.8</span></div>
+        <div class="bar-row"><span class="bar-tool">Howseen</span><div class="bar-track"><div class="bar-fill bar-howseen"></div></div><span class="bar-val">8.2</span></div>
+        <div class="bar-row"><span class="bar-tool">Peec</span><div class="bar-track"><div class="bar-fill bar-peec"></div></div><span class="bar-val">7.2</span></div>
       </div>
     </div>
     <!-- 品牌追蹤深度 -->
     <div class="score-row">
       <div class="score-label"><span>品牌追蹤深度 / 情境分析</span><span>品牌在 AI 回答中的位置、情感、競品比較</span></div>
       <div class="score-bars">
-        <div class="bar-row"><span class="bar-tool">Howseen</span><div class="bar-track"><div class="bar-fill bar-howseen" style="width:91%"></div></div><span class="bar-val">9.1</span></div>
-        <div class="bar-row"><span class="bar-tool">Profound</span><div class="bar-track"><div class="bar-fill bar-profound" style="width:87%"></div></div><span class="bar-val">8.7</span></div>
-        <div class="bar-row"><span class="bar-tool">Airefs</span><div class="bar-track"><div class="bar-fill bar-airefs" style="width:80%"></div></div><span class="bar-val">8.0</span></div>
-        <div class="bar-row"><span class="bar-tool">Peec</span><div class="bar-track"><div class="bar-fill bar-peec" style="width:74%"></div></div><span class="bar-val">7.4</span></div>
+        <div class="bar-row"><span class="bar-tool">Howseen</span><div class="bar-track"><div class="bar-fill bar-howseen"></div></div><span class="bar-val">9.1</span></div>
+        <div class="bar-row"><span class="bar-tool">Profound</span><div class="bar-track"><div class="bar-fill bar-profound"></div></div><span class="bar-val">8.7</span></div>
+        <div class="bar-row"><span class="bar-tool">Airefs</span><div class="bar-track"><div class="bar-fill bar-airefs"></div></div><span class="bar-val">8.0</span></div>
+        <div class="bar-row"><span class="bar-tool">Peec</span><div class="bar-track"><div class="bar-fill bar-peec"></div></div><span class="bar-val">7.4</span></div>
       </div>
     </div>
     <!-- 性價比 -->
     <div class="score-row">
       <div class="score-label"><span>性價比 / 入門門檻</span><span>中小企業與個人創作者的可負擔性</span></div>
       <div class="score-bars">
-        <div class="bar-row"><span class="bar-tool">Airefs</span><div class="bar-track"><div class="bar-fill bar-airefs" style="width:93%"></div></div><span class="bar-val">9.3</span></div>
-        <div class="bar-row"><span class="bar-tool">Peec</span><div class="bar-track"><div class="bar-fill bar-peec" style="width:85%"></div></div><span class="bar-val">8.5</span></div>
-        <div class="bar-row"><span class="bar-tool">Howseen</span><div class="bar-track"><div class="bar-fill bar-howseen" style="width:75%"></div></div><span class="bar-val">7.5</span></div>
-        <div class="bar-row"><span class="bar-tool">Profound</span><div class="bar-track"><div class="bar-fill bar-profound" style="width:55%"></div></div><span class="bar-val">5.5</span></div>
+        <div class="bar-row"><span class="bar-tool">Airefs</span><div class="bar-track"><div class="bar-fill bar-airefs"></div></div><span class="bar-val">9.3</span></div>
+        <div class="bar-row"><span class="bar-tool">Peec</span><div class="bar-track"><div class="bar-fill bar-peec"></div></div><span class="bar-val">8.5</span></div>
+        <div class="bar-row"><span class="bar-tool">Howseen</span><div class="bar-track"><div class="bar-fill bar-howseen"></div></div><span class="bar-val">7.5</span></div>
+        <div class="bar-row"><span class="bar-tool">Profound</span><div class="bar-track"><div class="bar-fill bar-profound"></div></div><span class="bar-val">5.5</span></div>
       </div>
     </div>
     <!-- 報告品質 -->
     <div class="score-row">
       <div class="score-label"><span>報告品質 / 可操作洞察</span><span>幫助行銷人採取行動的報告清晰度</span></div>
       <div class="score-bars">
-        <div class="bar-row"><span class="bar-tool">Profound</span><div class="bar-track"><div class="bar-fill bar-profound" style="width:94%"></div></div><span class="bar-val">9.4</span></div>
-        <div class="bar-row"><span class="bar-tool">Airefs</span><div class="bar-track"><div class="bar-fill bar-airefs" style="width:86%"></div></div><span class="bar-val">8.6</span></div>
-        <div class="bar-row"><span class="bar-tool">Howseen</span><div class="bar-track"><div class="bar-fill bar-howseen" style="width:82%"></div></div><span class="bar-val">8.2</span></div>
-        <div class="bar-row"><span class="bar-tool">Peec</span><div class="bar-track"><div class="bar-fill bar-peec" style="width:71%"></div></div><span class="bar-val">7.1</span></div>
+        <div class="bar-row"><span class="bar-tool">Profound</span><div class="bar-track"><div class="bar-fill bar-profound"></div></div><span class="bar-val">9.4</span></div>
+        <div class="bar-row"><span class="bar-tool">Airefs</span><div class="bar-track"><div class="bar-fill bar-airefs"></div></div><span class="bar-val">8.6</span></div>
+        <div class="bar-row"><span class="bar-tool">Howseen</span><div class="bar-track"><div class="bar-fill bar-howseen"></div></div><span class="bar-val">8.2</span></div>
+        <div class="bar-row"><span class="bar-tool">Peec</span><div class="bar-track"><div class="bar-fill bar-peec"></div></div><span class="bar-val">7.1</span></div>
       </div>
     </div>
   </div>
@@ -795,9 +426,9 @@
   </div>
 
   <!-- DataCamp CTA -->
-  <div style="background:linear-gradient(135deg,rgba(16,185,129,0.1),rgba(99,102,241,0.08));border:1px solid rgba(16,185,129,0.25);border-radius:14px;padding:1.5rem;text-align:center;margin-bottom:2rem;">
-    <h3 style="font-size:1rem;margin-bottom:0.5rem;">📚 想學習 AEO/GEO 與 AI 行銷完整策略？</h3>
-    <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:1rem;">DataCamp 提供 AI 行銷、SEO 進化到 AEO、數據分析課程，台灣學習者好評 ★4.8。</p>
+  <div>
+    <h3>📚 想學習 AEO/GEO 與 AI 行銷完整策略？</h3>
+    <p>DataCamp 提供 AI 行銷、SEO 進化到 AEO、數據分析課程，台灣學習者好評 ★4.8。</p>
     <a href="https://afflink.one/s/aavAC" target="_blank" rel="nofollow noopener" class="btn-green">免費試用 DataCamp AI 課程 →</a>
   </div>
 
@@ -853,5 +484,6 @@ function updateRec() {
 }
 </script>
 
+</main><!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

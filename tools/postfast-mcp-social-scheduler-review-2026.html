@@ -34,100 +34,11 @@
     }
     </script>
 
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', 'Segoe UI', sans-serif; background: #0f1117; color: #e0e0e0; line-height: 1.7; }
-        .navbar { background: rgba(15,17,23,0.95); border-bottom: 1px solid #2a2d3e; padding: 1rem 2rem; display: flex; align-items: center; gap: 2rem; position: sticky; top: 0; z-index: 100; }
-        .navbar .brand { color: #7c3aed; font-weight: 700; font-size: 1.2rem; text-decoration: none; }
-        .navbar a { color: #a0a0b0; text-decoration: none; font-size: 0.9rem; }
-        .navbar a:hover { color: #e0e0e0; }
-        .hero { background: linear-gradient(135deg, #0a1f3d 0%, #1a0533 50%, #0f1117 100%); padding: 2.8rem 1rem 2rem; text-align: center; border-bottom: 1px solid #2a2d3e; }
-        .hero-badge { display: inline-block; background: #1e3a5f; color: #60a5fa; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; margin-bottom: 0.8rem; }
-        .hero h1 { font-size: clamp(1.4rem, 3.5vw, 2.3rem); font-weight: 700; color: #fff; max-width: 750px; margin: 0 auto 0.8rem; line-height: 1.3; }
-        .hero p { color: #aaa; font-size: 0.98rem; max-width: 580px; margin: 0 auto 1.2rem; }
-        .rating-row { display: flex; align-items: center; justify-content: center; gap: 0.6rem; margin-bottom: 1.5rem; }
-        .stars { color: #f59e0b; font-size: 1.1rem; }
-        .rating-text { color: #888; font-size: 0.88rem; }
-        .hero-ctas { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
-        .btn-primary { display: inline-block; padding: 0.75rem 1.8rem; background: linear-gradient(135deg, #0369a1, #0284c7); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: opacity .2s; }
-        .btn-primary:hover { opacity: .85; }
-        .btn-secondary { display: inline-block; padding: 0.75rem 1.8rem; background: transparent; border: 1px solid #3a3d5e; color: #c4b5fd; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: border-color .2s; }
-        .btn-secondary:hover { border-color: #7c3aed; }
-        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.2rem; }
-        h2.sec { font-size: 1.3rem; color: #c4b5fd; margin: 2.5rem 0 1rem; border-bottom: 1px solid #2a2d3e; padding-bottom: 0.4rem; }
-        p { color: #b0b0c0; margin-bottom: 1rem; font-size: 0.95rem; }
-        /* Quick verdict */
-        .verdict { background: linear-gradient(135deg, #0a1f3d, #1a0533); border: 1px solid #1e40af; border-radius: 14px; padding: 1.5rem; margin: 2rem 0; }
-        .verdict h3 { color: #60a5fa; font-size: 1rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: .05em; }
-        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-        .verdict-col h4 { color: #34d399; font-size: 0.85rem; margin-bottom: 0.5rem; }
-        .verdict-col.cons h4 { color: #f87171; }
-        .verdict-col ul { list-style: none; }
-        .verdict-col ul li { font-size: 0.88rem; color: #b0b0c0; padding: 0.2rem 0; padding-left: 1.2rem; position: relative; }
-        .verdict-col ul li::before { content: '✓'; position: absolute; left: 0; color: #34d399; }
-        .verdict-col.cons ul li::before { content: '✗'; color: #f87171; }
-        /* Score bars */
-        .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
-        .score-item { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 10px; padding: 1rem; }
-        .score-item .label { font-size: 0.8rem; color: #888; margin-bottom: 0.4rem; }
-        .score-item .val { font-size: 1.3rem; font-weight: 700; color: #c4b5fd; }
-        /* Workflow steps */
-        .steps { counter-reset: step; list-style: none; margin: 1.2rem 0; }
-        .steps li { counter-increment: step; display: flex; gap: 1rem; margin-bottom: 1.2rem; }
-        .steps li::before { content: counter(step); background: #1e40af; color: #60a5fa; font-weight: 700; font-size: 0.85rem; min-width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; margin-top: 0.1rem; }
-        .steps li .step-body strong { display: block; color: #e0e0e0; font-size: 0.95rem; margin-bottom: 0.2rem; }
-        .steps li .step-body span { font-size: 0.88rem; color: #888; }
-        /* Code block */
-        .code-block { background: #0d0f1a; border: 1px solid #2a2d3e; border-radius: 8px; padding: 1rem 1.2rem; margin: 1rem 0; font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.82rem; color: #a5f3fc; overflow-x: auto; }
-        /* Table */
-        .table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid #2a2d3e; margin: 1rem 0; }
-        table { width: 100%; border-collapse: collapse; min-width: 550px; }
-        th { background: #1e2132; color: #c4b5fd; padding: 0.8rem 1rem; text-align: left; font-size: 0.85rem; border-bottom: 2px solid #3730a3; }
-        td { padding: 0.7rem 1rem; border-bottom: 1px solid #1e2132; font-size: 0.85rem; color: #c8c8d8; }
-        tr:last-child td { border-bottom: none; }
-        tr:hover td { background: #1a1d2e; }
-        td.highlight { color: #34d399; font-weight: 600; }
-        /* Pricing cards */
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
-        .pricing-card { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 12px; padding: 1.2rem; text-align: center; }
-        .pricing-card.popular { border-color: #6d28d9; background: linear-gradient(135deg, #1a0533, #0a1f3d); }
-        .pricing-card .plan-name { font-size: 0.85rem; color: #888; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 0.4rem; }
-        .pricing-card .price { font-size: 1.6rem; font-weight: 700; color: #c4b5fd; }
-        .pricing-card .price sub { font-size: 0.8rem; font-weight: 400; color: #888; }
-        .pricing-card .twd { font-size: 0.78rem; color: #888; margin-bottom: 0.8rem; }
-        .pricing-card ul { list-style: none; text-align: left; }
-        .pricing-card ul li { font-size: 0.82rem; color: #b0b0c0; padding: 0.2rem 0; padding-left: 1rem; position: relative; }
-        .pricing-card ul li::before { content: '✓'; position: absolute; left: 0; color: #34d399; }
-        .pop-badge { display: inline-block; background: #6d28d9; color: #fff; font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 10px; margin-bottom: 0.5rem; }
-        /* CTA section */
-        .cta-section { background: linear-gradient(135deg, #1a0533, #0a1f3d); border: 1px solid #3730a3; border-radius: 14px; padding: 2rem; margin: 2.5rem 0; text-align: center; }
-        .cta-section h3 { color: #c4b5fd; font-size: 1.2rem; margin-bottom: 0.6rem; }
-        .cta-section p { color: #888; font-size: 0.9rem; margin-bottom: 1.2rem; }
-        .cta-section .cta-row { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
-        .cta-btn-main { display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #0369a1, #0284c7); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
-        .cta-btn-alt { display: inline-block; padding: 0.8rem 1.8rem; background: linear-gradient(135deg, #6d28d9, #4c1d95); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.92rem; }
-        /* FAQ */
-        .faq-item { border-bottom: 1px solid #2a2d3e; padding: 1.2rem 0; }
-        .faq-item summary { cursor: pointer; color: #e0e0e0; font-weight: 600; font-size: 0.95rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-        .faq-item summary::after { content: '+'; color: #c4b5fd; font-size: 1.2rem; }
-        .faq-item[open] summary::after { content: '−'; }
-        .faq-item .faq-ans { color: #b0b0c0; font-size: 0.9rem; margin-top: 0.8rem; }
-        /* Footer */
-        footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid #1e2132; color: #555; font-size: 0.82rem; }
-        footer a { color: #7c3aed; text-decoration: none; }
-        .disclaimer { font-size: 0.78rem; color: #555; margin-top: 1.5rem; padding: 1rem; border: 1px solid #1e2132; border-radius: 8px; }
-        @media(max-width:600px) {
-            .verdict-grid { grid-template-columns: 1fr; }
-            .hero-ctas { flex-direction: column; align-items: center; }
-        }
-    </style>
+
+<link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body>
-<nav class="navbar">
-    <a class="brand" href="https://autodev-ai.com">AutoDev AI</a>
-    <a href="https://autodev-ai.com/blog/">Blog</a>
-    <a href="https://autodev-ai.com/tools/">工具</a>
-</nav>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article v2c-tool">
+
 
 <div class="hero">
     <div class="hero-badge">🚀 2026 年最新 MCP 社群工具</div>
@@ -148,7 +59,7 @@
     <h2 class="sec">📋 快速評測結論</h2>
     <div class="verdict">
         <h3>PostFast MCP 是什麼？</h3>
-        <p style="color:#b0b0c0;font-size:.9rem;margin-bottom:1rem;">PostFast 是 2026 年新興的 AI 社群媒體排程工具，最大差異是原生支援 <strong style="color:#60a5fa;">MCP（Model Context Protocol）</strong>，讓 Claude Code、Claude Desktop 等 AI 工具可以直接呼叫 PostFast API 排程貼文，無需手動操作 UI。適合 AI-native 工作流程的行銷人與開發者。</p>
+        <p>PostFast 是 2026 年新興的 AI 社群媒體排程工具，最大差異是原生支援 <strong>MCP（Model Context Protocol）</strong>，讓 Claude Code、Claude Desktop 等 AI 工具可以直接呼叫 PostFast API 排程貼文，無需手動操作 UI。適合 AI-native 工作流程的行銷人與開發者。</p>
         <div class="verdict-grid">
             <div class="verdict-col">
                 <h4>✅ 優點</h4>
@@ -237,7 +148,7 @@
     }
   }
 }</div>
-    <ul class="steps" style="counter-reset:step 3;">
+    <ul class="steps">
         <li>
             <div class="step-body">
                 <strong>步驟 4：用自然語言讓 Claude 幫你排程</strong>
@@ -254,16 +165,16 @@
 
     <h2 class="sec">💡 台灣行銷人 4 大實戰場景</h2>
 
-    <p><strong style="color:#e0e0e0;">場景 1：AI 部落客多平台同步發布</strong><br>
+    <p><strong>場景 1：AI 部落客多平台同步發布</strong><br>
     技術部落客每週產出 2-3 篇文章，原本需要手動複製貼文到 LinkedIn、Twitter、Facebook 各平台，花費 30-45 分鐘。使用 PostFast MCP 後，Claude 直接讀取文章摘要，針對各平台語調（LinkedIn 正式、Twitter 簡短、Facebook 親切）生成不同版本並一鍵排程。每週省 2-3 小時。</p>
 
-    <p><strong style="color:#e0e0e0;">場景 2：電商品牌節日促銷排程</strong><br>
+    <p><strong>場景 2：電商品牌節日促銷排程</strong><br>
     雙 11、母親節等活動期間，行銷人需要提前準備 10-20 天的貼文。透過 Claude + PostFast MCP，輸入促銷方案與日期，Claude 自動生成每日貼文並排程，整個流程從 3 天縮短至 2 小時。</p>
 
-    <p><strong style="color:#e0e0e0;">場景 3：開發者工具品牌經營</strong><br>
+    <p><strong>場景 3：開發者工具品牌經營</strong><br>
     SaaS 新創團隊在產品初期需要快速建立 LinkedIn 技術分享內容。PostFast + Claude Code 可設計定時工作流：每天早上 7 點抓取 GitHub trending，Claude 生成繁中技術摘要，自動排程 12:00 發布 LinkedIn。</p>
 
-    <p><strong style="color:#e0e0e0;">場景 4：數位行銷代理商批次管理</strong><br>
+    <p><strong>場景 4：數位行銷代理商批次管理</strong><br>
     代理商同時管理 10-20 個品牌帳號。PostFast Pro（€79/月）支援多帳號管理，搭配 API 可設計品牌專屬提示詞模板，Claude 快速生成各品牌風格一致的貼文，效率提升 5-8 倍。</p>
 
     <h2 class="sec" id="comparison">📊 PostFast vs Buffer vs Hootsuite vs Later 完整比較</h2>
@@ -388,7 +299,7 @@
         </div>
     </div>
 
-    <p style="font-size:.82rem;color:#555;margin-top:.5rem;">* 2026 年定價，以官網為準。1 EUR ≈ 33.6 TWD（2026-09 匯率）。</p>
+    <p>* 2026 年定價，以官網為準。1 EUR ≈ 33.6 TWD（2026-09 匯率）。</p>
 
     <h2 class="sec">🤔 誰適合用 PostFast？決策框架</h2>
     <div class="table-wrap">
@@ -435,7 +346,7 @@
             <a href="https://postfast.io/?ref=autodev" class="cta-btn-main" target="_blank" rel="noopener">立即免費試用 PostFast</a>
             <a href="https://m.do.co/c/6121a295f624" class="cta-btn-alt" target="_blank" rel="noopener">部署 DigitalOcean 伺服器自架排程系統</a>
         </div>
-        <p style="font-size:.78rem;color:#555;margin-top:.8rem;">* 如需自架社群管理後台（完全掌控數據），DigitalOcean Droplet 4GB $24/月即可跑 n8n + Redis。</p>
+        <p>* 如需自架社群管理後台（完全掌控數據），DigitalOcean Droplet 4GB $24/月即可跑 n8n + Redis。</p>
     </div>
 
     <h2 class="sec">❓ PostFast 常見問題（FAQ）</h2>
@@ -470,9 +381,7 @@
 
 </div>
 
-<footer>
-    <p>© 2026 AutoDev AI · <a href="https://autodev-ai.com">autodev-ai.com</a> · 台灣 AI 工具評測首選</p>
-    <p style="margin-top:.4rem;"><a href="https://autodev-ai.com/blog/">Blog</a> · <a href="https://autodev-ai.com/tools/">工具頁</a> · <a href="https://autodev-ai.com/sitemap.xml">Sitemap</a></p>
-</footer>
+
+</main><!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

@@ -1019,3 +1019,159 @@ html body.v2c-page {
   border-radius: 0;
   object-fit: cover;
 }
+
+/* ==========================================================================
+   v2c-tool — wider content column for tools/*.html + en/tools/*.html
+   (scripts/unify_articles.py adds this modifier to every tool page's
+   <main class="v2c-article">, content-type and interactive alike).
+   Overriding the whole `width` shorthand -- not just a max-width -- because
+   .v2c-article sets width via `min(calc(100% - Npx), 760px)`; below ~1140px
+   viewport the viewport-relative operand already wins regardless of which
+   cap this sets, so no separate mobile-breakpoint override is needed.
+   ========================================================================== */
+
+.v2c-article.v2c-tool {
+  width: min(calc(100% - 40px), 1100px);
+}
+
+/* ==========================================================================
+   v2c-article form elements + interactive-tool component patterns
+   (TASK site-unify-20260927 batch U3). Calculators/quizzes keep their own
+   functional CSS (display:none/.active/etc, see scripts/unify_articles.py's
+   --keep-functional-css mode) for JS-driven show/hide and selected state;
+   these rules give every input/button/result panel the shared v2 look
+   regardless of that. All widths are 100%/relative, so nothing here can
+   force a 375-1440px horizontal overflow.
+   ========================================================================== */
+
+.v2c-article label {
+  display: block;
+  margin: 0 0 .35rem;
+  color: var(--v2c-ink, #171714);
+  font-weight: 600;
+  font-size: .92rem;
+}
+
+.v2c-article :is(input, select, textarea) {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: .65rem .9rem;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 10px;
+  background: var(--v2c-paper-strong, #fffdfa);
+  color: var(--v2c-ink, #171714);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.v2c-article :is(input, select, textarea):focus {
+  outline: 2px solid var(--v2c-gold, #8a6537);
+  outline-offset: 1px;
+}
+
+.v2c-article input[type="range"] {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  accent-color: var(--v2c-gold, #8a6537);
+}
+
+.v2c-article :is(input[type="checkbox"], input[type="radio"]) {
+  width: 1.1rem;
+  height: 1.1rem;
+  min-width: 1.1rem;
+  padding: 0;
+  margin: 0 .4rem 0 0;
+  vertical-align: middle;
+  accent-color: var(--v2c-gold, #8a6537);
+}
+
+.v2c-article textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.v2c-article fieldset {
+  margin: 1.4rem 0;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 14px;
+}
+
+.v2c-article fieldset legend {
+  padding: 0 .4rem;
+  color: var(--v2c-ink, #171714);
+  font-weight: 650;
+}
+
+.v2c-article output {
+  display: inline-block;
+  color: var(--v2c-ink, #171714);
+  font-weight: 650;
+}
+
+.v2c-article button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Primary buttons: same look as the a:is(btn/cta/button) treatment above,
+   extended to <button> elements (calculators use real buttons, not links). */
+.v2c-article button:is([class*="btn" i], [class*="cta" i], [class*="button" i], [type="submit"]) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  min-height: 44px;
+  padding: .7rem 1.3rem;
+  margin: .2rem .3rem .2rem 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--v2c-ink, #171714);
+  color: #fff;
+  font-weight: 650;
+  font-size: .92rem;
+}
+
+.v2c-article button:is([class*="btn" i], [class*="cta" i], [class*="button" i], [type="submit"]):hover {
+  background: var(--v2c-gold, #8a6537);
+}
+
+/* Result/summary panels: class contains result/output/summary/total. */
+.v2c-article :is(div, section, aside):is([class*="result" i], [class*="output" i], [class*="summary" i], [class*="total" i]) {
+  margin: 1.6rem 0;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 18px;
+  background: var(--v2c-paper-strong, #fffdfa);
+}
+
+/* Tab buttons: class contains the whole word "tab" (e.g. "channel-tab"),
+   not "table" -- \b keeps those apart. */
+.v2c-article :is(button, a)[class~="tab"],
+.v2c-article :is(button, a)[class*="-tab" i],
+.v2c-article :is(button, a)[class*="tab-" i] {
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1.1rem;
+  margin: .2rem .3rem .2rem 0;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--v2c-ink, #171714);
+  font-size: .88rem;
+  text-decoration: none;
+}
+
+.v2c-article :is(button, a)[class~="tab"].active,
+.v2c-article :is(button, a)[class*="-tab" i].active,
+.v2c-article :is(button, a)[class*="tab-" i].active,
+.v2c-article :is(button, a)[class~="tab"][aria-selected="true"],
+.v2c-article :is(button, a)[class*="-tab" i][aria-selected="true"],
+.v2c-article :is(button, a)[class*="tab-" i][aria-selected="true"] {
+  background: var(--v2c-ink, #171714);
+  border-color: var(--v2c-ink, #171714);
+  color: #fff;
+}

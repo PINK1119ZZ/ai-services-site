@@ -19,9 +19,9 @@
 <meta name="theme-color" content="#FFF8F3">
 <meta name="robots" content="index, follow">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+
+
+
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"AI Token Cost Calculator","applicationCategory":"DeveloperApplication","operatingSystem":"Web","url":"https://autodev-ai.com/en/tools/token-cost-calculator.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
@@ -30,45 +30,12 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
 
-<style>
-.calc-hero { padding: 7rem 2rem 2rem; text-align: center; background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%); }
-.calc-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.85rem, 4vw, 2.5rem); margin-bottom: 1rem; }
-.calc-hero p { color: var(--text-muted); max-width: 720px; margin: 0 auto; line-height: 1.75; }
-.calc-wrap { max-width: 1000px; margin: 2rem auto 4rem; padding: 0 2rem; }
-.calc-input { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px; padding: 2rem 1.75rem; margin-bottom: 1.5rem; }
-.calc-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.6rem 0; }
-.calc-row label { color: var(--text); font-size: 0.95rem; flex: 1; }
-.calc-row input, .calc-row select { font-size: 16px; padding: 0.55rem 0.8rem; border: 1px solid var(--border); border-radius: 4px; background: var(--white); min-width: 180px; }
-.results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-.result-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1.25rem; }
-.result-card h4 { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 0.6rem; }
-.result-card .price { font-family: 'DM Serif Display', serif; font-size: 1.7rem; color: var(--primary); margin: 0.4rem 0; }
-.result-card .breakdown { font-size: 0.78rem; color: var(--text-soft); }
-.result-card.cheapest { border-color: var(--primary); background: linear-gradient(135deg, var(--bg-card), rgba(184,148,106,0.08)); }
-.result-card.cheapest::before { content: '🏆 Cheapest'; display: inline-block; background: var(--primary); color: var(--white); padding: 0.15rem 0.6rem; border-radius: 50px; font-size: 0.7rem; margin-bottom: 0.5rem; }
-.calc-cta { margin-top: 2rem; text-align: center; }
-.calc-cta a { display: inline-block; background: var(--primary); color: var(--white); padding: 0.95rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 500; }
-@media (max-width: 600px) { .calc-row { flex-direction: column; align-items: stretch; } .calc-row input, .calc-row select { width: 100%; min-width: 0; } }
-</style>
-</head>
-<body>
 
-<nav class="nav" id="nav">
-<div class="nav-inner">
-<a class="nav-logo" href="/en/">AutoDev AI</a>
-<div class="nav-links" id="navLinks">
-<a href="/en/services.html">Services</a>
-<a href="/en/bot-cloud.html">Cloud Hosting</a>
-<a href="/en/ai-model.html">AI Model</a>
-<a class="active" href="/en/tools/">Tools</a>
-<a href="/en/pricing.html">Pricing</a>
-<a href="/en/blog/">Blog</a>
-<a href="/en/about.html">About</a>
-<a class="nav-cta" href="/en/contact.html">Free Quote</a>
-</div>
-<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">&#9776;</button>
-</div>
-</nav>
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+</head>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/en/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/en/services.html">Services</a><a href="/en/portfolio.html">Work</a><a href="/en/ai-model.html">AI Model</a><a href="/en/blog/">Insights</a><a href="/en/about.html">About</a><a href="/en/contact.html">Contact</a><a class="v2c-cta" href="/en/contact.html" data-analytics="nav_contact">Discuss a project</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="Open menu" data-open-label="Open menu" data-close-label="Close menu">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article v2c-tool">
+
+
 
 <section class="calc-hero">
  <h1>AI Token Cost Calculator</h1>
@@ -77,7 +44,7 @@
 
 <div class="calc-wrap">
 <div class="calc-input">
- <h3 style="font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:1rem;">Your Monthly Usage</h3>
+ <h3>Your Monthly Usage</h3>
  <div class="calc-row">
   <label>Input tokens (questions/prompts)</label>
   <input type="number" id="inputTokens" value="500000" step="100000">
@@ -102,15 +69,13 @@
 </div>
 
 <div class="calc-cta">
- <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:1rem;">Need help choosing the right model + integration?</p>
+ <p>Need help choosing the right model + integration?</p>
  <a href="/en/contact.html?ref=token-calculator" onclick="gtag('event','click',{event_category:'tool_cta',event_label:'token_calc_consult_en'})">Free 30-Min Consult →</a>
 </div>
 
 </div>
 
-<footer style="padding:3rem 2rem 2rem;text-align:center;color:var(--text-muted);font-size:0.85rem;border-top:1px solid var(--border);background:var(--bg);">
- <p>© 2026 AutoDev AI · <a href="/en/tools/" style="color:var(--primary);">More Tools</a> · <a href="/tools/token-cost-calculator.html" style="color:var(--primary);">繁中版</a></p>
-</footer>
+
 
 <script>
 // 2026 model pricing (USD per 1M tokens)
@@ -147,5 +112,6 @@ calc();
 
 <script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;var H='☰',X='✕';function set(o){l.classList.toggle('show',o);b.innerHTML=o?X:H;}b.addEventListener('click',function(e){e.stopPropagation();set(!l.classList.contains('show'));});document.addEventListener('click',function(e){if(l.classList.contains('show')&&!l.contains(e.target)&&!b.contains(e.target))set(false);});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
 <script defer src="/lang.js?v=20260505"></script>
+</main><!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>Automation & Digital Systems Studio. Telegram-first systems that turn complex work into clear workflows.</p></div><div><h3>Studio</h3><a href="/en/services.html">Services</a><a href="/en/portfolio.html">Work</a><a href="/en/pricing.html">Project scope</a><a href="/en/contact.html">Discuss a project</a></div><div><h3>Labs & Tools</h3><a href="/en/bot-cloud.html">Bot Cloud</a><a href="/en/ai-model.html">AI Model</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/en/tools/">Tools</a><a href="/en/demo.html">Demo</a></div><div><h3>More</h3><a href="https://chat.autodev-ai.com/form">Existing form</a><a href="/en/blog/">Insights</a><a href="https://liff.line.me/2009694545-LJmZCiEX">Existing LIFF enquiry</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/en/privacy.html">Privacy</a> · <a href="/en/terms.html">Terms</a> · <a href="/en/disclaimer.html">Disclaimer</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>
