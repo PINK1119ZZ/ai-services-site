@@ -28,7 +28,7 @@ python3 scripts/apply_blog_chrome.py blog/your-new-slug-2026.html
 ```
 
 - 這一步是保險，不是選項。腳本是幂等的：如果外框標記已經是正確格式，重跑不會產生任何改動；如果不小心動到了外框（見下），腳本會用正確的 v2 外框覆蓋回去。
-- 跑完後用 `git diff <新文章路徑>` 檢查：改動應該只在正文與 head 佔位處，外框標記本身不該出現在 diff 裡（代表外框沒被破壞）。
+- 跑完後檢查：`grep -c "v2-chrome:header" <新文章路徑>` 與 `grep -c "v2-chrome:footer" <新文章路徑>` 都是 1，且再跑一次 `python3 scripts/apply_blog_chrome.py <新文章路徑>` 顯示 `0 changed`（新檔尚未被 Git 追蹤，不能用 `git diff` 判斷）。
 
 ## 3. 絕對不要動的部分
 

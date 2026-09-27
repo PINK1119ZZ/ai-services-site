@@ -131,3 +131,17 @@ test('scripts load the shared v2 chrome and chat/lang helpers once', () => {
     assert.equal((html.match(/lang\.js\?v=20260505/g) || []).length, 1, `${blog} lang.js loaded once`);
   }
 });
+
+test("every post card has a title and an article link", () => {
+  for (const [file, prefix] of [["blog/index.html", "/blog/"], ["en/blog/index.html", "/en/blog/"]]) {
+    const html = readFileSync(new URL(file, root), "utf8");
+    const grid = html.slice(html.indexOf('<div class="v2-post-grid">'));
+    const opens = [...grid.matchAll(/<(div|a)\b[^>]*class="[^"]*v2-post-card[^"]*"[^>]*>/g)];
+    assert.ok(opens.length > 0, `${file} has cards`);
+    for (let n = 0; n < opens.length; n += 1) {
+      const card = grid.slice(opens[n].index, n + 1 < opens.length ? opens[n + 1].index : undefined);
+      assert.match(card, /<h3\b[^>]*>[^<\s][\s\S]*?<\/h3>|<h3\b[^>]*><a\b[^>]*>[^<\s]/, `${file} card ${n} title`);
+      assert.ok(card.includes(`href="${prefix}`), `${file} card ${n} article link`);
+    }
+  }
+});

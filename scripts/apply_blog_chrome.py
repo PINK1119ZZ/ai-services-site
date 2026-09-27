@@ -384,6 +384,7 @@ def compute_removal_spans(html: str, protect_spans, english: bool):
         "footer_disclosure": False,
         "disclosure_text": None,
         "disclosure_source_text": None,
+        "disclosure_source_html": None,
         "no_nav_found": False,
         "no_footer_found": False,
     }
@@ -445,6 +446,7 @@ def compute_removal_spans(html: str, protect_spans, english: bool):
             info["footer_disclosure"] = True
             info["disclosure_text"] = disclosure_text
             info["disclosure_source_text"] = source_text
+            info["disclosure_source_html"] = inner
         # 'none' -> leave in place silently (not a site-footer signal at all)
     if not footer_found_any:
         info["no_footer_found"] = True
@@ -709,6 +711,35 @@ def strip_removed_spans(html: str, removal_ops):
     return "".join(out)
 
 
+_INLINE_TAGS_RE = re.compile(r"</?(?:strong|em|b|i|small|code|abbr|mark|u|sup|sub|span)\b[^>]*>", re.I)
+_SENTENCE_BOUNDARY = "\x1f\x03。．.！!？?·|｜:："
+_SENTENCE_END = "。．.！!？?"
+_SENTENCE_OPENER_RE = re.compile(r"^(本文|本站|This |These |We )")
+
+
+def disclosure_is_whole_sentence(footer_inner: str, text: str) -> bool:
+    """Independent check that the extracted disclosure was not cut out of the
+    middle of a sentence (e.g. a sentence that continues through a link).
+    Links become explicit markers, other inline tags vanish, block tags become
+    a boundary; the extracted text must start and end on a boundary."""
+    s = re.sub(r"<a\b[^>]*>", "\x02", footer_inner, flags=re.I)
+    s = re.sub(r"</a\s*>", "\x03", s, flags=re.I)
+    s = _INLINE_TAGS_RE.sub("", s)
+    s = re.sub(r"<[^>]+>", "\x1f", s)
+    s = re.sub(r"\s+", " ", html_entities.unescape(s))
+    t = re.sub(r"\s+", " ", text).strip()
+    i = s.find(t)
+    if i < 0:
+        return False
+    raw_before = s[:i]
+    before = raw_before.rstrip(" ")
+    after = s[i + len(t):].lstrip(" ")
+    start_ok = (before == "" or before[-1] in _SENTENCE_BOUNDARY
+                or (raw_before.endswith(" ") and before[-1] != "\x02" and _SENTENCE_OPENER_RE.match(t)))
+    end_ok = (t[-1] in _SENTENCE_END and after[:1] != "\x03") or after == "" or after[0] in "\x1f\x02·|｜"
+    return bool(start_ok and end_ok)
+
+
 def verify_one(path: Path):
     rel = path.relative_to(REPO_ROOT).as_posix()
     baseline = git_show_head(rel)
@@ -758,6 +789,8 @@ def verify_one(path: Path):
         ).strip()
         if p_text_norm not in source_norm:
             return False, "disclosure text is not a substring of the baseline footer text"
+        if not disclosure_is_whole_sentence(info["disclosure_source_html"] or "", p_text_norm):
+            return False, "disclosure text does not start and end on a sentence boundary in the baseline footer"
 
     if CSS_LINK_TAG in current_stripped:
         current_stripped = current_stripped.replace(CSS_LINK_TAG + "\n", "", 1)
