@@ -1,0 +1,748 @@
+/* ==========================================================================
+   AutoDev 2.0 — Blog article chrome (v2-chrome)
+   ==========================================================================
+   Standalone stylesheet for the unified header/footer "frame" wrapped around
+   every blog article by scripts/apply_blog_chrome.py between the
+   <!-- v2-chrome:header --> / <!-- v2-chrome:footer --> comment markers, plus
+   the <!-- v2-chrome:disclosure --> aside that same script substitutes for a
+   legacy footer that also carried disclosure-worthy prose.
+
+   This file does NOT depend on style.css. It ships its own copy of the
+   AutoDev 2.0 palette/type/spacing tokens (prefixed --v2c-*, distinct from
+   the commercial pages' --v2-* tokens) so it keeps working even on pages
+   that never load style.css.
+
+   Isolation strategy: every frame selector is anchored with `html body` and
+   the frame element's own id (#nav / #navLinks / #mobileMenuBtn) or class
+   (.v2c-footer), and every structural/visual property a legacy inline
+   <style> block could plausibly target (display, position, background,
+   color, font, spacing, border, shadow, sizing, transform, opacity, z-index,
+   box-sizing) is set explicitly with !important. Legacy per-article rules
+   such as `#nav{...}`, `#nav.scrolled{...}`, `#navLinks.active{...}`,
+   `nav a{...}`, `a{...}`, `footer{...}`, `header{...}` therefore cannot
+   change the frame's appearance, and legacy state classes toggled by old
+   inline <script> blocks (`.active`, `.open`, `.scrolled`) are harmless here
+   because this file never reads them for the frame itself.
+   ========================================================================== */
+
+html body #nav.v2c-header,
+html body .v2c-footer,
+html body .v2c-disclosure {
+  --v2c-paper: #f7f4ee;
+  --v2c-paper-strong: #fffdfa;
+  --v2c-ink: #171714;
+  --v2c-muted: #65635d;
+  --v2c-line: #d9d4ca;
+  --v2c-gold: #8a6537;
+  --v2c-gold-soft: #eadfcf;
+  --v2c-night: #171816;
+  --v2c-night-soft: #242520;
+  --v2c-white: #ffffff;
+  --v2c-radius: 24px;
+  --v2c-shadow: 0 24px 70px rgba(36, 31, 24, .09);
+  --v2c-max: 1180px;
+  --v2c-font: Inter, "Noto Sans TC", system-ui, sans-serif;
+}
+
+/* Shared reset for the whole frame (header, footer, disclosure aside) and
+   every one of their descendants, consolidated once instead of per-block. */
+html body #nav.v2c-header, html body #nav.v2c-header *,
+html body .v2c-footer, html body .v2c-footer *,
+html body .v2c-disclosure, html body .v2c-disclosure * {
+  box-sizing: border-box !important;
+}
+
+/* ─────────────────────────── Header / navigation ─────────────────────────── */
+
+html body #nav.v2c-header {
+  all: revert !important;
+  display: block !important;
+  position: sticky !important;
+  top: 0 !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  inset: auto !important;
+  z-index: 999 !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(23, 23, 20, .08) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: rgba(247, 244, 238, .92) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  backdrop-filter: blur(18px) !important;
+  color: var(--v2c-ink) !important;
+  font-family: var(--v2c-font) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  box-sizing: border-box !important;
+}
+
+html body #nav.v2c-header.scrolled,
+html body #nav.v2c-header.active,
+html body #nav.v2c-header.open {
+  /* Legacy inline <script> blocks toggle these classes on #nav for their own
+     (now-removed) chrome. Re-declaring the base look here makes sure the
+     class alone can never change the frame's appearance. */
+  background: rgba(247, 244, 238, .92) !important;
+  box-shadow: none !important;
+}
+
+html body #nav.v2c-header > .v2c-inner {
+  all: revert !important;
+  display: flex !important;
+  position: relative !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1.5rem !important;
+  width: min(calc(100% - 40px), var(--v2c-max)) !important;
+  max-width: var(--v2c-max) !important;
+  margin: 0 auto !important;
+  padding: 1rem 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: inherit !important;
+  font-family: var(--v2c-font) !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  box-sizing: border-box !important;
+}
+
+html body #nav.v2c-header a.v2c-logo {
+  all: revert !important;
+  display: inline-flex !important;
+  position: static !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: var(--v2c-ink) !important;
+  font-family: var(--v2c-font) !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -.03em !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  box-sizing: border-box !important;
+}
+
+html body #nav.v2c-header a.v2c-logo span {
+  color: var(--v2c-gold) !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+
+html body #navLinks.v2c-links {
+  all: revert !important;
+  display: flex !important;
+  position: static !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 1.55rem !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: inherit !important;
+  font-family: var(--v2c-font) !important;
+  font-size: .82rem !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  box-sizing: border-box !important;
+}
+
+html body #navLinks.v2c-links > a {
+  all: revert !important;
+  display: inline-block !important;
+  position: static !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: var(--v2c-muted) !important;
+  font-family: var(--v2c-font) !important;
+  font-size: .82rem !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  box-sizing: border-box !important;
+}
+
+html body #navLinks.v2c-links > a:hover,
+html body #navLinks.v2c-links > a.active,
+html body #navLinks.v2c-links > a[aria-current="page"] {
+  color: var(--v2c-ink) !important;
+}
+
+html body #navLinks.v2c-links > a.v2c-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 40px !important;
+  padding: .55rem 1.15rem !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: var(--v2c-ink) !important;
+  color: var(--v2c-white) !important;
+  font-weight: 650 !important;
+}
+
+html body #mobileMenuBtn.v2c-toggle {
+  all: revert !important;
+  display: none !important;
+  position: static !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: .5rem !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: var(--v2c-ink) !important;
+  font-family: var(--v2c-font) !important;
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+/* ───────────────────────────── Mobile navigation ───────────────────────────── */
+
+@media (max-width: 768px) {
+  html body #nav.v2c-header > .v2c-inner {
+    width: min(calc(100% - 28px), var(--v2c-max)) !important;
+    padding: .85rem 0 !important;
+  }
+
+  html body #navLinks.v2c-links {
+    display: none !important;
+  }
+
+  html body #navLinks.v2c-links.show {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    position: absolute !important;
+    top: 100% !important;
+    right: 14px !important;
+    left: 14px !important;
+    gap: .35rem !important;
+    padding: 1.1rem 1.3rem !important;
+    border: 1px solid var(--v2c-line) !important;
+    border-radius: 18px !important;
+    background: var(--v2c-paper-strong) !important;
+    box-shadow: var(--v2c-shadow) !important;
+    z-index: 998 !important;
+  }
+
+  html body #navLinks.v2c-links.show > a {
+    padding: .6rem .2rem !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  html body #navLinks.v2c-links.show > a.v2c-cta {
+    justify-content: center !important;
+    margin-top: .3rem !important;
+  }
+
+  html body #mobileMenuBtn.v2c-toggle {
+    display: flex !important;
+  }
+}
+
+/* ─────────────────────────────────── Footer ─────────────────────────────────── */
+
+html body .v2c-footer {
+  all: revert !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 3.5rem 0 2rem !important;
+  border: 0 !important;
+  border-top: 1px solid var(--v2c-line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: var(--v2c-paper) !important;
+  color: var(--v2c-ink) !important;
+  font-family: var(--v2c-font) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  text-align: left !important;
+  transform: none !important;
+  opacity: 1 !important;
+  box-sizing: border-box !important;
+}
+
+html body .v2c-footer > .v2c-inner {
+  display: block !important;
+  position: static !important;
+  width: min(calc(100% - 40px), var(--v2c-max)) !important;
+  max-width: var(--v2c-max) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+html body .v2c-footer .v2c-footer-grid {
+  display: grid !important;
+  grid-template-columns: 1.5fr repeat(3, 1fr) !important;
+  gap: 2rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+html body .v2c-footer .v2c-footer-grid > div {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+html body .v2c-footer h2 {
+  display: block !important;
+  margin: 0 0 .6rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--v2c-ink) !important;
+  font-family: var(--v2c-font) !important;
+  font-size: 1.1rem !important;
+  font-weight: 650 !important;
+  line-height: 1.3 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+html body .v2c-footer p {
+  max-width: 360px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--v2c-muted) !important;
+  font-family: var(--v2c-font) !important;
+  font-size: .85rem !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+html body .v2c-footer h3 {
+  display: block !important;
+  margin: 0 0 .8rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--v2c-ink) !important;
+  font-family: var(--v2c-font) !important;
+  font-size: .75rem !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+}
+
+html body .v2c-footer .v2c-footer-grid a {
+  all: revert !important;
+  display: block !important;
+  position: static !important;
+  margin: .45rem 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: var(--v2c-muted) !important;
+  font-family: var(--v2c-font) !important;
+  font-size: .82rem !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  box-sizing: border-box !important;
+}
+
+html body .v2c-footer .v2c-footer-grid a:hover {
+  color: var(--v2c-ink) !important;
+}
+
+html body .v2c-footer .v2c-footer-bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 1rem !important;
+  margin: 3rem 0 0 !important;
+  padding: 1.3rem 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--v2c-line) !important;
+  background: transparent !important;
+  color: var(--v2c-muted) !important;
+  font-family: var(--v2c-font) !important;
+  font-size: .72rem !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+html body .v2c-footer .v2c-footer-bottom a {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--v2c-muted) !important;
+  font-size: .72rem !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+}
+
+html body .v2c-footer .v2c-footer-bottom a:hover {
+  color: var(--v2c-ink) !important;
+}
+
+@media (max-width: 900px) {
+  html body .v2c-footer .v2c-footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr !important;
+  }
+
+  html body .v2c-footer .v2c-footer-grid > div:last-child {
+    grid-column: 2 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .v2c-footer .v2c-footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  html body .v2c-footer .v2c-footer-grid > div:first-child {
+    grid-column: 1 / -1 !important;
+  }
+
+  html body .v2c-footer .v2c-footer-grid > div:last-child {
+    grid-column: auto !important;
+  }
+}
+
+@media (max-width: 520px) {
+  html body .v2c-footer {
+    padding: 2.75rem 0 1.75rem !important;
+  }
+
+  html body .v2c-footer > .v2c-inner {
+    width: min(calc(100% - 28px), var(--v2c-max)) !important;
+  }
+
+  html body .v2c-footer .v2c-footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body .v2c-footer .v2c-footer-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* ───────────────────────────────── Disclosure aside ─────────────────────────────── */
+/* scripts/apply_blog_chrome.py replaces a legacy footer that also carried
+   disclosure-worthy prose (affiliate/commission wording, or other
+   article-specific attribution) with this aside, in the footer's old
+   position, keeping that sentence visible without the rest of the old
+   footer shell (copyright + site links move to the v2 footer instead). */
+
+html body .v2c-disclosure {
+  all: revert !important;
+  display: block !important;
+  position: static !important;
+  z-index: 1 !important;
+  width: min(calc(100% - 40px), var(--v2c-max)) !important;
+  max-width: var(--v2c-max) !important;
+  margin: 1.5rem auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: var(--v2c-muted) !important;
+  font-family: var(--v2c-font) !important;
+  font-size: .78rem !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+html body .v2c-disclosure p {
+  all: revert !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+  font: inherit !important;
+  text-align: inherit !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 520px) {
+  html body .v2c-disclosure {
+    width: min(calc(100% - 28px), var(--v2c-max)) !important;
+  }
+}
+
+/* ───────────────────────────── Print / reduced motion ───────────────────────────── */
+
+@media print {
+  html body #nav.v2c-header,
+  html body .v2c-footer,
+  html body .v2c-disclosure {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body #nav.v2c-header, html body #nav.v2c-header *,
+  html body .v2c-footer, html body .v2c-footer *,
+  html body .v2c-disclosure, html body .v2c-disclosure * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ==========================================================================
+   v2c-article — content typography for the new-article template
+   (docs/templates/blog-article-v2.html / .en.html). Existing migrated
+   articles keep their own inline styles and do NOT use this class.
+   ========================================================================== */
+
+.v2c-article {
+  all: revert;
+  box-sizing: border-box;
+  width: min(calc(100% - 40px), 760px);
+  margin: 0 auto;
+  padding: 3rem 0 5rem;
+  color: var(--v2c-ink, #171714);
+  font-family: var(--v2c-font, Inter, "Noto Sans TC", system-ui, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+
+.v2c-article * {
+  box-sizing: border-box;
+}
+
+.v2c-article h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.9rem, 4.5vw, 2.75rem);
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+
+.v2c-article h2 {
+  margin: 2.75rem 0 1rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 650;
+  line-height: 1.3;
+  letter-spacing: -.01em;
+}
+
+.v2c-article h3 {
+  margin: 2rem 0 .8rem;
+  font-size: 1.2rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.v2c-article p {
+  margin: 0 0 1.4rem;
+  color: var(--v2c-ink, #171714);
+}
+
+.v2c-article .v2c-lede {
+  color: var(--v2c-muted, #65635d);
+  font-size: 1.2rem;
+  line-height: 1.65;
+}
+
+.v2c-article ul,
+.v2c-article ol {
+  margin: 0 0 1.4rem;
+  padding-left: 1.4rem;
+}
+
+.v2c-article li {
+  margin: 0 0 .5rem;
+}
+
+.v2c-article a {
+  color: var(--v2c-gold, #8a6537);
+  text-decoration: underline;
+  text-decoration-color: var(--v2c-line, #d9d4ca);
+}
+
+.v2c-article a:hover {
+  text-decoration-color: currentColor;
+}
+
+.v2c-article blockquote {
+  margin: 1.6rem 0;
+  padding: .2rem 0 .2rem 1.2rem;
+  border-left: 2px solid var(--v2c-gold, #8a6537);
+  color: var(--v2c-muted, #65635d);
+  font-size: 1.05rem;
+}
+
+.v2c-article pre {
+  margin: 1.6rem 0;
+  padding: 1.1rem 1.3rem;
+  border-radius: 14px;
+  background: var(--v2c-night, #171816);
+  color: var(--v2c-white, #fff);
+  font-size: .85rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.v2c-article code {
+  padding: .15rem .4rem;
+  border-radius: 6px;
+  background: var(--v2c-gold-soft, #eadfcf);
+  font-size: .88em;
+}
+
+.v2c-article pre code {
+  padding: 0;
+  background: transparent;
+}
+
+.v2c-article table {
+  width: 100%;
+  margin: 1.6rem 0;
+  border-collapse: collapse;
+  font-size: .92rem;
+}
+
+.v2c-article th,
+.v2c-article td {
+  padding: .7rem .9rem;
+  border-bottom: 1px solid var(--v2c-line, #d9d4ca);
+  text-align: left;
+}
+
+.v2c-article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.v2c-article .v2c-cta-box {
+  margin: 2.5rem 0;
+  padding: 1.6rem 1.8rem;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: var(--v2c-radius, 24px);
+  background: var(--v2c-paper-strong, #fffdfa);
+}
+
+.v2c-article .v2c-cta-box a.v2c-button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem 1.3rem;
+  margin-top: .8rem;
+  border-radius: 999px;
+  background: var(--v2c-ink, #171714);
+  color: var(--v2c-white, #fff);
+  font-weight: 650;
+  font-size: .9rem;
+  text-decoration: none;
+}
+
+@media (max-width: 520px) {
+  .v2c-article {
+    width: min(calc(100% - 28px), 760px);
+    padding: 2.25rem 0 3.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v2c-article * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
