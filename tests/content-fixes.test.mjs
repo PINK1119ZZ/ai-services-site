@@ -163,3 +163,13 @@ test("tools/vps-compare.html: CPU/RAM/storage/sort selects are wired to a change
   assert.match(html, /sortBy === 'cpu'/);
   assert.match(html, /sortBy === 'ram'/);
 });
+
+test("en/demo JSON-LD description is the English meta description", () => {
+  const html = read("en/demo.html");
+  const meta = html.match(/<meta content="([^"]*)" name="description"/)[1].replace(/&amp;/g, "&");
+  const page = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+    .map((m) => JSON.parse(m[1]))
+    .find((d) => d.url === "https://autodev-ai.com/en/demo.html");
+  assert.equal(page.description, meta);
+  assert.doesNotMatch(page.description, /[一-鿿]/);
+});
