@@ -508,3 +508,34 @@ body.v2-site { margin: 0; background: var(--v2-paper); color: var(--v2-ink); fon
 .v2-site .v2-post-card .blog-card-link:hover { text-decoration: underline; }
 @media (max-width:900px) { .v2-site .v2-post-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width:640px) { .v2-site .v2-post-grid { grid-template-columns: 1fr; } }
+
+/* ───── AUTODEV 2.0 PRODUCT PAGES (bot-cloud, ai-model, line-bot-saas, demo) ───── */
+.v2-site .v2-card.featured { border-color: var(--v2-gold); }
+.v2-site .v2-scene-card { padding: 0; overflow: hidden; }
+.v2-site .v2-scene-card img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: calc(var(--v2-radius) - 10px) calc(var(--v2-radius) - 10px) 0 0; }
+.v2-site .v2-scene-card .v2-scene-body { padding: 1.1rem clamp(1.6rem,4vw,2.5rem) clamp(1.6rem,4vw,2.5rem); }
+.v2-site .kira-reel-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }
+.v2-site .kira-reel-video { position: relative; border-radius: var(--v2-radius); overflow: hidden; aspect-ratio: 9/16; background: var(--v2-line); box-shadow: var(--v2-shadow); }
+.v2-site .kira-reel-video img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.v2-site .kira-reel-video.lazy-video { cursor: pointer; transition: transform .3s; }
+.v2-site .kira-reel-video.lazy-video:hover { transform: scale(1.02); }
+.v2-site .kira-reel-video .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 60px; height: 60px; border-radius: 50%; background: rgba(255,253,250,.92); color: var(--v2-ink); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; padding-left: 4px; transition: transform .2s,background .2s; }
+.v2-site .kira-reel-video.lazy-video:hover .play-icon { transform: translate(-50%,-50%) scale(1.08); background: var(--v2-white); }
+.v2-site .kira-reel-video .reel-caption { position: absolute; bottom: .6rem; left: 50%; transform: translateX(-50%); background: rgba(23,23,20,.65); color: var(--v2-white); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 999px; }
+.v2-site .reel-meta { margin: 2rem auto 0; padding-top: 1rem; max-width: 480px; border-top: 1px solid var(--v2-line); color: var(--v2-muted); font-size: .8rem; letter-spacing: .04em; text-align: center; }
+.v2-site .editorial-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.1rem; }
+.v2-site .editorial-card { position: relative; margin: 0; aspect-ratio: 3/4; overflow: hidden; border-radius: var(--v2-radius); background: var(--v2-line); cursor: zoom-in; transition: transform .3s; }
+.v2-site .editorial-card:hover { transform: translateY(-4px); }
+.v2-site .editorial-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.v2-site .editorial-card figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.2rem 1rem .8rem; background: linear-gradient(to top,rgba(23,23,20,.85),transparent); color: var(--v2-white); font-size: .76rem; line-height: 1.4; }
+.v2-site .editorial-card figcaption strong { display: inline-block; margin-right: .4rem; padding: .1rem .5rem; border-radius: 999px; background: var(--v2-gold); color: var(--v2-white); font-size: .68rem; letter-spacing: .05em; }
+.v2-site .editorial-card figcaption em { font-style: normal; opacity: .78; font-size: .68rem; }
+.v2-site .lightbox { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; padding: 2rem; background: rgba(15,13,10,.94); backdrop-filter: blur(8px); cursor: zoom-out; }
+.v2-site .lightbox.show { display: flex; animation: v2FadeIn .25s ease; }
+.v2-site .lightbox img { max-width: 95vw; max-height: 90vh; object-fit: contain; border-radius: 12px; }
+.v2-site .lightbox-close { position: absolute; top: 1.25rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.1); color: var(--v2-white); font-size: 1.1rem; cursor: pointer; }
+.v2-site .lightbox-close:hover { background: rgba(255,255,255,.2); }
+.v2-site .lightbox-caption { position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); max-width: 90vw; padding: .55rem 1.15rem; border-radius: 999px; background: rgba(0,0,0,.6); color: var(--v2-white); font-size: .82rem; letter-spacing: .04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@keyframes v2FadeIn { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width:900px) { .v2-site .kira-reel-grid,.v2-site .editorial-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width:520px) { .v2-site .kira-reel-grid,.v2-site .editorial-grid { grid-template-columns: 1fr; } }
