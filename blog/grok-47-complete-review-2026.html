@@ -96,129 +96,10 @@
   }
   </script>
 
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #0a0e1a; color: #e2e8f0; line-height: 1.7; }
-    a { color: #60a5fa; text-decoration: none; }
-    a:hover { color: #93c5fd; text-decoration: underline; }
 
-    /* NAV */
-    nav { background: rgba(10,14,26,0.95); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
-    .nav-logo { font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .nav-links { display: flex; gap: 1.5rem; }
-    .nav-links a { color: #94a3b8; font-size: 0.9rem; }
-    .nav-links a:hover { color: #e2e8f0; }
-
-    /* HERO */
-    .hero { background: linear-gradient(135deg, #0a0e1a 0%, #1a0a2e 40%, #0d1b3e 100%); padding: 3rem 2rem 2rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .hero-badge { display: inline-block; background: rgba(239,68,68,0.2); border: 1px solid rgba(239,68,68,0.4); color: #fca5a5; border-radius: 20px; padding: 0.3rem 1rem; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: 0.05em; }
-    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; line-height: 1.3; max-width: 900px; margin: 0 auto 1rem; }
-    .hero h1 span { background: linear-gradient(135deg, #f59e0b, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero-meta { color: #64748b; font-size: 0.85rem; margin-top: 1rem; }
-    .hero-meta span { margin: 0 0.5rem; }
-
-    /* TLDR */
-    .tldr { background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(245,158,11,0.08)); border: 1px solid rgba(239,68,68,0.3); border-radius: 12px; padding: 1.5rem; max-width: 900px; margin: 2rem auto; }
-    .tldr h3 { color: #fca5a5; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; }
-    .tldr ul { padding-left: 1.2rem; }
-    .tldr li { color: #e2e8f0; margin-bottom: 0.4rem; font-size: 0.95rem; }
-
-    /* MAIN */
-    .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
-    h2 { font-size: 1.5rem; font-weight: 700; color: #f1f5f9; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(96,165,250,0.3); }
-    h3 { font-size: 1.15rem; font-weight: 600; color: #cbd5e1; margin: 1.5rem 0 0.75rem; }
-    p { margin-bottom: 1rem; color: #cbd5e1; }
-    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
-    li { margin-bottom: 0.4rem; color: #cbd5e1; }
-    strong { color: #f1f5f9; }
-
-    /* SPEC CARDS */
-    .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .spec-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1rem; text-align: center; }
-    .spec-card .label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
-    .spec-card .value { font-size: 1.3rem; font-weight: 700; color: #f59e0b; }
-    .spec-card .note { font-size: 0.75rem; color: #94a3b8; margin-top: 0.3rem; }
-
-    /* HIGHLIGHT BOX */
-    .highlight { background: rgba(245,158,11,0.08); border-left: 4px solid #f59e0b; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
-    .highlight p { margin: 0; color: #fde68a; }
-    .info-box { background: rgba(96,165,250,0.08); border-left: 4px solid #60a5fa; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
-    .info-box p { margin: 0; color: #bfdbfe; }
-    .warning-box { background: rgba(239,68,68,0.08); border-left: 4px solid #ef4444; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
-    .warning-box p { margin: 0; color: #fca5a5; }
-
-    /* TABLE */
-    .table-wrap { overflow-x: auto; margin: 1.5rem 0; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); }
-    table { width: 100%; border-collapse: collapse; min-width: 600px; }
-    thead { background: rgba(255,255,255,0.06); }
-    th { padding: 0.85rem 1rem; text-align: left; font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    td { padding: 0.85rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; color: #cbd5e1; }
-    tr:hover td { background: rgba(255,255,255,0.02); }
-    tr:last-child td { border-bottom: none; }
-    .winner { color: #4ade80; font-weight: 600; }
-    .second { color: #60a5fa; }
-    .third { color: #f59e0b; }
-
-    /* CODE */
-    pre { background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.25rem; overflow-x: auto; margin: 1.5rem 0; font-size: 0.85rem; line-height: 1.6; }
-    code { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
-    .code-label { display: inline-block; background: rgba(96,165,250,0.2); color: #93c5fd; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.5rem; }
-
-    /* RANKING */
-    .ranking-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; margin: 0.75rem 0; display: flex; align-items: center; gap: 1rem; }
-    .rank-badge { min-width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; }
-    .rank-1 { background: linear-gradient(135deg, #ffd700, #f59e0b); color: #1a1a1a; }
-    .rank-2 { background: linear-gradient(135deg, #e2e8f0, #94a3b8); color: #1a1a1a; }
-    .rank-3 { background: linear-gradient(135deg, #cd7f32, #92400e); color: #fff; }
-    .rank-4 { background: linear-gradient(135deg, #ef4444, #b91c1c); color: #fff; }
-    .rank-info h4 { color: #f1f5f9; font-size: 1rem; margin-bottom: 0.2rem; }
-    .rank-info p { color: #64748b; font-size: 0.85rem; margin: 0; }
-
-    /* SCENARIO CARDS */
-    .scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .scenario-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; }
-    .scenario-card .icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
-    .scenario-card h4 { color: #e2e8f0; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
-    .scenario-card p { font-size: 0.85rem; color: #94a3b8; margin: 0; }
-
-    /* CTA */
-    .cta-box { background: linear-gradient(135deg, rgba(96,165,250,0.12), rgba(167,139,250,0.08)); border: 1px solid rgba(96,165,250,0.3); border-radius: 16px; padding: 2rem; text-align: center; margin: 2.5rem 0; }
-    .cta-box h3 { color: #f1f5f9; font-size: 1.2rem; margin-bottom: 0.75rem; }
-    .cta-box p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.25rem; }
-    .btn { display: inline-block; padding: 0.75rem 2rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; transition: all 0.2s; margin: 0.4rem; }
-    .btn-primary { background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; box-shadow: 0 4px 14px rgba(59,130,246,0.35); }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59,130,246,0.5); color: white; text-decoration: none; }
-    .btn-secondary { background: rgba(255,255,255,0.07); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.15); }
-    .btn-secondary:hover { background: rgba(255,255,255,0.12); color: #e2e8f0; text-decoration: none; }
-    .btn-green { background: linear-gradient(135deg, #059669, #047857); color: white; box-shadow: 0 4px 14px rgba(5,150,105,0.35); }
-    .btn-green:hover { transform: translateY(-2px); color: white; text-decoration: none; }
-    .btn-orange { background: linear-gradient(135deg, #f59e0b, #d97706); color: #1a1a1a; box-shadow: 0 4px 14px rgba(245,158,11,0.35); }
-    .btn-orange:hover { transform: translateY(-2px); color: #1a1a1a; text-decoration: none; }
-
-    /* FAQ */
-    .faq-item { border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; margin-bottom: 0.75rem; overflow: hidden; }
-    .faq-q { background: rgba(255,255,255,0.04); padding: 1rem 1.25rem; font-weight: 600; color: #e2e8f0; cursor: pointer; font-size: 0.95rem; }
-    .faq-a { padding: 1rem 1.25rem; color: #94a3b8; font-size: 0.9rem; background: rgba(0,0,0,0.2); }
-
-    /* BREADCRUMB */
-    .breadcrumb { font-size: 0.8rem; color: #64748b; padding: 0.75rem 0; }
-    .breadcrumb a { color: #64748b; }
-    .breadcrumb span { margin: 0 0.4rem; }
-
-    /* FOOTER */
-    footer { background: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.07); padding: 2rem; text-align: center; color: #475569; font-size: 0.85rem; margin-top: 4rem; }
-    footer a { color: #64748b; }
-
-    @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .hero { padding: 2rem 1rem 1.5rem; }
-      .container { padding: 1rem; }
-      h2 { font-size: 1.25rem; }
-    }
-  </style>
 <link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article">
 
 
 
@@ -788,7 +669,7 @@ print()  # 換行</code></pre>
 
 </div>
 
-<!-- v2-chrome:disclosure --><aside class="v2c-disclosure" aria-label="聯盟行銷揭露"><p>本文含聯盟行銷連結，點擊後我們可能獲得佣金，不影響評測立場。</p></aside><!-- /v2-chrome:disclosure -->
+</main><!-- v2-chrome:disclosure --><aside class="v2c-disclosure" aria-label="聯盟行銷揭露"><p>本文含聯盟行銷連結，點擊後我們可能獲得佣金，不影響評測立場。</p></aside><!-- /v2-chrome:disclosure -->
 
 <!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>

@@ -13,9 +13,9 @@
 <meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
 <script type="application/ld+json">
@@ -32,91 +32,18 @@
 }
 </script>
 <meta name="theme-color" content="#FFF8F3">
-<style>
-.cv-wrap{max-width:1060px;margin:0 auto;padding:7rem 1.5rem 4rem;}
-.cv-header{text-align:center;margin-bottom:2.5rem;}
-.cv-header h1{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:900;line-height:1.2;margin-bottom:.8rem;}
-.cv-header p{color:var(--gray);font-size:1rem;max-width:680px;margin:0 auto;}
 
-/* Filter controls */
-.filter-bar{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem;padding:1.25rem;background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:14px;}
-.filter-label{font-size:.82rem;color:var(--gray);font-weight:700;width:100%;margin-bottom:.2rem;}
-.filter-btn{padding:.45rem 1rem;border:1.5px solid rgba(255,255,255,.12);border-radius:20px;background:transparent;color:var(--gray);font-size:.82rem;cursor:pointer;font-family:inherit;transition:all .18s;}
-.filter-btn:hover{border-color:rgba(196,165,123,.4);color:var(--light);}
-.filter-btn.active{border-color:var(--accent);background:rgba(196,165,123,.1);color:var(--accent);font-weight:700;}
-
-/* Currency toggle */
-.currency-toggle{display:flex;gap:.5rem;align-items:center;margin-bottom:1.5rem;}
-.currency-toggle label{font-size:.85rem;color:var(--gray);font-weight:600;}
-.toggle-btn{padding:.4rem .9rem;border:1.5px solid rgba(255,255,255,.12);border-radius:20px;background:transparent;color:var(--gray);font-size:.82rem;cursor:pointer;font-family:inherit;transition:all .18s;}
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+<style data-v2c-functional>.filter-btn.active{border-color:var(--accent);background:rgba(196,165,123,.1);color:var(--accent);font-weight:700;}
 .toggle-btn.active{border-color:var(--accent);background:rgba(196,165,123,.1);color:var(--accent);font-weight:700;}
-
-/* Tool cards */
-.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.2rem;margin-bottom:2.5rem;}
-.tool-card{background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:1.4rem;transition:border-color .2s;display:flex;flex-direction:column;}
-.tool-card:hover{border-color:rgba(196,165,123,.2);}
-.tool-card.highlight{border-color:rgba(196,165,123,.4);background:rgba(196,165,123,.04);}
-.tool-card.hidden{display:none;}
-.tool-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.9rem;}
-.tool-name{font-size:1.05rem;font-weight:900;color:var(--light);}
-.tool-badge{font-size:.72rem;padding:.25rem .6rem;border-radius:12px;font-weight:700;}
-.badge-free{background:rgba(100,220,140,.1);color:#7de8a8;}
-.badge-paid{background:rgba(196,165,123,.1);color:var(--accent);}
-.badge-usage{background:rgba(100,180,255,.1);color:#7ab8f5;}
-.badge-hot{background:rgba(255,100,100,.1);color:#ff8080;}
-.tool-price{margin-bottom:.9rem;}
-.price-main{font-size:1.7rem;font-weight:900;color:var(--light);line-height:1;}
-.price-usd{font-size:.85rem;color:var(--gray);margin-top:.2rem;}
-.price-note{font-size:.78rem;color:var(--gray);margin-top:.25rem;font-style:italic;}
-.tool-features{list-style:none;padding:0;margin:0 0 1rem;display:flex;flex-direction:column;gap:.4rem;}
-.tool-features li{font-size:.82rem;color:var(--gray);display:flex;gap:.5rem;align-items:flex-start;}
-.tool-features li::before{content:"✓";color:#7de8a8;flex-shrink:0;margin-top:1px;}
-.tool-features li.con::before{content:"✗";color:#ff8080;}
-.tool-cta{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.6rem 1.2rem;border-radius:10px;font-size:.85rem;font-weight:700;text-decoration:none;transition:opacity .2s;border:1.5px solid rgba(196,165,123,.3);color:var(--accent);}
-.tool-cta:hover{background:rgba(196,165,123,.08);opacity:.9;}
-.tool-cta.primary{background:linear-gradient(135deg,#c4a57b,#e8c97a);color:#1a1108;border:none;}
-
-/* Comparison summary */
-.summary-bar{background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:1.5rem;margin-bottom:2.5rem;}
-.summary-bar h3{font-size:1rem;font-weight:800;margin-bottom:1rem;}
-.summary-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.75rem;}
-.summary-stat{text-align:center;}
-.summary-stat .val{font-size:1.5rem;font-weight:900;color:var(--accent);}
-.summary-stat .lbl{font-size:.78rem;color:var(--gray);margin-top:.2rem;}
-
-/* Compare table */
-.compare-table-wrap{overflow-x:auto;margin-bottom:2.5rem;}
-.compare-table{width:100%;border-collapse:collapse;font-size:.83rem;}
-.compare-table th{background:var(--dark-2);color:var(--accent);font-weight:800;padding:.85rem .7rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.08);white-space:nowrap;}
-.compare-table td{padding:.75rem .7rem;border-bottom:1px solid rgba(255,255,255,.05);color:var(--gray);vertical-align:top;}
-.compare-table tr:hover td{background:rgba(255,255,255,.02);}
-.compare-table .tool-n{color:var(--light);font-weight:700;}
-.tick{color:#7de8a8;}
-.cross{color:#ff8080;}
-.best-tag{background:rgba(196,165,123,.15);color:var(--accent);font-size:.72rem;padding:.2rem .5rem;border-radius:8px;font-weight:700;white-space:nowrap;}
-.do-banner{background:linear-gradient(135deg,rgba(0,100,220,.15),rgba(0,60,150,.08));border:1px solid rgba(0,120,255,.2);border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:1.2rem;}
-.do-banner-text h4{font-size:1rem;font-weight:800;margin-bottom:.3rem;}
-.do-banner-text p{font-size:.85rem;color:var(--gray);margin-bottom:.6rem;}
-.do-banner-text a{color:#4da6ff;font-weight:700;font-size:.85rem;}
-.section-title{font-size:1.2rem;font-weight:900;margin-bottom:1.2rem;color:var(--light);}
-@media(max-width:600px){.tools-grid{grid-template-columns:1fr;}}
-</style>
+.tool-card.hidden{display:none;}</style>
 </head>
-<body>
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">AutoDev AI</a>
-    <div class="nav-links">
-      <a href="/blog/">文章</a>
-      <a href="/tools/">工具</a>
-      <a href="/about.html">關於</a>
-    </div>
-  </div>
-</nav>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article v2c-tool">
+
 
 <main class="cv-wrap">
   <div class="cv-header">
-    <p style="color:var(--accent);font-weight:700;font-size:.85rem;margin-bottom:.5rem;">💰 免費定價計算器 · 2026 年 9 月最新</p>
+    <p>💰 免費定價計算器 · 2026 年 9 月最新</p>
     <h1>AI Coding 工具定價比較器</h1>
     <p>Cursor vs Windsurf vs GitHub Copilot vs Claude Code vs Devin vs Gemini CLI vs Kilo Code。<br>7 款工具最新定價，台幣換算，找出最划算的 AI Coding 工具組合。</p>
   </div>
@@ -410,36 +337,36 @@
 
   <!-- Scenario Recommendations -->
   <p class="section-title">🎯 場景推薦</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-bottom:2.5rem;">
-    <div style="background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.2rem;">
-      <div style="font-size:1.3rem;margin-bottom:.5rem;">💸 最省預算</div>
-      <div style="font-weight:800;color:var(--light);margin-bottom:.4rem;">Gemini CLI + Copilot（學生）</div>
-      <div style="font-size:.82rem;color:var(--gray);">月費 $0。Gemini CLI 免費，學生/教師申請 Copilot 也免費。唯功能有限制。</div>
+  <div>
+    <div>
+      <div>💸 最省預算</div>
+      <div>Gemini CLI + Copilot（學生）</div>
+      <div>月費 $0。Gemini CLI 免費，學生/教師申請 Copilot 也免費。唯功能有限制。</div>
     </div>
-    <div style="background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.2rem;">
-      <div style="font-size:1.3rem;margin-bottom:.5rem;">⚡ 個人開發者性價比</div>
-      <div style="font-weight:800;color:var(--light);margin-bottom:.4rem;">Cursor Pro（$20）</div>
-      <div style="font-size:.82rem;color:var(--gray);">平衡功能與價格。500次 Claude Sonnet + 無限 AI 補全，大多數獨立開發者的首選。</div>
+    <div>
+      <div>⚡ 個人開發者性價比</div>
+      <div>Cursor Pro（$20）</div>
+      <div>平衡功能與價格。500次 Claude Sonnet + 無限 AI 補全，大多數獨立開發者的首選。</div>
     </div>
-    <div style="background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.2rem;">
-      <div style="font-size:1.3rem;margin-bottom:.5rem;">🏢 企業/團隊</div>
-      <div style="font-weight:800;color:var(--light);margin-bottom:.4rem;">GitHub Copilot Business（$19/人）</div>
-      <div style="font-size:.82rem;color:var(--gray);">支援所有 IDE、Teams 整合、企業安全政策、程式碼不進入訓練資料。</div>
+    <div>
+      <div>🏢 企業/團隊</div>
+      <div>GitHub Copilot Business（$19/人）</div>
+      <div>支援所有 IDE、Teams 整合、企業安全政策、程式碼不進入訓練資料。</div>
     </div>
-    <div style="background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.2rem;">
-      <div style="font-size:1.3rem;margin-bottom:.5rem;">🤖 最強 AI Agent</div>
-      <div style="font-weight:800;color:var(--light);margin-bottom:.4rem;">Claude Code Max（$100-200/月）</div>
-      <div style="font-size:.82rem;color:var(--gray);">需要完整 Agent 控制（bash、DB、API）。適合 DevOps 工程師和複雜自動化任務。</div>
+    <div>
+      <div>🤖 最強 AI Agent</div>
+      <div>Claude Code Max（$100-200/月）</div>
+      <div>需要完整 Agent 控制（bash、DB、API）。適合 DevOps 工程師和複雜自動化任務。</div>
     </div>
-    <div style="background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.2rem;">
-      <div style="font-size:1.3rem;margin-bottom:.5rem;">💥 試試新趨勢</div>
-      <div style="font-weight:800;color:var(--light);margin-bottom:.4rem;">Devin（$20 起）</div>
-      <div style="font-size:.82rem;color:var(--gray);">原價 $500 降到 $20，現在入場成本極低。適合想體驗完全自主 AI 工程師的開發者。</div>
+    <div>
+      <div>💥 試試新趨勢</div>
+      <div>Devin（$20 起）</div>
+      <div>原價 $500 降到 $20，現在入場成本極低。適合想體驗完全自主 AI 工程師的開發者。</div>
     </div>
-    <div style="background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.2rem;">
-      <div style="font-size:1.3rem;margin-bottom:.5rem;">🎨 設計師/副業開發</div>
-      <div style="font-weight:800;color:var(--light);margin-bottom:.4rem;">Windsurf Pro（$15/月）</div>
-      <div style="font-size:.82rem;color:var(--gray);">比 Cursor 便宜 $5，Cascade 模式適合描述任務讓 AI 自動執行，不需深入 Cursor 設置。</div>
+    <div>
+      <div>🎨 設計師/副業開發</div>
+      <div>Windsurf Pro（$15/月）</div>
+      <div>比 Cursor 便宜 $5，Cascade 模式適合描述任務讓 AI 自動執行，不需深入 Cursor 設置。</div>
     </div>
   </div>
 
@@ -452,7 +379,7 @@
     </div>
   </div>
 
-  <div class="do-banner" style="background:linear-gradient(135deg,rgba(5,141,217,.15),rgba(3,90,150,.08));border-color:rgba(5,141,217,.2);">
+  <div class="do-banner">
     <div class="do-banner-text">
       <h4>📚 系統學習 AI Coding Agent 技能</h4>
       <p>DataCamp 提供 Claude Code、GitHub Copilot、AI 工程師培訓課程，讓你更有效率地使用這些工具。</p>
@@ -462,30 +389,30 @@
 
   <!-- FAQ -->
   <p class="section-title">❓ 常見問題</p>
-  <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2.5rem;">
-    <details style="background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem 1.2rem;">
-      <summary style="font-weight:700;cursor:pointer;color:var(--light);">Cursor 還是 GitHub Copilot？2026 怎麼選？</summary>
-      <p style="color:var(--gray);font-size:.88rem;margin-top:.8rem;line-height:1.65;">主要取決於工作流程：如果你是獨立開發者或新創工程師，Cursor Pro（$20）的 Agent 模式和 Composer 更強大，效率提升更明顯。如果你在大公司，Copilot Business（$19）的多 IDE 支援、企業安全政策和 Teams 整合更重要。學生優先選 Copilot（免費）。</p>
+  <div>
+    <details>
+      <summary>Cursor 還是 GitHub Copilot？2026 怎麼選？</summary>
+      <p>主要取決於工作流程：如果你是獨立開發者或新創工程師，Cursor Pro（$20）的 Agent 模式和 Composer 更強大，效率提升更明顯。如果你在大公司，Copilot Business（$19）的多 IDE 支援、企業安全政策和 Teams 整合更重要。學生優先選 Copilot（免費）。</p>
     </details>
-    <details style="background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem 1.2rem;">
-      <summary style="font-weight:700;cursor:pointer;color:var(--light);">Devin 降到 $20 真的值得試嗎？</summary>
-      <p style="color:var(--gray);font-size:.88rem;margin-top:.8rem;line-height:1.65;">值得嘗試，但要注意 ACU 用量費。月費 $20 只是起步，複雜任務（超過幾個小時的工作量）會產生額外的 ACU 費用。建議先試一個月、用於真實任務評估，再決定是否長期訂閱。Devin 最適合「設定→等待→驗收」類的長流程任務。</p>
+    <details>
+      <summary>Devin 降到 $20 真的值得試嗎？</summary>
+      <p>值得嘗試，但要注意 ACU 用量費。月費 $20 只是起步，複雜任務（超過幾個小時的工作量）會產生額外的 ACU 費用。建議先試一個月、用於真實任務評估，再決定是否長期訂閱。Devin 最適合「設定→等待→驗收」類的長流程任務。</p>
     </details>
-    <details style="background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem 1.2rem;">
-      <summary style="font-weight:700;cursor:pointer;color:var(--light);">可以同時用多個 AI Coding 工具嗎？</summary>
-      <p style="color:var(--gray);font-size:.88rem;margin-top:.8rem;line-height:1.65;">可以，而且很多工程師這樣做。常見組合：Copilot（IDE 補全）+ Claude Code（複雜 Agent 任務），或 Cursor（日常編碼）+ Devin（長流程自動化任務）。關鍵是要計算總成本，避免功能重疊的訂閱堆疊。</p>
+    <details>
+      <summary>可以同時用多個 AI Coding 工具嗎？</summary>
+      <p>可以，而且很多工程師這樣做。常見組合：Copilot（IDE 補全）+ Claude Code（複雜 Agent 任務），或 Cursor（日常編碼）+ Devin（長流程自動化任務）。關鍵是要計算總成本，避免功能重疊的訂閱堆疊。</p>
     </details>
-    <details style="background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem 1.2rem;">
-      <summary style="font-weight:700;cursor:pointer;color:var(--light);">Claude Code 的 Max Plan $100/月值得嗎？</summary>
-      <p style="color:var(--gray);font-size:.88rem;margin-top:.8rem;line-height:1.65;">如果你大量使用 Claude Code（每月 API 費用超過 $80），Max Plan 通常更划算。Max Plan 包含固定額度的 Claude Sonnet 5 呼叫，避免超量驚喜帳單。你也可以搭配 headroom MCP 工具省 20-60% token，進一步降低成本。</p>
+    <details>
+      <summary>Claude Code 的 Max Plan $100/月值得嗎？</summary>
+      <p>如果你大量使用 Claude Code（每月 API 費用超過 $80），Max Plan 通常更划算。Max Plan 包含固定額度的 Claude Sonnet 5 呼叫，避免超量驚喜帳單。你也可以搭配 headroom MCP 工具省 20-60% token，進一步降低成本。</p>
     </details>
-    <details style="background:var(--dark-2);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem 1.2rem;">
-      <summary style="font-weight:700;cursor:pointer;color:var(--light);">台灣可以使用這些工具嗎？有台幣付款嗎？</summary>
-      <p style="color:var(--gray);font-size:.88rem;margin-top:.8rem;line-height:1.65;">都可以使用，需要信用卡支付美金。台灣 Visa/Mastercard 國際卡均可，會收取約 1-3% 跨境手續費。部分銀行（玉山、國泰世華）有海外消費優惠。匯率約 1 USD = NT$31-33，建議用年繳方案通常省 16-20%。</p>
+    <details>
+      <summary>台灣可以使用這些工具嗎？有台幣付款嗎？</summary>
+      <p>都可以使用，需要信用卡支付美金。台灣 Visa/Mastercard 國際卡均可，會收取約 1-3% 跨境手續費。部分銀行（玉山、國泰世華）有海外消費優惠。匯率約 1 USD = NT$31-33，建議用年繳方案通常省 16-20%。</p>
     </details>
   </div>
 
-  <p style="color:var(--gray);font-size:.8rem;text-align:center;">定價資訊更新至 2026 年 9 月，實際定價請以官網為準 · 本頁含聯盟連結，點擊後我們可能獲得佣金，不影響評測立場。</p>
+  <p>定價資訊更新至 2026 年 9 月，實際定價請以官網為準 · 本頁含聯盟連結，點擊後我們可能獲得佣金，不影響評測立場。</p>
 </main>
 
 <script>
@@ -530,5 +457,6 @@ function filterTools(tag, btn) {
   });
 }
 </script>
+</main><!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

@@ -28,98 +28,14 @@
     }
     </script>
 
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', 'Segoe UI', sans-serif; background: #0f1117; color: #e0e0e0; line-height: 1.7; }
-        .navbar { background: rgba(15,17,23,0.95); border-bottom: 1px solid #2a2d3e; padding: 1rem 2rem; display: flex; align-items: center; gap: 2rem; position: sticky; top: 0; z-index: 100; }
-        .navbar .brand { color: #7c3aed; font-weight: 700; font-size: 1.2rem; text-decoration: none; }
-        .navbar a { color: #a0a0b0; text-decoration: none; font-size: 0.9rem; }
-        .navbar a:hover { color: #e0e0e0; }
-        .hero { background: linear-gradient(135deg, #1a0533 0%, #0f2040 60%, #0f1117 100%); padding: 2.5rem 1rem 1.8rem; text-align: center; border-bottom: 1px solid #2a2d3e; }
-        .hero-badge { display: inline-block; background: #1e3a5f; color: #60a5fa; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; margin-bottom: 0.8rem; }
-        .hero h1 { font-size: clamp(1.4rem, 3.5vw, 2.2rem); font-weight: 700; color: #fff; max-width: 700px; margin: 0 auto 0.8rem; line-height: 1.3; }
-        .hero p { color: #aaa; font-size: 0.95rem; max-width: 550px; margin: 0 auto; }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.2rem; }
-
-        /* Selector */
-        .selector-section { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 14px; padding: 1.8rem; margin: 2rem 0; }
-        .selector-section h2 { font-size: 1.2rem; color: #c4b5fd; margin-bottom: 1.4rem; }
-        .selector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin-bottom: 1.5rem; }
-        .selector-group label { display: block; color: #888; font-size: 0.8rem; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .selector-group select { width: 100%; background: #0f1117; border: 1px solid #3a3d5e; border-radius: 8px; padding: 0.6rem 0.8rem; color: #e0e0e0; font-size: 0.9rem; cursor: pointer; }
-        .selector-group select:focus { outline: none; border-color: #7c3aed; }
-        .result-card { background: linear-gradient(135deg, #1a0533, #0a2340); border: 2px solid #6d28d9; border-radius: 12px; padding: 1.5rem; margin-top: 1rem; display: none; }
-        .result-card.show { display: block; }
-        .result-card .tool-name { font-size: 1.5rem; font-weight: 700; color: #c4b5fd; margin-bottom: 0.5rem; }
-        .result-card .reason { color: #a0a0c0; font-size: 0.92rem; margin-bottom: 1rem; }
-        .result-card .cta-btn { display: inline-block; padding: 0.7rem 1.5rem; background: linear-gradient(135deg, #6d28d9, #4c1d95); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
-
-        /* Score bars */
-        .score-section { margin: 2rem 0; }
-        .score-section h2 { font-size: 1.3rem; color: #c4b5fd; margin-bottom: 1.2rem; border-bottom: 1px solid #2a2d3e; padding-bottom: 0.4rem; }
-        .tool-scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
-        .tool-card { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 12px; padding: 1.2rem; }
-        .tool-card .tool-label { font-weight: 700; font-size: 1rem; color: #e0e0e0; margin-bottom: 0.3rem; }
-        .tool-card .price-tag { font-size: 0.8rem; color: #888; margin-bottom: 1rem; }
-        .score-bar { margin-bottom: 0.6rem; }
-        .score-bar .bar-label { display: flex; justify-content: space-between; font-size: 0.78rem; color: #888; margin-bottom: 0.2rem; }
-        .score-bar .bar-track { background: #0f1117; border-radius: 4px; height: 6px; }
-        .score-bar .bar-fill { height: 6px; border-radius: 4px; }
-        .bar-fill.invideo { background: linear-gradient(90deg, #6d28d9, #c4b5fd); }
-        .bar-fill.fliki { background: linear-gradient(90deg, #0369a1, #60a5fa); }
-        .bar-fill.pictory { background: linear-gradient(90deg, #065f46, #34d399); }
-        .bar-fill.capcut { background: linear-gradient(90deg, #7f1d1d, #f87171); }
-
-        /* Comparison table */
-        h2.section-title { font-size: 1.3rem; color: #c4b5fd; margin: 2.5rem 0 1rem; border-bottom: 1px solid #2a2d3e; padding-bottom: 0.4rem; }
-        .table-wrap { overflow-x: auto; margin: 1rem 0; border-radius: 10px; border: 1px solid #2a2d3e; }
-        table { width: 100%; border-collapse: collapse; min-width: 600px; }
-        th { background: #1e2132; color: #c4b5fd; padding: 0.8rem 1rem; text-align: left; font-size: 0.88rem; border-bottom: 2px solid #3730a3; white-space: nowrap; }
-        td { padding: 0.7rem 1rem; border-bottom: 1px solid #1e2132; font-size: 0.88rem; color: #c8c8d8; }
-        tr:hover td { background: #1a1d2e; }
-        .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
-        .badge.green { background: #064e3b; color: #34d399; }
-        .badge.red { background: #450a0a; color: #f87171; }
-        .badge.yellow { background: #451a03; color: #fbbf24; }
-        .badge.blue { background: #1e3a5f; color: #60a5fa; }
-
-        /* CTA section */
-        .cta-section { background: linear-gradient(135deg, #1a0533, #0a2340); border: 1px solid #2a2d3e; border-radius: 12px; padding: 1.8rem; margin: 2rem 0; text-align: center; }
-        .cta-section h2 { color: #c4b5fd; margin-bottom: 0.5rem; border: none; font-size: 1.2rem; }
-        .cta-section p { font-size: 0.9rem; margin-bottom: 1.2rem; color: #a0a0c0; }
-        .cta-buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
-        .cta-btn { display: inline-block; padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s; }
-        .cta-btn.purple { background: linear-gradient(135deg, #6d28d9, #4c1d95); color: #fff; }
-        .cta-btn.blue { background: linear-gradient(135deg, #0069ff, #003aad); color: #fff; }
-        .cta-btn.teal { background: linear-gradient(135deg, #0891b2, #065f72); color: #fff; }
-        .cta-btn.do { background: linear-gradient(135deg, #0069ff, #003aad); color: #fff; }
-        .cta-btn.dc { background: linear-gradient(135deg, #03ef62, #048840); color: #000; }
-        .cta-btn:hover { opacity: 0.85; }
-
-        /* Use case grid */
-        .usecase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
-        .usecase-card { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 10px; padding: 1rem 1.2rem; }
-        .usecase-card .uc-title { font-weight: 700; color: #93c5fd; margin-bottom: 0.4rem; font-size: 0.95rem; }
-        .usecase-card .uc-tool { color: #c4b5fd; font-weight: 600; }
-        .usecase-card .uc-desc { color: #888; font-size: 0.85rem; margin-top: 0.3rem; }
-
-        footer { background: #0a0c14; border-top: 1px solid #1e2132; padding: 1.5rem; text-align: center; color: #666; font-size: 0.85rem; margin-top: 3rem; }
-        footer a { color: #7c3aed; text-decoration: none; }
-
-        @media(max-width: 600px) {
-            .cta-buttons { flex-direction: column; align-items: stretch; }
-            .tool-scores { grid-template-columns: 1fr 1fr; }
-        }
-    </style>
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+<style data-v2c-functional>.result-card { background: linear-gradient(135deg, #1a0533, #0a2340); border: 2px solid #6d28d9; border-radius: 12px; padding: 1.5rem; margin-top: 1rem; display: none; }
+.result-card.show { display: block; }</style>
 </head>
-<body>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article v2c-tool">
 
-<nav class="navbar">
-    <a href="/" class="brand">AutoDev AI</a>
-    <a href="/tools/">工具</a>
-    <a href="/blog/">Blog</a>
-</nav>
+
 
 <div class="hero">
     <div class="hero-badge">🎬 互動比較工具 · 2026 最新版</div>
@@ -190,23 +106,23 @@
                 <div class="price-tag">$25-49/月 · 50% affiliate</div>
                 <div class="score-bar">
                     <div class="bar-label"><span>AI 腳本生成</span><span>95</span></div>
-                    <div class="bar-track"><div class="bar-fill invideo" style="width:95%"></div></div>
+                    <div class="bar-track"><div class="bar-fill invideo"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>模板豐富度</span><span>90</span></div>
-                    <div class="bar-track"><div class="bar-fill invideo" style="width:90%"></div></div>
+                    <div class="bar-track"><div class="bar-fill invideo"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>社群影片</span><span>92</span></div>
-                    <div class="bar-track"><div class="bar-fill invideo" style="width:92%"></div></div>
+                    <div class="bar-track"><div class="bar-fill invideo"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>中文支援</span><span>75</span></div>
-                    <div class="bar-track"><div class="bar-fill invideo" style="width:75%"></div></div>
+                    <div class="bar-track"><div class="bar-fill invideo"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>CP 值</span><span>85</span></div>
-                    <div class="bar-track"><div class="bar-fill invideo" style="width:85%"></div></div>
+                    <div class="bar-track"><div class="bar-fill invideo"></div></div>
                 </div>
             </div>
 
@@ -215,23 +131,23 @@
                 <div class="price-tag">$29-88/月 · 30% LIFETIME affiliate</div>
                 <div class="score-bar">
                     <div class="bar-label"><span>AI 語音合成</span><span>96</span></div>
-                    <div class="bar-track"><div class="bar-fill fliki" style="width:96%"></div></div>
+                    <div class="bar-track"><div class="bar-fill fliki"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>文字轉影片</span><span>90</span></div>
-                    <div class="bar-track"><div class="bar-fill fliki" style="width:90%"></div></div>
+                    <div class="bar-track"><div class="bar-fill fliki"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>Podcast 製作</span><span>93</span></div>
-                    <div class="bar-track"><div class="bar-fill fliki" style="width:93%"></div></div>
+                    <div class="bar-track"><div class="bar-fill fliki"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>中文語音</span><span>88</span></div>
-                    <div class="bar-track"><div class="bar-fill fliki" style="width:88%"></div></div>
+                    <div class="bar-track"><div class="bar-fill fliki"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>CP 值</span><span>88</span></div>
-                    <div class="bar-track"><div class="bar-fill fliki" style="width:88%"></div></div>
+                    <div class="bar-track"><div class="bar-fill fliki"></div></div>
                 </div>
             </div>
 
@@ -240,23 +156,23 @@
                 <div class="price-tag">$19-99/月</div>
                 <div class="score-bar">
                     <div class="bar-label"><span>長影片轉 Shorts</span><span>95</span></div>
-                    <div class="bar-track"><div class="bar-fill pictory" style="width:95%"></div></div>
+                    <div class="bar-track"><div class="bar-fill pictory"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>字幕自動生成</span><span>90</span></div>
-                    <div class="bar-track"><div class="bar-fill pictory" style="width:90%"></div></div>
+                    <div class="bar-track"><div class="bar-fill pictory"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>Blog 轉影片</span><span>92</span></div>
-                    <div class="bar-track"><div class="bar-fill pictory" style="width:92%"></div></div>
+                    <div class="bar-track"><div class="bar-fill pictory"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>中文支援</span><span>65</span></div>
-                    <div class="bar-track"><div class="bar-fill pictory" style="width:65%"></div></div>
+                    <div class="bar-track"><div class="bar-fill pictory"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>CP 值</span><span>78</span></div>
-                    <div class="bar-track"><div class="bar-fill pictory" style="width:78%"></div></div>
+                    <div class="bar-track"><div class="bar-fill pictory"></div></div>
                 </div>
             </div>
 
@@ -265,23 +181,23 @@
                 <div class="price-tag">免費 / $14.99/月</div>
                 <div class="score-bar">
                     <div class="bar-label"><span>手機剪輯</span><span>98</span></div>
-                    <div class="bar-track"><div class="bar-fill capcut" style="width:98%"></div></div>
+                    <div class="bar-track"><div class="bar-fill capcut"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>特效/濾鏡</span><span>95</span></div>
-                    <div class="bar-track"><div class="bar-fill capcut" style="width:95%"></div></div>
+                    <div class="bar-track"><div class="bar-fill capcut"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>TikTok 整合</span><span>97</span></div>
-                    <div class="bar-track"><div class="bar-fill capcut" style="width:97%"></div></div>
+                    <div class="bar-track"><div class="bar-fill capcut"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>中文支援</span><span>95</span></div>
-                    <div class="bar-track"><div class="bar-fill capcut" style="width:95%"></div></div>
+                    <div class="bar-track"><div class="bar-fill capcut"></div></div>
                 </div>
                 <div class="score-bar">
                     <div class="bar-label"><span>CP 值</span><span>95</span></div>
-                    <div class="bar-track"><div class="bar-fill capcut" style="width:95%"></div></div>
+                    <div class="bar-track"><div class="bar-fill capcut"></div></div>
                 </div>
             </div>
         </div>
@@ -507,22 +423,19 @@
 
     <!-- Final notes -->
     <h2 class="section-title">📌 總結推薦</h2>
-    <ul style="margin-left:1.5rem; color:#c8c8d8;">
-        <li style="margin-bottom:0.7rem"><strong>預算有限 + TikTok 主力 →</strong> CapCut AI（免費）</li>
-        <li style="margin-bottom:0.7rem"><strong>社群行銷 + 需要 AI 腳本 →</strong> InVideo AI（$25/月起）</li>
-        <li style="margin-bottom:0.7rem"><strong>Podcast / 語音內容 / 繁中 TTS →</strong> Fliki AI（$29/月起）</li>
-        <li style="margin-bottom:0.7rem"><strong>Blog 文章再利用 / YouTube 頻道擴展 →</strong> Pictory AI（$19/月起）</li>
-        <li style="margin-bottom:0.7rem"><strong>最強組合（行銷人）→</strong> InVideo AI + Fliki AI（腳本 + 語音雙效）</li>
+    <ul>
+        <li><strong>預算有限 + TikTok 主力 →</strong> CapCut AI（免費）</li>
+        <li><strong>社群行銷 + 需要 AI 腳本 →</strong> InVideo AI（$25/月起）</li>
+        <li><strong>Podcast / 語音內容 / 繁中 TTS →</strong> Fliki AI（$29/月起）</li>
+        <li><strong>Blog 文章再利用 / YouTube 頻道擴展 →</strong> Pictory AI（$19/月起）</li>
+        <li><strong>最強組合（行銷人）→</strong> InVideo AI + Fliki AI（腳本 + 語音雙效）</li>
     </ul>
 
-    <p style="margin-top:1.5rem; color:#888; font-size:0.9rem;">本工具最後更新：2026-09-02 | 價格以各官網為準，可能因促銷活動異動</p>
+    <p>本工具最後更新：2026-09-02 | 價格以各官網為準，可能因促銷活動異動</p>
 
 </div>
 
-<footer>
-    <p>© 2026 AutoDev AI · <a href="/tools/">工具總覽</a> · <a href="/blog/">Blog</a> · <a href="/sitemap.xml">Sitemap</a></p>
-    <p style="margin-top:0.5rem; font-size:0.8rem;">本頁部分連結為聯盟連結，點擊後可能使我們獲得佣金，不影響評測客觀性。</p>
-</footer>
+</main><!-- v2-chrome:disclosure --><aside class="v2c-disclosure" aria-label="聯盟行銷揭露"><p>本頁部分連結為聯盟連結，點擊後可能使我們獲得佣金，不影響評測客觀性。</p></aside><!-- /v2-chrome:disclosure -->
 
 <script>
 // Recommendation engine
@@ -585,5 +498,6 @@ function updateRecommendation() {
 });
 </script>
 
+<!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+
 <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <meta charset="UTF-8">
@@ -25,9 +25,9 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <meta name="theme-color" content="#FFF8F3">
 <meta name="author" content="AutoDev AI">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
 
@@ -84,81 +84,10 @@
 }
 </script>
 
-<style>
-:root{--brand:#FF6B2B;--brand-dark:#E55A1B;--bg:#FFF8F3;--card:#FFFFFF;--text:#1A1A2E;--muted:#6B7280;--border:#E5E7EB}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:'Noto Sans TC',sans-serif;line-height:1.8}
-a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
-.nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100}
-.nav-logo{font-weight:900;font-size:1.1rem;color:var(--text)}
-.nav-links{display:flex;gap:1.5rem;font-size:.9rem}
-.hero{background:linear-gradient(135deg,#1A1A2E 0%,#16213E 50%,#0F3460 100%);color:#fff;padding:3rem 1.5rem;text-align:center}
-.hero-badge{display:inline-block;background:linear-gradient(90deg,#FF6B2B,#FF4500);color:#fff;font-size:.75rem;font-weight:700;padding:.3rem .9rem;border-radius:99px;margin-bottom:1rem;letter-spacing:.05em}
-.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.25;margin-bottom:1rem;max-width:800px;margin-left:auto;margin-right:auto}
-.hero-sub{font-size:1.05rem;opacity:.88;max-width:640px;margin:0 auto 2rem}
-.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem;max-width:700px;margin:0 auto}
-.stat-card{background:rgba(255,255,255,.1);border-radius:12px;padding:1rem;text-align:center}
-.stat-num{font-size:1.7rem;font-weight:900;color:#FF6B2B}
-.stat-label{font-size:.78rem;opacity:.8;margin-top:.2rem}
-.container{max-width:860px;margin:0 auto;padding:2rem 1.5rem}
-.article-meta{display:flex;gap:1rem;align-items:center;font-size:.85rem;color:var(--muted);margin-bottom:2rem;flex-wrap:wrap}
-.tag{background:#FFF0E8;color:var(--brand);padding:.2rem .7rem;border-radius:99px;font-size:.78rem;font-weight:600}
-h2{font-family:'DM Serif Display',serif;font-size:1.6rem;margin:2.5rem 0 1rem;color:var(--text)}
-h3{font-size:1.15rem;font-weight:700;margin:1.8rem 0 .7rem;color:var(--text)}
-p{margin-bottom:1rem;color:#374151}
-ul,ol{padding-left:1.5rem;margin-bottom:1rem}
-li{margin-bottom:.4rem;color:#374151}
-.highlight-box{background:linear-gradient(135deg,#FFF0E8,#FFE4D4);border-left:4px solid var(--brand);border-radius:8px;padding:1.2rem 1.5rem;margin:1.5rem 0}
-.highlight-box strong{color:var(--brand-dark)}
-.warning-box{background:#FEF3C7;border-left:4px solid #F59E0B;border-radius:8px;padding:1.2rem 1.5rem;margin:1.5rem 0}
-.info-box{background:#EFF6FF;border-left:4px solid #3B82F6;border-radius:8px;padding:1.2rem 1.5rem;margin:1.5rem 0}
-.code-block{background:#1E293B;color:#E2E8F0;border-radius:10px;padding:1.2rem 1.5rem;font-family:'Courier New',monospace;font-size:.87rem;overflow-x:auto;margin:1rem 0;line-height:1.6}
-.code-block .comment{color:#64748B}
-.code-block .cmd{color:#86EFAC}
-.code-block .flag{color:#FCD34D}
-.step-list{counter-reset:step;list-style:none;padding:0}
-.step-list li{counter-increment:step;display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start}
-.step-list li::before{content:counter(step);background:var(--brand);color:#fff;font-weight:700;font-size:.85rem;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:.1rem;flex-shrink:0}
-.cta-box{border-radius:16px;padding:2rem;margin:2.5rem 0;text-align:center}
-.cta-box.orange{background:linear-gradient(135deg,#FF6B2B,#FF4500);color:#fff}
-.cta-box.blue{background:linear-gradient(135deg,#1D4ED8,#1E40AF);color:#fff}
-.cta-box.green{background:linear-gradient(135deg,#059669,#047857);color:#fff}
-.cta-box h3{color:#fff;margin:0 0 .5rem;font-size:1.2rem}
-.cta-box p{color:rgba(255,255,255,.9);margin-bottom:1.2rem}
-.cta-btn{display:inline-block;background:#fff;color:var(--brand);font-weight:700;padding:.75rem 2rem;border-radius:99px;font-size:.95rem;transition:transform .2s,box-shadow .2s}
-.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);text-decoration:none}
-.cta-btn.white-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
-.cta-btn.white-outline:hover{background:rgba(255,255,255,.1)}
-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem}
-th{background:#1A1A2E;color:#fff;padding:.8rem 1rem;text-align:left;font-weight:600}
-td{padding:.75rem 1rem;border-bottom:1px solid var(--border)}
-tr:nth-child(even) td{background:#F9FAFB}
-tr:hover td{background:#FFF0E8;transition:background .15s}
-.badge{display:inline-block;padding:.2rem .6rem;border-radius:99px;font-size:.75rem;font-weight:600}
-.badge-green{background:#D1FAE5;color:#065F46}
-.badge-orange{background:#FED7AA;color:#9A3412}
-.badge-blue{background:#DBEAFE;color:#1E40AF}
-.badge-red{background:#FEE2E2;color:#991B1B}
-.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1.5rem 0}
-.metric-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem;text-align:center}
-.metric-val{font-size:2rem;font-weight:900;color:var(--brand)}
-.metric-label{font-size:.8rem;color:var(--muted);margin-top:.2rem}
-.toc{background:#F8FAFC;border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:2rem 0}
-.toc h3{margin:0 0 .8rem;font-size:1rem;color:var(--text)}
-.toc ol{margin:0;padding-left:1.2rem}
-.toc li{margin-bottom:.3rem;font-size:.9rem}
-.faq-item{border-bottom:1px solid var(--border);padding:1.2rem 0}
-.faq-q{font-weight:700;color:var(--text);margin-bottom:.5rem}
-.faq-a{color:#374151;font-size:.95rem}
-.breadcrumb{font-size:.82rem;color:var(--muted);margin-bottom:1rem}
-.breadcrumb a{color:var(--muted)}
-footer{background:#1A1A2E;color:rgba(255,255,255,.6);text-align:center;padding:2rem;font-size:.85rem}
-footer a{color:rgba(255,255,255,.7)}
-@media(max-width:640px){.stat-grid{grid-template-columns:repeat(2,1fr)}.metric-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}}
-</style>
+
 <link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article">
 
 
 
@@ -522,7 +451,7 @@ EOF
       </tr>
       <tr>
         <td><strong>可同時用？</strong></td>
-        <td colspan="2" style="text-align:center"><span class="badge badge-green">✅ 完全相容，建議同時使用</span></td>
+        <td colspan="2"><span class="badge badge-green">✅ 完全相容，建議同時使用</span></td>
       </tr>
     </tbody>
   </table>
@@ -657,13 +586,13 @@ EOF
     <a class="cta-btn" href="https://afflink.one/s/aavAC" target="_blank" rel="nofollow noopener">探索 DataCamp AI 課程 →</a>
   </div>
 
-  <p style="font-size:.82rem;color:var(--muted);margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border)">
+  <p>
     <em>本文部分連結為聯盟連結，你點擊購買時，本站可能獲得小額佣金，不影響你的費用。所有工具評測均基於公開資料與實測，如有更新請參考各工具官方文件。</em>
   </p>
 </div>
 
 
 
-<!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
+</main><!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

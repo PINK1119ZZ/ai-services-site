@@ -100,114 +100,20 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
   <meta name="theme-color" content="#FFF8F3">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
 
-  <style>
-    :root {
-      --primary: #7C3AED;
-      --primary-dark: #5B21B6;
-      --accent: #F59E0B;
-      --bg: #FFF8F3;
-      --surface: #FFFFFF;
-      --text: #1C1917;
-      --text-muted: #78716C;
-      --border: #E7E5E4;
-      --success: #059669;
-      --warning: #D97706;
-      --danger: #DC2626;
-      --info: #2563EB;
-      --radius: 12px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Noto Sans TC', 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { max-width: 100%; height: auto; }
 
-    /* NAV */
-    nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 1.5rem; position: sticky; top: 0; z-index: 100; }
-    .nav-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
-    .nav-logo { font-weight: 900; font-size: 1.1rem; color: var(--primary); letter-spacing: -0.02em; }
-    .nav-links { display: flex; gap: 1.5rem; font-size: 0.9rem; }
-    .nav-links a { color: var(--text-muted); font-weight: 500; }
-    .nav-links a:hover { color: var(--primary); text-decoration: none; }
-
-    /* ARTICLE LAYOUT */
-    .article-wrap { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
-    .article-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 1.25rem; }
-    .tag { display: inline-block; padding: 0.2rem 0.65rem; border-radius: 99px; font-size: 0.75rem; font-weight: 600; }
-    .tag-new { background: #FEF3C7; color: #92400E; }
-    .tag-scoop { background: #EDE9FE; color: #5B21B6; }
-    .tag-xai { background: #FEE2E2; color: #991B1B; }
-    .tag-coding { background: #D1FAE5; color: #065F46; }
-    .article-title { font-family: 'Noto Serif TC', serif; font-size: clamp(1.5rem, 3.5vw, 2rem); font-weight: 600; line-height: 1.35; margin-bottom: 0.75rem; color: var(--text); }
-    .article-desc { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 1.5rem; border-left: 3px solid var(--primary); padding-left: 1rem; }
-    .article-info { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
-
-    /* CONTENT */
-    .article-body h2 { font-family: 'Noto Serif TC', serif; font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--border); color: var(--text); }
-    .article-body h3 { font-size: 1.1rem; font-weight: 700; margin: 1.75rem 0 0.65rem; color: var(--primary-dark); }
-    .article-body p { margin-bottom: 1.1rem; }
-    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.1rem; }
-    .article-body li { margin-bottom: 0.4rem; }
-    .article-body strong { color: var(--text); font-weight: 700; }
-    .article-body code { background: #F3F4F6; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.88rem; font-family: 'Courier New', monospace; color: #BE185D; }
-    .article-body pre { background: #1E1B4B; color: #E2E8F0; padding: 1.25rem 1.5rem; border-radius: var(--radius); overflow-x: auto; margin-bottom: 1.5rem; font-size: 0.88rem; line-height: 1.65; }
-    .article-body pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
-    .article-body blockquote { border-left: 4px solid var(--primary); padding: 0.75rem 1rem; background: #F5F3FF; border-radius: 0 8px 8px 0; margin: 1.5rem 0; color: var(--text-muted); font-style: italic; }
-
-    /* TABLE */
-    .table-wrap { overflow-x: auto; margin: 1.75rem 0; border-radius: var(--radius); box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-    thead { background: var(--primary); color: #fff; }
-    thead th { padding: 0.75rem 1rem; text-align: left; font-weight: 600; white-space: nowrap; }
-    tbody tr:nth-child(even) { background: #F9F7FF; }
-    tbody td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
-    tbody tr:last-child td { border-bottom: none; }
-
-    /* INFO BOX */
-    .info-box { border-radius: var(--radius); padding: 1.1rem 1.25rem; margin: 1.75rem 0; }
-    .info-box.blue { background: #EFF6FF; border-left: 4px solid #3B82F6; }
-    .info-box.green { background: #ECFDF5; border-left: 4px solid #10B981; }
-    .info-box.yellow { background: #FFFBEB; border-left: 4px solid #F59E0B; }
-    .info-box.red { background: #FEF2F2; border-left: 4px solid #EF4444; }
-    .info-box.purple { background: #F5F3FF; border-left: 4px solid var(--primary); }
-    .info-box-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.4rem; }
-
-    /* CTA BUTTON */
-    .cta-wrap { text-align: center; margin: 2.25rem 0; }
-    .cta-btn { display: inline-block; padding: 0.85rem 2rem; border-radius: 99px; font-weight: 700; font-size: 0.97rem; text-decoration: none; transition: opacity 0.18s, transform 0.18s; }
-    .cta-btn:hover { opacity: 0.9; transform: translateY(-2px); text-decoration: none; }
-    .cta-primary { background: linear-gradient(135deg, #7C3AED, #4F46E5); color: #fff; }
-    .cta-orange { background: linear-gradient(135deg, #F59E0B, #EF4444); color: #fff; }
-    .cta-green { background: linear-gradient(135deg, #059669, #0891B2); color: #fff; }
-    .cta-sub { display: block; font-size: 0.78rem; font-weight: 400; margin-top: 0.3rem; opacity: 0.85; }
-
-    /* BREADCRUMB */
-    .breadcrumb { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem; }
-    .breadcrumb a { color: var(--text-muted); }
-    .breadcrumb span { margin: 0 0.35rem; }
-
-    /* FOOTER */
-    footer { background: #1C1917; color: #A8A29E; padding: 2.5rem 1.5rem; text-align: center; font-size: 0.85rem; margin-top: 4rem; }
-    footer a { color: #D6D3D1; }
-
-    @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .article-body pre { font-size: 0.8rem; }
-    }
-  </style>
 <link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article">
 
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0"></iframe></noscript>
 
 
 
@@ -561,8 +467,8 @@
     <div class="info-box purple">
       <div class="info-box-title">🆚 結論：Grok Build 記憶功能值得試用嗎？</div>
       <p>如果你目前是 Claude Code 或 Cursor 的用戶，但苦於每次都要手動維護記憶設定，Grok Build v1.0.34 的自動記憶功能絕對值得一試——特別是現在免費版就能用。</p>
-      <p style="margin-top:0.5rem;">如果你對隱私有嚴格要求，或需要精確控制 Agent 記住的每一個細節，Claude Code 的 CLAUDE.md 方案仍然是更好的選擇。</p>
-      <p style="margin-top:0.5rem;">兩個工具並非互斥——很多台灣開發者會根據專案性質選擇合適的工具。開放程度高、個人側專案用 Grok Build；客戶專案、機密度高的用 Claude Code。</p>
+      <p>如果你對隱私有嚴格要求，或需要精確控制 Agent 記住的每一個細節，Claude Code 的 CLAUDE.md 方案仍然是更好的選擇。</p>
+      <p>兩個工具並非互斥——很多台灣開發者會根據專案性質選擇合適的工具。開放程度高、個人側專案用 Grok Build；客戶專案、機密度高的用 Claude Code。</p>
     </div>
 
     <h2>常見問題 FAQ</h2>
@@ -615,14 +521,14 @@
 
   </div><!-- .article-body -->
 
-  <div style="border-top:2px solid var(--border);margin-top:3rem;padding-top:2rem;text-align:center;">
-    <p style="font-size:0.85rem;color:var(--text-muted);">本文部分連結為聯盟行銷連結，點擊後購買可能讓 AutoDev AI 獲得少量佣金，不影響你的購買費用。我們只推薦真正使用過且認為有價值的工具。</p>
+  <div>
+    <p>本文部分連結為聯盟行銷連結，點擊後購買可能讓 AutoDev AI 獲得少量佣金，不影響你的購買費用。我們只推薦真正使用過且認為有價值的工具。</p>
   </div>
 
 </main>
 
 
 
-<!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
+</main><!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

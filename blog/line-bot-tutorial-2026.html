@@ -2,7 +2,7 @@
 
 <html lang="zh-Hant">
 <head>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+
 <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <meta charset="utf-8"/>
@@ -29,9 +29,9 @@
 <meta content="LINE Bot 開發教學,LINE Bot 教學,LINE 機器人教學,LINE Bot 製作,LINE Messaging API,LINE Bot 開發,LINE LIFF 教學,Rich Menu 教學" name="keywords"/>
 <meta content="AutoDev AI" name="author"/>
 <meta content="index, follow" name="robots"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Noto+Serif+TC:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="/style.css" rel="stylesheet"/>
+
+
+
 <script type="application/ld+json">
  {"@context":"https://schema.org","@type":"Article","headline":"LINE Bot 開發教學：從零開始到上線的完整攻略（2026）","description":"LINE Bot 開發完整教學，含 LINE Developer 設定、Messaging API、常見功能開發、DIY vs 外包比較","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-02","dateModified":"2026-05-02","mainEntityOfPage":"https://autodev-ai.com/blog/line-bot-tutorial-2026.html","image":"https://autodev-ai.com/autodev-logo2.png"}
  </script>
@@ -40,43 +40,7 @@
  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
-<style>
- .blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
- .blog-article h2 { color: var(--primary); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
- .blog-article h3 { color: var(--text); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
- .blog-article p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.2rem; }
- .blog-article ul, .blog-article ol { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
- .blog-article li { margin-bottom: 0.5rem; }
- .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; text-align: center; }
- .blog-meta span { margin: 0 0.5rem; }
- .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
- .price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
- .price-table th { color: var(--primary); font-weight: 700; background: rgba(184,148,106,0.1); }
- .price-table td { color: var(--text-muted); }
- .price-table tr:hover td { background: rgba(184,148,106,0.05); }
- .highlight-box { background: rgba(184,148,106,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0; margin: 1.5rem 0; }
- .highlight-box p { margin-bottom: 0; color: var(--text); }
- .blog-nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
- .blog-nav a { color: var(--primary); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(184,148,106,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
- .blog-nav a:hover { background: rgba(184,148,106,0.2); border-color: var(--primary); }
- 
-/* Blog optimizer additions */
 
-.reading-time { text-align: center; color: #888; font-size: 0.9rem; margin-bottom: 1.5rem; }
-.toc { background: rgba(184,148,106,0.08); border: 1px solid rgba(184,148,106,0.2); border-radius: 4px; padding: 1rem 1.5rem; margin-bottom: 2rem; }
-.toc summary { cursor: pointer; font-weight: 700; color: #B8946A; font-size: 1.1rem; }
-.toc ul { list-style: none; padding-left: 0; margin-top: 0.8rem; }
-.toc li { margin-bottom: 0.5rem; }
-.toc a { color: #B8946A; text-decoration: none; }
-.toc a:hover { text-decoration: underline; }
-.related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
-.related-articles h2 { text-align: center; margin-bottom: 1.5rem; }
-.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-.related-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 1.2rem; text-decoration: none; transition: all 0.3s; display: block; }
-.related-card:hover { border-color: rgba(184,148,106,0.5); transform: translateY(-2px); }
-.related-card h3 { color: #e2e8f0; font-size: 1rem; margin: 0 0 0.5rem; }
-.related-card p { color: #94a3b8; font-size: 0.85rem; margin: 0; }
-</style>
 <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482625906579389"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -84,28 +48,21 @@
  {"@type":"ListItem","position":2,"name":"Blog","item":"https://autodev-ai.com/blog/"},
  {"@type":"ListItem","position":3,"name":"LINE Bot 開發教學：從零開始到上線的完整攻略（2026）"}
 ]}</script>
-<style>
-.share-buttons{display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin:2rem 0;padding:1.5rem;background:rgba(184,148,106,0.08);border-radius:12px}
-.share-label{color:#94a3b8;font-size:0.9rem;margin-right:0.5rem}
-.share-btn{padding:0.4rem 1rem;border-radius:20px;text-decoration:none;font-size:0.85rem;font-weight:600;transition:all 0.2s;cursor:pointer}
-.share-line{background:#06C755;color:white}.share-fb{background:#1877F2;color:white}
-.share-tw{background:#1DA1F2;color:white}.share-copy{background:rgba(255,255,255,0.1);color:#B8946A;border:1px solid rgba(184,148,106,0.3)}
-.share-btn:hover{transform:scale(1.05);opacity:0.9}
-</style>
+
 <link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article">
 <!-- NAV -->
 
 <!-- PAGE HEADER -->
 <section class="page-header">
 <h1 data-en="LINE Bot Development Tutorial">LINE Bot 開發教學</h1>
 <!-- AUTHOR_BYLINE -->
-<div class="author-byline" style="display:flex;align-items:center;gap:1rem;margin:1.5rem 0 2rem;padding:1.2rem;background:rgba(184,148,106,0.08);border-left:3px solid var(--primary);border-radius:6px;">
-<div style="width:48px;height:48px;border-radius:50%;background:var(--gradient-1);display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;color:#fff;flex-shrink:0;">I</div>
-<div style="font-size:0.9rem;line-height:1.6;">
-<div><strong style="color:var(--light);">作者 <a href="/about.html" style="color:var(--accent);text-decoration:none;">Ivan（伊凡）</a></strong>　·　台灣獨立開發者</div>
-<div style="color:var(--gray);font-size:0.85rem;">發布：2026-04-02　·　<a href="/disclaimer.html" style="color:var(--gray);text-decoration:underline;">編輯政策與聯盟揭露</a></div>
+<div class="author-byline">
+<div>I</div>
+<div>
+<div><strong>作者 <a href="/about.html">Ivan（伊凡）</a></strong>　·　台灣獨立開發者</div>
+<div>發布：2026-04-02　·　<a href="/disclaimer.html">編輯政策與聯盟揭露</a></div>
 </div>
 </div>
 <p data-en="Complete Guide from Zero to Launch (2026)">從零開始到上線的完整攻略（2026）</p>
@@ -136,16 +93,16 @@
 <a data-en="DIY vs Outsource" href="#diy-vs-outsource">DIY vs 外包</a>
 <a data-en="FAQ" href="#faq">常見問題</a>
 </div>
-<p data-en="LINE Bot is one of the most popular digital tools for Taiwanese businesses. Whether it's auto-reply, booking systems, or AI customer service, they're all built on LINE Bot. This tutorial walks you through the complete LINE Bot development process to help you decide whether to DIY or outsource.">LINE Bot（LINE 機器人）是台灣商家最愛用的數位工具之一。無論是<a class="internal-link" href="/blog/line-auto-reply-setup.html" style="color:var(--primary-light,#E8D9BD);text-decoration:underline dotted;">自動回覆</a>、<a class="internal-link" href="/blog/line-bot-booking-system.html" style="color:var(--primary-light,#E8D9BD);text-decoration:underline dotted;">預約系統</a>還是 AI 客服，都建立在 LINE Bot 的基礎上。這篇教學會帶你了解 LINE Bot 開發的完整流程，幫你評估到底要自己動手還是找人外包。</p>
-<h2 data-en="What Do You Need to Develop a LINE Bot?" id="prerequisites">開發 LINE Bot 需要什麼？</h2><div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
-<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
+<p data-en="LINE Bot is one of the most popular digital tools for Taiwanese businesses. Whether it's auto-reply, booking systems, or AI customer service, they're all built on LINE Bot. This tutorial walks you through the complete LINE Bot development process to help you decide whether to DIY or outsource.">LINE Bot（LINE 機器人）是台灣商家最愛用的數位工具之一。無論是<a class="internal-link" href="/blog/line-auto-reply-setup.html">自動回覆</a>、<a class="internal-link" href="/blog/line-bot-booking-system.html">預約系統</a>還是 AI 客服，都建立在 LINE Bot 的基礎上。這篇教學會帶你了解 LINE Bot 開發的完整流程，幫你評估到底要自己動手還是找人外包。</p>
+<h2 data-en="What Do You Need to Develop a LINE Bot?" id="prerequisites">開發 LINE Bot 需要什麼？</h2><div class="ad-unit">
+<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <h3 data-en="Required">必備條件</h3>
 <ul>
 <li data-en="&lt;strong&gt;LINE account&lt;/strong&gt;: Used to log into LINE Developer Console"><strong>LINE 帳號</strong>：用來登入 LINE Developer Console</li>
-<li data-en='&lt;strong&gt;LINE official account&lt;/strong&gt;: Create one for free at &lt;a href="https://manager.line.biz/" target="_blank" rel="noopener" style="color:var(--accent);"&gt;LINE Official Account Manager&lt;/a&gt;'><strong>LINE 官方帳號</strong>：到 <a href="https://manager.line.biz/" rel="noopener" style="color:var(--accent);" target="_blank">LINE Official Account Manager</a>免費建立</li>
-<li data-en='&lt;strong&gt;LINE Developer account&lt;/strong&gt;: Register at &lt;a href="https://developers.line.biz/" target="_blank" rel="noopener" style="color:var(--accent);"&gt;LINE Developers&lt;/a&gt;'><strong>LINE Developer 帳號</strong>：到 <a href="https://developers.line.biz/" rel="noopener" style="color:var(--accent);" target="_blank">LINE Developers</a>註冊</li>
+<li data-en='&lt;strong&gt;LINE official account&lt;/strong&gt;: Create one for free at &lt;a href="https://manager.line.biz/" target="_blank" rel="noopener"&gt;LINE Official Account Manager&lt;/a&gt;'><strong>LINE 官方帳號</strong>：到 <a href="https://manager.line.biz/" rel="noopener" target="_blank">LINE Official Account Manager</a>免費建立</li>
+<li data-en='&lt;strong&gt;LINE Developer account&lt;/strong&gt;: Register at &lt;a href="https://developers.line.biz/" target="_blank" rel="noopener"&gt;LINE Developers&lt;/a&gt;'><strong>LINE Developer 帳號</strong>：到 <a href="https://developers.line.biz/" rel="noopener" target="_blank">LINE Developers</a>註冊</li>
 </ul>
 <h3 data-en="For Advanced Features You Also Need">進階功能還需要</h3>
 <ul>
@@ -179,14 +136,14 @@
 <ul>
 <li>LINE Developers 帳號（已建好上面那 5 步驟）</li>
 <li>Python 3.9+ 環境（或 Node.js 18+，本範例用 Python）</li>
-<li>一個能對外的 HTTPS URL — 如果還沒 VPS，<a href="/blog/cloudways-review-2026.html" style="color:var(--accent);">用 Cloudways</a>或 <a href="/blog/hostinger-vps-review-2026.html" style="color:var(--accent);">Hostinger VPS</a>都可以；本機開發階段用 ngrok 也行</li>
+<li>一個能對外的 HTTPS URL — 如果還沒 VPS，<a href="/blog/cloudways-review-2026.html">用 Cloudways</a>或 <a href="/blog/hostinger-vps-review-2026.html">Hostinger VPS</a>都可以；本機開發階段用 ngrok 也行</li>
 </ul>
 
 <h3>步驟 1：安裝套件</h3>
-<pre style="background:rgba(0,0,0,0.4);padding:1rem;border-radius:6px;overflow-x:auto;"><code>pip install flask line-bot-sdk python-dotenv</code></pre>
+<pre><code>pip install flask line-bot-sdk python-dotenv</code></pre>
 
 <h3>步驟 2：寫 echo_bot.py</h3>
-<pre style="background:rgba(0,0,0,0.4);padding:1rem;border-radius:6px;overflow-x:auto;"><code>import os
+<pre><code>import os
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
@@ -218,29 +175,29 @@ if __name__ == '__main__':
 </code></pre>
 
 <h3>步驟 3：設定環境變數 + 啟動</h3>
-<pre style="background:rgba(0,0,0,0.4);padding:1rem;border-radius:6px;overflow-x:auto;"><code>export CHANNEL_ACCESS_TOKEN="你從 LINE Developers 拿到的"
+<pre><code>export CHANNEL_ACCESS_TOKEN="你從 LINE Developers 拿到的"
 export CHANNEL_SECRET="你從 LINE Developers 拿到的"
 python echo_bot.py</code></pre>
 
 <h3>步驟 4：對外 HTTPS（本機開發）</h3>
 <p>LINE Webhook 強制 HTTPS。本機開發用 ngrok：</p>
-<pre style="background:rgba(0,0,0,0.4);padding:1rem;border-radius:6px;overflow-x:auto;"><code>ngrok http 5000</code></pre>
+<pre><code>ngrok http 5000</code></pre>
 <p>把 ngrok 給的 <code>https://xxxx.ngrok-free.app/callback</code>貼到 LINE Developers 的 Webhook URL，按「Verify」確認 200 OK。</p>
 
 <h3>步驟 5：測試</h3>
 <p>掃 LINE Developers 提供的 QR code 加好友，發任何訊息，Bot 就會回「你說了：xxx」。</p>
 
-<div class="highlight-box" style="background:rgba(196,165,123,0.08);border:1px solid rgba(196,165,123,0.3);border-radius:8px;padding:1rem 1.2rem;margin:1.5rem 0;">
-<p style="margin:0;"><strong>跑完這個 echo bot，就具備做 90% LINE Bot 功能的基礎</strong>。剩下的差別只在於「換掉 reply_message 的內容」— 換成資料庫查詢就是查單機器人，換成串 GPT 就是 AI 客服，換成寫入 Google Calendar 就是預約系統。</p>
+<div class="highlight-box">
+<p><strong>跑完這個 echo bot，就具備做 90% LINE Bot 功能的基礎</strong>。剩下的差別只在於「換掉 reply_message 的內容」— 換成資料庫查詢就是查單機器人，換成串 GPT 就是 AI 客服，換成寫入 Google Calendar 就是預約系統。</p>
 </div>
 
 <h3>實際部署常見坑（我自己踩過的）</h3>
-<table class="compare-table" style="width:100%;border-collapse:collapse;margin:1rem 0;">
+<table class="compare-table">
 <thead>
 <tr>
-<th style="background:var(--gradient-1);color:#fff;padding:0.6rem;text-align:left;">問題</th>
-<th style="background:var(--gradient-1);color:#fff;padding:0.6rem;text-align:left;">原因</th>
-<th style="background:var(--gradient-1);color:#fff;padding:0.6rem;text-align:left;">修法</th>
+<th>問題</th>
+<th>原因</th>
+<th>修法</th>
 </tr>
 </thead>
 <tbody>
@@ -248,16 +205,16 @@ python echo_bot.py</code></pre>
 <tr><td>本機 OK，部署後沒回應</td><td>SSL 憑證沒設、port 被擋</td><td>用 Caddy / Cloudflare Tunnel 自動 HTTPS</td></tr>
 <tr><td>偶爾訊息不回</td><td>單一 Flask process 處理慢、reply_token 30 秒過期</td><td>加 worker 池、或用 push_message 補發</td></tr>
 <tr><td>Bot 重啟訊息全失</td><td>沒做訊息持久化</td><td>事件先寫 DB／queue 再處理</td></tr>
-<tr><td>VPS 重開機 Bot 沒上線</td><td>沒設 systemd / supervisor</td><td>用 <a href="/bot-cloud.html" style="color:var(--accent);">Bot 雲託管</a>或自己寫 systemd unit</td></tr>
+<tr><td>VPS 重開機 Bot 沒上線</td><td>沒設 systemd / supervisor</td><td>用 <a href="/bot-cloud.html">Bot 雲託管</a>或自己寫 systemd unit</td></tr>
 </tbody>
 </table>
 
-<div class="highlight-box" style="background:rgba(184,148,106,0.08);border-left:3px solid var(--primary);border-radius:6px;padding:1rem 1.2rem;margin:1.5rem 0;">
-<p style="margin:0;"><strong>不想自己 debug 這些坑？</strong>我們的 <a href="/bot-cloud.html" style="color:var(--accent);">Bot 雲託管月費 NT$1,500/月起</a>直接幫你跑：自動重啟、HTTPS、流量監控、月用量報告。把上面這一整章的維運責任外包出去。或者看 <a href="/blog/line-bot-cost.html" style="color:var(--accent);">完整 LINE Bot 開發費用解析</a>估一下總成本。</p>
+<div class="highlight-box">
+<p><strong>不想自己 debug 這些坑？</strong>我們的 <a href="/bot-cloud.html">Bot 雲託管月費 NT$1,500/月起</a>直接幫你跑：自動重啟、HTTPS、流量監控、月用量報告。把上面這一整章的維運責任外包出去。或者看 <a href="/blog/line-bot-cost.html">完整 LINE Bot 開發費用解析</a>估一下總成本。</p>
 </div>
 
-<h2 data-en="Messaging API Fundamentals" id="messaging-api">Messaging API 基礎概念</h2><div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
-<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
+<h2 data-en="Messaging API Fundamentals" id="messaging-api">Messaging API 基礎概念</h2><div class="ad-unit">
+<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <p data-en="LINE Messaging API is the core of LINE Bot. Understanding these concepts gives you the operating logic of LINE Bot:">LINE Messaging API 是 LINE Bot 的核心。理解以下概念，你就掌握了 LINE Bot 的運作邏輯：</p>
@@ -287,7 +244,7 @@ python echo_bot.py</code></pre>
 <td data-en="Bot sends proactively">Bot 主動發送</td>
 </tr>
 <tr>
-<td data-en="Cost"><a class="internal-link" href="/blog/line-bot-cost.html" style="color:var(--primary-light,#E8D9BD);text-decoration:underline dotted;">費用</a></td>
+<td data-en="Cost"><a class="internal-link" href="/blog/line-bot-cost.html">費用</a></td>
 <td data-en="Free (unlimited)">免費（不限次數）</td>
 <td data-en="Charged by message volume">依訊息量計費</td>
 </tr>
@@ -311,7 +268,7 @@ python echo_bot.py</code></pre>
 <p data-en="The most basic feature. Automatically replies based on user message content. Can be simple keyword matching or AI-powered smart replies.">最基礎的功能。根據用戶發送的訊息內容，自動回覆對應的訊息。可以是簡單的關鍵字匹配，也可以串接 AI 做智慧回覆。</p>
 <ul>
 <li data-en='&lt;strong&gt;Keyword reply&lt;/strong&gt;: Detects specific keywords (like "business hours," "price") and replies with preset content'><strong>關鍵字回覆</strong>：偵測特定關鍵字（如「營業時間」、「價格」），回覆設定好的內容</li>
-<li data-en='&lt;strong&gt;AI smart reply&lt;/strong&gt;: Integrates GPT or Claude to understand natural language and generate answers. See &lt;a href="/blog/ai-customer-service-line.html" style="color:var(--accent);"&gt;AI CS Complete Guide&lt;/a&gt;'><strong>AI 智慧回覆</strong>：串接 GPT 或 Claude，理解自然語言並生成回答。詳見<a href="/blog/ai-customer-service-line.html" style="color:var(--accent);">AI 客服完整指南</a></li>
+<li data-en='&lt;strong&gt;AI smart reply&lt;/strong&gt;: Integrates GPT or Claude to understand natural language and generate answers. See &lt;a href="/blog/ai-customer-service-line.html"&gt;AI CS Complete Guide&lt;/a&gt;'><strong>AI 智慧回覆</strong>：串接 GPT 或 Claude，理解自然語言並生成回答。詳見<a href="/blog/ai-customer-service-line.html">AI 客服完整指南</a></li>
 </ul>
 <h3 data-en="2. Rich Menu">2. Rich Menu（圖文選單）</h3>
 <p data-en="The visual menu at the bottom of the LINE chat is the most intuitive entry point for users. You can design multiple button areas that trigger different features when tapped (e.g., book, inquire, contact CS).">LINE 聊天室底部的圖文選單，是用戶最直覺的操作入口。可以設計多個按鈕區域，點擊後觸發不同功能（如：預約、查詢、聯絡客服）。</p>
@@ -331,7 +288,7 @@ python echo_bot.py</code></pre>
 </ul>
 <p data-en="LIFF's advantage is direct access to the user's LINE User ID without separate login, creating a smooth experience.">LIFF 的優勢是可以直接取得用戶的 LINE User ID，不需要另外登入，體驗流暢。</p>
 <h3 data-en="4. Booking System">4. 預約系統</h3>
-<p data-en='Complete the booking flow within the LINE chat, including time slot management, auto-confirmation, and booking reminders. For details, see &lt;a href="/blog/line-bot-booking-system.html" style="color:var(--accent);"&gt;LINE Booking System Complete Guide&lt;/a&gt;.'>在 LINE 聊天室內完成預約流程。包含時段管理、自動確認、預約提醒等。詳細介紹請看<a href="/blog/line-bot-booking-system.html" style="color:var(--accent);">LINE 預約系統完整指南</a>。</p>
+<p data-en='Complete the booking flow within the LINE chat, including time slot management, auto-confirmation, and booking reminders. For details, see &lt;a href="/blog/line-bot-booking-system.html"&gt;LINE Booking System Complete Guide&lt;/a&gt;.'>在 LINE 聊天室內完成預約流程。包含時段管理、自動確認、預約提醒等。詳細介紹請看<a href="/blog/line-bot-booking-system.html">LINE 預約系統完整指南</a>。</p>
 <h3 data-en="5. Push Notifications">5. 通知推播</h3>
 <p data-en="Proactively send notifications to users: booking reminders, order status updates, event notices, birthday greetings, etc. Note that Push Messages count toward your message quota, so control frequency and targeting.">主動發送通知給用戶，如：預約提醒、訂單狀態更新、活動通知、生日祝福等。注意 Push Message 會計入訊息量，要控制發送頻率和對象。</p>
 <h3 data-en="6. Third-Party Integrations">6. 第三方服務串接</h3>
@@ -405,7 +362,7 @@ python echo_bot.py</code></pre>
 <li data-en="Your time is worth more than the development cost">你的時間比開發費更有價值</li>
 </ul>
 <div class="highlight-box">
-<p data-en="&lt;strong&gt;Practical advice:&lt;/strong&gt; If you're a store owner and the revenue you generate per hour far exceeds the dev cost amortized hourly, outsourcing is absolutely the smarter choice. Spend your time on what you do best and leave the tech to professionals. &lt;a href=&quot;/pricing.html&quot; style=&quot;color:var(--accent);&quot;&gt;View AutoDev AI Plans &amp;rarr;&lt;/a&gt;"><strong>務實建議：</strong>如果你是店老闆，每小時能創造的營收遠高於開發費分攤到每小時的成本，那外包絕對是更聰明的選擇。把時間花在你最擅長的事情上，技術的事交給專業的。不想一次性開發費？也可以考慮<a href="/line-bot-saas.html" style="color:var(--accent);">LINE Bot 雲託管</a>，NT$1,500/月起直接用。<a href="/pricing.html" style="color:var(--accent);">查看 AutoDev AI 方案 →</a></p>
+<p data-en="&lt;strong&gt;Practical advice:&lt;/strong&gt; If you're a store owner and the revenue you generate per hour far exceeds the dev cost amortized hourly, outsourcing is absolutely the smarter choice. Spend your time on what you do best and leave the tech to professionals. &lt;a href=&quot;/pricing.html&quot; style=&quot;color:var(--accent);&quot;&gt;View AutoDev AI Plans &amp;rarr;&lt;/a&gt;"><strong>務實建議：</strong>如果你是店老闆，每小時能創造的營收遠高於開發費分攤到每小時的成本，那外包絕對是更聰明的選擇。把時間花在你最擅長的事情上，技術的事交給專業的。不想一次性開發費？也可以考慮<a href="/line-bot-saas.html">LINE Bot 雲託管</a>，NT$1,500/月起直接用。<a href="/pricing.html">查看 AutoDev AI 方案 →</a></p>
 </div>
 <h2 data-en="Common Pitfalls in LINE Bot Development" id="line-bot-開發常見的地雷">LINE Bot 開發常見的地雷</h2>
 <ol>
@@ -438,8 +395,8 @@ python echo_bot.py</code></pre>
 <div class="faq-a" data-en="A LINE official account is a business account provided by LINE with basic auto-response features. A LINE Bot is a program developed through Messaging API that can handle more complex functions like AI conversations, booking systems, and database integrations. LINE Bot is built on top of a LINE official account.">LINE 官方帳號是 LINE 提供的商業帳號，有基本的自動回應功能。LINE Bot 是透過 Messaging API 開發的程式，可以做到更複雜的功能如 AI 對話、預約系統、資料庫串接等。LINE Bot 建立在 LINE 官方帳號之上。</div>
 </div>
 </div>
-<div class="highlight-box" style="margin-top:2rem;">
-<p data-en='&lt;strong&gt;Free Consultation:&lt;/strong&gt; Found the tutorial too complex? No worries — &lt;a href="/contact.html" style="color:var(--accent);"&gt;contact us&lt;/a&gt; for a free 30-minute assessment of your needs and quote. No charge, no pressure.'><strong>免費諮詢：</strong>看完教學覺得太複雜？沒關係，<a href="/contact.html" style="color:var(--accent);">聯繫我們</a>，30 分鐘免費幫你評估需求和報價。不收費、沒壓力。</p>
+<div class="highlight-box">
+<p data-en='&lt;strong&gt;Free Consultation:&lt;/strong&gt; Found the tutorial too complex? No worries — &lt;a href="/contact.html"&gt;contact us&lt;/a&gt; for a free 30-minute assessment of your needs and quote. No charge, no pressure.'><strong>免費諮詢：</strong>看完教學覺得太複雜？沒關係，<a href="/contact.html">聯繫我們</a>，30 分鐘免費幫你評估需求和報價。不收費、沒壓力。</p>
 </div>
 <div class="share-buttons">
  <span class="share-label">分享這篇文章：</span>
@@ -450,11 +407,11 @@ python echo_bot.py</code></pre>
 </div>
 </article>
 <!-- Calculator CTA Banner -->
-<section style="background:linear-gradient(135deg,#f5ede3 0%,#16213e 50%,#0f3460 100%);border:1px solid rgba(162,155,254,0.3);border-radius:16px;padding:2rem 2.5rem;margin:2rem auto;max-width:800px;text-align:center;">
- <div style="font-size:2rem;margin-bottom:0.5rem;"></div>
- <h3 style="color:#e2e8f0;font-size:1.3rem;margin:0 0 0.5rem;font-weight:700;">建 LINE Bot 要花多少錢？</h3>
- <p style="color:#94a3b8;font-size:0.95rem;margin:0 0 1.2rem;">勾選你要的功能，30 秒算出開發成本 + 月維護費。自建 vs 外包 vs 雲託管一目瞭然。</p>
- <a href="/tools/line-bot-calculator.html" style="display:inline-block;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;text-decoration:none;padding:0.75rem 2rem;border-radius:30px;font-weight:700;font-size:1rem;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">免費使用費用計算器 →</a>
+<section>
+ <div></div>
+ <h3>建 LINE Bot 要花多少錢？</h3>
+ <p>勾選你要的功能，30 秒算出開發成本 + 月維護費。自建 vs 外包 vs 雲託管一目瞭然。</p>
+ <a href="/tools/line-bot-calculator.html" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">免費使用費用計算器 →</a>
 </section>
 <!-- CTA -->
 <section class="cta-section">
@@ -468,16 +425,16 @@ python echo_bot.py</code></pre>
 </div>
 </section>
 <!-- n8n 模板包 CTA -->
-<section style="background:linear-gradient(135deg,#9C7B57 0%,#7c3aed 100%);color:white;padding:3rem 1rem;text-align:center;margin-top:3rem;">
-<div style="max-width:600px;margin:0 auto;">
-<div style="font-size:2.5rem;margin-bottom:.75rem;"></div>
-<h2 style="color:white;font-size:1.5rem;margin-bottom:.75rem;">LINE Bot + n8n 工作流：直接匯入使用</h2>
-<p style="opacity:.9;margin-bottom:1.5rem;font-size:1rem;">不用從零開始 · 繁中說明文件 · 包含 AI 客服 + 自動回覆 + 通知推播<br/>n8n 台灣自動化模板包 Vol.1</p>
-<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-<a href="https://xiaofan8.gumroad.com/l/n8n-tw-templates" rel="nofollow" style="background:white;color:#9C7B57;padding:.75rem 1.5rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;" target="_blank">
+<section>
+<div>
+<div></div>
+<h2>LINE Bot + n8n 工作流：直接匯入使用</h2>
+<p>不用從零開始 · 繁中說明文件 · 包含 AI 客服 + 自動回覆 + 通知推播<br/>n8n 台灣自動化模板包 Vol.1</p>
+<div>
+<a href="https://xiaofan8.gumroad.com/l/n8n-tw-templates" rel="nofollow" target="_blank">
  下載 LINE Bot 模板 — US$19
  </a>
-<a href="https://n8n.io/cloud/" rel="nofollow" style="background:rgba(255,255,255,.15);border:2px solid white;color:white;padding:.75rem 1.5rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;" target="_blank">
+<a href="https://n8n.io/cloud/" rel="nofollow" target="_blank">
  用 n8n Cloud 免維護快速上線
  </a>
 </div>
@@ -485,16 +442,16 @@ python echo_bot.py</code></pre>
 </section>
 
 <!-- Hub-and-Spoke: 回 LINE Bot Pillar 主指南 -->
-<section style="max-width:820px;margin:3rem auto 2rem;padding:2rem 1.75rem;background:linear-gradient(135deg,rgba(184,148,106,0.08),rgba(196,165,123,0.04));border:1px solid var(--border);border-radius:6px;text-align:center;">
- <span style="display:inline-block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--primary);font-weight:600;margin-bottom:0.85rem;">★ 主指南</span>
- <h3 style="font-family:'DM Serif Display','Noto Serif TC',serif;font-size:1.45rem;color:var(--text);margin:0 0 0.85rem;line-height:1.4;">看完這篇,別忘了回主指南拼起完整路徑</h3>
- <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.75;margin:0 0 1.25rem;max-width:600px;margin-left:auto;margin-right:auto;">這篇是「LINE Bot 完整指南 2026」5 篇 spoke 之一。主指南把 4 大類型、開發費用、5 個實戰主題、常見錯誤通通串在一起,從 0 到上線一頁看完。</p>
- <a href="/blog/line-bot-complete-guide-2026.html" style="display:inline-block;background:var(--primary);color:var(--white);padding:0.85rem 2rem;border-radius:4px;text-decoration:none;font-weight:500;letter-spacing:0.04em;font-size:0.95rem;transition:transform 0.2s, background 0.2s;" onclick="gtag('event','click',{event_category:'pillar_link',event_label:'spoke_to_pillar'})">→ 看 LINE Bot 完整指南 2026</a>
+<section>
+ <span>★ 主指南</span>
+ <h3>看完這篇,別忘了回主指南拼起完整路徑</h3>
+ <p>這篇是「LINE Bot 完整指南 2026」5 篇 spoke 之一。主指南把 4 大類型、開發費用、5 個實戰主題、常見錯誤通通串在一起,從 0 到上線一頁看完。</p>
+ <a href="/blog/line-bot-complete-guide-2026.html" onclick="gtag('event','click',{event_category:'pillar_link',event_label:'spoke_to_pillar'})">→ 看 LINE Bot 完整指南 2026</a>
 </section>
 
 <!-- FOOTER -->
-<div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
-<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
+<div class="ad-unit">
+<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div><section class="related-articles">
 <h2>延伸閱讀</h2>
@@ -535,11 +492,11 @@ python echo_bot.py</code></pre>
  });
 })();
 </script>
-<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="display:none;position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:50%;border:none;background:linear-gradient(135deg,#667eea,#764ba2);color:white;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 15px rgba(102,126,234,0.4);transition:all 0.3s;z-index:999;">↑</button>
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>
 (function(){var b=document.getElementById('backToTop');window.addEventListener('scroll',function(){b.style.display=window.scrollY>300?'block':'none'});})();
 </script>
 <script>(function(){function bind(){var b=document.getElementById('mobileMenuBtn'),l=document.getElementById('navLinks');if(!b||!l)return;var H='☰',X='✕';function set(o){l.classList.toggle('show',o);b.innerHTML=o?X:H;b.setAttribute('aria-label',o?'關閉選單':'開啟選單');b.setAttribute('aria-expanded',o?'true':'false');}b.addEventListener('click',function(e){e.stopPropagation();set(!l.classList.contains('show'));});document.addEventListener('click',function(e){if(l.classList.contains('show')&&!l.contains(e.target)&&!b.contains(e.target))set(false);});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();})();</script>
-<!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
+</main><!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

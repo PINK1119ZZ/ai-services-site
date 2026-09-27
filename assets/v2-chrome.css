@@ -591,7 +591,7 @@ html body .v2c-disclosure p {
   box-sizing: border-box;
   width: min(calc(100% - 40px), 760px);
   margin: 0 auto;
-  padding: 3rem 0 5rem;
+  padding: 3.5rem 0;
   color: var(--v2c-ink, #171714);
   font-family: var(--v2c-font, Inter, "Noto Sans TC", system-ui, sans-serif);
   font-size: 1.05rem;
@@ -614,6 +614,8 @@ html body .v2c-disclosure p {
 
 .v2c-article h2 {
   margin: 2.75rem 0 1rem;
+  padding-left: .9rem;
+  border-left: 3px solid var(--v2c-gold, #8a6537);
   font-size: clamp(1.4rem, 3vw, 1.8rem);
   font-weight: 650;
   line-height: 1.3;
@@ -649,7 +651,7 @@ html body .v2c-disclosure p {
 }
 
 .v2c-article a {
-  color: var(--v2c-gold, #8a6537);
+  color: #8a6a2f;
   text-decoration: underline;
   text-decoration-color: var(--v2c-line, #d9d4ca);
 }
@@ -660,8 +662,9 @@ html body .v2c-disclosure p {
 
 .v2c-article blockquote {
   margin: 1.6rem 0;
-  padding: .2rem 0 .2rem 1.2rem;
+  padding: .9rem 1.2rem;
   border-left: 2px solid var(--v2c-gold, #8a6537);
+  background: var(--v2c-paper-strong, #fffdfa);
   color: var(--v2c-muted, #65635d);
   font-size: 1.05rem;
 }
@@ -699,8 +702,13 @@ html body .v2c-disclosure p {
 .v2c-article th,
 .v2c-article td {
   padding: .7rem .9rem;
-  border-bottom: 1px solid var(--v2c-line, #d9d4ca);
+  border: 1px solid var(--v2c-line, #d9d4ca);
   text-align: left;
+}
+
+.v2c-article th {
+  background: #f0ece1;
+  font-weight: 650;
 }
 
 .v2c-article img {
@@ -735,7 +743,7 @@ html body .v2c-disclosure p {
 @media (max-width: 520px) {
   .v2c-article {
     width: min(calc(100% - 28px), 760px);
-    padding: 2.25rem 0 3.5rem;
+    padding: 1.75rem 0;
   }
 }
 
@@ -749,4 +757,421 @@ html body .v2c-disclosure p {
 /* Hidden hook that keeps legacy inline scripts bound to #mobileMenuBtn away from the real toggle. */
 html body #nav.v2c-header #mobileMenuBtn.v2c-legacy-hook {
   display: none !important;
+}
+
+/* ==========================================================================
+   v2c-page — unified warm-paper canvas for migrated blog articles.
+   scripts/unify_articles.py adds this class to <body> once it has stripped
+   an existing article's own inline <style> blocks and non-v2-chrome
+   stylesheets, so the page renders on the same base canvas described in
+   the v2c-article section above instead of whatever background/font the
+   article's own removed styles used to set.
+   ========================================================================== */
+
+html body.v2c-page {
+  margin: 0;
+  background: #f7f4ee;
+  color: #171816;
+  font-family: Inter, "Noto Sans TC", system-ui, sans-serif;
+}
+
+/* ==========================================================================
+   v2c-article — additional element coverage for migrated legacy articles
+   ==========================================================================
+   The rules above this section were written for the new-article template
+   (docs/templates/blog-article-v2.html). The rules below extend the same
+   .v2c-article class to the element/heading levels and component patterns
+   that actually occur in the 158 pre-existing articles once
+   scripts/unify_articles.py has stripped their own inline <style> and
+   style="" attributes, wrapped their content in <main class="v2c-article">,
+   and left every class name (btn/cta/box/highlight/tag/toc/stat/card/grid/...)
+   otherwise untouched for these substring selectors to key off.
+   ========================================================================== */
+
+.v2c-article h4,
+.v2c-article h5,
+.v2c-article h6 {
+  margin: 1.6rem 0 .7rem;
+  color: var(--v2c-ink, #171714);
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.v2c-article h4 {
+  font-size: 1.05rem;
+}
+
+.v2c-article h5 {
+  font-size: .95rem;
+}
+
+.v2c-article h6 {
+  color: var(--v2c-muted, #65635d);
+  font-size: .82rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.v2c-article p,
+.v2c-article li {
+  font-size: 17px;
+}
+
+.v2c-article hr {
+  margin: 2.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--v2c-line, #d9d4ca);
+}
+
+.v2c-article details {
+  margin: 1.6rem 0;
+  padding: 1rem 1.3rem;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 14px;
+  background: var(--v2c-paper-strong, #fffdfa);
+}
+
+.v2c-article details[open] summary {
+  margin-bottom: .6rem;
+}
+
+.v2c-article summary {
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.v2c-article figure,
+.v2c-article video,
+.v2c-article iframe {
+  max-width: 100%;
+  margin: 1.6rem 0;
+  border-radius: 14px;
+}
+
+.v2c-article figure img {
+  margin: 0;
+}
+
+.v2c-article figcaption {
+  margin-top: .6rem;
+  color: var(--v2c-muted, #65635d);
+  font-size: .85rem;
+  text-align: center;
+}
+
+/* A plain <table> cannot itself scroll without becoming a block box; giving
+   it `display: block` still lets its thead/tbody/tr children keep table
+   layout (the UA generates the missing anonymous table box around them),
+   while the table element itself becomes a container `overflow-x: auto`
+   can apply to, so a wide comparison table never forces the 760px article
+   column to overflow at 375–1440px. */
+.v2c-article table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 12px;
+}
+
+/* Common component classes carried over unmodified from migrated article
+   markup (unify_articles.py only strips style="" attributes and <style>
+   elements; every class name stays, which is what these selectors key
+   off). Substring + case-insensitive so `cta-block`, `CTA-Btn`,
+   `info-box`, `stat-card`, `platform-grid`, etc. all match. */
+
+.v2c-article a:is([class*="btn" i], [class*="cta" i], [class*="button" i]) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  min-height: 44px;
+  margin: .3rem .3rem .3rem 0;
+  padding: .7rem 1.3rem;
+  border-radius: 999px;
+  background: var(--v2c-ink, #171714);
+  color: #fff;
+  font-weight: 650;
+  font-size: .92rem;
+  text-decoration: none;
+  transition: background-color .2s ease;
+}
+
+.v2c-article a:is([class*="btn" i], [class*="cta" i], [class*="button" i]):hover {
+  background: var(--v2c-gold, #8a6537);
+}
+
+.v2c-article :is(div, aside, section):is(
+    [class*="callout" i],
+    [class*="note" i],
+    [class*="tip" i],
+    [class*="warning" i],
+    [class*="alert" i],
+    [class*="box" i],
+    [class*="highlight" i],
+    [class*="summary" i],
+    [class*="info" i]
+  ) {
+  margin: 1.6rem 0;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 18px;
+  background: var(--v2c-paper-strong, #fffdfa);
+}
+
+.v2c-article span:is([class*="tag" i], [class*="badge" i], [class*="pill" i], [class*="label" i]) {
+  display: inline-flex;
+  align-items: center;
+  margin: .2rem .3rem .2rem 0;
+  padding: .3rem .75rem;
+  border-radius: 999px;
+  background: var(--v2c-gold-soft, #eadfcf);
+  color: var(--v2c-ink, #171714);
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+.v2c-article :is(nav, div)[class*="toc" i] {
+  margin: 1.6rem 0;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 18px;
+  background: var(--v2c-paper-strong, #fffdfa);
+}
+
+.v2c-article :is(nav, div)[class*="toc" i] a {
+  display: block;
+  margin: .3rem 0;
+}
+
+.v2c-article div:is([class*="stat" i], [class*="card" i]) {
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 18px;
+  background: var(--v2c-paper-strong, #fffdfa);
+}
+
+.v2c-article div:is([class*="grid" i], [class*="cards" i], [class*="stats" i]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v2c-article a:is([class*="btn" i], [class*="cta" i], [class*="button" i]) {
+    transition: none !important;
+  }
+}
+
+/* In-article link rows, author bylines and table cell widths (unify review follow-up). */
+.v2c-article nav:has(> a):not([class*="breadcrumb" i]) { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 1.5rem; }
+.v2c-article nav:has(> a):not([class*="breadcrumb" i]) > a { padding: .35rem .85rem; border: 1px solid var(--v2c-line, #d9d4ca); border-radius: 999px; font-size: .9rem; text-decoration: none; }
+.v2c-article [class*="byline" i] { display: flex; align-items: center; gap: .75rem; margin: 1rem 0; }
+.v2c-article [class*="byline" i] > div:first-child:not(:has(*)) { flex: 0 0 40px; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid var(--v2c-line, #d9d4ca); border-radius: 50%; background: #efe8da; font-weight: 700; }
+.v2c-article th, .v2c-article td { min-width: 7.5em; }
+
+/* Kira page-portrait avatar circle (exact class, not a substring -- a
+   broader [class*="avatar" i] would also catch the unrelated emoji
+   "author-avatar" bubble in blog/deepclaude-run-claude-code-deepseek-17x-cheaper-2026.html,
+   which the byline rule above already sizes; that page keeps its 40px
+   treatment untouched). Without this, the removed page-specific <style>
+   left the portrait <img> at its natural (large) resolution instead of a
+   130px circle. */
+.v2c-article .kira-avatar {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.v2c-article .kira-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Photo grid/gallery containers -- class contains "gallery" or "scene"
+   (e.g. Kira's .scene-mini scenario-pack thumbnails). Without this, once a
+   page's own <style> block is gone these <a><img></a> tiles are inline
+   with no width limit, so each image renders near full article width and
+   the "grid" collapses into one very tall column. auto-fit/minmax never
+   overflows its container -- it only reduces the column count -- so this
+   stays safe at 375-1440px regardless of how many tiles a future gallery
+   page uses. */
+.v2c-article div:is([class*="gallery" i], [class*="scene" i]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: .5rem;
+}
+
+.v2c-article div:is([class*="gallery" i], [class*="scene" i]) a {
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.v2c-article div:is([class*="gallery" i], [class*="scene" i]) img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   v2c-tool — wider content column for tools/*.html + en/tools/*.html
+   (scripts/unify_articles.py adds this modifier to every tool page's
+   <main class="v2c-article">, content-type and interactive alike).
+   Overriding the whole `width` shorthand -- not just a max-width -- because
+   .v2c-article sets width via `min(calc(100% - Npx), 760px)`; below ~1140px
+   viewport the viewport-relative operand already wins regardless of which
+   cap this sets, so no separate mobile-breakpoint override is needed.
+   ========================================================================== */
+
+.v2c-article.v2c-tool {
+  width: min(calc(100% - 40px), 1100px);
+}
+
+/* ==========================================================================
+   v2c-article form elements + interactive-tool component patterns
+   (TASK site-unify-20260927 batch U3). Calculators/quizzes keep their own
+   functional CSS (display:none/.active/etc, see scripts/unify_articles.py's
+   --keep-functional-css mode) for JS-driven show/hide and selected state;
+   these rules give every input/button/result panel the shared v2 look
+   regardless of that. All widths are 100%/relative, so nothing here can
+   force a 375-1440px horizontal overflow.
+   ========================================================================== */
+
+.v2c-article label {
+  display: block;
+  margin: 0 0 .35rem;
+  color: var(--v2c-ink, #171714);
+  font-weight: 600;
+  font-size: .92rem;
+}
+
+.v2c-article :is(input, select, textarea) {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: .65rem .9rem;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 10px;
+  background: var(--v2c-paper-strong, #fffdfa);
+  color: var(--v2c-ink, #171714);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.v2c-article :is(input, select, textarea):focus {
+  outline: 2px solid var(--v2c-gold, #8a6537);
+  outline-offset: 1px;
+}
+
+.v2c-article input[type="range"] {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  accent-color: var(--v2c-gold, #8a6537);
+}
+
+.v2c-article :is(input[type="checkbox"], input[type="radio"]) {
+  width: 1.1rem;
+  height: 1.1rem;
+  min-width: 1.1rem;
+  padding: 0;
+  margin: 0 .4rem 0 0;
+  vertical-align: middle;
+  accent-color: var(--v2c-gold, #8a6537);
+}
+
+.v2c-article textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.v2c-article fieldset {
+  margin: 1.4rem 0;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 14px;
+}
+
+.v2c-article fieldset legend {
+  padding: 0 .4rem;
+  color: var(--v2c-ink, #171714);
+  font-weight: 650;
+}
+
+.v2c-article output {
+  display: inline-block;
+  color: var(--v2c-ink, #171714);
+  font-weight: 650;
+}
+
+.v2c-article button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Primary buttons: same look as the a:is(btn/cta/button) treatment above,
+   extended to <button> elements (calculators use real buttons, not links). */
+.v2c-article button:is([class*="btn" i], [class*="cta" i], [class*="button" i], [type="submit"]) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  min-height: 44px;
+  padding: .7rem 1.3rem;
+  margin: .2rem .3rem .2rem 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--v2c-ink, #171714);
+  color: #fff;
+  font-weight: 650;
+  font-size: .92rem;
+}
+
+.v2c-article button:is([class*="btn" i], [class*="cta" i], [class*="button" i], [type="submit"]):hover {
+  background: var(--v2c-gold, #8a6537);
+}
+
+/* Result/summary panels: class contains result/output/summary/total. */
+.v2c-article :is(div, section, aside):is([class*="result" i], [class*="output" i], [class*="summary" i], [class*="total" i]) {
+  margin: 1.6rem 0;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 18px;
+  background: var(--v2c-paper-strong, #fffdfa);
+}
+
+/* Tab buttons: class contains the whole word "tab" (e.g. "channel-tab"),
+   not "table" -- \b keeps those apart. */
+.v2c-article :is(button, a)[class~="tab"],
+.v2c-article :is(button, a)[class*="-tab" i],
+.v2c-article :is(button, a)[class*="tab-" i] {
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1.1rem;
+  margin: .2rem .3rem .2rem 0;
+  border: 1px solid var(--v2c-line, #d9d4ca);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--v2c-ink, #171714);
+  font-size: .88rem;
+  text-decoration: none;
+}
+
+.v2c-article :is(button, a)[class~="tab"].active,
+.v2c-article :is(button, a)[class*="-tab" i].active,
+.v2c-article :is(button, a)[class*="tab-" i].active,
+.v2c-article :is(button, a)[class~="tab"][aria-selected="true"],
+.v2c-article :is(button, a)[class*="-tab" i][aria-selected="true"],
+.v2c-article :is(button, a)[class*="tab-" i][aria-selected="true"] {
+  background: var(--v2c-ink, #171714);
+  border-color: var(--v2c-ink, #171714);
+  color: #fff;
 }

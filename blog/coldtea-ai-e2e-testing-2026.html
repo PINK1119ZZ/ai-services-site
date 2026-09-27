@@ -69,179 +69,11 @@
       ]
     }
     </script>
-    <style>
-        :root {
-            --primary: #FF6B35;
-            --dark: #1A1A2E;
-            --light: #FFF8F3;
-            --text: #2D2D3A;
-            --gray: #6B6B7B;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Segoe UI", sans-serif;
-            line-height: 1.8;
-            color: var(--text);
-            background: var(--light);
-        }
-        .container { max-width: 840px; margin: 0 auto; padding: 0 20px; }
-        header.site-header {
-            background: var(--dark);
-            padding: 16px 0;
-        }
-        header.site-header a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 20px;
-        }
-        article { padding: 40px 0 80px; }
-        .breadcrumb {
-            font-size: 13px;
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .urgent-badge {
-            display: inline-block;
-            background: #FF3B30;
-            color: #fff;
-            font-size: 13px;
-            font-weight: 700;
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin-bottom: 16px;
-        }
-        h1 {
-            font-size: 32px;
-            font-weight: 900;
-            line-height: 1.3;
-            margin-bottom: 12px;
-            color: var(--dark);
-        }
-        .meta {
-            color: var(--gray);
-            font-size: 14px;
-            margin-bottom: 32px;
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-        h2 {
-            font-size: 24px;
-            font-weight: 800;
-            margin: 40px 0 16px;
-            color: var(--dark);
-            border-left: 4px solid var(--primary);
-            padding-left: 12px;
-        }
-        h3 {
-            font-size: 19px;
-            font-weight: 700;
-            margin: 28px 0 12px;
-            color: var(--dark);
-        }
-        p { margin-bottom: 16px; font-size: 16px; }
-        ul, ol { margin: 0 0 20px 24px; }
-        li { margin-bottom: 8px; }
-        code {
-            background: #F0EDE8;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: "SF Mono", Consolas, monospace;
-            font-size: 14px;
-            color: #C0392B;
-        }
-        pre {
-            background: #1A1A2E;
-            color: #E8E8F0;
-            padding: 18px;
-            border-radius: 10px;
-            overflow-x: auto;
-            margin-bottom: 20px;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        pre code { background: none; color: inherit; padding: 0; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 24px;
-            font-size: 15px;
-        }
-        th, td {
-            border: 1px solid #E5E0D8;
-            padding: 10px 14px;
-            text-align: left;
-        }
-        th { background: #FFF1E6; font-weight: 700; }
-        .cta-box {
-            background: linear-gradient(135deg, #FF6B35, #FF9068);
-            border-radius: 16px;
-            padding: 28px;
-            margin: 32px 0;
-            color: #fff;
-            text-align: center;
-        }
-        .cta-box h3 { color: #fff; margin-top: 0; }
-        .cta-box p { color: rgba(255,255,255,0.92); }
-        .cta-btn {
-            display: inline-block;
-            background: #fff;
-            color: var(--primary);
-            font-weight: 800;
-            padding: 14px 32px;
-            border-radius: 30px;
-            text-decoration: none;
-            margin-top: 12px;
-            font-size: 16px;
-            transition: transform 0.2s;
-        }
-        .cta-btn:hover { transform: translateY(-2px); }
-        .cta-box.blue { background: linear-gradient(135deg, #2E86DE, #54A0FF); }
-        .cta-box.blue .cta-btn { color: #2E86DE; }
-        .cta-box.green { background: linear-gradient(135deg, #10AC84, #1DD1A1); }
-        .cta-box.green .cta-btn { color: #10AC84; }
-        .info-box {
-            background: #FFF1E6;
-            border-left: 4px solid var(--primary);
-            padding: 16px 20px;
-            border-radius: 8px;
-            margin-bottom: 24px;
-        }
-        .faq-item { margin-bottom: 24px; }
-        .faq-item h3 { color: var(--primary); }
-        footer.site-footer {
-            background: var(--dark);
-            color: #ccc;
-            text-align: center;
-            padding: 30px 0;
-            font-size: 13px;
-        }
-        footer.site-footer a { color: #FF9068; }
-        .stat-card {
-            background: #fff;
-            border: 1px solid #E5E0D8;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 24px;
-            text-align: center;
-        }
-        .stat-card .big-num {
-            font-size: 36px;
-            font-weight: 900;
-            color: var(--primary);
-            display: block;
-        }
-    </style>
+
 <link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
-<header class="site-header">
-    <div class="container">
-        <a href="/">AutoDev AI</a>
-    </div>
-</header>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article">
+
 
 <article>
     <div class="container">
@@ -375,7 +207,7 @@ Steps:
     </div>
 </article>
 
-<!-- v2-chrome:disclosure --><aside class="v2c-disclosure" aria-label="聯盟行銷揭露"><p>本文含聯盟連結，若透過連結完成購買我們可能獲得少量佣金，不影響您的購買價格。</p></aside><!-- /v2-chrome:disclosure -->
+</main><!-- v2-chrome:disclosure --><aside class="v2c-disclosure" aria-label="聯盟行銷揭露"><p>本文含聯盟連結，若透過連結完成購買我們可能獲得少量佣金，不影響您的購買價格。</p></aside><!-- /v2-chrome:disclosure -->
 <!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

@@ -26,9 +26,9 @@
 <meta content="LINE Bot development tutorial, LINE Bot tutorial, LINE bot guide, LINE Bot build, LINE Messaging API, LINE Bot development, LINE LIFF tutorial, Rich Menu tutorial" name="keywords"/>
 <meta content="AutoDev AI" name="author"/>
 <meta content="index, follow" name="robots"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Noto+Serif+TC:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="/style.css" rel="stylesheet"/>
+
+
+
 <script type="application/ld+json">
  {"@context":"https://schema.org","@type":"Article","headline":"LINE Bot 開發教學：從零開始到上線的完整攻略（2026）","description":"LINE Bot 開發完整教學，含 LINE Developer 設定、Messaging API、常見功能開發、DIY vs 外包比較","author":{"@type":"Person","name":"Ivan","url":"https://autodev-ai.com/about.html"},"publisher":{"@type":"Organization","name":"AutoDev AI","logo":{"@type":"ImageObject","url":"https://autodev-ai.com/autodev-logo2.png"}},"datePublished":"2026-04-02","dateModified":"2026-04-02","mainEntityOfPage":"https://autodev-ai.com/blog/line-bot-tutorial-2026.html","image":"https://autodev-ai.com/autodev-logo2.png"}
  </script>
@@ -37,41 +37,22 @@
  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
-<style>
- .blog-article { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
- .blog-article h2 { color: var(--primary); margin: 2.5rem 0 1rem; font-size: 1.6rem; }
- .blog-article h3 { color: var(--text); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
- .blog-article p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.2rem; }
- .blog-article ul, .blog-article ol { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; }
- .blog-article li { margin-bottom: 0.5rem; }
- .blog-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; text-align: center; }
- .blog-meta span { margin: 0 0.5rem; }
- .price-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; }
- .price-table th, .price-table td { padding: 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
- .price-table th { color: var(--primary); font-weight: 700; background: rgba(184,148,106,0.1); }
- .price-table td { color: var(--text-muted); }
- .price-table tr:hover td { background: rgba(184,148,106,0.05); }
- .highlight-box { background: rgba(184,148,106,0.1); border-left: 4px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0; margin: 1.5rem 0; }
- .highlight-box p { margin-bottom: 0; color: var(--text); }
- .blog-nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
- .blog-nav a { color: var(--primary); text-decoration: none; padding: 0.4rem 1rem; border: 1px solid rgba(184,148,106,0.3); border-radius: 20px; font-size: 0.85rem; transition: all 0.3s; }
- .blog-nav a:hover { background: rgba(184,148,106,0.2); border-color: var(--primary); }
- </style>
+
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482625906579389" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/en/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/en/services.html">Services</a><a href="/en/portfolio.html">Work</a><a href="/en/ai-model.html">AI Model</a><a href="/en/blog/" aria-current="page">Insights</a><a href="/en/about.html">About</a><a href="/en/contact.html">Contact</a><a class="v2c-cta" href="/en/contact.html" data-analytics="nav_contact">Discuss a project</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="Open menu" data-open-label="Open menu" data-close-label="Close menu">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/en/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/en/services.html">Services</a><a href="/en/portfolio.html">Work</a><a href="/en/ai-model.html">AI Model</a><a href="/en/blog/" aria-current="page">Insights</a><a href="/en/about.html">About</a><a href="/en/contact.html">Contact</a><a class="v2c-cta" href="/en/contact.html" data-analytics="nav_contact">Discuss a project</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="Open menu" data-open-label="Open menu" data-close-label="Close menu">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article">
 <!-- NAV -->
 
 <!-- PAGE HEADER -->
 <section class="page-header">
 <h1 data-en="LINE Bot Development Tutorial">LINE Bot Development Tutorial</h1>
 <!-- AUTHOR_BYLINE -->
-<div class="author-byline" style="display:flex;align-items:center;gap:1rem;margin:1.5rem 0 2rem;padding:1.2rem;background:rgba(184,148,106,0.08);border-left:3px solid var(--primary);border-radius:6px;">
-<div style="width:48px;height:48px;border-radius:50%;background:var(--gradient-1);display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;color:#fff;flex-shrink:0;">I</div>
-<div style="font-size:0.9rem;line-height:1.6;">
-<div><strong style="color:var(--light);">By <a href="/en/about.html" style="color:var(--accent);text-decoration:none;">Ivan</a></strong>— Independent developer, Taiwan</div>
-<div style="color:var(--gray);font-size:0.85rem;">Published: 2026-04-02 · <a href="/en/disclaimer.html" style="color:var(--gray);text-decoration:underline;">Editorial policy</a></div>
+<div class="author-byline">
+<div>I</div>
+<div>
+<div><strong>By <a href="/en/about.html">Ivan</a></strong>— Independent developer, Taiwan</div>
+<div>Published: 2026-04-02 · <a href="/en/disclaimer.html">Editorial policy</a></div>
 </div>
 </div>
 <p data-en="Complete Guide from Zero to Launch (2026)">Complete Guide from Zero to Launch (2026)</p>
@@ -94,8 +75,8 @@
 <h3 data-en="Required">Required</h3>
 <ul>
 <li data-en="&lt;strong&gt;LINE account&lt;/strong&gt;: Used to log into LINE Developer Console"><strong>LINE account</strong>: Used to log into LINE Developer Console</li>
-<li data-en='&lt;strong&gt;LINE official account&lt;/strong&gt;: Create one for free at &lt;a href="https://manager.line.biz/" target="_blank" rel="noopener" style="color:var(--accent);"&gt;LINE Official Account Manager&lt;/a&gt;'><strong>LINE official account</strong>: Create one for free at <a href="https://manager.line.biz/" rel="noopener" style="color:var(--accent);" target="_blank">LINE Official Account Manager</a></li>
-<li data-en='&lt;strong&gt;LINE Developer account&lt;/strong&gt;: Register at &lt;a href="https://developers.line.biz/" target="_blank" rel="noopener" style="color:var(--accent);"&gt;LINE Developers&lt;/a&gt;'><strong>LINE Developer account</strong>: Register at <a href="https://developers.line.biz/" rel="noopener" style="color:var(--accent);" target="_blank">LINE Developers</a></li>
+<li data-en='&lt;strong&gt;LINE official account&lt;/strong&gt;: Create one for free at &lt;a href="https://manager.line.biz/" target="_blank" rel="noopener"&gt;LINE Official Account Manager&lt;/a&gt;'><strong>LINE official account</strong>: Create one for free at <a href="https://manager.line.biz/" rel="noopener" target="_blank">LINE Official Account Manager</a></li>
+<li data-en='&lt;strong&gt;LINE Developer account&lt;/strong&gt;: Register at &lt;a href="https://developers.line.biz/" target="_blank" rel="noopener"&gt;LINE Developers&lt;/a&gt;'><strong>LINE Developer account</strong>: Register at <a href="https://developers.line.biz/" rel="noopener" target="_blank">LINE Developers</a></li>
 </ul>
 <h3 data-en="For Advanced Features You Also Need">For Advanced Features You Also Need</h3>
 <ul>
@@ -168,7 +149,7 @@
 <p data-en="The most basic feature. Automatically replies based on user message content. Can be simple keyword matching or AI-powered smart replies.">The most basic feature. Automatically replies based on user message content. Can be simple keyword matching or AI-powered smart replies.</p>
 <ul>
 <li data-en='&lt;strong&gt;Keyword reply&lt;/strong&gt;: Detects specific keywords (like "business hours," "price") and replies with preset content'><strong>Keyword reply</strong>: Detects specific keywords (like "business hours," "price") and replies with preset content</li>
-<li data-en='&lt;strong&gt;AI smart reply&lt;/strong&gt;: Integrates GPT or Claude to understand natural language and generate answers. See &lt;a href="/blog/ai-customer-service-line.html" style="color:var(--accent);"&gt;AI CS Complete Guide&lt;/a&gt;'><strong>AI smart reply</strong>: Integrates GPT or Claude to understand natural language and generate answers. See <a href="/en/blog/ai-customer-service-line.html" style="color:var(--accent);">AI CS Complete Guide</a></li>
+<li data-en='&lt;strong&gt;AI smart reply&lt;/strong&gt;: Integrates GPT or Claude to understand natural language and generate answers. See &lt;a href="/blog/ai-customer-service-line.html"&gt;AI CS Complete Guide&lt;/a&gt;'><strong>AI smart reply</strong>: Integrates GPT or Claude to understand natural language and generate answers. See <a href="/en/blog/ai-customer-service-line.html">AI CS Complete Guide</a></li>
 </ul>
 <h3 data-en="2. Rich Menu">2. Rich Menu</h3>
 <p data-en="The visual menu at the bottom of the LINE chat is the most intuitive entry point for users. You can design multiple button areas that trigger different features when tapped (e.g., book, inquire, contact CS).">The visual menu at the bottom of the LINE chat is the most intuitive entry point for users. You can design multiple button areas that trigger different features when tapped (e.g., book, inquire, contact CS).</p>
@@ -188,7 +169,7 @@
 </ul>
 <p data-en="LIFF's advantage is direct access to the user's LINE User ID without separate login, creating a smooth experience.">LIFF's advantage is direct access to the user's LINE User ID without separate login, creating a smooth experience.</p>
 <h3 data-en="4. Booking System">4. Booking System</h3>
-<p data-en='Complete the booking flow within the LINE chat, including time slot management, auto-confirmation, and booking reminders. For details, see &lt;a href="/blog/line-bot-booking-system.html" style="color:var(--accent);"&gt;LINE Booking System Complete Guide&lt;/a&gt;.'>Complete the booking flow within the LINE chat, including time slot management, auto-confirmation, and booking reminders. For details, see <a href="/en/blog/line-bot-booking-system.html" style="color:var(--accent);">LINE Booking System Complete Guide</a>.</p>
+<p data-en='Complete the booking flow within the LINE chat, including time slot management, auto-confirmation, and booking reminders. For details, see &lt;a href="/blog/line-bot-booking-system.html"&gt;LINE Booking System Complete Guide&lt;/a&gt;.'>Complete the booking flow within the LINE chat, including time slot management, auto-confirmation, and booking reminders. For details, see <a href="/en/blog/line-bot-booking-system.html">LINE Booking System Complete Guide</a>.</p>
 <h3 data-en="5. Push Notifications">5. Push Notifications</h3>
 <p data-en="Proactively send notifications to users: booking reminders, order status updates, event notices, birthday greetings, etc. Note that Push Messages count toward your message quota, so control frequency and targeting.">Proactively send notifications to users: booking reminders, order status updates, event notices, birthday greetings, etc. Note that Push Messages count toward your message quota, so control frequency and targeting.</p>
 <h3 data-en="6. Third-Party Integrations">6. Third-Party Integrations</h3>
@@ -262,7 +243,7 @@
 <li data-en="Your time is worth more than the development cost">Your time is worth more than the development cost</li>
 </ul>
 <div class="highlight-box">
-<p data-en="&lt;strong&gt;Practical advice:&lt;/strong&gt; If you're a store owner and the revenue you generate per hour far exceeds the dev cost amortized hourly, outsourcing is absolutely the smarter choice. Spend your time on what you do best and leave the tech to professionals. &lt;a href=&quot;/pricing.html&quot; style=&quot;color:var(--accent);&quot;&gt;View AutoDev AI Plans &amp;rarr;&lt;/a&gt;"><strong>Practical advice:</strong>If you're a store owner and the revenue you generate per hour far exceeds the dev cost amortized hourly, outsourcing is absolutely the smarter choice. Spend your time on what you do best and leave the tech to professionals. <a href="/en/pricing.html" style="color:var(--accent);">View AutoDev AI Plans →</a></p>
+<p data-en="&lt;strong&gt;Practical advice:&lt;/strong&gt; If you're a store owner and the revenue you generate per hour far exceeds the dev cost amortized hourly, outsourcing is absolutely the smarter choice. Spend your time on what you do best and leave the tech to professionals. &lt;a href=&quot;/pricing.html&quot; style=&quot;color:var(--accent);&quot;&gt;View AutoDev AI Plans &amp;rarr;&lt;/a&gt;"><strong>Practical advice:</strong>If you're a store owner and the revenue you generate per hour far exceeds the dev cost amortized hourly, outsourcing is absolutely the smarter choice. Spend your time on what you do best and leave the tech to professionals. <a href="/en/pricing.html">View AutoDev AI Plans →</a></p>
 </div>
 <h2 data-en="Common Pitfalls in LINE Bot Development">Common Pitfalls in LINE Bot Development</h2>
 <ol>
@@ -295,13 +276,13 @@
 <div class="faq-a" data-en="A LINE official account is a business account provided by LINE with basic auto-response features. A LINE Bot is a program developed through Messaging API that can handle more complex functions like AI conversations, booking systems, and database integrations. LINE Bot is built on top of a LINE official account.">A LINE official account is a business account provided by LINE with basic auto-response features. A LINE Bot is a program developed through Messaging API that can handle more complex functions like AI conversations, booking systems, and database integrations. LINE Bot is built on top of a LINE official account.</div>
 </div>
 </div>
-<div class="highlight-box" style="margin-top:2rem;">
-<p data-en='&lt;strong&gt;Free Consultation:&lt;/strong&gt; Found the tutorial too complex? No worries — &lt;a href="/en/contact.html" style="color:var(--accent);"&gt;contact us&lt;/a&gt; for a free 30-minute assessment of your needs and quote. No charge, no pressure.'><strong>Free Consultation:</strong>Found the tutorial too complex? No worries — <a href="/en/contact.html" style="color:var(--accent);">contact us</a>for a free 30-minute assessment of your needs and quote. No charge, no pressure.</p>
+<div class="highlight-box">
+<p data-en='&lt;strong&gt;Free Consultation:&lt;/strong&gt; Found the tutorial too complex? No worries — &lt;a href="/en/contact.html"&gt;contact us&lt;/a&gt; for a free 30-minute assessment of your needs and quote. No charge, no pressure.'><strong>Free Consultation:</strong>Found the tutorial too complex? No worries — <a href="/en/contact.html">contact us</a>for a free 30-minute assessment of your needs and quote. No charge, no pressure.</p>
 </div>
 
-<div style="margin-top:1.5rem; padding:1rem; background:var(--bg-light, #f8f9fa); border-radius:8px;">
- <p class="affiliate-note" style="margin:0 0 0.5rem 0;">Recommended: Need a server for your bot? We deploy on <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener noreferrer nofollow">DigitalOcean</a>— reliable and affordable.</p>
- <p class="affiliate-note" style="margin:0;">Recommended: Want to learn LINE Bot development step by step? Check out <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" target="_blank" rel="noopener noreferrer nofollow">Hahow</a>for comprehensive programming and AI courses.</p>
+<div>
+ <p class="affiliate-note">Recommended: Need a server for your bot? We deploy on <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener noreferrer nofollow">DigitalOcean</a>— reliable and affordable.</p>
+ <p class="affiliate-note">Recommended: Want to learn LINE Bot development step by step? Check out <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" target="_blank" rel="noopener noreferrer nofollow">Hahow</a>for comprehensive programming and AI courses.</p>
 </div>
 </article>
 <!-- CTA -->
@@ -340,6 +321,6 @@ document.querySelectorAll('.faq-q').forEach(q =>{
  });
 });
 </script>
-<!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>Automation & Digital Systems Studio. Telegram-first systems that turn complex work into clear workflows.</p></div><div><h3>Studio</h3><a href="/en/services.html">Services</a><a href="/en/portfolio.html">Work</a><a href="/en/pricing.html">Project scope</a><a href="/en/contact.html">Discuss a project</a></div><div><h3>Labs & Tools</h3><a href="/en/bot-cloud.html">Bot Cloud</a><a href="/en/ai-model.html">AI Model</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/en/tools/">Tools</a><a href="/en/demo.html">Demo</a></div><div><h3>More</h3><a href="https://chat.autodev-ai.com/form">Existing form</a><a href="/en/blog/">Insights</a><a href="https://liff.line.me/2009694545-LJmZCiEX">Existing LIFF enquiry</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/en/privacy.html">Privacy</a> · <a href="/en/terms.html">Terms</a> · <a href="/en/disclaimer.html">Disclaimer</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
+</main><!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>Automation & Digital Systems Studio. Telegram-first systems that turn complex work into clear workflows.</p></div><div><h3>Studio</h3><a href="/en/services.html">Services</a><a href="/en/portfolio.html">Work</a><a href="/en/pricing.html">Project scope</a><a href="/en/contact.html">Discuss a project</a></div><div><h3>Labs & Tools</h3><a href="/en/bot-cloud.html">Bot Cloud</a><a href="/en/ai-model.html">AI Model</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/en/tools/">Tools</a><a href="/en/demo.html">Demo</a></div><div><h3>More</h3><a href="https://chat.autodev-ai.com/form">Existing form</a><a href="/en/blog/">Insights</a><a href="https://liff.line.me/2009694545-LJmZCiEX">Existing LIFF enquiry</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/en/privacy.html">Privacy</a> · <a href="/en/terms.html">Terms</a> · <a href="/en/disclaimer.html">Disclaimer</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

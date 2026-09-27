@@ -35,98 +35,11 @@
     }
     </script>
 
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', 'Segoe UI', sans-serif; background: #0f1117; color: #e0e0e0; line-height: 1.7; }
-        .navbar { background: rgba(15,17,23,0.95); border-bottom: 1px solid #2a2d3e; padding: 1rem 2rem; display: flex; align-items: center; gap: 2rem; position: sticky; top: 0; z-index: 100; }
-        .navbar .brand { color: #7c3aed; font-weight: 700; font-size: 1.2rem; text-decoration: none; }
-        .navbar a { color: #a0a0b0; text-decoration: none; font-size: 0.9rem; }
-        .navbar a:hover { color: #e0e0e0; }
-        .hero { background: linear-gradient(135deg, #0d1f0d 0%, #1a0533 40%, #0f1117 100%); padding: 2.8rem 1rem 2rem; text-align: center; border-bottom: 1px solid #2a2d3e; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: #14532d; color: #4ade80; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; margin-bottom: 0.8rem; }
-        .hero h1 { font-size: clamp(1.4rem, 3.5vw, 2.3rem); font-weight: 700; color: #fff; max-width: 780px; margin: 0 auto 0.8rem; line-height: 1.3; }
-        .hero p { color: #aaa; font-size: 0.98rem; max-width: 600px; margin: 0 auto 1.2rem; }
-        .stat-row { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-        .stat-item { text-align: center; }
-        .stat-item .num { font-size: 1.4rem; font-weight: 700; color: #4ade80; }
-        .stat-item .lab { font-size: 0.75rem; color: #666; }
-        .hero-ctas { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
-        .btn-green { display: inline-block; padding: 0.75rem 1.8rem; background: linear-gradient(135deg, #15803d, #16a34a); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: opacity .2s; }
-        .btn-green:hover { opacity: .85; }
-        .btn-purple { display: inline-block; padding: 0.75rem 1.8rem; background: linear-gradient(135deg, #6d28d9, #4c1d95); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.2rem; }
-        h2.sec { font-size: 1.3rem; color: #4ade80; margin: 2.5rem 0 1rem; border-bottom: 1px solid #2a2d3e; padding-bottom: 0.4rem; }
-        p { color: #b0b0c0; margin-bottom: 1rem; font-size: 0.95rem; }
-        /* Summary card */
-        .summary-card { background: linear-gradient(135deg, #0d1f0d, #1a0533); border: 1px solid #15803d; border-radius: 14px; padding: 1.5rem; margin: 2rem 0; }
-        .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
-        .summary-col h4 { font-size: 0.85rem; margin-bottom: 0.5rem; }
-        .summary-col.pros h4 { color: #4ade80; }
-        .summary-col.cons h4 { color: #f87171; }
-        .summary-col ul { list-style: none; }
-        .summary-col ul li { font-size: 0.88rem; color: #b0b0c0; padding: 0.2rem 0 0.2rem 1.2rem; position: relative; }
-        .summary-col.pros ul li::before { content: '✓'; position: absolute; left: 0; color: #4ade80; }
-        .summary-col.cons ul li::before { content: '✗'; position: absolute; left: 0; color: #f87171; }
-        /* Highlight box */
-        .highlight-box { background: #0d1f0d; border-left: 3px solid #4ade80; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
-        .highlight-box strong { color: #4ade80; }
-        /* Code */
-        .code-block { background: #0a0c14; border: 1px solid #2a2d3e; border-radius: 8px; padding: 1rem 1.2rem; margin: 1rem 0; font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.8rem; color: #a5f3fc; overflow-x: auto; white-space: pre; }
-        .code-comment { color: #555; }
-        /* Steps */
-        .steps { counter-reset: step; list-style: none; margin: 1.2rem 0; }
-        .steps li { counter-increment: step; display: flex; gap: 1rem; margin-bottom: 1.2rem; align-items: flex-start; }
-        .steps li::before { content: counter(step); background: #14532d; color: #4ade80; font-weight: 700; font-size: 0.85rem; min-width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; }
-        .steps li .body strong { display: block; color: #e0e0e0; font-size: 0.95rem; margin-bottom: 0.3rem; }
-        .steps li .body span { font-size: 0.88rem; color: #888; }
-        /* Table */
-        .table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid #2a2d3e; margin: 1rem 0; }
-        table { width: 100%; border-collapse: collapse; min-width: 550px; }
-        th { background: #1e2132; color: #4ade80; padding: 0.8rem 1rem; text-align: left; font-size: 0.85rem; border-bottom: 2px solid #14532d; }
-        td { padding: 0.7rem 1rem; border-bottom: 1px solid #1e2132; font-size: 0.85rem; color: #c8c8d8; }
-        tr:last-child td { border-bottom: none; }
-        tr:hover td { background: #1a1d2e; }
-        td.green { color: #4ade80; font-weight: 600; }
-        td.red { color: #f87171; }
-        /* Pricing */
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
-        .plan-card { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 12px; padding: 1.2rem; }
-        .plan-card.hot { border-color: #4ade80; }
-        .plan-name { font-size: 0.82rem; color: #888; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .3rem; }
-        .plan-price { font-size: 1.5rem; font-weight: 700; color: #4ade80; }
-        .plan-price sub { font-size: .75rem; color: #888; font-weight: 400; }
-        .plan-twd { font-size: .78rem; color: #666; margin-bottom: .8rem; }
-        .plan-feats { list-style: none; }
-        .plan-feats li { font-size: .82rem; color: #b0b0c0; padding: .18rem 0 .18rem 1rem; position: relative; }
-        .plan-feats li::before { content: '✓'; position: absolute; left: 0; color: #4ade80; }
-        /* CTA */
-        .cta-sec { background: linear-gradient(135deg, #0d1f0d, #1a0533); border: 1px solid #14532d; border-radius: 14px; padding: 2rem; margin: 2.5rem 0; text-align: center; }
-        .cta-sec h3 { color: #4ade80; font-size: 1.2rem; margin-bottom: .6rem; }
-        .cta-sec p { color: #888; font-size: .9rem; margin-bottom: 1.2rem; }
-        .cta-row { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
-        /* Score */
-        .scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
-        .score-card { background: #1a1d2e; border: 1px solid #2a2d3e; border-radius: 10px; padding: 1rem; text-align: center; }
-        .score-card .s-label { font-size: .78rem; color: #888; margin-bottom: .3rem; }
-        .score-card .s-val { font-size: 1.4rem; font-weight: 700; color: #4ade80; }
-        /* FAQ */
-        .faq-item { border-bottom: 1px solid #2a2d3e; padding: 1.2rem 0; }
-        .faq-item summary { cursor: pointer; color: #e0e0e0; font-weight: 600; font-size: .95rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-        .faq-item summary::after { content: '+'; color: #4ade80; font-size: 1.2rem; }
-        .faq-item[open] summary::after { content: '−'; }
-        .faq-ans { color: #b0b0c0; font-size: .9rem; margin-top: .8rem; }
-        footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid #1e2132; color: #555; font-size: .82rem; }
-        footer a { color: #4ade80; text-decoration: none; }
-        .disclaimer { font-size: .78rem; color: #555; margin-top: 1.5rem; padding: 1rem; border: 1px solid #1e2132; border-radius: 8px; }
-        @media(max-width:600px){.summary-grid{grid-template-columns:1fr;}.hero-ctas{flex-direction:column;align-items:center;}}
-    </style>
+
+<link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body>
-<nav class="navbar">
-    <a class="brand" href="https://autodev-ai.com">AutoDev AI</a>
-    <a href="https://autodev-ai.com/blog/">Blog</a>
-    <a href="https://autodev-ai.com/tools/">工具</a>
-</nav>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article v2c-tool">
+
 
 <div class="hero">
     <div class="hero-badge">⭐ GitHub 44K★ · HeyGen 官方工具 · 繁中首發</div>
@@ -147,7 +60,7 @@
 <div class="container">
 
     <h2 class="sec">🎯 HyperFrames 是什麼？</h2>
-    <p><strong style="color:#e0e0e0;">HyperFrames</strong> 是 HeyGen 在 2026 年 9 月推出的開源 HTML-to-Video 引擎（GitHub：HeyGen-Official/HyperFrames），核心理念是：<strong style="color:#4ade80;">用你熟悉的 HTML/CSS 語法描述影片結構，AI 自動生成含 Avatar 旁白的完整影片。</strong></p>
+    <p><strong>HyperFrames</strong> 是 HeyGen 在 2026 年 9 月推出的開源 HTML-to-Video 引擎（GitHub：HeyGen-Official/HyperFrames），核心理念是：<strong>用你熟悉的 HTML/CSS 語法描述影片結構，AI 自動生成含 Avatar 旁白的完整影片。</strong></p>
     <p>傳統 AI 影片製作需要開啟 HeyGen 介面、上傳腳本、手動排版。HyperFrames 把整個流程變成程式碼：你只需寫一份 HTML template，Claude Code 或任何支援 MCP 的 AI 就能直接呼叫 HyperFrames API 生成影片。</p>
 
     <div class="highlight-box">
@@ -155,7 +68,7 @@
     </div>
 
     <div class="summary-card">
-        <h3 style="color:#4ade80;font-size:1rem;">📋 快速評測結論</h3>
+        <h3>📋 快速評測結論</h3>
         <div class="summary-grid">
             <div class="summary-col pros">
                 <h4>✅ 優點</h4>
@@ -216,7 +129,7 @@ npm install
 <span class="code-comment"># 設定環境變數</span>
 echo "HEYGEN_API_KEY=your_api_key_here" > .env</div>
 
-    <ul class="steps" style="counter-reset:step 2;">
+    <ul class="steps">
         <li>
             <div class="body">
                 <strong>步驟 3：設定 Claude Code MCP（選用，推薦）</strong>
@@ -237,7 +150,7 @@ echo "HEYGEN_API_KEY=your_api_key_here" > .env</div>
   }
 }</div>
 
-    <ul class="steps" style="counter-reset:step 3;">
+    <ul class="steps">
         <li>
             <div class="body">
                 <strong>步驟 4：撰寫你的第一個 HyperFrame HTML 模板</strong>
@@ -264,7 +177,7 @@ echo "HEYGEN_API_KEY=your_api_key_here" > .env</div>
   &lt;overlay type="cta" text="免費試用" url="https://example.com" /&gt;
 &lt;/hyperframe&gt;</div>
 
-    <ul class="steps" style="counter-reset:step 4;">
+    <ul class="steps">
         <li>
             <div class="body">
                 <strong>步驟 5：生成影片 — CLI 或 Claude 對話</strong>
@@ -281,16 +194,16 @@ npx hyperframes generate product-intro.hframe.html --output ./output/
 
     <h2 class="sec">🇹🇼 台灣開發者與行銷人 4 大實戰場景</h2>
 
-    <p><strong style="color:#e0e0e0;">場景 1：SaaS 產品 Onboarding 影片批次生成</strong><br>
+    <p><strong>場景 1：SaaS 產品 Onboarding 影片批次生成</strong><br>
     SaaS 新創每次改版後需要更新 Onboarding 影片（英文 + 繁中各一版）。傳統方法：重錄或更換字幕，需 2-3 天。使用 HyperFrames：修改 template 的旁白文字，Claude Code 批次生成兩語言版本，30 分鐘完成。</p>
 
-    <p><strong style="color:#e0e0e0;">場景 2：電商商品介紹短片</strong><br>
+    <p><strong>場景 2：電商商品介紹短片</strong><br>
     電商品牌每週新增 20-50 個 SKU，每個商品需要 15-30 秒介紹短片用於 IG Reels / TikTok。HyperFrames template 化商品資訊（名稱、價格、特色），n8n 讀取商品資料庫 → 自動填入 template → 批次生成，每天 100 支影片完全自動化。</p>
 
-    <p><strong style="color:#e0e0e0;">場景 3：教學平台課程預覽影片</strong><br>
-    Hahow 等教學平台的課程預覽影片製作成本高。HyperFrames 可讓講師用文字稿生成 Avatar 預覽影片，無需出鏡、無需錄音，AI 自動生成。結合 <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" style="color:#4ade80;" target="_blank" rel="noopener">Hahow 課程製作工作流</a>，大幅降低課程製作門檻。</p>
+    <p><strong>場景 3：教學平台課程預覽影片</strong><br>
+    Hahow 等教學平台的課程預覽影片製作成本高。HyperFrames 可讓講師用文字稿生成 Avatar 預覽影片，無需出鏡、無需錄音，AI 自動生成。結合 <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" target="_blank" rel="noopener">Hahow 課程製作工作流</a>，大幅降低課程製作門檻。</p>
 
-    <p><strong style="color:#e0e0e0;">場景 4：企業培訓教材影片</strong><br>
+    <p><strong>場景 4：企業培訓教材影片</strong><br>
     HR 部門定期需要更新員工培訓影片（資安、合規、產品更新）。HyperFrames 讓 HR 人員直接編輯 HTML 文字稿，無需影片製作技術，IT 人員用 Claude Code 一鍵更新並生成新版影片，維護成本降低 80%。</p>
 
     <h2 class="sec" id="comparison">⚖️ HyperFrames vs 其他 AI 影片工具完整比較</h2>
@@ -357,7 +270,7 @@ npx hyperframes generate product-intro.hframe.html --output ./output/
                 </tr>
                 <tr>
                     <td>月費（起）</td>
-                    <td>HyperFrames 免費<br><span style="font-size:.78rem;color:#888;">HeyGen $29/月起</span></td>
+                    <td>HyperFrames 免費<br><span>HeyGen $29/月起</span></td>
                     <td>$29/月</td>
                     <td>$22/月</td>
                     <td>$12/月</td>
@@ -376,7 +289,7 @@ npx hyperframes generate product-intro.hframe.html --output ./output/
     </div>
 
     <h2 class="sec">💰 HeyGen 定價方案（搭配 HyperFrames 使用）</h2>
-    <p style="color:#888;font-size:.88rem;margin-bottom:.5rem;">HyperFrames 本身完全免費開源，以下是呼叫 HeyGen API 的費用。</p>
+    <p>HyperFrames 本身完全免費開源，以下是呼叫 HeyGen API 的費用。</p>
     <div class="pricing-grid">
         <div class="plan-card">
             <div class="plan-name">Free</div>
@@ -425,7 +338,7 @@ npx hyperframes generate product-intro.hframe.html --output ./output/
             </ul>
         </div>
     </div>
-    <p style="font-size:.78rem;color:#555;margin-top:.4rem;">* 2026 年定價。Creator 方案為 HyperFrames API 使用的最低入門方案。1 USD ≈ 33.6 TWD。</p>
+    <p>* 2026 年定價。Creator 方案為 HyperFrames API 使用的最低入門方案。1 USD ≈ 33.6 TWD。</p>
 
     <div class="cta-sec">
         <h3>🚀 免費試用 HeyGen + HyperFrames</h3>
@@ -434,7 +347,7 @@ npx hyperframes generate product-intro.hframe.html --output ./output/
             <a href="https://www.heygen.com/?sid=rewardful&via=autodev" class="btn-green" target="_blank" rel="noopener">免費試用 HeyGen →</a>
             <a href="https://m.do.co/c/6121a295f624" class="btn-purple" target="_blank" rel="noopener">DigitalOcean 部署批次生成伺服器</a>
         </div>
-        <p style="font-size:.78rem;color:#555;margin-top:.8rem;">部署 DigitalOcean Droplet（$24/月起）跑 HyperFrames 批次任務，比本機執行穩定，24小時自動化不斷線。</p>
+        <p>部署 DigitalOcean Droplet（$24/月起）跑 HyperFrames 批次任務，比本機執行穩定，24小時自動化不斷線。</p>
     </div>
 
     <h2 class="sec">❓ HyperFrames 常見問題（FAQ）</h2>
@@ -469,9 +382,7 @@ npx hyperframes generate product-intro.hframe.html --output ./output/
 
 </div>
 
-<footer>
-    <p>© 2026 AutoDev AI · <a href="https://autodev-ai.com">autodev-ai.com</a> · 台灣 AI 工具評測首選</p>
-    <p style="margin-top:.4rem;"><a href="https://autodev-ai.com/blog/">Blog</a> · <a href="https://autodev-ai.com/tools/">工具頁</a> · <a href="https://autodev-ai.com/sitemap.xml">Sitemap</a></p>
-</footer>
+
+</main><!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs & Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="https://chat.autodev-ai.com/form">原有表單</a><a href="/blog/">洞察</a><a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2c-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><!-- /v2-chrome:footer --><script defer src="/assets/autodev-v2.js"></script>
 </body>
 </html>

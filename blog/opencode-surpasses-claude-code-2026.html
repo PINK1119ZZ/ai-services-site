@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+
 <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <meta charset="UTF-8">
@@ -25,9 +25,9 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <meta name="theme-color" content="#FFF8F3">
 <meta name="author" content="AutoDev AI">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(location.search.includes('internal=1'))document.cookie='_ga_internal=1;max-age=31536000;path=/;SameSite=Lax';var _cfg={};if(document.cookie.includes('_ga_internal=1'))_cfg.traffic_type='internal';gtag('config','G-4ZWDT650BM',_cfg);</script>
 
@@ -94,56 +94,13 @@
 }
 </script>
 
-<style>
-.hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
-.stat-card { background: linear-gradient(135deg, #f97316 0%, #ef4444 100%); color: white; border-radius: 12px; padding: 1.25rem; text-align: center; }
-.stat-card .stat-num { font-size: 2rem; font-weight: 900; display: block; }
-.stat-card .stat-label { font-size: 0.85rem; opacity: 0.9; }
-.event-banner { background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 100%); color: white; border-radius: 16px; padding: 1.5rem 2rem; margin: 2rem 0; border-left: 5px solid #f97316; }
-.event-banner h3 { color: #fbbf24; margin: 0 0 0.5rem; font-size: 1.1rem; }
-.cta-btn { display: inline-block; background: linear-gradient(135deg, #f97316, #ef4444); color: white !important; padding: 0.85rem 2rem; border-radius: 50px; font-weight: 700; text-decoration: none !important; margin: 0.5rem 0; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(249,115,22,0.4); }
-.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(249,115,22,0.5); }
-.cta-btn.blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); box-shadow: 0 4px 15px rgba(59,130,246,0.4); }
-.cta-btn.blue:hover { box-shadow: 0 6px 20px rgba(59,130,246,0.5); }
-.cta-btn.green { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 15px rgba(16,185,129,0.4); }
-.cta-btn.green:hover { box-shadow: 0 6px 20px rgba(16,185,129,0.5); }
-.cta-box { background: #fff7ed; border: 2px solid #fed7aa; border-radius: 16px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
-.cta-box h3 { margin: 0 0 0.5rem; color: #9a3412; }
-.cta-box p { margin: 0 0 1rem; color: #7c2d12; font-size: 0.95rem; }
-.comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
-.comparison-table th { background: #1e1b4b; color: white; padding: 0.75rem 1rem; text-align: left; }
-.comparison-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #e5e7eb; }
-.comparison-table tr:nth-child(even) td { background: #f9fafb; }
-.comparison-table .highlight { background: #fff7ed !important; font-weight: 600; }
-.badge-free { background: #d1fae5; color: #065f46; padding: 0.2rem 0.6rem; border-radius: 99px; font-size: 0.8rem; font-weight: 700; }
-.badge-paid { background: #fee2e2; color: #991b1b; padding: 0.2rem 0.6rem; border-radius: 99px; font-size: 0.8rem; font-weight: 700; }
-.badge-mid { background: #fef3c7; color: #92400e; padding: 0.2rem 0.6rem; border-radius: 99px; font-size: 0.8rem; font-weight: 700; }
-.step-box { background: #f0fdf4; border-left: 4px solid #10b981; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
-.step-box h4 { margin: 0 0 0.5rem; color: #065f46; }
-.cost-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
-.cost-card { border-radius: 12px; padding: 1.25rem; }
-.cost-card.free { background: #d1fae5; border: 2px solid #6ee7b7; }
-.cost-card.paid { background: #fee2e2; border: 2px solid #fca5a5; }
-.cost-card h4 { margin: 0 0 0.5rem; }
-.cost-card .price { font-size: 2rem; font-weight: 900; }
-.cost-card ul { margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.9rem; }
-.scenario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
-.scenario-card { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.25rem; }
-.scenario-card h4 { margin: 0 0 0.5rem; font-size: 1rem; }
-.scenario-card .recommend { color: #f97316; font-weight: 700; font-size: 0.9rem; }
-@media (max-width: 640px) {
-  .hero-stats { grid-template-columns: 1fr; }
-  .cost-grid, .scenario-grid { grid-template-columns: 1fr; }
-  .comparison-table { font-size: 0.78rem; }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
-}
-</style>
+
 <link rel="stylesheet" href="/assets/v2-chrome.css">
 </head>
-<body><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header -->
 
 
-<main class="blog-post">
+<main class="blog-post v2c-article">
   <article>
     <div class="post-header">
       <div class="post-meta">
@@ -443,9 +400,9 @@ export default {
     </div>
 
     <!-- CTA Box 2: DataCamp -->
-    <div class="cta-box" style="background: #eff6ff; border-color: #bfdbfe;">
-      <h3 style="color: #1e3a8a;">📚 想深入學 AI 工程師技能？</h3>
-      <p style="color: #1e40af;">DataCamp 的 AI Engineering 課程教你如何整合多種 LLM API、建構 Agent Pipeline，OpenCode 接入只是第一步。</p>
+    <div class="cta-box">
+      <h3>📚 想深入學 AI 工程師技能？</h3>
+      <p>DataCamp 的 AI Engineering 課程教你如何整合多種 LLM API、建構 Agent Pipeline，OpenCode 接入只是第一步。</p>
       <a href="https://afflink.one/s/aavAC" class="cta-btn blue" target="_blank" rel="nofollow sponsored">🎓 查看 DataCamp AI 課程</a>
     </div>
 
@@ -496,10 +453,10 @@ opencode "用最省費的方式重構這個 React component"</code></pre>
     </ul>
 
     <!-- CTA Box 3: Gumroad -->
-    <div class="cta-box" style="background: #f5f3ff; border-color: #c4b5fd;">
-      <h3 style="color: #4c1d95;">🛠️ 想加速 OpenCode + Claude Code 工作流？</h3>
-      <p style="color: #5b21b6;">我們整理了台灣工程師最實用的 Claude Code cron 工具包，含自動化腳本、省費配置、Slack 整合模板。</p>
-      <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn" style="background: linear-gradient(135deg, #7c3aed, #4c1d95);" target="_blank" rel="nofollow sponsored">💎 查看 Claude Code 工具包（Gumroad）</a>
+    <div class="cta-box">
+      <h3>🛠️ 想加速 OpenCode + Claude Code 工作流？</h3>
+      <p>我們整理了台灣工程師最實用的 Claude Code cron 工具包，含自動化腳本、省費配置、Slack 整合模板。</p>
+      <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn" target="_blank" rel="nofollow sponsored">💎 查看 Claude Code 工具包（Gumroad）</a>
     </div>
 
     <h2>FAQ：台灣工程師最常問的 5 個問題</h2>
