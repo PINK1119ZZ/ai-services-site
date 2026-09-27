@@ -352,8 +352,6 @@ class KeepFunctionalCssTests(unittest.TestCase):
         self.assertTrue(unify.FUNCTIONAL_CSS_MARKER_RE.search("opacity: 0;"))
 
 
-if __name__ == "__main__":
-    unittest.main()
 
 
 class MainExitCodeTests(unittest.TestCase):
@@ -362,3 +360,6 @@ class MainExitCodeTests(unittest.TestCase):
         target = next(p for p in unify.discover_files())
         with mock.patch.object(unify, "process_html", side_effect=RuntimeError("boom")):
             self.assertEqual(unify.main([str(target)]), 1)
+
+if __name__ == "__main__":
+    unittest.main()
