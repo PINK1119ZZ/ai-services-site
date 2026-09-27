@@ -112,11 +112,13 @@ test('JSON-LD parses and analytics/ads tags are preserved', () => {
   }
 });
 
-test('the AGENT insertion marker is present immediately above the newest post card', () => {
+test('the AGENT insertion marker is inside the post grid immediately above the newest card', () => {
   const zh = load('blog/index.html');
   const en = load('en/blog/index.html');
-  assert.match(zh, /<!--\s*AGENT-NEW-POST-CARDS:[^>]*-->\s*<div class="v2-post-grid">/);
-  assert.match(en, /<!--\s*AGENT[^>]*-->\s*<div class="v2-post-grid">/);
+  for (const page of [zh, en]) {
+    assert.equal(page.match(/AGENT-NEW-POST-CARDS/g)?.length, 1);
+    assert.match(page, /<div class="v2-post-grid">\s*<!--\s*AGENT-NEW-POST-CARDS:[^>]*-->\s*<(div|a)\b[^>]*class="v2-post-card/);
+  }
 });
 
 test('scripts load the shared v2 chrome and chat/lang helpers once', () => {
