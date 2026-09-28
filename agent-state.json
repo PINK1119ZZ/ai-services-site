@@ -1,8 +1,136 @@
 {
-  "lastRun": "2026-09-27T02:00:00Z",
-  "lastResearchRound": 223,
+  "lastRun": "2026-09-28T22:00:00Z",
+  "lastResearchRound": 225,
   "lastStrategistRun": "2026-09-27T02:00:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-09-28T22:00:00Z",
+      "agent": "researcher",
+      "task": "ai-dev-research",
+      "round": 225,
+      "status": "completed",
+      "summary": "Mon 22:00 UTC ai-dev-research cron R225 — OpenAI DevDay T-1天最終確認 + Agent Infrastructure 大爆發 + MCP vs UTCP 格局。核心發現：(1) 🚨 P0-EXECUTE：OpenAI DevDay Sep 29 17:00 UTC（Fort Mason，免費直播，seo-writer 23:59 UTC 前發布 recap）；(2) 🔴 P1-HIGH 新：mattpocock/skills（268.9K stars，GH Trending，portable agent workflows，繁中零教學）；(3) 🔴 P1-HIGH 新：MCP vs UTCP（UTCP = MCP 替代，無 wrapper server，native endpoint，2026-2027 developer tool 格局之爭，繁中空白）；(4) 🟡 P1 新：VibeDefend by CybeDefend（PH Sep 28 #4，AI coding agent security layer，npx 一行安裝）；(5) 🟡 P1 新：Harmony AI（PH Sep 28 #4，IT/HR tickets in Slack/Teams）；(6) 🟡 P1 新：Agent Builder by Airtop（PH Sep 3 #2，self-healing agents，n8n+Claude Code 整合）；(7) PH Sep 28 日榜：Humalike x GTA RP #1、Cuey #2、KiwiDesk #3、VibeDefend #4、Superhuman Go #5；(8) GitHub Trending Agent Infrastructure：mattpocock/skills 268.9K、DeepSeek Harness +152K、Archify +28.7K、Univer（Office Harness）18.8K、Floot MCP 435 PH upvotes；(9) Grok 4.8 仍無 GA（RL 進行中，P0-STANDBY 持續）；(10) R224 carryover：GPT-6 Sol/Luna + Claude Opus 5.5 繁中 6 天缺口仍未執行（Oct 6 截止）。創建 directives/researcher-to-strategist-2026-09-28-round225.md。預估新增月收入 $1,200-3,800/月。",
+      "changes": [
+        "搜尋 OpenAI DevDay 2026 Sep 29 → 確認 Fort Mason 17:00 UTC keynote，T-1天，免費直播，Agents API + AgentKit 預期",
+        "搜尋 Grok 4.8 xAI Sep 28 → 確認 Sep 28 22:00 UTC 仍無 GA；Grok 4.7 現行最新；4.8 RL 進行中",
+        "搜尋 Product Hunt Sep 28 2026 日榜 → 確認 Humalike x GTA RP #1、Cuey #2、KiwiDesk #3、Harmony #4、Superhuman Go #5、GPT-6 Sol&Luna #6",
+        "搜尋 Product Hunt Week Sep 28 2026 週榜 → 確認 Floot MCP #1（435 upvotes）、MCP Connectors Databox #2、Harness Router、Zerg Router、Agent Builder by Airtop 341 upvotes",
+        "搜尋 VibeDefend CybeDefend → 確認 PH Sep 28 #4（161 upvotes），daily #4 award；`npx -y @cybedefend/vibedefend@latest install`；security inside coding agent；Adversa.ai Top 10 attacks on Claude Code；CSA AI-Generated CVE Surge；YSecurity.io Vibe Coding Security",
+        "搜尋 UTCP Universal Tool Calling Protocol → 確認 utcp.io；MCP 替代；native endpoint 直連（HTTP/gRPC/CLI）；TypeScript/Python/Go/Ruby/Lua 支援；Sep 2026 最新更新；比較頁 utcp.io/next/utcp-vs-mcp",
+        "搜尋 mattpocock/skills GitHub → 確認 268.9K stars；`npx skills@latest add mattpocock/skills`；portable engineering workflows；.agents/ directory；Claude Code 支援",
+        "搜尋 Agent Builder Airtop Sep 2026 → 確認 PH Sep 3 #2（339 upvotes）；compiled code（非 LLM-per-step）；100x 效率；self-healing；n8n + Claude Code 整合",
+        "搜尋 Floot MCP Harmony AI Product Hunt → 確認 Floot MCP 週榜 Top3；Harmony IT/HR tickets in Slack/Teams（eGain/Salesforce 競品驗證市場）",
+        "搜尋 Agent Platform Era enterprise Sep 2026 → 確認 OTG Consulting Sep 12 turning point；managed orchestration new default；OpenAI+Salesforce+GCP+Accenture 齊入場",
+        "搜尋 Vantage AI UTCP infrastructure Sep 2026 → 確認 vantage.ai PH 週榜；agent infrastructure 全面爆發",
+        "寫入 dev-notes.md Round 225 完整段落（置於頂部，含 Round 220 保留）",
+        "創建 directives/researcher-to-strategist-2026-09-28-round225.md（strategist + seo-writer + Ivan 完整指令）",
+        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
+      ],
+      "topFindings": [
+        "🚨 OpenAI DevDay P0-EXECUTE TODAY（Sep 29 17:00 UTC，seo-writer 23:59 UTC 前發布）",
+        "🔴 mattpocock/skills P1-HIGH 新（268.9K stars，繁中零教學，portable agent workflows，Oct 8）",
+        "🔴 MCP vs UTCP 比較 P1-HIGH 新（繁中空白，developer tool 格局，Oct 10）",
+        "🟡 VibeDefend P1 新（PH Sep 28 #4，AI coding security，vibe coding debt 大趨勢，Oct 8）",
+        "🟡 Harmony AI P1 新（PH Sep 28 #4，IT/HR Slack/Teams agent，Oct 10）",
+        "🟡 Agent Builder Airtop P1 新（PH Sep 3 #2，self-healing，n8n+Claude Code，Oct 10）",
+        "🔴 GPT-6 Sol/Luna + Claude Opus 5.5 carryover（Oct 6 截止，仍未執行）",
+        "📡 GitHub Trending：mattpocock/skills 268.9K + Floot MCP + Univer Office Harness + Archify",
+        "📅 Grok 4.8 P0-STANDBY 持續（Sep 28 22:00 仍無 GA，RL 進行中）"
+      ],
+      "watchlistStatus": {
+        "openaiDevDay": "🚨 P0-EXECUTE TODAY（Sep 29 17:00 UTC，seo-writer recap 23:59 UTC 前）",
+        "grok48": "🚨 P0-STANDBY（Sep 28 22:00 UTC 仍無 GA，RL 進行中）",
+        "mattpocoakSkills": "🔴 P1-HIGH 新（268.9K stars，繁中空白，Oct 8 截止）",
+        "mcpVsUtcp": "🔴 P1-HIGH 新（繁中空白，技術格局，Oct 10 截止）",
+        "gpt6SolLuna": "🔴 P1-HIGH carryover（Sep 22 GA，繁中缺口，Oct 6 截止）",
+        "claudeOpus55": "🔴 P1-HIGH carryover（Sep 22 GA，繁中缺口，Oct 6 截止）",
+        "vibeDefend": "🟡 P1 新（PH Sep 28 #4，AI coding security，Oct 8）",
+        "harmonyAi": "🟡 P1 新（PH Sep 28 #4，IT/HR Slack/Teams，Oct 10）",
+        "agentBuilderAirtop": "🟡 P1 新（PH Sep 3 #2，self-healing agents，Oct 10）",
+        "howseenAi": "🔴 P1-HIGH carryover（Oct 3 截止！急）",
+        "hemory": "🔴 P1-HIGH carryover（Oct 6 截止）",
+        "eclatira": "🔴 P1-HIGH carryover（Oct 6 截止）",
+        "superhumanGo": "🟡 P1 carryover（affiliate Ivan 確認，Oct 6）",
+        "systemeIo": "🏆 P0-URGENT 積壓（60% LIFETIME，20+輪）",
+        "copyAi45": "🔴 P0 積壓（45%/12mo，Ivan 申請）",
+        "jasperAffiliate": "🔴 P0 積壓（25-30%/12mo，Impact，Ivan 申請）",
+        "firecrawl": "🔴 P0 carryover（partners.dub.co/firecrawl，Ivan 申請）",
+        "getresponse": "🔴 P1-HIGH carryover（40-60%/12mo，R222 升級）",
+        "gumroad5": "🔴 P0-URGENT（22+週積壓，5 個 404）"
+      },
+      "newAffiliatesFound": [
+        {
+          "name": "Airtop（airtop.ai/partners）",
+          "commission": "未確認（需 Ivan 查詢）",
+          "type": "待確認",
+          "url": "airtop.ai/partners（需查詢）",
+          "priority": "P1 新（R225，browser automation + agent builder，n8n+Claude Code 受眾完美吻合）",
+          "monthlyEst": "待確認",
+          "note": "R225 新發現。Agent Builder by Airtop PH Sep 3 #2（339 upvotes），週榜 Top 10，company 活躍。Ivan 查詢 affiliate program。"
+        }
+      ],
+      "estimatedNewRevenue": "$1,200-3,800/月（DevDay recap $400-1,500 + mattpocock/skills $150-400 + MCP vs UTCP $100-300 + VibeDefend $120-350 + Harmony $80-250 + Airtop $100-300 + Ivan積壓批准後潛在 $500-2,000）"
+    },
+    {
+      "timestamp": "2026-09-28T00:30:00Z",
+      "agent": "researcher",
+      "task": "ai-trend-hunter",
+      "round": 224,
+      "status": "completed",
+      "summary": "Mon 00:30 UTC ai-trend-hunter cron R224 — OpenAI DevDay T-1天最終布局 + 雙重繁中評測缺口發現。核心發現：(1) 🚨 P0-EXECUTE TODAY：OpenAI DevDay 2026 T-1天（Sep 29 17:00 UTC keynote，Fort Mason SF，免費直播，seo-writer 23:59 UTC 前發布 recap）；(2) 🔴 P1-HIGH 雙重遺漏：GPT-6 Sol & Luna（Sep 22 GA）+ Claude Opus 5.5（Sep 22 GA）= 同日雙旗艦，繁中 6 天缺口；(3) GPT-6 Sol/Luna 規格確認：50% cheaper vs GPT-5.6 促銷定價，Sol 主打 coding/agent，Luna 最低成本；(4) Claude Opus 5.5 規格確認：/0 per M tokens，比 Opus 5 便宜 40%，快 30%+，1M token context，Terminal-Bench 66.4%，OSWorld 81.8%；(5) PH Sep 27 重要新品：Humalike x GTA RP（#3 AI NPC），Superhuman Go（#4，潛在 CPA affiliate 5-50），GPT-6 Sol/Luna PH 登榜確認（#5）；(6) OpenAI DevDay 預期：AgentKit 升級、Agents API GA、新 ChatGPT Apps + 可能新模型；(7) Grok 4.8 仍無 GA（Sep 28 00:30 UTC，RL 進行中）；(8) Sep 28 API 清退：gpt-3.5-turbo-instruct/babbage-002/davinci-002 今天退役 → gpt-5.6-terra 替代。創建 directives/strategist-weekly-2026-09-28.md。預估新增月收入 ,380-4,350/月。",
+      "changes": [
+        "搜尋 Product Hunt Sep 27-28 2026 → 確認 Sep 27 日榜：Clicks Communicator #1、ChatGPT/Claude/Gemini 比較 #2、Humalike x GTA RP #3、Superhuman Go #4、GPT-6 Sol & Luna #5、KiwiDesk #6",
+        "搜尋 OpenAI DevDay 2026 announcements → 確認 Sep 29 Fort Mason，T-1天，17:00 UTC keynote，免費直播；DevDay Exchange 10月巡迴（台北未列入但亞洲有 Tokyo/Seoul）",
+        "搜尋 GPT-6 Sol Luna pricing → 確認 Sep 22 GA；50% cheaper vs GPT-5.6；releasebot.io 完整 API pricing 確認；OpenAI Dev Community 官方公告確認",
+        "搜尋 Claude Opus 5.5 → 確認 Sep 22 GA（同日！）；coursiv.io + vellum.ai + llm-stats.com 全部確認；API pricing /0//bin/bash.20；eigent.ai benchmark 比較",
+        "搜尋 Grok 4.8 release Sep 28 → 確認 仍無 GA（cellcog.ai Sep 21 資料：Grok 4.7 是現行最新，4.8 RL 進行中，Musk 確認但無日期）",
+        "搜尋 GitHub trending AI Sep 28 2026 → 確認 Ollama/n8n/OpenClaw 持續上榜；ossinsight.io trending；bytebytego Top AI GitHub Repos 2026",
+        "搜尋 OpenAI Agents API hosted sandboxes affiliate → 確認 Agents API Sep 10 公測，9 個官方 sandbox 合作夥伴（Blaxel/Cloudflare/Daytona/DigitalOcean/E2B/Modal/Oracle/Runloop/Vercel）；DigitalOcean 官方合作再確認",
+        "寫入 topic-ideas.md Round 224 完整段落（置於頂部）",
+        "創建 directives/strategist-weekly-2026-09-28.md（高價值發現指令）",
+        "更新 agent-state.json：lastRun + lastResearchRound + agentLog"
+      ],
+      "topFindings": [
+        "🚨 OpenAI DevDay T-1天（Sep 29 17:00 UTC，繁中首發 recap 最後機會，年度最高 SEO 時效窗口）",
+        "🔴 GPT-6 Sol & Luna P1-HIGH 新（Sep 22 GA，繁中 6 天缺口，50% price cut，可與 Opus 5.5 合併「Sep 22 AI 雙旗艦」比較文）",
+        "🔴 Claude Opus 5.5 P1-HIGH 新（Sep 22 GA，繁中 6 天缺口，/0，40% cheaper，1M ctx）",
+        "🟡 Superhuman Go P1 新（PH Sep 27 #4，潛在 CPA affiliate 5-50，Oct 6 截止）",
+        "🟡 Humalike x GTA RP P2 新（PH Sep 27 #3，AI NPC 遊戲趨勢，流量型）",
+        "📅 Sep 28 舊模型退役（gpt-3.5-turbo-instruct 今天退役，潛在「是時候升級了」教學文）",
+        "🚨 Grok 4.8 P0-STANDBY 持續（Sep 28 00:30 仍無 GA，RL 進行中）",
+        "📍 DevDay Exchange 巡迴 10月（Tokyo/Seoul 確認，無台北，但繁中媒體仍有首發機會）"
+      ],
+      "watchlistStatus": {
+        "openaiDevDay": "🚨 P0-EXECUTE TODAY（Sep 29 17:00 UTC keynote，seo-writer 23:59 UTC 前發布 recap）",
+        "gpt6SolLuna": "🔴 P1-HIGH 新（Sep 22 GA，繁中 6 天缺口，50% price cut，Oct 6 截止）",
+        "claudeOpus55": "🔴 P1-HIGH 新（Sep 22 GA，繁中 6 天缺口，/0，Oct 6 截止）",
+        "grok48": "🚨 P0-STANDBY（Sep 28 00:30 UTC 仍無 GA，RL 進行中）",
+        "superhumanGo": "🟡 P1 新（PH Sep 27 #4，affiliate 待 Ivan 確認，Oct 6 截止）",
+        "humanlikeGtaRp": "🟡 P2 新（PH Sep 27 #3，AI NPC 趨勢，Oct 6 截止）",
+        "hemory": "🔴 P1-HIGH carryover（Oct 6 截止）",
+        "eclatira": "🔴 P1-HIGH carryover（Oct 6 截止）",
+        "harnessManager": "🔴 P1-HIGH（今天 Sep 28 截止！）",
+        "howseenAi": "🔴 P1-HIGH carryover（Oct 3 截止）",
+        "lisen": "🟡 P1 carryover（Oct 6 截止）",
+        "systemeIo": "🏆 P0-URGENT 積壓（60% LIFETIME，20+輪！）",
+        "copyAi45": "🔴 P0 積壓（45%/12mo，Ivan 申請）",
+        "jasperAffiliate": "🔴 P0 積壓（25-30%/12mo，Impact，Ivan 申請）",
+        "firecrawl": "🔴 P0 carryover（partners.dub.co/firecrawl）",
+        "gumroad5": "🔴 P0-URGENT 積壓（22+週）"
+      },
+      "newAffiliatesFound": [
+        {
+          "name": "Superhuman Go",
+          "commission": "5-50 CPA（需 Ivan 確認 2026 條款）",
+          "type": "CPA referral",
+          "url": "superhuman.com/refer",
+          "priority": "P1（PH Sep 27 #4，需 Ivan 確認）",
+          "monthlyEst": "00-300/月",
+          "note": "R224 新發現。Superhuman 有 referral 計畫（历史 5-50 CPA），需 Ivan 確認 2026 Superhuman Go 是否延伸適用。"
+        }
+      ],
+      "estimatedNewRevenue": ",380-4,350/月（DevDay recap 00-1,500 + GPT-6 Sol/Luna 評測 00-600 + Claude Opus 5.5 評測 50-450 + Sep 22 三強比較文 00-500 + Superhuman affiliate Ivan後 00-300 + carryover 30-1,000）"
+    },
     {
       "timestamp": "2026-09-27T02:00:00Z",
       "agent": "strategist",
@@ -1000,79 +1128,79 @@
     }
   ],
   "gscData": {
-    "lastUpdated": "2026-09-27 05:30",
+    "lastUpdated": "2026-09-28 05:30",
     "period": "14 days",
     "sites": {
       "autodev-ai": {
         "summary": {
-          "totalClicks": 277,
-          "totalImpressions": 4328,
-          "avgCTR": 6.4,
+          "totalClicks": 272,
+          "totalImpressions": 4301,
+          "avgCTR": 6.3,
           "avgPosition": 6.4
         },
         "topQueries": [
           {
             "keyword": "lm studio bionic 教學",
             "clicks": 18,
-            "impressions": 45,
-            "ctr": 40.0,
+            "impressions": 46,
+            "ctr": 39.1,
             "position": 2.5
           },
           {
             "keyword": "opencode zen 費用",
-            "clicks": 5,
+            "clicks": 6,
             "impressions": 39,
-            "ctr": 12.8,
+            "ctr": 15.4,
             "position": 3.6
           },
           {
             "keyword": "lm studio bionic",
             "clicks": 4,
-            "impressions": 41,
-            "ctr": 9.8,
+            "impressions": 43,
+            "ctr": 9.3,
             "position": 9.3
+          },
+          {
+            "keyword": "lm studio bionic 是什麼",
+            "clicks": 3,
+            "impressions": 32,
+            "ctr": 9.4,
+            "position": 5.0
           },
           {
             "keyword": "omlx 教學",
             "clicks": 3,
-            "impressions": 27,
-            "ctr": 11.1,
-            "position": 4.5
-          },
-          {
-            "keyword": "opencode zen",
-            "clicks": 3,
-            "impressions": 46,
-            "ctr": 6.5,
-            "position": 9.0
-          },
-          {
-            "keyword": "opencode zen 和 go 的 区别",
-            "clicks": 3,
-            "impressions": 7,
-            "ctr": 42.9,
-            "position": 2.4
+            "impressions": 34,
+            "ctr": 8.8,
+            "position": 4.4
           },
           {
             "keyword": "opencode 免費 額度",
             "clicks": 3,
             "impressions": 16,
             "ctr": 18.8,
-            "position": 6.9
+            "position": 6.2
+          },
+          {
+            "keyword": "autodev ai",
+            "clicks": 2,
+            "impressions": 9,
+            "ctr": 22.2,
+            "position": 1.2
           },
           {
             "keyword": "claude-video",
             "clicks": 2,
-            "impressions": 19,
-            "ctr": 10.5,
-            "position": 5.2
+            "impressions": 21,
+            "ctr": 9.5,
+            "position": 5.3
           },
           {
             "keyword": "composio 是什麼",
             "clicks": 2,
             "impressions": 18,
             "ctr": 11.1,
-            "position": 5.4
+            "position": 5.1
           },
           {
             "keyword": "crush cli",
@@ -1091,8 +1219,8 @@
           {
             "keyword": "higgsfield api",
             "clicks": 2,
-            "impressions": 27,
-            "ctr": 7.4,
+            "impressions": 28,
+            "ctr": 7.1,
             "position": 7.4
           },
           {
@@ -1103,39 +1231,39 @@
             "position": 6.1
           },
           {
-            "keyword": "lm studio bionic 是什麼",
+            "keyword": "opencode zen",
             "clicks": 2,
-            "impressions": 28,
-            "ctr": 7.1,
-            "position": 5.1
+            "impressions": 37,
+            "ctr": 5.4,
+            "position": 9.1
           },
           {
             "keyword": "opencode zen vs go",
             "clicks": 2,
-            "impressions": 9,
-            "ctr": 22.2,
-            "position": 1.3
+            "impressions": 7,
+            "ctr": 28.6,
+            "position": 1.4
+          },
+          {
+            "keyword": "opencode zen 和 go 的 区别",
+            "clicks": 2,
+            "impressions": 6,
+            "ctr": 33.3,
+            "position": 2.3
           },
           {
             "keyword": "opencode 免費額度",
             "clicks": 2,
-            "impressions": 18,
-            "ctr": 11.1,
-            "position": 7.4
+            "impressions": 20,
+            "ctr": 10.0,
+            "position": 7.1
           },
           {
             "keyword": "autodev",
             "clicks": 1,
-            "impressions": 42,
+            "impressions": 41,
             "ctr": 2.4,
-            "position": 15.8
-          },
-          {
-            "keyword": "autodev ai",
-            "clicks": 1,
-            "impressions": 8,
-            "ctr": 12.5,
-            "position": 1.2
+            "position": 15.7
           },
           {
             "keyword": "bionic skill.md",
@@ -1150,6 +1278,13 @@
             "impressions": 3,
             "ctr": 33.3,
             "position": 4
+          },
+          {
+            "keyword": "copperhead ai",
+            "clicks": 1,
+            "impressions": 2,
+            "ctr": 50.0,
+            "position": 2
           },
           {
             "keyword": "copperhead pcb",
@@ -1173,13 +1308,6 @@
             "position": 2
           },
           {
-            "keyword": "lm bionic",
-            "clicks": 1,
-            "impressions": 4,
-            "ctr": 25.0,
-            "position": 5.8
-          },
-          {
             "keyword": "lm studio bionic tutorial",
             "clicks": 1,
             "impressions": 1,
@@ -1190,45 +1318,52 @@
         "topPages": [
           {
             "page": "//blog/opencode-zen-vs-go-pricing-2026.html",
-            "clicks": 74,
-            "impressions": 976,
-            "ctr": 7.6,
+            "clicks": 68,
+            "impressions": 942,
+            "ctr": 7.2,
             "position": 6.1
           },
           {
             "page": "//blog/lm-studio-bionic-guide-2026.html",
             "clicks": 48,
-            "impressions": 370,
-            "ctr": 13.0,
+            "impressions": 376,
+            "ctr": 12.8,
             "position": 5.9
           },
           {
             "page": "//blog/claude-video-watch-tutorial-2026.html",
-            "clicks": 27,
-            "impressions": 252,
-            "ctr": 10.7,
-            "position": 4.7
+            "clicks": 25,
+            "impressions": 254,
+            "ctr": 9.8,
+            "position": 4.8
           },
           {
             "page": "//blog/omlx-apple-silicon-llm-server-2026.html",
-            "clicks": 15,
-            "impressions": 185,
-            "ctr": 8.1,
-            "position": 5.8
+            "clicks": 18,
+            "impressions": 204,
+            "ctr": 8.8,
+            "position": 5.6
           },
           {
             "page": "//blog/openai-devday-2026-preview.html",
-            "clicks": 10,
-            "impressions": 421,
-            "ctr": 2.4,
-            "position": 6.1
+            "clicks": 11,
+            "impressions": 436,
+            "ctr": 2.5,
+            "position": 6.0
           },
           {
             "page": "//blog/ai-tools-comparison-2026.html",
             "clicks": 6,
             "impressions": 194,
             "ctr": 3.1,
-            "position": 8.4
+            "position": 8.5
+          },
+          {
+            "page": "//blog/copperhead-ai-pcb-design-guide-2026.html",
+            "clicks": 6,
+            "impressions": 68,
+            "ctr": 8.8,
+            "position": 3.5
           },
           {
             "page": "//blog/github-copilot-hydrafusion-review-2026.html",
@@ -1240,128 +1375,121 @@
           {
             "page": "//blog/mojo-programming-language-tutorial-2026.html",
             "clicks": 6,
-            "impressions": 74,
-            "ctr": 8.1,
-            "position": 6.3
-          },
-          {
-            "page": "//blog/copperhead-ai-pcb-design-guide-2026.html",
-            "clicks": 5,
-            "impressions": 63,
-            "ctr": 7.9,
-            "position": 3.6
+            "impressions": 77,
+            "ctr": 7.8,
+            "position": 6.2
           },
           {
             "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
             "clicks": 5,
-            "impressions": 81,
-            "ctr": 6.2,
+            "impressions": 76,
+            "ctr": 6.6,
             "position": 6.9
           },
           {
             "page": "//blog/higgsfield-api-review-2026.html",
             "clicks": 5,
-            "impressions": 55,
-            "ctr": 9.1,
-            "position": 6.6
+            "impressions": 61,
+            "ctr": 8.2,
+            "position": 6.7
           },
           {
             "page": "//blog/ponytail-claude-code-plugin-2026.html",
             "clicks": 5,
-            "impressions": 64,
-            "ctr": 7.8,
-            "position": 3.9
+            "impressions": 61,
+            "ctr": 8.2,
+            "position": 4.0
           },
           {
             "page": "//en/",
             "clicks": 5,
-            "impressions": 136,
-            "ctr": 3.7,
-            "position": 8.4
+            "impressions": 117,
+            "ctr": 4.3,
+            "position": 8.8
           },
           {
             "page": "//blog/crush-agentic-coding-cli-tutorial-2026.html",
             "clicks": 4,
-            "impressions": 40,
-            "ctr": 10.0,
+            "impressions": 41,
+            "ctr": 9.8,
             "position": 4.8
           },
           {
             "page": "//blog/framer-ai-agents-tutorial-2026.html",
             "clicks": 4,
-            "impressions": 48,
-            "ctr": 8.3,
-            "position": 6.5
+            "impressions": 47,
+            "ctr": 8.5,
+            "position": 6.7
           },
           {
             "page": "//blog/line-bot-cost.html",
             "clicks": 4,
-            "impressions": 143,
-            "ctr": 2.8,
-            "position": 5.9
-          },
-          {
-            "page": "//blog/n8n-automation-tutorial-2026.html",
-            "clicks": 4,
-            "impressions": 46,
-            "ctr": 8.7,
-            "position": 7.8
+            "impressions": 139,
+            "ctr": 2.9,
+            "position": 5.8
           },
           {
             "page": "//blog/composio-claude-code-skills-tutorial-2026.html",
             "clicks": 3,
-            "impressions": 49,
-            "ctr": 6.1,
-            "position": 5.5
+            "impressions": 48,
+            "ctr": 6.2,
+            "position": 5.4
           },
           {
             "page": "//blog/kilo-code-jetbrains-review-2026.html",
             "clicks": 3,
-            "impressions": 19,
-            "ctr": 15.8,
-            "position": 6.3
-          },
-          {
-            "page": "//blog/openviking-agent-memory-save-tokens-2026.html",
-            "clicks": 3,
-            "impressions": 64,
-            "ctr": 4.7,
-            "position": 7.0
+            "impressions": 20,
+            "ctr": 15.0,
+            "position": 6
           },
           {
             "page": "//blog/rtk-rust-token-killer-review-2026.html",
             "clicks": 3,
-            "impressions": 26,
-            "ctr": 11.5,
-            "position": 6
+            "impressions": 29,
+            "ctr": 10.3,
+            "position": 5.6
           },
           {
             "page": "//blog/ai-agent-cybersecurity-skills-claude-code-2026.html",
             "clicks": 2,
-            "impressions": 20,
-            "ctr": 10.0,
-            "position": 7.8
+            "impressions": 14,
+            "ctr": 14.3,
+            "position": 9.4
           },
           {
             "page": "//blog/buzz-jack-dorsey-guide-2026.html",
             "clicks": 2,
-            "impressions": 35,
-            "ctr": 5.7,
+            "impressions": 33,
+            "ctr": 6.1,
             "position": 4.6
           },
           {
             "page": "//blog/deepseek-harness-complete-guide-2026.html",
             "clicks": 2,
-            "impressions": 92,
-            "ctr": 2.2,
+            "impressions": 97,
+            "ctr": 2.1,
             "position": 9.2
           },
           {
             "page": "//blog/firecrawl-api-review-2026.html",
             "clicks": 2,
-            "impressions": 25,
-            "ctr": 8.0,
+            "impressions": 27,
+            "ctr": 7.4,
             "position": 5.5
+          },
+          {
+            "page": "//blog/grok-4-6-review-2026.html",
+            "clicks": 2,
+            "impressions": 57,
+            "ctr": 3.5,
+            "position": 5.4
+          },
+          {
+            "page": "//blog/markitdown-microsoft-tutorial-2026.html",
+            "clicks": 2,
+            "impressions": 30,
+            "ctr": 6.7,
+            "position": 6.5
           }
         ]
       },
@@ -1399,28 +1527,28 @@
         "site": "autodev-ai",
         "keyword": "lm studio bionic",
         "position": 9.3,
-        "impressions": 41,
+        "impressions": 43,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "opencode zen",
-        "position": 9.0,
-        "impressions": 46,
+        "position": 9.1,
+        "impressions": 37,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "autodev",
-        "position": 15.8,
-        "impressions": 42,
+        "position": 15.7,
+        "impressions": 41,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "autodev",
         "ctr": 2.4,
-        "impressions": 42,
+        "impressions": 41,
         "action": "improve title/meta for higher CTR"
       }
     ]
@@ -4087,7 +4215,7 @@
       ]
     }
   },
-  "lastGscCheckAt": "2026-09-27T05:30:06Z",
+  "lastGscCheckAt": "2026-09-28T05:30:07Z",
   "lastGscSummary": "ranking: avg pos 6.4; high-impr low-CTR pages: 5; pos 11-20 opps: 0",
   "lastResearchRoundDate": "2026-09-23",
   "lastIncomeIdeation": "2026-07-31T12:00:00Z",
