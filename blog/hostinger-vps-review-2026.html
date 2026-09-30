@@ -267,7 +267,7 @@
 </div>
 
  <h3>場景一：自架 n8n 自動化平台</h3>
- <p>n8n 是開源自動化工具（類似 Zapier 但免費自架），Hostinger KVM 2（8 GB RAM）完全夠用。安裝步驟：</p>
+ <p><a href="/blog/n8n-automation-tutorial-2026.html">n8n 是開源自動化工具</a>（類似 Zapier 但免費自架），Hostinger KVM 2（8 GB RAM）完全夠用。安裝步驟：</p>
  <ol>
  <li>SSH 連線到 VPS</li>
  <li>安裝 Docker：<code>curl -fsSL https://get.docker.com | sh</code></li>
@@ -277,8 +277,8 @@
  <p>成本對比：n8n Cloud 最低 $20/月，而 Hostinger KVM 2 只需 $7.99/月。每月省 $12，一年省 $144。</p>
 
  <h3>場景二：LINE Bot + AI 客服部署</h3>
- <p>LINE Messaging API Webhook 需要一個 HTTPS 的固定端點。Hostinger VPS + Nginx + Let's Encrypt SSL 可以輕鬆搞定，成本遠低於 Serverless 方案（GCP Cloud Run / AWS Lambda 在高呼叫量下費用會累積）。</p>
- <p>KVM 1（4 GB RAM）跑一個帶 OpenAI API 的 LINE Bot 完全沒問題；若同時跑多個 Bot 或整合資料庫，升級到 KVM 2 更穩。</p>
+ <p>LINE Messaging API Webhook 需要一個 HTTPS 的固定端點。Hostinger VPS + Nginx + Let's Encrypt SSL 可以輕鬆搞定，成本遠低於 Serverless 方案（GCP Cloud Run / AWS Lambda 在高呼叫量下費用會累積）。
+ <p>KVM 1（4 GB RAM）跑一個帶 OpenAI API 的 LINE Bot 完全沒問題；若同時跑多個 Bot 或整合資料庫，升級到 KVM 2 更穩。想了解 <a href="/blog/line-bot-tutorial-2026.html">LINE Bot 完整開發教學</a>，可以參考我們另一篇深度文章。</p>
 
  <h3>場景三：個人作品集 + WordPress 站</h3>
  <p>Hostinger 一鍵安裝 LiteSpeed + LSCache，WordPress 速度相當快。如果你不想管伺服器，也可以考慮 <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" target="_blank" rel="noopener">Cloudways</a>（managed hosting，自動備份、一鍵擴容，比較省心）。</p>
