@@ -1183,47 +1183,60 @@
         "讀取 directives/strategist-weekly-2026-09-28.md：確認 P0 聚焦 DevDay recap 與 GPT-6 Sol/Luna + Claude Opus 5.5 內容任務，無 content-ops 立即修站項",
         "更新 agent-state.json：lastChecked、siteHealth、lastSiteHealthCheck、lastSiteHealthSummary、agentLog"
       ]
+    },
+    {
+      "timestamp": "2026-09-30T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Wed 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 出現 Cloudflare 525（新異常）；ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效為預期）；兩個 GitHub Pages fallback 200✓。已建立 builder directive 處理 ai-tools.pro TLS / Cloudflare 層問題。",
+      "changes": [
+        "curl/HTTP 檢查 8 個站點 URL：autodev-ai.com/與 sitemap 200、ai-tools.pro/與 sitemap 525、兩個 GitHub Pages fallback 200、ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效預期）",
+        "交叉驗證 ai-tools.pro 與 sitemap.xml：curl -I 顯示 Cloudflare HTTP/2 525，確認為新站點層異常",
+        "新增 directive：directives/content-ops-to-builder-2026-09-30-ai-tools-pro-525.md",
+        "更新 agent-state.json：lastChecked、siteHealth、lastSiteHealthCheck、lastSiteHealthSummary、issues、agentLog"
+      ]
     }
   ],
   "gscData": {
-    "lastUpdated": "2026-09-28 05:30",
+    "lastUpdated": "2026-09-29 05:30",
     "period": "14 days",
     "sites": {
       "autodev-ai": {
         "summary": {
-          "totalClicks": 272,
-          "totalImpressions": 4301,
-          "avgCTR": 6.3,
+          "totalClicks": 278,
+          "totalImpressions": 4363,
+          "avgCTR": 6.4,
           "avgPosition": 6.4
         },
         "topQueries": [
           {
             "keyword": "lm studio bionic 教學",
-            "clicks": 18,
-            "impressions": 46,
-            "ctr": 39.1,
-            "position": 2.5
+            "clicks": 16,
+            "impressions": 47,
+            "ctr": 34.0,
+            "position": 2.4
           },
           {
             "keyword": "opencode zen 費用",
-            "clicks": 6,
+            "clicks": 7,
             "impressions": 39,
-            "ctr": 15.4,
+            "ctr": 17.9,
             "position": 3.6
           },
           {
             "keyword": "lm studio bionic",
             "clicks": 4,
-            "impressions": 43,
-            "ctr": 9.3,
-            "position": 9.3
+            "impressions": 45,
+            "ctr": 8.9,
+            "position": 9.2
           },
           {
             "keyword": "lm studio bionic 是什麼",
             "clicks": 3,
             "impressions": 32,
             "ctr": 9.4,
-            "position": 5.0
+            "position": 5.1
           },
           {
             "keyword": "omlx 教學",
@@ -1249,8 +1262,8 @@
           {
             "keyword": "claude-video",
             "clicks": 2,
-            "impressions": 21,
-            "ctr": 9.5,
+            "impressions": 22,
+            "ctr": 9.1,
             "position": 5.3
           },
           {
@@ -1277,23 +1290,23 @@
           {
             "keyword": "higgsfield api",
             "clicks": 2,
-            "impressions": 28,
-            "ctr": 7.1,
-            "position": 7.4
+            "impressions": 36,
+            "ctr": 5.6,
+            "position": 7.2
           },
           {
             "keyword": "lm studio bionic 中文",
             "clicks": 2,
-            "impressions": 18,
-            "ctr": 11.1,
+            "impressions": 17,
+            "ctr": 11.8,
             "position": 6.1
           },
           {
             "keyword": "opencode zen",
             "clicks": 2,
-            "impressions": 37,
-            "ctr": 5.4,
-            "position": 9.1
+            "impressions": 35,
+            "ctr": 5.7,
+            "position": 9.4
           },
           {
             "keyword": "opencode zen vs go",
@@ -1312,16 +1325,16 @@
           {
             "keyword": "opencode 免費額度",
             "clicks": 2,
-            "impressions": 20,
-            "ctr": 10.0,
-            "position": 7.1
+            "impressions": 16,
+            "ctr": 12.5,
+            "position": 6.8
           },
           {
             "keyword": "autodev",
             "clicks": 1,
-            "impressions": 41,
-            "ctr": 2.4,
-            "position": 15.7
+            "impressions": 45,
+            "ctr": 2.2,
+            "position": 18.8
           },
           {
             "keyword": "bionic skill.md",
@@ -1376,52 +1389,52 @@
         "topPages": [
           {
             "page": "//blog/opencode-zen-vs-go-pricing-2026.html",
-            "clicks": 68,
-            "impressions": 942,
-            "ctr": 7.2,
+            "clicks": 71,
+            "impressions": 931,
+            "ctr": 7.6,
             "position": 6.1
           },
           {
             "page": "//blog/lm-studio-bionic-guide-2026.html",
-            "clicks": 48,
-            "impressions": 376,
-            "ctr": 12.8,
+            "clicks": 49,
+            "impressions": 389,
+            "ctr": 12.6,
             "position": 5.9
           },
           {
             "page": "//blog/claude-video-watch-tutorial-2026.html",
-            "clicks": 25,
-            "impressions": 254,
-            "ctr": 9.8,
-            "position": 4.8
+            "clicks": 26,
+            "impressions": 262,
+            "ctr": 9.9,
+            "position": 4.9
           },
           {
             "page": "//blog/omlx-apple-silicon-llm-server-2026.html",
-            "clicks": 18,
-            "impressions": 204,
-            "ctr": 8.8,
+            "clicks": 19,
+            "impressions": 207,
+            "ctr": 9.2,
             "position": 5.6
           },
           {
             "page": "//blog/openai-devday-2026-preview.html",
-            "clicks": 11,
-            "impressions": 436,
-            "ctr": 2.5,
+            "clicks": 13,
+            "impressions": 450,
+            "ctr": 2.9,
             "position": 6.0
           },
           {
             "page": "//blog/ai-tools-comparison-2026.html",
             "clicks": 6,
-            "impressions": 194,
-            "ctr": 3.1,
-            "position": 8.5
+            "impressions": 205,
+            "ctr": 2.9,
+            "position": 8.3
           },
           {
             "page": "//blog/copperhead-ai-pcb-design-guide-2026.html",
             "clicks": 6,
-            "impressions": 68,
-            "ctr": 8.8,
-            "position": 3.5
+            "impressions": 69,
+            "ctr": 8.7,
+            "position": 3.4
           },
           {
             "page": "//blog/github-copilot-hydrafusion-review-2026.html",
@@ -1433,22 +1446,22 @@
           {
             "page": "//blog/mojo-programming-language-tutorial-2026.html",
             "clicks": 6,
-            "impressions": 77,
-            "ctr": 7.8,
-            "position": 6.2
+            "impressions": 79,
+            "ctr": 7.6,
+            "position": 5.9
           },
           {
             "page": "//blog/gemma-4-12b-local-ai-guide-2026.html",
             "clicks": 5,
-            "impressions": 76,
-            "ctr": 6.6,
-            "position": 6.9
+            "impressions": 72,
+            "ctr": 6.9,
+            "position": 7.0
           },
           {
             "page": "//blog/higgsfield-api-review-2026.html",
             "clicks": 5,
-            "impressions": 61,
-            "ctr": 8.2,
+            "impressions": 71,
+            "ctr": 7.0,
             "position": 6.7
           },
           {
@@ -1461,79 +1474,79 @@
           {
             "page": "//en/",
             "clicks": 5,
-            "impressions": 117,
-            "ctr": 4.3,
-            "position": 8.8
+            "impressions": 118,
+            "ctr": 4.2,
+            "position": 9.9
           },
           {
             "page": "//blog/crush-agentic-coding-cli-tutorial-2026.html",
             "clicks": 4,
-            "impressions": 41,
-            "ctr": 9.8,
-            "position": 4.8
+            "impressions": 42,
+            "ctr": 9.5,
+            "position": 4.7
           },
           {
             "page": "//blog/framer-ai-agents-tutorial-2026.html",
             "clicks": 4,
-            "impressions": 47,
-            "ctr": 8.5,
+            "impressions": 45,
+            "ctr": 8.9,
             "position": 6.7
           },
           {
             "page": "//blog/line-bot-cost.html",
             "clicks": 4,
-            "impressions": 139,
-            "ctr": 2.9,
+            "impressions": 132,
+            "ctr": 3.0,
             "position": 5.8
-          },
-          {
-            "page": "//blog/composio-claude-code-skills-tutorial-2026.html",
-            "clicks": 3,
-            "impressions": 48,
-            "ctr": 6.2,
-            "position": 5.4
           },
           {
             "page": "//blog/kilo-code-jetbrains-review-2026.html",
             "clicks": 3,
-            "impressions": 20,
-            "ctr": 15.0,
-            "position": 6
+            "impressions": 21,
+            "ctr": 14.3,
+            "position": 6.2
           },
           {
             "page": "//blog/rtk-rust-token-killer-review-2026.html",
             "clicks": 3,
-            "impressions": 29,
-            "ctr": 10.3,
-            "position": 5.6
+            "impressions": 35,
+            "ctr": 8.6,
+            "position": 5.9
           },
           {
             "page": "//blog/ai-agent-cybersecurity-skills-claude-code-2026.html",
             "clicks": 2,
-            "impressions": 14,
-            "ctr": 14.3,
-            "position": 9.4
+            "impressions": 15,
+            "ctr": 13.3,
+            "position": 8.8
           },
           {
             "page": "//blog/buzz-jack-dorsey-guide-2026.html",
             "clicks": 2,
-            "impressions": 33,
-            "ctr": 6.1,
-            "position": 4.6
+            "impressions": 31,
+            "ctr": 6.5,
+            "position": 4.7
+          },
+          {
+            "page": "//blog/composio-claude-code-skills-tutorial-2026.html",
+            "clicks": 2,
+            "impressions": 48,
+            "ctr": 4.2,
+            "position": 5.0
           },
           {
             "page": "//blog/deepseek-harness-complete-guide-2026.html",
             "clicks": 2,
-            "impressions": 97,
-            "ctr": 2.1,
+            "impressions": 91,
+            "ctr": 2.2,
             "position": 9.2
           },
           {
             "page": "//blog/firecrawl-api-review-2026.html",
             "clicks": 2,
-            "impressions": 27,
-            "ctr": 7.4,
-            "position": 5.5
+            "impressions": 31,
+            "ctr": 6.5,
+            "position": 6
           },
           {
             "page": "//blog/grok-4-6-review-2026.html",
@@ -1543,11 +1556,11 @@
             "position": 5.4
           },
           {
-            "page": "//blog/markitdown-microsoft-tutorial-2026.html",
+            "page": "//blog/n8n-automation-tutorial-2026.html",
             "clicks": 2,
-            "impressions": 30,
-            "ctr": 6.7,
-            "position": 6.5
+            "impressions": 43,
+            "ctr": 4.7,
+            "position": 7.7
           }
         ]
       },
@@ -1584,29 +1597,29 @@
       {
         "site": "autodev-ai",
         "keyword": "lm studio bionic",
-        "position": 9.3,
-        "impressions": 43,
+        "position": 9.2,
+        "impressions": 45,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "opencode zen",
-        "position": 9.1,
-        "impressions": 37,
+        "position": 9.4,
+        "impressions": 35,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "autodev",
-        "position": 15.7,
-        "impressions": 41,
+        "position": 18.8,
+        "impressions": 45,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "autodev",
-        "ctr": 2.4,
-        "impressions": 41,
+        "ctr": 2.2,
+        "impressions": 45,
         "action": "improve title/meta for higher CTR"
       }
     ]
@@ -1693,7 +1706,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-09-29T00:00:00Z",
+  "lastChecked": "2026-09-30T00:00:00Z",
   "issues": [
     "2026-09-01 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution; autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
@@ -1778,7 +1791,8 @@
     "ai-tools.tw and en.ai-tools.tw still fail DNS resolution as of 2026-09-17 daily health check; existing builder DNS/deprecation directive remains active.",
     "ai-tools.tw and en.ai-tools.tw still fail DNS resolution as of 2026-09-18 daily health check; existing builder DNS/deprecation directive remains active.",
     "2026-09-20 fb-weekly-review: Graph API v23.0 with current page token still rejects requested post insights metrics (post_impressions/post_engaged_users/post_clicks) with code #100 valid insights metric; weekly review again used public interaction fallback only. This week also confirmed 04:00 external-link format failed 32/32 while 12:00 native summary posts got 8/8 comment responses.",
-    "2026-09-22 site-health updated status for ai-tools.tw and en.ai-tools.tw from active DNS failure to deprecated domains following builder decision 2026-09-16; GitHub Pages fallback URLs remain healthy."
+    "2026-09-22 site-health updated status for ai-tools.tw and en.ai-tools.tw from active DNS failure to deprecated domains following builder decision 2026-09-16; GitHub Pages fallback URLs remain healthy.",
+    "2026-09-30 site-health found ai-tools.pro and ai-tools.pro/sitemap.xml returning Cloudflare 525 (origin SSL handshake failure likely). GitHub Pages fallbacks remained healthy; created directives/content-ops-to-builder-2026-09-30-ai-tools-pro-525.md."
   ],
   "fbReplied": [
     "122128661798778539_1396122008706659",
@@ -4273,7 +4287,7 @@
       ]
     }
   },
-  "lastGscCheckAt": "2026-09-28T05:30:07Z",
+  "lastGscCheckAt": "2026-09-29T05:30:06Z",
   "lastGscSummary": "ranking: avg pos 6.4; high-impr low-CTR pages: 5; pos 11-20 opps: 0",
   "lastResearchRoundDate": "2026-09-23",
   "lastIncomeIdeation": "2026-07-31T12:00:00Z",
@@ -4283,56 +4297,59 @@
       "url": "https://autodev-ai.com/",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-09-29T00:00:00Z"
+      "lastChecked": "2026-09-30T00:00:00Z"
     },
     "autodev-ai.com/sitemap.xml": {
       "url": "https://autodev-ai.com/sitemap.xml",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-09-29T00:00:00Z"
+      "lastChecked": "2026-09-30T00:00:00Z"
     },
     "ai-tools.pro": {
       "url": "https://ai-tools.pro/",
-      "status": 200,
-      "ok": true,
-      "lastChecked": "2026-09-29T00:00:00Z"
+      "status": 525,
+      "ok": false,
+      "lastChecked": "2026-09-30T00:00:00Z",
+      "issue": "Cloudflare 525 SSL handshake failed at origin/proxy layer"
     },
     "ai-tools.pro/sitemap.xml": {
       "url": "https://ai-tools.pro/sitemap.xml",
-      "status": 200,
-      "ok": true,
-      "lastChecked": "2026-09-29T00:00:00Z"
+      "status": 525,
+      "ok": false,
+      "lastChecked": "2026-09-30T00:00:00Z",
+      "issue": "Cloudflare 525 SSL handshake failed at origin/proxy layer"
     },
     "ai-tools.tw": {
       "url": "https://ai-tools.tw/",
       "status": 0,
       "ok": false,
-      "lastChecked": "2026-09-29T00:00:00Z",
+      "lastChecked": "2026-09-30T00:00:00Z",
       "issue": "Deprecated domain; DNS intentionally not restored, use GitHub Pages fallback"
     },
     "en.ai-tools.tw": {
       "url": "https://en.ai-tools.tw/",
       "status": 0,
       "ok": false,
-      "lastChecked": "2026-09-29T00:00:00Z",
+      "lastChecked": "2026-09-30T00:00:00Z",
       "issue": "Deprecated domain; DNS intentionally not restored, use GitHub Pages fallback"
     },
     "pink1119zz.github.io/ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-09-29T00:00:00Z"
+      "lastChecked": "2026-09-30T00:00:00Z"
     },
     "pink1119zz.github.io/ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-09-29T00:00:00Z"
+      "lastChecked": "2026-09-30T00:00:00Z"
     },
-    "lastChecked": "2026-09-29T00:00:00Z",
-    "lastSiteHealthCheck": "2026-09-29T00:00:00Z",
-    "lastSiteHealthSummary": "Tue 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓；ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效為預期）；兩個 GitHub Pages fallback 200✓。已確認最新 strategist directive 以 DevDay recap / Sol-Luna-Opus 5.5 內容任務為主，無新增需 content-ops 立即落地之修站項。本輪無新增站點異常，未需修站。",
+    "lastChecked": "2026-09-30T00:00:00Z",
+    "lastSiteHealthCheck": "2026-09-30T00:00:00Z",
+    "lastSiteHealthSummary": "Wed 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 出現 Cloudflare 525（新異常）；ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效為預期）；兩個 GitHub Pages fallback 200✓。已建立 builder directive 處理 ai-tools.pro TLS / Cloudflare 層問題。",
     "issues": [
+      "ai-tools.pro homepage and sitemap returned Cloudflare 525 on 2026-09-30; builder needs to fix origin TLS / SSL handshake path.",
       "ai-tools.tw and en.ai-tools.tw are deprecated per builder decision 2026-09-16; GitHub Pages fallbacks remain healthy and should be treated as canonical if needed."
     ]
   },
@@ -4343,8 +4360,8 @@
       "status": "completed"
     }
   },
-  "lastSiteHealthCheck": "2026-09-29T00:00:00Z",
-  "lastSiteHealthSummary": "Tue 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 200✓；ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效為預期）；兩個 GitHub Pages fallback 200✓。已確認最新 strategist directive 以 DevDay recap / Sol-Luna-Opus 5.5 內容任務為主，無新增需 content-ops 立即落地之修站項。本輪無新增站點異常，未需修站。",
+  "lastSiteHealthCheck": "2026-09-30T00:00:00Z",
+  "lastSiteHealthSummary": "Wed 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 出現 Cloudflare 525（新異常）；ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效為預期）；兩個 GitHub Pages fallback 200✓。已建立 builder directive 處理 ai-tools.pro TLS / Cloudflare 層問題。",
   "affiliateLinks": {
     "lastChecked": "2026-09-20T10:30:00Z",
     "totalArticlesScanned": 149,
