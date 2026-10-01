@@ -4,6 +4,56 @@
 
 ---
 
+## 2026-10-01（競品監控 b71d9ddc — Thu 10:06 UTC competitor-watch cron）
+
+### 🔥 本輪重點：競品變現方式分析 + LIFETIME Recurring 機會清單 + 台灣市場空白
+
+---
+
+#### 💰 最高優先：Systeme.io 60% LIFETIME（積壓 21+ 輪）
+
+- 佣金：60% LIFETIME recurring（無期限上限）
+- Cookie：永久標記
+- 定價：$17-$97/月
+- 單一 Unlimited 轉換：$58.20/月 × 永久
+- Ivan 已積壓 21+ 輪（5+ 個月未申請）
+- 預估月潛力：$400-1,200（複利成長）
+
+#### 🆕 新發現 LIFETIME Affiliates
+
+- **Fliki 30% LIFETIME**：30 天 cookie，$252/年（AI 影片）
+- **AdCreative.ai 30% LIFETIME**：AI 廣告素材，$29-$209/月
+- **Writesonic 30% LIFETIME**：AI 寫作，$16/月起
+
+#### 🆕 新發現高佣金 12mo affiliates
+
+- **ElevenLabs 22%/12mo**（90 天 cookie，PartnerStack，$5 min payout）
+- **ManyChat 30-50%/12mo**（PartnerStack，台灣 LINE 2,100 萬月活場景）
+
+#### 📡 台灣市場空白（先發機會）
+
+1. `ai 工具 affiliate 推薦` — **0 繁中競品**
+2. `manychat line bot 教學` — **0 繁中競品**
+3. `systeme.io 評測 繁中` — **0 繁中競品**
+4. `elevenlabs 繁中評測` — **0-2 弱競品**
+
+#### 競品分析（台灣）
+
+- **AI峰哥（autolab.cloud）**：企業培訓主收入，幾乎無 affiliate 變現，SEO 強在工具教學
+- **台灣 LINE Bot 平台（漸強、Omnichat、戰國策）**：無 affiliate 程式，ManyChat 有 30-50% affiliate 但繁中教學空白
+
+#### Ivan 行動優先順序
+
+1. P0-URGENT：systeme.io/affiliate-program（積壓 5+ 個月）
+2. P0-NEW：ManyChat affiliate（manychat.com → PartnerStack）
+3. P0-NEW：Fliki affiliate（fliki.ai/affiliate-program）
+4. P1-HIGH：ElevenLabs affiliate（PartnerStack）
+5. P1-HIGH：Copy.ai affiliate（確認 recurring 條款）
+
+**詳細指令見：directives/researcher-to-strategist-2026-10-01-competitor-watch.md**
+
+---
+
 ## 2026-10-01（市場研究 Round 228 — Thu 09:54 UTC market-research cron）
 
 ### 🔥 本輪重點：AI/ML API 30% LIFETIME 新發現 + ManyChat 50% 首年實測 + n8n 30%/12mo 確認 + Reddit/Quora 成為 2026 SEO 新主戰場 + 台灣 AI Workflow 模板市場完全空白
