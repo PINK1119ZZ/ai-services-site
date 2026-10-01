@@ -4,6 +4,243 @@
 
 ---
 
+## 2026-10-01（市場研究 Round 228 — Thu 09:54 UTC market-research cron）
+
+### 🔥 本輪重點：AI/ML API 30% LIFETIME 新發現 + ManyChat 50% 首年實測 + n8n 30%/12mo 確認 + Reddit/Quora 成為 2026 SEO 新主戰場 + 台灣 AI Workflow 模板市場完全空白
+
+---
+
+#### 💰 最高優先新發現：AI/ML API 30% LIFETIME Recurring
+
+**為什麼是本輪最重要發現？**
+- 佣金：30% **終身** recurring（不是 12 個月，是永久！）
+- 平台：100+ AI 模型統一 API（OpenAI/Claude/Gemini/Llama 全包）
+- Cookie：90 天
+- 定價：$5/月起步，平均 $79/月
+- 每轉換終身價值：$23.70/月 × 永久 = 複利型收入
+- 申請：aimlapi.com affiliate program
+- 受眾：開發者、AI 工具創作者（與我們受眾 100% 吻合）
+- 競品比較頁機會：AI/ML API vs OpenRouter vs Together AI（三個都有 affiliate）
+- **月潛力：$300-900（成長後 $1,500+，複利效應）**
+
+**立即行動（Ivan）：**
+1. 申請 aimlapi.com/affiliate（或搜尋官方 affiliate 頁面）
+2. 取得 affiliate 連結後通知 seo-writer
+3. seo-writer 執行：blog/aiml-api-vs-openrouter-comparison-2026.html（比較頁 + 完整教學）
+
+---
+
+#### 🆕 ManyChat Affiliate 50% 首年實測確認（PartnerStack）
+
+**更新與修正：**
+- 佣金：**30-50% 首年 recurring**（非終身，12 個月）
+  - Gold tier: 50%（需 lifetime 200+ paid signups）
+  - Sapphire: 40%（需 50+ paid signups）
+  - 起步: 30%
+- Cookie: 未明確公開（PartnerStack 預設 90 天）
+- 平台：PartnerStack（manychat.com → PartnerStack 申請）
+- 定價：Starter $15/月，Pro $79/月，Pro+ $139/月
+- 每轉換首年價值（30% 起步）：$15×12×0.3=$54 → $79×12×0.3=$284
+- 受眾：Instagram/WhatsApp/LINE 行銷自動化（台灣 LINE 2,100萬用戶市場）
+- **月潛力：$200-600（首年 recurring，需持續推廣維持）**
+
+**ManyChat vs BotPenguin 比較：**
+- ManyChat: 30-50%/12mo，主流平台全覆蓋
+- BotPenguin: 20%/36mo（更長 recurring 但比率低，2026/12/31 前暫停申請）
+
+**立即行動（Ivan）：**
+1. 申請 manychat.com → 找 affiliate/partner program（會導向 PartnerStack）
+2. 取得連結後通知 seo-writer
+3. seo-writer 執行：blog/manychat-line-bot-automation-tutorial-2026.html（台灣 LINE 行銷場景）
+
+---
+
+#### 📊 n8n Affiliate 30%/12mo 確認（PartnerStack，EUR 100 起付）
+
+**完整條款確認：**
+- 佣金：30% recurring for 12 months
+- Cookie: 未明確（PartnerStack 預設 90 天）
+- 平台：PartnerStack（n8n.io/affiliates）
+- 定價：Starter $20/月，Pro $50/月
+- 最低起付：EUR 100（PayPal required）
+- 每轉換首年價值：$20×12×0.3=$72 → $50×12×0.3=$180
+- 受眾：工作流自動化、no-code 開發者（與我們既有 n8n 教學文章完美配合）
+- **月潛力：$150-500（我們已有多篇 n8n 教學文章，加 affiliate 即可立即轉換）**
+
+**我們既有 n8n 內容資產：**
+- blog/n8n-automation-tutorial-2026.html（已發布）
+- blog/n8n-2-14-mcp-ai-workflow-2026.html（已發布）
+- blog/line-bot-n8n-templates-2026.html（已發布）
+- Gumroad n8n-tw-templates（積壓未上架，但內容已備好）
+
+**立即行動（Ivan）：**
+1. 申請 n8n.io/affiliates（會導向 PartnerStack）
+2. 取得 affiliate 連結後**回頭更新既有 3 篇 n8n 文章**（立即轉換現有流量）
+3. Gumroad n8n 模板上架後也加入 affiliate 連結
+
+---
+
+#### 🔴 台灣數位產品市場缺口：繁中 AI Workflow 模板**完全空白**
+
+**市場洞察（2026 Oct 最新）：**
+
+1. **Gumroad/Lemon Squeezy AI 產品爆發**
+   - 英文市場：AI prompt packs $19-79，workflow templates $27-97
+   - 台灣繁中：**零競品**
+   - 我們已有內容但積壓 23+ 週：
+     - claude-code-prompt-pack-2026（$27 建議定價）
+     - n8n-claude-templates-v1（$39 建議定價）
+     - n8n-tw-templates（$49 建議定價，台灣場景）
+     - claude-code-skills-pack-v2（$59 建議定價）
+     - ai-agent-cybersecurity-skills-v1（$79 建議定價）
+
+2. **繁體中文 AI Agent Workflow 教學需求高**
+   - 搜尋「AI agent workflow 繁中」「n8n 台灣教學」「claude code 繁中模板」：零結果
+   - 我們已發布多篇教學文章，但缺少**可下載實作模板**
+   - Notion AI Agents 2026 新功能：繁中模板市場完全空白（英文 $19-79）
+
+3. **LINE Bot 自動化繁中資源稀缺**
+   - LINE 台灣 2,100 萬用戶
+   - LINE Bot + n8n 整合教學：我們已有文章
+   - LINE Bot 模板：繁中市場幾乎空白
+
+**Ivan 必須立即執行（P0-URGENT，23+ 週積壓）：**
+1. 上架 5 個 Gumroad 產品（內容已備好，只差上架動作）
+2. 每個產品定價建議：$27-79（參考英文市場）
+3. 上架後回頭更新 6 篇含壞連結的文章（立即轉換現有流量）
+
+**預估收入（Gumroad 上架後）：**
+- 月銷 10-30 個產品 × 平均 $49 = $490-1,470/月
+- 既有 6 篇文章流量立即轉換
+- 無需新建內容，純執行動作
+
+---
+
+#### 📡 Reddit + Quora = 2026 SEO 新主戰場（Google AI Overview 優先引用）
+
+**為什麼 Reddit/Quora 突然變成 SEO 必爭之地？**
+
+1. **Google 與 Reddit 資料授權協議（2026 生效）**
+   - Google 在 AI Overview 與 "Perspectives" 篩選器中**優先顯示 Reddit 討論串**
+   - Reddit 流量 2024-2026：+70% 來自 Google organic search
+   - 搜尋「product review」「how to」「comparison」→ Reddit threads 常在 Top 3
+
+2. **Quora 持續霸榜 Google 首頁**
+   - 400M 月活躍用戶
+   - Quora 頁面持續佔據 Google 首頁（尤其長尾關鍵字）
+   - 品牌在 Quora 出現 = 免費 SERP 曝光
+
+3. **社群驅動 SEO 成為 2026 核心策略**
+   - 傳統 SEO（blog + backlinks）依然重要
+   - 但 **community-driven SEO**（Reddit/Quora/niche forums）成為新增長引擎
+   - 用戶真實討論 > 品牌 marketing speak
+
+**我們的機會：**
+- r/LocalLLaMA（173K 成員）：本機 AI、Ollama、LM Studio 討論
+- r/ClaudeAI（50K+ 成員）：Claude Code、coding agent
+- r/n8n（自動化工作流）
+- Quora AI tools 相關問題
+
+**執行策略（零成本，高 ROI）：**
+1. 每週 2-3 篇深度回答（Reddit 或 Quora）
+2. 真誠分享經驗，不直接貼連結
+3. 在回答中自然提及「我寫過一篇完整教學」→ 個人 profile 放 autodev-ai.com
+4. 累積 karma/upvotes → 帳號權重提升 → Google 更信任
+
+**預估效果：**
+- +500-2,000 UV/月（來自 Reddit/Quora referral + Google 索引）
+- 間接提升品牌搜尋量
+- 零成本（純時間投入）
+
+**不要做的事（Reddit 嚴格規則）：**
+- ❌ 不要直接貼 affiliate 連結（會被 ban）
+- ❌ 不要每篇都貼自己網站（spam）
+- ❌ 不要用多個帳號互相 upvote（shadowban）
+- ✅ 真誠回答，偶爾提及自己內容，讓社群自然發現
+
+---
+
+#### 🆕 其他新 Affiliate 發現（本輪次要）
+
+1. **Skool Community Platform**
+   - 佣金：推測 40-50% recurring（官方未明確公開完整條款，需申請確認）
+   - 定位：線上社群 + 課程平台（Kajabi/Circle 競品）
+   - 受眾：課程創作者、社群經營者
+   - 月潛力：$150-500（需 Ivan 查詢官方 affiliate 條款）
+
+2. **AdSkull（AI 廣告投放工具）**
+   - 佣金：30% recurring lifetime
+   - Cookie: 30 天
+   - 受眾：Meta/TikTok/Snapchat 廣告投手
+   - 月潛力：$100-300（小眾但高轉換）
+
+3. **ElevenLabs（TTS）**
+   - 佣金：22% recurring for 12 months
+   - Cookie: 90 天
+   - 月潛力：$150-400（我們已有 TTS 比較頁機會）
+
+**優先順序：**
+- P0: AI/ML API（30% LIFETIME）
+- P0: ManyChat（50%/12mo）
+- P1: n8n（30%/12mo，既有流量立即轉換）
+- P2: Skool/AdSkull/ElevenLabs（待 Ivan 確認條款）
+
+---
+
+#### 📊 Product Hunt + GitHub Trending（Oct 2026 觀察）
+
+**PH Sep 月榜 Top 10（2026 最終）：**
+1. Kilo Code（6.5K followers）— 已有 affiliate $99.50/conv
+2. Mastra（AI framework）
+3. Switch（productivity）
+4. tiun.（billing SDK）— P1-HIGH 積壓
+5. （其他略）
+
+**GitHub Trending 持續熱門：**
+- VoiceStudio（50K★，本機 TTS）
+- OpenRig（multi-agent harness）
+- Ponytail（token optimizer）
+- 所有項目繁中教學仍為空白
+
+---
+
+### 📌 Ivan 本週必做（優先順序）
+
+**P0-URGENT（立即執行，影響現有流量轉換）：**
+1. ✅ 申請 AI/ML API affiliate（aimlapi.com）
+2. ✅ 申請 ManyChat affiliate（manychat.com → PartnerStack）
+3. ✅ 申請 n8n affiliate（n8n.io/affiliates → PartnerStack）
+4. 🔴 上架 5 個 Gumroad 產品（23+ 週積壓，內容已備好）
+5. 🔴 更新既有 n8n 文章加入 affiliate 連結（立即轉換現有流量）
+
+**P1-HIGH（本週完成）：**
+6. 申請 Systeme.io affiliate（60% LIFETIME，20+ 輪積壓）
+7. 申請 Cursor affiliate（openaffiliate.dev/programs/cursor，積壓最久）
+8. 查詢 Skool affiliate 官方條款（skool.com）
+
+**P2（有空執行）：**
+9. 申請 AdSkull affiliate（adskull.io）
+10. 申請 ElevenLabs affiliate（elevenlabs.io/affiliates）
+
+---
+
+### 🎯 Strategist 指令摘要
+
+1. **seo-writer P1-HIGH：blog/aiml-api-vs-openrouter-comparison-2026.html**（Ivan 取得 affiliate 連結後執行）
+2. **seo-writer P1：blog/manychat-line-bot-automation-tutorial-2026.html**（台灣 LINE 場景）
+3. **content-refresher：回頭更新 3 篇既有 n8n 文章加 affiliate 連結**（Ivan 取得後立即執行）
+4. **Ivan P0-URGENT：上架 5 個 Gumroad 產品 + 更新 6 篇壞連結文章**
+
+**預估本輪新增月收入：**
+- AI/ML API affiliate: $300-900/月（LIFETIME 複利）
+- ManyChat affiliate: $200-600/月（首年 recurring）
+- n8n affiliate 更新既有文章: $150-500/月（立即轉換）
+- Gumroad 上架: $490-1,470/月（無需新內容）
+- Reddit/Quora 流量: $100-400/月（間接，零成本）
+- **總計：$1,240-3,870/月**
+
+---
+
 ## 2026-09-26（市場研究 Round 222 — Sun 23:00 UTC market-research cron）
 
 ### 🔥 本輪重點：GetResponse 40-60%/12mo 新確認 + Surfer SEO 25% CPA + BrightLocal 15% LIFETIME + AnswerThePublic 30% LIFETIME + Wand PH Sep 26 #4（語音程式設計）+ Reddit 流量策略 + OpenAI DevDay T-2天最終衝刺
