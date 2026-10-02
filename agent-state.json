@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-01T10:06:00Z",
+  "lastRun": "2026-10-02T00:00:00Z",
   "lastResearchRound": 229,
   "lastCompetitorWatchRun": "2026-10-01T10:06:00Z",
   "lastStrategistRun": "2026-10-01T10:00:00Z",
@@ -1807,6 +1807,18 @@
         "🔴 P0：申請 openaffiliate.dev/programs/cursor（積壓最久）",
         "🔴 P0：申請 partners.dub.co/firecrawl（$75M Series B，25%/12mo）"
       ]
+    },
+    {
+      "timestamp": "2026-10-02T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Fri 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 仍為 Cloudflare 525（持續異常，builder 已診斷為 origin TLS/SSL 問題，待 Ivan/Cloudflare 層處理）；ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效為預期）；兩個 GitHub Pages fallback 200✓。本輪無新增可由 content-ops 直接修復的站點問題。",
+      "changes": [
+        "curl/HTTP 檢查 8 個站點 URL：autodev-ai.com/與 sitemap 200、ai-tools.pro/與 sitemap 525、兩個 GitHub Pages fallback 200、ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效預期）",
+        "讀取 directives/strategist-weekly-2026-09-28.md：確認當前優先事項仍以 seo-writer / Ivan 的內容與 affiliate 任務為主，無新增 content-ops 可直接落地修站項",
+        "更新 agent-state.json：lastChecked、siteHealth、lastSiteHealthCheck、lastSiteHealthSummary、issues、agentLog"
+      ]
     }
   ],
   "gscData": {
@@ -2324,7 +2336,7 @@
     "taste-skill-gumroad-v2": "Gumroad agent-skills-tw 升級至 v2.0，pending",
     "cursor-3-plugins-tutorial": "積壓 5+ weeks"
   },
-  "lastChecked": "2026-10-01T00:00:00Z",
+  "lastChecked": "2026-10-02T00:00:00Z",
   "issues": [
     "2026-09-01 site-health reconfirmed ai-tools.tw and en.ai-tools.tw failing DNS resolution; autodev-ai.com, ai-tools.pro, and GitHub Pages fallback URLs remained healthy. Existing builder directive still valid.",
     "2026-07-10 site-health found ai-tools.tw and en.ai-tools.tw failing DNS resolution (curl: Could not resolve host / HTTP 000); autodev-ai.com and ai-tools.pro remained healthy. Added directive for builder to confirm canonical domains or restore DNS.",
@@ -2411,7 +2423,8 @@
     "2026-09-20 fb-weekly-review: Graph API v23.0 with current page token still rejects requested post insights metrics (post_impressions/post_engaged_users/post_clicks) with code #100 valid insights metric; weekly review again used public interaction fallback only. This week also confirmed 04:00 external-link format failed 32/32 while 12:00 native summary posts got 8/8 comment responses.",
     "2026-09-22 site-health updated status for ai-tools.tw and en.ai-tools.tw from active DNS failure to deprecated domains following builder decision 2026-09-16; GitHub Pages fallback URLs remain healthy.",
     "2026-09-30 site-health found ai-tools.pro and ai-tools.pro/sitemap.xml returning Cloudflare 525 (origin SSL handshake failure likely). GitHub Pages fallbacks remained healthy; created directives/content-ops-to-builder-2026-09-30-ai-tools-pro-525.md.",
-    "2026-10-01 site-health reconfirmed ai-tools.pro and ai-tools.pro/sitemap.xml returning Cloudflare 525; builder diagnosis still points to origin TLS / SSL handshake failure, requiring Ivan/Cloudflare dashboard action. Deprecated ai-tools.tw domains and GitHub Pages fallbacks unchanged."
+    "2026-10-01 site-health reconfirmed ai-tools.pro and ai-tools.pro/sitemap.xml returning Cloudflare 525; builder diagnosis still points to origin TLS / SSL handshake failure, requiring Ivan/Cloudflare dashboard action. Deprecated ai-tools.tw domains and GitHub Pages fallbacks unchanged.",
+    "2026-10-02 site-health reconfirmed ai-tools.pro and ai-tools.pro/sitemap.xml returning Cloudflare 525; builder diagnosis still points to origin TLS / SSL handshake failure, requiring Ivan/Cloudflare dashboard action. Deprecated ai-tools.tw domains and GitHub Pages fallbacks unchanged."
   ],
   "fbReplied": [
     "122128661798778539_1396122008706659",
@@ -4916,59 +4929,59 @@
       "url": "https://autodev-ai.com/",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-10-01T00:00:00Z"
+      "lastChecked": "2026-10-02T00:00:00Z"
     },
     "autodev-ai.com/sitemap.xml": {
       "url": "https://autodev-ai.com/sitemap.xml",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-10-01T00:00:00Z"
+      "lastChecked": "2026-10-02T00:00:00Z"
     },
     "ai-tools.pro": {
       "url": "https://ai-tools.pro/",
       "status": 525,
       "ok": false,
-      "lastChecked": "2026-10-01T00:00:00Z",
+      "lastChecked": "2026-10-02T00:00:00Z",
       "issue": "Cloudflare 525 SSL handshake failed at origin/proxy layer"
     },
     "ai-tools.pro/sitemap.xml": {
       "url": "https://ai-tools.pro/sitemap.xml",
       "status": 525,
       "ok": false,
-      "lastChecked": "2026-10-01T00:00:00Z",
+      "lastChecked": "2026-10-02T00:00:00Z",
       "issue": "Cloudflare 525 SSL handshake failed at origin/proxy layer"
     },
     "ai-tools.tw": {
       "url": "https://ai-tools.tw/",
       "status": 0,
       "ok": false,
-      "lastChecked": "2026-10-01T00:00:00Z",
+      "lastChecked": "2026-10-02T00:00:00Z",
       "issue": "Deprecated domain; DNS intentionally not restored, use GitHub Pages fallback"
     },
     "en.ai-tools.tw": {
       "url": "https://en.ai-tools.tw/",
       "status": 0,
       "ok": false,
-      "lastChecked": "2026-10-01T00:00:00Z",
+      "lastChecked": "2026-10-02T00:00:00Z",
       "issue": "Deprecated domain; DNS intentionally not restored, use GitHub Pages fallback"
     },
     "pink1119zz.github.io/ai-tools-tw": {
       "url": "https://pink1119zz.github.io/ai-tools-tw/",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-10-01T00:00:00Z"
+      "lastChecked": "2026-10-02T00:00:00Z"
     },
     "pink1119zz.github.io/ai-tools-en": {
       "url": "https://pink1119zz.github.io/ai-tools-en/",
       "status": 200,
       "ok": true,
-      "lastChecked": "2026-10-01T00:00:00Z"
+      "lastChecked": "2026-10-02T00:00:00Z"
     },
-    "lastChecked": "2026-10-01T00:00:00Z",
-    "lastSiteHealthCheck": "2026-10-01T00:00:00Z",
-    "lastSiteHealthSummary": "Thu 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 仍為 Cloudflare 525（持續異常，builder 已診斷為 origin TLS/SSL 問題，待 Ivan/Cloudflare 層處理）；ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效為預期）；兩個 GitHub Pages fallback 200✓。本輪無新增可由 content-ops 直接修復的站點問題。",
+    "lastChecked": "2026-10-02T00:00:00Z",
+    "lastSiteHealthCheck": "2026-10-02T00:00:00Z",
+    "lastSiteHealthSummary": "Fri 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 仍為 Cloudflare 525（持續異常，builder 已診斷為 origin TLS/SSL 問題，待 Ivan/Cloudflare 層處理）；ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效為預期）；兩個 GitHub Pages fallback 200✓。本輪無新增可由 content-ops 直接修復的站點問題。",
     "issues": [
-      "ai-tools.pro homepage and sitemap returned Cloudflare 525 on 2026-10-01; builder diagnosed origin TLS / SSL handshake issue and Ivan needs to check Cloudflare SSL/TLS settings or origin certificate.",
+      "ai-tools.pro homepage and sitemap returned Cloudflare 525 on 2026-10-02; builder diagnosed origin TLS / SSL handshake issue and Ivan needs to check Cloudflare SSL/TLS settings or origin certificate.",
       "ai-tools.tw and en.ai-tools.tw are deprecated per builder decision 2026-09-16; GitHub Pages fallbacks remain healthy and should be treated as canonical if needed."
     ]
   },
@@ -4979,8 +4992,8 @@
       "status": "completed"
     }
   },
-  "lastSiteHealthCheck": "2026-10-01T00:00:00Z",
-  "lastSiteHealthSummary": "Thu 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 仍為 Cloudflare 525（持續異常，builder 已診斷為 origin TLS/SSL 問題，待 Ivan/Cloudflare 層處理）；ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效為預期）；兩個 GitHub Pages fallback 200✓。本輪無新增可由 content-ops 直接修復的站點問題。",
+  "lastSiteHealthCheck": "2026-10-02T00:00:00Z",
+  "lastSiteHealthSummary": "Fri 00:00 UTC site-health — autodev-ai.com 與 sitemap 200✓；ai-tools.pro 與 sitemap 仍為 Cloudflare 525（持續異常，builder 已診斷為 origin TLS/SSL 問題，待 Ivan/Cloudflare 層處理）；ai-tools.tw / en.ai-tools.tw 維持 deprecated domain（DNS 失效為預期）；兩個 GitHub Pages fallback 200✓。本輪無新增可由 content-ops 直接修復的站點問題。",
   "affiliateLinks": {
     "lastChecked": "2026-09-20T10:30:00Z",
     "totalArticlesScanned": 149,
