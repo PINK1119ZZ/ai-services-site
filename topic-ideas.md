@@ -550,3 +550,20 @@
 
 ---
 
+
+---
+
+*R230 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點*
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 站點 |
+|------|------|--------|----------|---------|----------|------|
+| 2026-10-02 | Ponytail Plugin | ponytail claude code 評測, 省 token 教學 | 高（GitHub trending #1, 150K★, 1,194 stars/day） | 間接 DataCamp + DO | $200-600 | autodev-ai.com |
+| 2026-10-02 | Pi 1.0 earendil | pi 1.0 coding agent 教學 繁中 | 高（HN #1, 686 pts） | 間接 DataCamp + DO | $200-700 | autodev-ai.com |
+| 2026-10-02 | Dynamiq AI Platform | dynamiq ai 評測, ai agent platform 比較 | 中（企業 AI agent） | Dynamiq affiliate 50%/12mo（🔴 Ivan 申請） | $500-1,500 | autodev-ai.com |
+| 2026-10-02 | HyperFrames HeyGen | hyperframes heygen 教學, html 生成影片 | 中高（HeyGen品牌, 55K★） | HeyGen affiliate 25%/12mo（待確認） | $400-1,100 | autodev-ai.com |
+| 2026-10-02 | Context-Mode MCP | context mode mcp 教學, 98% token 減量 | 中（MCP 生態） | 間接 DataCamp + DO | $150-500 | autodev-ai.com |
+| 2026-10-02 | Impeccable Design | impeccable design skill 教學, ai coding agent 設計 | 中（設計+AI交集） | 間接 DataCamp + DO | $200-600 | autodev-ai.com |
+| 2026-10-02 | OpenRig | openrig 教學, claude code codex 協作 | 中（multi-agent） | 間接 DataCamp + DO | $150-500 | autodev-ai.com |
+| 2026-10-02 | Cloudflare Clef | cloudflare clef 評測, clef vs jev 比較 | 中高（Cloudflare品牌, HN#2） | 間接 DO | $200-600 | autodev-ai.com |
+| 2026-10-02 | Cursor Plugins | cursor plugins 教學, cursor plugin 推薦 2026 | 中（Cursor大用戶基數） | Cursor affiliate（🔴 積壓待 Ivan 申請） | $200-700 | autodev-ai.com |
+
