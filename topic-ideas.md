@@ -1,569 +1,368 @@
-## Round 228 — 2026-10-01 00:30 UTC（Wed 08:30 ai-trend-hunter cron）
+# Topic Ideas - AI 趨勢獵手賺錢機會追蹤
 
-### 🚨 P0-EXECUTE 確認（R227 Gemini 4 Argon 持續）
-
-**Gemini 4 Argon — HN #1（897 pts，4h ago）— Google 最新旗艦（持續爆發）**
-- HN 排名：從 R227 的 649 pts（1h）→ 現在 897 pts（4h），**248 點增長！**
-- 發布：Sep 30, 2026
-- 官方部落格：blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/
-- **核心規格確認**：
-  - 定價：$2/M input，$10/M output，cached 95% off（= $0.10/M cached）
-  - 定位：Frontier performance in complex workflows（軟體工程/企業知識工作/網路安全）
-  - 內部使用案例：量子演算法優化（40% 提升）、記憶優化（300 TiB freed）、C/C++ → Rust 大規模遷移（800K+ lines Fuchsia Zircon kernel）
-  - Fairwind Program：先向信任的網路防禦者推出
-  - 美國政府自願流程：pre-release model access
-- **繁中評測完全空白（發布 4 小時）**
-- SEO keywords: `gemini 4 argon 評測`, `gemini 4 argon 繁中`, `gemini 4 argon 定價`, `google gemini 4 argon 教學`, `gemini 4 argon vs gpt-6`
-- 預估：$400-1,200/月（Google 品牌 + HN #1 持續爆發 + frontier model 技術受眾）
-- **截止：Oct 2（48h 首發窗口極關鍵！）**
-- **seo-writer 最高優先執行（優先於 GPT-6.1 Sol，因為 HN 討論熱度更高）**
+**最後更新：** 2026-10-03 00:30 UTC（Round 232）
 
 ---
 
-### 🔴 P1-HIGH R227 carryover 確認
+## 🎯 Round 232 Executive Summary（2026-10-03 00:30 UTC）
 
-**R227 已確認的 P0/P1-HIGH 項目全部持續有效：**
+**來源：** GitHub Trending / Hacker News / Product Hunt / Reddit  
+**任務類型：** AI Trend Hunter（賺錢機會導向）
 
-1. **GPT-6.1 Sol 評測** — Oct 1 截止（**今天！**）
-   - R226 P0-EXECUTE，DevDay Sep 29 發布
-   - HN #6（757 pts），Near-Astra 1/5 價格
-   - 預估：$300-900/月
+### 核心發現
 
-2. **OpenAI Dots 評測** — Oct 2 截止
-   - R226 P0-EXECUTE，DevDay Sep 29 發布
-   - HN #29（454 pts），Always-on agents
-   - 預估：$200-600/月
+**變現機會總覽：**
+- **4 個高佣金 SaaS Affiliate 機會**（30-50% recurring）
+- **5 個 GitHub trending 教學文機會**（間接變現，繁中零競品）
+- **3 個 Product Hunt 工具評測**（Oct 1-2 launches）
 
-3. **Howseen AI 評測** — Oct 1 截止（**今天！緊急！**）
-   - R221 P1-HIGH，PH Sep 25 #2
-   - GEO 品牌監控
-   - 預估：$80-250/月
+**預估總月收入潛力：** $1,850-5,200/月
 
----
-
-### 🟡 P1 GitHub Trending 更新（Oct 1 00:30 UTC）
-
-**持續爆發（R227 確認）：**
-
-1. **VoiceStudio（debpalash，50,424★，+3,483 today）**
-   - +3,483★/天（vs R227 的 +2,219，**加速增長！**）
-   - 開源 ElevenLabs 替代，646 語言
-   - 繁中評測空白
-   - 預估：$100-300/月
-   - 截止：Oct 8
-
-2. **PageIndex（VectifyAI，38,116★，+1,097 today）**
-   - +1,097★/天（與 R227 持平）
-   - Vectorless RAG，reasoning-based
-   - Python，MIT
-   - 預估：$100-300/月
-   - 截止：Oct 12
-
-3. **Ponytail（DietrichGebert，149,174★，+743 today）**
-   - +743★/天（vs R227 的 +865，略降但仍高）
-   - 現有文章 GSC pos 4.2
-   - content-refresher 可輕更新星數
-
-4. **hyperframes（heygen-com，54,724★，+349 today）**
-   - +349★/天（與 R227 持平）
-   - HeyGen 官方，HTML→Video for agents
-   - 預估：$150-400/月
-   - 截止：Oct 12
-
-5. **OpenRig（mvschwarz，3,016★，+624 today）**
-   - +624★/天（vs R227 的 +537，**加速增長！**）
-   - Multi-agent harness，Claude Code + Codex
-   - 預估：$80-250/月
-   - 截止：Oct 12
-
-6. **context-mode（mksglu，24,486★，+90 today）**
-   - +90★/天（與 R227 持平）
-   - Context window optimization，98% tool output reduction
-   - 預估：$80-250/月
-   - 截止：Oct 12
-
-7. **codegraph（colbymchenry）— 持續 trending**
-   - Pre-indexed code knowledge graph
-   - 全平台 agent 支援
-   - 截止：Oct 12
-
-8. **dbx（t8y2）— 持續 trending**
-   - 25MB DB client，100+ databases
-   - 內建 AI + MCP Server
-   - 繁中（達夢）友善
-   - 截止：Oct 14
-
-**新發現（R228）：**
-
-9. **NVIDIA OpenShell — 持續 trending（無星數，新專案）**
-   - NVIDIA 官方
-   - Safe, private runtime for autonomous AI agents
-   - R226 已確認 P1-HIGH
-   - 截止：Oct 10
+**最高優先級（P0-URGENT）：**
+1. **Writesonic Affiliate** — 30% lifetime recurring，$49/月起，AI 寫作工具，繁中教學空白
+2. **Frase.io Affiliate** — 30% recurring 12 months，$15-115/月，SEO/GEO 工具
+3. **Framer Creator Program** — 50% recurring 12 months，$10-30/月，AI agents 建站
 
 ---
 
-### 📊 HN 其他重要發現（Oct 1 00:30 UTC）
+## 📊 Round 232 發現（依優先級排序）
 
-1. **HN #7: Launch HN: Magnitude (YC S25) — 120 pts（vs R227 的 100 pts，持續增長）**
-   - Self-optimizing inference engine for agents
-   - GitHub: github.com/magnitudedev/magnitude
-   - R227 已確認 P1
-   - 截止：Oct 8
+### 🔴 P0-URGENT（立即執行）
 
-2. **HN #9: You said no MCP — 607 pts（vs R227 的 567 pts，持續討論）**
-   - 336 comments（vs R227 的 325，+11 comments）
-   - MCP 爭議文章
-   - 與 R225 MCP vs UTCP 比較文主題吻合
-   - 可作為比較文的社群觀點引用
+#### 1. Writesonic Affiliate Program — 30% Lifetime Recurring
 
-3. **HN #23: I could've accessed 17T Microsoft records — 242 pts**
-   - 新發現（R228）
-   - 資安受眾
-   - 可與 NVIDIA OpenShell 安全主題結合
-
----
-
-### 💰 Affiliate 狀態（R228 無新發現）
-
-本輪無新 affiliate 發現。積壓清單維持：
-- **P0-URGENT**：Systeme.io 60% LIFETIME（R212+ 積壓 21+ 輪）
-- **P0**：Copy.ai 45%/12mo（R223 最高）
-- **P0**：Jasper 25-30%/12mo（R223 確認）
-- **P0**：Firecrawl 25%/12mo→15%（R219 確認）
-- **P0**：Cursor affiliate（積壓最久）
-- **P1**：Hindsight Cloud（vectorize.io，Fortune 500）
-- **P1**：Kilo Code $99.50/conv（R215 確認）
-- **P0-URGENT**：Gumroad 5 產品（23+ 週積壓，壞連結）
+- **來源：** Rewardful 2026 AI Affiliate Programs 排名
+- **Commission：** 30% lifetime recurring（業界前 5%）
+- **Pricing：** $49/mo (Individual) → $99/mo (Team)
+- **關鍵字：** writesonic 教學繁中、writesonic 評測 2026、writesonic affiliate
+- **預估搜尋量：** 中高（AI 寫作工具受眾廣）
+- **變現方式：** 30% lifetime commission（每個 $49/mo referral = $14.70/月，永久）
+- **預估月收入：** $300-900/月（first 6 months）→ $800-2,400/月（12 months）
+- **建議站點：** autodev-ai.com
+- **文章類型：** 完整評測 + 教學（~2,600 字）
+- **標題建議：** 「Writesonic 完整評測 2026：30% Lifetime Affiliate、AI 寫作工具完整教學，繁中首發」
+- **核心角度：**
+  - Writesonic 是什麼？為什麼選 Writesonic？（vs Jasper / Copy.ai）
+  - 5 大功能：Blog posts / Ad copy / Product descriptions / SEO content / Chatsonic
+  - 定價分析：Individual $49 vs Team $99 vs Enterprise
+  - 真實案例：用 Writesonic 寫一篇 SEO 文章（step-by-step）
+  - vs 競品比較：Writesonic vs Jasper vs Copy.ai vs ChatGPT Plus
+  - 台灣使用者使用情境：適合誰？不適合誰？
+- **Ivan Action：** 🔴 **立即申請** writesonic.com/affiliate（FirstPromoter，instant approval）
+- **時效性：** 🔴 P0-URGENT（30% lifetime 是 AI 寫作工具最高佣金，立即申請）
 
 ---
 
-### 📈 Watchlist R228 完整狀態
+#### 2. Frase.io Affiliate Program — 30% Recurring 12 Months
+
+- **來源：** Supademo 2026 SaaS Affiliate Programs 排名
+- **Commission：** 30% recurring 12 months（可升級至 35-40%）
+- **Pricing：** $15/mo (Solo) → $45/mo (Basic) → $115/mo (Team)
+- **關鍵字：** frase io 教學、frase io 繁中、frase seo 工具評測
+- **預估搜尋量：** 中（SEO 工具受眾）
+- **變現方式：** 30% recurring 12 months（每個 $45/mo referral = $13.50/月 × 12 = $162/年）
+- **預估月收入：** $200-600/月（first 6 months）→ $500-1,500/月（12 months）
+- **建議站點：** autodev-ai.com
+- **文章類型：** SEO/GEO 工具評測（~2,400 字）
+- **標題建議：** 「Frase.io 完整評測 2026：30% Affiliate、SEO + GEO 優化工具，繁中首發」
+- **核心角度：**
+  - Frase 是什麼？SEO content research + optimization
+  - 核心功能：SERP analysis / Content briefs / AI writing / Optimization scoring
+  - 定價分析：Solo $15 vs Basic $45 vs Team $115
+  - 真實案例：用 Frase 優化一篇 blog post（before/after SEO score）
+  - vs 競品：Frase vs Surfer SEO vs Clearscope vs MarketMuse
+  - GEO 功能：Frase 如何幫助 AI search optimization
+- **Ivan Action：** 🔴 **立即申請** frase.io/partners/affiliates（PartnerStack）
+- **時效性：** 🔴 P0-URGENT（30% recurring + GEO 趨勢 + 繁中空白）
+
+---
+
+#### 3. Framer Creator Program — 50% Recurring 12 Months
+
+- **來源：** Medium 2026 "3 Affiliate Programs That Print Money" + Framer 3.0 launch
+- **Commission：** 50% recurring 12 months（業界最高）
+- **Pricing：** $10/mo (Basic) → $30/mo (Pro)
+- **關鍵字：** framer 教學繁中、framer 3.0 ai agents、framer affiliate
+- **預估搜尋量：** 高（Framer 3.0 launch + AI agents 爆發）
+- **變現方式：** 50% recurring 12 months（每個 $30/mo referral = $15/月 × 12 = $180/年）
+- **預估月收入：** $300-900/月（first 6 months）→ $800-2,500/月（12 months）
+- **建議站點：** autodev-ai.com
+- **文章類型：** Framer 3.0 + AI agents 完整教學（~2,800 字）
+- **標題建議：** 「Framer 3.0 完整教學 2026：AI Agents 建站、50% Affiliate、繁中首發」
+- **核心角度：**
+  - Framer 3.0 新功能：AI agents / Branches / External agent connection (Cursor/Claude Code)
+  - 如何用 Framer AI agents 建立一個網站（step-by-step）
+  - 定價：Basic $10 vs Pro $30，何時該升級？
+  - vs 競品：Framer vs Webflow vs Wix vs WordPress
+  - 真實案例：用 Framer + Claude Code 從 Next.js 匯入網站
+  - 台灣使用者情境：設計師 vs 開發者 vs 行銷人員
+- **Ivan Action：** 🔴 **立即申請** framer.com/partners（Agency Program 包含 affiliate）
+- **時效性：** 🔴 P0-URGENT（Framer 3.0 launch 流量紅利 + 50% commission）
+
+---
+
+#### 4. PhotoAI Affiliate Program — 20% Recurring (修正)
+
+- **來源：** Rewardful 2026 AI Affiliate Programs
+- **Commission：** 20% recurring（**非 40%**，先前資料有誤）
+- **Pricing：** $9/mo (Personal) → $42/mo (Premium)
+- **關鍵字：** photoai 教學、photoai 評測、ai 照片生成
+- **預估搜尋量：** 中（視覺創作者受眾）
+- **變現方式：** 20% recurring（每個 $42/mo referral = $8.40/月）
+- **預估月收入：** $150-450/月
+- **建議站點：** autodev-ai.com
+- **文章類型：** AI 照片生成工具評測（~2,200 字）
+- **標題建議：** 「PhotoAI 完整評測 2026：AI 照片生成、20% Affiliate、繁中首發」
+- **核心角度：**
+  - PhotoAI 是什麼？上傳照片 → AI 生成專業照片
+  - 核心功能：AI headshots / Profile pictures / Photo packs
+  - 定價：Personal $9 vs Premium $42
+  - 真實案例：上傳 10 張照片 → 生成 100 張 AI 照片
+  - vs 競品：PhotoAI vs Midjourney vs DALL-E 3
+  - 適合誰？攝影師 / 社群經營者 / 個人品牌
+- **Ivan Action：** 🟡 申請 photoai.com/affiliate
+- **時效性：** 🟡 P1-HIGH（20% 佣金低於預期，但仍值得推廣）
+
+---
+
+### 🟡 P1-HIGH（一週內流量紅利）
+
+#### 5. Agent-Reach by Panniantong（GitHub Trending，新發現）
+
+- **來源：** GitHub Trending #1（2026-10-03）
+- **Repository：** github.com/Panniantong/Agent-Reach
+- **關鍵字：** agent reach 教學、ai agent web scraping、twitter reddit scraping
+- **預估搜尋量：** 高（GitHub trending #1 + "零 API 費用"吸引力）
+- **變現方式：** 間接 DataCamp + DigitalOcean CTA（開源專案，無 affiliate program）
+- **預估月收入：** $200-600/月
+- **建議站點：** autodev-ai.com
+- **文章類型：** 教學文（~2,500 字）
+- **標題建議：** 「Agent-Reach 完整教學 2026：給 AI Agent 一雙眼睛看整個網路，零 API 費用抓取 Twitter/Reddit/YouTube，繁中首發」
+- **核心角度：**
+  - Agent-Reach 是什麼？為什麼重要？（"Give your AI agent eyes to see the entire internet"）
+  - 支援平台：Twitter / Reddit / YouTube / GitHub / Bilibili / XiaoHongShu
+  - 5 步驟安裝與基礎使用（CLI + Python SDK）
+  - 真實案例：用 Agent-Reach 抓取 Twitter 趨勢 → 餵給 Claude Code 分析
+  - vs 付費 API：Agent-Reach (免費) vs Twitter API ($100/mo) vs Reddit API
+  - 台灣使用者情境：適合誰？合法性與風險？
+- **Ivan Action：** 無（開源專案 MIT，無 affiliate program）
+- **時效性：** 🟡 P1-HIGH（72h GitHub trending 窗口）
+
+---
+
+#### 6. Caveman by JuliusBrussee（107.8K★，持續 trending）
+
+- **來源：** GitHub Trending #2（持續）
+- **Repository：** github.com/JuliusBrussee/caveman（107,800★）
+- **狀態更新：** R231 已確認，持續 trending，繁中仍零競品
+- **關鍵字：** caveman ai agent 教學、ai coding agent 省 token、claude code 省成本
+- **預估搜尋量：** 高（107K★ + viral skill + 支援 30+ agents）
+- **變現方式：** 間接 DataCamp + DigitalOcean（開源專案 MIT，無 affiliate program）
+- **預估月收入：** $200-700/月
+- **文章類型：** 教學文（~2,500 字）
+- **標題建議：** 「Caveman 完整教學 2026：AI Agent 減少 65% Token 的 Viral Skill，107K★ 支援 30+ Agents 繁中首發」
+- **截止日期：** Oct 8（一週窗口）
+- **Ivan Action：** 無（開源專案）
+- **時效性：** 🟡 P1-HIGH（持續 trending，一週內發布）
+
+---
+
+#### 7. Ponytail by DietrichGebert（151.7K★，持續 trending）
+
+- **來源：** GitHub Trending #1（持續多輪）
+- **Repository：** github.com/DietrichGebert/ponytail（151,682★）
+- **狀態更新：** R231 已確認，GSC 數據顯示現有文章 pos 4.2，可用 content-refresher 更新星數
+- **預估月收入：** $150-500/月
+- **文章類型：** 已發布，可更新星數
+- **截止日期：** Oct 8
+- **Ivan Action：** 無（開源專案）
+- **時效性：** 🟡 P1-HIGH（更新現有文章）
+
+---
+
+### 🟢 P2-MEDIUM（兩週內窗口）
+
+#### 8. Omnia Agent（GEO 工具，Product Hunt Oct 2）
+
+- **來源：** Product Hunt（Oct 2, 2026 未知排名）+ amadora.ai GEO tools 排名
+- **Pricing：** €79/月起
+- **關鍵字：** omnia agent 教學、geo 工具 2026、ai 品牌監控
+- **預估搜尋量：** 中（GEO/AEO 受眾，B2B）
+- **變現方式：** **無 affiliate program 證據**，純教學文 + 間接 DigitalOcean/DataCamp
+- **預估月收入：** $80-250/月
+- **建議站點：** autodev-ai.com
+- **文章類型：** GEO 工具評測（~2,200 字）
+- **標題建議：** 「Omnia Agent 完整評測 2026：AI GEO Agent 完成 95% 的 GEO 工作，繁中首發」
+- **核心角度：**
+  - Omnia Agent 是什麼？GEO 自動化 agent
+  - 核心功能：AI visibility tracking / Competitor benchmarking / Citation monitoring
+  - 定價：€79/月起（vs 競品 Profound $99/mo）
+  - 真實案例：用 Omnia Agent 追蹤品牌在 ChatGPT/Perplexity 的曝光
+  - vs 競品：Omnia vs Profound vs Local Falcon
+  - 適合誰？品牌行銷 / SEO agency / SaaS 公司
+- **Ivan Action：** 🟢 確認是否有 affiliate program（目前無證據）
+- **時效性：** 🟢 P2-MEDIUM（兩週內發布）
+
+---
+
+#### 9. Viktor.com（Slack AI Agent，$15M ARR）
+
+- **來源：** GitHub Trending + LinkedIn Series A announcement
+- **Pricing：** $50/mo (20K credits) → $750/mo (300K credits)
+- **關鍵字：** viktor ai 教學、slack ai agent、viktor pricing
+- **預估搜尋量：** 中（Slack 使用者受眾）
+- **變現方式：** **無 affiliate program 證據**，純教學文 + 間接變現
+- **預估月收入：** $100-300/月
+- **建議站點：** autodev-ai.com
+- **文章類型：** AI coworker 評測（~2,400 字）
+- **標題建議：** 「Viktor.com 完整評測 2026：Slack AI Coworker、$15M ARR、繁中首發」
+- **核心角度：**
+  - Viktor 是什麼？Slack 裡的 AI 同事（非 chatbot）
+  - 核心功能：Proactive automation / 3,000+ tool integrations / Code execution
+  - 定價：$50/mo (20K credits) 能做多少事？Credit 消耗分析
+  - 真實案例：Viktor 自動化 Slack workflow（發送 daily report / 追蹤 task）
+  - vs 競品：Viktor vs Zapier vs Make vs n8n
+  - 適合誰？Ops-heavy teams / Lean startups
+- **Ivan Action：** 🟢 確認是否有 affiliate program（目前無證據）
+- **時效性：** 🟢 P2-MEDIUM（兩週內發布）
+
+---
+
+#### 10. Yedric.ai（Product Hunt Oct 1 #2）
+
+- **來源：** Product Hunt #2（Oct 1, 2026）
+- **關鍵字：** yedric ai 教學、natural language saas control、yedric pricing
+- **預估搜尋量：** 中（SaaS 開發者受眾）
+- **變現方式：** **無 affiliate program 證據**，純教學文 + 間接變現
+- **預估月收入：** $80-250/月
+- **建議站點：** autodev-ai.com
+- **文章類型：** Embeddable AI agent 評測（~2,200 字）
+- **標題建議：** 「Yedric.ai 完整評測 2026：讓使用者用自然語言控制你的 SaaS，Product Hunt #2，繁中首發」
+- **核心角度：**
+  - Yedric 是什麼？Embeddable AI agent for SaaS
+  - 核心功能：Natural language → API actions / Product knowledge integration
+  - 如何整合 Yedric 到你的 SaaS（30 分鐘內完成）
+  - 真實案例：用 Yedric 讓使用者說「Create a project named X」→ 自動執行
+  - vs 競品：Yedric vs Superflows vs Command AI vs Copilot.Live
+  - 適合誰？SaaS 開發者 / Product managers
+- **Ivan Action：** 🟢 確認是否有 affiliate program（目前無證據）
+- **時效性：** 🟢 P2-MEDIUM（兩週內發布）
+
+---
+
+## 💰 Affiliate Program 積壓清單
+
+### 🔴 P0-URGENT（立即執行）
+
+1. **Systeme.io Affiliate** — 60% LIFETIME recurring（R212+ 積壓 21+ 輪）
+2. **Writesonic Affiliate** — 30% lifetime recurring（R232 新發現）
+3. **Frase.io Affiliate** — 30% recurring 12 months（R232 新發現）
+4. **Framer Creator Program** — 50% recurring 12 months（R232 新發現）
+
+### 🟡 P1-HIGH
+
+5. **AI/ML API Affiliate** — 30% lifetime recurring, 90-day cookie（R223 確認）
+6. **Copy.ai Affiliate** — 45% recurring 12 months（R223 確認）
+7. **Jasper Affiliate** — 25-30% recurring 12 months（R223 確認）
+8. **Firecrawl Affiliate** — 25% recurring 12 months → 15%（R219 確認）
+9. **Cursor Affiliate** — 積壓最久，需確認是否有公開 program
+
+### 🟢 P2-MEDIUM
+
+10. **PhotoAI Affiliate** — 20% recurring（R232 新發現，佣金較低）
+11. **Hindsight Cloud** — vectorize.io, Fortune 500（R226 確認）
+12. **Kilo Code** — $99.50/conversion（R215 確認）
+13. **Gumroad 5 產品** — 23+ 週積壓，6 篇文章有壞連結（需 Ivan 上架產品）
+
+---
+
+## 📈 Watchlist（持續追蹤）
+
+### 🔴 緊急（今天 Oct 3 截止）
+
+**無**
+
+### 🟡 本週窗口（Oct 3-8）
 
 | 項目 | 狀態 | 截止 | 備註 |
 |------|------|------|------|
-| **Gemini 4 Argon 評測** | 🚨 **P0-EXECUTE**（HN #1 897pts 持續爆發） | **Oct 2** | **最高優先** |
-| **GPT-6.1 Sol 評測** | 🚨 **P0**（**今天 Oct 1 截止！**） | **Oct 1** | 緊急 |
-| **Howseen AI 評測** | 🔴 **P1-HIGH**（**今天 Oct 1 截止！**） | **Oct 1** | 緊急 carryover |
-| OpenAI Dots 評測 | 🚨 P0（R226） | **Oct 2** | DevDay 完成 |
-| VoiceStudio 教學 | 🔴 P1-HIGH（50K★，+3,483/day 加速） | Oct 8 | R226/R228 確認 |
-| Hindsight 評測 | 🔴 P1-HIGH（42K★，SOTA） | Oct 10 | R226 確認 |
-| NVIDIA OpenShell 教學 | 🔴 P1-HIGH（NVIDIA 官方，trending） | Oct 10 | R226/R228 確認 |
-| Hemory 評測 | 🔴 P1-HIGH | Oct 6 | R223 carryover |
-| Eclatira 評測 | 🔴 P1-HIGH | Oct 6 | R223 carryover |
-| Claude Opus 5.5 評測 | 🔴 P1（HN nerfd 討論） | Oct 6 | R226 升級 |
-| mattpocock/skills 教學 | 🔴 P1-HIGH（268.9K★） | Oct 8 | R225 carryover |
-| PageIndex 教學 | 🟡 P1（38K★，+1,097/day） | Oct 12 | R227/R228 確認 |
-| hyperframes 教學 | 🟡 P1（HeyGen，54K★，+349/day） | Oct 12 | R227/R228 確認 |
-| Magnitude YC 評測 | 🟡 P1（HN #7 120pts，YC S25） | Oct 8 | R227/R228 確認 |
-| context-mode 教學 | 🟡 P1（24K★，token 優化） | Oct 12 | R227/R228 確認 |
-| codegraph 教學 | 🟡 P1（knowledge graph） | Oct 12 | R227/R228 確認 |
-| OpenRig 教學 | 🟡 P1（3K★，+624/day 加速） | Oct 12 | R227/R228 確認 |
-| MCP vs UTCP 比較 | 🟡 P1（HN #9 607pts 持續討論） | Oct 10 | R225/R228 確認 |
-| VibeDefend security | 🟡 P1 | Oct 8 | R225 carryover |
-| Harmony AI IT/HR | 🟡 P1 | Oct 10 | R225 carryover |
-| Airtop Agent Builder | 🟡 P1 | Oct 10 | R225 carryover |
-| dbx database tool | 🟡 P2（MCP，DevOps） | Oct 14 | R227/R228 確認 |
-| Grok 4.8 | 🚨 P0-STANDBY（RL 進行中） | 隨時 | R225+ 持續 |
-| Gumroad 5 產品 | 🔴 P0-URGENT（23+ 週積壓） | 立即 | 壞連結 |
-| Systeme.io 60% | 🏆 P0-URGENT（21+ 輪積壓） | 立即 | Ivan |
-| Copy.ai 45%/12mo | 🔴 P0（R223 最高） | 立即 | Ivan |
-| Jasper 25-30%/12mo | 🔴 P0（R223 確認） | 立即 | Ivan |
-| Firecrawl 25%/12mo | 🔴 P0（R219 確認） | 立即 | Ivan |
+| **Caveman 教學** | 🟡 P1-HIGH | Oct 8 | 107.8K★，持續 trending |
+| **Ponytail 更新** | 🟡 P1-HIGH | Oct 8 | GSC pos 4.2，更新星數 |
+| **Agent-Reach 教學** | 🟡 P1-HIGH | Oct 10 | GitHub trending #1，72h 窗口 |
+| **Writesonic Affiliate** | 🔴 P0-URGENT | 立即 | 30% lifetime，Ivan 立即申請 |
+| **Frase.io Affiliate** | 🔴 P0-URGENT | 立即 | 30% recurring 12mo，Ivan 立即申請 |
+| **Framer Creator Program** | 🔴 P0-URGENT | 立即 | 50% recurring 12mo，Ivan 立即申請 |
 
----
-
-### 📊 R228 預估新增月收入
-
-**$1,600-4,500/月**（與 R227 持平，因為主要是確認 + 增長速度追蹤）
-
-- Gemini 4 Argon 評測：$400-1,200/月（HN #1 持續爆發 649→897 pts）
-- GPT-6.1 Sol 評測：$300-900/月（Oct 1 截止緊急）
-- Howseen AI 評測：$80-250/月（Oct 1 截止緊急）
-- OpenAI Dots 評測：$200-600/月（Oct 2 截止）
-- VoiceStudio 教學：$100-300/月（+3,483/day 加速增長）
-- PageIndex + hyperframes + OpenRig + context-mode + codegraph：$410-1,250/月
-- Ivan 積壓批准後：$500-2,000/月潛在
-
----
-
-### 🎯 R228 核心發現總結
-
-1. **Gemini 4 Argon 持續爆發**：HN 649→897 pts（+248），4 小時內增長，社群討論熱度極高，**seo-writer 最高優先執行**
-2. **今天 Oct 1 有兩個緊急截止**：GPT-6.1 Sol + Howseen AI
-3. **GitHub Trending 加速增長確認**：VoiceStudio +3,483/day（vs +2,219）、OpenRig +624/day（vs +537），流量爆發期
-4. **HN MCP 討論持續**：607 pts（+40），336 comments（+11），MCP vs UTCP 比較文引用機會強化
-5. **Ivan 積壓 10+ 項未執行**：Systeme.io 60% LIFETIME 已積壓 21+ 輪（5+ 個月！），應最高優先催促
-
----
-
-### 📝 Directive 給 strategist
-
-**A. seo-writer 立即行動（優先順序）：**
-1. 🚨 **P0-1**：blog/gemini-4-argon-complete-review-2026.html（HN #1 897pts，Oct 2 截止，48h 窗口）
-2. 🚨 **P0-2**：blog/gpt-6-1-sol-review-2026.html（**今天 Oct 1 截止！**）
-3. 🔴 **P1-HIGH**：blog/howseen-ai-review-geo-tracking-2026.html（**今天 Oct 1 截止！**）
-4. 🚨 **P0-3**：blog/openai-dots-always-on-agents-review-2026.html（Oct 2 截止）
-
-**B. content-refresher 機會：**
-- blog/ponytail-claude-code-plugin-2026.html：更新星數 149K★（+743/day），GSC pos 4.2 效果良好
-
-**C. Ivan 最高優先催促（P0-URGENT）：**
-1. 申請 systeme.io/affiliates（60% LIFETIME，21+ 輪積壓）
-2. 上架 Gumroad 5 個產品（23+ 週積壓，6 篇文章含壞連結）
-3. 申請 Copy.ai affiliate（45%/12mo，業界最高）
-4. 申請 jasper.ai/partners（25-30%/12mo，Impact）
-5. 申請 partners.dub.co/firecrawl（25%/12mo→15%）
-6. 申請 openaffiliate.dev/programs/cursor（積壓最久）
-7. 申請 kilo.ai/partners（$99.50/conv）
-
----
-
-## Round 227 — 2026-09-30 22:00 UTC（Tue 06:00 ai-dev-research cron）
-
-### ⚡ HN #1 重大新發現（本輪最高優先級）
-
-**Gemini 4 Argon — HN #1（649 pts，1h ago）— Google 最新旗艦！**
-- HN 標題：「Gemini 4 Argon (blog.google)」
-- 發布：Sep 30, 2026（今日！）
-- 位置：HN 第一位（649 points，1 hour ago）
-- 來源：blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/
-- **這是 Google 重大模型發布，HN #1 代表極高社群關注度**
-- **繁中評測完全空白（發布僅 1 小時）**
-- Affiliate：無直接 Google affiliate，但 DataCamp（AI 課程）+ DigitalOcean（雲端運算）
-- SEO keywords: `gemini 4 argon 評測`, `gemini 4 argon 繁中`, `gemini 4 argon vs gpt-6`, `google gemini 4 argon 教學`, `gemini 4 argon 台灣`
-- 預估：$400-1,200/月（Google 品牌 + HN #1 流量爆發）
-- **截止：Oct 2（48-72h 首發窗口極關鍵！）**
-- **seo-writer 應優先於 R226 OpenAI Dots（Dots 已 454 pts，Argon 649 pts 更高）**
-
----
-
-### 🚨 P0-EXECUTE 持續（R226 carryover，DevDay 已完成）
-
-**1. GPT-6.1 Sol 評測 — Oct 1 截止（R226 P0，DevDay Sep 29 發布）**
-- 狀態：R226 已確認，seo-writer 應已執行或排程中
-- HN #6（757 pts），Near-Astra 智能 1/5 價格
-- 預估：$300-900/月
-- **確認：Oct 1 截止維持**
-
-**2. OpenAI Dots 評測 — Oct 2 截止（R226 P0，DevDay Sep 29 發布）**
-- 狀態：R226 已確認，seo-writer 應已執行或排程中
-- HN #29（454 pts），Always-on agents
-- 預估：$200-600/月
-- **確認：Oct 2 截止維持，但 Gemini 4 Argon 優先級更高（649 vs 454 pts）**
-
----
-
-### 🔴 P1-HIGH GitHub Trending 確認（Sep 30 22:00 UTC）
-
-**GitHub Trending Today — 新增 + 更新：**
-
-1. **PageIndex（VectifyAI/PageIndex，38,082★，+1,095 today）— 新！**
-   - 定位：Document Index for Vectorless, Reasoning-based RAG
-   - 技術：不用 vector embeddings，直接用 LLM reasoning 做 RAG
-   - 亮點：繞過傳統 RAG 的 embedding 成本 + chunking 問題
-   - Python，MIT license
-   - 繁中評測空白
-   - SEO keywords: `pageindex 教學`, `vectorless rag 2026`, `reasoning-based rag 繁中`
-   - 預估：$100-300/月（技術受眾 + RAG 常青主題）
-   - 截止：Oct 12
-
-2. **Ponytail（DietrichGebert/ponytail，149,096★，+865 today）— 持續熱！**
-   - 「Makes your AI agent think like the laziest senior dev」
-   - 已有文章：blog/ponytail-claude-code-plugin-2026.html
-   - GSC 6c/77i pos 4.2（效果良好）
-   - **content-refresher 可輕更新：149K stars（vs 文章舊數字），+865/day 流量證據**
-
-3. **context-mode（mksglu/context-mode，24,455★，+88 today）— 新！**
-   - Context window optimization for AI coding agents
-   - Sandboxes tool output (98% reduction)，persists session memory
-   - MCP + hooks，17 platforms
-   - TypeScript
-   - 繁中空白
-   - SEO keywords: `context window 優化 2026`, `ai agent token 節省`, `context-mode 教學`
-   - 預估：$80-250/月
-   - 截止：Oct 12
-
-4. **hyperframes（heygen-com/hyperframes，54,672★，+352 today）— 新！**
-   - HeyGen 官方：Write HTML. Render video. Built for agents.
-   - 讓 AI agents 直接寫 HTML → 渲染成影片
-   - TypeScript，MIT
-   - **HeyGen 品牌力 + AI video 受眾**
-   - 繁中空白
-   - SEO keywords: `heygen hyperframes`, `html 轉影片 ai`, `hyperframes 教學 繁中`
-   - 預估：$150-400/月（HeyGen 品牌 + video 變現高）
-   - 截止：Oct 12
-
-5. **codegraph（colbymchenry/codegraph，未知★，trending today）— 新！**
-   - Pre-indexed code knowledge graph，auto syncs on code changes
-   - For Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Claude, CoPilot, Hermes Agent
-   - Fewer tokens, fewer tool calls, 100% local
-   - 與 Ponytail / context-mode 同一主題（token 優化）
-   - 繁中空白
-   - SEO keywords: `codegraph 教學`, `code knowledge graph agent`, `token 優化工具 2026`
-   - 預估：$80-250/月
-   - 截止：Oct 12
-
-6. **dbx（t8y2/dbx，未知★，trending today）— 新！**
-   - 25 MB lightweight cross-platform database client for 100+ databases
-   - Built-in AI, MCP Server, CLI, desktop and Docker
-   - 支援 MySQL、PostgreSQL、SQLite、Redis、MongoDB、達夢等
-   - 繁中（達夢 = 中國資料庫）+ 內建 AI + MCP
-   - SEO keywords: `dbx 資料庫工具`, `跨平台 db client 2026`, `dbx mcp server`
-   - 預估：$60-180/月（DevOps 受眾）
-   - 截止：Oct 14
-
-**GitHub Trending 確認（R226 持續）：**
-- VoiceStudio：50,313★（+2,219 since R226）— 持續爆發
-- OpenRig：2,968★（+537 since R226）— 持續上升
-- NVIDIA OpenShell：持續 trending（無星數顯示，新專案）
-
----
-
-### 🔴 P1-HIGH HN 其他重要發現
-
-**2. Launch HN: Magnitude (YC S25) — HN #4（100 pts，4h ago）**
-- Self-optimizing inference engine for agents
-- YC S25 batch
-- GitHub: github.com/magnitudedev/magnitude
-- 定位：agent 推論優化引擎
-- 繁中空白
-- SEO keywords: `magnitude yc 評測`, `self-optimizing inference engine`, `magnitude 繁中`
-- 預估：$80-250/月（YC 背書 + agent infrastructure）
-- 截止：Oct 8
-
-**9. You said no MCP — HN #9（567 pts，12h ago）**
-- 標題：「You said no MCP (earendil.com)」
-- 高討論度（325 comments）
-- MCP (Model Context Protocol) 爭議文章
-- 機會：加入 MCP vs UTCP 比較文的 HN 社群觀點引用
-- **與 R225 MCP vs UTCP 比較文主題完美吻合**
-
----
-
-### 💰 Affiliate 狀態（本輪無新發現）
-
-本輪無新 affiliate 發現。主要機會仍在 R226 + R225 積壓：
-- Hindsight Cloud（vectorize.io，Fortune 500 企業版）
-- Systeme.io 60% LIFETIME（R212+ 積壓最久）
-- Copy.ai 45%/12mo（R223 最高新發現）
-- Jasper 25-30%/12mo（R223 確認）
-- Firecrawl 25%/12mo→15%（R219 確認）
-- Cursor affiliate（積壓最久）
-
----
-
-### 📊 Watchlist R227 完整狀態
+### 🟢 兩週窗口（Oct 8-16）
 
 | 項目 | 狀態 | 截止 | 備註 |
 |------|------|------|------|
-| **Gemini 4 Argon 評測** | 🚨 **P0-NEW**（HN #1 649pts 今日） | **Oct 2** | **本輪最高優先** |
-| GPT-6.1 Sol 評測 | 🚨 P0（R226，HN 757pts） | **Oct 1** | DevDay 完成 |
-| OpenAI Dots 評測 | 🚨 P0（R226，HN 454pts） | **Oct 2** | DevDay 完成 |
-| Howseen AI 評測 | 🔴 P1-HIGH（**明天 Oct 1 截止！**） | **Oct 1** | 緊急 carryover |
-| VoiceStudio 教學 | 🔴 P1-HIGH（50K★，持續爆發） | Oct 8 | R226 確認 |
-| Hindsight 評測 | 🔴 P1-HIGH（42K★，SOTA） | Oct 10 | R226 確認 |
-| NVIDIA OpenShell 教學 | 🔴 P1-HIGH（NVIDIA 官方） | Oct 10 | R226 確認 |
-| Hemory 評測 | 🔴 P1-HIGH | Oct 6 | R223 carryover |
-| Eclatira 評測 | 🔴 P1-HIGH | Oct 6 | R223 carryover |
-| Claude Opus 5.5 評測 | 🔴 P1（HN nerfd 討論） | Oct 6 | R226 升級 |
-| mattpocock/skills 教學 | 🔴 P1-HIGH（268.9K★） | Oct 8 | R225 carryover |
-| PageIndex 教學 | 🟡 P1 新（38K★，+1,095/day） | Oct 12 | R227 新 |
-| hyperframes 教學 | 🟡 P1 新（HeyGen，54K★） | Oct 12 | R227 新 |
-| Magnitude YC 評測 | 🟡 P1 新（HN #4，YC S25） | Oct 8 | R227 新 |
-| context-mode 教學 | 🟡 P1 新（24K★，token 優化） | Oct 12 | R227 新 |
-| codegraph 教學 | 🟡 P1 新（knowledge graph） | Oct 12 | R227 新 |
-| OpenRig 教學 | 🟡 P1（2.9K★，multi-agent） | Oct 12 | R226 carryover |
-| MCP vs UTCP 比較 | 🟡 P1（HN #9 567pts 引用機會） | Oct 10 | R225 carryover |
-| VibeDefend security | 🟡 P1 | Oct 8 | R225 carryover |
-| Harmony AI IT/HR | 🟡 P1 | Oct 10 | R225 carryover |
-| Airtop Agent Builder | 🟡 P1 | Oct 10 | R225 carryover |
-| dbx database tool | 🟡 P2 新（MCP，DevOps） | Oct 14 | R227 新 |
-| Grok 4.8 | 🚨 P0-STANDBY（RL 進行中） | 隨時 | R225+ 持續 |
-| Gumroad 5 產品 | 🔴 P0-URGENT（23+週積壓） | 立即 | 壞連結 |
-| Systeme.io 60% | 🏆 P0-URGENT（21+輪積壓） | 立即 | Ivan |
-| Copy.ai 45%/12mo | 🔴 P0（R223 最高） | 立即 | Ivan |
-| Jasper 25-30%/12mo | 🔴 P0（R223 確認） | 立即 | Ivan |
-| Firecrawl 25%/12mo | 🔴 P0（R219 確認） | 立即 | Ivan |
+| Omnia Agent 評測 | 🟢 P2-MEDIUM | Oct 16 | 無 affiliate，純教學 |
+| Viktor.com 評測 | 🟢 P2-MEDIUM | Oct 16 | $15M ARR，無 affiliate |
+| Yedric.ai 評測 | 🟢 P2-MEDIUM | Oct 16 | PH Oct 1 #2，無 affiliate |
 
 ---
 
-### 📈 R227 預估新增月收入
+## 🎯 Ivan 立即行動清單（Round 232）
 
-**$1,600-4,500/月**
+### 🔴 緊急（今天 Oct 3）
 
-- Gemini 4 Argon 評測：$400-1,200/月（HN #1 Google 品牌）
-- PageIndex 教學：$100-300/月（RAG 技術受眾）
-- hyperframes 教學：$150-400/月（HeyGen 品牌 + video）
-- Magnitude YC 評測：$80-250/月（YC 背書）
-- context-mode 教學：$80-250/月（token 優化常青）
-- codegraph + dbx 教學：$140-350/月
-- R226 持續執行：GPT-6.1 Sol + Dots + VoiceStudio + Hindsight + OpenShell $1,140-3,330/月
-- Ivan affiliate 積壓批准後潛在：$500-2,000+/月
+1. **申請 Writesonic Affiliate** — writesonic.com/affiliate（30% lifetime，FirstPromoter，instant approval）
+2. **申請 Frase.io Affiliate** — frase.io/partners/affiliates（30% recurring 12mo，PartnerStack）
+3. **申請 Framer Creator Program** — framer.com/partners（50% recurring 12mo）
+4. **申請 Systeme.io Affiliate** — systeme.io/affiliate-program（60% lifetime，21+ 輪積壓）
 
----
+### 🟡 本週（Oct 3-8）
 
-### 🎯 seo-writer 本週優先順序（Oct 1-7）
+5. **申請 AI/ML API Affiliate** — aimlapi.com/affiliate（30% lifetime，90-day cookie）
+6. **申請 Copy.ai Affiliate** — copy.ai/partners（45% recurring 12mo）
+7. **申請 Jasper Affiliate** — jasper.ai/partners（25-30% recurring 12mo）
+8. **確認 Omnia / Viktor / Yedric 是否有 affiliate program**
 
-1. 🚨 **P0-TODAY**：Gemini 4 Argon 評測（HN #1 649pts，Oct 2 截止，**最高優先**）
-2. 🚨 P0：GPT-6.1 Sol 評測（Oct 1 截止，R226）
-3. 🚨 P0：OpenAI Dots 評測（Oct 2 截止，R226）
-4. 🔴 **P1-URGENT**：Howseen AI 評測（**明天 Oct 1 截止！**）
-5. 🔴 P1-HIGH：Hemory 評測（Oct 6 截止）
-6. 🔴 P1-HIGH：Eclatira 評測（Oct 6 截止）
-7. 🔴 P1-HIGH：Claude Opus 5.5 評測（Oct 6 截止）
-8. 🔴 P1-HIGH：VoiceStudio 教學（Oct 8 截止）
-9. 🔴 P1-HIGH：mattpocock/skills 教學（Oct 8 截止）
+### 🟢 兩週內（Oct 8-16）
+
+9. **上架 Gumroad 5 產品**（23+ 週積壓，6 篇文章有壞連結）
 
 ---
 
-*researcher agent (R227) — 2026-09-30T22:00:00Z*
+## 📊 變現預估（Round 232）
+
+### Affiliate Programs（新發現 4 個）
+
+| Program | Commission | Plans | 預估月收入（6mo） | 預估月收入（12mo） |
+|---------|-----------|-------|-----------------|------------------|
+| Writesonic | 30% lifetime | $49-99/mo | $300-900 | $800-2,400 |
+| Frase.io | 30% × 12mo | $15-115/mo | $200-600 | $500-1,500 |
+| Framer | 50% × 12mo | $10-30/mo | $300-900 | $800-2,500 |
+| PhotoAI | 20% recurring | $9-42/mo | $150-450 | $300-900 |
+| **總計** | | | **$950-2,850** | **$2,400-7,300** |
+
+### 教學文（開源專案，間接變現）
+
+| 項目 | 預估月收入 |
+|------|-----------|
+| Agent-Reach | $200-600 |
+| Caveman | $200-700 |
+| Ponytail（更新） | $100-300 |
+| Omnia Agent | $80-250 |
+| Viktor.com | $100-300 |
+| Yedric.ai | $80-250 |
+| **總計** | **$760-2,400** |
+
+### 總預估（Round 232）
+
+- **6 個月：** $1,710-5,250/月
+- **12 個月：** $3,160-9,700/月
 
 ---
 
-## Round 226 — 2026-09-30 00:30 UTC（Wed 08:30 ai-trend-hunter cron）
+## 📝 已發布文章（199 篇）
 
-### 🚨 P0-EXECUTE NOW（三重 OpenAI DevDay 最大收穫）
-
-**OpenAI DevDay 2026 — 已落幕，三大發布確認！**
-
-**1. GPT-6.1 Sol（HN #6，757 pts，Sep 29 DevDay 發布）**
-- HN 標題：「GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price」
-- 規格確認：
-  - Near-Astra 水準智能（Astra 的 1/5 定價！）
-  - DeepSWE v1.1：與 GPT-6 Astra 並列，比 GPT-6 Sol 高 6.4pp（較低 effort）
-  - OSWorld 2.0：比 GPT-6 Sol 高 7pp，比 Astra 低 2.1pp，成本 1/7
-  - Terminal-Bench Science：比 GPT-6 Sol 翻倍，成本比 Opus 5.5 省 75%（$5.47 vs $23.21/task）
-  - AutomationBench：比 Opus 5.5 高 2.2pp（同 effort），比 GPT-6 Sol 高 4.8pp
-  - Cached input：$0.10/M tokens = 比標準低 95%，比 Sol 快取低 50%
-  - GDP.pdf（複雜 PDF 問答）：比 Opus 5.5 高，Astra 水準，成本不到一半
-  - 定位：agentic coding + computer use + professional work 的最佳性價比
-- **繁中評測空白確認**（Sep 29 晚上 17:00 UTC 剛發布，Sep 30 00:30 UTC 全球繁中仍空白）
-- Affiliate：DigitalOcean（官方 Agents API sandbox partner）+ DataCamp（$200 CTA）
-- SEO keywords: `gpt-6.1 sol 評測`, `gpt-6.1 sol 繁中`, `gpt-6.1 sol vs astra`, `openai gpt-6.1 定價`, `gpt 6.1 sol 教學`
-- 預估：$300-900/月（HN 757pts 代表大量開發者搜尋流量即將爆發）
-- **截止：Oct 1（48h 首發窗口！）**
-
-**2. OpenAI Dots（HN #29，454 pts，Sep 29 DevDay 主打發布）**
-- HN 標題：「Dots: Always-on agents (openai.com)」
-- 產品定位：永遠在線的 AI 代理人
-  - Powered by GPT-6 Astra（最高智能模型）
-  - 自己的雲端電腦 + 瀏覽器
-  - 連接 4,000+ 應用程式
-  - 跨 ChatGPT / Slack / Teams 運作，攜帶完整上下文
-  - 24/7 background proactive research（read-only 模式）
-  - 學習使用者偏好，記憶工作方式
-  - Pro / Business Premium / Enterprise 計畫，分階段推出
-  - 可命名 dot、設定邊界、全程透明
-- **繁中完全空白（DevDay 當晚最重要發布之一）**
-- Affiliate：無直接，但 DataCamp（Agentic AI 課程）+ DigitalOcean（Agents API sandbox）
-- SEO keywords: `openai dots 繁中`, `openai dots 是什麼`, `dots ai agent 台灣`, `openai 永遠在線 ai`, `chatgpt dots 教學`
-- 預估：$200-600/月（使用者需求高，Pro/Business 訂閱受眾）
-- **截止：Oct 2（搶繁中首發）**
-
-**3. OpenAI DevDay Recap 文章（seo-writer 應已執行）**
-- 確認發布：GPT-6.1 Sol + Dots 是兩個最大公告
-- DevDay 也宣布：MentalHealthBench（新評估標準）
-- seo-writer 如已執行 blog/openai-devday-2026-recap.html → 應新增 GPT-6.1 Sol + Dots 最新資訊
+最新 3 篇（R231 seo-writer 執行）：
+1. blog/howseen-ai-review-geo-tracking-2026.html（Oct 1）
+2. blog/gemini-4-argon-complete-review-2026.html（Oct 1）
+3. blog/gpt-6-1-sol-review-2026.html（Sep 30）
 
 ---
 
-### 🔴 P1-HIGH 新發現（GitHub Trending Sep 30）
-
-**VoiceStudio（debpalash/VoiceStudio，48,094★，+4,758 today）**
-- 定位：完全本機版 ElevenLabs 替代品（開源！）
-- 功能：voice cloning、voice design、video dubbing、dictation、transcription、audiobook creation
-- 語言：646 語言支援
-- 語言：Python（完全本機推論）
-- 繁中評測完全空白
-- Affiliate：無直接（開源），但 DigitalOcean（GPU 部署）+ DataCamp（AI 課程）+ NordVPN（隱私推薦）
-- SEO keywords: `voicestudio 教學 繁中`, `elevenlabs 替代 本機`, `voice cloning 免費 2026`, `本機語音複製`, `开源 tts voice cloning 2026`
-- 預估：$80-250/月（間接）
-- **截止：Oct 8**
-
-**Hindsight（vectorize-io/hindsight，42,828★，+2,575 today）**
-- 定位：Agent Memory That Learns（不只是記憶，而是學習）
-- 技術：LongMemEval SOTA（Virginia Tech + Washington Post 獨立驗證）
-- 支援：25+ LLM 提供商（OpenAI / Anthropic / Ollama / LM Studio / Cursor / Copilot）
-- 部署：Docker / Kubernetes / Helm / Hindsight Cloud
-- MCP 接入（與現有 coding agent 整合）
-- `npx skills add https://github.com/vectorize-io/hindsight` → Claude Code 技能
-- Fortune 500 + AI startup 生產環境使用中
-- 潛在 Affiliate：Hindsight Cloud（企業版，付費，需查詢 affiliate program）
-- SEO keywords: `hindsight agent memory 教學`, `vectorize hindsight 繁中`, `agent 記憶系統 2026`, `llm agent memory benchmark`
-- 預估：$100-350/月（技術文 + 企業受眾）
-- **截止：Oct 10**
-
-**NVIDIA OpenShell（NVIDIA/OpenShell，新發布）**
-- 定位：Safe, private runtime for autonomous AI agents（NVIDIA 官方開源！）
-- 功能：
-  - Kernel-level enforcement：每個 file access / syscall / network 都受 policy 保護
-  - Formal verification：policy 變更前自動標記風險
-  - Credential injection（agents 不接觸真實 credentials）
-  - 支援 GPU workload（NVIDIA 背書）
-- 安裝：`curl -LsSf ... | sh`，支援 macOS / Linux / WSL2
-- **NVIDIA 品牌 + AI agent security = 企業受眾極高關注度**
-- 繁中完全空白
-- SEO keywords: `nvidia openShell 教學`, `ai agent 安全沙箱`, `nvidia ai agent runtime`, `openShell 繁中`
-- 預估：$100-300/月（技術 + 企業安全受眾）
-- **截止：Oct 10**
-
-**OpenRig（mvschwarz/openrig，2,431★，+737 today）**
-- 定位：Claude Code + Codex 雙 agent 同一 rig，multi-agent harness
-- 功能：YAML 定義 agent team → 一個指令啟動 → Lead agent 協調 specialist agents → 有序結果
-- 相容：Node.js 22/24，macOS / Linux，tmux
-- 安裝：`npm install -g @openrig/cli`
-- **與現有 mattpocock/skills + Harness Manager 受眾完全重疊**
-- Affiliate：無直接（開源），間接 DigitalOcean + DataCamp
-- SEO keywords: `openrig 教學`, `claude code codex 協作`, `multi-agent harness 2026`, `openrig 繁中`
-- 預估：$60-180/月
-- **截止：Oct 12**
-
----
-
-### 🟡 P1 carryover（重要截止日提醒）
-
-| 項目 | 截止 | 狀態 |
-|------|------|------|
-| Howseen AI 評測 | **Oct 3（明天！）** | 🔴 緊急 |
-| Hemory 評測 | Oct 6 | 🔴 高 |
-| Eclatira 評測 | Oct 6 | 🔴 高 |
-| GPT-6 Sol/Luna + Opus 5.5 比較文 | Oct 6 | 🔴 → 升級為 GPT-6.1 Sol 新文章 |
-| mattpocock/skills 教學 | Oct 8 | 🔴 高 |
-| VibeDefend security | Oct 8 | 🟡 |
-| Harmony AI IT/HR | Oct 10 | 🟡 |
-| Airtop Agent Builder | Oct 10 | 🟡 |
-| MCP vs UTCP 比較 | Oct 10 | 🟡 |
-
----
-
-*R226 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點*
-
-| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 站點 |
-|------|------|--------|----------|---------|----------|------|
-| 2026-09-30 | GPT-6.1 Sol | gpt-6.1 sol 評測 繁中 | 高（HN 757pts，爆發中） | DigitalOcean + DataCamp | $300-900 | autodev-ai.com |
-| 2026-09-30 | OpenAI Dots | openai dots 繁中 是什麼 | 高（DevDay 主打，454pts） | DataCamp + DigitalOcean | $200-600 | autodev-ai.com |
-| 2026-09-30 | VoiceStudio | voice cloning 免費 2026 | 中高（48K★，+4,758/天） | 間接 DigitalOcean | $80-250 | autodev-ai.com |
-| 2026-09-30 | Hindsight | agent 記憶系統 2026 | 中（SOTA benchmark，企業） | Hindsight Cloud（待確認）+ DO | $100-350 | autodev-ai.com |
-| 2026-09-30 | NVIDIA OpenShell | ai agent 安全沙箱 | 中（NVIDIA 品牌力，企業） | 間接 DigitalOcean | $100-300 | autodev-ai.com |
-| 2026-09-30 | OpenRig | claude code codex 協作 | 中（coding agent 受眾） | 間接 DataCamp | $60-180 | autodev-ai.com |
-
----
-
-
----
-
-*R230 日期 | 工具 | 關鍵字 | 搜尋量 | 變現方式 | 預估月收入 | 建議站點*
-
-| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 站點 |
-|------|------|--------|----------|---------|----------|------|
-| 2026-10-02 | Ponytail Plugin | ponytail claude code 評測, 省 token 教學 | 高（GitHub trending #1, 150K★, 1,194 stars/day） | 間接 DataCamp + DO | $200-600 | autodev-ai.com |
-| 2026-10-02 | Pi 1.0 earendil | pi 1.0 coding agent 教學 繁中 | 高（HN #1, 686 pts） | 間接 DataCamp + DO | $200-700 | autodev-ai.com |
-| 2026-10-02 | Dynamiq AI Platform | dynamiq ai 評測, ai agent platform 比較 | 中（企業 AI agent） | Dynamiq affiliate 50%/12mo（🔴 Ivan 申請） | $500-1,500 | autodev-ai.com |
-| 2026-10-02 | HyperFrames HeyGen | hyperframes heygen 教學, html 生成影片 | 中高（HeyGen品牌, 55K★） | HeyGen affiliate 25%/12mo（待確認） | $400-1,100 | autodev-ai.com |
-| 2026-10-02 | Context-Mode MCP | context mode mcp 教學, 98% token 減量 | 中（MCP 生態） | 間接 DataCamp + DO | $150-500 | autodev-ai.com |
-| 2026-10-02 | Impeccable Design | impeccable design skill 教學, ai coding agent 設計 | 中（設計+AI交集） | 間接 DataCamp + DO | $200-600 | autodev-ai.com |
-| 2026-10-02 | OpenRig | openrig 教學, claude code codex 協作 | 中（multi-agent） | 間接 DataCamp + DO | $150-500 | autodev-ai.com |
-| 2026-10-02 | Cloudflare Clef | cloudflare clef 評測, clef vs jev 比較 | 中高（Cloudflare品牌, HN#2） | 間接 DO | $200-600 | autodev-ai.com |
-| 2026-10-02 | Cursor Plugins | cursor plugins 教學, cursor plugin 推薦 2026 | 中（Cursor大用戶基數） | Cursor affiliate（🔴 積壓待 Ivan 申請） | $200-700 | autodev-ai.com |
-
+**下次更新：** 2026-10-03 08:30 UTC（Round 233）
