@@ -4,6 +4,109 @@
 
 ---
 
+## 2026-10-03（市場研究 Round 233 — Sat 23:00 UTC researcher cron）
+
+### 🔥 本輪重點：未覆蓋賺錢管道 | GitHub Trending 新工具 | 高佣金 Email Affiliate 缺口 | 台灣數位產品需求
+
+---
+
+### 🆕 新發現 LIFETIME Affiliates（尚未覆蓋）
+
+#### 1. Moosend — 30-40% LIFETIME Recurring（最高佣金 Email 工具）
+- **Commission：** 30-40% lifetime recurring（Diamond tier：36+ 客戶 = 40% 永久）
+- **Cookie：** 90 days，PartnerStack 平台
+- **Pricing：** Email marketing + automation，起價約 $9/月（starter）
+- **繁中競品：** 幾乎零（Email marketing 繁中空白比 AI 寫作更嚴重）
+- **預估月收入：** $300-1,000/月（複利，40% lifetime 無上限）
+- **為何現在：** Email automation + AI 功能爆發，台灣企業需求高但繁中教學空白
+- **申請：** moosend.com/affiliate（PartnerStack，instant approval）
+- **建議文章：** blog/moosend-email-marketing-review-2026.html（~2,400 字）
+
+#### 2. InboxAlly — 20% LIFETIME Recurring（高客單 Email 投遞工具）
+- **Commission：** 20% lifetime recurring
+- **Cookie：** 120 days（業界最長之一）
+- **Pricing：** $149-$1,190/月（平均客戶 $1,000/月），高客單
+- **關鍵數字：** 每個 active referral = $20-$238/月（永久）
+- **受眾：** Email marketers、digital marketing agencies、deliverability experts
+- **繁中競品：** 零（InboxAlly 繁中搜尋空白）
+- **預估月收入：** 1 個中高客戶 = $200/月（永久），10 個客戶 = $2,000/月
+- **申請：** inboxally.com/affiliate（automatic approval）
+- **建議文章：** blog/inboxally-email-deliverability-review-2026.html
+
+#### 3. GetResponse — 40-60% 遞增 Commission（12 months）
+- **Commission：** 40% 起，50% at 50 sales，60% at 100 sales（12 months）
+- **Cookie：** 120 days，PartnerStack 平台
+- **Pricing：** Email + automation + landing pages
+- **特點：** 越賣越高佣金，$100 bounty 或 40% recurring 兩選一
+- **繁中競品：** 低（GetResponse 繁中教學稀少）
+- **申請：** getresponse.com/affiliate-programs
+
+---
+
+### 🆕 GitHub Trending（Round 233 — 今日發現）
+
+#### 4. vectorize-io/hindsight — 30.3K★ (+1,653/day) — Agent Memory SOTA
+- **描述：** Agent Memory That Learns — LongMemEval benchmark SOTA 91.4% accuracy
+- **最新：** v0.9.0（Aug 2026），Knowledge Pages + One Memory Plugin for Every Coding Agent
+- **GitHub Trending：** #2 全語言，#1 Python（Sep 26 首次，10/3 仍在趨勢）
+- **Stars：** 30,324 → 今天 +1,653，上升速度快
+- **繁中競品：** **0 篇**（Hindsight 繁中搜尋空白）
+- **SEO 關鍵字：** hindsight agent memory、hindsight ai 教學、vectorize hindsight
+- **預估月收入：** $150-500/月（間接，DigitalOcean + DataCamp affiliate）
+- **Deadline：** Oct 10（72h 窗口已過半，但長尾仍有 2 週）
+- **優先級：** P1-HIGH（30K★，還在 trending）
+
+#### 5. rohitg00/ai-engineering-from-scratch — 57.7K★ (+1,177/day) — AI 工程課程
+- **描述：** 從零開始學 AI Engineering，包含 25 個學習模組，MIT License
+- **最新：** Edition 2026.09（Sep 27），有 Vol 1-4 PDF + EPUB
+- **GitHub Trending：** 今日 #2（每週持續趨勢）
+- **Stars：** 57,778 → +1,177/day
+- **繁中競品：** 0-1（AI Engineering 繁中教學稀少）
+- **SEO 關鍵字：** ai engineering 教學、ai engineering from scratch 繁中、ai 工程師學習路徑
+- **預估月收入：** $200-600/月（DataCamp + DigitalOcean affiliate 轉換）
+- **Deadline：** Oct 16（仍有 2 週時效）
+- **優先級：** P1-HIGH（學習資源類 = 高轉換 DataCamp affiliate）
+
+#### 6. obra/superpowers — 294K★（持續趨勢）— Agentic Skills Framework
+- **描述：** AI coding agents 的 skills framework + SDLC methodology（TDD / YAGNI / DRY）
+- **Stars：** 294,000（May 2026 trending #1，Sep 27 updated）
+- **版本：** v6.0.3（June 18, 2026）
+- **關聯項目：** superpowers-zh（簡中版，8.2K★）—— 繁中版本**完全空白**
+- **繁中競品：** **0 篇**（superpowers 繁中完全空白）
+- **SEO 關鍵字：** obra superpowers 教學、agentic skills framework 繁中、superpowers ai 編程
+- **預估月收入：** $200-600/月（間接 DigitalOcean + DataCamp）
+- **優先級：** P2-MEDIUM（294K★ 市場大，但需求可能已由簡中版覆蓋部分台灣開發者）
+
+---
+
+### 📊 Gumroad 數位產品市場洞察（2026 最新數據）
+
+- **Software Dev 類：** $65.8M 總收入，Nano Banana & Flux AI Script 單品 $586K（$50 × 11,725 銷量）
+- **Writing & Publishing：** 每產品 $15,750 平均收入（最高 ROI for newcomer）
+- **AI Prompts 類：** 90-98% 利潤率，startup cost $29-100，市場屬 $394B 生成式 AI 大盤
+- **關鍵洞察：** AI Photoshop script $586K = 軟體工具 > 電子書
+- **建議：** 我們的 AI Token Calculator Notion Template 放在正確定位：軟體工具邊界（$27-50），非純電子書
+
+---
+
+### 🏴‍☠️ 台灣數位產品需求缺口（本輪新發現）
+
+1. **Email marketing 繁中教學** — Moosend / InboxAlly / GetResponse 繁中幾乎 0 篇
+2. **AI Engineering 學習路徑繁中版** — rohitg00/ai-engineering-from-scratch 無繁中詮釋
+3. **Hindsight Agent Memory 繁中** — 30K★ SOTA agent memory，0 繁中文章
+4. **Agent Skills Framework 繁中** — obra/superpowers 只有 8.2K★ 簡中版，繁中空白
+5. **AI Photoshop Scripts 繁中** — Gumroad 最暢銷類別，繁中教學稀少
+
+---
+
+### 📡 新流量管道發現
+
+- **Product Hunt Oct 2026 月榜：** Yedric.ai / Dots by OpenAI / Omnia / Chat.sh 仍在榜
+- **GitHub Trending 10/3 新增：** Hindsight (#2) / ai-engineering-from-scratch (#2) / superpowers 持續
+- **教學平台機會：** AI Engineering from Scratch 有官方網站 (aiengineeringfromscratch.com)，可交叉引用
+
+---
+
 ## 2026-10-01（競品監控 b71d9ddc — Thu 10:06 UTC competitor-watch cron）
 
 ### 🔥 本輪重點：競品變現方式分析 + LIFETIME Recurring 機會清單 + 台灣市場空白
