@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-02T22:00:00Z",
+  "lastRun": "2026-10-03T00:00:00Z",
   "lastResearchRound": 231,
   "lastCompetitorWatchRun": "2026-10-01T10:06:00Z",
   "lastStrategistRun": "2026-10-02T12:00:00Z",
@@ -359,6 +359,21 @@
         "新增 directives/researcher-to-strategist-2026-10-02-round231.md",
         "更新 agent-state.json（lastResearchRound: 231, lastRun: 2026-10-02T22:00:00Z）"
       ]
+    },
+    {
+      "timestamp": "2026-10-03T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Daily site health check: curled 199 sitemap URLs; found 6 production 404s (Gemini 4 Argon, GPT-6.1 Sol, GPT-6 Sol/Luna comparison, Howseen AI, OpenAI Dots, AI Agent Security Tools). Verified all 6 files exist locally and are included by scripts/build_static.py, so issue appears to be stale/misaligned production publish artifact rather than missing source files. Updated agent-state issues + directive for builder to verify GitHub Pages/static publish and republish latest artifact. Local validation: test:seo passed, test:static passed, npm test still has 28 pre-existing failures.",
+      "checks": {
+        "sitemapUrlCount": 199,
+        "production404Count": 6,
+        "localFilesExistFor404s": true,
+        "testSeo": "passed",
+        "testStatic": "passed",
+        "npmTest": "28 failures (pre-existing)"
+      }
     }
   ],
   "gscData": {
@@ -795,5 +810,61 @@
     ]
   },
   "lastGscCheckAt": "2026-10-02T07:00:27Z",
-  "lastGscSummary": "ranking: avg pos 6.4; high-impr low-CTR pages: 4; pos 11-20 opps: 0"
+  "lastGscSummary": "ranking: avg pos 6.4; high-impr low-CTR pages: 4; pos 11-20 opps: 0",
+  "issues": [
+    {
+      "id": "site-health-2026-10-03-ghpages-stale-404",
+      "detectedAt": "2026-10-03T00:00:00Z",
+      "agent": "content-ops",
+      "severity": "high",
+      "status": "open",
+      "title": "Production serves stale/static-missing pages for 6 sitemap URLs",
+      "summary": "Sitemap URLs return 404 in production although matching source files exist locally and static build includes them. Likely GitHub Pages/deploy artifact drift or stale publish output rather than source-content absence.",
+      "affectedUrls": [
+        "https://autodev-ai.com/blog/gemini-4-argon-complete-review-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-1-sol-review-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-sol-luna-claude-opus-5-5-comparison-2026.html",
+        "https://autodev-ai.com/blog/howseen-ai-review-geo-tracking-2026.html",
+        "https://autodev-ai.com/blog/openai-dots-always-on-agents-review-2026.html",
+        "https://autodev-ai.com/tools/ai-agent-security-tools-comparison-2026.html"
+      ],
+      "evidence": {
+        "curlBadCount": 6,
+        "sitemapUrlCount": 199,
+        "localFilesExist": true,
+        "staticBuildFiles": 269,
+        "staticBuildWarnings": 3,
+        "tests": {
+          "npm_test": "failed (28 existing failures, unrelated to detected prod 404 set)",
+          "test_seo": "passed",
+          "test_static": "passed"
+        }
+      },
+      "nextAction": "Need deploy/publishing owner to verify current GitHub Pages artifact/source and republish latest build output."
+    }
+  ],
+  "lastChecked": "2026-10-03T00:00:00Z",
+  "directives": [
+    {
+      "id": "content-ops-to-builder-2026-10-03-ghpages-publish-check",
+      "timestamp": "2026-10-03T00:00:00Z",
+      "from": "content-ops",
+      "to": "builder",
+      "status": "pending",
+      "priority": "urgent",
+      "action": "Verify GitHub Pages/static publish pipeline and republish latest artifact. Production has 6 sitemap URLs returning 404 even though source files exist locally and scripts/build_static.py includes them.",
+      "context": {
+        "affectedUrls": [
+          "https://autodev-ai.com/blog/gemini-4-argon-complete-review-2026.html",
+          "https://autodev-ai.com/blog/gpt-6-1-sol-review-2026.html",
+          "https://autodev-ai.com/blog/gpt-6-sol-luna-claude-opus-5-5-comparison-2026.html",
+          "https://autodev-ai.com/blog/howseen-ai-review-geo-tracking-2026.html",
+          "https://autodev-ai.com/blog/openai-dots-always-on-agents-review-2026.html",
+          "https://autodev-ai.com/tools/ai-agent-security-tools-comparison-2026.html"
+        ],
+        "localVerification": "files exist in repo; local static build built 269 files",
+        "note": "Likely stale Pages artifact or publish-source drift, not missing content files."
+      }
+    }
+  ]
 }
