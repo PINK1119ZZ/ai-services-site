@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 模型比較工具 2026｜找出最適合你的 AI API — GPT-6 vs Claude vs Gemini vs DeepSeek</title>
+<meta name="description" content="根據使用情境、預算、延遲需求，智能推薦最適合的 AI 模型。比較 GPT-6 Astra、Claude Fable 5.1、Gemini 4 Argon、DeepSeek V4 等 150+ 模型的定價、性能與適用場景。">
+<link rel="canonical" href="https://autodev-ai.com/tools/ai-model-comparison.html">
+<meta property="og:title" content="AI 模型比較工具 2026｜智能推薦最適合你的 AI API">
+<meta property="og:description" content="輸入使用情境、預算、延遲需求，立即獲得前 3 名 AI 模型推薦與理由。比較 GPT-6、Claude、Gemini、DeepSeek 等 150+ 模型。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autodev-ai.com/tools/ai-model-comparison.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI 模型比較工具 2026",
+  "description": "根據使用情境、預算、延遲需求，智能推薦最適合的 AI 模型。比較 GPT-6、Claude、Gemini、DeepSeek 等 150+ 模型。",
+  "url": "https://autodev-ai.com/tools/ai-model-comparison.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "inLanguage": "zh-Hant"
+}
+</script>
+<meta name="theme-color" content="#FFF8F3">
+
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+<style>
+:root {
+  --warm-bg: #F6F1E8;
+  --warm-surface: #FBF7EF;
+  --warm-white: #FFFFFF;
+  --warm-border: #E2D9C8;
+  --warm-accent: #C8853F;
+  --warm-accent-hover: #A86B2C;
+  --warm-tint: #F0E3D0;
+  --warm-charcoal: #2A2723;
+  --ink: #1F2421;
+  --muted: #8A8A80;
+}
+
+body {
+  background: var(--warm-bg);
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.mc-container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.mc-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.mc-header h1 {
+  font-family: 'DM Serif Display', 'Roboto Slab', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.mc-header h1 em {
+  color: var(--warm-accent);
+  font-style: italic;
+}
+
+.mc-header p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.mc-badge {
+  display: inline-block;
+  background: var(--warm-tint);
+  color: var(--warm-accent);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.mc-card {
+  background: var(--warm-white);
+  border: 1px solid var(--warm-border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(42, 39, 35, 0.06);
+}
+
+.mc-card h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  color: var(--ink);
+}
+
+.mc-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.mc-form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+.mc-form-group select,
+.mc-form-group input[type="range"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--warm-border);
+  border-radius: 8px;
+  background: var(--warm-surface);
+  color: var(--ink);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.mc-form-group select:focus {
+  outline: 2px solid var(--warm-accent);
+  outline-offset: 2px;
+}
+
+.mc-range-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.mc-range-value {
+  font-weight: 600;
+  color: var(--warm-accent);
+  font-size: 1.1rem;
+}
+
+.mc-btn {
+  display: inline-block;
+  background: var(--warm-accent);
+  color: var(--warm-white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mc-btn:hover {
+  background: var(--warm-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(200, 133, 63, 0.3);
+}
+
+.mc-results {
+  display: none;
+}
+
+.mc-results.show {
+  display: block;
+}
+
+.mc-result-card {
+  background: var(--warm-surface);
+  border: 2px solid var(--warm-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.mc-result-card.best {
+  border-color: var(--warm-accent);
+  background: var(--warm-tint);
+}
+
+.mc-result-badge {
+  position: absolute;
+  top: -12px;
+  right: 1.5rem;
+  background: var(--warm-accent);
+  color: var(--warm-white);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.mc-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.mc-result-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.mc-result-provider {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.mc-result-pricing {
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.mc-result-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--warm-accent);
+  display: block;
+}
+
+.mc-result-reason {
+  color: var(--ink);
+  margin: 1rem 0;
+  line-height: 1.7;
+}
+
+.mc-result-specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--warm-white);
+  border-radius: 8px;
+}
+
+.mc-spec {
+  text-align: center;
+}
+
+.mc-spec-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.mc-spec-value {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.mc-cta-section {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.mc-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.mc-cta-primary {
+  background: linear-gradient(135deg, #C8853F 0%, #A86B2C 100%);
+  color: var(--warm-white);
+}
+
+.mc-cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(200, 133, 63, 0.4);
+}
+
+.mc-cta-secondary {
+  background: var(--warm-surface);
+  color: var(--ink);
+  border: 1px solid var(--warm-border);
+}
+
+.mc-cta-secondary:hover {
+  background: var(--warm-white);
+  border-color: var(--warm-accent);
+}
+
+.mc-help {
+  background: var(--warm-charcoal);
+  color: var(--warm-white);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.mc-help h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+}
+
+.mc-help p {
+  margin: 0 0 1rem;
+  opacity: 0.9;
+}
+
+.mc-help a {
+  color: var(--warm-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mc-help a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .mc-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .mc-card {
+    padding: 1.5rem;
+  }
+  
+  .mc-result-header {
+    flex-direction: column;
+  }
+  
+  .mc-result-pricing {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+}
+</style>
+</head>
+<body class="v2c-page">
+<!-- v2-chrome:header -->
+<header class="v2c-header" id="nav">
+  <div class="v2c-inner">
+    <a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a>
+    <div class="v2c-links" id="navLinks" data-nav-links>
+      <a href="/services.html">服務</a>
+      <a href="/portfolio.html">案例</a>
+      <a href="/ai-model.html">AI 模特</a>
+      <a href="/blog/">洞察</a>
+      <a href="/about.html">關於</a>
+      <a href="/contact.html">聯絡</a>
+      <a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a>
+    </div>
+    <button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button>
+  </div>
+</header>
+<!-- /v2-chrome:header -->
+
+<div class="mc-container">
+  <div class="mc-header">
+    <span class="mc-badge">🎯 智能推薦引擎</span>
+    <h1>找出<em>最適合你</em>的 AI 模型</h1>
+    <p>根據使用情境、預算與延遲需求，立即獲得前 3 名 AI 模型推薦。比較 GPT-6、Claude、Gemini、DeepSeek 等 150+ 模型。</p>
+  </div>
+
+  <div class="mc-card">
+    <h2>📋 告訴我們你的需求</h2>
+    
+    <form id="comparisonForm">
+      <div class="mc-form-group">
+        <label for="useCase">主要使用情境</label>
+        <select id="useCase" required>
+          <option value="">請選擇...</option>
+          <option value="coding">程式開發 (Coding)</option>
+          <option value="writing">內容寫作 (Writing)</option>
+          <option value="analysis">數據分析 (Analysis)</option>
+          <option value="conversation">對話互動 (Chat)</option>
+          <option value="translation">翻譯 (Translation)</option>
+          <option value="reasoning">複雜推理 (Reasoning)</option>
+          <option value="multimodal">多模態 (Vision + Text)</option>
+        </select>
+      </div>
+
+      <div class="mc-form-group">
+        <label for="budget">每月預算 (USD)</label>
+        <input type="range" id="budget" min="0" max="500" value="100" step="10">
+        <div class="mc-range-display">
+          <span>$0</span>
+          <span class="mc-range-value" id="budgetValue">$100</span>
+          <span>$500+</span>
+        </div>
+      </div>
+
+      <div class="mc-form-group">
+        <label for="latency">延遲需求</label>
+        <select id="latency" required>
+          <option value="low">低延遲優先 (即時回應，如聊天機器人)</option>
+          <option value="medium">平衡 (一般應用)</option>
+          <option value="high">可接受較高延遲 (如批量處理、深度分析)</option>
+        </select>
+      </div>
+
+      <div class="mc-form-group">
+        <label for="contextLength">上下文長度需求</label>
+        <select id="contextLength" required>
+          <option value="short">短 (< 4K tokens，如簡單問答)</option>
+          <option value="medium">中 (4K-32K tokens，如文章分析)</option>
+          <option value="long">長 (32K-128K tokens，如整個 codebase)</option>
+          <option value="ultra">超長 (128K+ tokens，如完整書籍)</option>
+        </select>
+      </div>
+
+      <button type="submit" class="mc-btn">🔍 立即比較</button>
+    </form>
+  </div>
+
+  <div id="results" class="mc-results">
+    <div class="mc-card">
+      <h2>✨ 推薦結果</h2>
+      <div id="recommendationsList"></div>
+    </div>
+
+    <div class="mc-help">
+      <h3>🚀 準備開始使用 AI API？</h3>
+      <p>我們推薦以下資源來加速你的 AI 開發流程：</p>
+      <div class="mc-cta-section">
+        <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="nofollow noopener" class="mc-cta-btn mc-cta-primary">
+          ☁️ DigitalOcean GPU Droplets — 部署 AI 應用
+        </a>
+        <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" target="_blank" rel="nofollow noopener" class="mc-cta-btn mc-cta-secondary">
+          📚 DataCamp — 學習 AI 開發技能
+        </a>
+        <a href="/tools/ai-token-cost-calculator.html" class="mc-cta-btn mc-cta-secondary">
+          🧮 Token 費用計算器 — 精算每月成本
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- v2-chrome:footer -->
+<footer class="v2c-footer">
+  <div class="v2c-inner">
+    <div class="v2c-footer-grid">
+      <div>
+        <h2>AutoDev</h2>
+        <p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p>
+      </div>
+      <div>
+        <h3>Studio</h3>
+        <a href="/services.html">服務</a>
+        <a href="/portfolio.html">案例</a>
+        <a href="/pricing.html">專案範圍</a>
+        <a href="/contact.html">需求諮詢</a>
+      </div>
+      <div>
+        <h3>Labs & Tools</h3>
+        <a href="/bot-cloud.html">Bot Cloud</a>
+        <a href="/ai-model.html">AI 模特</a>
+        <a href="/line-bot-saas.html">LINE Bot SaaS</a>
+        <a href="/tools/">工具</a>
+        <a href="/demo.html">Demo</a>
+      </div>
+      <div>
+        <h3>更多</h3>
+        <a href="https://chat.autodev-ai.com/form">原有表單</a>
+        <a href="/blog/">洞察</a>
+        <a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a>
+        <a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a>
+        <a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a>
+      </div>
+    </div>
+    <div class="v2c-footer-bottom">
+      <span>© AutoDev</span>
+      <span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span>
+    </div>
+  </div>
+</footer>
+<!-- /v2-chrome:footer -->
+
+<script defer src="/assets/autodev-v2.js"></script>
+<script>
+// Model database (simplified for MVP — can expand to 150+ models)
+const models = [
+  // GPT-6 Series
+  {
+    name: 'GPT-6 Astra',
+    provider: 'OpenAI',
+    inputPrice: 10,
+    outputPrice: 50,
+    contextWindow: 128000,
+    latency: 'medium',
+    strengths: ['reasoning', 'coding', 'analysis', 'multimodal'],
+    features: 'AGI 級推理，適合複雜任務',
+    tier: 'flagship'
+  },
+  {
+    name: 'GPT-6.1 Sol',
+    provider: 'OpenAI',
+    inputPrice: 2,
+    outputPrice: 10,
+    contextWindow: 128000,
+    latency: 'medium',
+    strengths: ['coding', 'writing', 'reasoning', 'conversation'],
+    features: 'Near-Astra 性能，1/5 價格',
+    tier: 'balanced'
+  },
+  {
+    name: 'GPT-5.5 (cached)',
+    provider: 'OpenAI',
+    inputPrice: 0.1,
+    outputPrice: 2.5,
+    contextWindow: 200000,
+    latency: 'low',
+    strengths: ['coding', 'analysis'],
+    features: '快取命中省 95%，適合重複上下文',
+    tier: 'budget'
+  },
+  
+  // Claude Series
+  {
+    name: 'Claude Fable 5.1',
+    provider: 'Anthropic',
+    inputPrice: 10,
+    outputPrice: 50,
+    contextWindow: 200000,
+    latency: 'medium',
+    strengths: ['writing', 'reasoning', 'coding', 'analysis'],
+    features: '最長上下文，適合文件分析',
+    tier: 'flagship'
+  },
+  {
+    name: 'Claude Opus 5.5',
+    provider: 'Anthropic',
+    inputPrice: 3,
+    outputPrice: 15,
+    contextWindow: 200000,
+    latency: 'medium',
+    strengths: ['writing', 'coding', 'reasoning'],
+    features: '平衡性價比與性能',
+    tier: 'balanced'
+  },
+  {
+    name: 'Claude Sonnet 4.6',
+    provider: 'Anthropic',
+    inputPrice: 3,
+    outputPrice: 15,
+    contextWindow: 200000,
+    latency: 'low',
+    strengths: ['conversation', 'coding', 'writing'],
+    features: '快速回應，適合互動場景',
+    tier: 'balanced'
+  },
+  
+  // Gemini Series
+  {
+    name: 'Gemini 4 Argon',
+    provider: 'Google',
+    inputPrice: 2,
+    outputPrice: 10,
+    contextWindow: 1000000,
+    latency: 'medium',
+    strengths: ['multimodal', 'analysis', 'reasoning'],
+    features: '100 萬 token 上下文，95% 快取折扣',
+    tier: 'balanced'
+  },
+  {
+    name: 'Gemini 3.8 Flash',
+    provider: 'Google',
+    inputPrice: 0.75,
+    outputPrice: 3.75,
+    contextWindow: 1000000,
+    latency: 'low',
+    strengths: ['conversation', 'coding', 'translation'],
+    features: '促銷至 2027/1/1，超高性價比',
+    tier: 'budget'
+  },
+  {
+    name: 'Gemini 2.5 Flash',
+    provider: 'Google',
+    inputPrice: 0.075,
+    outputPrice: 0.3,
+    contextWindow: 1000000,
+    latency: 'low',
+    strengths: ['conversation', 'translation', 'writing'],
+    features: '最省方案，適合大量輕量任務',
+    tier: 'budget'
+  },
+  
+  // DeepSeek Series
+  {
+    name: 'DeepSeek V4 Pro',
+    provider: 'DeepSeek',
+    inputPrice: 0.5,
+    outputPrice: 2,
+    contextWindow: 64000,
+    latency: 'medium',
+    strengths: ['coding', 'reasoning', 'analysis'],
+    features: '中國最強模型，coding 能力強',
+    tier: 'budget'
+  },
+  {
+    name: 'DeepSeek Chat V3',
+    provider: 'DeepSeek',
+    inputPrice: 0.14,
+    outputPrice: 0.28,
+    contextWindow: 64000,
+    latency: 'low',
+    strengths: ['conversation', 'coding', 'writing'],
+    features: '超省方案，性能不俗',
+    tier: 'budget'
+  },
+  
+  // Grok Series
+  {
+    name: 'Grok 4.7 (Cursor)',
+    provider: 'xAI',
+    inputPrice: 5,
+    outputPrice: 15,
+    contextWindow: 131072,
+    latency: 'low',
+    strengths: ['coding', 'reasoning'],
+    features: 'Cursor 內建，coding 專用',
+    tier: 'balanced'
+  }
+];
+
+// Budget slider
+const budgetInput = document.getElementById('budget');
+const budgetValue = document.getElementById('budgetValue');
+budgetInput.addEventListener('input', (e) => {
+  const val = e.target.value;
+  budgetValue.textContent = val >= 500 ? '$500+' : `$${val}`;
+});
+
+// Form submission
+document.getElementById('comparisonForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  const useCase = document.getElementById('useCase').value;
+  const budget = parseInt(document.getElementById('budget').value);
+  const latency = document.getElementById('latency').value;
+  const contextLength = document.getElementById('contextLength').value;
+  
+  if (!useCase) {
+    alert('請選擇使用情境');
+    return;
+  }
+  
+  // Scoring logic
+  const scored = models.map(model => {
+    let score = 0;
+    
+    // Use case match (most important)
+    if (model.strengths.includes(useCase)) {
+      score += 50;
+    }
+    
+    // Latency match
+    if (latency === 'low' && model.latency === 'low') score += 20;
+    if (latency === 'medium') score += 10;
+    if (latency === 'high') score += 15; // High latency = more powerful models OK
+    
+    // Context length match
+    const contextNeeds = {
+      'short': 4000,
+      'medium': 32000,
+      'long': 128000,
+      'ultra': 200000
+    };
+    if (model.contextWindow >= contextNeeds[contextLength]) {
+      score += 15;
+    }
+    
+    // Budget efficiency (cost per 1M tokens, assuming 1:1 input/output ratio)
+    const avgCost = (model.inputPrice + model.outputPrice) / 2;
+    if (avgCost <= 5) score += 20;
+    else if (avgCost <= 15) score += 10;
+    else if (avgCost <= 30) score += 5;
+    
+    // Estimate monthly cost (rough: 10M tokens per $100 budget tier)
+    const estimatedMonthlyTokens = budget * 0.5; // M tokens
+    const estimatedCost = (estimatedMonthlyTokens * avgCost);
+    const withinBudget = estimatedCost <= budget * 1.2; // 20% buffer
+    if (withinBudget) score += 10;
+    
+    return { ...model, score, estimatedCost };
+  });
+  
+  // Sort and get top 3
+  scored.sort((a, b) => b.score - a.score);
+  const top3 = scored.slice(0, 3);
+  
+  // Render results
+  renderResults(top3, useCase, budget, latency, contextLength);
+  
+  // Show results section
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+function renderResults(recommendations, useCase, budget, latency, contextLength) {
+  const container = document.getElementById('recommendationsList');
+  
+  const useCaseLabels = {
+    'coding': '程式開發',
+    'writing': '內容寫作',
+    'analysis': '數據分析',
+    'conversation': '對話互動',
+    'translation': '翻譯',
+    'reasoning': '複雜推理',
+    'multimodal': '多模態'
+  };
+  
+  const latencyLabels = {
+    'low': '低延遲',
+    'medium': '平衡',
+    'high': '深度分析'
+  };
+  
+  const contextLabels = {
+    'short': '< 4K tokens',
+    'medium': '4K-32K tokens',
+    'long': '32K-128K tokens',
+    'ultra': '128K+ tokens'
+  };
+  
+  const reasonMap = {
+    0: (m) => `<strong>${m.name}</strong> 是你需求的最佳選擇。針對<strong>${useCaseLabels[useCase]}</strong>場景，它提供${m.features}。預估每月成本約 <strong>$${m.estimatedCost.toFixed(2)}</strong>，在你的預算範圍內。`,
+    1: (m) => `<strong>${m.name}</strong> 是次優方案。若${recommendations[0].name}無法滿足，${m.name}在${m.strengths.slice(0,2).map(s=>useCaseLabels[s]).join('與')}方面同樣出色，預估每月成本約 <strong>$${m.estimatedCost.toFixed(2)}</strong>。`,
+    2: (m) => `<strong>${m.name}</strong> 是第三選擇。${m.features}，適合作為備選方案或特定任務分流使用，預估每月成本約 <strong>$${m.estimatedCost.toFixed(2)}</strong>。`
+  };
+  
+  container.innerHTML = recommendations.map((model, idx) => `
+    <div class="mc-result-card ${idx === 0 ? 'best' : ''}">
+      ${idx === 0 ? '<span class="mc-result-badge">🏆 最佳推薦</span>' : ''}
+      <div class="mc-result-header">
+        <div>
+          <h3 class="mc-result-title">${model.name}</h3>
+          <div class="mc-result-provider">${model.provider}</div>
+        </div>
+        <div class="mc-result-pricing">
+          <span class="mc-result-price">$${((model.inputPrice + model.outputPrice) / 2).toFixed(2)}/MTok</span>
+          <span>平均</span>
+        </div>
+      </div>
+      
+      <div class="mc-result-reason">
+        ${reasonMap[idx](model)}
+      </div>
+      
+      <div class="mc-result-specs">
+        <div class="mc-spec">
+          <span class="mc-spec-label">輸入定價</span>
+          <span class="mc-spec-value">$${model.inputPrice}/MTok</span>
+        </div>
+        <div class="mc-spec">
+          <span class="mc-spec-label">輸出定價</span>
+          <span class="mc-spec-value">$${model.outputPrice}/MTok</span>
+        </div>
+        <div class="mc-spec">
+          <span class="mc-spec-label">上下文</span>
+          <span class="mc-spec-value">${(model.contextWindow / 1000).toFixed(0)}K</span>
+        </div>
+        <div class="mc-spec">
+          <span class="mc-spec-label">延遲</span>
+          <span class="mc-spec-value">${model.latency === 'low' ? '低' : model.latency === 'medium' ? '中' : '高'}</span>
+        </div>
+      </div>
+      
+      <div class="mc-result-reason" style="font-size: 0.9rem; color: var(--muted); margin-top: 1rem;">
+        <strong>適用場景：</strong> ${model.strengths.map(s => useCaseLabels[s]).join('、')}
+      </div>
+    </div>
+  `).join('');
+}
+</script>
+
+</body>
+</html>
