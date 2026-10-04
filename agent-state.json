@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-10-04T00:30:00Z",
+  "lastRun": "2026-10-04T02:08:00Z",
   "lastBuilderRun": "2026-10-03T05:00:00Z",
   "lastResearchRound": 234,
   "lastCompetitorWatchRun": "2026-10-01T10:06:00Z",
-  "lastStrategistRun": "2026-10-02T12:00:00Z",
+  "lastStrategistRun": "2026-10-04T02:08:00Z",
   "lastSeoWriterRun": "2026-10-03T03:00:00Z",
   "newAssetProposals": [
     {
@@ -194,6 +194,41 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-10-04T02:08:00Z",
+      "agent": "strategist",
+      "task": "passive-income-audit",
+      "status": "completed",
+      "summary": "Sun 02:08 UTC strategist income audit — 管道健檢完成。核心問題：GitHub Pages deploy 積壓導致 7 個 URL 在 production 404（主站 200 但 blog/tools 新頁全掛）。tools/ai-token-cost-calculator.html 和 tools/ai-model-comparison.html 均 404；5 篇 blog 文章 404。Gumroad 0 產品。Affiliate 積壓 9+ 個 programs 全未申請（Systeme.io 60% 已積壓 21+ 輪）。本週 agent 產出：researcher R231-234（4 輪）、seo-writer 2 篇、builder 1 工具，全部只在 repo 端，production 完全未更新。最高優先：Ivan 觸發 GitHub Pages deploy。",
+      "urlChecks": {
+        "mainSite": "200 OK",
+        "tokenCalculator": "404 (production stale)",
+        "modelComparison": "404 (production stale)",
+        "blogGemini4Argon": "404 (production stale)",
+        "blogGpt61Sol": "404 (production stale)",
+        "blogHowseen": "404 (production stale)",
+        "blogOpenaiDots": "404 (production stale)",
+        "toolsAiAgentSecurity": "404 (production stale)"
+      },
+      "affiliateLinksChecked": {
+        "digitalOcean": "OK (m.do.co/c/6121a295f624 - in token calc, caveman, multiple articles)",
+        "datacamp": "OK (afflink.one/s/aavAC - in token calc, caveman)",
+        "cloudways": "OK (vbtrax.com link - in caveman, writesonic)",
+        "systemeIo": "OK (systeme.io/?sa=... - IN writesonic article - affiliate link EXISTS, but Ivan申請狀態不明)",
+        "writesonic": "writesonic.com/pricing 連結（非 affiliate，Ivan 仍未申請）"
+      },
+      "gumroadStatus": "0 products live (積壓 23+ 週)",
+      "pendingActions": [
+        "🔴 BLOCKER Ivan：觸發 GitHub Pages deploy（7 個 production 404，新工具/文章全掛）",
+        "🔴 Ivan 申請：Viktor.com (partners.dub.co/viktor) — P0 新發現",
+        "🔴 Ivan 申請：Systeme.io 60% lifetime (systeme.io/affiliate-program) — 21+ 輪積壓",
+        "🔴 Ivan 申請：Moosend 40% lifetime — Round 233",
+        "🔴 Ivan 申請：InboxAlly 20% lifetime 120-day — Round 233",
+        "🔴 seo-writer：Hemory AI + Eclatira（Oct 6 截止，已逾期）",
+        "🔴 seo-writer：DwarfStar 4 教學文（Oct 14，R234 P0-URGENT）",
+        "🔴 seo-writer：Viktor AI 評測文（等 Ivan 申請 affiliate 後補連結）"
+      ]
+    },
     {
       "timestamp": "2026-10-04T00:30:00Z",
       "agent": "researcher",
