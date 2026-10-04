@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-04T03:00:00Z",
+  "lastRun": "2026-10-04T14:30:00Z",
   "lastBuilderRun": "2026-10-03T05:00:00Z",
   "lastResearchRound": 234,
   "lastCompetitorWatchRun": "2026-10-04T03:08:00Z",
@@ -194,6 +194,41 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-10-04T14:30:00Z",
+      "agent": "content-ops",
+      "task": "content-refresher",
+      "status": "completed",
+      "summary": "Sun 14:30 UTC content-refresher — 更新 2 篇 lastmod 最舊文章。(1) blog/lm-studio-bionic-guide-2026.html：依 affiliate-monitor 指令，新增 DigitalOcean ($200 免費點數，model-modes 段落後) + DataCamp (fit 段落後) 共 2 個 contextual affiliate CTA，0→2 個聯盟連結；dateModified 更新 2026-09-21→2026-10-04。(2) blog/ai-tools-comparison-2026.html：更新過期「下次重測：2026-09」→「下次重測：2026-12」，並更新 JSON-LD dateModified 2026-06-07→2026-10-04、byline 顯示日期同步更新；此文已有 DataCamp + DigitalOcean + Systeme.io 三個聯盟連結，不重複加入。sitemap.xml 兩篇 lastmod 均更新為 2026-10-04。commit: af6df2d。",
+      "changes": [
+        "blog/lm-studio-bionic-guide-2026.html：新增 DigitalOcean + DataCamp affiliate CTA 各 1 個，dateModified 更新至 2026-10-04",
+        "blog/ai-tools-comparison-2026.html：更新「下次重測」日期至 2026-12，dateModified + byline 更新至 2026-10-04",
+        "sitemap.xml：2 篇 lastmod 從 2026-09-28 更新至 2026-10-04",
+        "git push：af6df2d"
+      ],
+      "articlesRefreshed": [
+        {
+          "file": "blog/lm-studio-bionic-guide-2026.html",
+          "gscClicks14d": 38,
+          "gscPosition": 6.0,
+          "affiliateLinksAdded": 2,
+          "affiliateLinksBefore": 0,
+          "affiliateLinksAfter": 2,
+          "changes": ["DigitalOcean CTA after #model-modes", "DataCamp CTA after #fit", "dateModified 2026-09-21→2026-10-04"]
+        },
+        {
+          "file": "blog/ai-tools-comparison-2026.html",
+          "affiliateLinksAdded": 0,
+          "affiliateLinksBefore": 3,
+          "affiliateLinksAfter": 3,
+          "changes": ["下次重測 2026-09→2026-12", "dateModified 2026-06-07→2026-10-04", "byline + tested-callout date synced"]
+        }
+      ],
+      "sitemapUpdated": true,
+      "directivesActioned": [
+        "affiliate-monitor-to-content-refresher-2026-10-04 (blog/lm-studio-bionic-guide-2026.html DigitalOcean + DataCamp CTAs added)"
+      ]
+    },
     {
       "timestamp": "2026-10-04T10:30:00Z",
       "agent": "content-ops",
@@ -1577,7 +1612,7 @@
       "timestamp": "2026-10-04T10:30:00Z",
       "from": "content-ops (affiliate-monitor)",
       "to": "content-refresher",
-      "status": "pending",
+      "status": "completed",
       "priority": "high",
       "action": "Add affiliate CTAs to blog/lm-studio-bionic-guide-2026.html — this is the #2 GSC traffic article (38 clicks, pos 6.0) with ZERO affiliate links. Recommended CTAs: DigitalOcean GPU Droplets (m.do.co/c/6121a295f624) for running LM Studio cloud-side, DataCamp (afflink.one/s/aavAC) for AI/ML learning. Keep additions contextual and minimal (1-2 CTA blocks).",
       "context": {
@@ -1747,5 +1782,17 @@
         "blog/claude-code-prompt-pack-guide-2026.html"
       ]
     }
-  ]
+  ],
+  "fbStrategy": {
+    "performance": {
+      "weeklyReviews": [
+        {
+          "weekEnding": "2026-10-04",
+          "summary": "本週 Facebook Page 無新貼文可分析；未新增 win/fail pattern，建議下週先確保穩定發文，才能累積可學習樣本。",
+          "postCount": 0,
+          "insight": "目前問題不是內容優化，而是樣本數為 0。先解決發文頻率，再談觸及與互動優化。"
+        }
+      ]
+    }
+  }
 }
