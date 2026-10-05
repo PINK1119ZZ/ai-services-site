@@ -214,14 +214,22 @@
           "affiliateLinksAdded": 2,
           "affiliateLinksBefore": 0,
           "affiliateLinksAfter": 2,
-          "changes": ["DigitalOcean CTA after #model-modes", "DataCamp CTA after #fit", "dateModified 2026-09-21→2026-10-04"]
+          "changes": [
+            "DigitalOcean CTA after #model-modes",
+            "DataCamp CTA after #fit",
+            "dateModified 2026-09-21→2026-10-04"
+          ]
         },
         {
           "file": "blog/ai-tools-comparison-2026.html",
           "affiliateLinksAdded": 0,
           "affiliateLinksBefore": 3,
           "affiliateLinksAfter": 3,
-          "changes": ["下次重測 2026-09→2026-12", "dateModified 2026-06-07→2026-10-04", "byline + tested-callout date synced"]
+          "changes": [
+            "下次重測 2026-09→2026-12",
+            "dateModified 2026-06-07→2026-10-04",
+            "byline + tested-callout date synced"
+          ]
         }
       ],
       "sitemapUpdated": true,
@@ -1115,6 +1123,37 @@
         "testStatic": "passed",
         "npmTest": "28 failures (pre-existing)"
       }
+    },
+    {
+      "timestamp": "2026-10-05T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Daily site health check: curled all 204 sitemap URLs; 192 returned 200, 11 returned 404, and 1 returned 503. All 12 problematic URLs exist locally in repo, so issue remains a stale/incomplete production publish artifact rather than missing source files. Added urgent follow-up directive for builder to verify GitHub Pages/static publish and republish latest artifact.",
+      "checks": {
+        "sitemapUrlCount": 204,
+        "status200": 192,
+        "status404": 11,
+        "status503": 1,
+        "localFilesExistForAllFailures": true
+      },
+      "failingUrls": [
+        "https://autodev-ai.com/blog/caveman-ai-agent-token-optimization-2026.html",
+        "https://autodev-ai.com/blog/dwarfstar-4-ds4-local-llm-antirez-2026.html",
+        "https://autodev-ai.com/blog/gemini-3.8-live-extended-thinking-review-2026.html",
+        "https://autodev-ai.com/blog/gemini-4-argon-complete-review-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-1-sol-review-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-sol-luna-claude-opus-5-5-comparison-2026.html",
+        "https://autodev-ai.com/blog/howseen-ai-review-geo-tracking-2026.html",
+        "https://autodev-ai.com/blog/openai-dots-always-on-agents-review-2026.html",
+        "https://autodev-ai.com/blog/viktor-ai-coworker-complete-review-2026.html",
+        "https://autodev-ai.com/blog/writesonic-complete-review-2026.html",
+        "https://autodev-ai.com/tools/ai-agent-security-tools-comparison-2026.html",
+        "https://autodev-ai.com/tools/ai-model-comparison.html"
+      ],
+      "directivesIssued": [
+        "content-ops-to-builder-2026-10-05-ghpages-stale-publish-followup"
+      ]
     }
   ],
   "gscData": {
@@ -1582,9 +1621,43 @@
         }
       },
       "nextAction": "Need deploy/publishing owner to verify current GitHub Pages artifact/source and republish latest build output."
+    },
+    {
+      "id": "site-health-2026-10-05-ghpages-stale-404-followup",
+      "detectedAt": "2026-10-05T00:00:00Z",
+      "agent": "content-ops",
+      "severity": "high",
+      "status": "open",
+      "title": "Production still serves stale/missing Pages artifact for 11 URLs; 1 URL returns 503",
+      "summary": "Curled all 204 sitemap URLs. Production returned 192 OK / 11 404 / 1 503. All affected files exist locally in repo, indicating stale/incomplete static publish artifact or GitHub Pages deploy drift rather than missing source files.",
+      "affectedUrls": [
+        "https://autodev-ai.com/blog/caveman-ai-agent-token-optimization-2026.html",
+        "https://autodev-ai.com/blog/dwarfstar-4-ds4-local-llm-antirez-2026.html",
+        "https://autodev-ai.com/blog/gemini-3.8-live-extended-thinking-review-2026.html",
+        "https://autodev-ai.com/blog/gemini-4-argon-complete-review-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-1-sol-review-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-sol-luna-claude-opus-5-5-comparison-2026.html",
+        "https://autodev-ai.com/blog/howseen-ai-review-geo-tracking-2026.html",
+        "https://autodev-ai.com/blog/openai-dots-always-on-agents-review-2026.html",
+        "https://autodev-ai.com/blog/viktor-ai-coworker-complete-review-2026.html",
+        "https://autodev-ai.com/blog/writesonic-complete-review-2026.html",
+        "https://autodev-ai.com/tools/ai-agent-security-tools-comparison-2026.html",
+        "https://autodev-ai.com/tools/ai-model-comparison.html"
+      ],
+      "evidence": {
+        "curlBadCount": 12,
+        "statusBreakdown": {
+          "200": 192,
+          "404": 11,
+          "503": 1
+        },
+        "sitemapUrlCount": 204,
+        "localFilesExist": true
+      },
+      "nextAction": "Builder/publish owner to verify Pages/static artifact, republish latest build, and recheck affected URLs."
     }
   ],
-  "lastChecked": "2026-10-04T10:30:00Z",
+  "lastChecked": "2026-10-05T00:00:00Z",
   "directives": [
     {
       "id": "content-ops-to-builder-2026-10-03-ghpages-publish-check",
@@ -1624,6 +1697,38 @@
           "DigitalOcean GPU Droplets — m.do.co/c/6121a295f624",
           "DataCamp (learn AI/ML) — afflink.one/s/aavAC"
         ]
+      }
+    },
+    {
+      "id": "content-ops-to-builder-2026-10-05-ghpages-stale-publish-followup",
+      "timestamp": "2026-10-05T00:00:00Z",
+      "from": "content-ops",
+      "to": "builder",
+      "status": "pending",
+      "priority": "urgent",
+      "action": "Verify GitHub Pages/static publish pipeline and republish latest artifact. Production now has 11 sitemap URLs returning 404 and 1 URL returning 503 even though all source files exist locally.",
+      "context": {
+        "affectedUrls": [
+          "https://autodev-ai.com/blog/caveman-ai-agent-token-optimization-2026.html",
+          "https://autodev-ai.com/blog/dwarfstar-4-ds4-local-llm-antirez-2026.html",
+          "https://autodev-ai.com/blog/gemini-3.8-live-extended-thinking-review-2026.html",
+          "https://autodev-ai.com/blog/gemini-4-argon-complete-review-2026.html",
+          "https://autodev-ai.com/blog/gpt-6-1-sol-review-2026.html",
+          "https://autodev-ai.com/blog/gpt-6-sol-luna-claude-opus-5-5-comparison-2026.html",
+          "https://autodev-ai.com/blog/howseen-ai-review-geo-tracking-2026.html",
+          "https://autodev-ai.com/blog/openai-dots-always-on-agents-review-2026.html",
+          "https://autodev-ai.com/blog/viktor-ai-coworker-complete-review-2026.html",
+          "https://autodev-ai.com/blog/writesonic-complete-review-2026.html",
+          "https://autodev-ai.com/tools/ai-agent-security-tools-comparison-2026.html",
+          "https://autodev-ai.com/tools/ai-model-comparison.html"
+        ],
+        "statusBreakdown": {
+          "200": 192,
+          "404": 11,
+          "503": 1
+        },
+        "localVerification": "all 12 corresponding source files exist in repo",
+        "note": "Likely stale Pages artifact or publish-source drift, not missing content files."
       }
     }
   ],
