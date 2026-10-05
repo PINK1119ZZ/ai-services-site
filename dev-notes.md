@@ -1,5 +1,109 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 237 | 2026-10-05 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-10-05 22:00 UTC | 搜尋範圍：GitHub trending Oct 5 2026、HN front Oct 4-5 2026、Product Hunt Oct 5 2026、CoreSpeed/Qwen3.8 Flash Next/Paperclip/VoiceStudio 深度調查 | 模式：Tue/Thu/Sat 06:00 ai-dev-research cron
+
+### 🔎 本輪搜尋結果摘要
+
+#### 🔥 Product Hunt Oct 5, 2026 Top Launches
+
+1. **Clair** — Answer Claude Code from your wrist（PH #1 Oct 5）
+   - Apple Watch app，讓你從手腕回覆 Claude Code 的 approval prompt
+   - 搭配 claude-watch (github.com/shobhit99/claude-watch) 本地 bridge
+   - App Store 已有多個競品（ClaudeWatch, AgentWatch, Claude Code Notifier）
+   - **上輪 R236 P1-HIGH 確認：affiliate 待查**
+   - 本輪調查：App Store 上有付費訂閱版本（ClaudeWatch Pro Mensual/Anual），但「Clair」為 Product Hunt 全新 launch，affiliate 程式未公開確認
+   - ✅ **繁中教學機會：仍是 0 篇**，但現在有更多細節可寫完整教學（claude-watch bridge 安裝 + Watch app 設定 + ntfy 方案比較）
+   - **產品化評估：能做成付費繁中教學文 + 工具評比文章（DataCamp/DigitalOcean 間接變現）**
+
+2. **CoreSpeed** — One MCP for everything your agents need: apps, memory, tools（PH #2 Oct 4-5，Launch of the Day）
+   - 定位：portable MCP server，跨 agent 保留 apps/memory/voice/policy
+   - 支援：Claude Code, Codex, Cursor, OpenClaw, Hermes
+   - 定價：Free（3,000 credits/90d）/ Pro $20/mo / Enterprise custom
+   - GitHub：corespeed-io，有 WeChat bot SDK、hermes-template、skills fork
+   - **Affiliate 程式：目前無公開 affiliate/partner program 頁面**（無法直接變現）
+   - ✅ **教學文機會 P1-HIGH**：「CoreSpeed MCP 完整教學 2026：一個 MCP 連接所有 AI Agent，Claude Code / Codex / OpenClaw 通用」
+   - 間接變現：DigitalOcean（部署 self-hosted agent）+ DataCamp（AI agent 學習）
+   - **awesome-list 吸流量機會**：「2026 最佳 MCP Server 精選清單」CoreSpeed 列為主推工具之一
+
+3. **Gemini 4 Argon**（PH #3 Oct 5）— 已於 R228 覆蓋，blog/gemini-4-argon-complete-review-2026.html 已發布
+
+---
+
+#### 🔥 GitHub Trending / HN Oct 4-5, 2026
+
+4. **Qwen 3.8 Flash Next（125B MoE）** — HN #2 Oct 4，849 pts，383 comments
+   - Alibaba Cloud 開源 MoE 模型：125B 總參數，每 token ~6B active（A6B）
+   - 單張 RTX 4090（24GB）可跑完整模型：~25 t/s decode，471 t/s prefill（80K context）
+   - RTX 3060：~50 t/s（Strata + 量化），Apple Silicon MLX：70-98 t/s
+   - 成本：$0.16/1M input，$0.47/1M output（hosted）
+   - 250K token context window
+   - **比較對手**：Claude Opus 4.6 Max 等級，Deepseek V4.1 Flash (552B MoE) 同分
+   - ✅ **教學文機會 P0-URGENT（Oct 10 截止，繁中目前 0 篇）**
+   - 部落格角度：「RTX 4090 跑 125B 模型？Qwen 3.8 Flash Next 完整安裝教學，繁中首發」
+   - **省 Token 機會**：hosted API $0.16 input 是 Claude 同等級的 1/15 價格 → 直接降低我們自己的 agent 成本
+   - **推薦在 agent 採購策略**：用 Qwen 3.8 Flash Next 替換低階 summarization/drafting 任務，估省 80-90% 成本
+   - 變現：DigitalOcean GPU Droplet（自架推論）+ DataCamp（教學）
+
+5. **Paperclip AI（paperclipai/paperclip）**
+   - 開源 agent 公司管理平台：org chart、job titles、budgets、goals、audit logs
+   - v2026.916.1（Sep 21 latest），43K★，MIT
+   - 支援 OpenClaw 作為「continuous agent」掛入 Paperclip 任務系統
+   - `npx paperclipai onboard --yes` 一鍵安裝
+   - **paperclipai/companies**：16 pre-built 公司模板，440+ 專業 agent，500+ skills，MIT
+   - 關聯：我們自己的 multi-agent 系統可以 migrate 至 Paperclip 架構（降低 token 浪費）
+   - **教學文機會 P1-HIGH**：「Paperclip AI 完整教學 2026：用開源平台管理 AI Agent 公司，OpenClaw 整合，繁中首發」
+   - **awesome-list 機會**：Paperclip + OpenClaw + CoreSpeed 組合包清單文章
+   - 無 affiliate program（MIT 開源）
+
+6. **VoiceStudio（debpalash/VoiceStudio）**
+   - 52.3K★，GitHub rank #472，#1 Python trending Sep 16 2026
+   - 定位：全本地 ElevenLabs 替代方案：voice cloning、voice design、video dubbing、dictation、transcription
+   - 版本 v0.5.6（Sep 23），跨平台 Electron app（Windows/macOS/Linux）
+   - AGPL-3.0，完全本地，無雲端 API 費用
+   - **上輪 R232 P1 Oct 8 截止，但上輪 seo-writer 未執行**（過期）
+   - **重新評估：仍值得發布**，因為 52K★ 且仍在 Python trending top 10
+   - 變現：ElevenLabs affiliate（已有 WisprFlow，可補 ElevenLabs competitor 角度）+ DigitalOcean
+
+---
+
+#### 🏛️ 背景訊號（AGNTCon + MCPCon）
+
+- **MCP Dev Summit Toronto：Oct 5-6, 2026**（今日正在進行）
+- **AGNTCon + MCPCon North America：Oct 22-23, San Jose**，3,500+ attendees，1,000+ 組織
+- **搜尋趨勢含義**：MCP 生態系正在加速標準化，CoreSpeed / Paperclip / OpenClaw 形成一套完整 agentic stack → 可做一篇「2026 MCP Agent 生態系完整地圖」作為流量磁石文章
+
+---
+
+### 💰 本輪產品化評估
+
+| 機會 | 類型 | 優先級 | 截止 | 預估月收入 | affiliate |
+|------|------|--------|------|-----------|-----------|
+| Qwen 3.8 Flash Next 教學文 | SEO 文章 | **P0-URGENT** | Oct 10 | $100-300（間接）| DigitalOcean GPU |
+| CoreSpeed MCP 教學文 | SEO 文章 | **P1-HIGH** | Oct 15 | $100-250（間接）| DigitalOcean |
+| Paperclip AI 教學文 | SEO 文章 | P1-HIGH | Oct 18 | $80-200（間接）| DigitalOcean |
+| VoiceStudio 本地語音教學 | SEO 文章 | P1-HIGH | Oct 20 | $80-200（間接）| DigitalOcean |
+| MCP Agent 生態系 awesome-list | 流量磁石 | P2-MEDIUM | Oct 25 | $50-150（長尾）| 多個 |
+| 採用 Qwen 3.8 Flash Next 替換 agent 任務 | 省 token | **立即執行** | - | 省 agent cost 80-90% | - |
+
+**預估新增月收入：$410-1,100（間接變現，無新 affiliate program）**
+
+---
+
+### 🔎 Affiliate Program 本輪確認
+
+- **CoreSpeed**：無公開 affiliate program（$20/mo Pro，但無轉介計畫）
+- **Paperclip AI**：MIT 開源，無商業 affiliate
+- **Qwen 3.8 Flash Next**：Alibaba Cloud API，無 affiliate（但 DigitalOcean GPU 可搭配）
+- **Clair（Apple Watch）**：affiliate 未公開確認，待 Ivan 直接聯絡開發者
+
+---
+
+### 📋 本輪 Directive 摘要 → 詳見 directives/researcher-to-strategist-2026-10-05-round237.md
+
+---
+
 ## Round 231 | 2026-10-02 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-10-02 22:00 UTC | 搜尋範圍：GitHub trending Oct 2 2026、Hacker News Oct 2 2026、Product Hunt Oct 2 2026 | 模式：Tue/Thu/Sat 22:00 ai-dev-research cron

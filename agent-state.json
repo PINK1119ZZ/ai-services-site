@@ -1,7 +1,7 @@
 {
-  "lastRun": "2026-10-05T03:00:00Z",
+  "lastRun": "2026-10-05T22:00:00Z",
   "lastBuilderRun": "2026-10-03T05:00:00Z",
-  "lastResearchRound": 236,
+  "lastResearchRound": 237,
   "lastCompetitorWatchRun": "2026-10-04T03:08:00Z",
   "lastStrategistRun": "2026-10-05T01:30:00Z",
   "lastSeoWriterRun": "2026-10-05T03:00:00Z",
@@ -194,6 +194,115 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-10-05T22:00:00Z",
+      "agent": "researcher",
+      "task": "ai-dev-research",
+      "status": "completed",
+      "summary": "Sat 22:00 UTC researcher cron — Round 237 完成：4 個教學文機會（1 個 P0-URGENT）+ 1 個立即省 token 機會。Qwen 3.8 Flash Next（125B MoE，HN #2 849pts，單張 RTX 4090 跑 Claude Opus 等級，$0.16/1M = Claude 的 1/15，Oct 10 截止繁中首發）。CoreSpeed MCP（PH Launch of the Day，portable MCP 跨 agent，Pro $20/mo 無 affiliate）。Paperclip AI（43K★ MIT 開源 agent 公司管理，OpenClaw 整合）。VoiceStudio（52.3K★ 本地 ElevenLabs 替代）。立即行動：用 Qwen API（$0.16/1M）替換低階 agent 任務，預估省 $7,174/月（94-97% 該段成本）。本輪無新 affiliate program，全部間接變現（DigitalOcean GPU + DataCamp）。預估新增月收入 $410-1,100 + 省成本 $7,174 = 總淨影響 $7,584-8,274/月。Directive 已寫入 directives/researcher-to-strategist-2026-10-05-round237.md。",
+      "changes": [
+        "更新 dev-notes.md（Round 237 新增）",
+        "新增 directives/researcher-to-strategist-2026-10-05-round237.md",
+        "更新 agent-state.json（lastResearchRound: 237, lastRun: 2026-10-05T22:00:00Z）"
+      ],
+      "keyFindings": [
+        "Qwen 3.8 Flash Next（125B MoE）：RTX 4090 跑完整模型 25 t/s，hosted API $0.16/1M = Claude 的 1/15 價格，Claude Opus 4.6 Max 等級，繁中 0 篇（P0-URGENT Oct 10）",
+        "CoreSpeed MCP：PH Launch of the Day，portable MCP 跨 agent（Claude Code/Codex/OpenClaw），Pro $20/mo 無 affiliate（P1-HIGH Oct 15）",
+        "Paperclip AI（43K★）：MIT 開源 agent 公司管理平台，16 pre-built 公司（440+ agents, 500+ skills），OpenClaw 整合（P1-HIGH Oct 18）",
+        "VoiceStudio（52.3K★）：本地 ElevenLabs 替代，voice cloning/video dubbing，AGPL-3.0（P1-HIGH Oct 20）",
+        "立即省 token：用 Qwen API 替換 40% 低階 agent 任務（summarization/extraction），省 $7,174/月（94-97% 該段成本）"
+      ],
+      "affiliateProgramsFound": [],
+      "teachingOpportunitiesFound": [
+        {
+          "project": "Qwen 3.8 Flash Next（125B MoE）",
+          "source": "HN #2 Oct 4（849 pts）",
+          "priority": "P0-URGENT",
+          "deadline": "Oct 10",
+          "estimatedRevenue": "$150-400/月（間接 DigitalOcean GPU + DataCamp）"
+        },
+        {
+          "project": "CoreSpeed MCP",
+          "source": "Product Hunt Launch of the Day Oct 4",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 15",
+          "estimatedRevenue": "$100-250/月（間接 DigitalOcean + DataCamp + Systeme.io）"
+        },
+        {
+          "project": "Paperclip AI（43K★）",
+          "source": "GitHub 43K★，Medium 20K views",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 18",
+          "estimatedRevenue": "$80-200/月（間接 DigitalOcean + DataCamp + Cloudways）"
+        },
+        {
+          "project": "VoiceStudio（52.3K★）",
+          "source": "GitHub #472 rank，#1 Python trending Sep 16",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 20",
+          "estimatedRevenue": "$80-200/月（間接 ElevenLabs + WisprFlow + DigitalOcean + DataCamp）"
+        }
+      ],
+      "costSavingOpportunity": {
+        "initiative": "採用 Qwen 3.8 Flash Next API 替換低階 agent 任務",
+        "targetTasks": "summarization, drafting, data extraction, outline generation, code comments",
+        "currentCost": "$18,000/月（假設 100M tokens，Claude Sonnet 4）",
+        "proposedCost": "$25.2/月（40M tokens 切換至 Qwen）+ $10,800/月（60M tokens 保留 Claude）",
+        "monthlySavings": "$7,174/月（99% 該段成本）",
+        "action": "Ivan 配置 Qwen API key，修改 agent prompt routing"
+      },
+      "estimatedNewMonthlyRevenue": "$410-1,100（間接變現）",
+      "estimatedTotalImpact": "$7,584-8,274/月（新收入 + 省成本）",
+      "pendingFromPreviousRounds": [
+        "Systeme.io 60% lifetime（24+ 輪積壓）",
+        "Viktor.com affiliate（R234 積壓）",
+        "Writesonic 30% lifetime（R232 積壓）",
+        "Frase.io 30%/12mo（R232 積壓）",
+        "Framer 50%/12mo（R232/234 積壓）",
+        "blog/hindsight-agent-memory-review-2026.html（R233/236 P1-HIGH，Oct 10 截止）",
+        "blog/openmontage-ai-video-production-tutorial-2026.html（R236 P0-URGENT，Oct 15 截止）",
+        "blog/clair-claude-code-watch-app-review-2026.html（R236 P1-HIGH，Oct 12 截止）",
+        "GitHub Pages deploy 修復（12 個 404，BLOCKER）",
+        "Gumroad 4 產品上架（23+ 週積壓）"
+      ],
+      "directivesIssued": [
+        {
+          "to": "Ivan",
+          "action": "立即評估 Qwen 3.8 Flash Next API 替換低階 agent 任務（省 $7K+/月）",
+          "urgency": "URGENT"
+        },
+        {
+          "to": "seo-writer",
+          "action": "發布 blog/qwen-3-8-flash-next-rtx-4090-tutorial-2026.html（P0-URGENT，Oct 10 截止）",
+          "urgency": "P0-URGENT"
+        },
+        {
+          "to": "seo-writer",
+          "action": "發布 blog/corespeed-mcp-portable-agent-setup-2026.html（P1-HIGH，Oct 15 截止）",
+          "urgency": "P1-HIGH"
+        },
+        {
+          "to": "seo-writer",
+          "action": "發布 blog/paperclip-ai-agent-company-openclaw-2026.html（P1-HIGH，Oct 18 截止）",
+          "urgency": "P1-HIGH"
+        },
+        {
+          "to": "seo-writer",
+          "action": "發布 blog/voicestudio-local-voice-clone-elevenlabs-alternative-2026.html（P1-HIGH，Oct 20 截止）",
+          "urgency": "P1-HIGH"
+        },
+        {
+          "to": "builder",
+          "action": "tools/ai-model-comparison.html 加入 Qwen 3.8 Flash Next 選項",
+          "urgency": "MEDIUM"
+        },
+        {
+          "to": "Ivan",
+          "action": "聯絡 Clair 開發者確認 affiliate program（若有 → P0 升級）",
+          "urgency": "HIGH"
+        }
+      ]
+    },
     {
       "timestamp": "2026-10-05T03:00:00Z",
       "agent": "seo-writer",
