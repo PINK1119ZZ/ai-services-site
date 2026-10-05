@@ -1,6 +1,33 @@
 # Topic Ideas - AI 趨勢獵手賺錢機會追蹤
 
-**最後更新：** 2026-10-04 00:30 UTC（Round 234）
+**最後更新：** 2026-10-05 00:30 UTC（Round 236）
+
+---
+
+## 🎯 Round 236 Executive Summary（2026-10-05 00:30 UTC）
+
+**來源：** GitHub Trending / Product Hunt / HN / Reddit  
+**任務類型：** ai-trend-hunter（賺錢機會發現）
+
+### Round 236 新增發現
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|-----------|---------|
+| 2026-10-05 | OpenMontage (52K★) | openmontage 教學、ai 視頻生產 代理 | 中 | DigitalOcean GPU + DataCamp 間接 | $300-900 | blog/openmontage-ai-video-production-tutorial-2026.html |
+| 2026-10-05 | Hindsight Cloud (27K★) | hindsight agent memory、vectorize cloud | 中 | Vectorize affiliate（待確認）+ DigitalOcean | $200-600 | blog/hindsight-agent-memory-review-2026.html |
+| 2026-10-05 | HubSpot AEO ($50/mo) | hubspot aeo 教學、aeo 工具比較 | 中低 | HubSpot Partners 30%/12mo = $15/mo/referral | $150-450 | blog/hubspot-aeo-review-2026.html |
+| 2026-10-05 | Clair（PH Oct 4 #3） | clair watch claude code、apple watch ai | 低 | 待確認 affiliate + 間接 | $80-250 | blog/clair-claude-code-watch-app-review-2026.html |
+| 2026-10-05 | mattpocock/skills (143K★) | mattpocock skills 教學、claude code 工作流 | 中 | DataCamp 間接 + Claude Code 矩陣 | $100-300 | blog/mattpocock-skills-claude-code-engineering-2026.html |
+
+**Round 236 預估新增月收入：** $830-2,500/月
+
+### 高價值 Affiliate 發現（30%+）
+
+- **HubSpot AEO：** $50/mo × 30%/12mo = $15/月/referral（HubSpot Partners，高轉換率品牌）
+- **Vectorize/Hindsight Cloud：** usage-based pricing，需確認 affiliate 計畫
+- **Systeme.io 60% LIFETIME：** 🔴 已積壓 24+ 輪，每輪損失 $300-1,200/月機會成本
+
+---
 
 ---
 
