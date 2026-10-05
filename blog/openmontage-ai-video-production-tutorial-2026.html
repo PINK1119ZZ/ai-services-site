@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenMontage 完整教學 2026：52K★ AI 視頻生產系統，12 個流程 100+ 工具，繁中首發</title>
+    <meta name="description" content="OpenMontage 是 GitHub 52K★ 的開源 AI 視頻生產系統，12 個 production pipeline、100+ tools，60 秒視頻 10-20 分鐘完成，支援 WAN 2.1 / Hunyuan / CogVideo，在 Claude Code 內運行。完整教學與硬體需求分析，繁中首發。">
+    <meta name="keywords" content="openmontage 教學, ai 視頻生產 代理, openmontage claude code, ai 視頻自動化 2026, openmontage 安裝, openmontage 繁中, ai video production agent, wan 2.1 教學">
+    <meta property="og:title" content="OpenMontage 完整教學 2026：52K★ AI 視頻生產系統，繁中首發">
+    <meta property="og:description" content="calesthio/OpenMontage 52K★，12 production pipelines，100+ tools，WAN 2.1 / Hunyuan / CogVideo 支援。在 Claude Code 內跑 AI 視頻自動化，繁中完整教學。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/openmontage-ai-video-production-tutorial-2026.html">
+    <link rel="canonical" href="https://autodev-ai.com/blog/openmontage-ai-video-production-tutorial-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="datePublished" content="2026-10-05">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "OpenMontage 完整教學 2026：52K★ AI 視頻生產系統，繁中首發",
+      "datePublished": "2026-10-05",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "calesthio/OpenMontage 52K★，全球最大開源 AI 視頻生產系統，12 pipelines，100+ tools，完整教學。"
+    }
+    </script>
+
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+</head>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article">
+<div class="container">
+    <div class="breadcrumb">
+        <a href="/">AutoDev AI</a> &rsaquo;
+        <a href="/blog/">部落格</a> &rsaquo;
+        OpenMontage AI 視頻生產教學
+    </div>
+    <div class="nav-bar">
+        <a href="/blog/">← 所有文章</a>
+        <a href="/blog/hindsight-agent-memory-review-2026.html">Hindsight 記憶系統</a>
+        <a href="/blog/caveman-ai-agent-token-optimization-2026.html">Caveman Token 優化</a>
+        <a href="/tools/ai-model-comparison.html">AI 模型比較工具</a>
+    </div>
+
+    <div class="meta">
+        <span class="tag hot">OpenMontage</span>
+        <span class="tag">AI 視頻生產</span>
+        <span class="tag">Claude Code</span>
+        <span class="tag">52K★</span>
+        <br><br>
+        發布：2026-10-05 ｜ 作者：AutoDev AI Team
+    </div>
+
+    <h1>OpenMontage 完整教學 2026：GitHub 52K★ AI 視頻生產系統，12 個自動化流程、100+ 工具，在 Claude Code 裡跑出 60 秒影片，繁中首發</h1>
+
+    <div class="highlight-box">
+        <strong>核心發現：</strong>OpenMontage（calesthio/OpenMontage，GitHub 52K★）是目前最完整的開源 AI 視頻生產系統，整合 12 個 production pipeline、100+ 工具、700+ agent skill files，支援 WAN 2.1、Hunyuan Video、CogVideo 等主流視頻模型。在 Claude Code 環境中運行，60 秒視頻約 10-20 分鐘生成。AGPL 授權，產出內容用戶擁有完整版權。台灣繁中深度評測幾乎空白，本文提供完整架構解析與環境設定教學。
+    </div>
+
+    <h2>為什麼 AI 視頻生產還沒有普及？</h2>
+
+    <p>如果你用過 Sora、Runway Gen-3 或 Kling，你大概有同樣的挫折：<strong>生成一段好看的視頻，需要的不只是一個模型，而是一條完整的工作流。</strong></p>
+
+    <p>典型的 AI 視頻生產流程長這樣：</p>
+    <ol>
+        <li>用 LLM 生成腳本和分鏡</li>
+        <li>用圖像模型生成分鏡圖</li>
+        <li>用視頻模型把分鏡圖轉成視頻片段</li>
+        <li>用音樂生成或 TTS 加上配音配樂</li>
+        <li>用剪輯工具拼接所有片段</li>
+        <li>加字幕、特效、色彩調整</li>
+    </ol>
+
+    <p>手動做一次這個流程需要 2-4 小時，而且每個環節都是不同工具、不同格式、不同 API。<strong>OpenMontage 把這 6 個步驟打包成一個可以在 Claude Code 裡執行的自動化 Agent 系統。</strong></p>
+
+    <h2>OpenMontage 是什麼？</h2>
+
+    <p><strong>OpenMontage</strong> 是由 calesthio 主導開發的開源 AI 視頻生產框架。它的定位不是另一個「AI 影片生成工具」，而是一個<strong>完整的 AI 視頻生產 OS（Operating System）</strong>——把所有視頻生產環節的 AI 工具整合進一個統一的 Agent 系統，讓非技術用戶也能透過自然語言指令生產高品質視頻。</p>
+
+    <p>截至 2026 年 10 月，GitHub 上 calesthio/OpenMontage 有 <strong>52,000+ stars</strong>，在 2026 Week 26 獲選「全語言 #1 Repo of the Week」，是今年開源社群關注度最高的 AI 創作工具。</p>
+
+    <h3>OpenMontage 的授權說明</h3>
+
+    <p>OpenMontage 使用 <strong>AGPL 授權</strong>。對於個人和非商業用途，完全免費。重要的是：<strong>用 OpenMontage 生成的視頻內容，版權歸用戶所有</strong>——AGPL 的限制在於系統本身的修改必須回饋社群，不影響產出內容的所有權。</p>
+
+    <h2 id="architecture">架構解析：12 個 Pipeline，100+ 工具</h2>
+
+    <h3>Pipeline 系統</h3>
+
+    <p>OpenMontage 的核心是 12 個預建的 production pipeline，每個都是針對特定視頻類型優化的完整工作流：</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+        <thead>
+            <tr style="background:#f0f0f0;">
+                <th style="padding:8px;border:1px solid #ddd;text-align:left;">Pipeline</th>
+                <th style="padding:8px;border:1px solid #ddd;text-align:left;">用途</th>
+                <th style="padding:8px;border:1px solid #ddd;text-align:right;">預估生成時間</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>short-reel</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">15-60 秒短影音（IG / TikTok）</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">10-20 分鐘</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>explainer</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">產品或概念說明視頻（2-5 分鐘）</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">30-60 分鐘</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>documentary</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">紀錄片風格長視頻（10-30 分鐘）</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">2-4 小時</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>ad-spot</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">廣告片段（15-30 秒）</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">8-15 分鐘</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>news-brief</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">新聞摘要視頻（輸入文章 → 視頻）</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">15-25 分鐘</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>podcast-clips</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">Podcast 切片 + 字幕視頻</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">5-10 分鐘/片</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>slide-narrator</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">簡報轉旁白視頻</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">20-40 分鐘</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>avatar-talking</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">虛擬人物說話視頻</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">10-20 分鐘</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>music-video</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">音樂視頻（輸入歌詞 → MV）</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">30-60 分鐘</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>product-showcase</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">產品展示視頻（輸入圖片 + 說明）</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">15-25 分鐘</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>educational</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">教育課程視頻</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">45-90 分鐘</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;"><code>custom</code></td>
+                <td style="padding:8px;border:1px solid #ddd;">自定義 pipeline（YAML 設定）</td>
+                <td style="padding:8px;border:1px solid #ddd;text-align:right;">視設定而定</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>工具層（100+ Tools）</h3>
+
+    <p>每個 pipeline 背後是 OpenMontage 內建的 100+ 工具，按功能分類：</p>
+
+    <ul>
+        <li><strong>視頻生成模型</strong>：WAN 2.1、Hunyuan Video、CogVideoX、AnimateDiff、Pika Labs API</li>
+        <li><strong>圖像生成</strong>：SDXL、Flux、DALL-E 3、Ideogram</li>
+        <li><strong>語音合成（TTS）</strong>：Piper TTS（本地）、ElevenLabs API、OpenAI TTS</li>
+        <li><strong>音樂生成</strong>：AudioCraft、Suno API</li>
+        <li><strong>剪輯工具</strong>：FFmpeg 封裝、MoviePy、自動字幕生成</li>
+        <li><strong>腳本生成</strong>：GPT-6.1 Sol、Claude Opus 4（via Claude Code）</li>
+        <li><strong>資產管理</strong>：本地緩存、雲端儲存整合（S3 / GCS）</li>
+    </ul>
+
+    <h3>Agent Skill Files（700+）</h3>
+
+    <p>OpenMontage 最獨特的設計是 700+ 個 Agent Skill Files。這些是預先訓練好的指令集，告訴 Agent 如何在特定情況下使用特定工具組合。例如：</p>
+
+    <ul>
+        <li><code>cinematic-transition.skill</code>：如何在兩個場景之間加入電影級的轉場效果</li>
+        <li><code>talking-head-lip-sync.skill</code>：如何把語音和虛擬人物嘴型對齊</li>
+        <li><code>b-roll-selector.skill</code>：如何根據腳本語意自動選擇合適的 B 卷素材</li>
+    </ul>
+
+    <p>這些 Skill Files 可以疊加使用，也可以自定義。700+ 個 skills 相當於 700 個「業界最佳實踐」的視頻製作技巧，被系統化地教給 Agent。</p>
+
+    <!-- CTA 1: DigitalOcean GPU -->
+    <div style="background:linear-gradient(135deg,#0069ff 0%,#004db3 100%);border-radius:12px;padding:24px;margin:32px 0;color:#fff;">
+        <div style="font-size:0.85rem;letter-spacing:0.05em;opacity:0.85;margin-bottom:8px;">跑 OpenMontage 需要 GPU 算力</div>
+        <div style="font-size:1.25rem;font-weight:700;margin-bottom:8px;">DigitalOcean GPU Droplet：新帳號送 $200 免費點數</div>
+        <div style="opacity:0.9;margin-bottom:16px;">OpenMontage 視頻生成需要 GPU（NVIDIA A100 or H100）。DigitalOcean GPU Droplet 按需計費，$200 免費點數可以先測試效果再決定規模。</div>
+        <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;background:#fff;color:#0069ff;font-weight:700;padding:10px 22px;border-radius:8px;text-decoration:none;" data-analytics="affiliate_do_openmontage">領取 $200 免費點數 →</a>
+    </div>
+
+    <h2 id="requirements">硬體需求分析</h2>
+
+    <p>OpenMontage 是計算密集型的系統，不同 pipeline 的硬體需求差異很大：</p>
+
+    <table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+        <thead>
+            <tr style="background:#f0f0f0;">
+                <th style="padding:8px;border:1px solid #ddd;text-align:left;">使用場景</th>
+                <th style="padding:8px;border:1px solid #ddd;text-align:left;">最低配置</th>
+                <th style="padding:8px;border:1px solid #ddd;text-align:left;">建議配置</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;">文字 + TTS（無視頻生成）</td>
+                <td style="padding:8px;border:1px solid #ddd;">CPU only，4GB RAM</td>
+                <td style="padding:8px;border:1px solid #ddd;">8 core CPU，16GB RAM</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;">短視頻（&lt;60 秒）</td>
+                <td style="padding:8px;border:1px solid #ddd;">NVIDIA RTX 3090（24GB VRAM）</td>
+                <td style="padding:8px;border:1px solid #ddd;">A100 40GB 或 H100</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;">長視頻（1-10 分鐘）</td>
+                <td style="padding:8px;border:1px solid #ddd;">A100 40GB</td>
+                <td style="padding:8px;border:1px solid #ddd;">H100 80GB 或雙卡設定</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;border:1px solid #ddd;">WAN 2.1（全品質）</td>
+                <td style="padding:8px;border:1px solid #ddd;">80GB VRAM（A100/H100）</td>
+                <td style="padding:8px;border:1px solid #ddd;">H100 x2 NVLink</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>重要說明：</strong>如果你只是想測試 OpenMontage 的腳本生成和 pipeline 邏輯（不跑本地視頻模型），可以用 API 模式——系統會把視頻生成步驟外包給 Runway、Kling 或 Pika 的 API，本機只需要 CPU 環境。本文後半段會說明這個模式。</p>
+
+    <h2 id="install">安裝教學</h2>
+
+    <h3>前置需求</h3>
+    <ul>
+        <li>Claude Code（已安裝，用 Claude Max 訂閱）</li>
+        <li>Python 3.11+</li>
+        <li>Git</li>
+        <li>ffmpeg（<code>brew install ffmpeg</code> 或 <code>apt install ffmpeg</code>）</li>
+        <li>CUDA 12.2+（如果要跑本地視頻模型）</li>
+    </ul>
+
+    <h3>步驟一：Clone OpenMontage</h3>
+
+    <pre style="background:#1e1e2e;color:#cdd6f4;padding:20px;border-radius:8px;overflow-x:auto;font-size:0.9rem;"><code>git clone https://github.com/calesthio/OpenMontage.git
+cd OpenMontage
+pip install -e ".[all]"</code></pre>
+
+    <p><code>[all]</code> 會安裝所有可選依賴，包含本地視頻模型支援。如果只要 API 模式，用 <code>pip install -e ".[api]"</code>。</p>
+
+    <h3>步驟二：設定環境變數</h3>
+
+    <pre style="background:#1e1e2e;color:#cdd6f4;padding:20px;border-radius:8px;overflow-x:auto;font-size:0.9rem;"><code># .env 檔案（在 OpenMontage 根目錄建立）
+ANTHROPIC_API_KEY=your_claude_api_key
+OPENAI_API_KEY=your_openai_key        # 可選，用於 DALL-E
+ELEVENLABS_API_KEY=your_el_key        # 可選，用於高品質語音
+RUNWAY_API_KEY=your_runway_key        # 可選，API 模式視頻生成
+
+# 如果要用 DigitalOcean Spaces 儲存輸出
+DO_SPACES_KEY=your_spaces_key
+DO_SPACES_SECRET=your_spaces_secret
+DO_SPACES_BUCKET=your_bucket_name</code></pre>
+
+    <h3>步驟三：在 Claude Code 安裝 MCP Server</h3>
+
+    <pre style="background:#1e1e2e;color:#cdd6f4;padding:20px;border-radius:8px;overflow-x:auto;font-size:0.9rem;"><code># 在 OpenMontage 目錄下執行
+python -m openmontage.mcp install
+
+# 這會自動把 OpenMontage 的 MCP server 加到 Claude Code 設定
+# 等同於手動在 ~/.config/claude/mcp.json 加入：
+# {
+#   "servers": {
+#     "openmontage": {
+#       "command": "python",
+#       "args": ["-m", "openmontage.mcp.server"],
+#       "cwd": "/path/to/OpenMontage"
+#     }
+#   }
+# }</code></pre>
+
+    <h3>步驟四：驗證安裝</h3>
+
+    <pre style="background:#1e1e2e;color:#cdd6f4;padding:20px;border-radius:8px;overflow-x:auto;font-size:0.9rem;"><code>python -m openmontage check
+
+# 正常輸出：
+# ✅ Claude Code MCP: connected
+# ✅ FFmpeg: v6.1.1
+# ✅ Python 3.11.9
+# ✅ CUDA: 12.2 (if GPU available)
+# ⚠️  WAN 2.1: not loaded (set LOAD_WAN=true to enable)
+# ⚠️  Hunyuan: not loaded (set LOAD_HUNYUAN=true to enable)</code></pre>
+
+    <h2 id="first-video">第一個視頻：用 Claude Code 生成</h2>
+
+    <p>安裝完成後，打開 Claude Code，試試這個指令：</p>
+
+    <pre style="background:#1e1e2e;color:#cdd6f4;padding:20px;border-radius:8px;overflow-x:auto;font-size:0.9rem;"><code>用 OpenMontage 的 short-reel pipeline，
+製作一個 30 秒的「AI 工具選擇指南」短影音，
+配上中文旁白，使用 Piper TTS，
+輸出 1080x1920 垂直格式（IG Reel）</code></pre>
+
+    <p>Claude Code 會：
+    <br>1. 自動選擇 <code>short-reel</code> pipeline
+    <br>2. 用 GPT-6.1 Sol / Claude Opus 4 生成腳本和分鏡
+    <br>3. 用 Flux 生成各分鏡的背景圖
+    <br>4. 用 WAN 2.1（本地）或 Runway（API）生成視頻
+    <br>5. 用 Piper TTS 合成中文旁白
+    <br>6. 用 FFmpeg 拼接所有片段，加字幕
+    <br>7. 輸出 <code>output/short-reel-[timestamp].mp4</code></p>
+
+    <h2 id="api-mode">API 模式（沒有 GPU 的情況）</h2>
+
+    <p>如果你沒有高端 GPU，可以用 API 模式讓視頻生成步驟走外部 API：</p>
+
+    <pre style="background:#1e1e2e;color:#cdd6f4;padding:20px;border-radius:8px;overflow-x:auto;font-size:0.9rem;"><code># 設定 API 模式，視頻生成外包給 Runway Gen-4
+export OPENMONTAGE_VIDEO_BACKEND=runway
+
+# 或使用 Kling（通常比 Runway 便宜）
+export OPENMONTAGE_VIDEO_BACKEND=kling
+
+# 圖像生成用 DALL-E 3（不需要本地 GPU）
+export OPENMONTAGE_IMAGE_BACKEND=dalle3</code></pre>
+
+    <p>API 模式的優缺點：</p>
+
+    <ul>
+        <li>✅ 不需要 GPU，MacBook Air 也能用</li>
+        <li>✅ 啟動速度快（不需要載入模型）</li>
+        <li>❌ 視頻生成費用（Runway Gen-4 約 $0.05/秒，一支 60 秒視頻約 $3-5）</li>
+        <li>❌ 依賴外部 API 穩定性和速度</li>
+    </ul>
+
+    <h2 id="wan21">WAN 2.1 深度整合</h2>
+
+    <p>WAN（Wide Area Network）2.1 是 OpenMontage 整合的最高品質視頻模型，由 Wan AI 開源。它的特點：</p>
+
+    <ul>
+        <li><strong>時序一致性極強</strong>：物件在不同幀之間的動作流暢，沒有傳統 AI 視頻的「閃爍」問題</li>
+        <li><strong>物理理解能力</strong>：重力、光影、流體動作表現接近真實</li>
+        <li><strong>長視頻支援</strong>：可生成最長 120 秒的單段視頻（需要 80GB VRAM）</li>
+        <li><strong>Multi-modal 輸入</strong>：支援文字轉視頻（T2V）、圖片轉視頻（I2V）、視頻轉視頻（V2V）</li>
+    </ul>
+
+    <p>在 OpenMontage 中啟用 WAN 2.1：</p>
+
+    <pre style="background:#1e1e2e;color:#cdd6f4;padding:20px;border-radius:8px;overflow-x:auto;font-size:0.9rem;"><code># 下載模型（約 80GB，需要穩定網路）
+python -m openmontage.models download wan2.1
+
+# 啟用時設定
+export LOAD_WAN=true
+export WAN_PRECISION=bf16  # 或 fp16 節省顯存
+python -m openmontage.server</code></pre>
+
+    <!-- CTA 2: DataCamp -->
+    <div style="background:linear-gradient(135deg,#03a9f4 0%,#0277bd 100%);border-radius:12px;padding:24px;margin:32px 0;color:#fff;">
+        <div style="font-size:0.85rem;letter-spacing:0.05em;opacity:0.85;margin-bottom:8px;">學習 AI 視頻生產技術</div>
+        <div style="font-size:1.25rem;font-weight:700;margin-bottom:8px;">DataCamp：掌握 AI 視頻模型與 Agent 開發</div>
+        <div style="opacity:0.9;margin-bottom:16px;">從擴散模型原理到 Agent 工作流設計，DataCamp 提供完整的 AI 工程學習路徑，適合想深入了解 OpenMontage 底層技術的開發者。</div>
+        <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" style="display:inline-block;background:#fff;color:#0277bd;font-weight:700;padding:10px 22px;border-radius:8px;text-decoration:none;" data-analytics="affiliate_datacamp_openmontage">開始學習 →</a>
+    </div>
+
+    <h2 id="use-cases">OpenMontage 的實際應用場景</h2>
+
+    <h3>1. 內容創作者：每日短影音自動化</h3>
+
+    <p>最適合 OpenMontage 的使用者是：每天需要發布 IG Reel、YouTube Shorts 或 TikTok，但自己剪片費時費力的內容創作者。</p>
+
+    <p>一個典型的自動化流程：</p>
+    <ol>
+        <li>每天早上從 RSS / 爬蟲抓取 3 個 AI 新聞</li>
+        <li>讓 OpenMontage 的 <code>news-brief</code> pipeline 自動生成 3 支 60 秒短影音</li>
+        <li>自動上傳到 YouTube Shorts 和 IG Reel（透過 API）</li>
+    </ol>
+
+    <p>全流程自動化的情況下，人工只需要設定一次 + 偶爾審核輸出品質。</p>
+
+    <h3>2. 行銷團隊：產品宣傳視頻</h3>
+
+    <p><code>product-showcase</code> pipeline 特別適合電商或 SaaS 產品。輸入：產品圖片 + 功能說明文字，輸出：30 秒產品展示視頻，有旁白、有字幕、有背景音樂。不需要請視頻製作公司，預算省 80%+。</p>
+
+    <h3>3. 教育機構：課程影片量產</h3>
+
+    <p><code>educational</code> pipeline 可以把已有的課程 PDF 或 Notion 文檔自動轉換成有旁白的教學視頻，適合線上課程平台或企業內訓。</p>
+
+    <h3>4. 新聞媒體：自動化圖文轉視頻</h3>
+
+    <p><code>news-brief</code> pipeline 讓新聞機構可以把每篇文字新聞自動轉成 60-90 秒的視頻摘要，擴大視頻內容覆蓋率，不需要增加視頻製作人員。</p>
+
+    <h2 id="customization">自定義 Pipeline（進階）</h2>
+
+    <p>OpenMontage 的 <code>custom</code> pipeline 允許你用 YAML 定義自己的視頻生產流程：</p>
+
+    <pre style="background:#1e1e2e;color:#cdd6f4;padding:20px;border-radius:8px;overflow-x:auto;font-size:0.9rem;"><code># my-pipeline.yaml
+name: "tw-tech-reel"
+description: "台灣科技新聞 IG Reel"
+output:
+  resolution: "1080x1920"
+  fps: 30
+  duration: 45
+
+steps:
+  - id: script
+    tool: llm
+    model: claude-opus-4
+    prompt: |
+      根據以下新聞，寫一個 45 秒的 IG Reel 腳本，
+      繁體中文，口語化，每句不超過 15 字：
+      {{input.news_text}}
+
+  - id: voiceover
+    tool: piper_tts
+    text: "{{steps.script.output}}"
+    voice: "zh-TW-female-1"
+
+  - id: visuals
+    tool: flux
+    prompts: "{{steps.script.scene_prompts}}"
+    style: "modern tech, clean design"
+
+  - id: video_segments
+    tool: wan2.1
+    images: "{{steps.visuals.output}}"
+    motion_preset: "subtle"
+
+  - id: assemble
+    tool: ffmpeg
+    segments: "{{steps.video_segments.output}}"
+    audio: "{{steps.voiceover.output}}"
+    subtitles: auto</code></pre>
+
+    <h2 id="limitations">限制與注意事項</h2>
+
+    <ul>
+        <li><strong>算力需求高</strong>：本地跑 WAN 2.1 需要 80GB VRAM，個人消費級硬體難以負擔。API 模式可以繞過，但有費用</li>
+        <li><strong>AGPL 授權限制</strong>：如果你修改了 OpenMontage 的程式碼並用於商業服務，需要開放修改後的程式碼。產出視頻內容不受此限制</li>
+        <li><strong>生成時間</strong>：即使是最快的 <code>short-reel</code> pipeline，也需要 10-20 分鐘。不適合需要即時預覽的場景</li>
+        <li><strong>品質一致性</strong>：自動化生成的視頻品質比人工剪輯有差距，適合量產，不適合需要精緻品質的旗艦宣傳片</li>
+    </ul>
+
+    <h2 id="verdict">總結：OpenMontage 適合你嗎？</h2>
+
+    <p>OpenMontage 是目前開源 AI 視頻生產領域最完整的解決方案。52K★ 的 GitHub 人氣不是偶然——它確實解決了「AI 視頻生產需要一條工具鏈而非一個工具」這個核心問題。</p>
+
+    <p>適合使用的情況：</p>
+    <ul>
+        <li>✅ 需要規模化視頻生產（每週 10+ 支）</li>
+        <li>✅ 已有 Claude Code 工作流，想加入視頻生成能力</li>
+        <li>✅ 有 GPU 資源（本機或雲端）或能接受 API 費用</li>
+        <li>✅ 視頻以「夠用」為目標，不需要頂級製作品質</li>
+    </ul>
+
+    <p>不適合的情況：</p>
+    <ul>
+        <li>❌ 只需要偶爾生成 1-2 支視頻（直接用 Runway / Sora 更快）</li>
+        <li>❌ 需要精緻的品牌旗艦視頻</li>
+        <li>❌ 完全沒有任何 GPU 且不願意付 API 費用</li>
+    </ul>
+
+    <!-- CTA 3: Cloudways -->
+    <div style="background:linear-gradient(135deg,#ff6b35 0%,#d44000 100%);border-radius:12px;padding:24px;margin:32px 0;color:#fff;">
+        <div style="font-size:0.85rem;letter-spacing:0.05em;opacity:0.85;margin-bottom:8px;">部署 AI 視頻生產服務</div>
+        <div style="font-size:1.25rem;font-weight:700;margin-bottom:8px;">Cloudways：高效能雲端伺服器，AI 應用首選</div>
+        <div style="opacity:0.9;margin-bottom:16px;">把 OpenMontage 部署到 Cloudways 管理的雲端伺服器，享受企業級效能與簡單的控制面板。適合需要穩定跑 OpenMontage API 服務的團隊。</div>
+        <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" target="_blank" rel="noopener sponsored" style="display:inline-block;background:#fff;color:#d44000;font-weight:700;padding:10px 22px;border-radius:8px;text-decoration:none;" data-analytics="affiliate_cloudways_openmontage">查看 Cloudways 方案 →</a>
+    </div>
+
+    <h2>相關閱讀</h2>
+
+    <ul>
+        <li><a href="/blog/hindsight-agent-memory-review-2026.html">Hindsight：Agent Memory SOTA 工具，讓 Claude Code 記住你</a></li>
+        <li><a href="/blog/caveman-ai-agent-token-optimization-2026.html">Caveman 完整教學：AI Agent 減少 65% Token 費用</a></li>
+        <li><a href="/blog/dwarfstar-4-ds4-local-llm-antirez-2026.html">DwarfStar 4：Redis 創辦人的本地 LLM 推論引擎</a></li>
+        <li><a href="/tools/ai-model-comparison.html">AI 模型比較工具：找出最適合你的 AI API</a></li>
+    </ul>
+
+    <div class="post-footer">
+        <p><em>發布：2026-10-05 ｜ AutoDev AI Team ｜ <a href="/blog/">更多 AI 教學</a></em></p>
+    </div>
+</div>
+</main>
+<footer class="v2c-footer"><div class="v2c-inner"><p>© AutoDev AI · <a href="/privacy.html">隱私</a> · <a href="/terms.html">條款</a></p></div></footer>
+<script defer src="/chat-widget.js?v=20260502e"></script>
+<script defer src="/lang.js?v=20260505"></script>
+<script defer src="/assets/autodev-v2.js"></script>
+</body>
+</html>
