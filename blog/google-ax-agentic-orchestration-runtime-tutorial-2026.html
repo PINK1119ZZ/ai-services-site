@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google AX 完整教學 2026：開源 AI Agent 編排框架，Kubernetes for AI Agents，13K★，繁中首發</title>
+    <meta name="description" content="Google AX 完整教學：google/ax 開源 agentic orchestration runtime，Kubernetes 風格 YAML 宣告式，Apache 2.0，每叢集支援數十億並發 Agent 任務。HN #2 trending，繁中首發完整解析。">
+    <meta name="keywords" content="google ax 教學, kubernetes for ai agents, google ax agentic runtime, google ax 繁中, agentic orchestration 2026, google ax github, agent executor google, google ax yaml">
+    <meta property="og:title" content="Google AX 完整教學 2026：Kubernetes for AI Agents，13K★，繁中首發">
+    <meta property="og:description" content="google/ax 開源 agentic orchestration runtime 完整解析：YAML 宣告式、Task/Workspace/Gateway/Model 四大原語、Apache 2.0，繁中首發。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/google-ax-agentic-orchestration-runtime-tutorial-2026.html">
+    <link rel="canonical" href="https://autodev-ai.com/blog/google-ax-agentic-orchestration-runtime-tutorial-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="datePublished" content="2026-10-06">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Google AX 完整教學 2026：開源 AI Agent 編排框架，Kubernetes for AI Agents，繁中首發",
+      "datePublished": "2026-10-06",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "google/ax 開源 agentic orchestration runtime 完整技術解析，Kubernetes 風格 YAML 宣告式，Apache 2.0，繁中首發教學。"
+    }
+    </script>
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+</head>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article">
+<div class="container">
+    <div class="breadcrumb">
+        <a href="/">AutoDev AI</a> &rsaquo;
+        <a href="/blog/">部落格</a> &rsaquo;
+        Google AX Agentic Runtime 完整教學
+    </div>
+    <div class="nav-bar">
+        <a href="/blog/">← 所有文章</a>
+        <a href="/blog/reflection-beam-501b-open-weight-model-review-2026.html">Reflection Beam 評測</a>
+        <a href="/blog/cloudflare-web-search-api-ai-agent-review-2026.html">Cloudflare Web Search API</a>
+        <a href="/tools/ai-model-comparison.html">AI 模型比較工具</a>
+    </div>
+
+    <div class="meta">
+        <span class="tag hot">🚨 HN #2 Trending</span>
+        <span class="tag">Google AX</span>
+        <span class="tag">13K★</span>
+        <span class="tag">Agentic Runtime</span>
+        <span class="tag">繁中首發</span>
+        <br><br>
+        發布：2026-10-06 ｜ 作者：AutoDev AI Team
+    </div>
+
+    <h1>Google AX 完整教學 2026：開源 AI Agent 編排框架，Kubernetes for AI Agents，GitHub 13K★，繁中首發</h1>
+
+    <div class="highlight-box">
+        <strong>核心發現：</strong>Google 官方 org 發布 <code>google/ax</code>——一個 Kubernetes 風格的開源 AI Agent 編排框架，Apache 2.0 授權。用 YAML 宣告式定義 Agent 任務，底層是 Google DeepMind 研發的 Agent Substrate 運行時，聲稱可達每叢集數十億並發 Agent 任務。GitHub 13,100+ stars，HN #2 trending（Sep 21, 179 points），繁中零評測，本文首發完整技術解析。
+    </div>
+
+    <h2>一個讓 HN 社群討論最久的問題：「這真的是 Google 官方的嗎？」</h2>
+
+    <p>當 google/ax 在 2026 年 9 月 21 日登上 Hacker News #2 時，討論串裡有一個問題被反覆問：<em>「這是 Google 官方支持的專案，還是又一個 Google Lab 的附屬側專案？」</em></p>
+
+    <p>答案讓很多人訝異：<strong>是的，這是官方的。</strong></p>
+
+    <p>幾個具體證據：repo 在 <code>github.com/google</code>（不是 <code>googlecloudplatform</code> 或 <code>google-research</code>）、沒有附上 Google 慣用的「not officially supported」免責聲明、Apache 2.0 授權（Google 官方開源的標準選擇）、repo 描述直接寫「Google's open agentic orchestration runtime」。</p>
+
+    <p>這個細節很重要，因為它影響你對這個工具長期維護性的判斷。</p>
+
+    <h2>AX 是什麼？用一句話說清楚</h2>
+
+    <p><strong>AX 是一個讓你用 YAML 宣告式定義和運行 AI Agent 任務的框架，底層跑在 Kubernetes 上。</strong></p>
+
+    <p>如果你熟悉 Kubernetes，可以這樣理解：</p>
+    <ul>
+        <li>Kubernetes 讓你用 YAML 定義「我要跑哪些 container、怎麼擴縮、怎麼網路互通」</li>
+        <li>AX 讓你用 YAML 定義「我要跑哪些 AI Agent、任務流程怎麼串接、用哪個 LLM、在什麼 Workspace 裡執行」</li>
+    </ul>
+
+    <p>核心問題從「如何管理容器」變成「如何管理 Agent 任務」，但基礎設施抽象層的思路是一樣的。</p>
+
+    <h2>AX 的技術架構：四個核心原語</h2>
+
+    <p>AX 建立在四個基本概念（primitives）之上：</p>
+
+    <h3>1. Task（任務）</h3>
+    <p><strong>Task 是 AX 裡最基礎的執行單元。</strong>它代表一個 Agent 需要完成的具體工作，例如「閱讀這份 repo 的 README 然後寫一份技術分析報告」或「執行這段程式碼並驗證輸出結果」。</p>
+    <p>每個 Task 有自己的狀態機：<code>Suspended → Pending → Running → Succeeded/Failed</code>。預設新建的 Task 是 Suspended 狀態，需要顯式 resume 才會開始執行（防止意外觸發）。</p>
+
+    <h3>2. Workspace（工作空間）</h3>
+    <p><strong>Workspace 是 Task 執行時的環境容器。</strong>它定義了 Agent 能存取哪些資料、哪些工具、哪些檔案系統。可以把它想成一個「有邊界的沙盒」——Agent 在 Workspace 裡工作，不會意外觸碰到 Workspace 外的資源。</p>
+    <p>AX 的 Workspace 支援 inlined files（直接在 YAML 裡嵌入檔案內容）和外部掛載，這讓版本控制和審計變得容易。</p>
+
+    <h3>3. Gateway（閘道）</h3>
+    <p><strong>Gateway 是 AX 的控制面入口。</strong>你透過 Gateway 部署 Task、查詢狀態、接收 callback。AX CLI 的所有操作（<code>ax apply</code>、<code>ax get tasks</code>）都是和 Gateway 通訊。</p>
+    <p>Gateway 也負責授權管理——你可以配置誰可以部署哪些類型的 Task，對多人協作或企業 CI/CD 整合很重要。</p>
+
+    <h3>4. Model（模型）</h3>
+    <p><strong>Model 定義 Task 使用哪個 LLM 後端。</strong>AX 目前主要支援 Google 的 Gemini 系列，但架構上設計為可插拔，社群有嘗試接入其他 provider 的 PR。</p>
+
+    <h2>AX 的技術特點：Agent Substrate 運行時</h2>
+
+    <p>AX 的底層是 Google 稱為 <strong>Agent Substrate</strong> 的計算運行時，源自 Google DeepMind 的 agentic 研究基礎設施。這個設計有幾個值得注意的特點：</p>
+
+    <h3>密集多工（Dense Multiplexing）</h3>
+    <p>傳統的任務調度通常是「一個任務一個容器」，每個任務預留固定的 CPU/記憶體資源。AX 的 Agent Substrate 使用<strong>密集多工</strong>：多個 Agent Task 共享 worker 資源，透過輕量級 actor 模型管理，而不是每個 Task 獨占一個 VM 或 container。</p>
+    <p>這讓 AX 聲稱可以在單個叢集上運行「數十億並發 Agent 任務」——雖然這個數字需要在實際負載下驗證，但架構設計的確支援超高密度。</p>
+
+    <h3>Sub-second Suspend/Resume</h3>
+    <p>Agent 任務通常有長時間的「等待」：等待 LLM API 回應、等待工具執行、等待人工確認。傳統框架在等待期間佔用資源。AX 設計了毫秒級的 suspend/resume 機制——Agent 在等待時可以被暫停並讓出資源，收到回應後立即恢復，整個過程對 Agent 邏輯透明。</p>
+
+    <h3>Kubernetes Native</h3>
+    <p>AX 不是「執行在 Kubernetes 上的服務」，而是「AX 的控制面 IS Kubernetes」。Task、Workspace、Gateway 都作為 Kubernetes Custom Resources（CRD）存在，可以用 <code>kubectl</code> 查詢和管理。</p>
+
+    <h2>快速上手：部署你的第一個 AX Task</h2>
+
+    <h3>前置需求</h3>
+    <ul>
+        <li>一個 Kubernetes 叢集（本地 minikube / kind，或 GKE）</li>
+        <li>kubectl 已配置</li>
+        <li>Gemini API 金鑰（Model 設定需要）</li>
+        <li>Go 1.23+（如果要從 source 編譯 AX CLI）</li>
+    </ul>
+
+    <h3>Step 1：部署 AX 控制面</h3>
+    <pre><code># 克隆 repo
+git clone https://github.com/google/ax
+cd ax
+
+# 部署 AX CRDs 和 control plane 到 Kubernetes
+kubectl apply -f deploy/
+
+# 確認 Gateway 已啟動
+kubectl get pods -n ax-system</code></pre>
+
+    <h3>Step 2：配置 Model</h3>
+    <pre><code>apiVersion: ax.agentexecutor.io/v1alpha1
+kind: Model
+metadata:
+  name: gemini-4-argon
+spec:
+  provider: google
+  modelId: gemini-4-argon
+  apiKeySecretRef:
+    name: gemini-api-key
+    key: api-key</code></pre>
+
+    <pre><code>kubectl apply -f model.yaml</code></pre>
+
+    <h3>Step 3：定義 Workspace</h3>
+    <pre><code>apiVersion: ax.agentexecutor.io/v1alpha1
+kind: Workspace
+metadata:
+  name: code-review-ws
+spec:
+  files:
+    inline:
+      - path: "guidelines.md"
+        content: |
+          # Code Review Guidelines
+          - Check for security vulnerabilities
+          - Verify test coverage
+          - Review API documentation</code></pre>
+
+    <h3>Step 4：建立並執行 Task</h3>
+    <pre><code>apiVersion: ax.agentexecutor.io/v1alpha1
+kind: Task
+metadata:
+  name: review-pr-123
+spec:
+  workspaceRef:
+    name: code-review-ws
+  modelRef:
+    name: gemini-4-argon
+  prompt: |
+    Review the following code diff and provide structured feedback
+    based on the guidelines in the workspace.
+    Focus on: security, performance, and maintainability.
+    [diff content here]
+  # 注意：新 Task 預設 Suspended，需要 resume
+  suspend: false</code></pre>
+
+    <pre><code># 部署 Task
+kubectl apply -f task.yaml
+
+# 查詢執行狀態
+kubectl get tasks -n default
+kubectl describe task review-pr-123</code></pre>
+
+    <h3>Step 5：使用 AX CLI</h3>
+    <pre><code># 安裝 AX CLI（Go 1.23+ 需要）
+go install github.com/google/ax/cmd/ax@latest
+
+# 部署（等同 kubectl apply，但有 AX 特定驗證）
+ax apply -f task.yaml
+
+# 查詢 Task 列表
+ax get tasks
+
+# 查看 Task 日誌
+ax logs task/review-pr-123
+
+# Resume 暫停的 Task
+ax resume task/review-pr-123</code></pre>
+
+    <!-- DigitalOcean CTA -->
+    <div class="affiliate-cta" style="background:linear-gradient(135deg,#0061FF,#003ecb);padding:24px;border-radius:12px;margin:32px 0;color:#fff;text-align:center;">
+        <h3 style="margin:0 0 8px;color:#fff;">在 Kubernetes 上部署 Google AX</h3>
+        <p style="margin:0 0 16px;opacity:0.9;">DigitalOcean Managed Kubernetes（DOKS）提供全管理的 K8s 叢集，完全相容 AX 部署需求。新帳號 $200 免費點數，足夠測試完整 AX 環境一個月以上。</p>
+        <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;background:#fff;color:#0061FF;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;">DigitalOcean Kubernetes — 免費 $200 →</a>
+    </div>
+
+    <h2>AX vs 其他 Agent 編排框架：橫向比較</h2>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>框架</th>
+                <th>定位</th>
+                <th>基礎設施</th>
+                <th>授權</th>
+                <th>適合場景</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Google AX</strong></td>
+                <td>生產級 K8s 原生</td>
+                <td>Kubernetes</td>
+                <td>Apache 2.0</td>
+                <td>企業大規模 Agent 部署</td>
+            </tr>
+            <tr>
+                <td>LangGraph</td>
+                <td>Graph-based Agent 流程</td>
+                <td>無特定</td>
+                <td>MIT</td>
+                <td>複雜多步 Agent 流程設計</td>
+            </tr>
+            <tr>
+                <td>CrewAI</td>
+                <td>角色分工多 Agent</td>
+                <td>無特定</td>
+                <td>MIT</td>
+                <td>多 Agent 協作任務</td>
+            </tr>
+            <tr>
+                <td>OpenClaw</td>
+                <td>Personal AI runtime</td>
+                <td>Node-based</td>
+                <td>商業</td>
+                <td>個人/小團隊 AI 助理</td>
+            </tr>
+            <tr>
+                <td>Scion（GCP）</td>
+                <td>K8s + harness 整合</td>
+                <td>GKE</td>
+                <td>Apache 2.0</td>
+                <td>包裝既有 agent harness</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>AX 最明顯的差異點是：它是<strong>基礎設施層</strong>，不是<strong>應用層</strong>。LangGraph 幫你設計「Agent 要怎麼思考」，AX 幫你解決「Agent 任務要怎麼運行、擴縮、監控」。兩者可以結合使用：用 LangGraph 設計 Agent 邏輯，用 AX 作為運行時。</p>
+
+    <h2>AX 的現實限制</h2>
+
+    <p>AX 目前仍是早期階段（最新版本 v0.3.x），有幾個實際使用需要考量的問題：</p>
+
+    <h3>1. 主要支援 Gemini</h3>
+    <p>AX 的 Model primitive 目前官方支援主要是 Google 的 Gemini 系列。如果你的 stack 是 Claude 或 OpenAI，需要等待或自行實作 provider adapter。社群有相關 issue，但尚未有合併的 PR。</p>
+
+    <h3>2. 需要 Kubernetes 專業知識</h3>
+    <p>AX 的「Kubernetes native」特性是雙刃劍。它讓有 K8s 背景的 DevOps 很自然，但對沒有 K8s 經驗的 AI 工程師來說，學習曲線陡峭。這不是一個「pip install 就能跑」的框架。</p>
+
+    <h3>3. 文件仍不完整</h3>
+    <p>目前 agentexecutor.io 的官方文件覆蓋基礎概念，但進階使用（複雜 Workspace 配置、Gateway 安全設置、multi-cluster 部署）的文件還很薄弱。</p>
+
+    <h3>4. 並發規模宣稱需驗證</h3>
+    <p>「每叢集數十億並發 Agent 任務」是 AX 的官方宣稱，但目前尚無獨立的公開 benchmark。實際的規模上限取決於 K8s 叢集配置和 LLM API 的 rate limits。</p>
+
+    <h2>誰應該現在就認真研究 AX？</h2>
+
+    <p><strong>應該馬上深入的：</strong></p>
+    <ul>
+        <li>在企業環境管理 10+ 個 AI Agent 工作流的平台工程師</li>
+        <li>已有 GKE 或 Kubernetes 基礎設施的 ML 平台團隊</li>
+        <li>在研究 agentic AI 基礎設施設計的架構師</li>
+        <li>Google Cloud 客戶——AX 長期很可能深度整合進 GKE/Vertex AI</li>
+    </ul>
+
+    <p><strong>可以繼續觀望的：</strong></p>
+    <ul>
+        <li>個人開發者跑小規模 Agent 工作流</li>
+        <li>不使用 Kubernetes 的團隊（除非你打算遷移）</li>
+        <li>需要 Claude/GPT 作為主要 LLM 的場景（等社群 adapter 成熟）</li>
+    </ul>
+
+    <!-- DataCamp CTA -->
+    <div class="affiliate-cta" style="background:linear-gradient(135deg,#2ecc71,#1a9e57);padding:24px;border-radius:12px;margin:32px 0;color:#fff;text-align:center;">
+        <h3 style="margin:0 0 8px;color:#fff;">學習 AI Agent 架構與 MLOps</h3>
+        <p style="margin:0 0 16px;opacity:0.9;">DataCamp 提供 Kubernetes for ML、Agent 架構設計、分散式 AI 系統等完整學習路徑，幫助你快速建立 AX 所需的技術背景。</p>
+        <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" style="display:inline-block;background:#fff;color:#1a9e57;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;">DataCamp — 學習 AI 系統架構 →</a>
+    </div>
+
+    <h2>AX 與 Google 的更大佈局：Scion 的關係</h2>
+
+    <p>在 HN 討論中，一個評論者提到了另一個 Google Cloud 專案：<strong>Scion</strong>（<code>googlecloudplatform/scion</code>）。它被描述為「更成熟、更整合的選項，包裝既有 agent harness（如 OpenCode 插件）而不需要採用完整 Agent Substrate stack」。</p>
+
+    <p>這兩個專案的關係目前還不完全清楚，但一個可能的框架是：</p>
+    <ul>
+        <li><strong>AX</strong>：底層 Agent 運行時基礎設施，適合從頭建立</li>
+        <li><strong>Scion</strong>：更上層的整合層，適合把既有 Agent harness 遷移到 GCP</li>
+    </ul>
+
+    <p>如果你的目標是在 GCP 上跑大規模 Agent，可能值得同時研究這兩個專案後再做選擇。</p>
+
+    <h2>AX 的發展時間線</h2>
+
+    <ul>
+        <li><strong>2026-05-20</strong>：v0.1.0 首次發布，「early stage」定位，邀請對話</li>
+        <li><strong>2026-07-21</strong>：v0.2.0，加入 Workspace inline files 等核心功能</li>
+        <li><strong>2026-09-20</strong>：v0.3.0，重大重構「Restructure AX into a general-purpose orchestration layer for agentic workloads」</li>
+        <li><strong>2026-09-21</strong>：HN #2 trending，179 points，74 comments</li>
+        <li><strong>2026-09-25</strong>：v0.3.1，bug fixes，GitHub Trending #1 Go Repo</li>
+        <li><strong>2026-10-06（現在）</strong>：13,100+ stars，持續活躍開發</li>
+    </ul>
+
+    <h2>總結：AX 是下一代 AI 基礎設施的重要參考</h2>
+
+    <p>即使你現在不打算部署 AX，它仍然值得你花時間理解，原因有三：</p>
+
+    <p><strong>1. 它定義了「AI Agent 基礎設施」應該長什麼樣子。</strong>Task、Workspace、Gateway、Model 這四個原語不只是 AX 的設計，而是思考「如何管理大規模 Agent 系統」的一個成熟框架。</p>
+
+    <p><strong>2. Google 的技術選擇往往成為業界標準。</strong>Kubernetes 本身就是 Google Borg 的開源版本。AX 是否會成為 Agent 編排的 Kubernetes，值得密切關注。</p>
+
+    <p><strong>3. 如果你在 GCP 生態，AX 整合進 GKE/Vertex 只是時間問題。</strong>現在提前了解，能讓你在它成為標配時有技術優勢。</p>
+
+    <p>從純實用角度：如果你今天需要運行生產級 multi-agent 工作流，LangGraph + 現有雲端服務可能是更快的路徑。但如果你在做中長期的 AI 平台規劃，AX 值得列入你的技術雷達。</p>
+
+    <!-- Systeme.io CTA -->
+    <div class="affiliate-cta" style="background:linear-gradient(135deg,#f39c12,#d68910);padding:24px;border-radius:12px;margin:32px 0;color:#fff;text-align:center;">
+        <h3 style="margin:0 0 8px;color:#fff;">用 Systeme.io 自動化你的 AI Agent 工作流通知</h3>
+        <p style="margin:0 0 16px;opacity:0.9;">Systeme.io 提供 Email 自動化、Funnel 建立、Webhook 整合——可以把 AX Task 的完成通知、錯誤告警串接進你的業務流程。免費方案即可開始，付費方案 $17/月起。</p>
+        <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" target="_blank" rel="noopener sponsored" style="display:inline-block;background:#fff;color:#d68910;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;">Systeme.io — 免費開始自動化 →</a>
+    </div>
+
+    <div class="nav-bar" style="margin-top:40px;">
+        <a href="/blog/reflection-beam-501b-open-weight-model-review-2026.html">延伸閱讀：Reflection Beam 501B →</a>
+        <a href="/blog/cloudflare-web-search-api-ai-agent-review-2026.html">延伸閱讀：Cloudflare Web Search API →</a>
+        <a href="/blog/hindsight-agent-memory-review-2026.html">延伸閱讀：Hindsight Agent Memory →</a>
+    </div>
+</div>
+</main>
+<footer class="v2-footer"><div class="v2-shell"><div class="v2-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs &amp; Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="/blog/">洞察</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><script defer src="/chat-widget.js?v=20260502e"></script><script defer src="/lang.js?v=20260505"></script><script defer src="/assets/autodev-v2.js"></script>
+</body>
+</html>

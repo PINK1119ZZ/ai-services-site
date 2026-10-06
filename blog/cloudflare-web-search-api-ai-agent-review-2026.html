@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudflare Web Search API 完整評測 2026：AI Agent 搜尋統一閘道，Ceramic.ai + Exa + Linkup，繁中首發</title>
+    <meta name="description" content="Cloudflare Web Search API 完整評測：透過 AI Gateway 整合 Ceramic.ai、Exa、Linkup 三大搜尋 provider，統一 billing、Zero Data Retention、Cloudflare Birthday Week 2026 正式發布，繁中首發完整教學。">
+    <meta name="keywords" content="cloudflare web search api 教學, cloudflare ai gateway 搜尋, ceramic ai review, exa api 比較, cloudflare web search api 繁中, ai agent 搜尋 2026, cloudflare birthday week 2026, web search api ai agent">
+    <meta property="og:title" content="Cloudflare Web Search API 完整評測 2026：AI Agent 搜尋統一閘道，繁中首發">
+    <meta property="og:description" content="Cloudflare AI Gateway 整合 Ceramic.ai + Exa + Linkup 搜尋 API，統一 billing + Zero Data Retention，Cloudflare Birthday Week 2026 正式發布，繁中首發。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/cloudflare-web-search-api-ai-agent-review-2026.html">
+    <link rel="canonical" href="https://autodev-ai.com/blog/cloudflare-web-search-api-ai-agent-review-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="datePublished" content="2026-10-06">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Cloudflare Web Search API 完整評測 2026：AI Agent 搜尋統一閘道，繁中首發",
+      "datePublished": "2026-10-06",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "Cloudflare Web Search API 透過 AI Gateway 整合 Ceramic.ai + Exa + Linkup，統一 billing 與 Zero Data Retention，繁中首發完整教學。"
+    }
+    </script>
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+</head>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article">
+<div class="container">
+    <div class="breadcrumb">
+        <a href="/">AutoDev AI</a> &rsaquo;
+        <a href="/blog/">部落格</a> &rsaquo;
+        Cloudflare Web Search API 完整評測
+    </div>
+    <div class="nav-bar">
+        <a href="/blog/">← 所有文章</a>
+        <a href="/blog/reflection-beam-501b-open-weight-model-review-2026.html">Reflection Beam 評測</a>
+        <a href="/blog/google-ax-agentic-orchestration-runtime-tutorial-2026.html">Google AX 教學</a>
+        <a href="/tools/ai-token-cost-calculator.html">AI Token 計算機</a>
+    </div>
+
+    <div class="meta">
+        <span class="tag hot">🚨 HN #3 Trending</span>
+        <span class="tag">Cloudflare</span>
+        <span class="tag">Web Search API</span>
+        <span class="tag">AI Gateway</span>
+        <span class="tag">繁中首發</span>
+        <br><br>
+        發布：2026-10-06 ｜ 作者：AutoDev AI Team
+    </div>
+
+    <h1>Cloudflare Web Search API 完整評測 2026：AI Agent 搜尋統一閘道，整合 Ceramic.ai + Exa + Linkup，Cloudflare Birthday Week 正式發布，繁中首發</h1>
+
+    <div class="highlight-box">
+        <strong>核心發現：</strong>Cloudflare 在 2026 年 10 月 2 日的 Birthday Week 發布 Web Search API，透過既有的 AI Gateway 統一管理三個搜尋 provider（Ceramic.ai、Exa、Linkup）。統一 billing、Zero Data Retention、REST API + Workers binding 多接入方式，讓 AI Agent 獲取即時網路資訊不再需要分別管理多個搜尋 API。HN #3 trending，Product Hunt Oct 5 熱門，繁中零評測，本文首發完整解析與接入教學。
+    </div>
+
+    <h2>AI Agent 的「猜 URL」問題</h2>
+
+    <p>如果你有過讓 AI Agent 搜尋網路資訊的經驗，你大概遇過這個問題：<strong>Agent 不「搜尋」，它「猜測」。</strong></p>
+
+    <p>沒有即時網路存取時，模型只能依賴訓練資料。問它「今天 Hacker News 最熱門的文章是什麼」，它不是去搜尋，而是基於訓練知識編造一個看起來合理的答案。問它「某 GitHub repo 現在有多少 stars」，它給你的可能是 6 個月前的數字。</p>
+
+    <p>更糟的情況：Agent 嘗試自行構造 URL 去 curl，然後碰到 429、403、robots.txt 阻擋，整個工作流程崩潰。</p>
+
+    <p>解法是把即時搜尋能力直接注入 Agent 的工具集。但這帶來新問題：<strong>哪個搜尋 API？用自己的 key 還是代理？怎麼統一 billing？資料隱私怎麼保障？</strong>這就是 Cloudflare Web Search API 試圖解決的問題。</p>
+
+    <h2>Cloudflare Web Search API 是什麼？</h2>
+
+    <p>簡單說：<strong>這是一個透過 Cloudflare AI Gateway 代理多個搜尋 provider 的統一 API 介面。</strong></p>
+
+    <p>你不需要分別申請 Ceramic.ai、Exa、Linkup 的帳號和 API key（雖然也可以帶自己的 key）。Cloudflare 把它們整合進 AI Gateway，讓你用同一個 endpoint、同一套 billing 機制、同一個 dashboard 管理所有搜尋請求。</p>
+
+    <h3>三個搜尋 Provider 的差異</h3>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Provider</th>
+                <th>定位</th>
+                <th>特點</th>
+                <th>適合場景</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Ceramic.ai</strong></td>
+                <td>AI-native 搜尋</td>
+                <td>語意理解強，回傳結構化資料</td>
+                <td>需要深度理解查詢意圖的 Agent</td>
+            </tr>
+            <tr>
+                <td><strong>Exa</strong></td>
+                <td>開發者友好搜尋</td>
+                <td>精確 URL 搜尋、neural search、HTML 全文回傳</td>
+                <td>需要完整頁面內容的 research agent</td>
+            </tr>
+            <tr>
+                <td><strong>Linkup</strong></td>
+                <td>企業搜尋</td>
+                <td>高品質新聞、學術、企業資料覆蓋</td>
+                <td>需要可靠、最新資訊的業務 agent</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>這三個 provider 都承諾了兩件事：</p>
+    <ul>
+        <li><strong>Zero Data Retention</strong>：搜尋請求不被 provider 記錄用於訓練</li>
+        <li><strong>Cloudflare 驗證爬蟲標準</strong>：遵守 robots.txt，不爬受保護內容</li>
+    </ul>
+
+    <h2>技術架構：它如何整合進 AI Gateway</h2>
+
+    <p>理解 Cloudflare Web Search API 的關鍵是先理解 <strong>AI Gateway</strong> 的角色。</p>
+
+    <p>AI Gateway 是 Cloudflare 的 AI 請求代理層，已經整合了 OpenAI、Anthropic、Google、AWS Bedrock 等主要 LLM provider，提供統一的：</p>
+    <ul>
+        <li>請求 logging 與 observability</li>
+        <li>Rate limiting 與 caching</li>
+        <li>Access control</li>
+        <li>Unified billing（用 Cloudflare 點數統一付費）</li>
+    </ul>
+
+    <p>Web Search API 把「搜尋」視為 AI Gateway 裡的另一種請求類型，和 LLM API 呼叫共存在同一個 gateway 中。這意味著：</p>
+    <ul>
+        <li>搜尋請求會出現在你的 AI Gateway dashboard（和 LLM 呼叫一起）</li>
+        <li>統一帳單（不再分別管理 LLM 費用 + 搜尋費用）</li>
+        <li>搜尋可以加入 retry logic、caching、failover 策略</li>
+    </ul>
+
+    <h2>快速上手：三種接入方式</h2>
+
+    <h3>方式一：透過 AI Gateway REST API</h3>
+    <pre><code>curl https://gateway.ai.cloudflare.com/v1/{YOUR_ACCOUNT_ID}/{GATEWAY_ID}/web-search \
+  -H "Authorization: Bearer {CF_API_TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "provider": "exa",
+    "query": "Reflection AI Beam 501B open weight model review 2026",
+    "limit": 5
+  }'</code></pre>
+
+    <p>回傳格式為標準化的 JSON，包含 title、url、snippet 三個欄位，不管用哪個 provider 格式都一致。</p>
+
+    <h3>方式二：Cloudflare Workers binding（最推薦）</h3>
+    <pre><code>// wrangler.toml 配置
+[[ai]]
+binding = "AI"
+
+// Worker 程式碼（TypeScript）
+export default {
+  async fetch(request: Request, env: Env): Promise&lt;Response&gt; {
+    // 搜尋網路取得最新資訊
+    const searchResponse = await env.AI.websearch({
+      gatewayId: "default",
+      query: "最新 AI 模型 ranking 2026",
+      provider: "exa",
+      limit: 5,
+    });
+    const searchResults = await searchResponse.json();
+
+    // 把搜尋結果注入 LLM 呼叫
+    const completion = await env.AI.run(
+      "@cf/anthropic/claude-opus-4-5",
+      {
+        messages: [
+          {
+            role: "user",
+            content: `Based on these search results, answer the question:
+${JSON.stringify(searchResults)}
+
+Question: 2026 年最強的 open-weight coding model 是哪個？`
+          }
+        ]
+      }
+    );
+
+    return Response.json(completion);
+  }
+};</code></pre>
+
+    <p>Workers binding 的優勢是：搜尋和 LLM 呼叫都在同一個 Worker 裡執行，延遲最低，沒有跨服務的網路 round-trip。</p>
+
+    <h3>方式三：帶自己的 Provider API Key</h3>
+    <pre><code>curl https://gateway.ai.cloudflare.com/v1/{ACCOUNT_ID}/{GATEWAY_ID}/web-search \
+  -H "Authorization: Bearer {CF_API_TOKEN}" \
+  -H "x-provider-api-key: {YOUR_EXA_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "provider": "exa",
+    "query": "cloudflare birthday week 2026 announcements",
+    "limit": 10
+  }'</code></pre>
+
+    <p>如果你已有 Exa/Ceramic.ai/Linkup 的帳號，可以帶自己的 key。Cloudflare 不額外收費，只是提供統一的代理和 logging 層。</p>
+
+    <h2>在 AI Agent 工作流中整合：實際架構示例</h2>
+
+    <h3>場景：自動新聞摘要 Agent</h3>
+
+    <p>以下是一個在 Cloudflare Workers 上跑的新聞摘要 Agent，每小時抓取最新 AI 新聞並生成繁中摘要：</p>
+
+    <pre><code>// 每小時觸發的 Cron Worker
+export default {
+  async scheduled(event: ScheduledEvent, env: Env, ctx: ExecutionContext) {
+    // 1. 搜尋最新 AI 新聞
+    const newsSearch = await env.AI.websearch({
+      gatewayId: "ai-news-agent",
+      query: "artificial intelligence news last 24 hours site:techcrunch.com OR site:theverge.com",
+      provider: "ceramic",
+      limit: 8,
+    });
+    const news = await newsSearch.json();
+
+    // 2. 用 LLM 生成繁中摘要
+    const summary = await env.AI.run("@cf/google/gemma-4-26b-a4b-it", {
+      messages: [{
+        role: "user",
+        content: `以下是過去 24 小時的 AI 新聞：
+${news.results.map(r => `- ${r.title}: ${r.snippet}`).join('\n')}
+
+請用繁體中文寫一份 300 字的重點摘要，條列最重要的 3-5 個發展。`
+      }]
+    });
+
+    // 3. 儲存到 KV 或發送通知
+    await env.NEWS_CACHE.put("latest-summary", summary.response, {
+      expirationTtl: 3600
+    });
+  }
+}</code></pre>
+
+    <!-- DigitalOcean CTA -->
+    <div class="affiliate-cta" style="background:linear-gradient(135deg,#0061FF,#003ecb);padding:24px;border-radius:12px;margin:32px 0;color:#fff;text-align:center;">
+        <h3 style="margin:0 0 8px;color:#fff;">需要在 VPS 上運行更複雜的 AI Agent？</h3>
+        <p style="margin:0 0 16px;opacity:0.9;">Cloudflare Workers 適合輕量 Agent，但複雜的 Agent 工作流（長時間執行、大量記憶體需求）仍需要 VPS。DigitalOcean Droplets 可與 Cloudflare 搭配使用，新帳號享 $200 免費點數。</p>
+        <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;background:#fff;color:#0061FF;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;">DigitalOcean — 免費 $200 點數 →</a>
+    </div>
+
+    <h2>費用分析：實際跑起來要多少錢？</h2>
+
+    <p>Cloudflare Web Search API 在 beta 階段透過 AI Gateway credits 計費，<strong>使用提供者的標準定價，Cloudflare 不加價</strong>。各 provider 的大概費率（beta 期間可能調整）：</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Provider</th>
+                <th>約略費率</th>
+                <th>特點</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ceramic.ai</td>
+                <td>~$0.25 / 1,000 queries</td>
+                <td>AI-native 語意搜尋</td>
+            </tr>
+            <tr>
+                <td>Exa</td>
+                <td>~$1–5 / 1,000 queries（依 plan）</td>
+                <td>全文內容回傳較貴</td>
+            </tr>
+            <tr>
+                <td>Linkup</td>
+                <td>~$1–3 / 1,000 queries（依 plan）</td>
+                <td>企業資料品質</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>對比之下，直接用模型原生搜尋工具（如 Claude 的 web_search）通常在 $10–35 / 1,000 queries 範圍。Ceramic.ai 的 $0.25/1K 讓搜尋成本降低了 40–140 倍。</p>
+
+    <p><strong>實際成本估算：</strong></p>
+    <ul>
+        <li>一個每小時跑一次的新聞摘要 Agent：8 次搜尋 × 24 小時 × 30 天 = 5,760 queries/月</li>
+        <li>用 Ceramic.ai：5,760 × $0.00025 = <strong>$1.44/月</strong></li>
+        <li>一個客服 Agent 每天處理 500 個查詢、每查詢 2 次搜尋：30,000 queries/月</li>
+        <li>用 Ceramic.ai：30,000 × $0.00025 = <strong>$7.50/月</strong></li>
+    </ul>
+
+    <h2>Zero Data Retention 的實際意義</h2>
+
+    <p>對企業用戶和處理敏感資訊的 Agent 來說，Zero Data Retention 很重要。它意味著：</p>
+
+    <ul>
+        <li>你的搜尋查詢內容不會被 Ceramic.ai / Exa / Linkup 儲存用於訓練模型</li>
+        <li>每個請求完成後，provider 不保留任何請求日誌</li>
+        <li>你的用戶問題、業務查詢不會成為競品的訓練資料</li>
+    </ul>
+
+    <p>這個承諾是通過 Cloudflare 的合作協議約束的，不只是 provider 單方面的隱私政策聲明。對 GDPR / PDPA 合規需求的企業，這是一個重要的評估點。</p>
+
+    <h2>Coming Soon：Server Tools 整合</h2>
+
+    <p>Cloudflare 官方文件提到了「Coming Soon: Server tools」——這意味著 Web Search API 將直接整合進 Claude、GPT 等模型的 function calling / tool use 框架，讓 LLM 可以主動決定「現在要搜尋網路」，而不需要你手動在程式碼裡串接搜尋邏輯。</p>
+
+    <p>這個功能完成後，整合方式會更像：</p>
+    <pre><code>// 未來可能的 Server Tools 整合（預計功能）
+const response = await ai.run("@cf/anthropic/claude-opus-4-5", {
+  messages: [{role: "user", content: "今天最熱門的 AI 新聞是什麼？"}],
+  tools: ["cloudflare:web-search:exa"]  // 模型自主決定何時搜尋
+});</code></pre>
+
+    <p>目前需要手動先搜尋再注入 context，Server Tools 功能完成後這個過程會更自動化。</p>
+
+    <h2>適合誰用 Cloudflare Web Search API？</h2>
+
+    <p><strong>非常適合：</strong></p>
+    <ul>
+        <li>已在使用 Cloudflare Workers / AI Gateway 的開發者</li>
+        <li>需要即時搜尋功能的 Agent 系統，但不想管多個 API 帳號</li>
+        <li>有 GDPR/資料隱私合規需求的企業 Agent</li>
+        <li>需要低成本高頻率搜尋的應用（Ceramic.ai $0.25/1K 很划算）</li>
+    </ul>
+
+    <p><strong>可能不是最佳選擇：</strong></p>
+    <ul>
+        <li>需要 Google 搜尋結果的場景（目前只有 Ceramic.ai / Exa / Linkup）</li>
+        <li>非 Cloudflare 基礎設施的純 AWS / GCP 環境（雖然 REST API 可用，但失去 Workers 整合優勢）</li>
+        <li>需要圖片搜尋或影片搜尋的場景（目前只支援文字搜尋）</li>
+    </ul>
+
+    <!-- DataCamp CTA -->
+    <div class="affiliate-cta" style="background:linear-gradient(135deg,#2ecc71,#1a9e57);padding:24px;border-radius:12px;margin:32px 0;color:#fff;text-align:center;">
+        <h3 style="margin:0 0 8px;color:#fff;">系統學習 AI Agent 開發與 API 整合</h3>
+        <p style="margin:0 0 16px;opacity:0.9;">DataCamp 的 AI Agent 開發課程涵蓋 RAG、Tool Use、API 整合、Cloudflare Workers 實作，從零建立具備真實世界搜尋能力的 AI Agent。</p>
+        <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" style="display:inline-block;background:#fff;color:#1a9e57;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;">DataCamp — 開始學 AI Agent 開發 →</a>
+    </div>
+
+    <h2>Cloudflare Birthday Week 2026 的其他發布</h2>
+
+    <p>Web Search API 是 Cloudflare Birthday Week 2026（每年 9 月底到 10 月初的年度發布周）的發布之一。同期還有多個 AI 相關功能更新，包括 AI Search 定價模型調整、Workers AI 新模型支援等。</p>
+
+    <p>Birthday Week 是 Cloudflare 每年發布最多新功能的時段，通常預告了接下來 12 個月的產品方向。Web Search API 的發布表明 Cloudflare 正在從「CDN + 安全公司」向「AI 基礎設施公司」的方向深度轉型。</p>
+
+    <h2>總結：接入複雜度低、效益顯著</h2>
+
+    <p>Cloudflare Web Search API 沒有革命性的技術突破，但它解決了一個真實的整合痛點——<strong>在不增加基礎設施複雜度的前提下，給 AI Agent 加上可靠的即時網路搜尋能力。</strong></p>
+
+    <p><strong>核心優點：</strong></p>
+    <ul>
+        <li>✅ 統一 billing，不再分別管理多個搜尋 API 帳號</li>
+        <li>✅ Zero Data Retention，合規更有保障</li>
+        <li>✅ Ceramic.ai 的 $0.25/1K 定價極具競爭力</li>
+        <li>✅ Workers binding 讓搜尋和 LLM 在同一個 runtime 執行</li>
+        <li>✅ Beta 期間可以免費測試基本功能</li>
+    </ul>
+
+    <p><strong>需要注意：</strong></p>
+    <ul>
+        <li>⚠️ 目前只有三個 provider，無 Google/Bing 搜尋結果</li>
+        <li>⚠️ Server Tools 整合還在「Coming Soon」</li>
+        <li>⚠️ Beta 定價可能在 GA 後調整</li>
+    </ul>
+
+    <p>如果你現在有在 Cloudflare Workers 上跑 AI Agent，這個 API 值得立刻試用（Beta 免費）。如果你在 AWS / GCP 上，評估加入 Cloudflare AI Gateway 作為中間層是否符合你的架構，帶來的好處不只是搜尋，還有整個 LLM 請求的 observability 和 billing 統一。</p>
+
+    <!-- Cloudways CTA -->
+    <div class="affiliate-cta" style="background:linear-gradient(135deg,#00bcd4,#0097a7);padding:24px;border-radius:12px;margin:32px 0;color:#fff;text-align:center;">
+        <h3 style="margin:0 0 8px;color:#fff;">需要高性能雲端主機部署 AI 後端？</h3>
+        <p style="margin:0 0 16px;opacity:0.9;">Cloudways 提供管理型雲端主機（DigitalOcean / AWS / GCP），一鍵部署 Node.js / Python AI 後端，與 Cloudflare WAF + CDN 完美搭配。免費試用 3 天。</p>
+        <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" target="_blank" rel="noopener sponsored" style="display:inline-block;background:#fff;color:#0097a7;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;">Cloudways — 免費試用 3 天 →</a>
+    </div>
+
+    <div class="nav-bar" style="margin-top:40px;">
+        <a href="/blog/reflection-beam-501b-open-weight-model-review-2026.html">延伸閱讀：Reflection Beam 501B →</a>
+        <a href="/blog/google-ax-agentic-orchestration-runtime-tutorial-2026.html">延伸閱讀：Google AX 教學 →</a>
+        <a href="/blog/caveman-ai-agent-token-optimization-2026.html">延伸閱讀：AI Agent Token 優化 →</a>
+    </div>
+</div>
+</main>
+<footer class="v2-footer"><div class="v2-shell"><div class="v2-footer-grid"><div><h2>AutoDev</h2><p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p></div><div><h3>Studio</h3><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/pricing.html">專案範圍</a><a href="/contact.html">需求諮詢</a></div><div><h3>Labs &amp; Tools</h3><a href="/bot-cloud.html">Bot Cloud</a><a href="/ai-model.html">AI 模特</a><a href="/line-bot-saas.html">LINE Bot SaaS</a><a href="/tools/">工具</a><a href="/demo.html">Demo</a></div><div><h3>更多</h3><a href="/blog/">洞察</a><a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a><a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a></div></div><div class="v2-footer-bottom"><span>© AutoDev</span><span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span></div></div></footer><script defer src="/chat-widget.js?v=20260502e"></script><script defer src="/lang.js?v=20260505"></script><script defer src="/assets/autodev-v2.js"></script>
+</body>
+</html>
