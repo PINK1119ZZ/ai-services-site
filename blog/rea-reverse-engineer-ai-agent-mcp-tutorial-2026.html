@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REA 逆向工程 AI Agent 完整教學 2026：零 API 費用抓取 APK/韌體/Binary，MCP + CLI 整合，繁中首發</title>
+    <meta name="description" content="REA（Reverse Engineer Agent）完整教學 2026：GitHub trending #1，+4,666 stars/day，零 API 費用逆向工程 Android APK、IoT 韌體、二進位檔案，MCP Server + CLI 整合，完整安裝與使用指南。">
+    <meta name="keywords" content="rea 逆向工程, rea ai agent 教學, reverse engineer agent, rea mcp server, rea cli 教學, apk 逆向工程, rea github, rea 繁中">
+    <link rel="canonical" href="https://autodev-ai.com/blog/rea-reverse-engineer-ai-agent-mcp-tutorial-2026.html">
+    <meta property="og:title" content="REA 逆向工程 AI Agent 完整教學 2026：零 API 費用、MCP + CLI 整合、繁中首發">
+    <meta property="og:description" content="GitHub trending #1，+4,666 stars/day，零 API 費用逆向工程 APK/韌體/Binary，MCP Server + CLI 完整教學。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/rea-reverse-engineer-ai-agent-mcp-tutorial-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/assets/og-rea-agent.png">
+    <link rel="stylesheet" href="../style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "REA 逆向工程 AI Agent 完整教學 2026：零 API 費用、MCP + CLI 整合、繁中首發",
+      "description": "REA（Reverse Engineer Agent）GitHub trending #1，+4,666 stars/day，零 API 費用逆向工程 Android APK、IoT 韌體、二進位檔案，MCP Server + CLI 完整教學。",
+      "author": {
+        "@type": "Person",
+        "name": "AutoDev AI Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "AutoDev AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://autodev-ai.com/assets/logo.png"
+        }
+      },
+      "datePublished": "2026-10-08T03:00:00Z",
+      "dateModified": "2026-10-08T03:00:00Z",
+      "image": "https://autodev-ai.com/assets/og-rea-agent.png",
+      "mainEntityOfPage": "https://autodev-ai.com/blog/rea-reverse-engineer-ai-agent-mcp-tutorial-2026.html"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">AutoDev AI</a>
+                <div class="nav-links">
+                    <a href="../index.html#services">服務項目</a>
+                    <a href="../blog/index.html">技術 Blog</a>
+                    <a href="../index.html#contact">聯絡我們</a>
+                    <a href="../en/index.html">English</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container article-content">
+        <article>
+            <h1>REA 逆向工程 AI Agent 完整教學 2026：零 API 費用、MCP + CLI 整合、繁中首發</h1>
+            
+            <div class="article-meta">
+                <time datetime="2026-10-08">發布於 2026 年 10 月 8 日</time>
+                <span class="reading-time">閱讀時間：約 10 分鐘</span>
+            </div>
+
+            <div class="toc">
+                <h2>目錄</h2>
+                <ul>
+                    <li><a href="#overview">REA 是什麼？GitHub Trending #1 的逆向工程 Agent</a></li>
+                    <li><a href="#features">核心功能：APK/韌體/Binary 逆向工程</a></li>
+                    <li><a href="#architecture">技術架構：MCP Server + CLI 雙模式</a></li>
+                    <li><a href="#installation">安裝教學：從零開始設定 REA</a></li>
+                    <li><a href="#use-cases">實戰案例：Android APK 逆向工程</a></li>
+                    <li><a href="#mcp-integration">MCP Server 整合：Claude Code / OpenClaw</a></li>
+                    <li><a href="#comparison">REA vs 傳統逆向工具比較</a></li>
+                    <li><a href="#conclusion">結論與適用情境</a></li>
+                </ul>
+            </div>
+
+            <section id="overview">
+                <h2>REA 是什麼？GitHub Trending #1 的逆向工程 Agent</h2>
+                <p><strong>REA（Reverse Engineer Agent）</strong> 是由 <strong>morluto</strong> 開發的開源 AI agent，專門用於<strong>逆向工程 Android APK、IoT 韌體、二進位檔案</strong>。它在 2026 年 10 月 7 日登上 <strong>GitHub Trending #1</strong>，單日新增 <strong>+4,666 stars</strong>，累積 <strong>14,540+ stars</strong>，成為逆向工程社群最熱門的 AI 工具。</p>
+                
+                <p>REA 的核心特色是「<strong>零 API 費用</strong>」— 它不依賴 OpenAI/Anthropic 等付費 API，而是使用 <strong>本地 LLM（Ollama/LM Studio）</strong> + <strong>開源逆向工具鏈</strong>（Ghidra/Radare2/apktool/Frida），讓逆向工程師在不支付 AI API 費用的前提下，獲得「<strong>AI 輔助逆向分析</strong>」能力。</p>
+
+                <div class="info-box">
+                    <h3>為什麼 REA 爆紅？</h3>
+                    <p>2026 年逆向工程社群的痛點是：<strong>傳統工具（IDA Pro/Ghidra）學習曲線陡峭，AI 輔助工具（如 ChatGPT Code Interpreter）又需要付費 API 且無法處理 binary 檔案</strong>。REA 填補了這個空白，提供「本地 LLM + 專業逆向工具鏈」的整合方案，讓新手也能快速上手 APK/韌體逆向。</p>
+                </div>
+            </section>
+
+            <section id="features">
+                <h2>核心功能：APK/韌體/Binary 逆向工程</h2>
+                <p>REA 支援以下逆向工程任務：</p>
+
+                <h3>1. Android APK 逆向工程</h3>
+                <ul>
+                    <li><strong>APK 解包</strong>：自動執行 <code>apktool d</code> 解包 APK，提取 AndroidManifest.xml、資源檔、smali 代碼</li>
+                    <li><strong>權限分析</strong>：分析 <code>&lt;uses-permission&gt;</code> 標籤，識別 high-risk permissions（例如 READ_CONTACTS / SEND_SMS）</li>
+                    <li><strong>Activity/Service 分析</strong>：列出所有 Activity、Service、BroadcastReceiver，識別潛在攻擊面</li>
+                    <li><strong>惡意行為檢測</strong>：識別混淆代碼、加殼、root 檢測、反調試等常見惡意技術</li>
+                </ul>
+
+                <h3>2. IoT 韌體逆向工程</h3>
+                <ul>
+                    <li><strong>韌體提取</strong>：從 <code>.bin</code> / <code>.img</code> 檔案提取檔案系統（使用 <code>binwalk</code>）</li>
+                    <li><strong>Hardcoded Credentials 搜尋</strong>：自動掃描 <code>admin</code> / <code>root</code> / <code>password</code> 等 hardcoded 帳密</li>
+                    <li><strong>網路服務分析</strong>：識別開放的 telnet/ssh/http 服務，評估安全風險</li>
+                    <li><strong>加密演算法識別</strong>：識別 AES/DES/RSA 等加密演算法的實作</li>
+                </ul>
+
+                <h3>3. 二進位檔案逆向工程</h3>
+                <ul>
+                    <li><strong>反組譯</strong>：使用 Ghidra/Radare2 自動反組譯 ELF/PE/Mach-O 檔案</li>
+                    <li><strong>函數呼叫圖</strong>：生成函數呼叫關係圖，識別關鍵函數（例如 <code>encrypt()</code> / <code>verify_license()</code>）</li>
+                    <li><strong>字串分析</strong>：提取所有可讀字串，識別 API endpoints / hardcoded keys / debug messages</li>
+                    <li><strong>動態追蹤</strong>：整合 Frida，動態追蹤函數執行流程</li>
+                </ul>
+
+                <div class="cta-box">
+                    <h3>想學習逆向工程基礎？</h3>
+                    <p>REA 降低了逆向工程的入門門檻，但仍需要基本的 assembly / binary 知識。推薦 <strong>DataCamp 的 Cybersecurity 與 Reverse Engineering 課程</strong>學習基礎概念。</p>
+                    <a href="https://afflink.one/s/aavAC" class="cta-button" target="_blank" rel="nofollow">DataCamp 學習逆向工程課程 →</a>
+                </div>
+            </section>
+
+            <section id="architecture">
+                <h2>技術架構：MCP Server + CLI 雙模式</h2>
+                <p>REA 提供兩種使用模式：</p>
+
+                <h3>1. MCP Server 模式（推薦）</h3>
+                <p><strong>MCP（Model Context Protocol）</strong> 是 Anthropic 推出的 AI agent 標準協議，REA 實作了完整的 MCP Server，可以無縫整合到：</p>
+                <ul>
+                    <li><strong>Claude Code</strong>：在 VSCode 中直接調用 REA 分析 APK/binary</li>
+                    <li><strong>OpenClaw</strong>：在 Telegram/LINE bot 中調用 REA 逆向工程服務</li>
+                    <li><strong>Codex / Pi</strong>：任何支援 MCP 的 coding agent</li>
+                </ul>
+
+                <p>MCP Server 的優勢是「<strong>agent 之間可以互相調用</strong>」— 例如 Claude Code 在分析 APK 時，可以自動調用 REA 的 <code>analyze_apk</code> tool，無需手動複製貼上結果。</p>
+
+                <h3>2. CLI 模式</h3>
+                <p>REA 也提供傳統的 CLI 介面，適合「一次性逆向任務」或「整合到 CI/CD pipeline」的場景：</p>
+                <pre><code># 分析 APK
+rea analyze-apk app.apk
+
+# 分析韌體
+rea analyze-firmware router.bin
+
+# 分析 ELF binary
+rea analyze-binary /usr/bin/suspicious_app</code></pre>
+
+                <h3>本地 LLM 支援</h3>
+                <p>REA 預設使用 <strong>Ollama</strong> 作為本地 LLM backend，支援的模型包括：</p>
+                <ul>
+                    <li><strong>Llama 3.1 70B</strong>（推薦）：最佳逆向分析品質</li>
+                    <li><strong>Mistral Large 4</strong>（23B active）：速度與品質平衡</li>
+                    <li><strong>Qwen 3.8 Flash</strong>（14B active）：速度最快，適合快速掃描</li>
+                    <li><strong>DeepSeek Coder V4</strong>：最強 code understanding，適合複雜 binary</li>
+                </ul>
+
+                <p>關鍵優勢：<strong>所有推論在本地執行，不會外洩逆向工程的敏感資料</strong>（例如客戶的 APK 檔案、內部韌體）。</p>
+            </section>
+
+            <section id="installation">
+                <h2>安裝教學：從零開始設定 REA</h2>
+                
+                <h3>前置需求</h3>
+                <ul>
+                    <li><strong>作業系統</strong>：Linux / macOS（推薦）/ Windows WSL2</li>
+                    <li><strong>Python</strong>：3.10+</li>
+                    <li><strong>Ollama</strong>：本地 LLM runtime（<a href="https://ollama.com" target="_blank" rel="nofollow">ollama.com</a>）</li>
+                    <li><strong>逆向工具</strong>：apktool / Ghidra / radare2 / binwalk / Frida（REA 會自動安裝）</li>
+                </ul>
+
+                <h3>Step 1：安裝 Ollama + 下載模型</h3>
+                <pre><code># macOS / Linux
+curl -fsSL https://ollama.com/install.sh | sh
+
+# 下載 Llama 3.1 70B（推薦，需要 48GB RAM）
+ollama pull llama3.1:70b
+
+# 或下載 Mistral Large 4（23B active，需要 24GB RAM）
+ollama pull mistral-large-4
+
+# 或下載 Qwen 3.8 Flash（14B active，需要 16GB RAM，速度最快）
+ollama pull qwen3.8-flash</code></pre>
+
+                <h3>Step 2：Clone REA Repository</h3>
+                <pre><code>git clone https://github.com/morluto/rea.git
+cd rea
+pip install -r requirements.txt</code></pre>
+
+                <h3>Step 3：安裝逆向工具鏈</h3>
+                <pre><code># REA 提供一鍵安裝腳本（Linux/macOS）
+./scripts/install-tools.sh
+
+# 或手動安裝（Ubuntu/Debian）
+sudo apt-get install apktool radare2 binwalk ghidra
+
+# macOS
+brew install apktool radare2 binwalk ghidra</code></pre>
+
+                <h3>Step 4：啟動 MCP Server（選配）</h3>
+                <pre><code># 啟動 REA MCP Server（預設 port 8765）
+rea serve --port 8765 --model llama3.1:70b
+
+# 測試 MCP Server
+curl http://localhost:8765/mcp/tools</code></pre>
+
+                <h3>Step 5：第一次逆向分析</h3>
+                <pre><code># 下載範例 APK
+wget https://example.com/sample.apk
+
+# CLI 模式分析
+rea analyze-apk sample.apk --output report.json
+
+# MCP 模式分析（在 Claude Code 中執行）
+# 1. 開啟 Claude Code
+# 2. 輸入：@rea analyze sample.apk
+# 3. REA 自動分析並返回報告</code></pre>
+
+                <div class="info-box">
+                    <h3>硬體需求建議</h3>
+                    <p><strong>最低配置</strong>：16GB RAM + Qwen 3.8 Flash（速度快但分析品質中等）<br>
+                    <strong>推薦配置</strong>：48GB RAM + Llama 3.1 70B（最佳分析品質）<br>
+                    <strong>雲端方案</strong>：DigitalOcean CPU-Optimized Droplet（32GB RAM，$0.24/hour）</p>
+                </div>
+            </section>
+
+            <section id="use-cases">
+                <h2>實戰案例：Android APK 逆向工程</h2>
+                <p>以下是使用 REA 分析一個「可疑的 Android 工具 APK」的完整流程。</p>
+
+                <h3>案例背景</h3>
+                <p>客戶收到一個「手電筒 App」（flashlight.apk），懷疑它偷偷收集用戶資料並上傳到遠端伺服器。我們使用 REA 進行逆向分析。</p>
+
+                <h3>Step 1：基本資訊提取</h3>
+                <pre><code>rea analyze-apk flashlight.apk --verbose
+
+# 輸出摘要
+[+] Package: com.example.flashlight
+[+] Version: 1.2.3
+[+] Min SDK: 21 (Android 5.0)
+[+] Target SDK: 33 (Android 13)
+[!] HIGH-RISK permissions detected:
+    - READ_CONTACTS (讀取聯絡人)
+    - ACCESS_FINE_LOCATION (精確定位)
+    - SEND_SMS (發送簡訊)
+    - INTERNET (網路存取)</code></pre>
+
+                <p><strong>分析</strong>：一個「手電筒 App」不應該需要讀取聯絡人、定位、發送簡訊的權限 — 這是明顯的惡意跡象。</p>
+
+                <h3>Step 2：Activity 與 Service 分析</h3>
+                <pre><code>[+] Activities:
+    - MainActivity (正常的主畫面)
+    - SettingsActivity (設定頁)
+    - HiddenActivity (未在 Launcher 顯示！可疑)
+
+[+] Services:
+    - FlashlightService (正常的手電筒服務)
+    - DataUploadService (可疑！持續背景運行)
+
+[+] Broadcast Receivers:
+    - BootReceiver (開機自動啟動！可疑)</code></pre>
+
+                <p><strong>分析</strong>：<code>HiddenActivity</code>、<code>DataUploadService</code>、<code>BootReceiver</code> 都是惡意 App 常見的元件。</p>
+
+                <h3>Step 3：網路流量分析</h3>
+                <pre><code>[+] Network endpoints detected:
+    - https://api.flashlight.com/v1/upload (正常 API)
+    - http://203.0.113.42:8080/collect (可疑！非 HTTPS + 陌生 IP)
+
+[+] Hardcoded API keys:
+    - API_KEY = "sk_live_abc123xyz..." (外洩的 API key！)</code></pre>
+
+                <p><strong>分析</strong>：<code>http://203.0.113.42:8080/collect</code> 是一個未加密的 HTTP endpoint，可能用來上傳竊取的資料。</p>
+
+                <h3>Step 4：Smali 代碼分析（AI 輔助）</h3>
+                <p>REA 使用本地 LLM 分析 smali 代碼，自動識別惡意行為：</p>
+                <pre><code>[AI Analysis] DataUploadService.smali:
+- Line 142: 讀取聯絡人資料庫 (ContactsContract.Contacts.CONTENT_URI)
+- Line 158: 讀取 GPS 座標 (LocationManager.getLastKnownLocation)
+- Line 201: 使用 HttpURLConnection 發送 POST 請求到 203.0.113.42:8080
+- Line 215: 無加密直接傳輸 (未使用 HTTPS/TLS)
+
+[VERDICT] 高度可疑：此 Service 收集用戶聯絡人與定位，未加密上傳到遠端伺服器。</code></pre>
+
+                <h3>最終結論</h3>
+                <p>REA 自動生成報告：</p>
+                <blockquote>
+                    <p><strong>Malware Confidence: 95%</strong></p>
+                    <p>此 APK 包含明顯的惡意行為：收集聯絡人、定位資料，透過未加密的 HTTP 上傳到遠端伺服器 203.0.113.42:8080。建議立即刪除並通報 Google Play Protect。</p>
+                </blockquote>
+
+                <div class="cta-box">
+                    <h3>需要專業的 APK 逆向工程服務？</h3>
+                    <p><strong>AutoDev AI</strong> 提供企業級 Android 安全審計服務，包含 APK 逆向工程、惡意行為檢測、合規報告。立即聯絡我們。</p>
+                    <a href="../index.html#contact" class="cta-button">立即諮詢 AutoDev AI 逆向工程服務 →</a>
+                </div>
+            </section>
+
+            <section id="mcp-integration">
+                <h2>MCP Server 整合：Claude Code / OpenClaw</h2>
+                
+                <h3>在 Claude Code 中使用 REA</h3>
+                <p>Claude Code 原生支援 MCP Server，整合步驟：</p>
+                <ol>
+                    <li>啟動 REA MCP Server：<code>rea serve --port 8765</code></li>
+                    <li>在 Claude Code 中新增 MCP Server：
+                        <pre><code># settings.json
+{
+  "mcp.servers": [
+    {
+      "name": "rea",
+      "url": "http://localhost:8765",
+      "tools": ["analyze_apk", "analyze_firmware", "analyze_binary"]
+    }
+  ]
+}</code></pre>
+                    </li>
+                    <li>在 Claude Code 中輸入：<code>@rea analyze sample.apk</code></li>
+                    <li>Claude Code 自動調用 REA，返回逆向分析報告</li>
+                </ol>
+
+                <h3>在 OpenClaw 中使用 REA</h3>
+                <p>OpenClaw 是自架 AI assistant，支援 MCP Server 整合：</p>
+                <pre><code># ~/.config/openclaw/config.yaml
+mcp:
+  servers:
+    - name: rea
+      url: http://localhost:8765
+      tools:
+        - analyze_apk
+        - analyze_firmware</code></pre>
+
+                <p>整合後，在 Telegram/LINE 中直接上傳 APK 檔案，OpenClaw 自動調用 REA 分析：</p>
+                <blockquote>
+                    <p><strong>User</strong>：（上傳 flashlight.apk）<br>
+                    <strong>OpenClaw</strong>：偵測到 APK 檔案，正在調用 REA 分析...<br>
+                    [3 秒後]<br>
+                    <strong>OpenClaw</strong>：⚠️ 警告！此 APK 包含惡意行為（Malware Confidence: 95%）。詳細報告：...</p>
+                </blockquote>
+            </section>
+
+            <section id="comparison">
+                <h2>REA vs 傳統逆向工具比較</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>工具</th>
+                            <th>學習曲線</th>
+                            <th>AI 輔助</th>
+                            <th>支援格式</th>
+                            <th>成本</th>
+                            <th>自動化程度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>REA</strong></td>
+                            <td>低（AI 自動分析）</td>
+                            <td>✅ 本地 LLM</td>
+                            <td>APK / 韌體 / ELF / PE</td>
+                            <td>免費（開源）</td>
+                            <td>高（MCP 整合）</td>
+                        </tr>
+                        <tr>
+                            <td>IDA Pro</td>
+                            <td>高（需學 assembly）</td>
+                            <td>❌ 無</td>
+                            <td>全格式</td>
+                            <td>$1,879/年</td>
+                            <td>低（手動分析）</td>
+                        </tr>
+                        <tr>
+                            <td>Ghidra</td>
+                            <td>中高</td>
+                            <td>❌ 無</td>
+                            <td>全格式</td>
+                            <td>免費</td>
+                            <td>低（手動分析）</td>
+                        </tr>
+                        <tr>
+                            <td>Radare2</td>
+                            <td>高</td>
+                            <td>❌ 無</td>
+                            <td>全格式</td>
+                            <td>免費</td>
+                            <td>低（CLI 操作）</td>
+                        </tr>
+                        <tr>
+                            <td>apktool</td>
+                            <td>低</td>
+                            <td>❌ 無</td>
+                            <td>僅 APK</td>
+                            <td>免費</td>
+                            <td>低（僅解包）</td>
+                        </tr>
+                        <tr>
+                            <td>ChatGPT Code Interpreter</td>
+                            <td>低</td>
+                            <td>✅ GPT-6.1</td>
+                            <td>text/code only</td>
+                            <td>$20/月</td>
+                            <td>中（無法處理 binary）</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>REA 的核心優勢</h3>
+                <ul>
+                    <li><strong>零 API 費用</strong>：本地 LLM，不依賴 OpenAI/Anthropic</li>
+                    <li><strong>低學習曲線</strong>：AI 自動分析，新手也能快速上手</li>
+                    <li><strong>MCP 整合</strong>：無縫整合到 Claude Code / OpenClaw / Codex</li>
+                    <li><strong>資料隱私</strong>：所有分析在本地執行，不外洩敏感檔案</li>
+                </ul>
+            </section>
+
+            <section id="conclusion">
+                <h2>結論與適用情境</h2>
+                <p><strong>REA（Reverse Engineer Agent）</strong> 是 2026 年逆向工程社群最令人興奮的工具，它將「AI 輔助逆向分析」從「付費 API 黑盒子」變成「本地開源工具鏈」，讓更多人能夠使用 AI 技術進行安全研究。</p>
+
+                <h3>誰應該使用 REA？</h3>
+                <ul>
+                    <li><strong>✅ 適合</strong>：安全研究員、滲透測試工程師、惡意軟體分析師</li>
+                    <li><strong>✅ 適合</strong>：逆向工程新手（AI 輔助降低學習曲線）</li>
+                    <li><strong>✅ 適合</strong>：企業內部安全團隊（資料隱私、零 API 費用）</li>
+                    <li><strong>✅ 適合</strong>：Claude Code / OpenClaw 用戶（MCP 無縫整合）</li>
+                    <li><strong>❌ 不適合</strong>：需要「完全自動化惡意軟體檢測」的場景（REA 仍需人工判斷）</li>
+                </ul>
+
+                <h3>未來發展方向</h3>
+                <p>REA 開發者在 GitHub 上表示，接下來會加入：</p>
+                <ul>
+                    <li><strong>iOS IPA 逆向工程</strong>（目前僅支援 Android APK）</li>
+                    <li><strong>自動化漏洞挖掘</strong>（fuzzing + symbolic execution 整合）</li>
+                    <li><strong>GUI 介面</strong>（降低 CLI 使用門檻）</li>
+                    <li><strong>雲端版本</strong>（REA Cloud，提供 SaaS 服務）</li>
+                </ul>
+
+                <div class="cta-box">
+                    <h3>立即開始使用 REA</h3>
+                    <p>前往 <strong>GitHub morluto/rea</strong> 下載最新版本，或參考本文安裝教學開始你的第一次 AI 輔助逆向工程。需要 GPU 算力？使用 <strong>DigitalOcean CPU-Optimized Droplets</strong>（32GB RAM）運行本地 LLM。</p>
+                    <a href="https://m.do.co/c/6121a295f624" class="cta-button" target="_blank" rel="nofollow">DigitalOcean 免費試用（贈送 $200）→</a>
+                </div>
+            </section>
+
+            <section class="related-articles">
+                <h2>延伸閱讀</h2>
+                <ul>
+                    <li><a href="dwarfstar-4-ds4-local-llm-antirez-2026.html">DwarfStar 4（ds4）完整教學 2026：Redis 創辦人 antirez 的本地 LLM 推論引擎</a></li>
+                    <li><a href="mistral-large-4-le-chonk-review-2026.html">Mistral Large 4（Le Chonk）完整評測 2026：1T Params MoE、$0.68/$2.09 定價</a></li>
+                    <li><a href="ai-agent-cybersecurity-skills-claude-code-2026.html">AI Agent 資安技能完整指南 2026：Claude Code 整合 40+ 安全工具</a></li>
+                    <li><a href="../tools/ai-agent-security-tools-comparison-2026.html">AI Agent 安全工具比較 2026：選擇最適合的安全掃描方案</a></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024-2026 AutoDev AI. 專注於 AI Agent 與流程自動化的獨立工作室。</p>
+            <p><a href="../privacy.html">隱私權政策</a> | <a href="../terms.html">服務條款</a></p>
+        </div>
+    </footer>
+</body>
+</html>
