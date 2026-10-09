@@ -3,7 +3,7 @@
   "lastBuilderRun": "2026-10-07T05:06:44.652487Z",
   "lastResearchRound": 241,
   "lastCompetitorWatchRun": "2026-10-04T03:08:00Z",
-  "lastStrategistRun": "2026-10-05T01:30:00Z",
+  "lastStrategistRun": "2026-10-09T12:00:00Z",
   "lastSeoWriterRun": "2026-10-08T03:00:00Z",
   "newAssetProposals": [
     {
@@ -191,6 +191,101 @@
       "status": "completed",
       "completedAt": "2026-10-03T05:00:00Z",
       "completedFile": "tools/ai-model-comparison.html"
+    },
+    {
+      "proposalId": "strategist-2026-10-09-01",
+      "type": "digital-product",
+      "title": "AI FinOps 成本控制儀表板 - Notion Template",
+      "description": "企業 AI 成本管理 Notion 模板：追蹤 OpenAI/Anthropic/Claude/Gemini token 消耗，含預算警示、ROI 計算、月度比較、每模型 CPM 儀表板。直接呼應「Meta 砍 60K→30K Claude 用戶、Uber $3.4B 燒光」熱點事件，定位企業決策者與 FinOps 工程師。",
+      "revenueModel": "one-time-sale",
+      "platform": "Gumroad + Lemon Squeezy",
+      "pricing": "$39 (launch) → $49 (regular)",
+      "estimatedMonthlyRevenue": "$1,200-3,600",
+      "marketValidation": [
+        "Round 241 researcher 確認：Meta/Microsoft/Uber AI 成本危機爆發，搜尋量「ai cost management tools」急升（Oct 2026）",
+        "CloudZero 部落格確認：72% 企業已有正式雲端成本管理計畫，AI 成本是主要失控來源",
+        "Gumroad Software Dev 類別 $65.8M 總收入，企業工具模板在 $39-49 區間有成熟購買慣性",
+        "既有工具頁 tools/ai-token-cost-calculator.html GSC 4 clicks / pos 6.8，已有流量基礎",
+        "競品分析：Gumroad 上無「AI FinOps Notion Template」，市場空白",
+        "B2B 買家決策：看到 Meta/Uber 新聞後立即需要可操作工具 → 衝動購買率高"
+      ],
+      "buildSteps": [
+        "1. 建立 Notion 4 資料庫：Models Registry（含所有主流模型 + Claude Haiku 5.5 最新定價）/ Monthly Budget Tracker / Usage Log / ROI Dashboard",
+        "2. 公式計算層：cost_per_call = (input_tokens × input_price + output_tokens × output_price) / 1M；budget_burn_rate = current_spend / monthly_budget × 100；projected_overage = IF(burn_rate>80%, 「⚠️ 預計超支」, 「✅ 正常」)",
+        "3. Gallery View：按月份×模型雙軸成本熱力圖（用 Notion progress bar 模擬）",
+        "4. 預算警報視圖：Filter burn_rate>80% 自動浮出，搭配紅色 status property",
+        "5. ROI 計算頁：輸入「任務時薪節省」「每月 AI 支出」→ 自動計算 payback period",
+        "6. 加入 Claude Haiku 5.5 專區（$0.10/$0.50，vs Haiku 4.5 節省 90%）作為賣點 highlight",
+        "7. Canva 產品圖：深色企業風，浮動 badge「Track 6 providers / Budget Alerts / ROI Calculator」",
+        "8. Gumroad listing：標題「AI FinOps Dashboard - Notion Template for Teams」，描述強調「Meta cut 60K→30K users. Uber burned $3.4B. Don't be next.」",
+        "9. 在 tools/ai-token-cost-calculator.html 底部加入 CTA：「Want a full Notion FinOps Dashboard? →」",
+        "10. 發布文章 blog/ai-finops-cost-tracking-notion-template-2026.html（1,800 字），說明 Meta/Uber 危機 + 解決方案漏斗"
+      ],
+      "affiliateIntegration": [
+        "模板內建 Resources 頁：推薦 DigitalOcean（自架 Open Source 替代 API 降成本，m.do.co/c/6121a295f624）",
+        "模板內推薦 DataCamp FinOps for AI 課程（afflink.one/s/aavAC）",
+        "購買後第 3 天 email：推薦 Systeme.io 60% lifetime（自動化成本通知工作流）",
+        "模板 Resources 頁加入 LangFuse（開源 LLM tracking，若 Ivan 確認 affiliate 則升級為帶 commission 的推薦）"
+      ],
+      "directivesForOtherAgents": [
+        "builder: 建立 Notion template（4 databases + 公式層 + ROI 計算），Ivan 授權後發布到 Gumroad（$39）",
+        "seo-writer: 發布 blog/ai-finops-cost-tracking-notion-template-2026.html（1,800 字，R241 AI 成本危機角度），嵌入 Gumroad link + DigitalOcean affiliate",
+        "builder: 在 tools/ai-token-cost-calculator.html 底部加入 FinOps Dashboard CTA",
+        "Ivan: 確認 LangFuse Cloud affiliate（langfuse.com），若有 → 加入模板 Resources 推薦"
+      ],
+      "contentFunnel": [
+        "頂端：blog/ai-cost-management-tools-llm-comparison-2026.html（R241 researcher 指令，比較文帶流量）",
+        "中端：tools/ai-token-cost-calculator.html（既有工具，CTA 導向 Notion template）",
+        "底端：Gumroad 購買頁（$39 一次性，附 email sequence 推 Systeme.io）"
+      ],
+      "urgency": "HIGH",
+      "reason": "R241 researcher 確認 AI 成本危機搜尋量爆量，Gumroad $39-49 企業工具有市場，既有 token calculator 流量可轉換，無直接競品，2 週可上架"
+    },
+    {
+      "proposalId": "strategist-2026-10-09-02",
+      "type": "affiliate-program",
+      "title": "申請 ManyChat + ActiveCampaign Affiliate — 雙漏斗自動化受眾",
+      "description": "ManyChat (30-50% recurring 12mo + Telegram Bot 受眾完全吻合) × ActiveCampaign (20-30% recurring 無時限) 雙 affiliate 策略。這是 AutoDev AI 最強受眾匹配：台灣 Telegram Bot、LINE Bot、企業自動化客戶天然是 ManyChat + ActiveCampaign 目標用戶，且繁中評測文市場完全空白。",
+      "revenueModel": "recurring-commission",
+      "commissionStructure": {
+        "ManyChat": "30% (Gold) → 40% (Sapphire) → 50% (Diamond), recurring 12 months",
+        "ActiveCampaign": "20% start → 30% max, recurring lifetime（無時限）"
+      },
+      "estimatedMonthlyRevenue": "$500-1,800 (ManyChat 6mo) + $300-900 (ActiveCampaign 6mo) = $800-2,700/月合計",
+      "marketValidation": [
+        "ManyChat 市場：$11.45B 2026 chatbot 市場，Diamond 50% 為業界最高 chatbot affiliate",
+        "AutoDev AI 核心受眾是 Telegram Bot + LINE Bot 企業，ManyChat = 直接升級路徑（受眾完美匹配）",
+        "ActiveCampaign：30% 無時限 recurring（不是 12mo 限制），比 GetResponse 40-60%/12mo 終身總報酬更高",
+        "繁中評測：搜尋「manychat 繁中教學」「activecampaign 繁中評測」結果稀少，內容市場空白",
+        "既有文章 blog/telegram-bot-business-guide.html（GSC 3 clicks）可直接加入 ManyChat CTA",
+        "競品研究：台灣 3 大 n8n 教學站（hotspot/leadion/raymondhouch）全無 ManyChat/ActiveCampaign affiliate"
+      ],
+      "implementationSteps": [
+        "1. Ivan 立即申請 ManyChat affiliate：manychat.com/affiliates（PartnerStack，instant approval）",
+        "2. Ivan 立即申請 ActiveCampaign affiliate：activecampaign.com/partners/affiliate（instant approval，PartnerStack）",
+        "3. 取得兩個 affiliate link 後，seo-writer 立即執行以下文章",
+        "4. blog/manychat-telegram-line-bot-review-2026.html（2,200 字，繁中首發）：\n   - 角度：「Telegram Bot 創業者的下一步：ManyChat 能做什麼你的 bot 做不到？」\n   - 比較表：ManyChat vs n8n vs Zapier vs 自架 Telegram Bot\n   - CTA：3 個漸層按鈕（ManyChat affiliate + DigitalOcean + DataCamp）",
+        "5. blog/activecampaign-taiwan-automation-complete-review-2026.html（2,000 字）：\n   - 角度：「比 Systeme.io 貴但更強大：何時值得升級到 ActiveCampaign？」\n   - 比較表：ActiveCampaign vs Systeme.io vs n8n vs Zapier（定位層次清晰）\n   - CTA：3 個漸層按鈕（ActiveCampaign affiliate + Systeme.io affiliate + DigitalOcean）",
+        "6. 在既有 blog/telegram-bot-business-guide.html 底部加入 ManyChat CTA（「準備擴大 Telegram Bot 規模？」）",
+        "7. 在既有 Systeme.io 文章加入 ActiveCampaign 比較段落（中高端客戶分流）",
+        "8. 未來 ManyChat 文章發布後，在 blog/line-bot-tutorial-2026.html 加入 ManyChat 替代方案段落"
+      ],
+      "contentStrategy": [
+        "主要文章：blog/manychat-telegram-line-bot-review-2026.html（ManyChat 直接 affiliate）",
+        "比較文：blog/activecampaign-vs-systemeio-marketing-automation-2026.html（兩個 affiliate 同時出現）",
+        "更新文：blog/telegram-bot-business-guide.html 底部加入 ManyChat CTA",
+        "長期：ManyChat Telegram Bot 教學系列（3 篇），建立 Diamond 50% tier 資格"
+      ],
+      "strategicAdvantage": "AutoDev AI 是 Telegram Bot 自動化專家，推薦 ManyChat 是天然延伸，不是硬塞 affiliate。客戶信任度高 → 轉換率高於一般評測站 3-5x。",
+      "directivesForOtherAgents": [
+        "Ivan: 立即申請 manychat.com/affiliates（PartnerStack，5 分鐘，instant approval）",
+        "Ivan: 立即申請 activecampaign.com/partners/affiliate（PartnerStack，5 分鐘，instant approval）",
+        "seo-writer: 收到兩個 affiliate link 後，優先發布 blog/manychat-telegram-line-bot-review-2026.html",
+        "seo-writer: 同步更新 blog/telegram-bot-business-guide.html 底部加入 ManyChat CTA",
+        "builder: 建立 /tools/chatbot-platform-comparison.html（ManyChat vs n8n vs Zapier vs 自架，嵌入 ManyChat + n8n affiliate）"
+      ],
+      "urgency": "HIGH",
+      "reason": "受眾完美匹配（Telegram Bot 創業者），30-50% recurring commission，繁中競品 0，10 分鐘即可申請，直接轉換既有流量"
     }
   ],
   "agentLog": [
@@ -999,8 +1094,11 @@
       ]
     },
     {
-      "timestamp": "2026-10-05T01:30:00Z",
+      "timestamp": "2026-10-09T12:00:00Z",
       "agent": "strategist",
+      "action": "income-ideation",
+      "summary": "Round 241 腦暴。基於 researcher R241 指令（AI 成本危機 + Claude Haiku 5.5 + Anthropic IPO 主題）產出兩項提案：(1) AI FinOps Notion Template $39 Gumroad 一次性數位產品（目標月收 $1,200-3,600）；(2) ManyChat 30-50% + ActiveCampaign 20-30% Recurring Affiliate 雙漏斗策略（目標月收 $800-2,700）。搜尋確認：AI 成本管理工具比較市場爆量、ManyChat 繁中競品 0、ActiveCampaign 繁中競品 0。積壓確認：Systeme.io/OmniSEO/Reclaim.AI/Gumroad 仍未執行，已轉發指令。"
+    },
       "task": "seo-weekly-report",
       "status": "completed",
       "summary": "Mon 01:30 UTC strategist weekly report — Week Oct 5–11 directive 已發布。核心問題：GitHub Pages 12 個 production 404（持續 2 週，builder 未執行修復，這週設為 #1 BLOCKER）。Gumroad 4 個 broken product links 影響 6 篇文章（23+ 週積壓）。本週 seo-writer 排程：hindsight 教學文（Oct 10 截止，立即發布）、openmontage 教學文（Oct 15）、clair 評測（Oct 12）、hubspot-aeo 評測（Oct 18）、ai-engineering 課程文（Oct 16）。Builder 除 GitHub Pages 修復外，啟動 AI Prompt Library Google Sheet 架構。Researcher 本週聚焦 Clair affiliate 確認 + Vectorize affiliate 確認。Ivan 最緊急：Systeme.io 60% lifetime（24+ 輪積壓），GitHub Pages deploy，Gumroad 產品上架，Viktor affiliate link 補入。",
