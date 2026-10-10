@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudflare 收購 Deno 完整解析 2026：Workers 遷移指南、Deno Deploy 6 個月後關閉，繁中首發</title>
+    <meta name="description" content="2026 年 10 月 9 日，Cloudflare 宣布收購 Deno。Deno Deploy 將於 6 個月後關閉，現有用戶需遷移至 Cloudflare Workers。本文提供完整遷移指南、技術差異比較，以及對 JavaScript 生態系的深遠影響。">
+    <meta name="keywords" content="cloudflare 收購 deno, deno deploy 關閉, cloudflare workers 遷移, deno workers 教學, cloudflare deno 2026, deno deploy migration, workers kv 遷移">
+    <link rel="canonical" href="https://autodev-ai.com/blog/cloudflare-acquires-deno-workers-migration-guide-2026.html">
+    <meta property="og:title" content="Cloudflare 收購 Deno 完整解析 2026：Workers 遷移指南，繁中首發">
+    <meta property="og:description" content="Cloudflare 收購 Deno，Deno Deploy 6 個月後關閉。完整遷移指南：Workers、KV、R2 對應設定，以及對 JavaScript 生態系的影響。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/cloudflare-acquires-deno-workers-migration-guide-2026.html">
+    <meta property="og:image" content="https://autodev-ai.com/assets/og-cloudflare-deno.png">
+    <link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/blog/cloudflare-acquires-deno-workers-migration-guide-2026.html">
+    <link rel="stylesheet" href="../style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Cloudflare 收購 Deno 完整解析 2026：Workers 遷移指南、Deno Deploy 6 個月後關閉，繁中首發",
+      "description": "2026 年 10 月 9 日，Cloudflare 宣布收購 Deno。Deno Deploy 將於 6 個月後關閉，現有用戶需遷移至 Cloudflare Workers。本文提供完整遷移指南與技術差異比較。",
+      "author": {
+        "@type": "Person",
+        "name": "AutoDev AI Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "AutoDev AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://autodev-ai.com/assets/logo.png"
+        }
+      },
+      "datePublished": "2026-10-10T03:00:00Z",
+      "dateModified": "2026-10-10T03:00:00Z",
+      "image": "https://autodev-ai.com/assets/og-cloudflare-deno.png",
+      "mainEntityOfPage": "https://autodev-ai.com/blog/cloudflare-acquires-deno-workers-migration-guide-2026.html"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">AutoDev AI</a>
+                <div class="nav-links">
+                    <a href="../index.html#services">服務項目</a>
+                    <a href="../blog/index.html">技術 Blog</a>
+                    <a href="../index.html#contact">聯絡我們</a>
+                    <a href="../en/index.html">English</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container article-content">
+        <article>
+            <h1>Cloudflare 收購 Deno 完整解析 2026：Workers 遷移指南、Deno Deploy 6 個月後關閉，繁中首發</h1>
+            
+            <div class="article-meta">
+                <time datetime="2026-10-10">發布於 2026 年 10 月 10 日</time>
+                <span class="reading-time">閱讀時間：約 12 分鐘</span>
+            </div>
+
+            <div class="toc">
+                <h2>目錄</h2>
+                <ul>
+                    <li><a href="#news">重大新聞：Cloudflare 宣布收購 Deno</a></li>
+                    <li><a href="#why">為什麼 Cloudflare 要收購 Deno？</a></li>
+                    <li><a href="#deno-deploy-shutdown">Deno Deploy 關閉時間軸</a></li>
+                    <li><a href="#tech-diff">技術差異：Deno Deploy vs Cloudflare Workers</a></li>
+                    <li><a href="#migration">完整遷移指南：手把手從 Deno Deploy 移到 Workers</a></li>
+                    <li><a href="#kv-r2">KV 與 R2 遷移：儲存層對應</a></li>
+                    <li><a href="#runtime-compat">Runtime 相容性：Deno API 在 Workers 上怎麼跑</a></li>
+                    <li><a href="#ecosystem">對 JavaScript 生態系的深遠影響</a></li>
+                    <li><a href="#hosting-options">替代方案：不想用 Cloudflare 怎麼辦？</a></li>
+                    <li><a href="#conclusion">結論：現在該怎麼做？</a></li>
+                </ul>
+            </div>
+
+            <section id="news">
+                <h2>重大新聞：Cloudflare 宣布收購 Deno</h2>
+                <p>2026 年 10 月 9 日，Cloudflare 官方部落格宣布收購 Deno——這是 JavaScript/TypeScript 執行環境與邊緣運算領域近年來最震撼的整併案之一。此消息在 Hacker News 上迅速衝至首頁，獲得超過 960 個 upvote，成為近期最熱議的開發者話題之一。</p>
+
+                <p>Deno 由 Node.js 創始人 Ryan Dahl 於 2018 年創立，以「修正 Node.js 設計錯誤」為目標。相較於 Node.js，Deno 提供原生 TypeScript 支援、更嚴格的安全模型（需明確授予許可）、內建標準函式庫，以及與 Web 標準 API 更高的相容性。</p>
+
+                <p>Deno Deploy 則是 Deno 公司於 2021 年推出的邊緣運算平台——類似 Cloudflare Workers，讓開發者可以把 Deno 程式碼部署到全球 35 個 PoP（Points of Presence），實現超低延遲的邊緣執行。</p>
+
+                <p>這次收購代表兩個方向的整合：Deno 的技術能力（尤其是 TypeScript 原生支援與 Web 標準相容性）將融入 Cloudflare Workers 生態，而 Deno Deploy 的現有用戶則必須在 6 個月內完成遷移。</p>
+
+                <div class="highlight-box" style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem 1.5rem; margin: 1.5rem 0;">
+                    <strong>⚠️ 如果你正在使用 Deno Deploy：</strong> 請立即確認你的應用，Deno Deploy 將於 2027 年 4 月前後正式關閉。Cloudflare 提供遷移工具，但你需要主動行動。
+                </div>
+            </section>
+
+            <section id="why">
+                <h2>為什麼 Cloudflare 要收購 Deno？</h2>
+                <p>要理解這次收購的戰略邏輯，需要先看 Cloudflare 的長期佈局。</p>
+
+                <h3>Cloudflare Workers 的技術債</h3>
+                <p>Cloudflare Workers 自 2017 年推出以來，一直使用 V8 引擎（JavaScript 引擎）加上自行開發的 Workers Runtime。這個架構效能很好，但在 TypeScript 支援、Web 標準相容性方面一直落後於 Deno。</p>
+
+                <p>開發者常見的痛點包括：</p>
+                <ul>
+                    <li>TypeScript 需要額外的 build step，不像 Deno 可以直接執行 .ts 檔案</li>
+                    <li>部分 Web API（如 Streams、Fetch 的細節行為）與瀏覽器標準有微妙差異</li>
+                    <li>Package 管理依賴 npm，與 Deno 的 URL import 模式衝突</li>
+                </ul>
+
+                <h3>Deno 的強項與財務困境</h3>
+                <p>Deno 的技術口碑很好，但商業化一直是挑戰。Deno Deploy 用戶增長雖然穩定，但 Free tier 佔比過高，付費轉換率不理想。在 VC 資金緊縮的 2025-2026 年環境下，Deno 公司面臨盈利壓力。</p>
+
+                <p>對 Cloudflare 來說，這是一個典型的「技術收購」——買的不是用戶，而是 Deno 的核心 Runtime 技術、Ryan Dahl 團隊，以及更重要的：一套已被市場驗證的 TypeScript-first 開發體驗。</p>
+
+                <h3>競爭格局：對抗 Vercel + Bun 組合</h3>
+                <p>Vercel 已與 Next.js 深度整合，Bun 的崛起讓執行環境競爭更加激烈。Cloudflare 收購 Deno，等於在邊緣運算戰場建立更強的技術護城河，直接與 Vercel Edge Functions 形成更全面的競爭。</p>
+            </section>
+
+            <section id="deno-deploy-shutdown">
+                <h2>Deno Deploy 關閉時間軸</h2>
+                <p>根據 Cloudflare 官方聲明，遷移時間軸如下：</p>
+
+                <table style="width:100%; border-collapse:collapse; margin: 1.5rem 0;">
+                    <thead>
+                        <tr style="background:#f5f5f5;">
+                            <th style="padding:0.75rem; border:1px solid #ddd; text-align:left;">時間點</th>
+                            <th style="padding:0.75rem; border:1px solid #ddd; text-align:left;">事件</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">2026 年 10 月 9 日</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">收購宣布，遷移工具開放測試</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">2026 年 10-12 月</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">遷移期：Deno Deploy 繼續正常運作，開發者可開始遷移</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">2027 年 1 月</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">Deno Deploy 停止接受新用戶</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">2027 年 4 月（預估）</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">Deno Deploy 正式關閉</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Cloudflare 承諾提供遷移工具，並對 Deno Deploy 付費用戶提供等值的 Workers 免費點數作為補償。Free tier 用戶則可直接使用 Workers 的免費額度。</p>
+            </section>
+
+            <section id="tech-diff">
+                <h2>技術差異：Deno Deploy vs Cloudflare Workers</h2>
+                <p>在遷移之前，必須先理解兩個平台的核心差異：</p>
+
+                <table style="width:100%; border-collapse:collapse; margin: 1.5rem 0;">
+                    <thead>
+                        <tr style="background:#f5f5f5;">
+                            <th style="padding:0.75rem; border:1px solid #ddd; text-align:left;">面向</th>
+                            <th style="padding:0.75rem; border:1px solid #ddd; text-align:left;">Deno Deploy</th>
+                            <th style="padding:0.75rem; border:1px solid #ddd; text-align:left;">Cloudflare Workers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>執行環境</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">Deno Runtime（V8 + Deno APIs）</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">Workers Runtime（V8 + Web APIs）</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>TypeScript 支援</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">原生，無需 build step</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">需要 wrangler build（即將改善）</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>Package 管理</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">URL import + JSR + npm compat</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">npm（透過 wrangler）</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>儲存</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">Deno KV（全球一致性）</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">Workers KV + D1 + R2</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>PoP 數量</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">35 個節點</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">300+ 個節點</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>CPU 時間限制</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">50ms（Free）</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">10ms（Free）/ 無限（Paid）</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>Free 月請求量</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">100 萬次</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">100 萬次</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>Cron Jobs</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">原生支援</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">Workers Cron Triggers</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>最重要的差異是 <strong>CPU 時間限制</strong>：Deno Deploy Free tier 允許 50ms，Workers Free 只有 10ms。如果你的 Worker 邏輯比較複雜，可能需要升級到 Workers Paid 計畫（$5/月起）。</p>
+            </section>
+
+            <section id="migration">
+                <h2>完整遷移指南：手把手從 Deno Deploy 移到 Workers</h2>
+
+                <h3>步驟 1：安裝 Wrangler CLI</h3>
+                <pre style="background:#1a1a2e;color:#e2e8f0;padding:1.25rem;border-radius:8px;overflow-x:auto;"><code># 安裝 Wrangler（Cloudflare Workers CLI）
+npm install -g wrangler
+
+# 登入 Cloudflare 帳號
+wrangler login</code></pre>
+
+                <h3>步驟 2：建立新的 Worker 專案</h3>
+                <pre style="background:#1a1a2e;color:#e2e8f0;padding:1.25rem;border-radius:8px;overflow-x:auto;"><code># 從 template 建立 TypeScript Worker
+npm create cloudflare@latest my-worker -- --type typescript
+
+cd my-worker</code></pre>
+
+                <h3>步驟 3：轉換 Deno Deploy 入口點</h3>
+                <p>Deno Deploy 使用 <code>Deno.serve()</code>，Workers 使用 <code>export default { fetch() }</code>：</p>
+
+                <pre style="background:#1a1a2e;color:#e2e8f0;padding:1.25rem;border-radius:8px;overflow-x:auto;"><code>// --- Deno Deploy (舊) ---
+Deno.serve(async (req: Request): Promise&lt;Response&gt; => {
+  const url = new URL(req.url);
+  if (url.pathname === "/api/hello") {
+    return new Response(JSON.stringify({ message: "Hello!" }), {
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+  return new Response("Not Found", { status: 404 });
+});
+
+// --- Cloudflare Workers (新) ---
+export default {
+  async fetch(request: Request, env: Env): Promise&lt;Response&gt; {
+    const url = new URL(request.url);
+    if (url.pathname === "/api/hello") {
+      return new Response(JSON.stringify({ message: "Hello!" }), {
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+    return new Response("Not Found", { status: 404 });
+  },
+};</code></pre>
+
+                <p>關鍵變化：</p>
+                <ul>
+                    <li><code>Deno.serve(handler)</code> → <code>export default { fetch(request, env) }</code></li>
+                    <li>多了 <code>env</code> 參數（用來存取 KV、R2、環境變數）</li>
+                    <li>TypeScript 需要定義 <code>Env</code> interface</li>
+                </ul>
+
+                <h3>步驟 4：處理 URL Import</h3>
+                <p>Deno 可以直接 import URL，Workers 不行。需要改用 npm 或 JSR：</p>
+
+                <pre style="background:#1a1a2e;color:#e2e8f0;padding:1.25rem;border-radius:8px;overflow-x:auto;"><code>// Deno Deploy (舊)
+import { Hono } from "https://deno.land/x/hono/mod.ts";
+
+// Cloudflare Workers (新)
+// 先 npm install hono
+import { Hono } from "hono";</code></pre>
+
+                <h3>步驟 5：wrangler.toml 設定</h3>
+                <pre style="background:#1a1a2e;color:#e2e8f0;padding:1.25rem;border-radius:8px;overflow-x:auto;"><code># wrangler.toml
+name = "my-worker"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# 若有 Cron Jobs（對應 Deno Deploy Scheduled）
+[triggers]
+crons = ["0 */6 * * *"]  # 每 6 小時執行一次</code></pre>
+
+                <h3>步驟 6：部署</h3>
+                <pre style="background:#1a1a2e;color:#e2e8f0;padding:1.25rem;border-radius:8px;overflow-x:auto;"><code># 本地開發
+wrangler dev
+
+# 部署到 Production
+wrangler deploy</code></pre>
+            </section>
+
+            <section id="kv-r2">
+                <h2>KV 與 R2 遷移：儲存層對應</h2>
+                <p>Deno Deploy 使用 <strong>Deno KV</strong>——一個全球一致的 key-value store，類似 Cloudflare Workers KV 但有全域即時一致性（Workers KV 是最終一致性）。</p>
+
+                <h3>Deno KV → Workers KV 遷移</h3>
+                <pre style="background:#1a1a2e;color:#e2e8f0;padding:1.25rem;border-radius:8px;overflow-x:auto;"><code>// Deno KV (舊)
+const kv = await Deno.openKv();
+await kv.set(["users", userId], userData);
+const result = await kv.get(["users", userId]);
+
+// Workers KV (新) — 需要在 wrangler.toml 定義 KV namespace
+// wrangler.toml: [[kv_namespaces]] binding = "USERS_KV" id = "..."
+await env.USERS_KV.put(`user:${userId}`, JSON.stringify(userData));
+const raw = await env.USERS_KV.get(`user:${userId}`);
+const result = raw ? JSON.parse(raw) : null;</code></pre>
+
+                <p><strong>注意：</strong> Deno KV 支援複合 key（array of primitives），Workers KV 只支援字串 key。遷移時需要手動把 Deno KV 的 key array 序列化成字串（如用 `:` 分隔）。</p>
+
+                <h3>Deno KV → D1（關聯式資料需求）</h3>
+                <p>如果你的資料有關聯關係，考慮遷移到 Cloudflare D1（SQLite）：</p>
+                <pre style="background:#1a1a2e;color:#e2e8f0;padding:1.25rem;border-radius:8px;overflow-x:auto;"><code>// D1 範例（Workers）
+const { results } = await env.DB.prepare(
+  "SELECT * FROM users WHERE id = ?"
+).bind(userId).all();
+
+const user = results[0];</code></pre>
+
+                <p>Cloudflare 也提供官方遷移工具，可以把 Deno KV 資料匯出為 JSON，再批次寫入 Workers KV 或 D1。</p>
+            </section>
+
+            <section id="runtime-compat">
+                <h2>Runtime 相容性：Deno API 在 Workers 上怎麼跑</h2>
+                <p>好消息是 Workers 的 Web 標準相容性近年來大幅提升，大部分基本 Deno API 都有對應：</p>
+
+                <table style="width:100%; border-collapse:collapse; margin: 1.5rem 0;">
+                    <thead>
+                        <tr style="background:#f5f5f5;">
+                            <th style="padding:0.75rem; border:1px solid #ddd;">Deno API</th>
+                            <th style="padding:0.75rem; border:1px solid #ddd;">Workers 對應</th>
+                            <th style="padding:0.75rem; border:1px solid #ddd;">狀態</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><code>fetch()</code></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><code>fetch()</code></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">✅ 直接相容</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><code>Request / Response</code></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><code>Request / Response</code></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">✅ 直接相容</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><code>crypto.subtle</code></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><code>crypto.subtle</code></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">✅ 直接相容</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><code>Deno.env.get()</code></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><code>env.MY_VAR</code>（wrangler vars）</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">⚠️ 需調整</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><code>Deno.readFile()</code></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">無本地檔案系統，用 R2</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">❌ 需重設計</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><code>WebSocket</code></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">Workers WebSocket Hibernation</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">✅ Workers 版更強</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>最需要注意的是 <strong>本地檔案系統存取</strong>——Workers 和 Deno Deploy 都是 serverless，但 Deno Deploy 部分版本允許讀取 bundle 內的靜態檔案。Workers 建議把靜態資源放到 Cloudflare R2，或用 Workers Assets 功能。</p>
+            </section>
+
+            <section id="ecosystem">
+                <h2>對 JavaScript 生態系的深遠影響</h2>
+                <p>這次收購不只是一個平台整合，更有可能重塑 JavaScript 邊緣運算的格局。</p>
+
+                <h3>正面影響</h3>
+                <ul>
+                    <li><strong>Workers 的 TypeScript 體驗將大幅提升：</strong> Deno 的原生 TS 支援技術將被整合進 Workers Runtime，預計 2027 上半年發布</li>
+                    <li><strong>Web 標準推進加速：</strong> Deno 一直是 WinterCG（Web-interoperable Runtimes Community Group）的推動者，加入 Cloudflare 後有更多資源</li>
+                    <li><strong>開發者工具改善：</strong> Deno 的 LSP（Language Server Protocol）整合可能帶進 VS Code Workers 開發體驗</li>
+                </ul>
+
+                <h3>疑慮</h3>
+                <ul>
+                    <li><strong>開源性：</strong> Deno 是開源的（MIT），Cloudflare Workers Runtime 則是閉源的。Deno 的部分技術被整合後，開源承諾能否延續？</li>
+                    <li><strong>Ryan Dahl 的角色：</strong> 收購後 Ryan Dahl 將加入 Cloudflare，但他是否會繼續主導技術方向，還是逐漸邊緣化？</li>
+                    <li><strong>競爭格局失衡：</strong> Cloudflare Workers 已是邊緣運算市佔第一，吃掉 Deno Deploy 後，有沒有其他選手能挑戰？</li>
+                </ul>
+
+                <h3>對 Bun 的影響</h3>
+                <p>Bun 近年快速成長，定位是「更快的 Node.js」。Deno 消失後（Deno Deploy 關閉），不少 Deno Deploy 用戶可能轉向 Bun 或 Fly.io，而非全部流入 Workers。這對 Bun 是個機會。</p>
+            </section>
+
+            <section id="hosting-options">
+                <h2>替代方案：不想用 Cloudflare 怎麼辦？</h2>
+                <p>如果你不想把所有邊緣運算都放在 Cloudflare，以下是幾個仍然支援 Deno 或提供類似邊緣運算的選項：</p>
+
+                <table style="width:100%; border-collapse:collapse; margin: 1.5rem 0;">
+                    <thead>
+                        <tr style="background:#f5f5f5;">
+                            <th style="padding:0.75rem; border:1px solid #ddd;">平台</th>
+                            <th style="padding:0.75rem; border:1px solid #ddd;">Deno 支援</th>
+                            <th style="padding:0.75rem; border:1px solid #ddd;">免費額度</th>
+                            <th style="padding:0.75rem; border:1px solid #ddd;">定價</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>Fly.io</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">完整 Deno Runtime</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">3 個 shared-cpu VM</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">依資源計費</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>Vercel Edge</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">部分相容（Web標準）</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">Hobby 免費</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">$20/月起</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>Netlify Edge</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">Deno-based Runtime</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">100 萬次/月</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">$19/月起</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem; border:1px solid #ddd;"><strong>DigitalOcean Functions</strong></td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">Node.js / Python</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">100 萬次/月</td>
+                            <td style="padding:0.75rem; border:1px solid #ddd;">$0.0000025/GB-s</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>如果你的應用需要 Deno 原生支援（例如大量使用 Deno KV 的複合 key），Fly.io 是目前最好的替代方案。Netlify Edge Functions 也值得考慮，因為它的 Runtime 本來就是基於 Deno。</p>
+
+                <!-- CTA 1: DigitalOcean -->
+                <div style="background: linear-gradient(135deg, #0069ff 0%, #0052cc 100%); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; color: white;">
+                    <h3 style="margin-top:0; color:white;">🚀 需要完全掌控的伺服器環境？</h3>
+                    <p style="margin-bottom:1rem;">DigitalOcean Droplet 從 $6/月起，你可以自架 Deno、Bun 或任何 Node.js 環境，不受任何平台鎖定。新用戶享 $200 免費點數（60天）。</p>
+                    <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block; background:white; color:#0069ff; padding:0.75rem 1.5rem; border-radius:6px; font-weight:700; text-decoration:none;">免費領取 $200 點數 →</a>
+                </div>
+            </section>
+
+            <section id="conclusion">
+                <h2>結論：現在該怎麼做？</h2>
+
+                <h3>如果你是 Deno Deploy 用戶</h3>
+                <ol>
+                    <li><strong>立即清查你的應用</strong>：有哪些用了 Deno Deploy？有幾個 project？</li>
+                    <li><strong>評估遷移複雜度</strong>：純 HTTP handler 最簡單，有 Deno KV 資料的比較複雜</li>
+                    <li><strong>優先遷移生產環境</strong>：6 個月的窗口看起來長，但生產環境的遷移往往需要多輪測試，建議 2 個月內完成</li>
+                    <li><strong>善用 Cloudflare 提供的遷移工具</strong>：官方會提供 CLI 工具協助資料匯出</li>
+                </ol>
+
+                <h3>如果你還在評估邊緣運算平台</h3>
+                <p>這次事件再次提醒：免費的 serverless 平台都有被收購或關閉的風險。在 Cloudflare Workers 上建置的優點是：Cloudflare 是一家財務健全的公司，短期內不存在這個問題。</p>
+
+                <p>對於需要更彈性的架構，或是資料不能放在美國公司服務的專案，自架 VPS（如 DigitalOcean 或 Cloudways）搭配 Deno/Bun 仍是一個好選項。</p>
+
+                <!-- CTA 2: Cloudways -->
+                <div style="background: linear-gradient(135deg, #2e86de 0%, #1e6fc4 100%); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; color: white;">
+                    <h3 style="margin-top:0; color:white;">☁️ 需要 Managed Cloud Hosting？</h3>
+                    <p style="margin-bottom:1rem;">Cloudways 讓你在 AWS/GCP/DO/Vultr/Linode 上部署應用，完全不需要管理伺服器。適合想保有彈性但不想管 Linux 的團隊。</p>
+                    <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" target="_blank" rel="noopener sponsored" style="display:inline-block; background:white; color:#2e86de; padding:0.75rem 1.5rem; border-radius:6px; font-weight:700; text-decoration:none;">免費試用 Cloudways 3 天 →</a>
+                </div>
+
+                <!-- CTA 3: DataCamp -->
+                <div style="background: linear-gradient(135deg, #03cc65 0%, #02a552 100%); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; color: white;">
+                    <h3 style="margin-top:0; color:white;">📚 想系統學習雲端與 AI 開發？</h3>
+                    <p style="margin-bottom:1rem;">DataCamp 提供 Cloud Computing、Serverless Architecture、JavaScript/TypeScript 完整課程路徑，動手做中學，適合從入門到進階的開發者。</p>
+                    <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" style="display:inline-block; background:white; color:#03cc65; padding:0.75rem 1.5rem; border-radius:6px; font-weight:700; text-decoration:none;">免費試用 DataCamp →</a>
+                </div>
+
+                <p>Cloudflare 收購 Deno 是邊緣運算整合浪潮的縮影。對開發者來說，這既是遷移的麻煩，也是一個重新審視架構決策的好時機。無論選擇哪個平台，最重要的是確保你的應用不過度依賴任何單一供應商的專有 API。</p>
+
+                <p>有遷移問題或想評估是否需要自架方案的讀者，歡迎透過 <a href="../index.html#contact">AutoDev AI 聯絡頁面</a>詢問，我們有協助多個台灣開發者團隊處理 serverless 架構遷移的實務經驗。</p>
+            </section>
+
+            <div class="article-footer">
+                <p><strong>延伸閱讀：</strong></p>
+                <ul>
+                    <li><a href="/blog/cloudflare-web-search-api-ai-agent-review-2026.html">Cloudflare Web Search API 完整評測 2026：AI Agent 搜尋統一閘道</a></li>
+                    <li><a href="/blog/n8n-automation-tutorial-2026.html">n8n 完整教學 2026：台灣企業自動化最強工具</a></li>
+                    <li><a href="/tools/ai-model-comparison.html">AI 模型比較工具：找到最適合你需求的 AI</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AutoDev AI. 台灣 AI 自動化與 Telegram Bot 開發專家。</p>
+            <p><a href="../privacy.html">隱私政策</a> | <a href="../terms.html">服務條款</a></p>
+        </div>
+    </footer>
+</body>
+</html>

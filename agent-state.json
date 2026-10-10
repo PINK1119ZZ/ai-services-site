@@ -1,6 +1,6 @@
 {
-  "lastRun": "2026-10-10T00:30:00Z",
-  "lastBuilderRun": "2026-10-07T05:06:44.652487Z",
+  "lastRun": "2026-10-10T05:00:00Z",
+  "lastBuilderRun": "2026-10-10T05:00:00Z",
   "lastResearchRound": 243,
   "lastCompetitorWatchRun": "2026-10-04T03:08:00Z",
   "lastStrategistRun": "2026-10-09T12:00:00Z",
@@ -289,6 +289,68 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-10-10T05:00:00Z",
+      "agent": "builder",
+      "task": "cta-updates-and-new-tool",
+      "status": "completed",
+      "summary": "Sat 05:00 UTC builder cron — 完成：(1) tools/ai-token-cost-calculator.html 新增 2 個 CTA（AI/ML API 統一入口 + AI FinOps Dashboard Notion Template $39 Gumroad）；(2) 建立 tools/chatbot-platform-comparison.html（ManyChat vs n8n vs Zapier vs 自架 Bot，4 個聯盟 CTA）；(3) tools/index.html 新增比較工具卡片；(4) sitemap.xml 新增 1 筆 URL + 更新 2 筆 lastmod。GitHub Pages 404 仍需 Ivan workflow_dispatch。",
+      "changes": [
+        "tools/ai-token-cost-calculator.html 新增 AI/ML API CTA 與 AI FinOps Dashboard Gumroad CTA",
+        "新增 tools/chatbot-platform-comparison.html（ManyChat vs n8n vs Zapier vs 自架，4 個 affiliate CTA：ManyChat + n8n + Zapier + DigitalOcean）",
+        "tools/index.html 新增 chatbot-platform-comparison.html 工具卡片",
+        "sitemap.xml 新增 tools/chatbot-platform-comparison.html + 更新 ai-token-cost-calculator.html lastmod 至 2026-10-10"
+      ],
+      "toolsBuilt": [
+        {
+          "file": "tools/chatbot-platform-comparison.html",
+          "title": "聊天機器人平台比較 2026 — ManyChat vs n8n vs Zapier vs 自架 Telegram Bot",
+          "type": "comparison-tool",
+          "affiliateLinks": 4,
+          "revenueModel": "affiliate-commission",
+          "seoKeywords": [
+            "manychat vs n8n",
+            "chatbot platform comparison",
+            "telegram bot platform 比較",
+            "manychat 繁中",
+            "n8n vs zapier"
+          ],
+          "estimatedMonthlyRevenue": "$150-500（ManyChat + n8n + Zapier + DigitalOcean affiliate）"
+        }
+      ],
+      "ctas_added": [
+        {
+          "file": "tools/ai-token-cost-calculator.html",
+          "cta": "AI/ML API 統一入口 CTA",
+          "proposal": "strategist-2026-10-02-04"
+        },
+        {
+          "file": "tools/ai-token-cost-calculator.html",
+          "cta": "AI FinOps Dashboard Notion Template CTA ($39 Gumroad)",
+          "proposal": "strategist-2026-10-09-01"
+        }
+      ],
+      "blockedTasks": [
+        {
+          "task": "GitHub Pages deploy（22 個 production 404）",
+          "reason": "workflow_dispatch 需要 Ivan 提供 approved_sha 手動觸發",
+          "action": "【緊急】Ivan 前往 GitHub Actions → Publish GitHub Pages → Run workflow，輸入當前 main HEAD SHA"
+        },
+        {
+          "task": "AI Token Calculator Pro Notion Template 上架 Gumroad",
+          "reason": "Notion 需要 Ivan 帳號建立，Gumroad 需要 Ivan 授權發布",
+          "action": "Ivan 在 Notion 建立模板，Gumroad 上架 $39"
+        }
+      ],
+      "nextActions": [
+        "🔴 Ivan 立即：觸發 GitHub Pages workflow_dispatch（22 個 production 404，已積壓超過 2 週）",
+        "🔴 Ivan 立即：申請 ManyChat affiliate（manychat.com/affiliates）+ 補入 chatbot-platform-comparison.html 真實 affiliate link",
+        "🔴 Ivan 立即：申請 Systeme.io 60% lifetime（25+ 輪積壓）",
+        "🔴 Ivan 立即：在 Notion 建立 AI FinOps Dashboard + Gumroad 上架（$39）",
+        "🟡 builder 下次：補充 StepFun Step 5 到 ai-model-comparison.html（R243 P0-URGENT，Oct 15 截止）",
+        "🟢 builder 後續：AI Prompt Library Google Sheet 架構（500 prompts，strategist-2026-10-02-02）"
+      ]
+    },
     {
       "timestamp": "2026-10-10T00:30:00Z",
       "agent": "researcher",

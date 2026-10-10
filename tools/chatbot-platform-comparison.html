@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>聊天機器人平台比較 2026｜ManyChat vs n8n vs Zapier vs 自架 Telegram Bot</title>
+<meta name="description" content="比較 ManyChat、n8n、Zapier 與自架 Telegram Bot 的功能、定價、無代碼 AI agent 能力。幫助企業選擇最適合的自動化平台。">
+<link rel="canonical" href="https://autodev-ai.com/tools/chatbot-platform-comparison.html">
+<meta property="og:title" content="聊天機器人平台比較 2026｜ManyChat vs n8n vs Zapier">
+<meta property="og:description" content="ManyChat $11.45/mo 低成本，n8n $20/mo 無限工作流，Zapier $19.99/mo 雲端整合，自架 Telegram Bot 最靈活——看你的場景選擇。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autodev-ai.com/tools/chatbot-platform-comparison.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ComparisonChart",
+  "name": "聊天機器人平台比較 2026",
+  "description": "ManyChat、n8n、Zapier 與自架 Telegram Bot 的功能、定價與適用場景比較。",
+  "url": "https://autodev-ai.com/tools/chatbot-platform-comparison.html",
+  "inLanguage": "zh-Hant"
+}
+</script>
+
+<meta name="theme-color" content="#FFF8F3">
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+<style>
+:root {
+  --warm-bg: #F6F1E8;
+  --warm-surface: #FBF7EF;
+  --warm-white: #FFFFFF;
+  --warm-border: #E2D9C8;
+  --warm-accent: #C8853F;
+  --warm-accent-hover: #A86B2C;
+  --warm-tint: #F0E3D0;
+  --ink: #1F2421;
+  --muted: #8A8A80;
+  --highlight: #FFF3E0;
+}
+
+body {
+  background: var(--warm-bg);
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.cpc-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.cpc-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cpc-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}
+
+.cpc-header p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin: 0.5rem 0 0;
+}
+
+.cpc-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.cpc-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--warm-white);
+  font-size: 0.95rem;
+}
+
+.cpc-table thead {
+  background: var(--warm-bg);
+  border-bottom: 2px solid var(--warm-border);
+}
+
+.cpc-table th {
+  padding: 1.25rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--ink);
+  vertical-align: middle;
+}
+
+.cpc-table tbody tr {
+  border-bottom: 1px solid var(--warm-border);
+}
+
+.cpc-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.cpc-table td {
+  padding: 1rem 1.25rem;
+  vertical-align: top;
+}
+
+.cpc-table td:first-child {
+  font-weight: 600;
+  color: var(--ink);
+  min-width: 140px;
+}
+
+.platform-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.platform-icon {
+  font-size: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.625rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+.badge-best {
+  background: #C8F7DC;
+  color: #065F46;
+}
+
+.badge-cheap {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.checkmark {
+  color: #10B981;
+  font-weight: 700;
+}
+
+.partial {
+  color: #F59E0B;
+  font-weight: 700;
+}
+
+.cross {
+  color: #EF4444;
+  font-weight: 700;
+}
+
+.rating {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.25rem 0.625rem;
+  background: var(--highlight);
+  border-radius: 4px;
+  color: #D97706;
+}
+
+.cpc-info-box {
+  background: var(--warm-tint);
+  border: 1px solid var(--warm-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cpc-info-box h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.cpc-info-box p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.aff-ctas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.aff-card {
+  background: var(--warm-white);
+  border: 2px solid var(--warm-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.aff-card:hover {
+  border-color: var(--warm-accent);
+  box-shadow: 0 4px 12px rgba(200, 133, 63, 0.15);
+}
+
+.ac-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--warm-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.ac-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+.ac-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.ac-btn {
+  display: inline-block;
+  background: var(--warm-accent);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.ac-btn:hover {
+  background: var(--warm-accent-hover);
+}
+
+@media (max-width: 768px) {
+  .cpc-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .cpc-table {
+    font-size: 0.85rem;
+  }
+
+  .cpc-table th,
+  .cpc-table td {
+    padding: 0.75rem;
+  }
+
+  .badge {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+}
+</style>
+</head>
+<body class="v2c-page">
+<!-- v2-chrome:header -->
+<header class="v2c-header" id="nav">
+  <div class="v2c-inner">
+    <a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a>
+    <div class="v2c-links" id="navLinks" data-nav-links>
+      <a href="/services.html">服務</a>
+      <a href="/portfolio.html">案例</a>
+      <a href="/ai-model.html">AI 模特</a>
+      <a href="/blog/">洞察</a>
+      <a href="/about.html">關於</a>
+      <a href="/contact.html">聯絡</a>
+      <a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a>
+    </div>
+    <button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button>
+    <button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button>
+  </div>
+</header>
+<!-- /v2-chrome:header -->
+
+<main class="v2c-article v2c-tool">
+<div class="cpc-container">
+  <header class="cpc-header">
+    <h1>聊天機器人平台比較 2026</h1>
+    <p>選擇最適合你的企業自動化方案：ManyChat、n8n、Zapier 或自架 Telegram Bot</p>
+  </header>
+
+  <div class="cpc-info-box">
+    <h3>🎯 選擇指南</h3>
+    <p><strong>ManyChat</strong> — 低成本 Telegram/WhatsApp 客服，$11.45/月起；<strong>n8n</strong> — 無限工作流無代碼自動化，$20/月起；<strong>Zapier</strong> — 雲端應用整合之王，$19.99/月起；<strong>自架 Bot</strong> — 最靈活但需要技術，DigitalOcean $6/月起。</p>
+  </div>
+
+  <div class="cpc-table-wrapper">
+    <table class="cpc-table">
+      <thead>
+        <tr>
+          <th style="min-width: 160px;">功能 / 平台</th>
+          <th>ManyChat</th>
+          <th>n8n</th>
+          <th>Zapier</th>
+          <th>自架 Telegram Bot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="platform-name">
+            <span class="platform-icon">💰</span>
+            基礎定價
+          </td>
+          <td>$11.45/月 <span class="badge badge-cheap">最便宜</span></td>
+          <td>$20/月 (Self-hosted Free)</td>
+          <td>$19.99/月</td>
+          <td>DigitalOcean $6/月</td>
+        </tr>
+        <tr>
+          <td>Telegram 原生支援</td>
+          <td><span class="checkmark">✓</span> 完整</td>
+          <td><span class="checkmark">✓</span> API</td>
+          <td><span class="partial">◐</span> Zapier 轉接</td>
+          <td><span class="checkmark">✓</span> 完整</td>
+        </tr>
+        <tr>
+          <td>無代碼工作流</td>
+          <td><span class="checkmark">✓</span> 傳播式</td>
+          <td><span class="checkmark">✓</span> 完整圖形</td>
+          <td><span class="checkmark">✓</span> 完整圖形</td>
+          <td><span class="cross">✗</span> 需代碼</td>
+        </tr>
+        <tr>
+          <td>可連接應用數</td>
+          <td>50+</td>
+          <td>400+</td>
+          <td>6,000+</td>
+          <td>無限制</td>
+        </tr>
+        <tr>
+          <td>AI Agent 整合</td>
+          <td><span class="partial">◐</span> 有限</td>
+          <td><span class="checkmark">✓</span> 完整 LLM</td>
+          <td><span class="checkmark">✓</span> AI Features</td>
+          <td><span class="checkmark">✓</span> 完整 API</td>
+        </tr>
+        <tr>
+          <td>客服功能</td>
+          <td><span class="checkmark">✓</span> 內建</td>
+          <td><span class="partial">◐</span> 延伸</td>
+          <td><span class="partial">◐</span> 依工作流</td>
+          <td><span class="partial">◐</span> 自行建</td>
+        </tr>
+        <tr>
+          <td>每月訊息數限制</td>
+          <td>10,000 (Pro)</td>
+          <td>無限制</td>
+          <td>取決工作流</td>
+          <td>無限制</td>
+        </tr>
+        <tr>
+          <td>自託管選項</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="checkmark">✓</span> Docker</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="checkmark">✓</span></td>
+        </tr>
+        <tr>
+          <td>數據隱私控制</td>
+          <td><span class="partial">◐</span> 雲端托管</td>
+          <td><span class="checkmark">✓</span> 自架優</td>
+          <td><span class="partial">◐</span> 雲端托管</td>
+          <td><span class="checkmark">✓</span> 完全控制</td>
+        </tr>
+        <tr>
+          <td>學習曲線</td>
+          <td><span class="checkmark">✓</span> 簡單</td>
+          <td><span class="partial">◐</span> 中等</td>
+          <td><span class="checkmark">✓</span> 簡單</td>
+          <td><span class="cross">✗</span> 陡峭</td>
+        </tr>
+        <tr>
+          <td>中文教學資源</td>
+          <td><span class="partial">◐</span> 基礎</td>
+          <td><span class="partial">◐</span> 社群</td>
+          <td><span class="checkmark">✓</span> 完整</td>
+          <td><span class="checkmark">✓</span> 繁中社群</td>
+        </tr>
+        <tr style="background: var(--highlight);">
+          <td><strong>最佳場景</strong></td>
+          <td><strong>小型客服</strong> <br> 低成本快速上線</td>
+          <td><strong>複雜工作流</strong> <br> 無限自動化</td>
+          <td><strong>應用整合</strong> <br> 雲端 SaaS 多端點</td>
+          <td><strong>完全定制</strong> <br> 企業級隱私</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cpc-info-box">
+    <h3>📊 選擇場景指南</h3>
+    <p><strong>初創企業 / 小商店：</strong>選 ManyChat，$11.45/月快速上線，10K 訊息/月足夠。</p>
+    <p><strong>複雜自動化 / 多平台：</strong>選 n8n，無限工作流 + AI agent，自架成本最低。</p>
+    <p><strong>已用多個 SaaS 工具：</strong>選 Zapier，6000+ 應用一站式整合。</p>
+    <p><strong>大型企業 / 隱私要求高：</strong>選自架 Telegram Bot，完全控制 + DigitalOcean $6/月。</p>
+  </div>
+
+  <!-- 聯盟 CTA -->
+  <div class="aff-ctas">
+    <div class="aff-card">
+      <span class="ac-label">🚀 快速開始</span>
+      <span class="ac-title">ManyChat 30% 推薦</span>
+      <p class="ac-desc">Telegram Bot 客服首選，$11.45/月 起。我們的推薦連結享 30-50% 永久佣金。</p>
+      <a href="https://manychat.com/?utm_source=autodev-ai" target="_blank" rel="noopener" class="ac-btn">查看 ManyChat 方案 →</a>
+    </div>
+    <div class="aff-card">
+      <span class="ac-label">⚙️ 無限自動化</span>
+      <span class="ac-title">n8n — 無代碼工作流</span>
+      <p class="ac-desc">複雜自動化之王，Self-hosted 免費，Cloud $20/月。整合 400+ 應用 + LLM Agent。</p>
+      <a href="https://n8n.io/" target="_blank" rel="noopener" class="ac-btn">試用 n8n →</a>
+    </div>
+    <div class="aff-card">
+      <span class="ac-label">🔗 應用整合</span>
+      <span class="ac-title">Zapier — 6,000+ 應用</span>
+      <p class="ac-desc">雲端 SaaS 整合之王，$19.99/月 起。Excel/Google Sheets/Slack 無縫銜接。</p>
+      <a href="https://zapier.com/" target="_blank" rel="noopener" class="ac-btn">試用 Zapier →</a>
+    </div>
+    <div class="aff-card">
+      <span class="ac-label">🖥️ 自架託管</span>
+      <span class="ac-title">DigitalOcean — 雲端主機</span>
+      <p class="ac-desc">部署自架 Telegram Bot 首選，$6/月 起。快速穩定，完全控制。</p>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="ac-btn">查看 DigitalOcean →</a>
+    </div>
+  </div>
+
+  <p style="text-align: center; color: var(--muted); font-size: 0.9rem; margin-top: 2rem;">本比較表以 2026 年 10 月為準。定價與功能可能更新，建議前往官方網站確認最新資訊。部分連結為聯盟推廣連結，不影響你的價格。</p>
+
+</div>
+</main>
+
+<!-- v2-chrome:footer -->
+<footer class="v2c-footer">
+  <div class="v2c-inner">
+    <div class="v2c-footer-grid">
+      <div>
+        <h2>AutoDev</h2>
+        <p>企業自動化與數位系統工作室。以 Telegram Bot 為核心，把複雜工作整理成簡單流程。</p>
+      </div>
+      <div>
+        <h3>Studio</h3>
+        <a href="/services.html">服務</a>
+        <a href="/portfolio.html">案例</a>
+        <a href="/pricing.html">專案範圍</a>
+        <a href="/contact.html">需求諮詢</a>
+      </div>
+      <div>
+        <h3>Labs & Tools</h3>
+        <a href="/bot-cloud.html">Bot Cloud</a>
+        <a href="/ai-model.html">AI 模特</a>
+        <a href="/line-bot-saas.html">LINE Bot SaaS</a>
+        <a href="/tools/">工具</a>
+        <a href="/demo.html">Demo</a>
+      </div>
+      <div>
+        <h3>更多</h3>
+        <a href="https://chat.autodev-ai.com/form">原有表單</a>
+        <a href="/blog/">洞察</a>
+        <a href="https://liff.line.me/2009694545-LJmZCiEX">原有 LIFF 諮詢</a>
+        <a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a>
+        <a href="https://pink1119zz.github.io/ai-tools-en/">AI Tools EN</a>
+      </div>
+    </div>
+    <div class="v2c-footer-bottom">
+      <span>© AutoDev</span>
+      <span><a href="/privacy.html">隱私權</a> · <a href="/terms.html">使用條款</a> · <a href="/disclaimer.html">免責聲明</a></span>
+    </div>
+  </div>
+</footer>
+<!-- /v2-chrome:footer -->
+
+<script defer src="/assets/autodev-v2.js"></script>
+</body>
+</html>
