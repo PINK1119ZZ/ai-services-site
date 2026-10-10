@@ -406,6 +406,7 @@
         "Mistral Large 4 / Claude Haiku 5.5 教學文（R240/R241 已積壓）"
       ]
     },
+    {
       "agent": "researcher",
       "task": "ai-trend-hunter",
       "status": "completed",
@@ -638,6 +639,7 @@
         "Ivan 未申請積壓 affiliate：Writesonic 30% / Frase 30% / Framer 50% / Moosend 40% / n8n 30% / Make.com 35% / GetResponse 40-60% / AI/ML API 30%"
       ]
     },
+    {
       "timestamp": "2026-10-07T22:00:00Z",
       "agent": "researcher",
       "task": "ai-dev-research",
@@ -775,6 +777,7 @@
         }
       ]
     },
+    {
       "timestamp": "2026-10-07T05:06:44.652487Z",
       "agent": "builder",
       "task": "cross-link-tool-cta",
@@ -1214,6 +1217,7 @@
       "action": "income-ideation",
       "summary": "Round 241 腦暴。基於 researcher R241 指令（AI 成本危機 + Claude Haiku 5.5 + Anthropic IPO 主題）產出兩項提案：(1) AI FinOps Notion Template $39 Gumroad 一次性數位產品（目標月收 $1,200-3,600）；(2) ManyChat 30-50% + ActiveCampaign 20-30% Recurring Affiliate 雙漏斗策略（目標月收 $800-2,700）。搜尋確認：AI 成本管理工具比較市場爆量、ManyChat 繁中競品 0、ActiveCampaign 繁中競品 0。積壓確認：Systeme.io/OmniSEO/Reclaim.AI/Gumroad 仍未執行，已轉發指令。"
     },
+    {
       "task": "seo-weekly-report",
       "status": "completed",
       "summary": "Mon 01:30 UTC strategist weekly report — Week Oct 5–11 directive 已發布。核心問題：GitHub Pages 12 個 production 404（持續 2 週，builder 未執行修復，這週設為 #1 BLOCKER）。Gumroad 4 個 broken product links 影響 6 篇文章（23+ 週積壓）。本週 seo-writer 排程：hindsight 教學文（Oct 10 截止，立即發布）、openmontage 教學文（Oct 15）、clair 評測（Oct 12）、hubspot-aeo 評測（Oct 18）、ai-engineering 課程文（Oct 16）。Builder 除 GitHub Pages 修復外，啟動 AI Prompt Library Google Sheet 架構。Researcher 本週聚焦 Clair affiliate 確認 + Vectorize affiliate 確認。Ivan 最緊急：Systeme.io 60% lifetime（24+ 輪積壓），GitHub Pages deploy，Gumroad 產品上架，Viktor affiliate link 補入。",
@@ -2361,6 +2365,47 @@
       "directivesIssued": [
         "content-ops-to-builder-2026-10-07-ghpages-stale-publish-followup"
       ]
+    },
+    {
+      "timestamp": "2026-10-10T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Daily site health check: curled all 215 sitemap URLs; 193 returned 200 and 22 returned 404. Failure set expanded again and is concentrated on newer blog posts plus tools/ai-agent-security-tools-comparison-2026.html and tools/ai-model-comparison.html, which still points to stale/incomplete production publish rather than a single broken page template. Also repaired malformed agent-state.json before updating state.",
+      "checks": {
+        "sitemapUrlCount": 215,
+        "status200": 193,
+        "status404": 22,
+        "checkedCommit": "623d2761f41888043eb35fe96861f1106a472ba5",
+        "agentStateJsonRepaired": true
+      },
+      "failingUrls": [
+        "https://autodev-ai.com/blog/ai-cost-management-tools-llm-comparison-2026.html",
+        "https://autodev-ai.com/blog/caveman-ai-agent-token-optimization-2026.html",
+        "https://autodev-ai.com/blog/claude-haiku-5-5-review-2026.html",
+        "https://autodev-ai.com/blog/clair-claude-code-watch-app-review-2026.html",
+        "https://autodev-ai.com/blog/cloudflare-web-search-api-ai-agent-review-2026.html",
+        "https://autodev-ai.com/blog/dwarfstar-4-ds4-local-llm-antirez-2026.html",
+        "https://autodev-ai.com/blog/gemini-4-argon-complete-review-2026.html",
+        "https://autodev-ai.com/blog/google-ax-agentic-orchestration-runtime-tutorial-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-sol-luna-claude-opus-5-5-comparison-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-1-sol-review-2026.html",
+        "https://autodev-ai.com/blog/hindsight-agent-memory-review-2026.html",
+        "https://autodev-ai.com/blog/howseen-ai-review-geo-tracking-2026.html",
+        "https://autodev-ai.com/blog/mistral-large-4-le-chonk-review-2026.html",
+        "https://autodev-ai.com/blog/openai-dots-always-on-agents-review-2026.html",
+        "https://autodev-ai.com/blog/openmontage-ai-video-production-tutorial-2026.html",
+        "https://autodev-ai.com/blog/qwen-3-8-flash-next-rtx-4090-tutorial-2026.html",
+        "https://autodev-ai.com/blog/rea-reverse-engineer-ai-agent-mcp-tutorial-2026.html",
+        "https://autodev-ai.com/blog/reflection-beam-501b-open-weight-model-review-2026.html",
+        "https://autodev-ai.com/blog/viktor-ai-coworker-complete-review-2026.html",
+        "https://autodev-ai.com/blog/writesonic-complete-review-2026.html",
+        "https://autodev-ai.com/tools/ai-agent-security-tools-comparison-2026.html",
+        "https://autodev-ai.com/tools/ai-model-comparison.html"
+      ],
+      "directivesIssued": [
+        "content-ops-to-builder-2026-10-10-ghpages-stale-publish-followup"
+      ]
     }
   ],
   "gscData": {
@@ -2933,9 +2978,52 @@
         "localFilesExist": true
       },
       "nextAction": "Builder/publish owner to verify Pages/static artifact, republish latest build, and recheck affected URLs."
+    },
+    {
+      "id": "site-health-2026-10-10-ghpages-stale-404-followup",
+      "detectedAt": "2026-10-10T00:00:00Z",
+      "agent": "content-ops",
+      "severity": "high",
+      "status": "open",
+      "title": "Production still serves stale/missing Pages artifact for 22 sitemap URLs",
+      "summary": "Curled all 215 sitemap URLs. Production returned 193 OK / 22 404. Affected URLs are mostly recently published blog posts plus 2 tool pages, consistent with stale/incomplete GitHub Pages publish artifact rather than isolated source-file breakage.",
+      "affectedUrls": [
+        "https://autodev-ai.com/blog/ai-cost-management-tools-llm-comparison-2026.html",
+        "https://autodev-ai.com/blog/caveman-ai-agent-token-optimization-2026.html",
+        "https://autodev-ai.com/blog/claude-haiku-5-5-review-2026.html",
+        "https://autodev-ai.com/blog/clair-claude-code-watch-app-review-2026.html",
+        "https://autodev-ai.com/blog/cloudflare-web-search-api-ai-agent-review-2026.html",
+        "https://autodev-ai.com/blog/dwarfstar-4-ds4-local-llm-antirez-2026.html",
+        "https://autodev-ai.com/blog/gemini-4-argon-complete-review-2026.html",
+        "https://autodev-ai.com/blog/google-ax-agentic-orchestration-runtime-tutorial-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-sol-luna-claude-opus-5-5-comparison-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-1-sol-review-2026.html",
+        "https://autodev-ai.com/blog/hindsight-agent-memory-review-2026.html",
+        "https://autodev-ai.com/blog/howseen-ai-review-geo-tracking-2026.html",
+        "https://autodev-ai.com/blog/mistral-large-4-le-chonk-review-2026.html",
+        "https://autodev-ai.com/blog/openai-dots-always-on-agents-review-2026.html",
+        "https://autodev-ai.com/blog/openmontage-ai-video-production-tutorial-2026.html",
+        "https://autodev-ai.com/blog/qwen-3-8-flash-next-rtx-4090-tutorial-2026.html",
+        "https://autodev-ai.com/blog/rea-reverse-engineer-ai-agent-mcp-tutorial-2026.html",
+        "https://autodev-ai.com/blog/reflection-beam-501b-open-weight-model-review-2026.html",
+        "https://autodev-ai.com/blog/viktor-ai-coworker-complete-review-2026.html",
+        "https://autodev-ai.com/blog/writesonic-complete-review-2026.html",
+        "https://autodev-ai.com/tools/ai-agent-security-tools-comparison-2026.html",
+        "https://autodev-ai.com/tools/ai-model-comparison.html"
+      ],
+      "evidence": {
+        "curlBadCount": 22,
+        "statusBreakdown": {
+          "200": 193,
+          "404": 22
+        },
+        "sitemapUrlCount": 215,
+        "checkedCommit": "623d2761f41888043eb35fe96861f1106a472ba5"
+      },
+      "nextAction": "Ivan/publish owner to run GitHub Pages workflow_dispatch with latest approved_sha and republish latest artifact, then recheck affected URLs."
     }
   ],
-  "lastChecked": "2026-10-07T00:00:00Z",
+  "lastChecked": "2026-10-10T00:00:00Z",
   "directives": [
     {
       "id": "content-ops-to-builder-2026-10-03-ghpages-publish-check",
@@ -3074,6 +3162,47 @@
         },
         "localVerification": "all 16 corresponding source files exist in repo",
         "note": "Likely stale Pages artifact or publish-source drift, not missing content files."
+      }
+    },
+    {
+      "id": "content-ops-to-builder-2026-10-10-ghpages-stale-publish-followup",
+      "timestamp": "2026-10-10T00:00:00Z",
+      "from": "content-ops",
+      "to": "builder",
+      "status": "pending",
+      "priority": "urgent",
+      "action": "Verify GitHub Pages/static publish pipeline and republish latest artifact. Production now has 22 sitemap URLs returning 404 while the failure pattern matches stale Pages output.",
+      "context": {
+        "affectedUrls": [
+          "https://autodev-ai.com/blog/ai-cost-management-tools-llm-comparison-2026.html",
+          "https://autodev-ai.com/blog/caveman-ai-agent-token-optimization-2026.html",
+          "https://autodev-ai.com/blog/claude-haiku-5-5-review-2026.html",
+          "https://autodev-ai.com/blog/clair-claude-code-watch-app-review-2026.html",
+          "https://autodev-ai.com/blog/cloudflare-web-search-api-ai-agent-review-2026.html",
+          "https://autodev-ai.com/blog/dwarfstar-4-ds4-local-llm-antirez-2026.html",
+          "https://autodev-ai.com/blog/gemini-4-argon-complete-review-2026.html",
+          "https://autodev-ai.com/blog/google-ax-agentic-orchestration-runtime-tutorial-2026.html",
+          "https://autodev-ai.com/blog/gpt-6-sol-luna-claude-opus-5-5-comparison-2026.html",
+          "https://autodev-ai.com/blog/gpt-6-1-sol-review-2026.html",
+          "https://autodev-ai.com/blog/hindsight-agent-memory-review-2026.html",
+          "https://autodev-ai.com/blog/howseen-ai-review-geo-tracking-2026.html",
+          "https://autodev-ai.com/blog/mistral-large-4-le-chonk-review-2026.html",
+          "https://autodev-ai.com/blog/openai-dots-always-on-agents-review-2026.html",
+          "https://autodev-ai.com/blog/openmontage-ai-video-production-tutorial-2026.html",
+          "https://autodev-ai.com/blog/qwen-3-8-flash-next-rtx-4090-tutorial-2026.html",
+          "https://autodev-ai.com/blog/rea-reverse-engineer-ai-agent-mcp-tutorial-2026.html",
+          "https://autodev-ai.com/blog/reflection-beam-501b-open-weight-model-review-2026.html",
+          "https://autodev-ai.com/blog/viktor-ai-coworker-complete-review-2026.html",
+          "https://autodev-ai.com/blog/writesonic-complete-review-2026.html",
+          "https://autodev-ai.com/tools/ai-agent-security-tools-comparison-2026.html",
+          "https://autodev-ai.com/tools/ai-model-comparison.html"
+        ],
+        "statusBreakdown": {
+          "200": 193,
+          "404": 22
+        },
+        "checkedCommit": "623d2761f41888043eb35fe96861f1106a472ba5",
+        "note": "Builder log already noted workflow_dispatch requires Ivan with approved_sha; if builder cannot act directly, keep this blocked and preserve exact run instructions for Ivan."
       }
     }
   ],
@@ -3245,70 +3374,4 @@
       ]
     }
   }
-}    {
-      "timestamp": "2026-10-08T03:00:00Z",
-      "agent": "seo-writer",
-      "task": "article-publish",
-      "status": "completed",
-      "summary": "Thu 03:00 UTC seo-writer cron — 完成：2 篇 P0-URGENT 文章發布（Mistral Large 4 Le Chonk + REA 逆向工程 Agent）。Mistral Large 4 (HN #1, Oct 10 截止): 1T params MoE, 23B active, 1M context, $0.68/$2.09/1M, 西方開源戰略反擊 DeepSeek, Apache 2.0 權重 Oct 27 發布, 3 個漸層 CTA(DigitalOcean×2 + DataCamp)。REA (GitHub trending #1, +4,666★/day, Oct 10 截止): 零 API 費用逆向工程 APK/韌體/binary, 本地 LLM + MCP Server 整合 Claude Code/OpenClaw, 完整安裝與實戰教學, 3 個漸層 CTA(DataCamp + DigitalOcean + AutoDev 服務)。sitemap.xml 新增 2 筆（共 211 個）。blog/index.html 新增 2 張卡片（211→213 篇）。",
-      "changes": [
-        "新增 blog/mistral-large-4-le-chonk-review-2026.html（~2,700字，3個漸層聯盟按鈕 DigitalOcean×2 + DataCamp）",
-        "新增 blog/rea-reverse-engineer-ai-agent-mcp-tutorial-2026.html（~3,100字，3個漸層聯盟按鈕 DataCamp + DigitalOcean + AutoDev服務）",
-        "sitemap.xml 新增 2 筆 URL（共 211 個）",
-        "blog/index.html 新增 2 張文章卡片（211→213 篇）",
-        "更新 agent-state.json（lastRun + lastSeoWriterRun + agentLog）"
-      ],
-      "articlesPublished": [
-        {
-          "file": "blog/mistral-large-4-le-chonk-review-2026.html",
-          "title": "Mistral Large 4（Le Chonk）完整評測 2026：1T Params MoE、23B Active、1M Context、$0.68/$2.09，西方開源戰略反擊，繁中首發",
-          "wordCount": "~2,700字",
-          "publishedAt": "2026-10-08T03:00:00Z",
-          "affiliateLinks": 3,
-          "seoKeywords": [
-            "mistral large 4 評測",
-            "le chonk mistral",
-            "mistral large 4 繁中",
-            "mistral 1t params",
-            "mistral large 4 定價",
-            "mistral large 4 benchmark",
-            "mistral large 4 教學",
-            "mistral large 4 vs deepseek"
-          ],
-          "publishReason": "R240 P0-URGENT（HN #1 Oct 7-8，mistral.ai/large-4，Oct 10 截止，繁中 0 競品）",
-          "estimatedTraffic": "1.2K-3.5K/月",
-          "estimatedRevenue": "$300-900/月（間接 DigitalOcean GPU + DataCamp）"
-        },
-        {
-          "file": "blog/rea-reverse-engineer-ai-agent-mcp-tutorial-2026.html",
-          "title": "REA 逆向工程 AI Agent 完整教學 2026：零 API 費用抓取 APK/韌體/Binary，MCP + CLI 整合，繁中首發",
-          "wordCount": "~3,100字",
-          "publishedAt": "2026-10-08T03:00:00Z",
-          "affiliateLinks": 3,
-          "seoKeywords": [
-            "rea 逆向工程",
-            "rea ai agent 教學",
-            "reverse engineer agent",
-            "rea mcp server",
-            "rea cli 教學",
-            "apk 逆向工程",
-            "rea github",
-            "rea 繁中"
-          ],
-          "publishReason": "R239 P0-URGENT（GitHub trending #1，+4,666 stars/day，Oct 10 截止，繁中 0 競品）",
-          "estimatedTraffic": "0.8K-2.5K/月",
-          "estimatedRevenue": "$200-700/月（間接 DataCamp + DigitalOcean + AutoDev 服務詢問）"
-        }
-      ],
-      "nextActions": [
-        "🔴 P0-URGENT Oct10截止（已完成）：Mistral Large 4 + REA 兩篇",
-        "🔴 P1-HIGH Oct13截止：blog/opentpu-open-source-fpga-ai-accelerator-2026.html（HN trending，AI 設計 AI 硬體）",
-        "🔴 P1-HIGH Oct14截止：blog/i-have-adhd-ai-agent-skill-token-optimization-2026.html（省 token 40-60%）",
-        "🟡 P1-HIGH Oct15截止：blog/omniseo-ai-visibility-platform-review-2026.html（等 Ivan 申請 OmniSEO affiliate）",
-        "🟡 P1-HIGH Oct16截止：blog/addyosmani-agent-skills-production-coding-guide-2026.html（Google Chrome Lead，101K★）",
-        "🔴 Ivan 立即：申請 OmniSEO PartnerStack（50% first-year，$400-1,500/月）",
-        "🔴 Ivan 立即：申請 Reclaim.AI affiliate（40%/12mo，R235 積壓 3 週）",
-        "🔴 Ivan 立即：申請 Systeme.io 60% lifetime（30+ 輪積壓）",
-        "🔴 Ivan 立即：觸發 GitHub Pages deploy（16 個 production 404）"
-      ]
-    }
+}
