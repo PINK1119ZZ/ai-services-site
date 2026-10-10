@@ -4,6 +4,177 @@
 
 ---
 
+## 2026-10-11（市場研究 Round 244 — Sun 07:00 UTC researcher cron）
+
+### 🔥 本輪重點：未碰觸的賺錢管道 | AI SaaS Affiliate 新一輪 | 暢銷數位產品 | 台灣需求缺口 | 流量管道
+
+---
+
+### 🆕 A. HIGH-VALUE AFFILIATE — 本輪新發現（我們尚未覆蓋）
+
+#### 1. OmniSEO — 50% First-Year Revenue Share（AEO/AI Visibility）✅ 確認可申請
+- **Commission：** 50% on every payment in first 12 months per customer
+- **Cookie：** 90 days
+- **Platform：** PartnerStack（manual review，但 instant 居多）
+- **Pricing：** Essentials $89/mo → Professional $349/mo
+- **收入試算：** 1 個 Pro referral × 12 months = $349 × 50% × 12 = **$2,094**
+- **市場信號：** AEO/AI Search Visibility 2026 爆發，ChatGPT Ads 開始，Perplexity 廣告上線
+- **繁中競品：** 零（omniseo.com 繁中評測 = 0 篇，R240 積壓但 Ivan 未申請）
+- **申請：** omniseo.com/affiliates → PartnerStack
+- **建議文章：** blog/omniseo-ai-visibility-platform-review-2026.html（已規劃 R240，等 affiliate link）
+- **積壓狀態：** ⚠️ **R240 P0-URGENT，積壓 3 輪，Ivan 必須立即申請**
+
+#### 2. ElevenLabs — 22% Recurring / First 12 Months（AI Voice）✅ 確認
+- **Commission：** 22% recurring for first 12 months（PartnerStack）
+- **Cookie：** 不確定（PartnerStack 標準 30 天）
+- **Platform：** PartnerStack
+- **Min Payout：** $5（非常友善）
+- **Pricing：** Starter $11/mo → Creator $33/mo → Pro $99/mo → Scale $330/mo
+- **收入試算：** 10 個 Creator referrals × 12 months = $33 × 22% × 10 × 12 = **$871.2**
+- **市場信號：** ElevenLabs Forbes AI 50，70+ 語言，YouTube/Podcast/Audiobook 創作者大量使用
+- **繁中競品：** 少（ElevenLabs 繁中評測稀少，VoiceStudio 教學文已發但未用 ElevenLabs affiliate）
+- **申請：** elevenlabs.io/affiliates → PartnerStack
+- **建議行動：** 在既有 blog/voicestudio-local-voice-clone-elevenlabs-alternative-2026.html 加入 ElevenLabs affiliate CTA
+
+#### 3. Logome.ai — 50% Commission on Every Sale（AI Logo/Branding）✅ 確認
+- **Commission：** 50% on every successful sale
+- **Platform：** PartnerStack
+- **Pricing：** 一次性購買（non-subscription）
+- **特點：** 低門檻，instant approval，適合比較文 / 推薦清單
+- **市場信號：** AI 品牌設計 2026 熱門，台灣創業者需求強（品牌定位 × AI 速度）
+- **繁中競品：** 零（Logome.ai 繁中 = 0 篇）
+- **申請：** 透過 PartnerStack marketplace（market.partnerstack.com → 搜尋 Logome.ai）
+- **建議文章：** blog/ai-logo-generators-comparison-2026.html（Logome vs Looka vs Canva，5 個工具比較，嵌入 Logome 50% affiliate）
+
+#### 4. Invideo AI — 50% Monthly Plans, 25% Annual（AI Video）✅ 確認
+- **Commission：** 50% on monthly plans，25% on annual plans
+- **Cookie：** 120 days（業界最長）
+- **Platform：** Impact
+- **Min Payout：** $0（最友善）
+- **Pricing：** Plus $35/mo → Max $60/mo → Generative $120/mo
+- **收入試算：** 10 個 Max referrals × 50% × $60 = **$300/月持續**
+- **市場信號：** AI video creation 2026 主流化，YouTube 創作者大量需求，繁中教學空白
+- **繁中競品：** 零（Invideo AI 繁中評測 = 0 篇）
+- **申請：** invideo.io/affiliates → Impact platform
+- **建議文章：** blog/invideo-ai-video-generator-review-2026.html（vs RunwayML vs OpenMontage 比較）
+
+#### 5. Surfer SEO — 75% CPA Monthly / 15% CPA Annual（SEO）✅ 確認 PartnerStack
+- **Commission：** 75% CPA on first monthly subscription，15% CPA on first yearly
+- **Platform：** PartnerStack
+- **受眾：** SEO marketers, content teams, agencies
+- **市場信號：** AI SEO 需求持續，Surfer 是最知名工具之一，PartnerStack 評分高
+- **繁中競品：** 少（但有競品存在，需要差異化角度）
+- **申請：** surferseo.com/affiliates → PartnerStack
+- **建議文章：** blog/surfer-seo-ai-content-optimization-review-2026.html
+
+---
+
+### 🆕 B. GITHUB TRENDING + 流量紅利（2026-10-11 新訊號）
+
+#### 6. Paperclip AI — 97K★ 持續爆發（Agent 公司管理）
+- **現狀：** GitHub 97,000★（Oct 週趨勢 #2），YT 教學 390K views，paperclip.ing 上線
+- **前情：** R237/R240 已積壓，seo-writer 尚未發布
+- **SEO 機會：** 「paperclip ai 教學」「ai agent 公司管理」「paperclip openclaw」= 繁中 0 競品
+- **獨特角度：** OpenClaw + Paperclip 整合 — 只有我們有真實使用視角
+- **文章：** blog/paperclip-ai-agent-company-openclaw-2026.html（R237 積壓，Oct 18 截止）
+- **優先級：** P0-URGENT（3 輪積壓，今日最後時效窗口）
+
+#### 7. claude-mem — 97K★ 持續穩定（持久化 Agent 記憶）
+- **現狀：** thedotmack/claude-mem 97,801★（今日 GitHub trending），578 stars today
+- **v13.8.0（June 21）：** MCP 三層搜尋，95% token 省，token-cost 遙測
+- **流量機會：** 新版本＋GitHub trending 更新文章機會
+- **行動：** 更新 blog/claude-mem-persistent-memory-agent-token-saving-2026.html（若已發布），或新增 v13.8.0 版本評測段落
+
+#### 8. Agent Reach — 90K★（AI 代理全網瀏覽，免費）
+- **現狀：** Panniantong/Agent-Reach 90,468★，免費 MIT，支援 Twitter/Reddit/YouTube/GitHub/小紅書/B站
+- **台灣特殊價值：** 支援小紅書 + B站，是台灣/中文市場唯一多平台免費方案
+- **前情：** R232 已記錄 28K★ 時，現在已 90K★ = 第二波教學文機會
+- **文章：** blog/agent-reach-ai-web-scraping-no-api-fees-2026.html（更新版，強調小紅書 + 台灣視角）
+- **優先級：** P1-HIGH（90K★ 還在 trending，繁中 0 競品）
+
+---
+
+### 🆕 C. 台灣數位產品需求缺口（R244 新挖掘）
+
+#### 9. 繁中 AI Agent 教學包 — Gumroad 市場空白
+- **信號：** Paperclip / claude-mem / obra/superpowers 等工具 = 繁中評測 0，但 GitHub 有台灣開發者 star/fork
+- **缺口：** 「台灣 AI Agent 實戰教學 PDF + Notion」 = 搜尋有量但無繁中數位產品
+- **建議產品：** 「AutoDev AI Agent 啟動包」— 繁體中文，含 Paperclip + claude-mem + obra/superpowers 三合一安裝與設定 Notion checklist
+- **定價：** $29 Gumroad launch → $39 regular（對應 Agent 受眾，稍高門檻）
+- **預估月收入：** $600-2,000（AI agent 工具書市場，2026 年 Gumroad 爆量）
+- **緊急度：** 中（需要 builder 建立，Ivan 上架）
+
+#### 10. 「AI 工具選型指南」企業版 PDF — 台灣 B2B 市場
+- **信號：** GSC 顯示「opencode zen vs go」「ai token 費用計算」「lm studio bionic」等有流量 = 決策型搜尋者
+- **缺口：** 企業決策者需要「一份簡單可以拿去簡報」的 AI 工具比較文件
+- **建議產品：** 企業 AI 工具選型指南 PDF（台灣市場定制，含定價/合規/中文支援評分）
+- **定價：** $49 Gumroad（B2B，高客單）
+- **通路：** 現有 tools/ai-model-comparison.html → 底部 CTA 導購 PDF
+
+---
+
+### 🆕 D. 新流量管道（免費導流，2026-10-11）
+
+#### 11. SkillsLLM.com — AI Agent Skills 新興目錄站
+- **現狀：** skillsllm.com 是新興 AI agent skills 目錄，收錄 claude-mem / obra/superpowers / agent-reach 等工具
+- **機會：** 提交 AutoDev AI 文章/工具到 SkillsLLM，獲得反向連結 + 技術受眾流量
+- **行動：** 申請 AutoDev AI 內容收錄（agent skills 方向）
+
+#### 12. Dev.to — AI Agent 文章高流量平台
+- **信號：** Dev.to 上「How We Built a Company Powered by 14 AI Agents」= 高閱讀案例文
+- **機會：** 發布 AutoDev AI 的 AutoDev AI Agent 運作案例文（如本自主運維協議本身就是案例）
+- **行動：** seo-writer 每月發布 1-2 篇英文版到 Dev.to，交叉引流到主站
+- **預估流量：** 1,000-5,000 views/篇（AI agent 實作文在 Dev.to 非常高流量）
+
+#### 13. Threads.com — AI 工具分享高互動平台
+- **信號：** agent-reach、claude-mem、Paperclip 均在 Threads 引爆，單則 3-5 likes（高互動比）
+- **機會：** AutoDev AI 新文章發布後 → 立刻貼 Threads 短評 + 連結
+- **行動：** Ivan 建立 AutoDev AI Threads 帳號，每篇文章 72h 內發布 Threads 短評
+- **預估效果：** 每則 500-2,000 impressions，高轉換（技術受眾）
+
+#### 14. Paperclip.ing 社群 — 精準 AI Agent 受眾
+- **現狀：** paperclip.ing 有活躍社群（GitHub Discussions + Discord）
+- **機會：** 在 Paperclip Discord/Discussions 中自然分享 AutoDev AI 的繁中 Paperclip 教學
+- **預估流量：** 精準 AI agent 使用者，轉換率高
+
+---
+
+### 📊 R244 評估矩陣（未碰管道，優先排序）
+
+| 機會 | 佣金/月收入潛力 | 進入門檻 | 具體行動 | 優先級 |
+|------|----------------|---------|---------|-------|
+| OmniSEO Affiliate | $500-2,094/mo | 低（PartnerStack） | Ivan 申請 omniseo.com/affiliates | **P0-URGENT（積壓 3 輪）** |
+| ElevenLabs Affiliate | $100-400/mo | 低（PartnerStack） | Ivan 申請 elevenlabs.io/affiliates | P1-HIGH |
+| Invideo AI Affiliate | $200-600/mo | 低（Impact） | Ivan 申請 invideo.io/affiliates | P1-HIGH |
+| Logome.ai Affiliate | $100-300/mo | 極低（PartnerStack instant） | Ivan 申請 market.partnerstack.com | P1-HIGH |
+| Surfer SEO Affiliate | $200-600/mo | 低（PartnerStack） | Ivan 申請 surferseo.com/affiliates | P2-MEDIUM |
+| Paperclip 文章 | 間接 $100-300/mo | 低（寫文） | seo-writer 立刻發布（3 輪積壓） | P0-URGENT |
+| Agent Reach 更新文 | 間接 $80-250/mo | 低（更新） | seo-writer 更新版（90K★） | P1-HIGH |
+| claude-mem 更新文 | 間接 $80-200/mo | 低（更新） | seo-writer 加 v13.8.0 段落 | P2-MEDIUM |
+| AI Agent 教學包 Gumroad | $600-2,000/mo | 中（需建立） | builder + Ivan 授權上架 | P2-MEDIUM |
+| Dev.to 英文文章 | 免費流量 1K-5K/篇 | 低 | Ivan/seo-writer 各月 1-2 篇 | P2-MEDIUM |
+| Threads 帳號 | 免費 500-2K/則 | 極低 | Ivan 建立帳號 | P1-HIGH |
+
+---
+
+### 🔍 已確認仍未申請的高積壓 Affiliate（截至 R244）
+
+| Program | Commission | 積壓輪數 | 申請連結 |
+|---------|-----------|---------|---------|
+| **Systeme.io** | 60% LIFETIME | **30+ 輪** | systeme.io/affiliate-program |
+| OmniSEO | 50% first-year | **3 輪** | omniseo.com/affiliates |
+| ManyChat | 30-50% 12mo | **2 輪** | manychat.com/affiliates |
+| ActiveCampaign | 20-30% lifetime | **2 輪** | activecampaign.com/partners |
+| ElevenLabs | 22% 12mo | **新發現** | elevenlabs.io/affiliates |
+| Invideo AI | 50% monthly / 25% annual | **新發現** | invideo.io/affiliates |
+| Logome.ai | 50% per sale | **新發現** | market.partnerstack.com |
+| Writesonic | 30% lifetime | **5+ 輪** | writesonic.com/affiliate |
+| Framer | 50% 12mo | **5+ 輪** | framer.com/partners |
+| Reclaim.AI | 40% 12mo | **3 輪** | reclaim.ai/affiliates |
+| GetResponse | 40-60% 12mo | **3 輪** | getresponse.com/affiliate-programs |
+
+---
+
 ## 2026-10-03（市場研究 Round 233 — Sat 23:00 UTC researcher cron）
 
 ### 🔥 本輪重點：未覆蓋賺錢管道 | GitHub Trending 新工具 | 高佣金 Email Affiliate 缺口 | 台灣數位產品需求
