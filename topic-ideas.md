@@ -1,6 +1,48 @@
 # Topic Ideas - AI 趨勢獵手賺錢機會追蹤
 
-**最後更新：** 2026-10-10 00:30 UTC（Round 243）
+**最後更新：** 2026-10-11 00:30 UTC（Round 245）
+
+---
+
+## 🎯 Round 245 Executive Summary（2026-10-11 00:30 UTC）
+
+**來源：** Product Hunt daily / Hacker News / GitHub Trending / Reddit / OrangeBot.AI  
+**任務類型：** ai-trend-hunter（賺錢機會發現）
+
+### 核心發現（今日亮點）
+
+**🚨 緊急訊號（24-72h 窗口）：**
+1. **StepFun Step 5 Open Weights — Oct 15 倒數 4 天！** — 600B MoE / 27B active / 1M context，API $1.00/$2.70/1M（cached $5/1M input），繁中評測 0 篇，台灣/中文開發者等待最久的開源大模型之一。builder 本輪 P0：ai-model-comparison.html 加入 Step 5 Preview，seo-writer P0：blog/stepfun-step5-open-weights-oct15-tutorial-2026.html，搭配 DigitalOcean GPU Server 教學（$200 CPA）
+2. **CodeRabbit Affiliate $30/lead（Dub Partners）** — AI code review，2M+ repos，75M+ bugs detected，$24/user/mo。**$30 per qualified lead（CPA）**，已在 2M 開發者使用，affiliate 直接申請 partners.dub.co/coderabbit。繁中 code review 比較文 0 篇，與「14 Best AI Code Review Tools 2026」比較文完美匹配
+
+**🔥 Product Hunt Oct 10 榜（OrangeBot 今日確認）：**
+3. **ej — 11MB local model for typed decisions** — PH #19，完全本地執行，11MB 模型，one-pass typed decisions，隱私友好，企業決策流程 + AutoDev AI 角度天然切入（「11MB 就能做決策？比 Claude 便宜 100,000 倍」）
+4. **Microsoft-Decision-1** — PH #21，Cloudflare Clef + Amazon Strands Decider（Oct 1 發布）佐證「open decision models」新品類爆發，2B active MoE，Apache-2.0，繁中 0 篇解析文
+5. **Hypervibe** — PH #26，「Run your AI coding agents on one infinite board」，多 agent 協作視覺化板，台灣開發者工具角度，可配合 Herdr（35K★ agent 協調器）文章延伸
+6. **KernelAI** — PH #20，private offline AI for iPhone and Android，本地 AI 隱私保護，affiliate 待確認
+7. **Lune** — PH #10，「search engine built for scientific AI agents」，繁中 0 篇，ScientificAI agent 新品類，GEO 流量機會
+
+**🟡 高佣金 Affiliate 新確認（本輪最高價值）：**
+8. **BrainGrid 15% lifetime recurring（Tapfiliate）** — AI builders & technical creators，**60-day cookie，monthly payouts**，ready-made marketing assets，Cursor/Claude Code/Codex/OpenClaw 整合。比較文：BrainGrid vs CodeRabbit vs Lovable，月收 $300-1,500（每個 referral $X/月永久）
+9. **Lovable Affiliate up to $100/referral** — 前端 AI app builder，已有競品 base44 alternatives + Lovable alternatives 等比較文流量，申請路徑待確認
+10. **claude-mem 93,700★（持續爬升，接近 94K）** — 本輪 SkillsLLM 確認最新星數，支援 OpenClaw，繁中 tutorial 更新文機會（上次 R239 記錄 95.5K，現 SkillsLLM 顯示 93.7K，另有來源顯示 v13.8.0 在 83.9K → 現今 93K+，持續成長）
+
+**💡 中期機會（本月內）：**
+11. **AI Coding Agent Security（Plugin4Shell 事件）** — Air Security Sep 17 2026 揭露 zero-click RCE，影響 Claude Code / Codex / GitHub Copilot / Gemini CLI 4 大 agent，HN + Help Net Security 廣泛報導。繁中安全指南 0 篇，配合 Unbound AI AASB（Agent Access Security Broker）角度，DigitalOcean + DataCamp 間接變現
+12. **Herdr（35K★，Apache-2.0，Rust binary）** — terminal-first agent orchestrator，sidebar shows working/blocked/done，socket API，Sept 2026 數據。Warp 官方 best-terminal-for-ai-agents 文章中推薦，搭配 Codex/Claude Code/OpenClaw 教學，繁中 0 篇
+
+---
+
+| 日期 | 工具 | 關鍵字 | 搜尋量估計 | 變現方式 | 預估月收入 | 建議站點 |
+|------|------|--------|-----------|---------|-----------|---------|
+| 2026-10-11 | StepFun Step 5 Open Weights | stepfun step 5 教學、step5 open weights、600b moe 繁中 | 高（Oct 15 爆發） | DigitalOcean GPU $200 CPA + DataCamp | $300-900/月 | autodev-ai.com/blog |
+| 2026-10-11 | CodeRabbit Affiliate | coderabbit 評測、ai code review 比較 2026 | 中高 | $30/lead CPA（Dub Partners）| $200-800/月 | autodev-ai.com/blog |
+| 2026-10-11 | BrainGrid 15% lifetime | braingrid ai、braingrid vs coderabbit | 中 | 15% lifetime recurring（Tapfiliate）| $300-1,500/月 | autodev-ai.com/blog |
+| 2026-10-11 | ej 11MB local model | 11mb ai model、local decision model | 中 | DigitalOcean 間接 | $80-250/月 | autodev-ai.com/blog |
+| 2026-10-11 | Microsoft Decision-1 / Clef / Decider | open decision models 2026、cloudflare clef | 中 | DigitalOcean + DataCamp | $100-350/月 | autodev-ai.com/blog |
+| 2026-10-11 | Plugin4Shell 安全事件 | ai coding agent 安全 2026、claude code 漏洞 | 高（B2B企業） | Unbound AI + DigitalOcean 間接 | $150-500/月 | autodev-ai.com/blog |
+| 2026-10-11 | Herdr agent orchestrator | herdr terminal agent 教學、ai agent 多工 | 中 | DigitalOcean + DataCamp | $100-300/月 | autodev-ai.com/blog |
+| 2026-10-11 | Hypervibe coding board | hypervibe ai agents、multi-agent board | 低-中 | DigitalOcean 間接 | $50-150/月 | autodev-ai.com/blog |
 
 ---
 
