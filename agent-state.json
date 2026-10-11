@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-11T03:10:00Z",
+  "lastRun": "2026-10-11T10:30:00Z",
   "lastBuilderRun": "2026-10-10T05:00:00Z",
   "lastResearchRound": 245,
   "lastCompetitorWatchRun": "2026-10-11T03:10:00Z",
@@ -289,6 +289,72 @@
     }
   ],
   "agentLog": [
+    {
+      "timestamp": "2026-10-11T10:30:00Z",
+      "agent": "content-ops",
+      "task": "affiliate-monitor",
+      "status": "completed",
+      "summary": "Sun 10:30 UTC affiliate-monitor (Oct 11) — Checked all 20 affiliateLink entries. HEALTHY (200): DigitalOcean, Gumroad-main, Gumroad-agent-skills, Systeme.io (both), n8n, HeyGen, Synthesia, WisprFlow, Postfast, LLMClicks, Blym (11 links). BOT-BLOCKED (functional): DataCamp/afflink.one, DataCamp-alt/onelink.one (2 links). SKIPPED (placeholder URL): Cloudways vbtrax, Cloudways abzcoupon (2 links). BROKEN 404 (Gumroad unpublished): n8n-tw-templates (3 articles), n8n-claude-templates-v1 (1 article), ai-agent-cybersecurity-skills-v1 (1 article), claude-code-prompt-pack-2026 (1 article). NO AFFILIATE LINKS: tools/index.html, tools/line-bot-calculator.html. Directive written to content-refresher for tools/line-bot-calculator.html.",
+      "checks": {
+        "totalLinksChecked": 20,
+        "status200": 11,
+        "statusBotBlocked403": 2,
+        "statusPlaceholderSkipped": 2,
+        "status404Broken": 4,
+        "statusChange": "No change from last run — same 4 Gumroad 404s persist"
+      },
+      "brokenLinks": [
+        {
+          "url": "https://xiaofan8.gumroad.com/l/n8n-tw-templates",
+          "status": 404,
+          "affectedFiles": [
+            "blog/line-bot-tutorial-2026.html",
+            "blog/n8n-automation-tutorial-2026.html",
+            "blog/telegram-bot-business-guide.html"
+          ],
+          "note": "Gumroad product not published — persists from last run"
+        },
+        {
+          "url": "https://xiaofan8.gumroad.com/l/n8n-claude-templates-v1",
+          "status": 404,
+          "affectedFiles": [
+            "blog/n8n-claude-code-workflow-templates-2026.html"
+          ],
+          "note": "Gumroad product not published — persists from last run"
+        },
+        {
+          "url": "https://xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1",
+          "status": 404,
+          "affectedFiles": [
+            "blog/ai-agent-cybersecurity-skills-claude-code-2026.html"
+          ],
+          "note": "Gumroad product not published — persists from last run"
+        },
+        {
+          "url": "https://xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026",
+          "status": 404,
+          "affectedFiles": [
+            "blog/claude-code-prompt-pack-guide-2026.html"
+          ],
+          "note": "Gumroad product not published — persists from last run"
+        }
+      ],
+      "noAffiliateLinkPages": [
+        {
+          "file": "tools/index.html",
+          "note": "Tools index page — acceptable as nav page, low priority"
+        },
+        {
+          "file": "tools/line-bot-calculator.html",
+          "note": "LINE Bot calculator tool — has traffic potential, recommend adding DigitalOcean + DataCamp CTAs",
+          "directive": "content-refresher"
+        }
+      ],
+      "changes": [
+        "Updated agent-state.json affiliateLinks status and lastChecked for all 20 entries",
+        "Written directive to directives/affiliate-monitor-to-content-refresher-2026-10-11.md"
+      ]
+    },
     {
       "timestamp": "2026-10-11T03:10:00Z",
       "agent": "researcher",
@@ -2859,23 +2925,23 @@
     }
   ],
   "gscData": {
-    "lastUpdated": "2026-10-10 05:30",
+    "lastUpdated": "2026-10-11 05:30",
     "period": "14 days",
     "sites": {
       "autodev-ai": {
         "summary": {
-          "totalClicks": 159,
-          "totalImpressions": 2523,
-          "avgCTR": 6.3,
-          "avgPosition": 7.1
+          "totalClicks": 161,
+          "totalImpressions": 2577,
+          "avgCTR": 6.2,
+          "avgPosition": 7.3
         },
         "topQueries": [
           {
             "keyword": "lm studio bionic 教學",
-            "clicks": 9,
-            "impressions": 28,
-            "ctr": 32.1,
-            "position": 4.6
+            "clicks": 10,
+            "impressions": 30,
+            "ctr": 33.3,
+            "position": 4.7
           },
           {
             "keyword": "copperhead ai",
@@ -2885,39 +2951,39 @@
             "position": 2.2
           },
           {
-            "keyword": "opencode 免費 額度",
-            "clicks": 3,
-            "impressions": 4,
-            "ctr": 75.0,
-            "position": 2.2
-          },
-          {
             "keyword": "higgsfield api",
             "clicks": 2,
-            "impressions": 28,
-            "ctr": 7.1,
+            "impressions": 23,
+            "ctr": 8.7,
             "position": 6.9
           },
           {
             "keyword": "lm studio bionic",
             "clicks": 2,
-            "impressions": 24,
-            "ctr": 8.3,
-            "position": 8.8
+            "impressions": 22,
+            "ctr": 9.1,
+            "position": 8.6
+          },
+          {
+            "keyword": "opencode zen vs go",
+            "clicks": 2,
+            "impressions": 10,
+            "ctr": 20.0,
+            "position": 2.9
           },
           {
             "keyword": "opencode zen 費用",
             "clicks": 2,
-            "impressions": 21,
-            "ctr": 9.5,
-            "position": 6.7
+            "impressions": 19,
+            "ctr": 10.5,
+            "position": 7
           },
           {
             "keyword": "rust token killer",
             "clicks": 2,
-            "impressions": 28,
-            "ctr": 7.1,
-            "position": 4.9
+            "impressions": 30,
+            "ctr": 6.7,
+            "position": 4.8
           },
           {
             "keyword": "autodev ai",
@@ -2929,9 +2995,9 @@
           {
             "keyword": "bionic ai agent",
             "clicks": 1,
-            "impressions": 3,
-            "ctr": 33.3,
-            "position": 3.3
+            "impressions": 1,
+            "ctr": 100,
+            "position": 1
           },
           {
             "keyword": "colibri github",
@@ -2948,25 +3014,18 @@
             "position": 4
           },
           {
-            "keyword": "crush cli",
-            "clicks": 1,
-            "impressions": 6,
-            "ctr": 16.7,
-            "position": 7.3
-          },
-          {
             "keyword": "harness 教學",
             "clicks": 1,
-            "impressions": 3,
-            "ctr": 33.3,
-            "position": 10.7
+            "impressions": 2,
+            "ctr": 50.0,
+            "position": 12.5
           },
           {
             "keyword": "lm studio bionic 是什麼",
             "clicks": 1,
-            "impressions": 13,
-            "ctr": 7.7,
-            "position": 4.8
+            "impressions": 10,
+            "ctr": 10.0,
+            "position": 4.3
           },
           {
             "keyword": "lm studio bionic 設定",
@@ -2999,9 +3058,9 @@
           {
             "keyword": "opencode zen",
             "clicks": 1,
-            "impressions": 7,
-            "ctr": 14.3,
-            "position": 12.3
+            "impressions": 4,
+            "ctr": 25.0,
+            "position": 16
           },
           {
             "keyword": "opencode zen go",
@@ -3013,23 +3072,37 @@
           {
             "keyword": "opencode zen和go的区别",
             "clicks": 1,
-            "impressions": 3,
-            "ctr": 33.3,
-            "position": 4
+            "impressions": 4,
+            "ctr": 25.0,
+            "position": 6.2
           },
           {
-            "keyword": "opencode 免費額度",
+            "keyword": "opencode 免費 額度",
             "clicks": 1,
-            "impressions": 5,
-            "ctr": 20.0,
-            "position": 3.6
+            "impressions": 2,
+            "ctr": 50.0,
+            "position": 1
           },
           {
             "keyword": "opencode 費用",
             "clicks": 1,
-            "impressions": 17,
-            "ctr": 5.9,
-            "position": 6.6
+            "impressions": 16,
+            "ctr": 6.2,
+            "position": 6.8
+          },
+          {
+            "keyword": "orca ade",
+            "clicks": 1,
+            "impressions": 2,
+            "ctr": 50.0,
+            "position": 24.5
+          },
+          {
+            "keyword": "orca ade 教學",
+            "clicks": 1,
+            "impressions": 10,
+            "ctr": 10.0,
+            "position": 7.1
           },
           {
             "keyword": "perplexity pro ptt",
@@ -3037,141 +3110,127 @@
             "impressions": 1,
             "ctr": 100,
             "position": 5
-          },
-          {
-            "keyword": "token 費用 計算",
-            "clicks": 1,
-            "impressions": 4,
-            "ctr": 25.0,
-            "position": 6.8
           }
         ],
         "topPages": [
           {
             "page": "//blog/opencode-zen-vs-go-pricing-2026.html",
-            "clicks": 27,
-            "impressions": 331,
-            "ctr": 8.2,
-            "position": 6.3
+            "clicks": 28,
+            "impressions": 295,
+            "ctr": 9.5,
+            "position": 6.4
           },
           {
             "page": "//blog/lm-studio-bionic-guide-2026.html",
-            "clicks": 26,
-            "impressions": 204,
-            "ctr": 12.7,
+            "clicks": 27,
+            "impressions": 191,
+            "ctr": 14.1,
             "position": 6.1
           },
           {
             "page": "//blog/colibri-moe-local-ai-guide-2026.html",
             "clicks": 16,
-            "impressions": 61,
-            "ctr": 26.2,
+            "impressions": 60,
+            "ctr": 26.7,
             "position": 5.4
           },
           {
             "page": "//blog/higgsfield-api-review-2026.html",
-            "clicks": 13,
-            "impressions": 77,
-            "ctr": 16.9,
-            "position": 5.6
+            "clicks": 11,
+            "impressions": 67,
+            "ctr": 16.4,
+            "position": 5.8
           },
           {
             "page": "//blog/claude-video-watch-tutorial-2026.html",
-            "clicks": 11,
-            "impressions": 127,
+            "clicks": 10,
+            "impressions": 115,
             "ctr": 8.7,
-            "position": 6.2
+            "position": 6.0
           },
           {
             "page": "//blog/copperhead-ai-pcb-design-guide-2026.html",
-            "clicks": 10,
-            "impressions": 62,
-            "ctr": 16.1,
-            "position": 4.4
+            "clicks": 9,
+            "impressions": 63,
+            "ctr": 14.3,
+            "position": 5.0
           },
           {
             "page": "//blog/openai-devday-2026-preview.html",
             "clicks": 9,
-            "impressions": 271,
-            "ctr": 3.3,
-            "position": 5.9
+            "impressions": 255,
+            "ctr": 3.5,
+            "position": 5.8
           },
           {
             "page": "//blog/telegram-bot-business-guide.html",
             "clicks": 6,
-            "impressions": 74,
-            "ctr": 8.1,
-            "position": 8.4
+            "impressions": 93,
+            "ctr": 6.5,
+            "position": 8.0
           },
           {
             "page": "//blog/omlx-apple-silicon-llm-server-2026.html",
-            "clicks": 4,
-            "impressions": 89,
-            "ctr": 4.5,
-            "position": 6.7
+            "clicks": 5,
+            "impressions": 84,
+            "ctr": 6.0,
+            "position": 7.0
           },
           {
             "page": "//blog/rtk-rust-token-killer-review-2026.html",
-            "clicks": 4,
-            "impressions": 111,
-            "ctr": 3.6,
-            "position": 6.4
+            "clicks": 5,
+            "impressions": 121,
+            "ctr": 4.1,
+            "position": 6.5
           },
           {
             "page": "//",
             "clicks": 3,
-            "impressions": 22,
-            "ctr": 13.6,
-            "position": 3.5
+            "impressions": 24,
+            "ctr": 12.5,
+            "position": 3.2
           },
           {
-            "page": "//blog/crush-agentic-coding-cli-tutorial-2026.html",
+            "page": "//blog/agent-skills-complete-guide-2026.html",
             "clicks": 3,
-            "impressions": 18,
-            "ctr": 16.7,
-            "position": 8.7
+            "impressions": 68,
+            "ctr": 4.4,
+            "position": 9.0
+          },
+          {
+            "page": "//blog/moneyprinterturbo-ai-video-guide-2026.html",
+            "clicks": 3,
+            "impressions": 43,
+            "ctr": 7.0,
+            "position": 7.5
+          },
+          {
+            "page": "//blog/orca-ade-parallel-agents-tutorial-2026.html",
+            "clicks": 3,
+            "impressions": 27,
+            "ctr": 11.1,
+            "position": 11.3
           },
           {
             "page": "//en/",
             "clicks": 3,
-            "impressions": 115,
-            "ctr": 2.6,
-            "position": 8.3
-          },
-          {
-            "page": "//blog/agent-skills-complete-guide-2026.html",
-            "clicks": 2,
-            "impressions": 52,
-            "ctr": 3.8,
-            "position": 9.6
-          },
-          {
-            "page": "//blog/kilo-code-jetbrains-review-2026.html",
-            "clicks": 2,
-            "impressions": 13,
-            "ctr": 15.4,
-            "position": 9.7
+            "impressions": 144,
+            "ctr": 2.1,
+            "position": 7.8
           },
           {
             "page": "//blog/mojo-programming-language-tutorial-2026.html",
             "clicks": 2,
             "impressions": 42,
             "ctr": 4.8,
-            "position": 6.1
-          },
-          {
-            "page": "//blog/moneyprinterturbo-ai-video-guide-2026.html",
-            "clicks": 2,
-            "impressions": 35,
-            "ctr": 5.7,
-            "position": 8.9
+            "position": 6.0
           },
           {
             "page": "//tools/ai-token-cost-calculator.html",
             "clicks": 2,
             "impressions": 51,
             "ctr": 3.9,
-            "position": 6.7
+            "position": 8.7
           },
           {
             "page": "//blog/ai-agent-cybersecurity-skills-claude-code-2026.html",
@@ -3181,10 +3240,17 @@
             "position": 3.5
           },
           {
+            "page": "//blog/crush-agentic-coding-cli-tutorial-2026.html",
+            "clicks": 1,
+            "impressions": 14,
+            "ctr": 7.1,
+            "position": 11.1
+          },
+          {
             "page": "//blog/deepseek-harness-complete-guide-2026.html",
             "clicks": 1,
-            "impressions": 33,
-            "ctr": 3.0,
+            "impressions": 30,
+            "ctr": 3.3,
             "position": 6.8
           },
           {
@@ -3192,21 +3258,21 @@
             "clicks": 1,
             "impressions": 8,
             "ctr": 12.5,
-            "position": 5.2
+            "position": 9.8
           },
           {
             "page": "//blog/github-copilot-hydrafusion-review-2026.html",
             "clicks": 1,
-            "impressions": 15,
-            "ctr": 6.7,
-            "position": 6.5
+            "impressions": 14,
+            "ctr": 7.1,
+            "position": 6.6
           },
           {
             "page": "//blog/glm-53-cyber-coding-review-2026.html",
             "clicks": 1,
-            "impressions": 7,
-            "ctr": 14.3,
-            "position": 18.6
+            "impressions": 5,
+            "ctr": 20.0,
+            "position": 23.4
           },
           {
             "page": "//blog/grok-build-memory-tutorial-2026.html",
@@ -3216,11 +3282,11 @@
             "position": 9.2
           },
           {
-            "page": "//blog/kilo-code-review-vs-cursor-claude-code-2026.html",
+            "page": "//blog/kilo-code-jetbrains-review-2026.html",
             "clicks": 1,
-            "impressions": 30,
-            "ctr": 3.3,
-            "position": 8.5
+            "impressions": 13,
+            "ctr": 7.7,
+            "position": 10
           }
         ]
       },
@@ -3257,28 +3323,21 @@
       {
         "site": "autodev-ai",
         "keyword": "lm studio bionic",
-        "position": 8.8,
-        "impressions": 24,
-        "action": "optimize to push to page 1"
-      },
-      {
-        "site": "autodev-ai",
-        "keyword": "harness 教學",
-        "position": 10.7,
-        "impressions": 3,
+        "position": 8.6,
+        "impressions": 22,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "opencode zen",
-        "position": 12.3,
-        "impressions": 7,
+        "position": 16,
+        "impressions": 4,
         "action": "optimize to push to page 1"
       }
     ]
   },
-  "lastGscCheckAt": "2026-10-10T05:30:23Z",
-  "lastGscSummary": "ranking: avg pos 7.1; high-impr low-CTR pages: 5; pos 11-20 opps: 1",
+  "lastGscCheckAt": "2026-10-11T05:30:05Z",
+  "lastGscSummary": "ranking: avg pos 7.3; high-impr low-CTR pages: 3; pos 11-20 opps: 2",
   "issues": [
     {
       "id": "site-health-2026-10-03-ghpages-stale-404",
@@ -3736,112 +3795,128 @@
       "provider": "DigitalOcean",
       "status": 200,
       "note": "OK",
-      "appearances": 223
+      "appearances": 223,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://afflink.one/s/aavAC",
       "provider": "DataCamp",
-      "status": "bot-blocked-301",
+      "status": "bot-blocked-403",
       "note": "Redirects to afftck.com tracking chain, AWS WAF challenge — functional, not dead",
-      "appearances": 186
+      "appearances": 186,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://xiaofan8.gumroad.com/l/kknad",
       "provider": "Gumroad-main",
       "status": 200,
       "note": "OK",
-      "appearances": 80
+      "appearances": 80,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f",
       "provider": "Systeme.io",
       "status": 200,
       "note": "OK",
-      "appearances": 47
+      "appearances": 47,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://systeme.io/zh?sa=sa009897832997e84d5223f260ff81ddbd4c151cf7",
       "provider": "Systeme.io-zh",
       "status": 200,
       "note": "OK",
-      "appearances": 3
+      "appearances": 3,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://vbtrax.com/track/clicks/9532/...",
       "provider": "Cloudways",
-      "status": 200,
+      "status": "placeholder-skipped",
       "note": "OK (with browser UA)",
-      "appearances": 23
+      "appearances": 23,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://abzcoupon.com/track/clicks/4850/...",
       "provider": "Cloudways-alt",
-      "status": 200,
+      "status": "placeholder-skipped",
       "note": "OK (with browser UA)",
-      "appearances": 19
+      "appearances": 19,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://onelink.one/s/7WSzC",
       "provider": "DataCamp-alt",
-      "status": "bot-blocked-301",
+      "status": "bot-blocked-403",
       "note": "Redirects to affsrc.com tracking chain, AWS WAF challenge — functional",
-      "appearances": 15
+      "appearances": 15,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://n8n.io/cloud/",
       "provider": "n8n",
       "status": 200,
       "note": "OK",
-      "appearances": 10
+      "appearances": 10,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://www.heygen.com/?sid=rewardful&via=autodev",
       "provider": "HeyGen",
       "status": 200,
       "note": "OK",
-      "appearances": 2
+      "appearances": 2,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://www.synthesia.io/?via=autodev",
       "provider": "Synthesia",
       "status": 200,
       "note": "OK",
-      "appearances": 1
+      "appearances": 1,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://wisprflow.ai/?via=autodevai",
       "provider": "WisprFlow",
       "status": 200,
       "note": "OK",
-      "appearances": 3
+      "appearances": 3,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://postfast.io/?ref=autodev",
       "provider": "Postfast",
       "status": 200,
       "note": "OK",
-      "appearances": 2
+      "appearances": 2,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://llmclicks.ai/",
       "provider": "LLMClicks",
       "status": 200,
       "note": "OK",
-      "appearances": 2
+      "appearances": 2,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://blym.co",
       "provider": "Blym",
       "status": 200,
       "note": "OK",
-      "appearances": 3
+      "appearances": 3,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://xiaofan8.gumroad.com/l/agent-skills-tw",
       "provider": "Gumroad-agent-skills",
       "status": 200,
       "note": "OK",
-      "appearances": 4
+      "appearances": 4,
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://xiaofan8.gumroad.com/l/n8n-tw-templates",
@@ -3853,7 +3928,8 @@
         "blog/line-bot-tutorial-2026.html",
         "blog/n8n-automation-tutorial-2026.html",
         "blog/telegram-bot-business-guide.html"
-      ]
+      ],
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://xiaofan8.gumroad.com/l/n8n-claude-templates-v1",
@@ -3863,7 +3939,8 @@
       "appearances": 1,
       "affectedFiles": [
         "blog/n8n-claude-code-workflow-templates-2026.html"
-      ]
+      ],
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://xiaofan8.gumroad.com/l/ai-agent-cybersecurity-skills-v1",
@@ -3873,7 +3950,8 @@
       "appearances": 1,
       "affectedFiles": [
         "blog/ai-agent-cybersecurity-skills-claude-code-2026.html"
-      ]
+      ],
+      "lastChecked": "2026-10-11T10:30:00Z"
     },
     {
       "url": "https://xiaofan8.gumroad.com/l/claude-code-prompt-pack-2026",
@@ -3883,7 +3961,8 @@
       "appearances": 1,
       "affectedFiles": [
         "blog/claude-code-prompt-pack-guide-2026.html"
-      ]
+      ],
+      "lastChecked": "2026-10-11T10:30:00Z"
     }
   ],
   "fbStrategy": {
