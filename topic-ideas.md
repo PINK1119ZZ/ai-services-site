@@ -756,6 +756,12 @@
 - 4 個高佣金 SaaS Affiliate：Writesonic 30% lifetime / Frase.io 30% / Framer 50% / PhotoAI 20%
 - 5 個 GitHub trending：Agent-Reach / Caveman / Ponytail / Omnia / Viktor
 
+### Round 246（2026-10-11 競品監控）
+- 3 個新 Affiliate 確認：Taskade 20-50% lifetime（競品 zaiwork 已用）/ Botpress 30%/12mo / Chatbase 30%/12mo
+- 台灣競品 SEO 缺口：n8n vs Make vs Zapier 比較文 / Taskade Genesis 教學 / Botpress 繁中評測
+- TriloAI、zaiwork、raymondhouch 三大競品無 Synthflow/Botpress/Chatbase affiliate
+- 新增 4 個文章機會：taskade-genesis / botpress-review / chatbase-vs-sitegpt / n8n-make-zapier-update
+
 ---
 
-**End of Round 237**
+**End of Round 246**
