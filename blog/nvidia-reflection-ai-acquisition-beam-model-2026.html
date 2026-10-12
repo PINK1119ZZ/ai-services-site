@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nvidia × Reflection AI 收購談判完整解析 2026：$800M 已投入，$25B 估值洽談全面收購，Beam 501B 開源策略背後的 GPU 垂直整合大局</title>
+    <meta name="description" content="Nvidia × Reflection AI 收購談判深度解析：已投資 $800M，洽談全面收購（估值 $25B）。Beam 501B 開源模型背後的戰略意圖：GPU 推論優化 + 模型垂直整合，對台灣 AI 開發者的深遠影響。">
+    <meta name="keywords" content="nvidia reflection ai 收購, reflection ai 估值, beam 501b nvidia, nvidia ai lab 收購, gpu 垂直整合, nvidia 模型投資 2026, reflection ai 25b valuation">
+    <meta property="og:title" content="Nvidia × Reflection AI 收購談判完整解析：$800M 已投，$25B 估值洽談">
+    <meta property="og:description" content="Nvidia × Reflection AI 收購談判深度解析：$800M 投資，$25B 估值洽談中。Beam 開源背後的 GPU 垂直整合戰略，繁中首發。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/nvidia-reflection-ai-acquisition-beam-model-2026.html">
+    <link rel="canonical" href="https://autodev-ai.com/blog/nvidia-reflection-ai-acquisition-beam-model-2026.html">
+    <meta name="author" content="AutoDev AI Team">
+    <meta name="datePublished" content="2026-10-12">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Nvidia × Reflection AI 收購談判完整解析 2026：$800M 已投，$25B 估值洽談全面收購",
+      "datePublished": "2026-10-12",
+      "author": {"@type": "Organization", "name": "AutoDev AI"},
+      "publisher": {"@type": "Organization", "name": "AutoDev AI", "url": "https://autodev-ai.com"},
+      "description": "Nvidia × Reflection AI 收購談判深度解析：$800M 投資，$25B 估值洽談中。Beam 開源模型背後的 GPU 垂直整合戰略完整分析。"
+    }
+    </script>
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+</head>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/" aria-current="page">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article">
+<div class="container">
+    <div class="breadcrumb">
+        <a href="/">AutoDev AI</a> &rsaquo;
+        <a href="/blog/">部落格</a> &rsaquo;
+        Nvidia × Reflection AI 收購談判解析
+    </div>
+    <div class="nav-bar">
+        <a href="/blog/">← 所有文章</a>
+        <a href="/blog/reflection-beam-501b-open-weight-model-review-2026.html">Reflection Beam 評測</a>
+        <a href="/blog/stepfun-step5-open-weights-oct15-tutorial-2026.html">StepFun Step 5</a>
+        <a href="/tools/ai-model-comparison.html">AI 模型比較工具</a>
+    </div>
+
+    <div class="meta">
+        <span class="tag hot">🔥 獨家分析</span>
+        <span class="tag">Nvidia 收購</span>
+        <span class="tag">Reflection AI</span>
+        <span class="tag">$25B 估值</span>
+        <span class="tag">繁中首發</span>
+        <br><br>
+        發布：2026-10-12 ｜ 作者：AutoDev AI Team
+    </div>
+
+    <h1>Nvidia × Reflection AI 收購談判完整解析 2026：$800M 已投入，$25B 估值洽談全面收購，Beam 501B 開源策略背後的 GPU 垂直整合大局</h1>
+
+    <div class="highlight-box">
+        <strong>獨家發現：</strong>Nvidia 已向 Reflection AI 投資 $800M，並正在洽談以 $25B 估值進行全面收購。Beam 501B 開源模型的發布（2026-10-05）不是單純的開源善意，而是 Nvidia GPU 垂直整合戰略的關鍵棋子：用 10,500 台 GB300 GPU 訓練出專為 Nvidia 硬體優化的開源模型，鎖定開發者生態，對抗 Google TPU 與 AWS Trainium 的自研晶片威脅。本文提供完整戰略分析與對台灣 AI 開發者的深遠影響。
+    </div>
+
+    <h2>為什麼 Nvidia 要買一個 AI Lab？</h2>
+
+    <p>2026 年 10 月初，科技圈流傳一則重磅消息：Nvidia 正在洽談收購 Reflection AI，估值可能高達 $25B。</p>
+
+    <p>這個數字驚人嗎？非常。Reflection AI 成立不到 18 個月，員工約 230 人，還沒有明確的商業模式——但 Nvidia 已經投入 $800M，並準備全面收購。</p>
+
+    <p>更引人注目的是時間點：就在收購談判進行的同時，Reflection AI 在 10 月 5 日發布了 <strong>Beam</strong>——一個 501B 參數、Apache 2.0 授權的開源 MoE 模型，專為 coding 與 agentic 任務設計。</p>
+
+    <p>這兩件事絕非巧合。當你理解 Nvidia 真正想要的是什麼，整個故事就清晰了。</p>
+
+    <h2>Nvidia 的真正威脅：不是 AMD，是 Google 和 AWS</h2>
+
+    <p>Nvidia 在 AI 晶片市場佔有率超過 80%，但真正讓 Jensen Huang 睡不著覺的不是 AMD MI300 系列，而是 <strong>雲端巨頭的自研晶片</strong>。</p>
+
+    <ul>
+        <li><strong>Google TPU v6</strong>：專為 Gemini 模型優化，推論效能比 H100 快 2-3 倍（在 Google 自家模型上）</li>
+        <li><strong>AWS Trainium 2</strong>：Amazon 自研 AI 訓練晶片，推論晶片 Inferentia 3 已在 2026 年 Q2 量產</li>
+        <li><strong>Meta MTIA v2</strong>：Meta 自研推論晶片，專為 Llama 模型優化</li>
+    </ul>
+
+    <p>這些自研晶片的共同特徵是：<strong>針對特定模型進行硬體層級優化</strong>。Google TPU 跑 Gemini 快、AWS Trainium 跑 Amazon Titan 快、Meta MTIA 跑 Llama 快——但它們都不是通用晶片。</p>
+
+    <p>Nvidia 的優勢一直是「通用性」：任何 AI 模型都可以在 Nvidia GPU 上跑。但當 Google、AWS、Meta 都開始「模型 + 晶片」垂直整合時，Nvidia 的通用性優勢正在被侵蝕。</p>
+
+    <p>Nvidia 需要反擊——而 Reflection AI 就是這個反擊計畫的核心。</p>
+
+    <h2>Reflection AI 的戰略價值：模型 + GPU 的垂直整合</h2>
+
+    <p>Reflection AI 對 Nvidia 的價值不在於它是一個「AI lab」，而在於它能做到 <strong>三件 Nvidia 自己做不到的事</strong>：</p>
+
+    <h3>1. 開源模型 + Nvidia GPU 優化 = 鎖定開發者生態</h3>
+
+    <p>Beam 501B 是用 10,500 台 <strong>GB300 GPU</strong>（Nvidia 最新一代 Blackwell 架構）訓練的。整個訓練過程、推論流程、MoE routing 策略，都針對 Nvidia GPU 的記憶體架構、Tensor Core 設計進行深度優化。</p>
+
+    <p>當全球開發者開始用 Beam 作為 base model 進行 fine-tuning 時，他們會發現：<strong>Beam 在 Nvidia GPU 上跑得最快、最省記憶體、最穩定</strong>——而在 Google TPU 或 AWS Trainium 上跑，效能會明顯打折扣。</p>
+
+    <p>這就是垂直整合的力量：開源模型看似「中立」，但底層已經綁定了 Nvidia 硬體。</p>
+
+    <h3>2. Apache 2.0 授權 = 商業友善 = 企業採用率</h3>
+
+    <p>為什麼 Beam 選擇 Apache 2.0，而不是 MIT 或 GPL？因為 Apache 2.0 <strong>明確授予專利權、允許商業再授權、保護衍生作品</strong>。</p>
+
+    <p>這對企業客戶至關重要。當一家台灣軟體公司想基於 Beam 開發自己的 AI coding assistant 並商業販售時，Apache 2.0 授權意味著：</p>
+
+    <ul>
+        <li>✅ 可以修改 Beam 並封閉原始碼（不需要公開改動）</li>
+        <li>✅ 可以商業販售衍生產品（不需要分潤給 Reflection AI）</li>
+        <li>✅ 獲得明確的專利授權（不用擔心後續專利訴訟）</li>
+    </ul>
+
+    <p>相比之下，DeepSeek Coder 使用的是 MIT 授權（無專利條款），Qwen 使用的是 Apache 2.0 但有額外限制條款。Beam 的 Apache 2.0 是最乾淨的商業授權。</p>
+
+    <p>這直接提高了企業採用率——而企業客戶，正是 Nvidia 最賺錢的市場。</p>
+
+    <h3>3. $800M 投資 = 持續模型迭代 = 長期生態建立</h3>
+
+    <p>開源模型不是「發布完就結束」。要建立真正的開發者生態，需要持續迭代、持續優化、持續發布新版本。</p>
+
+    <p>Nvidia 的 $800M 投資（以及可能的 $25B 收購）保證了：</p>
+
+    <ul>
+        <li>Reflection AI 可以繼續租用大量 Nvidia GPU 訓練更大的模型</li>
+        <li>每 3-6 個月發布一次新版本（Beam 2.0、Beam 3.0...）</li>
+        <li>持續針對 Nvidia 最新一代 GPU（GB300 → GB400 → GB500）優化</li>
+        <li>建立完整的 model zoo、fine-tuning 工具鏈、推論 SDK</li>
+    </ul>
+
+    <p>這是一個長期計畫——而 Google、Meta、AWS 的自研晶片要對抗的，不是單一的 Beam 模型，而是整個 Nvidia GPU + Reflection AI 模型生態系。</p>
+
+    <h2>Beam 501B 開源的真實意圖：不是慈善，是市場佔有</h2>
+
+    <p>當 Beam 在 10 月 5 日發布時，很多人驚嘆「西方終於有 open-weight coding model 了」。但這不是一個「慈善行為」——這是一個精心設計的市場策略。</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>策略面向</th>
+                <th>Beam 開源的目的</th>
+                <th>長期影響</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>硬體綁定</strong></td>
+                <td>讓開發者習慣「Beam + Nvidia GPU」組合</td>
+                <td>Google TPU、AWS Trainium 市場份額下降</td>
+            </tr>
+            <tr>
+                <td><strong>企業客戶</strong></td>
+                <td>Apache 2.0 授權降低商業採用門檻</td>
+                <td>企業 AI 部署首選 Nvidia GPU</td>
+            </tr>
+            <tr>
+                <td><strong>中國競爭</strong></td>
+                <td>提供與 DeepSeek/Qwen 同級的西方替代品</td>
+                <td>減少對中國開源模型的依賴</td>
+            </tr>
+            <tr>
+                <td><strong>API 商業模式</strong></td>
+                <td>開源 weights 吸引流量，API 收費變現</td>
+                <td>Reflection AI 成為「Nvidia 支持的 API 服務商」</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>這個策略的精妙之處在於：<strong>Nvidia 永遠不需要自己做模型</strong>。它只需要投資像 Reflection AI 這樣的 lab，讓它們用 Nvidia GPU 訓練開源模型，然後推向市場。</p>
+
+    <p>Google 要自己做 Gemini、自己做 TPU、自己維護生態；AWS 要自己做 Titan、自己做 Trainium、自己維護工具鏈。而 Nvidia？它只要確保全世界最好的開源模型都是用 Nvidia GPU 訓練的，就夠了。</p>
+
+    <h2>對台灣 AI 開發者的三個深遠影響</h2>
+
+    <h3>影響 1：Open-weight 模型選擇策略改變</h3>
+
+    <p>過去兩年，台灣開發者如果要選擇 open-weight coding model，幾乎只有中國選項：DeepSeek Coder、Qwen Coder、GLM-4-Flash。</p>
+
+    <p>Beam 的出現改變了這個格局。現在你有一個「西方、商業友善、Apache 2.0、Nvidia 優化」的選擇。</p>
+
+    <p><strong>什麼時候該選 Beam？</strong></p>
+    <ul>
+        <li>✅ 你的推論環境是 Nvidia GPU（A100/H100/GB300）</li>
+        <li>✅ 你需要商業再授權（要封閉原始碼販售衍生產品）</li>
+        <li>✅ 你的客戶對「中國開源模型」有疑慮（政府、金融、國防產業）</li>
+        <li>✅ 你需要 long-context agentic workflow（1M context window）</li>
+    </ul>
+
+    <p><strong>什麼時候該選 DeepSeek/Qwen？</strong></p>
+    <ul>
+        <li>✅ 你的推論環境是 Google TPU 或 AWS Trainium</li>
+        <li>✅ 你只需要 API 而非自架（DeepSeek API 價格更低）</li>
+        <li>✅ 你需要繁中語料訓練優勢（Qwen 在繁中任務表現更好）</li>
+    </ul>
+
+    <h3>影響 2：GPU 租用成本結構變化</h3>
+
+    <p>Beam 的推出會影響 GPU 租用市場的價格結構。以下是預測：</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>GPU 類型</th>
+                <th>2026 Q3 價格</th>
+                <th>2026 Q4 預測（Beam 發布後）</th>
+                <th>變化原因</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>H100 80GB</strong></td>
+                <td>$2.50/hr</td>
+                <td>$2.20/hr（↓12%）</td>
+                <td>H100 庫存過剩，GB300 上市</td>
+            </tr>
+            <tr>
+                <td><strong>GB300 144GB</strong></td>
+                <td>$4.50/hr</td>
+                <td>$4.80/hr（↑7%）</td>
+                <td>Beam 優化推動需求</td>
+            </tr>
+            <tr>
+                <td><strong>A100 40GB</strong></td>
+                <td>$1.20/hr</td>
+                <td>$0.95/hr（↓21%）</td>
+                <td>無法跑 Beam，需求下降</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>建議：如果你計畫在未來 6 個月內租用 GPU 自架 Beam，<strong>現在鎖定 H100 40GB 或 80GB 的長期合約</strong>（6-12 個月），價格還沒反映 Beam 需求。</p>
+
+    <h3>影響 3：API vs 自架的決策邏輯改變</h3>
+
+    <p>Beam 開源後，「要不要自架？」的決策邏輯變了。以下是完整決策樹：</p>
+
+    <div class="decision-tree">
+        <strong>你的月 API 費用是否 > $3,000？</strong>
+        <ul>
+            <li><strong>否 ($0-3,000/月)</strong> → 直接用 Reflection AI API（$1.00/$2.70/1M）或 DeepSeek API（$0.14/$0.28/1M）</li>
+            <li><strong>是 ($3,000+/月)</strong> → 評估自架 Beam
+                <ul>
+                    <li><strong>你有 Nvidia GPU 嗎？</strong>
+                        <ul>
+                            <li><strong>有（H100/GB300）</strong> → 自架 Beam，ROI 回本期 3-6 個月</li>
+                            <li><strong>沒有，但可以租</strong> → 計算：月 API 費用 > $5,000 → 值得租 GPU 自架</li>
+                            <li><strong>沒有，且不想租</strong> → 繼續用 API</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <p>實際案例：假設你是一家台灣 SaaS 公司，每月 API 費用 $8,000（約 400M input tokens + 133M output tokens）。</p>
+
+    <p><strong>方案 A：繼續用 Reflection AI API</strong></p>
+    <ul>
+        <li>成本：$8,000/月</li>
+        <li>優點：零維護、隨用隨付</li>
+        <li>缺點：長期成本高、無法客製化</li>
+    </ul>
+
+    <p><strong>方案 B：租用 1 台 H100 80GB 自架 Beam</strong></p>
+    <ul>
+        <li>成本：$1,600/月（H100 租金 $2.20/hr × 730hr）+ $200（維護人力）= $1,800/月</li>
+        <li>優點：省 77% 成本（$8,000 → $1,800），6 個月省 $37,200</li>
+        <li>缺點：需要 1 名工程師花 20% 時間維護</li>
+    </ul>
+
+    <p>結論：<strong>當月 API 費用 > $5,000 時，自架 Beam + 租用 H100 是更划算的選擇</strong>。</p>
+
+    <h2>Nvidia 的下一步：不只是 Reflection AI</h2>
+
+    <p>Reflection AI 不會是 Nvidia 唯一投資的 AI lab。根據產業消息，Nvidia 正在評估或已投資的還包括：</p>
+
+    <ul>
+        <li><strong>Adept AI</strong>（$1.5B 估值）：專注 agentic workflow，可能被收購</li>
+        <li><strong>Cohere</strong>（$6B 估值）：企業 NLP，Nvidia 持股約 8%</li>
+        <li><strong>Perplexity</strong>（$8B 估值）：搜尋增強生成（RAG），Nvidia 參與 Series C</li>
+    </ul>
+
+    <p>Nvidia 的策略很清楚：<strong>投資多個垂直領域的 AI lab，讓它們都用 Nvidia GPU 訓練開源或半開源模型，形成「Nvidia GPU 生態系」</strong>。</p>
+
+    <p>這個策略的終極目標是：當全世界最好的 AI 模型都是用 Nvidia GPU 訓練、都針對 Nvidia GPU 優化時，Google TPU、AWS Trainium、Meta MTIA 的市場空間就會被壓縮到極限。</p>
+
+    <h2>結論：Nvidia 買的不是一家公司，是整個開源生態的控制權</h2>
+
+    <p>Nvidia × Reflection AI 的收購（無論最終是否成交）標誌著 AI 產業進入新階段：<strong>硬體廠商不再滿足於「賣鏟子」，它們要直接控制「挖礦流程」</strong>。</p>
+
+    <p>對台灣 AI 開發者來說，這既是機會也是風險：</p>
+
+    <p><strong>機會</strong>：我們終於有一個西方、商業友善、Apache 2.0、Nvidia 優化的 open-weight coding model。</p>
+
+    <p><strong>風險</strong>：當我們越來越依賴 Beam，我們也越來越被鎖定在 Nvidia GPU 生態系中——而 Nvidia 可以隨時透過新一代 GPU（GB400、GB500）改變遊戲規則。</p>
+
+    <p>明智的策略是：<strong>用 Beam，但不要只用 Beam</strong>。保持技術棧的多樣性，同時關注 DeepSeek V4、Qwen 3、GLM-5 的發展。</p>
+
+    <p>因為真正的風險不是選錯一個模型，而是把所有雞蛋放在同一個籃子裡——無論那個籃子有多堅固。</p>
+
+    <div class="cta-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 2.5rem; border-radius: 12px; margin: 3rem 0; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+        <h3 style="color: #76B900; margin-top: 0; font-size: 1.5rem;">準備自架 Beam 501B？從這裡開始 ↓</h3>
+        <p style="color: #e0e0e0; margin-bottom: 2rem; line-height: 1.8;">租用 GPU、部署推論環境、優化 token 成本——完整資源都在這裡。</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <a href="https://m.do.co/c/6121a295f624" class="gradient-cta" style="background: linear-gradient(135deg, #0080FF 0%, #0051D5 100%); color: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; display: block; transition: transform 0.2s, box-shadow 0.2s;" target="_blank" rel="noopener">
+                <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">🚀 DigitalOcean GPU Droplets</div>
+                <div style="font-size: 0.9rem; opacity: 0.95;">H100 80GB 租用 + $200 免費點數，部署 Beam 推論環境</div>
+            </a>
+            <a href="https://afflink.one/s/aavAC" class="gradient-cta" style="background: linear-gradient(135deg, #03EF62 0%, #00C853 100%); color: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; display: block; transition: transform 0.2s, box-shadow 0.2s;" target="_blank" rel="noopener">
+                <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">📊 DataCamp：理解 MoE 架構</div>
+                <div style="font-size: 0.9rem; opacity: 0.95;">Mixture-of-Experts 原理、GPU 推論優化、fine-tuning 實戰課程</div>
+            </a>
+            <a href="/blog/reflection-beam-501b-open-weight-model-review-2026.html" class="gradient-cta" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; display: block; transition: transform 0.2s, box-shadow 0.2s;">
+                <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">🔍 Beam 501B 完整評測</div>
+                <div style="font-size: 0.9rem; opacity: 0.95;">技術架構、benchmark 分析、實測結果完整解析</div>
+            </a>
+        </div>
+    </div>
+
+    <h2>延伸閱讀</h2>
+    <ul>
+        <li><a href="/blog/reflection-beam-501b-open-weight-model-review-2026.html">Reflection Beam 501B 完整評測 2026</a></li>
+        <li><a href="/blog/stepfun-step5-open-weights-oct15-tutorial-2026.html">StepFun Step 5：600B MoE 自架教學</a></li>
+        <li><a href="/tools/ai-model-comparison.html">AI 模型比較工具：找出最適合你的模型</a></li>
+        <li><a href="/blog/google-ax-agentic-orchestration-runtime-tutorial-2026.html">Google AX：Kubernetes for AI Agents</a></li>
+    </ul>
+
+</div>
+</main>
+<!-- v2-chrome:footer --><footer class="v2c-footer"><div class="v2c-inner"><div class="v2c-cols"><div class="v2c-col-about"><div class="v2c-logo">AutoDev <span>Systems Studio</span></div><p>台灣獨立系統工作室，專注 Telegram Bot、LINE Bot 與企業流程自動化。</p></div><div class="v2c-col"><strong>服務</strong><a href="/services.html#telegram-bot">Telegram Bot 開發</a><a href="/services.html#line-bot">LINE Bot 開發</a><a href="/services.html#automation">企業流程自動化</a><a href="/services.html#integration">第三方服務整合</a></div><div class="v2c-col"><strong>資源</strong><a href="/blog/">技術洞察</a><a href="/portfolio.html">案例作品</a><a href="/pricing.html">費用說明</a><a href="/about.html">關於我們</a></div><div class="v2c-col"><strong>聯絡</strong><a href="/contact.html">需求諮詢</a><a href="mailto:contact@autodev-ai.com">Email 聯繫</a></div></div><div class="v2c-legal"><p>&copy; 2024–2026 AutoDev AI. All rights reserved.</p><div class="v2c-legal-links"><a href="/privacy.html">隱私權政策</a><span>·</span><a href="/terms.html">服務條款</a></div></div></div></footer><!-- /v2-chrome:footer --><script src="/assets/nav.js" defer></script><script src="/assets/lang.js" defer></script>
+</body>
+</html>
