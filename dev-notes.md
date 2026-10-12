@@ -1,5 +1,133 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 248 | 2026-10-12 22:00 UTC — researcher agent (ai-dev-research)
+
+> 執行時間：2026-10-12 22:00 UTC | 搜尋範圍：Product Hunt Oct 12 trending、Lovable affiliate 路徑確認、EmbeddingGemma 2 深度分析、AI 成本優化最新研究、Dropstone CLI、Manifold MCP | 模式：Tue/Thu/Sat 06:00 ai-dev-research cron
+
+### 🔎 本輪搜尋結果摘要
+
+#### 🔥 Product Hunt Oct 12, 2026（Top 5 + 關鍵產品）
+
+1. **Dropstone CLI**（#1 Launch of the Day）— 自學習 coding agent terminal，persistent memory 跨 session，支援 MCP + subagents，繁中 0 篇
+2. **Manifold MCP**（#2 + daily #5）— SEO + AI answers + social + ads + leads data MCP server for Claude/ChatGPT/Cursor，AutoDev AI 受眾完美匹配，繁中 0 篇
+3. **Invited - AI Reminder Scanner**（#3）— Bills/invites/docs AI 掃描，低技術含量略過
+4. **ExcaliClaw**（#4）— AI agent + Excalidraw 手繪圖表整合
+5. **ngram 2.0**（#5）— AI avatar explainer/screencast 影片工具
+
+✅ **Dropstone CLI 評估：** P1-HIGH 教學文（Oct 17 截止）— Persistent learning 機制 = 省 token + 省時間，vs Claude Code 每 session 重置，差異化明確
+✅ **Manifold MCP 評估：** P1-HIGH 評測文（Oct 16 截止）— 讓 AI agent 直接取得 SEO/競品/社群數據，AutoDev 行銷自動化受眾精準命中
+
+---
+
+#### 🎯 EmbeddingGemma 2 深度確認（Google DeepMind, Oct 6 2026）
+
+**規格：**
+- 740M 總參數（270M text-only backbone + 170M vision + 300M audio encoders）
+- Gemma 4 架構，768 維向量空間，Apache 2.0 授權
+- **核心突破：** 統一 text + code + images + video + audio 於單一 embedding space
+- **目標：** 手機/Edge 推論（sub-1B SOTA）
+
+**為什麼重要（省 token = 省錢）：**
+1. **多模態 RAG 成本崩壞：** 過去需 3 個模型（ASR + OCR/caption + text embed）→ 現在 1 個模型
+2. **程式碼搜尋提升 14.4%：** MTEB Code 78.68（vs EmbeddingGemma 1 的 68.76）
+3. **隱私本地 RAG：** 740M 可在 MacBook/VPS 執行，敏感資料不上雲
+4. **Matryoshka embeddings：** 可縮小向量維度 = lower memory + faster retrieval
+
+**產品化機會：**
+- ✅ **P1-HIGH 教學文：** blog/embeddinggemma-2-multimodal-rag-local-search-2026.html（Oct 15 截止，繁中 0 篇）
+- 🎁 **Gumroad 機會：** "本地多模態 RAG 實作包"（EmbeddingGemma 2 + Gemma 4 + 隱私 pipeline）$29-39
+- 💰 **省 token：** 我們 agent 文件/圖片 RAG 可用 EmbeddingGemma 2 本地執行取代外部 embedding API
+- **預估月收：** $200-600/月（間接 DigitalOcean + DataCamp + Gumroad 配套）
+
+---
+
+#### 💡 AI 成本優化最新研究（省錢直接機會）
+
+**核心數據（已驗證來源）：**
+- Prompt caching 省 41-80% API cost（PwC 2026 研究，500 agent session 測試）
+- 模型路由省 60-80%：70% 低複雜度任務用 Nano/Flash（$0.10-0.30/1M）
+- 5 步驟 workflow × 500 次：無優化 $150 vs 有快取 $15（省 90%）
+- 組合優化（routing + caching + context）：$1.60/互動 → $0.40/互動（省 75%）
+
+**對 AutoDev 的直接影響：**
+1. 啟用 Anthropic prompt caching（system prompt 前綴固定 → 省 41-80%）
+2. 低複雜度 agent 任務路由至 Claude Haiku 5.5（$0.10/1M input）
+3. 評估 agentic checkpoint caching（agent workflow 中段快取）
+**估計效益：** 若現有 agent 成本 $X/月，可省 50-75%
+
+**文章機會：**
+- ✅ **P1-HIGH：** blog/ai-agent-cost-optimization-guide-2026.html（2,000 字，Oct 20 截止）
+- 角度：「2026 AI Agent 成本削減 80% 完整指南：Prompt Caching + 智能路由 + Context 壓縮」
+- CTA：DigitalOcean + DataCamp + tools/ai-token-cost-calculator.html + AI FinOps Notion Template
+- 預估月收：$250-800/月（高 B2B CTR，企業 FinOps 受眾）
+
+---
+
+#### 🔴 P0-URGENT Affiliate 路徑確認
+
+##### 1. Lovable — $100/referral, Impact.com（✅ 路徑已確認）
+
+**重要更正：** R245 記錄 Lovable 為 Tapfiliate，本輪直接存取 lovable.dev/affiliates 確認：
+- **Platform：Impact.com**（非 Tapfiliate）
+- **Commission：up to $100 per first-time subscriber**（固定 CPA，非百分比）
+- **申請網址：** https://app.impact.com/campaign-campaign-info-v2/Lovable-Labs.brand
+- **功能：** Real-time dashboard、Performance bonuses（tier milestones）、Monthly payouts
+- **狀態：** Open application，不需代碼
+
+**Ivan 行動：** 前往 Impact.com 申請 Lovable campaign
+**優先級：** P1-HIGH（$100/referral 是高 CPA，vibe coding 工具 2026 最熱門）
+**預估月收：** $300-1,200/月（若每月 3-12 conversions）
+
+##### 2. BrainGrid AI — 15% lifetime, Tapfiliate（路徑待確認）
+
+**搜尋結果：** 未找到 braingrid.ai/affiliates 公開頁面，可能需登入後查看
+**Ivan 行動：** 直接造訪 braingrid.ai → 底部找 Affiliate / Partners 連結
+**預估月收：** $300-1,500/月（15% lifetime，60-day cookie）
+
+##### 3. Unbound AI AASB — 企業安全 SaaS（路徑未確認）
+
+**搜尋結果：** 未找到公開 affiliate 頁面，可能為 enterprise partner program
+**Ivan 行動：** 造訪 unbound.ai → Contact / Partners 頁詢問
+**重要性：** 若確認 → Plugin4Shell 文章（Oct 18）可加 affiliate CTA，升為 P0
+
+---
+
+#### 📊 本輪發現評估矩陣
+
+| 發現 | 產品化？ | 省 token？ | Awesome-list？ | 行動 | 優先 |
+|------|---------|-----------|--------------|------|------|
+| Lovable affiliate 路徑確認 | ✅ 直接收入 | ❌ | ❌ | Ivan 申請 Impact.com | P0 |
+| EmbeddingGemma 2 | ✅ Gumroad RAG 包 | ✅ 本地 RAG 省 API | ✅ | seo-writer 教學文 Oct 15 | P1 |
+| AI 成本優化研究 | ✅ 文章 + 工具頁 | ✅ 直接省 50-75% | ❌ | seo-writer Oct 20 | P1 |
+| Dropstone CLI | ✅ 教學文 | ✅ Persistent memory | ✅ | seo-writer Oct 17 | P1 |
+| Manifold MCP | ✅ 教學文 | ❌ | ✅ | seo-writer Oct 16 | P1 |
+| BrainGrid affiliate | ✅ 直接收入 | ❌ | ❌ | Ivan 確認申請路徑 | P1 |
+
+---
+
+#### 🚨 對 strategist 的關鍵建議
+
+1. **Lovable affiliate 平台更正：** R245 記錄為 Tapfiliate 有誤，已確認為 **Impact.com**，申請連結已取得
+2. **EmbeddingGemma 2 雙層機會：** 短期教學文（Oct 15）+ 中期 Gumroad「本地多模態 RAG 實作包」$29-39
+3. **AI 成本優化系列文：** 配合既有 tools/ai-token-cost-calculator.html + FinOps Notion Template 提案 → 新增「Agent Cost Optimization Guide」補完系列
+4. **Dropstone CLI 定位：** PH #1 今日，但與 AutoDev 核心定位（Telegram Bot / 企業自動化）關係較弱 → 教學文 CTA 重點放 OpenClaw 替代方案比較
+
+**本輪預估新增月收入：** $850-3,600/月（Lovable $300-1.2K + EmbeddingGemma $200-600 + AI Cost Opt $250-800 + Dropstone/Manifold $100-1K）
+
+---
+
+#### 📋 積壓確認（本輪重申）
+
+| 積壓項目 | 積壓輪數 | Ivan 行動 | 每月損失 |
+|---------|---------|---------|---------|
+| Systeme.io 60% lifetime | 30+ 輪 | systeme.io/affiliate-program（5 分鐘） | $300-1,200 |
+| Lovable $100/referral | 3 輪 | ✅ 路徑確認：Impact.com，立即申請 | $300-1,200 |
+| BrainGrid 15% lifetime | 3 輪 | 確認 braingrid.ai affiliate 頁面 | $300-1,500 |
+| GitHub Pages 22+ 404 | 3+ 週 | workflow_dispatch BLOCKER | SEO 損失 |
+| Gumroad 4 products | 25+ 週 | 上架修復壞連結（6 篇文章） | 信任度損失 |
+
+---
+
 ## Round 242 | 2026-10-09 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-10-09 22:00 UTC | 搜尋範圍：GitHub trending Oct 9 2026、HN front page Oct 9、AI changelog、新框架發布、產業重大事件 | 模式：Tue/Thu/Sat 06:00 ai-dev-research cron (即 Fri Oct 9 22:00 UTC = Sat TW)

@@ -1,7 +1,7 @@
 {
-  "lastRun": "2026-10-12T03:00:00Z",
+  "lastRun": "2026-10-12T22:00:00Z",
   "lastBuilderRun": "2026-10-10T05:00:00Z",
-  "lastResearchRound": 247,
+  "lastResearchRound": 248,
   "lastCompetitorWatchRun": "2026-10-11T03:10:00Z",
   "lastStrategistRun": "2026-10-12T01:30:00Z",
   "lastSeoWriterRun": "2026-10-12T03:00:00Z",
@@ -289,6 +289,100 @@
     }
   ],
   "agentLog": [
+    {
+      "round": 248,
+      "agent": "researcher",
+      "timestamp": "2026-10-12T22:00:00Z",
+      "task": "ai-dev-research",
+      "status": "completed",
+      "summary": "Mon 22:00 UTC researcher cron — Round 248 完成：(1) Lovable affiliate 路徑確認（重要更正：平台是 Impact.com，非 Tapfiliate；申請連結已取得：app.impact.com/campaign-campaign-info-v2/Lovable-Labs.brand，$100/referral CPA）；(2) PH #1 Dropstone CLI（自學習 coding agent，persistent memory 跨 session，省 token 機會，P1-HIGH Oct 17 教學文）；(3) PH #2 Manifold MCP（Launch of the Day，SEO+AI answers+social+ads MCP server，AutoDev AI 受眾命中，P1-HIGH Oct 16 教學文）；(4) EmbeddingGemma 2 深度確認（Google DeepMind Oct 6，740M，Apache 2.0，多模態 RAG 省成本，P1-HIGH Oct 15 教學文 + Gumroad RAG 實作包機會）；(5) AI 成本優化最新研究（prompt caching 省 41-80%，模型路由省 60-80%，組合優化省 75%，P1-HIGH Oct 20 指南文章）；(6) BrainGrid/Unbound AI affiliate 路徑仍待 Ivan 確認。預估新增月收入 $850-3,600/月。Directive 已寫入 directives/researcher-to-strategist-2026-10-12-round248.md。",
+      "changes": [
+        "更新 dev-notes.md（Round 248 新增，含完整發現表格與評估矩陣）",
+        "新增 directives/researcher-to-strategist-2026-10-12-round248.md",
+        "更新 agent-state.json（lastResearchRound: 248, lastRun: 2026-10-12T22:00:00Z）"
+      ],
+      "keyFindings": [
+        "Lovable affiliate：平台更正為 Impact.com（非 Tapfiliate），$100/referral CPA，申請連結已確認",
+        "Dropstone CLI（PH #1 Oct 12）：自學習 coding agent，persistent memory 省 token，繁中 0 篇，P1-HIGH Oct 17",
+        "Manifold MCP（PH #2 + Launch of Day Oct 12）：AI agent 行銷數據 MCP server，AutoDev 受眾完美匹配，繁中 0 篇，P1-HIGH Oct 16",
+        "EmbeddingGemma 2（Google DeepMind, Oct 6）：740M multimodal embedding，Apache 2.0，多模態 RAG 省 API 成本，繁中 0 篇，P1-HIGH Oct 15",
+        "AI 成本優化研究（PwC 2026）：Prompt caching 省 41-80%，模型路由省 60-80%，組合可省 75%，P1-HIGH 指南文章 Oct 20",
+        "BrainGrid 15% lifetime affiliate 路徑仍未確認（需 Ivan 訪問 braingrid.ai）",
+        "Unbound AI AASB affiliate 未找到公開頁面（需 Ivan 詢問 Partners 頁）"
+      ],
+      "affiliateProgramsFound": [
+        {
+          "program": "Lovable",
+          "commission": "$100 per first-time subscriber（CPA）",
+          "platform": "Impact.com",
+          "applyUrl": "https://app.impact.com/campaign-campaign-info-v2/Lovable-Labs.brand",
+          "action": "Ivan 立即申請",
+          "priority": "P1-HIGH",
+          "note": "R245 平台記錄錯誤（Tapfiliate），已更正為 Impact.com",
+          "estimatedRevenue": "$300-1,200/月"
+        }
+      ],
+      "teachingOpportunitiesFound": [
+        {
+          "project": "EmbeddingGemma 2（Google DeepMind）",
+          "source": "blog.google + developers.googleblog.com + Hugging Face Oct 6",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 15",
+          "article": "blog/embeddinggemma-2-multimodal-rag-local-search-2026.html",
+          "uniqueAngle": "一個 740M 模型取代三個模型（ASR + OCR + text embed），本地隱私 RAG，省 API 成本",
+          "estimatedRevenue": "$200-600/月（間接 DigitalOcean + DataCamp）"
+        },
+        {
+          "project": "Manifold MCP",
+          "source": "Product Hunt #2 + Launch of the Day Oct 12",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 16",
+          "article": "blog/manifold-mcp-ai-agent-marketing-data-server-2026.html",
+          "uniqueAngle": "讓 AI agent 直接取得 SEO/競品廣告/TikTok/Reddit 數據，AutoDev AI 受眾精準命中",
+          "estimatedRevenue": "$100-300/月（間接）"
+        },
+        {
+          "project": "Dropstone CLI",
+          "source": "Product Hunt #1 Launch of the Day Oct 12",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 17",
+          "article": "blog/dropstone-cli-self-learning-coding-agent-terminal-2026.html",
+          "uniqueAngle": "Persistent learning 機制（一次糾正永久記住）vs Claude Code 每 session 重置 → 省 token + 省時間",
+          "estimatedRevenue": "$150-500/月（間接）"
+        },
+        {
+          "project": "AI Agent 成本優化指南",
+          "source": "Requesty.ai + Exadel + PointFive + TrueFoundry 2026 研究",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 20",
+          "article": "blog/ai-agent-cost-optimization-guide-2026.html",
+          "uniqueAngle": "組合優化（prompt caching + 模型路由 + context 壓縮）省 75%，B2B FinOps 受眾高 CTR",
+          "estimatedRevenue": "$250-800/月（高 B2B CTR）"
+        }
+      ],
+      "costSavingOpportunities": [
+        {
+          "tool": "EmbeddingGemma 2 本地部署",
+          "method": "取代外部 embedding API（OpenAI Embeddings / Voyage AI），本地執行 text + image RAG",
+          "estimatedSaving": "外部 embedding API 成本可降至 $0（本地運算替代）",
+          "action": "Ivan 評估 agent RAG pipeline 是否可切換至 EmbeddingGemma 2"
+        },
+        {
+          "tool": "Prompt Caching（Anthropic/OpenAI/Google 全支援）",
+          "method": "固定 system prompt 前綴 → 啟用 prompt caching",
+          "estimatedSaving": "41-80% API 成本省（PwC 2026 研究）",
+          "action": "Ivan 在 OpenClaw agent 配置中啟用 prompt caching"
+        },
+        {
+          "tool": "模型路由（智能分流）",
+          "method": "低複雜度任務（summarization/extraction）→ Claude Haiku 5.5（$0.10/1M）；高複雜度保留 Claude Sonnet",
+          "estimatedSaving": "60-80% 成本省（依路由比例）",
+          "action": "配置 agent routing 規則"
+        }
+      ],
+      "estimatedNewMonthlyRevenue": "$850-3,600/月（Lovable $300-1.2K + EmbeddingGemma $200-600 + AI Cost Opt $250-800 + Dropstone/Manifold $100-1K）",
+      "directivesIssued": "directives/researcher-to-strategist-2026-10-12-round248.md"
+    },
     {
       "timestamp": "2026-10-12T03:00:00Z",
       "agent": "seo-writer",
