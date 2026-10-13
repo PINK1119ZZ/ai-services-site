@@ -2661,6 +2661,59 @@
         "🔴 Ivan 立即：申請 frase.io/partners/affiliates（30% recurring 12mo）",
         "🏆 Ivan 立即：申請 systeme.io/affiliates（60% LIFETIME，21+ 輪積壓）"
       ]
+    },
+    {
+      "timestamp": "2026-10-13T00:00:16Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Tue 00:00 UTC site-health — Curled all 222 sitemap URLs. Result: 193 OK / 29 404. No source-side content breakage found; failures still match stale GitHub Pages publish artifact. Updated lastChecked, added 2026-10-13 follow-up issue, and queued another builder directive. No auto-fix possible from repo side because publish requires Ivan workflow_dispatch.",
+      "checks": {
+        "sitemapUrlCount": 222,
+        "status200": 193,
+        "status404": 29
+      },
+      "brokenUrls": [
+        "https://autodev-ai.com/blog/ai-cost-management-tools-llm-comparison-2026.html",
+        "https://autodev-ai.com/blog/caveman-ai-agent-token-optimization-2026.html",
+        "https://autodev-ai.com/blog/clair-claude-code-watch-app-review-2026.html",
+        "https://autodev-ai.com/blog/claude-haiku-5-5-review-2026.html",
+        "https://autodev-ai.com/blog/cloudflare-acquires-deno-workers-migration-guide-2026.html",
+        "https://autodev-ai.com/blog/cloudflare-web-search-api-ai-agent-review-2026.html",
+        "https://autodev-ai.com/blog/dwarfstar-4-ds4-local-llm-antirez-2026.html",
+        "https://autodev-ai.com/blog/gemini-4-argon-complete-review-2026.html",
+        "https://autodev-ai.com/blog/google-ax-agentic-orchestration-runtime-tutorial-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-1-sol-review-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-sol-luna-claude-opus-5-5-comparison-2026.html",
+        "https://autodev-ai.com/blog/herdr-multi-agent-terminal-orchestrator-2026.html",
+        "https://autodev-ai.com/blog/hindsight-agent-memory-review-2026.html",
+        "https://autodev-ai.com/blog/howseen-ai-review-geo-tracking-2026.html",
+        "https://autodev-ai.com/blog/mistral-large-4-le-chonk-review-2026.html",
+        "https://autodev-ai.com/blog/nvidia-reflection-ai-acquisition-beam-model-2026.html",
+        "https://autodev-ai.com/blog/openai-dots-always-on-agents-review-2026.html",
+        "https://autodev-ai.com/blog/openmontage-ai-video-production-tutorial-2026.html",
+        "https://autodev-ai.com/blog/plugin4shell-ai-coding-agent-security-cve-2026.html",
+        "https://autodev-ai.com/blog/qwen-3-8-flash-next-rtx-4090-tutorial-2026.html",
+        "https://autodev-ai.com/blog/rea-reverse-engineer-ai-agent-mcp-tutorial-2026.html",
+        "https://autodev-ai.com/blog/reflection-beam-501b-open-weight-model-review-2026.html",
+        "https://autodev-ai.com/blog/stepfun-step5-open-weights-oct15-tutorial-2026.html",
+        "https://autodev-ai.com/blog/telegram-cve-2026-10718-account-security-guide.html",
+        "https://autodev-ai.com/blog/viktor-ai-coworker-complete-review-2026.html",
+        "https://autodev-ai.com/blog/writesonic-complete-review-2026.html",
+        "https://autodev-ai.com/tools/ai-agent-security-tools-comparison-2026.html",
+        "https://autodev-ai.com/tools/ai-model-comparison.html",
+        "https://autodev-ai.com/tools/chatbot-platform-comparison.html"
+      ],
+      "changes": [
+        "updated agent-state.json lastChecked to 2026-10-13T00:00:16Z",
+        "added issue site-health-2026-10-13-ghpages-stale-404-followup",
+        "added directive content-ops-to-builder-2026-10-13-ghpages-stale-publish-followup"
+      ],
+      "nextActions": [
+        "Ivan: trigger GitHub Pages workflow_dispatch with latest approved_sha",
+        "builder: verify publish artifact once workflow is run",
+        "content-ops: recheck production after deploy"
+      ]
     }
   ],
   "gscData": {
@@ -3357,9 +3410,60 @@
         "checkedCommit": "ce811023e86f716c5e2a678da37937d07d4744ea"
       },
       "nextAction": "Ivan/publish owner to run GitHub Pages workflow_dispatch with latest approved_sha and republish latest artifact, then recheck affected URLs."
+    },
+    {
+      "id": "site-health-2026-10-13-ghpages-stale-404-followup",
+      "detectedAt": "2026-10-13T00:00:00Z",
+      "agent": "content-ops",
+      "severity": "high",
+      "status": "open",
+      "title": "Production still serves stale/missing Pages artifact for 29 sitemap URLs",
+      "summary": "Curled all sitemap URLs. Production returned 193 OK / 29 404. All 29 affected files exist locally in repo, so the failure pattern still matches stale/incomplete GitHub Pages output rather than missing source files.",
+      "affectedUrls": [
+        "https://autodev-ai.com/blog/ai-cost-management-tools-llm-comparison-2026.html",
+        "https://autodev-ai.com/blog/caveman-ai-agent-token-optimization-2026.html",
+        "https://autodev-ai.com/blog/clair-claude-code-watch-app-review-2026.html",
+        "https://autodev-ai.com/blog/claude-haiku-5-5-review-2026.html",
+        "https://autodev-ai.com/blog/cloudflare-acquires-deno-workers-migration-guide-2026.html",
+        "https://autodev-ai.com/blog/cloudflare-web-search-api-ai-agent-review-2026.html",
+        "https://autodev-ai.com/blog/dwarfstar-4-ds4-local-llm-antirez-2026.html",
+        "https://autodev-ai.com/blog/gemini-4-argon-complete-review-2026.html",
+        "https://autodev-ai.com/blog/google-ax-agentic-orchestration-runtime-tutorial-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-1-sol-review-2026.html",
+        "https://autodev-ai.com/blog/gpt-6-sol-luna-claude-opus-5-5-comparison-2026.html",
+        "https://autodev-ai.com/blog/herdr-multi-agent-terminal-orchestrator-2026.html",
+        "https://autodev-ai.com/blog/hindsight-agent-memory-review-2026.html",
+        "https://autodev-ai.com/blog/howseen-ai-review-geo-tracking-2026.html",
+        "https://autodev-ai.com/blog/mistral-large-4-le-chonk-review-2026.html",
+        "https://autodev-ai.com/blog/nvidia-reflection-ai-acquisition-beam-model-2026.html",
+        "https://autodev-ai.com/blog/openai-dots-always-on-agents-review-2026.html",
+        "https://autodev-ai.com/blog/openmontage-ai-video-production-tutorial-2026.html",
+        "https://autodev-ai.com/blog/plugin4shell-ai-coding-agent-security-cve-2026.html",
+        "https://autodev-ai.com/blog/qwen-3-8-flash-next-rtx-4090-tutorial-2026.html",
+        "https://autodev-ai.com/blog/rea-reverse-engineer-ai-agent-mcp-tutorial-2026.html",
+        "https://autodev-ai.com/blog/reflection-beam-501b-open-weight-model-review-2026.html",
+        "https://autodev-ai.com/blog/stepfun-step5-open-weights-oct15-tutorial-2026.html",
+        "https://autodev-ai.com/blog/telegram-cve-2026-10718-account-security-guide.html",
+        "https://autodev-ai.com/blog/viktor-ai-coworker-complete-review-2026.html",
+        "https://autodev-ai.com/blog/writesonic-complete-review-2026.html",
+        "https://autodev-ai.com/tools/ai-agent-security-tools-comparison-2026.html",
+        "https://autodev-ai.com/tools/ai-model-comparison.html",
+        "https://autodev-ai.com/tools/chatbot-platform-comparison.html"
+      ],
+      "evidence": {
+        "curlBadCount": 29,
+        "statusBreakdown": {
+          "200": 193,
+          "404": 29
+        },
+        "sitemapUrlCount": 222,
+        "localFilesExist": true,
+        "checkedCommit": null
+      },
+      "nextAction": "Ivan/publish owner to run GitHub Pages workflow_dispatch with latest approved_sha and republish latest artifact, then recheck affected URLs."
     }
   ],
-  "lastChecked": "2026-10-12T00:00:00Z",
+  "lastChecked": "2026-10-13T00:00:16Z",
   "directives": [
     {
       "id": "content-ops-to-builder-2026-10-03-ghpages-publish-check",
@@ -3629,6 +3733,54 @@
         "localVerification": "all 27 corresponding source files exist in repo",
         "checkedCommit": "ce811023e86f716c5e2a678da37937d07d4744ea",
         "note": "Builder log already says workflow_dispatch needs Ivan with approved_sha; if builder cannot act directly, keep this blocked and preserve exact run instructions for Ivan."
+      }
+    },
+    {
+      "id": "content-ops-to-builder-2026-10-13-ghpages-stale-publish-followup",
+      "timestamp": "2026-10-13T00:00:00Z",
+      "from": "content-ops",
+      "to": "builder",
+      "status": "pending",
+      "priority": "urgent",
+      "action": "Verify GitHub Pages/static publish pipeline and republish latest artifact. Production now has 29 sitemap URLs returning 404 while all corresponding source files exist locally.",
+      "context": {
+        "affectedUrls": [
+          "https://autodev-ai.com/blog/ai-cost-management-tools-llm-comparison-2026.html",
+          "https://autodev-ai.com/blog/caveman-ai-agent-token-optimization-2026.html",
+          "https://autodev-ai.com/blog/clair-claude-code-watch-app-review-2026.html",
+          "https://autodev-ai.com/blog/claude-haiku-5-5-review-2026.html",
+          "https://autodev-ai.com/blog/cloudflare-acquires-deno-workers-migration-guide-2026.html",
+          "https://autodev-ai.com/blog/cloudflare-web-search-api-ai-agent-review-2026.html",
+          "https://autodev-ai.com/blog/dwarfstar-4-ds4-local-llm-antirez-2026.html",
+          "https://autodev-ai.com/blog/gemini-4-argon-complete-review-2026.html",
+          "https://autodev-ai.com/blog/google-ax-agentic-orchestration-runtime-tutorial-2026.html",
+          "https://autodev-ai.com/blog/gpt-6-1-sol-review-2026.html",
+          "https://autodev-ai.com/blog/gpt-6-sol-luna-claude-opus-5-5-comparison-2026.html",
+          "https://autodev-ai.com/blog/herdr-multi-agent-terminal-orchestrator-2026.html",
+          "https://autodev-ai.com/blog/hindsight-agent-memory-review-2026.html",
+          "https://autodev-ai.com/blog/howseen-ai-review-geo-tracking-2026.html",
+          "https://autodev-ai.com/blog/mistral-large-4-le-chonk-review-2026.html",
+          "https://autodev-ai.com/blog/nvidia-reflection-ai-acquisition-beam-model-2026.html",
+          "https://autodev-ai.com/blog/openai-dots-always-on-agents-review-2026.html",
+          "https://autodev-ai.com/blog/openmontage-ai-video-production-tutorial-2026.html",
+          "https://autodev-ai.com/blog/plugin4shell-ai-coding-agent-security-cve-2026.html",
+          "https://autodev-ai.com/blog/qwen-3-8-flash-next-rtx-4090-tutorial-2026.html",
+          "https://autodev-ai.com/blog/rea-reverse-engineer-ai-agent-mcp-tutorial-2026.html",
+          "https://autodev-ai.com/blog/reflection-beam-501b-open-weight-model-review-2026.html",
+          "https://autodev-ai.com/blog/stepfun-step5-open-weights-oct15-tutorial-2026.html",
+          "https://autodev-ai.com/blog/telegram-cve-2026-10718-account-security-guide.html",
+          "https://autodev-ai.com/blog/viktor-ai-coworker-complete-review-2026.html",
+          "https://autodev-ai.com/blog/writesonic-complete-review-2026.html",
+          "https://autodev-ai.com/tools/ai-agent-security-tools-comparison-2026.html",
+          "https://autodev-ai.com/tools/ai-model-comparison.html",
+          "https://autodev-ai.com/tools/chatbot-platform-comparison.html"
+        ],
+        "statusBreakdown": {
+          "200": 193,
+          "404": 29
+        },
+        "localVerification": "all 29 corresponding source files exist in repo",
+        "note": "Builder logs already indicate workflow_dispatch needs Ivan with approved_sha; if builder cannot act directly, keep this blocked and preserve exact run instructions for Ivan."
       }
     }
   ],
