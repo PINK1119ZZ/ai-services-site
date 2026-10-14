@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Code Review 工具比較 2026：CodeRabbit vs GitHub Copilot vs Cursor vs Augment Code，14 工具完整選型指南</title>
+<meta name="description" content="2026 最完整 AI Code Review 工具互動比較。CodeRabbit、GitHub Copilot、Cursor、Augment Code 等 14 大工具功能、定價、PR 審查能力一目了然。互動篩選，找出最適合你的 AI 程式碼審查工具。">
+<meta name="keywords" content="AI code review 工具比較 2026, CodeRabbit 評測, GitHub Copilot vs Cursor, Augment Code 比較, best ai code review 2026, coderabbit vs copilot, AI 程式碼審查工具, PR review AI, Qodo 比較">
+<meta property="og:title" content="AI Code Review 工具比較 2026：14 大工具完整互動比較">
+<meta property="og:description" content="14 個 AI Code Review 工具互動比較，含 PR 審查、安全掃描、CI/CD 整合能力。找出最適合你團隊的方案。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autodev-ai.com/tools/ai-code-review-comparison.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://autodev-ai.com/tools/ai-code-review-comparison.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/tools/ai-code-review-comparison.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "AI Code Review 工具比較 2026",
+  "description": "CodeRabbit vs GitHub Copilot vs Cursor vs Augment Code 等 14 大工具互動比較，PR 審查能力完整選型指南",
+  "url": "https://autodev-ai.com/tools/ai-code-review-comparison.html",
+  "datePublished": "2026-10-14",
+  "dateModified": "2026-10-14",
+  "inLanguage": "zh-Hant",
+  "author": {"@type": "Organization", "name": "AutoDev"},
+  "publisher": {"@type": "Organization", "name": "AutoDev", "url": "https://autodev-ai.com"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "CodeRabbit 是什麼？",
+      "acceptedAnswer": {"@type": "Answer", "text": "CodeRabbit 是一個 AI-native PR 審查工具，每個 PR 都能在幾分鐘內取得逐行 code review、安全掃描與架構建議，支援 GitHub、GitLab、Bitbucket，並提供 $30/lead 的 affiliate 計畫。"}
+    },
+    {
+      "@type": "Question",
+      "name": "CodeRabbit vs GitHub Copilot 哪個適合 PR Review？",
+      "acceptedAnswer": {"@type": "Answer", "text": "CodeRabbit 專為 PR Review 設計，可獨立運作並自動在 PR 留下 AI 建議；GitHub Copilot 的 PR 功能需要 GitHub Enterprise 且主要是輔助開發者在 IDE 中寫程式。如果團隊主要需求是自動 PR Review，CodeRabbit 更合適；如果是 IDE 輔助補完，Copilot 更強。"}
+    },
+    {
+      "@type": "Question",
+      "name": "小團隊適合使用 AI Code Review 工具嗎？",
+      "acceptedAnswer": {"@type": "Answer", "text": "非常適合。5 人以下的小團隊 code review 資源有限，AI 工具可以在人工審查前先過濾常見問題（命名、安全漏洞、邏輯錯誤）。CodeRabbit 有免費方案，Qodo（原 CodiumAI）對開源免費，是小團隊的好起點。"}
+    },
+    {
+      "@type": "Question",
+      "name": "Cursor 有 PR Review 功能嗎？",
+      "acceptedAnswer": {"@type": "Answer", "text": "Cursor 主要是 AI-first IDE，其 code review 能力來自 AI 輔助的 diff 閱讀與重構建議，不像 CodeRabbit 那樣自動在 GitHub PR 上留評論。如果你的工作流在 IDE 中，Cursor 很強；如果需要 GitHub PR 自動審查，需要配合其他工具。"}
+    },
+    {
+      "@type": "Question",
+      "name": "如何在 DigitalOcean 上架設 CI/CD + AI Code Review？",
+      "acceptedAnswer": {"@type": "Answer", "text": "DigitalOcean App Platform 可以部署 CI/CD pipeline，搭配 CodeRabbit GitHub App 即可在每個 PR 觸發 AI Review。DigitalOcean 提供 $200 免費點數，適合測試整套 AI-assisted DevOps 架構。"}
+    },
+    {
+      "@type": "Question",
+      "name": "Augment Code 和 GitHub Copilot 有什麼差異？",
+      "acceptedAnswer": {"@type": "Answer", "text": "Augment Code 專注於理解大型 codebase 的上下文，特別適合 legacy code 重構和跨檔案依賴分析；GitHub Copilot 則是更通用的 IDE 補全工具。Augment Code 企業版有 team knowledge graph 功能，讓 AI 理解你的整個工程組織知識。"}
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+<style data-v2c-functional>
+.tool-card{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:border-color .2s,box-shadow .2s;position:relative;overflow:hidden;}
+.tool-card:hover{border-color:var(--accent);box-shadow:0 4px 20px rgba(0,0,0,.1);}
+.tool-card.hidden{display:none;}
+.badge{display:inline-block;padding:.2rem .65rem;border-radius:20px;font-size:.78rem;font-weight:700;letter-spacing:.3px;}
+.badge-hot{background:rgba(239,68,68,.15);color:#ef4444;}
+.badge-new{background:rgba(99,102,241,.15);color:#6366f1;}
+.badge-open{background:rgba(16,185,129,.15);color:#10b981;}
+.badge-free{background:rgba(245,158,11,.15);color:#d97706;}
+.badge-enterprise{background:rgba(59,130,246,.15);color:#3b82f6;}
+.score-bar{display:flex;align-items:center;gap:.6rem;margin:.25rem 0;}
+.bar-label{font-size:.82rem;color:var(--text2);width:90px;flex-shrink:0;}
+.bar-track{flex:1;height:8px;background:var(--bg3);border-radius:4px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent),#f59e0b);}
+.filter-btn{padding:.4rem 1rem;border:1.5px solid var(--border);border-radius:20px;background:transparent;color:var(--text2);cursor:pointer;font-size:.88rem;transition:all .2s;}
+.filter-btn.active,.filter-btn:hover{border-color:var(--accent);background:rgba(196,165,123,.1);color:var(--accent);font-weight:700;}
+.rec-box{margin-top:1rem;padding:1rem 1.25rem;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);border-radius:10px;display:none;font-size:.93rem;}
+.rec-box.show{display:block;}
+.compare-table{width:100%;border-collapse:collapse;font-size:.9rem;margin:1.5rem 0;overflow-x:auto;display:block;}
+.compare-table th{background:var(--bg3);padding:.7rem .8rem;text-align:left;font-weight:700;border-bottom:2px solid var(--border);white-space:nowrap;}
+.compare-table td{padding:.65rem .8rem;border-bottom:1px solid var(--border);vertical-align:top;}
+.compare-table tr:hover td{background:rgba(196,165,123,.04);}
+.yes{color:#10b981;font-weight:700;}
+.no{color:#ef4444;}
+.partial{color:#f59e0b;}
+.cta-box{background:linear-gradient(135deg,rgba(196,165,123,.12),rgba(245,158,11,.08));border:1px solid rgba(196,165,123,.3);border-radius:14px;padding:1.5rem 2rem;text-align:center;margin:2rem 0;}
+.cta-btn{display:inline-block;padding:.65rem 1.6rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:opacity .2s;}
+.cta-btn:hover{opacity:.85;}
+.cta-btn-primary{background:var(--accent);color:#fff;}
+.cta-btn-secondary{background:transparent;border:1.5px solid var(--accent);color:var(--accent);}
+.faq-item{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:0;margin:.75rem 0;overflow:hidden;}
+.faq-q{padding:1rem 1.25rem;cursor:pointer;font-weight:600;display:flex;justify-content:space-between;align-items:center;font-size:.95rem;}
+.faq-q:hover{background:rgba(196,165,123,.06);}
+.faq-a{padding:0 1.25rem 1rem;color:var(--text2);font-size:.92rem;line-height:1.7;display:none;}
+.faq-a.open{display:block;}
+.faq-arrow{transition:transform .25s;}
+.faq-arrow.open{transform:rotate(180deg);}
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;margin:1.5rem 0;}
+.price-tag{font-size:.85rem;font-weight:700;color:var(--accent);}
+.integration-chips{display:flex;flex-wrap:wrap;gap:.35rem;margin:.5rem 0;}
+.chip{font-size:.75rem;padding:.18rem .55rem;border-radius:4px;background:var(--bg3);color:var(--text2);}
+</style>
+</head>
+<body class="v2c-page"><!-- v2-chrome:header --><header class="v2c-header" id="nav"><div class="v2c-inner"><a class="v2c-logo" href="/">AutoDev <span>Systems Studio</span></a><div class="v2c-links" id="navLinks" data-nav-links><a href="/services.html">服務</a><a href="/portfolio.html">案例</a><a href="/ai-model.html">AI 模特</a><a href="/blog/">洞察</a><a href="/about.html">關於</a><a href="/contact.html">聯絡</a><a class="v2c-cta" href="/contact.html" data-analytics="nav_contact">需求諮詢</a></div><button class="v2c-toggle" type="button" data-nav-toggle aria-controls="navLinks" aria-expanded="false" aria-label="開啟選單" data-open-label="開啟選單" data-close-label="關閉選單">☰</button><button class="v2c-legacy-hook" id="mobileMenuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button></div></header><!-- /v2-chrome:header --><main class="v2c-article v2c-tool">
+
+<div style="max-width:960px;margin:0 auto;padding:2rem 1rem 4rem;">
+
+  <!-- Header -->
+  <div style="text-align:center;margin-bottom:2rem;">
+    <p style="color:var(--accent);font-weight:700;font-size:.9rem;letter-spacing:1px;text-transform:uppercase;margin:0 0 .5rem;">🔍 互動比較工具 · 2026 年 10 月最新</p>
+    <h1 style="font-size:clamp(1.6rem,4vw,2.2rem);margin:0 0 .75rem;line-height:1.25;">AI Code Review 工具比較 2026</h1>
+    <p style="color:var(--text2);font-size:1rem;max-width:660px;margin:0 auto 1rem;">CodeRabbit、GitHub Copilot、Cursor、Augment Code 等 14 大工具完整比較。<br>互動篩選，找出最適合你團隊規模與工作流的 AI 程式碼審查方案。</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;font-size:.85rem;color:var(--text2);">
+      <span>✓ 14 個工具</span><span>·</span>
+      <span>✓ PR Review 能力評分</span><span>·</span>
+      <span>✓ 含定價與免費方案</span><span>·</span>
+      <span>✓ CI/CD 整合評估</span>
+    </div>
+  </div>
+
+  <!-- Filter -->
+  <div style="margin-bottom:1rem;">
+    <p style="font-weight:700;margin:0 0 .6rem;font-size:.95rem;">🎯 依需求篩選：</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+      <button class="filter-btn active" onclick="filterCards('all',this)">全部工具</button>
+      <button class="filter-btn" onclick="filterCards('pr-review',this)">PR 自動審查</button>
+      <button class="filter-btn" onclick="filterCards('ide',this)">IDE 整合</button>
+      <button class="filter-btn" onclick="filterCards('security',this)">安全掃描</button>
+      <button class="filter-btn" onclick="filterCards('free',this)">有免費方案</button>
+      <button class="filter-btn" onclick="filterCards('enterprise',this)">企業功能</button>
+      <button class="filter-btn" onclick="filterCards('open-source',this)">開源友善</button>
+    </div>
+  </div>
+
+  <!-- Recommendation boxes -->
+  <div id="rec-all" class="rec-box show">💡 <strong>全部 14 個工具</strong> — 依你的需求篩選，找出最適合的組合。PR 自動審查首選 CodeRabbit；IDE 補全首選 Cursor 或 GitHub Copilot；安全掃描首選 Qodo + Semgrep Assistant。</div>
+  <div id="rec-pr-review" class="rec-box">🔎 <strong>PR 自動審查首選：</strong>CodeRabbit（$30/lead affiliate，最強 PR Bot）、Qodo（開源免費）、Augment Code（enterprise context）。這類工具可在人工審查前自動標記 95% 的常見問題。</div>
+  <div id="rec-ide" class="rec-box">💻 <strong>IDE 整合首選：</strong>Cursor（AI-first IDE，$20/月）、GitHub Copilot（$10/月，VS Code 原生）、Tabnine（$12/月，Privacy 優先）。IDE 工具提升開發速度 30–50%，PR Review 為輔助。</div>
+  <div id="rec-security" class="rec-box">🔒 <strong>安全掃描首選：</strong>Semgrep Assistant（OWASP 覆蓋率最高）、Snyk Code（SCA + SAST 整合）、CodeRabbit（含安全建議）。企業合規場景必備，建議搭配 DigitalOcean VPS 自建 CI/CD。</div>
+  <div id="rec-free" class="rec-box">🆓 <strong>免費方案：</strong>Qodo（開源 100% 免費）、GitHub Copilot（學生免費）、Semgrep（Community 免費）、CodeRabbit（免費版有限次數）。小團隊可從免費版開始，驗證後升級。</div>
+  <div id="rec-enterprise" class="rec-box">🏢 <strong>企業功能首選：</strong>Augment Code（team knowledge graph）、GitHub Copilot Enterprise（$39/user）、CodeRabbit Pro（自訂規則 + compliance）、Snyk Code（SOC2 + GDPR）。企業需要 SSO、審計日誌、自訂 policy。</div>
+  <div id="rec-open-source" class="rec-box">🐙 <strong>開源友善：</strong>Qodo（完全免費 for OSS）、Semgrep（開源 engine）、GitHub Copilot（學生 & OSS 免費）。開源專案推薦先申請免費計畫，再評估商業方案。</div>
+
+  <!-- Tool Cards Grid -->
+  <div class="tool-grid" id="toolGrid">
+
+    <!-- 1. CodeRabbit -->
+    <div class="tool-card" data-tags="pr-review security enterprise">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">🐰 CodeRabbit</h2>
+          <span class="price-tag">$12/月起 · 免費試用</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-hot">🔥 PR Review #1</span>
+          <span class="badge badge-new">$30/lead affiliate</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">每個 PR 幾分鐘內取得逐行 AI Review、安全建議、架構改進。支援 GitHub / GitLab / Bitbucket，自然語言設定審查規則，整個 PR Bot 不需離開 Git 工作流。</p>
+      <div class="integration-chips">
+        <span class="chip">GitHub</span><span class="chip">GitLab</span><span class="chip">Bitbucket</span><span class="chip">Jira</span><span class="chip">Linear</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">PR 審查</span><div class="bar-track"><div class="bar-fill" style="width:99%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.9</span></div>
+        <div class="score-bar"><span class="bar-label">安全掃描</span><div class="bar-track"><div class="bar-fill" style="width:85%;"></div></div><span style="font-size:.82rem;font-weight:700;">8.5</span></div>
+        <div class="score-bar"><span class="bar-label">設定簡便</span><div class="bar-track"><div class="bar-fill" style="width:95%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.5</span></div>
+        <div class="score-bar"><span class="bar-label">企業適用</span><div class="bar-track"><div class="bar-fill" style="width:88%;"></div></div><span style="font-size:.82rem;font-weight:700;">8.8</span></div>
+      </div>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:var(--accent);color:#fff;border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_coderabbit_do">🚀 搭配 DigitalOcean CI/CD → $200 免費點數</a>
+    </div>
+
+    <!-- 2. GitHub Copilot -->
+    <div class="tool-card" data-tags="ide pr-review enterprise free">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">🐙 GitHub Copilot</h2>
+          <span class="price-tag">$10/月 · 學生免費</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-enterprise">🏢 GitHub 官方</span>
+          <span class="badge badge-free">學生 & OSS 免費</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">業界最大部署量（1,000 萬+ 開發者）。IDE 補全首選，PR Review 功能（Copilot for Pull Requests）需 Enterprise $39/user。支援 VS Code、JetBrains、Neovim、Vim。</p>
+      <div class="integration-chips">
+        <span class="chip">VS Code</span><span class="chip">JetBrains</span><span class="chip">Neovim</span><span class="chip">GitHub</span><span class="chip">Azure DevOps</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">IDE 補全</span><div class="bar-track"><div class="bar-fill" style="width:97%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.7</span></div>
+        <div class="score-bar"><span class="bar-label">PR 審查</span><div class="bar-track"><div class="bar-fill" style="width:72%;"></div></div><span style="font-size:.82rem;font-weight:700;">7.2（需 Enterprise）</span></div>
+        <div class="score-bar"><span class="bar-label">生態系整合</span><div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div><span style="font-size:.82rem;font-weight:700;">10</span></div>
+        <div class="score-bar"><span class="bar-label">企業適用</span><div class="bar-track"><div class="bar-fill" style="width:95%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.5</span></div>
+      </div>
+      <a href="https://coderabbit.ai" target="_blank" rel="noopener" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:transparent;border:1.5px solid var(--accent);color:var(--accent);border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_copilot">📋 Copilot PR Review 需 Enterprise → 先評估 CodeRabbit</a>
+    </div>
+
+    <!-- 3. Cursor -->
+    <div class="tool-card" data-tags="ide pr-review free">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">🖱️ Cursor</h2>
+          <span class="price-tag">$20/月 · 免費版可用</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-hot">🔥 AI IDE 增長最快</span>
+          <span class="badge badge-free">免費版有限</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">AI-first IDE，以 VS Code 為底，深度整合 Claude Sonnet / GPT-5 / o4。Tab 補全、多檔案同時修改（Composer）、Diff Review 一鍵生成是核心亮點，PR Review 為 IDE 內輔助而非獨立 Bot。</p>
+      <div class="integration-chips">
+        <span class="chip">VS Code 生態</span><span class="chip">Claude</span><span class="chip">GPT-5</span><span class="chip">Gemini</span><span class="chip">GitHub</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">IDE 體驗</span><div class="bar-track"><div class="bar-fill" style="width:99%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.9</span></div>
+        <div class="score-bar"><span class="bar-label">多檔案重構</span><div class="bar-track"><div class="bar-fill" style="width:96%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.6</span></div>
+        <div class="score-bar"><span class="bar-label">PR Bot</span><div class="bar-track"><div class="bar-fill" style="width:40%;"></div></div><span style="font-size:.82rem;font-weight:700;">❌ 非 PR Bot</span></div>
+        <div class="score-bar"><span class="bar-label">上手速度</span><div class="bar-track"><div class="bar-fill" style="width:94%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.4</span></div>
+      </div>
+      <a href="https://www.datacamp.com/promo/ai-tools-2026" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:var(--accent);color:#fff;border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_cursor_dc">📚 DataCamp — AI 工具實戰課程（含 Cursor 教學）</a>
+    </div>
+
+    <!-- 4. Augment Code -->
+    <div class="tool-card" data-tags="ide pr-review enterprise">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">🔧 Augment Code</h2>
+          <span class="price-tag">$30/月起（enterprise 洽談）</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-enterprise">🏢 大型 Codebase</span>
+          <span class="badge badge-new">Team Knowledge Graph</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">專為大型 codebase 設計，核心差異是 Team Knowledge Graph — AI 會理解整個組織的程式架構、慣例與依賴關係。Legacy code 重構、跨團隊 PR Review 一致性是最強場景。</p>
+      <div class="integration-chips">
+        <span class="chip">VS Code</span><span class="chip">JetBrains</span><span class="chip">GitHub</span><span class="chip">GitLab</span><span class="chip">Slack</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">大型 Codebase</span><div class="bar-track"><div class="bar-fill" style="width:99%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.9</span></div>
+        <div class="score-bar"><span class="bar-label">Legacy 重構</span><div class="bar-track"><div class="bar-fill" style="width:95%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.5</span></div>
+        <div class="score-bar"><span class="bar-label">PR Review</span><div class="bar-track"><div class="bar-fill" style="width:82%;"></div></div><span style="font-size:.82rem;font-weight:700;">8.2</span></div>
+        <div class="score-bar"><span class="bar-label">小團隊適用</span><div class="bar-track"><div class="bar-fill" style="width:55%;"></div></div><span style="font-size:.82rem;font-weight:700;">中等</span></div>
+      </div>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:var(--accent);color:#fff;border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_augment_do">🚀 大型專案 → DigitalOcean VPS 自架 CI/CD → $200 免費</a>
+    </div>
+
+    <!-- 5. Qodo (CodiumAI) -->
+    <div class="tool-card" data-tags="pr-review security free open-source">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">🧪 Qodo（原 CodiumAI）</h2>
+          <span class="price-tag">開源免費 · Pro $19/月</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-open">✓ 開源免費</span>
+          <span class="badge badge-free">PR-Agent OSS</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">開源 PR-Agent 是 Qodo 的核心，可自架（self-hosted）或使用 SaaS。每個 PR 自動生成摘要、標記邏輯錯誤、建議測試案例，對開源專案完全免費，是小團隊與 OSS 的首選。</p>
+      <div class="integration-chips">
+        <span class="chip">GitHub</span><span class="chip">GitLab</span><span class="chip">Bitbucket</span><span class="chip">Jira</span><span class="chip">自架可行</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">PR 審查</span><div class="bar-track"><div class="bar-fill" style="width:91%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.1</span></div>
+        <div class="score-bar"><span class="bar-label">測試生成</span><div class="bar-track"><div class="bar-fill" style="width:95%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.5</span></div>
+        <div class="score-bar"><span class="bar-label">免費友善度</span><div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div><span style="font-size:.82rem;font-weight:700;">10</span></div>
+        <div class="score-bar"><span class="bar-label">企業適用</span><div class="bar-track"><div class="bar-fill" style="width:70%;"></div></div><span style="font-size:.82rem;font-weight:700;">7.0</span></div>
+      </div>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:var(--accent);color:#fff;border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_qodo_do">🔧 Qodo 自架 → DigitalOcean Droplet → $200 免費點數</a>
+    </div>
+
+    <!-- 6. Semgrep Assistant -->
+    <div class="tool-card" data-tags="security pr-review enterprise free open-source">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">🛡️ Semgrep Assistant</h2>
+          <span class="price-tag">Community 免費 · Team $40/月</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-enterprise">🏢 SAST #1</span>
+          <span class="badge badge-free">OSS Engine</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">靜態分析（SAST）界的標準工具，Semgrep Assistant 加入 AI 能力後自動解釋安全漏洞、建議修復方案。OWASP Top 10 覆蓋率最高，企業合規（SOC2、HIPAA）友善。</p>
+      <div class="integration-chips">
+        <span class="chip">GitHub</span><span class="chip">GitLab</span><span class="chip">Bitbucket</span><span class="chip">Jenkins</span><span class="chip">CircleCI</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">安全掃描</span><div class="bar-track"><div class="bar-fill" style="width:99%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.9</span></div>
+        <div class="score-bar"><span class="bar-label">OWASP 覆蓋</span><div class="bar-track"><div class="bar-fill" style="width:97%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.7</span></div>
+        <div class="score-bar"><span class="bar-label">PR 審查</span><div class="bar-track"><div class="bar-fill" style="width:75%;"></div></div><span style="font-size:.82rem;font-weight:700;">7.5</span></div>
+        <div class="score-bar"><span class="bar-label">假陽性率</span><div class="bar-track"><div class="bar-fill" style="width:85%;"></div></div><span style="font-size:.82rem;font-weight:700;">低（8.5）</span></div>
+      </div>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:var(--accent);color:#fff;border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_semgrep_do">🔐 Semgrep + DigitalOcean → 企業安全 CI/CD → $200 免費</a>
+    </div>
+
+    <!-- 7. Snyk Code -->
+    <div class="tool-card" data-tags="security enterprise free">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">🐍 Snyk Code</h2>
+          <span class="price-tag">Developer 免費 · Team $25/月</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-enterprise">🏢 SCA + SAST</span>
+          <span class="badge badge-free">Developer 免費</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">同時涵蓋 SAST（靜態分析）與 SCA（開源套件漏洞掃描），是安全覆蓋最廣的工具。DeepCode AI 引擎提供語意層級的漏洞解析，不只是 pattern matching，適合有 dependency 管理需求的企業。</p>
+      <div class="integration-chips">
+        <span class="chip">GitHub</span><span class="chip">GitLab</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">npm/pip/Maven</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">漏洞掃描</span><div class="bar-track"><div class="bar-fill" style="width:97%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.7</span></div>
+        <div class="score-bar"><span class="bar-label">SCA 覆蓋</span><div class="bar-track"><div class="bar-fill" style="width:99%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.9</span></div>
+        <div class="score-bar"><span class="bar-label">PR Review</span><div class="bar-track"><div class="bar-fill" style="width:68%;"></div></div><span style="font-size:.82rem;font-weight:700;">6.8</span></div>
+        <div class="score-bar"><span class="bar-label">合規適用</span><div class="bar-track"><div class="bar-fill" style="width:92%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.2</span></div>
+      </div>
+      <a href="https://www.datacamp.com/promo/ai-tools-2026" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:var(--accent);color:#fff;border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_snyk_dc">📚 DataCamp DevSecOps 課程 → 學 Snyk 實戰整合</a>
+    </div>
+
+    <!-- 8. Tabnine -->
+    <div class="tool-card" data-tags="ide enterprise free">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">📑 Tabnine</h2>
+          <span class="price-tag">$12/月 · 自架可行</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-enterprise">🔒 Privacy First</span>
+          <span class="badge badge-new">本地部署支援</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">隱私優先的 AI 補全工具，支援本地模型（不傳送程式碼到外部伺服器）。對有資安合規（HIPAA、金融監管）的企業是重要選項。IDE 補全能力強，PR Review 為輔助功能。</p>
+      <div class="integration-chips">
+        <span class="chip">VS Code</span><span class="chip">JetBrains</span><span class="chip">Vim</span><span class="chip">Eclipse</span><span class="chip">本地模型</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">隱私保護</span><div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div><span style="font-size:.82rem;font-weight:700;">10</span></div>
+        <div class="score-bar"><span class="bar-label">IDE 補全</span><div class="bar-track"><div class="bar-fill" style="width:88%;"></div></div><span style="font-size:.82rem;font-weight:700;">8.8</span></div>
+        <div class="score-bar"><span class="bar-label">PR Review</span><div class="bar-track"><div class="bar-fill" style="width:55%;"></div></div><span style="font-size:.82rem;font-weight:700;">5.5</span></div>
+        <div class="score-bar"><span class="bar-label">合規適用</span><div class="bar-track"><div class="bar-fill" style="width:95%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.5</span></div>
+      </div>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:var(--accent);color:#fff;border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_tabnine_do">🔐 Tabnine 自架 → DigitalOcean Private VPS → $200 免費</a>
+    </div>
+
+    <!-- 9. Sourcery -->
+    <div class="tool-card" data-tags="pr-review ide free">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">🧠 Sourcery</h2>
+          <span class="price-tag">免費起 · Pro $19/月</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-free">Python 專精</span>
+          <span class="badge badge-open">PR Review Bot</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">Python 程式碼品質的專精工具，自動識別過度複雜的程式碼並建議重構方案。PR Review Bot 支援 GitHub，每個 PR 提供可讀性評分與具體改進建議，對 Python / Django / FastAPI 開發者特別有價值。</p>
+      <div class="integration-chips">
+        <span class="chip">GitHub</span><span class="chip">VS Code</span><span class="chip">PyCharm</span><span class="chip">Python 專精</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">Python 審查</span><div class="bar-track"><div class="bar-fill" style="width:97%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.7</span></div>
+        <div class="score-bar"><span class="bar-label">PR Review</span><div class="bar-track"><div class="bar-fill" style="width:83%;"></div></div><span style="font-size:.82rem;font-weight:700;">8.3</span></div>
+        <div class="score-bar"><span class="bar-label">多語言支援</span><div class="bar-track"><div class="bar-fill" style="width:45%;"></div></div><span style="font-size:.82rem;font-weight:700;">有限</span></div>
+        <div class="score-bar"><span class="bar-label">免費友善</span><div class="bar-track"><div class="bar-fill" style="width:90%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.0</span></div>
+      </div>
+      <a href="https://www.datacamp.com/promo/ai-tools-2026" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:var(--accent);color:#fff;border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_sourcery_dc">📚 Python AI 開發課程 → DataCamp</a>
+    </div>
+
+    <!-- 10. Amazon CodeWhisperer -->
+    <div class="tool-card" data-tags="ide security enterprise free">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">☁️ Amazon Q Developer</h2>
+          <span class="price-tag">個人免費 · Pro $19/月</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-enterprise">🟠 AWS 整合</span>
+          <span class="badge badge-free">個人版免費</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">前身 CodeWhisperer，現為 Amazon Q Developer。AWS 生態系的最佳選擇，含 Lambda、CDK、CloudFormation 的 AI 輔助。個人免費版功能完整，企業版含安全掃描（OWASP + CWE）。</p>
+      <div class="integration-chips">
+        <span class="chip">VS Code</span><span class="chip">JetBrains</span><span class="chip">AWS Console</span><span class="chip">Lambda</span><span class="chip">CDK</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">AWS 整合</span><div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div><span style="font-size:.82rem;font-weight:700;">10</span></div>
+        <div class="score-bar"><span class="bar-label">IDE 補全</span><div class="bar-track"><div class="bar-fill" style="width:85%;"></div></div><span style="font-size:.82rem;font-weight:700;">8.5</span></div>
+        <div class="score-bar"><span class="bar-label">PR Review</span><div class="bar-track"><div class="bar-fill" style="width:60%;"></div></div><span style="font-size:.82rem;font-weight:700;">6.0</span></div>
+        <div class="score-bar"><span class="bar-label">免費友善</span><div class="bar-track"><div class="bar-fill" style="width:95%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.5</span></div>
+      </div>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:transparent;border:1.5px solid var(--accent);color:var(--accent);border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_q_dev_do">☁️ 不用 AWS？→ DigitalOcean 更靈活 → $200 免費</a>
+    </div>
+
+    <!-- 11. Codeium / Windsurf -->
+    <div class="tool-card" data-tags="ide free">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">🌊 Windsurf（Codeium）</h2>
+          <span class="price-tag">免費起 · Pro $15/月</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-free">強力免費版</span>
+          <span class="badge badge-new">Cascade Agent</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">Codeium 推出的 AI IDE Windsurf，主打 Cascade 多步驟 Agent — 可以一個指令完成「建立功能 → 寫測試 → 修復 bug」整個流程，免費版非常大方，是 Cursor 強力競品。</p>
+      <div class="integration-chips">
+        <span class="chip">獨立 IDE</span><span class="chip">VS Code 外掛</span><span class="chip">JetBrains</span><span class="chip">多語言</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">免費功能</span><div class="bar-track"><div class="bar-fill" style="width:99%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.9</span></div>
+        <div class="score-bar"><span class="bar-label">Agent 能力</span><div class="bar-track"><div class="bar-fill" style="width:90%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.0</span></div>
+        <div class="score-bar"><span class="bar-label">PR Review</span><div class="bar-track"><div class="bar-fill" style="width:40%;"></div></div><span style="font-size:.82rem;font-weight:700;">❌ 非 PR Bot</span></div>
+        <div class="score-bar"><span class="bar-label">CP 值</span><div class="bar-track"><div class="bar-fill" style="width:98%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.8</span></div>
+      </div>
+      <a href="https://www.datacamp.com/promo/ai-tools-2026" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:var(--accent);color:#fff;border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_windsurf_dc">📚 DataCamp — AI IDE 完整上手課程</a>
+    </div>
+
+    <!-- 12. Devin / Cognition -->
+    <div class="tool-card" data-tags="pr-review enterprise">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">🤖 Devin（Cognition）</h2>
+          <span class="price-tag">$500/月（企業洽談）</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-enterprise">🏢 Full Autonomy</span>
+          <span class="badge badge-hot">🔥 AI SWE Agent</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">不只是 Code Review，而是全自主 AI 工程師。可接受 GitHub Issue → 自行研究 → 寫程式 → 開 PR。企業版支援自訂工作流，PR Review 是其中一個能力，但定位是比其他工具高一個層次的 AI SWE。</p>
+      <div class="integration-chips">
+        <span class="chip">GitHub</span><span class="chip">Slack</span><span class="chip">Jira</span><span class="chip">自訂工作流</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">自主能力</span><div class="bar-track"><div class="bar-fill" style="width:98%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.8</span></div>
+        <div class="score-bar"><span class="bar-label">PR Review</span><div class="bar-track"><div class="bar-fill" style="width:85%;"></div></div><span style="font-size:.82rem;font-weight:700;">8.5</span></div>
+        <div class="score-bar"><span class="bar-label">CP 值</span><div class="bar-track"><div class="bar-fill" style="width:35%;"></div></div><span style="font-size:.82rem;font-weight:700;">貴（企業用）</span></div>
+        <div class="score-bar"><span class="bar-label">企業適用</span><div class="bar-track"><div class="bar-fill" style="width:95%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.5</span></div>
+      </div>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:transparent;border:1.5px solid var(--accent);color:var(--accent);border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_devin_do">💡 Devin 太貴？→ DigitalOcean + CodeRabbit 更划算</a>
+    </div>
+
+    <!-- 13. SonarQube / SonarCloud -->
+    <div class="tool-card" data-tags="security pr-review enterprise free open-source">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">📊 SonarQube / SonarCloud</h2>
+          <span class="price-tag">開源免費 · Cloud $15/月起</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-open">✓ 業界標準</span>
+          <span class="badge badge-free">30 年老牌</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">Code Quality 業界標準，29 種語言支援，SonarLint IDE 外掛 + SonarQube Server + SonarCloud SaaS 三種部署模式。AI 加持的 Sonar AI Code Assurance 2026 版本提供 LLM 生成程式碼的特別掃描規則。</p>
+      <div class="integration-chips">
+        <span class="chip">GitHub</span><span class="chip">GitLab</span><span class="chip">Jenkins</span><span class="chip">Azure DevOps</span><span class="chip">29 語言</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">程式碼品質</span><div class="bar-track"><div class="bar-fill" style="width:98%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.8</span></div>
+        <div class="score-bar"><span class="bar-label">語言支援</span><div class="bar-track"><div class="bar-fill" style="width:97%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.7（29 種）</span></div>
+        <div class="score-bar"><span class="bar-label">AI PR Review</span><div class="bar-track"><div class="bar-fill" style="width:65%;"></div></div><span style="font-size:.82rem;font-weight:700;">6.5（非主打）</span></div>
+        <div class="score-bar"><span class="bar-label">合規適用</span><div class="bar-track"><div class="bar-fill" style="width:99%;"></div></div><span style="font-size:.82rem;font-weight:700;">9.9</span></div>
+      </div>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:var(--accent);color:#fff;border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_sonarqube_do">🔧 SonarQube 自架 → DigitalOcean Droplet → $200 免費</a>
+    </div>
+
+    <!-- 14. Kilo Code Review -->
+    <div class="tool-card" data-tags="pr-review ide free open-source">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.75rem;">
+        <div>
+          <h2 style="font-size:1.15rem;margin:0 0 .3rem;">⚡ Kilo Code Review</h2>
+          <span class="price-tag">免費開源 · 自帶模型</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;">
+          <span class="badge badge-open">✓ 開源 MIT</span>
+          <span class="badge badge-new">自帶 LLM</span>
+        </div>
+      </div>
+      <p style="font-size:.88rem;color:var(--text2);margin:.4rem 0 .8rem;line-height:1.6;">開源 VS Code 外掛，可自帶任何 LLM（OpenAI / Claude / 本地 Ollama）進行 code review。完全免費，適合希望 100% 控制 AI 模型與資料流向的團隊。PR Review 以 IDE 內操作為主。</p>
+      <div class="integration-chips">
+        <span class="chip">VS Code</span><span class="chip">任意 LLM</span><span class="chip">Ollama 本地</span><span class="chip">GitHub</span>
+      </div>
+      <div style="margin:.75rem 0 .5rem;">
+        <div class="score-bar"><span class="bar-label">開源彈性</span><div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div><span style="font-size:.82rem;font-weight:700;">10</span></div>
+        <div class="score-bar"><span class="bar-label">隱私控制</span><div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div><span style="font-size:.82rem;font-weight:700;">10</span></div>
+        <div class="score-bar"><span class="bar-label">PR Bot 功能</span><div class="bar-track"><div class="bar-fill" style="width:50%;"></div></div><span style="font-size:.82rem;font-weight:700;">有限</span></div>
+        <div class="score-bar"><span class="bar-label">上手難度</span><div class="bar-track"><div class="bar-fill" style="width:60%;"></div></div><span style="font-size:.82rem;font-weight:700;">需設定</span></div>
+      </div>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="display:inline-block;margin-top:.5rem;padding:.45rem 1.1rem;background:var(--accent);color:#fff;border-radius:7px;font-size:.85rem;font-weight:700;text-decoration:none;" data-analytics="cta_kilo_do">🔧 Kilo + 本地 LLM → DigitalOcean GPU → $200 免費</a>
+    </div>
+
+  </div><!-- /tool-grid -->
+
+  <!-- Primary CTA: DigitalOcean -->
+  <div class="cta-box" style="margin:2.5rem 0;">
+    <h3 style="margin:0 0 .5rem;font-size:1.2rem;">🚀 架設 AI-Powered CI/CD Pipeline</h3>
+    <p style="color:var(--text2);font-size:.95rem;margin:0 0 1rem;">大多數 AI Code Review 工具（CodeRabbit、Qodo、SonarQube）需要 CI/CD 基礎設施。DigitalOcean 的 $200 免費點數讓你在 10 分鐘內完成設定。</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;">
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-primary" data-analytics="cta_do_main">☁️ DigitalOcean → $200 免費點數</a>
+      <a href="https://www.datacamp.com/promo/ai-tools-2026" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-secondary" data-analytics="cta_dc_main">📚 DataCamp → DevOps + AI 課程</a>
+    </div>
+  </div>
+
+  <!-- Comparison Table -->
+  <h2 style="font-size:1.3rem;margin:2rem 0 1rem;">📋 快速比較表</h2>
+  <div style="overflow-x:auto;">
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>工具</th>
+        <th>定價</th>
+        <th>PR Bot</th>
+        <th>IDE 整合</th>
+        <th>安全掃描</th>
+        <th>免費方案</th>
+        <th>最適場景</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>🐰 CodeRabbit</strong></td><td>$12/月起</td><td class="yes">✓ 最強</td><td class="partial">✓ 輔助</td><td class="yes">✓</td><td class="partial">限量</td><td>自動 PR Review</td></tr>
+      <tr><td><strong>🐙 GitHub Copilot</strong></td><td>$10/月</td><td class="partial">Enterprise 才有</td><td class="yes">✓ 原生</td><td class="partial">有限</td><td class="yes">學生免費</td><td>IDE 補全</td></tr>
+      <tr><td><strong>🖱️ Cursor</strong></td><td>$20/月</td><td class="no">✗</td><td class="yes">✓ AI-first</td><td class="no">✗</td><td class="partial">有限</td><td>AI IDE 最佳體驗</td></tr>
+      <tr><td><strong>🔧 Augment Code</strong></td><td>$30/月+</td><td class="yes">✓</td><td class="yes">✓</td><td class="partial">有限</td><td class="no">✗</td><td>大型 Codebase</td></tr>
+      <tr><td><strong>🧪 Qodo</strong></td><td>免費起</td><td class="yes">✓ OSS</td><td class="yes">✓</td><td class="partial">有限</td><td class="yes">✓ 完全免費</td><td>開源 / 小團隊</td></tr>
+      <tr><td><strong>🛡️ Semgrep</strong></td><td>免費起</td><td class="yes">✓</td><td class="partial">外掛</td><td class="yes">✓ OWASP #1</td><td class="yes">✓ Community</td><td>安全合規</td></tr>
+      <tr><td><strong>🐍 Snyk Code</strong></td><td>$25/月</td><td class="partial">CI 整合</td><td class="yes">✓</td><td class="yes">✓ SCA+SAST</td><td class="yes">Developer 免費</td><td>漏洞掃描 / 依賴</td></tr>
+      <tr><td><strong>📑 Tabnine</strong></td><td>$12/月</td><td class="no">✗</td><td class="yes">✓ 本地</td><td class="no">✗</td><td class="partial">有限</td><td>隱私 / 金融</td></tr>
+      <tr><td><strong>🧠 Sourcery</strong></td><td>免費起</td><td class="yes">✓</td><td class="yes">✓ VS Code</td><td class="no">✗</td><td class="yes">✓</td><td>Python 專案</td></tr>
+      <tr><td><strong>☁️ Amazon Q Dev</strong></td><td>$19/月</td><td class="no">✗</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">個人免費</td><td>AWS 生態系</td></tr>
+      <tr><td><strong>🌊 Windsurf</strong></td><td>$15/月</td><td class="no">✗</td><td class="yes">✓ Agent</td><td class="no">✗</td><td class="yes">✓ 大方</td><td>Cursor 替代方案</td></tr>
+      <tr><td><strong>🤖 Devin</strong></td><td>$500/月+</td><td class="yes">✓ 全自主</td><td class="yes">✓</td><td class="partial">有限</td><td class="no">✗</td><td>企業 AI SWE</td></tr>
+      <tr><td><strong>📊 SonarQube</strong></td><td>免費起</td><td class="partial">CI 整合</td><td class="yes">✓ SonarLint</td><td class="yes">✓ 29 語言</td><td class="yes">✓ OSS</td><td>Code Quality 標準</td></tr>
+      <tr><td><strong>⚡ Kilo Code</strong></td><td>完全免費</td><td class="partial">IDE 內</td><td class="yes">✓ VS Code</td><td class="no">✗</td><td class="yes">✓ MIT</td><td>自帶 LLM / 隱私</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- How to choose -->
+  <h2 style="font-size:1.3rem;margin:2rem 0 1rem;">🎯 如何選擇？4 種場景指南</h2>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin:1rem 0;">
+    <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;">
+      <h3 style="font-size:1rem;margin:0 0 .5rem;">👤 獨立開發者 / 小團隊</h3>
+      <p style="font-size:.88rem;color:var(--text2);margin:0 0 .5rem;line-height:1.6;">預算有限，想自動化 PR Review、減少 bug 漏過。</p>
+      <p style="font-size:.88rem;margin:0;"><strong>推薦：</strong>Qodo（免費）+ Sourcery（Python）+ Semgrep Community。先免費用，有需要再升 CodeRabbit Pro。</p>
+    </div>
+    <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;">
+      <h3 style="font-size:1rem;margin:0 0 .5rem;">🏢 中型企業（10–100 人工程團隊）</h3>
+      <p style="font-size:.88rem;color:var(--text2);margin:0 0 .5rem;line-height:1.6;">需要統一的 Code Quality 基準、PR 自動審查、CI/CD 整合。</p>
+      <p style="font-size:.88rem;margin:0;"><strong>推薦：</strong>CodeRabbit Pro + SonarCloud + Snyk Code。三層覆蓋：AI Review + 程式碼品質 + 安全依賴。</p>
+    </div>
+    <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;">
+      <h3 style="font-size:1rem;margin:0 0 .5rem;">🔒 安全合規優先（金融 / 醫療 / 政府）</h3>
+      <p style="font-size:.88rem;color:var(--text2);margin:0 0 .5rem;line-height:1.6;">HIPAA / SOC2 / ISO 27001 合規，程式碼不能離開內部環境。</p>
+      <p style="font-size:.88rem;margin:0;"><strong>推薦：</strong>Tabnine Enterprise（本地）+ Semgrep Team + SonarQube Server（自架）。搭配 DigitalOcean VPS 建立隔離環境。</p>
+    </div>
+    <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;">
+      <h3 style="font-size:1rem;margin:0 0 .5rem;">🚀 開源專案維護者</h3>
+      <p style="font-size:.88rem;color:var(--text2);margin:0 0 .5rem;line-height:1.6;">外部貢獻者 PR 品質不穩定，需要自動過濾。</p>
+      <p style="font-size:.88rem;margin:0;"><strong>推薦：</strong>Qodo PR-Agent（OSS 免費）+ Semgrep Community + GitHub Copilot（OSS 免費）。三個都是對開源免費或有 OSS 方案。</p>
+    </div>
+  </div>
+
+  <!-- DataCamp CTA -->
+  <div class="cta-box" style="margin:2rem 0;">
+    <h3 style="margin:0 0 .5rem;font-size:1.15rem;">📚 學 AI-Assisted 開發工作流</h3>
+    <p style="color:var(--text2);font-size:.92rem;margin:0 0 1rem;">CodeRabbit、Cursor、GitHub Copilot 用得好，生產力提升 40%+。DataCamp 有 AI 工具實戰課程，從基礎到企業 CI/CD 一套學完。</p>
+    <a href="https://www.datacamp.com/promo/ai-tools-2026" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-primary" data-analytics="cta_dc_secondary">📚 DataCamp AI 開發課程 → 立即學習</a>
+  </div>
+
+  <!-- FAQ -->
+  <h2 style="font-size:1.3rem;margin:2rem 0 1rem;">❓ 常見問題</h2>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFAQ(this)">CodeRabbit 是什麼？和 GitHub Copilot 有什麼差？<span class="faq-arrow">▼</span></div>
+    <div class="faq-a">CodeRabbit 是專為 PR Review 設計的 AI Bot，安裝後每個 PR 都會自動收到逐行評論、安全建議和架構改進，不需要開發者主動操作。GitHub Copilot 的 PR Review 功能（Copilot for PRs）只在 Enterprise $39/user 版本才有，且主要功能是 IDE 補全而非 PR Bot。如果你的核心需求是「每個 PR 自動被 AI 審查」，CodeRabbit 更直接。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFAQ(this)">小團隊（3–5 人）需要 AI Code Review 工具嗎？<span class="faq-arrow">▼</span></div>
+    <div class="faq-a">非常需要。小團隊 code review 資源有限，往往互相 review 就草草帶過。AI 工具可在人工審查前自動標記 70–90% 的常見問題（命名規範、未處理的 edge case、潛在安全漏洞），讓人工 review 聚焦在更高層次的架構討論。從免費版開始：Qodo（PR-Agent OSS）+ Semgrep Community，零成本試跑 1 個月再評估。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFAQ(this)">如何在 DigitalOcean 架設 AI Code Review CI/CD？<span class="faq-arrow">▼</span></div>
+    <div class="faq-a">DigitalOcean 有多種方案：(1) Droplet + GitHub Actions：最彈性，可安裝任何 self-hosted runner，搭配 SonarQube / Semgrep；(2) App Platform：直接 git push 觸發，適合小型專案；(3) Managed Kubernetes（DOKS）：企業規模，搭配 Snyk + CodeRabbit。DigitalOcean 提供 $200 免費點數，可以完整測試整套架構。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFAQ(this)">Cursor 和 Windsurf 哪個比較好？<span class="faq-arrow">▼</span></div>
+    <div class="faq-a">兩者都是 AI-first IDE 的強力選手。Cursor（$20/月）生態更成熟、社群更大、模型選擇更多（Claude / GPT / Gemini）；Windsurf（$15/月）的 Cascade Agent 在多步驟任務上表現優秀，免費版更大方。建議：都有免費版，兩個都裝，用一週再決定。對多數開發者，Cursor 稍微領先；預算考量則選 Windsurf。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFAQ(this)">台灣企業使用 AI Code Review 有哪些合規考量？<span class="faq-arrow">▼</span></div>
+    <div class="faq-a">主要有三點：(1) 程式碼外傳風險 — 若程式碼含商業邏輯或個資，傳送到外部 AI 服務有洩漏風險，建議使用 Tabnine Enterprise（本地）或 SonarQube 自架；(2) 個資法（PDPA） — AI Code Review 工具不應接觸含個資的測試資料，CI/CD 環境要做資料隔離；(3) 金融監管 — 金管會對雲端服務有境內落地要求，部分場景需選擇本地部署方案。</div>
+  </div>
+
+  <!-- Breadcrumb / nav -->
+  <div style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.88rem;color:var(--text2);">
+    <p>相關工具頁：
+      <a href="/tools/ai-agent-security-tools-comparison-2026.html" style="color:var(--accent);text-decoration:none;">AI Agent 安全工具比較</a> ·
+      <a href="/tools/ai-model-comparison.html" style="color:var(--accent);text-decoration:none;">AI 模型比較</a> ·
+      <a href="/tools/ai-coding-tools-pricing-calculator-2026.html" style="color:var(--accent);text-decoration:none;">AI Coding 定價計算機</a>
+    </p>
+    <p style="margin-top:.5rem;">相關文章：
+      <a href="/blog/kilo-code-review-vs-cursor-claude-code-2026.html" style="color:var(--accent);text-decoration:none;">Kilo Code Review vs Cursor vs Claude Code</a> ·
+      <a href="/blog/plugin4shell-ai-coding-agent-security-cve-2026.html" style="color:var(--accent);text-decoration:none;">AI Coding Agent 安全漏洞解析</a>
+    </p>
+  </div>
+
+</div><!-- /container -->
+</main>
+
+<!-- v2-chrome:footer -->
+<footer class="v2c-footer"><div class="v2c-inner"><p>© 2026 AutoDev Systems Studio · <a href="/privacy.html">隱私</a> · <a href="/terms.html">條款</a></p></div></footer>
+<!-- /v2-chrome:footer -->
+
+<script>
+function filterCards(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.tool-card').forEach(card => {
+    if (tag === 'all' || card.dataset.tags.includes(tag)) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+  document.querySelectorAll('.rec-box').forEach(b => b.classList.remove('show'));
+  const rec = document.getElementById('rec-' + tag);
+  if (rec) rec.classList.add('show');
+}
+function toggleFAQ(el) {
+  const a = el.nextElementSibling;
+  const arr = el.querySelector('.faq-arrow');
+  a.classList.toggle('open');
+  arr.classList.toggle('open');
+}
+</script>
+</body>
+</html>
