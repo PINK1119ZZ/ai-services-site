@@ -1,11 +1,93 @@
 {
-  "lastRun": "2026-10-16T12:00:00Z",
+  "lastRun": "2026-10-16T22:00:00Z",
   "lastBuilderRun": "2026-10-14T05:00:00Z",
-  "lastResearchRound": 252,
+  "lastResearchRound": 253,
   "lastCompetitorWatchRun": "2026-10-11T03:10:00Z",
   "lastStrategistRun": "2026-10-16T12:00:00Z",
   "lastSeoWriterRun": "2026-10-15T03:00:00Z",
   "agentLog": [
+    {
+      "round": 253,
+      "agent": "researcher",
+      "timestamp": "2026-10-16T22:00:00Z",
+      "task": "ai-trend-hunter",
+      "status": "completed",
+      "summary": "Fri 22:00 UTC researcher cron — Round 253 完成：5 個發現（4 P1-HIGH / 1 P2-MEDIUM / 1 P3-LOW 降佣警告）+ 4 個 Affiliate 確認。最大訊號：FastRouter.ai（PH #2 Oct 5，LLM cost gateway，flat $199-799/月，無 % markup，省 $10K+/月，B2B 服務機會 NT$80K-200K）+ OpenCodex 17.3K★（Codex/Claude Code 通用 LLM proxy，MIT，接 Ollama/Gemini 節省 agent 成本 $30-100/月）+ OpenCut 93.5K★（開源 CapCut 替代品，TypeScript+Rust，隱私優先，台灣資料疑慮角度）+ Spira Maxima（PH #1 Oct 5 + Oct 月榜 #1，劇本→Reel 一次生成，Creator $15/月）。P2-MEDIUM：Rill Browser（PH #1 Oct 6，Claude Code + Codex 整合 Mac 瀏覽器）。Affiliate 確認：Jasper 25-30% recurring 12mo（Impact，Ivan P0）、Copy.ai 45% 前 12 月（Ivan P0）、Omnia Agent 20% ARR 12mo（已確認，Ivan P0）、Writesonic ⚠️ 降佣（20% 12mo，非 30% lifetime，舊文章需更新）。省成本機會：FastRouter pilot（月 API >$3K 時值得）+ OpenCodex routing 省 $30-100/月。預估新增月收：$850-2,550/月（5 篇文章）。Directive 已寫入 directives/researcher-to-strategist-2026-10-16-round253.md。",
+      "changes": [
+        "更新 dev-notes.md（Round 253 新增，置頂）",
+        "新增 directives/researcher-to-strategist-2026-10-16-round253.md",
+        "更新 agent-state.json（lastResearchRound: 253, lastRun: 2026-10-16T22:00:00Z）"
+      ],
+      "keyFindings": [
+        "FastRouter.ai（PH #2 Oct 5，Oct 月榜 top）：統一 LLM gateway，200+ 模型，flat $199-799/月，省 $10K+/月；Oct 14 blog 比較 Requesty vs FastRouter vs OpenRouter（月 API >$4K FastRouter 即 win）",
+        "OpenCodex lidge-jun（17.3K★，TypeScript，MIT，v2.86.0 活躍）：Codex CLI/App/SDK + Claude Code 接任意 LLM；生態更大（Free Claude Code 60.8K★ / 9Router 30.9K★）",
+        "OpenCut（93.5K★，MIT，TypeScript+Rust）：開源 CapCut 替代品，隱私優先，MCP server 支援，Jun 2025 launch 一年 93K★",
+        "Spira Maxima（PH #1 Oct 5 + Oct 月榜 #1，3.9K followers）：劇本→Reel（presenter+B-roll+字幕+音樂），Creator $15/月，一次生成免後製",
+        "Rill Browser（PH #1 Oct 6）：Mac 桌面瀏覽器，Claude Code + Codex side panel，使用既有訂閱無 API key",
+        "Writesonic Affiliate 降佣：官網實際 20% recurring 12mo（非各評測引用 30% lifetime），已發布文章需更新"
+      ],
+      "affiliateConfirmed": [
+        {
+          "program": "Jasper AI",
+          "commission": "25-30% recurring 12mo（100 leads 後 30%）",
+          "cookie": "45 天",
+          "platform": "Impact",
+          "applyUrl": "jasper.com/affiliates",
+          "priority": "P0-Ivan 立即申請"
+        },
+        {
+          "program": "Copy.ai",
+          "commission": "45% 前 12 個月",
+          "cookie": "60 天",
+          "platform": "PayPal",
+          "applyUrl": "copy.ai affiliate page",
+          "priority": "P0-Ivan 立即申請"
+        },
+        {
+          "program": "Omnia Agent",
+          "commission": "20% of ARR 前 12 個月（self-serve）；10%（team introduce）",
+          "cookie": "N/A",
+          "platform": "直接（季付）",
+          "applyUrl": "useomnia.com/affiliate-program",
+          "priority": "P0-Ivan 立即申請（已確認存在）"
+        },
+        {
+          "program": "Writesonic",
+          "commission": "⚠️ 已降：20% recurring 12mo（非 30% lifetime）",
+          "cookie": "60 天（FirstPromoter）",
+          "platform": "FirstPromoter",
+          "applyUrl": "writesonic.com/affiliate",
+          "priority": "P2-更新舊文章說明"
+        }
+      ],
+      "costSavingOpportunities": [
+        {
+          "item": "FastRouter.ai pilot",
+          "savings": "月 API >$4K 時優於 OpenRouter 5% markup",
+          "action": "Ivan 審核當前月 API 花費，>$3K 立即申請 FastRouter pilot"
+        },
+        {
+          "item": "OpenCodex + Ollama/Gemini 4 Argon routing",
+          "savings": "$30-100/月（摘要/分類任務改接低成本 LLM）",
+          "action": "修改 researcher/seo-writer agent routing 設定"
+        }
+      ],
+      "b2bOpportunity": {
+        "title": "LLM Gateway 顧問服務",
+        "value": "NT$80K-200K 建置 + NT$20K-50K/月管理費",
+        "rationale": "台灣中型企業 API 成本未受管控，FastRouter flat plan ROI 容易量化",
+        "action": "builder 增加「AI 成本優化顧問」到服務頁，seo-writer 配套文章帶企業 CTA"
+      },
+      "articlesToWrite": [
+        { "file": "blog/fastrouter-ai-llm-cost-optimization-2026.html", "priority": "P1-HIGH", "deadline": "Oct 22" },
+        { "file": "blog/opencodex-universal-llm-proxy-codex-claude-code-2026.html", "priority": "P1-HIGH", "deadline": "Oct 22" },
+        { "file": "blog/spira-maxima-ai-video-model-review-2026.html", "priority": "P1-HIGH", "deadline": "Oct 23" },
+        { "file": "blog/opencut-capcut-alternative-open-source-2026.html", "priority": "P1-HIGH", "deadline": "Oct 24" },
+        { "file": "blog/rill-browser-claude-code-codex-review-2026.html", "priority": "P2-MEDIUM", "deadline": "Oct 26" }
+      ],
+      "estimatedNewMonthlyRevenue": "$850-2,550/月（5 篇文章）",
+      "directivesIssued": "directives/researcher-to-strategist-2026-10-16-round253.md"
+    },
     {
       "timestamp": "2026-10-16T12:00:00Z",
       "agent": "strategist",

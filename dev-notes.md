@@ -1,5 +1,58 @@
 # Dev Notes — AI Tech Research Log
 
+## Round 253 | 2026-10-16T22:00:00Z — researcher agent (ai-dev-research)
+
+> 執行時間：2026-10-16 22:00 UTC | 搜尋範圍：GitHub trending Oct 2026、Product Hunt Oct 5-6、LLM gateway/routing 生態、affiliate 佣金確認（Jasper/Copy.ai/Writesonic/Omnia）| 模式：每 3 天 1 輪（strategist 半月指令調整節奏）
+
+### 🔎 本輪搜尋結果摘要
+
+**0 P0-URGENT / 4 P1-HIGH / 1 P2-MEDIUM / 1 P3-LOW**
+
+#### 🔥 P1-HIGH 發現
+
+1. **FastRouter.ai（PH #2 Oct 5）— LLM 成本路由器**
+   - 統一 LLM gateway，200+ 模型，自動路由省成本；flat $199-799/月，無 % markup
+   - vs OpenRouter/Requesty 5-5.5% → 月 API >$4K 即回本；客戶省 $10K+/月
+   - **省成本機會：** 若我們月 API >$3K 立即 pilot
+   - **文章：** `blog/fastrouter-ai-llm-cost-optimization-2026.html`（Oct 22）
+   - **B2B 服務：** LLM gateway 顧問服務 NT$80K-200K 建置
+
+2. **OpenCodex（lidge-jun，17.3K★）— Codex/Claude Code 通用 LLM Proxy**
+   - MIT，TypeScript，讓 Codex CLI/SDK + Claude Code 接任意 LLM（Ollama/Gemini/Grok/DeepSeek）
+   - v2.86.0 更新（20 小時前），活躍；生態更大：Free Claude Code 60.8K★、9Router 30.9K★
+   - **省成本：** agent routing 改接 Gemini 4 Argon $2/1M，省 $30-100/月
+   - **文章：** `blog/opencodex-universal-llm-proxy-codex-claude-code-2026.html`（Oct 22）
+
+3. **OpenCut（93.5K★）— 開源 CapCut 替代品**
+   - MIT，TypeScript+Rust，支援 MCP server；隱私優先（影片不離裝置）
+   - June 2025 launch，一年長出 93K★；台灣 CapCut 資料疑慮高 → 強本地化角度
+   - **文章：** `blog/opencut-capcut-alternative-open-source-2026.html`（Oct 24）
+
+4. **Spira Maxima（PH #1 Oct 5 + Oct 月榜 #1）— 劇本→社群影片**
+   - 文字劇本 → 完整 Reel（presenter+B-roll+字幕+音樂）一次生成，Creator $15/月
+   - 3.9K PH followers；台灣社群媒體代理市場強需求
+   - **文章：** `blog/spira-maxima-ai-video-model-review-2026.html`（Oct 23）
+
+#### 🟠 P2-MEDIUM
+
+5. **Rill Browser（PH #1 Oct 6）— Claude Code + Codex 整合瀏覽器**
+   - Mac 桌面瀏覽器，既有 Claude/Codex 訂閱直接用，無 API key；#1 day + #2 week
+   - **文章：** `blog/rill-browser-claude-code-codex-review-2026.html`（Oct 26）
+
+#### ⚠️ P3-LOW（警告）
+
+6. **Writesonic Affiliate 降佣確認**
+   - 官網實際：20% recurring 12 個月（非各評測引用的 30% lifetime）
+   - 已發布文章中的 Writesonic 說明需更新
+
+#### ✅ Affiliate 確認
+- Jasper：25-30% recurring 12mo，Impact，jasper.com/affiliates（Ivan P0 立刻申請）
+- Copy.ai：45% 前 12 月，60 天 cookie，PayPal（Ivan P0）
+- Omnia Agent：20% ARR 前 12 月，**已確認**，useomnia.com/affiliate-program（Ivan P0）
+- Writesonic：⚠️ 降為 20% 12 月（需更新舊文章）
+
+---
+
 ## Round 251 | 2026-10-14 22:00 UTC — researcher agent (ai-dev-research)
 
 > 執行時間：2026-10-14 22:00 UTC | 搜尋範圍：HN front page Oct 14、Product Hunt Oct 14、AI 新工具發布、Gemini 4 Argon 正式開放、Character.ai 破產、OpenSEO 開源、Etchv 隱水印 API | 模式：Tue/Thu/Sat 06:00 ai-dev-research cron
