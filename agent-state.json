@@ -1,11 +1,89 @@
 {
-  "lastRun": "2026-10-15T03:00:00Z",
+  "lastRun": "2026-10-16T12:00:00Z",
   "lastBuilderRun": "2026-10-14T05:00:00Z",
   "lastResearchRound": 252,
   "lastCompetitorWatchRun": "2026-10-11T03:10:00Z",
-  "lastStrategistRun": "2026-10-15T01:00:00Z",
+  "lastStrategistRun": "2026-10-16T12:00:00Z",
   "lastSeoWriterRun": "2026-10-15T03:00:00Z",
   "agentLog": [
+    {
+      "timestamp": "2026-10-16T12:00:00Z",
+      "agent": "strategist",
+      "task": "income-ideation",
+      "status": "completed",
+      "summary": "Fri 12:00 UTC strategist cron (weekly income-ideation) — 完成：3 個新提案 + 2 個 Affiliate 補充。提案A：AI 工作流程數位產品線（Lemon Squeezy，Telegram Bot workflow + n8n 模板，$29-79/件，$290-2,370/月）。提案B：AdCreative.ai 40% lifetime recurring affiliate（即時審核，$174-1,160/月 cumulative）。提案C：AI 訂閱費用計算器工具頁（tools/ai-subscription-cost-calculator.html，DigitalOcean CTA，$400-1,000/月）。Moosend 30% lifetime recurring 升為 P1（easy approval，$135/月）。本週最高 ROI 動作：Ivan 申請 AdCreative.ai（5 分鐘）+ 開設 Lemon Squeezy 帳號。合計新增月收估算：$999-5,070/月（+既有 $1,100-3,300/月）。",
+      "changes": [
+        "新增 directives/strategist-weekly-2026-10-16.md（3 提案 + 週任務清單）",
+        "更新 agent-state.json（lastRun + lastStrategistRun + agentLog）"
+      ],
+      "newAssetProposals": [
+        {
+          "type": "digital-product-line",
+          "title": "AI 工作流程包 / n8n + Telegram Bot 模板",
+          "revenueModel": "Lemon Squeezy 直售（$29-$79/件）",
+          "estimatedMonthlyRevenue": "$290-2,370/月",
+          "buildSteps": [
+            "Ivan：開設 Lemon Squeezy 帳號（free，VAT 自動）",
+            "Ivan：建立第一個產品（Telegram Bot workflow 包，$29 試售）",
+            "builder：建立 /products/ai-workflow-bundle.html 銷售頁（Oct 23）",
+            "seo-writer：n8n-telegram-bot-workflow-template-2026.html 配套教學（Oct 25）"
+          ],
+          "affiliateDirective": "N/A（直售）"
+        },
+        {
+          "type": "affiliate-program",
+          "title": "AdCreative.ai 40% Lifetime Recurring",
+          "revenueModel": "30-40% recurring lifetime on $29-$599/月訂閱",
+          "estimatedMonthlyRevenue": "$174-1,160/月（cumulative）",
+          "buildSteps": [
+            "Ivan：立即申請 adcreative.ai/affiliate（即時審核，P0-URGENT）",
+            "seo-writer：adcreative-ai-review-ad-generation-2026.html（Oct 22）",
+            "seo-writer：adcreative-ai-vs-canva-vs-jasper-2026.html（Oct 25）"
+          ],
+          "affiliateDirective": "申請後補入 affiliate link 至上述 2 篇文章"
+        },
+        {
+          "type": "interactive-tool",
+          "title": "AI 訂閱費用計算器 2026",
+          "revenueModel": "DigitalOcean $200 CPA + DataCamp affiliate（嵌入工具頁 CTA）",
+          "estimatedMonthlyRevenue": "$400-1,000/月",
+          "buildSteps": [
+            "builder：建立 tools/ai-subscription-cost-calculator.html（Oct 21）",
+            "Pure JS，checkbox 選工具，即時算月費，推薦砍哪個",
+            "嵌入 DigitalOcean + DataCamp 漸層 CTA",
+            "sitemap.xml + tools/index.html 更新"
+          ],
+          "targetKeywords": [
+            "ai 訂閱費用",
+            "ai 工具費用計算",
+            "chatgpt claude gemini 哪個便宜",
+            "ai 月費比較 2026"
+          ]
+        }
+      ],
+      "affiliatePicksThisRound": [
+        {
+          "program": "AdCreative.ai",
+          "url": "https://www.adcreative.ai/affiliate",
+          "commission": "30-40% lifetime recurring",
+          "approvalType": "instant（tiered：Bronze 30% → Gold 40%）",
+          "priority": "P0-URGENT（Ivan 立即申請）"
+        },
+        {
+          "program": "Moosend",
+          "url": "moosend.com/affiliate-program",
+          "commission": "30-40% lifetime recurring（tiered）",
+          "approvalType": "easy approval",
+          "priority": "P1（Ivan 本週申請）"
+        }
+      ],
+      "ivanActionList": [
+        "🔴 P0：申請 AdCreative.ai affiliate（adcreative.ai/affiliate，即時審核，5 分鐘）",
+        "🔴 P0：申請 Moosend affiliate（moosend.com/affiliate-program，easy approval）",
+        "🔴 P0：開設 Lemon Squeezy 帳號 + 建立第一個數位產品（Telegram Bot workflow 包，$29）",
+        "🔴 P0（積壓 31 輪）：申請 Systeme.io 60% lifetime affiliate"
+      ]
+    },
     {
       "timestamp": "2026-10-16T00:00:00Z",
       "agent": "content-ops",
@@ -453,14 +531,14 @@
     }
   ],
   "gscData": {
-    "lastUpdated": "2026-10-15 05:30",
+    "lastUpdated": "2026-10-16 05:30",
     "period": "14 days",
     "sites": {
       "autodev-ai": {
         "summary": {
-          "totalClicks": 74,
-          "totalImpressions": 1622,
-          "avgCTR": 4.6,
+          "totalClicks": 67,
+          "totalImpressions": 1631,
+          "avgCTR": 4.1,
           "avgPosition": 8.5
         },
         "topQueries": [
@@ -469,7 +547,7 @@
             "clicks": 4,
             "impressions": 13,
             "ctr": 30.8,
-            "position": 7.5
+            "position": 5.8
           },
           {
             "keyword": "copperhead ai",
@@ -483,14 +561,14 @@
             "clicks": 3,
             "impressions": 33,
             "ctr": 9.1,
-            "position": 4.6
+            "position": 4.7
           },
           {
             "keyword": "opencode zen vs go",
             "clicks": 2,
-            "impressions": 9,
-            "ctr": 22.2,
-            "position": 3.2
+            "impressions": 10,
+            "ctr": 20.0,
+            "position": 3
           },
           {
             "keyword": "opencode zen",
@@ -509,9 +587,9 @@
           {
             "keyword": "orca ade 教學",
             "clicks": 1,
-            "impressions": 20,
-            "ctr": 5.0,
-            "position": 7.3
+            "impressions": 21,
+            "ctr": 4.8,
+            "position": 7.5
           },
           {
             "keyword": "perplexity pro ptt",
@@ -572,9 +650,9 @@
           {
             "keyword": "auto dev",
             "clicks": 0,
-            "impressions": 21,
+            "impressions": 24,
             "ctr": 0,
-            "position": 10.2
+            "position": 9.8
           },
           {
             "keyword": "auto-dev",
@@ -593,9 +671,9 @@
           {
             "keyword": "autodev",
             "clicks": 0,
-            "impressions": 65,
+            "impressions": 66,
             "ctr": 0,
-            "position": 9.7
+            "position": 10.5
           },
           {
             "keyword": "autodev ai",
@@ -603,6 +681,13 @@
             "impressions": 1,
             "ctr": 0,
             "position": 1
+          },
+          {
+            "keyword": "autodev.com",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 6
           },
           {
             "keyword": "autodew",
@@ -617,13 +702,6 @@
             "impressions": 5,
             "ctr": 0,
             "position": 16
-          },
-          {
-            "keyword": "booking bots",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 27
           },
           {
             "keyword": "bot booking",
@@ -643,100 +721,100 @@
         "topPages": [
           {
             "page": "//blog/opencode-zen-vs-go-pricing-2026.html",
-            "clicks": 9,
-            "impressions": 112,
-            "ctr": 8.0,
-            "position": 8.0
-          },
-          {
-            "page": "//blog/colibri-moe-local-ai-guide-2026.html",
-            "clicks": 8,
-            "impressions": 25,
-            "ctr": 32.0,
-            "position": 7.4
+            "clicks": 10,
+            "impressions": 105,
+            "ctr": 9.5,
+            "position": 9.1
           },
           {
             "page": "//blog/copperhead-ai-pcb-design-guide-2026.html",
             "clicks": 8,
-            "impressions": 69,
-            "ctr": 11.6,
-            "position": 5.5
+            "impressions": 78,
+            "ctr": 10.3,
+            "position": 5.2
           },
           {
             "page": "//blog/lm-studio-bionic-guide-2026.html",
-            "clicks": 8,
-            "impressions": 59,
-            "ctr": 13.6,
-            "position": 9.4
+            "clicks": 7,
+            "impressions": 54,
+            "ctr": 13.0,
+            "position": 9.3
           },
           {
             "page": "//blog/rtk-rust-token-killer-review-2026.html",
-            "clicks": 7,
-            "impressions": 144,
-            "ctr": 4.9,
-            "position": 6.6
+            "clicks": 6,
+            "impressions": 158,
+            "ctr": 3.8,
+            "position": 6.7
+          },
+          {
+            "page": "//blog/colibri-moe-local-ai-guide-2026.html",
+            "clicks": 4,
+            "impressions": 14,
+            "ctr": 28.6,
+            "position": 6.2
           },
           {
             "page": "//blog/telegram-bot-business-guide.html",
-            "clicks": 5,
-            "impressions": 119,
-            "ctr": 4.2,
-            "position": 7.7
-          },
-          {
-            "page": "//blog/agent-skills-complete-guide-2026.html",
-            "clicks": 3,
-            "impressions": 73,
-            "ctr": 4.1,
-            "position": 9.9
+            "clicks": 4,
+            "impressions": 126,
+            "ctr": 3.2,
+            "position": 7.5
           },
           {
             "page": "//blog/kilo-code-review-vs-cursor-claude-code-2026.html",
             "clicks": 3,
-            "impressions": 62,
-            "ctr": 4.8,
-            "position": 6.7
-          },
-          {
-            "page": "//blog/moneyprinterturbo-ai-video-guide-2026.html",
-            "clicks": 3,
-            "impressions": 52,
-            "ctr": 5.8,
-            "position": 7.6
+            "impressions": 72,
+            "ctr": 4.2,
+            "position": 6.6
           },
           {
             "page": "//blog/orca-ade-parallel-agents-tutorial-2026.html",
             "clicks": 3,
-            "impressions": 44,
-            "ctr": 6.8,
+            "impressions": 46,
+            "ctr": 6.5,
             "position": 9.7
+          },
+          {
+            "page": "//en/",
+            "clicks": 3,
+            "impressions": 165,
+            "ctr": 1.8,
+            "position": 7.8
+          },
+          {
+            "page": "//blog/agent-skills-complete-guide-2026.html",
+            "clicks": 2,
+            "impressions": 79,
+            "ctr": 2.5,
+            "position": 8.5
           },
           {
             "page": "//blog/github-copilot-hydrafusion-review-2026.html",
             "clicks": 2,
-            "impressions": 11,
-            "ctr": 18.2,
+            "impressions": 13,
+            "ctr": 15.4,
             "position": 7.5
           },
           {
             "page": "//blog/mojo-programming-language-tutorial-2026.html",
             "clicks": 2,
-            "impressions": 15,
-            "ctr": 13.3,
-            "position": 8.7
+            "impressions": 11,
+            "ctr": 18.2,
+            "position": 9.5
           },
           {
-            "page": "//en/",
+            "page": "//blog/moneyprinterturbo-ai-video-guide-2026.html",
             "clicks": 2,
-            "impressions": 165,
-            "ctr": 1.2,
-            "position": 7.3
+            "impressions": 53,
+            "ctr": 3.8,
+            "position": 7.8
           },
           {
             "page": "//",
             "clicks": 1,
-            "impressions": 15,
-            "ctr": 6.7,
+            "impressions": 14,
+            "ctr": 7.1,
             "position": 2
           },
           {
@@ -749,16 +827,23 @@
           {
             "page": "//blog/higgsfield-api-review-2026.html",
             "clicks": 1,
-            "impressions": 7,
-            "ctr": 14.3,
-            "position": 6.6
+            "impressions": 6,
+            "ctr": 16.7,
+            "position": 6.7
+          },
+          {
+            "page": "//blog/kilo-code-jetbrains-review-2026.html",
+            "clicks": 1,
+            "impressions": 8,
+            "ctr": 12.5,
+            "position": 15
           },
           {
             "page": "//blog/line-bot-cost.html",
             "clicks": 1,
-            "impressions": 111,
+            "impressions": 113,
             "ctr": 0.9,
-            "position": 9.5
+            "position": 9.6
           },
           {
             "page": "//blog/markitdown-microsoft-tutorial-2026.html",
@@ -770,23 +855,16 @@
           {
             "page": "//blog/mastra-ai-typescript-agent-framework-2026.html",
             "clicks": 1,
-            "impressions": 6,
-            "ctr": 16.7,
-            "position": 10.7
+            "impressions": 7,
+            "ctr": 14.3,
+            "position": 9.7
           },
           {
             "page": "//blog/omlx-apple-silicon-llm-server-2026.html",
             "clicks": 1,
-            "impressions": 26,
-            "ctr": 3.8,
-            "position": 11.9
-          },
-          {
-            "page": "//blog/openai-devday-2026-preview.html",
-            "clicks": 1,
-            "impressions": 41,
-            "ctr": 2.4,
-            "position": 7.9
+            "impressions": 29,
+            "ctr": 3.4,
+            "position": 11.2
           },
           {
             "page": "//blog/perplexity-ai-pro-review-2026.html",
@@ -798,23 +876,23 @@
           {
             "page": "//blog/ponytail-claude-code-plugin-2026.html",
             "clicks": 1,
-            "impressions": 19,
-            "ctr": 5.3,
-            "position": 14.3
+            "impressions": 18,
+            "ctr": 5.6,
+            "position": 14.7
           },
           {
             "page": "//en/blog/line-bot-booking-system.html",
             "clicks": 1,
-            "impressions": 43,
+            "impressions": 44,
             "ctr": 2.3,
-            "position": 11.8
+            "position": 11.4
           },
           {
             "page": "//about.html",
             "clicks": 0,
-            "impressions": 7,
+            "impressions": 9,
             "ctr": 0,
-            "position": 5.7
+            "position": 6
           }
         ]
       },
@@ -846,18 +924,18 @@
       "ai-tools-en": {
         "summary": {
           "totalClicks": 0,
-          "totalImpressions": 4,
+          "totalImpressions": 3,
           "avgCTR": 0,
-          "avgPosition": 5.2
+          "avgPosition": 5.3
         },
         "topQueries": [],
         "topPages": [
           {
             "page": "/",
             "clicks": 0,
-            "impressions": 4,
+            "impressions": 3,
             "ctr": 0,
-            "position": 5.2
+            "position": 5.3
           }
         ]
       }
@@ -873,29 +951,29 @@
       {
         "site": "autodev-ai",
         "keyword": "auto dev",
-        "position": 10.2,
-        "impressions": 21,
+        "position": 9.8,
+        "impressions": 24,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "auto dev",
         "ctr": 0,
-        "impressions": 21,
+        "impressions": 24,
         "action": "improve title/meta for higher CTR"
       },
       {
         "site": "autodev-ai",
         "keyword": "autodev",
-        "position": 9.7,
-        "impressions": 65,
+        "position": 10.5,
+        "impressions": 66,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "autodev",
         "ctr": 0,
-        "impressions": 65,
+        "impressions": 66,
         "action": "improve title/meta for higher CTR"
       },
       {
@@ -907,8 +985,8 @@
       }
     ]
   },
-  "lastGscCheckAt": "2026-10-15T05:30:06Z",
-  "lastGscSummary": "ranking: avg pos 8.5; high-impr low-CTR pages: 2; pos 11-20 opps: 3",
+  "lastGscCheckAt": "2026-10-16T05:30:05Z",
+  "lastGscSummary": "ranking: avg pos 8.5; high-impr low-CTR pages: 6; pos 11-20 opps: 4",
   "lastChecked": "2026-10-16T00:00:00Z",
   "issues": [
     {
