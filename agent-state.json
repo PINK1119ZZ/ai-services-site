@@ -1,11 +1,110 @@
 {
-  "lastRun": "2026-10-17T05:00:00Z",
+  "lastRun": "2026-10-17T23:00:00Z",
   "lastBuilderRun": "2026-10-17T05:00:00Z",
-  "lastResearchRound": 254,
+  "lastResearchRound": 255,
+  "lastMarketResearchRun": "2026-10-17T23:00:00Z",
   "lastCompetitorWatchRun": "2026-10-11T03:10:00Z",
   "lastStrategistRun": "2026-10-16T12:00:00Z",
   "lastSeoWriterRun": "2026-10-17T03:00:00Z",
   "agentLog": [
+    {
+      "round": 255,
+      "agent": "researcher",
+      "timestamp": "2026-10-17T23:00:00Z",
+      "task": "market-research",
+      "status": "completed",
+      "summary": "Sun 23:00 UTC market-research cron — Round 255 完成：3 個新 Affiliate 發現 + 1 個積壓再確認 + 2 個待確認 + 1 個台灣市場需求缺口 + 1 個 Notion Affiliate 警告。最大訊號：（1）Colossyan 25-50% tiered recurring（colossyan.com/affiliate-program，90 天 cookie，企業 AI 訓練影片，繁中評測零）——P0 Ivan 立即申請；（2）OmniSEO 50% first-year revenue（PartnerStack，Essentials $89/mo，R244 積壓，本輪再確認升 P0-URGENT）；（3）Reclaim.AI 40% recurring 12mo（PartnerStack，AI 日曆，$200-600/月潛力）；（4）NitroStack PH Oct 17 #1（MCP Server 部署平台，80K+ servers，affiliate 待確認，文章機會截止 Oct 21）；（5）台灣 MCP Server 繁中教學需求缺口（政府已公告技術指南，企業導入窗口，B2B NT$50K-200K/案）；（6）Notion affiliate ⚠️ 官網明確標示不接受新申請，各方報導數字難核實，不要規劃此管道；（7）Pancake $99/月 Vercel for GTM（PH 月榜前 5，affiliate 待確認）。預估新增月收 $1,122-3,749/月。Directive 寫入 directives/researcher-to-strategist-2026-10-18-round255.md。",
+      "changes": [
+        "更新 market-notes.md（Round 255 新增，置頂）",
+        "新增 directives/researcher-to-strategist-2026-10-18-round255.md",
+        "更新 agent-state.json（lastResearchRound: 255, lastRun + lastMarketResearchRun）"
+      ],
+      "keyFindings": [
+        "Colossyan Affiliate（25-50% tiered，90 天 cookie）：AI 訓練影片平台，企業 L&D 受眾，colossyan.com/affiliate-program，繁中評測接近零，Ivan P0 立即申請",
+        "OmniSEO Affiliate（50% first-year revenue，PartnerStack）：R244 即發現，積壓多輪，再確認 P0-URGENT，omniseo.com/affiliates",
+        "Reclaim.AI Affiliate（40% recurring 12mo，PartnerStack）：AI 日曆自動排程，$200-600/月潛力，P1 申請",
+        "NitroStack PH Oct 17 #1：Build/test/deploy MCP servers，80K+ servers 部署量，affiliate 待確認，文章機會截止 Oct 21",
+        "台灣 MCP Server 需求缺口：政府已公告技術指南（經濟部），企業 40% 導入趨勢，繁中實作教學稀少，B2B NT$50K-200K/案諮詢機會",
+        "Notion Affiliate 警告：官網明確「currently not accepting new affiliates」，停止規劃此管道",
+        "Pancake $99/月 flat GTM via MCP（PH 月榜前 5，affiliate 待確認）",
+        "IrisGo AI OS（德國 $500K 電視投資，Solopreneurs 版 PH launch，B2B 自動化對比角度）"
+      ],
+      "affiliateConfirmed": [
+        {
+          "program": "Colossyan",
+          "commission": "25-50% tiered recurring（月付）",
+          "cookie": "90 天",
+          "platform": "直接（Wise / PayPal）",
+          "applyUrl": "https://www.colossyan.com/affiliate-program",
+          "priority": "P0-Ivan 立即申請"
+        },
+        {
+          "program": "Reclaim.AI",
+          "commission": "40% recurring 12mo（職場 email），25%（個人）",
+          "cookie": "PartnerStack 標準",
+          "platform": "PartnerStack",
+          "applyUrl": "PartnerStack Marketplace 搜尋",
+          "priority": "P1-Ivan 本週申請"
+        }
+      ],
+      "affiliatePendingCheck": [
+        {
+          "program": "NitroStack",
+          "url": "nitrostack.ai",
+          "priority": "P1-Ivan 確認（5 分鐘）",
+          "potentialValue": "開發者工具，MCP 熱潮，高潛力"
+        },
+        {
+          "program": "Pancake",
+          "url": "pancake.ai",
+          "priority": "P2-Ivan 確認",
+          "potentialValue": "$99/月 flat，B2B GTM 工具"
+        }
+      ],
+      "affiliateWarning": {
+        "program": "Notion",
+        "status": "官網明確不接受新申請（⚠️ not accepting new affiliates）",
+        "action": "不要規劃此管道，等候重開公告"
+      },
+      "taiwanMarketGap": {
+        "topic": "MCP Server 繁中教學 + 台灣企業導入指南",
+        "evidence": "政府（經濟部）已公告技術指南，Gartner 40% 企業應用預測，MCP SDK 月下載 5 億次",
+        "b2bOpportunity": "MCP Server 部署顧問服務，NT$50K-200K/案",
+        "seoOpportunity": "繁中競品稀少，搜尋需求真實存在（keyword: mcp server 教學, claude mcp 設定）"
+      },
+      "articlesToWrite": [
+        {
+          "file": "blog/nitrostack-mcp-server-deploy-tutorial-2026.html",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 21",
+          "reason": "PH Oct 17 #1，流量窗口存在，MCP 熱潮"
+        },
+        {
+          "file": "blog/colossyan-ai-video-creator-training-review-2026.html",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 24",
+          "reason": "申請 affiliate 後立即發布"
+        },
+        {
+          "file": "blog/colossyan-vs-synthesia-ai-video-comparison-2026.html",
+          "priority": "P2-MEDIUM",
+          "deadline": "Oct 26"
+        },
+        {
+          "file": "blog/mcp-server-build-taiwan-guide-2026.html",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 24",
+          "reason": "台灣 MCP 需求缺口，B2B 服務 CTA，政府認可"
+        },
+        {
+          "file": "blog/reclaim-ai-calendar-review-focus-time-2026.html",
+          "priority": "P2-MEDIUM",
+          "deadline": "Oct 25"
+        }
+      ],
+      "estimatedNewMonthlyRevenue": "$1,122-3,749/月（全部執行後）",
+      "directivesIssued": "directives/researcher-to-strategist-2026-10-18-round255.md"
+    },
     {
       "timestamp": "2026-10-17T05:00:00Z",
       "agent": "builder",
@@ -26,8 +125,17 @@
           "file": "tools/geo-tools-comparison-2026.html",
           "type": "interactive-tool",
           "tools": 6,
-          "features": ["互動篩選器（5 種）","工具卡片含評分條","快速比較表","場景選型指南（4 種）","FAQ（6 題）"],
-          "affiliateLinks": ["DigitalOcean $200 CPA", "Hahow affiliate"],
+          "features": [
+            "互動篩選器（5 種）",
+            "工具卡片含評分條",
+            "快速比較表",
+            "場景選型指南（4 種）",
+            "FAQ（6 題）"
+          ],
+          "affiliateLinks": [
+            "DigitalOcean $200 CPA",
+            "Hahow affiliate"
+          ],
           "estimatedRevenue": "$200-600/月",
           "directiveSource": "strategist-to-builder-2026-10-15-halfmonth.md P1 Task 2"
         },
@@ -35,17 +143,35 @@
           "file": "tools/ai-subscription-cost-calculator.html",
           "type": "interactive-calculator",
           "toolsIncluded": 11,
-          "features": ["純 JS 即時計算","功能重疊偵測","砍掉建議引擎","月費 + 年費 + NT$ 三欄","省錢潛力條形圖"],
-          "affiliateLinks": ["DigitalOcean $200 CPA", "Hahow affiliate"],
+          "features": [
+            "純 JS 即時計算",
+            "功能重疊偵測",
+            "砍掉建議引擎",
+            "月費 + 年費 + NT$ 三欄",
+            "省錢潛力條形圖"
+          ],
+          "affiliateLinks": [
+            "DigitalOcean $200 CPA",
+            "Hahow affiliate"
+          ],
           "estimatedRevenue": "$400-1,000/月",
           "directiveSource": "strategist-weekly-2026-10-16.md 提案 C",
-          "targetKeywords": ["ai 訂閱費用計算器","ai 月費比較 2026","chatgpt claude 哪個便宜"]
+          "targetKeywords": [
+            "ai 訂閱費用計算器",
+            "ai 月費比較 2026",
+            "chatgpt claude 哪個便宜"
+          ]
         },
         {
           "file": "services/index.html",
           "type": "b2b-services-page",
           "services": 4,
-          "features": ["4 個服務卡片（安全審計/LINE Agent/文件防盜用/OpenSEO）","服務流程 5 步驟","FAQ","CTA → contact.html"],
+          "features": [
+            "4 個服務卡片（安全審計/LINE Agent/文件防盜用/OpenSEO）",
+            "服務流程 5 步驟",
+            "FAQ",
+            "CTA → contact.html"
+          ],
           "estimatedRevenue": "B2B inquiry（NT$30K-200K/案）",
           "directiveSource": "strategist-to-builder-2026-10-15-halfmonth.md P2 Task 3"
         },
@@ -55,7 +181,13 @@
           "products": 4,
           "priceRange": "$19-79",
           "status": "早鳥登記（等 Ivan 開 Lemon Squeezy 帳號）",
-          "features": ["4 個產品卡片","全包套餐 $79（原 $136）","Why trust 說明","FAQ","DigitalOcean CTA"],
+          "features": [
+            "4 個產品卡片",
+            "全包套餐 $79（原 $136）",
+            "Why trust 說明",
+            "FAQ",
+            "DigitalOcean CTA"
+          ],
           "estimatedRevenue": "$290-2,370/月（Lemon Squeezy 上架後）",
           "directiveSource": "strategist-weekly-2026-10-16.md 提案 A"
         }
@@ -876,15 +1008,15 @@
     }
   ],
   "gscData": {
-    "lastUpdated": "2026-10-16 05:30",
+    "lastUpdated": "2026-10-17 05:30",
     "period": "14 days",
     "sites": {
       "autodev-ai": {
         "summary": {
-          "totalClicks": 67,
-          "totalImpressions": 1631,
-          "avgCTR": 4.1,
-          "avgPosition": 8.5
+          "totalClicks": 65,
+          "totalImpressions": 1658,
+          "avgCTR": 3.9,
+          "avgPosition": 8.6
         },
         "topQueries": [
           {
@@ -904,9 +1036,9 @@
           {
             "keyword": "rust token killer",
             "clicks": 3,
-            "impressions": 33,
-            "ctr": 9.1,
-            "position": 4.7
+            "impressions": 30,
+            "ctr": 10.0,
+            "position": 4.6
           },
           {
             "keyword": "opencode zen vs go",
@@ -925,16 +1057,16 @@
           {
             "keyword": "orca ade",
             "clicks": 1,
-            "impressions": 3,
-            "ctr": 33.3,
-            "position": 20
+            "impressions": 4,
+            "ctr": 25.0,
+            "position": 17.8
           },
           {
             "keyword": "orca ade 教學",
             "clicks": 1,
-            "impressions": 21,
-            "ctr": 4.8,
-            "position": 7.5
+            "impressions": 28,
+            "ctr": 3.6,
+            "position": 7.4
           },
           {
             "keyword": "perplexity pro ptt",
@@ -942,6 +1074,13 @@
             "impressions": 1,
             "ctr": 100,
             "position": 5
+          },
+          {
+            "keyword": "ruflo",
+            "clicks": 1,
+            "impressions": 8,
+            "ctr": 12.5,
+            "position": 7.1
           },
           {
             "keyword": "@botfather",
@@ -960,9 +1099,9 @@
           {
             "keyword": "ai rtk",
             "clicks": 0,
-            "impressions": 2,
+            "impressions": 3,
             "ctr": 0,
-            "position": 10
+            "position": 9.7
           },
           {
             "keyword": "ai tools comparison 2026",
@@ -995,9 +1134,9 @@
           {
             "keyword": "auto dev",
             "clicks": 0,
-            "impressions": 24,
+            "impressions": 25,
             "ctr": 0,
-            "position": 9.8
+            "position": 9.6
           },
           {
             "keyword": "auto-dev",
@@ -1016,9 +1155,9 @@
           {
             "keyword": "autodev",
             "clicks": 0,
-            "impressions": 66,
+            "impressions": 65,
             "ctr": 0,
-            "position": 10.5
+            "position": 10.3
           },
           {
             "keyword": "autodev ai",
@@ -1044,9 +1183,9 @@
           {
             "keyword": "booking bot",
             "clicks": 0,
-            "impressions": 5,
+            "impressions": 6,
             "ctr": 0,
-            "position": 16
+            "position": 17
           },
           {
             "keyword": "bot booking",
@@ -1054,91 +1193,77 @@
             "impressions": 2,
             "ctr": 0,
             "position": 23.5
-          },
-          {
-            "keyword": "bot dev",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 6
           }
         ],
         "topPages": [
           {
             "page": "//blog/opencode-zen-vs-go-pricing-2026.html",
-            "clicks": 10,
-            "impressions": 105,
-            "ctr": 9.5,
-            "position": 9.1
+            "clicks": 9,
+            "impressions": 97,
+            "ctr": 9.3,
+            "position": 10
           },
           {
             "page": "//blog/copperhead-ai-pcb-design-guide-2026.html",
             "clicks": 8,
-            "impressions": 78,
-            "ctr": 10.3,
-            "position": 5.2
+            "impressions": 74,
+            "ctr": 10.8,
+            "position": 5.1
           },
           {
             "page": "//blog/lm-studio-bionic-guide-2026.html",
             "clicks": 7,
-            "impressions": 54,
-            "ctr": 13.0,
+            "impressions": 59,
+            "ctr": 11.9,
             "position": 9.3
           },
           {
             "page": "//blog/rtk-rust-token-killer-review-2026.html",
             "clicks": 6,
-            "impressions": 158,
-            "ctr": 3.8,
-            "position": 6.7
-          },
-          {
-            "page": "//blog/colibri-moe-local-ai-guide-2026.html",
-            "clicks": 4,
-            "impressions": 14,
-            "ctr": 28.6,
-            "position": 6.2
+            "impressions": 166,
+            "ctr": 3.6,
+            "position": 6.8
           },
           {
             "page": "//blog/telegram-bot-business-guide.html",
             "clicks": 4,
-            "impressions": 126,
-            "ctr": 3.2,
-            "position": 7.5
+            "impressions": 128,
+            "ctr": 3.1,
+            "position": 7.8
           },
           {
             "page": "//blog/kilo-code-review-vs-cursor-claude-code-2026.html",
             "clicks": 3,
-            "impressions": 72,
-            "ctr": 4.2,
+            "impressions": 77,
+            "ctr": 3.9,
             "position": 6.6
+          },
+          {
+            "page": "//blog/moneyprinterturbo-ai-video-guide-2026.html",
+            "clicks": 3,
+            "impressions": 60,
+            "ctr": 5.0,
+            "position": 7.2
           },
           {
             "page": "//blog/orca-ade-parallel-agents-tutorial-2026.html",
             "clicks": 3,
-            "impressions": 46,
-            "ctr": 6.5,
-            "position": 9.7
-          },
-          {
-            "page": "//en/",
-            "clicks": 3,
-            "impressions": 165,
-            "ctr": 1.8,
-            "position": 7.8
+            "impressions": 56,
+            "ctr": 5.4,
+            "position": 9.5
           },
           {
             "page": "//blog/agent-skills-complete-guide-2026.html",
             "clicks": 2,
-            "impressions": 79,
-            "ctr": 2.5,
-            "position": 8.5
+            "impressions": 73,
+            "ctr": 2.7,
+            "position": 8.7
           },
           {
-            "page": "//blog/github-copilot-hydrafusion-review-2026.html",
+            "page": "//blog/colibri-moe-local-ai-guide-2026.html",
             "clicks": 2,
-            "impressions": 13,
-            "ctr": 15.4,
+            "impressions": 10,
+            "ctr": 20.0,
             "position": 7.5
           },
           {
@@ -1146,21 +1271,28 @@
             "clicks": 2,
             "impressions": 11,
             "ctr": 18.2,
-            "position": 9.5
+            "position": 10.1
           },
           {
-            "page": "//blog/moneyprinterturbo-ai-video-guide-2026.html",
+            "page": "//blog/ruflo-claude-code-multi-agent-2026.html",
             "clicks": 2,
-            "impressions": 53,
-            "ctr": 3.8,
-            "position": 7.8
+            "impressions": 25,
+            "ctr": 8.0,
+            "position": 9.4
+          },
+          {
+            "page": "//en/",
+            "clicks": 2,
+            "impressions": 169,
+            "ctr": 1.2,
+            "position": 7.7
           },
           {
             "page": "//",
             "clicks": 1,
-            "impressions": 14,
-            "ctr": 7.1,
-            "position": 2
+            "impressions": 17,
+            "ctr": 5.9,
+            "position": 2.7
           },
           {
             "page": "//blog/getresponse-ai-email-marketing-review-2026.html",
@@ -1168,6 +1300,13 @@
             "impressions": 7,
             "ctr": 14.3,
             "position": 10.6
+          },
+          {
+            "page": "//blog/github-copilot-hydrafusion-review-2026.html",
+            "clicks": 1,
+            "impressions": 8,
+            "ctr": 12.5,
+            "position": 8.5
           },
           {
             "page": "//blog/higgsfield-api-review-2026.html",
@@ -1186,9 +1325,9 @@
           {
             "page": "//blog/line-bot-cost.html",
             "clicks": 1,
-            "impressions": 113,
+            "impressions": 112,
             "ctr": 0.9,
-            "position": 9.6
+            "position": 9.8
           },
           {
             "page": "//blog/markitdown-microsoft-tutorial-2026.html",
@@ -1200,16 +1339,16 @@
           {
             "page": "//blog/mastra-ai-typescript-agent-framework-2026.html",
             "clicks": 1,
-            "impressions": 7,
-            "ctr": 14.3,
-            "position": 9.7
+            "impressions": 8,
+            "ctr": 12.5,
+            "position": 9
           },
           {
             "page": "//blog/omlx-apple-silicon-llm-server-2026.html",
             "clicks": 1,
-            "impressions": 29,
-            "ctr": 3.4,
-            "position": 11.2
+            "impressions": 32,
+            "ctr": 3.1,
+            "position": 11.9
           },
           {
             "page": "//blog/perplexity-ai-pro-review-2026.html",
@@ -1221,23 +1360,16 @@
           {
             "page": "//blog/ponytail-claude-code-plugin-2026.html",
             "clicks": 1,
-            "impressions": 18,
-            "ctr": 5.6,
-            "position": 14.7
+            "impressions": 17,
+            "ctr": 5.9,
+            "position": 14.8
           },
           {
             "page": "//en/blog/line-bot-booking-system.html",
             "clicks": 1,
-            "impressions": 44,
-            "ctr": 2.3,
-            "position": 11.4
-          },
-          {
-            "page": "//about.html",
-            "clicks": 0,
-            "impressions": 9,
-            "ctr": 0,
-            "position": 6
+            "impressions": 45,
+            "ctr": 2.2,
+            "position": 11.0
           }
         ]
       },
@@ -1289,49 +1421,56 @@
       {
         "site": "autodev-ai",
         "keyword": "orca ade",
-        "position": 20,
+        "position": 17.8,
+        "impressions": 4,
+        "action": "optimize to push to page 1"
+      },
+      {
+        "site": "autodev-ai",
+        "keyword": "ai rtk",
+        "position": 9.7,
         "impressions": 3,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "auto dev",
-        "position": 9.8,
-        "impressions": 24,
+        "position": 9.6,
+        "impressions": 25,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "auto dev",
         "ctr": 0,
-        "impressions": 24,
+        "impressions": 25,
         "action": "improve title/meta for higher CTR"
       },
       {
         "site": "autodev-ai",
         "keyword": "autodev",
-        "position": 10.5,
-        "impressions": 66,
+        "position": 10.3,
+        "impressions": 65,
         "action": "optimize to push to page 1"
       },
       {
         "site": "autodev-ai",
         "keyword": "autodev",
         "ctr": 0,
-        "impressions": 66,
+        "impressions": 65,
         "action": "improve title/meta for higher CTR"
       },
       {
         "site": "autodev-ai",
         "keyword": "booking bot",
-        "position": 16,
-        "impressions": 5,
+        "position": 17,
+        "impressions": 6,
         "action": "optimize to push to page 1"
       }
     ]
   },
-  "lastGscCheckAt": "2026-10-16T05:30:05Z",
-  "lastGscSummary": "ranking: avg pos 8.5; high-impr low-CTR pages: 6; pos 11-20 opps: 4",
+  "lastGscCheckAt": "2026-10-17T05:30:04Z",
+  "lastGscSummary": "ranking: avg pos 8.6; high-impr low-CTR pages: 6; pos 11-20 opps: 4",
   "lastChecked": "2026-10-17T00:00:00Z",
   "issues": [
     {

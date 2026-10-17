@@ -4,6 +4,60 @@
 
 ---
 
+## 2026-10-18（市場研究 Round 255 — Sun 23:00 UTC market-research cron）
+
+### 🔥 本輪重點：未碰觸的賺錢管道 | 新 Affiliate 確認 | 台灣 MCP 需求缺口 | PH 今日新品
+
+---
+
+### A. NEW AFFILIATE — Colossyan（25-50% tiered recurring，90 天 cookie）
+- **Commission：** 25% 起步，遞增至 50%，月付（Wise / PayPal）
+- **申請：** colossyan.com/affiliate-program（24-48h 審核）
+- **產品：** AI 訓練影片平台（多語言、AI avatar），企業 L&D 主流工具
+- **估算：** 10 referrals × $131 × 25% = **$327/月**；50% 達成後 **$655+/月**
+- **機會：** Colossyan 繁中評測幾乎為零，台灣 HR 培訓受眾未開發
+- **Ivan P0：** 申請 colossyan.com/affiliate-program
+- **文章：** blog/colossyan-ai-video-creator-training-review-2026.html + blog/colossyan-vs-synthesia-ai-video-comparison-2026.html
+
+### B. RE-CONFIRMED AFFILIATE — OmniSEO（50% first-year revenue，PartnerStack）
+- **Commission：** 50% of every payment in first 12 months
+- **Platform：** PartnerStack（搜尋 OmniSEO 申請）
+- **Pricing：** Essentials $89/mo → Professional $349/mo
+- **估算：** 1 Pro referral × 12 months = **$2,094 cumulative**
+- **狀態：** ⚠️ R244 即發現，**Ivan 積壓多輪，P0-URGENT 必須本週申請**
+
+### C. NEW AFFILIATE — Reclaim.AI（40% recurring 12mo，PartnerStack）
+- **Commission：** 40% recurring 12 months（職場 email），25%（個人 email）
+- **Platform：** PartnerStack
+- **產品：** AI 日曆自動排程（protect focus time）
+- **估算：** $200-600/月（繁中評測幾乎為零）
+- **Ivan P1：** PartnerStack 搜尋 Reclaim.AI 申請
+
+### D. PH Oct 17 #1 — NitroStack（MCP Server 部署平台，80K+ servers）
+- **訊號：** Product Hunt Oct 17 日榜第 1 名
+- **產品：** Build / test / deploy MCP servers in one place
+- **Affiliate：** 待 Ivan 確認（nitrostack.ai）
+- **機會：** MCP Server 部署 + 教學文章 = 台灣繁中缺口（developer 受眾）
+- **文章截止：** Oct 21（趁 PH 流量窗口）
+
+### E. TAIWAN DEMAND GAP — MCP Server 台灣繁中教學需求
+- **證據：** 台灣政府（經濟部）已公告 MCP 技術導入指南；MCP SDK 下載量 2026 年 5 億次/月
+- **缺口：** 「如何自己建 MCP Server」繁中實作教學稀少（data-di.com 已有 1 篇企業視角但非教學）
+- **機會：** blog/mcp-server-build-taiwan-guide-2026.html（B2B 服務 CTA）
+- **B2B：** 台灣企業 MCP 導入預算 NT$50K-200K/案，AutoDev services 頁可新增「MCP Server 部署顧問」
+
+### F. NOTION AFFILIATE 警告 ⚠️
+- **官網確認：** notion.com/affiliates 顯示「Program is currently not accepting new affiliates」
+- **不要申請，等重開公告**
+- **各方流傳的「50% recurring 12 months」難以核實，官網結構為 $50/signup + 20% year-one**
+
+### G. PH Oct 2026 月榜觀察
+- **月榜前 10：** Spira AI、Pancake（Vercel for GTM）、Rill Browser、IrisGo、ReSO AI、GenPage、Velozity、Directus、Gauth、OpenSEO
+- **Pancake（$99/月 GTM Brain + MCP，月榜前 5）：** Affiliate 待確認（pancake.ai）
+- **IrisGo（AI OS 自動化工作流，Got $500K 德國 Löwen Tank deal）：** 評測機會，無直接 affiliate 但 B2B 對比角度可用
+
+---
+
 ## 2026-10-11（市場研究 Round 244 — Sun 07:00 UTC researcher cron）
 
 ### 🔥 本輪重點：未碰觸的賺錢管道 | AI SaaS Affiliate 新一輪 | 暢銷數位產品 | 台灣需求缺口 | 流量管道
