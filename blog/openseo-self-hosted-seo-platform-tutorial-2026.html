@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSEO 完整自架教學 2026：免費取代 Ahrefs／Semrush，Cloudflare Workers 部署省 $130-260/月，MCP 支援，繁中首發</title>
+    <meta name="description" content="OpenSEO 自架完整教學（2026 年 10 月）：GitHub every-app/open-seo 6K+ ⭐ MIT 授權，完全免費替代 Ahrefs／Semrush，Cloudflare Workers 零成本部署，支援 MCP Server 直接在 Claude／Codex 查 SEO 數據，Product Hunt 月最佳，繁中首發深度教學。">
+    <meta name="keywords" content="openseo 教學, openseo 自架, 免費 seo 工具, ahrefs 替代方案, semrush 替代, cloudflare workers seo, open-seo github, mcp seo server, openseo 2026, seo 工具比較">
+    <link rel="canonical" href="https://autodev-ai.com/blog/openseo-self-hosted-seo-platform-tutorial-2026.html">
+    <link rel="stylesheet" href="../style.css">
+    <meta property="og:title" content="OpenSEO 完整自架教學 2026：免費取代 Ahrefs／Semrush，省 $130-260/月，MCP 支援，繁中首發">
+    <meta property="og:description" content="6K+ ⭐ MIT 授權，Cloudflare Workers 零成本部署，MCP Server 直接在 Claude 查 SEO 數據，Product Hunt 月最佳，繁中首發完整教學。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autodev-ai.com/blog/openseo-self-hosted-seo-platform-tutorial-2026.html">
+    <meta property="article:published_time" content="2026-10-16T03:00:00Z">
+    <meta property="article:author" content="Ivan Kuo">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "OpenSEO 完整自架教學 2026：免費取代 Ahrefs／Semrush，Cloudflare Workers 部署省 $130-260/月，MCP 支援，繁中首發",
+      "description": "OpenSEO 自架完整教學（2026 年 10 月）：GitHub every-app/open-seo 6K+ ⭐ MIT 授權，完全免費替代 Ahrefs／Semrush，Cloudflare Workers 零成本部署，支援 MCP Server 直接在 Claude／Codex 查 SEO 數據，Product Hunt 月最佳，繁中首發深度教學。",
+      "image": "https://autodev-ai.com/assets/og-image.jpg",
+      "datePublished": "2026-10-16T03:00:00Z",
+      "dateModified": "2026-10-16T03:00:00Z",
+      "author": {
+        "@type": "Person",
+        "name": "Ivan Kuo"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "AutoDev AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://autodev-ai.com/assets/logo.png"
+        }
+      }
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><a href="../index.html">AutoDev AI</a></div>
+            <ul>
+                <li><a href="../services.html">服務項目</a></li>
+                <li><a href="../blog.html">技術文章</a></li>
+                <li><a href="../tools.html">工具</a></li>
+                <li><a href="../contact.html">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="blog-post">
+        <header class="post-header">
+            <h1>OpenSEO 完整自架教學 2026：免費取代 Ahrefs／Semrush，Cloudflare Workers 部署省 $130-260/月，MCP 支援</h1>
+            <div class="post-meta">
+                <span class="author">作者：Ivan Kuo</span>
+                <span class="date">發布日期：2026 年 10 月 16 日</span>
+                <span class="read-time">閱讀時間：12 分鐘</span>
+            </div>
+            <p class="post-intro">每個月你在 Ahrefs 或 Semrush 花多少錢？$99 的 Lite 到 $249 的 Guru，甚至更高。現在有一個 MIT 授權的開源替代方案——<strong>OpenSEO（every-app/open-seo）</strong>——在 GitHub 累積 6,000+ ⭐，Product Hunt 2026 年月最佳 SEO 工具，並且支援 MCP Server 讓 Claude 和 Codex 直接查詢 SEO 數據。本文是繁中首發完整自架教學，從 Cloudflare Workers 部署到 MCP 整合，一步步帶你省下每月 $130-260 的工具費用。</p>
+        </header>
+
+        <div class="post-content">
+
+            <h2>OpenSEO 是什麼？為什麼它讓 6,000 個開發者放棄 Ahrefs？</h2>
+            <p>OpenSEO 是由 <a href="https://github.com/every-app/open-seo" target="_blank" rel="noopener">every-app 團隊</a>開發的開源 SEO 平台，核心理念很簡單：<strong>把你本來付給 Ahrefs/Semrush 的錢省下來，數據完全自己掌控。</strong></p>
+
+            <p>它能做什麼？</p>
+            <ul>
+                <li><strong>關鍵字研究：</strong>搜尋量、競爭度、CPC 估算，數據來源整合 Google Search Console + Common Crawl</li>
+                <li><strong>反向連結分析：</strong>Domain Rating、Referring Domains、錨文字分析</li>
+                <li><strong>網站爬蟲：</strong>找出斷掉的連結、重複內容、缺少的 meta 標籤</li>
+                <li><strong>競品分析：</strong>比對任意網域的排名關鍵字、流量估算</li>
+                <li><strong>MCP Server：</strong>直接在 Claude Desktop、Codex、Cursor 中呼叫 SEO 查詢</li>
+                <li><strong>Google Search Console 整合：</strong>直接拉取你的真實排名與 CTR 數據</li>
+            </ul>
+
+            <p>最重要的是：<strong>完全免費</strong>（MIT 授權，可商業使用），部署在 Cloudflare Workers 上幾乎零成本（每月 100K 次請求免費額度，足夠一般網站使用）。</p>
+
+            <h2>OpenSEO vs Ahrefs vs Semrush：功能與成本完整對比</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>功能</th>
+                        <th>OpenSEO（自架）</th>
+                        <th>Ahrefs Lite</th>
+                        <th>Semrush Pro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>月費</strong></td>
+                        <td>$0（Cloudflare 免費方案）</td>
+                        <td>$129/月</td>
+                        <td>$139/月</td>
+                    </tr>
+                    <tr>
+                        <td><strong>關鍵字研究</strong></td>
+                        <td>✅ 整合 GSC + Common Crawl</td>
+                        <td>✅ 商業資料庫</td>
+                        <td>✅ 商業資料庫</td>
+                    </tr>
+                    <tr>
+                        <td><strong>反向連結分析</strong></td>
+                        <td>✅ Common Crawl 索引</td>
+                        <td>✅ 專有爬蟲</td>
+                        <td>✅ 專有爬蟲</td>
+                    </tr>
+                    <tr>
+                        <td><strong>網站爬蟲</strong></td>
+                        <td>✅ 無限制（自架）</td>
+                        <td>⚠️ 每月 500 頁（Lite）</td>
+                        <td>⚠️ 每月 100K 頁（Pro）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>MCP Server</strong></td>
+                        <td>✅ 原生支援</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                    </tr>
+                    <tr>
+                        <td><strong>API 存取</strong></td>
+                        <td>✅ 完整 REST API</td>
+                        <td>⚠️ 付費 API 另計</td>
+                        <td>⚠️ 付費 API 另計</td>
+                    </tr>
+                    <tr>
+                        <td><strong>資料自主性</strong></td>
+                        <td>✅ 完全自控</td>
+                        <td>❌ 廠商資料庫</td>
+                        <td>❌ 廠商資料庫</td>
+                    </tr>
+                    <tr>
+                        <td><strong>隱私合規</strong></td>
+                        <td>✅ 零外送</td>
+                        <td>❌ 查詢記錄由廠商保存</td>
+                        <td>❌ 查詢記錄由廠商保存</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>注意：OpenSEO 的關鍵字數據量不如 Ahrefs/Semrush 的商業資料庫龐大，但對於<strong>中小型網站、部落格、電商</strong>的 SEO 需求已綽綽有餘，而且你的 Google Search Console 真實數據完全整合，這些數據比 Ahrefs 估算更準確。</p>
+
+            <!-- CTA 1: DigitalOcean -->
+            <div style="background: linear-gradient(135deg, #0069ff 0%, #00cfff 100%); border-radius: 12px; padding: 24px; margin: 32px 0; color: white; text-align: center;">
+                <h3 style="margin-bottom: 8px; font-size: 1.2rem;">☁️ 需要比 Cloudflare 更多算力？DigitalOcean VPS 從 $6/月起</h3>
+                <p style="margin-bottom: 16px; opacity: 0.9;">OpenSEO 的爬蟲模組在大型網站建議部署在 VPS 上。新用戶免費 $200 Credit，跑 6 個月不花一毛錢。</p>
+                <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" style="background: white; color: #0069ff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">領取 $200 免費 Credit →</a>
+            </div>
+
+            <h2>Cloudflare Workers 自架教學（20 分鐘完成）</h2>
+            <p>以下是完整部署流程，不需要付費伺服器，Cloudflare Workers 免費方案即可。</p>
+
+            <h3>步驟 1：Fork 並安裝依賴</h3>
+            <pre><code class="language-bash"># Fork GitHub repo 後 clone 到本地
+git clone https://github.com/every-app/open-seo.git
+cd open-seo
+
+# 安裝依賴（Node.js 18+ 必須）
+npm install
+
+# 安裝 Wrangler CLI（Cloudflare Workers 工具）
+npm install -g wrangler
+wrangler login
+</code></pre>
+
+            <h3>步驟 2：設定環境變數</h3>
+            <p>建立 <code>.env.local</code> 並填入以下設定：</p>
+            <pre><code class="language-bash"># Google Search Console（必填，取得真實排名數據）
+GOOGLE_SITE_VERIFICATION=your_gsc_token
+GOOGLE_OAUTH_CLIENT_ID=your_oauth_client_id
+GOOGLE_OAUTH_CLIENT_SECRET=your_oauth_client_secret
+
+# DataForSEO API（選填，提升關鍵字數據品質）
+# 免費方案每天 1,000 次查詢
+DATAFORSEO_EMAIL=your_email
+DATAFORSEO_PASSWORD=your_api_password
+
+# Cloudflare R2（選填，儲存爬蟲快取數據）
+R2_BUCKET_NAME=openseo-cache
+R2_ACCOUNT_ID=your_cloudflare_account_id
+</code></pre>
+
+            <h3>步驟 3：設定 wrangler.toml</h3>
+            <pre><code class="language-toml">name = "openseo"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+
+[vars]
+ENVIRONMENT = "production"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "openseo-db"
+database_id = "your-d1-database-id"
+
+[[r2_buckets]]
+binding = "CACHE"
+bucket_name = "openseo-cache"
+</code></pre>
+
+            <h3>步驟 4：建立 D1 資料庫並初始化</h3>
+            <pre><code class="language-bash"># 建立 Cloudflare D1 資料庫（免費）
+wrangler d1 create openseo-db
+
+# 記下輸出的 database_id，填回 wrangler.toml
+
+# 初始化 schema
+wrangler d1 execute openseo-db --file=./schema.sql
+</code></pre>
+
+            <h3>步驟 5：本地測試</h3>
+            <pre><code class="language-bash"># 本地開發測試
+npm run dev
+
+# 瀏覽器開啟 http://localhost:8787
+# 你應該能看到 OpenSEO 的控制面板
+</code></pre>
+
+            <h3>步驟 6：部署到 Cloudflare Workers</h3>
+            <pre><code class="language-bash"># 部署（一鍵完成）
+npm run deploy
+
+# 輸出類似：
+# Published openseo (1.23 sec)
+# https://openseo.your-username.workers.dev
+</code></pre>
+
+            <p>恭喜！你的 OpenSEO 實例已經運行在 Cloudflare Workers 上，全球 CDN 加速，完全免費。</p>
+
+            <h2>連接 Google Search Console：取得真實排名數據</h2>
+            <p>這是 OpenSEO 最強的功能之一——直接整合你的 GSC 真實數據，而非 Ahrefs/Semrush 的估算值。</p>
+
+            <h3>1. 建立 Google OAuth 2.0 憑證</h3>
+            <ol>
+                <li>前往 <a href="https://console.cloud.google.com/" target="_blank" rel="noopener">Google Cloud Console</a></li>
+                <li>建立新專案，啟用 <strong>Google Search Console API</strong></li>
+                <li>OAuth 2.0 用戶端 ID → 選擇「Web 應用程式」</li>
+                <li>授權重新導向 URI 加入：<code>https://openseo.your-username.workers.dev/auth/callback</code></li>
+                <li>下載 JSON 憑證，提取 <code>client_id</code> 和 <code>client_secret</code></li>
+            </ol>
+
+            <h3>2. 授權你的 GSC 網站</h3>
+            <pre><code class="language-bash"># 透過 CLI 完成授權流程
+wrangler secret put GOOGLE_OAUTH_CLIENT_ID
+# 輸入你的 client_id
+
+wrangler secret put GOOGLE_OAUTH_CLIENT_SECRET
+# 輸入你的 client_secret
+
+# 重新部署以生效
+npm run deploy
+</code></pre>
+
+            <p>完成後，在 OpenSEO 控制面板登入 Google 帳號，授權存取你的 Search Console 屬性。你將立刻能看到：</p>
+            <ul>
+                <li>每個頁面的真實點擊次數、曝光次數、CTR、平均排名</li>
+                <li>哪些關鍵字在第 2 頁（位置 11-20）——這些是最快能優化到第 1 頁的機會</li>
+                <li>索引覆蓋率問題（哪些頁面沒被 Google 收錄）</li>
+            </ul>
+
+            <h2>MCP Server 設定：讓 Claude 直接查 SEO 數據</h2>
+            <p>這是 OpenSEO 最讓開發者興奮的功能：<strong>MCP（Model Context Protocol）Server 支援</strong>，讓你可以直接在 Claude Desktop、Codex、Cursor 等 AI 工具中查詢 SEO 數據。</p>
+
+            <h3>啟用 MCP Server</h3>
+            <pre><code class="language-bash"># OpenSEO 已內建 MCP Server，只需在部署時啟用
+# 在 wrangler.toml 加入：
+
+[vars]
+ENABLE_MCP_SERVER = "true"
+MCP_AUTH_TOKEN = "your-secure-random-token"
+</code></pre>
+
+            <h3>在 Claude Desktop 設定 OpenSEO MCP</h3>
+            <pre><code class="language-json">// ~/.claude/claude_desktop_config.json
+{
+  "mcpServers": {
+    "openseo": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://openseo.your-username.workers.dev/mcp"],
+      "env": {
+        "MCP_AUTH_TOKEN": "your-secure-random-token"
+      }
+    }
+  }
+}
+</code></pre>
+
+            <h3>實際使用範例：直接在 Claude 中分析 SEO</h3>
+            <pre><code class="language-markdown">你（在 Claude Desktop 中）：
+"幫我分析 autodev-ai.com 過去 30 天的排名，
+ 找出在第 2 頁（position 11-20）且曝光次數超過 50 的關鍵字，
+ 並給出優化建議"
+
+Claude（呼叫 OpenSEO MCP 後回覆）：
+"根據 OpenSEO 查詢結果，以下 5 個關鍵字在第 2 頁有高優化潛力：
+ 1. 'autodev 教學' — position 14.3，曝光 89 次，建議在首頁 H2 強化此關鍵字
+ 2. 'telegram bot 建立' — position 11.8，曝光 67 次，建議更新 meta description
+ ..."
+</code></pre>
+
+            <p>這就是 MCP 的威力：你不需要手動在 OpenSEO 控制面板複製數據再貼到 Claude，而是讓 Claude 直接取得數據、分析並給出可執行的優化建議。</p>
+
+            <!-- CTA 2: DataCamp -->
+            <div style="background: linear-gradient(135deg, #03ef62 0%, #00b4d8 100%); border-radius: 12px; padding: 24px; margin: 32px 0; color: #1a1a2e; text-align: center;">
+                <h3 style="margin-bottom: 8px; font-size: 1.2rem;">📊 想系統學習 SEO 數據分析與 Python 自動化？</h3>
+                <p style="margin-bottom: 16px;">DataCamp 有完整的「SEO Data Analysis」、「Python for Marketing」課程，搭配 OpenSEO API 可以打造全自動 SEO 監控系統。</p>
+                <a href="https://afflink.one/s/aavAC" target="_blank" rel="noopener sponsored" style="background: #1a1a2e; color: #03ef62; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">免費試用 DataCamp →</a>
+            </div>
+
+            <h2>OpenSEO 進階功能：競品分析與自動化報告</h2>
+
+            <h3>競品關鍵字分析</h3>
+            <p>OpenSEO 的競品分析功能整合 Common Crawl 的公開網頁爬蟲索引，可以估算任意網域的關鍵字排名：</p>
+            <pre><code class="language-bash"># 使用 OpenSEO CLI 分析競品
+npx openseo-cli analyze-competitor \
+  --domain competitor.com \
+  --compare-with yourdomain.com \
+  --export competitor-gap-report.json
+</code></pre>
+            <p>輸出包含：</p>
+            <ul>
+                <li>競品有排名但你沒有的關鍵字（Content Gap）</li>
+                <li>你排名比競品高的關鍵字（優勢鞏固）</li>
+                <li>雙方都排名但你位置較低的關鍵字（優先優化目標）</li>
+            </ul>
+
+            <h3>自動化 SEO 週報</h3>
+            <p>配合 Cloudflare Workers Cron Trigger，可以設定自動生成週報並發送到 Telegram 或 Slack：</p>
+            <pre><code class="language-toml"># wrangler.toml 加入 Cron Trigger
+[triggers]
+crons = ["0 9 * * 1"]  # 每週一早上 9 點（UTC）
+</code></pre>
+            <pre><code class="language-typescript">// src/cron.ts
+export async function handleCron(env: Env) {
+  const report = await generateWeeklySeoReport(env);
+  
+  // 發送到 Telegram
+  await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: env.TELEGRAM_CHAT_ID,
+      text: formatReportAsMarkdown(report),
+      parse_mode: 'Markdown'
+    })
+  });
+}
+</code></pre>
+            <p>這樣每週一你就會收到自動生成的 SEO 報告，完全不需要手動登入任何工具。</p>
+
+            <h2>OpenSEO 的限制：什麼情況下還是需要 Ahrefs？</h2>
+            <p>誠實說，OpenSEO 不是在每個場景都能完全取代商業工具：</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>場景</th>
+                        <th>OpenSEO</th>
+                        <th>建議</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>個人部落格 / 中小型網站</td>
+                        <td>✅ 完全夠用</td>
+                        <td>直接用 OpenSEO，省 $130-260/月</td>
+                    </tr>
+                    <tr>
+                        <td>電商網站（&lt;1,000 頁）</td>
+                        <td>✅ 搭配 GSC 整合很強</td>
+                        <td>OpenSEO + GSC 即可</td>
+                    </tr>
+                    <tr>
+                        <td>SEO 代理商（大量客戶）</td>
+                        <td>⚠️ 需要自架多實例</td>
+                        <td>可用，但管理成本較高</td>
+                    </tr>
+                    <tr>
+                        <td>大型媒體（10 萬+ 頁）</td>
+                        <td>⚠️ Common Crawl 覆蓋率不足</td>
+                        <td>Ahrefs Enterprise 仍有優勢</td>
+                    </tr>
+                    <tr>
+                        <td>精準反向連結數據</td>
+                        <td>⚠️ Common Crawl 有延遲</td>
+                        <td>Ahrefs 的即時爬蟲更準</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>結論：</strong>如果你是獨立開發者、部落客、中小企業，OpenSEO 完全可以取代 Ahrefs/Semrush，立刻省下每月 $130-260。如果你需要即時反向連結監控或管理 100 個以上客戶網站，商業工具仍有其價值。</p>
+
+            <h2>台灣開發者常見問題</h2>
+
+            <h3>Q：OpenSEO 的關鍵字數據支援中文嗎？</h3>
+            <p>支援。Common Crawl 包含繁體中文和簡體中文的網頁索引，Google Search Console 整合後的數據完全支援中文關鍵字。不過對於台灣在地長尾關鍵字，GSC 整合的真實數據比估算值更準確。</p>
+
+            <h3>Q：Cloudflare Workers 免費方案夠用嗎？</h3>
+            <p>對於月流量 1K-10K 的網站完全夠用。免費方案每天 100K 次請求，D1 資料庫 5GB，R2 儲存 10GB。超過這個量建議升級 Cloudflare Workers Paid（$5/月），比 Ahrefs 便宜 96%。</p>
+
+            <h3>Q：自架數據安全嗎？</h3>
+            <p>比商業工具更安全。你的 SEO 數據、競品分析查詢都儲存在你自己的 Cloudflare D1，不會上傳到任何第三方伺服器。Ahrefs 和 Semrush 的 Terms of Service 明確表示他們會記錄你的查詢用於改善產品。</p>
+
+            <h3>Q：DataForSEO 整合是免費的嗎？</h3>
+            <p>DataForSEO 有免費方案（每天 1,000 次查詢），用於補充 OpenSEO 的關鍵字搜尋量數據。大多數個人網站在免費方案內即可。</p>
+
+            <!-- CTA 3: Systeme.io -->
+            <div style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); border-radius: 12px; padding: 24px; margin: 32px 0; color: white; text-align: center;">
+                <h3 style="margin-bottom: 8px; font-size: 1.2rem;">🚀 想把你的知識變成收入？Systeme.io 免費建立課程和銷售頁</h3>
+                <p style="margin-bottom: 16px; opacity: 0.9;">學完 OpenSEO 自架，你可以把這個技能打包成課程或 SOP 服務。Systeme.io 提供免費方案，建立銷售頁面、Email 行銷、會員課程一站搞定。</p>
+                <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" target="_blank" rel="noopener sponsored" style="background: white; color: #ff6b35; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">免費開始使用 Systeme.io →</a>
+            </div>
+
+            <h2>結論：現在就該換 OpenSEO 的 5 個理由</h2>
+            <ol>
+                <li><strong>每月省 $130-260：</strong>Ahrefs Lite $129/月 vs OpenSEO $0/月，1 年省 $1,548-$3,120。</li>
+                <li><strong>MCP 整合領先商業工具 2 年：</strong>在 Claude、Codex、Cursor 中直接查 SEO 數據，Ahrefs/Semrush 目前都沒有這個功能。</li>
+                <li><strong>GSC 真實數據比估算更準：</strong>你自己的 Search Console 數據永遠比 Ahrefs 的估算模型準確，特別是繁體中文長尾關鍵字。</li>
+                <li><strong>完全的數據隱私：</strong>競品分析查詢不會被任何人記錄，適合敏感的商業項目。</li>
+                <li><strong>自動化空間無限：</strong>MIT 授權，你可以自由修改、整合到任何 CI/CD 流程、Telegram Bot、報告系統。</li>
+            </ol>
+
+            <p>20 分鐘的部署時間，換取每年超過 $1,500 的節省，以及一個比 Ahrefs 更現代、更智慧（MCP 支援）的 SEO 工具。這筆帳不難算。</p>
+
+            <!-- CTA 4: 企業諮詢 -->
+            <div class="cta-block cta-enterprise" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 12px; padding: 24px; margin: 32px 0; color: white;">
+                <h3 style="color: #00d4aa; margin-bottom: 8px;">🏢 企業部署諮詢</h3>
+                <p style="margin-bottom: 16px; opacity: 0.9;">需要協助將 OpenSEO 導入企業 SEO 工作流程？包含多網站管理、客製化爬蟲規則、與現有 CMS 整合？AutoDev AI 提供完整部署、客製化與技術支援服務。</p>
+                <a href="/contact.html" style="background: #00d4aa; color: #1a1a2e; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">了解企業服務 →</a>
+            </div>
+
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 AutoDev AI. 保留所有權利。</p>
+            <p><a href="../privacy.html">隱私政策</a> | <a href="../terms.html">使用條款</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 訂閱費用計算器 2026：ChatGPT vs Claude vs Gemini，你每月花了多少錢？哪個可以砍？</title>
+<meta name="description" content="免費 AI 訂閱費用計算器 2026。勾選你正在用的 AI 工具（ChatGPT Plus、Claude Pro、Gemini Advanced、Perplexity Pro…），即時計算月費總計，並自動建議哪個可以砍掉、哪個最值得留。">
+<meta name="keywords" content="AI 訂閱費用計算器, ai 工具費用計算, chatgpt claude gemini 哪個便宜, ai 月費比較 2026, ai 訂閱比較, ai 工具費用, chatgpt plus 值得嗎, claude pro 費用">
+<meta property="og:title" content="AI 訂閱費用計算器 2026：你每月在 AI 工具花了多少錢？">
+<meta property="og:description" content="免費工具：勾選你的 AI 訂閱，即時算月費總計，自動推薦哪個可以砍。ChatGPT Plus / Claude Pro / Gemini Advanced 一次比較。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autodev-ai.com/tools/ai-subscription-cost-calculator.html">
+<meta property="og:image" content="https://autodev-ai.com/autodev-logo2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://autodev-ai.com/tools/ai-subscription-cost-calculator.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://autodev-ai.com/tools/ai-subscription-cost-calculator.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZWDT650BM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZWDT650BM');</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI 訂閱費用計算器 2026",
+  "description": "計算你每月在 AI 工具的訂閱費用，並建議哪個可以砍掉、哪個最值得留",
+  "url": "https://autodev-ai.com/tools/ai-subscription-cost-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "datePublished": "2026-10-17",
+  "inLanguage": "zh-Hant"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ChatGPT Plus 值得訂嗎？",
+      "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT Plus 每月 $20，提供 GPT-4o 無限用量、DALL-E 圖片生成、Code Interpreter 和最新 GPT-5 系列存取。如果你每天使用 AI 工作，Plus 的 ROI 通常很高；如果只是偶爾問問題，免費版已夠用。"}
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Pro 和 ChatGPT Plus 哪個適合我？",
+      "acceptedAnswer": {"@type": "Answer", "text": "Claude Pro（$20/月）在長文件分析、程式碼理解和細膩指令跟隨上表現優秀；ChatGPT Plus 則在工具整合（DALL-E、Code Interpreter）和生態多樣性上更強。如果主要用途是寫作/分析，Claude Pro 更值得；如果需要多模態功能，ChatGPT Plus 更合適。"}
+    },
+    {
+      "@type": "Question",
+      "name": "Perplexity Pro 值得訂嗎？",
+      "acceptedAnswer": {"@type": "Answer", "text": "Perplexity Pro（$20/月）的強項是即時搜尋+AI 摘要，適合需要快速查詢最新資料的人。但如果你已有 ChatGPT Plus（含 Search 功能），Perplexity Pro 可能重疊。建議先試用免費版，再評估是否需要升級。"}
+    },
+    {
+      "@type": "Question",
+      "name": "我訂了太多 AI 工具，該砍哪個？",
+      "acceptedAnswer": {"@type": "Answer", "text": "使用本計算器勾選你的訂閱，工具會自動分析功能重疊並建議可以砍掉哪個。一般原則：ChatGPT Plus 功能最廣泛，可作為主力；Claude Pro 保留給需要長文件分析的任務；Gemini Advanced 和 Copilot Pro 在重疊功能較多，可能最先考慮砍掉。"}
+    },
+    {
+      "@type": "Question",
+      "name": "用 DigitalOcean 自建 AI 有沒有比訂閱 SaaS 便宜？",
+      "acceptedAnswer": {"@type": "Answer", "text": "對於重度用戶（每月 API 費用超過 $50），自建 AI 伺服器可能更便宜。DigitalOcean Droplet GPU（$0.5-2/hr）+開源模型（Llama/Gemma）適合有技術能力的用戶；一般用戶使用 SaaS 訂閱通常更方便划算。DigitalOcean 提供 $200 免費點數讓你測試。"}
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/v2-chrome.css">
+<style data-v2c-functional>
+.ai-tool-item{display:flex;align-items:center;gap:.75rem;background:var(--card-bg);border:2px solid var(--border);border-radius:12px;padding:.9rem 1.1rem;cursor:pointer;transition:all .2s;user-select:none;}
+.ai-tool-item:hover{border-color:var(--accent);}
+.ai-tool-item.selected{border-color:var(--accent);background:rgba(200,133,63,.06);}
+.ai-tool-item input[type=checkbox]{width:18px;height:18px;accent-color:#C8853F;cursor:pointer;flex-shrink:0;}
+.tool-info{flex:1;}
+.tool-name{font-weight:700;font-size:.95rem;}
+.tool-price{font-size:.88rem;color:var(--text2);}
+.tool-tags{font-size:.75rem;color:var(--text3);margin-top:.15rem;}
+.result-card{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-bottom:1rem;}
+.cost-big{font-size:2.5rem;font-weight:800;color:#C8853F;}
+.cost-usd{font-size:1.1rem;font-weight:600;color:var(--text2);margin-left:.25rem;}
+.rec-pill{display:inline-block;padding:.25rem .7rem;border-radius:20px;font-size:.78rem;font-weight:600;margin:.2rem;}
+.rec-keep{background:rgba(16,185,129,.12);color:#059669;}
+.rec-cut{background:rgba(239,68,68,.12);color:#b91c1c;}
+.rec-maybe{background:rgba(245,158,11,.12);color:#b45309;}
+.cta-gradient{background:linear-gradient(135deg,#C8853F 0%,#e8a86b 50%,#C8853F 100%);color:#fff;padding:.9rem 1.8rem;border-radius:10px;text-decoration:none;display:inline-block;font-weight:600;transition:opacity .2s;}
+.cta-gradient:hover{opacity:.9;color:#fff;}
+.cta-secondary{background:linear-gradient(135deg,#2563eb,#6366f1);color:#fff;padding:.85rem 1.8rem;border-radius:10px;text-decoration:none;display:inline-block;font-weight:600;transition:opacity .2s;}
+.cta-secondary:hover{opacity:.9;color:#fff;}
+.category-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text3);margin:1.25rem 0 .5rem;}
+.saving-bar{height:10px;background:rgba(200,133,63,.15);border-radius:5px;overflow:hidden;margin:.5rem 0;}
+.saving-fill{height:100%;background:linear-gradient(90deg,#C8853F,#e8a86b);border-radius:5px;transition:width .5s ease;}
+</style>
+</head>
+<body>
+<header class="v2-header">
+  <div class="v2-container">
+    <a href="/" class="v2-logo">AutoDev</a>
+    <nav class="v2-nav">
+      <a href="/blog/">Blog</a>
+      <a href="/tools/" class="active">工具</a>
+      <a href="/services/">服務</a>
+      <a href="/contact.html">聯絡</a>
+    </nav>
+  </div>
+</header>
+
+<main class="v2-container" style="max-width:1000px;margin:0 auto;padding:2rem 1rem 4rem;">
+
+  <!-- Hero -->
+  <div style="text-align:center;margin-bottom:2rem;">
+    <div style="display:inline-block;background:rgba(200,133,63,.1);color:#C8853F;border-radius:20px;padding:.4rem 1rem;font-size:.85rem;font-weight:600;margin-bottom:.75rem;">💰 免費工具 · 即時計算</div>
+    <h1 style="font-size:2rem;font-weight:800;margin:.5rem 0 .75rem;line-height:1.25;">AI 訂閱費用計算器 2026</h1>
+    <p style="font-size:1.05rem;color:var(--text2);max-width:580px;margin:0 auto;">勾選你正在訂閱的 AI 工具，立刻看清楚每月燒了多少錢，<br>並找出功能重疊、可以砍掉的那個。</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 340px;gap:1.5rem;align-items:start;" id="main-grid">
+
+    <!-- Left: Tool Selector -->
+    <div>
+
+      <div class="category-label">🤖 通用 AI 助理</div>
+      <div style="display:flex;flex-direction:column;gap:.6rem;" id="tool-list">
+
+        <label class="ai-tool-item" data-price="20" data-key="chatgpt" data-overlap="writing,code,image,search">
+          <input type="checkbox" onchange="recalculate()">
+          <span style="font-size:1.3rem;">🤖</span>
+          <div class="tool-info">
+            <div class="tool-name">ChatGPT Plus（GPT-4o）</div>
+            <div class="tool-price">$20/月（約 NT$650/月）</div>
+            <div class="tool-tags">寫作・程式碼・圖片生成・搜尋</div>
+          </div>
+          <span style="font-weight:700;color:#C8853F;white-space:nowrap;">$20</span>
+        </label>
+
+        <label class="ai-tool-item" data-price="20" data-key="claude" data-overlap="writing,code,analysis">
+          <input type="checkbox" onchange="recalculate()">
+          <span style="font-size:1.3rem;">🧠</span>
+          <div class="tool-info">
+            <div class="tool-name">Claude Pro（Claude 4.5 / Sonnet）</div>
+            <div class="tool-price">$20/月（約 NT$650/月）</div>
+            <div class="tool-tags">長文分析・程式碼・指令跟隨</div>
+          </div>
+          <span style="font-weight:700;color:#C8853F;white-space:nowrap;">$20</span>
+        </label>
+
+        <label class="ai-tool-item" data-price="19.99" data-key="gemini" data-overlap="writing,search,image,google">
+          <input type="checkbox" onchange="recalculate()">
+          <span style="font-size:1.3rem;">💎</span>
+          <div class="tool-info">
+            <div class="tool-name">Google One AI Premium（Gemini Advanced）</div>
+            <div class="tool-price">$19.99/月（含 2TB 雲端 + Workspace）</div>
+            <div class="tool-tags">Google 生態整合・多模態・搜尋</div>
+          </div>
+          <span style="font-weight:700;color:#C8853F;white-space:nowrap;">$20</span>
+        </label>
+
+        <label class="ai-tool-item" data-price="20" data-key="perplexity" data-overlap="search">
+          <input type="checkbox" onchange="recalculate()">
+          <span style="font-size:1.3rem;">🔍</span>
+          <div class="tool-info">
+            <div class="tool-name">Perplexity Pro</div>
+            <div class="tool-price">$20/月（$200/年）</div>
+            <div class="tool-tags">即時搜尋・AI 摘要・引用來源</div>
+          </div>
+          <span style="font-weight:700;color:#C8853F;white-space:nowrap;">$20</span>
+        </label>
+
+        <label class="ai-tool-item" data-price="20" data-key="copilot" data-overlap="writing,code,search,microsoft">
+          <input type="checkbox" onchange="recalculate()">
+          <span style="font-size:1.3rem;">🪁</span>
+          <div class="tool-info">
+            <div class="tool-name">Microsoft Copilot Pro</div>
+            <div class="tool-price">$20/月（Office 365 整合）</div>
+            <div class="tool-tags">Word/Excel/Teams・Windows Copilot</div>
+          </div>
+          <span style="font-weight:700;color:#C8853F;white-space:nowrap;">$20</span>
+        </label>
+
+        <div class="category-label">💻 AI 開發工具</div>
+
+        <label class="ai-tool-item" data-price="19" data-key="cursor" data-overlap="code">
+          <input type="checkbox" onchange="recalculate()">
+          <span style="font-size:1.3rem;">⌨️</span>
+          <div class="tool-info">
+            <div class="tool-name">Cursor Pro</div>
+            <div class="tool-price">$19/月（含 GPT-4 / Claude 用量）</div>
+            <div class="tool-tags">AI-first IDE・程式補全・重構</div>
+          </div>
+          <span style="font-weight:700;color:#C8853F;white-space:nowrap;">$19</span>
+        </label>
+
+        <label class="ai-tool-item" data-price="10" data-key="copilot-dev" data-overlap="code,github">
+          <input type="checkbox" onchange="recalculate()">
+          <span style="font-size:1.3rem;">🐙</span>
+          <div class="tool-info">
+            <div class="tool-name">GitHub Copilot Individual</div>
+            <div class="tool-price">$10/月（$100/年）</div>
+            <div class="tool-tags">IDE 補全・PR Review・VS Code</div>
+          </div>
+          <span style="font-weight:700;color:#C8853F;white-space:nowrap;">$10</span>
+        </label>
+
+        <div class="category-label">📝 AI 寫作 &amp; 內容工具</div>
+
+        <label class="ai-tool-item" data-price="16" data-key="writesonic" data-overlap="writing,seo">
+          <input type="checkbox" onchange="recalculate()">
+          <span style="font-size:1.3rem;">✍️</span>
+          <div class="tool-info">
+            <div class="tool-name">Writesonic Individual</div>
+            <div class="tool-price">$16/月（AI 文章生成 + SEO）</div>
+            <div class="tool-tags">SEO 文章・廣告文案・長文</div>
+          </div>
+          <span style="font-weight:700;color:#C8853F;white-space:nowrap;">$16</span>
+        </label>
+
+        <label class="ai-tool-item" data-price="36" data-key="jasper" data-overlap="writing,marketing">
+          <input type="checkbox" onchange="recalculate()">
+          <span style="font-size:1.3rem;">🚀</span>
+          <div class="tool-info">
+            <div class="tool-name">Jasper Creator</div>
+            <div class="tool-price">$39/月（$468/年）</div>
+            <div class="tool-tags">行銷文案・品牌語調・模板</div>
+          </div>
+          <span style="font-weight:700;color:#C8853F;white-space:nowrap;">$39</span>
+        </label>
+
+        <div class="category-label">📊 AI 學習 &amp; 生產力</div>
+
+        <label class="ai-tool-item" data-price="10" data-key="notion-ai" data-overlap="writing,productivity">
+          <input type="checkbox" onchange="recalculate()">
+          <span style="font-size:1.3rem;">📋</span>
+          <div class="tool-info">
+            <div class="tool-name">Notion AI（add-on）</div>
+            <div class="tool-price">$10/月（需另訂 Notion Plus）</div>
+            <div class="tool-tags">文件摘要・問答・自動填入</div>
+          </div>
+          <span style="font-weight:700;color:#C8853F;white-space:nowrap;">$10</span>
+        </label>
+
+        <label class="ai-tool-item" data-price="14" data-key="grammarly" data-overlap="writing,english">
+          <input type="checkbox" onchange="recalculate()">
+          <span style="font-size:1.3rem;">📖</span>
+          <div class="tool-info">
+            <div class="tool-name">Grammarly Premium</div>
+            <div class="tool-price">$12-30/月（依方案）</div>
+            <div class="tool-tags">英文校對・語氣建議・改寫</div>
+          </div>
+          <span style="font-weight:700;color:#C8853F;white-space:nowrap;">$14</span>
+        </label>
+
+      </div><!-- /tool-list -->
+
+      <div style="margin-top:1.25rem;">
+        <button onclick="selectAll()" style="padding:.45rem 1rem;border-radius:20px;border:1.5px solid var(--border);background:var(--card-bg);color:var(--text);cursor:pointer;font-size:.88rem;margin-right:.5rem;">全選</button>
+        <button onclick="clearAll()" style="padding:.45rem 1rem;border-radius:20px;border:1.5px solid var(--border);background:var(--card-bg);color:var(--text);cursor:pointer;font-size:.88rem;">清除</button>
+      </div>
+
+    </div><!-- /left -->
+
+    <!-- Right: Result Panel (sticky) -->
+    <div id="result-panel" style="position:sticky;top:80px;">
+
+      <div class="result-card" id="total-card">
+        <div style="font-size:.85rem;color:var(--text2);margin-bottom:.25rem;">每月 AI 訂閱總費用</div>
+        <div>
+          <span class="cost-big" id="total-usd">$0</span>
+          <span class="cost-usd">/月</span>
+        </div>
+        <div style="font-size:.88rem;color:var(--text2);margin-top:.35rem;">≈ NT$ <span id="total-ntd">0</span>/月 · 年費約 <span id="total-annual">NT$0</span></div>
+        <div class="saving-bar" id="saving-bar-wrap" style="display:none;">
+          <div class="saving-fill" id="saving-bar" style="width:0%"></div>
+        </div>
+        <div id="saving-text" style="font-size:.82rem;color:var(--text2);display:none;"></div>
+      </div>
+
+      <div class="result-card" id="rec-card" style="display:none;">
+        <div style="font-size:.88rem;font-weight:700;margin-bottom:.75rem;">🤖 AI 建議</div>
+        <div id="rec-content"></div>
+      </div>
+
+      <div id="empty-state" style="text-align:center;padding:2rem 1rem;color:var(--text3);">
+        <div style="font-size:2rem;margin-bottom:.5rem;">☝️</div>
+        <div style="font-size:.9rem;">勾選左邊的 AI 工具<br>即時計算你的月費</div>
+      </div>
+
+      <!-- CTAs -->
+      <div style="margin-top:1rem;display:flex;flex-direction:column;gap:.75rem;">
+        <div style="background:linear-gradient(135deg,rgba(200,133,63,.08),rgba(200,133,63,.02));border:1px solid rgba(200,133,63,.25);border-radius:12px;padding:1.1rem;">
+          <div style="font-size:.82rem;font-weight:700;margin-bottom:.3rem;">💡 省錢提示</div>
+          <div style="font-size:.82rem;color:var(--text2);margin-bottom:.75rem;">重度 AI 用戶（API >$50/月）可考慮在 DigitalOcean 自架開源模型，可省 40-70%。</div>
+          <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="cta-gradient" style="display:block;text-align:center;font-size:.88rem;padding:.75rem 1.2rem;">領取 $200 DO 免費點數 →</a>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(99,102,241,.08),rgba(99,102,241,.02));border:1px solid rgba(99,102,241,.25);border-radius:12px;padding:1.1rem;">
+          <div style="font-size:.82rem;font-weight:700;margin-bottom:.3rem;">📚 一個帳號學 300+ AI 課程</div>
+          <div style="font-size:.82rem;color:var(--text2);margin-bottom:.75rem;">Hahow 線上課程訂閱，比買多個 AI SaaS 更省錢。</div>
+          <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" target="_blank" rel="noopener sponsored" class="cta-secondary" style="display:block;text-align:center;font-size:.88rem;padding:.75rem 1.2rem;">瀏覽 Hahow 課程 →</a>
+        </div>
+      </div>
+
+    </div><!-- /right -->
+  </div><!-- /main-grid -->
+
+  <!-- Comparison info section -->
+  <section style="margin-top:3rem;margin-bottom:3rem;">
+    <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:1.25rem;">📊 主流 AI 工具 2026 費用速查</h2>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;background:var(--card-bg);border-radius:12px;overflow:hidden;">
+        <thead>
+          <tr>
+            <th style="background:var(--bg2);font-weight:600;padding:.75rem 1rem;text-align:left;border-bottom:2px solid var(--border);">工具</th>
+            <th style="background:var(--bg2);font-weight:600;padding:.75rem 1rem;text-align:left;border-bottom:2px solid var(--border);">月費（USD）</th>
+            <th style="background:var(--bg2);font-weight:600;padding:.75rem 1rem;text-align:left;border-bottom:2px solid var(--border);">月費（NT$）</th>
+            <th style="background:var(--bg2);font-weight:600;padding:.75rem 1rem;text-align:left;border-bottom:2px solid var(--border);">有免費版</th>
+            <th style="background:var(--bg2);font-weight:600;padding:.75rem 1rem;text-align:left;border-bottom:2px solid var(--border);">最大亮點</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);"><strong>ChatGPT Plus</strong></td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">$20</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">≈ NT$650</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">✅ 有</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">功能最廣泛，圖片+搜尋+代碼</td></tr>
+          <tr><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);"><strong>Claude Pro</strong></td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">$20</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">≈ NT$650</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">✅ 有</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">長文分析最強，指令精準</td></tr>
+          <tr><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);"><strong>Gemini Advanced</strong></td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">$19.99</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">≈ NT$650</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">✅ 有</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">含 2TB Drive，Google 深度整合</td></tr>
+          <tr><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);"><strong>Perplexity Pro</strong></td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">$20</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">≈ NT$650</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">✅ 有</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">即時搜尋+引用來源最佳</td></tr>
+          <tr><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);"><strong>Copilot Pro</strong></td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">$20</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">≈ NT$650</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">✅ 有</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">Office 365 深度整合</td></tr>
+          <tr><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);"><strong>Cursor Pro</strong></td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">$19</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">≈ NT$620</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">✅ 有</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">AI-first IDE 最強代碼體驗</td></tr>
+          <tr><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);"><strong>GitHub Copilot</strong></td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">$10</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">≈ NT$325</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">✅ 免費版（學生/開源）</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">GitHub 生態整合，PR Review</td></tr>
+          <tr><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);"><strong>Notion AI</strong></td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">$10</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">≈ NT$325</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">✅ 有限功能</td><td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);">文件/Wiki AI 問答最方便</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.82rem;color:var(--text2);margin-top:.5rem;">* 費用以 2026 年 10 月 USD/NT$（1:32.5）換算，實際費率可能因匯率變動。</p>
+  </section>
+
+  <!-- FAQ -->
+  <section style="margin-bottom:3rem;">
+    <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:1.25rem;">❓ 常見問題</h2>
+    <div style="display:flex;flex-direction:column;gap:.6rem;">
+      <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;cursor:pointer;" onclick="this.querySelector('.faq-body').style.display=this.querySelector('.faq-body').style.display==='none'?'block':'none'">
+        <div style="font-weight:600;">ChatGPT Plus 值得訂嗎？</div>
+        <div class="faq-body" style="display:none;font-size:.9rem;color:var(--text2);margin-top:.5rem;">ChatGPT Plus 每月 $20，提供 GPT-4o 無限用量、DALL-E 圖片生成、Code Interpreter 和最新 GPT-5 系列存取。如果你每天使用 AI 工作，Plus 的 ROI 通常很高；如果只是偶爾問問題，免費版已夠用。</div>
+      </div>
+      <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;cursor:pointer;" onclick="this.querySelector('.faq-body').style.display=this.querySelector('.faq-body').style.display==='none'?'block':'none'">
+        <div style="font-weight:600;">Claude Pro 和 ChatGPT Plus 哪個適合我？</div>
+        <div class="faq-body" style="display:none;font-size:.9rem;color:var(--text2);margin-top:.5rem;">Claude Pro（$20/月）在長文件分析、程式碼理解和細膩指令跟隨上表現優秀；ChatGPT Plus 則在工具整合（DALL-E、Code Interpreter）和生態多樣性上更強。如果主要用途是寫作/分析，Claude Pro 更值得；如果需要多模態功能，ChatGPT Plus 更合適。</div>
+      </div>
+      <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;cursor:pointer;" onclick="this.querySelector('.faq-body').style.display=this.querySelector('.faq-body').style.display==='none'?'block':'none'">
+        <div style="font-weight:600;">我訂了太多 AI 工具，該砍哪個？</div>
+        <div class="faq-body" style="display:none;font-size:.9rem;color:var(--text2);margin-top:.5rem;">使用本計算器勾選你的訂閱，工具會自動分析功能重疊並建議。一般原則：ChatGPT Plus 功能最廣泛，可作為主力；Claude Pro 保留給需要長文件分析的任務；Gemini Advanced 和 Copilot Pro 在重疊功能較多，可能最先考慮砍掉。</div>
+      </div>
+      <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;cursor:pointer;" onclick="this.querySelector('.faq-body').style.display=this.querySelector('.faq-body').style.display==='none'?'block':'none'">
+        <div style="font-weight:600;">用 DigitalOcean 自建 AI 有沒有比訂閱 SaaS 便宜？</div>
+        <div class="faq-body" style="display:none;font-size:.9rem;color:var(--text2);margin-top:.5rem;">對於重度用戶（每月 API 費用超過 $50），自建 AI 伺服器可能更便宜。DigitalOcean Droplet GPU（$0.5-2/hr）+開源模型（Llama/Gemma）適合有技術能力的用戶；一般用戶使用 SaaS 訂閱通常更方便划算。<a href="https://m.do.co/c/6121a295f624">DigitalOcean 提供 $200 免費點數</a>讓你測試。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section>
+    <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:.75rem;">相關工具 &amp; 文章</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;font-size:.9rem;">
+      <a href="/tools/ai-model-comparison.html" style="background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:.4rem .8rem;text-decoration:none;color:var(--text);">🤖 AI 模型比較</a>
+      <a href="/tools/ai-coding-cost-calculator.html" style="background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:.4rem .8rem;text-decoration:none;color:var(--text);">💻 AI 程式成本計算器</a>
+      <a href="/tools/geo-tools-comparison-2026.html" style="background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:.4rem .8rem;text-decoration:none;color:var(--text);">🔍 GEO 工具比較</a>
+      <a href="/blog/fastrouter-ai-llm-cost-optimization-2026.html" style="background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:.4rem .8rem;text-decoration:none;color:var(--text);">📰 LLM 費用優化指南</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="v2-footer">
+  <div class="v2-container">
+    <p>© 2026 AutoDev · <a href="/privacy.html">隱私政策</a> · <a href="/contact.html">聯絡我們</a></p>
+    <p style="font-size:.8rem;color:var(--text3);margin-top:.4rem;">本頁包含聯盟連結（DigitalOcean、Hahow），點擊後可能產生佣金，不影響工具客觀性。費用資料以 2026/10 為準，詳情請參閱各工具官方定價頁。</p>
+  </div>
+</footer>
+
+<script>
+// AI tools data
+const AI_TOOLS = {
+  chatgpt:     { name: 'ChatGPT Plus', price: 20, overlap: ['writing','code','image','search'], keep: true },
+  claude:      { name: 'Claude Pro',   price: 20, overlap: ['writing','code','analysis'],       keep: true },
+  gemini:      { name: 'Gemini Advanced', price: 19.99, overlap: ['writing','search','image','google'], keep: null },
+  perplexity:  { name: 'Perplexity Pro', price: 20, overlap: ['search'],                       keep: null },
+  copilot:     { name: 'Copilot Pro',  price: 20, overlap: ['writing','code','search','microsoft'], keep: null },
+  cursor:      { name: 'Cursor Pro',   price: 19, overlap: ['code'],                            keep: true },
+  'copilot-dev': { name: 'GitHub Copilot', price: 10, overlap: ['code','github'],              keep: null },
+  writesonic:  { name: 'Writesonic',   price: 16, overlap: ['writing','seo'],                  keep: null },
+  jasper:      { name: 'Jasper Creator', price: 39, overlap: ['writing','marketing'],           keep: null },
+  'notion-ai': { name: 'Notion AI',   price: 10, overlap: ['writing','productivity'],           keep: null },
+  grammarly:   { name: 'Grammarly',   price: 14, overlap: ['writing','english'],                keep: null },
+};
+
+const OVERLAP_MSGS = {
+  writing: '寫作功能',
+  code:    '程式碼',
+  search:  '搜尋功能',
+  image:   '圖片生成',
+  analysis: '文件分析',
+};
+
+function getSelected() {
+  return [...document.querySelectorAll('#tool-list input[type=checkbox]')]
+    .filter(cb => cb.checked)
+    .map(cb => cb.closest('.ai-tool-item').dataset.key);
+}
+
+function recalculate() {
+  const selected = getSelected();
+  const empty = document.getElementById('empty-state');
+  const recCard = document.getElementById('rec-card');
+  
+  // Update card visuals
+  document.querySelectorAll('.ai-tool-item').forEach(item => {
+    const cb = item.querySelector('input[type=checkbox]');
+    item.classList.toggle('selected', cb.checked);
+  });
+
+  if (selected.length === 0) {
+    document.getElementById('total-usd').textContent = '$0';
+    document.getElementById('total-ntd').textContent = '0';
+    document.getElementById('total-annual').textContent = 'NT$0';
+    document.getElementById('saving-bar-wrap').style.display = 'none';
+    document.getElementById('saving-text').style.display = 'none';
+    empty.style.display = 'block';
+    recCard.style.display = 'none';
+    return;
+  }
+
+  empty.style.display = 'none';
+
+  // Calculate total
+  let total = 0;
+  selected.forEach(key => { if (AI_TOOLS[key]) total += AI_TOOLS[key].price; });
+  const totalNtd = Math.round(total * 32.5);
+  const totalAnnual = totalNtd * 12;
+
+  document.getElementById('total-usd').textContent = '$' + Math.round(total);
+  document.getElementById('total-ntd').textContent = totalNtd.toLocaleString();
+  document.getElementById('total-annual').textContent = 'NT$' + Math.round(totalAnnual / 1000) + 'K';
+
+  // Saving bar (max ~$200/mo reference)
+  const pct = Math.min(100, Math.round((total / 200) * 100));
+  document.getElementById('saving-bar-wrap').style.display = 'block';
+  document.getElementById('saving-bar').style.width = pct + '%';
+  document.getElementById('saving-text').style.display = 'block';
+  
+  let savingMsg = '';
+  if (total < 30) savingMsg = '💚 花費適中，你的 AI 工具組合很精簡。';
+  else if (total < 60) savingMsg = '🟡 月費偏高，考慮整合功能重疊的工具。';
+  else savingMsg = '🔴 月費較高，強烈建議精簡工具組合！';
+  document.getElementById('saving-text').textContent = savingMsg;
+
+  // Generate recommendations
+  generateRecs(selected, total);
+}
+
+function generateRecs(selected, total) {
+  const recCard = document.getElementById('rec-card');
+  const recContent = document.getElementById('rec-content');
+  
+  if (selected.length < 2) {
+    recCard.style.display = 'none';
+    return;
+  }
+
+  recCard.style.display = 'block';
+  let html = '';
+
+  // Detect overlaps
+  const overlapMap = {};
+  selected.forEach(key => {
+    const tool = AI_TOOLS[key];
+    if (!tool) return;
+    tool.overlap.forEach(tag => {
+      if (!overlapMap[tag]) overlapMap[tag] = [];
+      overlapMap[tag].push(tool.name);
+    });
+  });
+
+  const overlaps = Object.entries(overlapMap).filter(([,names]) => names.length > 1);
+  
+  if (overlaps.length > 0) {
+    html += '<div style="font-size:.85rem;font-weight:600;color:#b45309;margin-bottom:.5rem;">⚠️ 功能重疊偵測到：</div>';
+    overlaps.slice(0, 3).forEach(([tag, names]) => {
+      html += `<div style="font-size:.83rem;color:var(--text2);margin-bottom:.3rem;">• ${OVERLAP_MSGS[tag] || tag}：${names.join(' 和 ')} 功能重疊</div>`;
+    });
+    html += '<div style="height:.5rem"></div>';
+  }
+
+  // Per-tool recs
+  html += '<div style="font-size:.85rem;font-weight:600;margin-bottom:.5rem;">📋 各工具建議：</div>';
+
+  // Priority keep: chatgpt, claude, cursor
+  selected.forEach(key => {
+    const tool = AI_TOOLS[key];
+    if (!tool) return;
+    let rec = '', cls = '';
+    
+    if (key === 'chatgpt') {
+      rec = '✅ 保留 — 功能最廣泛，推薦主力工具';
+      cls = 'rec-keep';
+    } else if (key === 'claude') {
+      rec = '✅ 保留 — 長文件分析/程式碼最強';
+      cls = 'rec-keep';
+    } else if (key === 'cursor') {
+      rec = '✅ 保留 — 開發者首選 AI IDE';
+      cls = 'rec-keep';
+    } else if (key === 'copilot' && selected.includes('chatgpt')) {
+      rec = '⚠️ 可考慮砍 — 與 ChatGPT Plus 功能重疊 70%，除非需要 Office 365';
+      cls = 'rec-cut';
+    } else if (key === 'gemini' && (selected.includes('chatgpt') || selected.includes('claude'))) {
+      rec = '⚠️ 可砍 — 功能與 ChatGPT/Claude 重疊，僅 Google Workspace 用戶才值得';
+      cls = 'rec-cut';
+    } else if (key === 'perplexity' && selected.includes('chatgpt')) {
+      rec = '🤔 視情況 — ChatGPT Plus 已有搜尋功能，Perplexity 的引用來源更完整';
+      cls = 'rec-maybe';
+    } else if (key === 'writesonic' && selected.includes('jasper')) {
+      rec = '⚠️ 可砍其中一個 — Writesonic 和 Jasper 功能高度重疊';
+      cls = 'rec-cut';
+    } else if (key === 'copilot-dev' && selected.includes('cursor')) {
+      rec = '🤔 視情況 — 已有 Cursor Pro 的話，GitHub Copilot 功能有重疊';
+      cls = 'rec-maybe';
+    } else if (key === 'notion-ai') {
+      rec = '🤔 視情況 — Notion 重度用戶值得；一般用戶可用 ChatGPT 替代';
+      cls = 'rec-maybe';
+    } else {
+      rec = '✅ 保留 — 有其獨特功能';
+      cls = 'rec-keep';
+    }
+
+    html += `<div style="margin-bottom:.4rem;"><span class="rec-pill ${cls}">${tool.name}</span><span style="font-size:.82rem;color:var(--text2);">${rec}</span></div>`;
+  });
+
+  // Saving potential
+  const cuttableKeys = selected.filter(k => {
+    if (['chatgpt','claude','cursor'].includes(k)) return false;
+    if (k === 'copilot' && selected.includes('chatgpt')) return true;
+    if (k === 'gemini' && (selected.includes('chatgpt') || selected.includes('claude'))) return true;
+    if ((k === 'writesonic' || k === 'jasper') && selected.includes('chatgpt')) return true;
+    return false;
+  });
+
+  if (cuttableKeys.length > 0) {
+    const savings = cuttableKeys.reduce((s, k) => s + (AI_TOOLS[k]?.price || 0), 0);
+    html += `<div style="margin-top:.75rem;padding:.75rem;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);border-radius:8px;font-size:.85rem;"><strong style="color:#059669;">💰 潛在每月節省：$${Math.round(savings)}（≈ NT$${Math.round(savings * 32.5)}/月）</strong></div>`;
+  }
+
+  recContent.innerHTML = html;
+}
+
+function selectAll() {
+  document.querySelectorAll('#tool-list input[type=checkbox]').forEach(cb => cb.checked = true);
+  recalculate();
+}
+function clearAll() {
+  document.querySelectorAll('#tool-list input[type=checkbox]').forEach(cb => cb.checked = false);
+  recalculate();
+}
+
+// Mobile: collapse to 1-col
+function handleResize() {
+  const grid = document.getElementById('main-grid');
+  if (window.innerWidth < 700) {
+    grid.style.gridTemplateColumns = '1fr';
+    document.getElementById('result-panel').style.position = 'static';
+  } else {
+    grid.style.gridTemplateColumns = '1fr 340px';
+    document.getElementById('result-panel').style.position = 'sticky';
+  }
+}
+window.addEventListener('resize', handleResize);
+handleResize();
+</script>
+</body>
+</html>
