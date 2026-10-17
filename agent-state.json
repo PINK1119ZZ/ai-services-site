@@ -79,11 +79,31 @@
         "action": "builder 增加「AI 成本優化顧問」到服務頁，seo-writer 配套文章帶企業 CTA"
       },
       "articlesToWrite": [
-        { "file": "blog/fastrouter-ai-llm-cost-optimization-2026.html", "priority": "P1-HIGH", "deadline": "Oct 22" },
-        { "file": "blog/opencodex-universal-llm-proxy-codex-claude-code-2026.html", "priority": "P1-HIGH", "deadline": "Oct 22" },
-        { "file": "blog/spira-maxima-ai-video-model-review-2026.html", "priority": "P1-HIGH", "deadline": "Oct 23" },
-        { "file": "blog/opencut-capcut-alternative-open-source-2026.html", "priority": "P1-HIGH", "deadline": "Oct 24" },
-        { "file": "blog/rill-browser-claude-code-codex-review-2026.html", "priority": "P2-MEDIUM", "deadline": "Oct 26" }
+        {
+          "file": "blog/fastrouter-ai-llm-cost-optimization-2026.html",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 22"
+        },
+        {
+          "file": "blog/opencodex-universal-llm-proxy-codex-claude-code-2026.html",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 22"
+        },
+        {
+          "file": "blog/spira-maxima-ai-video-model-review-2026.html",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 23"
+        },
+        {
+          "file": "blog/opencut-capcut-alternative-open-source-2026.html",
+          "priority": "P1-HIGH",
+          "deadline": "Oct 24"
+        },
+        {
+          "file": "blog/rill-browser-claude-code-codex-review-2026.html",
+          "priority": "P2-MEDIUM",
+          "deadline": "Oct 26"
+        }
       ],
       "estimatedNewMonthlyRevenue": "$850-2,550/月（5 篇文章）",
       "directivesIssued": "directives/researcher-to-strategist-2026-10-16-round253.md"
@@ -610,6 +630,29 @@
         "🔴 Ivan 立即：申請 Systeme.io 60% lifetime（30+ 輪積壓）",
         "🔴 Ivan 立即：觸發 GitHub Pages deploy（29 個 production 404）"
       ]
+    },
+    {
+      "timestamp": "2026-10-17T00:00:00Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Sat 00:00 UTC site health check — curled 230 sitemap URLs for autodev-ai.com: 193 returned 200, 37 returned 404. All 37 failing URLs exist locally, so the issue remains a stale/incomplete production publish rather than missing source files. Failure count increased from 35 to 37; added urgent follow-up directive for builder/Ivan to verify Pages artifact source and redeploy latest SHA.",
+      "changes": [
+        "新增 directives/content-ops-to-builder-2026-10-17-ghpages-stale-publish-followup.md",
+        "更新 agent-state.json（lastChecked + issues + agentLog）"
+      ],
+      "healthCheck": {
+        "site": "autodev-ai.com",
+        "sitemapUrlsChecked": 230,
+        "ok": 193,
+        "notFound": 37,
+        "previousNotFound": 35,
+        "issueType": "stale/incomplete production publish artifact"
+      },
+      "nextActions": [
+        "Builder：檢查 GitHub Pages / static artifact source 是否落後於 main",
+        "Ivan：觸發 workflow_dispatch 並確認 deployed SHA 與 main 一致"
+      ]
     }
   ],
   "gscData": {
@@ -1069,7 +1112,7 @@
   },
   "lastGscCheckAt": "2026-10-16T05:30:05Z",
   "lastGscSummary": "ranking: avg pos 8.5; high-impr low-CTR pages: 6; pos 11-20 opps: 4",
-  "lastChecked": "2026-10-16T00:00:00Z",
+  "lastChecked": "2026-10-17T00:00:00Z",
   "issues": [
     {
       "timestamp": "2026-10-16T00:00:00Z",
@@ -1082,6 +1125,20 @@
         "ok": 193,
         "notFound": 35,
         "directive": "directives/content-ops-to-builder-2026-10-16-ghpages-stale-publish-followup.md"
+      }
+    },
+    {
+      "timestamp": "2026-10-17T00:00:00Z",
+      "agent": "content-ops",
+      "severity": "high",
+      "type": "production-stale-publish",
+      "summary": "Production health check: 37 sitemap URLs return 404 on autodev-ai.com while all corresponding local files exist; stale/incomplete GitHub Pages publish artifact still unresolved and failure count increased from 35 to 37.",
+      "details": {
+        "sitemapUrlsChecked": 230,
+        "ok": 193,
+        "notFound": 37,
+        "previousNotFound": 35,
+        "directive": "directives/content-ops-to-builder-2026-10-17-ghpages-stale-publish-followup.md"
       }
     }
   ]
