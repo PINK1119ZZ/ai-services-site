@@ -1005,6 +1005,29 @@
         "Builder：檢查 GitHub Pages / static artifact source 是否落後於 main",
         "Ivan：觸發 workflow_dispatch 並確認 deployed SHA 與 main 一致"
       ]
+    },
+    {
+      "timestamp": "2026-10-18T00:01:26Z",
+      "agent": "content-ops",
+      "task": "site-health",
+      "status": "completed",
+      "summary": "Sun 00:00 UTC site health check — curled 234 sitemap URLs for autodev-ai.com: 193 returned 200, 41 returned 404. All 41 failing URLs exist locally, so the issue remains a stale/incomplete production publish artifact rather than missing source files. Failure count increased from 37 to 41; added urgent follow-up directive for builder/Ivan to verify Pages artifact source and redeploy latest SHA.",
+      "changes": [
+        "新增 directives/content-ops-to-builder-2026-10-18-ghpages-stale-publish-followup.md",
+        "更新 agent-state.json（lastChecked + issues + agentLog）"
+      ],
+      "healthCheck": {
+        "site": "autodev-ai.com",
+        "sitemapUrlsChecked": 234,
+        "ok": 193,
+        "notFound": 41,
+        "previousNotFound": 37,
+        "issueType": "stale/incomplete production publish artifact"
+      },
+      "nextActions": [
+        "Builder：檢查 GitHub Pages / static artifact source 是否落後於 main",
+        "Ivan：觸發 workflow_dispatch 並確認 deployed SHA 與 main 一致"
+      ]
     }
   ],
   "gscData": {
@@ -1471,7 +1494,7 @@
   },
   "lastGscCheckAt": "2026-10-17T05:30:04Z",
   "lastGscSummary": "ranking: avg pos 8.6; high-impr low-CTR pages: 6; pos 11-20 opps: 4",
-  "lastChecked": "2026-10-17T00:00:00Z",
+  "lastChecked": "2026-10-18T00:01:26Z",
   "issues": [
     {
       "timestamp": "2026-10-16T00:00:00Z",
@@ -1498,6 +1521,20 @@
         "notFound": 37,
         "previousNotFound": 35,
         "directive": "directives/content-ops-to-builder-2026-10-17-ghpages-stale-publish-followup.md"
+      }
+    },
+    {
+      "timestamp": "2026-10-18T00:01:26Z",
+      "agent": "content-ops",
+      "severity": "high",
+      "type": "production-stale-publish",
+      "summary": "Production health check: 41 sitemap URLs return 404 on autodev-ai.com while all corresponding local files exist; stale/incomplete GitHub Pages publish artifact remains unresolved and failure count increased from 37 to 41.",
+      "details": {
+        "sitemapUrlsChecked": 234,
+        "ok": 193,
+        "notFound": 41,
+        "previousNotFound": 37,
+        "directive": "directives/content-ops-to-builder-2026-10-18-ghpages-stale-publish-followup.md"
       }
     }
   ]
